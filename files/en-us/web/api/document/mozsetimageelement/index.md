@@ -52,8 +52,8 @@ block is clicked by the user.
 </style>
 ```
 
-The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
-  HTMLElement("div") }} to use an element with the id "canvasbg" as its background.
+The CSS defined by the {{ HTMLElement("style") }} block above is used by our
+{{HTMLElement("div")}} to use an element with the id "canvasbg" as its background.
 
 ```js
 let c = 0x00;

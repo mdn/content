@@ -14,7 +14,8 @@ Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may b
 
 ## Description
 
-`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. A `Map` object is iterated by key-value pairs — a {{jsxref("Statements/for...of", "for...of")}} loop returns a 2-member array of `[key, value]` for each iteration. Iteration happens in _insertion order_, which corresponds to the order in which each key-value pair was first inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method (that is, there wasn't a key with the same value already in the map when `set()` was called).
+`Map` objects are collections of key-value pairs. A key in the `Map` **may only occur once**; it is unique in the `Map`'s collection. A `Map` object is iterated by key-value pairs — a
+{{jsxref("Statements/for...of", "for...of")}} loop returns a 2-member array of `[key, value]` for each iteration. Iteration happens in _insertion order_, which corresponds to the order in which each key-value pair was first inserted into the map by the [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) method (that is, there wasn't a key with the same value already in the map when `set()` was called).
 
 The specification requires maps to be implemented "that, on average, provide access times that are sublinear on the number of elements in the collection". Therefore, it could be represented internally as a hash table (with O(1) lookup), a search tree (with O(log(N)) lookup), or any other data structure, as long as the complexity is better than O(N).
 
@@ -110,8 +111,7 @@ cases:
           iterates
           <strong>all</strong> of an object's properties; the various mechanisms
           each include different subsets of properties.
-          ({{jsxref("Statements/for...in",
-          "for-in")}}
+          ({{jsxref("Statements/for...in", "for-in")}}
           includes only enumerable string-keyed properties;
           {{jsxref("Object.keys")}} includes only own, enumerable,
           string-keyed properties;

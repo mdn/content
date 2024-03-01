@@ -8,7 +8,7 @@ browser-compat: api.AudioParam.linearRampToValueAtTime
 
 {{ APIRef("Web Audio API") }}
 
-The `linearRampToValueAtTime()` method of the {{ domxref("AudioParam") }}
+The `linearRampToValueAtTime()` method of the {{domxref("AudioParam")}}
 Interface schedules a gradual linear change in the value of the
 `AudioParam`. The change starts at the time specified for the
 _previous_ event, follows a linear ramp to the new value given in the
@@ -39,8 +39,7 @@ implementations of this interface return {{jsxref('undefined')}}.
 
 In this example, we have a media source with two control buttons (see the [audio-param repo](https://github.com/mdn/webaudio-examples/tree/main/audio-param) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `linearRampToValueAtTime()` is
 used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
-useful for fade in/fade out effects, although {{
-  domxref("AudioParam.exponentialRampToValueAtTime()") }} is often said to be a bit more
+useful for fade in/fade out effects, although {{domxref("AudioParam.exponentialRampToValueAtTime()")}} is often said to be a bit more
 natural.
 
 ```js

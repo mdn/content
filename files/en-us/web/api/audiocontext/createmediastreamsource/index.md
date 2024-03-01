@@ -13,8 +13,7 @@ Interface is used to create a new {{ domxref("MediaStreamAudioSourceNode") }}
 object, given a media stream (say, from a {{ domxref("MediaDevices.getUserMedia") }}
 instance), the audio from which can then be played and manipulated.
 
-For more details about media stream audio source nodes, check out the {{
-    domxref("MediaStreamAudioSourceNode") }} reference page.
+For more details about media stream audio source nodes, check out the {{domxref("MediaStreamAudioSourceNode")}} reference page.
 
 ## Syntax
 
@@ -35,11 +34,9 @@ whose media is obtained from the specified source stream.
 
 ## Examples
 
-In this example, we grab a media (audio + video) stream from {{
-    domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }}
-element to play then mute the audio, but then also feed the audio into a {{
-    domxref("MediaStreamAudioSourceNode") }}. Next, we feed this source audio into a low
-pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
+In this example, we grab a media (audio + video) stream from {{domxref("navigator.getUserMedia")}}, feed the media into a {{htmlelement("video")}}
+element to play then mute the audio, but then also feed the audio into a {{domxref("MediaStreamAudioSourceNode")}}.
+Next, we feed this source audio into a low pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
 then a {{domxref("AudioDestinationNode") }}.
 
 The range slider below the {{ htmlelement("video") }} element controls the amount of

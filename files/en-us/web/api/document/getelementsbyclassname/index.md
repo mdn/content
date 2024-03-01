@@ -14,8 +14,8 @@ of all child elements which have all of the given class name(s).
 
 When called on
 the {{domxref("document")}} object, the complete document is searched, including the
-root node. You may also call {{domxref("Element.getElementsByClassName",
-  "getElementsByClassName()")}} on any element; it will return only elements which are
+root node. You may also call {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}}
+on any element; it will return only elements which are
 descendants of the specified root element with the given class name(s).
 
 > **Warning:** This is a live {{domxref("HTMLCollection")}}. Changes in the DOM will

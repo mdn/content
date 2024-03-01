@@ -57,8 +57,7 @@ function handleNewIceCandidate(candidateSDP) {
 ```
 
 The `handleNewIceCandidate()` function shown here passes the received
-candidate's SDP text into {{domxref("RTCIceCandidate.RTCIceCandidate",
-  "RTCIceCandidate()")}} to receive an {{domxref("RTCIceCandidate")}} object in return,
+candidate's SDP text into {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} to receive an {{domxref("RTCIceCandidate")}} object in return,
 which represents the candidate.
 
 The new candidate is then passed into {{domxref("RTCPeerConnection.addIceCandidate()")}} to add the candidate to the list of

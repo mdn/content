@@ -12,8 +12,8 @@ The {{domxref("CanvasRenderingContext2D")}} method
 **`fillText()`**, part of the Canvas 2D API, draws a text string
 at the specified coordinates, filling the string's characters with the current
 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}. An optional parameter
-allows specifying a maximum width for the rendered text, which the {{Glossary("user
-  agent")}} will achieve by condensing the text or by using a lower font size.
+allows specifying a maximum width for the rendered text, which the
+{{Glossary("user agent")}} will achieve by condensing the text or by using a lower font size.
 
 This method draws directly to the canvas without modifying the current path, so any
 subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or

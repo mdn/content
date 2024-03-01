@@ -8,8 +8,7 @@ browser-compat: api.BiquadFilterNode.getFrequencyResponse
 
 {{ APIRef("Web Audio API") }}
 
-The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")
-    }} interface takes the current filtering algorithm's settings and calculates the
+The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")}} interface takes the current filtering algorithm's settings and calculates the
 frequency response for frequencies specified in a specified array of frequencies.
 
 The two output arrays, `magResponseOutput` and

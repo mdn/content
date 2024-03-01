@@ -8,9 +8,8 @@ browser-compat: api.AudioBuffer.duration
 
 {{ APIRef("Web Audio API") }}
 
-The **`duration`** property of the {{ domxref("AudioBuffer")
-    }} interface returns a double representing the duration, in seconds, of the PCM data
-stored in the buffer.
+The **`duration`** property of the {{ domxref("AudioBuffer")}}
+interface returns a double representing the duration, in seconds, of the PCM data stored in the buffer.
 
 ## Value
 

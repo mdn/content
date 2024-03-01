@@ -16,8 +16,8 @@ which returns an iterable of {{domxref("AudioParamDescriptor")}}-based objects.
 The property is not a part of the {{domxref("AudioWorkletProcessor")}}
 interface, but, if defined, it is called internally by the
 {{domxref("AudioWorkletProcessor")}} constructor to create a list of custom
-{{domxref("AudioParam")}} objects in the {{domxref("AudioWorkletNode.parameters",
-  "parameters")}} property of the associated {{domxref("AudioWorkletNode")}}.
+{{domxref("AudioParam")}} objects in the {{domxref("AudioWorkletNode.parameters", "parameters")}}
+property of the associated {{domxref("AudioWorkletNode")}}.
 
 Defining the getter is optional.
 

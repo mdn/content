@@ -8,10 +8,8 @@ browser-compat: api.AudioScheduledSourceNode.start
 
 {{APIRef("Web Audio API")}}
 
-The `start()` method on
-{{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the
-specified time. If no time is specified, then the sound begins playing
-immediately.
+The `start()` method on {{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the
+specified time. If no time is specified, then the sound begins playing immediately.
 
 ## Syntax
 
@@ -37,8 +35,7 @@ None ({{jsxref("undefined")}}).
 
 - `InvalidStateNode` {{domxref("DOMException")}}
   - : Thrown if the node has already been started. This error occurs even if the node is no longer
-    running because of a prior call to {{domxref("AudioScheduledSourceNode.stop",
-    "stop()")}}.
+    running because of a prior call to {{domxref("AudioScheduledSourceNode.stop", "stop()")}}.
 - {{jsxref("RangeError")}}
   - : Thrown if the value specified for `when` is negative.
 

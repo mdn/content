@@ -55,8 +55,7 @@ where `<policy-directive>` consists of:
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
-    directives")}}.
+  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
 - {{CSP("font-src")}}
   - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
 - {{CSP("frame-src")}}

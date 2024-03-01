@@ -29,8 +29,7 @@ method on the event. This keeps the implementation from executing the default ac
 that is associated with the event.
 
 Event listeners that handle multiple kinds of events may want to check
-`cancelable` before invoking their {{domxref("event.preventDefault",
-  "preventDefault()")}} methods.
+`cancelable` before invoking their {{domxref("event.preventDefault", "preventDefault()")}} methods.
 
 ## Value
 
@@ -39,8 +38,8 @@ canceled.
 
 ## Example
 
-For example, browser vendors are proposing that the {{domxref("Element/wheel_event",
-  "wheel")}} event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
+For example, browser vendors are proposing that the {{domxref("Element/wheel_event", "wheel")}}
+event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
 canceled.
 
 ```js

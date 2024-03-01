@@ -9,8 +9,8 @@ browser-compat: api.DataTransfer.items
 {{APIRef("HTML Drag and Drop API")}}
 
 The read-only {{domxref("DataTransfer")}} property `items` property is a
-{{domxref("DataTransferItemList","list")}} of the {{domxref("DataTransferItem","data
-  transfer items", "", "nocode")}} in a drag operation. The list includes one item for each item in the
+{{domxref("DataTransferItemList","list")}} of the {{domxref("DataTransferItem","data transfer items", "", "nocode")}}
+in a drag operation. The list includes one item for each item in the
 operation and if the operation had no items, the list is empty.
 
 ## Value

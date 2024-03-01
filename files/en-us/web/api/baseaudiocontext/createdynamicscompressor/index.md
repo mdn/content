@@ -8,8 +8,7 @@ browser-compat: api.BaseAudioContext.createDynamicsCompressor
 
 {{ APIRef("Web Audio API") }}
 
-The `createDynamicsCompressor()` method of the {{
-    domxref("BaseAudioContext") }} Interface is used to create a
+The `createDynamicsCompressor()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a
 {{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an
 audio signal.
 

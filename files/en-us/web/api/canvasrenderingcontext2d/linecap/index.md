@@ -99,8 +99,7 @@ ctx.strokeStyle = "black";
 });
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180",
-  "canvas_linecap.png")}}
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "canvas_linecap.png")}}
 
 ## Specifications
 

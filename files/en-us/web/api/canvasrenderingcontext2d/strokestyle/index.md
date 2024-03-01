@@ -82,8 +82,7 @@ for (let i = 0; i < 6; i++) {
 
 The result looks like this:
 
-{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "180", "180",
-  "canvas_strokestyle.png")}}
+{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "180", "180", "canvas_strokestyle.png")}}
 
 ## Specifications
 

@@ -34,8 +34,8 @@ matrix using the `resetTransform()` method.
 #### JavaScript
 
 The {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method rotates the
-transformation matrix by 45°. The {{domxref("CanvasRenderingContext2D.fillRect()",
-  "fillRect()")}} method draws a filled rectangle, adjusted according to that matrix.
+transformation matrix by 45°. The {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}}
+method draws a filled rectangle, adjusted according to that matrix.
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -93,8 +93,8 @@ The skewed rectangles are gray, and the non-skewed rectangles are red.
 
 ## Polyfill
 
-You can also use the {{domxref("CanvasRenderingContext2D.setTransform()",
-  "setTransform()")}} method to reset the current transform to the identity matrix, like
+You can also use the {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}}
+method to reset the current transform to the identity matrix, like
 so:
 
 ```js

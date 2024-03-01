@@ -63,8 +63,7 @@ ctx.stroke();
 
 ### Re-stroking paths
 
-Typically, you'll want to call {{domxref("CanvasRenderingContext2D.beginPath()",
-  "beginPath()")}} for each new thing you want to stroke. If you don't, the previous
+Typically, you'll want to call {{domxref("CanvasRenderingContext2D.beginPath()", "beginPath()")}} for each new thing you want to stroke. If you don't, the previous
 sub-paths will remain part of the current path, and get stroked every time you call the
 `stroke()` method. In some cases, however, this may be the desired effect.
 

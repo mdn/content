@@ -230,8 +230,7 @@ my_element.addEventListener("click", (e) => {
 });
 ```
 
-If an event handler (for example, {{domxref("Element.click_event",
-  "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the
+If an event handler (for example, {{domxref("Element.click_event", "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the
 attribute value is effectively wrapped in a handler function that binds the value of
 `this` in a manner consistent with the `addEventListener()`; an
 occurrence of `this` within the code represents a reference to the element.

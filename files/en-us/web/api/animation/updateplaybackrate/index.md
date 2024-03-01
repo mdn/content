@@ -22,9 +22,8 @@ currently running.
 `updatePlaybackRate()` is an asynchronous method that sets the speed of an
 animation after synchronizing with its current playback position, ensuring that the
 resulting change in speed does not produce a sharp jump. After calling
-`updatePlaybackRate()` the animation's {{domxref("Animation.playbackRate",
-    "playbackRate")}} is _not_ immediately updated. It will be updated once the
-animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
+`updatePlaybackRate()` the animation's {{domxref("Animation.playbackRate", "playbackRate")}}
+is _not_ immediately updated. It will be updated once the animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
 
 ## Syntax
 

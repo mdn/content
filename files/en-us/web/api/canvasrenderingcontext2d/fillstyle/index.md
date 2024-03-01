@@ -79,8 +79,7 @@ for (let i = 0; i < 6; i++) {
 
 The result looks like this:
 
-{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", 160, 160,
-  "canvas_fillstyle.png")}}
+{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", 160, 160, "canvas_fillstyle.png")}}
 
 ## Specifications
 

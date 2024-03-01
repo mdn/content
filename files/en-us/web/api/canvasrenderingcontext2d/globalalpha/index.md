@@ -93,8 +93,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180",
-  "canvas_globalalpha.png")}}
+{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180", "canvas_globalalpha.png")}}
 
 ## Specifications
 
