@@ -8,7 +8,7 @@ browser-compat: api.AudioParam.linearRampToValueAtTime
 
 {{ APIRef("Web Audio API") }}
 
-The `linearRampToValueAtTime()` method of the {{domxref("AudioParam")}}
+The `linearRampToValueAtTime()` method of the {{ domxref("AudioParam") }}
 Interface schedules a gradual linear change in the value of the
 `AudioParam`. The change starts at the time specified for the
 _previous_ event, follows a linear ramp to the new value given in the
