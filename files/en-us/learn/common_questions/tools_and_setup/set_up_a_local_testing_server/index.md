@@ -110,7 +110,7 @@ To do this:
 
 The best approach for working with server side languages, such as Python, PHP, or JavaScript, depends on the server-side language you are using, and whether you're working with a web framework or "stand-alone" code.
 
-If you working with a web framework, usually the framework will provide its own simple and easy to use development server.
+If you're working with a web framework, usually the framework will provide its own simple and easy to use development server.
 For example, the following languages/frameworks come with a development server:
 
 - Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
