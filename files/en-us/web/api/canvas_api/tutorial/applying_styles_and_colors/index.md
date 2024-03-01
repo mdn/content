@@ -64,7 +64,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160)}}
+{{EmbedLiveSample("A_fillStyle_example", "", "160")}}
 
 ### A `strokeStyle` example
 

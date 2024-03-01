@@ -177,6 +177,6 @@ function drawStar(ctx, r) {
 draw();
 ```
 
-{{EmbedLiveSample("Hole_in_rectangle", 160, 160)}}
+{{EmbedLiveSample("Hole_in_rectangle", "", "160")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
