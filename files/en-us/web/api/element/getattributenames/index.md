@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Array ({{jsxref("Array")}}).
 
 ## Examples
 
