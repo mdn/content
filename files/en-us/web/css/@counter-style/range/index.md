@@ -32,7 +32,7 @@ range:
 
 ### Values
 
-The value is a comma-separated list of ranges each including a lower and upper limit or the the keyword `auto`.
+The value is a comma-separated list of ranges each including a lower and upper limit or the keyword `auto`.
 
 - `auto`
 

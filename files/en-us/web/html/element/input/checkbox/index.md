@@ -41,7 +41,7 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 
 ## Additional attributes
 
-In addition to the common attributes shared by all {{HTMLElement("input")}} elements, "`checkbox`" inputs support the following attributes.
+In addition to the [common attributes](/en-US/docs/Web/HTML/Element/input#attributes) shared by all {{HTMLElement("input")}} elements, "`checkbox`" inputs support the following attributes.
 
 - `checked`
 
@@ -286,7 +286,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>

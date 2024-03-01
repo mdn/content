@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.storage.onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area, returning details of the changed keys. A callback is called only when there are changes to the underlying data.
 

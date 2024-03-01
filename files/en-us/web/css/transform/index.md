@@ -61,8 +61,6 @@ transform: unset;
 
 The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
 
-If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.
-
 ### Values
 
 - {{cssxref("&lt;transform-function&gt;")}}

@@ -112,7 +112,7 @@ The `aria-labelledby` attribute is **NOT** supported in:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('label')}} element
 - HTML {{HTMLElement('legend')}} element

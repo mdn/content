@@ -408,7 +408,7 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

@@ -124,4 +124,4 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 
 ### Older versions
 
-{{Firefox_for_developers('31')}}
+{{Firefox_for_developers}}

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.
 

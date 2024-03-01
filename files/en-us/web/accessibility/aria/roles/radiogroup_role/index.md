@@ -141,7 +141,7 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('fieldset')}} element
 - HTML {{HTMLElement('input/radio', '&lt;input type="radio">')}} radio button element
@@ -155,6 +155,6 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>
