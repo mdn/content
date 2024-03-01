@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Symbol.replace
 
 {{JSRef}}
 
-The **`Symbol.replace`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@replace`. The {{jsxref("String.prototype.replace()")}} method looks up this symbol on its first argument for the method that replaces substrings matched by the current object.
+The **`Symbol.replace`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@replace`. The {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods look up this symbol on their first argument for the method that replaces substrings matched by the current object.
 
-For more information, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) and {{jsxref("String.prototype.replace()")}}.
+For more information, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace), and {{jsxref("String.prototype.replace()")}}, and {{jsxref("String.prototype.replaceAll()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-replace.html")}}
 
