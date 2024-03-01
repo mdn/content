@@ -52,4 +52,5 @@ console.log("football".replace(new CustomReplacer("foo"))); // "#!@?tball"
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
 - {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
 - [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
