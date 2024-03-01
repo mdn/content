@@ -10,53 +10,65 @@ A **color space** is an organization of colors with respect to an underlying col
 
 The _sRGB_ color space (standard red, green, blue) was created for the web, but we are no longer limited to this color space. In addition to several defined color spaces, CSS Color level 5 enables defining custom color spaces.
 
+## Named color spaces
+
 The predefined sRGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz`, `xyz-d50`, and `xyz-d65`.
 
 Color spaces are either rectangular or polar. Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz`, `xyz-d50`, and `xyz-d65`. The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
 
-## Named color spaces
+### `sRGB` color spaces
 
-- `sRGB` color spaces
+sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors, including {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness).
 
-  - : sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors, including {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness). The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb).Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, it is not restricted to sRGB.
+The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb).Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, it is not restricted to sRGB.
 
-    Additional cylindrical sRGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv` and `Cubehelix`. For all of these, the {{cssxref("ident")}} used as the color space in {{CSSXref("color_value/color", "color()")}} is `srgb`. Other predefined RGB color spaces include `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
+- `srgb-linear` color space
 
-  - `srgb-linear` color space
+  - : The predefined linear-light sRGB color space, `srgb-linear`, is the same as `srgb` except that the transfer function is linear-light with no gamma-encoding. The `srgb-linear` color space accepts the three red, green, and blue, or `r`, `g`, and `b`, values as numeric parameters, with in-gamut colors ranging from `0` to `1`. The whitepoint is D65.
 
-    - : The predefined linear-light sRGB color space, `srgb-linear`, is the same as `srgb` except that the transfer function is linear-light with no gamma-encoding. The `srgb-linear` color space accepts the three red, green, and blue, or `r`, `g`, and `b`, values as numeric parameters, with in-gamut colors ranging from `0` to `1`. The whitepoint is D65.
+- `display-p3` color space
 
-  - `display-p3` color space
+  - : Defined by Apple, the **Display P3** color space combines the DCI-P3 color gamut, the D65 white point, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in gamut values ranging from `0` to `1`. The whitepoint is D65.
 
-    - : Defined by Apple, the **Display P3** color space combines the DCI-P3 color gamut, the D65 white point, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in gamut values ranging from `0` to `1`. The whitepoint is D65.
+- `a98-rgb` color space
 
-  - `a98-rgb` color space
+  - : The `a98-rgb`, is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the CIELab color space can be achieved, encompassing more cyan-green hues that other RGB. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
 
-    - : The `a98-rgb`, is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the CIELab color space can be achieved, encompassing more cyan-green hues that other RGB. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
+- `prophoto-rgb`
 
-  - `prophoto-rgb`
+  - : Developed by Kodak, the `prophoto-rgb` color space can represent all the colors likely to occur in nature and about 90% of CIElab colors. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, with a value of 1/1.8, and a small linear portion near black. The white point is D50, the same as is used by CIE Lab.
 
-    - : Developed by Kodak, the `prophoto-rgb` color space can represent all the colors likely to occur in nature and about 90% of CIElab colors. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, with a value of 1/1.8, and a small linear portion near black. The white point is D50, the same as is used by CIE Lab.
+- `rec2020`
 
-  - `rec2020`
+  - : `rec2020` is a broadcast industry standard for ultra high definition, 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
 
-    - : `rec2020` is a broadcast industry standard for ultra high definition, 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
+Additional cylindrical sRGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv` and `Cubehelix`.
 
-- [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color spaces
+### CIELAB color spaces
 
-  - : The CIELAB color space, also referred to as L*a*b*, represents the entire range of color that humans can see. It expresses color as three values: L* for perceptual lightness and a* and b* for the four unique colors of human vision: red, green, blue and yellow.
+The CIELAB color space, also referred to as L*a*b*, represents the entire range of color that humans can see. It expresses color as three values: L* for perceptual lightness and a* and b* for the four unique colors of human vision: red, green, blue and yellow.
 
-    Lab is rectangular coordinate system, with a central lightness `L` axis. Positive values along the `a` axis are a purplish red while negative values are the complement: green. Positive values along the `b` axis are yellow and negative are blue/violet. Desaturated colors have small values for `a` and `b` with greater absolute values being more saturated.
+Lab is rectangular coordinate system, with a central lightness `L` axis. Positive values along the `a` axis are a purplish red while negative values are the complement: green. Positive values along the `b` axis are yellow and negative are blue/violet. Desaturated colors have small values for `a` and `b` with greater absolute values being more saturated.
 
-    CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` is a polar, cylindrical coordinate system using polar coordinates `C` (chroma) and `H` (hue) rather than axes. Note the hue and lightness here are not the same as the same named values in `hsl()` or other sRGB color spaces.
+CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` is a polar, cylindrical coordinate system using polar coordinates `C` (chroma) and `H` (hue) rather than axes. Note the hue and lightness here are not the same as the same named values in `hsl()` or other sRGB color spaces.
 
-    CIE Lab color spaces, including LCH, Oklab and Oklch, are device-independent color spaces.
+CIE Lab color spaces, including LCH, Oklab and Oklch, are device-independent color spaces.
 
-- CIE XYZ color spaces
+### XYZ color spaces
 
-  - : Created by the International Commission on Illumination (CIE) in 1931, the XYZ color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human color vision. xyz, xyz-d50, and xyz-d65.
+Created by the International Commission on Illumination (CIE) in 1931, the XYZ color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human color vision.
 
-REC709 Color Space.
+- `xyz` color space
+
+  - : explain
+
+- `xyz-d50` color space
+
+  - : explain
+
+- `xyz-d65` color space
+
+  - : explain
 
 ## See also
 
@@ -68,6 +80,8 @@ REC709 Color Space.
 - [Oklab](https://bottosson.github.io/posts/oklab/) color space
 
 NOTES:
+
+REC709 Color Space.
 
 **RGB**, _Red-Green-Blue_, is a color model that represents colors as mixtures of three underlying components - red, green, and blue color channels. The **HSL**, _Hue-Saturation-Lightness_, color model represents colors as ,
 sRGB is intended as a common color space for the creation of images for viewing on the Internet and World Wide Web (WWW). The resultant color space closely approximates a Gamma correction of 2.2,[7] the average response of a CRT display to linear voltage levels.
