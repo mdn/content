@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Color spaces** are named organizations of colors for underlying color models. A color model defines how color components relate to a color space. Color spaces are three-dimensional grids or represents a color. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, or transformed from one color space to another, while still looking the same.
+**Color spaces** are named organizations of colors for underlying color models. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an `hwb()` color) relate to a color space. Color spaces are three-dimensional grids or represents a color. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, or transformed from one color space to another, while still looking the same.
 
 Color spaces categorize and define specific ranges of colors. Each color space is defined by a mathematical model and associated rule set. Each color space has a defined gamut, which refers to the specific range of colors it can represent. These rules enable consistent and reproducible color representation across different devices and software.
 
@@ -14,13 +14,15 @@ The _sRGB_ color space (standard red, green, blue) was created for the web, but 
 
 ## Named color spaces
 
-The predefined sRGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz`, `xyz-d50`, and `xyz-d65`.
+The predefined sRGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
 
-Color spaces are either rectangular or polar. Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz`, `xyz-d50`, and `xyz-d65`. The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
+Color spaces are either rectangular or polar. Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
 
 ### `sRGB` color spaces
 
-sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is primarily used for displaying colors on computer screens, including laptops and smartphones. sRGB color spaces define Red, Green, Blue color channel values that, combined, create various hues. This works well for representing colors on your screens, but doesn't directly correspond to human perception.
+RGB is a color model that represents colors as mixtures of three underlying components - red, green, and blue color channels - that, combined, create various hues. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended as a common color space for the creation of images for viewing on the Internet and World Wide Web (WWW). sRGB is primarily used for displaying colors on computer screens, including laptops and smartphones.
+
+There are several RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ (`a98-rgb`) are different.
 
 CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness).
 
@@ -64,19 +66,17 @@ CIE Lab color spaces, including LCH, Oklab and Oklch, are device-independent col
 
 ### XYZ color spaces
 
-Created by the International Commission on Illumination (CIE) in 1931, the XYZ color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human color vision.
+While combinations of red, green, and blue do work well for representing colors on screen, sRGB doesn't directly correspond to how humans perceive color.Created by the International Commission on Illumination (CIE) in 1931, the XYZ color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human color vision.
 
-- `xyz` color space
+People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. CIE XYZs, three parameters corresponding to levels of stimuli of the three kinds of cone cells which, in principle, describe every color. The CIE XYZ color space, with its tri-stimulus values, encompass all visible colors.
 
-  - : explain
+- `xyz` and `xyz-d65` color space
+
+  - : The `xyz` identifier is a synonym for the `xyz-d65` color space. The axes are not limited to a `0` to `1` range as the color space is not bound to the range and these values are only used as reference pointns in defining percentage inputs and outputs. The whitepoint is D65.
 
 - `xyz-d50` color space
 
-  - : explain
-
-- `xyz-d65` color space
-
-  - : explain
+  - : `xyz-d50` is the same as `xyz-d65` except it uses `d50` as a white point.
 
 ## See also
 
@@ -90,11 +90,6 @@ Created by the International Commission on Illumination (CIE) in 1931, the XYZ c
 NOTES:
 
 REC709 Color Space.
-
-**RGB**, _Red-Green-Blue_, is a color model that represents colors as mixtures of three underlying components - red, green, and blue color channels. The **HSL**, _Hue-Saturation-Lightness_, color model represents colors as ,
-sRGB is intended as a common color space for the creation of images for viewing on the Internet and World Wide Web (WWW). The resultant color space closely approximates a Gamma correction of 2.2,[7] the average response of a CRT display to linear voltage levels.
-
-Note that there are other RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ are different.
 
 There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in functional notation, [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 
