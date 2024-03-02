@@ -17,16 +17,6 @@ The `glyphRef` element provides a single possible glyph to the referencing `<alt
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation)
-- [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("x")}} {{Deprecated_Inline}}
 - {{SVGAttr("y")}} {{Deprecated_Inline}}
 - {{SVGAttr("dx")}} {{Deprecated_Inline}}
