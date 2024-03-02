@@ -114,8 +114,8 @@ On desktop:
 On mobile:
 
 - On Android, Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs.
-- On iOS 16.3 and earlier, PWAs can only be installed with Safari.
-- On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
+- On iOS 17.3 and earlier, PWAs can only be installed with Safari.
+- On iOS 17.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
 
 ### Installing sites as apps
 
