@@ -77,4 +77,4 @@ svg {
 ## See also
 
 - [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes) including {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, and {{SVGAttr('width')}}.
-- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation), including {{SVGAttr('flood-color')}}, and {{SVGAttr('flood-opacity')}}.
+- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute), including {{SVGAttr('flood-color')}}, and {{SVGAttr('flood-opacity')}}.
