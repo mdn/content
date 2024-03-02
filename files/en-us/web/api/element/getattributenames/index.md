@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-Array ({{jsxref("Array")}}).
+An ({{jsxref("Array")}}) of strings.
 
 ## Examples
 
