@@ -53,7 +53,7 @@ const myWorker = new Worker("worker.js");
 const first = document.querySelector("input#number1");
 
 first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
+  myWorker.postMessage(first.value);
   console.log("Message posted to worker");
 };
 ```
