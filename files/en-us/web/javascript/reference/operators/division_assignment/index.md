@@ -23,7 +23,7 @@ x /= y
 
 ## Examples
 
-### Using division assignment
+### Division assignment using numbers
 
 ```js
 let bar = 5;
@@ -31,8 +31,17 @@ let bar = 5;
 bar /= 2; // 2.5
 bar /= 2; // 1.25
 bar /= 0; // Infinity
-bar /= "foo"; // NaN
+```
 
+### Division assignment using non-numbers
+
+```js
+bar /= "foo"; // NaN
+```
+
+### Division assignment using BigInts
+
+```js
 let foo = 3n;
 foo /= 2n; // 1n
 foo /= 2n; // 0n
