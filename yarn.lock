@@ -760,15 +760,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.5.tgz#9587c6b592e87f8a5ccab80ccdd8b5184f867922"
   integrity sha512-+8zfCGZzBoAoLK6jYnOm9Xa2LcdNRDVrUXatuBNuGJHyt7tpR+k/+de2LSGHiU34TYrfAXk7g9x8/IpXR+4zhw==
 
-"@mdn/browser-compat-data@^5.5.11":
-  version "5.5.11"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.11.tgz#02ac783e8c60627f11ce2677fc70c22956393d5c"
-  integrity sha512-4o1ZaGmvqoDx3QLyEAcZvGDKmdVXLB0aiANuPDumgue/7iH67KUBsKejLX7wrdxEdyNYfXUKtjFQYhGwVUBXGw==
+"@mdn/browser-compat-data@^5.5.12":
+  version "5.5.12"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.12.tgz#04b07124c9a8c07b658aa0626a86e757c6f61d1c"
+  integrity sha512-/AHFqy6OeNHS2NNZGFVRgQh+pnW8iAoV3d1fiO9b2PuQ3HzZpC30MrMrHtq1uOGy1/zcK4uPQEyI31jkM0NNAA==
 
-"@mdn/yari@2.39.5":
-  version "2.39.5"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.39.5.tgz#5ec8f8047dc88e82298f40c25047bbde40e377ee"
-  integrity sha512-IKkVpM9XKd+uT5h2JZk7ZEXTsvq/Km3s4CeA+qcbCWIYJT8VaoColWVoXTdbKmf3KsGQno+5NgvhfjTIljzhpw==
+"@mdn/yari@2.41.0":
+  version "2.41.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.41.0.tgz#d71a01e7dfc55fb0a8a2d39f8ef2ee2d60f116bd"
+  integrity sha512-kURpUFMEyO/O1DRq5s1G8rrSDbIYWAgOUUpgSGDsTFSSwIB4yJqRnElHEx27Az7iphbSsPNKN0LUSqgRIg9S6Q==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -778,11 +778,11 @@
     "@codemirror/theme-one-dark" "^6.1.2"
     "@fast-csv/parse" "^5.0.0"
     "@mdn/bcd-utils-api" "^0.0.5"
-    "@mdn/browser-compat-data" "^5.5.11"
+    "@mdn/browser-compat-data" "^5.5.12"
     "@mozilla/glean" "4.0.0"
-    "@sentry/integrations" "^7.102.1"
-    "@sentry/node" "^7.102.1"
-    "@stripe/stripe-js" "^3.0.5"
+    "@sentry/integrations" "^7.103.0"
+    "@sentry/node" "^7.103.0"
+    "@stripe/stripe-js" "^3.0.6"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.9"
     "@webref/css" "^6.12.0"
@@ -823,7 +823,7 @@
     md5-file "^5.0.0"
     mdast-util-from-markdown "^2.0.0"
     mdast-util-phrasing "^4.1.0"
-    mdn-data "^2.4.1"
+    mdn-data "^2.4.2"
     open "^10.0.4"
     open-editor "^4.1.1"
     openai "^4.28.0"
@@ -902,7 +902,7 @@
     "@sentry/types" "7.103.0"
     "@sentry/utils" "7.103.0"
 
-"@sentry/integrations@^7.102.1":
+"@sentry/integrations@^7.103.0":
   version "7.103.0"
   resolved "https://registry.yarnpkg.com/@sentry/integrations/-/integrations-7.103.0.tgz#58a52a1644ec18a49bcf6091e6f847036d64c679"
   integrity sha512-jS1vQqBBF776xFpht4xS5cJRztbpskFELeZX57pELzy/J7PNjbO0/oypP1qK7budMxxkazJhkcNwJw9eUFT0pg==
@@ -912,7 +912,7 @@
     "@sentry/utils" "7.103.0"
     localforage "^1.8.1"
 
-"@sentry/node@^7.102.1":
+"@sentry/node@^7.103.0":
   version "7.103.0"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-7.103.0.tgz#9cf488086717c2920c43568432d14232b6783a9e"
   integrity sha512-/bS/WNeO+PEd0r3o3LN0XGJV+l7hLNy1dTcn61VRgWGVs8SqMBb3uAvXAibZ9zGTCkaX/Ky3JumMcOOoxmNCtg==
@@ -968,7 +968,7 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stripe/stripe-js@^3.0.5":
+"@stripe/stripe-js@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.6.tgz#80844af42eae50a9a0ba452038672c20217c7117"
   integrity sha512-Ef3A0/zvgKbiMdCPT+rZgQBQqhNZ66wuR6Eg2w9YUuqykcIFFKU4nYApBr05WTvInrge8GuOqY5acSDiv6DOjA==
@@ -5295,7 +5295,7 @@ mdn-data@2.0.30:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
-mdn-data@^2.4.1:
+mdn-data@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.4.2.tgz#0120cb4818913a0117dfa26a0c21dfa818c36948"
   integrity sha512-idPW/pIOG+kFB36OahZHGCXZaaKIp5aYbbgRS/NACMbCpSJTTbW+T9XmMLMzvs27vnRhUO1xrd++gAGv7lm1gA==

@@ -148,4 +148,4 @@ page-type: firefox-release-notes
 
 ## Older versions
 
-{{Firefox_for_developers(49)}}
+{{Firefox_for_developers}}

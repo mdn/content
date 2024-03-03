@@ -17,12 +17,6 @@ The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the ho
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("u1")}} {{Deprecated_Inline}}
 - {{SVGAttr("g1")}} {{Deprecated_Inline}}
 - {{SVGAttr("u2")}} {{Deprecated_Inline}}

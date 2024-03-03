@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: css.at-rules.container
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to elements nested within a specific container based on the features of that container. The query returns true or false depending on whether the query condition is true for the container.
 
