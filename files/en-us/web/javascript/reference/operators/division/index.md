@@ -34,6 +34,8 @@ Math.floor(3 / 2); // 1
 
 1.0 / 2.0; // 0.5
 
+### Division using BigInts
+
 1n / 2n; // 0n
 5n / 3n; // 1n
 -1n / 3n; // 0n
@@ -50,12 +52,9 @@ Number(2n) / 2; // 1
 
 ```js
 2.0 / 0; // Infinity
-
 2.0 / 0.0; // Infinity, because 0.0 === 0
-
 2.0 / -0.0; // -Infinity
-
-2n / 0n; // RangeError: Division by zero
+2n / 0n; // RangeError: BigInt division by zero
 ```
 
 ## Specifications
