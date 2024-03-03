@@ -16,7 +16,7 @@ The Web Bluetooth API provides the ability to connect and interact with Bluetoot
 ## Interfaces
 
 - {{DOMxRef("Bluetooth")}}
-  - : Returns a {{jsxref("Promise")}} to a {{DOMxRef("BluetoothDevice")}} object with the specified options.
+  - : Provides methods to query Bluetooth availability and request access to devices.
 - {{DOMxRef("BluetoothCharacteristicProperties")}}
   - : Provides properties of a particular `BluetoothRemoteGATTCharacteristic`.
 - {{DOMxRef("BluetoothDevice")}}
@@ -29,6 +29,15 @@ The Web Bluetooth API provides the ability to connect and interact with Bluetoot
   - : Represents a GATT Server on a remote device.
 - {{DOMxRef("BluetoothRemoteGATTService")}}
   - : Represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.
+
+## Extensions to other interfaces
+
+The Bluetooth API extends the following APIs, adding the listed features.
+
+### Navigator
+
+- {{domxref("Navigator.bluetooth")}}
+  - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to Web Bluetooth API functionality.
 
 ## Specifications
 
