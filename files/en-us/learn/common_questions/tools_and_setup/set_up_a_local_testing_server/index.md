@@ -110,7 +110,7 @@ To do this:
 
 The best approach for working with server side languages, such as Python, PHP, or JavaScript, depends on the server-side language you are using, and whether you're working with a web framework or "stand-alone" code.
 
-If you're working with a web framework, usually the framework will provide its own simple and easy to use development server.
+If you're working with a web framework, usually the framework will provide its own development server.
 For example, the following languages/frameworks come with a development server:
 
 - Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
@@ -122,5 +122,5 @@ For example, the following languages/frameworks come with a development server:
   php -S localhost:8000
   ```
 
-If you're not working directly with with a server-side framework or a programming language that provides a development server, Python's `http.server` module can also be used to test server-side code written in languages such as Python, PHP, JavaScript, and so on, by invoking server-side GCI scripts.
+If you're not working directly with with a server-side framework or a programming language that provides a development server, Python's `http.server` module can also be used to test server-side code written in languages such as Python, PHP, JavaScript, and so on, by invoking server-side Common Gateway Interface (CGI) scripts.
 For examples of how to use this feature see [Execute a Script Remotely Through the Common Gateway Interface (CGI)](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi) in _How to Launch an HTTP Server in One Line of Python Code_ on realpython.com.
