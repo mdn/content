@@ -58,7 +58,7 @@ Content-Encoding: deflate, gzip
   - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
     structure (defined in {{rfc(1950)}}) with the [deflate](https://en.wikipedia.org/wiki/Deflate) compression
     algorithm (defined in {{rfc(1951)}}).
-- `br` {{Non-standard_Inline}}
+- `br`
   - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
 
 ## Examples
