@@ -22,11 +22,11 @@ Color spaces are either rectangular or polar. Rectangular color spaces include `
 
 RGB is a color model that represents colors as mixtures of three underlying components - red, green, and blue color channels - that, combined, create various hues. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended as a common color space for the creation of images for viewing on the Internet and World Wide Web (WWW). sRGB is primarily used for displaying colors on computer screens, including laptops and smartphones.
 
-There are several RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ (`a98-rgb`) are different.
-
-CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness).
+There are several RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ (`a98-rgb`) are different. There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in functional notation, [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`). CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 
 The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, it is not restricted to sRGB.
+
+RGB is not the only color model that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
 
 - `srgb` color space
 
@@ -64,6 +64,18 @@ CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightnes
 
 CIE Lab color spaces, including LCH, Oklab and Oklch, are device-independent color spaces.
 
+- `lab-d50` color space
+
+  - : Expresses color as `L` in a range from `0` to `100`, and both `a` and `b` with a range from `-125` to `125`. The `a` and `b` axes are not bound by these range values which are references in defining percentage inputs and outputs in relation to the `Display P3`color space. The whitepoint is D50.
+
+- `lab-d65` color space
+
+  -: This color space is the same as `lab-d50`, except the whitepoint is D65.
+
+- `oklab` color space
+
+  - : Similar to `lab-d65`, but the range for `L` is `0` to `1`, and both `a` and `b` range from `-0.4` to `0.4`.
+
 ### XYZ color spaces
 
 While combinations of red, green, and blue do work well for representing colors on screen, sRGB doesn't directly correspond to how humans perceive color.Created by the International Commission on Illumination (CIE) in 1931, the XYZ color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human color vision.
@@ -83,36 +95,5 @@ People with normal vision have three kinds of cone cells that sense light, havin
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` feature
 - [CSS data type: `<color>`](/en-US/docs/Web/CSS/color_value)
 - [sRGB color space](https://webstore.iec.ch/publication/6168)
-- [sRGB](https://en.wikipedia.org/wiki/SRGB) color space
 - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space
 - [Oklab](https://bottosson.github.io/posts/oklab/) color space
-
-NOTES:
-
-REC709 Color Space.
-
-There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in functional notation, [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
-
-RGB is not the only color model that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
-
-When rendered, for example by CanvasDrawImage drawImage(), a VideoFrame must be converted to a color space compatible with the rendering target, unless color conversion is explicitly disabled.
-
-Color space conversion during ImageBitmap construction is controlled by ImageBitmapOptions colorSpaceConversion. Setting this value to "none" disables color space conversion.
-
-enum VideoColorPrimaries {
-"bt709",
-"bt470bg",
-"smpte170m",
-"bt2020",
-"smpte432",
-};
-bt709
-Color primaries used by BT.709 and sRGB, as described by [H.273] section 8.1 table 2 value 1.
-bt470bg
-Color primaries used by BT.601 PAL, as described by [H.273] section 8.1 table 2 value 5.
-smpte170m
-Color primaries used by BT.601 NTSC, as described by [H.273] section 8.1 table 2 value 6.
-bt2020
-Color primaries used by BT.2020 and BT.2100, as described by [H.273] section 8.1 table 2 value 9.
-smpte432
-Color primaries used by P3 D65, as described by [H.273] section 8.1 table 2 value 12.
