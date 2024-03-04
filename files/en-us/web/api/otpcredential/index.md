@@ -19,9 +19,9 @@ _This interface also inherits properties from {{domxref("Credential")}}._
 
 - {{domxref("OTPCredential.code")}} {{Experimental_Inline}}
   - : The OTP.
-- {{domxref("Credential.id", "OTPCredential.id")}}
+- {{domxref("Credential.id", "OTPCredential.id")}} {{SecureContext_Inline}}
   - : Inherited from {{domxref("Credential")}}. The ID of the credential type.
-- {{domxref("Credential.type", "OTPCredential.type")}}
+- {{domxref("Credential.type", "OTPCredential.type")}} {{SecureContext_Inline}}
   - : Inherited from {{domxref("Credential")}}. Always set to `otp` for `OTPCredential` instances.
 
 ## Instance methods
