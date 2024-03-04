@@ -2,6 +2,8 @@
 title: Set-Login
 slug: Web/HTTP/Headers/Set-Login
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Set-Login
 ---
 

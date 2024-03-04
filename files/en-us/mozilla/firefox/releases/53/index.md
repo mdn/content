@@ -168,4 +168,4 @@ Enhanced APIs:
 
 ## Older versions
 
-{{Firefox_for_developers(52)}}
+{{Firefox_for_developers}}
