@@ -8,7 +8,7 @@ browser-compat: api.Element.setAttributeNodeNS
 
 {{ APIRef("DOM") }}
 
-The **`hasAttributeNS()`** method of the {{domxref("Element")}} interface adds a new namespaced {{domxref("Attr")}} node to an element.
+The **`setAttributeNodeNS()`** method of the {{domxref("Element")}} interface adds a new namespaced {{domxref("Attr")}} node to an element.
 
 If you don't need to work with the attribute node (such as cloning from another element) before adding it, you can use the {{domxref("Element.setAttributeNS()", "setAttributeNS()")}} method instead.
 

@@ -47,9 +47,9 @@ The `resize` property is specified as a single keyword value from the list below
   - : The element displays a mechanism for allowing the user to resize it in the _horizontal_ direction.
 - `vertical`
   - : The element displays a mechanism for allowing the user to resize it in the _vertical_ direction.
-- `block` {{experimental_inline}}
+- `block`
   - : The element displays a mechanism for allowing the user to resize it in the _block_ direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).
-- `inline` {{experimental_inline}}
+- `inline`
   - : The element displays a mechanism for allowing the user to resize it in the _inline_ direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).
 
 ## Formal definition

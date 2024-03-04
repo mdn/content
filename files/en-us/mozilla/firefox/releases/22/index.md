@@ -71,4 +71,4 @@ page-type: firefox-release-notes
 
 ### Versions
 
-{{Firefox_for_developers('21')}}
+{{Firefox_for_developers}}

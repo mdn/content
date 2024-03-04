@@ -217,4 +217,4 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ## See also
 
-{{Firefox_for_developers('3')}}
+{{Firefox_for_developers}}
