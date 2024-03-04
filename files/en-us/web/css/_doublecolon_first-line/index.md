@@ -87,7 +87,7 @@ In order to make the {{SVGElement("text")}} element be multiple lines you need t
 #### HTML
 
 ```html-nolint
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="150" viewBox="0 0 320 150" version="1.1">
+<svg viewBox="0 0 320 150">
   <text dy="1rem">Here is an English paragraph
 that is broken into multiple lines
 in the source code so that it can
