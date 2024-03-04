@@ -124,6 +124,8 @@ p::first-letter {
 
 ### Styling first letter in SVG text element
 
+In this example, we use the `::first-letter` pseudo-element to style the first letter of a SVG {{SVGElement("text")}} element.
+
 > **Note:** At time of writing this feature has [limited support](#browser_compatibility).
 
 #### HTML
