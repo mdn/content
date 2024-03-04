@@ -240,13 +240,8 @@ The {{CSSXRef("white-space")}} CSS property can be used to create multiple lines
 The text inside the `<text>` element needs to be split into multiple lines for the new-lines to be detected. After the first line the rest need to have their whitespace removed.
 
 ```html-nolint
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="320"
-  height="150"
-  viewBox="0 0 320 150"
-  version="1.1">
-  <text y="20" x="10" dy="1rem">Here is an English paragraph
+<svg viewBox="0 0 320 150">
+  <text y="20" x="10">Here is an English paragraph
 that is broken into multiple lines
 in the source code so that it can
 be more easily read and edited
