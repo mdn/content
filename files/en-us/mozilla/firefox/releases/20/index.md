@@ -74,4 +74,4 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 ### Older versions
 
-{{Firefox_for_developers('19')}}
+{{Firefox_for_developers}}

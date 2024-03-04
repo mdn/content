@@ -799,7 +799,7 @@
 /en-US/docs/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/CSS/resize	/en-US/docs/Web/CSS/resize
 /en-US/docs/CSS/resolution	/en-US/docs/Web/CSS/resolution
-/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/CSS/right	/en-US/docs/Web/CSS/right
 /en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
@@ -3569,6 +3569,7 @@
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
 /en-US/docs/Glossary/Block/Block_(scripting)	/en-US/docs/Glossary/Block/Scripting
 /en-US/docs/Glossary/Boot2Gecko	/en-US/docs/Glossary/Firefox_OS
+/en-US/docs/Glossary/Brotli	/en-US/docs/Glossary/Brotli_compression
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext
@@ -3581,6 +3582,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
+/en-US/docs/Glossary/GZip	/en-US/docs/Glossary/GZip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -11678,7 +11680,7 @@
 /en-US/docs/Web/CSS/repeating-linear-gradient()	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
-/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
@@ -12780,6 +12782,7 @@
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
+/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps
@@ -12954,6 +12957,11 @@
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
