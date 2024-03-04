@@ -88,7 +88,7 @@ In this example, we style the first line of an SVG {{SVGElement("text")}} elemen
 
 ```html-nolint
 <svg viewBox="0 0 320 150">
-  <text dy="1rem">Here is an English paragraph
+  <text y="20">Here is an English paragraph
 that is broken into multiple lines
 in the source code so that it can
 be more easily read and edited
