@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_media-source.totalAudioEnergy
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-The {{domxref("RTCAudioSourceStats")}} dictionary's **`totalAudioEnergy`** property represents the total audio energy of the media source over the lifetime of this stats object.
+The **`totalAudioEnergy`** property of the {{domxref("RTCAudioSourceStats")}} dictionary represents the total audio energy of the media source over the lifetime of this stats object.
 
 The total energy across a particular duration can be determined by subtracting the value of this property returned by two different `getStats()` calls.
 

@@ -8,9 +8,9 @@ browser-compat: api.RTCStatsReport.type_media-source.kind
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCAudioSourceStats")}} dictionary's **`kind`** property is a string value that is used to differentiate `audio` and `video` media sources.
+The **`kind`** property of the {{domxref("RTCAudioSourceStats")}} dictionary is a string with the value `audio`.
 
-Along with the {{domxref("RTCAudioSourceStats.type", "type")}}, this identifies the object as an {{domxref("RTCAudioSourceStats")}} object when iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}}.
+The `kind` is used to differentiate between audio and video media sources when iterating an {{domxref("RTCStatsReport")}}, which both have a {{domxref("RTCAudioSourceStats.type", "type")}} of `media-source` (a `kind` of `video` indicates an {{domxref("RTCVideoSourceStats")}} object).
 
 ## Value
 

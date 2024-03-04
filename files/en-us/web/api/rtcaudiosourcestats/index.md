@@ -7,7 +7,7 @@ browser-compat: api.RTCStatsReport.type_media-source
 
 {{APIRef("WebRTC")}}
 
-The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)'s **`RTCAudioSourceStats`** dictionary provides information about an audio track that is attached to one or more senders.
+The **`RTCAudioSourceStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics information about an audio track that is attached to one or more senders.
 
 These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `media-source` and a [`kind`](#kind) of `audio`.
 
@@ -15,11 +15,11 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 
 ## Instance properties
 
-- {{domxref("RTCAudioSourceStats.audioLevel", "audioLevel")}} {{Experimental_Inline}}
+- {{domxref("RTCAudioSourceStats.audioLevel", "audioLevel")}} {{Experimental_Inline}}{{optional_inline}}
   - : A number that represents the audio level of the media source.
-- {{domxref("RTCAudioSourceStats.totalAudioEnergy", "totalAudioEnergy")}} {{Experimental_Inline}}
+- {{domxref("RTCAudioSourceStats.totalAudioEnergy", "totalAudioEnergy")}} {{Experimental_Inline}}{{optional_inline}}
   - : A number that represents the total audio energy of the media source over the lifetime of the stats object.
-- {{domxref("RTCAudioSourceStats.totalSamplesDuration", "totalSamplesDuration")}} {{Experimental_Inline}}
+- {{domxref("RTCAudioSourceStats.totalSamplesDuration", "totalSamplesDuration")}} {{Experimental_Inline}}{{optional_inline}}
   - : A number that represents the total duration of all samples produced by the media source over the lifetime of the stats object.
 
 The following properties are present in both `RTCAudioSourceStats` and {{domxref("RTCVideoSourceStats")}}: <!-- RTCMediaSourceStats  -->
@@ -27,7 +27,7 @@ The following properties are present in both `RTCAudioSourceStats` and {{domxref
 - {{domxref("RTCAudioSourceStats.trackIdentifier", "trackIdentifier")}}
   - : A string that contains the [`id`](/en-US/docs/Web/API/MediaStreamTrack/id) value of the [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) associated with the audio source.
 - {{domxref("RTCAudioSourceStats.kind", "kind")}}
-  - : A string indicating whether this object represents stats for a video source or a media source. For an `RTCAudioSourceStats` this will always be `audio`.
+  - : A string indicating the kind of media source. For an `RTCAudioSourceStats` this will always be `audio`.
 
 ### Common instance properties
 
