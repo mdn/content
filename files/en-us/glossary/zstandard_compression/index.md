@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 **Zstandard** is a general-purpose lossless compression algorithm.
 
-Zstandard, or `zstd` as short version, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios. It's backed by a very fast entropy stage, provided by [Huff0 and FSE library](https://github.com/Cyan4973/FiniteStateEntropy). It often offers better compression ratios than {{glossary("Brotli_compression", "brotli")}} (at equivalent CPU costs), or better CPU costs (at equivalent ratios).
+Zstandard, or `zstd` as short version, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios. It's backed by a very fast entropy stage, provided by [Huff0 and FSE library](https://github.com/Cyan4973/FiniteStateEntropy). It often offers better compression ratios than {{glossary("Brotli_compression", "brotli")}} at equivalent CPU costs, or better CPU costs at equivalent compression ratios.
 
 For browser support, see [Content-Encoding: Browser compatibility](/en-US/docs/Web/HTTP/Headers/Content-Encoding#browser_compatibility).
 
