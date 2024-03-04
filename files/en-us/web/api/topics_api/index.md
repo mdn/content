@@ -3,11 +3,12 @@ title: Topics API
 slug: Web/API/Topics_API
 page-type: web-api-overview
 status:
+  - experimental
   - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 
-{{DefaultAPISidebar("Topics API")}}
+{{DefaultAPISidebar("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
@@ -40,7 +41,7 @@ The Topics API has no distinct interfaces of its own.
 ### Extensions to other interfaces
 
 - {{domxref("Document.browsingTopics()")}}
-  - : Returns a promise that fulfills with an array of objects representing the selected topics for the current user, for the three most recent epochs. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
+  - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
 - {{domxref("fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 - {{domxref("HTMLIFrameElement.browsingTopics")}}

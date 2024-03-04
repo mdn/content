@@ -860,6 +860,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "DigitalCredential": {
+      "inh": "Credential",
+      "impl": []
+    },
     "DigitalGoodsService": {
       "inh": "",
       "impl": []
@@ -1876,6 +1880,10 @@
       "inh": "UIEvent",
       "impl": []
     },
+    "InstallEvent": {
+      "inh": "ExtendableEvent",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
       "impl": []
@@ -2328,6 +2336,14 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
+    "NotRestoredReasonDetails": {
+      "inh": "",
+      "impl": []
+    },
+    "NotRestoredReasons": {
+      "inh": "",
+      "impl": []
+    },
     "OES_draw_buffers_indexed": {
       "inh": "",
       "impl": []
@@ -2401,6 +2417,10 @@
       "impl": []
     },
     "PageRevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "PageSwapEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -3574,6 +3594,10 @@
     },
     "TextEncoderStream": {
       "inh": "",
+      "impl": []
+    },
+    "TextEvent": {
+      "inh": "UIEvent",
       "impl": []
     },
     "TextFormat": {

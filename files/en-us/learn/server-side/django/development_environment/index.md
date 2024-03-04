@@ -35,7 +35,7 @@ The development environment is an installation of Django on your local computer 
 
 The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
 
-There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
+There are other peripheral tools, that often form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDE for editing code, linters for auto formatting, and so on. We are assuming that you've already got a text editor installed.
 
 ### What are the Django setup options?
 
@@ -60,9 +60,9 @@ In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 #### What version of Python should be used?
 
 You can use any Python version supported by your target Django release.
-For Django 4.2 the allowed versions are Python 3.8 to 3.11 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django)).
+For Django 5.0 the allowed versions are Python 3.10 to 3.12 (see [FAQ:Installation](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)).
 
-The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
+The Django project _recommends_ (and "officially supports") using the newest available version of the supported Python release.
 
 #### Where can we download Django?
 
@@ -76,7 +76,7 @@ This article shows how to install Django from PyPi, in order to get the latest s
 
 #### Which database?
 
-Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/4.2/ref/databases/) that are better to avoid).
+Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/5.0/ref/databases/) that are better to avoid).
 
 For this article (and most of this module) we will be using the _SQLite_ database, which stores its data in a file. SQLite is intended for use as a lightweight database and can't support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.
 
@@ -103,14 +103,14 @@ This section briefly explains how you can check what versions of Python are pres
 
 > **Note:** Depending on your platform, you may also be able to install Python/pip from the operating system's own package manager or via other mechanisms. For most platforms, you can download the required installation files from <https://www.python.org/downloads/> and install them using the appropriate platform-specific method.
 
-### Ubuntu 20.04
+### Ubuntu 22.04
 
-Ubuntu Linux 20.04 LTS includes Python 3.8.10 by default.
+Ubuntu Linux 22.04 LTS includes Python 3.10.12 by default.
 You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
-# Output: Python 3.8.10
+# Output: Python 3.10.12
 ```
 
 However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
@@ -120,9 +120,8 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
-> **Note:** Python 3.8 is the oldest version [supported by Django 4.2](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django).
-> While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
-> If you want to update Python, then there are instructions on the internet.
+> **Note:** Python 3.10 is the oldest version [supported by Django 5.0](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
+> You don't _need_ to use the latest version of Python for this tutorial, but if you want to there are instructions on the internet.
 
 ### macOS
 
@@ -140,8 +139,8 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/macos/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
-      (at time of writing this is Python 3.11.4).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
+      (at time of writing this is Python 3.11.8).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -160,8 +159,8 @@ Windows doesn't include Python by default, but you can easily install it (along 
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/windows/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
-      (at time of writing this is Python 3.11.4).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
+      (at time of writing this is Python 3.11.8).
 
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
@@ -595,8 +594,8 @@ In the testing section you also briefly saw how we can create a new Django websi
 
 ## See also
 
-- [Quick Install Guide](https://docs.djangoproject.com/en/4.2/intro/install/) (Django docs)
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.2/topics/install/) (Django docs) — also covers how to remove Django
-- [How to install Django on Windows](https://docs.djangoproject.com/en/4.2/howto/windows/) (Django docs)
+- [Quick Install Guide](https://docs.djangoproject.com/en/5.0/intro/install/) (Django docs)
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/5.0/topics/install/) (Django docs) — also covers how to remove Django
+- [How to install Django on Windows](https://docs.djangoproject.com/en/5.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
