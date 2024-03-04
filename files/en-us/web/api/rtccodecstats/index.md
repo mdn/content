@@ -21,15 +21,15 @@ Note that other transports will use their own, different, `RTCCodecStats` object
 
 ## Instance properties
 
-- {{domxref("RTCCodecStats.channels", "channels")}}
+- {{domxref("RTCCodecStats.channels", "channels")}} {{optional_inline}}
   - : A positive number indicating the number of channels supported by the codec.
-- {{domxref("RTCCodecStats.clockRate", "clockRate")}}
+- {{domxref("RTCCodecStats.clockRate", "clockRate")}} {{optional_inline}}
   - : A positive number containing the media sampling rate.
 - {{domxref("RTCCodecStats.mimeType", "mimeType")}}
   - : A string containing the media MIME type/sub-type, such as video/VP8.
 - {{domxref("RTCCodecStats.payloadType", "payloadType")}}
   - : A positive integer value in the range of 0 to 127 indicating the payload type used in RTP encoding or decoding.
-- {{domxref("RTCCodecStats.sdpFmtpLine", "sdpFmtpLine")}}
+- {{domxref("RTCCodecStats.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}
   - : A string containing the format-specific parameters of the `"a=fmtp"` line in the codec's {{Glossary("SDP")}} (if present).
 - {{domxref("RTCCodecStats.transportId", "transportId")}}
   - : A string containing the unique identifier of the transport on which this codec is being used.
