@@ -152,6 +152,8 @@ text::first-letter {
 }
 ```
 
+#### Result
+
 {{ EmbedLiveSample("styling_first_letter_in_SVG_text_element", "100%", "100") }}
 
 ## Specifications
