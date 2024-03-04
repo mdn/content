@@ -334,12 +334,10 @@ Now we can create as many objects as we like, reusing the definition:
 
 ```js
 const salva = createPerson("Salva");
-salva.name;
 salva.introduceSelf();
 // "Hi! I'm Salva."
 
 const frankie = createPerson("Frankie");
-frankie.name;
 frankie.introduceSelf();
 // "Hi! I'm Frankie."
 ```
@@ -366,12 +364,10 @@ To call `Person()` as a constructor, we use `new`:
 
 ```js
 const salva = new Person("Salva");
-salva.name;
 salva.introduceSelf();
 // "Hi! I'm Salva."
 
 const frankie = new Person("Frankie");
-frankie.name;
 frankie.introduceSelf();
 // "Hi! I'm Frankie."
 ```

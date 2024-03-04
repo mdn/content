@@ -134,8 +134,6 @@ Elements belonging to this category are {{HTMLElement("Heading_Elements", "<code
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
-> **Note:** The {{HTMLElement("hgroup")}} element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification prior to HTML 5 being finalized, but is still part of the WHATWG specification and is at least partially supported by most browsers.
-
 ### Phrasing content
 
 Phrasing content, a subset of flow content, refers to the text and the markup within a document. Sequences of phrasing content make up paragraphs.

@@ -122,4 +122,4 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ## See also
 
-{{Firefox_for_developers('11')}}
+{{Firefox_for_developers}}
