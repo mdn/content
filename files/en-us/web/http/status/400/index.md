@@ -1,5 +1,5 @@
 ---
-title: 400 Bad Request
+title: 400 Bad Request change
 slug: Web/HTTP/Status/400
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.400
