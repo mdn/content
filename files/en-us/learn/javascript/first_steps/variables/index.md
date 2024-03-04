@@ -314,7 +314,7 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [the arrays article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
+To learn more, see our [arrays article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
 
 ### Objects
 
