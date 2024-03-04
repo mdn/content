@@ -99,6 +99,8 @@ in a text editor.
 
 #### CSS
 
+In order to make the SVG `<text>` element wrap to multiple lines, we use the {{cssxref("white-space", "", "#multiple_lines_in_svg_text_element")}} CSS property. We then select the first line using the `::first-line` pseudo-element.
+
 ```css hidden
 text {
   font-size: 20px;
