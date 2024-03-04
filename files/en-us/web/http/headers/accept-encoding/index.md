@@ -93,3 +93,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}
+- {{Glossary("Brotli compression")}}
+- {{Glossary("Gzip compression")}}
+- {{Glossary("Zstandard compression")}}
