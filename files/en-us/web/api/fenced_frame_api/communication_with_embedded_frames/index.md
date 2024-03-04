@@ -1,5 +1,5 @@
 ---
-title: Communication with embeded frames
+title: Communication with embedded frames
 slug: Web/API/Fenced_frame_API/Communication_with_embedded_frames
 page-type: guide
 ---
@@ -12,13 +12,13 @@ This article provides information on how communication differs between an embedd
 
 ![Diagram illustrating the difference between local storage and shared storage and communication with an iframe, as explained below](iframe-storage-communication.png)
 
-When the third-party code is embedded in an `<iframe>`, the `<iframe>` and the embedder can send messages freely to each other to request data to be written into their [shared storage](/en-US/docs/Web/API/Shared_Storage_API). The embedder can send a request to that `<iframe>` to write data into its own third-party storage with a cross-document communication channel using {{domxref("Window.postMessage()")}}. The third party can also send `postMessage()` requests to the embedder.
+When the third-party code is embedded in an `<iframe>`, the `<iframe>` and the embedder can send messages freely to each other to request data to be written into their client-side [shared storage](/en-US/docs/Web/API/Shared_Storage_API). The embedder can send a request to that `<iframe>` to write data into its own third-party storage with a cross-document communication channel using {{domxref("Window.postMessage()")}}. The third party can also send `postMessage()` requests to the embedder.
 
-From the `<iframe>`, you can listen to a [`message`](/en-US/docs/Web/API/Window/message_event) event that comes from the embedder. When the embedder dispatches a message to the `<iframe>` using `postMessage()`, the `<iframe>` can take that data and store it in its own shared storage. Conversely, the `<iframe>` can dispatch a message that the embedder can listen to, and respond by writing data into its shared storage.
+From the `<iframe>`, you can listen to a [`message`](/en-US/docs/Web/API/Window/message_event) event that comes from the embedder. When the embedder dispatches a message to the `<iframe>` using `postMessage()`, the `<iframe>` can take that data and store it in its own client-side shared storage. Conversely, the `<iframe>` can dispatch a message that the embedder can listen to, and respond by writing data into its shared storage.
 
 ## How to communicate between the embedder and a `<fencedframe>`
 
-Sometime in the future, fenced frames will likely become more common as they will be used for use cases such as displaying targeted ads selected via the [Protected Audience API](https://developer.chrome.com/en/docs/privacy-sandbox/fledge/) and {{domxref("WindowSharedStorage.selectURL()")}}. Communicating between `<fencedframe>`s and other pages outside the `<fencedframe>` on the page is intentionally limited, but one method of communication between the embedder and shared storage worklets does exist — {{domxref("FencedFrameConfig.setSharedStorageContext()")}}.
+Fenced frames are intended to be used for cases such as displaying targeted ads selected via the [Protected Audience API](https://developer.chrome.com/en/docs/privacy-sandbox/fledge/) and {{domxref("WindowSharedStorage.selectURL()")}}. Communicating between `<fencedframe>`s and other pages outside the `<fencedframe>` on the page is intentionally limited, but one method of communication between the embedder and shared storage worklets does exist — {{domxref("FencedFrameConfig.setSharedStorageContext()")}}.
 
 > **Note:** Within the same `<fencedframe>` tree, communication between frames is allowed. For example, a root `<fencedframe>` can send a message to a child `<iframe>` in its own tree, and a child `<iframe>` can send a message to the parent `<fencedframe>`.
 

@@ -9,7 +9,7 @@ browser-compat: http.headers.Supports-Loading-Mode
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The **`Supports-Loading-Mode`** header allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwse fail to be loaded in.
+The **`Supports-Loading-Mode`** header allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
 <table class="properties">
   <tbody>
@@ -44,8 +44,6 @@ The `Supports-Loading-Mode` header value is a list of one or more tokens, which 
   - : Indicates that a destination origin opts in to loading documents via cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering).
 - `fenced-frame`
   - : The response can loaded inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API). Without this explicit opt-in, all navigations inside of a fenced frame will fail.
-
-> **Note:** More values will likely be supported in the future.
 
 ## Examples
 

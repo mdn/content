@@ -9,7 +9,7 @@ browser-compat: api.Fence
 
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
-The **`Fence`** interface of the {{domxref("Fenced Frame API", "Fenced Frame API", "", "nocode")}} contains several functions relevant to fenced frame functionality.
+The **`Fence`** interface of the {{domxref("Fenced Frame API", "Fenced Frame API", "", "nocode")}} contains several functions relevant to {{htmlelement("fencedframe")}} functionality.
 
 `Fence` objects are accessed through the {{domxref("Window.fence")}} property, but they are only available to documents embedded inside {{htmlelement("fencedframe")}}s (loaded via {{domxref("FencedFrameConfig")}}s) or {{htmlelement("iframe")}}s (loaded via opaque URNs).
 

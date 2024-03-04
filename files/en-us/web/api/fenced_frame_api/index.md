@@ -15,7 +15,7 @@ The **Fenced Frame API** provides functionality for controlling content embedded
 
 One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is content embedded in {{htmlelement("iframe")}} elements. Historically `<iframe>`s have been used to set third-party cookies, which can be used to share information and track users across sites. In addition, content embedded in an `<iframe>` can communicate with its embedding document (for example, using {{domxref("Window.postMessage()")}}).
 
-The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains URL parameters. The `<iframe>` can also access the embedding context's DOM, and vice versa.
+The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
 
 Most modern browsers are working on mechanisms to partition storage so that cookie data can no longer be used for tracking (for example see [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) or [Firefox State Partitioning](/en-US/docs/Web/Privacy/State_Partitioning)).
 
@@ -55,7 +55,7 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque URN that can only be used in an `<iframe>`.
+`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
 
 Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
@@ -66,7 +66,6 @@ Either way, the browser stores a URL containing the target location of the conte
 ### Accessing fenced frame functionality on the `Fence` object
 
 Inside documents embedded in `<fencedframe>`s, JavaScript has access to a {{domxref("Window.fence")}} property that returns a {{domxref("Fence")}} instance for that document. This object contains several functions specifically relevant to fenced frame API functionality.
-
 For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specified URLs, in order to report ad views and clicks.
 
 ### Permissions policy
@@ -92,7 +91,7 @@ Other effects of fenced frames on HTTP headers are as follows:
 - [User-agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are not available inside fenced frames because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
 - Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside frenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
 - [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) has been added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
-- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, keep it unsandboxed, or specify at least the following attributes:
+- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, you need to specify no `sandbox` CSP (which implies the below values), or specify the following sandbox values:
   - `allow-same-origin`
   - `allow-forms`
   - `allow-scripts`
@@ -102,7 +101,7 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 ### `beforeunload` and `unload` events
 
-[`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) and [`unload`](/en-US/docs/Web/API/Window/unload_event) event handlers cannot be used inside fenced frames — they are not widely used and can leak information in the form of a page deletion timestamp. It is good to eliminate as many potential leakages as possible.
+[`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) and [`unload`](/en-US/docs/Web/API/Window/unload_event) events do not fire on fenced frames, because they can leak information in the form of a page deletion timestamp. Implementations aim to eliminate as many potential leakages as possible.
 
 ## Interfaces
 

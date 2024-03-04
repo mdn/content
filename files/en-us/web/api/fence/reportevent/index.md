@@ -11,7 +11,7 @@ browser-compat: api.Fence.reportEvent
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
 The **`reportEvent()`** method of the
-{{domxref("Fence")}} interface triggers the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/), for the purpose of collecting ad auction results.
+{{domxref("Fence")}} interface triggers the submission of report data via a [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience), for the purpose of collecting ad auction results.
 
 > **Note:** {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} provides similar report data submission, except in that case the submission is triggered via a navigation rather than by an explicit method call.
 
@@ -27,7 +27,7 @@ reportEvent(event)
   - : An object or string representing the data to send.
     - An object value defines a specific report event that you want to send. The required properties are as follows:
       - `eventType`
-        - : A string representing the type of event that is being reported — for example you might be interested in how many times an ad is clicked on. This string can be any relevant event name (for example [`click`](/en-US/docs/Web/API/Element/click_event)). This needs to match the event type specified in the associated {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} call in a Protected Audience API worklet.
+        - : A string representing the type of event that is being reported — for example you might be interested in how many times an ad is clicked on. This string can be any relevant event name (for example [`click`](/en-US/docs/Web/API/Element/click_event)). This needs to match the event type specified in the associated {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} call in a [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience) worklet.
       - `eventData`
         - : A string representing the data to be sent.
       - `destination`
