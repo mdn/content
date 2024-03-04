@@ -21,7 +21,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("MediaDeviceInfo"
 
 _Also inherits methods from its parent interface, {{DOMxRef("MediaDeviceInfo")}}._
 
-- {{domxref("InputDeviceInfo.getCapabilities()")}}
+- {{domxref("InputDeviceInfo.getCapabilities()")}} {{SecureContext_Inline}}
   - : Returns a `MediaTrackCapabilities` object describing the primary audio or video track of a device's `MediaStream`.
 
 ## Examples

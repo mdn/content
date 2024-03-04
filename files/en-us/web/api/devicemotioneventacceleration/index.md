@@ -11,11 +11,11 @@ The **`DeviceMotionEventAcceleration`** interface of the {{domxref("Device Orien
 
 ## Instance properties
 
-- {{domxref("DeviceMotionEventAcceleration.x")}} {{ReadOnlyInline}}
+- {{domxref("DeviceMotionEventAcceleration.x")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The amount of acceleration along the X axis.
-- {{domxref("DeviceMotionEventAcceleration.y")}} {{ReadOnlyInline}}
+- {{domxref("DeviceMotionEventAcceleration.y")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The amount of acceleration along the Y axis.
-- {{domxref("DeviceMotionEventAcceleration.z")}} {{ReadOnlyInline}}
+- {{domxref("DeviceMotionEventAcceleration.z")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The amount of acceleration along the Z axis.
 
 ## Specifications

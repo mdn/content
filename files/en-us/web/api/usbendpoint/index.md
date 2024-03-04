@@ -13,12 +13,12 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
 ## Constructor
 
-- {{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}} {{Experimental_Inline}}
+- {{domxref("USBEndpoint.USBEndpoint", "USBEndpoint()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `USBEndpoint` object which will be populated with information about the endpoint on the provided {{domxref('USBAlternateInterface')}} with the given endpoint number and transfer direction.
 
 ## Instance properties
 
-- {{domxref("USBEndpoint.endpointNumber")}} {{Experimental_Inline}}
+- {{domxref("USBEndpoint.endpointNumber")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns this endpoint's "endpoint number" which is a value from 1 to 15 extracted from the `bEndpointAddress` field of the endpoint descriptor defining this endpoint. This value is used to identify the endpoint when calling methods on `USBDevice`.
 - {{domxref("USBEndpoint.direction")}} {{Experimental_Inline}}
 
@@ -35,7 +35,7 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
     - `"interrupt"` - Provides reliable data transfer for small payloads. Data sent through an interrupt endpoint is guaranteed to be delivered or generate an error and is also given dedicated bus time for transmission.
     - `"isochronous"` - Provides unreliable data transfer for payloads that must be delivered periodically. They are given dedicated bus time but if a deadline is missed the data is dropped.
 
-- {{domxref("USBEndpoint.packetSize")}} {{Experimental_Inline}}
+- {{domxref("USBEndpoint.packetSize")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the size of the packets that data sent through this endpoint will be divided into.
 
 ## Examples

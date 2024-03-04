@@ -15,16 +15,16 @@ The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_De
 
 ## Constructor
 
-- {{domxref("XRRay.XRRay", "XRRay()")}} {{Experimental_Inline}}
+- {{domxref("XRRay.XRRay", "XRRay()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `XRRay` object.
 
 ## Instance properties
 
-- {{domxref("XRRay.direction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRRay.direction")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the ray's 3-dimensional directional vector.
-- {{domxref("XRRay.matrix")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRRay.matrix")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A transform that can be used to position objects along the `XRRay`. This is a 4 by 4 matrix given as a 16 element {{jsxref("Float32Array")}} in column major order.
-- {{domxref("XRRay.origin")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRRay.origin")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 
 ## Instance methods

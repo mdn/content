@@ -19,18 +19,18 @@ This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permi
 
 ## Constructor
 
-- {{domxref("Accelerometer.Accelerometer()", "Accelerometer()")}} {{Experimental_Inline}}
+- {{domxref("Accelerometer.Accelerometer()", "Accelerometer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `Accelerometer` object.
 
 ## Instance properties
 
 _In addition to the properties listed below, `Accelerometer` inherits properties from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
-- {{domxref('Accelerometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('Accelerometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a double containing the acceleration of the device along the device's x axis.
-- {{domxref('Accelerometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('Accelerometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a double containing the acceleration of the device along the device's y axis.
-- {{domxref('Accelerometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('Accelerometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a double containing the acceleration of the device along the device's z axis.
 
 ## Instance methods

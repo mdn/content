@@ -23,63 +23,63 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-- {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
-- {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the {{domxref("ServiceWorker")}} object that represents the service worker.
 
 ## Instance methods
 
 _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
+- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} {{SecureContext_Inline}}
   - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
 
 ## Events
 
 Listen to this event using {{domxref("EventTarget/addEventListener()", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
+- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} {{SecureContext_Inline}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
-- {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has been canceled by the user or the app.
-- {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when the user has clicked on the UI for a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation.
-- {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when at least one of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has failed.
-- {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
-- {{domxref("ServiceWorkerGlobalScope/canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
-- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
-- {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
-- {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
+- {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} {{SecureContext_Inline}}
   - : Occurs when a {{domxref("fetch()")}} is called.
-- {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
+- {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} {{SecureContext_Inline}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
-- {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
+- {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} {{SecureContext_Inline}}
   - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers.
-- {{domxref("ServiceWorkerGlobalScope/messageerror_event", "messageerror")}}
+- {{domxref("ServiceWorkerGlobalScope/messageerror_event", "messageerror")}} {{SecureContext_Inline}}
   - : Occurs when incoming messages can't be deserialized.
-- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
+- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} {{SecureContext_Inline}}
   - : Occurs when a user clicks on a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
+- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} {{SecureContext_Inline}}
   - : Occurs when a user closes a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope/paymentrequest_event", "paymentrequest")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/paymentrequest_event", "paymentrequest")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired on a payment app when a payment flow has been initiated on the merchant website via the {{domxref("PaymentRequest.show()")}} method.
-- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
+- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} {{SecureContext_Inline}}
   - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
-- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
-- {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
+- {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} {{SecureContext_Inline}}
   - : Occurs when a server push notification is received.
-- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
+- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} {{SecureContext_Inline}}
   - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
 
 ## Examples

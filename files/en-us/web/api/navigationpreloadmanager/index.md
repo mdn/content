@@ -14,13 +14,13 @@ The result of a preload fetch request is waited on using the promise returned by
 
 ## Instance methods
 
-- {{domxref("NavigationPreloadManager.enable()")}}
+- {{domxref("NavigationPreloadManager.enable()")}} {{SecureContext_Inline}}
   - : Enables navigation preloading, returning a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
-- {{domxref("NavigationPreloadManager.disable()")}}
+- {{domxref("NavigationPreloadManager.disable()")}} {{SecureContext_Inline}}
   - : Disables navigation preloading, returning a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
-- {{domxref("NavigationPreloadManager.setHeaderValue()")}}
+- {{domxref("NavigationPreloadManager.setHeaderValue()")}} {{SecureContext_Inline}}
   - : Sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header sent in preloading requests and returns an empty {{jsxref("Promise")}}.
-- {{domxref("NavigationPreloadManager.getState()")}}
+- {{domxref("NavigationPreloadManager.getState()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preloading is enabled, and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header in preloading requests.
 
 ## Description

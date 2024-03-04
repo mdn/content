@@ -13,12 +13,12 @@ The **`XRAnchor`** interface creates anchors which keep track of the pose that i
 
 ## Instance properties
 
-- {{domxref("XRAnchor.anchorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRAnchor.anchorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("XRSpace")}} object to locate the anchor relative to other `XRSpace` objects.
 
 ## Instance methods
 
-- {{domxref("XRAnchor.delete()")}} {{Experimental_Inline}}
+- {{domxref("XRAnchor.delete()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Removes the anchor.
 
 ## Examples

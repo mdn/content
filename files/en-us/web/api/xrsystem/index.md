@@ -21,15 +21,15 @@ _While `XRSystem` directly offers no properties, it does inherit properties from
 
 _In addition to inheriting methods from its parent interface, {{domxref("EventTarget")}}, the `XRSystem` interface includes the following methods:_
 
-- {{DOMxRef("XRSystem.isSessionSupported", "isSessionSupported()")}} {{Experimental_Inline}}
+- {{DOMxRef("XRSystem.isSessionSupported", "isSessionSupported()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise which resolves to `true` if the browser supports the given session mode.
     Resolves to `false` if the specified mode isn't supported.
-- {{DOMxRef("XRSystem.requestSession", "requestSession()")}} {{Experimental_Inline}}
+- {{DOMxRef("XRSystem.requestSession", "requestSession()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise that resolves to a new {{DOMxRef("XRSession")}} with the specified session mode.
 
 ## Events
 
-- {{domxref("XRSystem.devicechange_event", "devicechange")}} {{Experimental_Inline}}
+- {{domxref("XRSystem.devicechange_event", "devicechange")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sent when the set of available XR devices has changed.
     Also available using the `ondevicechange` event handler.
 

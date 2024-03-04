@@ -19,13 +19,13 @@ None.
 
 ## Instance methods
 
-- {{domxref("PushMessageData.arrayBuffer()")}}
+- {{domxref("PushMessageData.arrayBuffer()")}} {{SecureContext_Inline}}
   - : Extracts the data as an {{jsxref("ArrayBuffer")}} object.
-- {{domxref("PushMessageData.blob()")}}
+- {{domxref("PushMessageData.blob()")}} {{SecureContext_Inline}}
   - : Extracts the data as a {{domxref("Blob")}} object.
-- {{domxref("PushMessageData.json()")}}
+- {{domxref("PushMessageData.json()")}} {{SecureContext_Inline}}
   - : Extracts the data as a [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
-- {{domxref("PushMessageData.text()")}}
+- {{domxref("PushMessageData.text()")}} {{SecureContext_Inline}}
   - : Extracts the data as a plain text string.
 
 ## Examples

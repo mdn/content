@@ -25,7 +25,7 @@ An event is fired at the `WakeLockSentinel` if the platform lock is released, al
 
 _Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
+- {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
 - {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
 
@@ -39,12 +39,12 @@ _Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}.
 
 _Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 
-- {{domxref('WakeLockSentinel.release()', 'release()')}}
+- {{domxref('WakeLockSentinel.release()', 'release()')}} {{SecureContext_Inline}}
   - : Releases the `WakeLockSentinel`, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
 
 ## Events
 
-- {{domxref("WakeLockSentinel.release_event", "release")}}
+- {{domxref("WakeLockSentinel.release_event", "release")}} {{SecureContext_Inline}}
   - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
 
 ## Examples

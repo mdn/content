@@ -18,19 +18,19 @@ This interface requires a secure context.
 
 ## Constructor
 
-- {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}} {{Experimental_Inline}}
+- {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `IdleDetector` object.
 
 ## Instance properties
 
-- {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a string indicating whether the users has interacted with either the screen or the device within the threshold provided to `start()`, one of `"active"` or `"idle"`. This attribute returns `null` before `start()` is called.
-- {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a string indicating whether the screen is locked, one of `"locked"` or `"unlocked"`. This attribute returns `null` before `start()` is called.
 
 ## Events
 
-- {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}}
+- {{domxref("IdleDetector.change_event", "change")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Called when the value of `userState` or `screenState` has changed.
 
 ## Static methods
@@ -42,7 +42,7 @@ This interface requires a secure context.
 
 ## Instance methods
 
-- {{domxref("IdleDetector.start()")}} {{Experimental_Inline}}
+- {{domxref("IdleDetector.start()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a `Promise` that resolves when the detector starts listening for
     changes in the user's idle state. `userState` and `screenState` are given
     initial values. This method takes an optional `options` object with the `threshold` in

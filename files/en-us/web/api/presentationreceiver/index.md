@@ -13,7 +13,7 @@ The **`PresentationReceiver`** interface of the [Presentation API](/en-US/docs/W
 
 ## Instance properties
 
-- {{domxref('PresentationReceiver.connectionList')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('PresentationReceiver.connectionList')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with a {{domxref('PresentationConnectionList')}} object containing a list of _incoming presentation connections._
 
 ## Specifications

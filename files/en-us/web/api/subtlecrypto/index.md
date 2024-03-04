@@ -25,29 +25,29 @@ _This interface doesn't inherit any properties, as it has no parent interface._
 
 _This interface doesn't inherit any methods, as it has no parent interface._
 
-- {{domxref("SubtleCrypto.encrypt()")}}
+- {{domxref("SubtleCrypto.encrypt()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with the encrypted data corresponding to the clear text, algorithm, and key given as parameters.
-- {{domxref("SubtleCrypto.decrypt()")}}
+- {{domxref("SubtleCrypto.decrypt()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with the clear data corresponding to the encrypted text, algorithm, and key given as parameters.
-- {{domxref("SubtleCrypto.sign()")}}
+- {{domxref("SubtleCrypto.sign()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with the signature corresponding to the text, algorithm, and key given as parameters.
-- {{domxref("SubtleCrypto.verify()")}}
+- {{domxref("SubtleCrypto.verify()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a boolean value indicating if the signature given as a parameter matches the text, algorithm, and key that are also given as parameters.
-- {{domxref("SubtleCrypto.digest()")}}
+- {{domxref("SubtleCrypto.digest()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a digest generated from the algorithm and text given as parameters.
-- {{domxref("SubtleCrypto.generateKey()")}}
+- {{domxref("SubtleCrypto.generateKey()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a newly-generated {{domxref("CryptoKey")}}, for symmetrical algorithms, or a {{domxref("CryptoKeyPair")}}, containing two newly generated keys, for asymmetrical algorithms. These will match the algorithm, usages, and extractability given as parameters.
-- {{domxref("SubtleCrypto.deriveKey()")}}
+- {{domxref("SubtleCrypto.deriveKey()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a newly generated {{domxref("CryptoKey")}} derived from the master key and specific algorithm given as parameters.
-- {{domxref("SubtleCrypto.deriveBits()")}}
+- {{domxref("SubtleCrypto.deriveBits()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a newly generated buffer of pseudo-random bits derived from the master key and specific algorithm given as parameters.
-- {{domxref("SubtleCrypto.importKey()")}}
+- {{domxref("SubtleCrypto.importKey()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}} corresponding to the format, the algorithm, raw key data, usages, and extractability given as parameters.
-- {{domxref("SubtleCrypto.exportKey()")}}
+- {{domxref("SubtleCrypto.exportKey()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with the raw key data containing the key in the requested format.
-- {{domxref("SubtleCrypto.wrapKey()")}}
+- {{domxref("SubtleCrypto.wrapKey()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a wrapped symmetric key for usage (transfer and storage) in insecure environments. The wrapped key matches the format specified in the given parameters, and wrapping is done by the given wrapping key, using the specified algorithm.
-- {{domxref("SubtleCrypto.unwrapKey()")}}
+- {{domxref("SubtleCrypto.unwrapKey()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}} corresponding to the wrapped key given in the parameter.
 
 ## Using SubtleCrypto

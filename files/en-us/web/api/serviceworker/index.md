@@ -28,16 +28,16 @@ Dynamic import is disallowed by the specification — calling [`import()`](/en-U
 
 _The `ServiceWorker` interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("ServiceWorker.scriptURL")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorker.scriptURL")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the `ServiceWorker` serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the `ServiceWorker`.
-- {{domxref("ServiceWorker.state")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorker.state")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the state of the service worker. It returns one of the following values: `parsed`, `installing`, `installed`, `activating`, `activated`, or `redundant`.
 
 ## Instance methods
 
 _The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("ServiceWorker.postMessage()")}}
+- {{domxref("ServiceWorker.postMessage()")}} {{SecureContext_Inline}}
   - : Sends a message — consisting of any [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) JavaScript object — to the service worker. The message is transmitted to the service worker using a {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event on its global scope.
 
 ## Events
@@ -46,7 +46,7 @@ _The `ServiceWorker` interface inherits methods from its parent, {{domxref("Even
 
   - : Fired when {{domxref("ServiceWorker.state")}} changes.
 
-- {{domxref("ServiceWorker.error_event", "error")}}
+- {{domxref("ServiceWorker.error_event", "error")}} {{SecureContext_Inline}}
   - : Fired when an error happens inside the `ServiceWorker` object.
 
 ## Examples

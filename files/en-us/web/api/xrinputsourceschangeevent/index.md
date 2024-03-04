@@ -13,16 +13,16 @@ The WebXR Device API interface **`XRInputSourcesChangeEvent`** is used to repres
 
 ## Constructor
 
-- {{domxref("XRInputSourcesChangeEvent.XRInputSourcesChangeEvent", "XRInputSourcesChangeEvent()")}}
+- {{domxref("XRInputSourcesChangeEvent.XRInputSourcesChangeEvent", "XRInputSourcesChangeEvent()")}} {{SecureContext_Inline}}
   - : Creates and returns a new `XRInputSourcesChangeEvent` object. The specified type must be `inputsourceschange`, which is the only event that uses this interface.
 
 ## Instance properties
 
-- {{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}}
+- {{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been newly connected or enabled for use.
-- {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} {{ReadOnlyInline}}
+- {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices newly connected or enabled for use.
-- {{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}}
+- {{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The {{domxref("XRSession")}} to which this input source change event is being directed.
 
 ## Instance methods

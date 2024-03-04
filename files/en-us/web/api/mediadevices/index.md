@@ -19,20 +19,20 @@ _Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-- {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
+- {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} {{SecureContext_Inline}}
   - : Obtains an array of information about the media input and output devices available on the system.
-- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
+- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}} {{SecureContext_Inline}}
   - : Returns an object conforming to {{domxref("MediaTrackSupportedConstraints")}} indicating which constrainable properties are supported on the {{domxref("MediaStreamTrack")}} interface. See [Media Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) to learn more about constraints and how to use them.
-- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
+- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} {{SecureContext_Inline}}
   - : Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a `MediaStream`.
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} {{SecureContext_Inline}}
   - : With the user's permission through a prompt, turns on a camera and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.
-- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}}
+- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Prompts the user to select a specific audio output device.
 
 ## Events
 
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}} {{SecureContext_Inline}}
   - : Fired when a media input or output device is attached to or removed from the user's computer.
 
 ## Example

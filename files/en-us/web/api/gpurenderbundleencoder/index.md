@@ -27,16 +27,16 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
 
 ## Instance properties
 
-- {{domxref("GPURenderBundleEncoder.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPURenderBundleEncoder.draw", "draw()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.draw", "draw()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Draw primitives based on the vertex buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}}.
-- {{domxref("GPURenderBundleEncoder.drawIndexed", "drawIndexed()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.drawIndexed", "drawIndexed()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Draw indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderBundleEncoder.setIndexBuffer", "setIndexBuffer()")}}
-- {{domxref("GPURenderBundleEncoder.drawIndirect", "drawIndirect()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.drawIndirect", "drawIndirect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Draw primitives using parameters read from a {{domxref("GPUBuffer")}}.
 - {{domxref("GPURenderBundleEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}} {{Experimental_Inline}}
 
@@ -46,11 +46,11 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
 
   - : Completes recording of the current render pass command sequence.
 
-- {{domxref("GPURenderBundleEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Marks a specific point in a series of encoded commands with a label.
-- {{domxref("GPURenderBundleEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Ends a debug group, which is begun with a {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
-- {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPURenderBundleEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 - {{domxref("GPURenderBundleEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}}
 
@@ -64,7 +64,7 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
 
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render bundle.
 
-- {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets or unsets the current {{domxref("GPUBuffer")}} that will provide vertex data for subsequent drawing commands.
 
 ## Examples

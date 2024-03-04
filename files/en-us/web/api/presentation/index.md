@@ -15,9 +15,9 @@ In controlling browsing context, the `Presentation` interface provides a mechani
 
 ## Instance properties
 
-- {{DOMxRef("Presentation.defaultRequest")}} {{Experimental_Inline}}
+- {{DOMxRef("Presentation.defaultRequest")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : In a [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent), the `defaultRequest` attribute _MUST_ return the [default presentation request](https://www.w3.org/TR/presentation-api/#dfn-default-presentation-request) if any, `null` otherwise. In a [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context), it _MUST_ return `null`.
-- {{DOMxRef("Presentation.receiver")}} {{Experimental_Inline}}
+- {{DOMxRef("Presentation.receiver")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : In a [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent), the `receiver` attribute _MUST_ return the {{DOMxRef("PresentationReceiver")}} instance associated with the [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) and created by the [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent) when the [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) is created.
 
 ## Instance methods

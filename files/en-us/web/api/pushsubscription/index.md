@@ -13,22 +13,22 @@ An instance of this interface can be serialized.
 
 ## Instance properties
 
-- {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}}
+- {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string containing the endpoint associated with the push subscription.
-- {{domxref("PushSubscription.expirationTime")}} {{ReadOnlyInline}}
+- {{domxref("PushSubscription.expirationTime")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
-- {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}
+- {{domxref("PushSubscription.options")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An object containing the options used to create the subscription.
 - {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : A string containing the subscription ID associated with the push subscription.
 
 ## Instance methods
 
-- {{domxref("PushSubscription.getKey()")}}
+- {{domxref("PushSubscription.getKey()")}} {{SecureContext_Inline}}
   - : Returns an {{jsxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.
-- {{domxref("PushSubscription.toJSON()")}}
+- {{domxref("PushSubscription.toJSON()")}} {{SecureContext_Inline}}
   - : Standard serializer — returns a JSON representation of the subscription properties.
-- {{domxref("PushSubscription.unsubscribe()")}}
+- {{domxref("PushSubscription.unsubscribe()")}} {{SecureContext_Inline}}
   - : Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a boolean value when the current subscription is successfully unregistered.
 
 ## Example

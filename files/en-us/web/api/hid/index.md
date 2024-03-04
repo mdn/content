@@ -21,16 +21,16 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
 
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("HID.getDevices","getDevices()")}} {{Experimental_Inline}}
+- {{domxref("HID.getDevices","getDevices()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
-- {{domxref("HID.requestDevice","requestDevice()")}} {{Experimental_Inline}}
+- {{domxref("HID.requestDevice","requestDevice()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects. Calling this function will trigger the user agent's permission flow in order to gain permission to access one selected device from the returned list of devices.
 
 ### Events
 
-- {{domxref("HID.connect_event", "connect")}} {{Experimental_Inline}}
+- {{domxref("HID.connect_event", "connect")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when an HID device is connected.
-- {{domxref("HID.disconnect_event", "disconnect")}} {{Experimental_Inline}}
+- {{domxref("HID.disconnect_event", "disconnect")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when an HID device is disconnected.
 
 ## Specifications

@@ -24,13 +24,13 @@ Additional requirements for using the API are discussed in the [Security conside
 
 _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes its methods._
 
-- {{domxref("Clipboard.read()","read()")}}
+- {{domxref("Clipboard.read()","read()")}} {{SecureContext_Inline}}
   - : Requests arbitrary data (such as images) from the clipboard, returning a {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects containing the clipboard's contents.
-- {{domxref("Clipboard.readText()","readText()")}}
+- {{domxref("Clipboard.readText()","readText()")}} {{SecureContext_Inline}}
   - : Requests text from the system clipboard, returning a {{jsxref("Promise")}} that is fulfilled with a string containing the clipboard's text once it's available.
-- {{domxref("Clipboard.write()","write()")}}
+- {{domxref("Clipboard.write()","write()")}} {{SecureContext_Inline}}
   - : Writes arbitrary data to the system clipboard, returning a {{jsxref("Promise")}} that resolves when the operation completes.
-- {{domxref("Clipboard.writeText()","writeText()")}}
+- {{domxref("Clipboard.writeText()","writeText()")}} {{SecureContext_Inline}}
   - : Writes text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the text is fully copied into the clipboard.
 
 ## Specifications

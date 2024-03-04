@@ -13,12 +13,12 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/AP
 
 ## Constructor
 
-- {{domxref("MIDIConnectionEvent.MIDIConnectionEvent", "MIDIConnectionEvent()")}}
+- {{domxref("MIDIConnectionEvent.MIDIConnectionEvent", "MIDIConnectionEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `MIDIConnectionEvent` object.
 
 ## Instance properties
 
-- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
+- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
 
 ## Examples

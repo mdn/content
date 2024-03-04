@@ -14,23 +14,23 @@ Server on a remote device.
 
 ## Instance properties
 
-- {{DOMxRef("BluetoothRemoteGATTServer.connected")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.connected")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A boolean value that returns true while this script execution environment is
     connected to `this.device`. It can be false while the user agent is
     physically connected.
-- {{DOMxRef("BluetoothRemoteGATTServer.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.device")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A reference to the {{DOMxRef("BluetoothDevice")}} running the server.
 
 ## Instance methods
 
-- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Causes the script execution environment to connect to `this.device`.
-- {{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Causes the script execution environment to disconnect from `this.device`.
-- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise to the primary {{DOMxRef("BluetoothRemoteGATTService")}} offered by the
     Bluetooth device for a specified `BluetoothServiceUUID`.
-- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise to a list of primary {{DOMxRef("BluetoothRemoteGATTService")}} objects
     offered by the Bluetooth device for a specified `BluetoothServiceUUID`.
 

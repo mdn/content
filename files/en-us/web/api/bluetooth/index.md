@@ -21,16 +21,16 @@ _Inherits properties from its parent {{domxref("EventTarget")}}._
 
 ## Instance methods
 
-- {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}} {{Experimental_Inline}}
+- {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolved to a boolean value indicating
     whether the user-agent has the ability to support Bluetooth. Some user-agents let the
     user configure an option that affects what is returned by this value. If this option
     is set, that is the value returned by this method.
-- {{domxref("Bluetooth.getDevices","Bluetooth.getDevices()")}} {{Experimental_Inline}}
+- {{domxref("Bluetooth.getDevices","Bluetooth.getDevices()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolved to an array of
     {{domxref("BluetoothDevice")}}s which the origin already obtained permission for via a
     call to {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}}.
-- {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} {{Experimental_Inline}}
+- {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the
     specified options.
 

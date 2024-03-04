@@ -86,7 +86,7 @@ _The Worklet interface does not define any properties._
 
 ## Instance methods
 
-- {{domxref("Worklet.addModule()")}}
+- {{domxref("Worklet.addModule()")}} {{SecureContext_Inline}}
   - : Adds the script module at the given URL to the current worklet.
 
 ## Specifications

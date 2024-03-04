@@ -20,20 +20,20 @@ Below is a list of interfaces based on the FileSystemHandle interface.
 
 ## Instance properties
 
-- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}}
+- {{domxref('FileSystemHandle.kind','kind')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the type of entry. This is `'file'` if the associated entry is a file or `'directory'`.
-- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}}
+- {{domxref('FileSystemHandle.name', 'name')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the name of the associated entry.
 
 ## Instance methods
 
-- {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
+- {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}} {{SecureContext_Inline}}
   - : Compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
-- {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
+- {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Queries the current permission state of the current handle.
 - {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Requests removal of the entry represented by the handle from the underlying file system.
-- {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
+- {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Requests read or readwrite permissions for the file handle.
 
 ## Examples

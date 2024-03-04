@@ -11,11 +11,11 @@ A **`DeviceMotionEventRotationRate`** interface of the {{domxref("Device Orienta
 
 ## Instance properties
 
-- {{ domxref("DeviceMotionEventRotationRate.alpha") }} {{ReadOnlyInline}}
+- {{ domxref("DeviceMotionEventRotationRate.alpha") }} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The amount of rotation around the Z axis, in degrees per second.
-- {{ domxref("DeviceMotionEventRotationRate.beta") }} {{ReadOnlyInline}}
+- {{ domxref("DeviceMotionEventRotationRate.beta") }} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The amount of rotation around the X axis, in degrees per second.
-- {{ domxref("DeviceMotionEventRotationRate.gamma") }} {{ReadOnlyInline}}
+- {{ domxref("DeviceMotionEventRotationRate.gamma") }} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The amount of rotation around the Y axis, in degrees per second.
 
 ## Specifications

@@ -19,9 +19,9 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 
 ## Instance properties
 
-- {{domxref("Credential.id")}} {{ReadOnlyInline}}
+- {{domxref("Credential.id")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the credential's identifier. This might be any one of a GUID, username, or email address.
-- {{domxref("Credential.type")}} {{ReadOnlyInline}}
+- {{domxref("Credential.type")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the credential's type. Valid values are `password`, `federated`, `public-key`, `identity` and `otp`. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}}, {{domxref("PublicKeyCredential")}}, {{domxref("IdentityCredential")}} and {{domxref("OTPCredential")}})
 
 ## Instance methods

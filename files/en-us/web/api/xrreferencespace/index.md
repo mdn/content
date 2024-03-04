@@ -21,7 +21,7 @@ _`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but de
 
 _`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
 
-- {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}
+- {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} {{SecureContext_Inline}}
   - : Creates and returns a new reference space object as the same type as the one on which you call the method (so, either `XRReferenceSpace` or {{domxref("XRBoundedReferenceSpace")}}). The new reference space can be used to transform a coordinate from the reference space of the object on which the method is called into a different coordinate space. This is useful for positioning objects while rendering, and to perform the needed transforms when changing the viewer's position and/or orientation in 3D space.
 
 ## Events

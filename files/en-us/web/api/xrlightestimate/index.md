@@ -15,11 +15,11 @@ To get an `XRLightEstimate` object, call the {{domxref("XRFrame.getLightEstimate
 
 ## Instance properties
 
-- {{domxref("XRLightEstimate.primaryLightDirection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRLightEstimate.primaryLightDirection")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} representing the direction to the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
-- {{domxref("XRLightEstimate.primaryLightIntensity")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRLightEstimate.primaryLightIntensity")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{domxref("DOMPointReadOnly")}} (with the `x`, `y`, `z` values mapped to RGB) representing the intensity of the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
-- {{domxref("XRLightEstimate.sphericalHarmonicsCoefficients")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRLightEstimate.sphericalHarmonicsCoefficients")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 
 ## Instance methods

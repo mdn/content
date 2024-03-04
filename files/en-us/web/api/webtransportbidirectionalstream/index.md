@@ -13,9 +13,9 @@ The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTranspo
 
 ## Instance properties
 
-- {{domxref("WebTransportBidirectionalStream.readable", "readable")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportBidirectionalStream.readable", "readable")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("WebTransportReceiveStream")}} instance that can be used to read incoming data.
-- {{domxref("WebTransportBidirectionalStream.writable", "writable")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportBidirectionalStream.writable", "writable")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("WebTransportSendStream")}} instance that can be used to write outgoing data.
 
 ## Examples

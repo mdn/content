@@ -19,7 +19,7 @@ Internal errors occur when something happens in the WebGPU implementation that w
 
 ## Constructor
 
-- {{domxref("GPUInternalError.GPUInternalError", "GPUInternalError()")}} {{Experimental_Inline}}
+- {{domxref("GPUInternalError.GPUInternalError", "GPUInternalError()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `GPUInternalError` object instance.
 
 ## Instance properties

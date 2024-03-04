@@ -17,7 +17,7 @@ A `GPUBindGroup` object instance is created using the {{domxref("GPUDevice.creat
 
 ## Instance properties
 
-- {{domxref("GPUBindGroup.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUBindGroup.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

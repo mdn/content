@@ -15,7 +15,7 @@ To use this sensor, the user must grant permission to the `'accelerometer'` devi
 
 ## Constructor
 
-- {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}
+- {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}} {{SecureContext_Inline}}
   - : Creates a new `GravitySensor` object.
 
 ## Instance properties

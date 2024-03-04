@@ -21,7 +21,7 @@ _This interface also inherits methods from {{domxref("MIDIPort")}}._
 
 - {{domxref("MIDIOutput.send()")}}
   - : Queues a message to be sent to the MIDI port.
-- {{domxref("MIDIOutput.clear()")}}
+- {{domxref("MIDIOutput.clear()")}} {{SecureContext_Inline}}
   - : Clears any pending send data from the queue.
 
 ## Examples

@@ -18,11 +18,11 @@ This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushMana
 
 ## Instance methods
 
-- {{domxref("PushManager.getSubscription()")}}
+- {{domxref("PushManager.getSubscription()")}} {{SecureContext_Inline}}
   - : Retrieves an existing push subscription. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.
-- {{domxref("PushManager.permissionState()")}}
+- {{domxref("PushManager.permissionState()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to the permission state of the current {{domxref("PushManager")}}, which will be one of `'granted'`, `'denied'`, or `'prompt'`.
-- {{domxref("PushManager.subscribe()")}}
+- {{domxref("PushManager.subscribe()")}} {{SecureContext_Inline}}
   - : Subscribes to a push service. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of a push subscription. A new push subscription is created if the current service worker does not have an existing subscription.
 
 ### Deprecated methods

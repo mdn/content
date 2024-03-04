@@ -17,32 +17,32 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ## Constructor
 
-- {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}} {{Experimental_Inline}}
+- {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates and returns a new `XRWebGLLayer` object for use by the specified {{domxref("XRSession")}}, using a particular {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}} as the destination context.
 
 ## Instance properties
 
-- {{domxref('XRWebGLLayer.antialias', "antialias")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.antialias', "antialias")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A Boolean value indicating whether or not the WebGL context's framebuffer supports anti-aliasing. The specific type of anti-aliasing is determined by the {{Glossary("user agent")}}.
-- {{domxref('XRWebGLLayer.fixedFoveation', "fixedFoveation")}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.fixedFoveation', "fixedFoveation")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A number indicating the amount of foveation used by the XR compositor. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
-- {{domxref('XRWebGLLayer.framebuffer', "framebuffer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.framebuffer', "framebuffer")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref('WebGLFramebuffer')}} suitable for passing into the {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} method.
-- {{domxref('XRWebGLLayer.framebufferWidth', "framebufferWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.framebufferWidth', "framebufferWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the width of the `XRWebGLLayer`'s framebuffer.
-- {{domxref('XRWebGLLayer.framebufferHeight', "framebufferHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.framebufferHeight', "framebufferHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the height of the layer's framebuffer.
-- {{domxref('XRWebGLLayer.ignoreDepthValues', "ignoreDepthValues")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.ignoreDepthValues', "ignoreDepthValues")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A Boolean which Indicates whether or not the [WebXR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) should make use of the contents of the layer's depth buffer while compositing the scene.
 
 ## Static methods
 
-- {{domxref('XRWebGLLayer/getNativeFramebufferScaleFactor_static', "getNativeFramebufferScaleFactor()")}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer/getNativeFramebufferScaleFactor_static', "getNativeFramebufferScaleFactor()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the scaling factor that can be used to scale the resolution of the recommended WebGL framebuffer resolution to the rendering device's native resolution.
 
 ## Instance methods
 
-- {{domxref('XRWebGLLayer.getViewport()', "getViewport()")}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer.getViewport()', "getViewport()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a new {{domxref('XRViewport')}} instance representing the position, width, and height to which the [WebGL context's viewport](/en-US/docs/Web/API/WebGLRenderingContext/viewport) must be set to contain drawing to the area of the framebuffer designated for the specified view's contents. In this way, for example, the rendering of the left eye's point of view and of the right eye's point of view are each placed into the correct parts of the framebuffer.
 
 ## Examples

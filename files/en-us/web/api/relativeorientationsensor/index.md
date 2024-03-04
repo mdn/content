@@ -15,7 +15,7 @@ To use this sensor, the user must grant permission to the `'accelerometer'`, and
 
 ## Constructor
 
-- {{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}}
+- {{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}} {{SecureContext_Inline}}
   - : Creates a new `RelativeOrientationSensor` object.
 
 ## Instance properties

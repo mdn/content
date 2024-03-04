@@ -13,14 +13,14 @@ The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) re
 
 ## Constructor
 
-- {{domxref("PushEvent.PushEvent", "PushEvent()")}}
+- {{domxref("PushEvent.PushEvent", "PushEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `PushEvent` object.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
 
-- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
 ## Instance methods

@@ -15,16 +15,16 @@ The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 ## Instance properties
 
-- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the canvas that the context was created from.
 
 ## Instance methods
 
-- {{domxref("GPUCanvasContext.configure", "configure()")}} {{Experimental_Inline}}
+- {{domxref("GPUCanvasContext.configure", "configure()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Configures the context to use for rendering with a given {{domxref("GPUDevice")}} and clears the canvas to transparent black.
-- {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the next {{domxref("GPUTexture")}} to be composited to the document by the canvas context.
-- {{domxref("GPUCanvasContext.unconfigure", "unconfigure()")}} {{Experimental_Inline}}
+- {{domxref("GPUCanvasContext.unconfigure", "unconfigure()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Removes any previously-set context configuration, and destroys any textures produced while the canvas context was configured.
 
 ## Examples

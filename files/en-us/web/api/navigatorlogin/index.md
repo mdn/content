@@ -19,7 +19,7 @@ See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_A
 
 ## Instance methods
 
-- {{domxref("NavigatorLogin.setStatus", "setStatus()")}} {{Experimental_Inline}}
+- {{domxref("NavigatorLogin.setStatus", "setStatus()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets the login status of a federated identity provider (IdP), when called from the IdP's origin. By "login status", we mean "whether any users are logged into the IdP on the current browser or not".
 
 ## Examples

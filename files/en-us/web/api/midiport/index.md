@@ -15,11 +15,11 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 ## Instance properties
 
-- {{domxref("MIDIPort.id")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.id")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the unique ID of the port.
-- {{domxref("MIDIPort.manufacturer")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.manufacturer")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the manufacturer of the port.
-- {{domxref("MIDIPort.name")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.name")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the system name of the port.
 - {{domxref("MIDIPort.type")}} {{ReadOnlyInline}}
 
@@ -30,7 +30,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"output"`
       - : The `MIDIPort` is an output port.
 
-- {{domxref("MIDIPort.version")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.version")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the version of the port.
 - {{domxref("MIDIPort.state")}} {{ReadOnlyInline}}
 
@@ -56,14 +56,14 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 
-- {{domxref("MIDIPort.open()")}}
+- {{domxref("MIDIPort.open()")}} {{SecureContext_Inline}}
   - : Makes the MIDI device connected to this `MIDIPort` explicitly available, and returns a {{jsxref("Promise")}} which resolves once access to the port has been successful.
-- {{domxref("MIDIPort.close()")}}
+- {{domxref("MIDIPort.close()")}} {{SecureContext_Inline}}
   - : Makes the MIDI device connected to this `MIDIPort` unavailable, changing the {{domxref("MIDIPort.state","state")}} from `"open"` to `"closed"`. This returns a {{jsxref("Promise")}} which resolves once the port has been closed.
 
 ## Events
 
-- {{domxref("MIDIPort.statechange_event")}}
+- {{domxref("MIDIPort.statechange_event")}} {{SecureContext_Inline}}
   - : Called when an existing port changes its state or connection.
 
 ## Examples

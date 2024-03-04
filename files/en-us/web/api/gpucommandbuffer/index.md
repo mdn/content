@@ -19,7 +19,7 @@ A `GPUCommandBuffer` is created via the {{domxref("GPUCommandEncoder.finish()")}
 
 ## Instance properties
 
-- {{domxref("GPUCommandBuffer.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandBuffer.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

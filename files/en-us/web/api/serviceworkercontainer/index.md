@@ -15,31 +15,31 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}
 
 ## Instance properties
 
-- {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
-- {{domxref("ServiceWorkerContainer.ready")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerContainer.ready")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 
 ## Instance methods
 
-- {{domxref("ServiceWorkerContainer.getRegistration()")}}
+- {{domxref("ServiceWorkerContainer.getRegistration()")}} {{SecureContext_Inline}}
   - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL. The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
-- {{domxref("ServiceWorkerContainer.getRegistrations()")}}
+- {{domxref("ServiceWorkerContainer.getRegistrations()")}} {{SecureContext_Inline}}
   - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array. The method returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("ServiceWorkerRegistration")}}.
-- {{domxref("ServiceWorkerContainer.register()")}}
+- {{domxref("ServiceWorkerContainer.register()")}} {{SecureContext_Inline}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
-- {{domxref("ServiceWorkerContainer.startMessages()")}}
+- {{domxref("ServiceWorkerContainer.startMessages()")}} {{SecureContext_Inline}}
   - : explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.
 
 ## Events
 
-- {{domxref("ServiceWorkerContainer/controllerchange_event", "controllerchange")}}
+- {{domxref("ServiceWorkerContainer/controllerchange_event", "controllerchange")}} {{SecureContext_Inline}}
   - : Occurs when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
 - {{domxref("ServiceWorkerContainer/error_event", "error")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired whenever an error occurs in the associated service workers.
-- {{domxref("ServiceWorkerContainer/message_event", "message")}}
+- {{domxref("ServiceWorkerContainer/message_event", "message")}} {{SecureContext_Inline}}
   - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
-- {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}}
+- {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}} {{SecureContext_Inline}}
   - : Occurs when incoming messages can not deserialized by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
 
 ## Examples

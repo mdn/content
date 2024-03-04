@@ -33,9 +33,9 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Events
 
-- {{domxref("ScreenDetails.currentscreenchange_event", "currentscreenchange")}} {{experimental_inline}}
+- {{domxref("ScreenDetails.currentscreenchange_event", "currentscreenchange")}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Fired when the window's current screen changes in some way — for example available width or height, or orientation.
-- {{domxref("ScreenDetails.screenschange_event", "screenschange")}} {{experimental_inline}}
+- {{domxref("ScreenDetails.screenschange_event", "screenschange")}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Fired when screens are connected to or disconnected from the system.
 
 ## Examples

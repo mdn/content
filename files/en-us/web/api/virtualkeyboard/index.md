@@ -21,23 +21,23 @@ You access the `VirtualKeyboard` interface by using {{domxref("navigator.virtual
 
 _The `VirtualKeyboard` interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{domxref("DOMRect")}} that describes the geometry of the virtual keyboard.
-- {{DOMxRef("VirtualKeyboard.overlaysContent")}} {{Experimental_Inline}}
+- {{DOMxRef("VirtualKeyboard.overlaysContent")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{jsxref('Boolean')}} that defines whether the browser should stop handling the on-screen virtual keyboard.
 
 ## Instance methods
 
 _The `VirtualKeyboard` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref('VirtualKeyboard.show()')}} {{experimental_inline}}
+- {{domxref('VirtualKeyboard.show()')}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Show the virtual keyboard.
-- {{domxref('VirtualKeyboard.hide()')}} {{experimental_inline}}
+- {{domxref('VirtualKeyboard.hide()')}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Hide the virtual keyboard.
 
 ## Events
 
-- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
+- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
 
 ## Example

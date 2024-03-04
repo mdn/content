@@ -17,12 +17,12 @@ It is accessed via the {{domxref("ServiceWorkerRegistration.paymentManager")}} p
 
 ## Instance properties
 
-- {{domxref("PaymentManager.userHint", "userHint")}} {{Experimental_Inline}}
+- {{domxref("PaymentManager.userHint", "userHint")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides a hint for the browser to display along with the payment app's name and icon in the Payment Handler UI.
 
 ## Instance methods
 
-- {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}}
+- {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
 ## Examples

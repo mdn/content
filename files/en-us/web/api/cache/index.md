@@ -19,19 +19,19 @@ You are also responsible for periodically purging cache entries. Each browser ha
 
 ## Instance methods
 
-- {{domxref("Cache.match", "Cache.match(request, options)")}}
+- {{domxref("Cache.match", "Cache.match(request, options)")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to the response associated with the first matching request in the `Cache` object.
-- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}
+- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of all matching responses in the `Cache` object.
-- {{domxref("Cache.add", "Cache.add(request)")}}
+- {{domxref("Cache.add", "Cache.add(request)")}} {{SecureContext_Inline}}
   - : Takes a URL, retrieves it and adds the resulting response object to the given cache. This is functionally equivalent to calling `fetch()`, then using `put()` to add the results to the cache.
-- {{domxref("Cache.addAll", "Cache.addAll(requests)")}}
+- {{domxref("Cache.addAll", "Cache.addAll(requests)")}} {{SecureContext_Inline}}
   - : Takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache.
-- {{domxref("Cache.put", "Cache.put(request, response)")}}
+- {{domxref("Cache.put", "Cache.put(request, response)")}} {{SecureContext_Inline}}
   - : Takes both a request and its response and adds it to the given cache.
-- {{domxref("Cache.delete", "Cache.delete(request, options)")}}
+- {{domxref("Cache.delete", "Cache.delete(request, options)")}} {{SecureContext_Inline}}
   - : Finds the `Cache` entry whose key is the request, returning a {{jsxref("Promise")}} that resolves to `true` if a matching `Cache` entry is found and deleted. If no `Cache` entry is found, the promise resolves to `false`.
-- {{domxref("Cache.keys", "Cache.keys(request, options)")}}
+- {{domxref("Cache.keys", "Cache.keys(request, options)")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of `Cache` keys.
 
 ## Examples

@@ -21,7 +21,7 @@ The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} pr
 
     This method must be called with user activation.
 
-- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}
+- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
     the host which the origin has permission to access.
 

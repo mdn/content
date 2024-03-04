@@ -27,7 +27,7 @@ When a bidirectional stream is initiated by the remote end, an object of this ty
 
 _Also inherits properties from its parent interface, {{domxref("WritableStream")}}._
 
-- {{domxref("WebTransportSendStream.getStats()")}} {{Experimental_Inline}}
+- {{domxref("WebTransportSendStream.getStats()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
 
 ## Instance methods
@@ -36,7 +36,7 @@ _Also inherits methods from its parent interface, {{domxref("WritableStream")}}.
 
 <!-- WebTransportSendStream.sendGroup not implemented in any browser -->
 
-- {{domxref("WebTransportSendStream.sendOrder")}} {{Experimental_Inline}}
+- {{domxref("WebTransportSendStream.sendOrder")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 
 ## Examples

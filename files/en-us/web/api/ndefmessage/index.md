@@ -13,12 +13,12 @@ The **`NDEFMessage`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC
 
 ## Constructor
 
-- {{DOMxRef("NDEFMessage.NDEFMessage", "NDEFMessage()")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFMessage.NDEFMessage", "NDEFMessage()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `NDEFMessage` object, initialized with the given NDEF records.
 
 ## Attributes
 
-- {{DOMxRef("NDEFMessage.records")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFMessage.records")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the list of NDEF records contained in the message.
 
 ## Specifications

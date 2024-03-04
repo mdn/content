@@ -11,13 +11,13 @@ The **`StorageManager`** interface of the [Storage API](/en-US/docs/Web/API/Stor
 
 ## Instance methods
 
-- {{domxref("StorageManager.estimate()")}}
+- {{domxref("StorageManager.estimate()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to an object containing usage and quota numbers for your origin.
-- {{domxref("StorageManager.getDirectory()")}}
+- {{domxref("StorageManager.getDirectory()")}} {{SecureContext_Inline}}
   - : Used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system). Returns a {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandle")}} object.
-- {{domxref("StorageManager.persist()")}}
+- {{domxref("StorageManager.persist()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to `true` if the user agent is able to persist your site's storage.
-- {{domxref("StorageManager.persisted()")}}
+- {{domxref("StorageManager.persisted()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
 
 ## Specifications

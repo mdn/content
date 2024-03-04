@@ -28,7 +28,7 @@ _Inherits properties from its parent interface, {{domxref("ReadableStream")}}._
 
 _Also inherits properties from its parent interface, {{domxref("ReadableStream")}}._
 
-- {{domxref("WebTransportReceiveStream.getStats()")}} {{Experimental_Inline}}
+- {{domxref("WebTransportReceiveStream.getStats()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
 
 ## Examples

@@ -18,7 +18,7 @@ The **`PaymentRequestUpdateEvent`** interface is used for events sent to a {{dom
 
 ## Constructor
 
-- {{domxref("PaymentRequestUpdateEvent.PaymentRequestUpdateEvent()","PaymentRequestUpdateEvent()")}}
+- {{domxref("PaymentRequestUpdateEvent.PaymentRequestUpdateEvent()","PaymentRequestUpdateEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `PaymentRequestUpdateEvent` object.
 
 ## Instance properties
@@ -29,7 +29,7 @@ _Provides only the properties inherited from its parent interface, {{domxref("Ev
 
 _In addition to methods inherited from the parent interface, {{domxref("Event")}}, `PaymentRequestUpdateEvent` offers the following methods:_
 
-- {{domxref("PaymentRequestUpdateEvent.updateWith()")}}
+- {{domxref("PaymentRequestUpdateEvent.updateWith()")}} {{SecureContext_Inline}}
   - : If the event handler determines that information included in the payment request needs to be changed, or that new information needs to be added, it calls `updateWith()` with the information that needs to be replaced or added.
 
 ## Specifications

@@ -15,7 +15,7 @@ To use this sensor, the user must grant permission to the `'accelerometer'` devi
 
 ## Constructor
 
-- {{domxref("LinearAccelerationSensor.LinearAccelerationSensor", "LinearAccelerationSensor()")}}
+- {{domxref("LinearAccelerationSensor.LinearAccelerationSensor", "LinearAccelerationSensor()")}} {{SecureContext_Inline}}
   - : Creates a new `LinearAccelerationSensor` object.
 
 ## Instance properties

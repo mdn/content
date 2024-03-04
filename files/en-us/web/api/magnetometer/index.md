@@ -17,16 +17,16 @@ To use this sensor, the user must grant permission to the `'magnetometer'` devic
 
 ## Constructor
 
-- {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}} {{Experimental_Inline}}
+- {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `Magnetometer` object.
 
 ## Instance properties
 
-- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a double containing the magnetic field around the device's x axis.
-- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a double containing the magnetic field around the device's y axis.
-- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a double containing the magnetic field around the device's z axis.
 
 ## Instance methods

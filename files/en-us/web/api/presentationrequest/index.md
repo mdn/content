@@ -17,7 +17,7 @@ When a `PresentationRequest` is constructed, the given `urls` _MUST_ be used as 
 
 ## Constructor
 
-- {{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}} {{Experimental_Inline}}
+- {{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a `PresentationRequest`.
 
 ## Instance properties
@@ -26,11 +26,11 @@ None
 
 ## Instance methods
 
-- {{domxref("PresentationRequest.start()")}} {{Experimental_Inline}}
+- {{domxref("PresentationRequest.start()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("PresentationConnection")}} after the user agent prompts the user to select a display and grant permission to use that display.
-- {{domxref("PresentationRequest.reconnect()")}} {{Experimental_Inline}}
+- {{domxref("PresentationRequest.reconnect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : When the `reconnect(presentationId)` method is called on a `PresentationRequest` _presentationRequest_, the [user agent](https://www.w3.org/TR/presentation-api/#dfn-user-agents) _MUST_ run the following steps to _reconnect to a presentation_.
-- {{domxref("PresentationRequest.getAvailability()")}} {{Experimental_Inline}}
+- {{domxref("PresentationRequest.getAvailability()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : When the `getAvailability()` method is called, the user agent _MUST_ run the steps as the link.
 
 ## Specifications

@@ -15,7 +15,7 @@ The **`GPUError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "n
 
 ## Instance properties
 
-- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples

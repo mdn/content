@@ -15,14 +15,14 @@ The **`GPUPipelineError`** interface of the {{domxref("WebGPU API", "WebGPU API"
 
 ## Constructor
 
-- {{domxref("GPUPipelineError.GPUPipelineError", "GPUPipelineError()")}} {{Experimental_Inline}}
+- {{domxref("GPUPipelineError.GPUPipelineError", "GPUPipelineError()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `GPUPipelineError` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("DOMException")}}._
 
-- {{domxref("GPUPipelineError.reason", "reason")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUPipelineError.reason", "reason")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An enumerated value that defines the reason the pipeline creation failed in a machine-readable way.
 
 ## Examples

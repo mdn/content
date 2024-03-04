@@ -17,12 +17,12 @@ A `GPUComputePipeline` object instance can be created using the {{domxref("GPUDe
 
 ## Instance properties
 
-- {{domxref("GPUComputePipeline.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePipeline.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUComputePipeline.getBindGroupLayout", "getBindGroupLayout()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePipeline.getBindGroupLayout", "getBindGroupLayout()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e. included in the originating {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} call's pipeline layout).
 
 ## Examples

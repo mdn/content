@@ -17,12 +17,12 @@ A `GPUShaderModule` object instance is created using {{domxref("GPUDevice.create
 
 ## Instance properties
 
-- {{domxref("GPUShaderModule.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUShaderModule.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUShaderModule.getCompilationInfo", "getCompilationInfo()")}} {{Experimental_Inline}}
+- {{domxref("GPUShaderModule.getCompilationInfo", "getCompilationInfo()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUCompilationInfo")}} object containing messages generated during the `GPUShaderModule`'s compilation.
 
 ## Examples

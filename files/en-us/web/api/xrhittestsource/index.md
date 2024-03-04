@@ -19,7 +19,7 @@ None.
 
 ## Instance methods
 
-- {{domxref("XRHitTestSource.cancel()")}} {{Experimental_Inline}}
+- {{domxref("XRHitTestSource.cancel()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Unsubscribes from the hit test.
 
 ## Examples

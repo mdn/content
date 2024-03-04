@@ -17,38 +17,38 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 
 ## Instance properties
 
-- {{domxref("GPUCommandEncoder.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUCommandEncoder.beginComputePass", "beginComputePass()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.beginComputePass", "beginComputePass()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Starts encoding a compute pass, returning a {{domxref("GPUComputePassEncoder")}} that can be used to control computation.
-- {{domxref("GPUCommandEncoder.beginRenderPass", "beginRenderPass()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.beginRenderPass", "beginRenderPass()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Starts encoding a render pass, returning a {{domxref("GPURenderPassEncoder")}} that can be used to control rendering.
-- {{domxref("GPUCommandEncoder.clearBuffer", "clearBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.clearBuffer", "clearBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that fills a region of a {{domxref("GPUBuffer")}} with zeroes.
-- {{domxref("GPUCommandEncoder.copyBufferToBuffer", "copyBufferToBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.copyBufferToBuffer", "copyBufferToBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that copies data from one {{domxref("GPUBuffer")}} to another.
-- {{domxref("GPUCommandEncoder.copyBufferToTexture", "copyBufferToTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.copyBufferToTexture", "copyBufferToTexture()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that copies data from a {{domxref("GPUBuffer")}} to a {{domxref("GPUTexture")}}.
-- {{domxref("GPUCommandEncoder.copyTextureToBuffer", "copyTextureToBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.copyTextureToBuffer", "copyTextureToBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that copies data from a {{domxref("GPUTexture")}} to a {{domxref("GPUBuffer")}}.
-- {{domxref("GPUCommandEncoder.copyTextureToTexture", "copyTextureToTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.copyTextureToTexture", "copyTextureToTexture()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that copies data from one {{domxref("GPUTexture")}} to another.
 - {{domxref("GPUCommandEncoder.finish", "finish()")}} {{Experimental_Inline}}
 
   - : Completes recording of the command sequence encoded on this `GPUCommandEncoder`, returning a corresponding {{domxref("GPUCommandBuffer")}}.
 
-- {{domxref("GPUCommandEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Marks a specific point in a series of encoded commands with a label.
-- {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
 - {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}}
 
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 
-- {{domxref("GPUCommandEncoder.resolveQuerySet", "resolveQuerySet()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.resolveQuerySet", "resolveQuerySet()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.
 - {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{Experimental_Inline}}
   - : Encodes a command that writes a timestamp into a {{domxref("GPUQuerySet")}} once the previous commands recorded into the same queued {{domxref("GPUCommandBuffer")}} have been executed by the GPU.

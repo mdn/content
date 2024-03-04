@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
   - : Contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
 
-- {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDevice.queue", "queue")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the primary {{domxref("GPUQueue")}} for the device.
 
 ## Instance methods
@@ -110,12 +110,12 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
   - : Pops an existing GPU error scope from the error scope stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, or {{domxref("GPUValidationError")}}) describing the first error captured in the scope, or `null` if no error occurred.
 
-- {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Pushes a new GPU error scope onto the device's error scope stack, allowing you to capture errors of a particular type.
 
 ## Events
 
-- {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when an error is thrown that has not been observed by a GPU error scope, to provide a way to report unexpected errors. Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", "pushErrorScope()")}} and {{domxref("GPUDevice.popErrorScope", "popErrorScope()")}}.
 
 ## Examples

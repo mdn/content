@@ -30,13 +30,13 @@ _Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}.
 
 ## Instance methods
 
-- {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData()")}}
+- {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData()")}} {{SecureContext_Inline}}
   - : Returns an {{jsxref("ArrayBuffer")}} containing the authenticator data contained within the {{domxref("AuthenticatorAttestationResponse.attestationObject")}} property.
-- {{domxref("AuthenticatorAttestationResponse.getPublicKey()")}}
+- {{domxref("AuthenticatorAttestationResponse.getPublicKey()")}} {{SecureContext_Inline}}
   - : Returns an {{jsxref("ArrayBuffer")}} containing the DER `SubjectPublicKeyInfo` of the new credential (see [Subject Public Key Info](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)), or `null` if this is not available.
-- {{domxref("AuthenticatorAttestationResponse.getPublicKeyAlgorithm()")}}
+- {{domxref("AuthenticatorAttestationResponse.getPublicKeyAlgorithm()")}} {{SecureContext_Inline}}
   - : Returns a number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm used for the new credential.
-- {{domxref("AuthenticatorAttestationResponse.getTransports()")}}
+- {{domxref("AuthenticatorAttestationResponse.getTransports()")}} {{SecureContext_Inline}}
   - : Returns an array of strings describing which transport methods (e.g., `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
 
 ## Examples

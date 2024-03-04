@@ -11,13 +11,13 @@ The WebXR Device API's **`XRViewport`** interface provides properties used to de
 
 ## Instance properties
 
-- {{domxref("XRViewport.height", "height")}} {{ReadOnlyInline}}
+- {{domxref("XRViewport.height", "height")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The height, in pixels, of the viewport.
-- {{domxref("XRViewport.width", "width")}} {{ReadOnlyInline}}
+- {{domxref("XRViewport.width", "width")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The width, in pixels, of the viewport.
-- {{domxref("XRViewport.x", "x")}} {{ReadOnlyInline}}
+- {{domxref("XRViewport.x", "x")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The offset from the origin of the destination graphics surface (typically a {{domxref("XRWebGLLayer")}}) to the left edge of the viewport, in pixels.
-- {{domxref("XRViewport.y", "y")}} {{ReadOnlyInline}}
+- {{domxref("XRViewport.y", "y")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The offset from the origin of the viewport to the bottom edge of the viewport; WebGL's coordinate system places (0, 0) at the bottom left corner of the surface.
 
 ## Usage notes

@@ -19,26 +19,26 @@ A `GPUComputePassEncoder` object instance is created via the {{domxref("GPUComma
 
 ## Instance properties
 
-- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUComputePassEncoder.dispatchWorkgroups", "dispatchWorkgroups()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.dispatchWorkgroups", "dispatchWorkgroups()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Dispatches a specific grid of workgroups to perform the work being done by the current {{domxref("GPUComputePipeline")}}.
-- {{domxref("GPUComputePassEncoder.dispatchWorkgroupsIndirect", "dispatchWorkgroupsIndirect()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.dispatchWorkgroupsIndirect", "dispatchWorkgroupsIndirect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Dispatches a grid of workgroups, defined by the parameters of a {{domxref("GPUBuffer")}}, to perform the work being done by the current {{domxref("GPUComputePipeline")}}.
-- {{domxref("GPUComputePassEncoder.end", "end()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.end", "end()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Completes recording of the current compute pass command sequence.
-- {{domxref("GPUComputePassEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Marks a specific point in a series of encoded commands with a label.
-- {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Ends a debug group, which is begun with a {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
-- {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
-- {{domxref("GPUComputePassEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.
-- {{domxref("GPUComputePassEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePassEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets the {{domxref("GPUComputePipeline")}} to use for this compute pass.
 
 ## Examples

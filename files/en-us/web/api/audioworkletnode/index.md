@@ -15,21 +15,21 @@ The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/
 
 ## Constructor
 
-- {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}
+- {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} {{SecureContext_Inline}}
   - : Creates a new instance of an `AudioWorkletNode` object.
 
 ## Instance properties
 
 _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-- {{domxref("AudioWorkletNode.port")}} {{ReadOnlyInline}}
+- {{domxref("AudioWorkletNode.port")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the node and its associated {{domxref("AudioWorkletProcessor")}}. The other end is available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the processor.
-- {{domxref("AudioWorkletNode.parameters")}} {{ReadOnlyInline}}
+- {{domxref("AudioWorkletNode.parameters")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying `AudioWorkletProcessor`. If the `AudioWorkletProcessor` has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create `AudioParam` objects on the `AudioWorkletNode`. With this mechanism it is possible to make your own `AudioParam` objects accessible from your `AudioWorkletNode`. You can then use their values in the associated `AudioWorkletProcessor`.
 
 ### Events
 
-- {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}}
+- {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}} {{SecureContext_Inline}}
   - : Fired when an error is thrown in associated {{domxref("AudioWorkletProcessor")}}. Once fired, the processor and consequently the node will output silence throughout its lifetime.
 
 ## Instance methods

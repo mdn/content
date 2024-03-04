@@ -15,16 +15,16 @@ To use this sensor, the user must grant permission to the `'gyroscope'` device s
 
 ## Constructor
 
-- {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}}
+- {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}} {{SecureContext_Inline}}
   - : Creates a new `Gyroscope` object.
 
 ## Instance properties
 
-- {{domxref('Gyroscope.x')}} {{ReadOnlyInline}}
+- {{domxref('Gyroscope.x')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a double, containing the angular velocity of the device along the device's x axis.
-- {{domxref('Gyroscope.y')}} {{ReadOnlyInline}}
+- {{domxref('Gyroscope.y')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a double, containing the angular velocity of the device along the device's y axis.
-- {{domxref('Gyroscope.z')}} {{ReadOnlyInline}}
+- {{domxref('Gyroscope.z')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a double, containing the angular velocity of the device along the device's z axis.
 
 ## Instance methods
