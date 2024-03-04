@@ -99,5 +99,5 @@ depends on server settings and used server modules.
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{Glossary("Brotli compression")}}
-- {{Glossary("Gzip compression")}}
+- {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
