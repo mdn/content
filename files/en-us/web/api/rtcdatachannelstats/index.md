@@ -11,26 +11,26 @@ The **`RTCDataChannelStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API
 
 The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `data-channel`.
 
-The data channels statistics can be correlated to a particular channel by comparing the [`dataChannelIdentifier`](#datachannelidentifier) property to a matching {{domxref("RTCDataChannel.id")}}.
+The data channels statistics may be correlated to a particular channel by comparing the [`dataChannelIdentifier`](#datachannelidentifier) property to a matching {{domxref("RTCDataChannel.id")}}.
 
 ## Instance properties
 
-- {{domxref("RTCDataChannelStats.label", "label")}}
-  - : A string containing the {{domxref("RTCDataChannel.label", "label")}} of the associated `RTCDataChannel`.
-- {{domxref("RTCDataChannelStats.protocol", "protocol")}}
-  - : A string containing the {{domxref("RTCDataChannel.protocol", "protocol")}} of the associated `RTCDataChannel`.
-- {{domxref("RTCDataChannelStats.dataChannelIdentifier", "dataChannelIdentifier")}}
+- {{domxref("RTCDataChannelStats.bytesSent", "bytesSent")}} {{optional_inline}}
+  - : A positive integer value indicating the total number of payload bytes sent on the associated `RTCDataChannel`.
+- {{domxref("RTCDataChannelStats.bytesReceived", "bytesReceived")}} {{optional_inline}}
+  - : A positive integer value indicating the total number of payload bytes received on the associated `RTCDataChannel`.
+- {{domxref("RTCDataChannelStats.dataChannelIdentifier", "dataChannelIdentifier")}} {{optional_inline}}
   - : A positive integer value containing the {{domxref("RTCDataChannel.id", "id")}} of the associated `RTCDataChannel`.
+- {{domxref("RTCDataChannelStats.label", "label")}} {{optional_inline}}
+  - : A string containing the {{domxref("RTCDataChannel.label", "label")}} of the associated `RTCDataChannel`.
+- {{domxref("RTCDataChannelStats.messagesReceived", "messagesReceived")}} {{optional_inline}}
+  - : A positive integer value indicating the total number of [`message` events](/en-US/docs/Web/API/RTCDataChannel/message_event) fired for received messages on the associated `RTCDataChannel`.
+- {{domxref("RTCDataChannelStats.messagesSent", "messagesSent")}} {{optional_inline}}
+  - : A positive integer value indicating the total number of [`message` events](/en-US/docs/Web/API/RTCDataChannel/message_event) fired for sent messages on the channel.
+- {{domxref("RTCDataChannelStats.protocol", "protocol")}} {{optional_inline}}
+  - : A string containing the {{domxref("RTCDataChannel.protocol", "protocol")}} of the associated `RTCDataChannel`.
 - {{domxref("RTCDataChannelStats.state", "state")}}
   - : The {{domxref("RTCDataChannel.readyState", "readyState")}} of the associated `RTCDataChannel`.
-- {{domxref("RTCDataChannelStats.messagesSent", "messagesSent")}}
-  - : A positive integer value indicating the total number of messages sent on the channel.
-- {{domxref("RTCDataChannelStats.bytesSent", "bytesSent")}}
-  - : A positive integer value indicating the total number of payload bytes sent on the associated `RTCDataChannel`.
-- {{domxref("RTCDataChannelStats.messagesReceived", "messagesReceived")}}
-  - : A positive integer value indicating the total number of messages received on the associated.
-- {{domxref("RTCDataChannelStats.bytesReceived", "bytesReceived")}}
-  - : A positive integer value indicating the total number of payload bytes received on the associated `RTCDataChannel`.
 
 ### Common instance properties
 
@@ -68,8 +68,3 @@ stats.forEach((report) => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("RTCStatsReport")}}
-- {{domxref("RTCRtpCodecParameters")}}
