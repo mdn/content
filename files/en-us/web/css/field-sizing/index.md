@@ -19,11 +19,11 @@ field-sizing: content;
 field-sizing: fixed;
 
 /* Global values */
-empty-cells: inherit;
-empty-cells: initial;
-empty-cells: revert;
-empty-cells: revert-layer;
-empty-cells: unset;
+field-sizing: inherit;
+field-sizing: initial;
+field-sizing: revert;
+field-sizing: revert-layer;
+field-sizing: unset;
 ```
 
 ### Values
@@ -42,13 +42,15 @@ Specifically, this property affects the following elements:
 - Form input types that accept direct text input from users: This includes [`email`](/en-US/docs/Web/HTML/Element/input/email), [`number`](/en-US/docs/Web/HTML/Element/input/number), [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), and [`url`](/en-US/docs/Web/HTML/Element/input/url) types.
   - If no minimum width is set on the control, it will only be as big as the text cursor.
   - Controls with [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attributes set will be rendered large enough to display the placeholder text.
+  - The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute modifies the default preferred size of such `<input>`s. As a result, `size` has no effect on `<input>` elements with `field-sizing: content` set.
 - [`file`](/en-US/docs/Web/HTML/Element/input/file) inputs: Direct text input is not possible, but the filename display changes as the user selects a new file to upload, which will change the control size if `field-sizing: content` is set.
 - {{htmlelement("textarea")}} controls: It is worth noting that `<textarea>` elements with `field-sizing: content` set behave much like single-line text controls do, with the following additions:
   - If `<textarea>`s are unable to grow due to a width constraint, they will start to grow in height to display additional rows of content. When a height constraint is then reached, they will then start to show a scrollbar to allow all the content to be viewed.
-  - [`rows`](/en-US/docs/Web/HTML/Element/textarea#cols) and [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attributes modify the default preferred size of a `<textarea>`, so as such do not have any effect on `<textarea>` elements with `field-sizing: content` set.
+  - [`rows`](/en-US/docs/Web/HTML/Element/textarea#cols) and [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attributes modify the default preferred size of a `<textarea>`. As a result, `rows`/`cols` have no effect on `<textarea>` elements with `field-sizing: content` set.
 - {{htmlelement("select")}} controls: These behave a bit differently to what you might expect with `field-sizing: content` set. The effect depends on the type of select control you are creating:
   - Regular drop-down select boxes will change width to always fit the displayed option value, as new values are selected. (By default, the drop-down would be sized large enough to display the longest option value.)
-  - List boxes (`<select>`s with the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute set) will be large enough to display all the options without needing to scroll. (By default, the drop-down would require scrolling to view all the option values.)
+  - List boxes (`<select>`s with the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) or [`size`](/en-US/docs/Web/HTML/Element/select#multiple) attributes set) will be large enough to display all the options without needing to scroll. (By default, the drop-down would require scrolling to view all the option values.)
+  - The [`size`](/en-US/docs/Web/HTML/Element/select#size) attribute has very little effect on `<select>` elements that also have `field-sizing: content` set on them. In such cases, the browser will check whether `size` is equal to `1` or not to determine whether the select should be a drop-down or a listbox, but it will always display all the options of a listbox even if `size` is smaller than the number of options.
 
 ### Sizing controls with CSS
 
