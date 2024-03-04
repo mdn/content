@@ -80,7 +80,7 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ### Styling the first line of a SVG text element
 
-In order to make the {{SVGElement("text")}} element be multiple lines you need to use {{cssxref("white-space", "", "#multiple_lines_in_svg_text_element")}} CSS property.
+In this example, we style the first line of an SVG {{SVGElement("text")}} element using the `::first-line` pseudo-element.
 
 > **Note:** At time of writing this feature has [limited support](#browser_compatibility).
 
