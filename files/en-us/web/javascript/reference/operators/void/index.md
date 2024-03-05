@@ -97,7 +97,7 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 Arrow functions introduce a short-hand braceless syntax that returns an expression.
 This can cause unintended side effects if the expression is a function call where the returned value changes from `undefined` to some other value.
 
-For example, if `doSomething()` returns `false` in the code below, the checkbox will no longer be marked as checked or unchecked when the checkbox is clicked (setting the handler to `false` disables the default action).
+For example, if `doSomething()` returns `false` in the code below, the checkbox will no longer be marked as checked or unchecked when the checkbox is clicked (returning `false` from the handler disables the default action).
 
 ```js example-bad
 checkbox.onclick = () => doSomething();
