@@ -5246,6 +5246,7 @@
 /en-US/docs/Learn/Forms/Your_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_form/Example	/en-US/docs/Learn/Forms/Your_first_form
+/en-US/docs/Learn/Front-end_web_developer	https://developer.mozilla.org/en-US/curriculum/
 /en-US/docs/Learn/Getting_started_with_the_web/How_to_set_up_your_work_environment	/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_web_site	/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
