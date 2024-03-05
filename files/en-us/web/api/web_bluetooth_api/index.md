@@ -39,6 +39,19 @@ The Bluetooth API extends the following APIs, adding the listed features.
 - {{domxref("Navigator.bluetooth")}}
   - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to Web Bluetooth API functionality.
 
+## Security considerations
+
+The Web Bluetooth API can only be used in a secure context.
+
+Access to the API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/bluetooth","bluetooth")}}.
+The default allowlist for the `bluetooth` policy is `self`, which enables Bluetooth usage in same-origin nested frames but prevents access by third-party content by default.
+Cross-origin access be enabled by specifying the allowed origins in both the `Permissions-Policy: bluetooth` HTTP header and the desired `<iframe>`.
+
+In order to use the feature the user must first grant explicit permission (they will not be prompted for access if access is not allowed for other reasons, such as being blocked by a `Permissions-Policy`).
+In order to request a device using {{domxref("Bluetooth.requestDevice()")}} the owning global object must also have {{glossary("transient activation")}}.
+
+The [Permissions API](/en-US/docs/Web/API/Permissions_API) `bluetooth` permission can be used to test whether access to use a particular Bluetooth device is `granted`, `denied` or `prompt` (requires user acknowledgement of a prompt). <!-- https://webbluetoothcg.github.io/web-bluetooth/#permission-api-integration -->
+
 ## Specifications
 
 {{Specifications}}
