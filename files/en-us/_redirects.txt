@@ -7,7 +7,7 @@
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
-/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/AJAX	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Community	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Getting_Started	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
@@ -3645,8 +3645,8 @@
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/Element/HTMLHeadElement	/en-US/docs/Web/API/HTMLHeadElement
 /en-US/docs/HTML/Element/Heading_Elements	/en-US/docs/Web/HTML/Element/Heading_Elements
-/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/Img
-/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/img
+/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/HTML/Element/Input	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/Input-redirect-1	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/a	/en-US/docs/Web/HTML/Element/a
@@ -12221,6 +12221,7 @@
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/image	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats

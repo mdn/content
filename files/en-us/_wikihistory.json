@@ -94858,18 +94858,6 @@
       "jorh"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2020-10-15T21:25:09.630Z",
-    "contributors": [
-      "teoli",
-      "Sheppy",
-      "chearon",
-      "slimsag",
-      "Jeremie",
-      "dustindowell",
-      "msherefel"
-    ]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-12-03T01:54:55.358Z",
     "contributors": [
