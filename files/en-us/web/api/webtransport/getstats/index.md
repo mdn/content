@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebTransport.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getStats()`** method of the {{domxref("WebTransport")}} interface asynchronously returns an object containing HTTP/3 connection statistics.
 

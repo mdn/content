@@ -22,7 +22,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)

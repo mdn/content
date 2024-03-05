@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`isochronousTransferOut()`** method of the
 {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBIsochronousOutTransferResult")}} when time sensitive information has been transmitted from the USB device.

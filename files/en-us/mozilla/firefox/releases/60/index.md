@@ -154,4 +154,4 @@ Theme API:
 
 ## Older versions
 
-{{Firefox_for_developers(59)}}
+{{Firefox_for_developers}}

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQueue.onSubmittedWorkDone
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`onSubmittedWorkDone()`** method of the
 {{domxref("GPUQueue")}} interface returns a {{jsxref("Promise")}} that resolves when all the work submitted to the GPU via this `GPUQueue` at the point the method is called has been processed.
