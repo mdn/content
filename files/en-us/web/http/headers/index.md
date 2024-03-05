@@ -312,6 +312,8 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : User's preference to see fewer animations and content layout shifts.
 
+> **Note:** User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+
 #### Device client hints
 
 - {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
