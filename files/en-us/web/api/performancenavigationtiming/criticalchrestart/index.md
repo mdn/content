@@ -30,7 +30,7 @@ The following JavaScript can be used to see if the connection was restarted:
 let restartTime =
   performance?.getEntriesByType?.("navigation")[0]?.criticalCHRestart;
 if (restartTime > 0) {
-  console.log("Time at which connection restart happened: ", restartTime);
+  console.log("Time at which connection restart happened:", restartTime);
 }
 ```
 
