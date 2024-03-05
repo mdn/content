@@ -45,8 +45,8 @@ Events have three functions:
 ## Examples
 
 ```js
-function handlePerformanceWarning(performanceWarningInfo) {
-  console.log(`Performance warning: ${performanceWarningInfo.description}`);
+function handlePerformanceWarning(details) {
+  console.log(`Performance warning: ${details.description}`);
 }
 
 browser.runtime.onPerformanceWarning.addListener(handlePerformanceWarning);
