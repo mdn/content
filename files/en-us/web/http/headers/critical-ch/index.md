@@ -89,3 +89,4 @@ The client will include the header in subsequent requests in the current session
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- {{domxref("PerformanceNavigationTiming.criticalCHRestart")}}
