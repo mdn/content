@@ -904,7 +904,7 @@ Svelte stores support generics out of the box. And, because of generic type infe
 
 If you open the file `Todos.svelte` and assign a `number` type to our `$alert` store, you'll get the following error:
 
-![Todo Type object property complete should be completed](13-vscode-generic-alert-error.png)
+![Argument of type 9999 is not assignable to parameter of type string](13-vscode-generic-alert-error.png)
 
 That's because when we defined our alert store in the `stores.ts` file with:
 

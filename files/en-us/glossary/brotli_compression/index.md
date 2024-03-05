@@ -1,5 +1,5 @@
 ---
-title: Brotli
+title: Brotli compression
 slug: Glossary/Brotli_compression
 page-type: glossary-definition
 ---
