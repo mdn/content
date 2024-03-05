@@ -7,7 +7,7 @@ browser-compat: api.RTCStatsReport.type_media-source
 
 {{APIRef("WebRTC")}}
 
-The **`RTCVideoSourceStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics information about a video track that is attached to one or more senders.
+The **`RTCVideoSourceStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics information about a video track ({{domxref("MediaStreamTrack")}}) that is attached to one or more senders ({{domxref("RTCRtpSender")}}).
 
 These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `media-source` and a [`kind`](#kind) of `video`.
 
@@ -15,21 +15,24 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 
 ## Instance properties
 
-- {{domxref("RTCVideoSourceStats.frames", "frames")}}
-  - : A positive number that indicates the total number of frames from this video source.
-- {{domxref("RTCVideoSourceStats.framesPerSecond", "framesPerSecond")}}
-  - : A number that represents the number of frames from this video source in the last second.
-- {{domxref("RTCVideoSourceStats.height", "height")}}
+- {{domxref("RTCVideoSourceStats.frames", "frames")}} {{optional_inline}}
+  - : A positive number that indicates the total number of frames sent from this video source.
+- {{domxref("RTCVideoSourceStats.framesPerSecond", "framesPerSecond")}} {{optional_inline}}
+  - : A number that represents the number of frames sent from this video source in the last second.
+    This property is not defined on this stats object for the first second of its existence.
+- {{domxref("RTCVideoSourceStats.height", "height")}} {{optional_inline}}
   - : A positive number that represents the height, in pixels, of the last frame originating from this source.
-    This property is not defined on the stats option until after the first frame has been produced.
-- {{domxref("RTCVideoSourceStats.width", "width")}}
+    This property is not defined on this stats object until after the first frame has been produced.
+- {{domxref("RTCVideoSourceStats.width", "width")}} {{optional_inline}}
   - : A number that represents thewidth, in pixels, of the last frame originating from this source.
-    This property is not defined on the stats option until after the first frame has been produced.
+    This property is not defined on this stats object until after the first frame has been produced.
+
+### Common media-source properties
 
 The following properties are present in both `RTCVideoSourceStats` and {{domxref("RTCAudioSourceStats")}}: <!-- RTCMediaSourceStats  -->
 
 - {{domxref("RTCVideoSourceStats.trackIdentifier", "trackIdentifier")}}
-  - : A string that contains the [`id`](/en-US/docs/Web/API/MediaStreamTrack/id) value of the [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) associated with the audio source.
+  - : A string that contains the [`id`](/en-US/docs/Web/API/MediaStreamTrack/id) value of the [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) associated with the video source.
 - {{domxref("RTCVideoSourceStats.kind", "kind")}}
   - : A string indicating the kind of media source. For an `RTCVideoSourceStats` this will always be `video`.
 
@@ -46,12 +49,12 @@ The following properties are common to all statistics objects. <!-- RTCStats -->
 
 ## Description
 
-The interface provides statistics about an audio media source attached to one or more senders.
-The information includes Xxxxx.
+The interface provides statistics about a video media source attached to one or more senders.
+The information includes a identifier for the associated `MediaStreamTrack`, along with the height and width of the last frame sent from the source, the number of frames sent from the source, and the frame rate.
 
 ## Examples
 
-This example shows how you might iterate the stats object returned from `RTCRtpSender.getStats()` to get the video source stats, and then extract the `framesPerSecond`.
+This example shows how you might iterate the stats object returned from `RTCRtpSender.getStats()` to get the video-specific media-source stats.
 
 ```js
 // where sender is an RTCRtpSender
@@ -65,9 +68,11 @@ stats.forEach((report) => {
   }
 });
 
-// Note, test is conditional.
-// framesPerSecond does not exist in the first second
+// framesPerSecond, width, height, may initially be defined on the stats object
+const frames = videoSourceStats.frames;
 const fps = videoSourceStats?.framesPerSecond;
+const width = videoSourceStats?.width;
+const height = videoSourceStats?.height;
 ```
 
 ## Specifications
