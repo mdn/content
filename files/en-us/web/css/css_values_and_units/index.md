@@ -133,55 +133,89 @@ These are all covered in subsections below.
 
 #### Distance units
 
-Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute.
+Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute. Relative length units specify a length in relation to something else.
 
-Relative length units specify a length in relation to something else.
-For example, `em` is relative to the font size on the element and `vh` is relative to the viewport height.
+There are two types of relative lengths: font-relative lengths and viewport-percentage lengths. These both come in two types. Font-relative length units are either local font-relative or root font-relative. Viewport percentage lengths are either relative to the viewport height or width size or, as defined in the [CSS Containment module](/en-US/docs/Web/CSS/CSS_containment), relative to a [container](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units).
 
-| Unit   | Relative to                                                                                                                            |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | Font size of the element.                                                                                                              |
-| `ex`   | x-height of the element's font.                                                                                                        |
-| `cap`  | Cap height (the nominal height of capital letters) of the element's font.                                                              |
-| `ch`   | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
-| `ic`   | Average character advance of a full width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
-| `rem`  | Font size of the root element.                                                                                                         |
-| `lh`   | Line height of the element.                                                                                                            |
-| `rlh`  | Line height of the root element.                                                                                                       |
-| `vw`   | 1% of viewport's width.                                                                                                                |
-| `vh`   | 1% of viewport's height.                                                                                                               |
-| `vi`   | 1% of viewport's size in the root element's inline axis.                                                                               |
-| `vb`   | 1% of viewport's size in the root element's block axis.                                                                                |
-| `vmin` | 1% of viewport's smaller dimension.                                                                                                    |
-| `vmax` | 1% of viewport's larger dimension.                                                                                                     |
+##### Local font-relative lengths
 
-Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
+Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
+For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
+
+| Unit  | Relative to                                                                                                                            |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `cap` | Cap height (the nominal height of capital letters) of the element's font.                                                              |
+| `ch`  | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
+| `em`  | Font size of the element's font.                                                                                                       |
+| `ex`  | x-height of the element's font.                                                                                                        |
+| `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
+| `lh`  | Line height of the element.                                                                                                            |
+
+##### Root font-relative lengths
+
+Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
+For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
+
+| Unit   | Relative to                                                                                                                                 |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rcap` | Cap height (the nominal height of capital letters) of the root element's font.                                                              |
+| `rch`  | Average character advance of a narrow glyph in the root element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
+| `rem`  | Font size of the root element's font.                                                                                                       |
+| `rex`  | x-height of the root element's font.                                                                                                        |
+| `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
+| `rlh`  | Line height of the root element.                                                                                                            |
+
+##### Viewport units
+
+Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
+For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
+
+| Unit   | Relative to                                                                                                                        |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                                                         |
+| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                                                          |
+| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                                             |
+| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                                              |
+| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                                             |
+| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                                              |
+| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
+| `vh`   | 1% of viewport's height.                                                                                                           |
+| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline). |
+| `vmax` | 1% of viewport's larger dimension.                                                                                                 |
+| `vmin` | 1% of viewport's smaller dimension.                                                                                                |
+| `vw`   | 1% of viewport's width.                                                                                                            |
+
+##### Container units
+
+Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
 | Unit    | Relative to                           |
 | ------- | ------------------------------------- |
-| `cqw`   | 1% of a query container's width       |
+| `cqb`   | 1% of a query container's block size  |
 | `cqh`   | 1% of a query container's height      |
 | `cqi`   | 1% of a query container's inline size |
-| `cqb`   | 1% of a query container's block size  |
-| `cqmin` | The smaller value of `cqi` or `cqb`   |
 | `cqmax` | The larger value of `cqi` or `cqb`    |
+| `cqmin` | The smaller value of `cqi` or `cqb`   |
+| `cqw`   | 1% of a query container's width       |
+
+#### Absolute length units
 
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
 | Unit | Name                | Equivalent to       |
 | ---- | ------------------- | ------------------- |
 | `cm` | Centimeters         | 1cm = 96px/2.54     |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 | `in` | Inches              | 1in = 2.54cm = 96px |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm |
 | `pc` | Picas               | 1pc = 1/6th of 1in  |
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 
 When including a length value, if the length is `0`, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.
 
-#### Angle units
+##### Angle units
 
 Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept the following values:
 
@@ -192,16 +226,16 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 | `rad`  | Radians  | There are 2π radians in a full circle.   |
 | `turn` | Turns    | There is 1 turn in a full circle.        |
 
-#### Time units
+##### Time units
 
 Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
 | Unit | Name         | Description                               |
 | ---- | ------------ | ----------------------------------------- |
-| `s`  | Seconds      |                                           |
 | `ms` | Milliseconds | There are 1,000 milliseconds in a second. |
+| `s`  | Seconds      |                                           |
 
-#### Frequency units
+##### Frequency units
 
 Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. It accepts the following values.
 
@@ -212,7 +246,7 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 `1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
 
-#### Flex units
+##### Flex units
 
 Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
 
@@ -220,17 +254,17 @@ Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts t
 | ---- | ---- | ---------------------------------------------------- |
 | `fr` | Flex | Represents a flexible length within a grid container |
 
-#### Resolution units
+##### Resolution units
 
 Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
 
 | Unit        | Description          |
 | ----------- | -------------------- |
-| `dpi`       | Dots per inch.       |
 | `dpcm`      | Dots per centimeter. |
+| `dpi`       | Dots per inch.       |
 | `dppx`, `x` | Dots per px unit.    |
 
-### Percentages
+#### Percentages
 
 A {{cssxref("&lt;percentage&gt;")}} is a type that represents a fraction of some other value.
 
@@ -294,4 +328,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Trigonometric functions in CSS](https://web.dev/css-trig-functions/)
+- [Trigonometric functions in CSS](https://web.dev/articles/css-trig-functions)

@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Notification.close
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-The `close()` method of the {{domxref("Notification")}} interface is used to
+The **`close()`** method of the {{domxref("Notification")}} interface is used to
 close/remove a previously displayed notification.
 
 > **Note:** This API shouldn't be used just to have the notification
@@ -18,6 +18,8 @@ close/remove a previously displayed notification.
 > notification that is no longer relevant (e.g. the user already read the notification
 > on the webpage in the case of a messaging app or the following song is already playing
 > in a music app).
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

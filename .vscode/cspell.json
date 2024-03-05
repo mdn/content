@@ -52,7 +52,6 @@
     "Base64",
     "class=\"(?:[^\\\"]+|\\.)*\"",
     "data-test-id=\"(?:[^\\\"]+|\\.)*\"",
-    "EscapeCharacters",
     "for=\"(?:[^\\\"]+|\\.)*\"",
     "HexValues",
     "href=\"(?:[^\\\"]+|\\.)*\"",
@@ -69,5 +68,6 @@
       "path": "./project-words.txt",
       "addWords": true
     }
-  ]
+  ],
+  "enableFiletypes": ["xml"]
 }

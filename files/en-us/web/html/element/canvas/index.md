@@ -9,73 +9,6 @@ browser-compat: html.elements.canvas
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
-          >embedded content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Transparent but with no
-        <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        >
-        descendants except for {{HTMLElement("a")}} elements,
-        {{HTMLElement("button")}} elements,
-        {{HTMLElement("input")}} elements whose
-        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
-        <code>checkbox</code>, <code>radio</code>, or <code>button</code>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLCanvasElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -105,14 +38,7 @@ It is better to specify your canvas dimensions by setting the `width` and `heigh
 
 ### Maximum canvas size
 
-The maximum size of a `<canvas>` element is very large, but the exact size depends on the browser. The following is some data we've collected from various tests and other sources (e.g. [Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)):
-
-| Browser | Maximum height | Maximum width | Maximum area                               |
-| ------- | -------------- | ------------- | ------------------------------------------ |
-| Chrome  | 32,767 pixels  | 32,767 pixels | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| Firefox | 32,767 pixels  | 32,767 pixels | 472,907,776 pixels (i.e., 22,528 x 20,992) |
-| Safari  | 32,767 pixels  | 32,767 pixels | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| IE      | 8,192 pixels   | 8,192 pixels  | ?                                          |
+The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results).
 
 > **Note:** Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
 
@@ -162,6 +88,75 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 - [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
 - [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
+          >embedded content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Transparent but with no
+        <a
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          >interactive content</a
+        >
+        descendants except for {{HTMLElement("a")}} elements,
+        {{HTMLElement("button")}} elements,
+        {{HTMLElement("input")}} elements whose
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
+        <code>checkbox</code>, <code>radio</code>, or <code>button</code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLCanvasElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 {{Specifications}}
@@ -174,9 +169,12 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
-- [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
 - [OffscreenCanvas](/en-US/docs/Web/API/OffscreenCanvas)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html) (2009)
 - [Canvas cheat sheet](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf) (pdf) (2015)
-- [Canvas cheat sheet](https://www.coding-dude.com/wp/wp-content/uploads/2020/09/HTML5-canvas-cheat-sheet.pdf) (pdf) (2020)
-- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) (2013)
+- [Safari HTML canvas guide](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) via Apple (2013)
+- [`CanvasRenderingContext2D` 2D drawing context for a canvas element](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) via Apple.com
+- [WebGL](/en-US/docs/Web/API/WebGL_API) API
+- {{HTMLElement("img")}}
+- [SVG](/en-US/docs/Web/SVG)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)

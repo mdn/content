@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportDatagramDuplexStream.readable
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`readable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("ReadableStream")}} instance that can be used to unreliably read incoming datagrams from the stream.
 
@@ -32,7 +32,7 @@ See the main {{domxref("WebTransportDatagramDuplexStream")}} interface page.
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

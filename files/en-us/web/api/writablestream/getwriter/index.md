@@ -28,19 +28,14 @@ A {{domxref("WritableStreamDefaultWriter")}} object instance.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : The stream you are trying to create a writer for is not a {{domxref("WritableStream")}}.
+  - : The stream you are trying to create a writer for is not a {{domxref("WritableStream")}} or it is already locked to another writer.
 
 ## Examples
 
-The following example illustrates several features of this interface. It shows the
-creation of the `WritableStream` with a custom sink and an API-supplied
-queuing strategy. It then calls a function called `sendMessage()`, passing
-the newly created stream and a string. Inside this function it calls the stream's
-`getWriter()` method, which returns an instance of
-{{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to
-write each chunk of the string to the stream. Finally, `write()` and
-`close()` return promises that are processed to deal with success or failure
-of chunks and streams.
+The following example illustrates several features of this interface.
+It shows the creation of the `WritableStream` with a custom sink and an API-supplied queuing strategy.
+t then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}.
+A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
 
 ```js
 const list = document.querySelector("ul");

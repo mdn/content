@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
 ---
 
-{{APIRef("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.
 
@@ -104,6 +104,18 @@ Frame format:
      |                     Payload Data continued ...                |
      +---------------------------------------------------------------+
 ```
+
+This means that a frame contains the following bytes:
+
+- First byte:
+  - bit 0: FIN
+  - bit 1: RSV1
+  - bit 2: RSV2
+  - bit 3: RSV3
+  - bits 4-7 OPCODE
+- Bytes 2-10: payload length (see [Decoding Payload Length](#decoding_payload_length))
+- If masking is used, the next 4 bytes contain the masking key (see [Reading and unmasking the data](#reading_and_unmasking_the_data))
+- All subsequent bytes are payload
 
 The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. _Note: You must mask messages even when using a secure socket._ RSV1-3 can be ignored, they are for extensions.
 

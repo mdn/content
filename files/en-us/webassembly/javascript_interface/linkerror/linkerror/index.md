@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.LinkError() constructor
 slug: WebAssembly/JavaScript_interface/LinkError/LinkError
-browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
+page-type: webassembly-constructor
+browser-compat: webassembly.api.LinkError.LinkError
 ---
 
 {{WebAssemblySidebar}}

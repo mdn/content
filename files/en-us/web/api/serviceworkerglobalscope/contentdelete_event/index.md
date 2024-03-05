@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerGlobalScope.contentdelete_event
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`contentdelete`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when an item is removed from the indexed content via the user agent.
 
@@ -74,5 +74,5 @@ self.oncontentdelete = (event) => {
 ## See also
 
 - [Content index API](/en-US/docs/Web/API/Content_Index_API)
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

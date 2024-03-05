@@ -7,7 +7,7 @@ browser-compat: api.ClipboardEvent
 
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
+The **`ClipboardEvent`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
 
 {{InheritanceDiagram}}
 
@@ -39,5 +39,4 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
 - Copy-related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

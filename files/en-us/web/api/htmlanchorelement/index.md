@@ -7,7 +7,7 @@ browser-compat: api.HTMLAnchorElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLAnchorElement`** interface represents hyperlink elements and provides special properties and methods (beyond those of the regular {{domxref("HTMLElement")}} object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to [`<a>`](/en-US/docs/Web/HTML/Element/a) element; not to be confused with [`<link>`](/en-US/docs/Web/HTML/Element/link), which is represented by [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement))
+The **`HTMLAnchorElement`** interface represents hyperlink elements and provides special properties and methods (beyond those of the regular {{domxref("HTMLElement")}} object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to [`<a>`](/en-US/docs/Web/HTML/Element/a) element; not to be confused with [`<link>`](/en-US/docs/Web/HTML/Element/link), which is represented by [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement).
 
 {{InheritanceDiagram}}
 
@@ -15,8 +15,6 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLElement.accessKey")}}
-  - : A string representing a single character that switches input focus to the hyperlink.
 - {{domxref("HTMLAnchorElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}
@@ -35,6 +33,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string containing the password specified before the domain name.
 - {{domxref("HTMLAnchorElement.pathname")}}
   - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+- {{domxref("HTMLAnchorElement.ping")}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 - {{domxref("HTMLAnchorElement.port")}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.protocol")}}
@@ -47,8 +47,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Returns a {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Element/a#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLAnchorElement.search")}}
   - : A string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.
-- {{domxref("HTMLElement.tabIndex")}}
-  - : A `long` containing the position of the element in the tabbing navigation order for the current document.
 - {{domxref("HTMLAnchorElement.target")}}
   - : A string that reflects the [`target`](/en-US/docs/Web/HTML/Element/a#target) HTML attribute, indicating where to display the linked resource.
 - {{domxref("HTMLAnchorElement.text")}}
@@ -79,14 +77,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLElement.blur")}}
-  - : Removes the keyboard focus from the current element.
-- {{domxref("HTMLElement.focus")}}
-  - : Gives the keyboard focus to the current element.
 - {{domxref("HTMLAnchorElement.toString()")}}
   - : Returns a string containing the whole URL. It is a synonym for {{domxref("HTMLAnchorElement.href")}}, though it can't be used to modify the value.
-
-The `blur()` and `focus()` methods are inherited from {{domxref("HTMLElement")}}.
 
 ## Specifications
 

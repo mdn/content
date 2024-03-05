@@ -31,14 +31,14 @@ display: none;
 display: contents;
 
 /* multi-keyword syntax */
+display: block flex;
 display: block flow;
+display: block flow-root;
+display: block grid;
+display: inline flex;
 display: inline flow;
 display: inline flow-root;
-display: block flex;
-display: inline flex;
-display: block grid;
 display: inline grid;
-display: block flow-root;
 
 /* other values */
 display: table;
@@ -70,8 +70,18 @@ The keyword values can be grouped into six value categories.
     - `inline`
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** Browsers that support the multi-keyword syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`.
-> This will result in expected behavior; for example, if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
+
+> **Note:** To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
+>
+> ```css
+> .container {
+>   display: inline-flex;
+>   display: inline flex;
+> }
+> ```
+>
+> See [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) for more information.
 
 ### Inside
 
@@ -85,10 +95,10 @@ The keyword values can be grouped into six value categories.
 
         If its outer display type is `inline` or `run-in`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
 
-        Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
+        Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
     - `flow-root`
-      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), defining where the formatting root lies.
+      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
@@ -98,8 +108,7 @@ The keyword values can be grouped into six value categories.
     - `ruby` {{Experimental_Inline}}
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
-> **Note:** Browsers that support the multi-keyword syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
-> This will result in expected behavior; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
+> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
 
 ### List Item
 
@@ -190,11 +199,12 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
         It is equivalent to `inline grid`.
 
-### Which syntax should you use now?
+### Which syntax should you use?
 
-The Level 3 specification details two values for the `display` property — enabling the specification of the outer and inner display type explicitly — but this is not yet well-supported by browsers.
+The [CSS display module](/en-US/docs/Web/CSS/CSS_display) describes a multi-keyword syntax for values you can use with the `display` property to explicitly define **outer** and **inner** display.
+The single keyword values (precomposed `<display-legacy>` values) are supported for backward-compatibility.
 
-The precomposed `<display-legacy>` methods allow the same results with single keyword values, and should be favoured by developers until the two keyword values are better supported. For example, using two values you might specify an inline flex container as follows:
+For example, using two values you can specify an inline flex container as follows:
 
 ```css
 .container {
@@ -202,7 +212,7 @@ The precomposed `<display-legacy>` methods allow the same results with single ke
 }
 ```
 
-This can currently be specified using a single value.
+This can also be specified using the legacy single value:
 
 ```css
 .container {
@@ -210,7 +220,7 @@ This can currently be specified using a single value.
 }
 ```
 
-For more information on these changes to the specification, see the article [Adapting to the new multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display).
+For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) guide.
 
 ### Global
 
@@ -225,7 +235,9 @@ display: unset;
 
 The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the [Syntax](#syntax) section. In addition, see the following material, which covers the various values of display in depth.
 
-- [Adapting to the new multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+### Multi-keyword values
+
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
 
 ### CSS Flow Layout (display: block, display: inline)
 
@@ -258,6 +270,26 @@ The individual pages for the different types of value that `display` can have se
 - [CSS Grid Layout and Accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+
+### Animating display
+
+[Supporting browsers](#browser_compatibility) animate `display` with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that the property will flip between two values 50% through animating between the two.
+
+There is one exception, which is when animating to or from `display: none`. In this case, the browser will flip between the two values so that the animated content is shown for the entire animation duration. So for example:
+
+- When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+
+This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
+
+When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `display` value in an explicit keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
+
+When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
+
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) provides starting values for properties you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on an element's first style update or when the `display` type changes from `none` to another type.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the {{cssxref("transition-property")}} declaration (or the {{cssxref("transition")}} shorthand) to enable `display` transitions.
+
+For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples) pages.
 
 ## Accessibility concerns
 
@@ -299,8 +331,6 @@ In this example we have two block-level container elements, each one with three 
 
 We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.
 
-> **Note:** We've not included any of the modern multi-keyword syntax, as support for that is still fairly limited.
-
 #### HTML
 
 ```html
@@ -322,12 +352,16 @@ We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the
     <option selected>block</option>
     <option>inline</option>
     <option>inline-block</option>
+    <option>inline flow-root</option>
     <option>none</option>
     <option>flex</option>
     <option>inline-flex</option>
+    <option>inline flex</option>
     <option>grid</option>
     <option>inline-grid</option>
+    <option>inline grid</option>
     <option>table</option>
+    <option>block table</option>
     <option>list-item</option>
   </select>
 </div>
@@ -385,7 +419,14 @@ updateDisplay();
 
 {{EmbedLiveSample('display_value_comparison','100%', 440)}}
 
-> **Note:** You can find more examples in the pages for each separate display data type, linked above.
+Note that some multi-keyword values are added for illustration which have the following equivalents:
+
+- `inline-block` = `inline flow-root`
+- `inline-flex` = `inline flex`
+- `inline-grid` = `inline grid`
+- `table` = `block table`
+
+You can find more examples in the pages for each separate display data type under [Grouped values](#grouped_values)
 
 ## Specifications
 

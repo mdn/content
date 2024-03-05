@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.update
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`update()`** method of the
 {{domxref("ServiceWorkerRegistration")}} interface attempts to update the service
@@ -14,7 +14,7 @@ worker. It fetches the worker's script URL, and if the new worker is not byte-by
 identical to the current worker, it installs the new worker. The fetch of the worker
 bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -66,6 +66,4 @@ if ("serviceWorker" in navigator) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

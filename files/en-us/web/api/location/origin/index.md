@@ -1,5 +1,5 @@
 ---
-title: "location: origin property"
+title: "Location: origin property"
 short-title: origin
 slug: Web/API/Location/origin
 page-type: web-api-instance-property

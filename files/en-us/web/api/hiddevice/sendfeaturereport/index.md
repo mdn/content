@@ -38,7 +38,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the report has been 
 
 ## Examples
 
-In the following example `sendFeatureReport()` makes a device blink. You can see more examples and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+In the following example `sendFeatureReport()` makes a device blink. You can see more examples and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 const reportId = 1;

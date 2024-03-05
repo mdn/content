@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkerNavigator.serial
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`serial`** read-only property of the {{domxref("WorkerNavigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the {{domxref("Web Serial API")}}.
 
@@ -38,5 +38,5 @@ navigator.serial.getPorts().then((ports) => {
 
 ## See also
 
-- [Read from and write to a serial port](https://web.dev/serial/)
+- [Read from and write to a serial port](https://developer.chrome.com/docs/capabilities/serial)
 - [Getting started with the web serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

@@ -77,7 +77,7 @@ We can add a `<script></script>` to our document, filled with the following Java
 ```js
 const conditional = document.querySelector(".conditional");
 if (CSS.supports("grid-template-columns", "subgrid")) {
-  conditional.setAttribute("href", "subgrid-layout.css.css");
+  conditional.setAttribute("href", "subgrid-layout.css");
 }
 ```
 

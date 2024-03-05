@@ -13,10 +13,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- `nowrap` {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ## Examples
 
@@ -63,7 +60,11 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role"><code>definition</code></a></td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+        </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

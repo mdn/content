@@ -189,7 +189,7 @@ Unlike `var` declarations, which only hoist the declaration but not its value, [
 
 Global variables are in fact properties of the _global object_.
 
-In web pages, the global object is {{domxref("window")}}, so you can set and access global variables using the `window.variable` syntax. In all environments, you can use the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable (which itself is a global variable) to access global variables.
+In web pages, the global object is {{domxref("window")}}, so you can read and set global variables using the `window.variable` syntax. In all environments, the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable (which itself is a global variable) may be used to read and set global variables. This is to provide a consistent interface among various JavaScript runtimes.
 
 Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the `window` or `frame` name. For example, if a variable called `phoneNumber` is declared in a document, you can refer to this variable from an `iframe` as `parent.phoneNumber`.
 
@@ -331,7 +331,7 @@ The following example creates the `coffees` array with three elements and a `len
 const coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
+An array literal creates a new array object every time the literal is evaluated. For example, an array defined with a literal in the global scope is created once when the script loads. However, if the array literal is inside a function, a new array is instantiated every time that function is called.
 
 > **Note:** Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 
@@ -412,7 +412,7 @@ Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), h
 - A leading `0` (zero) on an integer literal, or a leading `0o` (or `0O`) indicates it is in _octal_. Octal integer literals can include only the digits `0` – `7`.
 - A leading `0x` (or `0X`) indicates a _hexadecimal_ integer literal. Hexadecimal integers can include digits (`0` – `9`) and the letters `a` – `f` and `A` – `F`. (The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.)
 - A leading `0b` (or `0B`) indicates a _binary_ integer literal. Binary integer literals can only include the digits `0` and `1`.
-- A trailing `n` suffix on an integer literal indicates a {{jsxref("BigInt")}} literal. The integer literal can use any of the above bases. Note that leading-zero octal syntax like `0123n` is not allowed, but `0o123n` is fine.
+- A trailing `n` suffix on an integer literal indicates a {{jsxref("BigInt")}} literal. The {{jsxref("BigInt")}} literal can use any of the above bases. Note that leading-zero octal syntax like `0123n` is not allowed, but `0o123n` is fine.
 
 Some examples of integer literals are:
 

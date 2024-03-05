@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.FileReader.readyState
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("FileReader")}} **`readyState`** property provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
+The **`readyState`** read-only property of the {{domxref("FileReader")}} interface provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
 
 | Value | State     | Description                                                   |
 | ----- | --------- | ------------------------------------------------------------- |

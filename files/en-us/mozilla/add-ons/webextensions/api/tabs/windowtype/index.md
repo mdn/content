@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.WindowType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The type of window that hosts this tab.
 

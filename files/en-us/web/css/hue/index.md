@@ -2,7 +2,11 @@
 title: <hue>
 slug: Web/CSS/hue
 page-type: css-type
-browser-compat: css.types.hue
+browser-compat:
+  - css.types.color.hsl
+  - css.types.color.hwb
+  - css.types.color.lch
+  - css.types.color.oklch
 spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 ---
 
@@ -151,7 +155,7 @@ p {
 }
 span {
   font-family: monospace;
-  background: rgb(0 0 0 / 0.1);
+  background: rgb(0 0 0 / 10%);
   padding: 3px;
 }
 #hue-slider {

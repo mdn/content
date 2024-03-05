@@ -6,15 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportBidirectionalStream.writable
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
-The **`writable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to write outgoing data.
+The **`writable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("WebTransportSendStream")}} instance that can be used to write outgoing data.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{domxref("WritableStream")}}.
+A {{domxref("WebTransportSendStream")}}.
 
 ## Examples
 
@@ -30,7 +30,7 @@ See the main {{domxref("WebTransportBidirectionalStream")}} interface page.
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

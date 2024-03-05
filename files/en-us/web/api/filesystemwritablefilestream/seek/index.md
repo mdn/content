@@ -28,9 +28,9 @@ A {{jsxref('Promise')}} that returns `undefined`.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if {{domxref('PermissionStatus.state')}} is not `granted`.
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 - {{jsxref("TypeError")}}
-  - : Returned if `position` is not a number or not defined.
+  - : Thrown if `position` is not a number or not defined.
 
 ## Examples
 
@@ -79,4 +79,4 @@ If you run the above function and then open the resulting file created on disk, 
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.create
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`create()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that resolves with a new credential instance based on the provided options, the information from which can then be stored and later used to authenticate users via {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}.
 
@@ -110,10 +110,12 @@ If a single credential cannot be successfully created, the Promise will resolve 
 ```js
 navigator.credentials
   .create({
-    id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
-    name: "fluffybunny",
-    origin: "example.com",
-    password: "fluffyhaxx0r",
+    password: {
+      id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
+      name: "fluffybunny",
+      origin: "example.com",
+      password: "fluffyhaxx0r",
+    },
   })
   .then((pwdCred) => {
     console.log(pwdCred.name);
@@ -294,14 +296,30 @@ The `publicKey` object can contain the following properties:
     - `name`
       - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"johndoe667"`).
 
+- `hints` {{optional_inline}}
+
+  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
+
+    The values can be any of the following:
+
+    - `"security-key"`
+      - : Authentication requires a separate dedicated physical device to provide the key.
+    - `"client-device"`
+      - : The user authenticates using their own device, such as a phone.
+    - `"hybrid"`
+      - : Authentication relies on a combination of authorization/authentication methods, potentially relying on both user and server-based mechanisms.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}} instance matching the provided parameters. If no credential object can be created, the promise resolves with `null`.
 
 ### Exceptions
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Possible causes include:
+    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
+    - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
 
 ## Examples
 

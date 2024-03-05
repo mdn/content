@@ -6,11 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.Clipboard.readText
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **{{domxref("Clipboard")}}** interface's
-**`readText()`** method returns a {{jsxref("Promise")}} which
-resolves with a copy of the textual contents of the system clipboard.
+The **`readText()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} which fulfils with a copy of the textual contents of the system clipboard.
+
+> **Note:** To read non-text contents from the clipboard, use the {{domxref("Clipboard.read", "read()")}} method instead.
+> You can write text to the clipboard using {{domxref("Clipboard.writeText", "writeText()")}}.
 
 ## Syntax
 
@@ -24,30 +25,34 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a string containing the
-textual contents of the clipboard. Returns an empty string if the clipboard is empty,
-does not contain text, or does not include a textual representation among the
-{{domxref("DataTransfer")}} objects representing the clipboard's contents.
+A {{jsxref("Promise")}} that resolves with a string containing the textual contents of the clipboard.
 
-To read non-text contents from the clipboard, use the {{domxref("Clipboard.read",
-  "read()")}} method instead. You can write text to the clipboard using
-{{domxref("Clipboard.writeText", "writeText()")}}.
+Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the objects representing the clipboard's contents.
 
-## Security
+### Exceptions
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the access to read the clipboard is not allowed.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the clipboard indicates that it contains data that can be represented as a text but is unable to provide a textual representation.
 
-The `"clipboard-read"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) must be granted before you can read data from the clipboard.
+## Security considerations
+
+Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
+Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
 ## Examples
 
-This example retrieves the textual contents of the clipboard and inserts the returned
-text into an element's contents.
+This example retrieves the textual contents of the clipboard and inserts the returned text into a selected element's contents.
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+const destination = document.getElementById("outbox");
+destinationImage.addEventListener("click", () => {
+  navigator.clipboard
+    .readText()
+    .then((clipText) => (destination.innerText = clipText));
+});
 ```
 
 ## Specifications
@@ -61,7 +66,7 @@ navigator.clipboard
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}

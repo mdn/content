@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.eval
 
 {{jsSidebar("Objects")}}
 
-> **Warning:** Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use eval()!](#never_use_eval!), below.
+> **Warning:** Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
@@ -62,9 +62,12 @@ eval(String(expression)); // returns 4
 
 ### Direct and indirect eval
 
-There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval only has one form: `eval( )` (the invoked function's name is `eval` and its value is the global `eval` function). Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
+There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval, as the name implies, refers to _directly_ calling the global `eval` function with `eval(...)`. Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
 
 ```js
+// Direct call
+eval("x + y");
+
 // Indirect call using the comma operator to return eval
 (0, eval)("x + y");
 
@@ -159,7 +162,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
   new Ctor(); // [Function: Ctor]
   ```
 
-### Never use eval()!
+### Never use direct eval()!
 
 Using direct `eval()` suffers from multiple problems:
 

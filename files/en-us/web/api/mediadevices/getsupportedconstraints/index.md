@@ -6,13 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-The
-**`getSupportedConstraints()`**
-method of the {{domxref("MediaDevices")}} interface returns an object based on the
-{{domxref("MediaTrackSupportedConstraints")}} dictionary, whose member fields each
-specify one of the constrainable properties the {{Glossary("user agent")}} understands.
+The **`getSupportedConstraints()`** method of the {{domxref("MediaDevices")}} interface returns an object based on the {{domxref("MediaTrackSupportedConstraints")}} dictionary, whose member fields each specify one of the constrainable properties the {{Glossary("user agent")}} understands.
 
 ## Syntax
 
@@ -26,10 +22,8 @@ None.
 
 ### Return value
 
-A new object based on the {{domxref("MediaTrackSupportedConstraints")}} dictionary
-listing the constraints supported by the user agent. Because only constraints supported
-by the user agent are included in the list, each of these Boolean properties has the
-value `true`.
+A new object based on the {{domxref("MediaTrackSupportedConstraints")}} dictionary listing the constraints supported by the user agent.
+Because only constraints supported by the user agent are included in the list, each of these Boolean properties has the value `true`.
 
 ## Examples
 

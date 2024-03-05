@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 
@@ -32,7 +32,7 @@ let querying = browser.tabs.query(queryObj)
     - `autoDiscardable` {{optional_inline}}
       - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
     - `cookieStoreId` {{optional_inline}}
-      - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `currentWindow` {{optional_inline}}
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded` {{optional_inline}}
