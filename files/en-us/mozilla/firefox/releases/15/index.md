@@ -96,4 +96,4 @@ The following interfaces have been removed.
 
 ## See also
 
-{{Firefox_for_developers('14')}}
+{{Firefox_for_developers}}
