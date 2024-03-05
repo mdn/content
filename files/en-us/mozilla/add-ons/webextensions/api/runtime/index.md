@@ -31,6 +31,8 @@ It also provides messaging APIs enabling you to:
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}
+  - : The category of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onRestartRequired")}} event is being dispatched.
 
