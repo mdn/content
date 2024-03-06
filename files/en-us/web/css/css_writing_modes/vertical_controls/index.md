@@ -348,7 +348,7 @@ button {
 
 The result looks like so:
 
-{{ EmbedLiveSample("Adjusting button text line order", "100%", "150") }}
+{{ EmbedLiveSample("Adjusting button text line order", "100%", "160") }}
 
 ## Text-based inputs
 
