@@ -3,6 +3,7 @@ title: "MediaTrackSupportedConstraints: frameRate property"
 short-title: frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
 page-type: web-api-instance-property
+browser-compat: api.MediaStreamTrack.applyConstraints.frameRate_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
