@@ -159,7 +159,7 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 700, "/files/4371/test.png")}}
+{{EmbedLiveSample("Example", "100%", "700")}}
 
 ## Specifications
 
