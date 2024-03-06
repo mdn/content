@@ -49,8 +49,8 @@ function foo() {
 
 ### String representation of the Selection object
 
-In JavaScript, when an object is passed to a function expecting a string (like {{
-  Domxref("window.alert()") }} or {{ Domxref("document.write()") }}), the object's
+In JavaScript, when an object is passed to a function expecting a string (like {{Domxref("window.alert()")}} or
+{{Domxref("document.write()")}}), the object's
 {{jsxref("Object.toString", "toString()")}} method is called and the returned value is
 passed to the function. This can make the object appear to be a string when used with
 other functions when it is really an object with properties and methods.
