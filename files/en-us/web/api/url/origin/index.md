@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.URL.origin
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`origin`** read-only property of
 the {{domxref("URL")}} interface returns a string containing the
@@ -22,8 +22,6 @@ varies depending on the type of URL:
 - for `blob:` URLs, the origin of the URL following `blob:` will
   be used. For example, `"blob:https://mozilla.org"` will be returned as
   `"https://mozilla.org".`
-
-{{AvailableInWorkers}}
 
 ## Value
 

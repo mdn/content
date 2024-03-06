@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.WebTransportBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a {{domxref("WebTransportReceiveStream")}} for reading incoming data, and a {{domxref("WebTransportSendStream")}} for writing outgoing data.
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 
