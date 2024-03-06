@@ -2,7 +2,7 @@
 title: display
 slug: Web/SVG/Attribute/display
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.display
+browser-compat: svg.global_attributes.display
 ---
 
 {{SVGRef}}

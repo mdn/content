@@ -2,7 +2,7 @@
 title: font-weight
 slug: Web/SVG/Attribute/font-weight
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.font-weight
+browser-compat: svg.global_attributes.font-weight
 ---
 
 {{SVGRef}}

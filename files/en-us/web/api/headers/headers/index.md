@@ -6,12 +6,10 @@ page-type: web-api-constructor
 browser-compat: api.Headers.Headers
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers()`** constructor creates a new
 {{domxref("Headers")}} object.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

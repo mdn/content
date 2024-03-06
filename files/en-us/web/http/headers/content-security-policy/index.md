@@ -57,10 +57,12 @@ where `<policy-directive>` consists of:
 - {{CSP("default-src")}}
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
     directives")}}.
+- {{CSP("fenced-frame-src")}}
+  - : Specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 - {{CSP("font-src")}}
   - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
 - {{CSP("frame-src")}}
-  - : Specifies valid sources for nested browsing contexts loading using elements such as
+  - : Specifies valid sources for nested browsing contexts loaded into elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 - {{CSP("img-src")}}
   - : Specifies valid sources of images and favicons.
