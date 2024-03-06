@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.delete
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`delete()`** method of the {{domxref("Headers")}}
 interface deletes a header from the current `Headers` object.
@@ -19,8 +19,6 @@ This method throws a {{jsxref("TypeError")}} for the following reasons:
 For security reasons, some headers can only be controlled by the user agent. These
 headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
