@@ -7,6 +7,8 @@ status:
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
 
+{{SeeCompatTable}}
+
 **Cookies Having Independent Partitioned State** (**CHIPS**, also known as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
 A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by third-party services, but only read within the context of the top-level site where they were initially set. This allows cross-site tracking to be blocked, while still enabling non-tracking uses of third-party cookies such as persisting state of embedded maps or chat widgets across different sites, and persisting config information for subresource CDN load balancing and Headless CMS providers.

@@ -8,14 +8,12 @@ status:
 browser-compat: api.Notification.image
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`image`** read-only property of the
 {{domxref("Notification")}} interface contains the URL of an image to be displayed as
 part of the notification, as specified in the `image` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
-
-{{AvailableInWorkers}}
 
 ## Value
 

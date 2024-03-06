@@ -2,7 +2,7 @@
 title: font-family
 slug: Web/SVG/Attribute/font-family
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.font-family
+browser-compat: svg.global_attributes.font-family
 ---
 
 {{SVGRef}}

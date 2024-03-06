@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/kerning
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.kerning
+browser-compat: svg.global_attributes.kerning
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

@@ -85,7 +85,7 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-Insignificant {{Glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://unicode-table.com/en/0009/)), carriage return ([U+000D](https://unicode-table.com/en/000D/)), line feed ([U+000A](https://unicode-table.com/en/000A/)), and space ([U+0020](https://unicode-table.com/en/0020/)) characters are the only valid whitespace characters.
+Insignificant {{Glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://symbl.cc/en/0009/)), carriage return ([U+000D](https://symbl.cc/en/000D/)), line feed ([U+000A](https://symbl.cc/en/000A/)), and space ([U+0020](https://symbl.cc/en/0020/)) characters are the only valid whitespace characters.
 
 ## Static properties
 

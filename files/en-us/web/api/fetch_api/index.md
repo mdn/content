@@ -5,11 +5,9 @@ page-type: web-api-overview
 browser-compat: api.fetch
 ---
 
-{{DefaultAPISidebar("Fetch API")}}
+{{DefaultAPISidebar("Fetch API")}} {{AvailableInWorkers}}
 
 The Fetch API provides an interface for fetching resources (including across the network). It is a more powerful and flexible replacement for {{DOMxRef("XMLHttpRequest")}}.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
