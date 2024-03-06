@@ -43,7 +43,7 @@ There are three types of native manifest:
   </tbody>
 </table>
 
-For all native manifests, you need to store the file so the browser can find it. The section on [manifest location](#manifest_location) describes how to do this.
+For all native manifests, you need to store the file so the browser can find it. The section on [manifest location](#manifest_location) describes how to do this. On Linux and macOS, the files are in a fixed location, on Windows the file location is written to the Windows Registry.
 
 ## Native messaging manifests
 
