@@ -2,7 +2,7 @@
 title: font-stretch
 slug: Web/SVG/Attribute/font-stretch
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.font-stretch
+browser-compat: svg.global_attributes.font-stretch
 ---
 
 {{SVGRef}}

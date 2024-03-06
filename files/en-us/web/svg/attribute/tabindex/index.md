@@ -2,7 +2,7 @@
 title: tabindex
 slug: Web/SVG/Attribute/tabindex
 page-type: svg-attribute
-browser-compat: svg.attributes.core.tabindex
+browser-compat: svg.global_attributes.tabindex
 ---
 
 {{SVGRef}}

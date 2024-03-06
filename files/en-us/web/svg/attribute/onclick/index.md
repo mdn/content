@@ -2,7 +2,7 @@
 title: onclick
 slug: Web/SVG/Attribute/onclick
 page-type: svg-attribute
-browser-compat: svg.attributes.events.global.onclick
+browser-compat: svg.global_attributes.onclick
 ---
 
 {{SVGRef}}
