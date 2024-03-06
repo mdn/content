@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.IDBFactory.cmp
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`cmp()`** method of the {{domxref("IDBFactory")}}
 interface compares two values as keys to determine equality and ordering for IndexedDB
 operations, such as storing and iterating.
-
-{{AvailableInWorkers}}
 
 > **Note:** Do not use this method for comparing arbitrary JavaScript
 > values, because many JavaScript values are either not valid IndexedDB keys (booleans

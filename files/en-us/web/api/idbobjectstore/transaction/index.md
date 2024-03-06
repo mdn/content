@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.transaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`transaction`** read-only property of the
 {{domxref("IDBObjectStore")}} interface returns the transaction object to which this
 object store belongs.
-
-{{AvailableInWorkers}}
 
 ## Value
 

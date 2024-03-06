@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getNotifications()`** method of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the
@@ -15,8 +15,6 @@ current service worker registration. Origins can have many active but
 differently-scoped service worker registrations. Notifications created by one service
 worker on the same origin will not be available to other active service workers on
 that same origin.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

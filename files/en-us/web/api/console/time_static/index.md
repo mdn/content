@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.console.time_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.time()`** static method starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call {{domxref("console/timeEnd_static", "console.timeEnd()")}} with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started.
 
 See [Timers](/en-US/docs/Web/API/console#timers) in the {{domxref("console")}} documentation for details and examples.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
