@@ -10,8 +10,8 @@ The guide explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref(
 
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) sliders, {{htmlelement("progress")}} bars, and {{htmlelement("meter")}} elements.
 - {{htmlelement("select")}} elements.
-- Button controls including {{htmlelement("button")}} and [`button`](/en-US/docs/Web/HTML/Element/input/button), [`reset`](/en-US/docs/Web/HTML/Element/input/reset), and [`submit`](/en-US/docs/Web/HTML/Element/input/submit) `<input>` types.
-- [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)s, and text-based inputs such as [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url).
+- {{htmlelement("button")}} elements and button input types such as [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button), [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset), and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit).
+- {{htmlelement("textarea")}} elements and text-based input types such as [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url).
 
 ## General technique
 
