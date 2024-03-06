@@ -12,7 +12,7 @@ The **`with()`** method of {{jsxref("Array")}} instances is the [copying](/en-US
 ## Syntax
 
 ```js-nolint
-arrayInstance.with(index, value)
+with(index, value)
 ```
 
 ### Parameters
