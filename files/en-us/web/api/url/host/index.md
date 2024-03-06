@@ -9,8 +9,7 @@ browser-compat: api.URL.host
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`host`** property of the {{domxref("URL")}} interface is
-a string containing the host, that is the {{domxref("URL.hostname",
-  "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a
+a string containing the host, that is the {{domxref("URL.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a
 `':'`, followed by the {{domxref("URL.port", "port")}} of the URL.
 
 ## Value
