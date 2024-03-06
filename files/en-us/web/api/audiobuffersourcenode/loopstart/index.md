@@ -8,8 +8,7 @@ browser-compat: api.AudioBufferSourceNode.loopStart
 
 {{ APIRef("Web Audio API") }}
 
-The **`loopStart`** property of the {{
-  domxref("AudioBufferSourceNode") }} interface is a floating-point value indicating, in
+The **`loopStart`** property of the {{domxref("AudioBufferSourceNode")}} interface is a floating-point value indicating, in
 seconds, where in the {{domxref("AudioBuffer")}} the restart of the play must happen.
 
 The `loopStart` property's default value is `0`.

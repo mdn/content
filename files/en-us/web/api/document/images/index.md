@@ -19,8 +19,7 @@ in the current document. Each entry in the collection is an
 
 ## Usage notes
 
-You can use either JavaScript array notation or the {{domxref("HTMLCollection.item",
-  "item()")}} method on the returned collection to access the items in the collection. The
+You can use either JavaScript array notation or the {{domxref("HTMLCollection.item", "item()")}} method on the returned collection to access the items in the collection. The
 following are equivalent:
 
 ```js

@@ -10,8 +10,8 @@ browser-compat: api.BaseAudioContext.createBufferSource
 
 The `createBufferSource()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to create a new {{ domxref("AudioBufferSourceNode") }}, which can be
-used to play audio data contained within an {{ domxref("AudioBuffer") }} object. {{
-    domxref("AudioBuffer") }}s are created using
+used to play audio data contained within an {{ domxref("AudioBuffer") }} object.
+{{domxref("AudioBuffer") }}s are created using
 {{domxref("BaseAudioContext.createBuffer")}} or returned by
 {{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio
 track.

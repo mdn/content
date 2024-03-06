@@ -29,8 +29,8 @@ as a text string. The data is _always_ presumed to be in UTF-8 format.
 
 ## Usage notes
 
-The {{domxref("FileReader")}} method {{domxref("FileReader.readAsText",
-  "readAsText()")}} is an older method that performs a similar function. It works on both
+The {{domxref("FileReader")}} method {{domxref("FileReader.readAsText", "readAsText()")}}
+is an older method that performs a similar function. It works on both
 `Blob` and {{domxref("File")}} objects. There are two key differences:
 
 - `Blob.text()` returns a promise, whereas

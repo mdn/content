@@ -112,8 +112,7 @@ for (let i = 0; i <= 3; i++) {
 
 #### Result
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210,
-  "canvas_arc.png") }}
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}
 
 ## Specifications
 

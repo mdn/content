@@ -50,8 +50,7 @@ None ({{jsxref("undefined")}}).
   - : Thrown under the following conditions:
 
     - The _processorCtor_ is not a callable constructor.
-    - The {{domxref("AudioWorkletProcessor.parameterDescriptors",
-        "parameterDescriptors")}} property of the constructor exists and doesn't return an
+    - The {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property of the constructor exists and doesn't return an
       array of {{domxref("AudioParamDescriptor")}}-based objects.
 
 ## Examples

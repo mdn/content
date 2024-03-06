@@ -55,8 +55,8 @@ function getTrackList(el) {
 
 The resulting `trackList` contains an array of audio tracks whose
 `kind` is one of those in the array `wantedKinds`, with each entry
-providing the track's {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind",
-  "kind")}}, and {{domxref("AudioTrack.label", "label")}}.
+providing the track's {{domxref("AudioTrack.id", "id")}},
+{{domxref("AudioTrack.kind", "kind")}}, and {{domxref("AudioTrack.label", "label")}}.
 
 ## Specifications
 
