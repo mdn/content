@@ -42,8 +42,6 @@ The {{CSSXRef('order')}} property, part of flex or grid layouts, can be used to 
 
 Make sure your owned elements have only one owner. Do not specify the `id` of an element in more than one other element's `aria-owns` attribute. An element can have only one owner.
 
-> **Warning:** At the time of this writing, [`aria-owns` is not supported](https://a11ysupport.io/tech/aria/aria-owns_attribute) on MacOS and iOS with VoiceOver.
-
 ## Values
 
 - `id` list
