@@ -39,12 +39,12 @@ Once started, a live preview is available at `http://localhost:5042/`.
 You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
 The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
 
-To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
+To find out how to get started, see the [caoky.md](CONTRIBUTING.md) document in this repository.
 By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Get in touch
 
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
-[communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
-[MDN Web Docs]: https://developer.mozilla.org/
+[communication channels]: https://caoky.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[MDN Web Docs]: https://caoky.mozilla.org/
