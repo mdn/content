@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.assert_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.assert()`** static method writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
