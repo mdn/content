@@ -3,7 +3,6 @@ title: "MediaTrackSettings: height property"
 short-title: height
 slug: Web/API/MediaTrackSettings/height
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.height
 ---
 
 {{APIRef("Media Capture and Streams")}}

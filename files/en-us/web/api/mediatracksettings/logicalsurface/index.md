@@ -3,7 +3,6 @@ title: "MediaTrackSettings: logicalSurface property"
 short-title: logicalSurface
 slug: Web/API/MediaTrackSettings/logicalSurface
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.logicalSurface
 ---
 
 {{APIRef("Media Capture and Streams")}}

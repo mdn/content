@@ -2,7 +2,6 @@
 title: MediaTrackSettings
 slug: Web/API/MediaTrackSettings
 page-type: web-api-interface
-browser-compat: api.MediaTrackSettings
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -3,7 +3,6 @@ title: "MediaTrackSettings: channelCount property"
 short-title: channelCount
 slug: Web/API/MediaTrackSettings/channelCount
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.channelCount
 ---
 
 {{APIRef("Media Capture and Streams")}}

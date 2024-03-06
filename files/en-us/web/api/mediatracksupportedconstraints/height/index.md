@@ -3,7 +3,6 @@ title: "MediaTrackSupportedConstraints: height property"
 short-title: height
 slug: Web/API/MediaTrackSupportedConstraints/height
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.height
 ---
 
 {{APIRef("Media Capture and Streams")}}

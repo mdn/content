@@ -3,7 +3,6 @@ title: "MediaTrackSettings: frameRate property"
 short-title: frameRate
 slug: Web/API/MediaTrackSettings/frameRate
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.frameRate
 ---
 
 {{APIRef("Media Capture and Streams")}}

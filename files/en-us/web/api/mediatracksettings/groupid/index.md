@@ -3,7 +3,6 @@ title: "MediaTrackSettings: groupId property"
 short-title: groupId
 slug: Web/API/MediaTrackSettings/groupId
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.groupId
 ---
 
 {{APIRef("Media Capture and Streams")}}

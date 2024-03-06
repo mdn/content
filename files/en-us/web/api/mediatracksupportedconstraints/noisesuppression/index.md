@@ -3,7 +3,6 @@ title: "MediaTrackSupportedConstraints: noiseSuppression property"
 short-title: noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 ---
 
 {{APIRef("Media Capture and Streams")}}

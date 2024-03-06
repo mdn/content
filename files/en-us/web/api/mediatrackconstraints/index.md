@@ -2,7 +2,7 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-browser-compat: api.MediaTrackConstraints
+browser-compat: api.MediaStreamTrack.applyConstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -3,7 +3,6 @@ title: "MediaTrackSettings: width property"
 short-title: width
 slug: Web/API/MediaTrackSettings/width
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.width
 ---
 
 {{APIRef("Media Capture and Streams")}}

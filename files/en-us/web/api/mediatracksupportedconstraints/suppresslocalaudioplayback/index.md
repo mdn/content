@@ -5,7 +5,6 @@ slug: Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.MediaTrackSupportedConstraints.suppressLocalAudioPlayback
 ---
 
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
