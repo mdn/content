@@ -18,7 +18,7 @@ A relative CSS color value has the following general syntax structure:
 color-function(from origin-color channel1 channel2 channel3)
 color-function(from origin-color channel1 channel2 channel3 / alpha)
 
-// colorspace included in the case of color() functions
+// color space included in the case of color() functions
 color(from origin-color colorspace channel1 channel2 channel3)
 color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
@@ -129,8 +129,8 @@ Below you can find relative color syntax examples for each color function. Each 
 
 ```css
 /* color() with and without alpha channel */
-/* Note that Chrome supports r g b and x y z for all colorspaces */
-/* Whereas Safari supports r g b or x y z depending on the colorspace */
+/* Note that Chrome supports r g b and x y z for all color spaces */
+/* Whereas Safari supports r g b or x y z depending on the color space */
 color(from red a98-rgb r g b)
 color(from red a98-rgb r g b / alpha)
 
@@ -449,8 +449,8 @@ fieldset {
   background-color: lch(from var(--base-color) l c calc(h + 180));
 }
 
-/* Use @supports to add in support for Safari 16.4+, which supports old
-   syntax that requires deg units to be specified in hue calculations */
+/* Use @supports to add in support old syntax that requires deg units
+   to be specified in hue calculations. This is required for Safari 16.4+. */
 @supports (color: lch(from red l c calc(h + 180deg))) {
   .comp :nth-child(2) {
     background-color: lch(from var(--base-color) l c calc(h + 180deg));
@@ -473,8 +473,8 @@ fieldset {
   background-color: lch(from var(--base-color) l c calc(h + 120));
 }
 
-/* Use @supports to add in support for Safari 16.4+, which supports old
-   syntax that requires deg units to be specified in hue calculations */
+/* Use @supports to add in support old syntax that requires deg units
+   to be specified in hue calculations. This is required for Safari 16.4+. */
 @supports (color: lch(from red l c calc(h + 120deg))) {
   .triadic :nth-child(2) {
     background-color: lch(from var(--base-color) l c calc(h - 120deg));
@@ -504,8 +504,8 @@ fieldset {
   background-color: lch(from var(--base-color) l c calc(h + 270));
 }
 
-/* Use @supports to add in support for Safari 16.4+, which supports old
-   syntax that requires deg units to be specified in hue calculations */
+/* Use @supports to add in support old syntax that requires deg units
+   to be specified in hue calculations. This is required for Safari 16.4+. */
 @supports (color: lch(from red l c calc(h + 90deg))) {
   .tetradic :nth-child(2) {
     background-color: lch(from var(--base-color) l c calc(h + 90deg));
@@ -699,9 +699,9 @@ main {
   background: radial-gradient(white, var(--base-color));
 }
 
-/* Use @supports to add in support for --complementary-color
-   in Safari 16.4+, which supports old syntax that requires
-   deg units to be specified in hue calculations */
+/* Use @supports to add in support for --complementary-color with old
+   syntax that requires deg units to be specified in hue calculations.
+   This is required for in Safari 16.4+. */
 @supports (color: lch(from red l c calc(h + 180deg))) {
   main {
     --complementary-color: lch(from var(--base-color) l c calc(h + 180deg));

@@ -4,26 +4,25 @@ slug: Web/CSS/color_value/color
 page-type: css-function
 browser-compat: css.types.color.color
 spec-urls:
+  - https://drafts.csswg.org/css-color-5/#color-function
   - https://drafts.csswg.org/css-color-5/#relative-color-function
   - https://drafts.csswg.org/css-color/#color-function
 ---
 
 {{CSSRef}}
 
-The **`color()`** functional notation allows a color to be specified in a particular, specified colorspace rather than the implicit sRGB colorspace that most of the other color functions operate in.
+The **`color()`** functional notation allows a color to be specified in a particular, specified {{glossary("color_spaces", "color space")}} rather than the implicit sRGB color space that most of the other color functions operate in.
 
-Support for a particular colorspace can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) CSS media feature.
+Support for a particular color space can be detected with the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) CSS media feature.
 
 ## Syntax
 
 ```css
 /* Absolute values */
-
 color(display-p3 1 0.5 0);
 color(display-p3 1 0.5 0 / .5);
 
 /* Relative values */
-
 color(from green srgb r g b / 0.5)
 color(from #0000FF xyz calc(x + 0.75) y calc(z - 0.35))
 ```
@@ -42,15 +41,15 @@ The parameters are as follows:
 
 - `colorspace`
 
-  - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined colorspaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
+  - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
 
 - `c1`, `c2`, `c3`
 
-  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the colorspace. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
+  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the colorspace. When using a `<number>` value, generally, `0` to `1` represents the bounds of the color space. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given color space. When using a percentage value, `100%` represents `1` and `0%` represents `0`.
 
 - `A` {{optional_inline}}
 
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` explicitly specifies no alpha channel. If included, the value is preceded by a slash (`/`).
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
@@ -65,30 +64,30 @@ The parameters are as follows:
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `colorspace`
-  - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined colorspaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
+  - : An {{CSSXref("&lt;ident&gt;")}} denoting the color space of the output color, which is one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
 - `c1`, `c2`, `c3`
-  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the output color. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
+  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the output color. When using a `<number>` value, generally `0` to `1` represents the bounds of the color space. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given color space. Generally, when using a percentage value, `100%` represents `1` and `0%` represents `0`.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` explicitly specifies no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside a `color()` function, the browser converts the origin color into an equivalent color in the specified colorspace (if it is not already specified as such). The color is defined as three distinct color channel values plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside a `color()` function, the browser converts the origin color into an equivalent color in the specified color space (if it is not already specified as such). The color is defined as three distinct color channel values plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The three color channel values of the origin color are resolved to a `<number>`. Depending on the specified colorspace, these values will be one of the following:
+- The three color channel values of the origin color are resolved to a `<number>`. Depending on the specified color space, these values will be one of the following:
 
-  - `r`, `g`, and `b`: Color channel values for the RGB-based colorspaces `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
-  - `x`, `y`, and `z`: Color channel values for the CIE XYZ-based colorspaces `xyz`, `xyz-d50`, and `xyz-d65`.
+  - `r`, `g`, and `b`: Color channel values for the RGB-based color spaces `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
+  - `x`, `y`, and `z`: Color channel values for the CIE XYZ-based color spaces `xyz`, `xyz-d50`, and `xyz-d65`.
 
-    > **Note:** Each of these values is usually between 0 and 1 but, as explained above, they may be outside these bounds.
+    > **Note:** Each of these values is usually between `0` and `1` but, as explained above, they may be outside these bounds.
 
-    > **Note:** Referencing `r`, `g`, and `b` values inside a `color()` function with a XYZ-based colorspace, or referencing `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, is invalid. The origin color channel values available inside the function will match the specified type of colorspace.
+    > **Note:** Referencing `r`, `g`, and `b` values inside a `color()` function with a XYZ-based colorspace, `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, or any other characters, is invalid. The origin color channel values available inside the function must match the specified type of colorspace.
 
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.
+- The `alpha` channel is resolved to a `<number>` between `0` and `1`, inclusive.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
-It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative color syntax.
+It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative `color()` syntax.
 
 Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). While you are unlikely to ever write the following functions because they output the same color as the origin color, this demonstrates how to use the origin color channel values as the output channel values:
 
@@ -119,14 +118,26 @@ color(from hsl(0 100% 50%) xyz x y 0.5)
 /* Computed output color: color(xyz-d65 0.412426 0.212648 0.5) */
 ```
 
+In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output channel values are `1` for the above examples.
+
+Let's look at some examples that specify origin and output alpha channel values. The first one specifies the output alpha channel value as being the same as the origin alpha channel value, whereas the second one specifies a different output alpha channel value, unrelated to the origin alpha channel value.
+
+```css
+color(from hsl(0 100% 50% / 0.8) srgb r g b / alpha)
+/* Computed output color: color(srgb 1 0 0 / 0.8) */
+
+color(from hsl(0 100% 50% / 0.8) xyz x y z / 0.5)
+/* Computed output color: color(xyz-d65 0.412426 0.212648 0.0193173 / 0.5) */
+```
+
 The following examples use {{cssxref("calc")}} functions to calculate new channel values for the output colors that are relative to the origin color channel values:
 
 ```css
-color(from hsl(0 100% 50%) srgb calc(r - 0.4) calc(g + 0.1) calc(b + 0.6))
-/* Computed output color: color(srgb 0.6 0.1 0.6)  */
+color(from hsl(0 100% 50%) srgb calc(r - 0.4) calc(g + 0.1) calc(b + 0.6) / calc(alpha - 0.1))
+/* Computed output color: color(srgb 0.6 0.1 0.6 / 0.9)  */
 
-color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3))
-/* Computed output color: color(xyz-d65 0.112426 0.512648 0.319317) */
+color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3) / calc(alpha - 0.1))
+/* Computed output color: color(xyz-d65 0.112426 0.512648 0.319317 / 0.9) */
 ```
 
 ### Formal syntax
@@ -135,7 +146,7 @@ color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3))
 
 ## Examples
 
-### Using predefined colorspaces with color()
+### Using predefined color spaces with color()
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `color()` function.
 
@@ -186,11 +197,11 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("using_predefined_colorspaces_with_color")}}
+{{EmbedLiveSample("using_predefined_color_spaces_with_color")}}
 
-### Using the xyz colorspace with color()
+### Using the xyz color space with color()
 
-The following example shows how to use the `xyz` colorspace to specify a color.
+The following example shows how to use the `xyz` color space to specify a color.
 
 #### HTML
 
@@ -229,11 +240,11 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("using_the_xyz_colorspace_with_color")}}
+{{EmbedLiveSample("using_the_xyz_color_space_with_color")}}
 
 ### Using color-gamut media queries with color()
 
-This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media query to detect support for a particular colorspace and use that colorspace to specify a color.
+This example shows how to use the [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) media query to detect support for a particular color space and use that color space to specify a color.
 
 #### HTML
 
@@ -331,9 +342,9 @@ These variants are defined using relative colors — the `--base-color` [custom 
   );
 }
 
-/* Use @supports to add in support for Safari 16.4+, which supports old
-   syntax that requires r g b values to be specified as percentages (with
-   units) in calculations */
+/* Use @supports to add in support old syntax that requires r g b values
+   to be specified as percentages (with units) in calculations.
+   This is required for Safari 16.4+ */
 @supports (color: color(from red display-p3 r g calc(b + 30%))) {
   #one {
     background-color: color(

@@ -62,7 +62,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - {{cssxref("alpha-value")}}
 - {{cssxref("hue")}}
 - {{cssxref("system-color")}}
-- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
+- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_color_spaces_with_color)
 
 ### Keywords
 

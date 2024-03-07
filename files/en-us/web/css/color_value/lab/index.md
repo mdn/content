@@ -18,13 +18,11 @@ Lab represents the entire range of colors that humans can see by specifying the 
 
 ```css
 /* Absolute values */
-
 lab(29.2345% 39.3825 20.0664);
 lab(52.2345% 40.1645 59.9971);
 lab(52.2345% 40.1645 59.9971 / .5);
 
 /* Relative values */
-
 lab(from green l a b / 0.5)
 lab(from #0000FF calc(l + 10) a b)
 lab(from hsl(180 100% 50%) calc(l - 10) a b)
@@ -49,7 +47,7 @@ The parameters are as follows:
 - `b`
   - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `b` axis, which defines how blue (moving towards `-125`) or yellow ( moving towards `+125`) the color is. Note that these values are signed (allowing both positive and negative values) and theoretically unbounded, meaning that you can set values outside the `±125` (`±100%`) limits. In practice, values cannot exceed `±160`.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` explicitly specifies no alpha channel. If included, the value is preceded by a slash (`/`).
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
@@ -70,7 +68,7 @@ The parameters are as follows:
 - `b`
   - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `b` axis, which defines how blue (moving towards `-125`) or yellow (moving towards `+125`) the color is. Note that these values are signed (allowing both positive and negative values) and theoretically unbounded, meaning that you can set values outside the `±125` (`±100%`) limits. In practice, values cannot exceed `±160`.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` explicitly specifies no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`. This is not always the case for LAB's lightness and `a` and `b` axes, as mentioned above. With `L`, the range is from 0 to 100, with `100%` equal to `100`. The `a` and `b` values support both negative and positive values, with `100%` being equal to `125` and `-100%` being equal to `-125`.
 
@@ -78,13 +76,13 @@ The parameters are as follows:
 
 When using relative color syntax inside a `lab()` function, the browser converts the origin color into an equivalent Lab color (if it is not already specified as such). The color is defined as three distinct color channel values — `l` (lightness), `a` (green/red axis), and `b` (blue/yellow axis) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `l` channel value is resolved to a `<number>` between 0 and 100.
-- The `a` and `b` channels are each resolved to a `<number>` between -125 and 125.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.
+- The `l` channel value is resolved to a `<number>` between `0` and `100`.
+- The `a` and `b` channels are each resolved to a `<number>` between `-125` and `125`.
+- The `alpha` channel is resolved to a `<number>` between `0` and `1`, inclusive.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
-It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative color syntax.
+It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative `lab()` syntax.
 
 Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `l`, `a`, and `b` channel values as the output channel values:
 
@@ -115,6 +113,18 @@ This example:
 - Sets the output color's `a` channel value to a new value not based on the origin color: `-100`.
 
 The above example's output color is `lab(54.29 -100 69.8997)`.
+
+In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output channel values are `1` for the above examples.
+
+Let's look at some examples that specify origin and output alpha channel values. The first one specifies the output alpha channel value as being the same as the origin alpha channel value, whereas the second one specifies a different output alpha channel value, unrelated to the origin alpha channel value.
+
+```css
+lab(from hsl(0 100% 50% / 0.8) l a b / alpha)
+/* Computed output color: lab(54.29 80.8198 69.8997 / 0.8) */
+
+lab(from hsl(0 100% 50% / 0.8) l a b / 0.5)
+/* Computed output color: lab(54.29 80.8198 69.8997 / 0.5) */
+```
 
 In the following example, the `hsl()` origin color is again converted to the `lab()` equivalent — `lab(54.29 80.8198 69.8997)`. {{cssxref("calc")}} calculations are applied to the `L`, `a`, `b`, and `A` values, resulting in an output color of `lab(74.29 60.8198 29.8997 / 0.9)`:
 

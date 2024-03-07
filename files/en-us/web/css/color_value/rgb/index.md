@@ -12,26 +12,22 @@ spec-urls:
 
 The **`rgb()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-> **Note:** The legacy `rgba()` syntax is an alias for `rgb()`, accepting the same parameters and behaving in the same way.
-
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
 ## Syntax
 
 ```css
 /* Absolute values */
-
 rgb(255 255 255)
 rgb(255 255 255 / 50%)
 
 /* Relative values */
-
 rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 ```
 
-The absolute values can also be written in a legacy form in which all values are separated with commas. Mixing number and percent value types is not valid in the comma-separated legacy syntax: the `R`, `G`, and `B` values must be either all numbers or all percentages.
+> **Note:** The absolute values can also be written in a legacy form in which all values are separated with commas. Additionally, the legacy `rgba()` function can be used, which is an alias for `rgb()` that accepts the same parameters. Mixing number and percent value types is not valid in the comma-separated legacy syntax: the `R`, `G`, and `B` values must be either all numbers or all percentages.
 
 ### Values
 
@@ -50,7 +46,7 @@ The parameters are as follows:
 - `R`, `G`, `B`
   - : Each value can be represented as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). These values represent the red, green, and blue channels, respectively.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` explicitly specifies no alpha channel. If included, the value is preceded by a slash (`/`).
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
@@ -67,18 +63,18 @@ The parameters are as follows:
 - `R`, `G`, `B`
   - : Each value can be represented as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). These values represent the red, green, and blue channel values of the output color, respectively.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` explicitly specifies no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 #### Defining relative color output channel components
 
 When using relative color syntax inside an `rgb()` function, the browser converts the origin color into an equivalent RGB color (if it is not already specified as such). The color is defined as three distinct color channel values — `r` (red), `g` (green), and `b` (blue) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `r`, `g` and `b` values are each resolved to `<number>`s between 0 and 255.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.
+- The `r`, `g` and `b` values are each resolved to `<number>`s between `0` and `255`.
+- The `alpha` channel is resolved to a `<number>` between `0` and `1`, inclusive.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
-It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative color syntax.
+It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative `rgb()` syntax.
 
 Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `r`, `g`, and `b` channel values as the output channel values:
 
@@ -109,6 +105,18 @@ This example:
 - Sets the output color's `G` and `B` channel values to new values not based on the origin color: `80` and `80`.
 
 The above example's output color is `color(srgb 1 0.313726 0.313726)`.
+
+In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output channel values are `1` for the above examples.
+
+Let's look at some examples that specify origin and output alpha channel values. The first one specifies the output alpha channel value as being the same as the origin alpha channel value, whereas the second one specifies a different output alpha channel value, unrelated to the origin alpha channel value.
+
+```css
+rgb(from hsl(0 100% 50% / 0.8) r g b / alpha)
+/* Computed output color: color(srgb 1 0 0 / 0.8) */
+
+rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
+/* Computed output color: color(srgb 1 0 0 / 0.5) */
+```
 
 In the following example, the `hsl()` origin color is again converted into an equivalent of the `rgb()` representation in the sRGB color space — `color(srgb 1 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values, resulting in an output color of `color(srgb 0.5 0.0980392 0.686275 / 0.9)`:
 
@@ -171,9 +179,9 @@ These variants are defined using relative colors — the `--base-color` [custom 
   /* 153 is 60% of 255 */
 }
 
-/* Use @supports to add in support for Safari 16.4+, which supports old
-   syntax that requires r g b values to be specified as percentages (with
-   units) in calculations */
+/* Use @supports to add in support for old syntax that requires r g b values to
+   be specified as percentages (with units) in calculations. This is required
+   for Safari 16.4+. */
 @supports (color: rgb(from red r g calc(b + 30%))) {
   #two {
     background-color: rgb(from var(--base-color) calc(r - 30%) g calc(b + 30%));
