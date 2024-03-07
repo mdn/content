@@ -2,7 +2,7 @@
 title: writing-mode
 slug: Web/SVG/Attribute/writing-mode
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.writing-mode
+browser-compat: svg.global_attributes.writing-mode
 ---
 
 {{SVGRef}}

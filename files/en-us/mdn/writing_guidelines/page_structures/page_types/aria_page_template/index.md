@@ -16,12 +16,12 @@ An ARIA role page should have a `title` and `slug` of `ARIA: Name Of The Role`. 
 
 A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:
 
-- \\{{deprecated_header}}—generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). If it isn't, then you can remove the macro call.
 - \\{{ariaref}}—generates a suitable ARIA sidebar, depending on what tags are included on the page.
 
-### Tags
+### Statuses
 
-In ARIA role or attribute subpages, you need to include the following tags (see the _Tags_ section at the bottom of the editor UI): **ARIA**, **Reference**, **ARIA Role** or **ARIA Attribute**, _the name of the Role or Attribute_ (e.g. **ARIA button** or **aria-labelledby**), **ARIA widget,** **Experimental** (if the role or attribute is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), and **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated)).
+Do not add or edit status keys manually.
+To include the (appropriate) feature status key — [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** — see the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 
 ### Specifications
 
@@ -37,7 +37,7 @@ Additional resources:
 
 ## Page template
 
-The summary paragraph—start by naming the role or attribute and saying what it does. This should ideally be 1 or 2 short sentences. This content appears as a tool tip on links to this page, so craft it well.
+The summary paragraph—start by naming the role or attribute and saying what it does. This should ideally be one or two short sentences. This content appears as a tool tip on links to this page, so craft it well.
 
 ```html
 <!-- Insert code block showing common use cases -->

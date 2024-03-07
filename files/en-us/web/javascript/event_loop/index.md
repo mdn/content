@@ -144,4 +144,4 @@ Legacy exceptions exist like `alert` or synchronous XHR, but it is considered go
 ## See also
 
 - [Event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops) in the HTML standard
-- [The Node.js Event Loop, Timers, and `process.nextTick()`](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop) in the Node.js docs
+- [What is the Event Loop?](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick#what-is-the-event-loop) in the Node.js docs

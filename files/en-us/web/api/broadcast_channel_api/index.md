@@ -5,11 +5,9 @@ page-type: web-api-overview
 browser-compat: api.BroadcastChannel
 ---
 
-{{DefaultAPISidebar("Broadcast Channel API")}}
+{{DefaultAPISidebar("Broadcast Channel API")}} {{AvailableInWorkers}}
 
 The **Broadcast Channel API** allows basic communication between {{glossary("browsing context", "browsing contexts")}} (that is, _windows_, _tabs_, _frames_, or _iframes_) and workers on the same {{glossary("origin")}}.
-
-{{AvailableInWorkers}}
 
 By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can "subscribe" to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.
 

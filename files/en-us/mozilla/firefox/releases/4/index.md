@@ -498,4 +498,4 @@ In addition to the specific changes referenced below, it's important to note tha
 
 ## See also
 
-{{Firefox_for_developers('3.6')}}
+{{Firefox_for_developers}}
