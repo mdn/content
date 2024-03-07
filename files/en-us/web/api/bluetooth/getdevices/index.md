@@ -10,7 +10,7 @@ browser-compat: api.Bluetooth.getDevices
 
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
-The **`getDevices()`** method of {{DOMxRef("Bluetooth")}} interface of [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) exposes the Bluetooth devices this origin is allowed to access.
+The **`getDevices()`** method of the {{DOMxRef("Bluetooth")}} interface exposes the Bluetooth devices this origin is allowed to access.
 This method does not display any permission prompts.
 
 > **Note:** This method returns a {{DOMxRef("BluetoothDevice")}} for each device the origin is currently allowed to access, even the ones that are out of range or powered off.
