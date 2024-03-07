@@ -32,7 +32,7 @@ view-timeline-inset: 20% 200px;
 
 Allowed values for `view-timeline-inset` are:
 
-- `auto`
+- `auto` {{experimental_inline}}
   - : If set, the corresponding {{cssxref("scroll-padding")}} (or equivalent longhand value) for that edge of the scrollport is used. If this is not set (or set to `auto`), the value will usually be 0, although some user agents may use heuristics to determine a different default value if appropriate.
 - {{cssxref("length-percentage")}}
   - : Any valid `<length-percentage>` value is accepted as an inset/outset value.

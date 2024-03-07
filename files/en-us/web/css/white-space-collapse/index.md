@@ -33,15 +33,15 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 ### Values
 
-- `collapse`
+- `collapse` {{experimental_inline}}
   - : White space sequences are [collapsed](#collapsing_of_white_space).
-- `preserve`
+- `preserve` {{experimental_inline}}
   - : White space sequences and segment break characters are preserved.
-- `preserve-breaks`
+- `preserve-breaks` {{experimental_inline}}
   - : White space sequences are collapsed, while segment break characters are preserved.
 - `preserve-spaces`
   - : White space sequences are preserved, while tabs and segment break characters are converted to spaces.
-- `break-spaces`
+- `break-spaces` {{experimental_inline}}
   - : The behavior is identical to `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.

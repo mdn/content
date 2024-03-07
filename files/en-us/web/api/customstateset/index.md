@@ -2,12 +2,10 @@
 title: CustomStateSet
 slug: Web/API/CustomStateSet
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CustomStateSet
 ---
 
-{{APIRef("Web Components")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) stores a list of states for an [autonomous custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element), and allows states to be added and removed from the set.
 
@@ -15,26 +13,26 @@ The interface can be used to expose the internal states of a custom element, all
 
 ## Instance properties
 
-- {{domxref("CustomStateSet.size")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.size")}}
   - : Returns the number of values in the `CustomStateSet`.
 
 ## Instance methods
 
-- {{domxref("CustomStateSet.add()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.add()")}}
   - : Adds a value to the set.
-- {{domxref("CustomStateSet.clear()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.clear()")}}
   - : Removes all elements from the `CustomStateSet` object.
-- {{domxref("CustomStateSet.delete()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.delete()")}}
   - : Removes one value from the `CustomStateSet` object.
-- {{domxref("CustomStateSet.entries()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.entries()")}}
   - : Returns a new iterator with the values for each element in the `CustomStateSet` in insertion order.
-- {{domxref("CustomStateSet.forEach()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.forEach()")}}
   - : Executes a provided function for each value in the `CustomStateSet` object.
-- {{domxref("CustomStateSet.has()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.has()")}}
   - : Returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
-- {{domxref("CustomStateSet.keys()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.keys()")}}
   - : An alias for {{domxref("CustomStateSet.values()")}}.
-- {{domxref("CustomStateSet.values()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.values()")}}
   - : Returns a new iterator object that yields the values for each element in the `CustomStateSet` object in insertion order.
 
 ## Description

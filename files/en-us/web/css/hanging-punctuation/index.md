@@ -43,8 +43,8 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 - **One-value** syntax uses any one of the keyword values in the list below.
 - **Two-value** syntax uses one of the following:
 
-  - `first` together with any one of `last`, `allow-end`, or `force-end`
-  - `last` together with any one of `first`, `allow-end`, or `force-end`
+  - `first` {{experimental_inline}} together with any one of `last`, `allow-end`, or `force-end`
+  - `last` {{experimental_inline}} together with any one of `first`, `allow-end`, or `force-end`
 
 - **Three-value** syntax uses one of the following:
 
@@ -53,7 +53,7 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 
 ### Values
 
-- `none`
+- `none` {{experimental_inline}}
   - : No character hangs.
 - `first`
 
@@ -66,9 +66,9 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
   - : A closing bracket or quote at the end of the last formatted line of an element hangs. This applies to:
     - all characters in the Unicode categories [Pe](https://unicodeplus.com/category/Pe), [Pf](https://unicodeplus.com/category/Pf), [Pi](https://unicodeplus.com/category/Pi)
     - the quote marks `U+0027` APOSTROPHE (`'`) and `U+0022` QUOTATION MARK (`"`).
-- `force-end`
+- `force-end` {{experimental_inline}}
   - : A stop or comma at the end of a line hangs.
-- `allow-end`
+- `allow-end` {{experimental_inline}}
   - : A stop or comma at the end of a line hangs if it does not otherwise fit prior to justification.
 
 Stops and commas that are allowed to hang include:

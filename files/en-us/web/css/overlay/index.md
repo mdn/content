@@ -32,9 +32,9 @@ display: unset;
 
 ### Values
 
-- `auto`
+- `auto` {{experimental_inline}}
   - : The element is rendered in the top layer if it is promoted to the top layer.
-- `none`
+- `none` {{experimental_inline}}
   - : The element is not rendered in the top layer.
 
 ## Formal definition

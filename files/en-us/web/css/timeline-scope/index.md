@@ -28,7 +28,7 @@ timeline-scope: custom_name_for_timeline;
 
 Allowed values for `timeline-scope` are:
 
-- `none`
+- `none` {{experimental_inline}}
   - : There is no change in timeline scope.
 - `<dashed-ident>`
 

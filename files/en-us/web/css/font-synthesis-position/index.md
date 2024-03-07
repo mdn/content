@@ -30,9 +30,9 @@ font-synthesis-position: unset;
 
 ### Values
 
-- `auto`
+- `auto` {{experimental_inline}}
   - : Indicates that a missing position typeface may be synthesized by the browser if needed.
-- `none`
+- `none` {{experimental_inline}}
   - : Indicates that the synthesis of a missing position typeface by the browser is not allowed.
 
 ## Formal definition

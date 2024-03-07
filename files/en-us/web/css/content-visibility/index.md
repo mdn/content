@@ -2,12 +2,10 @@
 title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.content-visibility
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
@@ -33,11 +31,11 @@ content-visibility: unset;
 
 ### Values
 
-- `visible`
+- `visible` {{experimental_inline}}
   - : No effect. The element's contents are laid out and rendered as normal.
-- `hidden`
+- `hidden` {{experimental_inline}}
   - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
-- `auto`
+- `auto` {{experimental_inline}}
   - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
 
 ## Description

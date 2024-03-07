@@ -37,9 +37,9 @@ The `text-size-adjust` property is specified as `none`, `auto`, or a `<percentag
 
 ### Values
 
-- `none`
+- `none` {{experimental_inline}}
   - : Disables the browser's inflation algorithm.
-- `auto`
+- `auto` {{experimental_inline}}
   - : Enables the browser's inflation algorithm. This value is used to cancel a `none` value previously set with CSS.
 - `<percentage>`
   - : Enables the browser's inflation algorithm, specifying a percentage value with which to increase the font size.

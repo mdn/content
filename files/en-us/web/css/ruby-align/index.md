@@ -30,13 +30,13 @@ ruby-align: unset;
 
 ### Values
 
-- `start`
+- `start` {{experimental_inline}}
   - : Is a keyword indicating that the ruby will be aligned with the start of the base text.
-- `center`
+- `center` {{experimental_inline}}
   - : Is a keyword indicating that the ruby will be aligned at the middle of the base text.
-- `space-between`
+- `space-between` {{experimental_inline}}
   - : Is a keyword indicating that the extra space will be distributed between the elements of the ruby.
-- `space-around`
+- `space-around` {{experimental_inline}}
   - : Is a keyword indicating that the extra space will be distributed between the elements of the ruby, and around it.
 
 ## Formal definition

@@ -35,7 +35,7 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 
 ### Values
 
-- `normal`
+- `normal` {{experimental_inline}}
   - : No special initial-letter effect. Text behaves as normal.
 - `<number>`
   - : Defines the size of the initial letter, in terms of how many lines it occupies. Negative values are not allowed.

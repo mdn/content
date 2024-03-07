@@ -38,7 +38,7 @@ text-decoration-skip: unset;
 
 ### Values
 
-- `none`
+- `none` {{experimental_inline}}
   - : Nothing is skipped. Thus, text decoration is drawn for all text content and across atomic inline-level boxes.
 - `objects`
   - : The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.

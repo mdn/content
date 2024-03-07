@@ -28,13 +28,13 @@ text-justify: unset;
 
 ### Values
 
-- `none`
+- `none` {{experimental_inline}}
   - : The text justification is turned off. This has the same effect as not setting {{cssxref("text-align")}} at all, although it is useful if you need to turn justification on and off for some reason.
-- `auto`
+- `auto` {{experimental_inline}}
   - : The browser chooses the best type of justification for the current situation based on a balance between performance and quality, but also on what is most appropriate for the language of the text (e.g., English, CJK languages, etc.). This is the default justification used if `text-justify` is not set at all.
-- `inter-word`
+- `inter-word` {{experimental_inline}}
   - : The text is justified by adding space between words (effectively varying {{cssxref("word-spacing")}}), which is most appropriate for languages that separate words using spaces, like English or Korean.
-- `inter-character`
+- `inter-character` {{experimental_inline}}
   - : The text is justified by adding space between characters (effectively varying {{cssxref("letter-spacing")}}), which is most appropriate for languages like Japanese.
 - `distribute` {{deprecated_inline}}
   - : Exhibits the same behavior as `inter-character`; this value is kept for backwards compatibility.
