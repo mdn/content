@@ -31,9 +31,9 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 ## Buffers
 
-- {{domxref("WebGL2RenderingContext.bufferData()")}}
+- {{domxref("WebGLRenderingContext.bufferData()")}}
   - : Initializes and creates the buffer object's data store.
-- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
   - : Updates a subset of a buffer object's data store.
 - {{domxref("WebGL2RenderingContext.copyBufferSubData()")}}
   - : Copies part of the data of a buffer to another buffer.
