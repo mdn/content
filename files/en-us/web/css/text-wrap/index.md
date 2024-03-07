@@ -14,6 +14,8 @@ The **`text-wrap`** CSS property controls how text inside an element is wrapped.
 
 > **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
+{{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+
 ## Syntax
 
 ```css

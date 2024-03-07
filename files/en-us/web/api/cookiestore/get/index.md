@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStore.get
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
