@@ -121,7 +121,7 @@ The previous snippet references another build function: `buildDeleteButtonEl()`.
 function buildDeleteButtonEl(id) {
   const button = document.createElement("button");
   button.setAttribute("type", "button");
-  button.textContent "Delete";
+  button.textContent = "Delete";
 
   return button;
 }
