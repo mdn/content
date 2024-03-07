@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/glyph-orientation-horizontal
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
+browser-compat: svg.global_attributes.glyph-orientation-horizontal
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

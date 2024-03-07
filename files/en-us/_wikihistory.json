@@ -7844,20 +7844,6 @@
       "icyfenix"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-11-18T06:45:07.853Z",
-    "contributors": [
-      "SphinxKnight",
-      "iamkiing2000",
-      "gammlerfranz",
-      "niceby.collectvibe",
-      "thewebsolinterns",
-      "chrisdavidmills",
-      "ohaver",
-      "davidmichaelgregg",
-      "roshan0708"
-    ]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-12-07T11:57:48.782Z",
     "contributors": [
@@ -94858,18 +94844,6 @@
       "jorh"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2020-10-15T21:25:09.630Z",
-    "contributors": [
-      "teoli",
-      "Sheppy",
-      "chearon",
-      "slimsag",
-      "Jeremie",
-      "dustindowell",
-      "msherefel"
-    ]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-12-03T01:54:55.358Z",
     "contributors": [
@@ -124535,10 +124509,6 @@
   "Web/SVG/Attribute/numOctaves": {
     "modified": "2020-10-15T21:20:48.485Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/onclick": {
-    "modified": "2020-10-15T22:23:00.291Z",
-    "contributors": ["josh.591536", "Sebastianz"]
   },
   "Web/SVG/Attribute/opacity": {
     "modified": "2020-10-15T21:07:02.287Z",

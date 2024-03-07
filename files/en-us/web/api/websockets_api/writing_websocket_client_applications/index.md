@@ -4,11 +4,9 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
-
-{{AvailableInWorkers}}
 
 > **Note:** The example snippets in this article are taken from our WebSocket chat client/server sample.
 > [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).

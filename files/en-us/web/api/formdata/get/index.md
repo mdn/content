@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.get
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("FormData")}} interface
 returns the first value associated with a given key from within a `FormData`
 object. If you expect multiple values and want all of them, use the
 {{domxref("FormData.getAll()","getAll()")}} method instead.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

@@ -6,33 +6,30 @@ page-type: landing-page
 
 {{LearnSidebar}}
 
-Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites.
-
-The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from [the rest of MDN](/en-US/), and other intermediate to advanced resources that assume a lot of previous knowledge.
+Welcome to the MDN learning area. This set of articles aims to provide complete beginners to web development with fundamental skills for coding websites. The aim is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from [the rest of MDN](/en-US/), and other intermediate to advanced resources that assume a lot of previous knowledge.
 
 If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
+
+## Where to start
+
+If you are not sure about committing to learning web development in-depth and want to begin with a taster session, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) guides. Beyond that, you should start by learning the following topics:
+
+- HTML and CSS
+  - : HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS first steps](/en-US/docs/Learn/CSS/First_steps) for essential starter information.
+- JavaScript
+  - : JavaScript allows you to code interactive functionality on websites. Begin with [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).
+- Frameworks and tooling
+  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
+
+> **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
 > **Callout:**
 >
 > #### Looking to become a front-end web developer?
 >
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
+> If you want to become a front-end web developer and are not sure what to learn first, we'd suggest using the [MDN Curriculum](/en-US/curriculum/) to plan your learning. It provides a structured learning pathway covering the essential skills and practices for being a successful front-end developer, along with recommended learning resources.
 >
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
-## Where to start
-
-- Complete beginner
-  - : If you are a complete beginner to web development, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module, which provides a practical introduction to web development.
-- Beyond the basics
-  - : If you have a bit of knowledge already, the next step is to learn {{glossary("HTML")}} and {{glossary("CSS")}} in detail: start with our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module and move on to our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
-- Moving onto scripting
-  - : If you are comfortable with HTML and CSS already, or you are mainly interested in coding, you'll want to move on to {{glossary("JavaScript")}} or server-side development. Begin with our [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [Server-side first steps](/en-US/docs/Learn/Server-side/First_steps) modules.
-- Frameworks and tooling
-  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), and [server-side website programming](/en-US/docs/Learn/Server-side).
-
-> **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
+> [**Get started**](/en-US/curriculum/)
 
 ## Topics covered
 
@@ -61,20 +58,18 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 ## Tasks and assessments
 
-In the Learn web development section of MDN, there are many self-contained modules that contain articles, tasks, examples, and assessments for you to complete.
-Here are some tips on how to get the most out of them.
-There are two main types of tasks you'll encounter:
+In the Learn web development section of MDN, there are many self-contained tasks and assessments for you to complete. These come in two main types:
 
-- "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
-- more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+- "Test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
+- More in-depth **assessments** at the end of some modules, for example [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery).
 
-For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/main/learn).
-
-Each assessment/skill test has an associated marking guide and recommended solution available to help you assess your work.
+Each one has an associated marking guide and recommended solution available to help you assess your work.
 There are patterns that make it easier to find these resources, for example:
 
-- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
-- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
+- The **test your skills** task linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
+- The **assessment** linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
+
+> **Note:** Most of the marking guides and other resources for the tasks and assessments are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), although some are in [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn).
 
 ## Getting our code examples
 
@@ -115,25 +110,15 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 ## See also
 
-- [MDN Blog](/en-US/blog/)
-  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
-- [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
-  - : Our newsletter for web developers, which is an excellent resource for all levels of experience.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
-- [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://github.com/JeremiePat).
 - [Codecademy](https://www.codecademy.com/)
   - : A great interactive site for learning programming languages from scratch.
-- [BitDegree](https://www.bitdegree.org/learn/)
-  - : Basic coding theory with a gamified learning process. Mainly focused on beginners.
-- [Code.org](https://code.org/)
-  - : Basic coding theory and practice, primarily aimed at children/complete beginners.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Interactive site with tutorials and projects to learn web development.
 - [The Odin Project](https://www.theodinproject.com/)
   - : Features a free and open-source full-stack curriculum, from beginner to advanced.
-- [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
-  - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
-- [Edabit](https://edabit.com/challenges/javascript)
-  - : Thousands of interactive JavaScript challenges.
+- [MDN Blog](/en-US/blog/)
+  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
+- [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
+  - : Our newsletter for web developers, which is an excellent resource for all levels of experience.

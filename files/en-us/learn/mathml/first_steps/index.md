@@ -8,14 +8,6 @@ page-type: learn-module
 
 MathML is the markup language used to write mathematical formulas in web pages. This module provides a gentle beginning to your path towards MathML mastery with the basics of how it works, what the syntax looks like, and how you can start using it inside HTML.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you should have:
