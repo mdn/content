@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/glyph-orientation-vertical
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.glyph-orientation-vertical
+browser-compat: svg.global_attributes.glyph-orientation-vertical
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

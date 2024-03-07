@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.values
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 The **`FormData.values()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all values contained in the {{domxref("FormData")}}. The values are strings or {{domxref("Blob")}} objects.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

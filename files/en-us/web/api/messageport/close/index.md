@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.MessagePort.close
 ---
 
-{{APIRef("Channel Messaging API")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`close()`** method of the {{domxref("MessagePort")}}
 interface disconnects the port, so it is no longer active. This stops the flow of
 messages to that port.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

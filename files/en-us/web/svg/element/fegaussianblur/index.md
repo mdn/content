@@ -47,7 +47,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("Simple_example", "", "130")}}
 
 ### Drop shadow example
 
@@ -74,7 +74,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
+{{EmbedLiveSample("Drop_shadow_example", "", "130")}}
 
 ## Specifications
 

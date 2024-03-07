@@ -6,12 +6,10 @@ page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.only_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`only()`** static method of the {{domxref("IDBKeyRange")}}
 interface creates a new key range containing a single value.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
