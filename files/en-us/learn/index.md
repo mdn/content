@@ -58,20 +58,18 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 ## Tasks and assessments
 
-In the Learn web development section of MDN, there are many self-contained modules that contain articles, tasks, examples, and assessments for you to complete.
-Here are some tips on how to get the most out of them.
-There are two main types of tasks you'll encounter:
+In the Learn web development section of MDN, there are many self-contained tasks and assessments for you to complete. These come in two main types:
 
-- "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
-- more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+- "Test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
+- More in-depth **assessments** at the end of some modules, for example [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery).
 
-For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/main/learn).
-
-Each assessment/skill test has an associated marking guide and recommended solution available to help you assess your work.
+Each one has an associated marking guide and recommended solution available to help you assess your work.
 There are patterns that make it easier to find these resources, for example:
 
-- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
-- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
+- The **test your skills** task linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
+- The **assessment** linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
+
+> **Note:** Most of the marking guides and other resources for the tasks and assessments are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), although some are in [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn).
 
 ## Getting our code examples
 
@@ -112,25 +110,15 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 ## See also
 
-- [MDN Blog](/en-US/blog/)
-  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
-- [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
-  - : Our newsletter for web developers, which is an excellent resource for all levels of experience.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
-- [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://github.com/JeremiePat).
 - [Codecademy](https://www.codecademy.com/)
   - : A great interactive site for learning programming languages from scratch.
-- [BitDegree](https://www.bitdegree.org/learn/)
-  - : Basic coding theory with a gamified learning process. Mainly focused on beginners.
-- [Code.org](https://code.org/)
-  - : Basic coding theory and practice, primarily aimed at children/complete beginners.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Interactive site with tutorials and projects to learn web development.
 - [The Odin Project](https://www.theodinproject.com/)
   - : Features a free and open-source full-stack curriculum, from beginner to advanced.
-- [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
-  - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
-- [Edabit](https://edabit.com/challenges/javascript)
-  - : Thousands of interactive JavaScript challenges.
+- [MDN Blog](/en-US/blog/)
+  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
+- [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
+  - : Our newsletter for web developers, which is an excellent resource for all levels of experience.

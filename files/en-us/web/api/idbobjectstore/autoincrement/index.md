@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.autoIncrement
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`autoIncrement`** read-only property of the
 {{domxref("IDBObjectStore")}} interface returns the value of the auto increment flag
 for this object store.
 
 Note that every object store has its own separate auto increment counter.
-
-{{AvailableInWorkers}}
 
 ## Value
 

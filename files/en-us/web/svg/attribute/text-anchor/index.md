@@ -2,7 +2,7 @@
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.text-anchor
+browser-compat: svg.global_attributes.text-anchor
 ---
 
 {{SVGRef}}
