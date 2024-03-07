@@ -13,7 +13,7 @@ Some compression methods such as {{glossary("WebP")}} are capable of both lossy 
 
 ![Lossy compression image](2019-11-18.png)
 
-Although there is no obvious difference quality between the two images above, the size of the second image has been significantly reduced using lossy compression.
+Although there is no obvious difference in quality between the two images above, the size of the second image has been significantly reduced using lossy compression.
 
 ## See also
 
