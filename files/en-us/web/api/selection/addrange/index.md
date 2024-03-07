@@ -20,8 +20,7 @@ addRange(range)
 ### Parameters
 
 - `range`
-  - : A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
-    }}.
+  - : A {{ domxref("Range") }} object that will be added to the {{domxref("Selection")}}.
 
 ### Return value
 
