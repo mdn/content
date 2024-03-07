@@ -98,7 +98,7 @@ ctx.lineWidth = 10;
 });
 ```
 
-{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("Comparison_of_line_joins", "", "180")}}
 
 ## Specifications
 

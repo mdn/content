@@ -2,7 +2,7 @@
 title: word-spacing
 slug: Web/SVG/Attribute/word-spacing
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.word-spacing
+browser-compat: svg.global_attributes.word-spacing
 ---
 
 {{SVGRef}}
