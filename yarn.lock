@@ -853,10 +853,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.13.tgz#2894aaeffc1d51b7b8c7420af895bdf642be9f64"
   integrity sha512-TebJo+nW4mfxxHcCoYC+3GgSitQGwjp6sAT/b6tqfKifyLfn9jlf3xa0tE/fnhGFerLzGauFrTf1HCTuVyYysQ==
 
-"@mdn/yari@2.42.1":
-  version "2.42.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.42.1.tgz#1e719d75facf6f4ed5a1631973147cdf7311ebaf"
-  integrity sha512-xLXyoiRj2dqD3BG6hQ7J+5ibj3oaDkIWvGrBSBBV3R3PsBArcOXk/e274HsRcwIPUm/JuGSbPcXql1CCoi9agA==
+"@mdn/yari@2.43.0":
+  version "2.43.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.43.0.tgz#a836cdbf9bce437d1d37c44f5238c6199ff1dfbb"
+  integrity sha512-/nG00YgImQFxKMcsxjuEBTpNZulJyTccL7s6o0+KFo8cLcz87DHvmrYzZFDciEMAwKXiDqmo4YvnHI6xoaJ0OQ==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -870,7 +870,7 @@
     "@mozilla/glean" "4.0.0"
     "@sentry/integrations" "^7.105.0"
     "@sentry/node" "^7.105.0"
-    "@stripe/stripe-js" "^3.0.6"
+    "@stripe/stripe-js" "^3.0.7"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.9"
     "@webref/css" "^6.12.1"
@@ -885,7 +885,7 @@
     cookie-parser "^1.4.6"
     css-tree "^2.3.1"
     dayjs "^1.11.10"
-    dexie "^3.2.5"
+    dexie "^3.2.6"
     dotenv "^16.4.5"
     ejs "^3.1.9"
     express "^4.18.3"
@@ -1056,10 +1056,10 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@stripe/stripe-js@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.6.tgz#80844af42eae50a9a0ba452038672c20217c7117"
-  integrity sha512-Ef3A0/zvgKbiMdCPT+rZgQBQqhNZ66wuR6Eg2w9YUuqykcIFFKU4nYApBr05WTvInrge8GuOqY5acSDiv6DOjA==
+"@stripe/stripe-js@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.7.tgz#ceec7db210830d742c1ba2a697ddaf3a210542af"
+  integrity sha512-qmjTsxnst84iWDsGqPxk5Wlff/fG4nSFjy/r24t9WWFAlCuvwnuUAe4eGgbqZBng019AtgWvo8wuhM3Y5/olbw==
 
 "@szmarczak/http-timer@^5.0.1":
   version "5.0.1"
@@ -2715,10 +2715,10 @@ devlop@^1.0.0, devlop@^1.1.0:
   dependencies:
     dequal "^2.0.0"
 
-dexie@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.5.tgz#f68e34b98e0e5e3412cf86b540a2cc6cbf9b0266"
-  integrity sha512-MA7vYQvXxWN2+G50D0GLS4FqdYUyRYQsN0FikZIVebOmRoNCSCL9+eUbIF80dqrfns3kmY+83+hE2GN9CnAGyA==
+dexie@^3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.6.tgz#c5980e4228d7e81744bb324c81459afa6604da41"
+  integrity sha512-R9VzQ27/cncQymoAeD1kfu66NUrdxcnMNXVfEoFLnQ+apVVbS4++veUcSGxft9V++zaeiLkMAREOMf8EwgR/Vw==
   dependencies:
     karma-safari-launcher "^1.0.0"
 
