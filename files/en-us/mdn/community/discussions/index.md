@@ -14,7 +14,9 @@ If you're not sure whether to open an issue or start discussion, consider the fo
 
 - Issues are for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
 - Discussions are the right place if an issue needs a discussion to agree upon a course of action or define an actionable piece of work.
-  heck out the subject of each discussion category below so that you can start your discussion in the proper place.
+- If the discussion is controversial or otherwise requires a resolution for action to be taken, follow the [discussion toward resolution guidelines](/en-US/docs/MDN/Community/Discussions/Resolving_discussions).
+
+Check out the subject of each discussion category below so that you can start your discussion in the proper place.
 
 <table>
   <thead>
