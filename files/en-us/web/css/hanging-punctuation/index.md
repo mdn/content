@@ -43,8 +43,8 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 - **One-value** syntax uses any one of the keyword values in the list below.
 - **Two-value** syntax uses one of the following:
 
-  - `first` {{experimental_inline}} together with any one of `last`, `allow-end`, or `force-end`
-  - `last` {{experimental_inline}} together with any one of `first`, `allow-end`, or `force-end`
+  - `first` together with any one of `last`, `allow-end`, or `force-end`
+  - `last` together with any one of `first`, `allow-end`, or `force-end`
 
 - **Three-value** syntax uses one of the following:
 
@@ -55,14 +55,14 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 
 - `none` {{experimental_inline}}
   - : No character hangs.
-- `first`
+- `first` {{experimental_inline}}
 
   - : An opening bracket or quote at the start of the first formatted line of an element hangs. This applies to:
 
     - all characters in the Unicode categories [Ps](https://unicodeplus.com/category/Ps), [Pf](https://unicodeplus.com/category/Pf), [Pi](https://unicodeplus.com/category/Pi)
     - the quote marks `U+0027` APOSTROPHE (`'`) and `U+0022` QUOTATION MARK (`"`).
 
-- `last`
+- `last` {{experimental_inline}}
   - : A closing bracket or quote at the end of the last formatted line of an element hangs. This applies to:
     - all characters in the Unicode categories [Pe](https://unicodeplus.com/category/Pe), [Pf](https://unicodeplus.com/category/Pf), [Pi](https://unicodeplus.com/category/Pi)
     - the quote marks `U+0027` APOSTROPHE (`'`) and `U+0022` QUOTATION MARK (`"`).
