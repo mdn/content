@@ -510,7 +510,7 @@ searchBtn.onclick = () => {
     for (const itemText of myHistory) {
       const listItem = document.createElement('li');
       listItem.textContent = itemText;
-      list.appendChild(listItem);
+      list.prepend(listItem);
     }
 
     // If the array length is 5 or more, remove the oldest search term
