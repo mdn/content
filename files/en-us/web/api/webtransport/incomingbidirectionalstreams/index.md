@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransport.incomingBidirectionalStreams
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`incomingBidirectionalStreams`** read-only property of the {{domxref("WebTransport")}} interface represents one or more bidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportBidirectionalStream")}} objects. Each one can be used to reliably read data from the server and write data back to it.
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
-
-{{AvailableInWorkers}}
 
 ## Value
 
