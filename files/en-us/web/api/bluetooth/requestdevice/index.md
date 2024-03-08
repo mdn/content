@@ -28,7 +28,7 @@ requestDevice(options)
     - `filters`
       - : An array of filter objects.
         Each filter consists of an array of `BluetoothServiceUUID`s, a `name` parameter, and a `namePrefix` parameter.
-    - `optionalServices[]`
+    - `optionalServices`
       - : An array of `BluetoothServiceUUID`s.
     - `acceptAllDevices`
       - : A boolean value indicating that the requesting script can accept all Bluetooth devices.
