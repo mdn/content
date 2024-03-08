@@ -124,7 +124,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example")}}
+{{EmbedLiveSample("A_translate_example", "", "160")}}
 
 ## Rotating
 
@@ -185,7 +185,7 @@ To rotate the rectangle around its own center, we translate the canvas to the ce
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "", "160")}}
+{{EmbedLiveSample("A_rotate_example", "", "220")}}
 
 ## Scaling
 
@@ -291,6 +291,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "", "160")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "", "260")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

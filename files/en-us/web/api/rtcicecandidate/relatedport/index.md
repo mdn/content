@@ -46,9 +46,8 @@ The remote port, `relatedPort`, is the number immediately following the `"rport"
 
 In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
 checked, and then debugging output is presented, based on the candidate type, including
-the candidate's type, address (`ip` and {{domxref("RTCIceCandidate.port",
-  "port")}}), and related address ({{domxref("RTCIceCandidate.relatedAddress",
-  "relatedAddress")}} and `relatedPort`).
+the candidate's type, address (`ip` and {{domxref("RTCIceCandidate.port", "port")}}),
+and related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} and `relatedPort`).
 
 ```js
 const ip = candidate.ip;

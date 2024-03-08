@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.name
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`name`** read-only property of the
 `IDBDatabase` interface is a string that contains the
 name of the connected database.
-
-{{AvailableInWorkers}}
 
 ## Value
 

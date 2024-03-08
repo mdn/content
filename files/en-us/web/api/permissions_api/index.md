@@ -9,14 +9,12 @@ browser-compat:
 spec-urls: https://w3c.github.io/permissions/
 ---
 
-{{DefaultAPISidebar("Permissions API")}}
+{{DefaultAPISidebar("Permissions API")}} {{AvailableInWorkers}}
 
 The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied, or requires specific user permission.
 
 Note that the permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) restrictions applied to the document, and user prompts.
 So, for example, if an API is restricted by permissions policy, the returned permission would be `denied` and the user would not be prompted for access.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 

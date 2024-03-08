@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.IDBCursor.request
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`request`** read-only property of the {{domxref("IDBCursor")}} interface returns the {{domxref("IDBRequest")}} used to obtain the cursor.
-
-{{AvailableInWorkers}}
 
 ## Value
 

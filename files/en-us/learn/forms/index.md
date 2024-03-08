@@ -8,15 +8,6 @@ page-type: learn-module
 
 This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons, it's not always obvious how to use them to their full potential. In the articles listed below, we'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you should at least work through our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML). At this point you should find the [Introductory guides](#introductory_guides) easy to understand, and also be able to make use of our [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls) guide.
