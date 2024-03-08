@@ -1,5 +1,5 @@
 ---
-title: Web forms — Working with user data
+title: Core forms learning pathway
 slug: Learn/Forms
 page-type: learn-module
 ---
