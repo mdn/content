@@ -31,7 +31,6 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : Buffer used for element indices.
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
