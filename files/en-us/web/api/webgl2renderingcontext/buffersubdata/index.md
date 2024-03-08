@@ -1,23 +1,24 @@
 ---
-title: "WebGLRenderingContext: bufferSubData() method"
+title: "WebGL2RenderingContext: bufferSubData() method"
 short-title: bufferSubData()
-slug: Web/API/WebGLRenderingContext/bufferSubData
+slug: Web/API/WebGL2RenderingContext/bufferSubData
 page-type: web-api-instance-method
-browser-compat: api.WebGLRenderingContext.bufferSubData
+browser-compat: api.WebGL2RenderingContext.bufferSubData
 ---
 
 {{APIRef("WebGL")}}
 
-The **`WebGLRenderingContext.bufferSubData()`** method of the
+The **`WebGL2RenderingContext.bufferSubData()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer
 object's data store.
 
 ## Syntax
 
 ```js-nolint
-// WebGL1
-bufferSubData(target, offset)
-bufferSubData(target, offset, srcData)
+// WebGL2
+bufferSubData(target, dstByteOffset, srcOffset)
+bufferSubData(target, dstByteOffset, srcData, srcOffset)
+bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 ```
 
 ### Parameters
@@ -32,10 +33,6 @@ bufferSubData(target, offset, srcData)
     - `gl.ELEMENT_ARRAY_BUFFER`
 
       - : Buffer used for element indices.
-
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-    the following values are available additionally:
-
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`
@@ -72,19 +69,6 @@ None ({{jsxref("undefined")}}).
 - A `gl.INVALID_ENUM` error is thrown if `target` is not one of
   the allowed enums.
 
-## Examples
-
-### Using `bufferSubData`
-
-```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
-gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -95,7 +79,7 @@ gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
 
 ## See also
 
-- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
