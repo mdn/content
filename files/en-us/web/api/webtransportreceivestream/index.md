@@ -7,7 +7,7 @@ status:
 browser-compat: api.WebTransportReceiveStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The `WebTransportReceiveStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a {{domxref("ReadableStream")}} that can be used to read from an incoming unidirectional or bidirectional {{domxref("WebTransport")}} stream.
 
@@ -19,8 +19,6 @@ Instead they are obtained using the [`WebTransport.incomingUnidirectionalStream`
 `WebTransportReceiveStream` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 

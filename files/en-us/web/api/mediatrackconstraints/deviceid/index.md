@@ -38,8 +38,7 @@ call {{domxref("MediaStreamTrack.getCapabilities", "getCapabilities()")}}.
 Because of this, there's no use for the device ID when calling
 {{domxref("MediaStreamTrack.applyConstraints()")}}, since there is only one possible
 value; however, you can record a `deviceId` and use it to ensure that you get
-the same source for multiple calls to {{domxref("MediaDevices.getUserMedia",
-  "getUserMedia()")}}.
+the same source for multiple calls to {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
 
 > **Note:** An exception to the rule that device IDs are the same across browsing sessions:
 > private browsing mode will use a different ID, and will change it each browsing

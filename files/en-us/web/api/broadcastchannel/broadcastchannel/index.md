@@ -6,12 +6,10 @@ page-type: web-api-constructor
 browser-compat: api.BroadcastChannel.BroadcastChannel
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
 The **`BroadcastChannel()`** constructor creates a new
 {{domxref("BroadcastChannel")}} and connects it to the underlying channel.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

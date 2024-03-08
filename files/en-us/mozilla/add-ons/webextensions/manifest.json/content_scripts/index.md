@@ -281,6 +281,38 @@ Details of all the keys you can include are given in the table below.
         </p>
       </td>
     </tr>
+    <tr>
+      <td>
+        <a id="run_at"><code>world</code></a>
+      </td>
+      <td><code>String</code></td>
+      <td>
+        <p>
+          The JavaScript world the script executes in.
+        </p>
+        <dl>
+          <dt><code>"ISOLATED"</code></dt>
+          <dd>
+            The default <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> execution environment.
+            This environment is isolated from the page's context: while they share the same document, the global scopes and available APIs differ.
+          </dd>
+          <dt><code>"MAIN"</code></dt>
+          <dd>
+            The web page's execution environment.
+            This environment is shared with the web page without isolation.
+            Scripts in this environment don't have any access to the APIs that are only available to content scripts.
+            <div class="notecard warning" id="sect1">
+              <p>
+                <strong>Warning:</strong> Due to the lack of isolation, the web page can detect and interfere with the executed code.
+                Do not use the <code>MAIN</code> world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
+                <code>worid</code>, and therefore <code>"MAIN"</code>, is not supported in Firefox (although it is planned, and the work to introduce it is tracked by <a href="https://bugzil.la/1736575" class="external" target="_blank">Bug 1736575</a>). In the meantime, JavaScript code running in the isolated content script sandbox can use the Firefox "Xray vision" feature, as described in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Share objects with page scripts</a>.
+              </p>
+            </div>
+          </dd>
+        </dl>
+        <p>The default value is <code>"ISOLATED"</code>.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 

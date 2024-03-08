@@ -148,13 +148,35 @@ The policy specified in `Content-Security-Policy` headers is enforced while the 
 
 ## Enabling reporting
 
-By default, violation reports aren't sent. To enable violation reporting, you need to specify the {{CSP("report-to")}} policy directive, providing at least one URI to which to deliver the reports:
+A server can inform clients where to send reports using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+This header defines one or more endpoint URLs as a comma-separated list.
+If you want to define an endpoint named `csp-endpoint` which accepts reports at `https://example.com/csp-reports`, the server's response header would look like this:
 
 ```http
-Content-Security-Policy: default-src 'self'; report-to http://reportcollector.example.com/collector.cgi
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-Then you need to set up your server to receive the reports; it can store or process them in whatever manner you determine is appropriate.
+You must then use the `Content-Security-Policy` header's {{CSP("report-to")}} directive to refer to an endpoint where reports of that policy should be sent.
+For example, to send violation reports to `https://example.com/csp-reports` you can send response headers that look like the following:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+```
+
+You need to set up a server to receive reports at the given URL (`https://example.com/csp-reports` in this case) that accepts a JSON object sent with an `application/csp-report` {{HTTPHeader("Content-Type")}}.
+The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
+
+If you want to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contains a comma-separated list of endpoints:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
+```
+
+> **Warning:**
+> The `report-uri` directive is deprecated and it's recommended to send CSP reports using {{CSP("report-to")}} instead.
+> See the {{CSP("report-uri")}} documentation for details on how to specify both directives for backwards compatibility.
 
 ## Violation report syntax
 
