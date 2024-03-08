@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_codec.clockRate
 
 {{APIRef("WebRTC")}}
 
-The **`clockRate`** property of the {{domxref("RTCCodecStats")}} dictionary is a positive number containing the media sampling rate in Hz.
+The **`clockRate`** property of the {{domxref("RTCCodecStats")}} dictionary is a positive number containing the media sampling rate in hertz (Hz).
 
 ## Values
 
@@ -21,3 +21,7 @@ A positive number indicating the media sampling rate.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCRtpCodecParameters.clockRate")}}

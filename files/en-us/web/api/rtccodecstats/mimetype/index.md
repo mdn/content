@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_codec.mimeType
 
 {{APIRef("WebRTC")}}
 
-The **`mimeType`** property of the {{domxref("RTCCodecStats")}} dictionary is a string containing the codec's MIME media type and subtype.
+The **`mimeType`** property of the {{domxref("RTCCodecStats")}} dictionary is a string containing the codec's {{glossary("MIME type")}} and subtype.
 
 This is of the form `"type/subtype"`, such as "video/VP8" or "audio/opus", as defined in the [IANA registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
 

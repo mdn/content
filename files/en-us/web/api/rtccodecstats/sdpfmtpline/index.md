@@ -24,13 +24,13 @@ The `"a=fmtp"` line in the codec's {{Glossary("SDP")}} line has the following fo
 a=fmtp:<payload_type_number> param1=value1; ...; paramN=valueN
 ```
 
-For example, the following line would indicate that the "opus" codec, which has a `payloadType` 99, has the format specific parameters `maxplaybackrate` and `stereo`:
+For example, the following line would indicate that the "opus" codec, which has a `payloadType` 99, has the format-specific parameters `maxplaybackrate` and `stereo`:
 
 ```plain
 a=fmtp:99 maxplaybackrate=16000; stereo=1;
 ```
 
-For this codec the value in `sdpFmtpLine` would be `maxplaybackrate=16000; stereo=1;`.
+For this codec, the value in `sdpFmtpLine` would be `maxplaybackrate=16000; stereo=1;`.
 
 ## Specifications
 
