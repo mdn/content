@@ -36,7 +36,7 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
   - : Encodes a command that copies data from a {{domxref("GPUTexture")}} to a {{domxref("GPUBuffer")}}.
 - {{domxref("GPUCommandEncoder.copyTextureToTexture", "copyTextureToTexture()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Encodes a command that copies data from one {{domxref("GPUTexture")}} to another.
-- {{domxref("GPUCommandEncoder.finish", "finish()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.finish", "finish()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Completes recording of the command sequence encoded on this `GPUCommandEncoder`, returning a corresponding {{domxref("GPUCommandBuffer")}}.
 
@@ -44,7 +44,7 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
   - : Marks a specific point in a series of encoded commands with a label.
 - {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
-- {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 

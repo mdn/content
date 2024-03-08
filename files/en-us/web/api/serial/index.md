@@ -15,7 +15,7 @@ The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} pr
 
 ## Instance methods
 
-- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
+- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
@@ -29,9 +29,9 @@ The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} pr
 
 The following events are available to `Serial` via event bubbling from {{domxref("SerialPort")}}:
 
-- `SerialPort` {{domxref("SerialPort.connect_event", "connect")}} event
+- `SerialPort` {{domxref("SerialPort.connect_event", "connect")}} event {{SecureContext_Inline}}
   - : An event fired when a port has been connected to the device.
-- `SerialPort` {{domxref("SerialPort.disconnect_event", "disconnect")}} event
+- `SerialPort` {{domxref("SerialPort.disconnect_event", "disconnect")}} event {{SecureContext_Inline}}
   - : An event fired when a port has been disconnected from the device.
 
 ## Examples

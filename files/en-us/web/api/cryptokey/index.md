@@ -13,19 +13,19 @@ For security reasons, the `CryptoKey` interface can only be used in a [secure co
 
 ## Instance properties
 
-- {{domxref("CryptoKey.type")}} {{ReadOnlyInline}}
+- {{domxref("CryptoKey.type")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : The type of key the object represents. It may take one of the following values: `"secret"`, `"private"` or `"public"`.
 
-- {{domxref("CryptoKey.extractable")}} {{ReadOnlyInline}}
+- {{domxref("CryptoKey.extractable")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 
-- {{domxref("CryptoKey.algorithm")}} {{ReadOnlyInline}}
+- {{domxref("CryptoKey.algorithm")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : An object describing the algorithm for which this key can be used and any associated extra parameters.
 
-- {{domxref("CryptoKey.usages")}} {{ReadOnlyInline}}
+- {{domxref("CryptoKey.usages")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : An {{jsxref("Array")}} of strings, indicating what can be done with the key. Possible values for array elements are `"encrypt"`, `"decrypt"`, `"sign"`, `"verify"`, `"deriveKey"`, `"deriveBits"`, `"wrapKey"`, and `"unwrapKey"`.
 

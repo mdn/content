@@ -38,11 +38,11 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
   - : Draw indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderBundleEncoder.setIndexBuffer", "setIndexBuffer()")}}
 - {{domxref("GPURenderBundleEncoder.drawIndirect", "drawIndirect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Draw primitives using parameters read from a {{domxref("GPUBuffer")}}.
-- {{domxref("GPURenderBundleEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Draw indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
 
-- {{domxref("GPURenderBundleEncoder.finish", "finish()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.finish", "finish()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Completes recording of the current render pass command sequence.
 
@@ -52,15 +52,15 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
   - : Ends a debug group, which is begun with a {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
 - {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPURenderBundleEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
-- {{domxref("GPURenderBundleEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
 
-- {{domxref("GPURenderBundleEncoder.setIndexBuffer", "setIndexBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.setIndexBuffer", "setIndexBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
 
-- {{domxref("GPURenderBundleEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderBundleEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render bundle.
 

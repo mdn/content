@@ -36,7 +36,7 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
   - : Draw indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}
 - {{domxref("GPURenderPassEncoder.drawIndirect", "drawIndirect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Draw primitives using parameters read from a {{domxref("GPUBuffer")}}.
-- {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Draw indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
 
@@ -54,11 +54,11 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPURenderPassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 - {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
-- {{domxref("GPURenderPassEncoder.setBlendConstant", "setBlendConstant()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setBlendConstant", "setBlendConstant()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Sets the constant blend color and alpha values used with `"constant"` and `"one-minus-constant"` blend factors (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the `blend` property).
 
-- {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
 
@@ -66,7 +66,7 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render pass.
 - {{domxref("GPURenderPassEncoder.setScissorRect", "setScissorRect()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
-- {{domxref("GPURenderPassEncoder.setStencilReference", "setStencilReference()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setStencilReference", "setStencilReference()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Sets the stencil reference value using during stencil tests with the `"replace"` stencil operation (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the properties defining the various stencil operations).
 

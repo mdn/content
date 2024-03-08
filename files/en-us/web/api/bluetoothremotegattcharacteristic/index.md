@@ -26,7 +26,7 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
 
 ### Events
 
-- `oncharacteristicvaluechanged` {{Experimental_Inline}}
+- `oncharacteristicvaluechanged` {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Event handler for the `characteristicvaluechanged` event.
 
 ## Instance methods

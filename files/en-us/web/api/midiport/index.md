@@ -21,7 +21,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
   - : Returns a string containing the manufacturer of the port.
 - {{domxref("MIDIPort.name")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the system name of the port.
-- {{domxref("MIDIPort.type")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.type")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : Returns a string containing the type of the port, one of:
 
@@ -32,7 +32,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
 
 - {{domxref("MIDIPort.version")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string containing the version of the port.
-- {{domxref("MIDIPort.state")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.state")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : Returns a string containing the state of the port, one of:
 
@@ -41,7 +41,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"connected"`
       - : The device that this `MIDIPort` represents is currently connected.
 
-- {{domxref("MIDIPort.connection")}} {{ReadOnlyInline}}
+- {{domxref("MIDIPort.connection")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : Returns a string containing the connection state of the port, one of:
 

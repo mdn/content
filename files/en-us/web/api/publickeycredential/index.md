@@ -15,7 +15,7 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 ## Instance properties
 
-- {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline}}
+- {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : A string that indicates the mechanism by which the WebAuthn implementation is attached to the authenticator at the time the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call completes.
 

@@ -19,19 +19,19 @@ A `GPUDevice` object is requested using the {{domxref("GPUAdapter.requestDevice(
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDevice.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : A {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device.
 
-- {{domxref("GPUDevice.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
-- {{domxref("GPUDevice.limits", "limits")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDevice.limits", "limits")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : A {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the device.
 
-- {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDevice.lost", "lost")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : Contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.
 
@@ -42,71 +42,71 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("GPUDevice.createBindGroup", "createBindGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createBindGroup", "createBindGroup()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUBindGroup")}} based on a {{domxref("GPUBindGroupLayout")}} that defines a set of resources to be bound together in a group and how those resources are used in shader stages.
 
-- {{domxref("GPUDevice.createBindGroupLayout", "createBindGroupLayout()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createBindGroupLayout", "createBindGroupLayout()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUBindGroupLayout")}} that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
 
-- {{domxref("GPUDevice.createBuffer", "createBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createBuffer", "createBuffer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUBuffer")}} in which to store raw data to use in GPU operations.
 
-- {{domxref("GPUDevice.createCommandEncoder", "createCommandEncoder()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createCommandEncoder", "createCommandEncoder()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUCommandEncoder")}}, which is used to encode commands to be issued to the GPU.
 
-- {{domxref("GPUDevice.createComputePipeline", "createComputePipeline()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createComputePipeline", "createComputePipeline()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUComputePipeline")}} that can control the compute shader stage and be used in a {{domxref("GPUComputePassEncoder")}}.
 
-- {{domxref("GPUDevice.createComputePipelineAsync", "createComputePipelineAsync()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createComputePipelineAsync", "createComputePipelineAsync()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUComputePipeline")}}, which can control the compute shader stage and be used in a {{domxref("GPUComputePassEncoder")}}, once the pipeline can be used without any stalling.
 
-- {{domxref("GPUDevice.createPipelineLayout", "createPipelineLayout()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createPipelineLayout", "createPipelineLayout()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUPipelineLayout")}} that defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
 
-- {{domxref("GPUDevice.createQuerySet", "createQuerySet()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createQuerySet", "createQuerySet()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUQuerySet")}} that can be used to record the results of queries on passes, such as occlusion or timestamp queries.
 
-- {{domxref("GPUDevice.createRenderBundleEncoder", "createRenderBundleEncoder()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createRenderBundleEncoder", "createRenderBundleEncoder()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPURenderBundleEncoder")}} that can be used to pre-record bundles of commands. These can be reused in {{domxref("GPURenderPassEncoder")}}s via the {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} method, as many times as required.
 
-- {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPURenderPipeline")}} that can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
-- {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPURenderPipeline")}}, which can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}, once the pipeline can be used without any stalling.
 
-- {{domxref("GPUDevice.createSampler", "createSampler()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createSampler", "createSampler()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUSampler")}}, which controls how shaders transform and filter texture resource data.
 
-- {{domxref("GPUDevice.createShaderModule", "createShaderModule()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createShaderModule", "createShaderModule()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUShaderModule")}} from a string of WGSL source code.
 
-- {{domxref("GPUDevice.createTexture", "createTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.createTexture", "createTexture()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Creates a {{domxref("GPUTexture")}} in which to store texture data to use in GPU rendering operations.
 
-- {{domxref("GPUDevice.destroy", "destroy()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.destroy", "destroy()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Destroys the device, preventing further operations on it.
 
-- {{domxref("GPUDevice.importExternalTexture", "importExternalTexture()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.importExternalTexture", "importExternalTexture()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Takes an {{domxref("HTMLVideoElement")}} as an input and returns a {{domxref("GPUExternalTexture")}} wrapper object containing a snapshot of the video that can be used in GPU rendering operations.
 
-- {{domxref("GPUDevice.popErrorScope", "popErrorScope()")}} {{Experimental_Inline}}
+- {{domxref("GPUDevice.popErrorScope", "popErrorScope()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Pops an existing GPU error scope from the error scope stack and returns a {{jsxref("Promise")}} that resolves to an object ({{domxref("GPUInternalError")}}, {{domxref("GPUOutOfMemoryError")}}, or {{domxref("GPUValidationError")}}) describing the first error captured in the scope, or `null` if no error occurred.
 

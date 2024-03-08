@@ -20,14 +20,14 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 
 - {{domxref("USBEndpoint.endpointNumber")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns this endpoint's "endpoint number" which is a value from 1 to 15 extracted from the `bEndpointAddress` field of the endpoint descriptor defining this endpoint. This value is used to identify the endpoint when calling methods on `USBDevice`.
-- {{domxref("USBEndpoint.direction")}} {{Experimental_Inline}}
+- {{domxref("USBEndpoint.direction")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns the direction in which this endpoint transfers data, one of:
 
     - `"in"` - Data is transferred from device to host.
     - `"out"` - Data is transferred from host to device.
 
-- {{domxref("USBEndpoint.type")}} {{Experimental_Inline}}
+- {{domxref("USBEndpoint.type")}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns the type of this endpoint, one of:
 

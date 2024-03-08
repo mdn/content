@@ -20,7 +20,7 @@ The `USBInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebU
 
 - {{domxref("USBInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a `DataView` object containing the data received from the USB device, if any.
-- {{domxref("USBInTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("USBInTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns the status of the transfer request, one of:
 

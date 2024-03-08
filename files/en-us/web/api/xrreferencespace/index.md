@@ -26,7 +26,7 @@ _`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in add
 
 ## Events
 
-- {{domxref("XRReferenceSpace.reset_event", "reset")}}
+- {{domxref("XRReferenceSpace.reset_event", "reset")}} {{SecureContext_Inline}}
 
   - : The `reset` event is sent to an `XRReferenceSpace` object when the browser detects a discontinuity between the tracked object's origin and the user's environment or location. This can happen, for example, after the user recalibrates their XR device, or if the device automatically adjusts its origin after losing and regaining tracking.
 

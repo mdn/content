@@ -23,7 +23,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API', ''
 
 ## Instance methods
 
-- {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
+- {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns a {{jsxref('Promise')}} which fulfills with an array of `DetectedBarcode` objects with the following properties:
 

@@ -27,7 +27,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}.
 
 - {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
-- {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
+- {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
 
   - : Returns a string representation of the currently acquired `WakeLockSentinel` type.
     Return values are:

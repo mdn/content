@@ -42,7 +42,7 @@ _The `ServiceWorker` interface inherits methods from its parent, {{domxref("Even
 
 ## Events
 
-- {{domxref("ServiceWorker.statechange_event", "statechange")}}
+- {{domxref("ServiceWorker.statechange_event", "statechange")}} {{SecureContext_Inline}}
 
   - : Fired when {{domxref("ServiceWorker.state")}} changes.
 
