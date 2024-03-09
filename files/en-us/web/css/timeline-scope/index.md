@@ -30,7 +30,7 @@ Allowed values for `timeline-scope` are:
 
 - `none` {{experimental_inline}}
   - : There is no change in timeline scope.
-- `<dashed-ident>`
+- `<dashed-ident>` {{experimental_inline}}
 
   - : Specifies the name of an existing named timeline (i.e. declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This causes the timeline scope to be increased to the element that `timeline-scope` is set on and any of its descendants.
 
