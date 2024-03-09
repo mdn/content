@@ -5,6 +5,7 @@ page-type: landing-page
 ---
 
 
+
 {{LearnSidebar}}
 
 Welcome to the MDN learning area. This set of articles aims to provide complete beginners to web development with fundamental skills for coding websites. The aim is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from [the rest of MDN](/en-US/), and other intermediate to advanced resources that assume a lot of previous knowledge.
