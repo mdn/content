@@ -53,6 +53,7 @@ bufferData(target, srcData, usage, srcOffset, length)
     If `null`, a data store is still created, but the content is uninitialized and undefined.
     One of `size` and `srcData` must be provided.
 - `usage`
+
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
     for optimization purposes. Possible values:
 
