@@ -15,7 +15,7 @@ object's data store.
 ## Syntax
 
 ```js-nolint
-bufferSubData(target, dstByteOffset, srcOffset)
+bufferSubData(target, dstByteOffset, srcData)
 bufferSubData(target, dstByteOffset, srcData, srcOffset)
 bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 ```
@@ -54,7 +54,7 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
     the buffer.
 - `length` {{optional_inline}}
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0, where 0 means `bufferSubData` should calculate the length.
 
 ### Return value
 

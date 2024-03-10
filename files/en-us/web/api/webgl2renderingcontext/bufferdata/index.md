@@ -13,7 +13,8 @@ The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/d
 ## Syntax
 
 ```js-nolint
-bufferData(target, usage, srcOffset)
+bufferData(target, size, usage)
+bufferData(target, srcData, usage)
 bufferData(target, srcData, usage, srcOffset)
 bufferData(target, srcData, usage, srcOffset, length)
 ```
@@ -52,7 +53,6 @@ bufferData(target, srcData, usage, srcOffset, length)
     If `null`, a data store is still created, but the content is uninitialized and undefined.
     One of `size` and `srcData` must be provided.
 - `usage`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
     for optimization purposes. Possible values:
 
