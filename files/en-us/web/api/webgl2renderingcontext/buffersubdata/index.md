@@ -15,7 +15,6 @@ object's data store.
 ## Syntax
 
 ```js-nolint
-// WebGL2
 bufferSubData(target, dstByteOffset, srcOffset)
 bufferSubData(target, dstByteOffset, srcData, srcOffset)
 bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
@@ -51,7 +50,7 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 - `srcData` {{optional_inline}}
   - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("DataView")}}, or a {{jsxref("TypedArray")}}
     that will be copied into the data store.
-- `srcOffset`
+- `srcOffset` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
     the buffer.
 - `length` {{optional_inline}}

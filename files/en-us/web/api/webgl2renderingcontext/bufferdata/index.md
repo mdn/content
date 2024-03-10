@@ -8,13 +8,11 @@ browser-compat: api.WebGL2RenderingContext.bufferData
 
 {{APIRef("WebGL")}}
 
-The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
-buffer object's data store.
+The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes the buffer object's data store.
 
 ## Syntax
 
 ```js-nolint
-// WebGL2
 bufferData(target, usage, srcOffset)
 bufferData(target, srcData, usage, srcOffset)
 bufferData(target, srcData, usage, srcOffset, length)
@@ -44,13 +42,15 @@ bufferData(target, srcData, usage, srcOffset, length)
     - `gl.PIXEL_UNPACK_BUFFER`
       - : Buffer used for pixel transfer operations.
 
-- `size`
+- `size`  {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
     store.
+    One of `size` and `srcData` must be provided.
 - `srcData` {{optional_inline}}
   - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
     that will be copied into the data store.
     If `null`, a data store is still created, but the content is uninitialized and undefined.
+    One of `size` and `srcData` must be provided.
 - `usage`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
@@ -95,11 +95,13 @@ bufferData(target, srcData, usage, srcOffset, length)
         times as the source for WebGL drawing and image specification
         commands.
 
-- `srcOffset`
+- `srcOffset` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
     the buffer.
+    Only allowed if `srcData` is provided.
 - `length` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
+  Only allowed if `srcOffset` is given.
 
 ### Return value
 
