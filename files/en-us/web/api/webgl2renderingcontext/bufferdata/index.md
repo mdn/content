@@ -42,7 +42,7 @@ bufferData(target, srcData, usage, srcOffset, length)
     - `gl.PIXEL_UNPACK_BUFFER`
       - : Buffer used for pixel transfer operations.
 
-- `size`  {{optional_inline}}
+- `size` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
     store.
     One of `size` and `srcData` must be provided.
@@ -101,7 +101,7 @@ bufferData(target, srcData, usage, srcOffset, length)
     Only allowed if `srcData` is provided.
 - `length` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
-  Only allowed if `srcOffset` is given.
+    Only allowed if `srcOffset` is given.
 
 ### Return value
 
