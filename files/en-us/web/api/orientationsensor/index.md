@@ -22,12 +22,12 @@ Below is a list of interfaces based on the OrientationSensor interface.
 
 ## Instance properties
 
-- {{domxref("OrientationSensor.quaternion")}} {{ReadOnlyInline}}
+- {{domxref("OrientationSensor.quaternion")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a four element {{jsxref('Array')}} whose elements contain the components of the unit quaternion representing the device's orientation.
 
 ## Instance methods
 
-- {{domxref("OrientationSensor.populateMatrix()")}}
+- {{domxref("OrientationSensor.populateMatrix()")}} {{SecureContext_Inline}}
   - : Populates the given object with the rotation matrix based on the latest sensor reading.
 
 ## Examples

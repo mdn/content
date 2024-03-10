@@ -19,16 +19,16 @@ In browsers that support it, an instance of this interface may be passed in the 
 
 ## Constructor
 
-- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}} {{Experimental_Inline}}
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `FederatedCredential` object.
 
 ## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a string containing a credential's federated identity provider.
-- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a string containing a credential's federated identity protocol.
 
 ## Instance methods

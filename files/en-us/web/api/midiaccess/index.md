@@ -13,16 +13,16 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 
 ## Instance properties
 
-- {{domxref("MIDIAccess.inputs")}} {{ReadOnlyInline}}
+- {{domxref("MIDIAccess.inputs")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an instance of {{domxref("MIDIInputMap")}} which provides access to any available MIDI input ports.
-- {{domxref("MIDIAccess.outputs")}} {{ReadOnlyInline}}
+- {{domxref("MIDIAccess.outputs")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an instance of {{domxref("MIDIOutputMap")}} which provides access to any available MIDI output ports.
-- {{domxref("MIDIAccess.sysexEnabled")}} {{ReadOnlyInline}}
+- {{domxref("MIDIAccess.sysexEnabled")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A boolean attribute indicating whether system exclusive support is enabled on the current MIDIAccess instance.
 
 ### Events
 
-- {{domxref("MIDIAccess.statechange_event")}}
+- {{domxref("MIDIAccess.statechange_event")}} {{SecureContext_Inline}}
   - : Called whenever a new MIDI port is added or an existing port changes state.
 
 ## Examples

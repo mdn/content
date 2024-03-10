@@ -21,16 +21,16 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 ## Constructor
 
-- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
+- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `CookieChangeEvent`.
 
 ## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
+- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an array containing one or more changed cookies.
-- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
+- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an array containing one or more deleted cookies.
 
 ## Instance methods

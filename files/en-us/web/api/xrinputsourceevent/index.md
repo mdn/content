@@ -15,14 +15,14 @@ To learn more about handling inputs in a WebXR project, see the article [Inputs 
 
 ## Constructor
 
-- {{domxref("XRInputSourceEvent.XRInputSourceEvent", "XRInputSourceEvent()")}}
+- {{domxref("XRInputSourceEvent.XRInputSourceEvent", "XRInputSourceEvent()")}} {{SecureContext_Inline}}
   - : Creates and returns a new `XRInputSourceEvent` object whose properties match those provided in the `eventInitDict` dictionary provided.
 
 ## Instance properties
 
-- {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
+- {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
-- {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
+- {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ## Instance methods

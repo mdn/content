@@ -17,12 +17,12 @@ A [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlli
 
 ## Constructor
 
-- {{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new PresentationConnectionAvailableEvent.
 
 ## Instance properties
 
-- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a references to the {{domxref("PresentationConnection")}} object that fired the event.
 
 ## Specifications

@@ -13,9 +13,9 @@ The **`GeolocationPosition`** interface represents the position of the concerned
 
 _The `GeolocationPosition` interface doesn't inherit any properties._
 
-- {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}}
+- {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.
-- {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a timestamp, given as {{Glossary("Unix time")}} in milliseconds, representing the time at which the location was retrieved.
 
 ## Instance methods

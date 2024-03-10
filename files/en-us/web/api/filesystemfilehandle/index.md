@@ -21,14 +21,14 @@ _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-- {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
+- {{domxref('FileSystemFileHandle.getFile', 'getFile()')}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object
     representing the state on disk of the entry represented by the handle.
-- {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}}
+- {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemSyncAccessHandle')}} object
     that can be used to synchronously read from and write to a file. The synchronous nature of this method brings performance advantages,
     but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-- {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
+- {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} which resolves to a newly created {{domxref('FileSystemWritableFileStream')}}
     object that can be used to write to a file.
 

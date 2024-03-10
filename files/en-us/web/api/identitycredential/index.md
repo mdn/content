@@ -19,9 +19,9 @@ A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("IdentityCredential.isAutoSelected")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
+- {{domxref("IdentityCredential.isAutoSelected")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}} {{SecureContext_Inline}}
   - : A boolean value that indicates whether the federated sign-in was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e. without user mediation) or not.
-- {{domxref("IdentityCredential.token")}} {{experimental_inline}}
+- {{domxref("IdentityCredential.token")}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Returns the token used to validate the associated sign-in.
 
 ## Examples

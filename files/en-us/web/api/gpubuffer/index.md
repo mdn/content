@@ -17,25 +17,25 @@ A `GPUBuffer` object instance is created using the {{domxref("GPUDevice.createBu
 
 ## Instance properties
 
-- {{domxref("GPUBuffer.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUBuffer.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in
     {{domxref("GPUError")}} messages or console warnings.
-- {{domxref("GPUBuffer.mapState", "mapState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUBuffer.mapState", "mapState")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An enumerated value representing the mapped state of the `GPUBuffer`.
-- {{domxref("GPUBuffer.size", "size")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUBuffer.size", "size")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the length of the `GPUBuffer`'s memory allocation, in bytes.
-- {{domxref("GPUBuffer.usage", "usage")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUBuffer.usage", "usage")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The {{glossary("bitwise flags")}} representing the allowed usages of the `GPUBuffer`.
 
 ## Instance methods
 
-- {{domxref("GPUBuffer.destroy", "destroy()")}} {{Experimental_Inline}}
+- {{domxref("GPUBuffer.destroy", "destroy()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Destroys the `GPUBuffer`.
-- {{domxref("GPUBuffer.getMappedRange", "getMappedRange()")}} {{Experimental_Inline}}
+- {{domxref("GPUBuffer.getMappedRange", "getMappedRange()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{jsxref("ArrayBuffer")}} containing the mapped contents of the `GPUBuffer` in the specified range.
-- {{domxref("GPUBuffer.mapAsync", "mapAsync()")}} {{Experimental_Inline}}
+- {{domxref("GPUBuffer.mapAsync", "mapAsync()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Maps the specified range of the `GPUBuffer`. Returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed with {{domxref("GPUBuffer.getMappedRange()")}}.
-- {{domxref("GPUBuffer.unmap", "unmap()")}} {{Experimental_Inline}}
+- {{domxref("GPUBuffer.unmap", "unmap()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Unmaps the mapped range of the `GPUBuffer`, making its contents available for use by the GPU again.
 
 ## Examples

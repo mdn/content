@@ -21,7 +21,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ### Events
 
-- {{domxref("MIDIInput.midimessage_event", "midimessage")}}
+- {{domxref("MIDIInput.midimessage_event", "midimessage")}} {{SecureContext_Inline}}
   - : Fired when the current port receives a MIDI message.
 
 ## Examples

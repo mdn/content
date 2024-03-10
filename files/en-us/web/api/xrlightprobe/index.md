@@ -19,7 +19,7 @@ This object doesn't itself contain lighting values, but it is used to collect li
 
 - `XRLightProbe.onreflectionchange`
   - : Event handler property for the {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} event.
-- {{domxref("XRLightProbe.probeSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRLightProbe.probeSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : An {{domxref("XRSpace")}} tracking the position and orientation the lighting estimations are relative to.
 
 ## Instance methods
@@ -28,7 +28,7 @@ None.
 
 ## Events
 
-- {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} {{Experimental_Inline}}
+- {{domxref("XRLightProbe.reflectionchange_event", "reflectionchange")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired each time the estimated reflection cube map changes. (This happens when the user moves around and the environment's lighting changes.)
 
 ## Examples

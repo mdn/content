@@ -13,18 +13,18 @@ The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation 
 
 ## Constructor
 
-- {{domxref("DeviceOrientationEvent.DeviceOrientationEvent","DeviceOrientationEvent.DeviceOrientationEvent()")}}
+- {{domxref("DeviceOrientationEvent.DeviceOrientationEvent","DeviceOrientationEvent.DeviceOrientationEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `DeviceOrientationEvent`.
 
 ## Instance properties
 
-- {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}}
+- {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A boolean that indicates whether or not the device is providing orientation data absolutely.
-- {{domxref("DeviceOrientationEvent.alpha")}} {{ReadOnlyInline}}
+- {{domxref("DeviceOrientationEvent.alpha")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
-- {{domxref("DeviceOrientationEvent.beta")}} {{ReadOnlyInline}}
+- {{domxref("DeviceOrientationEvent.beta")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the motion of the device around the x axis, express in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.
-- {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}}
+- {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the motion of the device around the y axis, express in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.
 - `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, express in degrees with values ranging from 0 to 360.

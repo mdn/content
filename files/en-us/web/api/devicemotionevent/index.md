@@ -15,18 +15,18 @@ The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Event
 
 ## Constructor
 
-- {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
+- {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `DeviceMotionEvent`.
 
 ## Instance properties
 
-- {{DOMxRef("DeviceMotionEvent.acceleration")}} {{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.acceleration")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An object giving the acceleration of the device on the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} {{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An object giving the acceleration of the device on the three axis X, Y and Z with the effect of gravity. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{DOMxRef("DeviceMotionEvent.rotationRate")}} {{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.rotationRate")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An object giving the rate of change of the device's orientation on the three orientation axis alpha, beta and gamma. Rotation rate is expressed in degrees per seconds.
-- {{DOMxRef("DeviceMotionEvent.interval")}} {{ReadOnlyInline}}
+- {{DOMxRef("DeviceMotionEvent.interval")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the interval of time, in milliseconds, at which data is obtained from the device.
 
 ## Example

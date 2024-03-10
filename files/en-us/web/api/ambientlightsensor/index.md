@@ -19,12 +19,12 @@ This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permi
 
 ## Constructor
 
-- {{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}} {{Experimental_Inline}}
+- {{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `AmbientLightSensor` object.
 
 ## Instance properties
 
-- {{domxref('AmbientLightSensor.illuminance')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('AmbientLightSensor.illuminance')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
 ## Instance methods

@@ -21,13 +21,13 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 _Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}._
 
-- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} {{ReadOnlyInline}}
+- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence and user verification flags, and any extensions processed by the authenticator.
 - {{domxref("AuthenticatorResponse.clientDataJSON")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the JSON-compatible serialization of the data passed from the browser to the authenticator in order to authenticate with this credential — i.e., when {{domxref("CredentialsContainer.get()")}} is called with a `publicKey` option. This data contains some information from the options passed into the `get()` call, and some information controlled by the browser.
-- {{domxref("AuthenticatorAssertionResponse.signature")}} {{ReadOnlyInline}}
+- {{domxref("AuthenticatorAssertionResponse.signature")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An assertion signature over {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and {{domxref("AuthenticatorResponse.clientDataJSON")}}. The assertion signature is created with the private key of the key pair that was created during the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call and verified using the public key of that same key pair.
-- {{domxref("AuthenticatorAssertionResponse.userHandle")}} {{ReadOnlyInline}}
+- {{domxref("AuthenticatorAssertionResponse.userHandle")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{jsxref("ArrayBuffer")}} containing an opaque user identifier, specified as `user.id` in the options passed to the originating {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call.
 
 ## Instance methods

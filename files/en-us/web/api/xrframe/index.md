@@ -15,32 +15,32 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
 
 ## Instance properties
 
-- {{DOMxRef("XRFrame.session", "session")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("XRFrame.session", "session")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : The {{DOMxRef("XRSession")}} that for which this `XRFrame` describes the tracking details for all objects. The information about a specific object can be obtained by calling one of the methods on the object.
-- {{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : An {{domxref("XRAnchorSet")}} containing all anchors still tracked in the frame.
 
 ## Instance methods
 
-- {{domxref("XRFrame.createAnchor()", "createAnchor()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.createAnchor()", "createAnchor()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.
-- {{domxref("XRFrame.fillJointRadii()", "fillJointRadii()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.fillJointRadii()", "fillJointRadii()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces. Returns `true` if successful for all spaces.
-- {{domxref("XRFrame.fillPoses()", "fillPoses()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.fillPoses()", "fillPoses()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Populates a {{jsxref("Float32Array")}} with the matrices of the poses, relative to a given base space. Returns `true` if all spaces have a valid pose.
-- {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.
-- {{domxref("XRFrame.getHitTestResults()", "getHitTestResults()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.getHitTestResults()", "getHitTestResults()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an array of {{domxref("XRHitTestResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
-- {{domxref("XRFrame.getHitTestResultsForTransientInput()", "getHitTestResultsForTransientInput()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.getHitTestResultsForTransientInput()", "getHitTestResultsForTransientInput()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an array of {{domxref("XRTransientInputHitTestResult")}} objects containing hit test results for a given {{domxref("XRTransientInputHitTestSource")}}.
-- {{domxref("XRFrame.getJointPose()", "getJointPose()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.getJointPose()", "getJointPose()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
-- {{domxref("XRFrame.getLightEstimate()", "getLightEstimate()")}} {{Experimental_Inline}}
+- {{domxref("XRFrame.getLightEstimate()", "getLightEstimate()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("XRLightEstimate")}} object containing estimated lighting values for an {{domxref("XRLightProbe")}}.
-- {{DOMxRef("XRFrame.getPose", "getPose()")}} {{Experimental_Inline}}
+- {{DOMxRef("XRFrame.getPose", "getPose()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("XRPose")}} object representing the spatial relationship between the two specified {{domxref("XRSpace")}} objects.
-- {{DOMxRef("XRFrame.getViewerPose", "getViewerPose()")}} {{Experimental_Inline}}
+- {{DOMxRef("XRFrame.getViewerPose", "getViewerPose()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("XRViewerPose")}} describing the viewer's position and orientation in a given {{domxref("XRReferenceSpace")}}.
 
 ## Specifications

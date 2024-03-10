@@ -13,16 +13,16 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) interface **`XRRefe
 
 ## Constructor
 
-- {{domxref("XRReferenceSpaceEvent.XRReferenceSpaceEvent", "XRReferenceSpaceEvent()")}}
+- {{domxref("XRReferenceSpaceEvent.XRReferenceSpaceEvent", "XRReferenceSpaceEvent()")}} {{SecureContext_Inline}}
   - : Returns a new `XRReferenceSpaceEvent` with the specified type and configuration.
 
 ## Instance properties
 
 _In addition to inheriting the properties available on the parent interface, {{domxref("Event")}}, `XRReferenceSpaceEvent` objects include the following properties:_
 
-- {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} {{ReadOnlyInline}}
+- {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRReferenceSpace")}} indicating the reference space that generated the event.
-- {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}}
+- {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace`'s native origin after the event, defined relative to the coordinate system before the event.
 
 ## Instance methods

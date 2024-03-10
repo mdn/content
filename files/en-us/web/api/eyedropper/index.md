@@ -13,14 +13,14 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 
 ## Constructor
 
-- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
+- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a new `EyeDropper` instance.
 
 ## Instance methods
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
-- {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
+- {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples

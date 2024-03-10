@@ -15,14 +15,14 @@ The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/
 
 ## Constructor
 
-- {{domxref("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent", "PresentationConnectionCloseEvent()")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent", "PresentationConnectionCloseEvent()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new PresentationConnectionCloseEvent.
 
 ## Instance properties
 
-- {{DOMxRef("PresentationConnectionCloseEvent.message")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("PresentationConnectionCloseEvent.message")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A human-readable message that provides more information about why the connection was closed.
-- {{DOMxRef("PresentationConnectionCloseEvent.reason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("PresentationConnectionCloseEvent.reason")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Indicates why the connection was closed. This property takes one of the following values: `error`, `closed`, or `wentaway`.
 
 ## Specifications

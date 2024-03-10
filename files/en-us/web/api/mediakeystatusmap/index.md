@@ -11,7 +11,7 @@ The **`MediaKeyStatusMap`** interface of the [Encrypted Media Extensions API](/e
 
 ## Instance properties
 
-- {{domxref("MediaKeyStatusMap.size")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeyStatusMap.size")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the number of key/value pairs in the status map.
 
 ## Instance methods
@@ -20,9 +20,9 @@ The **`MediaKeyStatusMap`** interface of the [Encrypted Media Extensions API](/e
   - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.
 - {{domxref("MediaKeyStatusMap.forEach()","MediaKeyStatusMap.forEach(callback[, argument])")}} {{ReadOnlyInline}}
   - : Calls `callback` once for each key-value pair in the status map, in insertion order. If `argument` is present it will be passed to the callback.
-- {{domxref("MediaKeyStatusMap.get()")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeyStatusMap.get()")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the value associated with the given key, or `undefined` if there is none.
-- {{domxref("MediaKeyStatusMap.has()")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeyStatusMap.has()")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a boolean asserting whether a value has been associated with the given key.
 - {{domxref("MediaKeyStatusMap.keys()")}} {{ReadOnlyInline}}
   - : Returns a new `Iterator` object containing keys for each element in the status map, in insertion order.

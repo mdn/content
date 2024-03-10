@@ -15,11 +15,11 @@ To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies
 
 ## Instance methods
 
-- {{domxref("CookieStoreManager.getSubscriptions()")}}
+- {{domxref("CookieStoreManager.getSubscriptions()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} which resolves to a list of the cookie change subscriptions for this service worker registration.
-- {{domxref("CookieStoreManager.subscribe()")}}
+- {{domxref("CookieStoreManager.subscribe()")}} {{SecureContext_Inline}}
   - : Subscribes to changes to cookies. It returns a {{jsxref("Promise")}} which resolves when the subscription is successful.
-- {{domxref("CookieStoreManager.unsubscribe()")}}
+- {{domxref("CookieStoreManager.unsubscribe()")}} {{SecureContext_Inline}}
   - : Unsubscribes the registered service worker from changes to cookies. It returns a {{jsxref("Promise")}} which resolves when the operation is successful.
 
 ## Examples

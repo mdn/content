@@ -19,7 +19,7 @@ Out-of-memory errors should be relatively rare in a well-behaved app but are les
 
 ## Constructor
 
-- {{domxref("GPUOutOfMemoryError.GPUOutOfMemoryError", "GPUOutOfMemoryError()")}} {{Experimental_Inline}}
+- {{domxref("GPUOutOfMemoryError.GPUOutOfMemoryError", "GPUOutOfMemoryError()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `GPUOutOfMemoryError` object instance.
 
 ## Instance properties

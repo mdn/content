@@ -17,11 +17,11 @@ The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is pass
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("HIDInputReportEvent.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDInputReportEvent.data")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
-- {{domxref("HIDInputReportEvent.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDInputReportEvent.device")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : The {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
-- {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
 ## Instance methods

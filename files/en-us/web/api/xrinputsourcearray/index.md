@@ -17,7 +17,7 @@ In addition to being able to access the input sources in the list using standard
 
 _The following properties are available on `XRInputSourceArray` objects._
 
-- {{domxref("XRInputSourceArray.length", "length")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRInputSourceArray.length", "length")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : The number of {{domxref("XRInputSource")}} objects in the list.
 
 ## Instance methods

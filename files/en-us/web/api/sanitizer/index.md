@@ -19,12 +19,12 @@ This configuration may be customized using constructor options.
 
 ## Constructors
 
-- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}}
+- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
 ## Instance methods
 
-- {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}}
+- {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}} {{SecureContext_Inline}}
 
   - : Returns a sanitized {{domxref('DocumentFragment')}} from an input {{domxref('Document')}} or {{domxref('DocumentFragment')}}
 

@@ -17,7 +17,7 @@ This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permi
 
 ## Constructor
 
-- {{domxref("AbsoluteOrientationSensor.AbsoluteOrientationSensor", "AbsoluteOrientationSensor()")}}
+- {{domxref("AbsoluteOrientationSensor.AbsoluteOrientationSensor", "AbsoluteOrientationSensor()")}} {{SecureContext_Inline}}
   - : Creates a new `AbsoluteOrientationSensor` object.
 
 ## Instance properties

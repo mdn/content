@@ -15,9 +15,9 @@ None.
 
 ## Instance methods
 
-- {{domxref("MediaKeys.createSession()")}}
+- {{domxref("MediaKeys.createSession()")}} {{SecureContext_Inline}}
   - : Returns a new {{domxref("MediaKeySession")}} object, which represents a context for message exchange with a content decryption module (CDM).
-- {{domxref("MediaKeys.setServerCertificate()")}}
+- {{domxref("MediaKeys.setServerCertificate()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} to a server certificate to be used to encrypt messages to the license server.
 
 ## Examples

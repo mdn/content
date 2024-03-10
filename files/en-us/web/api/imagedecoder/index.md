@@ -13,32 +13,32 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Constructor
 
-- {{domxref("ImageDecoder.ImageDecoder", "ImageDecoder()")}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.ImageDecoder", "ImageDecoder()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `ImageDecoder` object.
 
 ## Instance properties
 
-- {{domxref("ImageDecoder.complete")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.complete")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a boolean value indicating whether encoded data is completely buffered.
-- {{domxref("ImageDecoder.completed")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.completed")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves once `complete` is true.
-- {{domxref("ImageDecoder.tracks")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.tracks")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{domxref("ImageTrackList")}} object listing the available tracks and providing a method for selecting a track to decode.
-- {{domxref("ImageDecoder.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.type")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a string reflecting the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) configured during construction.
 
 ## Static methods
 
-- {{domxref("ImageDecoder.isTypeSupported_static", "ImageDecoder.isTypeSupported()")}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.isTypeSupported_static", "ImageDecoder.isTypeSupported()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Indicates if the provided [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) is supported for unpacking and decoding.
 
 ## Instance methods
 
-- {{domxref("ImageDecoder.close()")}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.close()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Ends all pending work and releases system resources.
-- {{domxref("ImageDecoder.decode()")}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.decode()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Enqueues a control message to decode the frame of an image.
-- {{domxref("ImageDecoder.reset()")}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.reset()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Aborts all pending `decode()` operations.
 
 ## Examples

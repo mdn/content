@@ -15,25 +15,25 @@ The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
 
 ## Constructor
 
-- {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a new `NDEFReader` object.
 
 ## Instance methods
 
 _The `NDEFReader` interface inherits the methods of {{domxref("EventTarget")}}, its parent interface._
 
-- {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag read operation is scheduled or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
-- {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Events
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("NDEFReader.reading_event", "reading")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReader.reading_event", "reading")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fires when a new reading is available from compatible NFC devices.
-- {{DOMxRef("NDEFReader.readingerror_event", "readingerror")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReader.readingerror_event", "readingerror")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fires when a tag is in proximity of a reading device, but cannot be read.
 
 ## Examples

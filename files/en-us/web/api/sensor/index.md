@@ -31,27 +31,27 @@ Below is a list of interfaces based on the `Sensor` interface.
 
 ## Instance properties
 
-- {{domxref('Sensor.activated')}} {{ReadOnlyInline}}
+- {{domxref('Sensor.activated')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a boolean value indicating whether the sensor is active.
-- {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}}
+- {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a boolean value indicating whether the sensor has a reading.
-- {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
+- {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the timestamp of the latest sensor reading.
 
 ## Instance methods
 
-- {{domxref('Sensor.start()')}}
+- {{domxref('Sensor.start()')}} {{SecureContext_Inline}}
   - : Activates one of the sensors based on `Sensor`.
-- {{domxref('Sensor.stop()')}}
+- {{domxref('Sensor.stop()')}} {{SecureContext_Inline}}
   - : Deactivates one of the sensors based on `Sensor`.
 
 ## Events
 
-- {{domxref('Sensor.activate_event', 'activate')}}
+- {{domxref('Sensor.activate_event', 'activate')}} {{SecureContext_Inline}}
   - : Fired when a sensor becomes activated.
-- {{domxref('Sensor.error_event', 'error')}}
+- {{domxref('Sensor.error_event', 'error')}} {{SecureContext_Inline}}
   - : Fired when an exception occurs on a sensor.
-- {{domxref('Sensor.reading_event', 'reading')}}
+- {{domxref('Sensor.reading_event', 'reading')}} {{SecureContext_Inline}}
   - : Fired when a new reading is available on a sensor.
 
 ## Specifications

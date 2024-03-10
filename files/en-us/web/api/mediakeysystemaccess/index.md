@@ -11,14 +11,14 @@ The **`MediaKeySystemAccess`** interface of the [Encrypted Media Extensions API]
 
 ## Instance properties
 
-- {{domxref("MediaKeySystemAccess.keySystem")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeySystemAccess.keySystem")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string identifying the key system being used.
 
 ## Instance methods
 
-- {{domxref("MediaKeySystemAccess.createMediaKeys()")}}
+- {{domxref("MediaKeySystemAccess.createMediaKeys()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves to a new {{domxref("MediaKeys")}} object.
-- {{domxref("MediaKeySystemAccess.getConfiguration()")}}
+- {{domxref("MediaKeySystemAccess.getConfiguration()")}} {{SecureContext_Inline}}
   - : Returns an object with the supported combination of configuration options.
 
 ## Specifications

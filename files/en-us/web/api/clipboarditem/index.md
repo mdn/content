@@ -15,23 +15,23 @@ The benefit of having the **`ClipboardItem`** interface to represent data, is th
 
 ## Constructor
 
-- {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
+- {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} {{SecureContext_Inline}}
   - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value.
 
 ## Instance properties
 
 _This interface provides the following properties._
 
-- {{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}}
+- {{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an {{jsxref("Array")}} of MIME types available within the **`ClipboardItem`**.
-- {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
+- {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns one of the following: `"unspecified"`, `"inline"` or `"attachment"`.
 
 ## Instance methods
 
 _This interface defines the following methods._
 
-- {{domxref("ClipboardItem.getType", "getType()")}}
+- {{domxref("ClipboardItem.getType", "getType()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}}, or an error if the MIME type is not found.
 
 ## Examples

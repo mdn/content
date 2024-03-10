@@ -13,7 +13,7 @@ This interface, and hence the system wake lock, is exposed through the {{domxref
 
 ## Instance methods
 
-- {{domxref("WakeLock.request", "request()")}}
+- {{domxref("WakeLock.request", "request()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("WakeLockSentinel")}} object if the screen wake lock is granted.
 
 ## Examples

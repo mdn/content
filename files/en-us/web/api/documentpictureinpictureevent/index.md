@@ -15,7 +15,7 @@ The **`DocumentPictureInPictureEvent`** interface of the {{domxref("Document Pic
 
 ## Constructor
 
-- {{domxref("DocumentPictureInPictureEvent.DocumentPictureInPictureEvent", "DocumentPictureInPictureEvent()")}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPictureEvent.DocumentPictureInPictureEvent", "DocumentPictureInPictureEvent()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `DocumentPictureInPictureEvent` object instance.
 
 ## Instance methods
@@ -26,7 +26,7 @@ _Inherits methods from its parent, {{DOMxRef("Event")}}._
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("DocumentPictureInPictureEvent.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPictureEvent.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Window")}} instance representing the browsing context inside the `DocumentPictureInPicture` window the event was fired on.
 
 ## Examples

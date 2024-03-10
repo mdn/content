@@ -13,10 +13,10 @@ The read-only `PushSubscriptionOptions` object is returned by calling {{domxref(
 
 ## Instance properties
 
-- {{domxref("PushSubscriptionOptions.userVisibleOnly")}} {{ReadOnlyInline}}
+- {{domxref("PushSubscriptionOptions.userVisibleOnly")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A boolean value indicating that the returned push
     subscription will only be used for messages whose effect is made visible to the user.
-- {{domxref("PushSubscriptionOptions.applicationServerKey")}} {{ReadOnlyInline}}
+- {{domxref("PushSubscriptionOptions.applicationServerKey")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A public key your push server will use to send
     messages to client apps via a push server.
 

@@ -21,7 +21,7 @@ Validation errors occur whenever invalid inputs are given to a WebGPU call. Thes
 
 ## Constructor
 
-- {{domxref("GPUValidationError.GPUValidationError", "GPUValidationError()")}} {{Experimental_Inline}}
+- {{domxref("GPUValidationError.GPUValidationError", "GPUValidationError()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `GPUValidationError` object instance.
 
 ## Instance properties

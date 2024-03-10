@@ -22,13 +22,13 @@ You will usually interact with these child interfaces. However, `XRDepthInformat
 
 ## Instance properties
 
-- {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Contains the height of the depth buffer (number of rows).
-- {{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth-buffer coordinates that can then be scaled by depth buffer's `width` and `height` to obtain the absolute depth-buffer coordinates.
-- {{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
-- {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Contains the width of the depth buffer (number of columns).
 
 ## Instance methods

@@ -11,19 +11,19 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 
 ## Instance properties
 
-- {{domxref("XRInputSource.gamepad", "gamepad")}} {{ReadOnlyInline}}
+- {{domxref("XRInputSource.gamepad", "gamepad")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A {{domxref("Gamepad")}} object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is `null`.
-- {{domxref('XRInputSource.gripSpace', 'gripSpace')}} {{ReadOnlyInline}}
+- {{domxref('XRInputSource.gripSpace', 'gripSpace')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRSpace")}} whose origin tracks the pose which is used to render objects which should appear as if they're held in the hand indicated by `handedness`. The orientation of this space indicates the angle at which the hand is gripping the object. Read on in the main article on {{domxref("XRInputSource.gripSpace", "gripSpace")}} for more details on how to use this space.
-- {{domxref('XRInputSource.hand', 'hand')}} {{ReadOnlyInline}}
+- {{domxref('XRInputSource.hand', 'hand')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRHand")}} object providing access to the underlying hand-tracking device.
-- {{domxref('XRInputSource.handedness', 'handedness')}} {{ReadOnlyInline}}
+- {{domxref('XRInputSource.handedness', 'handedness')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string that indicates which hand the device represented by this `XRInputSource` is being used in, if any. The value will be `left`, `right`, or `none`.
-- {{domxref('XRInputSource.profiles', 'profiles')}} {{ReadOnlyInline}}
+- {{domxref('XRInputSource.profiles', 'profiles')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An array of strings, each specifying the name of an input profile describing the preferred visual representation and behavior of this input source.
-- {{domxref('XRInputSource.targetRayMode', 'targetRayMode')}} {{ReadOnlyInline}}
+- {{domxref('XRInputSource.targetRayMode', 'targetRayMode')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string indicating the methodology used to produce the target ray: `gaze`, `tracked-pointer`, or `screen`.
-- {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}} {{ReadOnlyInline}}
+- {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direction in which it extends. This space is established using the method defined by `targetRayMode`.
 
 ## Instance methods

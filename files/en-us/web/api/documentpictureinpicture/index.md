@@ -17,17 +17,17 @@ It is accessed via the {{domxref("Window.documentPictureInPicture")}} property.
 
 ## Instance properties
 
-- {{domxref("DocumentPictureInPicture.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPicture.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
 
 ## Instance methods
 
-- {{domxref("DocumentPictureInPicture.requestWindow", "requestWindow()")}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPicture.requestWindow", "requestWindow()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Opens the Picture-in-Picture window for the current main browsing context. Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
 
 ## Events
 
-- {{domxref("DocumentPictureInPicture/enter_event", "enter")}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPicture/enter_event", "enter")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fired when the Picture-in-Picture window is successfully opened.
 
 ## Examples

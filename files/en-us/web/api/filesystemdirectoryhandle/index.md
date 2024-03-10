@@ -23,13 +23,13 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 Regular methods:
 
-- {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
+- {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name within the directory handle on which the method is called.
-- {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
+- {{domxref('FileSystemDirectoryHandle.getFileHandle()')}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the directory the method is called.
-- {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
+- {{domxref('FileSystemDirectoryHandle.removeEntry()')}} {{SecureContext_Inline}}
   - : Attempts to asynchronously remove an entry if the directory handle contains a file or directory called the name specified.
-- {{domxref('FileSystemDirectoryHandle.resolve()')}}
+- {{domxref('FileSystemDirectoryHandle.resolve()')}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} fulfilled with an {{jsxref('Array')}} of directory names from the parent handle to the specified child entry, with the name of the child entry as the last array item.
 
 [Asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) methods:

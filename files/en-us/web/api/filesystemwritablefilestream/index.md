@@ -19,11 +19,11 @@ _Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
 _Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 
-- {{domxref('FileSystemWritableFileStream.write()')}}
+- {{domxref('FileSystemWritableFileStream.write()')}} {{SecureContext_Inline}}
   - : Writes content into the file the method is called on, at the current file cursor offset.
-- {{domxref('FileSystemWritableFileStream.seek()')}}
+- {{domxref('FileSystemWritableFileStream.seek()')}} {{SecureContext_Inline}}
   - : Updates the current file cursor offset to the position (in bytes) specified.
-- {{domxref('FileSystemWritableFileStream.truncate()')}}
+- {{domxref('FileSystemWritableFileStream.truncate()')}} {{SecureContext_Inline}}
   - : Resizes the file associated with the stream to be the specified size in bytes.
 
 ## Examples

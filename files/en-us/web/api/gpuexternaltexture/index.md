@@ -17,7 +17,7 @@ A `GPUExternalTexture` object instance is created using {{domxref("GPUDevice.imp
 
 ## Instance properties
 
-- {{domxref("GPUExternalTexture.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUExternalTexture.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

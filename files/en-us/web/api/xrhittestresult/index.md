@@ -17,9 +17,9 @@ None.
 
 ## Instance methods
 
-- {{domxref("XRHitTestResult.createAnchor()")}} {{Experimental_Inline}}
+- {{domxref("XRHitTestResult.createAnchor()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRAnchor")}} created from the hit test result.
-- {{domxref("XRHitTestResult.getPose()")}} {{Experimental_Inline}}
+- {{domxref("XRHitTestResult.getPose()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("XRPose")}} of the hit test result relative to the given base space.
 
 ## Examples

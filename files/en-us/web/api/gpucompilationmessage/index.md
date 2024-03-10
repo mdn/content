@@ -17,17 +17,17 @@ An array of `GPUCompilationMessage` objects is available in the `messages` prope
 
 ## Instance properties
 
-- {{domxref("GPUCompilationMessage.length", "length")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCompilationMessage.length", "length")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the length of the substring that the message corresponds to.
-- {{domxref("GPUCompilationMessage.lineNum", "lineNum")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCompilationMessage.lineNum", "lineNum")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the line number in the shader code that the message corresponds to.
-- {{domxref("GPUCompilationMessage.linePos", "linePos")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCompilationMessage.linePos", "linePos")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the position in the code line that the message corresponds to. This could be an exact point, or the start of the relevant substring.
-- {{domxref("GPUCompilationMessage.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCompilationMessage.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string representing human-readable message text.
-- {{domxref("GPUCompilationMessage.offset", "offset")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCompilationMessage.offset", "offset")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the offset from the start of the shader code to the exact point, or the start of the relevant substring, that the message corresponds to.
-- {{domxref("GPUCompilationMessage.type", "type")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUCompilationMessage.type", "type")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An enumerated value representing the type of the message — `"error"`, `"info"`, or `"warning"`.
 
 ## Examples

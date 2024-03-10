@@ -23,17 +23,17 @@ None.
 
 ## Instance methods
 
-- {{domxref('FileSystemSyncAccessHandle.close', 'close()')}}
+- {{domxref('FileSystemSyncAccessHandle.close', 'close()')}} {{SecureContext_Inline}}
   - : Closes an open synchronous file handle, disabling any further operations on it and releasing the exclusive lock previously put on the file associated with the file handle.
-- {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}}
+- {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} {{SecureContext_Inline}}
   - : Persists any changes made to the file associated with the handle via the {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} method to disk.
-- {{domxref('FileSystemSyncAccessHandle.getSize', 'getSize()')}}
+- {{domxref('FileSystemSyncAccessHandle.getSize', 'getSize()')}} {{SecureContext_Inline}}
   - : Returns the size of the file associated with the handle in bytes.
-- {{domxref('FileSystemSyncAccessHandle.read', 'read()')}}
+- {{domxref('FileSystemSyncAccessHandle.read', 'read()')}} {{SecureContext_Inline}}
   - : Reads the content of the file associated with the handle into a specified buffer, optionally at a given offset.
-- {{domxref('FileSystemSyncAccessHandle.truncate', 'truncate()')}}
+- {{domxref('FileSystemSyncAccessHandle.truncate', 'truncate()')}} {{SecureContext_Inline}}
   - : Resizes the file associated with the handle to a specified number of bytes.
-- {{domxref('FileSystemSyncAccessHandle.write', 'write()')}}
+- {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} {{SecureContext_Inline}}
   - : Writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.
 
 ## Examples

@@ -13,16 +13,16 @@ The **`MediaKeyMessageEvent`** interface of the [Encrypted Media Extensions API]
 
 ## Constructor
 
-- {{domxref("MediaKeyMessageEvent.MediaKeyMessageEvent","MediaKeyMessageEvent()")}}
+- {{domxref("MediaKeyMessageEvent.MediaKeyMessageEvent","MediaKeyMessageEvent()")}} {{SecureContext_Inline}}
   - : Creates a new instance of `MediaKeyMessageEvent`.
 
 ## Instance properties
 
 Inherits properties from its parent, {{domxref("Event")}}.
 
-- {{domxref("MediaKeyMessageEvent.message")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeyMessageEvent.message")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
-- {{domxref("MediaKeyMessageEvent.messageType")}} {{ReadOnlyInline}}
+- {{domxref("MediaKeyMessageEvent.messageType")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
 
 ## Instance methods

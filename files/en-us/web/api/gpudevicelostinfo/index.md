@@ -17,9 +17,9 @@ See the {{domxref("GPUDevice.lost")}} page for more information about "lost" sta
 
 ## Instance properties
 
-- {{domxref("GPUDeviceLostInfo.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDeviceLostInfo.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string providing a human-readable message that explains why the device was lost.
-- {{domxref("GPUDeviceLostInfo.reason", "reason")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUDeviceLostInfo.reason", "reason")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An enumerated value that defines the reason the device was lost in a machine-readable way.
 
 ## Examples

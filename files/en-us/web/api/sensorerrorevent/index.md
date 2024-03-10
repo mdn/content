@@ -13,12 +13,12 @@ The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Se
 
 ## Constructor
 
-- {{domxref("SensorErrorEvent.SensorErrorEvent", "SensorErrorEvent()")}}
+- {{domxref("SensorErrorEvent.SensorErrorEvent", "SensorErrorEvent()")}} {{SecureContext_Inline}}
   - : Creates a new `SensorErrorEvent` object.
 
 ## Instance properties
 
-- {{domxref('SensorErrorEvent.error')}} {{ReadOnlyInline}}
+- {{domxref('SensorErrorEvent.error')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref('DOMException')}} object passed in the event's constructor.
 
 ## Specifications

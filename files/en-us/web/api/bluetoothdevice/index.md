@@ -16,19 +16,19 @@ environment.
 
 ## Instance properties
 
-- {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string that uniquely identifies a device.
-- {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string that provides a human-readable name for the device.
-- {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
 ## Instance methods
 
-- {{DOMxRef("BluetoothDevice.watchAdvertisements()")}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothDevice.watchAdvertisements()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A {{jsxref("Promise")}} that resolves to `undefined` or is rejected with
     an error if advertisements can't be shown for any reason.
-- {{DOMxRef("BluetoothDevice.forget()")}} {{Experimental_Inline}}
+- {{DOMxRef("BluetoothDevice.forget()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides a way for the page to revoke access to a device the user has granted access to.
 
 ## Specifications

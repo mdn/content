@@ -17,14 +17,14 @@ Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", 
 
 ## Constructor
 
-- {{domxref("GPUUncapturedErrorEvent.GPUUncapturedErrorEvent", "GPUUncapturedErrorEvent()")}} {{Experimental_Inline}}
+- {{domxref("GPUUncapturedErrorEvent.GPUUncapturedErrorEvent", "GPUUncapturedErrorEvent()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `GPUUncapturedErrorEvent` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("GPUUncapturedErrorEvent.error", "error")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUUncapturedErrorEvent.error", "error")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A {{domxref("GPUError")}} object instance providing access to the details of the error.
 
 ## Examples

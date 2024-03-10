@@ -17,37 +17,37 @@ The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID 
 
 This interface also inherits properties from {{domxref("EventTarget")}}.
 
-- {{domxref("HIDDevice.opened")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.opened")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("boolean")}}, true if the device has an open connection.
-- {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the vendorId of the HID device.
-- {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the productID of the HID device.
-- {{domxref("HIDDevice.productName")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.productName")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a string containing the product name of the HID device.
-- {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an array of report formats for the HID device.
 
 ### Events
 
-- {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Fires when a report is sent from the device.
 
 ## Instance methods
 
 This interface also inherits methods from {{domxref("EventTarget")}}.
 
-- {{domxref("HIDDevice.open()")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.open()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Opens a connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been successful.
-- {{domxref("HIDDevice.close()")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.close()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Closes the connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been closed.
-- {{domxref("HIDDevice.forget()")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.forget()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Closes the connection to this HID device and resets access permission, and returns a {{jsxref("Promise")}} which resolves once the permission was reset.
-- {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sends an output report to this HID Device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
-- {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sends a feature report to this HID device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
-- {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}}
+- {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Receives a feature report from this HID device in the form of a {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}}. This allows typed access to the contents of this message.
 
 ## Examples

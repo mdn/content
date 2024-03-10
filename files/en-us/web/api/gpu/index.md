@@ -17,14 +17,14 @@ The `GPU` object for the current context is accessed via the {{domxref("Navigato
 
 ## Instance properties
 
-- {{domxref("GPU.wgslLanguageFeatures", "wgslLanguageFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPU.wgslLanguageFeatures", "wgslLanguageFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A {{domxref("WGSLLanguageFeatures")}} object that reports the [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) supported by the WebGPU implementation.
 
 ## Instance methods
 
-- {{domxref("GPU.requestAdapter", "requestAdapter()")}} {{Experimental_Inline}}
+- {{domxref("GPU.requestAdapter", "requestAdapter()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, which is the primary interface for using WebGPU functionality.
-- {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}} {{Experimental_Inline}}
+- {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.
 
 ## Examples

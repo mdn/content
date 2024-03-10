@@ -13,9 +13,9 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 
 ## Instance properties
 
-- {{domxref('PaymentResponse.details')}} {{ReadOnlyInline}}
+- {{domxref('PaymentResponse.details')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used. Developers need to consult whomever controls the URL for the expected shape of the details object.
-- {{domxref('PaymentResponse.methodName')}} {{ReadOnlyInline}}
+- {{domxref('PaymentResponse.methodName')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc.
 - {{domxref('PaymentResponse.payerEmail')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the email address supplied by the user. This option is only present when the `requestPayerEmail` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
@@ -23,7 +23,7 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
   - : Returns the name supplied by the user. This option is only present when the `requestPayerName` option is set to true in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 - {{domxref('PaymentResponse.payerPhone')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the phone number supplied by the user. This option is only present when the `requestPayerPhone` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
-- {{domxref('PaymentResponse.requestId')}} {{ReadOnlyInline}}
+- {{domxref('PaymentResponse.requestId')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the identifier of the {{domxref('PaymentRequest')}} that produced the current response. This is the same value supplied in the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor by `details.id`.
 - {{domxref('PaymentResponse.shippingAddress')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns the shipping Address supplied by the user. This option is only present when the `requestShipping` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
@@ -32,11 +32,11 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 
 ## Instance methods
 
-- {{domxref('PaymentResponse.retry()')}}
+- {{domxref('PaymentResponse.retry()')}} {{SecureContext_Inline}}
   - : If something is wrong with the payment response's data (and there is a recoverable error), this method allows a merchant to request that the user retry the payment. The method takes an object as argument, which is used to signal to the user exactly what is wrong with the payment response so they can try to correct any issues.
-- {{domxref('PaymentResponse.complete()')}}
+- {{domxref('PaymentResponse.complete()')}} {{SecureContext_Inline}}
   - : Notifies the user agent that the user interaction is over. This causes any remaining user interface to be closed. This method should only be called after the Promise returned by the {{domxref('PaymentRequest.show()')}} method.
-- {{domxref("PaymentResponse.toJSON()")}}
+- {{domxref("PaymentResponse.toJSON()")}} {{SecureContext_Inline}}
   - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PaymentResponse` object.
 
 ## Events

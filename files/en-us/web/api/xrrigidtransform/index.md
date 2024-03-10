@@ -20,18 +20,18 @@ Using `XRRigidTransform` in these places rather than bare arrays that provide th
 
 ## Constructor
 
-- {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}
+- {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}} {{SecureContext_Inline}}
   - : Creates a new `XRRigidTransform` object which represents a transform that applies a specified position and/or orientation.
 
 ## Instance properties
 
-- {{DOMxRef("XRRigidTransform.position")}} {{ReadOnlyInline}}
+- {{DOMxRef("XRRigidTransform.position")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} specifying a 3-dimensional point, expressed in meters, describing the translation component of the transform. The {{DOMxRef("DOMPointReadonly.w", "w")}} property is always `1.0`.
-- {{DOMxRef("XRRigidTransform.orientation")}} {{ReadOnlyInline}}
+- {{DOMxRef("XRRigidTransform.orientation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A {{DOMxRef("DOMPointReadOnly")}} which contains a unit quaternion describing the rotational component of the transform. As a unit quaternion, its length is always normalized to `1.0`.
-- {{DOMxRef("XRRigidTransform.matrix")}} {{ReadOnlyInline}}
+- {{DOMxRef("XRRigidTransform.matrix")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the transform matrix in the form of a 16-member {{jsxref("Float32Array")}}. See the section [Matrix format](/en-US/docs/Web/API/XRRigidTransform/matrix#matrix_format) for how the array is used to represent a matrix.
-- {{DOMxRef("XRRigidTransform.inverse")}} {{ReadOnlyInline}}
+- {{DOMxRef("XRRigidTransform.inverse")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a `XRRigidTransform` which is the inverse of this transform. That is, if applied to an object that had been previously transformed by the original transform, it will undo the transform and return the original object.
 
 ## Usage notes

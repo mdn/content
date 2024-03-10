@@ -15,18 +15,18 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 ## Instance methods
 
-- {{domxref("CookieStore.delete()")}}
+- {{domxref("CookieStore.delete()")}} {{SecureContext_Inline}}
   - : The `delete()` method deletes a cookie with the given name or options object, it returns a {{jsxref("Promise")}} that resolves when the deletion completes.
-- {{domxref("CookieStore.get()")}}
+- {{domxref("CookieStore.get()")}} {{SecureContext_Inline}}
   - : The `get()` method gets a single cookie with the given name or options object, it returns a {{jsxref("Promise")}} that resolves with details of a single cookie.
-- {{domxref("CookieStore.getAll()")}}
+- {{domxref("CookieStore.getAll()")}} {{SecureContext_Inline}}
   - : The `getAll()` method gets all matching cookies, it returns a {{jsxref("Promise")}} that resolves with a list of cookies.
-- {{domxref("CookieStore.set()")}}
+- {{domxref("CookieStore.set()")}} {{SecureContext_Inline}}
   - : The `set()` method sets a cookie with the given name and value or options object, it returns a {{jsxref("Promise")}} that resolves when the cookie is set.
 
 ## Events
 
-- {{domxref("CookieStore.change_event", "change")}}
+- {{domxref("CookieStore.change_event", "change")}} {{SecureContext_Inline}}
   - : The `change` event fires when a change is made to any cookie.
 
 ## Examples

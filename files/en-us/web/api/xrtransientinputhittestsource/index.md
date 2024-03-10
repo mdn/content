@@ -19,7 +19,7 @@ None.
 
 ## Instance methods
 
-- {{domxref("XRTransientInputHitTestSource.cancel()")}} {{Experimental_Inline}}
+- {{domxref("XRTransientInputHitTestSource.cancel()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Unsubscribes from the transient input hit test.
 
 ## Examples

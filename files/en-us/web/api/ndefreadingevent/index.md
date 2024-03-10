@@ -15,16 +15,16 @@ The **`NDEFReadingEvent`** interface of the [Web NFC API](/en-US/docs/Web/API/We
 
 ## Constructor
 
-- {{DOMxRef("NDEFReadingEvent.NDEFReadingEvent", "NDEFReadingEvent.NDEFReadingEvent()")}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReadingEvent.NDEFReadingEvent", "NDEFReadingEvent.NDEFReadingEvent()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a new `NDEFReadingEvent`.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}_.
 
-- {{DOMxRef("NDEFReadingEvent.message")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReadingEvent.message")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
-- {{DOMxRef("NDEFReadingEvent.serialNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("NDEFReadingEvent.serialNumber")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.
 
 ## Instance methods

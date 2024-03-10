@@ -17,30 +17,30 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 
 ## Instance properties
 
-- {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the depth or layer count of the `GPUTexture` (pixels, or number of layers).
-- {{domxref("GPUTexture.dimension", "dimension")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.dimension", "dimension")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An enumerated value representing the dimension of the set of texels for each `GPUTexture` subresource.
-- {{domxref("GPUTexture.format", "format")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.format", "format")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An enumerated value representing the format of the `GPUTexture`.
-- {{domxref("GPUTexture.height", "height")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.height", "height")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the height of the `GPUTexture` in pixels.
-- {{domxref("GPUTexture.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
-- {{domxref("GPUTexture.mipLevelCount", "mipLevelCount")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.mipLevelCount", "mipLevelCount")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the number of mip levels of the `GPUTexture`.
-- {{domxref("GPUTexture.sampleCount", "sampleCount")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.sampleCount", "sampleCount")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the sample count of the `GPUTexture`.
-- {{domxref("GPUTexture.usage", "usage")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.usage", "usage")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : The {{glossary("bitwise flags")}} representing the allowed usages of the `GPUTexture`.
-- {{domxref("GPUTexture.width", "width")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.width", "width")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A number representing the width of the `GPUTexture` in pixels.
 
 ## Instance methods
 
-- {{domxref("GPUTexture.createView", "createView()")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.createView", "createView()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Creates a {{domxref("GPUTextureView")}} representing a specific view of the `GPUTexture`.
-- {{domxref("GPUTexture.destroy", "destroy()")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.destroy", "destroy()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Destroys the `GPUTexture`.
 
 ## Examples

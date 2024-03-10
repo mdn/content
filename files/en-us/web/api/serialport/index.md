@@ -19,31 +19,31 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 
 ## Instance properties
 
-- {{domxref("SerialPort.readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("SerialPort.readable")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
-- {{domxref("SerialPort.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("SerialPort.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.
 
 ## Instance methods
 
-- {{domxref("SerialPort.forget()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.forget()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port closes and is forgotten.
-- {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns an object containing properties of the port.
-- {{domxref("SerialPort.open()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.open()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.
-- {{domxref("SerialPort.setSignals()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.setSignals()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
-- {{domxref("SerialPort.getSignals()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.getSignals()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
-- {{domxref("SerialPort.close()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.close()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port closes.
 
 ## Events
 
-- {{domxref("SerialPort.connect_event", "connect")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.connect_event", "connect")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : An event fired when the port has connected to the device.
-- {{domxref("SerialPort.disconnect_event", "disconnect")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.disconnect_event", "disconnect")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : An event fired when the port has disconnected from the device.
 
 ## Examples

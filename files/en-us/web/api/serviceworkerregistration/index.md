@@ -17,49 +17,49 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 _Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}.
 
-- {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.active")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a service worker whose state is `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
-- {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a reference to a {{domxref("BackgroundFetchManager")}} object, which manages background fetch operations.
-- {{domxref("ServiceWorkerRegistration.cookies")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.cookies")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStoreManager")}} interface, which allows subscribe and unsubscribe to cookie change events.
-- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface, for managing indexed content for offline viewing.
-- {{domxref("ServiceWorkerRegistration.installing")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.installing")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a service worker whose state is `installing`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.paymentManager")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.paymentManager")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
-- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which allows for registering of tasks to run at specific intervals.
-- {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
-- {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
-- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
-- {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 
 ## Instance methods
 
 _Also inherits methods from its parent interface,_ {{domxref("EventTarget")}}.
 
-- {{domxref("ServiceWorkerRegistration.getNotifications()")}}
+- {{domxref("ServiceWorkerRegistration.getNotifications()")}} {{SecureContext_Inline}}
   - : Returns a list of the notifications in the order that they were created from the current origin via the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.showNotification()")}}
+- {{domxref("ServiceWorkerRegistration.showNotification()")}} {{SecureContext_Inline}}
   - : Displays the notification with the requested title.
-- {{domxref("ServiceWorkerRegistration.unregister()")}}
+- {{domxref("ServiceWorkerRegistration.unregister()")}} {{SecureContext_Inline}}
   - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
-- {{domxref("ServiceWorkerRegistration.update()")}}
+- {{domxref("ServiceWorkerRegistration.update()")}} {{SecureContext_Inline}}
   - : Checks the server for an updated version of the service worker without consulting caches.
 
 ## Events
 
-- {{domxref("ServiceWorkerRegistration.updatefound_event", "updatefound")}}
+- {{domxref("ServiceWorkerRegistration.updatefound_event", "updatefound")}} {{SecureContext_Inline}}
   - : Fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Examples

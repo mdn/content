@@ -15,9 +15,9 @@ The `ContactsManager` is available through the global {{domxref('navigator.conta
 
 ## Instance methods
 
-- {{domxref('ContactsManager.select','select()')}} {{Experimental_Inline}}
+- {{domxref('ContactsManager.select','select()')}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} which, when resolved, presents the user with a contact picker which allows them to select contact(s) they wish to share.
-- {{domxref('ContactsManager.getProperties()','getProperties()')}} {{Experimental_Inline}}
+- {{domxref('ContactsManager.getProperties()','getProperties()')}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact properties are available.
 
 ## Examples

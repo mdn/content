@@ -12,10 +12,10 @@ This may be a newly requested lock that is received in the callback to {{domxref
 
 ## Instance properties
 
-- {{domxref('Lock.mode')}} {{ReadOnlyInline}}
+- {{domxref('Lock.mode')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested.
     The mode is either `"exclusive"` (the default) or `"shared"`.
-- {{domxref('Lock.name')}} {{ReadOnlyInline}}
+- {{domxref('Lock.name')}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the name passed to {{domxref('LockManager.request()')}} when the lock was requested.
 
 ## Examples
