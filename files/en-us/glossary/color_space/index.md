@@ -52,7 +52,7 @@ RGB is not the only color model that can represent the _sRGB_ color space. Cylin
 
   - : `rec2020` is a broadcast industry standard for ultra-high definition 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
 
-Additional cylindrical sRGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv` and `Cubehelix`.
+> **Note:** Additional cylindrical sRGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv` and `Cubehelix`.
 
 ### CIELAB color spaces
 
