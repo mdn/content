@@ -47,7 +47,7 @@ Access to the API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP
 The default allowlist for the `bluetooth` policy is `self`, which enables Bluetooth usage in same-origin nested frames but prevents access by third-party content by default.
 Cross-origin access is enabled by specifying the allowed origins in both the `Permissions-Policy: bluetooth` HTTP header and the desired `<iframe>`.
 
-In order to use the feature the user must first grant explicit permission (they will not be prompted for access if it is not allowed for other reasons, such as being blocked by a `Permissions-Policy`).
+In order to use the feature the user must first grant explicit permission (they will not be prompted for access if it is not allowed for other reasons, such as being blocked by a Permissions Policy).
 In order to request a device using {{domxref("Bluetooth.requestDevice()")}} the owning global object must also have {{glossary("transient activation")}}.
 
 The [Permissions API](/en-US/docs/Web/API/Permissions_API) {{domxref("Permissions/query","navigator.permissions.query()")}} method can be used with the `bluetooth` permission to test whether a site has permission to use Bluetooth devices.
