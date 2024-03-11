@@ -61,7 +61,7 @@ The flow elements are:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
-- {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
 - {{HTMLElement("hr")}}
@@ -122,7 +122,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Sectioning content
 
-Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
+Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
 Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
 
@@ -130,11 +130,9 @@ Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElemen
 
 Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
-Elements belonging to this category are {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}} and {{HTMLElement("hgroup")}}.
+Elements belonging to this category are {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} and {{HTMLElement("hgroup")}}.
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
-
-> **Note:** The {{HTMLElement("hgroup")}} element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification prior to HTML 5 being finalized, but is still part of the WHATWG specification and is at least partially supported by most browsers.
 
 ### Phrasing content
 

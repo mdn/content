@@ -94,7 +94,7 @@ In the following example, {{domxref("LaunchQueue.setConsumer", "window.launchQue
 
 ```js
 async function playSong(handledFile) {
-  const blob = await file.getFile();
+  const blob = await handledFile.getFile();
   const url = window.URL.createObjectURL(blob);
   const audio = new Audio(url);
   audio.play();
@@ -120,4 +120,4 @@ if ("launchQueue" in window) {
 ## See also
 
 - [Handle files in Progressive Web Apps on learn.microsoft.com](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files)
-- [Let installed web applications be file handlers on developer.chrome.com](https://developer.chrome.com/articles/file-handling/)
+- [Let installed web applications be file handlers on developer.chrome.com](https://developer.chrome.com/docs/capabilities/web-apis/file-handling)

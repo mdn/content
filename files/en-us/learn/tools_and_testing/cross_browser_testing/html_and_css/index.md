@@ -164,20 +164,20 @@ button {
   /* … */
 
   background-color: #ff0000;
-  background-color: rgb(255 0 0 / 1);
+  background-color: rgb(255 0 0 / 100%);
   box-shadow:
-    inset 1px 1px 3px rgb(255 255 255 / 0.4),
-    inset -1px -1px 3px rgb(0 0 0 / 0.4);
+    inset 1px 1px 3px rgb(255 255 255 / 40%),
+    inset -1px -1px 3px rgb(0 0 0 / 40%);
 }
 
 button:hover {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {
   box-shadow:
-    inset 1px 1px 3px rgb(0 0 0 / 0.4),
-    inset -1px -1px 3px rgb(255 255 255 / 0.4);
+    inset 1px 1px 3px rgb(0 0 0 / 40%),
+    inset -1px -1px 3px rgb(255 255 255 / 40%);
 }
 ```
 
@@ -265,7 +265,7 @@ To use the Mozilla Developer Network (MDN), most people do a search engine searc
 
 - Reference material with browser support information for client-side web technologies, e.g. the [\<video> reference page](/en-US/docs/Web/HTML/Element/video).
 - Other supporting reference material, e.g. the [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats),
-- Useful tutorials that solve specific problems, for example, [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player).
+- Useful tutorials that solve specific problems, for example, [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
 
 [caniuse.com](https://caniuse.com/) provides support information, along with a few useful external resource links. For example, see <https://caniuse.com/#search=video> (you just have to enter the feature you are searching for into the text box).
 

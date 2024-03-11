@@ -24,11 +24,16 @@ new TextDecoderStream(label, options)
     This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options` {{optional_inline}}
 
-  - : An object with the property:
+  - : An object with the following properties:
 
-    - `fatal`
-      - : A boolean value indicating if this object must throw a {{jsxref("TypeError")}} when decoding invalid data.
+    - `fatal` {{optional_inline}}
+
+      - : A boolean value indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
         It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
+
+    - `ignoreBOM` {{optional_inline}}
+      - : A boolean value indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) will be included in the output or skipped over.
+        It defaults to `false`, which means that the byte order mark will be skipped over when decoding and will not be included in the decoded text.
 
 ### Exceptions
 

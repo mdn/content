@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.DOMPointReadOnly
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}} {{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.
-
-{{AvailableInWorkers}}
 
 There are two ways to create a new `DOMPointReadOnly` instance. First, you can use its constructor, passing in the values of the parameters for each dimension and, optionally, the perspective:
 

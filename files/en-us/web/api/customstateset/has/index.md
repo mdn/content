@@ -8,7 +8,7 @@ status:
 browser-compat: api.CustomStateSet.has
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Presentation.receiver
 ---
 
-{{APIRef("Presentation")}}{{SeeCompatTable}}
+{{APIRef("Presentation")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **read-only** {{domxref("Presentation")}} attribute
 `receiver`, which is only available in browser contexts which are

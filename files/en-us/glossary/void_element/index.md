@@ -35,7 +35,7 @@ The void elements in HTML are as follows:
 
 _Self-closing tags (`<tag />`) do not exist in HTML._
 
-If a trailing `/` (slash) character is present in the start tag of an HTML element, HTML parsers ignore that slash character. This is important to remember when an element such as {{HTMLElement('script')}} or {{HTMLElement('ul')}} does require a closing tag. In this case, adding a trailing slash in the start tag does not close the element.
+If a trailing `/` (slash) character is present in the start tag of an HTML element, HTML parsers ignore that slash character. This is especially important to remember for elements such as {{HTMLElement('script')}} or {{HTMLElement('ul')}} that do require a closing tag. In these cases, adding a trailing slash in the start tag does not close the element. Instead, the trailing slash is ignored, and the element is treated as open until an explicit closing tag is encountered or until the parser implicitly closes the element based on the HTML structure and parsing rules. For example, in the case of `<div/>Some text`, browsers interpret this as `<div>Some text</div>`, treating the slash as ignored and considering the div element to encapsulate the text that follows.
 
 However, some code formatters add the trailing slash character to the start tags of void elements to make them XHTML-compatible and more readable. For example, some code formatters will convert `<input type="text">` to `<input type="text" />`.
 

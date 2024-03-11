@@ -56,7 +56,7 @@ The following ruleset creates the grid of cards:
 }
 ```
 
-The {{cssxref("grid-template-columns")}} property defines the widths of the grid columns. In this case, we set the grid to auto-fill, with repeated columns that are minimally `230px` but allowed to grow to fill the available space. The {{cssxref("gap")}} property sets a gap of `20px` between adjacent rows and adjacent columns. Alternatively, the {{cssxref("grid-gap")}} property could have been used.
+The {{cssxref("grid-template-columns")}} property defines the widths of the grid columns. In this case, we set the grid to auto-fill, with repeated columns that are minimally `230px` but allowed to grow to fill the available space. The {{cssxref("gap")}} property sets a gap of `20px` between adjacent rows and adjacent columns.
 
 > **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. Lining up the components in each card with the same components in adjacent cards can be done with [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
 

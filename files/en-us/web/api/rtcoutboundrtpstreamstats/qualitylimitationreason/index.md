@@ -19,8 +19,7 @@ rate or resolution, or an increase in compression factor.
 
 The amount of time the encoded media has had its quality reduced in each of the
 potential ways that can be done can be found in
-{{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations",
-  "qualityLimitationDurations")}}.
+{{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}}.
 
 ## Value
 

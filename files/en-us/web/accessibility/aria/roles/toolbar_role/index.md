@@ -86,7 +86,7 @@ When the toolbar has focus within it, provide visual cues. When an element withi
 
 [Toolbar example from <abbr>W3C</abbr>, the World Wide Web Consortium](https://www.w3.org/TR/wai-aria-practices-1.2/examples/toolbar/toolbar.html)
 
-## Accessibility Concerns
+## Accessibility concerns
 
 Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
@@ -96,7 +96,7 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [The CSS `:focus-within` pseudoclass](/en-US/docs/Web/CSS/:focus-within)
@@ -105,6 +105,6 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

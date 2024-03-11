@@ -11,8 +11,6 @@ The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-
 
 If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the `ExtendableEvent` handler, the browser should throw an `InvalidStateError`; note also that multiple calls will stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises).
 
-> **Note:** The behavior described in the above paragraph was fixed in Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274).)
-
 This interface inherits from the {{domxref("Event")}} interface.
 
 {{InheritanceDiagram}}
@@ -96,6 +94,4 @@ self.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
