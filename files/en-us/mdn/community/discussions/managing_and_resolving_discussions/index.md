@@ -1,6 +1,6 @@
 ---
-title: Resolving discussions
-slug: MDN/Community/Discussions/Resolving_discussions
+title: Managing and resolving discussions
+slug: MDN/Community/Discussions/Managing_and_resolving_discussions
 page-type: mdn-community-guide
 ---
 

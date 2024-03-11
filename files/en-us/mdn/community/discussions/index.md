@@ -14,7 +14,7 @@ If you're not sure whether to open an issue or start discussion, consider the fo
 
 - Issues should be used for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
 - Use Discussions when an issue requires a dialogue to agree upon a course of action or define an actionable piece of work.
-- If your discussion doesn't progress or you're unsure of the next steps, refer to the [Guidelines for managing discussions]() for advice on moving forward, including expectations on timelines.
+- If your discussion doesn't progress or you're unsure of the next steps, refer to the [Guidelines for managing and resolving discussions](/en-US/docs/MDN/Community/Discussions/Managing_and_resolving_discussions) for advice on moving forward, including expectations on timelines.
 
 Check out the subject of each discussion category below so that you can start your discussion in the proper place.
 
