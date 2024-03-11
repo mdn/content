@@ -52,10 +52,7 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
     remove tracks while recording media.
 - `UnknownError`
   - : An non-security related error occurred that cannot otherwise be categorized.
-    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}}
-    becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
-    sent to the `MediaRecorder` with the remaining received data, and finally a
-    {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
+    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the `MediaRecorder` with the remaining received data, and finally a {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 ## Examples
 
