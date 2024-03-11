@@ -31,9 +31,9 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 
 ## Examples
 
-In our [fetch JSON example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json) (run [fetch JSON live](https://mdn.github.io/dom-examples/fetch/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
-  "Request()")}} constructor, then use it to fetch a `.json` file. When the
-fetch is successful, we read and parse the data using `json()`, then read
+In our [fetch JSON example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json) (run [fetch JSON live](https://mdn.github.io/dom-examples/fetch/fetch-json/)),
+we create a new request using the {{DOMxRef("Request.Request", "Request()")}} constructor, then use it to fetch a `.json` file.
+When the fetch is successful, we read and parse the data using `json()`, then read
 values out of the resulting objects as you'd expect and insert them into list items to
 display our product data.
 
