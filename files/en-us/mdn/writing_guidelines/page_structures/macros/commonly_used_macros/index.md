@@ -245,19 +245,19 @@ They can also be used to mark up a section on a page.
   Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### Indicating that a feature is available in web workers
+#### Indicating that a feature is available in web workers
 
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
 
-#### Syntax
+##### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-#### Examples
+##### Examples
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}
