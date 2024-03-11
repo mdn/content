@@ -8,7 +8,7 @@ page-type: mdn-community-guide
 
 The MDN community is encouraged to [initiate, engage in, and resolve discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
 
-While many discussions reach broad agreement very quickly, others may stall if there is no clear path to resolution: for example due to conflicting opinions. This process explains how you can work with the community in order to progress discussions through to resolution in a reasonable timeframe.
+While most discussions reach a broad agreement quickly, some may stall due to an unclear path to a resolution, often because of differing opinions. This document outlines the process and strategies to move discussions toward a resolution within a reasonable timeframe (we'll define what's an acceptable timeline later in this document).
 
 ## Moving a discussion to a resolution
 
@@ -35,9 +35,9 @@ Most discussions do not need a formal resolution process. These MDN discussion g
 
 Once agreement has been achieved, the discussion can be closed, the resolution announced, and the plan for implementing the resolution can be put it into action!
 
-## Discussion timeline
+## Expected turnaround times for discussions
 
-Every discussion will follow a different timeline depending on the complexity of the topic, the levels of agreement and disagreement, and the parties involved. Most discussions should be resolved in two months, allowing for the topic to be addressed at two monthly and / or nine weekly meetings, while ensuring that people with differing views have to opportunity to hear about and contribute to the discussion.
+Every discussion will have a different timeline depending on the complexity of the topic and the consensus levels. Ideally, most discussions should be resolved within two months, allowing for the topic to be addressed at various internal meetings. This timeframe ensures diverse viewpoints are considered and everyone interested has the opportunity to contribute to the discussion.
 
 1. Post the discussion and assign a driver.
 2. Identify any key stakeholders and needed approvers (the individuals who need to weigh in on the topic and give their approval), if any.

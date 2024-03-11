@@ -12,9 +12,9 @@ On MDN Web Docs, we encourage our community to start and/or engage in discussion
 If you see something wrong on MDN Web Docs, it's best to open a GitHub issue in the [relevant MDN GitHub repository](https://github.com/mdn/).
 If you're not sure whether to open an issue or start discussion, consider the following guidelines:
 
-- Issues are for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
-- Discussions are the right place if an issue needs a discussion to agree upon a course of action or define an actionable piece of work.
-- If the discussion is controversial or otherwise requires a resolution for action to be taken, follow the [discussion toward resolution guidelines](/en-US/docs/MDN/Community/Discussions/Resolving_discussions).
+- Issues should be used for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
+- Use Discussions when an issue requires a dialogue to agree upon a course of action or define an actionable piece of work.
+- If your discussion doesn't progress or you're unsure of the next steps, refer to the [Guidelines for managing discussions]() for advice on moving forward, including expectations on timelines.
 
 Check out the subject of each discussion category below so that you can start your discussion in the proper place.
 
