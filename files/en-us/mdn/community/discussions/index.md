@@ -141,7 +141,7 @@ Check out the subject of each discussion category below so that you can start yo
           >MDN Plus feature set</a
         >
         as well as feature ideas. For MDN Plus support such as subscriptions,
-        please refer to our
+        please refer to Mozilla's
         <a href="https://support.mozilla.org/en-US/products/mdn-plus"
           >official support channel</a
         >.
