@@ -6,11 +6,10 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-MDN Web Docs is an open source project. The community is encourage to initiate, engage in, and resolve discussions related to the MDN Web Docs documentation.
+The MDN community is encourage to [initiate, engage in, and resolve discussions](https://developer.mozilla.org/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
 
-At times, people will have differing views. If a discussion is controversial or otherwise requires a resolution before action is taken (or to decide to not take action), community members are encouraged to seek input and work together with interested parties toward a resolution.
-
-If you are proposing new content or features, please open a new issue in the [relevant MDN GitHub repository](https://github.com/mdn/), such as [MDN Content](https://github.com/mdn/content/issues/) or [Yari](https://github.com/mdn/yari/issues/). If, however, you are suggesting changes to processes or other changes that would benefit from or need input from our partners and the wider community, please read the [discussion guidelines](/en-US/docs/MDN/Community/Discussions), [start a discussion](https://github.com/orgs/mdn/discussions), and drive the discussion to a workable and supported resolution. The steps below provide guidance to achieve a resolution with maximum community input in a reasonable amount of time.
+While many discussions reach broad agreement very quickly, others may stall if there is no clear path to resolution: for example due to conflicting opinions.
+This process explains how you can work with the community in order to progress discussions through to resolution in a reasonable timeframe.
 
 ## Moving a discussion to a resolution
 
@@ -42,12 +41,12 @@ Once agreement has been achieved, the discussion can be closed, the resolution a
 Every discussion will follow a different timeline depending on the complexity of the topic, the levels of agreement and disagreement, and the parties involved. Most discussions should be resolved in two months, allowing for the topic to be addressed at two monthly and / or nine weekly meetings, while ensuring that people with differing views have to opportunity to hear about and contribute to the discussion.
 
 1. Post the discussion and assign a driver.
-2. Identify any essential voices and needed approvers (the individuals who need to weigh in on the topic and give their approval), if any.
-3. Inform the approves and other essential voices of the discussion and your proposed timeline. If needed, reach out to them again after 2 weeks, and weekly thereafter, until they provide feedback.
+2. Identify any key stakeholders and needed approvers (the individuals who need to weigh in on the topic and give their approval), if any.
+3. Inform the approvers and other essential voices of the discussion and your proposed timeline. If needed, reach out to them again after 2 weeks, and weekly thereafter, until they provide feedback.
 4. Add the discussion topic to the agendas of relevant meetings.
 5. After a month, sort through the feedback, discussions, and agreements, and formalate an initial plan merging the feedback into a possible action plan. Re-inform and re-request feedback from all interested parties, including everyone who participated in the discussion in any way.
 6. During the second month, keeping reaching out the the community for feedback on the proposed plan, making updates to the plan in light of any new feedback. Rinse. Repeat.
-7. If there are points of contention, arrange an online, synchronous, face-to-face meeting to resolve any remaining disagreements on in the discussion thread.
+7. If there are points of contention, arrange an online, synchronous, face-to-face meeting to resolve any remaining disagreements (as captured in the discussion thread).
 8. Keep the discussion threads alive during the second month as you work with the community towards the resolution.
 9. [Create an issue](/en-US/docs/MDN/Community/Issues) with the final plan for implementing the resolution and put it into action.
 10. Close the discussion.
