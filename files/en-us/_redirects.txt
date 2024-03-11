@@ -12245,6 +12245,7 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/HTML/Global_attributes/contextmenu	/en-US/docs/Web/HTML/Element/menu
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
