@@ -40,6 +40,8 @@ This article provides information about the changes in Firefox 124 that affect d
 
 ### APIs
 
+- [`AbortSignal.any()`](/en-US/docs/Web/API/AbortSignal/any_static) is now supported, allowing a composite signal to be created that can be used to abort an operation from multiple signal sources. ([Firefox bug 1830781](https://bugzil.la/1830781)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
