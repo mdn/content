@@ -24,4 +24,8 @@ A positive number indicating the media sampling rate.
 
 ## See also
 
+- [`RTCRtpCodecParameters.clockRate`](/en-US/docs/Web/API/RTCRtpCodecParameters#clockrate)
+
+## See also
+
 - {{domxref("RTCRtpCodecParameters.clockRate")}}
