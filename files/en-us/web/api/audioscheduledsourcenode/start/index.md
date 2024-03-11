@@ -8,8 +8,8 @@ browser-compat: api.AudioScheduledSourceNode.start
 
 {{APIRef("Web Audio API")}}
 
-The `start()` method on {{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the
-specified time. If no time is specified, then the sound begins playing immediately.
+The `start()` method on {{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the specified time.
+If no time is specified, then the sound begins playing immediately.
 
 ## Syntax
 
