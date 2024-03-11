@@ -1,80 +1,80 @@
 ---
-title: Beginning our Angular todo list app
+title: 开始开发我们的 Angular 待办事项应用程序
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
+此刻，我们已准备好使用 Angular 来创建我们的待办事项应用程序。完成后的应用程序将具有显示待办项目列表，并包含编辑、删除与新增项目等功能。在本篇中，你将学到应用程序的结构，以及建立一个可显示待办项目的基础列表。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提：</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
-        knowledge of the
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>， 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，
+        以及
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-          >terminal/command line</a
-        >.
+          href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          >终端命令行</a
+        >的知识。
+
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目标：</th>
       <td>
-        To create our basic app structure, get it displaying a list of to-do
-        items, and understand fundamental Angular concepts such as component
-        structure, sharing data between components, and looping content
-        creation.
+        创建一个可显示待办事项列表的基本应用程序结构，来理解Angular的基本概念，如组件结构、组件间数据共享以及循环内容创建。
+
       </td>
     </tr>
   </tbody>
 </table>
 
-## The to-do application structure
 
-Just like a basic application that doesn't use a framework, an Angular application has an `index.html`.
-Within the `<body>` tag of the `index.html`, Angular uses a special element — `<app-root>` — to insert your main component, which in turn includes other components you create.
-Generally, you don't need to touch the `index.html`, instead focusing your work within specialized areas of your application called components.
+## 待办事项应用程序结构
 
-### Organize your application with components
+就像一个不使用框架的基本应用程序一样，Angular 应用程序有一个`index.html`文件。
+在`index.html`的`<body>`标签内，Angular 使用一个特殊的元素——`<app-root>`——来插入你的主组件，而主组件又包括你创建的其他组件。
+通常，你不需要修改`index.html`，而是专注于你的应用程序中称为组件的专门区域内的工作。
 
-Components are a central building block of Angular applications.
-This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
+### 用组件组织你的应用程序
 
-Each component is made up of a TypeScript class, HTML, and CSS.
-TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+组件是 Angular 应用程序的核心构建块。
+这个待办事项应用程序有两个组件——一个作为应用程序基础的组件，以及一个用于处理待办事项的组件。
 
-### Dynamically change the UI with \*ngIf and \*ngFor
+每个组件由一个 TypeScript 类、HTML 和 CSS 组成。
+TypeScript会转译（或转换）成 JavaScript，这意味着你的应用程序最终会以纯 JavaScript 的形式出现，但你可以方便地使用TypeScript的扩展功能和简洁语法。
 
-This tutorial also covers two important Angular directives for dynamically altering the structure of the DOM.
-A directive is like a command that you can use in your HTML to affect change in your application.
+### 使用\*ngIf和\*ngFor动态改变 UI
 
-The first directive that this tutorial covers is Angular's iterator, `*ngFor`.
-`*ngFor` can dynamically create DOM elements based on items in an array.
+这个教程还涵盖了两个重要的 Angular 指令，用于动态改变DOM的结构。
+指令就像是你可以在HTML中使用的命令，用于在应用程序中实现变化。
 
-The second directive that you learn in this tutorial is `*ngIf`.
-You can use `*ngIf` to add or remove elements from the DOM based on a condition.
-For example, if users want to edit an item in the to-do list, you can provide them with the means to edit the item.
-If they do not want to edit an item, you can remove the interface for editing.
+这个教程涵盖的第一个指令是 Angular 的迭代器，`*ngFor`。
+`*ngFor`可以基于数组中的项动态创建 DOM 元素。
 
-### Share data between components
+你在这个教程中学到的第二个指令是`*ngIf`。
+你可以使用`*ngIf`基于条件添加或移除 DOM 中的元素。
+例如，如果用户想要编辑待办事项列表中的某个项目，你可以为他们提供编辑该项目的手段。
+如果他们不想编辑某个项目，你可以移除编辑界面。
 
-In this to-do application, you configure your components to share data.
-To add new items to the to do list, the main component has to send the new item to the second component.
-This second component manages the items and takes care of editing, marking as done, and deleting individual items.
+### 在组件之间共享数据
 
-You accomplish sharing data between Angular components with special decorators called `@Input()` and `@Output()`.
-You use these decorators to specify that certain properties allow data to go into or out of a component.
-To use `@Output()`, you raise an event in one component so that the other component knows that there is data available.
+在这个待办事项应用程序中，你配置你的组件以共享数据。
+为了向待办事项列表中添加新项目，主组件必须将新项目发送给第二个组件。
+这个第二个组件管理项目，并负责编辑、标记完成以及删除个别项目。
+
+你通过称为`@Input()`和`@Output()`的特殊装饰器在 Angular 组件之间共享数据。
+你使用这些装饰器来指定某些属性允许数据进入或离开一个组件。
+要使用`@Output()`，你在一个组件中引发一个事件，以便另一个组件知道有数据可用。
 
 ## Define Item
 
-In the `app` directory, create a new file named `item.ts` with the following contents:
+在 `app` 目录中，创建一个名为 `item.ts` 的新文件，并包含以下内容：
 
 ```ts
 export interface Item {
@@ -83,20 +83,21 @@ export interface Item {
 }
 ```
 
-You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` interface creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be done.
+你不会立即使用这个文件，直到后面的课程，但现在是一个了解和记录你对`item`是什么的知识的好时机。`Item`接口创建了一个`item`对象模型，以便你的应用程序能够理解`item`是什么。对于这个待办事项列表来说，一个`item`是一个具有描述并且可以完成的对象。
 
-## Add logic to AppComponent
 
-Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
-In `app.component.ts`, replace the contents with the following:
+## 为 AppComponent 添加逻辑
+
+现在你知道了什么是`item`，你可以通过将它们添加到TypeScript文件`app.component.ts`中，为你的应用程序提供一些项目。 在`app.component.ts`中，将内容替换为以下内容：
+
 
 ```js
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+  selector: "app-root"，
+  templateUrl: "./app.component.html"，
+  styleUrls: ["./app.component.css"]，
 })
 export class AppComponent {
   title = "todo";
@@ -104,10 +105,10 @@ export class AppComponent {
   filter: "all" | "active" | "done" = "all";
 
   allItems = [
-    { description: "eat", done: true },
-    { description: "sleep", done: false },
-    { description: "play", done: false },
-    { description: "laugh", done: false },
+    { description: "eat"， done: true }，
+    { description: "sleep"， done: false }，
+    { description: "play"， done: false }，
+    { description: "laugh"， done: false }，
   ];
 
   get items() {
@@ -120,32 +121,31 @@ export class AppComponent {
   }
 }
 ```
+第一行是一个 JavaScript 导入语句，用于导入 Angular。
+`@Component()`装饰器指定了`AppComponent`的元数据。
+默认的元数据属性如下：
 
-The first line is a JavaScript import that imports Angular.
-The `@Component()` decorator specifies metadata about the `AppComponent`.
-The default metadata properties are as follows:
 
-- `selector`: Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is `'app-root'`.
-  In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
-  You use all component selectors in the same way by adding them to other component HTML templates.
-- `templateUrl`: Specifies the HTML file to associate with this component.
-  Here it is, './app.component.html',
-- `styleUrls`: Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- `selector`：告诉你在模板中用来实例化这个组件的CSS选择器的名称。这里是`'app-root'`。
+  在`index.html`的`<body>`标签内，Angular CLI在生成应用程序时添加了`<app-root></app-root>`。
+  你可以通过将所有组件选择器添加到其他组件的HTML模板中，以相同的方式使用它们。
+- `templateUrl`：指定与此组件关联的HTML文件。这里是`'./app.component.html'`，
+- `styleUrls`：提供特定于此组件的样式文件的位置和名称。这里是`'./app.component.css'`。
 
-The `filter` property is of type `union`, which means `filter` could have the value of `all`, `active`, or `done`.
-With the `union` type, if you make a typo in the value you assign to the `filter` property, TypeScript lets you know so that you can catch the bug early.
-This guide shows you how to add filtering in a later step, but you can also use a filter to show the default list of all the items.
+`filter`属性是`union`类型，这意味着`filter`可以是`all`、`active`或`done`的值。
+使用`union`类型，如果你在为`filter`属性赋值时打错了字，TypeScript会让你知道，这样你就可以早点发现错误。
+这个指南会在后面的步骤中向你展示如何添加过滤功能，但你也可以使用过滤器来显示所有项目的默认列表。
 
-The `allItems` array contains the to-do items and whether they are `done`.
-The first item, `eat`, has a `done` value of true.
+`allItems`数组包含待办事项及其是否`done`。
+第一个项目`eat`的`done`值为true。
 
-The getter, `get items()`, retrieves the items from the `allItems` array if the `filter` is equal to `all`.
-Otherwise, `get items()` returns the `done` items or the outstanding items depending on how the user filters the view.
-The getter also establishes the name of the array as `items`, which you'll use in the next section.
+获取器`get items()`会从`allItems`数组中检索项目，如果`filter`等于`all`。
+否则，`get items()`会根据用户过滤视图的方式返回`done`项目或未完成的项目。
+获取器还将数组的名称设为`items`，你将在下一节中使用这个名称。
 
-## Add HTML to the AppComponent template
+## 向 AppComponent 模板添加 HTML
 
-To see the list of items in the browser, replace the contents of `app.component.html` with the following HTML:
+要在浏览器中看到项目列表，请将`app.component.html`的内容替换为以下 HTML：
 
 ```html
 <div class="main">
@@ -158,11 +158,11 @@ To see the list of items in the browser, replace the contents of `app.component.
 </div>
 ```
 
-The `<li>` contains an `*ngFor`, a built-in Angular directive that iterates over the items in the `items` array.
-For each item, `*ngFor` creates a new `<li>`.
-The double curly braces that contain `item.description` instructs Angular to populate each `<li>` with the text of each item's description.
+`<li>`标签包含了一个`*ngFor`，这是 Angular 内置的指令，用于遍历`items`数组中的项目。 对于每一个项目，`*ngFor`都会创建一个新的`<li>`。 包含`item.description`的双花括号指示Angular用每个项目的描述文本填充每个`<li>`。
 
-In the browser, you should see the list of items as follows:
+
+
+在浏览器中，你应该会看到如下的项目列表：
 
 ```plain
 My To Do List
@@ -174,11 +174,11 @@ What would you like to do today?
 * laugh
 ```
 
-## Add items to the list
+## 将项目添加到列表中
 
-A to-do list needs a way to add items.
+待办事项列表需要一种添加项目的方法。
 
-In `app.component.ts`, add the following method to the class:
+在`app.component.ts`中，向类中添加以下方法：
 
 ```ts
 addItem(description: string) {
@@ -189,13 +189,13 @@ addItem(description: string) {
 }
 ```
 
-The `addItem()` method takes an item that the user provides and adds it to the array when the user clicks the **Add** button.
-The `addItem()` method uses the array method `unshift()` to add a new item to the beginning of the array and the top of the list.
-You could alternatively use `push()`, which would add the new item to the end of the array and the bottom of the list.
+`addItem()`方法接受用户提供的项目，并在用户点击**添加**按钮时将其添加到数组中。
+`addItem()`方法使用数组方法`unshift()`将新项目添加到数组的开头和列表的顶部。
+你也可以选择使用`push()`，这将把新项目添加到数组的末尾和列表的底部。
 
-To use the `addItem()` method, edit the HTML in the `AppComponent` template.
+要使用`addItem()`方法，请编辑`AppComponent`模板中的HTML。
 
-In `app.component.html`, replace the `<h2>` with the following:
+在`app.component.html`中，将`<h2>`替换为以下内容：
 
 ```html
 <label for="addItemInput">What would you like to do today?</label>
@@ -207,17 +207,18 @@ In `app.component.html`, replace the `<h2>` with the following:
   class="lg-text-input"
   id="addItemInput" />
 
+
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```
 
-In the above HTML, `#newItem` is a template variable. The template variable in this case uses the `<input>` element as its value. Template variables can be referred to anywhere in the component's template.
+在上述HTML中，`#newItem`是一个模板变量。在这种情况下，模板变量使用`<input>`元素作为其值。模板变量可以在组件模板的任何地方被引用。
 
-When the user types a new item in the `<input>` field and presses **Enter**, the `addItem()` method adds the value to the `allItems` array.
-Pressing the **Enter** key also resets the value of `<input>` to an empty string. The template variable `#newItem` is used to access the value of the `<input>` element in the template.
-Instead of pressing the **Enter** key, the user can also click the **Add** button, which calls the same `addItem()` method.
 
-## Summary
 
-By now you should have your basic list of to-dos displaying in your browser. That's great progress! Of course, we have a lot more to do. In the next article we will look at adding some styling to our application.
+当用户在`<input>`字段中输入新项目并按下**Enter**键时，`addItem()`方法会将值添加到`allItems`数组中。 按下**Enter**键还会将`<input>`的值重置为空字符串。模板变量`#newItem`用于在模板中访问`<input>`元素的值。 用户也可以点击**添加**按钮来调用相同的`addItem()`方法，而不是按下**Enter**键。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+## 总结
+
+到目前为止，你应该已经在浏览器中显示了基本的待办事项列表。这是很大的进步！当然，我们还有很多工作要做。在下一篇文章中，我们将看看如何为我们的应用程序添加一些样式。
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started"，"Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling"， "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
