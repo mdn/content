@@ -24,10 +24,7 @@ are assigned by the WebGL layer when you create the attributes.
 Either way, since attributes cannot be used unless enabled, and are disabled by
 default, you need to call `enableVertexAttribArray()` to enable individual
 attributes so that they can be used. Once that's been done, other methods can be used to
-access the attribute, including
-{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}},
-{{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}},
-and {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}.
+access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}, {{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}, and {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}.
 
 ## Syntax
 

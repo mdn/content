@@ -40,9 +40,7 @@ to the specified reference space.
 
 ## Examples
 
-In this callback function for {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, the {{domxref("XRViewerPose")}} describing the viewer's
-viewpoint on the world is obtained by calling `getViewerPose()` on the
-{{domxref("XRFrame")}} passed into the callback.
+In this callback function for {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, the {{domxref("XRViewerPose")}} describing the viewer's viewpoint on the world is obtained by calling `getViewerPose()` on the {{domxref("XRFrame")}} passed into the callback.
 
 ```js
 viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
