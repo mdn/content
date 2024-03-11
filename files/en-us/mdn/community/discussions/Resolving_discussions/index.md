@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-The MDN community is encourage to [initiate, engage in, and resolve discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
+The MDN community is encouraged to [initiate, engage in, and resolve discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
 
 While many discussions reach broad agreement very quickly, others may stall if there is no clear path to resolution: for example due to conflicting opinions. This process explains how you can work with the community in order to progress discussions through to resolution in a reasonable timeframe.
 
@@ -21,10 +21,10 @@ Most discussions do not need a formal resolution process. These MDN discussion g
    - Guiding the conversation.
    - Making people aware the discussion exists.
    - Setting the timeline, informing people of it, changing the timeline as necessary, and sticking to the timeline as appropriate.
-   - Informing all the appropriate channels - Slack, Discord, tagging people Github, and other channels if appropriate - of needed feedback by specific dates.
+   - Informing all the appropriate channels - Slack, Discord, tagging people on GitHub, and other channels if appropriate - of needed feedback by specific dates.
    - Bring up the topic in community and weekly meetings.
    - Organizing a synchronous, online face-to-face meeting if required (if there is disagreement). Face-to-face meetings should be rare and only if required (See #3).
-   - Summarizing face-to-face conclusions in the relevant discussion on https://github.com/orgs/mdn/discussions within the relevant discussion.
+   - Summarizing face-to-face conclusions in the relevant discussion on [Discussions](https://github.com/orgs/mdn/discussions).
    - Guiding the implementation of the discussion results or working with the appropriate team lead to ensure that the results are implemented.
 
 3. Face-to-face meetings regarding a discussion should only be called if there is disagreement.
