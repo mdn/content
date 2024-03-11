@@ -157,7 +157,7 @@ To match a literal backslash, you need to escape the backslash.
 For instance, to match the string "C:\\" where "C" can be any letter, you'd use `/[A-Z]:\\/` — the first backslash escapes the one after it, so the expression searches for a single literal backslash.
 
 If using the `RegExp` constructor with a string literal, remember that the backslash is an escape in string literals, so to use it in the regular expression, you need to escape it at the string literal level.
-`/a\*b/` and `new RegExp("a\\*b")` create the same expression, which searches for "a" followed by a literal "\*" followed by "b".
+`/a\*b/` and `new RegExp("a\*b")` create the same expression, which searches for "a" followed by a literal "\*" followed by "b".
 
 If escape strings are not already part of your pattern you can add them using {{jsxref("String.prototype.replace()")}}:
 
