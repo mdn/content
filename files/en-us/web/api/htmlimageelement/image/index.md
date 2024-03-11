@@ -10,8 +10,7 @@ browser-compat: api.HTMLImageElement.Image
 
 The **`Image()`**
 constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functionally
-equivalent to {{DOMxRef("Document.createElement()",
-    "document.createElement('img')")}}.
+equivalent to {{DOMxRef("Document.createElement()", "document.createElement('img')")}}.
 
 > **Note:** This function should not be confused with the CSS [`image()`](/en-US/docs/Web/CSS/image/image) function.
 

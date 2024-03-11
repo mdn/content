@@ -11,8 +11,7 @@ browser-compat: api.FileSystemEntry.name
 The read-only **`name`** property of
 the {{domxref("FileSystemEntry")}} interface returns a string
 specifying the entry's name; this is the entry within its parent directory (the last
-component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
-    "fullPath")}} property).
+component of the path as indicated by the {{domxref("FileSystemEntry.fullPath", "fullPath")}} property).
 
 ## Value
 
