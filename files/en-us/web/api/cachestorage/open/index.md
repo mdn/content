@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CacheStorage.open
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`open()`** method of the
 {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to

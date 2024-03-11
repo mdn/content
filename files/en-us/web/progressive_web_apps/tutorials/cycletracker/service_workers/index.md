@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working web app! But it isn't yet a PWA. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
 
-If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `styles.css`, `app.js`, and `cycletracker.json`, respectively.
+If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `style.css`, `app.js`, and `cycletracker.json`, respectively.
 
 In this section, we are creating `sw.js`, the service worker script, that will convert our Web App into a PWA. We already have one JavaScript file; the last line in the HTML file calls the `app.js`. This JavaScript provides all the functionality for the standard web application features. Instead of calling the `sw.js` file like we did the `app.js` file with the `src` attribute of {{HTMLElement("script")}}, we will create a relationship between the web app and its service worker by registering the service worker.
 
@@ -61,7 +61,7 @@ For a good offline experience, the list of cached files should include all the r
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
-  "/styles.css",
+  "/style.css",
   "/app.js",
   "/icon-512x512.png",
 ];
@@ -85,7 +85,7 @@ const VERSION = "v1";
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
-  "/styles.css",
+  "/style.css",
   "/app.js",
   "/cycletrack.json",
   "/icons/wheel.svg",
@@ -132,7 +132,7 @@ self.addEventListener("install", (e) => {
       cache.addAll([
         "/",
         "/index.html"
-        "/styles.css"
+        "/style.css"
         "/app.js"
       ]);
     })()
@@ -197,7 +197,7 @@ We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalSc
 
 As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's [`respondWith()`](/en-US/docs/Web/API/FetchEvent/respondWith) method to prevent the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
 
-For all other request modes, we open the caches as done in the [install event response](#saving-the-cache-on-pwa-installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
+For all other request modes, we open the caches as done in the [install event response](#saving_the_cache_on_pwa_installation), instead passing the event request to the same `match()` method. It checks if the request is a key for a stored {{domxref("Response")}}. If yes, it returns the cached response. If not, we return a [404 status](/en-US/docs/Web/HTTP/Status/404) as a response.
 
 Using the [`Response()`](/en-US/docs/Web/API/Response/Response) constructor to pass a `null` body and a `status: 404` as options, doesn't mean there is an error in our PWA. Rather, everything we need should already be in the cache, and if it isn't, we're not going to the server to resolve this non-issue.
 
@@ -242,7 +242,7 @@ const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
   "/app.js",
-  "/styles.css",
+  "/style.css",
   "/icons/wheel.svg",
 ];
 
@@ -359,7 +359,7 @@ Open `index.html` and add the following {{HTMLElement("script")}} after the scri
 </script>
 ```
 
-You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
 
 ## Debugging service workers
 
@@ -367,7 +367,7 @@ Because of the way we have set up the service worker, once it is registered, eve
 
 ### By updating the version number and doing a hard reset
 
-To get a new cache, you can change the [version number](#version-number) and then do a hard browser refresh. The way you do a hard refresh depends on the browser and operating system:
+To get a new cache, you can change the [version number](#version_number) and then do a hard browser refresh. The way you do a hard refresh depends on the browser and operating system:
 
 - On Windows: Ctrl+F5, Shift+F5, or Ctrl+Shift+R.
 - On MacOS: Shift+Command+R.
@@ -388,7 +388,7 @@ In some developer tools, you can manually unregister a service worker, or you ca
 
 The service worker window within the DevTools' application panel, provides a link to access to pop up window containing a list of all the registered service workers for the browser; not just the service worker for the application opened in the current tab. Each service worker list of workers has buttons to stop, start, or unregister that individual service worker.
 
-![Two service workers exist at localhost:8080. The can be be unregistered from the list of service workers](edge_sw_list.jpg)
+![Two service workers exist at localhost:8080. The can be unregistered from the list of service workers](edge_sw_list.jpg)
 
 In other words, as you are working on your PWA, you don't have to update the version number for every app view. But remember, when you are done with all your changes, update the service worker VERSION value before distributing the updated version of your PWA. If you forget, no one who has already installed your app or even visited your online PWA without installing it will ever get to see your changes!
 

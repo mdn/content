@@ -13,8 +13,8 @@ Following on from the previous article, sometimes making complex UI controls tha
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
-        JavaScript, an understanding of the
+        A basic understanding of HTML, CSS, and
+        JavaScript. An understanding of the
         <a href="/en-US/docs/Learn/Accessibility"
           >previous articles in the course</a
         >.
@@ -100,7 +100,7 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 - Signposts/Landmarks
   - : ARIA's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute values can act as landmarks that either replicate the semantics of HTML elements (e.g., {{htmlelement("nav")}}), or go beyond HTML semantics to provide signposts to different functional areas, for example, `search`, `tablist`, `tab`, `listbox`, etc.
 - Dynamic content updates
-  - : Screen readers tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screen reader users when an area of content is updated, for example, via [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), or [DOM APIs](/en-US/docs/Web/API/Document_Object_Model).
+  - : Screen readers tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screen reader users when an area of content is updated dynamically: for example, by JavaScript in the page [fetching new content from the server and updating the DOM](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
 - Enhancing keyboard accessibility
   - : There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screen reader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
 - Accessibility of non-semantic controls
@@ -204,7 +204,7 @@ The improved semantics of the search form have shown what is made possible when 
 
 Content loaded into the DOM can be easily accessed using a screen reader, from textual content to alternative text attached to images. Traditional static websites with largely text content are therefore easy to make accessible for people with visual impairments.
 
-The problem is that modern web apps are often not just static text — they tend to have a lot of dynamically updating content, i.e. content that updates without the entire page reloading via a mechanism like [Fetch](/en-US/docs/Web/API/Fetch_API), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), or [DOM APIs](/en-US/docs/Web/API/Document_Object_Model). These are sometimes referred to as **live regions**.
+The problem is that modern web apps are often not just static text — they often update parts of the page by fetching new content from the server and updating the DOM. These are sometimes referred to as **live regions**.
 
 Let's look at a quick example — see [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (also [see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). In this example, we have a simple random quote box:
 
@@ -217,7 +217,7 @@ Let's look at a quick example — see [`aria-no-live.html`](https://github.com/m
 </section>
 ```
 
-Our JavaScript loads a JSON file via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/en-US/docs/Web/API/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
+Our JavaScript uses the {{domxref("fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/en-US/docs/Web/API/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
 
 ```js
 const intervalID = setInterval(showQuote, 10000);
@@ -242,7 +242,7 @@ We'd like you to take a copy of [`aria-no-live.html`](https://github.com/mdn/lea
 
 This will cause a screen reader to read out the content as it is updated.
 
-> **Note:** Most browsers will throw a security exception if you try to do an `XMLHttpRequest` call from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). See [how to set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+> **Note:** Most browsers will throw a security exception if you try to make an HTTP request from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). See [how to set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 
@@ -451,6 +451,6 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles): Categories of ARIA roles and the roles covered on MDN
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
-- [WAI-ARIA authoring practices](https://w3c.github.io/aria-practices/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}

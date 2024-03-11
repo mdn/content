@@ -86,7 +86,7 @@ To make them more generalizable, these methods don't just accept `Set` objects, 
 
 ### Set-like objects
 
-All [set methods](#set_methods) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
+All [set composition methods](#set_composition) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
 
 - A {{jsxref("Set/size", "size")}} property that contains a number.
 - A {{jsxref("Set/has", "has()")}} method that takes an element and returns a boolean.
@@ -173,7 +173,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.prototype.difference()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.difference()")}}
   - : Takes a set and returns a new set containing elements in this set but not in the given set.
 - {{jsxref("Set.prototype.entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order. This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
@@ -181,19 +181,19 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 - {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-- {{jsxref("Set.prototype.intersection()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.intersection()")}}
   - : Takes a set and returns a new set containing elements in both this set and the given set.
-- {{jsxref("Set.prototype.isDisjointFrom()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.isDisjointFrom()")}}
   - : Takes a set and returns a boolean indicating if this set has no elements in common with the given set.
-- {{jsxref("Set.prototype.isSubsetOf()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.isSubsetOf()")}}
   - : Takes a set and returns a boolean indicating if all elements of this set are in the given set.
-- {{jsxref("Set.prototype.isSupersetOf()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.isSupersetOf()")}}
   - : Takes a set and returns a boolean indicating if all elements of the given set are in this set.
 - {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
-- {{jsxref("Set.prototype.symmetricDifference()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.symmetricDifference()")}}
   - : Takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
-- {{jsxref("Set.prototype.union()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.union()")}}
   - : Takes a set and returns a new set containing elements which are in either or both of this set and the given set.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
@@ -369,25 +369,19 @@ console.log([...mySet]); // Will show you exactly the same Array as myArray
 
 ```js
 // Use to remove duplicate elements from an array
-
 const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
-console.log([...new Set(numbers)]);
-
-// [2, 13, 4, 5, 6, 7, 32]
+console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 ```
 
 ### Relation to strings
 
 ```js
-const text = "India";
+// Case sensitive (set will contain "F" and "f")
+new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
-const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size; // 5
-
-// case sensitive & duplicate omission
-new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
+// Duplicate omission ("f" occurs twice in the string but set will contain only one)
+new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ### Use a set to ensure the uniqueness of a list of values

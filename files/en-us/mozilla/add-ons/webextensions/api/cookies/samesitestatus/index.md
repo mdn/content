@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.SameSiteStatus
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `SameSiteStatus` type of the {{WebExtAPIRef("cookies")}} API represents information about the `SameSite` state of a cookie.
 

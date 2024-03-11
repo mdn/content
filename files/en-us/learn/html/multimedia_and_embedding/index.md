@@ -8,15 +8,6 @@ page-type: learn-module
 
 We've looked at a lot of text so far in this course, but the web would be really boring only using text. Let's start looking at how to make the web come alive with more interesting content! This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire webpages.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you should have a reasonable understanding of the basics of HTML, as previously covered in [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML). If you have not worked through this module (or something similar), work through it first, then come back!

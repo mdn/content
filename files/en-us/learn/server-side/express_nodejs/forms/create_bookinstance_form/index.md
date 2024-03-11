@@ -28,7 +28,7 @@ Find the exported `bookinstance_create_get()` controller method and replace it w
 ```js
 // Display BookInstance create form on GET.
 exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
-  const allBooks = await Book.find({}, "title").exec();
+  const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
   res.render("bookinstance_form", {
     title: "Create BookInstance",
@@ -37,7 +37,7 @@ exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
 });
 ```
 
-The controller gets a list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
+The controller gets a sorted list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
 Note that no book has been selected when we first display this form, so we don't pass the `selected_book` variable to `render()`.
 Because of this, `selected_book` will have a value of `undefined` in the template.
 
@@ -76,7 +76,7 @@ exports.bookinstance_create_post = [
     if (!errors.isEmpty()) {
       // There are errors.
       // Render form again with sanitized values and error messages.
-      const allBooks = await Book.find({}, "title").exec();
+      const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
       res.render("bookinstance_form", {
         title: "Create BookInstance",
@@ -109,28 +109,33 @@ extends layout
 block content
   h1=title
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='book') Book:
-      select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
-        - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+      select#book.form-control(name='book' required)
+        option(value='') --Please select a book--
         for book in book_list
-          option(value=book._id, selected=(selected_book==book._id.toString() ? 'selected' : false) ) #{book.title}
+          if selected_book==book._id.toString()
+            option(value=book._id, selected) #{book.title}
+          else
+            option(value=book._id) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:
-      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint))
+      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required value=(undefined===bookinstance ? '' : bookinstance.imprint) )
     div.form-group
       label(for='due_back') Date when book available:
       input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
 
     div.form-group
       label(for='status') Status:
-      select#status.form-control(type='select' placeholder='Select status' name='status' required='true' )
-        option(value='Maintenance' selected=(undefined===bookinstance || bookinstance.status!='Maintenance' ? false:'selected')) Maintenance
-        option(value='Available' selected=(undefined===bookinstance || bookinstance.status!='Available' ? false:'selected')) Available
-        option(value='Loaned' selected=(undefined===bookinstance || bookinstance.status!='Loaned' ? false:'selected')) Loaned
-        option(value='Reserved' selected=(undefined===bookinstance || bookinstance.status!='Reserved' ? false:'selected')) Reserved
+      select#status.form-control(name='status' required)
+        option(value='') --Please select a status--
+        each val in ['Maintenance', 'Available', 'Loaned', 'Reserved']
+          if undefined===bookinstance || bookinstance.status!=val
+            option(value=val)= val
+          else
+            option(value=val selected)= val
 
     button.btn.btn-primary(type='submit') Submit
 
@@ -158,7 +163,7 @@ The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the n
 Open the file where you defined the `BookInstanceSchema` model (**models/bookinstance.js**).
 Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_back_formatted()` virtual function):
 
-```pug
+```js
 BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
   return DateTime.fromJSDate(this.due_back).toISODate(); // format 'YYYY-MM-DD'
 });

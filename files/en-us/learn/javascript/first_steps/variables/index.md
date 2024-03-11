@@ -13,7 +13,7 @@ After reading the last couple of articles you should now know what JavaScript is
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -168,7 +168,7 @@ var myName;
 
 > **Note:** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
-This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
+This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#hoisting) for more detail on the subject.
 
 Hoisting no longer works with `let`. If we changed `var` to `let` in the above example, it would fail with an error. This is a good thing — declaring a variable after you initialize it results in confusing, harder to understand code.
 
@@ -264,8 +264,6 @@ Try creating a few more variables now, with the above guidance in mind.
 
 There are a few different types of data we can store in variables. In this section we'll describe these in brief, then in future articles, you'll learn about them in more detail.
 
-So far we've looked at the first two, but there are others.
-
 ### Numbers
 
 You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:
@@ -316,7 +314,7 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [a future article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
+To learn more, see our article on [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
 
 ### Objects
 
@@ -334,7 +332,7 @@ To retrieve the information stored in the object, you can use the following synt
 dog.name;
 ```
 
-We won't be looking at objects any more for now — you can learn more about those in [a future module](/en-US/docs/Learn/JavaScript/Objects).
+For more on this topic, see the [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module.
 
 ## Dynamic typing
 

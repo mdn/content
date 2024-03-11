@@ -47,7 +47,7 @@ progress {
 
 ### Result screenshot
 
-If you're not using a WebKit or Blink browser, the code above results in a progress bar that looks like this:
+The code above results in a progress bar that looks like this when using a WebKit or Blink browser:
 
 ![The progress bar is a horizontal bar about the height of a letter. The left 20% is green. The right 80% is orange.](progress-bar.png)
 

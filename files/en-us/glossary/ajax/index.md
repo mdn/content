@@ -6,17 +6,18 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Ajax**, which initially stood for Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}, is a programming practice of building complex, dynamic webpages using a technology known as {{Glossary("XMLHttpRequest")}}.
+Asynchronous JavaScript and XML (**Ajax**, or **AJAX**) is a web development technique in which a web app fetches content from the server by making asynchronous HTTP requests, and uses the new content to update the relevant parts of the page without requiring a full page load. This can make the page more responsive, because only the parts that need to be updated are requested.
 
-Ajax allows you to collect data to update parts of the {{Glossary("DOM")}} of an {{Glossary("HTML")}} page without the need for a full page refresh. Ajax also lets you work asynchronously, meaning your code continues to run while the targeted part of your web page is trying to reload (compared to synchronously, which blocks your code from running until that part of your page is done reloading).
+Ajax can be used to create {{Glossary("SPA", "single-page apps")}}, in which the entire web app consists of a single document, which uses Ajax to update its content as needed.
 
-With interactive websites and modern web standards, Ajax is performed using functions within JavaScript frameworks and the {{domxref("Fetch API")}} Standard.
+Initially Ajax was implemented using the {{domxref("XMLHttpRequest")}} interface, but the {{domxref("fetch()")}} API is more suitable for modern web applications: it is more powerful, more flexible, and integrates better with fundamental web app technologies such as [service workers](/en-US/docs/Web/API/Service_Worker_API). Modern web frameworks also provide abstractions for Ajax.
+
+This technique is so common in modern web development that the specific term "Ajax" is rarely used.
 
 ## See also
 
-- [Ajax](/en-US/docs/Web/Guide/AJAX)
-- {{DOMxRef("XMLHttpRequest")}}
+- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - {{DOMxRef("Fetch API")}}
-- [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- {{Glossary("SPA", "Single-page application")}}
+- {{DOMxRef("XMLHttpRequest")}}
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
-- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (2014)

@@ -42,7 +42,7 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_rol
 - `dialog`
   - : The popup is a dialog.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaHasPopup")}}
   - : The [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
@@ -76,7 +76,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
@@ -84,7 +84,7 @@ Inherited into roles:
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [Toolbar example](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/toolbar/toolbar.html) - W3C WAI ARIA practices
+- [Toolbar example](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/) - W3C WAI ARIA practices
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

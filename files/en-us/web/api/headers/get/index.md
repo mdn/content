@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.get
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface
 returns a byte string of all the values of a header within a `Headers` object

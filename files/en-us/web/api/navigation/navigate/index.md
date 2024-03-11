@@ -26,11 +26,11 @@ navigate(url, options)
   - : The destination URL to navigate to. Note that when calling `navigate()` on a another window's `navigation` object, the URL will be resolved relative to the target window's URL, not the calling window's URL. This matches the behavior of the [History API](/en-US/docs/Web/API/History_API), but not the behavior of the [Location API](/en-US/docs/Web/API/Location).
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
-    - `state`
+    - `state` {{optional_inline}}
       - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-    - `info`
+    - `info` {{optional_inline}}
       - : Developer-defined information to be passed along to the {{domxref("Navigation/navigate_event", "navigate")}} event, made available in {{domxref("NavigateEvent.info")}}. This can be any data type. You might, for example, wish to display newly-navigated content with a different animation depending on how it was navigated to (swipe left, swipe right, or go home). A string indicating which animation to use could be passed in as `info`.
-    - `history`
+    - `history` {{optional_inline}}
       - : An enumerated value that sets the history behavior of this navigation. The available values are:
         - `auto`: The default value; will usually perform a `push` navigation but will perform a `replace` navigation under special circumstances (see the `NotSupportedError` description below).
         - `push`: Will push a new {{domxref("NavigationHistoryEntry")}} onto the entries list, or fail under special circumstances (see the `NotSupportedError` description below).
@@ -109,7 +109,10 @@ async function navigateHandler() {
   await navigation.navigate(url, {
     info: { animation: "swipe-right" },
     state: { infoPaneOpen: true },
-  });
+  }).finished;
+
+  // Update application state
+  // ...
 }
 ```
 

@@ -159,7 +159,7 @@ However, like other expressions, assignment expressions like `x = f()` evaluate 
 Although this result value is usually not used, it can then be used by another expression.
 
 Chaining assignments or nesting assignments in other expressions can result in surprising behavior.
-For this reason, some JavaScript style guides [discourage chaining or nesting assignments][discourage assign chain]).
+For this reason, some JavaScript style guides [discourage chaining or nesting assignments][discourage assign chain].
 Nevertheless, assignment chaining and nesting may occur sometimes, so it is important to be able to understand how they work.
 
 [discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
@@ -184,7 +184,7 @@ console.log(f(0, x = f(), 0));
 The evaluation result matches the expression to the right of the `=` sign in the
 "Meaning" column of the table above. That means that `x = f()` evaluates into
 whatever `f()`'s result is, `x += f()` evaluates into the resulting sum `x + f()`,
-`x **= f()` evaluates into the resulting power `x ** y`, and so on.
+`x **= f()` evaluates into the resulting power `x ** f()`, and so on.
 
 In the case of logical assignments, `x &&= f()`,
 `x ||= f()`, and `x ??= f()`, the return value is that of the
@@ -307,7 +307,7 @@ For more information about objects, read [Working with Objects](/en-US/docs/Web/
 
 Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason,
-[chaining assignments in the same statement is discouraged][discourage assign chain]).
+[chaining assignments in the same statement is discouraged][discourage assign chain].
 
 In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does _not_ work. Only the outermost/leftmost variable would get declared; other variables within the assignment chain are _not_ declared by the `const`/`let`/`var` statement.
 For example:

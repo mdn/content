@@ -244,7 +244,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 ## Recommending a payment app when user has no apps
 
-If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NOTSUPPORTEDERR` exception. If this payment method is not supported, it redirects to the signup page for BobPay.
+If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` {{domxref("DOMException")}}. If this payment method is not supported, it redirects to the signup page for BobPay.
 
 The code looks something like this:
 
@@ -303,7 +303,7 @@ request
 
 ## Pre-authorizing transactions
 
-Some use cases (e.g., paying for fuel at a service station) involve pre-authorization of payment. One way to do this is through a Payment Handler (see the [Payment Handler API](https://w3c.github.io/payment-handler/)). At time of writing, that specification includes a `CanMakePayment` event that a Payment Handler could make use of to return authorization status.
+Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Payment Handler (see the {{domxref("Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Payment Handler could make use of to return authorization status.
 
 The merchant code would look like this:
 

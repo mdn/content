@@ -36,11 +36,9 @@ function evaluateXPath(aNode, aExpr) {
 
 Note that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
-If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a local or remote XML file into a DOM tree (as described in [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)), the first argument to `evaluateXPath()` should be `req.responseXML`.
-
 #### Sample usage
 
-Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)):
+Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)):
 
 ##### Example: An XML document to use with the custom `evaluateXPath()` utility function
 

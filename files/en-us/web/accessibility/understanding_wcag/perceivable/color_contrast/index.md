@@ -39,7 +39,7 @@ div {
 }
 
 .good {
-  background-color: #fae6fa;
+  background-color: #5a80a9;
 }
 
 .bad {
@@ -47,9 +47,11 @@ div {
 }
 ```
 
-Both pieces of text have their default black color. The "good" `<div>` has a light purple background, which makes the text easy to read:
+Both pieces of text have their default black color.
 
 ### Good Contrast
+
+The "good" `<div>` has a neon blue background, which makes the text easy to read:
 
 ```html
 <div class="good">Good contrast</div>
@@ -64,19 +66,19 @@ div {
   width: 250px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 4px 4px 4px black;
 }
 
 .good {
-  background-color: #fae6fa;
+  background-color: #5a80a9;
 }
 ```
 
 {{EmbedLiveSample('Good_Contrast', '100%', '100')}}
 
-The "bad" `<div>` on the other hand has a very dark purple background, which makes the text much harder to read:
-
 ### Bad Contrast
+
+The "bad" `<div>` on the other hand has a very dark purple background, which makes the text much harder to read:
 
 ```html
 <div class="bad">Bad contrast</div>
@@ -91,7 +93,7 @@ div {
   width: 250px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 4px 4px 4px black;
 }
 
 .bad {

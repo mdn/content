@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.windows.Window
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information about a browser window.
 

@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 page-type: guide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Each internationalized extension has at least one file named `messages.json` that provides locale-specific strings. This page describes the format of `messages.json` files.
 

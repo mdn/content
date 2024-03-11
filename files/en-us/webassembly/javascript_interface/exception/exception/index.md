@@ -2,7 +2,7 @@
 title: WebAssembly.Exception constructor
 slug: WebAssembly/JavaScript_interface/Exception/Exception
 page-type: webassembly-constructor
-browser-compat: javascript.builtins.WebAssembly.Exception.Exception
+browser-compat: webassembly.api.Exception.Exception
 ---
 
 {{WebAssemblySidebar}}

@@ -36,7 +36,7 @@ The `definition` ARIA role can be included on an element that is a definition of
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The `term` role](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
 - The {{HTMLElement('dfn')}} element
@@ -48,6 +48,6 @@ The `definition` ARIA role can be included on an element that is a definition of
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

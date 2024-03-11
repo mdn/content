@@ -8,14 +8,12 @@ status:
 browser-compat: api.WebTransportReceiveStream.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getStats()`** method of the {{domxref("WebTransportReceiveStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
 The statistics include the total number of ordered bytes that have arrived on this stream (ignoring network overhead, up until the first missing byte) and the total number that have been read by the application.
 It therefore provides a measure of how quickly the application is consuming bytes from the server on this particular stream.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -44,7 +42,7 @@ The returned object has the following properties:
 ## Examples
 
 The code snippet below uses `await` to wait on the {{jsxref("Promise")}} returned by `getStats()`.
-When the promise fulfills, the result for the `bytesSent` property in the stats object is logged to the console.
+When the promise fulfills, the number of bytes that have not yet been read is logged to the console.
 
 ```js
 const stats = await stream.getStats();

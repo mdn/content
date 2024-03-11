@@ -104,7 +104,7 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `maximumSignificantDigits`
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`.
 
-The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on th value of the [`roundingPriority`](#roundingpriority) property.
+The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on the value of the [`roundingPriority`](#roundingpriority) property.
 
 - `roundingPriority`
 
@@ -181,8 +181,12 @@ The above properties fall into two groups: `minimumIntegerDigits`, `minimumFract
       - : Display grouping separators based on the locale preference, which may also be dependent on the currency.
     - `"min2"`
       - : Display grouping separators when there are at least 2 digits in a group.
+    - `true`
+      - : Same as `"always"`.
+    - `false`
+      - : Display no grouping separators.
 
-    The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise. The boolean values `true` and `false` are accepted, but are always converted to the default value.
+    The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise. The string values `"true"` and `"false"` are accepted, but are always converted to the default value.
 
 - `signDisplay`
   - : When to display the sign for the number. Possible values are:

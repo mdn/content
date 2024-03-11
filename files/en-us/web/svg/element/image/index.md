@@ -21,19 +21,6 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 
 ## Attributes
 
-### Global attributes
-
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
-
-### Specific attributes
-
 - {{SVGAttr("x")}}: Positions the image horizontally from the origin.
 - {{SVGAttr("y")}}: Positions the image vertically from the origin.
 - {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.

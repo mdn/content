@@ -2,7 +2,7 @@
 title: fill
 slug: Web/SVG/Attribute/fill
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill
+browser-compat: svg.global_attributes.fill
 ---
 
 {{SVGRef}}
@@ -335,7 +335,7 @@ For {{SVGElement('set')}}, `fill` defines the final state of the animation.
 
 ## text
 
-For {{SVGElement('text')}}, `fill` is a presentation attribute that defines what the color of the text.
+For {{SVGElement('text')}}, `fill` is a presentation attribute that defines the color of the text.
 
 <table class="properties">
   <tbody>

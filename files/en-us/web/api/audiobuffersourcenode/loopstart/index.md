@@ -22,62 +22,79 @@ which each loop should begin during playback. This value is only used when the
 
 ## Examples
 
-In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
-decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
-are provided to play and stop the audio playback, and slider controls are used to change
-the `playbackRate`, `loopStart`, and `loopEnd`
-properties on the fly.
+### Setting `loopStart`
 
-When the audio is played to the end, it loops, but you can control how long the loops
-last by altering `loopStart` and `loopEnd`. For example, if you
-set their values to 20 and 25, respectively, the audio will start to loop between 20 and
-25 seconds in to the track.
+In this example, when the user presses "Play", we load an audio track, decode it, and put it into an {{domxref("AudioBufferSourceNode")}}.
 
-> **Note:** For a full working example, see [this code running live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+The example then sets the `loop` property to `true`, so the track loops, and plays the track.
+
+The user can set the `loopStart` and `loopEnd` properties using [range controls](/en-US/docs/Web/HTML/Element/input/range).
+
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop).)
 
 ```js
-function getData() {
-  source = audioCtx.createBufferSource();
-  request = new XMLHttpRequest();
+let audioCtx;
+let buffer;
+let source;
 
-  request.open("GET", "viper.ogg", true);
-  request.responseType = "arraybuffer";
+const play = document.getElementById("play");
+const stop = document.getElementById("stop");
 
-  request.onload = () => {
-    const audioData = request.response;
+const loopstartControl = document.getElementById("loopstart-control");
+const loopstartValue = document.getElementById("loopstart-value");
 
-    audioCtx.decodeAudioData(
-      audioData,
-      (buffer) => {
-        myBuffer = buffer;
-        songLength = buffer.duration;
-        source.buffer = myBuffer;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(audioCtx.destination);
-        source.loop = true;
+const loopendControl = document.getElementById("loopend-control");
+const loopendValue = document.getElementById("loopend-value");
 
-        loopstartControl.setAttribute("max", Math.floor(songLength));
-        loopendControl.setAttribute("max", Math.floor(songLength));
-      },
-
-      (e) => console.error(`Error with decoding audio data: ${e.err}`),
-    );
-  };
-
-  request.send();
+async function loadAudio() {
+  try {
+    // Load an audio file
+    const response = await fetch("rnb-lofi-melody-loop.wav");
+    // Decode it
+    buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
+    const max = Math.floor(buffer.duration);
+    loopstartControl.setAttribute("max", max);
+    loopendControl.setAttribute("max", max);
+  } catch (err) {
+    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+  }
 }
 
-// …
-
-loopstartControl.oninput = () => {
+play.addEventListener("click", async () => {
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+    await loadAudio();
+  }
+  source = audioCtx.createBufferSource();
+  source.buffer = buffer;
+  source.connect(audioCtx.destination);
+  source.loop = true;
   source.loopStart = loopstartControl.value;
-  loopstartValue.innerHTML = loopstartControl.value;
-};
-
-loopendControl.oninput = () => {
   source.loopEnd = loopendControl.value;
-  loopendValue.innerHTML = loopendControl.value;
-};
+  source.start();
+  play.disabled = true;
+  stop.disabled = false;
+  loopstartControl.disabled = false;
+  loopendControl.disabled = false;
+});
+
+stop.addEventListener("click", () => {
+  source.stop();
+  play.disabled = false;
+  stop.disabled = true;
+  loopstartControl.disabled = true;
+  loopendControl.disabled = true;
+});
+
+loopstartControl.addEventListener("input", () => {
+  source.loopStart = loopstartControl.value;
+  loopstartValue.textContent = loopstartControl.value;
+});
+
+loopendControl.addEventListener("input", () => {
+  source.loopEnd = loopendControl.value;
+  loopendValue.textContent = loopendControl.value;
+});
 ```
 
 ## Specifications

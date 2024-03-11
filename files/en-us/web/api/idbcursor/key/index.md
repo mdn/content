@@ -6,14 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.IDBCursor.key
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`key`** read-only property of the
 {{domxref("IDBCursor")}} interface returns the key for the record at the cursor's
 position. If the cursor is outside its range, this is set to undefined. The cursor's
 key can be any data type.
-
-{{AvailableInWorkers}}
 
 ## Value
 

@@ -1,5 +1,5 @@
 ---
-title: "location: host property"
+title: "Location: host property"
 short-title: host
 slug: Web/API/Location/host
 page-type: web-api-instance-property
