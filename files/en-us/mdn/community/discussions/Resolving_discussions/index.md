@@ -22,7 +22,7 @@ Most discussions do not need a formal resolution process. These MDN discussion g
    - Guiding the conversation.
    - Making people aware the discussion exists.
    - Setting the timeline, informing people of it, changing the timeline as necessary, and sticking to the timeline as appropriate.
-   - Informing all the appropriate channels - slack, discord, tagging people Github, and other channels if appropriate - of needed feedback by specific dates.
+   - Informing all the appropriate channels - Slack, Discord, tagging people Github, and other channels if appropriate - of needed feedback by specific dates.
    - Bring up the topic in community and weekly meetings.
    - Organizing a synchronous, online face-to-face meeting if required (if there is disagreement). Face-to-face meetings should be rare and only if required (See #3).
    - Summarizing face-to-face conclusions in the relevant discussion on https://github.com/orgs/mdn/discussions within the relevant discussion.
@@ -30,7 +30,7 @@ Most discussions do not need a formal resolution process. These MDN discussion g
 
 3. Face-to-face meetings regarding a discussion should only be called if there is disagreement.
 
-   - Face-to-face meetings must be announced in all [communication channels](/en-US/docs/MDN/Community/Communication_channels) (Slack, Discord, GitHub discussion, etc.).
+   - Face-to-face meetings must be announced in all relevant [communication channels](/en-US/docs/MDN/Community/Communication_channels), such as Slack, Discord, GitHub discussion, etc.
    - Conclusions of each face-to-face meeting must be entered into the GitHub discussion, which remains as the source of truth for the discussion.
    - The driver is responsible for calling the meeting, informing all parties, reporting results back into the GitHub discussion.
 
