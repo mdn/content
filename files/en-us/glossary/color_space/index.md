@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Color spaces** are named organizations of colors for underlying color models. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color) relate to a color space. Color spaces are three-dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, or transformed from one color space to another, while still looking the same.
+**Color spaces** are named organizations of colors for underlying color models of coordinate-based color arrangements. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color) relate to a color space. Color spaces are three-dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, or transformed from one color space to another, while still looking the same.
 
 Color spaces categorize and define specific ranges of colors. Each color space is defined by a mathematical model and associated rule set. Each color space has a defined [gamut](/en-US/docs/Glossary/Gamut), which refers to the specific range of colors it can represent. These rules enable consistent and reproducible color representation across different devices and software.
 
@@ -16,7 +16,7 @@ The _sRGB_ color space (standard red, green, and blue) was created for the web, 
 
 The predefined sRGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
 
-Color spaces are either rectangular or polar. Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
+Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024/okay-color-spaces/). Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
 
 ### `sRGB` color spaces
 
