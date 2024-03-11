@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-The MDN community is encourage to [initiate, engage in, and resolve discussions](https://developer.mozilla.org/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
+The MDN community is encourage to [initiate, engage in, and resolve discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
 
 While many discussions reach broad agreement very quickly, others may stall if there is no clear path to resolution: for example due to conflicting opinions.
 This process explains how you can work with the community in order to progress discussions through to resolution in a reasonable timeframe.
