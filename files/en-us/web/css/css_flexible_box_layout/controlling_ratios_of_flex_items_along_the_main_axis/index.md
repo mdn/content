@@ -136,7 +136,7 @@ You could say that `flex-shrink` works in pretty much the same way as `flex-grow
 
 While it is usually subtle, defined in the [specification](https://drafts.csswg.org/css-flexbox/#flex-flex-shrink-factor) is one reason why `flex-shrink` isn't quite the same for negative space as `flex-grow` is for positive space. The concept of [flex base size](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#what_sets_the_base_size_of_the_item) affects how negative space is distributed across flex items.
 
-> "Note: The flex shrink factor is multiplied by the [flex base size](https://www.w3.org/TR/css-flexbox-1/#flex-base-size) when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won't shrink to zero before a larger item has been noticeably reduced."
+> "Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won't shrink to zero before a larger item has been noticeably reduced."
 
 The second reason is that flexbox prevents small items from shrinking to zero size during this removal of negative free space. The items will be floored at their `min-content` size — the size that they become if they take advantage of any soft wrapping opportunities available to them.
 
