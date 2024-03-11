@@ -48,7 +48,8 @@ The default allowlist for the `bluetooth` policy is `self`, which enables Blueto
 Cross-origin access is enabled by specifying the allowed origins in both the `Permissions-Policy: bluetooth` HTTP header and the desired `<iframe>`.
 
 In order to use the feature the user must first grant explicit permission (they will not be prompted for access if it is not allowed for other reasons, such as being blocked by a Permissions Policy).
-In order to request a device using {{domxref("Bluetooth.requestDevice()")}} the owning global object must also have {{glossary("transient activation")}}.
+The permission prompt is displayed when calling {{domxref("Bluetooth.requestDevice()")}} to request access to a new Bluetooth device for which permission is not granted (the owning global object must also have {{glossary("transient activation")}}).
+You can use {{domxref("Bluetooth.getDevices()")}} to retrieve any devices that have previously been granted permission for the site.
 
 The [Permissions API](/en-US/docs/Web/API/Permissions_API) {{domxref("Permissions/query","navigator.permissions.query()")}} method can be used with the `bluetooth` permission to test whether a site has permission to use Bluetooth devices.
 The permission state will be `granted`, `denied` or `prompt` (requires user acknowledgement of a prompt):
@@ -60,6 +61,9 @@ if (btPermission.state !== "denied") {
 }
 ```
 
+<!-- The section below is specification correct, but not implemented at time of writing: https://github.com/WebBluetoothCG/web-bluetooth/issues/620#issuecomment-1986689299.
+-->
+<!--
 You can also use `query()` to directly retrieve devices that have previously been granted permission for the site.
 For example, the following code (modified from the example in the specification) returns the last Bluetooth device that was used, and for which the user granted permission:
 
@@ -77,6 +81,7 @@ if (result.devices.length == 1) {
 
 Note that the options that can be passed to `query()` for the `bluetooth` permission are the same as the options that can be passed as arguments to {{DOMxRef("Bluetooth.requestDevice()")}}.
 The returned {{jsxref("Promise")}} resolves to a `BluetoothPermissionResult`, an extended {{domxref("PermissionStatus")}} object that returns an array of permitted devices in its `devices` property.
+-->
 
 ## Specifications
 

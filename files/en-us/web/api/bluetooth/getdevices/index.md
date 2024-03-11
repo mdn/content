@@ -8,12 +8,9 @@ status:
 browser-compat: api.Bluetooth.getDevices
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`getDevices()`** method of the {{DOMxRef("Bluetooth")}} interface exposes the Bluetooth devices this origin is allowed to access.
-This method does not display any permission prompts.
-
-> **Note:** This method returns a {{DOMxRef("BluetoothDevice")}} for each device the origin is currently allowed to access, even the ones that are out of range or powered off.
+The **`getDevices()`** method of the {{DOMxRef("Bluetooth")}} interface returns an array containing the Bluetooth devices that this origin is allowed to access — including those that are out of range and powered off.
 
 ## Syntax
 
@@ -27,7 +24,7 @@ None.
 
 ### Return value
 
-A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("BluetoothDevice")}}s.
+A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("BluetoothDevice")}} objects.
 
 ## Exceptions
 

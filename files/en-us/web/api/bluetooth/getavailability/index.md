@@ -8,7 +8,7 @@ status:
 browser-compat: api.Bluetooth.getAvailability
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface _nominally_ returns `true` if the user agent can support Bluetooth (because the device has a Bluetooth adapter), and `false` otherwise.
 

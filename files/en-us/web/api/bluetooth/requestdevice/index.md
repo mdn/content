@@ -8,7 +8,7 @@ status:
 browser-compat: api.Bluetooth.requestDevice
 ---
 
-{{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`Bluetooth.requestDevice()`** method of the {{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("BluetoothDevice")}} object matching the specified options.
 If there is no chooser UI, this method returns the first device matching the criteria.
