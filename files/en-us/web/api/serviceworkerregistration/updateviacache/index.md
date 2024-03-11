@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`updateViaCache`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface updates the cache using

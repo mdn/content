@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.format
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`format`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the format of the `GPUTexture`.

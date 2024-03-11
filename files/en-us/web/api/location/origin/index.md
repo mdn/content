@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Location.origin
 ---
 
-{{APIRef("Location")}}
+{{APIRef("Location")}} {{AvailableInWorkers}}
 
 The **`origin`** read-only property of
 the {{domxref("Location")}} interface is a string containing the
@@ -22,8 +22,6 @@ That is:
 - for URL using the `blob:` scheme, the origin of the URL following
   `blob:`. E.g `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`
-
-{{AvailableInWorkers}}
 
 ## Value
 

@@ -30,8 +30,8 @@ The valid strings you can enter should, according to the specification, be CSS {
 
 ctx.fillStyle = "orange";
 ctx.fillStyle = "#FFA500";
-ctx.fillStyle = "rgb(255, 165, 0)";
-ctx.fillStyle = "rgba(255, 165, 0, 1)";
+ctx.fillStyle = "rgb(255 165 0)";
+ctx.fillStyle = "rgb(255 165 0 / 100%)";
 ```
 
 ### A `fillStyle` example
@@ -43,9 +43,9 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
-      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)}, ${Math.floor(
+      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)} ${Math.floor(
         255 - 42.5 * j,
-      )}, 0)`;
+      )} 0)`;
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -64,7 +64,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("A_fillStyle_example", "", "160")}}
 
 ### A `strokeStyle` example
 
@@ -75,7 +75,7 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
-      ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${Math.floor(
+      ctx.strokeStyle = `rgb(0 ${Math.floor(255 - 42.5 * i)} ${Math.floor(
         255 - 42.5 * j,
       )})`;
       ctx.beginPath();
@@ -96,7 +96,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "", "160")}}
 
 ## Transparency
 
@@ -107,16 +107,16 @@ In addition to drawing opaque shapes to the canvas, we can also draw semi-transp
 
 The `globalAlpha` property can be useful if you want to draw a lot of shapes on the canvas with similar transparency, but otherwise it's generally more useful to set the transparency on individual shapes when setting their colors.
 
-Because the `strokeStyle` and `fillStyle` properties accept CSS rgba color values, we can use the following notation to assign a transparent color to them.
+Because the `strokeStyle` and `fillStyle` properties accept CSS rgb color values, we can use the following notation to assign a transparent color to them.
 
 ```js
 // Assigning transparent colors to stroke and fill style
 
-ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
-ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
+ctx.strokeStyle = "rgb(255 0 0 / 50%)";
+ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ```
 
-The `rgba()` function is similar to the `rgb()` function but it has one extra parameter. The last parameter sets the transparency value of this particular color. The valid range is again between 0.0 (fully transparent) and 1.0 (fully opaque).
+The `rgb()` function has an optional extra parameter. The last parameter sets the transparency value of this particular color. The valid range is specified as a percentage between `0%` (fully transparent) and `100%` (fully opaque) or as a number between `0.0` (equivalent to `0%`) and `1.0` (equivalent to `100%`).
 
 ### A `globalAlpha` example
 
@@ -156,29 +156,29 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "", "160")}}
 
-### An example using `rgba()`
+### An example using `rgb()` with alpha transparency
 
-In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using `rgba()` gives you a little more control and flexibility because we can set the fill and stroke style individually.
+In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using `rgb()` gives you a little more control and flexibility because we can set the fill and stroke style individually.
 
 ```js
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw background
-  ctx.fillStyle = "rgb(255, 221, 0)";
+  ctx.fillStyle = "rgb(255 221 0)";
   ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = "rgb(102, 204, 0)";
+  ctx.fillStyle = "rgb(102 204 0)";
   ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = "rgb(0, 153, 255)";
+  ctx.fillStyle = "rgb(0 153 255)";
   ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = "rgb(255, 51, 0)";
+  ctx.fillStyle = "rgb(255 51 0)";
   ctx.fillRect(0, 112.5, 150, 37.5);
 
   // Draw semi transparent rectangles
   for (let i = 0; i < 10; i++) {
-    ctx.fillStyle = `rgba(255, 255, 255, ${(i + 1) / 10})`;
+    ctx.fillStyle = `rgb(255 255 255 / ${(i + 1) / 10})`;
     for (let j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
@@ -194,7 +194,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba", "180", "180", "canvas_rgba.png")}}
+{{EmbedLiveSample("An_example_using_rgb_with_alpha_transparency", "", "160")}}
 
 ## Line styles
 
@@ -246,7 +246,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
+{{EmbedLiveSample("A_lineWidth_example", "", "160")}}
 
 Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.
 
@@ -313,7 +313,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "Canvas_linecap.png")}}
+{{EmbedLiveSample("A_lineCap_example", "", "160")}}
 
 ### A `lineJoin` example
 
@@ -355,7 +355,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "", "160")}}
 
 ### A demo of the `miterLimit` property
 
@@ -436,7 +436,7 @@ document.getElementById("miterLimit").value = document
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "", "180")}}
 
 ### Using line dashes
 
@@ -471,7 +471,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
+{{EmbedLiveSample("Using_line_dashes")}}
 
 ## Gradients
 
@@ -521,7 +521,7 @@ function draw() {
 
   const lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
   lingrad2.addColorStop(0.5, "#000");
-  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
+  lingrad2.addColorStop(1, "rgb(0 0 0 / 0%)");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = lingrad;
@@ -545,7 +545,7 @@ The first is a background gradient. As you can see, we assigned two colors at th
 
 In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
+{{EmbedLiveSample("A_createLinearGradient_example", "", "160")}}
 
 ### A `createRadialGradient` example
 
@@ -559,22 +559,22 @@ function draw() {
   const radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
   radgrad.addColorStop(0, "#A7D30C");
   radgrad.addColorStop(0.9, "#019F62");
-  radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
+  radgrad.addColorStop(1, "rgb(1 159 98 / 0%)");
 
   const radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
   radgrad2.addColorStop(0, "#FF5F98");
   radgrad2.addColorStop(0.75, "#FF0188");
-  radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
+  radgrad2.addColorStop(1, "rgb(255 1 136 / 0%)");
 
   const radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
   radgrad3.addColorStop(0, "#00C9FF");
   radgrad3.addColorStop(0.8, "#00B5E2");
-  radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
+  radgrad3.addColorStop(1, "rgb(0 201 255 / 0%)");
 
   const radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
   radgrad4.addColorStop(0, "#F4F201");
   radgrad4.addColorStop(0.8, "#E4C700");
-  radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
+  radgrad4.addColorStop(1, "rgb(228 199 0 / 0%)");
 
   // draw shapes
   ctx.fillStyle = radgrad4;
@@ -598,9 +598,9 @@ draw();
 
 In this case, we've offset the starting point slightly from the end point to achieve a spherical 3D effect. It's best to try to avoid letting the inside and outside circles overlap because this results in strange effects which are hard to predict.
 
-The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgba(1,159,98,1)`.
+The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgb(1 159 98 / 100%)`.
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
+{{EmbedLiveSample("A_createRadialGradient_example", "", "160")}}
 
 ### A `createConicGradient` example
 
@@ -648,7 +648,7 @@ The first gradient is positioned in the center of the first rectangle and moves 
 
 The second gradient is also positioned at the center of it's second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.
 
-{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}
+{{EmbedLiveSample("A_createConicGradient_example", "", "160")}}
 
 ## Patterns
 
@@ -706,7 +706,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
+{{EmbedLiveSample("A_createPattern_example", "", "160")}}
 
 ## Shadows
 
@@ -740,7 +740,7 @@ function draw() {
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+  ctx.shadowColor = "rgb(0 0 0 / 50%)";
 
   ctx.font = "20px Times New Roman";
   ctx.fillStyle = "Black";
@@ -756,7 +756,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
+{{EmbedLiveSample("A_shadowed_text_example")}}
 
 We will look at the `font` property and `fillText` method in the next chapter about [drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -791,6 +791,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

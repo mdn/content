@@ -10,19 +10,13 @@ browser-compat: api.Document.execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-When an HTML document has been switched to
-[`designMode`](/en-US/docs/Web/API/Document/designMode), its
-`document` object exposes an **`execCommand`**
-method to run commands that manipulate the current editable region, such as [form inputs](/en-US/docs/Web/HTML/Element/input) or
-[`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
-elements.
+The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Element/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
-Most commands affect the document's [selection](/en-US/docs/Web/API/Selection) (bold, italics, etc.), while others
-insert new elements (adding a link), or affect an entire line (indenting). When using
-`contentEditable`, `execCommand()` affects the currently active
-editable element.
+To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
 
-The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `execCommand` in many cases, but `execCommand` is still sometimes useful. In particular, the Clipboard API doesn't replace the `insertText` command, which you can use to programmatically replace text at the cursor while preserving the undo buffer (edit history) in plain `textarea` and `input` elements.
+Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g. `copy`) can work without an editable element.
+
+> **Note:** Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
 
 ## Syntax
 
@@ -145,8 +139,7 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 > **Note:** `document.execCommand()` only returns
 > `true` if it is invoked as part of a user interaction. You can't use it to
-> verify browser support before calling a command. From Firefox 82, nested
-> `document.execCommand()` calls will always return `false`.
+> verify browser support before calling a command.
 
 ## Examples
 
@@ -225,7 +218,7 @@ function insertText(newText, selector) {
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+This feature is not part of any current specification, but there is an [unofficial draft](https://w3c.github.io/editing/docs/execCommand/) attempting to specify it.
 
 ## Browser compatibility
 

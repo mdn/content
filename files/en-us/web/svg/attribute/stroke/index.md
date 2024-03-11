@@ -2,7 +2,7 @@
 title: stroke
 slug: Web/SVG/Attribute/stroke
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke
+browser-compat: svg.global_attributes.stroke
 ---
 
 {{SVGRef}}

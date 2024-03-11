@@ -35,7 +35,6 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : Buffer used for element indices.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
@@ -77,35 +76,35 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : The contents are intended to be specified
         once by the application, and used at most a few times as the source for
         WebGL drawing and image specification commands.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-        1)}}, the following values are available additionally:
 
-      - `gl.STATIC_READ`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and queried many times
-          by the application.
-      - `gl.DYNAMIC_READ`
-        - : The contents are intended to be
-          respecified repeatedly by reading data from WebGL, and queried
-          many times by the application.
-      - `gl.STREAM_READ`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and queried at most a
-          few times by the application
-      - `gl.STATIC_COPY`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and used many times as
-          the source for WebGL drawing and image specification commands.
-      - `gl.DYNAMIC_COPY`
-        - : The contents are intended to be
-          respecified repeatedly by reading data from WebGL, and used many
-          times as the source for WebGL drawing and image specification
-          commands.
-      - `gl.STREAM_COPY`
-        - : The contents are intended to be
-          specified once by reading data from WebGL, and used at most a few
-          times as the source for WebGL drawing and image specification
-          commands.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+
+    - `gl.STATIC_READ`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and queried many times
+        by the application.
+    - `gl.DYNAMIC_READ`
+      - : The contents are intended to be
+        respecified repeatedly by reading data from WebGL, and queried
+        many times by the application.
+    - `gl.STREAM_READ`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and queried at most a
+        few times by the application
+    - `gl.STATIC_COPY`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and used many times as
+        the source for WebGL drawing and image specification commands.
+    - `gl.DYNAMIC_COPY`
+      - : The contents are intended to be
+        respecified repeatedly by reading data from WebGL, and used many
+        times as the source for WebGL drawing and image specification
+        commands.
+    - `gl.STREAM_COPY`
+      - : The contents are intended to be
+        specified once by reading data from WebGL, and used at most a few
+        times as the source for WebGL drawing and image specification
+        commands.
 
 - `srcOffset`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading

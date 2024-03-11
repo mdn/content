@@ -2,7 +2,7 @@
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-linejoin
+browser-compat: svg.global_attributes.stroke-linejoin
 ---
 
 {{SVGRef}}

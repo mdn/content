@@ -111,7 +111,7 @@ Next, pass `addTask()` into `<Form />` as a prop. The prop can have whatever nam
 <Form addTask={addTask} />
 ```
 
-To use this prop, we must change the signature of the `Form()` function in `Form.jsx` so that it acccepts `props` as a parameter:
+To use this prop, we must change the signature of the `Form()` function in `Form.jsx` so that it accepts `props` as a parameter:
 
 ```jsx
 function Form(props) {
@@ -132,14 +132,14 @@ Clicking on the "Add" button in your browser will prove that the `addTask()` cal
 
 ### Aside: a note on naming conventions
 
-We passed the `addTask()` function into the `<Form />` component as the prop `addTask` so that the relationship between the the `addTask()` _function_ and the `addTask` _prop_ would remain as clear as possible. Keep in mind, though, that prop names do not _need_ to be anything in particular. We could have passed `addTask()` into `<Form />` under any other name, such as this:
+We passed the `addTask()` function into the `<Form />` component as the prop `addTask` so that the relationship between the `addTask()` _function_ and the `addTask` _prop_ would remain as clear as possible. Keep in mind, though, that prop names do not _need_ to be anything in particular. We could have passed `addTask()` into `<Form />` under any other name, such as this:
 
 ```diff
 - <Form addTask={addTask} />
 + <Form onSubmit={addTask} />
 ```
 
-This would make the `addTask()` function available to the `<Form />` component as the prop `onSubmit`. That prop could be used in `App.jsx` like this:
+This would make the `addTask()` function available to the `<Form />` component as the prop `onSubmit`. That prop could be used in `Form.jsx` like this:
 
 ```diff
 function handleSubmit(event) {
@@ -600,7 +600,7 @@ import FilterButton from "./components/FilterButton";
 
 function App(props) {
   function addTask(name) {
-    const newTask = { id: `todo-${nanoid}`, name, completed: false };
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
   }
 
