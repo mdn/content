@@ -61,7 +61,7 @@ if (btPermission.state !== "denied") {
 ```
 
 You can also use `query()` to directly retrieve devices that have previously been granted permission for the site.
-For example, the following code (modified from the example in the specification) returns the last Bluetooth device that was used, and for which the user has permission:
+For example, the following code (modified from the example in the specification) returns the last Bluetooth device that was used, and for which the user granted permission:
 
 ```js
 const btPermission = await navigator.permissions.query({
@@ -75,8 +75,8 @@ if (result.devices.length == 1) {
 }
 ```
 
-Note that the `permissionDescriptor` options that can be passed to `query()` for the `bluetooth` permission are the same a the options that can be passed as arguments to {{DOMxRef("Bluetooth.requestDevice()")}}.
-The returned {{jsxref("Promise")}} resolves to a `BluetoothPermissionResult`, an extended {{domxref("PermissionStatus")}} that returns an array of permitted devices in its `devices` property.
+Note that the options that can be passed to `query()` for the `bluetooth` permission are the same as the options that can be passed as arguments to {{DOMxRef("Bluetooth.requestDevice()")}}.
+The returned {{jsxref("Promise")}} resolves to a `BluetoothPermissionResult`, an extended {{domxref("PermissionStatus")}} object that returns an array of permitted devices in its `devices` property.
 
 ## Specifications
 
