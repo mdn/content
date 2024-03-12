@@ -2,7 +2,7 @@
 title: cursor
 slug: Web/SVG/Attribute/cursor
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.cursor
+browser-compat: svg.global_attributes.cursor
 ---
 
 {{SVGRef}}

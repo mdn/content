@@ -5,7 +5,9 @@ Axess
 bézier
 Bhattacharya
 Brosset
+Brotli
 callouts
+Caniuse
 cdylib
 CEST
 CIELAB
@@ -23,6 +25,7 @@ Hermina
 hulki
 i'gyu
 Kazotetsu
+Lempel
 Letorey
 mathml
 mdnplay
@@ -72,3 +75,4 @@ Willee
 worklets
 Yari
 Yarusome
+Zstandard

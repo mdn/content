@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBFactory.open
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`open()`** method of the {{domxref("IDBFactory")}} interface requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
 
@@ -14,8 +14,6 @@ The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and pe
 If the operation is successful, a `success` event is fired on the request object that is returned from this method, with its `result` attribute set to the new {{domxref("IDBDatabase")}} object for the connection.
 
 May trigger `upgradeneeded`, `blocked` or `versionchange` events.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

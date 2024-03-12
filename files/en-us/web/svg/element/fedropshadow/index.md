@@ -60,7 +60,7 @@ svg {
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
 - {{SVGAttr("stdDeviation")}}
   - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+    _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
 
 ## Usage notes
 

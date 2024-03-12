@@ -2,7 +2,7 @@
 title: flood-opacity
 slug: Web/SVG/Attribute/flood-opacity
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.flood-opacity
+browser-compat: svg.global_attributes.flood-opacity
 ---
 
 {{SVGRef}}
