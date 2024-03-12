@@ -100,6 +100,8 @@ After the user selects a device to pair in this origin, it is only allowed to ac
 It is therefore important to list the required services.
 In particular, when filtering with just [`name`](#name) you must remember to also specify the desired services in [`optionalServices`](#optionalservices).
 
+> **Note:** Even though the `options` argument is technically optional, in order to return any results you must either set a value for `filters` or set `acceptAllDevices` to `true`.
+
 ### Return value
 
 A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
