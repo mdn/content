@@ -13,8 +13,7 @@ of the {{domxref("Document")}} interface returns an array of all elements
 at the specified coordinates (relative to the viewport).
 The elements are ordered from the topmost to the bottommost box of the viewport.
 
-It operates in a similar way to the {{domxref("Document.elementFromPoint",
-  "elementFromPoint()")}} method.
+It operates in a similar way to the {{domxref("Document.elementFromPoint", "elementFromPoint()")}} method.
 
 ## Syntax
 

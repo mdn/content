@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.append
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 The **`append()`** method of the {{domxref("FormData")}} interface appends a new value onto an existing key inside a `FormData` object, or adds the key if it does not already exist.
 
 The difference between {{domxref("FormData.set", "set()")}} and `append()` is that if the specified key already exists, `set()` will overwrite all existing values with the new one, whereas `append()` will append the new value onto the end of the existing set of values.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

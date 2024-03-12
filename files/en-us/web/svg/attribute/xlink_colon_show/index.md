@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/xlink:show
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.xlink.xlink_show
+browser-compat: svg.global_attributes.xlink_show
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

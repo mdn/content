@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.warn_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.warn()`** static method outputs a warning message to the console.
-
-{{AvailableInWorkers}}
 
 > **Note:** In Chrome and Firefox, warnings have a small exclamation point icon next to them in the console log.
 

@@ -127,9 +127,9 @@ Continuing the above `<card-component>` example, we create a nested component by
     }
   </style>
   <card-component exportparts="base, header, body">
-    <span slot="header_slot"><slot name="H"></slot></span>
-    <span slot="body_slot"><slot name="B"></slot></span>
-    <span slot="footer_slot"><slot name="F"></slot></span>
+    <slot name="H" slot="header_slot"></slot>
+    <slot name="B" slot="body_slot"></slot>
+    <slot name="F" slot="footer_slot"></slot>
   </card-component>
 </template>
 ```

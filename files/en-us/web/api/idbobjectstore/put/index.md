@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.put
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
 
@@ -19,8 +19,6 @@ Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the reco
 want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
 using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
 record will be updated, instead of a new record being inserted.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
