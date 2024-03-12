@@ -54,8 +54,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCRemoteOutboundRtpStreamStats.codecId", "codecId")}} {{optional_inline}}
   - : A string that uniquely identifies the object that was inspected to produce the {{domxref("RTCCodecStats")}} report associated with this {{Glossary("RTP")}} stream.
 - {{domxref("RTCRemoteOutboundRtpStreamStats.kind", "kind")}}
-  - : A string whose value is `"audio"` if the associated {{domxref("MediaStreamTrack")}} is audio-only or `"video"` if the track contains video.
-    This value will match that of the media type indicated by {{domxref("RTCCodecStats.codec")}}, as well as the track's {{domxref("MediaStreamTrack.kind", "kind")}} property. Previously called `mediaType`.
+  - : A string indicating whether the {{domxref("MediaStreamTrack")}} associated with the stream is an audio or a video track.
 - {{domxref("RTCRemoteOutboundRtpStreamStats.ssrc", "ssrc")}}
   - : A positive integer that identifies the synchronization source (SSRC) of the RTP packets in this stream.
 - {{domxref("RTCRemoteOutboundRtpStreamStats.transportId", "transportId")}} {{optional_inline}}
