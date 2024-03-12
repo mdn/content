@@ -7,7 +7,8 @@ browser-compat: api.RTCStatsReport.type_remote-outbound-rtp
 
 {{APIRef("WebRTC")}}
 
-The **`RTCRemoteOutboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics from remote endpoint of its outbound RTP stream, which corresponds to an inbound stream that is currently received by an {{domxref("RTCPeerConnection")}} object.
+The **`RTCRemoteOutboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics from remote endpoint about its outbound RTP stream.
+These will corresponds to an inbound stream that is currently received by the local {{domxref("RTCPeerConnection")}} object.
 
 The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `remote-outbound-rtp`.
 
