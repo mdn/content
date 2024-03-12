@@ -98310,24 +98310,6 @@
       "teoli"
     ]
   },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:31:57.783Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "mfuji09",
-      "SphinxKnight",
-      "ExE-Boss",
-      "rimunroe",
-      "chrisdavidmills",
-      "kbrosnan",
-      "Jamie0",
-      "Sebastianz",
-      "ddurst",
-      "teoli",
-      "Kikketer"
-    ]
-  },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:31:58.132Z",
     "contributors": [
