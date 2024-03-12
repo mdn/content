@@ -164,7 +164,7 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>It must have a start tag, but must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
