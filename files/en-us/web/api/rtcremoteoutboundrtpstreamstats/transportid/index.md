@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.transportId
 
 The **`transportId`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary is a string that uniquely identifies the associated {{domxref("RTCTransportStats")}} statistics object for this RTP stream's underlying transport.
 
-The `RTCRemoteOutboundRtpStreamStats` and `RTCTransportStats` objects are correlated by iterating the {{domxref("RTCStatsReport")}} to find a `RTCTransportStats` object with a matching value for `transportId` in {{domxref("RTCTransportStats.id")}}.
+`RTCRemoteOutboundRtpStreamStats` and `RTCTransportStats` objects are correlated by iterating the {{domxref("RTCStatsReport")}} to find the statistics objects where `RTCRemoteOutboundRtpStreamStats.transportId` is equal to {{domxref("RTCTransportStats.id")}}.
 
 ## Value
 
