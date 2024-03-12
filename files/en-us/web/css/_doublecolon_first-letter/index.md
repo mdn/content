@@ -122,6 +122,40 @@ p::first-letter {
 
 {{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', '100%', 350) }}
 
+### Styling first letter in SVG text element
+
+In this example, we use the `::first-letter` pseudo-element to style the first letter of a SVG {{SVGElement("text")}} element.
+
+> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+
+#### HTML
+
+```html
+<svg viewBox="0 0 300 40">
+  <text y="30">First letter in &lt;text&gt; SVG</text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  font-family: sans-serif;
+}
+
+text::first-letter {
+  font-family: serif;
+  font-size: 2rem;
+  font-weight: 600;
+  fill: tomato;
+  stroke: indigo;
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample("styling_first_letter_in_SVG_text_element", "100%", "100") }}
+
 ## Specifications
 
 {{Specifications}}
