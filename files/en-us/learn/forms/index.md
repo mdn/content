@@ -1,5 +1,5 @@
 ---
-title: Core forms learning pathway
+title: Web form building blocks
 slug: Learn/Forms
 page-type: learn-module
 ---
