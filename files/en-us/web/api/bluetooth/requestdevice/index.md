@@ -85,16 +85,20 @@ requestDevice(options)
         The identifiers take the same values as the elements of the [`services`](#services) array (a GATT service name, UUID, or UUID short 16-bit or 32-bit forms).
 
     - `optionalManufacturerData` {{optional_inline}}
-      - : An array of optional manufacture data.
-        This is not used for filtering.
-        The origin is allowed to access any manufacturer data from manufacturer codes.
+
+      - : An optional array of integer manufacturer codes.
+        This takes the same values as [`companyIdentifier`](#companyidentifier).
+
+        The data is not used for filtering the devices, but advertisements that match the specified set are still delivered in `advertisementreceived` events.
+        This is useful because it allows code to specify an interest in data received from Bluetooth devices without constraining the filter controlling which devices are presented to the user in the permission prompt.
+
     - `acceptAllDevices` {{optional_inline}}
 
       - : A boolean value indicating that the requesting script can accept all Bluetooth devices.
         The default is `false`.
 
-        > **Note:** This option is appropriate when devices have not advertised enough information for filtering to be useful.
-        > You should omit all [`filters`](#filters) and [`exclusionFilters`](#exclusionfilters), and you must set [`optionalServices`](#optionalservices) in order to be able to use the device.
+        This option is appropriate when devices have not advertised enough information for filtering to be useful.
+        When this is `true` you should omit all [`filters`](#filters) and [`exclusionFilters`](#exclusionfilters), and you must set [`optionalServices`](#optionalservices) in order to be able to _use_ the returned device.
 
 After the user selects a device to pair in this origin, it is only allowed to access services whose UUID was listed in the services list in any element of [`filters.services`](#services) or in [`optionalServices`](#optionalservices).
 It is therefore important to list the required services.
