@@ -97,8 +97,7 @@ and will be supplied to the Vertex Buffer Object (VBO). First, we need to bind t
 this method, `gl.vertexAttribPointer()`, we specify in what order the
 attributes are stored, and what data type they are in. In addition, we need to include
 the stride, which is the total byte length of all attributes for one vertex. Also, we
-have to call {{domxref("WebGLRenderingContext/enableVertexAttribArray",
-  "gl.enableVertexAttribArray()")}} to tell WebGL that this attribute should be filled
+have to call {{domxref("WebGLRenderingContext/enableVertexAttribArray", "gl.enableVertexAttribArray()")}} to tell WebGL that this attribute should be filled
 with data from our array buffer.
 
 Usually, your 3D geometry is already in a certain binary format, so you need to read
@@ -121,13 +120,11 @@ they are stored in the array buffer. You have two options:
 - Either you specify the index yourself. In this case, you call
   {{domxref("WebGLRenderingContext.bindAttribLocation()", "gl.bindAttribLocation()")}}
   to connect a named attribute from the vertex shader to the index you want to use. This
-  must be done before calling {{domxref("WebGLRenderingContext.linkProgram()",
-    "gl.linkProgram()")}}. You can then provide this same index to
+  must be done before calling {{domxref("WebGLRenderingContext.linkProgram()", "gl.linkProgram()")}}. You can then provide this same index to
   `gl.vertexAttribPointer()`.
 - Alternatively, you use the index that is assigned by the graphics card when
   compiling the vertex shader. Depending on the graphics card, the index will vary, so
-  you must call {{domxref("WebGLRenderingContext.getAttribLocation()",
-    "gl.getAttribLocation()")}} to find out the index, and then provide this index to
+  you must call {{domxref("WebGLRenderingContext.getAttribLocation()", "gl.getAttribLocation()")}} to find out the index, and then provide this index to
   `gl.vertexAttribPointer()`.
   If you are using WebGL 2, you can specify the index yourself in the vertex shader code
   and override the default used by the graphics card, e.g.
@@ -140,8 +137,7 @@ While the `ArrayBuffer` can be filled with both integers and floats, the
 attributes will always be converted to a float when they are sent to the vertex shader.
 If you need to use integers in your vertex shader code, you can either cast the float
 back to an integer in the vertex shader (e.g. `(int) floatNumber`), or use
-{{domxref("WebGL2RenderingContext.vertexAttribIPointer()",
-  "gl.vertexAttribIPointer()")}} from WebGL2.
+{{domxref("WebGL2RenderingContext.vertexAttribIPointer()", "gl.vertexAttribIPointer()")}} from WebGL2.
 
 ### Default attribute values
 
@@ -150,9 +146,8 @@ the values for each attribute. Instead, we can supply a default value that will 
 identical for all vertices. We can call
 {{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}
 to tell WebGL to use the default value, while calling
-{{domxref("WebGLRenderingContext.enableVertexAttribArray()",
-  "gl.enableVertexAttribArray()")}} will read the values from the array buffer as
-specified with `gl.vertexAttribPointer()`.
+{{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}}
+will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
 
 Similarly, if our vertex shader expects e.g. a 4-component attribute with
 `vec4` but in our `gl.vertexAttribPointer()` call we set the
@@ -172,9 +167,9 @@ color.
 
 ### Querying current settings
 
-You can call {{domxref("WebGLRenderingContext.getVertexAttrib()",
-  "gl.getVertexAttrib()")}} and {{domxref("WebGLRenderingContext.getVertexAttribOffset()",
-  "gl.getVertexAttribOffset()")}} to get the current parameters for an attribute, e.g. the
+You can call {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} and
+{{domxref("WebGLRenderingContext.getVertexAttribOffset()", "gl.getVertexAttribOffset()")}} to
+get the current parameters for an attribute, e.g. the
 data type or whether the attribute should be normalized. Keep in mind that these WebGL
 functions have a slow performance and it is better to store the state inside your
 JavaScript application. However, these functions are great for debugging a WebGL context

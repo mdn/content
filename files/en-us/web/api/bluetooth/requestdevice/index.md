@@ -8,12 +8,10 @@ status:
 browser-compat: api.Bluetooth.requestDevice
 ---
 
-{{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`Bluetooth.requestDevice()`** method of the
-{{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} to a
-{{domxref("BluetoothDevice")}} object with the specified options. If there is no chooser
-UI, this method returns the first device matching the criteria.
+The **`Bluetooth.requestDevice()`** method of the {{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("BluetoothDevice")}} object matching the specified options.
+If there is no chooser UI, this method returns the first device matching the criteria.
 
 ## Syntax
 
@@ -25,17 +23,16 @@ requestDevice(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object that sets options for the device request. The available options are:
-    - `filters[]`
-      - : An array of `BluetoothScanFilters`. This
-        filter consists of an array of `BluetoothServiceUUID`s, a
-        `name` parameter, and a `namePrefix` parameter.
-    - `optionalServices[]`
+  - : An object that sets options for the device request.
+    The available options are:
+    - `filters`
+      - : An array of filter objects.
+        Each filter consists of an array of `BluetoothServiceUUID`s, a `name` parameter, and a `namePrefix` parameter.
+    - `optionalServices`
       - : An array of `BluetoothServiceUUID`s.
     - `acceptAllDevices`
-      - : A boolean value indicating that the
-        requesting script can accept all Bluetooth devices. The default is
-        `false`.
+      - : A boolean value indicating that the requesting script can accept all Bluetooth devices.
+        The default is `false`.
 
 ### Return value
 
@@ -44,16 +41,12 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the provided `options` do not make sense. For example,
-    `options.filters` is present and `options.acceptAllDevices` is
-    `true`, or if `options.filters` is not present and
-    `options.acceptAllDevices` is `false`. Or
-    `options.filters` is `[]`.
+  - : Thrown if the provided `options` do not make sense.
+    For example, if `options.filters` is present and `options.acceptAllDevices` is `true`, `options.filters` is not present and `options.acceptAllDevices` is `false`, or `options.filters` is `[]`.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if there is no Bluetooth device that matches the specified options.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if this operation is not permitted in this context due to security concerns. For
-    example, it is called from insecure origin.
+  - : Thrown if this operation is not permitted in this context due to [security concerns](/en-US/docs/Web/API/Web_Bluetooth_API#security_considerations), such as being called from an insecure origin.
 
 ## Examples
 

@@ -35,10 +35,9 @@ postMessage(message, targetOrigin, transfer)
 ### Parameters
 
 - `message`
-  - : Data to be sent to the other window. The data is serialized using
-    {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone
-    algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the
-    destination window without having to serialize them yourself.
+  - : Data to be sent to the other window.
+    The data is serialized using the {{domxref("Web_Workers_API/Structured_clone_algorithm", "structured clone algorithm", "", 1)}}.
+    This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.
 - `options` {{optional_Inline}}
   - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of, and a optional `targetOrigin` field with a string which restricts the message to the limited targets only.
 - `targetOrigin` {{optional_Inline}}
