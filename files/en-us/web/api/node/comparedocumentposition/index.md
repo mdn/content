@@ -47,6 +47,8 @@ contains the node on which `compareDocumentPosition()` was
 called, then both the `DOCUMENT_POSITION_CONTAINS` and
 `DOCUMENT_POSITION_PRECEDING` bits would be set, producing a value of `10` (`0x0A`).
 
+When comparing a node with itself, `compareDocumentPosition()` returns `0`.
+
 ## Example
 
 ```js
