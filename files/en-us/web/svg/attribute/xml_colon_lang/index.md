@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/xml:lang
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.core.xml_lang
+browser-compat: svg.global_attributes.xml_lang
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

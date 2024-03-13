@@ -25,15 +25,6 @@ The articles below can help you learn more about HTML.
 - HTML Reference
   - : In our extensive [HTML reference](/en-US/docs/Web/HTML/Reference) section, you'll find the details about every element and attribute in HTML.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Beginner's tutorials
 
 Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that teach HTML from the ground up — no previous knowledge required.

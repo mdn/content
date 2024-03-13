@@ -2,7 +2,7 @@
 title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-miterlimit
+browser-compat: svg.global_attributes.stroke-miterlimit
 ---
 
 {{SVGRef}}

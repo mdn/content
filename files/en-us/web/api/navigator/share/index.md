@@ -159,7 +159,7 @@ btn.addEventListener("click", async () => {
 
 Click the button to launch the share dialog on your platform. Text will appear below the button to indicate whether the share was successful or provide an error code.
 
-{{EmbedLiveSample('Sharing a URL')}}
+{{EmbedLiveSample('Sharing a URL','','','','','','web-share')}}
 
 ### Sharing files
 

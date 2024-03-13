@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.set
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`set()`** method of the {{domxref("URLSearchParams")}}
 interface sets the value associated with a given search parameter to the given value.
 If there were several matching values, this method deletes the others. If the search
 parameter doesn't exist, this method creates it.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
