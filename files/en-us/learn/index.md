@@ -10,7 +10,7 @@ Welcome to the MDN learning area. This set of articles aims to provide complete 
 
 If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
 
-### Where to start
+## Where to start
 
 If you are not sure about committing to learning web development in-depth and want to begin with a taster session, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) guides. Beyond that, you should start by learning the following topics:
 

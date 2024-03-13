@@ -18,7 +18,7 @@
   },
   "type": "module",
   "scripts": {
-    "preinstall": "echo 'test'",
+    "preinstall": "echo 'testing'",
     "postinstall": "node scripts/update-history.js",
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
