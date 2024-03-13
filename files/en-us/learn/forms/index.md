@@ -1,5 +1,5 @@
 ---
-title: Web forms — Working with user data
+title: Web form building blocks
 slug: Learn/Forms
 page-type: learn-module
 ---
@@ -7,15 +7,6 @@ page-type: learn-module
 {{LearnSidebar}}
 
 This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons, it's not always obvious how to use them to their full potential. In the articles listed below, we'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 
@@ -75,3 +66,4 @@ The following articles aren't essential to the learning pathway, but they'll pro
 - [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms)
 - [HTML \<input> types reference](/en-US/docs/Web/HTML/Element/input)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [User input methods and controls](/en-US/docs/Learn/Forms/User_input_methods)

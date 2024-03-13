@@ -19,12 +19,6 @@ constructor, if it was provided.
 
 A {{jsxref("Number")}} (unsigned long).
 
-## Example
-
-```js
-// TBD
-```
-
 ## Specifications
 
 {{Specifications}}

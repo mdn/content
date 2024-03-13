@@ -35,6 +35,7 @@ Content-Encoding: gzip
 Content-Encoding: compress
 Content-Encoding: deflate
 Content-Encoding: br
+Content-Encoding: zstd
 
 // Multiple, in the order in which they were applied
 Content-Encoding: deflate, gzip
@@ -58,8 +59,10 @@ Content-Encoding: deflate, gzip
   - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
     structure (defined in {{rfc(1950)}}) with the [deflate](https://en.wikipedia.org/wiki/Deflate) compression
     algorithm (defined in {{rfc(1951)}}).
-- `br` {{Non-standard_Inline}}
-  - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
+- `br`
+  - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm structure (defined in {{rfc(7932)}}).
+- `zstd` {{experimental_inline}}
+  - : A format using the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm structure (defined in {{rfc(8878)}}).
 
 ## Examples
 
@@ -95,3 +98,6 @@ depends on server settings and used server modules.
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Transfer-Encoding")}}
+- {{Glossary("Brotli compression")}}
+- {{Glossary("GZip compression")}}
+- {{Glossary("Zstandard compression")}}

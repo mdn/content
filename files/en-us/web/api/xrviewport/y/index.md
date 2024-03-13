@@ -6,15 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.XRViewport.y
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRViewport")}} interface's
 **`y`** property indicates the offset from the bottom edge of
-the destination surface (typically a {{domxref("XRWebGLLayer")}} to the bottom edge of
+the destination surface (typically a {{domxref("XRWebGLLayer")}}) to the bottom edge of
 the viewport within the surface into which WebXR content is to be rendered. The
 viewport's {{domxref("XRViewport.x", "x")}} property identifies the `x`
-component of the origin, and its is given by the {{domxref("XRViewPort.width",
-  "width")}} and {{domxref("XRViewport.height", "height")}} properties.
+component of the origin, and its is given by the {{domxref("XRViewPort.width", "width")}}
+and {{domxref("XRViewport.height", "height")}} properties.
 
 ## Value
 

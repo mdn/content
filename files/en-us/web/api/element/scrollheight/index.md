@@ -16,8 +16,8 @@ screen due to overflow.
 
 The `scrollHeight` value is equal to the minimum height the element would
 require in order to fit all the content in the viewport without using a vertical
-scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight",
-  "clientHeight")}}: it includes the element's padding, but not its border, margin or
+scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight", "clientHeight")}}:
+it includes the element's padding, but not its border, margin or
 horizontal scrollbar (if present). It can also include the height of pseudo-elements
 such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can
 fit without a need for vertical scrollbar, its `scrollHeight` is equal to
@@ -37,7 +37,7 @@ An integer corresponding to the scrollHeight pixel value of the element.
 `scrollTop` is a non-rounded number, while `scrollHeight` and `clientHeight` are rounded — so the only way to determine if the scroll area is scrolled to the bottom is by seeing if the scroll amount is close enough to some threshold (in this example `1`):
 
 ```js
-Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) <= 1;
 ```
 
 The following will _not_ work all the time because `scrollTop` can contain decimals:

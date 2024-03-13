@@ -37,13 +37,13 @@ new IntersectionObserver(callback, options)
 
 - `options` {{optional_inline}}
 
-  - : An optional object which customizes the observer.
-    If `options` isn't specified, the observer uses the document's viewport as the root, with no margin, and a 0% threshold (meaning that even a one-pixel change is enough to trigger a callback).
+  - : An optional object which customizes the observer. All properties are optional.
     You can provide any combination of the following options:
 
     - `root`
       - : An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor of the intended target, whose bounding rectangle will be considered the viewport.
-        Any part of the target not visible in the visible area of the `root` is not considered visible.
+        Any part of the target not visible in the visible area of the `root` is not considered visible. If not specified, the observer uses the document's
+        viewport as the root, with no margin, and a 0% threshold (meaning that even a one-pixel change is enough to trigger a callback).
     - `rootMargin`
       - : A string which specifies a set of offsets to add to the root's {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking
         or growing the root for calculation purposes.

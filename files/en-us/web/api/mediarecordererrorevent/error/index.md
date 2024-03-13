@@ -11,8 +11,8 @@ browser-compat: api.MediaRecorderErrorEvent.error
 
 {{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The read-only `error` property in the
-**{{domxref("MediaRecorderErrorEvent")}}** interface is a
+The **`error`** read-only property of the
+{{domxref("MediaRecorderErrorEvent")}} interface is a
 {{domxref("DOMException")}} object providing details about the exception that was thrown
 by a {{domxref("MediaRecorder")}} instance.
 
@@ -39,15 +39,14 @@ method references.
     information, if it exists.
 - `SecurityError`
   - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
-    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device.
+    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device.
 - `InvalidModificationError`
   - : The number of tracks on the stream being recorded has changed. You can't add or
     remove tracks while recording media.
 - `UnknownError`
   - : A non-security related error occurred that cannot otherwise be categorized.
-    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
-    "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
+    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}} becomes `inactive`,
+    one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
     {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
@@ -85,7 +84,7 @@ function recordStream(stream) {
 
 ## Specifications
 
-{{Specifications}}
+This feature is no longer part of any specification, and longer on track to become standard.
 
 ## Browser compatibility
 

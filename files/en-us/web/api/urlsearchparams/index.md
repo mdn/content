@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.URLSearchParams
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
 
@@ -18,8 +18,6 @@ for (const [key, value] of mySearchParams.entries()) {
 }
 ```
 
-{{availableinworkers}}
-
 ## Constructor
 
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
@@ -27,11 +25,13 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## Instance properties
 
-- {{domxref("URLSearchParams.size", 'size')}}
+- {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
   - : Indicates the total number of search parameter entries.
 
 ## Instance methods
 
+- `URLSearchParams.[@@iterator]()`
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object in the same order as they appear in the query string.
 - {{domxref("URLSearchParams.append()")}}
   - : Appends a specified key/value pair as a new search parameter.
 - {{domxref("URLSearchParams.delete()")}}

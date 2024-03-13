@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Cache
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`Cache`** interface provides a persistent storage mechanism for {{domxref("Request")}} / {{domxref("Response")}} object pairs that are cached in long lived memory. How long a `Cache` object lives is browser dependent, but a single origin's scripts can typically rely on the presence of a previously populated `Cache` object. Note that the `Cache` interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec.
 
@@ -16,10 +16,6 @@ You are also responsible for periodically purging cache entries. Each browser ha
 > **Note:** The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-using-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the `Cache` object.
 
 > **Note:** The caching API doesn't honor HTTP caching headers.
-
-{{AvailableInWorkers}}
-
-{{securecontext_header}}
 
 ## Instance methods
 
@@ -183,6 +179,4 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

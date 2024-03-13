@@ -107,4 +107,4 @@ Highlights:
 
 ### Older versions
 
-{{Firefox_for_developers('30')}}
+{{Firefox_for_developers}}

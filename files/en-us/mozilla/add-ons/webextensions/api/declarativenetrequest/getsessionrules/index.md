@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the active set of session scoped rules for the extension.
 

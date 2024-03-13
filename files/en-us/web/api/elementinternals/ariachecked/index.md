@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaChecked
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 The **`ariaChecked`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.requestHitTestSource
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestHitTestSource()`** method of the
 {{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRHitTestSource")}} object that can be passed to {{domxref("XRFrame.getHitTestResults()")}}.

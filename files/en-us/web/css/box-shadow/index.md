@@ -31,7 +31,7 @@ box-shadow: 10px 5px 5px black;
 
 /* Four length values and a color */
 /* <length> | <length> | <length> | <length> | <color> */
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 
 /* inset, length values, and a color */
 /* <inset> | <length> | <length> | <color> */
@@ -52,7 +52,7 @@ box-shadow: unset;
 
 Specify a single box-shadow using:
 
-- Two, three, or four [`<length>`](/en-US/docs/Web/CSS/length) values.
+- Two, three, or four {{cssxref("length")}} values.
 
   - If only two values are given, they are interpreted as `<offset-x>` and `<offset-y>` values.
   - If a third value is given, it is interpreted as a `<blur-radius>`.
@@ -87,7 +87,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
 ### Interpolation
 
-When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as [`<length>`](/en-US/docs/Web/CSS/length)s.
+When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as {{cssxref("length")}}s.
 
 In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If in any pair of shadows, one has `inset` set and the other does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
 
@@ -125,9 +125,9 @@ In this example, we include three shadows: an inset shadow, a regular drop shado
 blockquote {
   padding: 20px;
   box-shadow:
-    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+    inset 0 -3em 3em rgb(0 200 0 / 30%),
     0 0 0 2px white,
-    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+    0.3em 0.3em 1em rgb(200 0 0 / 60%);
 }
 ```
 

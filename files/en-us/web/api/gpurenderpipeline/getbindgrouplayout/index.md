@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPipeline.getBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getBindGroupLayout()`** method of the
 {{domxref("GPURenderPipeline")}} interface returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e. included in the originating {{domxref("GPUDevice.createRenderPipeline()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call's pipeline layout).

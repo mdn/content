@@ -28,21 +28,44 @@ Not part of any standard.
 ### HTML
 
 ```html
-<meter min="0" max="10" value="6">Score out of 10</meter>
+Normal: <meter min="0" max="10" value="6">Score 6/10</meter>
+<br />
+Styled: <meter id="styled" min="0" max="10" value="6">Score 6/10</meter>
 ```
 
 ### CSS
 
 ```css
-meter {
-  /* Reset the default appearance for -webkit- only */
+body {
+  font-family: monospace;
+}
+
+.safari meter {
+  /* Reset the default appearance for Safari only */
+  /* .safari class is added via JavaScript */
   -webkit-appearance: none;
 }
 
-meter::-webkit-meter-bar {
+#styled::-webkit-meter-bar {
   background: #eee;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 20%) inset;
   border-radius: 3px;
+}
+```
+
+### JavaScript
+
+```js
+// Safari requires <meter> elements to have an `appearance` of `none` for custom styling
+// using `::-webkit-meter-*` selectors, but `appearance: none` breaks rendering on Chrome.
+// Therefore, we must check if the browser is Safari-based.
+
+const is_safari =
+  navigator.userAgent.includes("AppleWebKit/") &&
+  !navigator.userAgent.includes("Chrome/");
+
+if (is_safari) {
+  document.body.classList.add("safari");
 }
 ```
 

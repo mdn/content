@@ -209,7 +209,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 **Resources for detecting and controlling animated GIFs include:**
 
 - [RunKit Animated GIF Detector](https://npm.runkit.com/animated-gif-detector)
-- [rubentd.com/gifplayer/](https://rubentd.com/gifplayer/), a jQuery plugin that will help you play and stop animated gifs on your website
+- [github.com/rubentd/gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated gifs on your website
 
 ### Videos
 
@@ -396,7 +396,7 @@ function set_background() {
 
   // get the second item of the list of p elements
   myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  myP.style.background = "rgb(255 0 0)";
 }
 ```
 

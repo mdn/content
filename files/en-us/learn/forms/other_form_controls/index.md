@@ -13,7 +13,7 @@ We now look at the functionality of non-`<input>` form elements in detail, from 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
+        A basic
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >.

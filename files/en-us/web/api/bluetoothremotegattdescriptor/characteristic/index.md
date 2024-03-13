@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTDescriptor.characteristic
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTDescriptor.characteristic`**
 read-only property returns the {{domxref("BluetoothRemoteGATTCharacteristic")}} this

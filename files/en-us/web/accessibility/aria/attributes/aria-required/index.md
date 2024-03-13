@@ -55,7 +55,7 @@ This could be written semantically, without the need for JavaScript:
 - `false`
   - : The element is not required.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRequired")}}
   - : The [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.
@@ -87,7 +87,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute
 - [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional)

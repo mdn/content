@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Sensor.timestamp
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`timestamp`** read-only property
 of the {{domxref("Sensor")}} interface returns the timestamp of the latest sensor

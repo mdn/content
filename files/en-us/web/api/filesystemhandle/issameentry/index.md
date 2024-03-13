@@ -9,8 +9,7 @@ browser-compat: api.FileSystemHandle.isSameEntry
 {{securecontext_header}}{{APIRef("File System API")}}
 
 The **`isSameEntry()`** method of the
-{{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
-  "handles")}} to see if the associated entries (either a file or directory) match.
+{{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
 
 ## Syntax
 
@@ -52,4 +51,4 @@ function removeMatches(fileEntry, entriesArr) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
