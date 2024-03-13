@@ -51,7 +51,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}
   - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Element/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
-- {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}}
+- {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("MediaKeys")}} object, that is a set of keys that the element can use for decryption of media data during playback. If no key is available, it can be `null`.
 - {{domxref("HTMLMediaElement.muted")}}
   - : A boolean that determines whether audio is muted. `true` if the audio is muted and `false` otherwise.
@@ -75,7 +75,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}
   - : Returns a boolean that indicates whether the media is in the process of seeking to a new position.
-- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}}
+- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if the user agent default audio device is being used.
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
@@ -121,9 +121,9 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Begins playback of the media.
 - {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Seeks to the next frame in the media. This non-standard, experimental method makes it possible to manually drive reading and rendering of media at a custom speed, or to move through the media frame-by-frame to perform filtering or other operations.
-- {{domxref("HTMLMediaElement.setMediaKeys()")}}
+- {{domxref("HTMLMediaElement.setMediaKeys()")}} {{SecureContext_Inline}}
   - : Returns {{jsxref("Promise")}}. Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.
-- {{domxref("HTMLMediaElement.setSinkId()")}}
+- {{domxref("HTMLMediaElement.setSinkId()")}} {{SecureContext_Inline}}
   - : Sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}. This only works when the application is authorized to use the specified device.
 
 ## Obsolete methods

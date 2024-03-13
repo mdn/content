@@ -149,8 +149,8 @@ Java.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
   using array or [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
-- The values returned by `getComputedStyle` are {{CSSxRef("resolved_value",
-    "resolved values", "", 1)}}. These are usually the same as CSS 2.1's
+- The values returned by `getComputedStyle` are {{CSSxRef("resolved_value", "resolved values", "", 1)}}.
+  These are usually the same as CSS 2.1's
   {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
   like `width`, `height`, or `padding`, they are
   instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS

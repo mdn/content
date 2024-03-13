@@ -12,8 +12,8 @@ The read-only {{domxref("XRRigidTransform")}} property
 **`matrix`** returns the transform
 matrix represented by the object. The returned matrix can then be premultiplied with a
 column vector to rotate the
-vector by the 3D rotation specified by the {{domxref("XRRigidTransform.orientation",
-  "orientation")}}, then translate
+vector by the 3D rotation specified by the
+{{domxref("XRRigidTransform.orientation", "orientation")}}, then translate
 it by the {{domxref("XRRigidTransform.position", "position")}}.
 
 ## Value
@@ -21,8 +21,7 @@ it by the {{domxref("XRRigidTransform.position", "position")}}.
 A {{jsxref("Float32Array")}} containing 16 entries which represents the 4x4 transform
 matrix which is described by
 the {{domxref("XRRigidTransform.position", "position")}} and
-{{domxref("XRRigidTransform.orientation",
-  "orientation")}} properties.
+{{domxref("XRRigidTransform.orientation", "orientation")}} properties.
 
 ## Usage notes
 

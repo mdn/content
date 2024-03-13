@@ -49,8 +49,7 @@ function getTrackList(el) {
 
 The resulting `trackList` contains an array of video tracks whose
 `kind` is one of those in the array `wantedKinds`, with each entry
-providing the track's {{domxref("VideoTrack.id", "id")}}, {{domxref("VideoTrack.kind",
-  "kind")}}, and {{domxref("VideoTrack.label", "label")}}.
+providing the track's {{domxref("VideoTrack.id", "id")}}, {{domxref("VideoTrack.kind", "kind")}}, and {{domxref("VideoTrack.label", "label")}}.
 
 ## Specifications
 

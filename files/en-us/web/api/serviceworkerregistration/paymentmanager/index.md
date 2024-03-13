@@ -8,12 +8,10 @@ status:
 browser-compat: api.ServiceWorkerRegistration.paymentManager
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`paymentManager`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
-
-{{AvailableInWorkers}}
 
 ## Value
 
