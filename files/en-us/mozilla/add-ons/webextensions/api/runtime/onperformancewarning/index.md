@@ -39,9 +39,9 @@ Events have three functions:
       - : `object`. An object with the following properties:
 
         - `category`
-          - : A {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}} object indicating the category of the warning.
+          - : {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}. The category of the warning.
         - `severity`
-          - : `string`. The performance warning event severity. One of "low", "medium", or "high".
+          - : {{WebExtAPIRef("runtime.OnPerformanceWarningSeverity")}}. The severity of the warning.
         - `tabId` {{optional_inline}}
           - : `integer`. The ID of the tab that the performance warning relates to, if any.
         - `description`

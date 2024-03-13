@@ -33,6 +33,8 @@ It also provides messaging APIs enabling you to:
   - : The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
 - {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}
   - : The category of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningSeverity")}}
+  - : The severity of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onRestartRequired")}} event is being dispatched.
 
