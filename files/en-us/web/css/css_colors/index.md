@@ -56,7 +56,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
-- [`<absolute-color-function>`](#functions)
+- [`<color-function>`](#functions)
 - {{cssxref("hex-color")}}
 - {{cssxref("named-color")}}
 - {{cssxref("alpha-value")}}

@@ -16581,27 +16581,6 @@
       "Roc"
     ]
   },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-24T00:04:18.819Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "teoli",
-      "fscholz",
-      "mrolappe",
-      "Bedi",
-      "Mgjbot",
-      "Indigo",
-      "NickolayBot",
-      "Nickolay",
-      "Matmota",
-      "Chbok",
-      "Jesse",
-      "Dria",
-      "DarinFisher",
-      "cbiesinger"
-    ]
-  },
   "Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests": {
     "modified": "2019-03-24T00:05:36.282Z",
     "contributors": [
@@ -98308,24 +98287,6 @@
       "mfluehr",
       "chrisdavidmills",
       "teoli"
-    ]
-  },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:31:57.783Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "mfuji09",
-      "SphinxKnight",
-      "ExE-Boss",
-      "rimunroe",
-      "chrisdavidmills",
-      "kbrosnan",
-      "Jamie0",
-      "Sebastianz",
-      "ddurst",
-      "teoli",
-      "Kikketer"
     ]
   },
   "Web/HTML/Global_attributes/data-*": {

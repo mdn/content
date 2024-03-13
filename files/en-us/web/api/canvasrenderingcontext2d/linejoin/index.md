@@ -39,8 +39,7 @@ There are three possible values for this property: `"round"`, `"bevel"`, and `"m
 - `"miter"`
   - : Connected segments are joined by extending their outside edges to connect at a
     single point, with the effect of filling an additional lozenge-shaped area. This
-    setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit",
-    "miterLimit")}} property. Default value.
+    setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} property. Default value.
 
 ## Examples
 

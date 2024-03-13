@@ -46,8 +46,8 @@ A new {{domxref("DOMPointReadOnly")}} object (which is identical to the source p
 ### Creating a 2D point
 
 This sample creates a 2D point, specifying an inline object that includes the values to
-use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y",
-  "y")}}. The `z` and `w` properties are allowed to keep their
+use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y", "y")}}.
+The `z` and `w` properties are allowed to keep their
 default values (`0` and `1` respectively).
 
 ```js

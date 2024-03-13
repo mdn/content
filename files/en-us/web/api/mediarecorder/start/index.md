@@ -74,8 +74,7 @@ handler to respond to these errors.
     - The `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specificed when creating the `MediaRecorder`.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
-    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device. This
+    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device. This
     exception may also be delivered as an {{domxref("MediaRecorder.error_event", "error")}} event if
     the security options for the source media change after recording begins.
 

@@ -115,9 +115,8 @@ function sendText() {
 
 WebSockets is an event-driven API; when messages are received, a `message`
 event is sent to the `WebSocket` object. To handle it, add an event listener
-for the `message` event, or use the {{domxref("WebSocket/message_event",
-  "onmessage")}} event handler. To begin listening for incoming data, you can do something
-like this:
+for the `message` event, or use the {{domxref("WebSocket/message_event", "onmessage")}} event handler.
+To begin listening for incoming data, you can do something like this:
 
 ```js
 exampleSocket.onmessage = (event) => {
