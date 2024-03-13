@@ -10,8 +10,7 @@ browser-compat: api.RTCIceParameters.password
 
 The **{{domxref("RTCIceParameters")}}**
 dictionary's **`password`** property specifies the ICE
-password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment",
-    "usernameFragment")}}, uniquely identifies an ICE session for its entire
+password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}}, uniquely identifies an ICE session for its entire
 duration.
 
 ## Value

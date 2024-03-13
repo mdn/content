@@ -2,7 +2,7 @@
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-dasharray
+browser-compat: svg.global_attributes.stroke-dasharray
 ---
 
 {{SVGRef}}

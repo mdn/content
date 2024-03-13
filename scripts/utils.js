@@ -50,3 +50,41 @@ export function getRootDir() {
 export function isImagePath(path) {
   return IMG_RX.test(path);
 }
+
+/*
+ * Returns locations (line and column numbers) of 'searchValue' in the given 'content'.
+ */
+export function getLocations(content, searchValue) {
+  const lineLengths = content.split("\n").map((line) => line.length);
+  const searchRx =
+    searchValue instanceof RegExp
+      ? searchValue
+      : new RegExp(searchValue, "mig");
+  const matches = [...content.matchAll(searchRx)].map((match) => match.index);
+  const positions = [];
+
+  let currentPosition = 0;
+  lineLengths.forEach((lineLength, index) => {
+    lineLength += 1; // add '\n'
+    for (const match of matches) {
+      if (currentPosition < match && currentPosition + lineLength > match) {
+        positions.push({
+          line: index + 1,
+          column: match - currentPosition + 1,
+        });
+      }
+    }
+    currentPosition += lineLength;
+  });
+  return positions;
+}
+
+/*
+ * Convert Markdown header into URL slug.
+ */
+export function stringToFragment(text) {
+  return text
+    .trim()
+    .replace(/["#$%&+,/:;=?@[\]^`{|}~')(\\]/g, "")
+    .replace(/\s+/g, "_");
+}

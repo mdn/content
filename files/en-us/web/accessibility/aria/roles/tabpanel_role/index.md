@@ -62,7 +62,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 - [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)

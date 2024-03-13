@@ -108,13 +108,19 @@ To do this:
 
 ## Running server-side languages locally
 
-Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, but it is merely a _static_ file server; it doesn't know how to run code written in languages such as Python, PHP or JavaScript. To handle them, you'll need something more — exactly what you'll need depends on the server-side language you are trying to run. Here are a few examples:
+The best approach for working with server side languages, such as Python, PHP, or JavaScript, depends on the server-side language you are using, and whether you're working with a web framework or "stand-alone" code.
 
-- To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a [guide](/en-US/docs/Learn/Server-side/Django) is available), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
-- To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs).
-- To run PHP server-side code, launch [PHP's built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
+If you're working with a web framework, usually the framework will provide its own development server.
+For example, the following languages/frameworks come with a development server:
+
+- Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
+- Node/JavaScript frameworks such as [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs)
+- PHP has its own [built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash
   cd path/to/your/php/code
   php -S localhost:8000
   ```
+
+If you're not working directly with with a server-side framework or a programming language that provides a development server, Python's `http.server` module can also be used to test server-side code written in languages such as Python, PHP, JavaScript, and so on, by invoking server-side Common Gateway Interface (CGI) scripts.
+For examples of how to use this feature see [Execute a Script Remotely Through the Common Gateway Interface (CGI)](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi) in _How to Launch an HTTP Server in One Line of Python Code_ on realpython.com.

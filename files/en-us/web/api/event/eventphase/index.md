@@ -29,8 +29,7 @@ flow. Possible values are:
     called are triggered during this phase.
 - `Event.AT_TARGET (2)`
   - : The event has arrived at
-    {{domxref("EventTarget", "the event's target", "",
-        1)}}.
+    {{domxref("EventTarget", "the event's target", "", 1)}}.
     Event listeners registered for this phase are called at this time. If
     {{domxref("Event.bubbles")}} is `false`, processing
     the event is finished after this phase is complete.

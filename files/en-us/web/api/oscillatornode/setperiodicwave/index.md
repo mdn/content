@@ -8,8 +8,7 @@ browser-compat: api.OscillatorNode.setPeriodicWave
 
 {{ APIRef("Web Audio API") }}
 
-The **`setPeriodicWave()`** method of the {{
-  domxref("OscillatorNode") }} interface is used to point to a {{domxref("PeriodicWave")}}
+The **`setPeriodicWave()`** method of the {{domxref("OscillatorNode")}} interface is used to point to a {{domxref("PeriodicWave")}}
 defining a periodic waveform that can be used to shape the oscillator's output, when
 {{domxref("OscillatorNode.type", "type")}} is `custom`.
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WebTransportDatagramDuplexStream
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportDatagramDuplexStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a duplex stream that can be used for unreliable transport of datagrams between client and server. Provides access to a {{domxref("ReadableStream")}} for reading incoming datagrams, a {{domxref("WritableStream")}} for writing outgoing datagrams, and various settings and statistics related to the stream.
 
@@ -14,8 +14,6 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
 "Unreliable" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 

@@ -29,6 +29,8 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods can now be used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another. After transfer, the original buffer is detached from its original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}. (See [Firefox bug 1865103](https://bugzil.la/1865103) for more details.)
 
+- For parity with other browsers, [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) and the [`Date()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) only consider the first three letters of the specified month when [non-standard date strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#non-standard_date_strings) are parsed. Previously only truncated values of the full month name with three or more characters were accepted (See [Firefox bug 1862910](https://bugzil.la/1862910) for more details.)
+
 ### SVG
 
 #### Removals
@@ -44,6 +46,10 @@ This article provides information about the changes in Firefox 122 that affect d
 #### DOM
 
 - The {{domxref("HTMLSelectElement.showPicker()")}} method is now supported, allowing the browser picker for a {{HTMLElement("select")}} element to be programmatically launched when triggered by user interaction ([Firefox bug 1865207](https://bugzil.la/1865207)).
+
+#### Removals
+
+- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -92,4 +98,4 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 ## Older versions
 
-{{Firefox_for_developers(121)}}
+{{Firefox_for_developers}}

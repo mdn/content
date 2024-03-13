@@ -92,7 +92,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 #### DOM & HTML DOM
 
-- When unable to parse the [`srcset`](/en-US/docs/Web/HTML/Element/image#srcset), the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ([Firefox bug 1139560](https://bugzil.la/1139560)).
+- When unable to parse the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset), the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ([Firefox bug 1139560](https://bugzil.la/1139560)).
 - Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ([Firefox bug 1145439](https://bugzil.la/1145439)).
 - {{domxref("Navigator.taintEnabled")}} is no longer available for Web workers ([Firefox bug 1154878](https://bugzil.la/1154878)).
 
@@ -166,4 +166,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers('39')}}
+{{Firefox_for_developers}}
