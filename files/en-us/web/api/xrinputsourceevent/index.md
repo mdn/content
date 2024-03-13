@@ -31,17 +31,17 @@ _The `XRInputSourceEvent` interface doesn't define any methods; however, several
 
 ## Event types
 
-- {{domxref("XRSession.select_event", "select")}}
+- {{domxref("XRSession.select_event", "select")}} {{SecureContext_Inline}}
   - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions).
-- {{domxref("XRSession.selectend_event", "selectend")}}
+- {{domxref("XRSession.selectend_event", "selectend")}} {{SecureContext_Inline}}
   - : Sent to an {{domxref("XRSession")}} when an ongoing [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions) ends, or when an input source with an ongoing primary action has been disconnected from the system.
-- {{domxref("XRSession.selectstart_event", "selectstart")}}
+- {{domxref("XRSession.selectstart_event", "selectstart")}} {{SecureContext_Inline}}
   - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions), indicating that the user has begun a command-like input, such as pressing a trigger or button, issuing a spoken command, tapping on a touchpad, or the like.
-- {{domxref("XRSession.squeeze_event", "squeeze")}}
+- {{domxref("XRSession.squeeze_event", "squeeze")}} {{SecureContext_Inline}}
   - : Sent to an {{domxref("XRSession")}} when the sending input source has fully completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions).
-- {{domxref("XRSession.squeezeend_event", "squeezeend")}}
+- {{domxref("XRSession.squeezeend_event", "squeezeend")}} {{SecureContext_Inline}}
   - : Sent to an {{domxref("XRSession")}} when an ongoing [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) ends or when an input source with an ongoing primary squeeze action is disconnected.
-- {{domxref("XRSession.squeezestart_event", "squeezestart")}}
+- {{domxref("XRSession.squeezestart_event", "squeezestart")}} {{SecureContext_Inline}}
   - : Sent to an {{domxref("XRSession")}} when an input source begins its [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions), indicating that the user has begun to grab, squeeze, or grip the controller.
 
 ## Examples

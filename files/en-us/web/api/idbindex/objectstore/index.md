@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBIndex.objectStore
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`objectStore`** property of the {{domxref("IDBIndex")}}
 interface returns the object store referenced by the current index.
-
-{{AvailableInWorkers}}
 
 ## Value
 

@@ -85,4 +85,4 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ## Older versions
 
-{{Firefox_for_developers(115)}}
+{{Firefox_for_developers}}

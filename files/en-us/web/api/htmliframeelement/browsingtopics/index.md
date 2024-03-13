@@ -4,11 +4,12 @@ short-title: browsingTopics
 slug: Web/API/HTMLIFrameElement/browsingTopics
 page-type: web-api-instance-property
 status:
+  - experimental
   - non-standard
 browser-compat: api.HTMLIFrameElement.browsingTopics
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 

@@ -89,7 +89,7 @@ nourl.jpg            /* An image file must be defined using the url() function. 
 url(report.pdf)      /* A file pointed to by the url() function must be an image. */
 element(#fakeid)     /* An element ID must be an existing ID on the page. */
 image(z.jpg#xy=0,0)  /* The spatial fragment must be written in the format of xywh=#,#,#,# */
-image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolutions */
+image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolution */
 ```
 
 ## Specifications

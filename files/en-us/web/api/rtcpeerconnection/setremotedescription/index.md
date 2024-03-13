@@ -102,8 +102,7 @@ by `setRemoteDescription()`:
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error does not match the ones specified here. This includes identity validation errors.
 - `RTCError` {{domxref("DOMException")}}
-  - : Returned with the {{domxref("RTCError.errorDetail",
-    "errorDetail")}} set to `sdp-syntax-error` if the
+  - : Returned with the {{domxref("RTCError.errorDetail", "errorDetail")}} set to `sdp-syntax-error` if the
     {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
@@ -117,8 +116,8 @@ by `setRemoteDescription()`:
 
 When you call `setRemoteDescription()`, the ICE agent checks to make sure
 the {{domxref("RTCPeerConnection")}} is in either the `stable` or
-`have-remote-offer` {{domxref("RTCPeerConnection.signalingState",
-  "signalingState")}}. These states indicate that either an existing connection is being
+`have-remote-offer` {{domxref("RTCPeerConnection.signalingState", "signalingState")}}.
+These states indicate that either an existing connection is being
 renegotiated or that an offer previously specified by an earlier call to
 `setRemoteDescription()` is to be replaced with the new offer. In either of
 those two cases, we're at the beginning of the negotiation process, and the offer is
