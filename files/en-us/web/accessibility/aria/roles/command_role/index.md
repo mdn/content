@@ -21,7 +21,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)

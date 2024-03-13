@@ -4,10 +4,11 @@ slug: Web/HTTP/Headers/Want-Digest
 page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.Want-Digest
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}
+{{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`Want-Digest`** HTTP header is primarily used in a request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
 

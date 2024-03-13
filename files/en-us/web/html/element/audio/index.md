@@ -33,7 +33,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
-    The allowed values are `no`, `nofullscreen` and `noremoteplayback`.
+    The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
 - `crossorigin`
 
@@ -62,14 +62,14 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `none`: Indicates that the audio should not be preloaded.
     - `metadata`: Indicates that only audio metadata (e.g. length) is fetched.
-    - `auto`: Indicates that the whole audio file can be ed, even if the user is not expected to use it.
+    - `auto`: Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
     - _empty string_: A synonym of the `auto` value.
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
     > **Note:**
     >
-    > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start ing the audio for playback.
+    > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the audio for playback.
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
 - `src`
@@ -422,7 +422,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

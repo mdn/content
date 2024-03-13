@@ -65,8 +65,6 @@ Content-Type: text/html
 
 ### Preload example
 
-> **Warning:** Some browsers only support `preconnect` over 103 Early Hints. See the implementation notes in the [browser compatibility](#browser_compatibility) section below.
-
 The following `103` early hint response indicates a stylesheet `style.css` might be needed by the final response.
 
 ```http

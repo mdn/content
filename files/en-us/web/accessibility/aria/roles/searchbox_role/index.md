@@ -61,7 +61,7 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)

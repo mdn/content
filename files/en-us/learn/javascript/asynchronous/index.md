@@ -8,15 +8,6 @@ page-type: learn-module
 
 In this module, we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Asynchronous JavaScript is a fairly advanced topic, and you are advised to work through [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks) modules before attempting this.

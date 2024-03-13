@@ -74,8 +74,7 @@ handler to respond to these errors.
     - The `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specificed when creating the `MediaRecorder`.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
-    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device. This
+    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device. This
     exception may also be delivered as an {{domxref("MediaRecorder.error_event", "error")}} event if
     the security options for the source media change after recording begins.
 
@@ -100,6 +99,6 @@ record.onclick = () => {
 
 - [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
-- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://github.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

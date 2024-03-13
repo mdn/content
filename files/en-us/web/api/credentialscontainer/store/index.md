@@ -30,6 +30,11 @@ store(credentials)
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if there is also a credential of the same type as the current one under operation.
+
 ## Examples
 
 ### Storing a password credential at successful authentication

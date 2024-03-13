@@ -185,7 +185,7 @@ The navigation example has a static button. The submenu example has a button tha
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)

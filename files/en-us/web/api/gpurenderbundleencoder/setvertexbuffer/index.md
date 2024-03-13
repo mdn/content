@@ -50,9 +50,7 @@ The following criteria must be met when calling **`setVertexBuffer()`**, otherwi
 ### Set vertex buffer
 
 ```js
-function recordRenderPass(
-  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder // TypeScript
-) {
+function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
     passEncoder.setPipeline(dynamicPipeline);
   } else {

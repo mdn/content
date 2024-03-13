@@ -109,6 +109,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
   - {{cssxref("@container")}} at-rule
   - [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+  - [Using size and style container queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
   - {{cssxref("@supports")}} at-rule
   - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)

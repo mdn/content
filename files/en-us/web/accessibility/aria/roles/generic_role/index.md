@@ -33,7 +33,7 @@ This role is for use by user agents and not by developers. As such, no appropria
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('div')}} and {{HTMLElement('span')}} elements
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) roles such as

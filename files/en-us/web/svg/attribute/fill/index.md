@@ -2,7 +2,7 @@
 title: fill
 slug: Web/SVG/Attribute/fill
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill
+browser-compat: svg.global_attributes.fill
 ---
 
 {{SVGRef}}

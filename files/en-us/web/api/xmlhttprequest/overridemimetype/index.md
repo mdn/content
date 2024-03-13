@@ -15,8 +15,7 @@ transferred in a request.
 
 This may be used, for example, to force a stream to
 be treated and parsed as `"text/xml"`, even if the server does not report it
-as such. This method must be called before calling {{domxref("XMLHttpRequest.send",
-  "send()")}}.
+as such. This method must be called before calling {{domxref("XMLHttpRequest.send", "send()")}}.
 
 ## Syntax
 
