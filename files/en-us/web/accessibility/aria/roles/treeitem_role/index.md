@@ -232,7 +232,7 @@ If the tree has more than 7 tree items, including type ahead functionality is re
 
 {{Specifications}}
 
-## See Also
+## See also
 
 <section id="Quick_links">
 

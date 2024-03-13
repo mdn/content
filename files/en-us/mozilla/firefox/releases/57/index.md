@@ -239,4 +239,4 @@ The following APIs have been added or extended:
 
 ## Older versions
 
-{{Firefox_for_developers(56)}}
+{{Firefox_for_developers}}

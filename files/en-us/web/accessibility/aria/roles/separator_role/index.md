@@ -120,7 +120,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - Thematic break HTML {{HTMLElement('hr')}} element
 - [Example separator in a menubar](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-editor/)

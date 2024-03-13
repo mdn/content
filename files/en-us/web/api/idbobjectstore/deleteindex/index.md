@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.deleteIndex
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`deleteIndex()`** method of the
 {{domxref("IDBObjectStore")}} interface destroys the index with the specified name in
@@ -15,8 +15,6 @@ the connected database, used during a version upgrade.
 Note that this method must be called only from a `VersionChange` transaction
 mode callback. Note that this method synchronously modifies the
 {{domxref("IDBObjectStore.indexNames")}} property.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

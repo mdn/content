@@ -17,18 +17,6 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 {{svginfo}}
 
-## Attributes
-
-### Global attributes
-
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
-
 ## DOM Interface
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.
