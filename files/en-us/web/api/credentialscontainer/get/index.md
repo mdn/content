@@ -50,7 +50,7 @@ get(options)
 
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
 
-    Each of the following properties represents a _credential type_ being requested:
+    - : Each of the following properties represents a _credential type_ being requested:
 
     - `federated` {{optional_inline}}
       - : An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
