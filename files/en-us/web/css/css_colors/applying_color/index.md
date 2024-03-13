@@ -127,7 +127,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255 0 0 /
 Aside from `rgb()`, you can use `hsl()` and `hwb()` which take a `<hue>` component.
 A [`<hue>`](/en-US/docs/Web/CSS/hue) is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
-For more information on classifying these functions, see the [Color spaces and color models](#color-spaces-and-color-models) section.
+For more information on classifying these functions, see the [Color spaces and color models](#color_spaces_and_color_models) section.
 
 #### HSL functional notation
 
@@ -176,7 +176,7 @@ td {
 }
 
 th {
-  background-color: hsl(0, 0%, 75%);
+  background-color: hsl(0 0% 75%);
 }
 ```
 
@@ -190,28 +190,28 @@ th {
   </thead>
   <tbody>
     <tr>
-      <td><code>hsl(90deg, 100%, 50%)</code></td>
-      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
+      <td><code>hsl(90deg 100% 50%)</code></td>
+      <td style="background-color: hsl(90deg 100% 50%);">&nbsp;</td>
     </tr>
     <tr>
-      <td><code>hsl(90, 100%, 50%)</code></td>
-      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
+      <td><code>hsl(90 100% 50%)</code></td>
+      <td style="background-color: hsl(90 100% 50%);">&nbsp;</td>
     </tr>
     <tr>
-      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
+      <td><code>hsl(0.15turn 50% 75%)</code></td>
+      <td style="background-color: hsl(0.15turn 50% 75%);">&nbsp;</td>
     </tr>
     <tr>
-      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
+      <td><code>hsl(0.15turn 90% 75%)</code></td>
+      <td style="background-color: hsl(0.15turn 90% 75%);">&nbsp;</td>
     </tr>
     <tr>
-      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
+      <td><code>hsl(0.15turn 90% 50%)</code></td>
+      <td style="background-color: hsl(0.15turn 90% 50%);">&nbsp;</td>
     </tr>
     <tr>
-      <td><code>hsl(270deg, 90%, 50%)</code></td>
-      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
+      <td><code>hsl(270deg 90% 50%)</code></td>
+      <td style="background-color: hsl(270deg 90% 50%);">&nbsp;</td>
     </tr>
   </tbody>
 </table>
@@ -483,9 +483,9 @@ The `.boxLeft` class—which, cleverly, is used to style the box on the left—f
 ```css
 .boxRight {
   float: right;
-  background-color: hsl(270deg, 50%, 75%);
+  background-color: hsl(270deg 50% 75%);
   outline: 4px dashed rgb(110 20 120);
-  color: hsl(0deg, 100%, 100%);
+  color: hsl(0deg 100% 100%);
   text-decoration: underline wavy #88ff88;
   text-shadow: 2px 2px 3px black;
 }
@@ -495,9 +495,9 @@ The `.boxLeft` class—which, cleverly, is used to style the box on the left—f
 
 Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. It's configured to float the box to the right so that it appears next to the previous box. Then the following colors are established:
 
-- The `background-color` is set using the HSL value specified using `hsl(270deg, 50%, 75%)`. This is a medium purple color.
+- The `background-color` is set using the HSL value specified using `hsl(270deg 50% 75%)`. This is a medium purple color.
 - The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple (`rgb(110 20 120)`).
-- The foreground (text) color is specified by setting the {{cssxref("color")}} property to `hsl(0deg, 100%, 100%)`. This is one of many ways to specify the color white.
+- The foreground (text) color is specified by setting the {{cssxref("color")}} property to `hsl(0deg 100% 100%)`. This is one of many ways to specify the color white.
 - We add a green wavy line under the text with {{cssxref("text-decoration")}}.
 - Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
 

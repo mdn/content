@@ -6,12 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.getAll
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`getAll()`** method of the {{domxref("URLSearchParams")}}
 interface returns all the values associated with a given search parameter as an array.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

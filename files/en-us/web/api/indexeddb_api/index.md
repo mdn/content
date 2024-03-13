@@ -5,11 +5,9 @@ page-type: web-api-overview
 spec-urls: https://w3c.github.io/IndexedDB/
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{DefaultAPISidebar("IndexedDB")}} {{AvailableInWorkers}}
 
 IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data. While [Web Storage](/en-US/docs/Web/API/Web_Storage_API) is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution. This is the main landing page for MDN's IndexedDB coverage — here we provide links to the full API reference and usage guides, browser support details, and some explanation of key concepts.
-
-{{AvailableInWorkers}}
 
 ## Key concepts and usage
 
@@ -30,7 +28,7 @@ There are a number of web technologies that store data of one kind or another on
 
 ## Interfaces
 
-To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open) on the [`indexedDB`](/en-US/docs/Web/API/indexedDB) attribute of a [window](/en-US/docs/Web/API/Window) object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.
+To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open) on the [`indexedDB`](/en-US/docs/Web/API/indexedDB) property of a [window](/en-US/docs/Web/API/Window) object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.
 
 ### Connecting to a database
 
@@ -57,8 +55,6 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
   - : Iterates over object stores and indexes and returns the cursor's current value.
 - {{domxref("IDBKeyRange")}}
   - : Defines a key range that can be used to retrieve data from a database in a certain range.
-- {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).) This interface isn't part of the 2.0 specification.
 
 ### Custom event interfaces
 

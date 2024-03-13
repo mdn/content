@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetailed.isPrimary
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`isPrimary`** read-only property of the
 {{domxref("ScreenDetailed")}} interface is a boolean indicating whether the screen is set as the operating system (OS) primary screen or not.

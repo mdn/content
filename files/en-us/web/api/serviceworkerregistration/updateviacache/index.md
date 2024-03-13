@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`updateViaCache`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the update via cache mode associated with the current service worker registration using the `updateViaCache` parameter specified when register the service worker by calling {{domxref('ServiceWorkerContainer.register()')}}. Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers control over this behavior.
-
-{{AvailableInWorkers}}
 
 ## Value
 
