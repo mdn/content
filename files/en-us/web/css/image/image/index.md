@@ -116,7 +116,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 
 ```css
 .quarterlogo {
-  background-image: image(rgba(0, 0, 0, 0.25)), url("firefox.png");
+  background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }

@@ -18,6 +18,7 @@ The **`word-break`** [CSS](/en-US/docs/Web/CSS) property sets whether line break
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
+word-break: auto-phrase; /* experimental */
 word-break: break-word; /* deprecated */
 
 /* Global values */
@@ -38,10 +39,14 @@ The `word-break` property is specified as a single keyword chosen from the list 
   - : To prevent overflow, word breaks should be inserted between any two characters (excluding Chinese/Japanese/Korean text).
 - `keep-all`
   - : Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for `normal`.
+- `auto-phrase` {{Experimental_Inline}}
+  - : Has the same effect as `word-break: normal` except that language-specific analysis is performed to improve word breaks by not placing them in the middle of natural phrases.
 - `break-word` {{Deprecated_Inline}}
   - : Has the same effect as `overflow-wrap: anywhere` combined with `word-break: normal`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
 
 > **Note:** In contrast to `word-break: break-word` and `overflow-wrap: break-word` (see {{cssxref("overflow-wrap")}}), `word-break: break-all` will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).
+
+The specification also lists an additional value, `manual`, which is not currently supported in any browsers. When implemented, `manual` will have the same effect as `word-break: normal` except that breaks won't be automatically inserted in Southeast Asian languages. This is needed because, in such languages, user agents frequently place breaks in suboptimal positions. `manual` will allow you to insert line breaks in optimal positions manually.
 
 ## Formal definition
 
@@ -77,7 +82,21 @@ The `word-break` property is specified as a single keyword chosen from the list 
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>4. <code>word-break: break-word</code></p>
+<p>4. <code>word-break: manual</code></p>
+<p class="manual narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
+
+<p>5. <code>word-break: auto-phrase</code></p>
+<p class="autoPhrase narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
+
+<p>6. <code>word-break: break-word</code></p>
 <p class="breakWord narrow">
   This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
   Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
@@ -108,6 +127,14 @@ The `word-break` property is specified as a single keyword chosen from the list 
 
 .keepAll {
   word-break: keep-all;
+}
+
+.manual {
+  word-break: manual;
+}
+
+.autoPhrase {
+  word-break: auto-phrase;
 }
 
 .breakWord {

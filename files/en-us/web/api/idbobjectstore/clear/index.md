@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.clear
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`clear()`** method of the {{domxref("IDBObjectStore")}}
 interface creates and immediately returns an {{domxref("IDBRequest")}} object, and
@@ -17,8 +17,6 @@ Clearing an object store consists of removing all records from the object store 
 removing all records in indexes that reference the object store. To remove only some of
 the records in a store, use {{domxref("IDBObjectStore.delete")}} passing a key
 or {{domxref("IDBKeyRange")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

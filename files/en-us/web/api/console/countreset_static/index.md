@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.countReset_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.countReset()`** static method resets counter used with {{domxref("console/count_static", "console.count()")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

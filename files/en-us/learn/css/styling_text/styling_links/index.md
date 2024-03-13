@@ -13,7 +13,7 @@ When styling [links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperl
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study

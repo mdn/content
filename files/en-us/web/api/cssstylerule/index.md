@@ -16,7 +16,7 @@ The **`CSSStyleRule`** interface represents a single CSS style rule.
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSStyleRule.selectorText")}}
-  - : Returns the textual representation of the selector for this rule, e.g. `"h1,h2"`.
+  - : Returns the textual representation of the selector for this rule, e.g. `"h1, h2"`.
 - {{domxref("CSSStyleRule.style")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CSSStyleDeclaration")}} object for the rule.
 - {{domxref("CSSStyleRule.styleMap")}} {{ReadOnlyInline}}

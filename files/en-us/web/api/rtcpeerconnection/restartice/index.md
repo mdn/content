@@ -64,8 +64,8 @@ For details about how ICE restart works, see
 ## Examples
 
 This example creates a handler for the
-{{domxref("RTCPeerConnection.iceconnectionstatechange_event",
-  "iceconnectionstatechange")}} event that handles a transition to the `failed`
+{{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+event that handles a transition to the `failed`
 state by restarting ICE in order to try again.
 
 ```js
@@ -79,8 +79,8 @@ pc.addEventListener("iceconnectionstatechange", (event) => {
 ```
 
 With this code in place, a transition to the `failed` state during ICE
-negotiation will cause a {{domxref("RTCPeerConnection.negotiationneeded_event",
-  "negotiationneeded")}} event to be fired, in response to which your code should
+negotiation will cause a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+event to be fired, in response to which your code should
 renegotiate as usual. However, because you have called `restartIce()`, your
 call to {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} which occurs in
 the handler for `negotiationneeded` will trigger an ICE restart rather than

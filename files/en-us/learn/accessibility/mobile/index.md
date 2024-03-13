@@ -13,8 +13,8 @@ With web access on mobile devices being so popular and renowned platforms such a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
-        JavaScript, and an understanding of the
+        A basic understanding of HTML, CSS, and
+        JavaScript. An understanding of the
         <a href="/en-US/docs/Learn/Accessibility"
           >previous articles in the course</a
         >.

@@ -144,6 +144,27 @@ Also in Level 4 is the `pointer` media feature. This takes three possible values
 
 Using `pointer` can help you to design better interfaces that respond to the type of interaction a user is having with a screen. For example, you could create larger hit areas if you know that the user is interacting with the device as a touchscreen.
 
+#### Using ranged syntax
+
+One common case is to check if the viewport width is between two values:
+
+```css
+@media (min-width: 30em) and (max-width: 50em) {
+  /* … */
+}
+```
+
+If you want to improve the readability of this, you can use "range" syntax:
+
+```css
+@media (30em <= width <= 50em) {
+  /* … */
+}
+```
+
+So in this case, styles are applied when the viewport width is between `30em` and `50em`.
+For more information on using this style, see [Using Media Queries: Syntax improvements in Level 4](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4)
+
 ## More complex media queries
 
 With all of the different possible media queries, you may want to combine them, or create lists of queries — any of which could be matched.

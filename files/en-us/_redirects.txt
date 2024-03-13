@@ -7,7 +7,7 @@
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
-/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/AJAX	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Community	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Getting_Started	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
@@ -114,7 +114,6 @@
 /en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-/en-US/docs/Accessibility/Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
@@ -123,12 +122,11 @@
 /en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility:Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility:Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Adding_Extensions_using_the_Windows_Registry	https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
 /en-US/docs/Adding_feed_readers_to_Firefox	/en-US/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
@@ -606,7 +604,7 @@
 /en-US/docs/CSS/background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS/background-repeat	/en-US/docs/Web/CSS/background-repeat
 /en-US/docs/CSS/background-size	/en-US/docs/Web/CSS/background-size
-/en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/CSS/border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS/border-bottom	/en-US/docs/Web/CSS/border-bottom
 /en-US/docs/CSS/border-bottom-color	/en-US/docs/Web/CSS/border-bottom-color
@@ -801,7 +799,7 @@
 /en-US/docs/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/CSS/resize	/en-US/docs/Web/CSS/resize
 /en-US/docs/CSS/resolution	/en-US/docs/Web/CSS/resolution
-/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/CSS/right	/en-US/docs/Web/CSS/right
 /en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
@@ -986,7 +984,7 @@
 /en-US/docs/CSS:background-image	/en-US/docs/Web/CSS/background-image
 /en-US/docs/CSS:background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS:background-repeat	/en-US/docs/Web/CSS/background-repeat
-/en-US/docs/CSS:block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/CSS:block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/CSS:border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS:border-bottom	/en-US/docs/Web/CSS/border-bottom
 /en-US/docs/CSS:border-bottom-color	/en-US/docs/Web/CSS/border-bottom-color
@@ -1232,7 +1230,7 @@
 /en-US/docs/DOM/DOM_event_reference/compositionstart	/en-US/docs/Web/API/Element/compositionstart_event
 /en-US/docs/DOM/DOM_event_reference/compositionupdate	/en-US/docs/Web/API/Element/compositionupdate_event
 /en-US/docs/DOM/DOM_event_reference/error	/en-US/docs/Web/API/HTMLElement/error_event
-/en-US/docs/DOM/DOM_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/DOM/DOM_event_reference/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/DOM/DOM_event_reference/mouseenter	/en-US/docs/Web/API/Element/mouseenter_event
 /en-US/docs/DOM/DOM_event_reference/mouseleave	/en-US/docs/Web/API/Element/mouseleave_event
 /en-US/docs/DOM/DOM_event_reference/mousewheel	/en-US/docs/Web/API/Element/mousewheel_event
@@ -1459,7 +1457,7 @@
 /en-US/docs/DOM/Mozilla_event_reference/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/DOM/Mozilla_event_reference/gamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/DOM/Mozilla_event_reference/hashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/DOM/Mozilla_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/DOM/Mozilla_event_reference/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/DOM/Mozilla_event_reference/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/DOM/Mozilla_event_reference/keydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM/Mozilla_event_reference/keypress	/en-US/docs/Web/API/Element/keypress_event
@@ -1574,7 +1572,6 @@
 /en-US/docs/DOM/NodeList	/en-US/docs/Web/API/NodeList
 /en-US/docs/DOM/NodeList.item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/DOM/NodeList.item2	/en-US/docs/Web/API/NodeList/item
-/en-US/docs/DOM/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/DOM/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/DOM/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/DOM/PannerNode	/en-US/docs/Web/API/PannerNode
@@ -2099,7 +2096,6 @@
 /en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2174,11 +2170,10 @@
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/DOM/window.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/DOM/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/DOM/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/DOM/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -2560,7 +2555,6 @@
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/crypto_property
-/en-US/docs/DOM:window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM:window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM:window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM:window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2608,7 +2602,6 @@
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/Element/click_event
 /en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
-/en-US/docs/DOM:window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM:window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM:window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM:window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
@@ -2898,7 +2891,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.root	/en-US/docs/Web/API/NodeIterator/root
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.whatToShow	/en-US/docs/Web/API/NodeIterator/whatToShow
 /en-US/docs/Document_Object_Model_(DOM)/NodeList	/en-US/docs/Web/API/NodeList
-/en-US/docs/Document_Object_Model_(DOM)/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/Document_Object_Model_(DOM)/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/Document_Object_Model_(DOM)/Plugin	/en-US/docs/Web/API/Plugin
 /en-US/docs/Document_Object_Model_(DOM)/PluginArray	/en-US/docs/Web/API/PluginArray
@@ -3276,7 +3268,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Document_Object_Model_(DOM)/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Document_Object_Model_(DOM)/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/Window/forward
@@ -3329,11 +3320,10 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Document_Object_Model_(DOM)/window.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -3579,6 +3569,7 @@
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
 /en-US/docs/Glossary/Block/Block_(scripting)	/en-US/docs/Glossary/Block/Scripting
 /en-US/docs/Glossary/Boot2Gecko	/en-US/docs/Glossary/Firefox_OS
+/en-US/docs/Glossary/Brotli	/en-US/docs/Glossary/Brotli_compression
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext
@@ -3591,6 +3582,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
+/en-US/docs/Glossary/GZip	/en-US/docs/Glossary/GZip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -3618,7 +3610,6 @@
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
-/en-US/docs/Glossary/Symbol	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Glossary/Transferable_objects	/en-US/docs/Web/API/Web_Workers_API/Transferable_objects
 /en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)	/en-US/docs/Glossary/TCP
 /en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
@@ -3654,8 +3645,8 @@
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/Element/HTMLHeadElement	/en-US/docs/Web/API/HTMLHeadElement
 /en-US/docs/HTML/Element/Heading_Elements	/en-US/docs/Web/HTML/Element/Heading_Elements
-/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/Img
-/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/img
+/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/HTML/Element/Input	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/Input-redirect-1	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/a	/en-US/docs/Web/HTML/Element/a
@@ -4007,7 +3998,7 @@
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
 /en-US/docs/IPv6	/en-US/docs/Glossary/IPv6
 /en-US/docs/Inbox/Advance_HTML_Tags	/en-US/docs/Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Inbox/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Inbox/Writing_a_WebSocket_server_in_Java	/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 /en-US/docs/Incorrect_MIME_Type_for_CSS_Files	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -5160,7 +5151,7 @@
 /en-US/docs/JavaScript_typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/JavaScript_typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/JavaScript_typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
-/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 /en-US/docs/Learn/CSS/Basics	/en-US/docs/Learn/CSS/First_steps
@@ -5255,6 +5246,7 @@
 /en-US/docs/Learn/Forms/Your_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_form/Example	/en-US/docs/Learn/Forms/Your_first_form
+/en-US/docs/Learn/Front-end_web_developer	https://developer.mozilla.org/en-US/curriculum/
 /en-US/docs/Learn/Getting_started_with_the_web/How_to_set_up_your_work_environment	/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_web_site	/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
@@ -5407,11 +5399,15 @@
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
-/en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
+/en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
-/en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Community/Issues/Issue_triage	/en-US/docs/MDN/Community/Issues
+/en-US/docs/MDN/Community/MDN_content	/en-US/docs/MDN/Community/Contributing
+/en-US/docs/MDN/Community/MDN_content/Issues	/en-US/docs/MDN/Community/Issues
+/en-US/docs/MDN/Community/MDN_content/Pull_requests	/en-US/docs/MDN/Community/Pull_requests
 /en-US/docs/MDN/Community/Users_teams	/en-US/docs/MDN/Community/Roles_teams
+/en-US/docs/MDN/Contribute	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Changelog
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Writing_guidelines
@@ -5421,15 +5417,15 @@
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_subpage	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Contribute/Does_this_belong	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Contribute/Editor/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Feedback	/en-US/docs/MDN/Community
-/en-US/docs/MDN/Contribute/Fixing_MDN_content_bugs	/en-US/docs/MDN/Community/MDN_content
+/en-US/docs/MDN/Contribute/Fixing_MDN_content_bugs	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Getting_started	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/GitHub_beginners	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/GitHub_best_practices	/en-US/docs/MDN/Community/Issues
@@ -5454,14 +5450,14 @@
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_subpage	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Guidelines/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Guidelines/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Guidelines/Video	/en-US/docs/MDN/Writing_guidelines/Howto/Images_media
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Help_beginners	/en-US/docs/MDN/Community/Learn_forum
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
-/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -5484,11 +5480,13 @@
 /en-US/docs/MDN/Contribute/Localize	/en-US/docs/MDN/Community/Contributing/Translated_content
 /en-US/docs/MDN/Contribute/Markdown_in_MDN	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Open_source_etiquette	/en-US/docs/MDN/Community/Open_source_etiquette
+/en-US/docs/MDN/Contribute/Processes	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
-/en-US/docs/MDN/Contribute/Processes/Short_surveys	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/Processes/Short_surveys	/en-US/docs/MDN/Community/Contributing
+/en-US/docs/MDN/Contribute/Processes/Workstream_assessment_project	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Writing_guidelines/Page_structures
@@ -5517,7 +5515,7 @@
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-/en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Contribute/Style_guide	/en-US/docs/MDN/Writing_guidelines
@@ -5526,7 +5524,7 @@
 /en-US/docs/MDN/Contribute/Style_guide/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /en-US/docs/MDN/Contribute/Style_guide/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/Style_guide/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Style_guide/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
@@ -5594,7 +5592,7 @@
 /en-US/docs/MDN/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 /en-US/docs/MDN/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-/en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
@@ -5607,11 +5605,12 @@
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Writing_guidelines/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto
+/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Writing_guidelines/Research_technology	/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology
 /en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
-/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN_at_ten/History	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/MDN_at_ten/History_of_MDN	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/Main_page	/en-US/
@@ -5664,7 +5663,7 @@
 /en-US/docs/Media_Streams_API	/en-US/docs/Web/API/Media_Capture_and_Streams_API
 /en-US/docs/Media_formats_supported_by_the_audio_and_video_elements	/en-US/docs/Web/Media/Formats
 /en-US/docs/Memory_Sanitizer	https://firefox-source-docs.mozilla.org/tools/sanitizer/memory_sanitizer.html#memory-sanitizer
-/en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Web/Guide/Mobile
+/en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/MouseEvent.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /en-US/docs/Mozilla/Add-ons/AMO/Policy	https://extensionworkshop.com/documentation/publish/add-on-policies/
@@ -5800,6 +5799,7 @@
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 /en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
+/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
@@ -6273,7 +6273,7 @@
 /en-US/docs/Mozilla_event_reference/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Mozilla_event_reference/gamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/Mozilla_event_reference/hashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Mozilla_event_reference/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Mozilla_event_reference/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Mozilla_event_reference/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Mozilla_event_reference/keydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Mozilla_event_reference/keypress	/en-US/docs/Web/API/Element/keypress_event
@@ -6501,8 +6501,6 @@
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
-/en-US/docs/SVG/Attribute/contentScriptType	/en-US/docs/Web/SVG/Attribute/contentScriptType
-/en-US/docs/SVG/Attribute/contentStyleType	/en-US/docs/Web/SVG/Attribute/contentStyleType
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -6522,7 +6520,6 @@
 /en-US/docs/SVG/Attribute/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/SVG/Attribute/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
 /en-US/docs/SVG/Attribute/filter	/en-US/docs/Web/SVG/Attribute/filter
-/en-US/docs/SVG/Attribute/filterRes	/en-US/docs/Web/SVG/Attribute/filterRes
 /en-US/docs/SVG/Attribute/filterUnits	/en-US/docs/Web/SVG/Attribute/filterUnits
 /en-US/docs/SVG/Attribute/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
 /en-US/docs/SVG/Attribute/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
@@ -7593,7 +7590,6 @@
 /en-US/docs/Web/API/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
-/en-US/docs/Web/API/Bluetooth/onavailabilitychanged	/en-US/docs/Web/API/Bluetooth/availabilitychanged_event
 /en-US/docs/Web/API/BluetoothAdvertisingData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/appearance	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/manufacturerData	/en-US/docs/Web/API/Web_Bluetooth_API
@@ -7966,6 +7962,7 @@
 /en-US/docs/Web/API/Document/keydown_event	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/keypress_event	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Document/keyup_event	/en-US/docs/Web/API/Element/keyup_event
+/en-US/docs/Web/API/Document/lostpointercapture_event	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
@@ -7982,7 +7979,7 @@
 /en-US/docs/Web/API/Document/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/Document/onfullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/API/Document/onfullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
-/en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/Document/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/Document/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Document/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8270,7 +8267,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers.ondblclick	/en-US/docs/Web/API/Element/dblclick_event
 /en-US/docs/Web/API/GlobalEventHandlers.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/GlobalEventHandlers.onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/GlobalEventHandlers.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/GlobalEventHandlers.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/GlobalEventHandlers.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8331,7 +8328,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/GlobalEventHandlers/onformdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
 /en-US/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
-/en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/GlobalEventHandlers/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/GlobalEventHandlers/oninvalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/GlobalEventHandlers/onkeypress	/en-US/docs/Web/API/Element/keypress_event
@@ -8415,7 +8412,7 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
-/en-US/docs/Web/API/HTMLDialogElement/cancel	/en-US/docs/Web/API/HTMLElement/cancel_event
+/en-US/docs/Web/API/HTMLDialogElement/cancel_event	/en-US/docs/Web/API/HTMLElement/cancel_event
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -8446,8 +8443,10 @@
 /en-US/docs/Web/API/HTMLElement/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/HTMLElement/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/HTMLElement/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
+/en-US/docs/Web/API/HTMLElement/beforeinput_event	/en-US/docs/Web/API/Element/beforeinput_event
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/gotpointercapture_event	/en-US/docs/Web/API/Element/gotpointercapture_event
+/en-US/docs/Web/API/HTMLElement/input_event	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLElement/lostpointercapture_event	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
@@ -8459,7 +8458,7 @@
 /en-US/docs/Web/API/HTMLElement/oncut	/en-US/docs/Web/API/HTMLElement/cut_event
 /en-US/docs/Web/API/HTMLElement/ondblclick	/en-US/docs/Web/API/Element/dblclick_event
 /en-US/docs/Web/API/HTMLElement/onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/HTMLElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/HTMLElement/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/HTMLElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/HTMLElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/HTMLElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -8564,6 +8563,7 @@
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.disabled	/en-US/docs/Web/API/HTMLSelectElement/disabled
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.form	/en-US/docs/Web/API/HTMLSelectElement/form
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex	/en-US/docs/Web/API/HTMLSelectElement/selectedIndex
+/en-US/docs/Web/API/HTMLSelectElement/autofocus	/en-US/docs/Web/API/HTMLElement/autofocus
 /en-US/docs/Web/API/HTMLStyleElement.media	/en-US/docs/Web/API/HTMLStyleElement/media
 /en-US/docs/Web/API/HTMLStyleElement.scoped	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/Web/API/HTMLStyleElement.type	/en-US/docs/Web/API/HTMLStyleElement/type
@@ -8621,6 +8621,7 @@
 /en-US/docs/Web/API/Headers/getAll	/en-US/docs/Web/API/Headers/get
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
 /en-US/docs/Web/API/History_API/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
+/en-US/docs/Web/API/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/API/IDBCursor.advance	/en-US/docs/Web/API/IDBCursor/advance
 /en-US/docs/Web/API/IDBCursor.continue	/en-US/docs/Web/API/IDBCursor/continue
 /en-US/docs/Web/API/IDBCursor.delete	/en-US/docs/Web/API/IDBCursor/delete
@@ -8698,6 +8699,7 @@
 /en-US/docs/Web/API/IDBKeyRange/lowerBound	/en-US/docs/Web/API/IDBKeyRange/lowerBound_static
 /en-US/docs/Web/API/IDBKeyRange/only	/en-US/docs/Web/API/IDBKeyRange/only_static
 /en-US/docs/Web/API/IDBKeyRange/upperBound	/en-US/docs/Web/API/IDBKeyRange/upperBound_static
+/en-US/docs/Web/API/IDBLocaleAwareKeyRange	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/Web/API/IDBMutableFile	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/abort_event	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/error_event	/en-US/docs/Web/API/IndexedDB_API
@@ -8799,8 +8801,8 @@
 /en-US/docs/Web/API/InputDeviceCapabilities/fireTouchEvents	/en-US/docs/Web/API/InputDeviceCapabilities/firesTouchEvents
 /en-US/docs/Web/API/InputEvent.InputEvent	/en-US/docs/Web/API/InputEvent/InputEvent
 /en-US/docs/Web/API/InputEvent.isComposing	/en-US/docs/Web/API/InputEvent/isComposing
-/en-US/docs/Web/API/InputEvent/input	/en-US/docs/Web/API/HTMLElement/input_event
-/en-US/docs/Web/API/InputEvent/input_event	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/InputEvent/input	/en-US/docs/Web/API/Element/input_event
+/en-US/docs/Web/API/InputEvent/input_event	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/InstallEvent/activeWorker	/en-US/docs/Web/API/InstallEvent
 /en-US/docs/Web/API/Int16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array
 /en-US/docs/Web/API/Int32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array
@@ -8915,7 +8917,7 @@
 /en-US/docs/Web/API/MediaRecorder.onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder.onstart	/en-US/docs/Web/API/MediaRecorder/start_event
 /en-US/docs/Web/API/MediaRecorder.onstop	/en-US/docs/Web/API/MediaRecorder/stop_event
-/en-US/docs/Web/API/MediaRecorder.onwarning	/en-US/docs/Web/API/MediaRecorder/warning_event
+/en-US/docs/Web/API/MediaRecorder.onwarning	/en-US/docs/Web/API/MediaRecorder
 /en-US/docs/Web/API/MediaRecorder.pause	/en-US/docs/Web/API/MediaRecorder/pause
 /en-US/docs/Web/API/MediaRecorder.requestData	/en-US/docs/Web/API/MediaRecorder/requestData
 /en-US/docs/Web/API/MediaRecorder.resume	/en-US/docs/Web/API/MediaRecorder/resume
@@ -8931,7 +8933,8 @@
 /en-US/docs/Web/API/MediaRecorder/onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder/onstart	/en-US/docs/Web/API/MediaRecorder/start_event
 /en-US/docs/Web/API/MediaRecorder/onstop	/en-US/docs/Web/API/MediaRecorder/stop_event
-/en-US/docs/Web/API/MediaRecorder/onwarning	/en-US/docs/Web/API/MediaRecorder/warning_event
+/en-US/docs/Web/API/MediaRecorder/onwarning	/en-US/docs/Web/API/MediaRecorder
+/en-US/docs/Web/API/MediaRecorder/warning_event	/en-US/docs/Web/API/MediaRecorder
 /en-US/docs/Web/API/MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API
 /en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 /en-US/docs/Web/API/MediaSessionAction	/en-US/docs/Web/API/MediaSession/setActionHandler
@@ -8964,14 +8967,15 @@
 /en-US/docs/Web/API/MediaStreamTrack.kind	/en-US/docs/Web/API/MediaStreamTrack/kind
 /en-US/docs/Web/API/MediaStreamTrack.label	/en-US/docs/Web/API/MediaStreamTrack/label
 /en-US/docs/Web/API/MediaStreamTrack.onmute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
-/en-US/docs/Web/API/MediaStreamTrack.onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event
+/en-US/docs/Web/API/MediaStreamTrack.onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrack.onunmute	/en-US/docs/Web/API/MediaStreamTrack/unmute_event
 /en-US/docs/Web/API/MediaStreamTrack.readyState	/en-US/docs/Web/API/MediaStreamTrack/readyState
 /en-US/docs/Web/API/MediaStreamTrack.stop	/en-US/docs/Web/API/MediaStreamTrack/stop
 /en-US/docs/Web/API/MediaStreamTrack/onended	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/MediaStreamTrack/onmute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
-/en-US/docs/Web/API/MediaStreamTrack/onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event
+/en-US/docs/Web/API/MediaStreamTrack/onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrack/onunmute	/en-US/docs/Web/API/MediaStreamTrack/unmute_event
+/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrack/remote	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
 /en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
@@ -9608,7 +9612,7 @@
 /en-US/docs/Web/API/SVGElement/oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/SVGElement/ondblclick	/en-US/docs/Web/API/Element/dblclick_event
 /en-US/docs/Web/API/SVGElement/onfocus	/en-US/docs/Web/API/Window/focus_event
-/en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/SVGElement/oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/SVGElement/onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/SVGElement/onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/SVGElement/onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -10066,6 +10070,7 @@
 /en-US/docs/Web/API/WebRTC_API/Architecture	/en-US/docs/Web/API/WebRTC_API/Protocols
 /en-US/docs/Web/API/WebRTC_API/Architecture/Connectivity	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/API/WebRTC_API/Architecture/Protocols	/en-US/docs/Web/API/WebRTC_API/Protocols
+/en-US/docs/Web/API/WebRTC_API/High-level_guide	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Interface_overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
@@ -10775,7 +10780,6 @@
 /en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Web/API/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Web/API/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/Web/API/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -10849,11 +10853,10 @@
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/API/window.oninput	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/API/window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/window.onkeypress	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/window.onkeyup	/en-US/docs/Web/API/Element/keyup_event
@@ -11334,6 +11337,7 @@
 /en-US/docs/Web/CSS/::-ms-browse	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-input-placeholder	/en-US/docs/Web/CSS/::placeholder
+/en-US/docs/Web/CSS/::-webkit-outer-spin-button	/en-US/docs/Web/CSS/::-webkit-inner-spin-button
 /en-US/docs/Web/CSS/::-webkit-resizer	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-button	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-corner	/en-US/docs/Web/CSS/::-webkit-scrollbar
@@ -11380,7 +11384,7 @@
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/Containing_block
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
-/en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -11406,10 +11410,10 @@
 /en-US/docs/Web/CSS/CSS_Columns/Using_multicol_layouts	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Device_Adaptation	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -11480,8 +11484,11 @@
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
+/en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
+/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_named_grid_lines	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /en-US/docs/Web/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
@@ -11552,7 +11559,6 @@
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
-/en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
 /en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/color-contrast
@@ -11676,7 +11682,7 @@
 /en-US/docs/Web/CSS/repeating-linear-gradient()	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
-/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
@@ -11764,7 +11770,7 @@
 /en-US/docs/Web/Events/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
 /en-US/docs/Web/Events/audiostart	/en-US/docs/Web/API/SpeechRecognition/audiostart_event
 /en-US/docs/Web/Events/auxclick	/en-US/docs/Web/API/Element/auxclick_event
-/en-US/docs/Web/Events/beforeinput	/en-US/docs/Web/API/HTMLElement/beforeinput_event
+/en-US/docs/Web/Events/beforeinput	/en-US/docs/Web/API/Element/beforeinput_event
 /en-US/docs/Web/Events/beforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/Events/beforescriptexecute	/en-US/docs/Web/API/Element/beforescriptexecute_event
 /en-US/docs/Web/Events/beforeunload	/en-US/docs/Web/API/Window/beforeunload_event
@@ -11843,7 +11849,7 @@
 /en-US/docs/Web/Events/iceconnectionstatechange	/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event
 /en-US/docs/Web/Events/icegatheringstatechange	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
 /en-US/docs/Web/Events/icegatheringstatechange_event	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
-/en-US/docs/Web/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/Events/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/Events/install	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/Events/keydown	/en-US/docs/Web/API/Element/keydown_event
@@ -12032,6 +12038,7 @@
 /en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player	/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Guide/Audio_and_video_manipulation	/en-US/docs/Web/Media/Audio_and_video_manipulation
 /en-US/docs/Web/Guide/CSS	/en-US/docs/Learn/CSS
+/en-US/docs/Web/Guide/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/Guide/CSS/CSS_Image_Sprites	/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /en-US/docs/Web/Guide/CSS/Consistent_list_indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /en-US/docs/Web/Guide/CSS/Counters	/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
@@ -12162,8 +12169,12 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
+/en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn
+/en-US/docs/Web/Guide/Mobile	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web/Guide/Mobile/A_hybrid_approach	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web/Guide/Mobile/Mobile-friendliness	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Guide/Mobile/Separate_sites	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Parsing_and_serializing_XML	/en-US/docs/Web/XML/Parsing_and_serializing_XML
@@ -12212,6 +12223,7 @@
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/image	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats
@@ -12234,6 +12246,7 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/HTML/Global_attributes/contextmenu	/en-US/docs/Web/HTML/Element/menu
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
@@ -12338,7 +12351,7 @@
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 /en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-/en-US/docs/Web/Houdini	/en-US/docs/Web/Guide/Houdini
+/en-US/docs/Web/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Houdini/Learn/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
@@ -12773,6 +12786,7 @@
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
+/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps
@@ -12875,7 +12889,7 @@
 /en-US/docs/Web/Reference/Events/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
 /en-US/docs/Web/Reference/Events/gamepaddisconnected	/en-US/docs/Web/API/Window/gamepaddisconnected_event
 /en-US/docs/Web/Reference/Events/hashchange	/en-US/docs/Web/API/Window/hashchange_event
-/en-US/docs/Web/Reference/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
+/en-US/docs/Web/Reference/Events/input	/en-US/docs/Web/API/Element/input_event
 /en-US/docs/Web/Reference/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/Reference/Events/keydown	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/Reference/Events/keypress	/en-US/docs/Web/API/Element/keypress_event
@@ -12947,6 +12961,11 @@
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
@@ -13185,9 +13204,9 @@
 /en-US/docs/Web_Development	/en-US/docs/Web/Guide
 /en-US/docs/Web_Development/HTTP_cookies	/en-US/docs/Web/HTTP/Cookies
 /en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Learn
-/en-US/docs/Web_Development/Mobile	/en-US/docs/Web/Guide/Mobile
-/en-US/docs/Web_Development/Mobile/A_hybrid_approach	/en-US/docs/Web/Guide/Mobile/A_hybrid_approach
-/en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Web/Guide/Mobile/Mobile-friendliness
+/en-US/docs/Web_Development/Mobile	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web_Development/Mobile/A_hybrid_approach	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web_Development/Mobile/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Mobile/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Mobile/Separate_sites	/en-US/docs/Glossary/Responsive_web_design
@@ -13691,7 +13710,6 @@
 /en-US/docs/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/window.crypto	/en-US/docs/Web/API/crypto_property
-/en-US/docs/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape

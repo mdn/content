@@ -61,7 +61,7 @@ The mechanism has some limitations. For example, it will throw a "`SecurityError
 
 ## Cross-origin network access
 
-The same-origin policy controls interactions between two different origins, such as when you use {{domxref("XMLHttpRequest")}} or an {{htmlelement("img")}} element. These interactions are typically placed into three categories:
+The same-origin policy controls interactions between two different origins, such as when you use {{domxref("fetch()")}} or an {{htmlelement("img")}} element. These interactions are typically placed into three categories:
 
 - Cross-origin _writes_ are typically allowed. Examples are links, redirects, and form submissions. Some HTTP requests require [preflight](/en-US/docs/Web/HTTP/CORS#preflighted_requests).
 - Cross-origin _embedding_ is typically allowed. (Examples are listed below.)

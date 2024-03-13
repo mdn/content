@@ -86,22 +86,26 @@ You can also use the {{domxref("Response.Response", "Response()")}} constructor 
 const response = new Response();
 ```
 
-### An Ajax Call
+### A PHP Call
 
-Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.
+Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value.
 
 ```js
-// Function to do an Ajax call
-const doAjax = async () => {
-  const response = await fetch("Ajax.php"); // Generate the Response object
+// Function to fetch JSON using PHP
+const getJSON = async () => {
+  // Generate the Response object
+  const response = await fetch("getJSON.php");
   if (response.ok) {
-    return response.json(); // Get JSON value from the response body
+    // Get JSON value from the response body
+    return response.json();
   }
   throw new Error("*** PHP file not found");
 };
 
 // Call the function and output value or error message to console
-doAjax().then(console.log).catch(console.log);
+getJSON()
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 ```
 
 ## Specifications

@@ -13,7 +13,7 @@ In this assessment you'll update a page to play a series of animations in a sequ
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, how to use promise-based APIs.
       </td>
     </tr>

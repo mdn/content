@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Sensor.activated
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`activated`** read-only property
 of the {{domxref("Sensor")}} interface returns a boolean value indicating

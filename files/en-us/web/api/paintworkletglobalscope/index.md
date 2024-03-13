@@ -22,7 +22,7 @@ To avoid leaking visited links, this feature is currently disabled in Chrome-bas
 
 _This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 
-- {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}} {{Experimental_Inline}}
+- {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the current device's ratio of physical pixels to logical pixels.
 
 ## Instance methods
@@ -31,10 +31,6 @@ _This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 
 - {{domxref('PaintWorkletGlobalScope.registerPaint()')}} {{Experimental_Inline}}
   - : Registers a class to programmatically generate an image where a CSS property expects a file.
-
-### Event
-
-None.
 
 ## Examples
 
@@ -114,4 +110,4 @@ You can also use the {{cssxref('@supports')}} at-rule.
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

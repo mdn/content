@@ -18,13 +18,16 @@ You can learn more about ICE roles in
 
 ## Value
 
-A string specifying whether the {{domxref("RTCIceTransport")}}
-represents the controlling agent or the controlled agent. The value must be one of the following:
+A string specifying whether the {{domxref("RTCIceTransport")}} represents the controlling agent or the controlled agent.
 
-- `"controlling"`
-  - : The {{domxref("RTCIceTransport")}} object is serving as the controlling agent.
+The value must be one of the following:
+
 - `"controlled"`
   - : The transport is the controlled agent.
+- `"controlling"`
+  - : The {{domxref("RTCIceTransport")}} object is serving as the controlling agent.
+- `"unknown"`
+  - : The role has not yet been determined.
 
 ## Specifications
 

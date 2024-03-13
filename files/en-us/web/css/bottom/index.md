@@ -97,7 +97,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55, 55, 55, 0.2);
+  background: rgb(55 55 55 / 20%);
   border: 1px solid blue;
 }
 

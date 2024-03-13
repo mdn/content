@@ -33,11 +33,11 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
 
 ## Syntax
 
-Caching directives follow the validation rules below:
+Cache directives follow these rules:
 
 - Caching directives are case-insensitive. However, lowercase is recommended because some implementations do not recognize uppercase directives.
-- Multiple directives are comma-separated.
-- Some directives have an optional argument.
+- Multiple directives are permitted and must be comma-separated (e.g., `Cache-control: max-age=180, public`).
+- Some directives have an optional argument. When an argument is provided, it is separated from the directive name by an equals symbol (`=`). Typically, arguments for the directives are integers and are therefore not enclosed in quote characters (e.g., `Cache-control: max-age=12`).
 
 ### Cache directives
 
@@ -113,7 +113,8 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
+The `s-maxage` response directive indicates how long the response remains [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) in a shared cache.
+The `s-maxage` directive is ignored by private caches, and overrides the value specified by the `max-age` directive or the `Expires` header for shared caches, if they are present.
 
 ```http
 Cache-Control: s-maxage=604800

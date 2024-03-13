@@ -17,7 +17,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("error", (event) => {});
 
-onerror = (event) => {};
+onerror = (message, filename, lineno, colno, error) => {};
 ```
 
 ## Event type

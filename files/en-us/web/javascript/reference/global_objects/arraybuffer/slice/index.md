@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.slice
 
 {{JSRef}}
 
-The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer`
-whose contents are a copy of this `ArrayBuffer`'s bytes from
-`begin`, inclusive, up to `end`, exclusive.
+The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
@@ -25,19 +23,19 @@ slice(start, end)
 
 - `start` {{optional_inline}}
   - : Zero-based index at which to start extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the buffer — if `start < 0`, `start + buffer.length` is used.
+    - Negative index counts back from the end of the buffer — if `-buffer.length <= start < 0`, `start + buffer.length` is used.
     - If `start < -buffer.length` or `start` is omitted, `0` is used.
     - If `start >= buffer.length`, nothing is extracted.
 - `end` {{optional_inline}}
   - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
-    - Negative index counts back from the end of the buffer — if `end < 0`, `end + buffer.length` is used.
+    - Negative index counts back from the end of the buffer — if `-buffer.length <= end < 0`, `end + buffer.length` is used.
     - If `end < -buffer.length`, `0` is used.
     - If `end >= buffer.length` or `end` is omitted, `buffer.length` is used, causing all elements until the end to be extracted.
-    - If `end` is positioned before or at `start` after normalization, nothing is extracted.
+    - If `end` implies a position before or at the position that `start` implies, nothing is extracted.
 
 ### Return value
 
-A new {{jsxref("ArrayBuffer")}} object.
+A new {{jsxref("ArrayBuffer")}} containing the extracted elements.
 
 ## Examples
 
@@ -59,3 +57,4 @@ const buf2 = buf1.slice(0);
 ## See also
 
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer.prototype.slice()")}}

@@ -28,11 +28,11 @@ background-color: #1fef; /* Fully opaque shorthand */
 
 /* RGB value */
 background-color: rgb(255 255 128); /* Fully opaque */
-background-color: rgb(117 190 218 / 0.5); /* 50% transparent */
+background-color: rgb(117 190 218 / 50%); /* 50% transparent */
 
 /* HSL value */
 background-color: hsl(50 33% 25%); /* Fully opaque */
-background-color: hsl(50 33% 25% / 0.75); /* 75% opaque, i.e. 25% transparent */
+background-color: hsl(50 33% 25% / 75%); /* 75% opaque, i.e. 25% transparent */
 
 /* Special keyword values */
 background-color: currentcolor;
@@ -91,8 +91,8 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 }
 
 .exampletwo {
-  background-color: rgb(153, 102, 153);
-  color: rgb(255, 255, 204);
+  background-color: rgb(153 102 153);
+  color: rgb(255 255 204);
 }
 
 .examplethree {

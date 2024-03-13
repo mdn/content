@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.InterruptReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `InterruptReason` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons why a download was interrupted.
 

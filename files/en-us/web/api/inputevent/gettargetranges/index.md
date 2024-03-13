@@ -83,7 +83,7 @@ function isBeforeInputEventAvailable() {
 ### Basic usage
 
 The following example selects a `contenteditable` element and utilizes the
-[`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
+[`beforeinput`](/en-US/docs/Web/API/Element/beforeinput_event)
 event to log the result of `getTargetRanges()`.
 
 ```js

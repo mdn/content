@@ -27,7 +27,7 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
+  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank`, `_parent`, `_top`, and `_unfencedTop` can also be used. `_unfencedTop` is only relevant to [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
 
     This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target) elements.
 
@@ -254,7 +254,7 @@ console.log(sameOriginContext.origin);
 
 For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
-## Accessibility
+## Accessibility concerns
 
 ### Avoid resorting to window.open()
 

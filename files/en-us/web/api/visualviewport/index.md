@@ -7,7 +7,7 @@ browser-compat: api.VisualViewport
 
 {{APIRef("Visual Viewport")}}
 
-The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
+The **`VisualViewport`** interface of the {{domxref("Visual Viewport API", "", "", "nocode")}} represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
 
 You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.
 
@@ -17,7 +17,7 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 ## Instance properties
 
-_`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("VisualViewport.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
@@ -34,14 +34,18 @@ _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarg
 - {{domxref("VisualViewport.scale")}} {{ReadOnlyInline}}
   - : Returns the pinch-zoom scaling factor applied to the visual viewport.
 
+## Instance methods
+
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
+
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the relevant `oneventname` property of this interface.
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the relevant `oneventname` property of this interface.
 
-- [`resize`](/en-US/docs/Web/API/VisualViewport/resize_event)
+- {{domxref("VisualViewport/resize_event", "resize")}}
   - : Fired when the visual viewport is resized.
     Also available via the `onresize` property.
-- [`scroll`](/en-US/docs/Web/API/VisualViewport/scroll_event)
+- {{domxref("VisualViewport/scroll_event", "scroll")}}
   - : Fired when the visual viewport is scrolled.
     Also available via the `onscroll` property.
 

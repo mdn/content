@@ -81,5 +81,5 @@ navigator.userAgentData
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
 - [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch)

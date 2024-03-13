@@ -11,7 +11,7 @@ browser-compat: html.elements.script.type.speculationrules
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) indicates that the body of the element contains speculation rules.
 
-Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
 ## Syntax
 
@@ -79,7 +79,7 @@ Specifically, each object can contain the following properties:
   - : A string representing the source of the URLs to which the rule applies. Possible values are:
     - `"list"`
       - : Denotes that the URLs will come from a specific list.
-- `"urls"`
+- `"urls"` {{experimental_inline}}
   - : An array of strings representing the list of URLs to apply the rule to. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
 - `"requires"` {{optional_inline}} {{experimental_inline}}
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.usbVersionSubminor
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
 The **`usbVersionSubminor`** read only property of the
 {{domxref("USBDevice")}} interface is one of three properties that declare the USB

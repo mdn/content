@@ -5,7 +5,10 @@ Axess
 bézier
 Bhattacharya
 Brosset
+Brotli
 callouts
+Caniuse
+cdylib
 CEST
 CIELAB
 cjpeg
@@ -22,6 +25,7 @@ Hermina
 hulki
 i'gyu
 Kazotetsu
+Lempel
 Letorey
 mathml
 mdnplay
@@ -57,6 +61,7 @@ Paciello
 prophoto
 rgba
 ripgrep
+rustc
 sctp
 srgb
 tabak
@@ -70,3 +75,4 @@ Willee
 worklets
 Yari
 Yarusome
+Zstandard

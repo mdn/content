@@ -20,7 +20,7 @@ A {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} -->
 
 ## Example
 
-Note that this is is part of a larger example in the guide topic [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+Note that this is part of a larger example in the guide topic [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 ## Adding a transform for incoming frames
 
