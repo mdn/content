@@ -6,9 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-The MDN community is encouraged to [initiate, engage in, and resolve discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation.
-
-While most discussions reach a broad agreement quickly, some may stall due to an unclear path to a resolution, often because of differing opinions. This document outlines the process and strategies to move discussions toward a resolution within a reasonable timeframe (we'll define what's an acceptable timeline later in this document).
+The MDN community is encouraged to [initiate and engage in discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation. It is natural for those starting a discussion to expect their proposed ideas reaching a logical conclusion. While most discussions reach a broad agreement quickly, a few may stall due to an unclear path to a resolution, often because of differing opinions. This document outlines the process and strategies to help you move _stalled discussions_ toward a resolution within a reasonable timeframe (we'll define what's an acceptable timeline later in this document).
 
 ## Moving a discussion to a resolution
 
