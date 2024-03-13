@@ -35,7 +35,7 @@ create(options)
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
 
-    - : Each of the following properties represents a _credential type_ being created, only one of them can be specified:
+      Each of the following properties represents a _credential type_ being created, only one of them can be specified:
 
     - `federated` {{optional_inline}}
       - : An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
