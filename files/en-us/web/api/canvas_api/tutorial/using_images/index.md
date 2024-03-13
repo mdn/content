@@ -152,7 +152,7 @@ draw();
 
 The resulting graph looks like this:
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("Example_A_simple_line_graph", "", "160")}}
 
 ## Scaling
 
@@ -196,7 +196,7 @@ draw();
 
 The resulting canvas looks like this:
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("Example_Tiling_an_image", "", "160")}}
 
 ## Slicing
 
@@ -255,7 +255,7 @@ draw();
 
 We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags directly in our HTML source and retrieved the images from those. The images are hidden from output by setting the CSS property {{cssxref("display")}} to none for those images.
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Example_Framing_an_image", "", "160")}}
 
 The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then use `drawImage()` to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second `drawImage()` call.
 
