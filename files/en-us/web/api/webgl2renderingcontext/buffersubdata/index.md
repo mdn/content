@@ -1,22 +1,23 @@
 ---
-title: "WebGLRenderingContext: bufferSubData() method"
+title: "WebGL2RenderingContext: bufferSubData() method"
 short-title: bufferSubData()
-slug: Web/API/WebGLRenderingContext/bufferSubData
+slug: Web/API/WebGL2RenderingContext/bufferSubData
 page-type: web-api-instance-method
-browser-compat: api.WebGLRenderingContext.bufferSubData
+browser-compat: api.WebGL2RenderingContext.bufferSubData
 ---
 
 {{APIRef("WebGL")}}
 
-The **`WebGLRenderingContext.bufferSubData()`** method of the
+The **`WebGL2RenderingContext.bufferSubData()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer
 object's data store.
 
 ## Syntax
 
 ```js-nolint
-bufferSubData(target, offset)
-bufferSubData(target, offset, srcData)
+bufferSubData(target, dstByteOffset, srcData)
+bufferSubData(target, dstByteOffset, srcData, srcOffset)
+bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 ```
 
 ### Parameters
@@ -29,12 +30,7 @@ bufferSubData(target, offset, srcData)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : Buffer used for element indices.
-
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-    the following values are available additionally:
-
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`
@@ -54,11 +50,11 @@ bufferSubData(target, offset, srcData)
 - `srcData` {{optional_inline}}
   - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("DataView")}}, or a {{jsxref("TypedArray")}}
     that will be copied into the data store.
-- `srcOffset`
+- `srcOffset` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
     the buffer.
 - `length` {{optional_inline}}
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0, where 0 means `bufferSubData` should calculate the length.
 
 ### Return value
 
@@ -71,19 +67,6 @@ None ({{jsxref("undefined")}}).
 - A `gl.INVALID_ENUM` error is thrown if `target` is not one of
   the allowed enums.
 
-## Examples
-
-### Using `bufferSubData`
-
-```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
-gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -94,7 +77,7 @@ gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
 
 ## See also
 
-- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
