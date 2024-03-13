@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.ExtendableCookieChangeEvent.changed
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -40,7 +38,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
       - : Cookies will be sent in all contexts.
 
 - `partitioned`
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
 
 ## Examples
 

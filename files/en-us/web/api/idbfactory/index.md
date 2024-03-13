@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.IDBFactory
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBFactory`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) lets applications asynchronously access the indexed databases. The object that implements the interface is `window.indexedDB`. You open — that is, create and access — and delete a database with this object, and not directly with `IDBFactory`.
-
-{{AvailableInWorkers}}
 
 ## Instance methods
 

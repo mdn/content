@@ -8,15 +8,6 @@ page-type: learn-module
 
 When writing client-side JavaScript for websites or applications, you will quickly encounter **Application Programming Interfaces** (**APIs**). APIs are programming features for manipulating different aspects of the browser and operating system the site is running on, or manipulating data from other websites or services. In this module, we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 To get the most out of this module, you should have worked your way through the previous JavaScript modules in the series ([First steps](/en-US/docs/Learn/JavaScript/First_steps), [Building blocks](/en-US/docs/Learn/JavaScript/Building_blocks), and [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)). Those modules typically involve simple API usage, as it is often difficult to write client-side JavaScript examples without them. For this tutorial, we will assume that you are knowledgeable about the core JavaScript language, and we will explore common Web APIs in a bit more detail.

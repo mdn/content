@@ -10,11 +10,11 @@ browser-compat: api.XRViewport.x
 
 The read-only {{domxref("XRViewport")}} interface's
 **`x`** property indicates the offset from the left edge of
-the destination surface (typically a {{domxref("XRWebGLLayer")}} to the left edge of
+the destination surface (typically a {{domxref("XRWebGLLayer")}}) to the left edge of
 the viewport within the surface into which WebXR content is to be rendered. The
 viewport's {{domxref("XRViewport.y", "y")}} property identifies the `y`
-component of the origin, and its is given by the {{domxref("XRViewPort.width",
-  "width")}} and {{domxref("XRViewport.height", "height")}} properties.
+component of the origin, and its is given by the {{domxref("XRViewPort.width", "width")}}
+and {{domxref("XRViewport.height", "height")}} properties.
 
 ## Value
 
