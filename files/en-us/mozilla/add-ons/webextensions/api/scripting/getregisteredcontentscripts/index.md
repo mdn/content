@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.getRegisteredContentScripts
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} or a subset of the registered scripts when using a filter.
 

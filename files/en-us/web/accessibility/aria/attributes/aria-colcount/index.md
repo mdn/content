@@ -83,7 +83,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 

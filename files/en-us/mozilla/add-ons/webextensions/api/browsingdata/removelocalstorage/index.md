@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeLocalStorage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.
 

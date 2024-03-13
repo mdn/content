@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.name
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`name`** property of the {{domxref("IDBObjectStore")}}
 interface indicates the name of this object store.
-
-{{AvailableInWorkers}}
 
 ## Value
 

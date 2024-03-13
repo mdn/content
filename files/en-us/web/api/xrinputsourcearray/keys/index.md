@@ -62,8 +62,6 @@ index with array notation: `xrSession.inputSources[inputIdx]`.
 ## See also
 
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.values",
-    "values()")}}
-- The
-  [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `keys()`
+- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.values", "values()")}}
+- The [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `keys()`
 - {{domxref("XRInputSource")}}

@@ -2,7 +2,7 @@
 title: filter
 slug: Web/SVG/Attribute/filter
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.filter
+browser-compat: svg.global_attributes.filter
 ---
 
 {{SVGRef}}

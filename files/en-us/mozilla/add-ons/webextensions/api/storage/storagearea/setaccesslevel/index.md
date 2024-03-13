@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.setAccessLevel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the access level for the storage area.
 

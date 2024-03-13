@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor_static
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The static method
 **`XRWebGLLayer.getNativeFramebufferScaleFactor()`** returns a
@@ -110,8 +110,8 @@ function requestNativeScaleWebGLLayer(gl, xrSession) {
 }
 ```
 
-This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",
-  "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by
+This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function
+{{domxref("WebGLRenderingContext.makeXRCompatible", "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by
 calling `XRWebGLLayer`'s `getNativeFramebufferScaleFactor()`
 static function to get the scale factor needed to reach the native resolution, and we
 then pass that into the {{domxref("XRWebGLLayer.XRWebGLLayer", "WebGLLayer()")}}
@@ -120,8 +120,8 @@ property in its `layerInit` configuration object.
 
 That gets us a new {{domxref("XRWebGLLayer")}} object representing a rendering surface
 we can use for the {{domxref("XRSession")}}; we set it as the rendering surface for
-`xrSession` by calling its {{domxref("XRSession.updateRenderState",
-  "updateRenderState()")}} method, passing the new `glLayer` in using the
+`xrSession` by calling its
+{{domxref("XRSession.updateRenderState", "updateRenderState()")}} method, passing the new `glLayer` in using the
 {{domxref("XRRenderState")}} dictionary's {{domxref("XRRenderState.baseLayer")}}
 property. The result is a rendering context that looks like the diagram below:
 

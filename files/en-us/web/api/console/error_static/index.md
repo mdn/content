@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.error_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.error()`** static method outputs an error message to the console.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
