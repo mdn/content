@@ -30,8 +30,7 @@ let mql = window.matchMedia("(max-width: 600px)");
 document.querySelector(".mq-value").innerText = mql.media;
 ```
 
-The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia",
-  "matchMedia()")}} to compile it, then sets the `<span>`'s
+The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s
 {{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
 {{DOMxRef("MediaQueryList.media", "media")}} property.
 

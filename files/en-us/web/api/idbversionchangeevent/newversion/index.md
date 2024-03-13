@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`newVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the new version number of the
 database.
-
-{{AvailableInWorkers}}
 
 ## Value
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.createIndex
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`createIndex()`** method of the
 {{domxref("IDBObjectStore")}} interface creates and returns a new
@@ -19,8 +19,6 @@ and complex objects.
 
 Note that this method must be called only from a `VersionChange` transaction
 mode callback.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

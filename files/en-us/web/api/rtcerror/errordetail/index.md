@@ -42,8 +42,8 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
     object's {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}}. SCTP error cause
     codes 1-13 are defined in the SCTP specification: {{RFC(4960, "", "3.3.10")}}.
 - `sdp-syntax-error`
-  - : The SDP syntax is invalid. The error's {{domxref("RTCError.sdpLineNumber",
-    "sdpLineNumber")}} property indicates the line number within the SDP at which the
+  - : The SDP syntax is invalid. The error's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}}
+    property indicates the line number within the SDP at which the
     error was detected.
 
 ## Examples

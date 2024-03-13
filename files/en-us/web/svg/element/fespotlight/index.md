@@ -16,12 +16,6 @@ It is used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 - {{SVGAttr("z")}}

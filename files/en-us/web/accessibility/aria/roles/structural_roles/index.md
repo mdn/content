@@ -55,7 +55,7 @@ Do not use structural roles. Opt for HTML semantic elements instead.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 <section id="Quick_links">
 

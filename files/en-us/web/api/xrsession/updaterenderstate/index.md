@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.updateRenderState
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The `updateRenderState()` method of the {{DOMxRef("XRSession")}} interface of the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) schedules changes to be applied to the active render state ({{domxref("XRRenderState")}}) prior to rendering of the next frame.
 

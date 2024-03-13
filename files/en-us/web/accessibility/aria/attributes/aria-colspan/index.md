@@ -159,7 +159,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - The {{HTMLElement('th')}} and {{HTMLElement('td')}} [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property

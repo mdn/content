@@ -2,7 +2,7 @@
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.letter-spacing
+browser-compat: svg.global_attributes.letter-spacing
 ---
 
 {{SVGRef}}

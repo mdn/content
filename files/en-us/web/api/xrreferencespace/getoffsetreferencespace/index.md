@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The {{domxref("XRReferenceSpace")}}
 interface's **`getOffsetReferenceSpace()`** method returns a
@@ -77,8 +77,7 @@ In this code, we obtain a local reference space, then
 use `getOffsetReferenceSpace()` to create a new space whose origin is
 adjusted to a position given by `startPosition` and whose orientation is
 looking directly along the Z axis. Then the first animation frame is requested using
-{{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame",
-  "requestAnimationFrame()")}}.
+{{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ### Implementing rotation based on non-XR inputs
 
