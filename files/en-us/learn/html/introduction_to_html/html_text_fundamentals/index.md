@@ -265,7 +265,7 @@ This is a {{htmlelement("span")}} element. It has no semantics. You use it to wr
 
 ## Lists
 
-Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! On the web, we have three different types of list: unordered lists, ordered lists, and description lists.
+Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! On the web, we have three types of lists: unordered, ordered, and description.
 
 Unordered and ordered lists are very common, and they're covered in this section. Description lists are less common, and we'll cover them in [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting).
 
