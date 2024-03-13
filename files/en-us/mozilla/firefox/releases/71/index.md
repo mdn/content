@@ -121,4 +121,4 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 
 ## Older versions
 
-{{Firefox_for_developers(70)}}
+{{Firefox_for_developers}}

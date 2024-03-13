@@ -23,8 +23,7 @@ A number indicating how many audio tracks are included in the
 ## Examples
 
 This snippet gets the number of audio tracks in the first {{HTMLElement("video")}}
-element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
-  "querySelector()")}}.
+element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.
 
 ```js
 const videoElem = document.querySelector("video");

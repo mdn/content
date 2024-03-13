@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.upperOpen
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`upperOpen`** read-only property of the
 {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
 upper-bound value is included in the key range.
-
-{{AvailableInWorkers}}
 
 ## Value
 

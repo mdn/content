@@ -6,12 +6,10 @@ page-type: web-api-constructor
 browser-compat: api.URLSearchParams.URLSearchParams
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams()`** constructor creates and returns a
 new {{domxref("URLSearchParams")}} object.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

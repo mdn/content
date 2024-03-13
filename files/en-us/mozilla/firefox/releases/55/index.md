@@ -175,4 +175,4 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ## Older versions
 
-{{Firefox_for_developers(54)}}
+{{Firefox_for_developers}}

@@ -21,15 +21,6 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 - CSS Reference
   - : Our [exhaustive CSS reference](/en-US/docs/Web/CSS/Reference) for seasoned Web developers describes every property and concept of CSS.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Tutorials
 
 Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that teach CSS from the ground up — no previous knowledge required.

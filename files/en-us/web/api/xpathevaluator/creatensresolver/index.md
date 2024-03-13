@@ -12,8 +12,8 @@ This method adapts any DOM node to resolve namespaces so that an XPath expressio
 be easily evaluated relative to the context of the node where it appeared within the
 document.
 
-This adapter works like the DOM Level 3 method {{domxref("Node.lookupNamespaceURI",
-  "Node.lookupNamespaceURI()")}} in resolving the namespace URI from a given prefix using
+This adapter works like the DOM Level 3 method {{domxref("Node.lookupNamespaceURI", "Node.lookupNamespaceURI()")}}
+in resolving the namespace URI from a given prefix using
 the current information available in the node's hierarchy at the time the method is
 called, also correctly resolving the implicit `xml` prefix.
 

@@ -33,5 +33,4 @@ to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
 ## See also
 
 - The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
-  {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w",
-    "w")}}.
+  {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w", "w")}}.

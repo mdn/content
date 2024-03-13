@@ -8,14 +8,12 @@ status:
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`periodicSync`** read-only property of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
 {{domxref('PeriodicSyncManager')}} interface, which allows for registering of tasks to
 run at specific intervals.
-
-{{AvailableInWorkers}}
 
 ## Value
 

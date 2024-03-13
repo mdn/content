@@ -46,6 +46,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 
 ## Examples
 
+### Display news based on geolocation permission
+
+This example shows how you might display news related to the current location if the `geolocation` permission is granted, and otherwise prompt the user to enable granting access to the location.
+
 ```js
 navigator.permissions.query({ name: "geolocation" }).then((result) => {
   if (result.state === "granted") {
@@ -56,6 +60,85 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
   // Don't do anything if the permission was denied.
 });
 ```
+
+### Test support for various permissions
+
+This example shows the result of querying each of the permissions.
+
+The code uses `navigator.permissions.query()` to query each permission, logging either the permission status or the fact that the permission is not supported on the browser.
+Note that the `query()` is called inside a `try...catch` block because the associated `Promise` will reject if the permission is not supported.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```css hidden
+#log {
+  height: 320px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js
+// Array of permissions
+const permissions = [
+  "accelerometer",
+  "accessibility-events",
+  "ambient-light-sensor",
+  "background-sync",
+  "camera",
+  "clipboard-read",
+  "clipboard-write",
+  "geolocation",
+  "gyroscope",
+  "local-fonts",
+  "magnetometer",
+  "microphone",
+  "midi",
+  "notifications",
+  "payment-handler",
+  "persistent-storage",
+  "push",
+  "screen-wake-lock",
+  "storage-access",
+  "top-level-storage-access",
+  "window-management",
+];
+
+processPermissions();
+
+// Iterate through the permissions and log the result
+async function processPermissions() {
+  for (const permission of permissions) {
+    const result = await getPermission(permission);
+    log(result);
+  }
+}
+
+// Query a single permission in a try...catch block and return result
+async function getPermission(permission) {
+  try {
+    const result = await navigator.permissions.query({ name: permission });
+    return `${permission}: ${result.state}`;
+  } catch (error) {
+    return `${permission} (not supported)`;
+  }
+}
+```
+
+The log from running the code is shown below:
+
+{{EmbedLiveSample('Test support for various permissions',"100%", "370px")}}
 
 ## Specifications
 

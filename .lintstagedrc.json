@@ -7,5 +7,6 @@
     "prettier --write"
   ],
   "tests/**/*.*": "yarn test:front-matter-linter",
-  "*.{svg,png,jpeg,jpg,gif}": "yarn filecheck"
+  "*.{svg,png,jpeg,jpg,gif}": "yarn filecheck",
+  "*": "node scripts/log-url-issues.js"
 }
