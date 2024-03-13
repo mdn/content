@@ -36,10 +36,6 @@ if (foo.hasAttribute("bar")) {
 }
 ```
 
-## Notes
-
-{{DOMAttributeMethods}}
-
 ## Specifications
 
 {{Specifications}}
@@ -47,3 +43,11 @@ if (foo.hasAttribute("bar")) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttributes()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

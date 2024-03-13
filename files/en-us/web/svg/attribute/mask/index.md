@@ -2,7 +2,7 @@
 title: mask
 slug: Web/SVG/Attribute/mask
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.mask
+browser-compat: svg.global_attributes.mask
 ---
 
 {{SVGRef}}

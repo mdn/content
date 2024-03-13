@@ -24,8 +24,8 @@ default value for `step` if not specified.
 Valid on all numeric, date, and time input types that support the step attribute,
 including {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},
-{{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number",
-  "number")}}, and {{HTMLElement("input/range", "range")}}.
+{{HTMLElement("input/datetime-local", "datetime-local")}},
+{{HTMLElement("input/number", "number")}}, and {{HTMLElement("input/range", "range")}}.
 
 Given `<input id="myTime" type="time" max="17:00" step="900" value="17:00">`,
 invoking `myTime.stepDown(3)` will change the value to 16:15, decrementing the
@@ -124,8 +124,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Click the button in this example to decrement the {{HTMLElement("input/number",
-  "number")}} input type:
+Click the button in this example to decrement the {{HTMLElement("input/number", "number")}} input type:
 
 ### HTML
 

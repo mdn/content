@@ -16,8 +16,8 @@ screen due to overflow.
 
 The `scrollHeight` value is equal to the minimum height the element would
 require in order to fit all the content in the viewport without using a vertical
-scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight",
-  "clientHeight")}}: it includes the element's padding, but not its border, margin or
+scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight", "clientHeight")}}:
+it includes the element's padding, but not its border, margin or
 horizontal scrollbar (if present). It can also include the height of pseudo-elements
 such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can
 fit without a need for vertical scrollbar, its `scrollHeight` is equal to

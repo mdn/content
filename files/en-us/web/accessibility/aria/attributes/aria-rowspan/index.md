@@ -44,7 +44,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)

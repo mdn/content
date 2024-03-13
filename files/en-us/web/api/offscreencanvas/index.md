@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.OffscreenCanvas
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}} {{AvailableInWorkers}}
 
 When using the {{HtmlElement("canvas")}} element or the [Canvas API](/en-US/docs/Web/API/Canvas_API), rendering, animation, and user interaction usually happen on the main execution thread of a web application.
 The computation relating to canvas animations and rendering can have a significant impact on application performance.
@@ -14,8 +14,6 @@ The **`OffscreenCanvas`** interface provides a canvas that can be rendered off s
 Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_Workers_API) context, allowing you to run some tasks in a separate thread and avoid heavy work on the main thread.
 
 `OffscreenCanvas` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
