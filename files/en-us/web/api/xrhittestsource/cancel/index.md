@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRHitTestSource.cancel
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`cancel()`** method of the {{domxref("XRHitTestSource")}} interface unsubscribes a hit test.
 

@@ -85,6 +85,5 @@ element.appendChild(fragment);
 
 ## See also
 
-- {{domxref("DOMImplementation.createDocument",
-    "document.implementation.createDocument()")}}
+- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

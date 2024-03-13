@@ -16,8 +16,8 @@ point in space.
 
 A double-precision floating-point value indicating the _w_ perspective value for
 the point. This value is **unrestricted**, meaning that it is allowed to be
-infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}). The default is 1.0.
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity", "±Infinity")}}).
+The default is 1.0.
 
 ## Specifications
 

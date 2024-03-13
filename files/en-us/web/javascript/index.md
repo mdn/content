@@ -23,13 +23,6 @@ JavaScript documentation of core language features (pure [ECMAScript](/en-US/doc
 
 For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 
-> **Callout:** **Looking to become a front-end web developer?**
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Tutorials
 
 Learn how to program in JavaScript with guides and tutorials.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.beginRenderPass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`beginRenderPass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a render pass, returning a {{domxref("GPURenderPassEncoder")}} that can be used to control rendering.

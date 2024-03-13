@@ -89,7 +89,7 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - The {{HTMLElement('fieldset')}} Element
 - [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)

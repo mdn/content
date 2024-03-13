@@ -8,12 +8,10 @@ status:
 browser-compat: api.URLPattern.URLPattern
 ---
 
-{{APIRef("URLPattern API")}}{{SeeCompatTable}}
+{{APIRef("URLPattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}}
 object representing the url pattern defined by the parameters.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
