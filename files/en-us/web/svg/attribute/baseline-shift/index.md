@@ -2,7 +2,7 @@
 title: baseline-shift
 slug: Web/SVG/Attribute/baseline-shift
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.baseline-shift
+browser-compat: svg.global_attributes.baseline-shift
 ---
 
 {{SVGRef}}

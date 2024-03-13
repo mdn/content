@@ -10,8 +10,7 @@ browser-compat: api.HTMLImageElement.naturalWidth
 
 The {{domxref("HTMLImageElement")}} interface's read-only
 **`naturalWidth`** property returns the intrinsic (natural),
-density-corrected width of the image in {{Glossary("CSS pixel", "CSS
-    pixels")}}.
+density-corrected width of the image in {{Glossary("CSS pixel", "CSS pixels")}}.
 
 This is the width the image is if drawn with nothing constraining
 its width; if you neither specify a width for the image nor place the image inside a

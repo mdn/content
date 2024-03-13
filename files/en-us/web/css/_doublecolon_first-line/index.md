@@ -37,7 +37,9 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ## Examples
 
-### HTML
+### Styling first line of a paragraph
+
+#### HTML
 
 ```html
 <p>
@@ -51,12 +53,19 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 </span>
 ```
 
-### CSS
+#### CSS
+
+```css hidden
+* {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+```
 
 ```css
 ::first-line {
   color: blue;
-  text-transform: uppercase;
+  font-weight: bold;
 
   /* WARNING: DO NOT USE THESE */
   /* Many properties are invalid in ::first-line pseudo-elements */
@@ -67,7 +76,52 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ### Result
 
-{{EmbedLiveSample('Examples', 350, 160)}}
+{{EmbedLiveSample('styling_first_line_of_a_paragraph', 350, 130)}}
+
+### Styling the first line of a SVG text element
+
+In this example, we style the first line of an SVG {{SVGElement("text")}} element using the `::first-line` pseudo-element.
+
+> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+
+#### HTML
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+In order to make the SVG `<text>` element wrap to multiple lines, we use the {{cssxref("white-space", "", "#multiple_lines_in_svg_text_element")}} CSS property. We then select the first line using the `::first-line` pseudo-element.
+
+```css hidden
+text {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+```
+
+```css
+text {
+  white-space: break-spaces;
+}
+
+text::first-line {
+  fill: blue;
+  font-weight: bold;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("styling_the_first_line_of_a_SVG_text_element", "100%", 150)}}
 
 ## Specifications
 
@@ -80,3 +134,4 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 ## See also
 
 - {{cssxref("::first-letter")}}
+- {{cssxref("white-space")}}
