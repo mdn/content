@@ -14,8 +14,6 @@ buffer object's data store.
 ## Syntax
 
 ```js-nolint
-// WebGL1
-bufferData(target, usage)
 bufferData(target, size, usage)
 bufferData(target, srcData, usage)
 ```
