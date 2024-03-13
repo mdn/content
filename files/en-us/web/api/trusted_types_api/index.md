@@ -2,6 +2,7 @@
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
 page-type: web-api-overview
+browser-compat: api.trustedTypes
 spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 ---
 
@@ -74,7 +75,7 @@ Read more about this example, and discover other ways to sanitize input in the a
 
 ## Browser compatibility
 
-See the compatibility data for each of the Trusted Types API interfaces.
+{{Compat}}
 
 ## See also
 

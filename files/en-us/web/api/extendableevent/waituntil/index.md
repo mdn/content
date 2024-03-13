@@ -32,9 +32,6 @@ The `waitUntil()` method must be initially called within the event callback,
 but after that it can be called multiple times, until all the promises passed to it
 settle.
 
-> **Note:** The behavior described in the above paragraph was fixed in
-> Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274)).
-
 ## Syntax
 
 ```js-nolint

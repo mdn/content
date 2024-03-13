@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.load
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The `MediaKeySession.load()` method returns a {{jsxref('Promise')}} that
 resolves to a boolean value after loading data for a specified session object.

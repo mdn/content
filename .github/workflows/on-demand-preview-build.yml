@@ -108,7 +108,7 @@ jobs:
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.local
           # the trailing number is used to increase for getting
@@ -123,7 +123,7 @@ jobs:
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.RemovalOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
 

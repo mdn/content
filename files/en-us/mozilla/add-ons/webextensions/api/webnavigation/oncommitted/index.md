@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCommitted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
 

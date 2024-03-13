@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.append
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`append()`** method of the {{domxref("Headers")}}
 interface appends a new value onto an existing header inside a `Headers`

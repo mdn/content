@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes one or more items from the storage area.
 

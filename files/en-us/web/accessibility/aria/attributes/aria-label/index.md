@@ -92,7 +92,7 @@ The `aria-label` attribute is **NOT** supported in:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - {{HTMLElement('label')}} element
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)

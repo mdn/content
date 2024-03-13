@@ -87,7 +87,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute
 - [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional)

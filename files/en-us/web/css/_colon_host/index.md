@@ -77,5 +77,6 @@ The `:host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }` rule styles all 
 - [Web components](/en-US/docs/Web/API/Web_components)
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
-- {{CSSXref("::slotted")}}
+- {{CSSxref("::slotted")}}
+- {{CSSxRef(":state",":state()")}}
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

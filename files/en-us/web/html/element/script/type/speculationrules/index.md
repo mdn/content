@@ -79,7 +79,7 @@ Specifically, each object can contain the following properties:
   - : A string representing the source of the URLs to which the rule applies. Possible values are:
     - `"list"`
       - : Denotes that the URLs will come from a specific list.
-- `"urls"`
+- `"urls"` {{experimental_inline}}
   - : An array of strings representing the list of URLs to apply the rule to. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
 - `"requires"` {{optional_inline}} {{experimental_inline}}
 

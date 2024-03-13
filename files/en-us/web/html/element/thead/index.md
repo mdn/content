@@ -7,7 +7,7 @@ browser-compat: html.elements.thead
 
 {{HTMLSidebar}}
 
-The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows defining the head of the columns of the table.
+The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the head of a table with information about the table's columns. This is usually in the form of column headers ({{HTMLElement("th")}} elements).
 
 {{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
 
@@ -17,54 +17,213 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Deprecated attributes
 
+The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
+
 - `align` {{deprecated_inline}}
 
-  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : Specifies the horizontal alignment of each head cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
-    - `left`, aligning the content to the left of the cell
-    - `center`, centering the content in the cell
-    - `right`, aligning the content to the right of the cell
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
+- `bgcolor` {{deprecated_inline}}
 
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Warning:** Do not use this attribute as it is obsolete (not supported) in the latest standard.
-    >
-    > - To align values, use the CSS {{cssxref("text-align")}} property instead.
-
-- `bgcolor` {{Deprecated_Inline}}
-
-  - : This attribute defines the background color of each column cell. It accepts a 6-digit hexadecimal color or a named color. Alpha transparency is not supported.
-
-    > **Note:** Do not use this attribute, as it is non-standard. The `thead` element should be styled using the CSS {{cssxref("background-color")}} property, which can be applied to any element, including the `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
+  - : Defines the background color of each head cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
+  - : Specifies the alignment of the content to a character of each head cell. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
-
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
+  - : Specifies the number of characters to offset the head cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
+  - : Specifies the vertical alignment of each head cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
+## Usage notes
 
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{cssxref("vertical-align")}} property on it.
+- The `<thead>` is placed after any {{HTMLElement("caption")}} and {{HTMLElement("colgroup")}} elements, but before any {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, and {{HTMLElement("tr")}} elements.
+- Along with its related {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements, the `<thead>` element provides useful {{Glossary("semantics", "semantic")}} information and can be used when rendering for either screen or print. Specifying such table content groups also provides valuable contextual information for assistive technologies, including screen readers and search engines.
+- When printing a document, in the case of a multipage table, the table head usually specifies information that remains the same on each page.
 
 ## Examples
 
-See {{HTMLElement("table")}} for examples on `<thead>`.
+See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
+
+### Basic head structure
+
+This example demonstrates a table divided into a head section with column headers and a body section with the table's main data.
+
+#### HTML
+
+The `<thead>` and {{HTMLElement("tbody")}} elements are used to structure the table rows into {{Glossary("semantics", "semantic")}} sections. The `<thead>` element represents the head section of the table, which contains a row ({{HTMLElement("tr")}}) of column headers cells ({{HTMLElement("th")}}).
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Name</th>
+      <th>Major</th>
+      <th>Credits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>Computer Science</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+      <td>Russian Literature</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Petrov, Alexandra</td>
+      <td>Astrophysics</td>
+      <td>260</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+Some basic CSS is used to style and highlight the table head so that the headings of the columns stand out from the data in the table body.
+
+```css
+thead {
+  border-bottom: 2px solid rgb(160 160 160);
+  text-align: center;
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Basic_head_structure", 650, 140)}}
+
+### Multiple head rows
+
+This example demonstrates a table head section with two rows.
+
+#### HTML
+
+We extend the markup the table from the [basic example](#basic_head_structure) in this example by including two table rows ({{HTMLElement("tr")}}) within the `<thead>` element creating a multi-row table head. We included an additional column, splitting the student names into first and last names.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Student ID</th>
+      <th colspan="2">Student</th>
+      <th rowspan="2">Major</th>
+      <th rowspan="2">Credits</th>
+    </tr>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Martha</td>
+      <td>Jones</td>
+      <td>Computer Science</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Victor</td>
+      <td>Nim</td>
+      <td>Russian Literature</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Alexandra</td>
+      <td>Petrov</td>
+      <td>Astrophysics</td>
+      <td>260</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### Cell spanning
+
+In order to associate and line up the header cells with the correct columns and rows, the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are used on the {{HTMLElement("th")}} elements. The values set in these attributes specify how many cells each header cell ({{HTMLElement("th")}}) spans. Due to the way these attributes are set, the two second-row header cells are lined up with the columns they head. These each span one row and one column as the default values for the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are both `1`.
+
+The column and row spanning demonstrated by this example are illustrated in the following figure:
+
+![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning one column and two rows each; cell 2 spanning two columns and one row; cells 5 and 6 span a single row and column each, fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+
+#### CSS
+
+The CSS is unchanged from the [previous example](#basic_head_structure).
+
+```css hidden
+thead {
+  border-bottom: 2px solid rgb(160 160 160);
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Multiple_head_rows", 650, 180)}}
 
 ## Technical summary
 
@@ -96,11 +255,11 @@ See {{HTMLElement("table")}} for examples on `<thead>`.
       <td>
         A {{HTMLElement("table")}} element. The
         {{HTMLElement("thead")}} must appear after any
-        {{HTMLElement("caption")}} or
-        {{HTMLElement("colgroup")}} element, even implicitly defined,
+        {{HTMLElement("caption")}} and
+        {{HTMLElement("colgroup")}} elements, even implicitly defined,
         but before any {{HTMLElement("tbody")}},
-        {{HTMLElement("tfoot")}} and {{HTMLElement("tr")}}
-        element.
+        {{HTMLElement("tfoot")}}, and {{HTMLElement("tr")}}
+        elements.
       </td>
     </tr>
     <tr>
@@ -134,8 +293,9 @@ See {{HTMLElement("table")}} for examples on `<thead>`.
 
 ## See also
 
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}};
-- CSS properties and pseudo-classes that may be specially useful to style the `<thead>` element:
-
-  - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
-  - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each head cell
+- {{cssxref("border")}}: CSS property to control borders of head cells
+- {{cssxref("text-align")}}: CSS property to horizontally align each head cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each head cell content

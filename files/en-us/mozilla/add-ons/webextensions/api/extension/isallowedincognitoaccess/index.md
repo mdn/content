@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.extension.isAllowedIncognitoAccess
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Check whether the extension is allowed access to tabs opened in "private browsing" mode.
 

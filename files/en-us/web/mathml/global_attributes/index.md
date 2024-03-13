@@ -49,7 +49,7 @@ In addition to the basic MathML global attributes, the following global attribut
 
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
 
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
+  - : A {{cssxref("length-percentage")}} used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
 

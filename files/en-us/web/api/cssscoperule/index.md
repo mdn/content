@@ -2,12 +2,10 @@
 title: CSSScopeRule
 slug: Web/API/CSSScopeRule
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSScopeRule
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The **`CSSScopeRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSxRef("@scope")}} at-rule.
 
@@ -17,9 +15,9 @@ The **`CSSScopeRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/C
 
 _This interface inherits properties from its parent, {{domxref("CSSGroupingRule")}}._
 
-- {{domxref("CSSScopeRule.end", "end")}} {{experimental_inline}}
+- {{domxref("CSSScopeRule.end", "end")}}
   - : Returns a string containing the value of the `@scope` at-rule's scope limit.
-- {{domxref("CSSScopeRule.start", "start")}} {{experimental_inline}}
+- {{domxref("CSSScopeRule.start", "start")}}
   - : Returns a string containing the value of the `@scope` at-rule's scope root.
 
 ## Instance methods

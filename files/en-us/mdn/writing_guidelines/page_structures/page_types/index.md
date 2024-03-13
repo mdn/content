@@ -17,7 +17,7 @@ There are three broad categories of page types on MDN, though some page types fa
 
 ## Creating a new page
 
-To create new pages on MDN, you need to use GitHub — have a look at our [content repo README](https://github.com/mdn/content#adding-a-new-document) for more instructions.
+To create new pages on MDN, you need to use GitHub — have a look at our [content repo](https://github.com/mdn/content) section about [adding a new document](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document) for more instructions.
 
 ## How to use the templates
 
@@ -241,7 +241,7 @@ The list of subpages can be generated automatically using the templates [`Subpag
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [Learning area](/en-US/docs/Learn)
-- [Contributing to MDN](/en-US/docs/MDN/Contribute)
+- [Contributing to MDN](/en-US/docs/MDN/Community/Contributing)
 
 ## See also
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.topSites.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets an array containing information about pages that the user has visited often and recently.
 
