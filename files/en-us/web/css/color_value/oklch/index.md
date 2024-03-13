@@ -151,7 +151,7 @@ div {
 
 ## See also
 
-- [List of all color notations](/en-US/docs/Web/CSS/color)
+- [List of all color notations](/en-US/docs/Web/CSS/color_value)
 - {{CSSXref("&lt;hue&gt;")}} data type
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)

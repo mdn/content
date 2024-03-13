@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.TabStatus
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Indicates whether the tab has finished loading.
 

@@ -7,7 +7,7 @@ browser-compat:
   - webextensions.api.declarativeNetRequest.RuleAction.responseHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The request or response header to modify for a request, declared in the `rule.action.requestHeaders` array or `rule.action.responseHeaders` array for rules whose {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}`.type` is "modifyHeaders".
 

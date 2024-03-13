@@ -33,6 +33,8 @@ offset-path: ellipse(50% 50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
+offset-path: rect(5px 5px 160px 145px round 20%);
+offset-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Coordinate box */
 offset-path: content-box;
@@ -70,9 +72,9 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
 
       - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
-    - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
+    - {{cssxref("basic-shape")}}
 
-      - : Specifies the offset path as the equivalent path of a [CSS basic shape function](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes), such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the ellipse, starting at the rightmost point of the ellipse, proceeding clockwise through a full rotation. For `ellipse()` and `circle()`, which accept the `at <position>` parameter, if the `<position>` is omitted, the position defaults to `center` unless the element has an {{cssxref("offset-position")}} specified. In this case, the `offset-position` value is used for the `at <position>` parameter.
+      - : Specifies the offset path as the equivalent path of a {{cssxref("basic-shape", "CSS basic shape function")}}, such as {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("path","path()")}}, {{cssxref("basic-shape/polygon","polygon()")}}, {{cssxref("basic-shape/rect","rect()")}}, or {{cssxref("basic-shape/xywh","xywh()")}}. For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the ellipse, starting at the rightmost point of the ellipse, proceeding clockwise through a full rotation. For `ellipse()` and `circle()`, which accept the `at <position>` parameter, if the `<position>` is omitted, the position defaults to `center` unless the element has an {{cssxref("offset-position")}} specified. In this case, the `offset-position` value is used for the `at <position>` parameter.
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
 

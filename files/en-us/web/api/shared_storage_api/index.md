@@ -15,13 +15,13 @@ The **Shared Storage API** is a client-side storage mechanism that enables unpar
 
 One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is the use of cookies set on third-party content embedded in sites (for example via {{htmlelement("iframe")}} elements). These cookies can be used to track and profile users, and share information across sites.
 
-To prevent cross-site tracking, browsers are working towards partitioning all storage types, including [Cookies](/en-US/docs/Web/HTTP/Cookies), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and the [Cache API](/en-US/docs/Web/API/Cache). However, a major barrier to achieving this is the need for several legitimate use cases that rely on cross-site information sharing. Examples of such uses cases include advertisers wanting to measure the reach of their across sites and generate reports, and site owners wanting to customize user experiences based on the group they are in or their previous site interactions.
+To prevent cross-site tracking, browsers are working towards partitioning all storage types, including [Cookies](/en-US/docs/Web/HTTP/Cookies), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and the [Cache API](/en-US/docs/Web/API/Cache). However, a major barrier to achieving this is the need for several legitimate use cases that rely on cross-site information sharing. Examples of such use cases include advertisers wanting to measure the reach of their ads across sites and generate reports, and site owners wanting to customize user experiences based on the group they are in or their previous site interactions.
 
 The Shared Storage API provides a flexible solution for such use cases. It aims to provide the required data storage, processing, and sharing capabilities without the ability to track and profile users.
 
 Like other storage APIs, you can write to shared storage at any time. However, you can only read shared storage data from inside a {{domxref("SharedStorageWorklet", "worklet", "", "nocode")}}. Worklets provide a secure environment inside which you can process shared storage data and return useful results, but you can't directly share the data with the associated browsing context.
 
-To extract useful results from a shared storage worklet, you need to use an **output gate**. These gates serve specific purposes such as selecting a URL from a provided list to display to the user based on shared storage data. Results meant for the user are shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API) where they can't be accessed from the embedding page.
+To extract useful results from a shared storage worklet, you need to use an **output gate**. These gates serve specific purposes such as selecting a URL from a provided list to display to the user based on shared storage data. Results meant for the user are shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API) where they can't be accessed from the embedding page.
 
 ## Output gates
 
@@ -49,7 +49,7 @@ The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/
 
 ## Understanding how shared storage works
 
-There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
+There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 
 ### Writing to shared storage
 
@@ -58,7 +58,7 @@ Writing data to shared storage is simple — you use methods defined on the {{do
 This functionality is available in two different contexts:
 
 - In the main browsing context, where your site or app runs, on {{domxref("WindowSharedStorage")}}. This is available via `window.sharedStorage`.
-- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is is available via `this.sharedStorage`.
+- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is available via `this.sharedStorage`.
 
 In our A/B testing example, we define a function in our app context that generates a random number — 0 or 1 — to represent an experiment group. We then run the {{domxref("SharedStorage.set", "window.sharedStorage.set()")}} function to assign the user to a group and save the result in shared storage:
 

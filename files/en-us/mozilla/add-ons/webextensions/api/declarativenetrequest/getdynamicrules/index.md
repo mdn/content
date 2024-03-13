@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getDynamicRules
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the set of dynamic rules for the extension.
 

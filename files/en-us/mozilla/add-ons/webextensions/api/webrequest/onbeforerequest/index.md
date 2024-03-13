@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This event is triggered when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.
 

@@ -13,7 +13,7 @@ Now that we've looked at the very basics of strings, let's move up a gear and st
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.menus.refresh
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Refreshes a menu that's being shown.
 

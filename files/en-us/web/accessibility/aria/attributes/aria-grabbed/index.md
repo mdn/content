@@ -40,7 +40,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
 - [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)

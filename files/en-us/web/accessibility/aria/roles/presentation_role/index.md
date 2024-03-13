@@ -53,7 +53,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) versus [`role="presentation/none"`](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) - by Scott O'Hara
 
@@ -61,6 +61,6 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

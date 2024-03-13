@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformNaclArch
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The native client architecture. This may be different from arch on some platforms.
 

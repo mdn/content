@@ -267,7 +267,6 @@ That was easier than you thought, right? A-Frame targets web developers by offer
 ## See also
 
 - [A-Frame website](https://aframe.io/)
-- [Mozilla Mixed Reality website](https://mixedreality.mozilla.org/)
 - [Introducing A-Frame 0.1.0 article](https://aframe.io/blog/2015/12/16/introducing-aframe/)
 - [Made with A-Frame Tumblr](https://aframevr.tumblr.com/)
 - [A-Frame physics plugin](https://github.com/ngokevin/aframe-physics-components)

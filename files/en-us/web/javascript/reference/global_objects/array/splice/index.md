@@ -29,7 +29,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 - `start`
 
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
     - If `start` is omitted (and `splice()` is called with no arguments), nothing is deleted. This is different from passing `undefined`, which is converted to `0`.
@@ -85,6 +85,30 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed is [], no elements removed
+```
+
+### Remove 0 (zero) elements at index 0, and insert "angel"
+
+`splice(0, 0, ...elements)` inserts elements at the start of the array like {{jsxref("Array/unshift", "unshift()")}}.
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
+### Remove 0 (zero) elements at last index, and insert "sturgeon"
+
+`splice(array.length, 0, ...elements)` inserts elements at the end of the array like {{jsxref("Array/push", "push()")}}.
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
 ```
 
 ### Remove 1 element at index 3

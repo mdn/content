@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.proxy.ProxyInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Contains information about a proxy. This object, or an array of these objects, is returned from the listener to {{WebExtAPIRef("proxy.onRequest")}}. It instructs the browser whether to proxy the request, and if so, which proxy to use.
 

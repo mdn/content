@@ -311,7 +311,7 @@ There are other projects related to Svelte that are worth checking out:
 - Even though Svelte is a relatively young project there are lots of tutorials and [courses](https://www.udemy.com/topic/svelte-framework/?sort=popularity) available on the web, so it's difficult to make a recommendation.
 - Nevertheless, [Svelte.js — The Complete Guide](https://www.udemy.com/course/sveltejs-the-complete-guide/) by [Academind](https://academind.com/) is a very popular option with great ratings.
 - [The Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), by [Flavio Copes](https://flaviocopes.com/), is also a useful reference for learning the main Svelte concepts.
-- If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
+- If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), published in October 2020, that [you can preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome) for free.
 - If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s _Compile Svelte in your head_ blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
 
 ### Interacting with the community
@@ -337,7 +337,7 @@ Congratulations! You have completed the Svelte tutorial. In the previous article
 - Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.
 - We also took a look at Svelte's TypeScript support.
 
-In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to setup a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
+In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to set up a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
 
 Congratulations! After completing this series of tutorials you should have a strong base from which to start developing professional web applications with Svelte.
 

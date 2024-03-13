@@ -60,9 +60,8 @@ const mutablePoint = DOMPoint.fromPoint(readOnlyPoint);
 ### Creating a 2D point
 
 This sample creates a 2D point, specifying an inline object that includes the values to
-use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y",
-  "y")}}. The _z_ and _w_ properties are allowed to keep their default
-values (0 and 1 respectively).
+use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y", "y")}}.
+The _z_ and _w_ properties are allowed to keep their default values (0 and 1 respectively).
 
 ```js
 const center = DOMPoint.fromPoint({ x: 75, y: -50, z: -55, w: 0.25 });

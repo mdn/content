@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.theme.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates the browser theme according to the content of the {{WebExtAPIRef("theme.Theme", "Theme")}} object.
 

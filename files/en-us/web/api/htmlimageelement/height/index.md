@@ -79,3 +79,12 @@ This example may be easier to try out {{LiveSampleLink('Examples', 'in its own w
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLCanvasElement.height")}}
+- {{domxref("HTMLEmbedElement.height")}}
+- {{domxref("HTMLIFrameElement.height")}}
+- {{domxref("HTMLObjectElement.height")}}
+- {{domxref("HTMLSourceElement.height")}}
+- {{domxref("HTMLVideoElement.height")}}

@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUCommandBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUCommandBuffer`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pre-recorded list of GPU commands that can be submitted to a {{domxref("GPUQueue")}} for execution.
 

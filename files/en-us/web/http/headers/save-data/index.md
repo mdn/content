@@ -119,5 +119,5 @@ Content-Type: image/jpeg
 - [Delivering Fast and Light Applications with Save-Data - web.dev](https://web.dev/articles/optimizing-content-efficiency-save-data)
 - {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary))
 - CSS @media feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{domxref("NetworkInformation.saveData")}}

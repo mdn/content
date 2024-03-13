@@ -13,9 +13,9 @@ The **`FileSystemHandle`** interface of the {{domxref('File System API')}} is an
 
 Below is a list of interfaces based on the FileSystemHandle interface.
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxref("FileSystemFileHandle")}} {{SecureContext_Inline}}
   - : Represents a handle to a file entry.
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxref("FileSystemDirectoryHandle")}} {{SecureContext_Inline}}
   - : Provides a handle to a directory entry.
 
 ## Instance properties
@@ -110,4 +110,4 @@ function removeMatches(fileEntry, entriesArr) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

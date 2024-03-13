@@ -9,7 +9,7 @@ browser-compat: api.AbortController
 
 The **`AbortController`** interface represents a controller object that allows you to abort one or more Web requests as and when desired.
 
-You can create a new `AbortController` object using the {{domxref("AbortController.AbortController()", "AbortController()")}} constructor. Communicating with a DOM request is done using an {{domxref("AbortSignal")}} object.
+You can create a new `AbortController` object using the {{domxref("AbortController.AbortController()", "AbortController()")}} constructor. Communicating with an asynchronous operation is done using an {{domxref("AbortSignal")}} object.
 
 ## Constructor
 
@@ -19,12 +19,12 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 ## Instance properties
 
 - {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
-  - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.
+  - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, an asynchronous operation.
 
 ## Instance methods
 
 - {{domxref("AbortController.abort()")}}
-  - : Aborts a DOM request before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.
+  - : Aborts an asynchronous operation before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.
 
 ## Examples
 

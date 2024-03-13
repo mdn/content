@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.sessions.Session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `Session` object represents a tab or window that the user has closed in the current browsing session.
 

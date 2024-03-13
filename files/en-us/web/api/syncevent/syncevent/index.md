@@ -8,7 +8,7 @@ status:
 browser-compat: api.SyncEvent.SyncEvent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`SyncEvent()`** constructor creates a new {{domxref("SyncEvent")}} object.
 

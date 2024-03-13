@@ -21,7 +21,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
 - [ARIA: `columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
@@ -33,6 +33,6 @@ Do not use.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

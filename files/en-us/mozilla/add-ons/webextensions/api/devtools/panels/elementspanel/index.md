@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.devtools.panels.ElementsPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. This is called the Page Inspector in Firefox and the Elements panel in Chrome.
 

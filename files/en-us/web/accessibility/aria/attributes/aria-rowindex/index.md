@@ -67,7 +67,7 @@ Note both `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell,
 - `<integer>`
   - : An integer greater than or equal to 1, greater than the `aria-rowindex` of the previous row, if any, and less than or equal to the value of [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount).
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRowIndex")}}
   - : The [`ariaRowIndex`](/en-US/docs/Web/API/Element/ariaRowIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindex` attribute.
@@ -91,7 +91,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
 - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)

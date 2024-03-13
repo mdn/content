@@ -37,18 +37,19 @@ As we near the end of our React journey (for now at least), we'll add the finish
 
 ## Editing the name of a task
 
-We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
+We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.jsx`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
 
-Add the `editTask()` function inside your `App` component, in the same place as the other functions:
+Add the `editTask()` function inside your `<App />` component, in the same place as the other functions:
 
 ```jsx
 function editTask(id, newName) {
   const editedTaskList = tasks.map((task) => {
     // if this task has the same ID as the edited task
     if (id === task.id) {
-      //
+      // Copy the task and update its name
       return { ...task, name: newName };
     }
+    // Return the original task if it's not the edited task
     return task;
   });
   setTasks(editedTaskList);
@@ -71,23 +72,23 @@ const taskList = tasks.map((task) => (
 ));
 ```
 
-Now open `Todo.js`. We're going to do some refactoring.
+Now open `Todo.jsx`. We're going to do some refactoring.
 
 ## A UI for editing
 
-In order to allow users to edit a task, we have to provide a user interface for them to do so. First, import `useState` into the `Todo` component like we did before with the `App` component, by updating the first import statement to this:
+In order to allow users to edit a task, we have to provide a user interface for them to do so. First, import `useState` into the `<Todo />` component like we did before with the `<App />` component:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 ```
 
-We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { }` component definition:
+We'll use this to set an `isEditing` state with a default value of `false`. Add the following line just inside the top of your `<Todo />` component definition:
 
 ```jsx
 const [isEditing, setEditing] = useState(false);
 ```
 
-Next, we're going to rethink the `<Todo />` component — from now on, we want it to display one of two possible "templates", rather than the single template it's used so far:
+Next, we're going to rethink the `<Todo />` component. From now on, we want it to display one of two possible "templates", rather than the single template it has used so far:
 
 - The "view" template, when we are just viewing a todo; this is what we've used in the tutorial thus far.
 - The "editing" template, when we are editing a todo. We're about to create this.
@@ -193,9 +194,9 @@ The next step is to actually make the editing functionality work.
 
 ## Editing from the UI
 
-Much of what we're about to do will mirror the work we did in `Form.js`: as the user types in our new input field, we need to track the text they enter; once they submit the form, we need to use a callback prop to update our state with the new name of the task.
+Much of what we're about to do will mirror the work we did in `Form.jsx`: as the user types in our new input field, we need to track the text they enter; once they submit the form, we need to use a callback prop to update our state with the new name of the task.
 
-We'll start by making a new hook for storing and setting the new name. Still in `Todo.js`, put the following underneath the existing hook:
+We'll start by making a new hook for storing and setting the new name. Still in `Todo.jsx`, put the following underneath the existing hook:
 
 ```jsx
 const [newName, setNewName] = useState("");
@@ -221,7 +222,7 @@ Now we'll update our `editingTemplate`'s `<input />` field, setting a `value` at
 />
 ```
 
-Finally, we need to create a function to handle the edit form's `onSubmit` event; add the following just below the previous function you added:
+Finally, we need to create a function to handle the edit form's `onSubmit` event. Add the following just below `handleChange()`:
 
 ```jsx
 function handleSubmit(e) {
@@ -240,7 +241,91 @@ Bind this function to the form's `submit` event by adding the following `onSubmi
 <form className="stack-small" onSubmit={handleSubmit}>
 ```
 
-You should now be able to edit a task in your browser!
+You should now be able to edit a task in your browser. At this point, your `Todo.jsx` file should look like this:
+
+```jsx
+function Todo(props) {
+  const [isEditing, setEditing] = useState(false);
+  const [newName, setNewName] = useState("");
+
+  function handleChange(e) {
+    setNewName(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.editTask(props.id, newName);
+    setNewName("");
+    setEditing(false);
+  }
+
+  const editingTemplate = (
+    <form className="stack-small" onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label className="todo-label" htmlFor={props.id}>
+          New name for {props.name}
+        </label>
+        <input
+          id={props.id}
+          className="todo-text"
+          type="text"
+          value={newName}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="btn-group">
+        <button
+          type="button"
+          className="btn todo-cancel"
+          onClick={() => setEditing(false)}>
+          Cancel
+          <span className="visually-hidden">renaming {props.name}</span>
+        </button>
+        <button type="submit" className="btn btn__primary todo-edit">
+          Save
+          <span className="visually-hidden">new name for {props.name}</span>
+        </button>
+      </div>
+    </form>
+  );
+
+  const viewTemplate = (
+    <div className="stack-small">
+      <div className="c-cb">
+        <input
+          id={props.id}
+          type="checkbox"
+          defaultChecked={props.completed}
+          onChange={() => props.toggleTaskCompleted(props.id)}
+        />
+        <label className="todo-label" htmlFor={props.id}>
+          {props.name}
+        </label>
+      </div>
+      <div className="btn-group">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            setEditing(true);
+          }}>
+          Edit <span className="visually-hidden">{props.name}</span>
+        </button>
+        <button
+          type="button"
+          className="btn btn__danger"
+          onClick={() => props.deleteTask(props.id)}>
+          Delete <span className="visually-hidden">{props.name}</span>
+        </button>
+      </div>
+    </div>
+  );
+
+  return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
+}
+
+export default Todo;
+```
 
 ## Back to the filter buttons
 
@@ -266,7 +351,7 @@ Our goal right now is two-fold:
 
 A JavaScript object would be a great way to relate names to behaviors: each key is the name of a filter; each property is the behavior associated with that name.
 
-At the top of `App.js`, beneath our imports but above our `App()` function, let's add an object called `FILTER_MAP`:
+At the top of `App.jsx`, beneath our imports but above our `App()` function, let's add an object called `FILTER_MAP`:
 
 ```jsx
 const FILTER_MAP = {
@@ -302,7 +387,7 @@ const filterList = FILTER_NAMES.map((name) => (
 ));
 ```
 
-Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `filterList`. Replace the following:
+Now we'll replace the three repeated `<FilterButton />`s in `App.jsx` with this `filterList`. Replace the following:
 
 ```jsx
 <FilterButton />
@@ -338,13 +423,13 @@ const filterList = FILTER_NAMES.map((name) => (
 ));
 ```
 
-In the same way as we did earlier with our `<Todo />` component, we now have to update `FilterButton.js` to utilize the props we have given it. Do each of the following, and remember to use curly braces to read these variables!
+In the same way as we did earlier with our `<Todo />` component, we now have to update `FilterButton.jsx` to utilize the props we have given it. Do each of the following, and remember to use curly braces to read these variables!
 
 - Replace `all` with `{props.name}`.
 - Set the value of `aria-pressed` to `{props.isPressed}`.
 - Add an `onClick` handler that calls `props.setFilter()` with the filter's name.
 
-With all of that done, your `FilterButton()` function should read like this:
+With all of that done, your `FilterButton.jsx` file should read like this:
 
 ```jsx
 function FilterButton(props) {
@@ -360,6 +445,8 @@ function FilterButton(props) {
     </button>
   );
 }
+
+export default FilterButton;
 ```
 
 Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool's Page Inspector while clicking the buttons, you'll see the `aria-pressed` attribute values change accordingly.

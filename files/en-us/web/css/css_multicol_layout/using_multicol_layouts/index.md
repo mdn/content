@@ -217,4 +217,4 @@ There is a gap between columns. The recommended default is `1em`. This size can 
 
 ## Conclusion
 
-CSS columns are a layout primitive that can help make large blocks of text easier to read when responsive content is viewed on wide viewports. Imaginative developers may find many uses for them, especially in conjunction with [container queries](/en-US/docs/Web/CSS/CSS_container_queries) and with the automatic height balancing feature.
+CSS columns are a layout primitive that can help make large blocks of text easier to read when responsive content is viewed on wide viewports. Imaginative developers may find many uses for them, especially in conjunction with [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) and with the automatic height balancing feature.

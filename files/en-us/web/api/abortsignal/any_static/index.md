@@ -8,7 +8,7 @@ browser-compat: api.AbortSignal.any_static
 
 {{APIRef("DOM")}}
 
-The **`AbortSignal.any()`** static method takes an iterable of abort signals and returns an {{domxref("AbortSignal")}}. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason","","true")}} will be set to the reason of the first signal that is aborted. If any of the the given abort signals are already aborted then so will be the returned {{domxref("AbortSignal")}}.
+The **`AbortSignal.any()`** static method takes an iterable of abort signals and returns an {{domxref("AbortSignal")}}. The returned abort signal is aborted when any of the input iterable abort signals are aborted. The {{domxref("AbortSignal.reason", "abort reason","","true")}} will be set to the reason of the first signal that is aborted. If any of the given abort signals are already aborted then so will be the returned {{domxref("AbortSignal")}}.
 
 ## Syntax
 

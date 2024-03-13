@@ -35,7 +35,9 @@ To use this API you need to include the "contextualIdentities" and "cookies" [pe
 - {{WebExtAPIRef("contextualIdentities.create()")}}
   - : Creates a new contextual identity.
 - {{WebExtAPIRef("contextualIdentities.get()")}}
-  - : Retrieves a single contextual identity, given its cookie store ID.
+  - : Retrieves a contextual identity, given its cookie store ID.
+- {{WebExtAPIRef("contextualIdentities.move()")}}
+  - : Moves one or more contextual identities within the list of contextual identities.
 - {{WebExtAPIRef("contextualIdentities.query()")}}
   - : Retrieves all contextual identities, or all contextual identities with a particular name.
 - {{WebExtAPIRef("contextualIdentities.update()")}}

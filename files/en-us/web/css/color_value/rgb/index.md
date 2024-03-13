@@ -17,7 +17,7 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 
 ```css
 rgb(255 255 255)
-rgb(255 255 255 / .5)
+rgb(255 255 255 / 50%)
 ```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
@@ -62,7 +62,7 @@ div {
 }
 
 div.space-separated {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 div.comma-separated {
@@ -95,7 +95,7 @@ div {
 }
 
 div.rgb {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 div.rgba {

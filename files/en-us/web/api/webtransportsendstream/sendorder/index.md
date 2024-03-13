@@ -8,14 +8,12 @@ status:
 browser-compat: api.WebTransportSendStream.sendOrder
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`sendOrder`** property of the {{domxref("WebTransportSendStream")}} interface indicates the send priority of this stream relative to other streams for which the value has been set.
 
 Queued bytes are sent first for streams that have a higher value.
 If not set, the send order depends on the implementation.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -54,7 +52,7 @@ async function writeData() {
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

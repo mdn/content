@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBIndex.get
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("IDBIndex")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
@@ -17,8 +17,6 @@ key or the first corresponding value, if `key` is set to an
 If a value is found, then a structured clone of it is created and set as the
 `result` of the request object: this returns the record the key is associated
 with.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

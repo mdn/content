@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 
@@ -67,5 +67,5 @@ self.onperiodicsync = (event) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

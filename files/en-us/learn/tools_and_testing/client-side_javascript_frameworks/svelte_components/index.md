@@ -183,7 +183,7 @@ When any filter button is clicked, we just update the filter variable with the n
 
 In the previous example we realized that our `FilterButton` component wasn't working because our application state was flowing down from parent to child through the `filter` prop, but it wasn't going back up. So we added an `onclick` prop to let the child component communicate the new `filter` value to its parent.
 
-It works OK, but Svelte provides us with an easier and more straightforward way to achieve two-way data binding. Data ordinarily flows down from parent to child using props. If we want it to also flow the other way, from child to parent, we can use [the `bind:` directive](https://svelte.dev/docs#bind_element_property).
+It works OK, but Svelte provides us with an easier and more straightforward way to achieve two-way data binding. Data ordinarily flows down from parent to child using props. If we want it to also flow the other way, from child to parent, we can use [the `bind:` directive](https://svelte.dev/docs/element-directives#bind-property).
 
 Using `bind`, we will tell Svelte that any changes made to the `filter` prop in the `FilterButton` component should propagate back up to the parent component, `Todos`. That is, we will bind the `filter` variable's value in the parent to its value in the child.
 
@@ -370,7 +370,7 @@ Now we need to update our `Todo` component's markup to call the above functions 
 
 To handle the editing mode, we are using the `editing` variable, which is a boolean. When it's `true`, it should display the `<input>` field for editing the to-do name, and the _Cancel_ and _Save_ buttons. When it's not in editing mode, it will display the checkbox, the to-do name, and the buttons to edit and delete the to-do.
 
-To achieve this we will use an [`if` block](https://svelte.dev/docs#if). The `if` block conditionally renders some markup. Take into account that it won't just show or hide the markup based on the condition — it will dynamically add and remove the elements from the DOM, depending on the condition.
+To achieve this we will use an [`if` block](https://svelte.dev/docs/logic-blocks#if). The `if` block conditionally renders some markup. Take into account that it won't just show or hide the markup based on the condition — it will dynamically add and remove the elements from the DOM, depending on the condition.
 
 When `editing` is `true`, for example, Svelte will show the update form; when it's `false`, it will remove it from the DOM and add in the checkbox. Thanks to Svelte reactivity, assigning the value of the editing variable will be enough to display the correct HTML elements.
 
@@ -520,7 +520,7 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components `bind` can be a good choice; Svelte will let you choose.
 
-> **Note:** Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs#setContext) and [Stores](https://svelte.dev/docs#svelte_store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
+> **Note:** Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs/svelte#setcontext) and [Stores](https://svelte.dev/docs/svelte-store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
 
 ## The code so far
 

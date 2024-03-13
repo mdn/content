@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
 

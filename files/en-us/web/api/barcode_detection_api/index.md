@@ -231,7 +231,7 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 ## Interfaces
 
 - {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
-  - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
+  - : The `BarcodeDetector` interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
 
 ## Examples
 
@@ -290,4 +290,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)

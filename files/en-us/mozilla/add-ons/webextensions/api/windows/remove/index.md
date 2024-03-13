@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Closes a window and all the tabs inside it, given the window's ID.
 

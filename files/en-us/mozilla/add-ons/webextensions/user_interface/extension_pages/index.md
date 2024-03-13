@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 page-type: guide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
 

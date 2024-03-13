@@ -46,5 +46,5 @@ _This interface inherits methods from its parents, {{DOMxRef("UIEvent")}} and {{
 
 ## See also
 
-- [`beforeinput` event](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
-- [`input` event](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event)
+- [`input` event](/en-US/docs/Web/API/Element/input_event)

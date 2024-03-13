@@ -25,7 +25,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 
@@ -42,6 +42,6 @@ Do not use.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

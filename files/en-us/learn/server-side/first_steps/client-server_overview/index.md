@@ -13,7 +13,7 @@ Now that you know the purpose and potential benefits of server-side programming,
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A basic understanding of what a web server is.
+        A basic understanding of what a web server is.
       </td>
     </tr>
     <tr>
@@ -244,7 +244,7 @@ A good example of an additional task that a _Web Application_ might perform woul
 
 Server-side website code does not have to return HTML snippets/files in the response. It can instead dynamically create and return other types of files (text, PDF, CSV, etc.) or even data (JSON, XML, etc.).
 
-The idea of returning data to a web browser so that it can dynamically update its own content ({{glossary("AJAX")}}) has been around for quite a while. More recently "Single-page apps" have become popular, where the whole website is written with a single HTML file that is dynamically updated when needed. Websites created using this style of application push a lot of computational cost from the server to the web browser, and can result in websites that appear to behave a lot more like native apps (highly responsive, etc.).
+This is especially relevant for websites that work by fetching content from the server using JavaScript and updating the page dynamically, rather than always loading a new page when new content is to be shown. See [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) for more on the motivation for this approach, and what this model looks like from the client's point of view.
 
 ## Web frameworks simplify server-side web programming
 
