@@ -139,7 +139,7 @@ We passed the `addTask()` function into the `<Form />` component as the prop `ad
 + <Form onSubmit={addTask} />
 ```
 
-This would make the `addTask()` function available to the `<Form />` component as the prop `onSubmit`. That prop could be used in `App.jsx` like this:
+This would make the `addTask()` function available to the `<Form />` component as the prop `onSubmit`. That prop could be used in `Form.jsx` like this:
 
 ```diff
 function handleSubmit(event) {
@@ -600,7 +600,7 @@ import FilterButton from "./components/FilterButton";
 
 function App(props) {
   function addTask(name) {
-    const newTask = { id: `todo-${nanoid}`, name, completed: false };
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
   }
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Notification.maxActions_static
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`maxActions`** read-only static property of the
 {{domxref("Notification")}} interface returns the maximum number of actions supported by

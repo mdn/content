@@ -36,8 +36,7 @@ openWindow(url)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("WindowClient")}} object if the
-URL is from the same origin as the service worker or a {{Glossary("null", "null
-  value")}} otherwise.
+URL is from the same origin as the service worker or a {{Glossary("null", "null value")}} otherwise.
 
 ### Exceptions
 

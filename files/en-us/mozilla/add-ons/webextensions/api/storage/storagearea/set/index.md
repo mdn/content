@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Stores one or more items in the storage area or updates stored items.
 

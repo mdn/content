@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUSupportedLimits
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUSupportedLimits`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes the limits supported by a {{domxref("GPUAdapter")}}.
 

@@ -4,7 +4,9 @@ slug: Web/API/Background_Synchronization_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.SyncManager
+browser-compat:
+  - api.SyncManager
+  - api.ServiceWorkerGlobalScope.sync_event
 spec-urls: https://wicg.github.io/background-sync/spec/
 ---
 
@@ -35,7 +37,7 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run once the device has network connectivity.
-- [`ServiceWorkerGlobalScope: sync`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/sync_event) event
+- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens as soon as the network becomes available.
 
 ## Examples
