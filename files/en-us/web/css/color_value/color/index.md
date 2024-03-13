@@ -142,7 +142,7 @@ color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3) / calc(
 /* Computed output color: color(xyz-d65 0.112426 0.512648 0.319317 / 0.9) */
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<number>` to a `<percentage>`, for example, doesn't work.
+> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
 ### Formal syntax
 

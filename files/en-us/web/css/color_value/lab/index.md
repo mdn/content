@@ -134,7 +134,7 @@ In the following example, the `hsl()` origin color is again converted to the `la
 lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0.1))
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<number>` to a `<percentage>`, for example, doesn't work.
+> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
 ### Formal syntax
 

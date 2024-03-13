@@ -29,7 +29,7 @@ rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
 > **Note:** The computed values of relative colors expressed using `rgb()` syntax are {{CSSXref("color_value/color", "color(srgb ... )")}} values.
 
-> **Note:** The absolute values can also be written in a legacy form in which all values are separated with commas. Additionally, the legacy `rgba()` function can be used, which is an alias for `rgb()` that accepts the same parameters. Mixing number and percent value types is not valid in the comma-separated legacy syntax: the `R`, `G`, and `B` values must be either all numbers or all percentages.
+> **Note:** The absolute values can also be written in a legacy form in which all values are separated with commas. Additionally, the legacy `rgba()` function can be used, which is an alias for `rgb()` that accepts the same parameters. Mixing number and percent value types is not valid in the comma-separated legacy syntax. In other words, when using the legacy `rgba()` color function, the `R`, `G`, and `B` values must be either all numbers or all percentages.
 
 ### Values
 
@@ -128,7 +128,7 @@ In the following example, the `hsl()` origin color is again converted into an `r
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<number>` to a `<percentage>`, for example, doesn't work.
+> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
 ### Formal syntax
 

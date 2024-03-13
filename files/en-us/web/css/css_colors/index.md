@@ -83,8 +83,6 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
-  - : This tool makes it easy to create, adjust, and experiment with custom colors.
 
 ## Related concepts
 
@@ -129,3 +127,4 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool): This tool makes it easy to create, adjust, and experiment with custom colors.

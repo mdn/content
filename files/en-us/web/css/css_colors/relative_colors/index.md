@@ -23,7 +23,7 @@ color(from origin-color colorspace channel1 channel2 channel3)
 color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
 
-Relative colors are created using the same color functions as absolute colors, but with different parameters:
+Relative colors are created using the same [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) as absolute colors, but with different parameters:
 
 1. Include a basic color function (represented by _`color-function()`_ above) such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
 2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties), system colors, `currentColor`, or even another relative color.
@@ -69,7 +69,7 @@ The output is as follows:
 
 {{ EmbedLiveSample("General syntax", "100%", "200") }}
 
-The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to an equivalent `rgb()` color (`rgb(255 0 0)`) and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser, which are both quial to `0`).
+The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to an equivalent `rgb()` color (`rgb(255 0 0)`) and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser, which are both equal to `0`).
 
 This results in an output of `rgb(200 0 0)` — a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value. The browser's final output color (the computed value) is an sRGB `color()` value equivalent to `rgb(200 0 0)` — `color(srgb 0.784314 0 0)`.
 

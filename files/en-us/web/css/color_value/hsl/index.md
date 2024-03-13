@@ -141,7 +141,7 @@ In the following example, the `rgb()` origin color is again converted into an `h
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<number>` to a `<percentage>`, for example, doesn't work.
+> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
 ### Formal syntax
 
