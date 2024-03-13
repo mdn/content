@@ -7,11 +7,7 @@ browser-compat: css.properties.text-wrap-style
 
 {{CSSRef}}
 
-The **`text-wrap-style`** CSS property controls how text inside an element is wrapped. The different values provide:
-
-- Typographic improvements, for example more balanced line lengths across broken headings
-
-> **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap-style` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
+The **`text-wrap-style`** CSS property controls how text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element.
 
 {{EmbedInteractiveExample("pages/css/text-wrap-style.html")}}
 
@@ -31,3 +27,18 @@ text-wrap-style: revert;
 text-wrap-style: revert-layer;
 text-wrap-style: unset;
 ```
+
+When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-style` property is specified as a single keyword chosen from the list of values below.
+
+### Values
+
+- `auto`
+  - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
+- `balance`
+  - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six or less for Chromium and ten or less for Firefox).
+- `pretty`
+  - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
+- `stable` {{experimental_inline}}
+  - : Results in the same behavior as `wrap`, except that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
+
+## Description
