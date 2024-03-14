@@ -64,6 +64,8 @@ This article provides information about the changes in Firefox 124 that affect d
 
 ## Changes for add-on developers
 
+- Adds the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event that enables extensions to obtain information when the browser detects that the extension has a runtime performance issue such as a slow-running content script ([Firefox bug 1861445](https://bugzil.la/1861445)).
+
 ### Removals
 
 ### Other
