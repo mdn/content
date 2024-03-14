@@ -60,7 +60,7 @@ function format(event) {
   return JSON.stringify(obj, null, 2);
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 function logButtons(event) {
   log.textContent = format(event);
 }
