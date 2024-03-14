@@ -43,7 +43,7 @@ If none of these options are available or if the default accessible name is not 
 When using `aria-label`, you also need to consider [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby):
 
 - `aria-label` can be used in cases where text that could label the element is _not_ visible. If there is visible text that labels an element, use `aria-labelledby` instead.
-- The purpose of `aria-label` is the same as `aria-labelledby`. Both provide an accessible name for an element. If there is no visible name for the element you can reference, use `aria-label` to provide the user with a recognizable accessible name. If label text is available in the DOM and it's possible to referencing it for an acceptable user experience, prefer to use `aria-labelledby`. Don't use both on the same element because `aria-labelledby` will take precedence over `aria-label` if both are applied.
+- The purpose of `aria-label` is the same as `aria-labelledby`. Both provide an accessible name for an element. If there is no visible name for the element you can reference, use `aria-label` to provide the user with a recognizable accessible name. If label text is available in the DOM and it's possible to reference it for an acceptable user experience, prefer to use `aria-labelledby`. Don't use both on the same element because `aria-labelledby` will take precedence over `aria-label` if both are applied.
 
 Keep the following additional guidelines in mind when using `aria-label`:
 
