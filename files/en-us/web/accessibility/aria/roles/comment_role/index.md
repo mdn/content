@@ -59,7 +59,7 @@ Since `aria-details` can now accept multiple IDs, we can associate multiple comm
 
 ### Nested comments
 
-Nested comments are also possible with ARIA annotations — nest the comments inside one another, like so:
+It's possible to nest comments inside one another, like so:
 
 ```html
 <div role="comment" id="thread-1" data-author="chris">
