@@ -45,7 +45,7 @@ The `display-mode` feature is specified as a keyword value chosen from the list 
 
 ### Provide a light and dark color scheme to Picture-in-Picture content
 
-In this example, we combine the `display-mode: picture-in-picture` value with the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature to create light and dark color schemes that are applied based on the user's color scheme preference, only when the app is being shown in Picture-in-Picture mode.
+In this example, we combine the `display-mode: picture-in-picture` value with the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature to create light and dark color schemes that are applied based on the user's color scheme preference, only when the app is being shown in Picture-in-Picture mode.
 
 ```css
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: light) {
