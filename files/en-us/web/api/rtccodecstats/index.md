@@ -26,7 +26,7 @@ Note that other transports will use their own distinct `RTCCodecStats` objects.
 - {{domxref("RTCCodecStats.clockRate", "clockRate")}} {{optional_inline}}
   - : A positive number containing the media sampling rate.
 - {{domxref("RTCCodecStats.mimeType", "mimeType")}}
-  - : A string containing the media MIME type/sub-type, such as video/VP8.
+  - : A string containing the media MIME type/subtype, such as video/VP8.
 - {{domxref("RTCCodecStats.payloadType", "payloadType")}}
   - : A positive integer value in the range of 0 to 127 indicating the payload type used in RTP encoding or decoding.
 - {{domxref("RTCCodecStats.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}
