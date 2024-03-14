@@ -8,10 +8,7 @@ browser-compat: api.BaseAudioContext.createDynamicsCompressor
 
 {{ APIRef("Web Audio API") }}
 
-The `createDynamicsCompressor()` method of the {{
-    domxref("BaseAudioContext") }} Interface is used to create a
-{{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an
-audio signal.
+The `createDynamicsCompressor()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an audio signal.
 
 Compression lowers the volume of the loudest parts of the signal and raises the volume
 of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is

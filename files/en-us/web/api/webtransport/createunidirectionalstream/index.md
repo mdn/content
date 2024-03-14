@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
 
@@ -20,8 +20,6 @@ The relative order in which queued bytes are emptied from created streams can be
 If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
 If the order number is not set then the order in which bytes are sent is implementation dependent.
 Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

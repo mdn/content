@@ -71,5 +71,5 @@ svg {
 
 ## See also
 
-- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) including {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}
+- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes) including {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}
 - Other basic SVG shapes: {{SVGElement('circle')}}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polygon') }}**, {{ SVGElement('polyline') }}

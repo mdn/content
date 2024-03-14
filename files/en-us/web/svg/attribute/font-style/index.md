@@ -2,7 +2,7 @@
 title: font-style
 slug: Web/SVG/Attribute/font-style
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.font-style
+browser-compat: svg.global_attributes.font-style
 ---
 
 {{SVGRef}}

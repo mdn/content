@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStoreManager.getSubscriptions
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
 The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} interface returns a list of all the cookie change subscriptions for this {{domxref("ServiceWorkerRegistration")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

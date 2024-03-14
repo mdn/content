@@ -169,7 +169,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
+> **Note:** Unlike other browsers, Firefox persists the `disabled` state of an `<input>` element even after the page is reloaded. As a workaround, set the `<input>` element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to `off`. (See [Firefox bug 654072](https://bugzil.la/654072) for more details.)
 
 ## Validation
 

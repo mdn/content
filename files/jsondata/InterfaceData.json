@@ -2420,6 +2420,10 @@
       "inh": "Event",
       "impl": []
     },
+    "PageSwapEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "PageTransitionEvent": {
       "inh": "Event",
       "impl": []
