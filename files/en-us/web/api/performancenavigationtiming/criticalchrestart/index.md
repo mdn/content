@@ -27,7 +27,7 @@ If the value is `0` the connection was not restarted.
 The following JavaScript can be used to see if the connection was restarted:
 
 ```js
-let restartTime =
+const restartTime =
   performance?.getEntriesByType?.("navigation")[0]?.criticalCHRestart;
 if (restartTime > 0) {
   console.log("Time at which connection restart happened:", restartTime);
