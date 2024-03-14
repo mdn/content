@@ -13,7 +13,7 @@ The category of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanc
 
 Values of this type are strings. Possible values are:
 
-- `"content_script"`: The performance warning originated from a content script.
+- `"content_script"`: The performance warning is for a slow content script in the listening extension.
 
 {{WebExtExamples("h2")}}
 
