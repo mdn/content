@@ -11,8 +11,11 @@ The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/We
 
 For example:
 
-- A [progressive web app](/en-US/docs/Web/Progressive_web_apps) will often rely on opening apps [fullscreen](/en-US/docs/Web/API/Fullscreen_API) to provide an experience more like a native app. In this case, this `display-mode` media feature corresponds to the Web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member. Both apply to the top-level browsing context and any child browsing contexts, although we aware that the feature query will apply regardless of whether a web app manifest is present.
-- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) and other APIs such as the [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) can be used to display regular web app content in different contexts.
+- A [progressive web app](/en-US/docs/Web/Progressive_web_apps) [can set its display mode](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app) by setting the [`display`](/en-US/docs/Web/Manifest#display) member in its manifest. In this case, the value of `display-mode` identifies the value that was set (but note that this may not the be same as the value requested in the manifest, since a browser may not support the requested mode).
+
+- Any web app can use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) or the [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) to set the display mode, and in this case the value of `display-mode` identifies to the mode that was set.
+
+The `display-mode` value applies to the top-level browsing context and any child browsing contexts.
 
 ## Syntax
 
