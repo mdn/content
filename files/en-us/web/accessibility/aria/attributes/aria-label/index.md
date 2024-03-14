@@ -98,6 +98,7 @@ The `aria-label` attribute is **NOT** supported in:
 ## See also
 
 - {{HTMLElement('label')}} element
+- [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (2023)
 
