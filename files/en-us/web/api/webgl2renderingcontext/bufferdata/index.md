@@ -1,21 +1,22 @@
 ---
-title: "WebGLRenderingContext: bufferData() method"
+title: "WebGL2RenderingContext: bufferData() method"
 short-title: bufferData()
-slug: Web/API/WebGLRenderingContext/bufferData
+slug: Web/API/WebGL2RenderingContext/bufferData
 page-type: web-api-instance-method
-browser-compat: api.WebGLRenderingContext.bufferData
+browser-compat: api.WebGL2RenderingContext.bufferData
 ---
 
 {{APIRef("WebGL")}}
 
-The **`WebGLRenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
-buffer object's data store.
+The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes the buffer object's data store.
 
 ## Syntax
 
 ```js-nolint
 bufferData(target, size, usage)
 bufferData(target, srcData, usage)
+bufferData(target, srcData, usage, srcOffset)
+bufferData(target, srcData, usage, srcOffset, length)
 ```
 
 ### Parameters
@@ -29,9 +30,6 @@ bufferData(target, srcData, usage)
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : Buffer used for element indices.
-
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`
@@ -45,13 +43,15 @@ bufferData(target, srcData, usage)
     - `gl.PIXEL_UNPACK_BUFFER`
       - : Buffer used for pixel transfer operations.
 
-- `size`
+- `size` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} setting the size in bytes of the buffer object's data
     store.
+    One of `size` and `srcData` must be provided.
 - `srcData` {{optional_inline}}
   - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
     that will be copied into the data store.
     If `null`, a data store is still created, but the content is uninitialized and undefined.
+    One of `size` and `srcData` must be provided.
 - `usage`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
@@ -69,9 +69,6 @@ bufferData(target, srcData, usage)
       - : The contents are intended to be specified
         once by the application, and used at most a few times as the source for
         WebGL drawing and image specification commands.
-
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-
     - `gl.STATIC_READ`
       - : The contents are intended to be
         specified once by reading data from WebGL, and queried many times
@@ -99,6 +96,14 @@ bufferData(target, srcData, usage)
         times as the source for WebGL drawing and image specification
         commands.
 
+- `srcOffset` {{optional_inline}}
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
+    the buffer.
+    Only allowed if `srcData` is provided.
+- `length` {{optional_inline}}
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
+    Only allowed if `srcOffset` is given.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).
@@ -111,37 +116,6 @@ None ({{jsxref("undefined")}}).
 - A `gl.INVALID_ENUM` error is thrown if `target` or
   `usage` are not one of the allowed enums.
 
-## Examples
-
-### Using bufferData
-
-```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
-```
-
-### Getting buffer information
-
-To check the current buffer usage and buffer size, use the
-{{domxref("WebGLRenderingContext.getBufferParameter()")}} method.
-
-```js
-gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
-gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
-```
-
-### Getting size of a typed array
-
-To calculate size parameter for a typed array.
-
-```js
-const dataArray = new Float32Array([1, 2, 3, 4]);
-const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -152,7 +126,7 @@ const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
 
 ## See also
 
-- {{domxref("WebGL2RenderingContext.bufferData()")}}
+- {{domxref("WebGLRenderingContext.bufferData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferSubData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
