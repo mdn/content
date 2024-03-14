@@ -45,7 +45,7 @@ This example logs the `buttons` property when you trigger a {{domxref("Element/m
 ### JavaScript
 
 ```js
-const buttonNames = ['left', 'right', 'wheel', 'back', 'forward'];
+const buttonNames = ["left", "right", "wheel", "back", "forward"];
 function mouseButtonPressed(event, buttonName) {
   // Use binary `&` with the relevant power of 2 to check if a given button is pressed
   return Boolean(event.buttons & (2 ** buttonNames.indexOf(buttonName)));
