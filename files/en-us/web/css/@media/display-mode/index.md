@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.display-mode
 
 {{CSSRef}}
 
-The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the mode in which an application is being displayed within a device's operating system. You can use it to provide a consistent user experience when an application is opened in a display context that appears more integrated with the operating system than regular browser tab contents.
+The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether a web app is being displayed in a normal browser tab or in some alternative way, such as a standalone app or fullscreen mode.
 
 For example:
 
