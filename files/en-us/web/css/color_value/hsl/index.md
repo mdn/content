@@ -31,13 +31,15 @@ hsl(from #0000FF h s calc(l + 20))
 hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 ```
 
-> **Note:** The computed values of colors expressed using `hsl()` syntax are {{CSSXref("color_value/rgb", "rgb()")}} values in the case of absolute colors, and {{CSSXref("color_value/color", "color(srgb ... )")}} values in the case of relative colors.
+The `hsla()` function can also be used to express sRGB colors. This is an alias for `hsl()` that accepts the same parameters.
+
+> **Note:** The computed values of colors expressed using `hsl()` syntax are serialized to {{CSSXref("color_value/rgb", "rgb()")}} values in the case of absolute colors, and {{CSSXref("color_value/color", "color(srgb ... )")}} values in the case of relative colors. The values of the red, green, blue components may be rounded in serialization.
+
+> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120deg, 75%, 25%)`. Mixing number and percent value types is not valid in the comma-separated legacy syntax (i.e. the `S` and `L` values must be either all numbers or all percentages), and the `none` value is also not permitted.
 
 ### Values
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
-
-> **Note:** Absolute and relative functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
 #### Absolute value syntax
 
@@ -55,8 +57,6 @@ The parameters are as follows:
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This value represents the color's lightness. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
-
-> **Note:** The absolute values can also be written in a legacy form in which all values are separated with commas. Additionally, the legacy `hsla()` function can be used, which is an alias for `hsl()` that accepts the same parameters.
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
@@ -79,7 +79,7 @@ The parameters are as follows:
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` can be used to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
-> **Note:** The legacy `hsla()` function can be used to output relative colors, and to specify origin colors. When using `hsla()` to output a relative color, you must use the comma-less modern syntax and can't mix percentages and numbers (i.e. for the `S` and `L` values).
+> **Note:** The `hsla()` alias can also be used to output relative colors, and to specify origin colors. When using `hsla()` to output a relative color, you must use the comma-less modern syntax and can't mix percentages and numbers (i.e. for the `S` and `L` values).
 
 #### Defining relative color output channel components
 
