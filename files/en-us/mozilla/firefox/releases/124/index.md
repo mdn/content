@@ -42,6 +42,7 @@ This article provides information about the changes in Firefox 124 that affect d
 
 - The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) is now supported, allowing a web application to request that the screen not be dimmed or locked while it is active. This is useful for navigation and reading applications, and other applications where the screen doesn't get regular tactile input when in use, which would otherwise keep the screen awake. The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}. This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
   ([Firefox bug 1874849](https://bugzil.la/1874849)).
+- [`AbortSignal.any()`](/en-US/docs/Web/API/AbortSignal/any_static) is now supported, allowing a composite signal to be created that can be used to abort an operation from multiple signal sources. ([Firefox bug 1830781](https://bugzil.la/1830781)).
 
 #### DOM
 
@@ -62,6 +63,8 @@ This article provides information about the changes in Firefox 124 that affect d
 #### Marionette
 
 ## Changes for add-on developers
+
+- Adds the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event that enables extensions to obtain information when the browser detects that the extension has a runtime performance issue such as a slow-running content script ([Firefox bug 1861445](https://bugzil.la/1861445)).
 
 ### Removals
 

@@ -54,8 +54,7 @@ concept, in outline form, is:
    describes the requested payment and the options chosen by the user. Continue with the following steps:
 
    1. Validate the returned response; if there are any fields whose values are not
-      acceptable, call the response's {{domxref("PaymentResponse.complete",
-      "complete()")}} method with a value of `"fail"` to indicate failure.
+      acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of `"fail"` to indicate failure.
    2. If the response's data is valid and acceptable, call
       `complete("success")` to finalize the payment and process it.
 
