@@ -82,8 +82,8 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : The display mode of the application, as specified in the web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member.
-    Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+  - : The mode in which an application is being displayed: for example [fullscreen](/en-US/docs/Web/API/Fullscreen_API) or [picture-in-picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API/) mode.
+    Added in Media Queries Level 5.
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : Combination of brightness, contrast ratio, and color depth that are supported by the user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/forced-colors", "forced-colors")}}
