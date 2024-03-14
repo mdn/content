@@ -26,13 +26,6 @@ _Inherits properties from its parent {{domxref("EventTarget")}}._
 - {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the specified options.
 
-## Events
-
-Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
-
-- {{DOMxRef("Bluetooth/availabilitychanged_event", "availabilitychanged")}}
-  - : Fired on {{domxref("navigator.bluetooth")}} when the Bluetooth system as a whole becomes available or unavailable to the user agent.
-
 ## Specifications
 
 {{Specifications}}

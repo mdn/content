@@ -30,15 +30,15 @@ requestDevice(options)
     - `filters` {{optional_inline}}
 
       - : An array of filter objects indicating the properties of devices that will be matched.
-        To match a filter object, a device must match all the values of the filter: all its listed services, name, namePrefix, and so on.
+        To match a filter object, a device must match all the values of the filter: all its specified `services`, `name`, `namePrefix`, and so on.
 
         Each filter consists of an array of objects with the following properties:
 
         - `services` {{optional_inline}}
 
           - : An array of values indicating the Bluetooth GATT (Generic Attribute Profile) services that a Bluetooth device must support.
-            Each value can be a valid name from the [GATT assigned services keys](https://github.com/WebBluetoothCG/registries/blob/master/gatt_assigned_services.txt), such as `'battery_service'` or `'blood_pressure'`.
-            You can also pass a full UUID such as `'0000180F-0000-1000-8000-00805f9b34fb'` or the short 16-bit (`0x180F`) or 32-bit aliases.
+            Each value can be a valid name from the [GATT assigned services list](https://github.com/WebBluetoothCG/registries/blob/master/gatt_assigned_services.txt), such as `'battery_service'` or `'blood_pressure'`.
+            You can also pass a full service UUID such as `'0000180F-0000-1000-8000-00805f9b34fb'` or the short 16-bit (`0x180F`) or 32-bit alias.
             Note that these are the same values that can be passed to {{domxref("BluetoothUUID/getService_static","BluetoothUUID.getService()")}}.
 
         - `name` {{optional_inline}}
@@ -67,7 +67,7 @@ requestDevice(options)
             Each filter object has the following properties:
 
             - `service`
-              - : The GATT service name, the UUID, or the UUID 16-bit or 32-bit forms.
+              - : The GATT service name, the service UUID, or the UUID 16-bit or 32-bit form.
                 This takes the same values as the elements of the [`services`](#services) array.
             - `dataPrefix` {{optional_inline}}
               - : The data prefix.
@@ -82,7 +82,7 @@ requestDevice(options)
 
       - : An array of optional service identifiers.
 
-        The identifiers take the same values as the elements of the [`services`](#services) array (a GATT service name, UUID, or UUID short 16-bit or 32-bit forms).
+        The identifiers take the same values as the elements of the [`services`](#services) array (a GATT service name, service UUID, or UUID short 16-bit or 32-bit form).
 
     - `optionalManufacturerData` {{optional_inline}}
 
@@ -98,9 +98,9 @@ requestDevice(options)
         The default is `false`.
 
         This option is appropriate when devices have not advertised enough information for filtering to be useful.
-        When this is `true` you should omit all [`filters`](#filters) and [`exclusionFilters`](#exclusionfilters), and you must set [`optionalServices`](#optionalservices) in order to be able to _use_ the returned device.
+        When `acceptAllDevices` is set to `true` you should omit all [`filters`](#filters) and [`exclusionFilters`](#exclusionfilters), and you must set [`optionalServices`](#optionalservices) to be able to _use_ the returned device.
 
-After the user selects a device to pair in this origin, it is only allowed to access services whose UUID was listed in the services list in any element of [`filters.services`](#services) or in [`optionalServices`](#optionalservices).
+After the user selects a device to pair in the current origin, it is only allowed to access services whose UUID was listed in the services list in any element of [`filters.services`](#services) or in [`optionalServices`](#optionalservices).
 It is therefore important to list the required services.
 In particular, when filtering with just [`name`](#name) you must remember to also specify the desired services in [`optionalServices`](#optionalservices).
 
