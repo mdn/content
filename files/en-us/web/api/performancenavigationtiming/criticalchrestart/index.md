@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.criticalCHRestart
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-A website can indicate that a particular Client Hint is critical to the page by including it in a {{HTTPHeader("Critical-CH")}} HTTP response header (as well as the {{HTTPHeader("Accept-CH")}} HTTP request header which is needed for all client hints whether critical or not). Doing so will trigger a connection restart if the hint listed in the `Critical-CH` HTTP response header could be (but wasn't) included in the HTTP request initially sent. This requires the browser to support that client hint, otherwise it is ignored and no connection restart occurs.
+A website can indicate that a particular [Client Hint](/en-US/docs/Web/HTTP/Client_hints) is critical to the page by including it in a {{HTTPHeader("Critical-CH")}} HTTP response header (as well as the {{HTTPHeader("Accept-CH")}} HTTP request header which is needed for all client hints whether critical or not). Doing so will trigger a connection restart if the hint listed in the `Critical-CH` HTTP response header could have been, but wasn't, included in the HTTP request initially sent. If the browser does not support that client hint, it is ignored and no connection restart occurs.
 
 The **`criticalCHRestart`** read-only property represents the time at which the connection restart occured.
 
