@@ -16,7 +16,7 @@ The **`criticalCHRestart`** read-only property represents the time at which the 
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} representing the time after navigation {{domxref("PerformanceEntry.startTime")}} when the connection restart occured in milliseconds.
+A {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed since {{domxref("PerformanceEntry.startTime")}} when the connection restart occurred in milliseconds.
 
 If the value is `0` the connection was not restarted.
 
