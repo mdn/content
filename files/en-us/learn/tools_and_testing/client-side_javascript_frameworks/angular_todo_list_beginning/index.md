@@ -87,7 +87,7 @@ You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client
 
 ## Add logic to AppComponent
 
-Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
+Now that you know what an `item` is, you can give your application some items by adding them to the app.
 In `app.component.ts`, replace the contents with the following:
 
 ```js
@@ -96,10 +96,10 @@ import { CommonModule } from "@angular/common";
 
 @Component({
   standalone: true,
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
   imports: [CommonModule],
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
   title = "todo";
@@ -126,14 +126,17 @@ export class AppComponent {
 
 The first line is a JavaScript import that imports Angular.
 The `@Component()` decorator specifies metadata about the `AppComponent`.
-The default metadata properties are as follows:
+Here's some more information about the metadata we're using:
 
-- `selector`: Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is `'app-root'`.
+- [`standalone`](https://angular.io/api/core/Component#standalone): Describe whether the component requires a [NgModule](https://angular.io/guide/ngmodules#the-basic-ngmodule) or not.
+  Your app will directly manage template dependencies (components, directives, etc.) using imports when it's a standalone.
+- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is `'app-root'`.
   In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
   You use all component selectors in the same way by adding them to other component HTML templates.
-- `templateUrl`: Specifies the HTML file to associate with this component.
+- [`templateUrl`](https://angular.io/api/core/Component#templateurl): Specifies the HTML file to associate with this component.
   Here it is, './app.component.html',
-- `styleUrls`: Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- [`styleUrls`](https://angular.io/api/core/Component#styleurls): Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- [`imports`](https://angular.io/api/core/Component#imports): Allows you to specify the component's dependencies that can be used within its template.
 
 The `filter` property is of type `union`, which means `filter` could have the value of `all`, `active`, or `done`.
 With the `union` type, if you make a typo in the value you assign to the `filter` property, TypeScript lets you know so that you can catch the bug early.
@@ -179,9 +182,8 @@ What would you like to do today?
 
 ## Add items to the list
 
-A to-do list needs a way to add items.
-
-In `app.component.ts`, add the following method to the class:
+A to-do list needs a way to add items, so let's get started.
+In `app.component.ts`, add the following method to the class after the `allItems` array:
 
 ```ts
 addItem(description: string) {
@@ -197,7 +199,6 @@ The `addItem()` method uses the array method `unshift()` to add a new item to th
 You could alternatively use `push()`, which would add the new item to the end of the array and the bottom of the list.
 
 To use the `addItem()` method, edit the HTML in the `AppComponent` template.
-
 In `app.component.html`, replace the `<h2>` with the following:
 
 ```html
