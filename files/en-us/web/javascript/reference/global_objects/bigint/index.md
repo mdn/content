@@ -203,7 +203,7 @@ console.log(stringified);
 // {"number":1,"big":{"$bigint":"18014398509481982"}}
 ```
 
-If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
+You can then use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
 
 ```js
 const reviver = (key, value) =>
@@ -223,7 +223,7 @@ console.log(parsed);
 
 > **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects as shown above, the reviver of `JSON.parse()` has to be used with caution, because the serialization is _lossy_: it's not possible to distinguish between an object that happens to have a property called `$bigint` and an actual BigInt.
 >
-> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you are only dealing with a few specific keys containing BigInts, it may be better to just serialize them as strings and revive them based on the key's name instead.
+> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you know the shape of the payload, it may be better to just serialize them as strings and revive them based on the property key's name instead.
 
 ### BigInt coercion
 
