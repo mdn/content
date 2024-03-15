@@ -33,6 +33,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the current window is closed or not.
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : Returns a reference to the console object which provides access to the browser's debugging console.
+- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 - {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
@@ -45,8 +47,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
-- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
+- {{domxref("Window.fence")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{ReadOnlyInline}}
@@ -127,7 +131,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
@@ -146,16 +150,12 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ### Deprecated properties
 
-- {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
-  - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
 - {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- `Window.returnValue` {{Deprecated_Inline}}
-  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 - {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
@@ -217,7 +217,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Opens the Print Dialog to print the current document.
 - {{domxref("Window.prompt()")}}
   - : Returns the text entered by the user in a prompt dialog.
-- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
+- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 - {{domxref("queueMicrotask", "Window.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
@@ -245,11 +245,11 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
+- {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Displays a directory picker which allows the user to select a directory.
-- {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
+- {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Shows a file picker that allows a user to select a file or multiple files.
-- {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}}
+- {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Shows a file picker that allows a user to save a file.
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
   - : Sizes the window according to its content.
@@ -319,11 +319,11 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ### Device orientation events
 
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}} {{SecureContext_Inline}}
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}} {{SecureContext_Inline}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
-- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} {{SecureContext_Inline}}
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
 
 ### Focus events

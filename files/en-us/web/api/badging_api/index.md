@@ -64,13 +64,13 @@ None.
 To set a notification badge on the current app with a value of 12:
 
 ```js
-navigator.clearAppBadge(12);
+navigator.setAppBadge(12);
 ```
 
 To clear a notification badge on the current app:
 
 ```js
-navigator.setAppBadge();
+navigator.clearAppBadge();
 ```
 
 ## Specifications

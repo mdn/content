@@ -113,7 +113,7 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 <a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
 ```
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
@@ -128,7 +128,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
 - HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) attribute

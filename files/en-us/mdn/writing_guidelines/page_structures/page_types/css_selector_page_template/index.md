@@ -30,7 +30,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > ```
 >
 > - **title**
->   - : Title heading displayed at top of page. Format as _:NameOfTheSelector_.
+>   - : Title heading displayed at the top of the page. Format as _:NameOfTheSelector_.
 >     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
@@ -38,7 +38,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > - **page-type**
 >   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -52,29 +52,35 @@ browser-compat: css.selectors.NameOfTheSelector
 > **Top-of-page macros**
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> You should update or delete them according to the advice below:
+> These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the technology you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   If it isn't, then you can remove the macro call.
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
+>
+> You should update or delete the following macros according to the advice below:
+>
 > - `\{{CSSRef}}` — this must be present on every CSS selector page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>
+> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+>
+> Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > ---
 >
 > **Syntax section (`\{{CSSSyntax}}`)**
 >
 > The content of the Syntax section is generated using the `\{{CSSSyntax}}` macro.
-> For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) data file.
+> For these to populate, you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) data file.
 > See [selectors.md](https://github.com/mdn/data/blob/main/css/selectors.md) for more information.
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}
+{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The summary paragraph — start by naming the selector and saying what it does. This should ideally be 1 or 2 short sentences.
+The summary paragraph — start by naming the selector and saying what it does. This should ideally be one or two short sentences.
 
 ```css
 /* Insert code block showing common use cases */

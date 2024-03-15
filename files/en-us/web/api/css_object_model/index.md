@@ -19,7 +19,6 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("AnimationEvent")}}
 - {{DOMxRef("CaretPosition")}}
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSSCharsetRule")}}
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
 - {{DOMxRef("CSSFontFaceRule")}}
@@ -39,12 +38,9 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSStyleSheet")}}
 - {{DOMxRef("CSSStyleRule")}}
 - {{DOMxRef("CSSSupportsRule")}}
-- {{DOMxRef("CSSVariablesMap")}}
-- {{DOMxRef("CSSViewportRule")}}
 - {{DOMxRef("FontFace")}}
 - {{DOMxRef("FontFaceSet")}}
 - {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{DOMxRef("GetStyleUtils")}}
 - {{DOMxRef("MediaList")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}
@@ -98,7 +94,7 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 ## Tutorials
 
-- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (it needs some updating as it was made in the DHTML/Ajax era)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Specifications
@@ -112,4 +108,4 @@ All these features have been added little by little over the years to the differ
 ## See also
 
 - [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model)
-- [Houdini](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

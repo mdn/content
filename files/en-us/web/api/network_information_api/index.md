@@ -9,14 +9,12 @@ browser-compat:
   - api.Navigator.connection
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
 This can be used to select high definition content or low definition content based on the user's connection.
 
 The interface consists of a single {{domxref("NetworkInformation")}} object, an instance of which is returned by the {{domxref("Navigator.connection")}} property.
-
-{{AvailableInWorkers}}
 
 ## Interfaces
 

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.RuleCondition
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details of the condition that determines whether a rule matches a request, as the `condition` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 

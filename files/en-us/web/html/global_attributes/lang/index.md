@@ -9,7 +9,7 @@ browser-compat: html.global_attributes.lang
 
 The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single "language tag" in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
-> **Note:** The default value of `lang` is `unknown`, therefore it is recommended to always specify this attribute with the appropriate value.
+> **Note:** The default value of `lang` is the empty string, which means that the language is unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
@@ -36,7 +36,7 @@ The script subtag precedes the region subtag if both are present — `ru-Cyrl-BY
 
 To find the correct subtag codes for a language, try [the Language Subtag Lookup](https://r12a.github.io/app-subtags/).
 
-## Accessibility
+## Accessibility concerns
 
 WCAG Success Criterion 3.1.1 **requires** that a page language is specified in a way which may be 'programmatically determined' (i.e. via the **`lang`** attribute).
 

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a window is closed.
 

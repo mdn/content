@@ -166,19 +166,19 @@ div {
 ```css
 @media (color-gamut: p3) {
   div {
-    background-color: color(display-p3 0 0 1);
+    background-color: color(display-p3 1 0 0);
   }
 }
 
 @media (color-gamut: srgb) {
   div:nth-child(2) {
-    background-color: color(srgb 0 0 1);
+    background-color: color(srgb 1 0 0);
   }
 }
 
 @media (color-gamut: rec2020) {
   div:nth-child(3) {
-    background-color: color(rec2020 0 0 1);
+    background-color: color(rec2020 1 0 0);
   }
 }
 ```

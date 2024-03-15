@@ -37,7 +37,7 @@ A {{jsxref('Boolean')}} indicating whether the specified key was found.
 
 ## Examples
 
-The following example checks whether the location- or layout-specific string associated with the keyboard code that corresponds to the 'W' key on an English QWERTY keyboard existes.
+The following example checks whether the location- or layout-specific string associated with the keyboard code that corresponds to the 'W' key on an English QWERTY keyboard exists.
 
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {

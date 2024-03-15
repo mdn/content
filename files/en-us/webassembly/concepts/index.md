@@ -79,7 +79,6 @@ Let's talk about these options:
 
 Two of the many options for creating Wasm code are an online Wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online Wasm assembler choices, such as:
 
-- [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
 

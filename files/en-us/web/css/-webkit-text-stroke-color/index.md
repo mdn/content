@@ -15,7 +15,7 @@ The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/e
 /* <color> values */
 -webkit-text-stroke-color: red;
 -webkit-text-stroke-color: #e08ab4;
--webkit-text-stroke-color: rgb(200, 100, 0);
+-webkit-text-stroke-color: rgb(200 100 0);
 
 /* Global values */
 -webkit-text-stroke-color: inherit;

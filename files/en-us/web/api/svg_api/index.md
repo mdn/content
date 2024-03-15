@@ -60,7 +60,6 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGFETileElement")}}
 - {{DOMxRef("SVGFETurbulenceElement")}}
 - {{DOMxRef("SVGFilterElement")}}
-- {{DOMxRef("SVGFilterPrimitiveStandardAttributes")}}
 - {{DOMxRef("SVGForeignObjectElement")}}
 - {{DOMxRef("SVGGElement")}}
 - {{DOMxRef("SVGGeometryElement")}}
@@ -142,7 +141,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("GetSVGDocument")}}
 - {{DOMxRef("ShadowAnimation")}}
 - {{DOMxRef("SVGDocument")}}
-- {{DOMxRef("SVGFitToViewBox")}}
 - {{DOMxRef("SVGUnitTypes")}}
 - {{DOMxRef("SVGUseElementShadowRoot")}}
 

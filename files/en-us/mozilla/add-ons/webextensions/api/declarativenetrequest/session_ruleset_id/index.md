@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.SESSION_RULESET_ID
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The ruleset ID for the session-scoped rules added by the extension.
 

@@ -69,6 +69,6 @@ None ({{jsxref("undefined")}}).
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Related {{domxref("XMLHttpRequest")}} methods:
-  {{domxref("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, and
+  {{domxref("XMLHttpRequest.setRequestHeader","setRequestHeader()")}},
+  {{domxref("XMLHttpRequest.send", "send()")}}, and
   {{domxref("XMLHttpRequest.abort", "abort()")}}

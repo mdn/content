@@ -8,7 +8,7 @@ status:
 browser-compat: api.Gamepad.vibrationActuator
 ---
 
-{{APIRef("Gamepad")}}{{Non-standard_Header}}
+{{APIRef("Gamepad")}}{{Non-standard_Header}}{{SecureContext_Header}}
 
 The **`vibrationActuator`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 

@@ -20,7 +20,7 @@ The `aria-rowindextext` is added to each {{HTMLElement('tr')}} or to elements wi
 - `<string>`
   - The human-readable text alternative of the numeric [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRowIndexText")}}
   - : The [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
@@ -44,7 +44,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
 - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)

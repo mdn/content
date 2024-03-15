@@ -38,8 +38,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto
 
 - `dash-style` to `camelCase` conversion
 
-  - : A custom data attribute name is transformed to a key for the {{
-      domxref("DOMStringMap") }} entry by the following:
+  - : A custom data attribute name is transformed to a key for the
+    {{domxref("DOMStringMap") }} entry by the following:
 
     1. Lowercase all ASCII capital letters (`A` to
        `Z`);

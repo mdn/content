@@ -13,7 +13,7 @@ CSS and JavaScript, when used properly, also have the potential to allow for acc
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
+        A basic understanding of HTML, CSS, and
         JavaScript, and understanding of
         <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
           >what accessibility is</a

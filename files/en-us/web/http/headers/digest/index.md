@@ -4,10 +4,11 @@ slug: Web/HTTP/Headers/Digest
 page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.Digest
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}
+{{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`Digest`** response HTTP header provides a {{Glossary("digest")}} of the _selected representation_ of the requested resource.
 

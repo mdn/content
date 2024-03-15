@@ -71,8 +71,8 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     - {{domxref("Element/mouseover_event", "mouseover")}}
     - {{domxref("Element/mouseup_event", "mouseup")}}
     - {{domxref("Element/wheel_event","wheel")}}
-    - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
-    - {{domxref("HTMLElement/input_event", "input")}}
+    - {{domxref("Element/beforeinput_event", "beforeinput")}}
+    - {{domxref("Element/input_event", "input")}}
     - {{domxref("Element/keydown_event", "keydown")}}
     - {{domxref("Element/keyup_event", "keyup")}}
     - {{domxref("Element/compositionstart_event", "compositionstart")}}

@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.IDBObjectStore
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 

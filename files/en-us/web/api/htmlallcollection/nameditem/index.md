@@ -25,7 +25,7 @@ namedItem(name)
 
 The first {{domxref("Element")}} in the {{domxref("HTMLAllCollection")}} matching the `name`, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if there are none.
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

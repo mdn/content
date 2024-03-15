@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.request
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 

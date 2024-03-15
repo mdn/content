@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.selectConfiguration
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`selectConfiguration()`** method of the
 {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when

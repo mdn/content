@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### HTML
 
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) of `<iframes>` is now supported, allowing developers to hint that particular `<iframe>`s should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframes>` may not need to be fetched at all).
+- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) of `<iframe>` elements is now supported, allowing developers to hint that particular `<iframe>` elements should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframe>` elements may not need to be fetched at all).
   The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element, or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
   ([Firefox bug 1622090](https://bugzil.la/1622090)).
 
@@ -46,6 +46,10 @@ This article provides information about the changes in Firefox 121 that affect d
 ### APIs
 
 - The {{domxref("WebTransportSendStream.sendOrder", "sendOrder")}} property of the {{domxref("WebTransportSendStream")}} interface is now supported, allowing the relative priority of outgoing [WebTransport API](/en-US/docs/Web/API/WebTransport_API) _bidirectional_ streams to be read and changed after the stream is created. Note that this cannot be used to modify the priority of unidirectional streams, as Firefox implements them as {{domxref("WritableStream")}} instead of {{domxref("WebTransportSendStream")}}. (For more information see [Firefox bug 1853444](https://bugzil.la/1853444).)
+
+#### DOM
+
+- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
 
 ### WebAssembly
 
@@ -87,4 +91,4 @@ These features are newly shipped in Firefox 121 but are disabled by default. To 
 
 ## Older versions
 
-{{Firefox_for_developers(120)}}
+{{Firefox_for_developers}}
