@@ -72100,10 +72100,6 @@
       "SteveLee"
     ]
   },
-  "Web/Accessibility/ARIA/Annotations": {
-    "modified": "2020-04-03T08:53:49.929Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-24T00:12:10.850Z",
     "contributors": [
