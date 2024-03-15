@@ -29,14 +29,15 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 <!-- RTCReceivedRtpStreamStats -->
 
-These statistics are measured at the receiving end of an RTP stream, regardless of whether it's local or remote.
+These statistics are measured at the receiving end of an RTP stream, and reflect the values received at the remote endpoint.
+They are transmitted from the remote endpoint.
 
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}}
-  - : A number indicating the total number of RTP packets received for this synchronizing source, including retransmissions.
+  - : A positive integer indicating the total number of RTP packets received for this [synchronizing source](#ssrc), including retransmissions.
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}}
-  - : A number indicating the total number of RTP packets lost for this [synchronizing source](#ssrc).
+  - : An integer indicating the total number of RTP packets lost for this [synchronizing source](#ssrc), as measured at the remote endpoint.
 - {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}}
-  - : A number indicating the {{glossary("jitter", "packet jitter")}} for this [synchronizing source](#ssrc), measured in seconds.
+  - : An indicating the {{glossary("jitter", "packet jitter")}} for this [synchronizing source](#ssrc), measured in seconds.
 
 ### Standard fields included for all media types
 
