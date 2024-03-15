@@ -37,7 +37,7 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
   - : The total number of RTP packets lost for this synchronizing source.
     Note that this can be negative if more packets are received than sent.
 - {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}}
-  - : Packet jitter for this [synchronizing source](#ssrc), measured in seconds.
+  - : Packet {{glossary("jitter")}} for this [synchronizing source](#ssrc), measured in seconds.
     <!-- Calculated as defined in section 6.4.1. of [RFC3550]. -->
 
 ### Standard fields included for all media types
