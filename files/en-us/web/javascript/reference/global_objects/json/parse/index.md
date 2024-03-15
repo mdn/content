@@ -28,6 +28,10 @@ JSON.parse(text, reviver)
       - : The key associated with the value.
     - `value`
       - : The value produced by parsing.
+    - `context` {{optional_inline}}
+      - : A context object that holds state relevant to the current expression being revived. It is a new object for each invocation of the reviver function. It is only passed when reviving primitive values, but not when `value` is an object or array. It contains the following property:
+        - `source`
+          - : The original JSON string representing this value.
 
 ### Return value
 
@@ -62,7 +66,18 @@ console.log(transformedObj1); // undefined
 
 There is no way to work around this generically. You cannot specially handle the case where `key` is an empty string, because JSON objects can also contain keys that are empty strings. You need to know very precisely what kind of transformation is needed for each key when implementing the reviver.
 
-Note that `reviver` is run after the value is parsed. So, for example, numbers in JSON text will have already been converted to JavaScript numbers, and may lose precision in the process. To transfer large numbers without loss of precision, serialize them as strings, and revive them to [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), or other appropriate arbitrary precision formats.
+Note that `reviver` is run after the value is parsed. So, for example, numbers in JSON text will have already been converted to JavaScript numbers, and may lose precision in the process. To transfer large numbers without loss of precision, serialize them as strings, and revive them to [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), or other appropriate arbitrary precision formats. In environments with support, you can also use the `context.source` property to access the original JSON string representing the value.
+
+```js
+const bigJSON = '{"gross_gdp": 12345678901234567890}';
+const bigObj = JSON.parse(bigJSON, (key, value, context) => {
+  if (key === "gross_gdp") {
+    // Ignore the value because it has already lost precision
+    return BigInt(context.source);
+  }
+  return value;
+});
+```
 
 ## Examples
 
