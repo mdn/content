@@ -221,9 +221,9 @@ console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
 
-> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects as shown above, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects as shown above, the reviver of `JSON.parse()` has to be used with caution, because the serialization is _lossy_: it's not possible to distinguish between an object that happens to have a property called `$bigint` and an actual BigInt.
 >
-> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you are only dealing with a few specific keys containing bigints, it may be better not to wrap the value and simply revive those specific keys.
+> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you are only dealing with a few specific keys containing BigInts, it may be better to just serialize them as strings and revive them based on the key's name instead.
 
 ### BigInt coercion
 
