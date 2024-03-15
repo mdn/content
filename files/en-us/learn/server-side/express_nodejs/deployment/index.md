@@ -497,6 +497,31 @@ To start using Glitch you will first need to create an account:
 - Select GitHub in the popup to sign up using your GitHub credentials.
 - You'll then be logged in to the Glitch dashboard: <https://glitch.com/dashboard>.
 
+### Update Node Versions
+
+Hosting providers commonly support some major version of recent node releases.
+If the exact "minor" version you have specified in your `package.json` file is not supported they will usually fall back to the closest version they support (and often this will just work).
+
+Unfortunately, at time of writing, the highest supported version on Glitch is node 16.
+If you have been developing with node 17 or later, you should reduce the version used in your `package.json` file as shown.
+You will also need to retest:
+
+```json
+  "engines": {
+    "node": ">=v16"
+  },
+```
+
+Glitch [plans to update node and keep it better updated in future](https://blog.glitch.com/post/rebuilding-glitch) — and it may be that by the time you read this the node version limit no longer exists.
+Instead of updating node for your project first, you might upload it and see if it works.
+If the application doesn't load you could then modify the `package.json` in the Glitch editor to reduce the node version.
+
+> **Note:** You can also check the supported versions by entering the following command into the terminal of any Glitch project:
+>
+> ```sh
+> ls -l /opt/nvm/versions/node | grep '^d' | awk '{ print $9 }'
+> ```
+
 ### Deploy on Glitch from GitHub
 
 Next we'll import the Library project from GitHub.
