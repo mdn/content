@@ -12,7 +12,7 @@ The **`packetsLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats"
 
 ## Value
 
-Total number of RTP packets lost.
+An integer value indicating the number of lost RTP packets.
 
 This value can be negative.
 It is determined by subtracting the number of packets received from the number of packets that are expected.
