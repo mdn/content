@@ -33,9 +33,11 @@ For BigInt division, the result is the quotient of the two operands truncated to
 Math.floor(3 / 2); // 1
 
 1.0 / 2.0; // 0.5
+```
 
 ### Division using BigInts
 
+```js
 1n / 2n; // 0n
 5n / 3n; // 1n
 -1n / 3n; // 0n
