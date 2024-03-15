@@ -19,7 +19,7 @@ The **`CSSMatrixComponent`** interface of the {{domxref('CSS_Object_Model#css_ty
 ## Instance properties
 
 - {{domxref('CSSMatrixComponent.matrix','matrix')}}
-  - : A matrix.
+  - : A {{domxref("DOMMatrix")}} object.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBIndex.getKey
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`getKey()`** method of the {{domxref("IDBIndex")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
@@ -16,8 +16,6 @@ first corresponding primary key, if `key` is set to an
 
 If a primary key is found, it is set as the `result` of the request object.
 Note that this doesn't return the whole record as {{domxref("IDBIndex.get")}} does.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

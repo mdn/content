@@ -215,12 +215,10 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "OTPCredential",
-        "PasswordCredential",
-        "PublicKeyCredential"
+        "PasswordCredential"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.credentials"],
       "events": []
     },
     "CSS Counter Styles": {
@@ -474,9 +472,17 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential", "IdentityProvider"],
+      "guides": [
+        "/docs/Web/API/FedCM_API/IDP_integration",
+        "/docs/Web/API/FedCM_API/RP_sign-in"
+      ],
+      "interfaces": [
+        "IdentityCredential",
+        "IdentityProvider",
+        "NavigatorLogin"
+      ],
       "methods": ["CredentialsContainer.get()"],
-      "properties": [],
+      "properties": ["Navigator.login"],
       "events": []
     },
     "Fetch API": {
@@ -489,6 +495,16 @@
       "interfaces": ["Headers", "Request", "Response"],
       "methods": ["fetch()"],
       "properties": [],
+      "events": []
+    },
+    "Fenced Frame API": {
+      "overview": ["Fenced Frame API"],
+      "guides": [
+        "/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames"
+      ],
+      "interfaces": ["Fence", "FencedFrameConfig", "HTMLFencedFrameElement"],
+      "methods": ["Navigator.deprecatedReplaceInURN"],
+      "properties": ["Window.fence"],
       "events": []
     },
     "File API": {
@@ -1563,6 +1579,14 @@
         "Element: mouseout"
       ]
     },
+    "Topics API": {
+      "overview": ["Topics API"],
+      "guides": ["/docs/Web/API/Topics_API/Using"],
+      "interfaces": [],
+      "methods": ["Document.browsingTopics()", "fetch()"],
+      "properties": ["HTMLIFrameElement.browsingTopics"],
+      "events": []
+    },
     "Touch Events": {
       "overview": ["Touch events"],
       "guides": [
@@ -2107,6 +2131,7 @@
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
+        "RTCCodecStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"
@@ -2160,8 +2185,8 @@
       "properties": [],
       "events": []
     },
-    "Websockets API": {
-      "overview": ["Websockets API"],
+    "WebSockets API": {
+      "overview": ["WebSockets API"],
       "guides": [
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",

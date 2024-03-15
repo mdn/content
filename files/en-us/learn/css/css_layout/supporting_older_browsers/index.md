@@ -83,7 +83,7 @@ Similarly, this [error-handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#v
 
 Including new selectors that aren't supported in all browsers needs to be handled more carefully. If a selector in a comma-separated list of [selectors is invalid](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#selector_support), the entire style block is ignored.
 
-If using vendor-prefixed [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) or new[pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) a browser may not yet support, include the prefixed values within a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) by using {{cssxref(":is", ":is()")}} or {{cssxref(":where", ":where()")}} so the entire selector block doesn't get [invalidated and ignored](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list).
+If using vendor-prefixed [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) or new [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) a browser may not yet support, include the prefixed values within a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) by using {{cssxref(":is", ":is()")}} or {{cssxref(":where", ":where()")}} so the entire selector block doesn't get [invalidated and ignored](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list).
 
 ```css
 :is(:-prefix-mistake, :unsupported-pseudo),

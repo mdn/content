@@ -154,7 +154,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element

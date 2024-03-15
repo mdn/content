@@ -106,7 +106,7 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `maximumSignificantDigits`
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`.
 
-The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on th value of the [`roundingPriority`](#roundingpriority) property.
+The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on the value of the [`roundingPriority`](#roundingpriority) property.
 
 - `roundingPriority`
 

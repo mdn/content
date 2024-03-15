@@ -56,7 +56,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
-- [`<absolute-color-function>`](#functions)
+- [`<color-function>`](#functions)
 - {{cssxref("hex-color")}}
 - {{cssxref("named-color")}}
 - {{cssxref("alpha-value")}}
@@ -64,8 +64,9 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - {{cssxref("system-color")}}
 - [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
 
-### Keywords
+### Glossary terms and keywords
 
+- {{glossary("color space")}}
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 

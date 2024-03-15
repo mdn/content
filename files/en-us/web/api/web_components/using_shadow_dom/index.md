@@ -66,6 +66,8 @@ Before shadow DOM was made available to web developers, browsers were already us
 
 ## Creating a shadow DOM
 
+### Imperatively with JavaScript
+
 The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `"host"`, and a {{htmlelement("span")}} element containing some text:
 
 ```html
@@ -85,7 +87,34 @@ shadow.appendChild(span);
 
 The result looks like this:
 
-{{EmbedLiveSample("Creating a shadow DOM")}}
+{{EmbedLiveSample("Imperatively with JavaScript")}}
+
+### Declaratively with HTML
+
+Creating a shadow DOM via JavaScript API might be a good option for client-side rendered applications. For other applications, a server-side rendered UI might have better performance and, therefore, a better user experience. In such cases, you can use the {{htmlelement("template")}} element to declaratively define the shadow DOM. The key to this behavior is the {{glossary("enumerated")}} `shadowrootmode` attribute, which can be set to either `open` or `closed`, the same values as the `mode` option of {{domxref("Element.attachShadow()", "attachShadow()")}} method.
+
+```html
+<div id="host">
+  <template shadowrootmode="open">
+    <span>I'm in the shadow DOM</span>
+  </template>
+</div>
+```
+
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/simple.html", "", "")}}
+
+> **Note:** By default, contents of `<template>` are not displayed. In this case, because the `shadowrootmode="open"` was included, the shadow root is rendered. In supporting browsers, the visible contents within that shadow root are displayed.
+
+After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this:
+
+```plain
+- DIV id="host"
+  - #shadow-root
+    - SPAN
+      - #text: I'm in the shadow DOM
+```
+
+Note that there's no `<template>` element in the DOM tree.
 
 ## Encapsulation from JavaScript
 

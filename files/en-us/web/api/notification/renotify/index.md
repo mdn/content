@@ -8,14 +8,12 @@ status:
 browser-compat: api.Notification.renotify
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`renotify`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the user should be notified
 after a new notification replaces an old one, as specified in the `renotify`
 option of the {{domxref("Notification.Notification","Notification()")}} constructor.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -36,7 +34,7 @@ const options = {
 
 const n = new Notification("New review activity", options);
 
-console.log(n.renotify); // "true"
+console.log(n.renotify); // true
 ```
 
 ## Specifications

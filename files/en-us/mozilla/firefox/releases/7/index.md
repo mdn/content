@@ -190,4 +190,4 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 
 ## See also
 
-{{Firefox_for_developers('6')}}
+{{Firefox_for_developers}}

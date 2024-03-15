@@ -25,7 +25,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 - [ARIA: `generic` role](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)

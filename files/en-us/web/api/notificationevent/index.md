@@ -11,7 +11,7 @@ The **`NotificationEvent`** interface of the {{domxref("Notifications API", "", 
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-> **Note**: Only persistent notification events, fired at the {{domxref("ServiceWorkerGlobalScope")}} object, implement the `NotificationEvent` interface. Non-persistent notification events, fired at the {{domxref("Notification")}} object, implement the `Event` interface.
+> **Note:** Only persistent notification events, fired at the {{domxref("ServiceWorkerGlobalScope")}} object, implement the `NotificationEvent` interface. Non-persistent notification events, fired at the {{domxref("Notification")}} object, implement the `Event` interface.
 
 {{InheritanceDiagram}}
 

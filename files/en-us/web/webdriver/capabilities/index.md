@@ -8,7 +8,7 @@ page-type: landing-page
 
 WebDriver **_capabilities_** are used to communicate the features supported by a [session](/en-US/docs/Web/WebDriver). A client may also use capabilities to define which features it requires the driver to satisfy when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession).
 
-When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are [standard and shared between all browsers](#list-of-capabilities), but the set may also contain [browser-specific capabilities](#vendor-specific-capabilities) and these are always prefixed.
+When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are [standard and shared between all browsers](#list_of_capabilities), but the set may also contain [browser-specific capabilities](#vendor-specific_capabilities) and these are always prefixed.
 
 ## Capabilities negotiation
 
@@ -112,7 +112,7 @@ Which you choose of the two preceding examples is not important, but it can matt
 
 ## Vendor-specific capabilities
 
-In addition to the [standard capabilities](#list-of-capabilities) WebDriver allows third-parties to _extend_ the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.
+In addition to the [standard capabilities](#list_of_capabilities) WebDriver allows third-parties to _extend_ the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.
 
 - [Firefox capabilities](/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
 - [Chrome capabilities](/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions) (`goog:chromeOptions`)

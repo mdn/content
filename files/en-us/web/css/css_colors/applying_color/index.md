@@ -127,7 +127,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255 0 0 /
 Aside from `rgb()`, you can use `hsl()` and `hwb()` which take a `<hue>` component.
 A [`<hue>`](/en-US/docs/Web/CSS/hue) is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
-For more information on classifying these functions, see the [Color spaces and color models](#color-spaces-and-color-models) section.
+For more information on classifying these functions, see the [Color spaces and color models](#color_spaces_and_color_models) section.
 
 #### HSL functional notation
 

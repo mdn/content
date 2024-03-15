@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebSocket.binaryType
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}
 
 The **`WebSocket.binaryType`** property controls the type of
 binary data being received over the WebSocket connection.

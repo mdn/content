@@ -37,7 +37,7 @@ details on how to construct a media condition.
 
 ### Source size values
 
-The source size value is a [CSS length](/en-US/docs/Web/CSS/length). It may
+The source size value is a CSS {{cssxref("length")}}. It may
 be specified using font-relative units (such as `em` or `ex`),
 absolute units (such as `px` or `cm`), or the `vw`
 unit, which lets you specify the width as a percentage of the viewport width
@@ -126,9 +126,8 @@ article img {
 #### JavaScript
 
 The JavaScript code handles the two buttons that let you toggle the third width option
-between 40em and 50em; this is done by handling the {{domxref("Element.click_event",
-  "click")}} event, using the JavaScript string object {{jsxref("String.replace",
-  "replace()")}} method to replace the relevant portion of the `sizes` string.
+between 40em and 50em; this is done by handling the {{domxref("Element.click_event", "click")}}
+event, using the JavaScript string object {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
 
 ```js
 const image = document.querySelector("article img");

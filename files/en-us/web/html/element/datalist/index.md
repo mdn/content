@@ -107,6 +107,14 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
 
 {{EmbedLiveSample("Password_type", 600, 40)}}
 
+## Accessibility concerns
+
+When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
+
+- The font size of the data list's options does not zoom, always remaining the same size. The contents of the autosuggest do not grow or shrink when the rest of the contents are zoomed in or out.
+- As targeting the list of options with CSS is very limited to non-existent, rendering can not be styled for high-contrast mode.
+- Some screen reader/browser combinations, including NVDA and Firefox, do not announce the contents of the autosuggest popup.
+
 ## Technical summary
 
 <table class="properties">
@@ -138,7 +146,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -167,14 +175,6 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
     </tr>
   </tbody>
 </table>
-
-## Accessibility concerns
-
-When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
-
-- The font size of the data list's options does not zoom, always remaining the same size. The contents of the autosuggest do not grow or shrink when the rest of the contents are zoomed in or out.
-- As targeting the list of options with CSS is very limited to non-existent, rendering can not be styled for high-contrast mode.
-- Some screen reader/browser combinations, including NVDA and Firefox, do not announce the contents of the autosuggest popup.
 
 ## Specifications
 

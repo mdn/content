@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.clearBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`clearBuffer()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that fills a region of a {{domxref("GPUBuffer")}} with zeroes.

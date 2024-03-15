@@ -7,7 +7,7 @@
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
-/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/AJAX	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Community	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Getting_Started	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
@@ -126,7 +126,7 @@
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Adding_Extensions_using_the_Windows_Registry	https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
 /en-US/docs/Adding_feed_readers_to_Firefox	/en-US/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
@@ -604,7 +604,7 @@
 /en-US/docs/CSS/background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS/background-repeat	/en-US/docs/Web/CSS/background-repeat
 /en-US/docs/CSS/background-size	/en-US/docs/Web/CSS/background-size
-/en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/CSS/border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS/border-bottom	/en-US/docs/Web/CSS/border-bottom
 /en-US/docs/CSS/border-bottom-color	/en-US/docs/Web/CSS/border-bottom-color
@@ -799,7 +799,7 @@
 /en-US/docs/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/CSS/resize	/en-US/docs/Web/CSS/resize
 /en-US/docs/CSS/resolution	/en-US/docs/Web/CSS/resolution
-/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/CSS/right	/en-US/docs/Web/CSS/right
 /en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
@@ -984,7 +984,7 @@
 /en-US/docs/CSS:background-image	/en-US/docs/Web/CSS/background-image
 /en-US/docs/CSS:background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS:background-repeat	/en-US/docs/Web/CSS/background-repeat
-/en-US/docs/CSS:block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/CSS:block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/CSS:border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS:border-bottom	/en-US/docs/Web/CSS/border-bottom
 /en-US/docs/CSS:border-bottom-color	/en-US/docs/Web/CSS/border-bottom-color
@@ -3569,6 +3569,7 @@
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
 /en-US/docs/Glossary/Block/Block_(scripting)	/en-US/docs/Glossary/Block/Scripting
 /en-US/docs/Glossary/Boot2Gecko	/en-US/docs/Glossary/Firefox_OS
+/en-US/docs/Glossary/Brotli	/en-US/docs/Glossary/Brotli_compression
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext
@@ -3581,6 +3582,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
+/en-US/docs/Glossary/GZip	/en-US/docs/Glossary/GZip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -3643,8 +3645,8 @@
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/Element/HTMLHeadElement	/en-US/docs/Web/API/HTMLHeadElement
 /en-US/docs/HTML/Element/Heading_Elements	/en-US/docs/Web/HTML/Element/Heading_Elements
-/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/Img
-/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/img
+/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/HTML/Element/Input	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/Input-redirect-1	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/a	/en-US/docs/Web/HTML/Element/a
@@ -5244,6 +5246,7 @@
 /en-US/docs/Learn/Forms/Your_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_form/Example	/en-US/docs/Learn/Forms/Your_first_form
+/en-US/docs/Learn/Front-end_web_developer	https://developer.mozilla.org/en-US/curriculum/
 /en-US/docs/Learn/Getting_started_with_the_web/How_to_set_up_your_work_environment	/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_web_site	/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
@@ -5396,11 +5399,15 @@
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
-/en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
+/en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/About	/en-US/docs/MDN/Writing_guidelines
-/en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Community/Issues/Issue_triage	/en-US/docs/MDN/Community/Issues
+/en-US/docs/MDN/Community/MDN_content	/en-US/docs/MDN/Community/Contributing
+/en-US/docs/MDN/Community/MDN_content/Issues	/en-US/docs/MDN/Community/Issues
+/en-US/docs/MDN/Community/MDN_content/Pull_requests	/en-US/docs/MDN/Community/Pull_requests
 /en-US/docs/MDN/Community/Users_teams	/en-US/docs/MDN/Community/Roles_teams
+/en-US/docs/MDN/Contribute	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Changelog	/en-US/docs/MDN/Changelog
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Writing_guidelines
@@ -5416,9 +5423,9 @@
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Contribute/Does_this_belong	/en-US/docs/MDN/Writing_guidelines/What_we_write
 /en-US/docs/MDN/Contribute/Editor/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
-/en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Feedback	/en-US/docs/MDN/Community
-/en-US/docs/MDN/Contribute/Fixing_MDN_content_bugs	/en-US/docs/MDN/Community/MDN_content
+/en-US/docs/MDN/Contribute/Fixing_MDN_content_bugs	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Getting_started	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/GitHub_beginners	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/MDN/Contribute/GitHub_best_practices	/en-US/docs/MDN/Community/Issues
@@ -5450,7 +5457,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Help_beginners	/en-US/docs/MDN/Community/Learn_forum
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
-/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -5473,11 +5480,13 @@
 /en-US/docs/MDN/Contribute/Localize	/en-US/docs/MDN/Community/Contributing/Translated_content
 /en-US/docs/MDN/Contribute/Markdown_in_MDN	/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Open_source_etiquette	/en-US/docs/MDN/Community/Open_source_etiquette
+/en-US/docs/MDN/Contribute/Processes	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Processes/Content_bug_triage	/en-US/docs/MDN/Community/Issues
 /en-US/docs/MDN/Contribute/Processes/Locating_browser-specific_information	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_version	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
 /en-US/docs/MDN/Contribute/Processes/Matching_features_to_browser_versiosn	https://github.com/mdn/browser-compat-data/blob/main/docs/matching-browser-releases/index.md
-/en-US/docs/MDN/Contribute/Processes/Short_surveys	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN/Contribute/Processes/Short_surveys	/en-US/docs/MDN/Community/Contributing
+/en-US/docs/MDN/Contribute/Processes/Workstream_assessment_project	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN/Contribute/Sample_app_coding_guidelines	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 /en-US/docs/MDN/Contribute/Sample_server	/en-US/docs/MDN
 /en-US/docs/MDN/Contribute/Structures	/en-US/docs/MDN/Writing_guidelines/Page_structures
@@ -5601,7 +5610,7 @@
 /en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs
 /en-US/docs/MDN_at_ten	/en-US/docs/MDN/At_ten
-/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
+/en-US/docs/MDN_at_ten/Contributing_to_MDN	/en-US/docs/MDN/Community/Contributing
 /en-US/docs/MDN_at_ten/History	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/MDN_at_ten/History_of_MDN	/en-US/docs/MDN/At_ten/History_of_MDN
 /en-US/docs/Main_page	/en-US/
@@ -5790,6 +5799,7 @@
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 /en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
+/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
@@ -8402,7 +8412,7 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
-/en-US/docs/Web/API/HTMLDialogElement/cancel	/en-US/docs/Web/API/HTMLElement/cancel_event
+/en-US/docs/Web/API/HTMLDialogElement/cancel_event	/en-US/docs/Web/API/HTMLElement/cancel_event
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -8689,6 +8699,7 @@
 /en-US/docs/Web/API/IDBKeyRange/lowerBound	/en-US/docs/Web/API/IDBKeyRange/lowerBound_static
 /en-US/docs/Web/API/IDBKeyRange/only	/en-US/docs/Web/API/IDBKeyRange/only_static
 /en-US/docs/Web/API/IDBKeyRange/upperBound	/en-US/docs/Web/API/IDBKeyRange/upperBound_static
+/en-US/docs/Web/API/IDBLocaleAwareKeyRange	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/Web/API/IDBMutableFile	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/abort_event	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/error_event	/en-US/docs/Web/API/IndexedDB_API
@@ -11373,7 +11384,7 @@
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/Containing_block
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
-/en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -11474,6 +11485,7 @@
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
+/en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
@@ -11547,7 +11559,6 @@
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
-/en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
 /en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/color-contrast
@@ -11671,7 +11682,7 @@
 /en-US/docs/Web/CSS/repeating-linear-gradient()	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
-/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
@@ -12027,6 +12038,7 @@
 /en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player	/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Guide/Audio_and_video_manipulation	/en-US/docs/Web/Media/Audio_and_video_manipulation
 /en-US/docs/Web/Guide/CSS	/en-US/docs/Learn/CSS
+/en-US/docs/Web/Guide/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/Guide/CSS/CSS_Image_Sprites	/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /en-US/docs/Web/Guide/CSS/Consistent_list_indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /en-US/docs/Web/Guide/CSS/Counters	/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
@@ -12211,6 +12223,7 @@
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/image	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats
@@ -12233,6 +12246,7 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/HTML/Global_attributes/contextmenu	/en-US/docs/Web/HTML/Element/menu
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
@@ -12772,6 +12786,7 @@
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
+/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps
@@ -12946,6 +12961,11 @@
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate

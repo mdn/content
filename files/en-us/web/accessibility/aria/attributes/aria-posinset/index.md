@@ -71,7 +71,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
 
