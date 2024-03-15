@@ -255,7 +255,7 @@ function cached(getter) {
     if (cache.has(key)) {
       const dereferencedValue = cache.get(key).deref();
       if (dereferencedValue !== undefined) {
-        return cache.get(key).deref();
+        return dereferencedValue;
       }
     }
     const value = await getter(key);
