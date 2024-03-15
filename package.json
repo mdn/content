@@ -18,6 +18,7 @@
   },
   "type": "module",
   "scripts": {
+    "postinstall": "node scripts/update-history.js",
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
@@ -40,7 +41,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "2.39.0",
+    "@mdn/yari": "2.43.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "async": "^3.2.5",
@@ -50,9 +51,9 @@
     "env-cmd": "10.1.0",
     "fdir": "^6.1.1",
     "gray-matter": "^4.0.3",
-    "husky": "9.0.10",
+    "husky": "9.0.11",
     "js-yaml": "^4.1.0",
-    "lint-staged": "15.2.1",
+    "lint-staged": "15.2.2",
     "markdownlint-cli2": "0.12.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "prettier": "3.2.5"

@@ -95,7 +95,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement("dialog")}} element
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)

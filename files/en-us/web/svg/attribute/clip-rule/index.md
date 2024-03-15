@@ -2,7 +2,7 @@
 title: clip-rule
 slug: Web/SVG/Attribute/clip-rule
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.clip-rule
+browser-compat: svg.global_attributes.clip-rule
 ---
 
 {{SVGRef}}

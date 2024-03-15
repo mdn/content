@@ -3,12 +3,10 @@ title: "CSSScopeRule: end property"
 short-title: end
 slug: Web/API/CSSScopeRule/end
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSScopeRule.end
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The **`end`** property of the {{domxref("CSSScopeRule")}} interface returns a string containing the value of the `@scope` at-rule's scope limit.
 

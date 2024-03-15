@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBRequest.error
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`error`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the error in the event of an unsuccessful
 request.
-
-{{AvailableInWorkers}}
 
 ## Value
 

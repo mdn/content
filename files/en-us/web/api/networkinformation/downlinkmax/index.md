@@ -8,13 +8,11 @@ status:
 browser-compat: api.NetworkInformation.downlinkMax
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{APIRef("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`NetworkInformation.downlinkMax`** read-only property
 returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
 connection technology.
-
-{{AvailableInWorkers}}
 
 ## Value
 

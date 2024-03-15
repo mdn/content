@@ -589,7 +589,7 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 }
 ```
 
-```html hidden
+```html
 <div class="wrapper">
   <div class="box box1">
     <div class="nested">a</div>

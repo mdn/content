@@ -9,90 +9,6 @@ browser-compat: html.elements.meta
 
 The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other HTML meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("title")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
-          >Metadata content</a
-        >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th>Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
-    </tr>
-    <tr>
-      <th>Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag
-        must not be present.
-      </td>
-    </tr>
-    <tr>
-      <th>Permitted parents</th>
-      <td>
-        <ul>
-          <li>
-            <code>&#x3C;meta charset></code>,
-            <code>&#x3C;meta http-equiv></code>: a
-            {{HTMLElement("head")}} element. If the
-            <a href="/en-US/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> is not an
-            encoding declaration, it can also be inside a
-            {{HTMLElement("noscript")}} element, itself inside a
-            <code>&#x3C;head></code> element.
-          </li>
-          <li>
-            <code>&#x3C;meta name></code>: any element that accepts
-            <a
-              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
-              >metadata content</a
-            >.
-          </li>
-          <li>
-            <code>&#x3C;meta itemprop></code>: any element that accepts
-            <a
-              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
-              >metadata content</a
-            >
-            or
-            <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-              >flow content</a
-            >.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th>DOM interface</th>
-      <td>{{domxref("HTMLMetaElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 The type of metadata provided by the `<meta>` element can be one of the following:
 
 - If the [`name`](#name) attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
@@ -159,6 +75,89 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 <!-- Redirect page after 3 seconds -->
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th>
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+          >Metadata content</a
+        >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th>Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th>Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th>Permitted parents</th>
+      <td>
+        <ul>
+          <li>
+            <code>&#x3C;meta charset></code>,
+            <code>&#x3C;meta http-equiv></code>: a
+            {{HTMLElement("head")}} element. If the
+            <a href="/en-US/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> is not an
+            encoding declaration, it can also be inside a
+            {{HTMLElement("noscript")}} element, itself inside a
+            <code>&#x3C;head></code> element.
+          </li>
+          <li>
+            <code>&#x3C;meta name></code>: any element that accepts
+            <a
+              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+              >metadata content</a
+            >.
+          </li>
+          <li>
+            <code>&#x3C;meta itemprop></code>: any element that accepts
+            <a
+              href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+              >metadata content</a
+            >
+            or
+            <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+              >flow content</a
+            >.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th>DOM interface</th>
+      <td>{{domxref("HTMLMetaElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

@@ -154,7 +154,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
 - HTML {{HTMLElement('progress')}} element

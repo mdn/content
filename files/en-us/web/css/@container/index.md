@@ -298,6 +298,7 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 ## See also
 
 - [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
