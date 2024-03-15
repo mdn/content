@@ -7,7 +7,7 @@
 /en-US/docs/-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/::file-selector-button	/en-US/docs/Web/CSS/::file-selector-button
-/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/<img>	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/AJAX	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Community	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
 /en-US/docs/AJAX/Getting_Started	/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
@@ -126,7 +126,7 @@
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Adding_Extensions_using_the_Windows_Registry	https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
 /en-US/docs/Adding_feed_readers_to_Firefox	/en-US/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
@@ -3569,6 +3569,7 @@
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
 /en-US/docs/Glossary/Block/Block_(scripting)	/en-US/docs/Glossary/Block/Scripting
 /en-US/docs/Glossary/Boot2Gecko	/en-US/docs/Glossary/Firefox_OS
+/en-US/docs/Glossary/Brotli	/en-US/docs/Glossary/Brotli_compression
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext
@@ -3581,6 +3582,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
+/en-US/docs/Glossary/GZip	/en-US/docs/Glossary/GZip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -3643,8 +3645,8 @@
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/Element/HTMLHeadElement	/en-US/docs/Web/API/HTMLHeadElement
 /en-US/docs/HTML/Element/Heading_Elements	/en-US/docs/Web/HTML/Element/Heading_Elements
-/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/Img
-/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/Img
+/en-US/docs/HTML/Element/Img	/en-US/docs/Web/HTML/Element/img
+/en-US/docs/HTML/Element/Img-redirect-1	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/HTML/Element/Input	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/Input-redirect-1	/en-US/docs/Web/HTML/Element/Input
 /en-US/docs/HTML/Element/a	/en-US/docs/Web/HTML/Element/a
@@ -5244,6 +5246,7 @@
 /en-US/docs/Learn/Forms/Your_first_HTML_form	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn/Forms/Your_first_form
 /en-US/docs/Learn/Forms/Your_first_form/Example	/en-US/docs/Learn/Forms/Your_first_form
+/en-US/docs/Learn/Front-end_web_developer	https://developer.mozilla.org/en-US/curriculum/
 /en-US/docs/Learn/Getting_started_with_the_web/How_to_set_up_your_work_environment	/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_web_site	/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
@@ -5796,6 +5799,7 @@
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 /en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
+/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
@@ -10973,6 +10977,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/ARIA/Annotations	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role
@@ -12219,6 +12224,7 @@
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/image	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats
@@ -12241,6 +12247,7 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/HTML/Global_attributes/contextmenu	/en-US/docs/Web/HTML/Element/menu
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
@@ -12780,6 +12787,7 @@
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
+/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps
@@ -12954,6 +12962,11 @@
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
+/en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate

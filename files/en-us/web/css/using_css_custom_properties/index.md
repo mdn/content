@@ -203,7 +203,7 @@ This leads to the same result as the previous example, yet allows for one canoni
 
 ## Inheritance of custom properties
 
-A custom property defined using two dashes `--` instead of `@property` always inherit the value of its parent.
+A custom property defined using two dashes `--` instead of `@property` always inherits the value of its parent.
 This is demonstrated in the following example:
 
 ```html live-sample___dash-custom-property-inheritance

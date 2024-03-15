@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.WebTransport.WebTransport
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransport()`** constructor creates a new {{domxref("WebTransport")}} object instance.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

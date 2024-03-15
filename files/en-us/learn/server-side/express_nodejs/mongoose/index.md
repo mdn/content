@@ -107,7 +107,7 @@ Other code can execute while the server is waiting for the database operation to
 JavaScript has a number of mechanisms for supporting asynchronous behavior.
 Historically JavaScript relied heavily on passing [callback functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) to asynchronous methods to handle the success and error cases.
 In modern JavaScript callbacks have largely been replaced by [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-Promises are objects that are (immediately) returned by an asynchronous method that represent it's future state.
+Promises are objects that are (immediately) returned by an asynchronous method that represent its future state.
 When the operation completes, the promise object is "settled", and resolves an object that represents the result of the operation or an error.
 
 There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) for a high level overview of both approaches.

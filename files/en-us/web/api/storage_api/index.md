@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: api.StorageManager
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Storage")}}
+{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
 The [Storage Standard](https://storage.spec.whatwg.org) defines a shared storage system designed to be used by all APIs and technologies that websites can use to store data in a user's browser.
 
@@ -16,8 +16,6 @@ The Storage API gives websites the ability to find out how much space they can u
 This article gives an overview of the way user agents store and maintain websites' data. For more information about storage limits and eviction, see [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 
 This article also gives an overview of the {{domxref("StorageManager")}} interface used to estimate available storage for a site.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 

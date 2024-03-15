@@ -24,8 +24,7 @@ getElementsByTagNameNS(namespace, name)
     {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
 - `name`
   - : Either the local name of elements to look for or the special
-    value `*`, which matches all elements (see {{domxref("Element.localName",
-      "element.localName")}}).
+    value `*`, which matches all elements (see {{domxref("Element.localName", "element.localName")}}).
 
 ### Return value
 

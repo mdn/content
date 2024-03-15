@@ -75,6 +75,7 @@ particular XML documents. For example, in the qualified name
 
 ## See also
 
+- {{domxref("Element.tagName")}}
 - {{domxref("Element.namespaceURI")}}
 - {{domxref("Element.prefix")}}
 - {{domxref("Attr.localName")}}

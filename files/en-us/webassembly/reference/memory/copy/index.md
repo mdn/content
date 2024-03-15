@@ -22,8 +22,6 @@ i32.const 25
 
 ;; Copy data from [100, 125] to [50, 75]
 memory.copy
-
-;; the top item on the stack will now either be the previous number of pages (success) or `-1` (failure)
 ```
 
 | Instruction   | Binary opcode |

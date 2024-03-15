@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.MessagePort.postMessage
 ---
 
-{{APIRef("Channel Messaging API")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`postMessage()`** method of the
 {{domxref("MessagePort")}} interface sends a message from the port, and optionally,
 transfers ownership of objects to other browsing contexts.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
