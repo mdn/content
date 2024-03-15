@@ -22,6 +22,10 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Intl.Segmenter")}} is now supported, allowing developers to perform locale-sensitive text segmentation.
+  This enables splitting a string into meaningful items (graphemes, words or sentences) in different locales.
+  ([Firefox bug 1423593](https://bugzil.la/1423593), [Firefox bug 1883914](https://bugzil.la/1883914).)
+
 #### Removals
 
 ### SVG
