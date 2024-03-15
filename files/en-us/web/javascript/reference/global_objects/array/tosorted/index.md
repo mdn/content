@@ -19,23 +19,7 @@ toSorted(compareFn)
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-
-  - : A function that determines the order of the elements. It returns a number where:
-
-    - A negative value indicates that `a` should come before `b`.
-    - A positive value indicates that `a` should come after `b`.
-    - Zero indicates that `a` and `b` are considered equal.
-
-    Note: `NaN` is treated as `0`.
-
-    The function is called with the following arguments:
-
-    - `a`
-      - : The first element for comparison. Will never be `undefined`.
-    - `b`
-      - : The second element for comparison. Will never be `undefined`.
-
-    If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+  - : A function that determines the order of the elements. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value. See {{jsxref("Array/sort", "sort()")}} for more information.
 
 ### Return value
 

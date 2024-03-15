@@ -22,20 +22,20 @@ sort(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : A function that determines the order of the elements. It returns a number where:
+  - : A function that determines the order of the elements. The function is called with the following arguments:
+
+    - `a`
+      - : The first element for comparison.
+    - `b`
+      - : The second element for comparison.
+
+    It should return a number where:
 
     - A negative value indicates that `a` should come before `b`.
     - A positive value indicates that `a` should come after `b`.
-    - Zero indicates that `a` and `b` are considered equal.
+    - Zero or `NaN` indicates that `a` and `b` are considered equal.
 
-    Note: `NaN` is treated as `0`.
-
-    The function is called with the following arguments:
-
-    - `a`
-      - : The first element for comparison. Will never be `undefined`.
-    - `b`
-      - : The second element for comparison. Will never be `undefined`.
+    To memorize this, remember that `(a, b) => a - b` sorts numbers in ascending order.
 
     If omitted, the typed array elements are sorted according to numeric value.
 
