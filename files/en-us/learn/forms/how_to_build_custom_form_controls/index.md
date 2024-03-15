@@ -1366,11 +1366,20 @@ window.addEventListener("load", () => {
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        // Prevent the default action of the ArrowDown key press.
+        // Without this, the page would scroll down when the ArrowDown key is pressed.
+        event.preventDefault();
       }
 
       // When the user hits the up arrow, we jump to the previous option
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        // Prevent the default action of the ArrowUp key press.
+        event.preventDefault();
+      }
+      if (event.key === "Enter" || event.key === " ") {
+        // If Enter or Space is pressed, toggle the option list
+        toggleOptList(select);
       }
 
       updateValue(select, index);
