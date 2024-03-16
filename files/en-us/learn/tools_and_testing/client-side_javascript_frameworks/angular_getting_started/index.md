@@ -90,7 +90,7 @@ npm install -g @angular/cli
 ```
 
 Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
-In the directory you would like to build your app, use the following `ng new` command to create a new application called `todo`:
+In the directory you would like to build your app, use the following [`ng new`](https://angular.io/cli/new) command to create a new application called `todo`:
 
 ```bash
 ng new todo --routing=false --style=css --ssr=false
@@ -284,7 +284,7 @@ With component-specific styles, you can organize your CSS so that it is easily m
 ### Standalone components
 
 It's recommended to [make components standalone](https://angular.io/guide/component-overview#creating-a-component-manually-1) unless a project already makes use of [NgModules](https://angular.io/guide/ngmodules) (Angular modules) to organize code.
-This tutorial uses standalone components which are easier to start with.
+This tutorial uses [standalone components](https://angular.io/guide/standalone-components) which are easier to start with.
 It's common to import [`CommonModule`](https://angular.io/api/common/CommonModule) so that your component can make use of common [directives](https://angular.io/api/common#directives) and [pipes](https://angular.io/api/common#pipes).
 This tutorial makes use of `ngFor` and `ngIf`, so we can make sure they're available like so:
 
