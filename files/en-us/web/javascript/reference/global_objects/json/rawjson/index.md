@@ -18,25 +18,25 @@ JSON.rawJSON(string)
 ### Parameters
 
 - `string`
-  - : The JSON text. Must be valid JSON.
+  - : The JSON text. Must be valid JSON **representing a primitive value**.
 
 ### Return value
 
-An object that can be used to create JSON text with the same structure and values as the `string` provided, without quotes around the string itself. This object [has `null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and [is frozen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) (so it never gets accidentally serialized as a regular object by any kind of primitive conversion), and the following property:
+An object that can be used to create JSON text with the exact same content as the `string` provided, without quotes around the string itself. This object [has `null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and [is frozen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) (so it never gets accidentally serialized as a regular object by any kind of primitive conversion), and the following property:
 
 - `rawJSON`
-  - : The original JSON `string` provided. It must be valid JSON representing a **primitive value**.
+  - : The original JSON `string` provided.
 
 Furthermore, it has a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) that marks itself as a raw JSON object. This allows it to be identified by {{jsxref("JSON.stringify()")}} and {{jsxref("JSON.isRawJSON()")}}.
 
 ### Exceptions
 
 - {{jsxref("SyntaxError")}}
-  - : Thrown if the `string` is not valid JSON.
+  - : Thrown if the `string` is not valid JSON, or if it represents an object or array.
 
 ## Description
 
-A raw JSON object can be seen as an immutable, atomic data structure like any kind of [primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_values). It is not a regular object and it contains no data other than the raw JSON text. It holds a piece of JSON that should not (or cannot) be serialized by JavaScript itself for various reasons. The most typical use case is the floating point number loss of precision problem. For example:
+A raw JSON object can be seen as an immutable, atomic data structure like any kind of [primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_values). It is not a regular object and it contains no data other than the raw JSON text. It is used to "pre-serialize" data to formats that `JSON.stringify` itself cannot produce for various reasons. The most typical use case is the floating point number loss of precision problem. For example:
 
 ```js
 JSON.stringify({ value: 12345678901234567890 });
@@ -45,13 +45,15 @@ JSON.stringify({ value: 12345678901234567890 });
 
 The value is not exactly equivalent to the original number any more! This is because JavaScript uses floating point representation for all numbers, so it cannot represent all integers exactly. The number literal `12345678901234567890` itself is already rounded to the nearest representable number when it is parsed by JavaScript.
 
-One possible solution in this particular case is to use [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), but they only work for integers, and require special handling when used with `JSON.stringify()`. With raw JSON, you can directly tell `JSON.stringify()` what a particular value should be stringified as, and not let it do the conversion itself:
+Without `JSON.rawJSON`, there is no way to tell `JSON.stringify` to produce the number literal `12345678901234567000`, because there is simply no corresponding JavaScript number value. With raw JSON, you can directly tell `JSON.stringify()` what a particular value should be stringified as:
 
 ```js
 const rawJSON = JSON.rawJSON("12345678901234567890");
 JSON.stringify({ value: rawJSON });
 // {"value":12345678901234567890}
 ```
+
+For a more complete example of this, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#lossless_number_serialization).
 
 Note that although we passed a string to `JSON.rawJSON()`, it still becomes a number in the final JSON. This is because the string represents the verbatim JSON text. If you want to serialize a string, you should use `JSON.rawJSON()` with a quotes-enclosed string value:
 
@@ -61,7 +63,7 @@ JSON.stringify({ value: rawJSON });
 // {"value":"Hello world"}
 ```
 
-`JSON.rawJSON` allows you to insert arbitrary JSON text, but does not allow you to create invalid JSON, or any syntax that you could not create with `JSON.stringify()`. Anything that was not permitted by the JSON syntax is not permitted by `JSON.rawJSON()` either:
+`JSON.rawJSON` allows you to insert arbitrary JSON text, but does not allow you to create invalid JSON. Anything that was not permitted by the JSON syntax is not permitted by `JSON.rawJSON()` either:
 
 ```js example-bad
 const rawJSON = JSON.rawJSON('"Hello\nworld"'); // Syntax error, because line breaks are not allowed in JSON strings
@@ -101,13 +103,13 @@ const objJSON = JSON.rawJSON('{"a": 1, "b": 2}');
 
 ### Using JSON.rawJSON() to create escaped string literals
 
-When strings are serialized to JSON, all code points, other than those that are not legal inside JSON string literals (such as line breaks), are printed literally:
+Apart from numbers, there is only one other type that does not have a one-to-one correspondence between JavaScript values and JSON text: strings. When strings are serialized to JSON, all code points, other than those that are not legal inside JSON string literals (such as line breaks), are printed literally:
 
 ```js
 console.log(JSON.stringify({ value: "\ud83d\ude04" })); // {"value":"😄"}
 ```
 
-This may not be desirable, because the receiver of this string may handle Unicode differently. To improve interoperability, you can explicitly specify the string as a raw JSON string:
+This may not be desirable, because the receiver of this string may handle Unicode differently. To improve interoperability, you can explicitly specify the string to be serialized with escape sequences:
 
 ```js
 const rawJSON = JSON.rawJSON('"\\ud83d\\ude04"');
@@ -117,8 +119,8 @@ console.log(JSON.parse(objStr).value); // 😄
 
 Note that the double backslashes in the `rawJSON` actually represents a single slash character, so the JSON text looks like:
 
-```json
-{ "value": "\ud83d\ude04" }
+```json-nolint
+{"value":"\ud83d\ude04"}
 ```
 
 ## Specifications

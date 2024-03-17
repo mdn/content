@@ -156,70 +156,71 @@ JSON can contain number literals of arbitrary precision. However, it is not poss
 - On the serialization side, in order to obtain a number in JSON, you have to pass a number to `JSON.stringify`, either via the `replacer` function or via the `toJSON` method. But, in either case, you have already lost precision during number conversion. If you pass a string to `JSON.stringify`, it will be serialized as a string, not a number.
 - On the parsing side, not all numbers can be represented exactly. For example, `JSON.parse("12345678901234567890")` returns `12345678901234568000` because the number is rounded to the nearest representable number. Even if you use a `reviver` function, the number will already be rounded before the `reviver` function is called.
 
-There are, in general, two ways to solve this: one produces a JSON number, another produces a JSON string. JSON is a _communication format_, so if you use JSON, you are likely communicating with another system (HTTP request, storing in database, etc.). The best solution to choose depends on the recipient system. If the recipient of this message supports high precision numbers natively (such as Python integers), using JSON numbers is obviously more ideal. To serialize to JSON numbers without converting to actual JavaScript numbers, you can use {{jsxref("JSON.rawJSON()")}} to precisely specify what the JSON source text should be.
-
 ```js
 const data = {
   // Using a BigInt here to store the exact value,
-  // but it can also be a custom high-precision number library
+  // but it can also be a custom high-precision number library,
+  // if the number might not be an integer.
   gross_gdp: 12345678901234567890n,
 };
+```
 
-const str = JSON.stringify(data, (key, value) => {
+There are, in general, two ways to solve this: one involves a JSON number, another involves a JSON string. JSON is a _communication format_, so if you use JSON, you are likely communicating with another system (HTTP request, storing in database, etc.). The best solution to choose depends on the recipient system.
+
+If the recipient system does not have same JSON-handling capabilities as JavaScript, and does not support high precision numbers, you may want to serialize the number as a string, and then handle it as a string on the recipient side. This is also the only option in older JavaScript.
+
+To specify how custom data types (including `BigInt`) should be serialized to JSON, either add a `toJSON` method to your data type, or use the `replacer` function of {{jsxref("JSON.stringify()")}}.
+
+```js
+// Method 1:
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
+const str1 = JSON.stringify(data);
+
+// Method 2:
+const str2 = JSON.stringify(data, (key, value) => {
+  if (key === "gross_gdp") {
+    return value.toString();
+  }
+  return value;
+});
+```
+
+In either case, the JSON text will look like `{"gross_gdp":"12345678901234567890"}`, where the value is a string, not a number. Then, on the recipient side, you can parse the JSON and handle the string.
+
+If the recipient of this message supports high precision numbers natively (such as Python integers), using JSON numbers is obviously more ideal. To serialize to JSON numbers without converting to actual JavaScript numbers, you can use {{jsxref("JSON.rawJSON()")}} to precisely specify what the JSON source text should be.
+
+```js
+// Method 1:
+BigInt.prototype.toJSON = function () {
+  return JSON.rawJSON(this.toString());
+};
+const str1 = JSON.stringify(data);
+
+// Method 2:
+const str2 = JSON.stringify(data, (key, value) => {
   if (key === "gross_gdp") {
     return JSON.rawJSON(value.toString());
   }
   return value;
-}); // {"gross_gdp":12345678901234567890}
+});
 ```
 
-This JSON can then be parsed by the recipient without any extra processing, provided that the recipient system does not have the same precision limitations as JavaScript.
+The text passed to `JSON.rawJSON` is treated as if it is already a piece of JSON, so it won't be serialized again as a string. Therefore, the JSON text will look like `{"gross_gdp":12345678901234567890}`, where the value is a number. This JSON can then be parsed by the recipient without any extra processing, provided that the recipient system does not have the same precision limitations as JavaScript.
 
-If the recipient system is also JavaScript, you can continue to serialize numbers as number literals in JSON, but when you parse it, take extra care because when `JSON.parse()` invokes the `reviver` function, the value you receive is already parsed (and has lost precision). You can use the `context.source` parameter of the {{jsxref("JSON.parse()")}} `reviver` function to re-parse the number yourself.
+When parsing JSON containing high-precision numbers in JavaScript, take extra care because when `JSON.parse()` invokes the `reviver` function, the value you receive is already parsed (and has lost precision). You can use the `context.source` parameter of the {{jsxref("JSON.parse()")}} `reviver` function to re-parse the number yourself.
 
 ```js
 const parsedData = JSON.parse(str, (key, value, context) => {
   if (key === "gross_gdp") {
+    // Or use the constructor of your custom high-precision number library
     return BigInt(context.source);
   }
   return value;
 });
 // { gross_gdp: 12345678901234567890n }
 ```
-
-The same idea works for any kind of data that cannot be represented exactly in JavaScript, such as high-precision floating point numbers.
-
-If the recipient system does not have same JSON-handling capabilities as JavaScript, and does not support high precision numbers, you may want to serialize the number as a string, and then handle it as a string on the recipient side. You have many options of where to convert the number to a string.
-
-- You can use the `toJSON` method to automatically convert your custom data type to strings when serialized as JSON. For `BigInt`, you have to create your own `BigInt.prototype.toJSON` method:
-
-  ```js
-  const data = {
-    gross_gdp: 12345678901234567890n,
-  };
-
-  // Necessary for BigInt to be allowed by JSON.stringify()
-  BigInt.prototype.toJSON = function () {
-    return this.toString();
-  };
-  ```
-
-- You can use the `replacer` function of {{jsxref("JSON.stringify()")}} to convert the number to a string before it is serialized:
-
-  ```js
-  const data = {
-    gross_gdp: 12345678901234567890n,
-  };
-
-  const str = JSON.stringify(data, (key, value) => {
-    if (key === "gross_gdp") {
-      return value.toString();
-    }
-    return value;
-  });
-  ```
-
-In all cases, the JSON text will look like `{"gross_gdp":"12345678901234567890"}`, where the value is a string, not a number. Then, on the recipient side, you can parse the JSON and handle the string.
 
 ## Specifications
 
