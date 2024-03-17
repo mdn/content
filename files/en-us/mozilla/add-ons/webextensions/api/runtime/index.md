@@ -31,6 +31,10 @@ It also provides messaging APIs enabling you to:
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}
+  - : The category of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningSeverity")}}
+  - : The severity of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onRestartRequired")}} event is being dispatched.
 
@@ -96,6 +100,8 @@ It also provides messaging APIs enabling you to:
   - : Fired when a message is sent from either an extension process or a content script.
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
   - : Fired when a message is sent from another extension. Cannot be used in a content script.
+- {{WebExtAPIRef("runtime.onPerformanceWarning")}}
+  - : Fired when a runtime performance issue is detected for the extension.
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 

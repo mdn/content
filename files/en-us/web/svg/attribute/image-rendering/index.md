@@ -2,7 +2,7 @@
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.image-rendering
+browser-compat: svg.global_attributes.image-rendering
 ---
 
 {{SVGRef}}

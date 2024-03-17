@@ -134,4 +134,4 @@ This article provides information about the changes in Firefox 69 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(68)}}
+{{Firefox_for_developers}}

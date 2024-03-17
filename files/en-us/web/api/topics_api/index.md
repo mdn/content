@@ -3,11 +3,12 @@ title: Topics API
 slug: Web/API/Topics_API
 page-type: web-api-overview
 status:
+  - experimental
   - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 
-{{DefaultAPISidebar("Topics API")}}
+{{DefaultAPISidebar("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
@@ -21,7 +22,7 @@ A typical mechanism for advertising on the web involves a user visiting **publis
 
 The above process can be made more effective using interest-based advertising (IBA). The idea is that when users visit the publisher sites, they are served a **personalized** selection of ads based on their interests. Their interests are inferred from sites they have previously visited. In the past, [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) have been used to collect information on user interests, but all browsers are phasing out the use of third-party cookies. The Topics API provides part of the path towards this goal — a mechanism to implement IBA that does not depend on third-party cookies.
 
-First of all, the browser infers a user's interests from the URLs of sites they visit that have ad tech `<iframe>`s embeded. These interests are mapped to specific **topics of interest**, and the browser calculates and records the users' top topic (i.e. the topic that their interests mapped to most often) at the end of each **epoch**. An epoch is a week by default. The top topic is updated each week so that interests are kept current and users don't start to see ads for topics that they are no longer interested in.
+First of all, the browser infers a user's interests from the URLs of sites they visit that have ad tech `<iframe>`s embedded. These interests are mapped to specific **topics of interest**, and the browser calculates and records the users' top topic (i.e. the topic that their interests mapped to most often) at the end of each **epoch**. An epoch is a week by default. The top topic is updated each week so that interests are kept current and users don't start to see ads for topics that they are no longer interested in.
 
 > **Note:** This process only happens on sites where a Topics API feature is used (see [What API features observe and return topics?](#what_api_features_observe_and_return_topics)).
 
@@ -40,7 +41,7 @@ The Topics API has no distinct interfaces of its own.
 ### Extensions to other interfaces
 
 - {{domxref("Document.browsingTopics()")}}
-  - : Returns a promise that fulfills with an array of objects representing the selected topics for the current user, for the three most recent epochs. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
+  - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
 - {{domxref("fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 - {{domxref("HTMLIFrameElement.browsingTopics")}}

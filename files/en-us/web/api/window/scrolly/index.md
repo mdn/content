@@ -14,8 +14,7 @@ is currently scrolled vertically.
 
 This value is subpixel precise in modern
 browsers, meaning that it isn't necessarily a whole number. You can get the number of
-pixels the document is scrolled horizontally from the {{domxref("Window.scrollX",
-  "scrollX")}} property.
+pixels the document is scrolled horizontally from the {{domxref("Window.scrollX", "scrollX")}} property.
 
 ## Value
 

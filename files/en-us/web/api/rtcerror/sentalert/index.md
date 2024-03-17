@@ -16,8 +16,8 @@ while sending data to the remote peer, if the error represents an outbound DTLS 
 
 An unsigned integer value providing the DTLS alert number corresponding to the DTLS
 error which was sent to the remote peer, as represented by this `RTCError`
-object. This property is `null` if {{domxref("RTCError.errorDetail",
-  "errorDetail")}} isn't `dtls-failure`.
+object. This property is `null` if {{domxref("RTCError.errorDetail", "errorDetail")}}
+isn't `dtls-failure`.
 
 ## Specifications
 

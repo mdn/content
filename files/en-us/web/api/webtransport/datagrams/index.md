@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransport.datagrams
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`datagrams`** read-only property of the {{domxref("WebTransport")}} interface returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams — unreliable data transmission.
 
 "Unreliable" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
-
-{{AvailableInWorkers}}
 
 ## Value
 

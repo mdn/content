@@ -84,8 +84,7 @@ myPeerConnection
   );
 ```
 
-For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",
-  "RTCSessionDescription()")}} constructor is deprecated.
+For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} constructor is deprecated.
 
 ### Deprecated parameters
 
@@ -128,8 +127,8 @@ the following exceptions may occur:
 
 One of the advantages of the parameter-free form
 of `setLocalDescription()` is that it lets you simplify your negotiation code
-substantially. This is all your {{domxref("RTCPeerConnection.negotiationneeded_event",
-  "negotiationneeded")}} event handler needs to look like, for the most part. Just add the
+substantially. This is all your {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+event handler needs to look like, for the most part. Just add the
 signaling server code, which here is represented by the call to
 `signalRemotePeer()`.
 
