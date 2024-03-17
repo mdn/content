@@ -151,15 +151,17 @@ console.log(JSON.parse(jsonText));
 
 ### Lossless number serialization
 
-JSON can contain number literals of arbitrary precision. However, it is not possible to represent all JSON numbers exactly in JavaScript, because JavaScript uses floating point representation which has a fixed precision. This leads to several problems:
+JSON can contain number literals of arbitrary precision. However, it is not possible to represent all JSON numbers exactly in JavaScript, because JavaScript uses floating point representation which has a fixed precision. For example, `12345678901234567890 === 12345678901234567000` in JavaScript because they have the same floating point representation. This means there is no JavaScript number that corresponds to the `12345678901234567890` JSON number. Let's assume you have a exact representation of some number (either via {{jsxref("BigInt")}} or a custom library), and you want to serialize it and then parse to the same exact number. There are several difficulties:
 
-- On the serialization side, the number literal you write may not represent the exact value. For example, `12345678901234567890 === 12345678901234567000` in JavaScript because they have the same floating point representation.
-- On the parsing side, not all numbers can be represented exactly. For example, `JSON.parse("12345678901234567890")` will return `12345678901234568000` because the number is rounded to the nearest representable number.
+- On the serialization side, in order to obtain a number in JSON, you have to pass a number to `JSON.stringify`, either via the `replacer` function or via the `toJSON` method. But, in either case, you have already lost precision during number conversion. If you pass a string to `JSON.stringify`, it will be serialized as a string, not a number.
+- On the parsing side, not all numbers can be represented exactly. For example, `JSON.parse("12345678901234567890")` returns `12345678901234568000` because the number is rounded to the nearest representable number. Even if you use a `reviver` function, the number will already be rounded before the `reviver` function is called.
 
-Let's assume you have a exact representation of some number (either via {{jsxref("BigInt")}} or a custom library), and you want to serialize it and then parse to the same exact representation. How could you do this? JSON is a _communication format_, so if you use JSON, you are likely communicating with another system (HTTP request, storing in database, etc.). The way to work around this precision problem depends on the recipient system. If the recipient of this message supports high precision numbers natively, you may want the JSON to represent the number exactly. You can use {{jsxref("JSON.rawJSON()")}} to precisely specify what the JSON source text should be.
+There are, in general, two ways to solve this: one produces a JSON number, another produces a JSON string. JSON is a _communication format_, so if you use JSON, you are likely communicating with another system (HTTP request, storing in database, etc.). The best solution to choose depends on the recipient system. If the recipient of this message supports high precision numbers natively (such as Python integers), using JSON numbers is obviously more ideal. To serialize to JSON numbers without converting to actual JavaScript numbers, you can use {{jsxref("JSON.rawJSON()")}} to precisely specify what the JSON source text should be.
 
 ```js
 const data = {
+  // Using a BigInt here to store the exact value,
+  // but it can also be a custom high-precision number library
   gross_gdp: 12345678901234567890n,
 };
 
@@ -173,7 +175,7 @@ const str = JSON.stringify(data, (key, value) => {
 
 This JSON can then be parsed by the recipient without any extra processing, provided that the recipient system does not have the same precision limitations as JavaScript.
 
-If the recipient system is also JavaScript, you can continue to serialize numbers as number literals in JSON, but when you parse it, take extra care because `JSON.parse()` will convert all numbers to JavaScript numbers before invoking any user-provided transforming code. You can use the `context.source` parameter of the {{jsxref("JSON.parse()")}} `reviver` function to re-parse the number yourself.
+If the recipient system is also JavaScript, you can continue to serialize numbers as number literals in JSON, but when you parse it, take extra care because when `JSON.parse()` invokes the `reviver` function, the value you receive is already parsed (and has lost precision). You can use the `context.source` parameter of the {{jsxref("JSON.parse()")}} `reviver` function to re-parse the number yourself.
 
 ```js
 const parsedData = JSON.parse(str, (key, value, context) => {
@@ -189,7 +191,7 @@ The same idea works for any kind of data that cannot be represented exactly in J
 
 If the recipient system does not have same JSON-handling capabilities as JavaScript, and does not support high precision numbers, you may want to serialize the number as a string, and then handle it as a string on the recipient side. You have many options of where to convert the number to a string.
 
-- You can use {{jsxref("BigInt")}} to represent the number, and then create a `BigInt.prototype.toJSON` method to automatically convert all BigInts to strings when serialized to JSON:
+- You can use the `toJSON` method to automatically convert your custom data type to strings when serialized as JSON. For `BigInt`, you have to create your own `BigInt.prototype.toJSON` method:
 
   ```js
   const data = {
@@ -217,7 +219,7 @@ If the recipient system does not have same JSON-handling capabilities as JavaScr
   });
   ```
 
-In all cases, the JSON string will look like `{"gross_gdp":"12345678901234567890"}`. Then, on the recipient side, you can parse the JSON and handle the string.
+In all cases, the JSON text will look like `{"gross_gdp":"12345678901234567890"}`, where the value is a string, not a number. Then, on the recipient side, you can parse the JSON and handle the string.
 
 ## Specifications
 
