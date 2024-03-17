@@ -55,6 +55,16 @@ Because these files are static, you can host them on any web server capable of s
 
 You can use any backend such as [Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website).
 
+### Host locally
+
+For fun you can easily host the built app on your machine using [`http-server`](https://www.npmjs.com/package/http-server) package by running following command:
+
+```bash
+npx http-server ./dist/todo/browser/ -o
+```
+
+The command hosts `dist/todo/browser` direcotry on `8080` port. Open URL `http://127.0.0.1:8080` in a web browser to check the app. You can access the app from any machine in your LAN using `http://<server-ip-address>:8080` URL.
+
 ## What's next
 
 At this point, you've built a basic application, but your Angular journey is just beginning.

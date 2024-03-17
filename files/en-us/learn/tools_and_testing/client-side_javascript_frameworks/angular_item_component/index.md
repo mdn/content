@@ -200,7 +200,7 @@ import { Item } from "../item";
 ```
 
 The addition of `Input`, `Output`, and `EventEmitter` allows `ItemComponent` to share data with `AppComponent`.
-By importing `Item`, `ItemComponent` can understand what an `item` is.
+By importing `Item`, the `ItemComponent` can understand what an `item` is.
 You can update the `@Component` to use [`CommonModule`](https://angular.io/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `ngIf` directives:
 
 ```js
@@ -225,6 +225,7 @@ export class ItemComponent {
 
   saveItem(description: string) {
     if (!description) return;
+
     this.editable = false;
     this.item.description = description;
   }
@@ -272,7 +273,7 @@ In this example, we've defined the selector as `app-item`:
 ```
 
 To use the `ItemComponent` selector within the `AppComponent`, you add the element, `<app-item>`, which corresponds to the selector you defined for the component class to `app.component.html`.
-Replace the current unordered list in `app.component.html` with the following updated version:
+Replace the current unordered list `<ul>` in `app.component.html` with the following updated version:
 
 ```html
 <h2>
