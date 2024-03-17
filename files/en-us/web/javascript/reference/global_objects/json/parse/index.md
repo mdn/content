@@ -175,4 +175,5 @@ JSON.parse("{'foo': 1}");
 
 ## See also
 
+- [Polyfill of modern `JSON.parse` behavior (reviver's `context` parameter) in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
 - {{jsxref("JSON.stringify()")}}

@@ -372,6 +372,6 @@ This change should be backwards-compatible as long as you pass the result of `JS
 
 ## See also
 
-- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
+- [Polyfill of modern `JSON.stringify` behavior (symbol, well-formed unicode, raw JSON) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
 - {{jsxref("JSON.parse()")}}
 - {{jsxref("JSON.rawJSON()")}}
