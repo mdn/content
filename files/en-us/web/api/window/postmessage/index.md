@@ -52,8 +52,8 @@ postMessage(message, targetOrigin, transfer)
     the same as the intended receiver of the message containing the password, to prevent
     interception of the password by a malicious third party. **Always provide a
     specific `targetOrigin`, not `*`, if you know where the other
-    window's document should be located. Failing to provide a specific target discloses
-    the data you send to any interested malicious site.**
+    window's document should be located. Failing to provide a specific target could disclose
+    the data you send to a malicious site.**
 - `transfer` {{optional_Inline}}
   - : A sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) that are transferred with the message.
     The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
