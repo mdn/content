@@ -21,7 +21,7 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 ```css
 /* Absolute values */
 hsl(120deg 75% 25%)
-hsl(120 75% 25%) /* deg unit is optional */
+hsl(120 75 25) /* deg and % units are optional */
 hsl(120deg 75% 25% / 60%)
 hsl(none 75% 25%)
 
@@ -33,9 +33,7 @@ hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 
 The `hsla()` function can also be used to express sRGB colors. This is an alias for `hsl()` that accepts the same parameters.
 
-> **Note:** The computed values of colors expressed using `hsl()` syntax are serialized to {{CSSXref("color_value/rgb", "rgb()")}} values in the case of absolute colors, and {{CSSXref("color_value/color", "color(srgb ... )")}} values in the case of relative colors. The values of the red, green, blue components may be rounded in serialization.
-
-> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120deg, 75%, 25%)`. Mixing number and percent value types is not valid in the comma-separated legacy syntax (i.e. the `S` and `L` values must be either all numbers or all percentages), and the `none` value is also not permitted.
+> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120deg, 75%, 25%)`. The `none` value is not permitted in the comma-separated legacy syntax, and the `%` units are required.
 
 ### Values
 
@@ -56,9 +54,11 @@ The parameters are as follows:
 - `L`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This value represents the color's lightness. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+
+> **Note:** Absolute `hsl()` colors are serialized to {{CSSXref("color_value/rgb", "rgb()")}} values. The values of the red, green, and blue components may be rounded in serialization.
 
 #### Relative value syntax
 
@@ -77,9 +77,11 @@ The parameters are as follows:
 - `L`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (full opacity), or the keyword `none` can be used to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
-> **Note:** The `hsla()` alias can also be used to output relative colors, and to specify origin colors. When using `hsla()` to output a relative color, you must use the comma-less modern syntax and can't mix percentages and numbers (i.e. for the `S` and `L` values).
+> **Note:** The `hsla()` alias can also be used to output relative colors, and to specify origin colors. When using `hsla()` to output a relative color, you must use the comma-less modern syntax.
+
+> **Note:** To fully enable the representation of the full spectrum of visible colors, the output of relative `hsl()` color functions is serialized to `color(srgb)`. That means that querying the output color value via the {{DOMxRef("HTMLElement.style")}} property or the {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
 
 #### Defining relative color output channel components
 
@@ -121,11 +123,11 @@ This example:
 - Sets the `H` channel value for the output color to those of the origin color `hsl()` equivalent's `H` channel value — `0`.
 - Sets the output color's `S` and `L` channel values to new values not based on the origin color: `30%` and `60%`, respectively. The output `hsl()` color is `hsl(0 30% 60%)`.
 
-The final output color is the equivalent color in the sRGB color space — `color(srgb 0.72 0.48 0.48)`.
+The final output color is the equivalent of `hsl(0 30% 60%)` in the sRGB color space — `color(srgb 0.72 0.48 0.48)`.
 
 > **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
 
-In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output channel values are `1` for the above examples.
+In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
 Let's look at some examples that specify origin and output alpha channel values. The first one specifies the output alpha channel value as being the same as the origin alpha channel value, whereas the second one specifies a different output alpha channel value, unrelated to the origin alpha channel value.
 
@@ -137,13 +139,13 @@ hsl(from rgb(255 0 0 / 0.8) h s l / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-In the following example, the `rgb()` origin color is again converted into an `hsl()` representation — `hsl(0 100% 50% / 0.8)`. {{cssxref("calc")}} calculations are applied to the `H`, `S`, `L`, and `A` values, and the final output color is `color(srgb 0.72 0.72 0.08 / 0.7)`:
+In the following example, the `rgb()` origin color is again converted into an `hsl()` representation — `hsl(0 100% 50% / 0.8)`. {{cssxref("calc")}} calculations are applied to the `H`, `S`, `L`, and `A` values, and the final output color is the equivalent of `hsl(60 80% 30% / 0.7)` in the sRGB color space: `color(srgb 0.72 0.72 0.08 / 0.7)`.
 
 ```css
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>` values or other types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
+> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
 ### Formal syntax
 
@@ -290,7 +292,7 @@ div.comma-separated {
 
 ### Legacy syntax: hsla()
 
-The legacy `hsla()` syntax is an alias for `hsl()`.
+The `hsla()` syntax is an alias for `hsl()`.
 
 #### HTML
 
@@ -334,5 +336,6 @@ div.hsla {
 - [List of all color notations](/en-US/docs/Web/CSS/color)
 - {{CSSXref("&lt;hue&gt;")}} data type
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors/) module
 - [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
 - [Color picker](https://colorjs.io/apps/picker/) by Lea Verou

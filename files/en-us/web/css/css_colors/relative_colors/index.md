@@ -617,7 +617,7 @@ This in turn adjusts the color scheme for the entire UI:
 
 The HTML for the example is shown below.
 
-- The {{htmlelement("main")}} element acts as an outer wrapper to contain rest of the content, allowing the card and form to be centered vertically and horizontally inside `<main>` as one unit.
+- The {{htmlelement("main")}} element acts as an outer wrapper to contain the rest of the content, allowing the card and form to be centered vertically and horizontally inside `<main>` as one unit.
 - The {{htmlelement("section")}} element contains the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and {{htmlelement("p")}} elements that define the card's content.
 - The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control and its {{htmlelement("label")}}.
 
@@ -651,7 +651,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-In the CSS, the default `--hue` value is set on `:root`. The `<body>` element has relative [`lch()`](/en-US/docs/Web/CSS/color_value/lch) colors set on it to define the color scheme, plus a radial gradient that fills the whole body.
+In the CSS the `:root` has a default `--hue` value set on it, relative [`lch()`](/en-US/docs/Web/CSS/color_value/lch) colors to define the color scheme, plus a radial gradient that fills the whole body.
 
 The relative colors are as follows:
 
@@ -677,11 +677,19 @@ body {
   justify-content: center;
 }
 
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 40px;
+  width: 50%;
+  padding: 10px;
 }
 
 label {
@@ -703,15 +711,13 @@ main {
 :root {
   /* Default hue value */
   --hue: 240;
-}
 
-body {
   /* Relative color definitions */
   --base-color: lch(from red l c var(--hue));
   --bg-color: lch(from var(--base-color) calc(l + 40) c h);
   --complementary-color: lch(from var(--base-color) l c calc(h + 180));
 
-  background: radial-gradient(white, var(--base-color));
+  background: radial-gradient(ellipse at center, white 40%, var(--base-color));
 }
 
 /* Use @supports to add in support for --complementary-color with old
@@ -748,6 +754,11 @@ h1 {
 }
 
 /* Range slider styling */
+
+form {
+  background-color: var(--bg-color);
+  border: 3px solid var(--base-color);
+}
 
 input {
   accent-color: var(--base-color);
