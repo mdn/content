@@ -12,7 +12,7 @@ argument that is infinity.
 
 ## Message
 
-```
+```plain
 RangeError: Invalid string length (V8-based)
 RangeError: Invalid count value: Infinity (V8-based)
 RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)

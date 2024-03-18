@@ -30,7 +30,7 @@ A new BFC is created in the following situations:
 - elements with {{cssxref("contain", "contain: layout", "#layout")}}, `content`, or `strict`
 - {{Glossary("flex item", "flex items")}}
 - grid items
-- [multicol containers](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [multicol containers](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
 - elements with {{cssxref("column-span")}} set to `all`
 
 This is useful because a new BFC will behave much like the outermost document in that it becomes a mini-layout inside the main layout. A BFC contains everything inside it, {{cssxref("float")}} and {{cssxref("clear")}} only apply to items inside the same formatting context, and margins only collapse between elements in the same formatting context.
@@ -79,6 +79,6 @@ In this guide, we have looked in more detail at the block and Inline formatting 
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model)
 - [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model)

@@ -43,23 +43,17 @@ None ({{jsxref("undefined")}}).
 ## Description
 
 While vertex attributes are usually used to specify values which are different for each
-vertex (using {{domxref("WebGLRenderingContext.vertexAttribPointer()",
-  "vertexAttribPointer")}}), it can be useful to specify a constant value. For example, if
-you have a shader which has a `color` vertex attribute, but you want to draw
-everything in a single color, you can use `vertexAttrib` to achieve that
-without creating a buffer filled with only one value or having to create a separate
-shader which uses a uniform for the color.
+vertex (using {{domxref("WebGLRenderingContext.vertexAttribPointer()", "vertexAttribPointer")}}), it can be useful to specify a constant value.
+For example, if you have a shader which has a `color` vertex attribute, but you want to draw everything in a single color, you can use `vertexAttrib` to achieve that without creating a buffer filled with only one value or having to create a separate shader which uses a uniform for the color.
 
 This value will be used if a bound array buffer has not been enabled with
-{{domxref("WebGLRenderingContext.enableVertexAttribArray()",
-  "enableVertexAttribArray")}}.
+{{domxref("WebGLRenderingContext.enableVertexAttribArray()", "enableVertexAttribArray")}}.
 
 Attributes may be matrices, in which case columns of the matrix must be loaded into
 successive vertex attribute slots.
 
-The values set with {{domxref("WebGLRenderingContext.vertexAttribPointer()",
-  "vertexAttribPointer")}} are context-global, i.e. they aren't part of the shader state
-(like generix vertex attribute indexes to shader variable bindings) and aren't part of
+The values set with `vertexAttrib` are context-global; that is, they aren't part of the shader state
+(like generic vertex attribute indexes to shader variable bindings) and aren't part of
 the vertex array object state (like enabled vertex attribute arrays). The only way to
 change the values is by calling this function again.
 

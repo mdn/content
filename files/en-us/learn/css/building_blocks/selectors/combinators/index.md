@@ -13,10 +13,9 @@ The final selectors we will look at are called combinators, because they combine
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -64,9 +63,9 @@ If you remove the `>` that designates this as a child combinator, you end up wit
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/child.html", '100%', 600)}}
 
-## Adjacent sibling combinator
+## Next-sibling combinator
 
-The adjacent sibling selector (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
+The **next-sibling combinator** (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
 ```css
 p + img
@@ -76,11 +75,13 @@ A common use case is to do something with a paragraph that follows a heading, as
 
 If you insert some other element such as a `<h2>` in between the `<h1>` and the `<p>`, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
 
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/adjacent.html -->
+
 {{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
 
-## General sibling combinator
+## Subsequent-sibling combinator
 
-If you want to select siblings of an element even if they are not directly adjacent, then you can use the general sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the **subsequent-sibling combinator** (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
 p ~ img
@@ -88,7 +89,41 @@ p ~ img
 
 In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
 
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/general.html -->
+
 {{EmbedGHLiveSample("css-examples/learn/selectors/general.html", '100%', 600)}}
+
+## Creating complex selectors with nesting
+
+The [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#combinators) allows you to write nested rules that use combinators to create [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector).
+
+```css
+p {
+  ~ img {
+  }
+}
+/* This is parsed by the browser as */
+p ~ img {
+}
+```
+
+The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors.
+
+```css
+p {
+  & img {
+  }
+}
+/* This is parsed by the browser as */
+p img {
+}
+```
+
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/nesting.html -->
+
+{{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
+
+> **Note:** In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
 
 ## Using combinators
 

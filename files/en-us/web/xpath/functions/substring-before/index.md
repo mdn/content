@@ -10,7 +10,7 @@ The `substring-before` function returns a string that is the part of a given str
 
 ### Syntax
 
-```
+```plain
 substring-before( haystack, needle )
 ```
 

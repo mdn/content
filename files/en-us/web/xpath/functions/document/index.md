@@ -10,7 +10,7 @@ The `document` finds a node-set in an external document, or multiple external do
 
 ### Syntax
 
-```
+```plain
 document( URI [,node-set] )
 ```
 

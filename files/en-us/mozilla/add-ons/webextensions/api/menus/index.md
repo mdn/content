@@ -21,6 +21,8 @@ Except for [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtension
 
 To create a menu item call the {{WebExtAPIRef("menus.create()")}} method. You pass this method an object containing options for the item, including the item ID, item type, and the contexts in which it should be shown.
 
+In a Firefox extension using non-persistent [background pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) (Event pages) or in any Chrome extension, you call `menus.create` from within a {{WebExtAPIRef("runtime.onInstalled")}} listener. In a Firefox extension using persistent background pages, you make a top-level call. See {{WebExtAPIRef("menus.create()")}} for more information.
+
 Listen for clicks on your menu item by adding a listener to the {{WebExtAPIRef("menus.onClicked")}} event. This listener will be passed a {{WebExtAPIRef("menus.OnClickData")}} object containing the event's details.
 
 You can create four different types of menu item, based on the value of the `type` property you supply in the options to `create()`:
@@ -59,7 +61,7 @@ browser.menus.create(
     title: browser.i18n.getMessage("menuItemRemoveMe"),
     contexts: ["all"],
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -68,7 +70,7 @@ browser.menus.create(
     type: "separator",
     contexts: ["all"],
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -83,7 +85,7 @@ browser.menus.create(
       32: "icons/paint-green-32.png",
     },
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -98,7 +100,7 @@ browser.menus.create(
       32: "icons/paint-blue-32.png",
     },
   },
-  onCreated
+  onCreated,
 );
 
 browser.menus.create(
@@ -107,7 +109,7 @@ browser.menus.create(
     type: "separator",
     contexts: ["all"],
   },
-  onCreated
+  onCreated,
 );
 
 let checkedState = true;
@@ -120,7 +122,7 @@ browser.menus.create(
     contexts: ["all"],
     checked: checkedState,
   },
-  onCreated
+  onCreated,
 );
 ```
 

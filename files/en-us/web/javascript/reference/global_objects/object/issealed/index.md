@@ -30,7 +30,7 @@ A {{jsxref("Boolean")}} indicating whether or not the given object is sealed.
 ## Description
 
 Returns `true` if the object is sealed, otherwise `false`. An
-object is sealed if it is not {{jsxref("Object.isExtensible", "extensible", "", 1)}} and
+object is sealed if it is not {{jsxref("Object/isExtensible", "extensible", "", 1)}} and
 if all its properties are non-configurable and therefore not removable (but not
 necessarily non-writable).
 

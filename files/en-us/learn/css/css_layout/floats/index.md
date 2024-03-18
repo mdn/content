@@ -95,7 +95,7 @@ body {
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -145,7 +145,7 @@ To float the box, add the {{cssxref("float")}} and {{cssxref("margin-right")}} p
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -166,9 +166,9 @@ Add a class of `special` to the first paragraph of text, the one immediately fol
 
 ```css
 .special {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(148 255 172);
   padding: 10px;
-  color: #fff;
+  color: purple;
 }
 ```
 
@@ -223,14 +223,8 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
-}
-
-.special {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
 }
 ```
 
@@ -299,14 +293,14 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 
 .special {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(148 255 172);
   padding: 10px;
-  color: #fff;
+  color: purple;
 }
 
 .cleared {
@@ -330,9 +324,9 @@ You now know how to clear something following a floated element, but let's see w
 
 Change your document so that the first paragraph and the floated box are jointly wrapped with a {{htmlelement("div")}}, which has a class of `wrapper`.
 
-```html
+```html live-sample___the_problem
 <div class="wrapper">
-  <div class="box">Float</div>
+  <div class="box">Float1</div>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
@@ -345,12 +339,11 @@ Change your document so that the first paragraph and the floated box are jointly
 
 In your CSS, add the following rule for the `.wrapper` class and then reload the page:
 
-```css
+```css live-sample___the_problem
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(148 255 172);
   padding: 10px;
-  color: #fff;
-  overflow: auto;
+  color: purple;
 }
 ```
 
@@ -364,7 +357,7 @@ In addition, remove the original `.cleared` class:
 
 You'll see that, just like in the example where we put a background color on the paragraph, the background color runs behind the float.
 
-```html hidden
+```html hidden live-sample___the_problem
 <p>
   Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
   orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
@@ -385,7 +378,7 @@ You'll see that, just like in the example where we put a background color on the
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___the_problem
 body {
   width: 90%;
   max-width: 900px;
@@ -396,37 +389,31 @@ body {
     sans-serif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  overflow: auto;
-}
-
 .box {
   float: left;
   margin: 15px;
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
+  color: black;
 }
 ```
 
-{{EmbedLiveSample('The_problem', '100%', 600)}}
+{{EmbedLiveSample('the_problem', '100%', 600)}}
 
-Once again, this is because the float has been taken out of normal flow. You might expect that by wrapping the floated box and the text of first paragraph that wraps around the float together, the subsequent content will be cleared of the box. But this is not the case, as shown above. To deal with this, the standards method is create a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) using the {{cssxref("display")}} property.
+Once again, this is because the float has been taken out of normal flow. You might expect that by wrapping the floated box and the text of first paragraph that wraps around the float together, the subsequent content will be cleared of the box. But this is not the case, as shown above. To deal with this, the standard method is to create a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) using the {{cssxref("display")}} property.
 
 ### display: flow-root
 
-To solve this problem is to use the value `flow-root` of the `display` property. This exists only to create a BFC without using hacks — there will be no unintended consequences when you use it. Remove `overflow: auto` from your `.wrapper` rule and add `display: flow-root` and the box will clear.
+To solve this problem is to use the value `flow-root` of the `display` property. This exists only to create a BFC without using hacks — there will be no unintended consequences when you use it.
 
 ```css
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(148 255 172);
   padding: 10px;
-  color: #fff;
+  color: purple;
   display: flow-root;
 }
 ```
@@ -474,21 +461,15 @@ body {
     sans-serif;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
-  display: flow-root;
-}
-
 .box {
   float: left;
   margin: 15px;
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
+  color: black;
 }
 ```
 

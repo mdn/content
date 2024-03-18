@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the icon for the browser action.
 
@@ -41,8 +41,8 @@ let settingIcon = browser.browserAction.setIcon(
         let settingIcon = browser.action.setIcon({
           imageData: {
             16: image16,
-            32: image32
-          }
+            32: image32,
+          },
         });
         ```
 
@@ -58,8 +58,8 @@ let settingIcon = browser.browserAction.setIcon(
         let settingIcon = browser.action.setIcon({
           path: {
             16: "path/to/image16.jpg",
-            32: "path/to/image32.jpg"
-          }
+            32: "path/to/image32.jpg",
+          },
         });
         ```
 
@@ -102,7 +102,7 @@ function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
     { urls: ["<all_urls>"] },
-    ["responseHeaders"]
+    ["responseHeaders"],
   );
   browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
 }

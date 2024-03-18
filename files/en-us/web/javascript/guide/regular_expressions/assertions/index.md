@@ -225,7 +225,7 @@ const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 // In this example, two meanings of '^' control symbol are represented:
 // 1) Matching beginning of the input
 // 2) A negated or complemented character class: [^A]
-// That is, it matches anything that is not enclosed in the brackets.
+// That is, it matches anything that is not enclosed in the square brackets.
 
 const fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 
@@ -293,11 +293,8 @@ console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [Assertions in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-assertion)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

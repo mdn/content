@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.proxy.settings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the browser's proxy settings.
 
@@ -36,7 +36,7 @@ When setting this object, all properties are optional. Note that any properties 
 - `socksVersion` {{optional_inline}}
   - : `integer`. The version of the SOCKS proxy. May be 4 or 5. Defaults to 5.
 - `ssl` {{optional_inline}}
-  - : `string`. The address of the SSL proxy. Can include a port.
+  - : `string`. The address of the TLS/SSL proxy. Can include a port.
 
 ## Examples
 

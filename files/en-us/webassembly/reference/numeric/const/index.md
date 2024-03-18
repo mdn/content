@@ -1,6 +1,7 @@
 ---
 title: Const
 slug: WebAssembly/Reference/Numeric/Const
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

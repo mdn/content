@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.label
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`label`** readonly
+The **`label`** read-only
 property of the {{domxref("MediaDeviceInfo")}} interface returns a
 string describing this device (for example
 "External USB Webcam").

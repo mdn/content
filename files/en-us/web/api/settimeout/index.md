@@ -6,7 +6,7 @@ page-type: web-api-global-function
 browser-compat: api.setTimeout
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The global **`setTimeout()`** method sets a timer which executes a function or specified
 piece of code once the timer expires.
@@ -21,7 +21,7 @@ setTimeout(functionRef)
 setTimeout(functionRef, delay)
 setTimeout(functionRef, delay, param1)
 setTimeout(functionRef, delay, param1, param2)
-setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -358,7 +358,7 @@ console.log("After setTimeout");
 
 Will write to the console:
 
-```
+```plain
 After setTimeout
 foo has been called
 ```

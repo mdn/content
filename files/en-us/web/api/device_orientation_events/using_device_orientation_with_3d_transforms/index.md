@@ -4,34 +4,35 @@ slug: Web/API/Device_orientation_events/Using_device_orientation_with_3D_transfo
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
+
 This article provides tips on how to use device orientation information in tandem with CSS 3D transforms.
 
 ## Using orientation to rotate an element
 
-The easiest way to convert [orientation data](/en-US/docs/Web/API/Window/deviceorientation_event) to a [3D transform](/en-US/docs/Web/CSS/transform) is basically to use the alpha, gamma, and beta values as `rotateZ`, `rotateX` and `rotateY` values.
+The easiest way to convert [orientation data](/en-US/docs/Web/API/Window/deviceorientation_event) to a [3D transform](/en-US/docs/Web/CSS/transform) is basically to use the `alpha`, `gamma`, and `beta` values as `rotateZ`, `rotateX` and `rotateY` values.
 
-It is important to keep in mind, however, that the [Device Orientation coordinate system](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) is different from the [CSS coordinate system](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems). Namely, the former is [right-handed](https://en.wikipedia.org/wiki/Right-hand_rule) and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms). These are some of the practical consequences of these differences:
+It is important to keep in mind, however, that the [Device Orientation coordinate system](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) is different from the [CSS coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). Namely, the former is [right-handed](https://en.wikipedia.org/wiki/Right-hand_rule) and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms). These are some of the practical consequences of these differences:
 
 - The order of angle rotations matters, so make sure the alpha, beta and gamma rotations are applied in this order.
-- The [rotate3d()](/en-US/docs/Web/CSS/transform-function/rotate3d) CSS transformation, and the [DOMMatrixReadOnly.rotate()](/en-US/docs/Web/API/DOMMatrixReadOnly/rotate) and [DOMMatrix.rotateSelf()](/en-US/docs/Web/API/DOMMatrix/rotateSelf) functions apply angle rotations in a Z - Y' - X'' order, so it is not possible to apply the alpha, beta and gamma rotations in the right order with a single call to any of them. Instead, you should rotate each axis individually in the correct order.
-- Due to the differences in coordinate systems outlined above, when looking towards the origin rotations are applied clockwise around in CSS and counter-clockwise in the Device Orientation spec. This means alpha and beta need to be inverted (the rotations around Z and X), but gamma (the rotation around Y) does not because they point to different directions in the two coordinate systems.
+- The [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d) CSS transformation, and the [`DOMMatrixReadOnly.rotate()`](/en-US/docs/Web/API/DOMMatrixReadOnly/rotate) and [`DOMMatrix.rotateSelf()`](/en-US/docs/Web/API/DOMMatrix/rotateSelf) functions apply angle rotations in a Z - Y' - X'' order, so it is not possible to apply the alpha, beta and gamma rotations in the right order with a single call to any of them. Instead, you should rotate each axis individually in the correct order.
+- Due to the differences in coordinate systems outlined above, when looking towards the origin rotations are applied clockwise around in CSS and counter-clockwise in the Device Orientation spec. This means alpha and beta need to be inverted (the rotations around Z and X), because they point to different directions in the two coordinate systems. However, gamma (the rotation around Y) should be kept as is.
 
-Here's a simple code snippet to sum it up:
+  Here is a code snippet to sum it up:
 
-```js
-const elem = document.getElementById("view3d");
+  ```js
+  const elem = document.getElementById("view3d");
 
-window.addEventListener("deviceorientation", (e) => {
-  elem.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${
-    e.gamma
-  }deg)`;
-});
-```
+  window.addEventListener("deviceorientation", (e) => {
+    elem.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${
+      e.gamma
+    }deg)`;
+  });
+  ```
 
-## rotate3d to orientation
+## Convert from `rotate3d()` angles to `deviceorientation` angles
 
-Should you ever need to convert a rotate3d axis-angle to orientation Euler angles, you can use the following algorithm:
+Should you ever need to convert a rotate3d axis-angle to orientation [Euler angles](https://en.wikipedia.org/wiki/Euler_angles), used by `deviceorientation`, you can use the following algorithm:
 
 ```js
 // convert a rotate3d axis-angle to deviceorientation angles
@@ -78,5 +79,5 @@ function orient(aa) {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)

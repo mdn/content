@@ -8,11 +8,11 @@ status:
 browser-compat: api.VirtualKeyboard.show
 ---
 
-{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
+{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`show()`** method of the {{domxref("VirtualKeyboard")}} interface programmatically shows the on-screen virtual keyboard. This is useful when the page needs to implement its own virtual keyboard logic, especially when using the `virtualkeyboardpolicy` attribute on `contenteditable` elements as explained in [Control the virtual keyboard on `contenteditable` elements](/en-US/docs/Web/API/VirtualKeyboard_API#control_the_virtual_keyboard_on_contenteditable_elements).
 
-This method only works if the currently-focused element is a form control — such as an {{htmlelement("input")}} or {{htmlelement("textarea")}} element — or if the focused element is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable).
+This method only works if the currently-focused element is a form control — such as an {{htmlelement("input")}} or {{htmlelement("textarea")}} element — or if the focused element is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable), and the currently-focused element's [`virtualKeyboardPolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) attribute is set to `manual` and [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) isn't set to `none`.
 
 The `show()` method always returns `undefined` and triggers a {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} event.
 

@@ -35,7 +35,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("VideoDecoder.isConfigSupported()")}}
+- {{domxref("VideoDecoder.isConfigSupported_static", "VideoDecoder.isConfigSupported()")}}
   - : Returns a promise indicating whether the provided `VideoDecoderConfig` is supported.
 
 ## Instance methods
@@ -63,5 +63,5 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## See also
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)

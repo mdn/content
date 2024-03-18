@@ -32,7 +32,7 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 ## Description
 
 If you do not specify the `msValue` parameter, the value returned from the
-{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} method is
+{{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} method is
 used.
 
 If a parameter you specify is outside of the expected range,

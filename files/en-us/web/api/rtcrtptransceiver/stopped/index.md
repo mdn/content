@@ -10,17 +10,11 @@ browser-compat: api.RTCRtpTransceiver.stopped
 
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
-The read-only **`stopped`** property
-on the {{domxref("RTCRtpTransceiver")}} interface indicates whether or not the
-transceiver's associated sender and receiver have both been stopped.
+> **Note:** Instead of using this deprecated property, compare {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} to `"stopped"`.
 
-The transceiver is stopped if the {{domxref("RTCRtpTransceiver.stop", "stop()")}}
-method has been called or if a change to either the local or the remote description has
-caused the transceiver to be stopped for some reason.
+The read-only **`stopped`** property on the {{domxref("RTCRtpTransceiver")}} interface indicates whether or not the transceiver's associated sender and receiver have both been stopped.
 
-> **Note:** This property is _deprecated_ and will be removed in the future. Instead, look
-> at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
-> Its value is `stopped` if the transceiver has stopped.
+The transceiver is stopped if the {{domxref("RTCRtpTransceiver.stop", "stop()")}} method has been called or if a change to either the local or the remote description has caused the transceiver to be stopped for some reason.
 
 ## Value
 

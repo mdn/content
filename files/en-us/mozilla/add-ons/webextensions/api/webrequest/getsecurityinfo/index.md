@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this function to get detailed information about the [TLS](/en-US/docs/Glossary/TLS) connection associated with a particular request.
 
@@ -54,7 +54,7 @@ async function logSubject(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,
-      {}
+      {},
     );
     console.log(details.url);
     if (securityInfo.state === "secure" || securityInfo.state === "weak") {
@@ -68,7 +68,7 @@ async function logSubject(details) {
 browser.webRequest.onHeadersReceived.addListener(
   logSubject,
   { urls: ["https://*.mozilla.org/*"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 
@@ -79,12 +79,12 @@ async function logRoot(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,
-      { certificateChain: true }
+      { certificateChain: true },
     );
     console.log(details.url);
     if (securityInfo.state === "secure" || securityInfo.state === "weak") {
       console.log(
-        securityInfo.certificates[securityInfo.certificates.length - 1].issuer
+        securityInfo.certificates[securityInfo.certificates.length - 1].issuer,
       );
     }
   } catch (error) {
@@ -95,7 +95,7 @@ async function logRoot(details) {
 browser.webRequest.onHeadersReceived.addListener(
   logRoot,
   { urls: ["https://*.mozilla.org/*"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

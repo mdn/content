@@ -123,7 +123,7 @@ We can add these styles to some buttons:
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSS.supports()")}}
-- {{DOMxRef("CSS.escape()")}}
-- {{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}
+- {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
+- {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
+- {{DOMxRef("CSS/factory_functions_static", 'CSS factory functions')}}
 - CSS {{cssxref("@property")}}

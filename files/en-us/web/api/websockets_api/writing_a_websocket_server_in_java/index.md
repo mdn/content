@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 This example shows you how to create a WebSocket API server using Oracle Java.
 
@@ -115,7 +115,7 @@ After a successful handshake, client can send messages to the server, but now th
 
 If we send "abcdef", we get these bytes:
 
-```
+```plain
 129 134 167 225 225 210 198 131 130 182 194 135
 ```
 

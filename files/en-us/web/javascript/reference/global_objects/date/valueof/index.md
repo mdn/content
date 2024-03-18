@@ -17,6 +17,10 @@ The **`valueOf()`** method of {{jsxref("Date")}} instances returns the number of
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of this date. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

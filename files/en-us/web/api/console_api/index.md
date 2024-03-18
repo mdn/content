@@ -5,11 +5,9 @@ page-type: guide
 browser-compat: api.console
 ---
 
-{{DefaultAPISidebar("Console API")}}
+{{DefaultAPISidebar("Console API")}} {{AvailableInWorkers}}
 
 The Console API provides functionality to allow developers to perform debugging tasks, such as logging messages or the values of variables at set points in your code, or timing how long an operation takes to complete.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -18,9 +16,9 @@ The Console API started as a largely proprietary API, with different browsers im
 - [Google Chrome DevTools implementation](https://developer.chrome.com/docs/devtools/console/api/)
 - [Safari DevTools implementation](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)
 
-Usage is very simple — the {{domxref("console")}} object — available via {{domxref("window.console")}}, or {{domxref("WorkerGlobalScope.console")}} in workers; accessible using just `console` — contains many methods that you can call to perform rudimentary debugging tasks, generally focused around logging various values to the browser's [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+Usage is very simple — the {{domxref("console")}} object contains many methods that you can call to perform rudimentary debugging tasks, generally focused around logging various values to the browser's [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
-By far the most commonly-used method is {{domxref("console.log")}}, which is used to log the current value contained inside a specific variable.
+By far the most commonly-used method is {{domxref("console/log_static", "console.log()")}}, which is used to log the current value contained inside a specific variable.
 
 ## Interfaces
 

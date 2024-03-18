@@ -21,9 +21,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer value which indicates the total number of Full Intra Request (FIR) packets which this {{domxref("RTCRtpSender")}} has sent to the remote {{domxref("RTCRtpReceiver")}}. This is an indicator of how often the stream has lagged, requiring frames to be skipped in order to catch up. _Valid only for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream. _Only valid for video streams._
-- {{domxref("RTCOutboundRtpStreamStats.lastPacketSentTimestamp", "lastPacketSentTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was sent for this SSRC.
-    The {{domxref("RTCOutboundRtpStreamStats.timestamp", "timestamp")}} property, on the other hand, indicates the time at which the `RTCOutboundRtpStreamStats` object was generated.
 - {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
   - : An integer value indicating the total number of Negative ACKnolwedgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
 - {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}

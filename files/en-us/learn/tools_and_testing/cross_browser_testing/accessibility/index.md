@@ -159,7 +159,7 @@ select:focus {
 
 Sometimes it is not possible to avoid losing keyboard accessibility. You might have inherited a site where the semantics are not very good (perhaps you've ended up with a horrible CMS that generates buttons made with `<div>`s), or you are using a complex control that does not have keyboard accessibility built in, like the HTML {{htmlelement("video")}} element (amazingly, Opera is the only browser that allows you to tab through the `<video>` element's default browser controls). You have a few options here:
 
-1. Create custom controls using `<button>` elements (which we can tab to by default!) and JavaScript to wire up their functionality. See [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) for some good examples of this.
+1. Create custom controls using `<button>` elements (which we can tab to by default!) and JavaScript to wire up their functionality. See [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) for some good examples of this.
 2. Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See [Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) for some game-related examples that can be adapted for any purpose.
 3. Use some interesting tactics to fake button behavior. Take for example our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"` (see WebAIM's [tabindex article](https://webaim.org/techniques/keyboard/tabindex) for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
 
@@ -184,7 +184,7 @@ Text alternatives are very important for accessibility — if a person has a vis
 
 Missing alt text can be tested for in a number of ways, for example using accessibility [Auditing tools](#auditing_tools).
 
-Alt text is slightly more complex for video and audio content. There is a way to define text tracks (e.g. subtitles) and display them when video is being played, in the form of the {{htmlelement("track")}} element, and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for a detailed tutorial). [Browser compatibility](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#browser_compatibility) for these features is fairly good, but if you want to provide text alternatives for audio or support older browsers, a simple text transcript presented somewhere on the page or on a separate page might be a good idea.
+Alt text is slightly more complex for video and audio content. There is a way to define text tracks (e.g. subtitles) and display them when video is being played, in the form of the {{htmlelement("track")}} element, and the [WebVTT](/en-US/docs/Web/API/WebVTT_API) format (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for a detailed tutorial). [Browser compatibility](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#browser_compatibility) for these features is fairly good, but if you want to provide text alternatives for audio or support older browsers, a simple text transcript presented somewhere on the page or on a separate page might be a good idea.
 
 #### Element relationships and context
 
@@ -288,7 +288,6 @@ There are a number of auditing tools available that you can feed your web pages 
 
 - [Wave](https://wave.webaim.org/): A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.
 - [Tenon](https://tenon.io): Another nice online tool that goes through the code at a provided URL and returns results on accessibility errors including metrics, specific errors along with the WCAG criteria they affect, and suggested fixes. It requires a free trial signup to view the results.
-- [tota11y](https://khan.github.io/tota11y/): An accessibility tool from the Khan Academy that takes the form of a JavaScript library that you attach to your page to provide a number of accessibility tools.
 
 Let's look at an example, using Wave.
 
@@ -449,7 +448,7 @@ VO has many keyboard commands, and we won't list them all here. The basic ones y
   </tbody>
 </table>
 
-This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screen reader testing](#screen reader_testing) section.
+This seems like a lot of commands, but it isn't so bad when you get used to it, and VO regularly gives you reminders of what commands to use in certain places. Have a play with VO now; you can then go on to play with some of our examples in the [Screen reader testing](#screen_reader_testing) section.
 
 #### NVDA
 

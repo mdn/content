@@ -7,9 +7,9 @@ status:
 browser-compat: api.GPUSupportedFeatures
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`GPUSupportedFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
+The **`GPUSupportedFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
 
 The `GPUSupportedFeatures` object for the current adapter is accessed via the {{domxref("GPUAdapter.features")}} property.
 
@@ -28,14 +28,14 @@ We have not listed the exact set of additional features available to be used in 
 
 ## Instance properties
 
-The following properties are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) (the links below are to the {{jsxref("Set")}} global object reference page).
+The following properties are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) (the links below are to the {{jsxref("Set")}} global object reference page).
 
 - {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
-The following methods are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) (the below links are to the {{jsxref("Set")}} global object reference page).
+The following methods are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) (the below links are to the {{jsxref("Set")}} global object reference page).
 
 - {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
   - : Returns a boolean asserting whether an element is present with the given value in the set or not.

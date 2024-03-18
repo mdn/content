@@ -13,7 +13,7 @@ After reading the last couple of articles you should now know what JavaScript is
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -85,7 +85,7 @@ One special thing about variables is that they can contain just about anything �
 
 > **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
-![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
+![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of JavaScript variables. Each box contains hypothetical values that represent various JavaScript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
 ## Declaring a variable
 
@@ -168,7 +168,7 @@ var myName;
 
 > **Note:** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
-This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
+This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#hoisting) for more detail on the subject.
 
 Hoisting no longer works with `let`. If we changed `var` to `let` in the above example, it would fail with an error. This is a good thing — declaring a variable after you initialize it results in confusing, harder to understand code.
 
@@ -199,13 +199,13 @@ For these reasons and more, we recommend that you use `let` in your code, rather
 
 > **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
 >
-> ```
-> > let myName = 'Chris';
->   let myName = 'Bob';
+> ```plain
+> > let myName = "Chris";
+>   let myName = "Bob";
 > // As one input: SyntaxError: Identifier 'myName' has already been declared
 >
-> > let myName = 'Chris';
-> > let myName = 'Bob';
+> > let myName = "Chris";
+> > let myName = "Bob";
 > // As two inputs: both succeed
 > ```
 
@@ -225,7 +225,7 @@ You can call a variable pretty much anything you like, but there are limitations
 - You shouldn't use other characters because they may cause errors or be hard to understand for an international audience.
 - Don't use underscores at the start of variable names — this is used in certain JavaScript constructs to mean specific things, so may get confusing.
 - Don't use numbers at the start of variables. This isn't allowed and causes an error.
-- A safe convention to stick to is so-called ["lower camel case"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms), where you stick together multiple words, using lower case for the whole first word and then capitalize subsequent words. We've been using this for our variable names in the article so far.
+- A safe convention to stick to is {{Glossary("camel_case", "lower camel case")}}, where you stick together multiple words, using lower case for the whole first word and then capitalize subsequent words. We've been using this for our variable names in the article so far.
 - Make variable names intuitive, so they describe the data they contain. Don't just use single letters/numbers, or big long phrases.
 - Variables are case sensitive — so `myage` is a different variable from `myAge`.
 - One last point: you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like `var`, `function`, `let`, and `for` as variable names. Browsers recognize them as different code items, and so you'll get errors.
@@ -263,8 +263,6 @@ Try creating a few more variables now, with the above guidance in mind.
 ## Variable types
 
 There are a few different types of data we can store in variables. In this section we'll describe these in brief, then in future articles, you'll learn about them in more detail.
-
-So far we've looked at the first two, but there are others.
 
 ### Numbers
 
@@ -316,7 +314,7 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [a future article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
+To learn more, see our article on [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
 
 ### Objects
 
@@ -334,7 +332,7 @@ To retrieve the information stored in the object, you can use the following synt
 dog.name;
 ```
 
-We won't be looking at objects any more for now — you can learn more about those in [a future module](/en-US/docs/Learn/JavaScript/Objects).
+For more on this topic, see the [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module.
 
 ## Dynamic typing
 

@@ -15,10 +15,6 @@ The **`HTMLButtonElement`** interface provides properties and methods (beyond th
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLButtonElement.accessKey")}}
-  - : A string indicating the single-character keyboard key to give access to the button.
-- {{domxref("HTMLButtonElement.autofocus")}}
-  - : A boolean value indicating whether or not the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLButtonElement.disabled")}}
   - : A boolean value indicating whether or not the control is disabled, meaning that it does not accept any clicks.
 - {{domxref("HTMLButtonElement.form")}} {{ReadOnlyInline}}
@@ -33,19 +29,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.formNoValidate")}}
   - : A boolean value indicating that the form is not to be validated when it is submitted. If specified, this attribute overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formTarget")}}
-  - : A string reflecting a name or keyword indicating where to display the response that is received after submitting the form. If specified, this attribute overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the {{HTMLElement("form")}} element that owns this element.
+  - : A string reflecting a name or keyword indicating where to display the response received after submitting the form. If specified, this attribute overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} that represents a list of {{HTMLElement("label")}} elements that are labels for this button.
-- {{domxref("HTMLButtonElement.menu")}} {{experimental_inline}}
-  - : A {{domxref("HTMLMenuElement")}} representing the menu element to be displayed if the button is clicked and is of `type="menu"`.
 - {{domxref("HTMLButtonElement.name")}}
-  - : A string representing the name of the object when submitted with a form. If specified, it must not be the empty string.
+  - : A string representing the object's name when submitted with a form. If specified, it must not be the empty string.
 - {{domxref("HTMLButtonElement.popoverTargetAction")}}
   - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by a control button. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
   - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
-- {{domxref("HTMLButtonElement.tabIndex")}}
-  - : A `long` that represents this element's position in the tabbing order.
 - {{domxref("HTMLButtonElement.type")}}
 
   - : A string indicating the behavior of the button. This is an enumerated attribute with the following possible values:

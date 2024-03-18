@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.IDBCursor.direction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`direction`** read-only property of the
 {{domxref("IDBCursor")}} interface is a string that returns the
 direction of traversal of the cursor (set using
 {{domxref("IDBObjectStore.openCursor")}} for example). See the [Values](#values)
 section below for possible values.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -38,7 +36,7 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 cursor to iterate through all the records in the object store. Within each iteration we
 log the direction of the cursor, something like this:
 
-```
+```plain
 prev
 ```
 

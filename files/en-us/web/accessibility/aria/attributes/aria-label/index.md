@@ -57,7 +57,7 @@ If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attr
 - `<string>`
   - : A string of text that will be the accessible name for the object.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaLabel")}}
   - : The [`ariaLabel`](/en-US/docs/Web/API/Element/ariaLabel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-label` attribute.
@@ -92,11 +92,11 @@ The `aria-label` attribute is **NOT** supported in:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - {{HTMLElement('label')}} element
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [Using HTML landmark roles to improve accessibility](https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (2023)
+- [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (2023)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

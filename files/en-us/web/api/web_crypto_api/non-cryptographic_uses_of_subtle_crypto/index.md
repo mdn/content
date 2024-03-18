@@ -76,7 +76,7 @@ async function fileHash(file) {
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item
   // to hexadecimal strings, where characters of 0-9 or a-f represent
-  // a number between 0 and 16, containing 4 bits of information,
+  // a number between 0 and 15, containing 4 bits of information,
   // so 2 of them is 8 bits (1 byte).
   const hashAsString = Array.from(uint8ViewOfHash)
     .map((b) => b.toString(16).padStart(2, "0"))
@@ -212,7 +212,7 @@ Source: [How is git commit sha1 formed](https://gist.github.com/masak/2415865)
 
 Essentially it's the UTF8 string (null character written as `\0`):
 
-```
+```plain
 commit [size in bytes as decimal of this info]\0tree [tree hash]
 parent [parent commit hash]
 author [author info] [timestamp]

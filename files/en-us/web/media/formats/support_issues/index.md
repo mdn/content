@@ -40,7 +40,7 @@ When using a progressive image, the data is stored in such a way that the browse
 
 ## Checking compatibility in JavaScript
 
-{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported")}}…
+{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}…
 
 ## Detecting playback errors
 

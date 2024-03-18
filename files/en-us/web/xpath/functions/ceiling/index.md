@@ -10,7 +10,7 @@ The `ceiling` function evaluates a decimal number and returns the smallest integ
 
 ### Syntax
 
-```
+```plain
 ceiling( number )
 ```
 

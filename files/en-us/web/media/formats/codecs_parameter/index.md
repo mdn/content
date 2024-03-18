@@ -916,7 +916,7 @@ The first four components are required; everything from `CC` (chroma subsampling
 
 You can use the `codecs` parameter in a few situations. Firstly, you can use it with the {{HTMLElement("source")}} element when creating an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, in order to establish a group of options for the browser to choose from when selecting the format of the media to present to the user in the element.
 
-You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
+You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource/isTypeSupported_static", "MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
 
 ## See also
 

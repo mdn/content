@@ -5,7 +5,7 @@ page-type: css-shorthand-property
 browser-compat: css.properties.background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
 The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
@@ -146,5 +146,5 @@ Browsers do not provide any special information on background images to assistiv
 ## See also
 
 - {{cssxref("box-decoration-break")}}
-- [Using gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -12,7 +12,7 @@ page-type: guide
 
 Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity. The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query enables providing an experience with fewer animations and transitions to users who have set their operating system's accessibility preferences to reduce motion.
 
-Also, this method of switching animation off according to the user's preference can also benefit users with low battery or low-end phones or computers.
+Reducing animations or switching animation off completely based on the user's preference can also benefit users with low battery or low-end devices.
 
 ### Syntax
 
@@ -23,7 +23,7 @@ Also, this method of switching animation off according to the user's preference 
 
 ### Example
 
-This example has an annoying animation unless you turn on Reduce Motion in your accessibility preferences.
+This example has an annoying animation unless you turn on Reduce Motion in [your accessibility preferences](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely).
 
 #### HTML
 
@@ -45,8 +45,12 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 }
 ```
 
-The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
+The value of `prefers-reduced-motion` is `reduce`, not "none". This preference does not mean all animations must be removed, which could be achieved with `* {animation: none !important;}`. Rather, users expect motion animation, including those triggered by user interaction, to be disabled unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
 
 ## See also
 
+- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): to adjust page styles based on user's contrast preference
+- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [`inverted-colors`](/en-US/docs/Web/CSS/@media/inverted-colors)
 - [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

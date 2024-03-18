@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeDownloads
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears the browser's download history. Note that this does not delete the downloaded objects themselves, only records of downloads in the browser's history.
 

@@ -68,7 +68,7 @@ If any unsupported codecs are listed, the browser will throw an `InvalidAccessEr
 A good approach to setting codec preferences is to first get the list of codecs that are actually supported, then modify that list to match what you want.
 Pass the altered list into `setCodecPreferences()` to specify your preferences.
 
-To determine which codecs are supported by the transceiver, call the sender's {{domxref("RTCRtpSender.getCapabilities", "getCapabilities()")}} and the receiver's {{domxref("RTCRtpReceiver.getCapabilities", "getCapabilities()")}} methods and get the `codecs` array from the results of each.
+To determine which codecs are supported by the transceiver, call the sender's {{domxref("RTCRtpSender.getCapabilities_static", "getCapabilities()")}} and the receiver's {{domxref("RTCRtpReceiver.getCapabilities_static", "getCapabilities()")}} methods and get the `codecs` array from the results of each.
 
 The following code snippet demonstrates how to get both the list of codecs supported by the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.
 

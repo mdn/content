@@ -51,7 +51,7 @@ myObject.greet(); // Greetings from Madrid
 
 This is an object with one data property, `city`, and one method, `greet()`. If you type the object's name _followed by a period_ into the console, like `myObject.`, then the console will pop up a list of all the properties available to this object. You'll see that as well as `city` and `greet`, there are lots of other properties!
 
-```
+```plain
 __defineGetter__
 __defineSetter__
 __lookupGetter__

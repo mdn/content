@@ -8,7 +8,7 @@ status:
 browser-compat: api.SerialPort.close
 ---
 
-{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`SerialPort.close()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port closes.
 

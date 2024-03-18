@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.error
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.
 
@@ -31,7 +31,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["<all_urls>"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

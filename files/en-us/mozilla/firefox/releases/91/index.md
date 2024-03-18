@@ -23,7 +23,7 @@ No changes
 
 #### Removals
 
-- The non-standard {{cssxref("-moz-outline-radius")}} property has been removed ([Firefox bug 1715984](https://bugzil.la/1715984)). The property has not been usable by web developers since Firefox 88, this completes the removal.
+- The non-standard `-moz-outline-radius` property has been removed ([Firefox bug 1715984](https://bugzil.la/1715984)). The property has not been usable by web developers since Firefox 88, this completes the removal.
 
 ### JavaScript
 
@@ -57,4 +57,4 @@ No changes
 
 ## Older versions
 
-{{Firefox_for_developers(90)}}
+{{Firefox_for_developers}}

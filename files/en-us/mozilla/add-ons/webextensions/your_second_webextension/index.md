@@ -12,7 +12,7 @@ The extension adds a new button to the Firefox toolbar. When the user clicks the
 
 To implement this, we will:
 
-- **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action), which is a button attached to the Firefox toolbar**.
+- **define a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), which is a button attached to the Firefox toolbar**.
   For the button we'll supply:
 
   - an icon, called "beasts-32.png"
@@ -26,7 +26,7 @@ To implement this, we will:
 
 You could visualize the overall structure of the extension like this:
 
-![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast JavaScript popup resource calls in the beastify script.](untitled-1.png)
 
 It's a simple extension, but shows many of the basic concepts of the WebExtensions API:
 
@@ -410,7 +410,7 @@ Create a new directory called "beasts", and add the three images in that directo
 
 First, double check that you have the right files in the right places:
 
-```
+```plain
 beastify/
 
     beasts/

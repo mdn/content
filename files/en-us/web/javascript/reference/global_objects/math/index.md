@@ -13,7 +13,7 @@ The **`Math`** namespace object contains static properties and methods for mathe
 
 ## Description
 
-Unlike most global objects, `Math` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Atomics` object as a function. All properties and methods of `Math` are static.
+Unlike most global objects, `Math` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Math` object as a function. All properties and methods of `Math` are static.
 
 > **Note:** Many `Math` functions have a precision that's _implementation-dependent_.
 >

@@ -12,7 +12,7 @@ don't have any.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: null has no properties (Firefox)
 TypeError: undefined has no properties (Firefox)

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.pop
 
 {{JSRef}}
 
-The **`pop()`** method removes the **last**
+The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
@@ -18,6 +18,10 @@ array.
 ```js-nolint
 pop()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -115,7 +119,7 @@ console.log(collection.length); // 2
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}

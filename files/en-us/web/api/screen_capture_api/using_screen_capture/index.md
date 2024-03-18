@@ -13,7 +13,23 @@ In this article, we will examine how to use the Screen Capture API and its {{dom
 
 ## Capturing screen contents
 
-Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents.
+Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents. The `displayMediaOptions` object referenced in the below examples might look something like this:
+
+```js
+const displayMediaOptions = {
+  video: {
+    displaySurface: "browser",
+  },
+  audio: {
+    suppressLocalAudioPlayback: false,
+  },
+  preferCurrentTab: false,
+  selfBrowserSurface: "exclude",
+  systemAudio: "include",
+  surfaceSwitching: "include",
+  monitorTypeSurfaces: "include",
+};
+```
 
 ### Starting screen capture: `async`/`await` style
 
@@ -22,9 +38,8 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error(`Error: ${err}`);
   }
@@ -90,7 +105,7 @@ Before starting a project that will require sharing of audio, be sure to check t
 To request that the screen be shared with included audio, the options passed into `getDisplayMedia()` might look like this:
 
 ```js
-const gdmOptions = {
+const displayMediaOptions = {
   video: true,
   audio: true,
 };
@@ -99,7 +114,7 @@ const gdmOptions = {
 This allows the user total freedom to select whatever they want, within the limits of what the user agent supports. This could be refined further by specifying additional options, and constraints inside the `audio` and `video` objects:
 
 ```js
-const gdmOptions = {
+const displayMediaOptions = {
   video: {
     displaySurface: "window",
   },
@@ -202,7 +217,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-This allows us to use {{domxref("console.log()")}} and {{domxref("console.error()")}} to log information to the log box in the document.
+This allows us to use {{domxref("console/log_static", "console/log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
 
 ##### Starting display capture
 
@@ -213,9 +228,8 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch (err) {
     console.error(err);

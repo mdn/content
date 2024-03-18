@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 A CORS preflight request is a {{Glossary("CORS")}} request that checks to see if the CORS protocol is understood and a server is aware using specific methods and headers.
 
-It is an {{HTTPMethod("OPTIONS")}} request, using three HTTP request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and the {{HTTPHeader("Origin")}} header.
+It is an {{HTTPMethod("OPTIONS")}} request, using two or three HTTP request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Origin")}}, and optionally {{HTTPHeader("Access-Control-Request-Headers")}}.
 
 A preflight request is automatically issued by a browser and in normal cases, front-end developers don't need to craft such requests themselves. It appears when request is qualified as ["to be preflighted"](/en-US/docs/Web/HTTP/CORS#preflighted_requests) and omitted for [simple requests](/en-US/docs/Web/HTTP/CORS#simple_requests).
 
@@ -17,7 +17,7 @@ For example, a client might be asking a server if it would allow a {{HTTPMethod(
 ```http
 OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: origin, x-requested-with
+Access-Control-Request-Headers: Origin, X-Requested-With
 Origin: https://foo.bar.org
 ```
 
@@ -28,6 +28,7 @@ HTTP/1.1 204 No Content
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: Origin, X-Requested-With
 Access-Control-Max-Age: 86400
 ```
 

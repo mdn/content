@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.CookieStore
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `CookieStore` type of the {{WebExtAPIRef("cookies")}} API represents a cookie store in the browser.
 
@@ -49,7 +49,7 @@ The following code snippet gets all cookie stores and then logs the total number
 browser.cookies.getAllCookieStores().then((stores) => {
   const incognitoStores = stores.map((store) => store.incognito);
   console.log(
-    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`
+    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`,
   );
 });
 ```

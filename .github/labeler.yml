@@ -1,3 +1,15 @@
+system:
+  - package.json
+  - yarn.lock
+  - .github/**/*
+  - .husky/**/*
+  - .vscode/**/*
+  - .*
+  - scripts/**/*
+  - tests/**/*
+  - jest.config.json
+  - front-matter-config.json
+
 Content:Accessibility:
   - files/en-us/web/accessibility/**/*
 Content:CSS:

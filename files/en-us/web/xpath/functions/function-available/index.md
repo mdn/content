@@ -10,7 +10,7 @@ The `function-available` function determines if a given function is available an
 
 ### Syntax
 
-```
+```plain
 function-available( name )
 ```
 

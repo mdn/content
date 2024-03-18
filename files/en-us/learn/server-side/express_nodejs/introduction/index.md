@@ -13,7 +13,7 @@ In this first Express article we answer the questions "What is Node?" and "What 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A general understanding of <a href="/en-US/docs/Learn/Server-side/First_steps">server-side website programming</a>, and in particular the mechanics of <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">client-server interactions in websites</a>.
+        A general understanding of <a href="/en-US/docs/Learn/Server-side/First_steps">server-side website programming</a>, and in particular the mechanics of <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">client-server interactions in websites</a>.
       </td>
     </tr>
     <tr>
@@ -130,7 +130,7 @@ Express is unopinionated. You can insert almost any compatible middleware you li
 
 In a traditional data-driven website, a web application waits for HTTP requests from the web browser (or other client). When a request is received the application works out what action is needed based on the URL pattern and possibly associated information contained in `POST` data or `GET` data. Depending on what is required it may then read or write information from a database or perform other tasks required to satisfy the request. The application will then return a response to the web browser, often dynamically creating an HTML page for the browser to display by inserting the retrieved data into placeholders in an HTML template.
 
-Express provides methods to specify what function is called for a particular HTTP verb (`GET`, `POST`, `SET`, etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response. You can use Express middleware to add support for cookies, sessions, and users, getting `POST`/`GET` parameters, etc. You can use any database mechanism supported by Node (Express does not define any database-related behavior).
+Express provides methods to specify what function is called for a particular HTTP verb (`GET`, `POST`, `PUT`, etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response. You can use Express middleware to add support for cookies, sessions, and users, getting `POST`/`GET` parameters, etc. You can use any database mechanism supported by Node (Express does not define any database-related behavior).
 
 The following sections explain some of the common things you'll see when working with _Express_ and _Node_ code.
 
@@ -435,7 +435,7 @@ npm install mongodb
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
-This works with older versions of mongodb version ~ 2.2.33:
+This works with older versions of MongoDB version ~ 2.2.33:
 
 ```js
 const MongoClient = require("mongodb").MongoClient;
@@ -453,7 +453,7 @@ MongoClient.connect("mongodb://localhost:27017/animals", (err, db) => {
 });
 ```
 
-For mongodb version 3.0 and up:
+For MongoDB version 3.0 and up:
 
 ```js
 const MongoClient = require("mongodb").MongoClient;
@@ -478,7 +478,7 @@ For more information see [Database integration](https://expressjs.com/en/guide/d
 
 ### Rendering data (views)
 
-Template engines (also referred to as "view engines" by _Express_'s documentation) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
+Template engines (also referred to as "view engines" in _Express_) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://expressjs.com/en/resources/template-engines.html), each with its own strengths for addressing particular use cases (relative comparisons can easily be found via Internet search).
 
 In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engine' settings, as shown below (you will also have to install the package containing your template library too!)
 

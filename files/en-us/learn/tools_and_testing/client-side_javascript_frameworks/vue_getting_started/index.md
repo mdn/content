@@ -175,7 +175,7 @@ The Vue CLI comes with a built-in development server. This allows you to run you
 
 In your terminal, try running `npm run serve` (or `yarn serve` if you prefer yarn). Your terminal should output something like the following:
 
-```
+```plain
 INFO  Starting development server...
 98% after emitting CopyPlugin
 

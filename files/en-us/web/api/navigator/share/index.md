@@ -43,6 +43,8 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : The document is not fully active, or other sharing operations are in progress.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
@@ -157,7 +159,7 @@ btn.addEventListener("click", async () => {
 
 Click the button to launch the share dialog on your platform. Text will appear below the button to indicate whether the share was successful or provide an error code.
 
-{{EmbedLiveSample('Sharing a URL')}}
+{{EmbedLiveSample('Sharing a URL','','','','','','web-share')}}
 
 ### Sharing files
 

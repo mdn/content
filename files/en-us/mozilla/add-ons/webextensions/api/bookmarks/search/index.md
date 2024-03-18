@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.
 

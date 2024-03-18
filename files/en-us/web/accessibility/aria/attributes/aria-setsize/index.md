@@ -17,7 +17,7 @@ When the DOM is not complete, the browser calculation of the number of items in 
 
 Elements with the `aria-setsize` generally have the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between `1` and the positive value of `aria-setsize`.
 
-For example, in a page's comments section, When comments in are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
+For example, in a page's comments section, When comments in are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
 
 When a feed has a static number of articles, `aria-setsize` can be added to each article element with the value being either the total number of articles loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown.
 
@@ -48,7 +48,7 @@ To orient the user, assistive technologies would list the bananas above as "item
 - `<integer>`
   - : The number of items in the full set or `-1` is the set size is unknown.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSetSize")}}
   - : The [`ariaSetSize`](/en-US/docs/Web/API/Element/ariaSetSize) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-setsize` attribute.
@@ -81,7 +81,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
 - [Treegrid Email Inbox](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/treegrid/treegrid-1.html) example

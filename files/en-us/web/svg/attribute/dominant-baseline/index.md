@@ -2,7 +2,7 @@
 title: dominant-baseline
 slug: Web/SVG/Attribute/dominant-baseline
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.dominant-baseline
+browser-compat: svg.global_attributes.dominant-baseline
 ---
 
 {{SVGRef}}

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getFrame
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
 
@@ -27,8 +27,8 @@ let gettingFrame = browser.webNavigation.getFrame(
 
     - `tabId`
       - : `integer`. The ID of the tab in which the frame is.
-    - `processId` {{optional_inline}}
-      - : `integer`. The ID of the process running the renderer for this tab.
+    - `processId` {{optional_inline}} {{deprecated_inline}}
+      - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
     - `frameId`
       - : `integer`. The ID of the frame in the given tab.
 

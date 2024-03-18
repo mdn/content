@@ -11,6 +11,8 @@ browser-compat: css.properties.ruby-align
 
 The **`ruby-align`** CSS property defines the distribution of the different ruby elements over the base.
 
+## Syntax
+
 ```css
 /* Keyword values */
 ruby-align: start;
@@ -25,8 +27,6 @@ ruby-align: revert;
 ruby-align: revert-layer;
 ruby-align: unset;
 ```
-
-## Syntax
 
 ### Values
 

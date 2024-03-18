@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.abort_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The `abort` event is fired at {{domxref("XMLHttpRequestUpload")}} when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
 

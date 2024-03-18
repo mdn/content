@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-transitions/
 
 {{CSSRef}}
 
-The **CSS transitions** module lets you create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their timing function, duration, and other attributes.
+The **CSS transitions** module lets you create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their easing function, duration, and other attributes.
 
 ## Reference
 
@@ -18,6 +18,10 @@ The **CSS transitions** module lets you create gradual transitions between the v
 - {{cssxref("transition-duration")}}
 - {{cssxref("transition-property")}}
 - {{cssxref("transition-timing-function")}}
+
+### At rules
+
+- {{cssxref("@starting-style")}}
 
 ## Guides
 

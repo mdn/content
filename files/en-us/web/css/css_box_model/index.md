@@ -32,7 +32,7 @@ The Box Model specification defines a set of keywords that refer to the edges of
 
 ## Reference
 
-> **Note:** This specification defines the physical padding and margin properties. Flow-relative properties, which relate to text direction, are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
+> **Note:** This specification defines the physical padding and margin properties. Flow-relative properties, which relate to text direction, are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ### Properties for controlling the margin of a box
 

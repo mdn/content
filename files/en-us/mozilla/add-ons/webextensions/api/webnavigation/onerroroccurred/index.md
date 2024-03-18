@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onErrorOccurred
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 
@@ -51,8 +51,8 @@ Events have three functions:
           - : `integer`. The ID of the tab in which the navigation was happening.
         - `url`
           - : `string`. The URL to which the given frame was navigating.
-        - `processId`
-          - : `integer`. The ID of the process in which this tab is being rendered.
+        - `processId` {{optional_inline}} {{deprecated_inline}}
+          - : `integer`. This value is never set in modern browsers. It used to represent the ID of the process running the renderer for this tab.
         - `frameId`
 
           - : `integer`. Frame in which the navigation was happening.

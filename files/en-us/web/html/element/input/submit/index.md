@@ -11,7 +11,7 @@ browser-compat: html.elements.input.type_submit
 
 ## Value
 
-An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise. The `value` provides the {{glossary("accessible description")}} for the button.
 
 ### Setting the value attribute
 
@@ -61,7 +61,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 A string indicating the HTTP method to use when submitting the form's data; this value overrides any [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute given on the owning form. Permitted values are:
 
 - `get`
-  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only ASCII characters and have no side effects. This is the default value.
+  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
 - `post`
   - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute using an HTTP {{HTTPMethod("post")}} method. This method supports complex data and file attachments.
 - `dialog`

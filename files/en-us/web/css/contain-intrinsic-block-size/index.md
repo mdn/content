@@ -7,7 +7,7 @@ browser-compat: css.properties.contain-intrinsic-block-size
 
 {{CSSRef}}
 
-The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment).
 
 Block size is the size of an element in the dimension perpendicular to the flow of text within a line. In a horizontal [writing mode](/en-US/docs/Web/CSS/writing-mode) like standard English, block size is the vertical dimension (height); in a vertical writing mode, block size is the horizontal dimension.
 
@@ -106,7 +106,7 @@ The intrinsic block size and inline size that are used when it is size constrain
 
 ## See also
 
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)
 - {{CSSxRef("contain-intrinsic-inline-size")}}
 - {{CSSxRef("contain-intrinsic-size")}}
 - {{CSSxRef("contain-intrinsic-width")}}

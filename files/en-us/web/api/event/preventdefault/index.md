@@ -117,14 +117,13 @@ whether to allow it:
 
 ```js
 function checkName(evt) {
-  const charCode = evt.charCode;
-  if (charCode !== 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      displayWarning(
-        "Please use lowercase letters only.\n" + `charCode: ${charCode}\n`,
-      );
-    }
+  const key = evt.key;
+  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!lowerCaseAlphabet.includes(key)) {
+    evt.preventDefault();
+    displayWarning(
+      "Please use lowercase letters only.\n" + `Key pressed: ${key}\n`,
+    );
   }
 }
 ```

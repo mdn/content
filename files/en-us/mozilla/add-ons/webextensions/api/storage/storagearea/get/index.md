@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves one or more items from the storage area.
 
@@ -147,7 +147,7 @@ Or using a Promise
 
 ```js
 let gettingItem = new Promise((resolve) =>
-  chrome.storage.local.get("kitten", resolve)
+  chrome.storage.local.get("kitten", resolve),
 );
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```

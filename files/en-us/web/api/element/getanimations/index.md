@@ -14,7 +14,7 @@ The `getAnimations()` method of the {{domxref("Element")}} interface
 in future. It can optionally return {{domxref("Animation")}} objects for descendant
 elements too.
 
-> **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
+> **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 
@@ -63,7 +63,7 @@ Promise.all(
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - {{domxref("Document.getAnimations()")}} - Fetch all animations in the document
 - {{domxref("Animation")}}

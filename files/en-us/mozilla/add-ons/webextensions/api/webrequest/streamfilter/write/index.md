@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.write
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Writes some response data to the output stream.
 
@@ -57,7 +57,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

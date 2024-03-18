@@ -3,12 +3,10 @@ title: "VideoColorSpace: VideoColorSpace() constructor"
 short-title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.VideoColorSpace.VideoColorSpace
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace")}} object which represents a video color space.
 

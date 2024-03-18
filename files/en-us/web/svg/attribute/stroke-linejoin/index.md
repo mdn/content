@@ -2,7 +2,7 @@
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-linejoin
+browser-compat: svg.global_attributes.stroke-linejoin
 ---
 
 {{SVGRef}}
@@ -100,10 +100,10 @@ svg {
     <circle cx="3" cy="2" r="0.05" fill="pink" />
     <circle cx="5" cy="5.5" r="0.05" fill="pink" />
   </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <use href="#highlight" x="6" />
+  <use href="#highlight" x="12" />
+  <use href="#highlight" x="2" y="6" />
+  <use href="#highlight" x="8" y="6" />
 </svg>
 ```
 

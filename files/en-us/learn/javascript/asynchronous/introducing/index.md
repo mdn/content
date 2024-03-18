@@ -13,7 +13,7 @@ In this article, we'll explain what asynchronous programming is, why we need it,
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including functions and event handlers.
       </td>
     </tr>
@@ -197,13 +197,16 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("The trouble with long-running synchronous functions", 600, 200)}}
 
-This is the basic problem with long-running synchronous functions. What we need is a way for our program to:
+The reason for this is that this JavaScript program is _single-threaded_. A thread is a sequence of instructions that a program follows. Because the program consists of a single thread, it can only do one thing at a time: so if it is waiting for our long-running synchronous call to return, it can't do anything else.
+
+What we need is a way for our program to:
 
 1. Start a long-running operation by calling a function.
 2. Have that function start the operation and return immediately, so that our program can still be responsive to other events.
-3. Notify us with the result of the operation when it eventually completes.
+3. Have the function execute the operation in a way that does not block the main thread, for example by starting a new thread.
+4. Notify us with the result of the operation when it eventually completes.
 
-That's precisely what asynchronous functions can do. The rest of this module explains how they are implemented in JavaScript.
+That's precisely what asynchronous functions enable us to do. The rest of this module explains how they are implemented in JavaScript.
 
 ## Event handlers
 

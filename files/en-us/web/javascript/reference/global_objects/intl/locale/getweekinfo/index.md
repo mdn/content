@@ -17,6 +17,10 @@ The **`getWeekInfo()`** method of {{jsxref("Intl.Locale")}} instances returns a 
 getWeekInfo()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An object representing week information associated with the Locale data specified in [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements). It has the following properties:
@@ -59,4 +63,4 @@ console.log(msBN.getWeekInfo()); // { firstDay: 7, weekend: [5, 7], minimalDays:
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}

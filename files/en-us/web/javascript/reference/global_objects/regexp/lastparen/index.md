@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.RegExp.lastParen
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 > **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
 
@@ -42,8 +42,8 @@ RegExp["$+"]; // "hi"
 
 ## See also
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp/input", "RegExp.input ($_)")}}
+- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}}
 - {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

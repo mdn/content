@@ -34,7 +34,7 @@ Highlights:
 
 - The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by default ([Firefox bug 1231485](https://bugzil.la/1231485)).
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ([Firefox bug 1213126](https://bugzil.la/1213126)).
-- The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch `layout.css.font-display.enabled` to `true` ([Firefox bug 1157064](https://bugzil.la/1157064)).
+- The experimental support of the {{cssxref("@font-face/font-display", "font-display")}} descriptor (of {{cssxref("@font-face")}}; it requires to switch `layout.css.font-display.enabled` to `true` ([Firefox bug 1157064](https://bugzil.la/1157064)).
 - Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
 - {{cssxref("gradient/linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ([Firefox bug 1239153](https://bugzil.la/1239153)).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 1236506](https://bugzil.la/1236506)).
@@ -52,7 +52,7 @@ Highlights:
 - The non-standard `WeakMap.prototype.clear()` and `WeakSet.prototype.clear()` methods have been removed ([Firefox bug 1101817](https://bugzil.la/1101817)).
 - The non-standard, static `RegExp.multiline` property is now deprecated ([Firefox bug 1220457](https://bugzil.la/1220457)).
 - Built-in accessor function names now have a "get" or "set" prefix ([Firefox bug 1180290](https://bugzil.la/1180290), [Firefox bug 1235656](https://bugzil.la/1235656)).
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 (legacy) array comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 (legacy) generator comprehensions", "#Differences_to_the_older_JS1.7JS1.8_comprehensions", 1)}} have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
+- [JS1.7/JS1.8 (legacy) array comprehensions and generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator) have been removed ([Firefox bug 1220564](https://bugzil.la/1220564)).
 
 ### Interfaces/APIs/DOM
 
@@ -60,11 +60,11 @@ Highlights:
 
 - The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedindex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedoptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 
-- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, {{domxref("OffscreenCanvas.toBlob()")}}, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 1172796](https://bugzil.la/1172796)).
+- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, `OffscreenCanvas.toBlob()`, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 1172796](https://bugzil.la/1172796)).
 - The {{domxref("ImageBitmap.close()")}} method is now supported ([Firefox bug 1172796](https://bugzil.la/1172796)).
 - A new {{domxref("ImageBitmapRenderingContext")}} rendering context is now implemented. Use `"bitmaprenderer"` with {{domxref("OffscreenCanvas.getContext()")}} or {{domxref("HTMLCanvasElement.getContext()")}} to obtain this context. ([Firefox bug 1172796](https://bugzil.la/1172796)).
 
@@ -100,7 +100,7 @@ _No change._
 - The asynchronous {{domxref("FileReader")}} is now available in Web workers ([Firefox bug 901097](https://bugzil.la/901097)).
 - Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) has been updated:
 
-  - {{domxref("AnimationEffectTimingReadOnly")}} and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
+  - The `AnimationEffectTimingReadOnly` dictionary and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
 
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has now been enabled by default, for all release versions, not just Nightly as it previously was ([Firefox bug 1221106](https://bugzil.la/1221106).)
 - Sanitization of WOFF fonts has been loosened a bit ([Firefox bug 1244693](https://bugzil.la/1244693)).
@@ -153,4 +153,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers(45)}}
+{{Firefox_for_developers}}

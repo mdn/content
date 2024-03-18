@@ -1,6 +1,7 @@
 ---
 title: Load
 slug: WebAssembly/Reference/Memory/Load
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

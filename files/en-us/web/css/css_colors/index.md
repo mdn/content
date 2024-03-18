@@ -51,11 +51,12 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 - [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
+- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
 
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
-- [`<absolute-color-function>`](#functions)
+- [`<color-function>`](#functions)
 - {{cssxref("hex-color")}}
 - {{cssxref("named-color")}}
 - {{cssxref("alpha-value")}}
@@ -63,8 +64,9 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - {{cssxref("system-color")}}
 - [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
 
-### Keywords
+### Glossary terms and keywords
 
+- {{glossary("color space")}}
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
@@ -122,7 +124,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ## See also
 
 - [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
-- [CSS images](/en-US/docs/Web/CSS/CSS_Images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) images are defined.
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)

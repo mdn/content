@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this event to listen for messages from another part of your extension.
 
@@ -32,6 +32,7 @@ You can send a synchronous response to the message by calling the `sendResponse(
 To send an asynchronous response, there are two options:
 
 - return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. [See an example](#sending_an_asynchronous_response_using_sendresponse).
+  > **Warning:** Do not prepend `async` to the function. Prepending `async` changes the meaning to [sending an asynchronous response using a promise](#sending_an_asynchronous_response_using_a_promise), which is effectively the same as `sendResponse(true)`.
 - return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](#sending_an_asynchronous_response_using_a_promise).
 
 > **Note:** You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
@@ -77,6 +78,8 @@ Events have three functions:
 
         - either keep a reference to the `sendResponse()` argument and return `true` from the listener function. You will then be able to call `sendResponse()` after the listener function has returned.
         - or return a {{jsxref("Promise")}} from the listener function and resolve the promise when the response is ready. This is a preferred way.
+
+          > **Note:** Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, [return true and use sendResponse](#sending_an_asynchronous_response_using_sendresponse).
 
     The `listener` function can return either a Boolean or a {{jsxref("Promise")}}.
 
@@ -211,7 +214,11 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
+> **Warning:** Do not prepend `async` to the function. Prepending `async` changes the meaning to [sending an asynchronous response using a promise](#sending_an_asynchronous_response_using_a_promise), which is effectively the same as `sendResponse(true)`.
+
 ### Sending an asynchronous response using a Promise
+
+> **Note:** Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, [return true and use `sendResponse`](#sending_an_asynchronous_response_using_sendresponse).
 
 This content script gets the first `<a>` link on the page and sends a message asking if the link's location is bookmarked. It expects to get a Boolean response (`true` if the location is bookmarked, `false` otherwise):
 

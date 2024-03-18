@@ -25,40 +25,31 @@ A boolean.
 
 ## Examples
 
+### Switching normalization off
+
+The following example creates a convolver node and assigns it an {{domxref("AudioBuffer")}}. Before assigning the audio buffer, it sets `normalize` to `false`.
+
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
+// ...
+
 const convolver = audioCtx.createConvolver();
+// ...
 
-// …
-
-// grab audio track via XHR for convolver node
-
-let soundSource;
-let concertHallBuffer;
-
-ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open("GET", "concert-crowd.ogg", true);
-ajaxRequest.responseType = "arraybuffer";
-
-ajaxRequest.onload = () => {
-  let audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(
-    audioData,
-    (buffer) => {
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      soundSource.buffer = concertHallBuffer;
-    },
-    (e) => console.error(`Error with decoding audio data: ${e.err}`),
+// Grab audio track via fetch() for convolver node
+try {
+  const response = await fetch(
+    "https://mdn.github.io/voice-change-o-matic/audio/concert-crowd.ogg",
   );
-};
-
-ajaxRequest.send();
-
-// …
-
-convolver.normalize = false; // must be set before the buffer, to take effect
-convolver.buffer = concertHallBuffer;
+  const arrayBuffer = await response.arrayBuffer();
+  const decodedAudio = await audioCtx.decodeAudioData(arrayBuffer);
+  convolver.normalize = false; // must be set before the buffer, to take effect
+  convolver.buffer = decodedAudio;
+} catch (error) {
+  console.error(
+    `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+  );
+}
 ```
 
 ## Specifications

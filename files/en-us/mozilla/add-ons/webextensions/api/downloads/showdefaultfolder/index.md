@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`showDefaultFolder()`** function of the {{WebExtAPIRef("downloads")}} API opens the default downloads folder in the platform's file manager.
 

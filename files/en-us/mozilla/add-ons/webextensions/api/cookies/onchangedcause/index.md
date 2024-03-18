@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.OnChangedCause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `OnChangedCause` type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.
 
@@ -38,7 +38,7 @@ browser.cookies.onChanged.addListener((changeInfo) => {
     `Cookie changed: \n` +
       ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
       ` * Cause: ${changeInfo.cause}\n` +
-      ` * Removed: ${changeInfo.removed}`
+      ` * Removed: ${changeInfo.removed}`,
   );
 });
 ```

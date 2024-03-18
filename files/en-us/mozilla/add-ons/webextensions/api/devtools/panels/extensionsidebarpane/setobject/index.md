@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Displays a JSON object in the extension's sidebar pane.
 

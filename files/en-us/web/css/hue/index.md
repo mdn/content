@@ -2,7 +2,11 @@
 title: <hue>
 slug: Web/CSS/hue
 page-type: css-type
-browser-compat: css.types.hue
+browser-compat:
+  - css.types.color.hsl
+  - css.types.color.hwb
+  - css.types.color.lch
+  - css.types.color.oklch
 spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 ---
 
@@ -113,7 +117,7 @@ A `<hue>` can be either an `<angle>` or a `<number>`.
 - `<number>`
   - : A real number, representing degrees of the hue angle.
 
-As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg]`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
+As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg)`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
 
 ### Interpolation
 
@@ -151,7 +155,7 @@ p {
 }
 span {
   font-family: monospace;
-  background: rgb(0 0 0 / 0.1);
+  background: rgb(0 0 0 / 10%);
   padding: 3px;
 }
 #hue-slider {

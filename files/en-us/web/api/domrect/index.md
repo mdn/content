@@ -45,7 +45,7 @@ _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. 
 
 _`DOMRect` may also inherit static methods from its parent, {{domxref("DOMRectReadOnly")}}._
 
-- {{domxref("DOMRect.fromRect()")}}
+- {{domxref("DOMRect/fromRect_static", "DOMRect.fromRect()")}}
   - : Creates a new `DOMRect` object with a given location and dimensions.
 
 ## Instance methods

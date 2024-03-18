@@ -26,7 +26,7 @@ The syntax is simple. Any attribute on any element whose attribute name starts w
 
 Reading the values of these attributes out in [JavaScript](/en-US/docs/Web/JavaScript) is also very simple. You could use {{domxref("Element.getAttribute", "getAttribute()")}} with their full HTML name to read them, but the standard defines a simpler way: a {{domxref("DOMStringMap")}} you can read out via a {{domxref("HTMLElement/dataset", "dataset")}} property.
 
-To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to camelCase).
+To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to {{Glossary("camel_case", "camel case")}}).
 
 ```js
 const article = document.querySelector("#electric-cars");
@@ -74,5 +74,5 @@ Do not store content that should be visible and accessible in data attributes, b
 ## See also
 
 - This article is adapted from [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
-- Custom attributes are also supported in SVG 2; see {{domxref("SVGElement.dataset")}} and {{SVGAttr("data-*")}} for more information.
+- Custom attributes are also supported in SVG 2; see {{domxref("HTMLElement.dataset")}} and {{SVGAttr("data-*")}} for more information.
 - [How to use HTML data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

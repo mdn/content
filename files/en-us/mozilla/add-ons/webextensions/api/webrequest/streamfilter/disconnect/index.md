@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.disconnect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Disconnects the filter from the request. After this, the browser will continue to process the response, but no more filter events will fire, and no more filter function calls will have any effect. Note the difference between this function and {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}. With `disconnect()`, the browser will continue to process any further response data, but it won't be accessible through the filter. With `close()`, the browser will ignore any response data that hasn't already been passed through to the rendering engine.
 
@@ -50,7 +50,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

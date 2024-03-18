@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.FileList.item
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`item()`** method of the {{domxref("FileList")}} API returns a {{domxref("File")}} object representing the file at the specified index in the file list.
+The **`item()`** method of the {{domxref("FileList")}} interface returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ item(index)
 
 ### Return value
 
-A [`File`](/en-US/docs/Web/API/File) object representing the requested file.
+A {{domxref("File")}} object representing the requested file.
 
 ## Examples
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Searches for text in a tab.
 
@@ -184,7 +184,7 @@ function getNodes() {
     document,
     window.NodeFilter.SHOW_TEXT,
     null,
-    false
+    false,
   );
   const nodes = [];
   while ((node = walker.nextNode())) {

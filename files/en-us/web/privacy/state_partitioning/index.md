@@ -4,8 +4,6 @@ slug: Web/Privacy/State_Partitioning
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
-
 State Partitioning is a broad effort to rework how Firefox manages client-side
 state (i.e., data stored in the browser) to mitigate the ability of websites
 to abuse state for cross-site tracking. This effort aims to
@@ -43,7 +41,7 @@ access to some storage APIs (e.g., cookies and localStorage) for certain
 domains under certain conditions. For example, our "block all third-party
 cookies" policy will prevent all domains from accessing certain storage APIs
 when loaded in a third-party context. Our current
-[default cookie policy](/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy) blocks access in a third-party context only for domains classified as
+[default cookie policy](/en-US/docs/Web/Privacy/Storage_Access_Policy) blocks access in a third-party context only for domains classified as
 trackers.
 
 ## State partitioning
@@ -295,6 +293,10 @@ For example, to disable partitioning for `tracker.example`
 on `example.com` and for `social.example` on
 `news.example`, you would set the pref to the following:
 
-```
+```plain
 https://tracker.example,http://example.com;https://social.example,https://news.example
 ```
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

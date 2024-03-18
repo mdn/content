@@ -53,7 +53,7 @@ There are six heading elements: {{htmlelement("Heading_Elements", "h1")}}, {{htm
 
 ### Implementing structural hierarchy
 
-For example, in this story, the `<h1>` element represents the title of the story, the `<h2>` elements represent the title of each chapter, and the `<h3>` elements represent sub-sections of each chapter:
+For example, in this story, the `<h1>` element represents the title of the story, the `<h2>` elements represent the title of each chapter, and the `<h3>` elements represent subsections of each chapter:
 
 ```html
 <h1>The Crushing Bore</h1>
@@ -265,13 +265,15 @@ This is a {{htmlelement("span")}} element. It has no semantics. You use it to wr
 
 ## Lists
 
-Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the web, too, and we've got three different types to worry about.
+Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! On the web, we have three types of lists: unordered, ordered, and description.
+
+Unordered and ordered lists are very common, and they're covered in this section. Description lists are less common, and we'll cover them in [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting).
 
 ### Unordered
 
 Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:
 
-```
+```plain
 milk
 eggs
 bread
@@ -438,7 +440,7 @@ textarea.onkeyup = () => {
 
 Ordered lists are lists in which the order of the items _does_ matter. Let's take a set of directions as an example:
 
-```
+```plain
 Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
@@ -976,7 +978,7 @@ textarea.onkeyup = () => {
 
 ### Italic, bold, underline…
 
-The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
+The elements we've discussed so far have clear-cut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
 
 HTML5 redefined `<b>`, `<i>`, and `<u>` with new, somewhat confusing, semantic roles.
 

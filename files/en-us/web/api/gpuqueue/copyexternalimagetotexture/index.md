@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQueue.copyExternalImageToTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`copyExternalImageToTexture()`** method of the
 {{domxref("GPUQueue")}} interface copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.
@@ -28,7 +28,7 @@ copyExternalImageToTexture(source, destination, copySize)
   - : An object representing the source to write to the destination, and its origin. This can take the following properties:
 
     - `source`
-      - : An object providing the source of the snapshot to copy. This can be an {{domxref("ImageBitmap")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, or {{domxref("OffscreenCanvas")}}. The image source data is captured at the exact moment `copyExternalImageToTexture()` is invoked.
+      - : An object providing the source of the snapshot to copy. This can be an {{domxref("ImageBitmap")}}, {{domxref("HTMLVideoElement")}}, {{domxref("VideoFrame")}}, {{domxref("HTMLCanvasElement")}}, or {{domxref("OffscreenCanvas")}}. The image source data is captured at the exact moment `copyExternalImageToTexture()` is invoked.
     - `origin` {{optional_inline}}
 
       - : An object or array specifying the origin of the copy — the top-left corner of the source sub-region to copy from. Together with `copySize`, this defines the full extent of the source sub-region. The `x` and `y` values default to 0 if any of all of `origin` is omitted.
@@ -179,12 +179,12 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
 In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), the following snippet is used to fetch an image and upload it into a {{domxref("GPUTexture")}}:
 
 ```js
-let cubeTexture: GPUTexture; // TypeScript
+let cubeTexture;
 {
   const img = document.createElement("img");
   img.src = new URL(
     "../../../assets/img/Di-3d.png",
-    import.meta.url
+    import.meta.url,
   ).toString();
   await img.decode();
   const imageBitmap = await createImageBitmap(img);
@@ -201,7 +201,7 @@ let cubeTexture: GPUTexture; // TypeScript
   device.queue.copyExternalImageToTexture(
     { source: imageBitmap },
     { texture: cubeTexture },
-    [imageBitmap.width, imageBitmap.height]
+    [imageBitmap.width, imageBitmap.height],
   );
 }
 ```

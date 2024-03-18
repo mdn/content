@@ -134,7 +134,7 @@ express express-locallibrary-tutorial --view=pug
 
 The generator will create (and list) the project's files.
 
-```bash
+```plain
    create : express-locallibrary-tutorial\
    create : express-locallibrary-tutorial\public\
    create : express-locallibrary-tutorial\public\javascripts\
@@ -189,17 +189,17 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
    - On the Windows CMD prompt, use this command:
 
-     ```bash
+     ```batch
      SET DEBUG=express-locallibrary-tutorial:* & npm start
      ```
 
    - On Windows Powershell, use this command:
 
-     ```bash
-     $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     ```powershell
+     ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
-     > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > **Note:** Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
    - On macOS or Linux, use this command:
 
@@ -218,8 +218,10 @@ Congratulations! You now have a working Express application that can be accessed
 > **Note:** You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
 >
 > ```bash
-> >SET DEBUG=express-locallibrary-tutorial:* & npm start
+> SET DEBUG=express-locallibrary-tutorial:* & npm start
+> ```
 >
+> ```plain
 > > express-locallibrary-tutorial@0.0.0 start D:\github\mdn\test\exprgen\express-locallibrary-tutorial
 > > node ./bin/www
 >

@@ -39,7 +39,7 @@ Use the `host_permissions` key to request access for the APIs in your extension 
 
 ### Requested permissions and user prompts
 
-Most browsers treat `host_permission` as optional. If you request permissions using this key, users _may_ get prompted to grant those permissiosns during installation. As of June 2023, Safari, Firefox, and some Chromium-based browsers don't prompt the user during installation.
+Most browsers treat `host_permissions` as optional. If you request permissions using this key, users _may_ get prompted to grant those permissions during installation. As of June 2023, Safari, Firefox, and some Chromium-based browsers don't prompt the user during installation.
 
 Users can also grant or revoke host permissions on an ad hoc basis. For example, in Firefox, users can do this using the [extensions panel](https://blog.mozilla.org/addons/2022/11/17/unified-extensions-button-and-how-to-handle-permissions-in-manifest-v3/).
 
@@ -64,7 +64,7 @@ The extra privileges include:
 
 In Firefox extensions get host permissions for their origin, which is of the form:
 
-```
+```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
@@ -87,7 +87,7 @@ Request privileged access to pages under `developer.mozilla.org`.
 
 <!-- Ideally we'd use the WebExtExamples template, but examples are not categorized by manifest keys yet - https://github.com/mdn/webextensions-examples/issues/524 -->
 
-- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/master/dnr-redirect-url)
+- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/main/dnr-redirect-url)
 
 ## Browser compatibility
 

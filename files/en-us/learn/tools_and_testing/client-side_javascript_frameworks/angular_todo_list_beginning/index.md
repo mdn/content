@@ -92,8 +92,11 @@ In `app.component.ts`, replace the contents with the following:
 
 ```js
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
@@ -164,7 +167,7 @@ The double curly braces that contain `item.description` instructs Angular to pop
 
 In the browser, you should see the list of items as follows:
 
-```
+```plain
 My To Do List
 What would you like to do today?
 

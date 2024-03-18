@@ -177,4 +177,4 @@ So, for the Tabs widget example above, the user should be able to navigate into 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

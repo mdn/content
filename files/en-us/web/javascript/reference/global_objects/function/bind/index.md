@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Function.bind
 
 {{JSRef}}
 
-The **`bind()`** method creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+The **`bind()`** method of {{jsxref("Function")}} instances creates a new function that, when called, calls this function with its `this` keyword set to the provided value, and a given sequence of arguments preceding any provided when the new function is called.
 
 {{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
 
@@ -24,7 +24,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 
 - `thisArg`
   - : The value to be passed as the `this` parameter to the target function `func` when the bound function is called. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator.
-- `arg1, …, argN` {{optional_inline}}
+- `arg1`, …, `argN` {{optional_inline}}
   - : Arguments to prepend to arguments provided to the bound function when invoking `func`.
 
 ### Return value
@@ -261,7 +261,7 @@ console.log(new BoundDerived() instanceof Derived); // true
 
 ### Transforming methods to utility functions
 
-`bind()` is also helpful in cases where you want to transform a method which requires a specific `this` value to a plain utility function that accepts the previous `this` parameter as a normal parameter. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which avoids mutating `Array.prototype`, and allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)).
+`bind()` is also helpful in cases where you want to transform a method which requires a specific `this` value to a plain utility function that accepts the previous `this` parameter as a normal parameter. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)) without mutating `Object.prototype`.
 
 Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use for converting an array-like object to a real array. You could create a shortcut like this:
 

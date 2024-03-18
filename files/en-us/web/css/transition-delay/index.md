@@ -7,7 +7,7 @@ browser-compat: css.properties.transition-delay
 
 {{CSSRef}}
 
-The **`transition-delay`** CSS property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) when its value changes.
+The **`transition-delay`** CSS property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) when its value changes.
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
@@ -130,5 +130,5 @@ changeButton.addEventListener("click", change);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}} API

@@ -10,7 +10,7 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ## Message
 
-```
+```plain
 ReferenceError: x is not defined (V8-based)
 ReferenceError: assignment to undeclared variable x (Firefox)
 ReferenceError: Can't find variable: x (Safari)

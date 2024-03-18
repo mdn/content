@@ -10,7 +10,7 @@ The `substring` function returns a part of a given string.
 
 ### Syntax
 
-```
+```plain
 substring(string, start)
 substring(string, start, length)
 ```

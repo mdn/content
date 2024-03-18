@@ -46,10 +46,7 @@ new AudioWorkletProcessor(options)
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
     Note that there are default values for the first two properties, so even if there are no
-    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode",
-    "AudioWorkletNode constructor")}}, the _options_ object passed by the node to
-    the `AudioWorkletProcessor` constructor will exist and at minimum have
-    `numberOfInputs` and `numberOfOutputs`.
+    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}, the _options_ object passed by the node to the `AudioWorkletProcessor` constructor will exist and at minimum have `numberOfInputs` and `numberOfOutputs`.
 
 ### Return value
 
@@ -103,7 +100,7 @@ const testNode = new AudioWorkletNode(audioContext, "test-processor", {
 
 The console output will be as follows:
 
-```
+```plain
 > 1 // AudioWorkletNode options.numberOfInputs set to default
 > Map(2) { 1 => "one", 2 => "two" } // A cloned map under someUsefulVariable
 ```

@@ -1,6 +1,7 @@
 ---
 title: Min
 slug: WebAssembly/Reference/Numeric/Min
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

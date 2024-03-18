@@ -31,6 +31,7 @@ max-block-size: 75%;
 max-block-size: none;
 max-block-size: max-content;
 max-block-size: min-content;
+max-block-size: fit-content;
 max-block-size: fit-content(20em);
 
 /* Global values */
@@ -55,7 +56,9 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
   - : The intrinsic preferred `max-block-size`.
 - `min-content`
   - : The intrinsic minimum `max-block-size`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ### How writing-mode affects directionality

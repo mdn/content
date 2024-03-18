@@ -28,7 +28,7 @@ Differences from {{domxref("Node.appendChild()")}}:
 ```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

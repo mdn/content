@@ -161,7 +161,7 @@ Now add a rule between the columns with `column-rule`. In a similar way to the {
 .container {
   column-count: 3;
   column-gap: 20px;
-  column-rule: 4px dotted rgb(79, 185, 227);
+  column-rule: 4px dotted rgb(79 185 227);
 }
 ```
 
@@ -231,11 +231,11 @@ body {
 .container {
   column-count: 3;
   column-gap: 20px;
-  column-rule: 4px dotted rgb(79, 185, 227);
+  column-rule: 4px dotted rgb(79 185 227);
 }
 h2 {
   column-span: all;
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   color: white;
   padding: 0.5em;
 }
@@ -369,8 +369,8 @@ body {
 }
 
 .card {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 0 0 1em 0;
 }
@@ -380,13 +380,13 @@ body {
 
 ### Setting break-inside
 
-To control this behavior, we can use properties from the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation) specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of `avoid` to the rules for `.card`. This is the container of the heading and text, so we don't want it fragmented.
+To control this behavior, we can use properties from the [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of `avoid` to the rules for `.card`. This is the container of the heading and text, so we don't want it fragmented.
 
 ```css
 .card {
   break-inside: avoid;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 0 0 1em 0;
 }
@@ -505,7 +505,7 @@ You now know how to use the basic features of multiple-column layout, another to
 
 ## See also
 
-- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_Fragmentation)
-- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation)
+- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

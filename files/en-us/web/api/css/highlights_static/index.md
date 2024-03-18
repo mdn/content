@@ -3,12 +3,10 @@ title: "CSS: highlights static property"
 short-title: highlights
 slug: Web/API/CSS/highlights_static
 page-type: web-api-static-property
-status:
-  - experimental
 browser-compat: api.CSS.highlights_static
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The static, read-only **`highlights`** property of the {{domxref("CSS")}} interface provides access to the `HighlightRegistry` used to style arbitrary text ranges using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 

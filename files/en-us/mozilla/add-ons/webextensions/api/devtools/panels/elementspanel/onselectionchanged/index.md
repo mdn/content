@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fires when the user selects a different page element for inspection with the browser's developer tools, for example by selecting the "Inspect Element" context menu item in Firefox.
 
@@ -49,7 +49,7 @@ function handleSelectedElement() {
 }
 
 browser.devtools.panels.elements.onSelectionChanged.addListener(
-  handleSelectedElement
+  handleSelectedElement,
 );
 ```
 

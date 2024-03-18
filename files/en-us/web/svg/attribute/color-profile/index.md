@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/color-profile
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.color-profile
+browser-compat: svg.global_attributes.color-profile
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

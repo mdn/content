@@ -66,7 +66,7 @@ perspective-origin: unset;
 
 ### Changing the perspective origin
 
-An example showing how to change `perspective-origin` is given in [Using CSS transforms > Changing the perspective origin](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms#changing_the_perspective_origin).
+An example showing how to change `perspective-origin` is given in [Using CSS transforms > Changing the perspective origin](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#changing_the_perspective_origin).
 
 ## Specifications
 
@@ -78,7 +78,7 @@ An example showing how to change `perspective-origin` is given in [Using CSS tra
 
 ## See also
 
-- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}

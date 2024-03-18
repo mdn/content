@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.setZoom
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Zooms the specified tab.
 

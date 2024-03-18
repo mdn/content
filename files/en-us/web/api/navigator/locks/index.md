@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Navigator.locks
 ---
 
-{{APIRef("Web Locks")}}
+{{APIRef("Web Locks API")}}{{securecontext_header}}
 
 The **`locks`** read-only property of
 the {{domxref("Navigator")}} interface returns a {{domxref("LockManager")}} object

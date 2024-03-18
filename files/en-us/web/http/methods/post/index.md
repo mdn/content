@@ -17,7 +17,7 @@ A `POST` request is typically sent via an [HTML form](/en-US/docs/Learn/Forms) a
 - `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the `Content-Disposition` header of each part.
 - `text/plain`
 
-When the `POST` request is sent via a method other than an HTML form — like via an {{domxref("XMLHttpRequest")}} — the body can take any type. As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
+When the `POST` request is sent via a method other than an HTML form, such as a {{domxref("fetch()")}} call, the body can take any type. As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
 
 - Annotation of existing resources
 - Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;

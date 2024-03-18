@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.StreamFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `StreamFilter` is an object you use to monitor and modify HTTP responses.
 
@@ -101,7 +101,7 @@ function listener(details) {
 browser.webRequest.onBeforeRequest.addListener(
   listener,
   { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"]
+  ["blocking"],
 );
 ```
 

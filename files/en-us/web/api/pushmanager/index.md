@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PushManager
 ---
 
-{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}
 
 The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
 
@@ -13,7 +13,7 @@ This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushMana
 
 ## Static properties
 
-- [`PushManager.supportedContentEncodings`](/en-us/docs/Web/API/PushManager/supportedContentEncodings_static)
+- [`PushManager.supportedContentEncodings`](/en-US/docs/Web/API/PushManager/supportedContentEncodings_static)
   - : Returns an array of supported content codings that can be used to encrypt the payload of a push message.
 
 ## Instance methods
@@ -53,7 +53,7 @@ navigator.serviceWorker
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
-        // for example, an XMLHttpRequest.
+        // for example, the fetch() API.
       },
       (error) => {
         console.error(error);

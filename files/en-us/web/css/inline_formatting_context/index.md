@@ -15,7 +15,7 @@ The inline formatting context is part of the visual rendering of a web page. Inl
 - In a horizontal writing mode, boxes are laid out horizontally, starting on the left.
 - In a vertical writing mode they would be laid out vertically starting at the top.
 
-In the example below, the two ({{HTMLElement("div")}}) elements with the black borders form a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), inside which each word participates in an inline formatting context. The boxes in the horizontal writing mode run horizontally, and the vertical writing mode boxes run vertically.
+In the example below, the two ({{HTMLElement("div")}}) elements with the black borders form a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), inside which each word participates in an inline formatting context. The boxes in the horizontal writing mode run horizontally, and the vertical writing mode boxes run vertically.
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
@@ -29,7 +29,7 @@ Margins, borders, and padding in the inline direction are respected. In the exam
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
+> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ## Alignment in the block direction
 
@@ -51,5 +51,5 @@ Line boxes usually have the same size in the inline direction, therefore the sam
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model)

@@ -53,7 +53,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
 - `<integer>`
   - : The number of rows in the full table or `-1` is the table size is not known.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRowCount")}}
   - : The [`ariaRowCount`](/en-US/docs/Web/API/Element/ariaRowCount) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowcount` attribute.
@@ -75,7 +75,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)

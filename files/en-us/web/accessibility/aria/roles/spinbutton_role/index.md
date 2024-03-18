@@ -157,13 +157,13 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
   - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
   - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - Working examples:
-  - [Date picker spin button example](https://www.w3.org/TR/wai-aria-practices/examples/spinbutton/datepicker-spinbuttons.html)
-  - [Toolbar example: font-size picker](https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html)
+  - [Date picker spin button example](https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/examples/datepicker-spinbuttons/)
+  - [Toolbar example: font-size picker](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

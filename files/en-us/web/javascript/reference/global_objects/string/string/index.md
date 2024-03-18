@@ -76,4 +76,4 @@ String(sym); // "Symbol(example)"
 
 ## See also
 
-- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide

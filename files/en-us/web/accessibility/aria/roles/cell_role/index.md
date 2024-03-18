@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/cell_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#cell
-  - https://w3c.github.io/aria-practices/#cell
+  - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.
@@ -33,7 +33,7 @@ Each element with `role="cell"` MUST be nested in a container element with [`rol
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan).
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}}, and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
+> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) element, along with the table row element ({{HTMLElement('tr')}}), and table cell element ({{HTMLElement('td')}}), whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -187,6 +187,6 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

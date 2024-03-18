@@ -11,7 +11,7 @@ browser-compat:
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code or in third-party libraries and frameworks.
 
-The [task priorities](#task-priorities) are very coarse-grained and based around whether tasks block user interaction or otherwise impact the user experience, or can run in the background. Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories defined by the API.
+The [task priorities](#task_priorities) are very coarse-grained and based around whether tasks block user interaction or otherwise impact the user experience, or can run in the background. Developers and frameworks may implement more fine-grained prioritization schemes within the broad categories defined by the API.
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
@@ -210,7 +210,7 @@ This allows you to avoid blocking the main thread when the user is actively inte
 
 - [`Navigator.scheduling`](/en-US/docs/Web/API/Navigator/scheduling)
   - : This property is the entry point for using the `Scheduling.isInputPending()` method.
-- [`Window.scheduler`](/en-US/docs/Web/API/Window/scheduler)
+- [`scheduler`](/en-US/docs/Web/API/scheduler_property)
   - : This property is the entry point for using the `Scheduler.postTask()` method.
     It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available through `this` in most scopes.
 
@@ -233,7 +233,7 @@ function mylog(text) {
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/Window/scheduler) property in the global "`this`" exposed to the current scope.
+Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/scheduler_property) property in the global "`this`" exposed to the current scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 
@@ -511,4 +511,4 @@ Note that the second string appears in log after about 2 seconds.
 ## See also
 
 - [Building a Faster Web Experience with the postTask Scheduler](https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91) on the Airbnb blog (2021)
-- [Optimizing long tasks](https://web.dev/optimize-long-tasks/#yield-only-when-necessary) on web.dev (2022)
+- [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary) on web.dev (2022)

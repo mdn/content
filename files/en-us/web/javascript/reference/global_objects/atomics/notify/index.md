@@ -10,8 +10,7 @@ browser-compat: javascript.builtins.Atomics.notify
 The **`Atomics.notify()`** static
 method notifies up some agents that are sleeping in the wait queue.
 
-> **Note:** This operation works with a shared {{jsxref("Int32Array")}}
-> only.
+> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 > It will return `0` on non-shared `ArrayBuffer` objects.
 
 ## Syntax
@@ -23,12 +22,11 @@ Atomics.notify(typedArray, index, count)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}}.
+  - : An {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 - `index`
   - : The position in the `typedArray` to wake up on.
 - `count` {{optional_inline}}
-  - : The number of sleeping agents to notify. Defaults to {{jsxref("Infinity",
-    "+Infinity")}}.
+  - : The number of sleeping agents to notify. Defaults to {{jsxref("Infinity")}}.
 
 ### Return value
 
@@ -38,7 +36,7 @@ Atomics.notify(typedArray, index, count)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `typedArray` is not a {{jsxref("Int32Array")}}.
+  - : Thrown if `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 - {{jsxref("RangeError")}}
   - : Thrown if `index` is out of bounds in the `typedArray`.
 
@@ -83,3 +81,4 @@ Atomics.notify(int32, 0, 1);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.wait()")}}
+- {{jsxref("Atomics.waitAsync()")}}

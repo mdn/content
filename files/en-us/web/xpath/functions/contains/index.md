@@ -10,7 +10,7 @@ The `contains` function determines whether the first argument string contains th
 
 ### Syntax
 
-```
+```plain
 contains(haystack, needle)
 ```
 

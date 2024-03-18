@@ -1,5 +1,5 @@
 ---
-title: "location: reload() method"
+title: "Location: reload() method"
 short-title: reload()
 slug: Web/API/Location/reload
 page-type: web-api-instance-method
@@ -8,13 +8,7 @@ browser-compat: api.Location.reload
 
 {{ APIRef("HTML DOM") }}
 
-The **`location.reload()`** method reloads the current URL, like the Refresh button.
-
-The reload may be blocked and a `SECURITY_ERROR` {{domxref("DOMException")}}
-thrown. This happens if the {{Glossary("origin")}} of the script calling
-`location.reload()` differs from the origin of the page that owns the
-{{domxref("Location")}} object. See [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) for more
-information.
+The **`reload()`** method of the {{DOMXref("Location")}} interface reloads the current URL, like the Refresh button.
 
 ## Syntax
 
@@ -30,6 +24,11 @@ reload()
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the {{Glossary("origin")}} of the script calling the method is not the {{Glossary("Same-origin policy", "same origin")}} of the page originally described by the {{domxref("Location")}} object, mostly when the script is hosted on a different domain.
 
 ## Specifications
 

@@ -38,7 +38,7 @@ cursor:
 cursor:
   url(cursor_1.svg) 4 5,
   url(cursor_2.svg),
-  /* … ,*/ url(cursor_n.cur) 5 5,
+  /* …, */ url(cursor_n.cur) 5 5,
   progress;
 
 /* Global values */
@@ -145,7 +145,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: crosshair">
           <td><code>crosshair</code></td>
-          <td><img src="crosshair.gif" alt="plus symbol composed of two thing lines." /></td>
+          <td><img src="crosshair.gif" alt="plus symbol composed of two thin lines." /></td>
           <td>Cross cursor, often used to indicate selection in a bitmap.</td>
         </tr>
         <tr style="cursor: text">

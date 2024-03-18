@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.get
 
 {{JSRef}}
 
-The **`get()`** method returns a specified element from a `Map` object. If the
+The **`get()`** method of {{jsxref("Map")}} instances returns a specified element from this map. If the
 value that is associated to the provided key is an object, then you will get a
 reference to that object and any change made to that object will effectively
 modify it inside the `Map` object.

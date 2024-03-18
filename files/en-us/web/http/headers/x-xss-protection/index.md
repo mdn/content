@@ -88,7 +88,7 @@ header("X-XSS-Protection: 1; mode=block");
 
 Apache (.htaccess)
 
-```
+```apacheconf
 <IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
@@ -96,7 +96,7 @@ Apache (.htaccess)
 
 Nginx
 
-```
+```nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 
