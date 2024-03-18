@@ -69,8 +69,8 @@ stats.forEach((report) => {
   }
 });
 
-// framesPerSecond, width, height, may initially be defined on the stats object
-const frames = videoSourceStats.frames;
+// videoSourceStats will be null if the report did not include video source stats
+const frames = videoSourceStats?.frames;
 const fps = videoSourceStats?.framesPerSecond;
 const width = videoSourceStats?.width;
 const height = videoSourceStats?.height;
