@@ -14,7 +14,7 @@ The property is not defined on the stats object for the first second of its life
 
 ## Value
 
-A number indicating the frames from this source in the last second.
+A number indicating the frames originating from this source in the last second.
 
 ## Examples
 
