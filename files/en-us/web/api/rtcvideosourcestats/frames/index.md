@@ -30,7 +30,7 @@ stats.forEach((report) => {
   }
 });
 
-const frames = videoSourceStats.frames;
+const frames = videoSourceStats?.frames;
 ```
 
 ## Specifications
