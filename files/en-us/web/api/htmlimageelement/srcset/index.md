@@ -18,8 +18,8 @@ candidate string contains an image URL and an optional width or pixel density de
 that indicates the conditions under which that candidate should be used instead of the
 image specified by the {{domxref("HTMLImageElement.src", "src")}} property.
 
-The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
-  "sizes")}} property, are a crucial component in designing responsive websites, as they
+The `srcset` property, along with the {{domxref("HTMLImageElement.sizes", "sizes")}}
+property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
@@ -76,8 +76,8 @@ candidate, and assign it a default descriptor of `1x`.
 "header640.png 640w, header960.png 960w, header1024.png 1024w"
 ```
 
-This string provides versions of a header image to use when the {{Glossary("user
-  agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px.
+This string provides versions of a header image to use when the {{Glossary("user agent", "user agent's")}}
+renderer needs an image of width 640px, 960px, or 1024px.
 
 Note that if any resource in a `srcset` is described with a "w" descriptor, all
 resources within that `srcset` must also be described with "w" descriptors, and
