@@ -23,14 +23,13 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}}
   - : A number that ...
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTimeMeasurements", "roundTripTimeMeasurements")}}
-  - : A positive number that ...
+  - : A positive number that represents the total number of valid round trip time measurements received for this [synchronizing source](#ssrc).
 
 ### Statistics measured at the receiver of an RTP stream
 
 <!-- RTCReceivedRtpStreamStats -->
 
-These statistics are measured at the receiving end of an RTP stream, and reflect the values received at the remote endpoint.
-They are transmitted from the remote endpoint.
+These statistics are measured at the remote endpoint.
 
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}}
   - : A positive integer indicating the total number of RTP packets received for this [synchronizing source](#ssrc), including retransmissions.
