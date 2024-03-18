@@ -35,7 +35,7 @@ The following properties are present in both `RTCVideoSourceStats` and {{domxref
 - {{domxref("RTCVideoSourceStats.trackIdentifier", "trackIdentifier")}}
   - : A string that contains the [`id`](/en-US/docs/Web/API/MediaStreamTrack/id) value of the [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) associated with the video source.
 - {{domxref("RTCVideoSourceStats.kind", "kind")}}
-  - : A string indicating the kind of media source. For an `RTCVideoSourceStats` this will always be `video`.
+  - : A string indicating whether this object represents stats for a video source or a media source. For an `RTCVideoSourceStats` this will always be `video`.
 
 ### Common instance properties
 
