@@ -224,7 +224,7 @@ function render(text, selectionStart, selectionEnd) {
 }
 ```
 
-You can see the code for the `fromOffsetsToSelection()` function in the [converter.js](<(https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor/converter.js)>) file.
+You can see the code for the `fromOffsetsToSelection()` function in the [converter.js](https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor/converter.js) file.
 
 ## Updating the control bounds
 
