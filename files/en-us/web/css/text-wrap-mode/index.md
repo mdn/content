@@ -128,4 +128,4 @@ In this example the content will **not** flow over to the next line so that it f
 ## See also
 
 - {{CSSxRef("text-wrap")}}
-- {{CSSxRef("text-wrap-mode")}}
+- {{CSSxRef("text-wrap-style")}}

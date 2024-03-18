@@ -43,6 +43,16 @@ When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-sty
 
 ## Description
 
+When the content is allowed to wrap, which it does by default, then there are a number of choices that can effect the way the content is wrapped.
+
+The value you choose, for `text-wrap-style`, depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
+
+When the styled content will be limited to a short number of lines, such as headings, captions, and blockquotes, `text-wrap-style: balance` can be added to balance the number of characters on each line, enhancing layout quality and legibility. As browsers limit the number of lines impacted by this property, this value's impact on performance is negligible.
+
+For longer sections of text, `text-wrap-style: pretty` can be used. Note that `pretty` has a negative effect on performance, so it should be only used for longer blocks of text when the layout is more important than speed.
+
+The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
+
 ## Formal definition
 
 {{CSSInfo}}
@@ -52,6 +62,44 @@ When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-sty
 {{CSSSyntax}}
 
 ## Examples
+
+### Balanced text
+
+This example has 2 paragraphs, the first is the default `auto` and the second is `balanced`.
+
+#### HTML
+
+```html
+<h2>Unbalanced</h2>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, ad. Impedit
+  adipisci rerum modi praesentium atque aperiam vitae nesciunt consectetur
+  assumenda deleniti repudiandae perferendis sed odio doloremque, aliquid natus
+  laboriosam?
+</p>
+<h2>Balanced</h2>
+<p class="balanced">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, ad. Impedit
+  adipisci rerum modi praesentium atque aperiam vitae nesciunt consectetur
+  assumenda deleniti repudiandae perferendis sed odio doloremque, aliquid natus
+  laboriosam?
+</p>
+```
+
+#### CSS
+
+```css
+p {
+  max-width: 60ch;
+}
+.balanced {
+  text-wrap-style: balance;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("balanced_text", "100%",310)}}
 
 ## Specifications
 
