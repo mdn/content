@@ -11,7 +11,7 @@ browser-compat: api.ViewTransition
 
 The **`ViewTransition`** interface of the {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
 
-This object type is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method. When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). This also explains when the different promises fulfill.
+This object type is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method. When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_process). This also explains when the different promises fulfill.
 
 {{InheritanceDiagram}}
 

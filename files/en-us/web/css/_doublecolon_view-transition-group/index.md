@@ -11,7 +11,7 @@ browser-compat: css.selectors.view-transition-group
 
 The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition group.
 
-During a view transition, `::view-transition-group` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is only ever a child of {{cssxref("::view-transition")}}, and has a {{cssxref("::view-transition-image-pair")}} as a child.
+During a view transition, `::view-transition-group` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of {{cssxref("::view-transition")}}, and has a {{cssxref("::view-transition-image-pair")}} as a child.
 
 `::view-transition-group` is given the following default styling in the UA stylesheet:
 

@@ -1700,10 +1700,16 @@
     },
     "View Transitions API": {
       "overview": ["View Transitions API"],
-      "interfaces": ["ViewTransition"],
+      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
+      "interfaces": [
+        "NavigationActivation",
+        "PageRevealEvent",
+        "PageSwapEvent",
+        "ViewTransition"
+      ],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
-      "events": []
+      "events": ["Window: pagereveal", "Window: pageswap"]
     },
     "VirtualKeyboard API": {
       "overview": ["VirtualKeyboard API"],
