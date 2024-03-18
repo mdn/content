@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_media-source.framesPerSecond
 
 {{APIRef("WebRTC")}}
 
-The **`framesPerSecond`** property of the {{domxref("RTCVideoSourceStats")}} dictionary indicates the number of frames from this video source in the last second.
+The **`framesPerSecond`** property of the {{domxref("RTCVideoSourceStats")}} dictionary indicates the number of frames originating from this video source in the last second.
 
 The property is not defined on the stats object for the first second of its lifetime.
 
