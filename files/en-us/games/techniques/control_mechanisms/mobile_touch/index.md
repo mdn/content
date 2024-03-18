@@ -155,24 +155,18 @@ We can pull the ship around and do something in the meantime, and react when the
 
 ### Dedicated plugins
 
-You could go even further and use dedicated plugins like [Virtual Joystick](https://phaser.io/shop/plugins/virtualjoystick) — this is a paid, official Phaser plugin, but you can find free and [open source alternatives](https://github.com/Gamegur-us/phaser-touch-control-plugin). The initialization of Virtual Joystick looks like this:
+You could go even further and use dedicated plugins like this [TouchControl plugin](https://github.com/Gamegur-us/phaser-touch-control-plugin).
+The initialization of TouchControl looks like this:
 
 ```js
-this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
-this.stick = this.pad.addStick(30, 30, 80, "generic");
+this.game.touchControl = this.game.plugins.add(Phaser.TouchControl);
+this.game.touchControl.inputEnable();
 ```
 
-In the `create()` function of the `Game` state we're creating a virtual pad and a generic stick that has four directional virtual buttons by default. This is placed 30 pixels from the top and left edges of the screen and is 80 pixels wide.
-
-The stick being pressed can be handled during the gameplay in the `update` function like so:
-
-```js
-if (this.stick.isDown) {
-  // Move the player
-}
-```
-
+This allows you to create single or multi-directional touch controls for your games.
 We can adjust the player's velocity based on the current angle of the stick and move him appropriately.
+
+If you want to see full example code that uses TouchControl, have a look at the [phaser-touch-control-plugin GitHub repository](https://github.com/Gamegur-us/phaser-touch-control-plugin/blob/master/demo/js/Game.js).
 
 ## Summary
 
