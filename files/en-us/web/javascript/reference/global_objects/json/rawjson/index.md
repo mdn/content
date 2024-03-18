@@ -53,7 +53,7 @@ JSON.stringify({ value: rawJSON });
 // {"value":12345678901234567890}
 ```
 
-For a more complete example of this, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#lossless_number_serialization).
+For a more complete example of this, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers).
 
 Note that although we passed a string to `JSON.rawJSON()`, it still becomes a number in the final JSON. This is because the string represents the verbatim JSON text. If you want to serialize a string, you should use `JSON.rawJSON()` with a quotes-enclosed string value:
 

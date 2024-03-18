@@ -171,6 +171,8 @@ You want to serialize it and then parse to the same exact number. There are seve
 
 There are, in general, two ways to ensure that numbers are losslessly converted to JSON and parsed back: one involves a JSON number, another involves a JSON string. JSON is a _communication format_, so if you use JSON, you are likely communicating with another system (HTTP request, storing in database, etc.). The best solution to choose depends on the recipient system.
 
+#### Using JSON strings
+
 If the recipient system does not have same JSON-handling capabilities as JavaScript, and does not support high precision numbers, you may want to serialize the number as a string, and then handle it as a string on the recipient side. This is also the only option in older JavaScript.
 
 To specify how custom data types (including `BigInt`) should be serialized to JSON, either add a `toJSON` method to your data type, or use the `replacer` function of {{jsxref("JSON.stringify()")}}.
@@ -192,6 +194,8 @@ const str2 = JSON.stringify(data, (key, value) => {
 ```
 
 In either case, the JSON text will look like `{"gross_gdp":"12345678901234567890"}`, where the value is a string, not a number. Then, on the recipient side, you can parse the JSON and handle the string.
+
+#### Using JSON numbers
 
 If the recipient of this message natively supports high precision numbers (such as Python integers), passing numbers as JSON numbers is obviously better, because they can directly parse to the high precision type instead of parsing a string from JSON, and then parsing a number from the string. In JavaScript, you can serialize arbitrary data types to JSON numbers without producing a number value first (resulting in loss of precision) by using {{jsxref("JSON.rawJSON()")}} to precisely specify what the JSON source text should be.
 

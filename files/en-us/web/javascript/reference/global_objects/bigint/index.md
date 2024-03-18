@@ -217,7 +217,7 @@ console.log(parsed);
 
 > **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
 
-In fact, JSON allows number literals that are arbitrarily long; they just cannot be parsed to full precision in JavaScript. If you are communicating with another program in a language that supports longer integers (such as 64-bit integers), and you want to transmit the BigInt as a JSON number instead of a JSON string, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#lossless_number_serialization).
+In fact, JSON allows number literals that are arbitrarily long; they just cannot be parsed to full precision in JavaScript. If you are communicating with another program in a language that supports longer integers (such as 64-bit integers), and you want to transmit the BigInt as a JSON number instead of a JSON string, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers).
 
 ### BigInt coercion
 
