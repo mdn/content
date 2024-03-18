@@ -64,8 +64,9 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - {{cssxref("system-color")}}
 - [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_color_spaces_with_color)
 
-### Keywords
+### Glossary terms and keywords
 
+- {{glossary("color space")}}
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 

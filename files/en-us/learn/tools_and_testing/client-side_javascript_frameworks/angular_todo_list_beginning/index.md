@@ -92,8 +92,11 @@ In `app.component.ts`, replace the contents with the following:
 
 ```js
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
