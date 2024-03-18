@@ -8,11 +8,11 @@ browser-compat: api.RTCStatsReport.type_media-source.frames
 
 {{APIRef("WebRTC")}}
 
-The **`frames`** property of the {{domxref("RTCVideoSourceStats")}} dictionary indicates the total number of frames sent from this video source over its lifetime.
+The **`frames`** property of the {{domxref("RTCVideoSourceStats")}} dictionary indicates the total number of frames originating from this video source over its lifetime.
 
 ## Value
 
-A number indicating the total number of frames from this source.
+A number indicating the total number of frames originating from this source.
 
 ## Examples
 
