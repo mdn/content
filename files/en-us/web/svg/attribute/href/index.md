@@ -2,7 +2,7 @@
 title: href
 slug: Web/SVG/Attribute/href
 page-type: svg-attribute
-browser-compat: svg.attributes.href
+browser-compat: svg.global_attributes.href
 ---
 
 {{SVGRef}}

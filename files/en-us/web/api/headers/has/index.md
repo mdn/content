@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.has
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`has()`** method of the {{domxref("Headers")}} interface
 returns a boolean stating whether a `Headers` object contains a certain
@@ -15,8 +15,6 @@ header.
 For security reasons, some headers can only be controlled by the user agent. These
 headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

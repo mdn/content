@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.debug_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.debug()`** static method outputs a message to the console at the "debug" log level. The message is only displayed to the user if the console is configured to display debug output. In most cases, the log level is configured within the console UI. This log level might correspond to the `Debug` or `Verbose` log level.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

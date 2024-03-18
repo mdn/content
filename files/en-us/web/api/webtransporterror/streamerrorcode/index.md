@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportError.streamErrorCode
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`streamErrorCode`** read-only property of the {{domxref("WebTransportError")}} interface returns a number in the range 0-255 indicating the application protocol error code for this error, or `null` if one is not available.
-
-{{AvailableInWorkers}}
 
 ## Value
 

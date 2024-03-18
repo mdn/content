@@ -28,10 +28,8 @@ status:
 browser-compat: api.AudioDecoder
 ---
 
-\{{APIRef("WebCodecs API")}}\{{SeeCompatTable}}\{{SecureContext_Header}}
+\{{APIRef("WebCodecs API")}} \{{SeeCompatTable}} \{{SecureContext_Header}} \{{AvailableInWorkers}}
 ```
-
-While most banners are inserted immediately below the page metadata, the `\{{AvailableInWorkers}}` macro is added at the bottom of the first section of text, before the first heading.
 
 ## Banners that must be added manually
 

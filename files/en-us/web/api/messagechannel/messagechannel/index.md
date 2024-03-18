@@ -6,13 +6,11 @@ page-type: web-api-constructor
 browser-compat: api.MessageChannel.MessageChannel
 ---
 
-{{APIRef("Channel Messaging API")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`MessageChannel()`** constructor of the {{domxref("MessageChannel")}}
 interface returns a new {{domxref("MessageChannel")}} object with two new
 {{domxref("MessagePort")}} objects.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
