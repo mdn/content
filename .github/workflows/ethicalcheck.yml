@@ -54,7 +54,7 @@ jobs:
 
     steps:
        - name: EthicalCheck  Free & Automated API Security Testing Service
-         uses: apisec-inc/ethicalcheck-action@005fac321dd843682b1af6b72f30caaf9952c641
+         uses: apisec-inc/ethicalcheck-action@6538d51caea53470bf8018e21f93414a70026f46
          with:
           # The OpenAPI Specification URL or Swagger Path or Public Postman collection URL.
           oas-url: "http://netbanking.apisec.ai:8080/v2/api-docs"
