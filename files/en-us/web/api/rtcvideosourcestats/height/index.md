@@ -32,8 +32,8 @@ stats.forEach((report) => {
   }
 });
 
-// Note, test is conditional because the property
-// 'height' does not exist until frames are being produced.
+// Note, test is conditional in case the stats object
+// does not include video source stats
 const height = videoSourceStats?.height;
 ```
 

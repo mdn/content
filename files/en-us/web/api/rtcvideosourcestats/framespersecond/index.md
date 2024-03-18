@@ -32,8 +32,8 @@ stats.forEach((report) => {
   }
 });
 
-// Note, test is conditional because
-// framesPerSecond does not exist in the first second
+// Note, test is conditional in case the stats object
+// does not include video source stats
 const fps = videoSourceStats?.framesPerSecond;
 ```
 
