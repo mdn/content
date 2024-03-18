@@ -25,7 +25,7 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : A positive number that represents the height, in pixels, of the last frame originating from this source.
     This property is not defined on this stats object until after the first frame has been produced.
 - {{domxref("RTCVideoSourceStats.width", "width")}} {{optional_inline}}
-  - : A number that represents thewidth, in pixels, of the last frame originating from this source.
+  - : A number that represents the width, in pixels, of the last frame originating from this source.
     This property is not defined on this stats object until after the first frame has been produced.
 
 ### Common media-source properties
