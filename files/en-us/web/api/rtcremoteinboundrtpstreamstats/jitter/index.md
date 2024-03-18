@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.jitter
 
 {{APIRef("WebRTC")}}
 
-The **`jitter`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary returns the {{glossary("Jitter", "packet jitter")}} for the [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) of this stream of {{Glossary("RTP")}} packets.
+The **`jitter`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary returns the {{glossary("Jitter", "packet jitter")}} for the [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) as measured by the remote endpoint.
 
 High packet jitter values indicate that packet arrival rates vary significantly, which may degrade video, audio, and other real-time communications over WebRTC.
 
