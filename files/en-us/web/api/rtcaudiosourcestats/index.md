@@ -30,7 +30,7 @@ The following properties are present in both `RTCAudioSourceStats` and {{domxref
 - {{domxref("RTCAudioSourceStats.trackIdentifier", "trackIdentifier")}}
   - : A string that contains the [`id`](/en-US/docs/Web/API/MediaStreamTrack/id) value of the [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) associated with the audio source.
 - {{domxref("RTCAudioSourceStats.kind", "kind")}}
-  - : A string indicating the kind of media source. For an `RTCAudioSourceStats` this will always be `audio`.
+  - : A string indicating whether this object represents stats for a video source or a media source. For an `RTCAudioSourceStats` this will always be `audio`.
 
 ### Common instance properties
 
