@@ -2121,6 +2121,7 @@
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
+        "RTCVideoSourceStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"

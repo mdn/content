@@ -3,6 +3,7 @@ title: RTCVideoSourceStats
 slug: Web/API/RTCVideoSourceStats
 page-type: web-api-interface
 browser-compat: api.RTCStatsReport.type_media-source
+spec-urls: https://w3c.github.io/webrtc-stats/#dom-rtcvideosourcestats
 ---
 
 {{APIRef("WebRTC")}}
