@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.packetsLost
 
 {{APIRef("WebRTC")}}
 
-The **`packetsLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary returns the total number of {{Glossary("RTP")}} packets lost from the [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) of this stream since the beginning of reception.
+The **`packetsLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary returns the total number of {{Glossary("RTP")}} packets lost from the [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc), as reported by the rmeote endpoint, since the beginning of reception.
 
 ## Value
 

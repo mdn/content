@@ -36,6 +36,7 @@ They are transmitted from the remote endpoint.
   - : A positive integer indicating the total number of RTP packets received for this [synchronizing source](#ssrc), including retransmissions.
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}}
   - : An integer indicating the total number of RTP packets lost for this [synchronizing source](#ssrc), as measured at the remote endpoint.
+    This value can be negative.
 - {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}}
   - : An indicating the {{glossary("jitter", "packet jitter")}} for this [synchronizing source](#ssrc), measured in seconds.
 
