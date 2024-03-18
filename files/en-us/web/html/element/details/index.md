@@ -33,6 +33,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
 
+- `name`
+
+  - : This attribute connects multiple `<details>` elements, such that at any time at most one of them will be open. When one `<details>` element twists open and its content is shown, other `<details>` elements with the same `name` will be closed. If the only open `<details>` of the `name` is closed, other `<details>` will remain closed.
+
+    > **Note:** Connected `<details>` elements don't have to be adjacent to each other.
+
 ## Events
 
 In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
