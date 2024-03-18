@@ -378,3 +378,53 @@ To achieve the same circular reveal view transition during a cross-document navi
      );
    });
    ```
+
+## Making cross-document view transitions consistent
+
+[`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect) allows you to specify the most critical content in the associated document for the user's initial view of the page. Document rendering can be blocked until the specified critical content has been parsed, avoiding layout shifts and flashes when loading, and ensuring a consistent first paint across all supporting browsers. This is important for view transitions — a different first paint could result in a vastly different transition animation.
+
+Let's explore how this works with a simple example HTML document:
+
+```html
+<!doctype html>
+<head>
+  <link rel="expect" href="#lead-content" blocking="render" />
+  <body>
+    <h1>Page title</h1>
+    <nav>...</nav>
+    <div id="lead-content">
+      <section id="first-section">The first section</section>
+      <section>The second section</section>
+    </div>
+  </body>
+</head>
+```
+
+Note the `<link rel="expect">` line:
+
+```html
+<link rel="expect" href="#lead-content" blocking="render" />
+```
+
+- `rel="expect"` tells the browser that we are expecting to block a specific action on a particular part of the page being parsed.
+- `href="#lead-content"` specifies the ID of the element we want to block on. In this case, we are blocking the action until the {{htmlelement("div")}} element and its contents have been parsed.
+- [`blocking="render"`](/en-US/docs/Web/HTML/Attributes/rel#blocking) specifies that the action we will block is the rendering of the document.
+
+The result is that document rendering is blocked until the lead content `<div>` has been parsed, ensuring consistency in first paint and view transitions.
+
+You can also specify a [`media`](/en-US/docs/Web/HTML/Attributes/rel#blocking) attribute on `<link rel="expect">` elements. For example, you might want to block rendering on a smaller amount of content when loading the page on a narrow-screen device, than on a wide-screen device. This makes sense — on a mobile, less content will be visible when the page first loads than in the case of a desktop.
+
+This could be achieved with the following HTML:
+
+```html
+<link
+  rel="expect"
+  href="#lead-content"
+  blocking="render"
+  media="screen and (min-width: 641px)" />
+<link
+  rel="expect"
+  href="#first-section"
+  blocking="render"
+  media="screen and (max-width: 640px)" />
+```
