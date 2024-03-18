@@ -17,15 +17,15 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 ## Instance properties
 
 - {{domxref("RTCVideoSourceStats.frames", "frames")}} {{optional_inline}}
-  - : A positive number that indicates the total number of frames sent from this video source.
+  - : A positive number that indicates the total number of frames originating from this video source.
 - {{domxref("RTCVideoSourceStats.framesPerSecond", "framesPerSecond")}} {{optional_inline}}
-  - : A number that represents the number of frames sent from this video source in the last second.
+  - : A positive number that represents the number of frames originating from this video source in the last second.
     This property is not defined on this stats object for the first second of its existence.
 - {{domxref("RTCVideoSourceStats.height", "height")}} {{optional_inline}}
-  - : A positive number that represents the height, in pixels, of the last frame originating from this source.
+  - : A number that represents the height, in pixels, of the last frame originating from this source.
     This property is not defined on this stats object until after the first frame has been produced.
 - {{domxref("RTCVideoSourceStats.width", "width")}} {{optional_inline}}
-  - : A number that represents the width, in pixels, of the last frame originating from this source.
+  - : A number that represents the width, in pixels, of the most recent frame originating from this source.
     This property is not defined on this stats object until after the first frame has been produced.
 
 ### Common media-source properties
