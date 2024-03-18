@@ -2135,6 +2135,7 @@
         "RTCCodecStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
+        "RTCRemoteInboundRtpStreamStats",
         "RTCRemoteOutboundRtpStreamStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
