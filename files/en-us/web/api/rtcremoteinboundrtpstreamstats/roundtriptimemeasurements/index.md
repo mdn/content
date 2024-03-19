@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.roundTripTimeMeasurem
 
 The **`roundTripTimeMeasurements`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary contains a positive integer value that represents the total number valid round trip time measurements received for this [synchronizing source](#ssrc).
 
-The count can be used as an measure of the availability and reliability of round-trip-time measurement data.
+The count can be used as a measure of the availability and reliability of round-trip-time measurement data.
 
 ## Value
 

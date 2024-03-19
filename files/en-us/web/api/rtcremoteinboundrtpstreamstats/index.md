@@ -14,32 +14,35 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 ## Instance properties
 
-- {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}}
-  - : A string that ...
-- {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}}
-  - : A number that ...
-- {{domxref("RTCRemoteInboundRtpStreamStats.totalRoundTripTime", "totalRoundTripTime")}}
-  - : A number that ...
-- {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}}
-  - : A number that ...
-- {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTimeMeasurements", "roundTripTimeMeasurements")}}
-  - : A positive number that represents the total number of valid round trip time measurements received for this [synchronizing source](#ssrc).
+### Remote inbound specific statistics
 
-### Statistics measured at the receiver of an RTP stream
+- {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}} {{optional_inline}}
+  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](#ssrc).
+- {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}} {{optional_inline}}
+  - : A number that ...
+- {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}} {{optional_inline}}
+  - : A number that ...
+- {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTimeMeasurements", "roundTripTimeMeasurements")}} {{optional_inline}}
+  - : A positive number that represents the total number of valid round trip time measurements received for this [synchronization source (SSRC)](#ssrc).
+- {{domxref("RTCRemoteInboundRtpStreamStats.totalRoundTripTime", "totalRoundTripTime")}} {{optional_inline}}
+  - : A real number indicating the cumulative sum of all round trip time measurements since the beginning of the session, in seconds.
+    The average round trip time can be computed by dividing `totalRoundTripTime` by [`roundTripTimeMeasurements`](#roundtriptimemeasurements).
+
+### Received RTP stream statistics
 
 <!-- RTCReceivedRtpStreamStats -->
 
 These statistics are measured at the remote endpoint.
 
-- {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}}
-  - : A positive integer indicating the total number of RTP packets received for this [synchronizing source](#ssrc), including retransmissions.
-- {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}}
-  - : An integer indicating the total number of RTP packets lost for this [synchronizing source](#ssrc), as measured at the remote endpoint.
+- {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
+  - : A positive integer indicating the total number of RTP packets received for this [synchronization source (SSRC)](#ssrc), including retransmissions.
+- {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}} {{optional_inline}}
+  - : An integer indicating the total number of RTP packets lost for this [synchronization source (SSRC)](#ssrc), as measured at the remote endpoint.
     This value can be negative.
-- {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}}
-  - : An indicating the {{glossary("jitter", "packet jitter")}} for this [synchronizing source](#ssrc), measured in seconds.
+- {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}} {{optional_inline}}
+  - : An indicating the {{glossary("jitter", "packet jitter")}} for this [synchronization source (SSRC)](#ssrc), measured in seconds.
 
-### Standard fields included for all media types
+### Common RTP stream statistics
 
 <!-- RTCRtpStreamStats -->
 
