@@ -61,7 +61,7 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 ### At-rules
 
 - {{cssxref("@view-transition")}}
-  - : Used to opt in the current and destination documents to undergoing a view transition, in the case of a cross-document navigation.
+  - : In the case of a cross-document navigation, `@view-transition` is used to opt in the current and destination documents to undergo a view transition.
 
 ### Properties
 

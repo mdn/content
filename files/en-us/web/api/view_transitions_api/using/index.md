@@ -90,7 +90,7 @@ This code is enough to handle the transition between displayed images. Supportin
 
 ### Basic MPA view transition
 
-When creating a cross-document (MPA) view transition, the process is even simpler than for SPAs — no JavaScript is required, as the view update is triggered by a document navigation rather than a JavaScript-initiated DOM change. To enable a basic MPA view transition, you need to specify a {{cssxref("@view-transition")}} at rule in the CSS for both the current and destination documents to opt them in, like so:
+When creating a cross-document (MPA) view transition, the process is even simpler than for SPAs — no JavaScript is required, as the view update is triggered by a document navigation rather than a JavaScript-initiated DOM change. To enable a basic MPA view transition, you need to specify a {{cssxref("@view-transition")}} at-rule in the CSS for both the current and destination documents to opt them in, like so:
 
 ```css
 @view-transition {
