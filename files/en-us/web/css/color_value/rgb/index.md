@@ -74,9 +74,9 @@ div.comma-separated {
 
 {{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
 
-### Legacy syntax: rgba()
+### rgba() syntax
 
-The legacy `rgba()` syntax is an alias for `rgb()`.
+The `rgba()` syntax is an alias for `rgb()`.
 
 #### HTML
 
@@ -105,7 +105,7 @@ div.rgba {
 
 #### Result
 
-{{EmbedLiveSample('Legacy syntax: rgba()', '100%', '150px')}}
+{{EmbedLiveSample('rgba() syntax', '100%', '150px')}}
 
 ## Specifications
 
