@@ -397,6 +397,10 @@ For example, if we wanted to show the `display-p3 0 0 1` color, which is outside
 }
 ```
 
+### Relative colors
+
+The [CSS colors module](/en-US/docs/Web/CSS/CSS_colors) defines [**relative color syntax**](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which allows {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This powerful feature enables the creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants of an original color. Relative colors provide an effective mechanism to create palettes and define color adjustments.
+
 ## Using color
 
 Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under [Things that can have color](#things_that_can_have_color), there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
@@ -684,4 +688,5 @@ With this set, the browser won't tamper with the appearance of the element, and 
 
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
