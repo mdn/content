@@ -1,13 +1,13 @@
 ---
 title: text-wrap
 slug: Web/CSS/text-wrap
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
 ---
 
 {{CSSRef}}
 
-The **`text-wrap`** CSS property controls how text inside an element is wrapped. The different values provide:
+The **`text-wrap`** CSS shorthand property controls how text inside an element is wrapped. The different values provide:
 
 - Typographic improvements, for example more balanced line lengths across broken headings
 - A way to turn text wrapping off completely.
@@ -15,6 +15,13 @@ The **`text-wrap`** CSS property controls how text inside an element is wrapped.
 > **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 {{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- [`text-wrap-mode`](/en-US/docs/Web/CSS/text-wrap-mode)
+- [`text-wrap-style`](/en-US/docs/Web/CSS/text-wrap-style)
 
 ## Syntax
 
