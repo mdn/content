@@ -65,7 +65,7 @@ The `stable` value improves user experience when used on content that is [`conte
 
 ### Balanced text
 
-This example has 2 paragraphs, the first is the default `auto` and the second is `balanced`.
+This example has two paragraphs, the first is the default `auto` and the second is `balance`.
 
 #### HTML
 
