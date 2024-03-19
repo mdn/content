@@ -37,7 +37,7 @@ At this point, we are ready to start creating our to-do list application using A
 
 ## The to-do application structure
 
-Like any web application, an Angular application has an `index.html` as the entry point. The `indiex.html` acually is the app's top level HTML template:
+Like any web application, an Angular application has an `index.html` as the entry point. The `index.html` acually is the app's top level HTML template:
 
 ```html
 <!doctype html>
