@@ -61,17 +61,12 @@ The default setting is to wrap the content so the `text-wrap-mode` property is n
 
 #### CSS
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
-```
-
 ```css
 .box {
-  font-family: arial;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 64px;
+  box-sizing: border-box;
   border: 4px solid black;
   padding: 0px 3px;
   width: 223px;
