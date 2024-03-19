@@ -88,7 +88,7 @@ When defining a relative color, the different channels of the output color can b
 
 In the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative `oklab()` syntax.
 
-Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `l`, `a`, and `b` channel values as the output channel values:
+Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `l`, `a`, and `b` channel values (`0.627966`, `0.22488`, and `0.125859`) as the output channel values:
 
 ```css
 oklab(from hsl(0 100% 50%) l a b)
@@ -99,7 +99,7 @@ This function's output color is `oklab(0.627966 0.22488 0.125859)`.
 The next function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
 ```css
-oklab(from hsl(0 100% 50%) 42.1% 41.25% -25.25%)
+oklab(from hsl(0 100% 50%) 42.1% 0.165 -0.101)
 ```
 
 In the above case, the output color is `oklab(0.421 0.165 -0.101)`.
@@ -120,7 +120,7 @@ The final output color is `oklab(0.627966 -0.3 0.125859)`.
 
 > **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
 
-In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
+In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
 Let's look at some examples that specify origin and output alpha channel values. The first one specifies the output alpha channel value as being the same as the origin alpha channel value, whereas the second one specifies a different output alpha channel value, unrelated to the origin alpha channel value.
 
@@ -314,8 +314,8 @@ The output is as follows:
 ## See also
 
 - The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
-- {{cssxref("color_value/oklch",'oklch()')}}: Another functional notation using the same color space as `oklab()` but in a polar coordinate system
+- {{cssxref("color_value/lab","lab()")}} and {{cssxref("color_value/oklch","oklch()")}} color functions
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors/) module
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) on bottosson.github.io (2023)
 - [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) on observablehq.com

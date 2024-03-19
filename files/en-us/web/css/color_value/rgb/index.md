@@ -29,7 +29,7 @@ rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
 The `rgba()` function can also be used to express sRGB colors. This is an alias for `rgb()` that accepts the same parameters.
 
-> **Note:** `rgb()`/`rgba()` can also be written in a legacy form in which all values are separated with commas, for example `rgb(255,0,0)`. Mixing number and percent value types is not valid in the comma-separated legacy syntax (i.e. the `R`, `G`, and `B` values must be either all numbers or all percentages), and the `none` value is also not permitted.
+> **Note:** `rgb()`/`rgba()` can also be written in a legacy form in which all values are separated with commas, for example `rgb(255, 0, 0)`. Mixing number and percent value types is not valid in the comma-separated legacy syntax (i.e. the `R`, `G`, and `B` values must be either all numbers or all percentages), and the `none` value is also not permitted.
 
 ### Values
 
@@ -80,7 +80,7 @@ When defining a relative color, the different channels of the output color can b
 
 In the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative `rgb()` syntax.
 
-Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `rgb(255 0 0)`). The following function outputs the same color as the origin color — it uses the origin color's `r`, `g`, and `b` channel values as the output channel values:
+Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `rgb(255 0 0)`). The following function outputs the same color as the origin color — it uses the origin color's `r`, `g`, and `b` channel values (`255`, `0`, and `0`) as the output channel values:
 
 ```css
 rgb(from hsl(0 100% 50%) r g b)
@@ -106,13 +106,13 @@ This example:
 
 - Converts the origin color (`hsl(0 100% 50%)`) into an `rgb()` equivalent (`rgb(255 0 0)`).
 - Sets the `R` channel value for the output color to the origin color `rgb()` equivalent's `R` channel value — `255`.
-- Sets the output color's `G` and `B` channel values to new values not based on the origin color: `80` and `80`, respectively. The output `rgb()` color is `rgb(255 80 80)`.
+- Sets the output color's `G` and `B` channel values to new values not based on the origin color: `80` and `80`, respectively.
 
 The final output color is the equivalent of `rgb(255 80 80)` in the sRGB color space — `color(srgb 1 0.313726 0.313726)`.
 
 > **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
 
-In the examples we've seen so far in this section, the alpha channels have not been explicitly specified, for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
+In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
 Let's look at some examples that specify origin and output alpha channel values. The first one specifies the output alpha channel value as being the same as the origin alpha channel value, whereas the second one specifies a different output alpha channel value, unrelated to the origin alpha channel value.
 
@@ -124,7 +124,7 @@ rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-In the following example, the `hsl()` origin color is again converted into an `rgb()` representation — `rgb(255 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values, and the final output color is `color(srgb 0.5 0.0980392 0.686275 / 0.9)`:
+In the following example, the `hsl()` origin color is again converted into an `rgb()` representation — `rgb(255 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values. After calculating, the R, G, B and A values are `127.5`, `25`, `175`, and`0.9` respectively. The final output color is the equivalent of `rgb(127.5 25 175 / 0.9)` in the sRGB color space: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
@@ -285,4 +285,4 @@ div.rgba {
 
 - The {{CSSXref("&lt;color&gt;")}} data type for a list of all color notations
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS colors](/en-US/docs/Web/CSS/CSS_colors/) module
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
