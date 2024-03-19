@@ -16,10 +16,12 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 ### Remote inbound specific statistics
 
+<!-- RTCRemoteInboundRtpStreamStats -->
+
 - {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}} {{optional_inline}}
   - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](#ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}} {{optional_inline}}
-  - : A number that ...
+  - : A number indicating the fraction packet loss for this [synchronization source (SSRC)](#ssrc). Calculated as defined in [RFC3550] section 6.4.1 and Appendix A.3.
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}} {{optional_inline}}
   - : A number that indicates the estimated round trip time (RTT) for this [synchronization source (SSRC)](#ssrc), in seconds.
     This property will not exist until valid RTT data has been received.
@@ -32,8 +34,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 ### Received RTP stream statistics
 
 <!-- RTCReceivedRtpStreamStats -->
-
-These statistics are measured at the remote endpoint.
 
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
   - : A positive integer indicating the total number of RTP packets received for this [synchronization source (SSRC)](#ssrc), including retransmissions.
