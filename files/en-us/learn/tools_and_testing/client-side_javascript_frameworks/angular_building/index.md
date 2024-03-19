@@ -63,7 +63,8 @@ For fun you can easily host the built app on your machine using [`http-server`](
 npx http-server ./dist/todo/browser/ -o
 ```
 
-The command hosts `dist/todo/browser` direcotry on `8080` port. Open URL `http://127.0.0.1:8080` in a web browser to check the app. You can access the app from any machine in your LAN using `http://<server-ip-address>:8080` URL.
+This command serves the `dist/todo/browser` directory on port `8080` so you can open `http://127.0.0.1:8080` in your browser to see the app running.
+The HTTP server also lets you access the app at your computer's IP address from any other device on your local network, and this address is listed under the `127.0.0.1` address in the console.
 
 ## What's next
 
