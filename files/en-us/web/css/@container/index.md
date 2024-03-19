@@ -303,4 +303,4 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment/)
+- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
