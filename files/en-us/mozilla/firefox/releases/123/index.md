@@ -67,7 +67,7 @@ The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](h
 
 ## Changes for add-on developers
 
-- Addition of fhe {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
+- Addition of the {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
 
 ## Experimental web features
 

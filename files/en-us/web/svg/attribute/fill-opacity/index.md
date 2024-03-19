@@ -2,7 +2,7 @@
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill-opacity
+browser-compat: svg.global_attributes.fill-opacity
 ---
 
 {{SVGRef}}

@@ -88,8 +88,7 @@ pc.createAnswer()
 
 This asks {{domxref("RTCPeerConnection")}} to create and return a new answer. In our
 promise handler, the returned answer is set as the description of the local end of the
-connection by calling {{domxref("RTCPeerConnection.setLocalDescription",
-  "setLocalDescription()")}}.
+connection by calling {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
 
 Once that succeeds, the answer is sent to the signaling server using whatever protocol
 you see fit.

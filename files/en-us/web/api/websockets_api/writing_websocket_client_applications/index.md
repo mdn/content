@@ -4,11 +4,9 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
-
-{{AvailableInWorkers}}
 
 > **Note:** The example snippets in this article are taken from our WebSocket chat client/server sample.
 > [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
@@ -117,9 +115,8 @@ function sendText() {
 
 WebSockets is an event-driven API; when messages are received, a `message`
 event is sent to the `WebSocket` object. To handle it, add an event listener
-for the `message` event, or use the {{domxref("WebSocket/message_event",
-  "onmessage")}} event handler. To begin listening for incoming data, you can do something
-like this:
+for the `message` event, or use the {{domxref("WebSocket/message_event", "onmessage")}} event handler.
+To begin listening for incoming data, you can do something like this:
 
 ```js
 exampleSocket.onmessage = (event) => {

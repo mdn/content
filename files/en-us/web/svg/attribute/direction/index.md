@@ -2,7 +2,7 @@
 title: direction
 slug: Web/SVG/Attribute/direction
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.direction
+browser-compat: svg.global_attributes.direction
 ---
 
 {{SVGRef}}

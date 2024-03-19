@@ -31,9 +31,9 @@ _While `XRSessionEvent` defines no methods, it inherits methods from its parent 
 
 _The following events are represented using the `XRSessionEvent` interface, and are permitted values for its `type` property._
 
-- {{domxref("XRSession.end_event", "end")}}
+- {{domxref("XRSession.end_event", "end")}} {{SecureContext_Inline}}
   - : Fired at the session when it has ended, after being terminated by the application or the {{Glossary("user agent")}}.
-- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}}
+- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{SecureContext_Inline}}
   - : Fired at the session whenever its visibility state changes.
 
 ## Examples
