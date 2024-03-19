@@ -60,7 +60,7 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
 - {{cssxref("height")}}, {{cssxref("max-height")}}, and {{cssxref("block-size")}} CSS properties
 - {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
 - {{cssxref("line-style")}} enumerated data type
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) guide
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) guide
 
 ## Specifications
 

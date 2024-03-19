@@ -29,7 +29,7 @@ Intl.NumberFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
 
@@ -104,7 +104,7 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `maximumSignificantDigits`
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`.
 
-The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on th value of the [`roundingPriority`](#roundingpriority) property.
+The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on the value of the [`roundingPriority`](#roundingpriority) property.
 
 - `roundingPriority`
 

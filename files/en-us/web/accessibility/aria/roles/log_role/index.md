@@ -37,7 +37,7 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)

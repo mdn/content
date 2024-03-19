@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.deleteObjectStore
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`deleteObjectStore()`** method of the
 {{domxref("IDBDatabase")}} interface destroys the object store with the given name in
@@ -15,8 +15,6 @@ the connected database, along with any indexes that reference it.
 As with {{ domxref("IDBDatabase.createObjectStore") }}, this method can be called
 _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBTransaction#version_change)
 transaction.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

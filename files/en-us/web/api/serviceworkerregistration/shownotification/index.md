@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`showNotification()`** method of the
 {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active
 service worker.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -24,7 +22,7 @@ showNotification(title, options)
 ### Parameters
 
 - `title`
-  - : The title that must be shown within the notification
+  - : The title that must be shown within the notification.
 - `options` {{optional_inline}}
 
   - : An object that allows configuring the notification. It can have the following
@@ -38,14 +36,14 @@ showNotification(title, options)
           - : A string identifying a user action to be displayed on the notification.
         - `title`
           - : A string containing action text to be shown to the user.
-        - `icon`
+        - `icon` {{optional_inline}}
           - : A string containing the URL of an icon to display with the action.
 
         Appropriate responses are built using `event.action` within the
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
-      - : a string containing the URL of an image
+      - : A string containing the URL of an image
         to represent the notification when there is not enough space to display the
         notification itself such as for example, the Android Notification Bar. On Android
         devices, the badge should accommodate devices up to 4x resolution, about 96 by 96
@@ -59,10 +57,10 @@ showNotification(title, options)
     - `dir` {{optional_inline}}
       - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
     - `icon` {{optional_inline}}
-      - : a string containing the URL of an image to
+      - : A string containing the URL of an image to
         be used as an icon by the notification.
     - `image` {{optional_inline}} {{experimental_inline}}
-      - : a string containing the URL of an image to
+      - : A string containing the URL of an image to
         be displayed in the notification.
     - `lang` {{optional_inline}}
       - : Specify the lang used within the notification. This string
@@ -71,19 +69,19 @@ showNotification(title, options)
     - `renotify` {{optional_inline}} {{experimental_inline}}
       - : A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a `tag` value.
-        If _options_'s `renotify` is true
-        and _options_'s `tag` is the empty string a TypeError will be
+        If _options_'s `renotify` is `true`
+        and _options_'s `tag` is the empty string a `TypeError` will be
         thrown. The default is `false`.
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
       - : Indicates that on devices with sufficiently
         large screens, a notification should remain active until the user clicks or
-        dismisses it. If this value is absent or false, the desktop version of Chrome will
+        dismisses it. If this value is absent or `false`, the desktop version of Chrome will
         auto-minimize notifications after approximately twenty seconds. The default value
         is `false`.
     - `silent` {{optional_inline}}
       - : When set indicates that no sounds or vibrations should be
-        made. If _options_'s `silent` is true
-        and _options_'s `vibrate` is present a TypeError exception
+        made. If _options_'s `silent` is `true`
+        and _options_'s `vibrate` is present a `TypeError` exception
         will be thrown. The default value is `false`.
     - `tag` {{optional_inline}}
       - : An ID for a given notification that allows you to find,
@@ -128,8 +126,8 @@ function showNotification() {
 }
 ```
 
-To invoke the above function at an appropriate time, you could use the
-{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} event handler.
+To invoke the above function at an appropriate time, you could listen to the
+{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
 You can also retrieve details of the {{domxref("Notification")}}s that have been fired
 from the current service worker using

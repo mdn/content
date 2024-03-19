@@ -18,6 +18,7 @@
   },
   "type": "module",
   "scripts": {
+    "postinstall": "node scripts/update-history.js",
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
@@ -31,7 +32,7 @@
     "lint:json": "prettier -c \"**/*.json(c)?\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky install",
+    "prepare": "husky || true",
     "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",

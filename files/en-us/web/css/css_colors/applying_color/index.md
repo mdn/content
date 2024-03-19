@@ -127,7 +127,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255 0 0 /
 Aside from `rgb()`, you can use `hsl()` and `hwb()` which take a `<hue>` component.
 A [`<hue>`](/en-US/docs/Web/CSS/hue) is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
-For more information on classifying these functions, see the [Color spaces and color models](#color-spaces-and-color-models) section.
+For more information on classifying these functions, see the [Color spaces and color models](#color_spaces_and_color_models) section.
 
 #### HSL functional notation
 
@@ -396,6 +396,10 @@ For example, if we wanted to show the `display-p3 0 0 1` color, which is outside
   }
 }
 ```
+
+### Relative colors
+
+The [CSS colors module](/en-US/docs/Web/CSS/CSS_colors) defines [**relative color syntax**](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which allows {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This powerful feature enables the creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants of an original color. Relative colors provide an effective mechanism to create palettes and define color adjustments.
 
 ## Using color
 
@@ -684,4 +688,5 @@ With this set, the browser won't tamper with the appearance of the element, and 
 
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)

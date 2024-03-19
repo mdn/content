@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
@@ -66,9 +66,7 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 ## Examples
 
 ```js
-function recordRenderPass(
-  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder // TypeScript
-) {
+function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
     passEncoder.setPipeline(dynamicPipeline);
   } else {

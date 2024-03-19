@@ -14,7 +14,7 @@ Before we can start writing the game's functionality, we need to create a basic 
 
 ## The game's HTML
 
-The HTML document structure is quite simple, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as `index.html`, in a sensible location, and add the following code to it:
+The HTML document structure is quite minimal, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as `index.html`, in a sensible location, and add the following code to it:
 
 ```html
 <!doctype html>
@@ -102,9 +102,42 @@ The code above prints a blue-stroked empty rectangle. Thanks to the alpha channe
 
 ## Compare your code
 
-Here's the full source code of the first lesson, running live in a JSFiddle:
+Here's the full source code of the first lesson, running live:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+```
+
+```css
+canvas {
+  background: #eee;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(160, 10, 100, 40);
+ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.stroke();
+ctx.closePath();
+```
+
+{{embedlivesample("compare_your_code", 600, 340)}}
 
 > **Note:** Try changing the size and color of the given shapes.
 

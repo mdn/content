@@ -31,7 +31,7 @@ p {
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-{{EmbedLiveSample("","",40)}}
+{{EmbedLiveSample("Inherited properties","",40)}}
 
 The words "emphasized text" will appear green, since the `em` element has inherited the value of the [`color`](/en-US/docs/Web/CSS/color) property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
 
@@ -51,7 +51,7 @@ p {
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-{{EmbedLiveSample("","",40)}}
+{{EmbedLiveSample("Non-inherited properties","",40)}}
 
 The words "emphasized text" will not have another border (since the initial value of [`border-style`](/en-US/docs/Web/CSS/border-style) is `none`).
 
@@ -89,7 +89,7 @@ em {
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-{{EmbedLiveSample("","",40)}}
+{{EmbedLiveSample("Overriding inheritance, an example","",40)}}
 
 We can see here another border around the word "emphasized text".
 

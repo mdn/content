@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTDescriptor.value
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTDescriptor.value`**
 read-only property returns an {{jsxref("ArrayBuffer")}} containing the currently cached

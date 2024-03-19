@@ -36,5 +36,8 @@ console.log(el.height); // Output: 600
 ## See also
 
 - {{domxref("HTMLCanvasElement.height")}}
+- {{domxref("HTMLEmbedElement.height")}}
+- {{domxref("HTMLIFrameElement.height")}}
 - {{domxref("HTMLImageElement.height")}}
 - {{domxref("HTMLObjectElement.height")}}
+- {{domxref("HTMLSourceElement.height")}}

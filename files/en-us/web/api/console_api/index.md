@@ -5,11 +5,9 @@ page-type: guide
 browser-compat: api.console
 ---
 
-{{DefaultAPISidebar("Console API")}}
+{{DefaultAPISidebar("Console API")}} {{AvailableInWorkers}}
 
 The Console API provides functionality to allow developers to perform debugging tasks, such as logging messages or the values of variables at set points in your code, or timing how long an operation takes to complete.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 

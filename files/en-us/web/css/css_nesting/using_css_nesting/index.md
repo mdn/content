@@ -363,7 +363,7 @@ In this example there are 3 cards, one of which is featured. The cards are all e
 }
 ```
 
-In the following CSS we are creating the styles for `.card`, `.card h2` and then in the `h2` styles we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card.featured h2`.
+In the following CSS, we are creating the styles for `.card` and `.card h2`. Then, in the `h2` style block, we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card :is(.featured h2)`, which is equivalent to `:is(.card h2):is(.featured h2)`.
 
 ```css
 .card {
@@ -374,7 +374,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured.card h2` */
+      /* equivalent to `:is(.card h2):is(.featured h2)` */
       color: tomato;
     }
   }

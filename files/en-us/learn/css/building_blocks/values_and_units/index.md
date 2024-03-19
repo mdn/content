@@ -378,7 +378,7 @@ These values are less intuitive than keywords for defining colors, but they are 
 
 ### RGB values
 
-To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two).
+To create RGB values directly, the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two).
 
 Let's rewrite our last example to use RGB colors:
 
@@ -396,20 +396,39 @@ In the example below, we have added a background image to the containing block o
 
 > **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`, but for backwards compatibility with old websites, the `rgba()` syntax is still supported, and has exactly the same behavior as `rgb()`.
 
+### SRGB values
+
+The `sRGB` color space defines colors in the **red** (r), **green** (g), and **blue** (b) color space.
+
 ### Using hues to specify a color
 
 If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/hue).
 Hue is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-A great starting point for using hues in CSS is the `hsl()` function.
-Let's take a quick look at the parts you can specify:
+There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, including `hsl()`,`hwb()`, and [`lch()`](/en-US/docs/Web/CSS/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/color_value/lab), define colors based on what humans can see.
+
+If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
+
+### HWB
+
+A great starting point for using hues in CSS is the [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) function which specifies an `srgb()` color.
+The three parts are:
 
 - **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/hue) value between 0 and 360, representing the angles around a color wheel.
+- **Whiteness**: How white is the color? This takes a value from `0%` (no whiteness) to `100%` (full whiteness).
+- **Blackness**: How black is the color? This takes a value from 0% (no blackness) to 100% (full blackness).
+
+### HSL
+
+Similar to the `hwb()` function is the [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) function which also specifies an `srgb()` color.
+HSL uses `Hue`, in addition to `Saturation` and `Lightness`:
+
+- **Hue**
 - **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation.
 - **Lightness**: How light or bright is the color? This takes a value from 0–100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white).
 
-Similar to `rgb()`, the `hsl()` color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
+The `hsl()` color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
 
 Let's update the RGB example to use HSL colors instead:
 
@@ -420,9 +439,6 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
 
 > **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
-
-There are other color functions available such as `hwb()` and `lch()` which also use `<hue>` component, and even functions such as `lab()` which let you work with colors based on what humans can see.
-If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ## Images
 

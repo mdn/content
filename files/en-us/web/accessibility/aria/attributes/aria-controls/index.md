@@ -82,8 +82,8 @@ In this tabs example, each tab controls one tabpanel:
 
 ## Associated interfaces
 
-- {{domxref("Element.ariaBusy")}}
-  - : The [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of each element's interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
+- {{domxref("Element.ariaControlsElements")}}
+  - : The `ariaControlsElements` property is part of each element's interface. Its value is a list of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-controls` attribute.
 
 ## Associated roles
 
@@ -93,7 +93,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 
