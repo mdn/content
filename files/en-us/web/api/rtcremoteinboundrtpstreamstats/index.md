@@ -21,11 +21,12 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}} {{optional_inline}}
   - : A number that ...
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}} {{optional_inline}}
-  - : A number that ...
+  - : A number that indicates the estimated round trip time (RTT) for this [synchronization source (SSRC)](#ssrc), in seconds.
+    This property will not exist until valid RTT data has been received.
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTimeMeasurements", "roundTripTimeMeasurements")}} {{optional_inline}}
-  - : A positive number that represents the total number of valid round trip time measurements received for this [synchronization source (SSRC)](#ssrc).
+  - : A positive integer indicating the total number of valid round trip time measurements received for this [synchronization source (SSRC)](#ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.totalRoundTripTime", "totalRoundTripTime")}} {{optional_inline}}
-  - : A real number indicating the cumulative sum of all round trip time measurements since the beginning of the session, in seconds.
+  - : A number indicating the cumulative sum of all round trip time measurements since the beginning of the session, in seconds.
     The average round trip time can be computed by dividing `totalRoundTripTime` by [`roundTripTimeMeasurements`](#roundtriptimemeasurements).
 
 ### Received RTP stream statistics
