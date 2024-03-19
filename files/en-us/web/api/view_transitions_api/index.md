@@ -45,10 +45,10 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 ## Extensions to other interfaces
 
 - {{domxref("Document.startViewTransition()")}}
-  - : Starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
-    The {{domxref("Window")}} {{domxref("Window.pagereveal_event", "pagereveal")}} event
+  - : Starts a new same-document (SPA) view transition and returns a {{domxref("ViewTransition")}} object to represent it.
+- The {{domxref("Window")}} {{domxref("Window.pagereveal_event", "pagereveal")}} event
   - : Fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](https://web.dev/articles/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
-    The {{domxref("Window")}} {{domxref("Window.pageswap_event", "pageswap")}} event
+- The {{domxref("Window")}} {{domxref("Window.pageswap_event", "pageswap")}} event
   - : Fired when a document is about to be unloaded due to a navigation.
 
 ## HTML additions
@@ -83,9 +83,9 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 ## Examples
 
-- [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with separate transitions between old and new images, and old and new captions.
-- [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a smooth transition when the two pages are navigated between.
-- [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features a number of different SPA view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
+- [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
+- [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
+- [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
 
 ## Specifications
 

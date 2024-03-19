@@ -11,7 +11,10 @@ browser-compat: api.ViewTransition.skipTransition
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
 The **`skipTransition()`** method of the
-{{domxref("ViewTransition")}} interface skips the animation part of the view transition, but doesn't skip running the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} callback that updates the DOM.
+{{domxref("ViewTransition")}} interface skips the animation part of the view transition, but doesn't skip running the associated view update.
+
+- In the case of a same-origin (SPA) transition, this would be triggered by the invocation of the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} callback that updates the DOM.
+- In the case of a cross-origin (MPA) transition, this would be triggered by a page navigation.
 
 ## Syntax
 
@@ -29,12 +32,28 @@ None.
 
 ## Examples
 
+### Skipping an SPA view transition
+
 ```js
 // start new view transition
 const transition = document.startViewTransition(() => displayNewImage());
 
 // skip the animation and just update the DOM
 transition.skipTransition();
+```
+
+### Skipping an MPA view transition
+
+```js
+// Fired on the current (outgoing) page
+document.addEventListener("pageswap", (event) => {
+  event.viewTransition.skipTransition();
+});
+
+// Fired on the destination (inbound) page
+document.addEventListener("pagereveal", (event) => {
+  event.viewTransition.skipTransition();
+});
 ```
 
 ## Specifications

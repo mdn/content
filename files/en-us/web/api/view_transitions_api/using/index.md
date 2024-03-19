@@ -20,11 +20,17 @@ Let's walk through the process by which a view transition works:
      > **Note:** An active view transition has an associated {{domxref("ViewTransition")}} instance (for example, returned by `startViewTransition()` in the case of same-document (SPA) transitions). The `ViewTransition` object includes several promises, allowing you to run code in response to different parts of the view transition process being reached. See [Controlling view transitions with JavaScript](#controlling_view_transitions_with_javascript) for mroe information.
 2. The API takes a screenshot of the current (old page) view.
 3. The view change occurs:
+
    - In the case of same-document transitions (SPAs), the callback passed to `startViewTransition()` is invoked, which causes the DOM to change.
-     > **Note:** When the callback has run successfully, the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills, allowing you to respond to the DOM updating.
+
+     When the callback has run successfully, the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills, allowing you to respond to the DOM updating.
+
    - In the case of cross-document transitions (MPAs), the navigation occurs between the current and destination documents.
+
 4. The API captures the new view as a live representation.
-   > **Note:** At this point, the view transition is about to run, and the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
+
+   At this point, the view transition is about to run, and the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
+
 5. The old page view animates "out", while the new view animates "in". By default, the old view animates from {{cssxref("opacity")}} 1 to 0 and the new view animates from `opacity` 0 to 1, which creates a cross-fade.
 6. When the transition animation has reached its end state, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
 
@@ -40,16 +46,15 @@ To handle creating the outbound and inbound transition animations, the API const
       └─ ::view-transition-new(root)
 ```
 
-The most interesting parts of this structure are as follows:
+In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in both the current and destination documents.
+
+The most interesting parts of the tree structure are as follows:
 
 - {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transitions and sits over the top of all other page content.
 - {{cssxref("::view-transition-old")}} targets the screenshot of the old page view, and {{cssxref("::view-transition-new")}} targets the live representation of the new page view. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 - The `root` argument specifies the default grouping for the view transition — that the view transition animation will apply to all DOM elements that change when the view is updated. It is possible to use target different DOM elements with different custom view transition animations — see [Different transitions for different elements](#different_transitions_for_different_elements).
 
 > **Note:** As you'll see later, to customize the outbound and inbound animations you need to target the {{cssxref("::view-transition-old")}} and {{cssxref("::view-transition-new")}} pseudo-elements with your animations, respectively.
-
-- In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document.
-- In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in both the current and destination documents.
 
 ## Creating a basic view transition
 
@@ -101,7 +106,7 @@ Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transiti
 
 The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transitions_API#pseudo-elements)).
 
-Most appearence transitions are given a default smooth cross-fade animation, as mentioned above. There are some exceptions:
+Most appearance transitions are given a default smooth cross-fade animation, as mentioned above. There are some exceptions:
 
 - `height` and `width` transitions have a smooth scaling animation applied.
 - `position` and `transform` transitions have a smooth movement animation applied.
