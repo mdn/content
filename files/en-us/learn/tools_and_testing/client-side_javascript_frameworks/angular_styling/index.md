@@ -39,7 +39,7 @@ The Angular CLI generates two types of style files:
 - `styles.css`: In the `src` directory, the styles in this file apply to your entire application unless you specify styles at the component level.
 
 Depending on whether you are using a CSS preprocessor, the extension on your CSS files can vary.
-Angular supports plain CSS, SCSS, Sass, Less, and Stylus.
+Angular supports plain CSS, SCSS, Sass, and Less.
 
 In `src/styles.css`, paste the following styles:
 
