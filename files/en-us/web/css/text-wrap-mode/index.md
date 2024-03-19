@@ -90,17 +90,12 @@ In this example the content will **not** flow over to the next line so that it f
 
 #### CSS
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
-```
-
 ```css
 .box {
-  font-family: arial;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 64px;
+  box-sizing: border-box;
   border: 4px solid black;
   padding: 0px 3px;
   width: 223px;
