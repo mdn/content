@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 124 that affect developers. Firefox 124 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 19, 2024](https://whattrainisitnow.com/release/?version=124).
+This article provides information about the changes in Firefox 124 that affect developers. Firefox 123 was released on [March 19, 2024](https://whattrainisitnow.com/release/?version=124).
 
 ## Changes for web developers
 
