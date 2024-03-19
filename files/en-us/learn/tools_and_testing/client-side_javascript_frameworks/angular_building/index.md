@@ -57,7 +57,7 @@ You can use any backend such as [Firebase](https://firebase.google.com/docs/host
 
 ### Host locally
 
-For fun you can easily host the built app on your machine using [`http-server`](https://www.npmjs.com/package/http-server) package by running following command:
+For fun, you can host the built app on your machine using [`http-server`](https://www.npmjs.com/package/http-server) package by running following command after running a build:
 
 ```bash
 npx http-server ./dist/todo/browser/ -o
