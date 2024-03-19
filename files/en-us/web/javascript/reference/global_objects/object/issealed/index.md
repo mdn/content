@@ -8,7 +8,7 @@ browser-compat: javascript.builtins.Object.isSealed
 {{JSRef}}
 
 The **`Object.isSealed()`** static method determines if an object is
-sealed.
+[sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
 {{EmbedInteractiveExample("pages/js/object-issealed.html")}}
 
