@@ -127,7 +127,7 @@ The print controls allow the user to select how the `section`s in the `article` 
       <li>@right-bottom</li>
       <li>@bottom-left-corner</li>
       <li>@bottom-left</li>
-      <li>@bottom-middle</li>
+      <li>@bottom-center</li>
       <li>@bottom-right</li>
       <li>@bottom-right-corner</li>
     </ul>
