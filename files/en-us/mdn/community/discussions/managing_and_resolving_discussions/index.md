@@ -39,16 +39,17 @@ Once agreement has been achieved, the resolution can be announced, the discussio
 
 Every discussion will have a different timeline depending on the complexity of the topic and the consensus levels. Ideally, most discussions should be resolved within two months, allowing for the topic to be addressed at various internal meetings. This timeframe ensures diverse viewpoints are considered and everyone interested has the opportunity to contribute to the discussion.
 
-1. Post the discussion and assign a driver.
-2. Identify any key stakeholders and needed approvers (the individuals who need to weigh in on the topic and give their approval), if any.
-3. Inform the approvers and other essential voices of the discussion and your proposed timeline. If needed, reach out to them again after 2 weeks, and weekly thereafter, until they provide feedback.
-4. Add the discussion topic to the agendas of relevant meetings.
-5. After a month, sort through the feedback, discussions, and agreements, and formulate an initial plan merging the feedback into a possible action plan.
-6. Re-inform and re-request feedback from all interested parties, including everyone who participated in the discussion in any way.
-7. During the second month, keep reaching out the community for feedback on the proposed plan, making updates to the plan in light of any new feedback. Rinse. Repeat.
-8. If there are points of contention, arrange an online, synchronous, face-to-face meeting to resolve any remaining disagreements (as captured in the discussion thread).
-9. Keep the discussion threads alive during the second month as you work with the community towards the resolution.
-10. [Create an issue](/en-US/docs/MDN/Community/Issues) with the final plan for implementing the resolution and put it into action. ([Issue reporting guidelines](/en-US/docs/MDN/Community/Issues#guidelines_for_reporting_an_issue?))
-11. Close the discussion.
+1. Post the discussion.
+2. Assign a driver. Determine the driver if it's not the same as the discussion author.
+3. Identify any key stakeholders and needed approvers (the individuals who need to weigh in on the topic and give their approval), if any.
+4. Inform the approvers and other essential voices of the discussion and your proposed timeline. If needed, reach out to them again after 2 weeks, and weekly thereafter, until they provide feedback.
+5. Add the discussion topic to the agendas of relevant meetings.
+6. After a month, sort through the feedback, discussions, and agreements, and formulate an initial plan merging the feedback into a possible action plan.
+7. Re-inform and re-request feedback from all interested parties, including everyone who participated in the discussion in any way.
+8. During the second month, keep reaching out the community for feedback on the proposed plan, making updates to the plan in light of any new feedback. Rinse. Repeat.
+9. If there are points of contention, arrange an online, synchronous, face-to-face meeting to resolve any remaining disagreements (as captured in the discussion thread).
+10. Keep the discussion threads alive during the second month as you work with the community towards the resolution.
+11. [Create the issue](/en-US/docs/MDN/Community/Issues) for the resolution implementation plan and put it into action. ([Issue reporting guidelines](/en-US/docs/MDN/Community/Issues#guidelines_for_reporting_an_issue?))
+12. Close the discussion.
 
 If the discussion involves reaching out to and receiving feedback from experts, the timeline above can be extended as needed.
