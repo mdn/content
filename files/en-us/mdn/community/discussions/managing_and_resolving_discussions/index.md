@@ -53,3 +53,9 @@ Every discussion will have a different timeline depending on the complexity of t
 12. Close the discussion.
 
 If the discussion involves reaching out to and receiving feedback from experts, the timeline above can be extended as needed.
+
+### Inconclusive resolutions
+
+It's important to come to a resolution, but it's also important to remember that not all discussions will come to an implementable resolution. A discussion's resolution may be "no decision is being made" or "Let's revisit this in a year". These are both valid resolutions!
+
+When a discussion ends with no implementable resolution, note that in the discussion, then close the discussion as resolved.
