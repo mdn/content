@@ -137,7 +137,7 @@ The code above assign a dark grey ambient light for the whole scene. The box loo
 
 ## Material
 
-The basic PlayCanvas material is called [PhongMaterial](https://developer.playcanvas.com/user-manual/assets/types/material/) — add the following lines below the previous code.
+The basic PlayCanvas material is called [Material](https://developer.playcanvas.com/user-manual/assets/types/material/) — add the following lines below the previous code.
 
 ```js
 const boxMaterial = new pc.PhongMaterial();
