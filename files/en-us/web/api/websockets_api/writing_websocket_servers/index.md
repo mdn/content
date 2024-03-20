@@ -162,7 +162,7 @@ Client: FIN=1, opcode=0x0, msg="year!"
 Server: (process complete message) Happy new year to you too!
 ```
 
-Notice the first frame contains an entire message (has `FIN=1` and `opcode!=0x0`), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (`opcode=0x1`), but the entire message has not arrived yet (`FIN=0`). All remaining parts of that message are sent with continuation frames (`opcode=0x0`), and the final frame of the message is marked by `FIN=1`. [Section 5.4 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.4) describes message fragmentation.
+Notice the first frame contains an entire message (has `FIN=1` and `opcode!=0x1`), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (`opcode=0x1`), but the entire message has not arrived yet (`FIN=0`). All remaining parts of that message are sent with continuation frames (`opcode=0x0`), and the final frame of the message is marked by `FIN=1`. [Section 5.4 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.4) describes message fragmentation.
 
 ## Pings and Pongs: The Heartbeat of WebSockets
 
