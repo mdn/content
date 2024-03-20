@@ -6,55 +6,24 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 124 that affect developers. Firefox 124 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 19, 2024](https://whattrainisitnow.com/release/?version=124).
+This article provides information about the changes in Firefox 124 that affect developers. Firefox 124 was released on [March 19, 2024](https://whattrainisitnow.com/release/?version=124).
 
 ## Changes for web developers
 
-### Developer Tools
-
-### HTML
-
-#### Removals
-
 ### CSS
 
-#### Removals
-
-### JavaScript
-
-#### Removals
+- The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
+- The {{cssxref("text-wrap")}} property has now been converted to a shorthand property and covers the constituent properties {{cssxref("text-wrap-mode")}} and {{cssxref("text-wrap-style")}}. ([Firefox bug 1758391](https://bugzil.la/1758391)).
 
 ### SVG
 
 - The {{cssxref("::first-letter")}} and {{cssxref("::first-line")}} CSS pseudo-elements can now be applied to the {{SVGElement("text")}} SVG element. This allows you to change the fill, stroke or font of the first letter/line of a `<text>` element using CSS, for example. ([Firefox bug 1302722](https://bugzil.la/1302722)).
 
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
 
 - [`AbortSignal.any()`](/en-US/docs/Web/API/AbortSignal/any_static) is now supported, allowing a composite signal to be created that can be used to abort an operation from multiple signal sources. ([Firefox bug 1830781](https://bugzil.la/1830781)).
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
-
-#### General
 
 #### WebDriver BiDi
 
@@ -82,10 +51,6 @@ This article provides information about the changes in Firefox 124 that affect d
 ## Changes for add-on developers
 
 - Adds the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event that enables extensions to obtain information when the browser detects that the extension has a runtime performance issue such as a slow-running content script ([Firefox bug 1861445](https://bugzil.la/1861445)).
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
