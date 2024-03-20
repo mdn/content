@@ -35,9 +35,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `name`
 
-  - : This attribute connects multiple `<details>` elements, such that at any time at most one of them will be open. When one `<details>` element twists open and its content is shown, other `<details>` elements with the same `name` will be closed. If the only open `<details>` of the `name` is closed, other `<details>` will remain closed.
+  - : This attribute enables multiple `<details>` elements to be connected, with only one open at a time. This allows developers to easily create UI features such as accordions without scripting.
 
-    > **Note:** Connected `<details>` elements don't have to be adjacent to each other.
+    The name attribute specifies a group name — give multiple `<details>` elements the same name value to group them. Only one of the grouped `<details>` elements can be open at a time — opening one will cause another to close. If multiple grouped `<details>` elements are given the open attribute, only the first one in the source order will be rendered open.
+
+    > **Note:** `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
 
 ## Events
 
