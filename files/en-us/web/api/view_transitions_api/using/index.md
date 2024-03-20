@@ -384,9 +384,9 @@ To achieve the same circular reveal view transition during a cross-document navi
    });
    ```
 
-## Making cross-document view transitions consistent
+## Making cross-document transitions consistent with `rel="expect"`
 
-[`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect) allows you to specify the most critical content in the associated document for the user's initial view of the page. Document rendering can be blocked until the specified critical content has been parsed, avoiding layout shifts and flashes when loading, and ensuring a consistent first paint across all supporting browsers. This is important for view transitions — a different first paint could result in a vastly different transition animation.
+[`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect) allows you to specify the most critical content in the associated document for the user's initial view of the page. Document rendering can be blocked until the specified content has been parsed, avoiding layout shifts and flashes when loading, and ensuring a consistent first paint across all supporting browsers. This is important for view transitions — a different first paint could result in a vastly different transition animation.
 
 Let's explore how this works with a simple example HTML document:
 

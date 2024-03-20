@@ -24,6 +24,7 @@ The following table lists some of the most important existing keywords. Every ke
 | [`canonical`](#canonical)                                            | Preferred URL for the current document.                                                                                                                                                                                                                                                 | Link                    | Not allowed                                      | Not allowed             |
 | [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch)   | Tells the browser to preemptively perform DNS resolution for the target resource's origin.                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
 | [`external`](#external)                                              | The referenced document is not part of the same site as the current document.                                                                                                                                                                                                           | Not allowed             | Annotation                                       | Annotation              |
+| [`expect`](#expect)                                                  | Specifies content critical for the user's initial view of the page. Document rendering can be blocked until the specified content has been parsed.                                                                                                                                      | Link                    | Not allowed                                      | Not allowed             |
 | [`help`](#help)                                                      | Link to context-sensitive help.                                                                                                                                                                                                                                                         | Link                    | Link                                             | Link                    |
 | [`icon`](#icon)                                                      | An icon representing the current document.                                                                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
 | [`license`](#license)                                                | Indicates that the main content of the current document is covered by the copyright license described by the referenced document.                                                                                                                                                       | Link                    | Link                                             | Link                    |
@@ -118,6 +119,22 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which helps search engines reduce duplicate content.
 - `dns-prefetch`
   - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
+- `expect`
+
+  - : `<link rel="expect">` allows you to specify the most critical content in the associated document for the user's initial view of the page. Document rendering can be blocked until the specified content has been parsed, avoiding layout shifts and flashes when loading, and ensuring a consistent first paint across all supporting browsers. This is important for [view transitions](/en-US/docs/Web/API/View_Transitions_API) — a different first paint could result in a vastly different transition animation.
+
+    A typical example is as follows:
+
+    ```html
+    <link rel="expect" href="#lead-content" blocking="render" />
+    ```
+
+    - `rel="expect"` tells the browser that we are expecting to block a specific action on a particular part of the page being parsed.
+    - [`href="#lead-content"`](/en-US/docs/Web/HTML/Element/link#href) specifies the ID of the element we want to block on. In this case, we are blocking the action until the element with an `id` of `lead-content` and its contents have been parsed.
+    - [`blocking="render"`](/en-US/docs/Web/HTML/Element/link#blocking) specifies that the action we will block is the rendering of the document.
+
+    See [Making cross-document transitions consistent with `rel="expect"`](/en-US/docs/Web/API/View_Transitions_API/Using#making_cross-document_transitions_consistent_with_relexpect) for a complete example.
+
 - `external`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
 - `help`
