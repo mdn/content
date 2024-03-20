@@ -155,18 +155,32 @@ We can pull the ship around and do something in the meantime, and react when the
 
 ### Dedicated plugins
 
-You could go even further and use dedicated plugins like this [TouchControl plugin](https://github.com/Gamegur-us/phaser-touch-control-plugin).
-The initialization of TouchControl looks like this:
+You can use dedicated plugins that handle touch events in different ways, render UI controls, and more.
+Here are some plugin examples that use a virtual gamepad and joystick:
 
-```js
-this.game.touchControl = this.game.plugins.add(Phaser.TouchControl);
-this.game.touchControl.inputEnable();
+- [phaser-plugin-virtual-gamepad](https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad) (Phaser 2)
+- [Virtual joystick](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/virtualjoystick/) (Phaser 3)
+
+For basic plugins like the virtual gamepad, you can download the script and make it available in your page:
+
+```html
+<script src="js/phaser.min.js"></script>
+<!-- https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad -->
+<script src="js/phaser-plugin-virtual-gamepad.js"></script>
 ```
 
-This allows you to create single or multi-directional touch controls for your games.
-We can adjust the player's velocity based on the current angle of the stick and move him appropriately.
+Then include them in your script and use them similar to the following snippet:
 
-If you want to see full example code that uses TouchControl, have a look at the [phaser-touch-control-plugin GitHub repository](https://github.com/Gamegur-us/phaser-touch-control-plugin/blob/master/demo/js/Game.js).
+```js
+// Add the VirtualGamepad plugin to a Phaser 2 game
+this.gamepad = this.game.plugins.add(Phaser.Plugin.VirtualGamepad);
+// Add a joystick to the game
+this.joystick = this.gamepad.addJoystick(100, 420, 1.2, "gamepad");
+// Add a button to the game
+this.button = this.gamepad.addButton(400, 420, 1.0, "gamepad");
+```
+
+For more information, have a look through then [unofficial catalog of Phaser plugins](https://phaserplugins.com/) to see if something fits your needs.
 
 ## Summary
 
