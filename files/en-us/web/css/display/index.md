@@ -89,7 +89,7 @@ The keyword values can be grouped into six value categories.
 
   - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
 
-    - `flow` {{Experimental_Inline}}
+    - `flow`
 
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
@@ -105,7 +105,7 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
     - `grid`
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
-    - `ruby` {{Experimental_Inline}}
+    - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
@@ -146,13 +146,13 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
       - : These elements behave like {{HTMLElement("col")}} HTML elements.
     - `table-caption`
       - : These elements behave like {{HTMLElement("caption")}} HTML elements.
-    - `ruby-base` {{Experimental_Inline}}
+    - `ruby-base`
       - : These elements behave like {{HTMLElement("rb")}} HTML elements.
-    - `ruby-text` {{Experimental_Inline}}
+    - `ruby-text`
       - : These elements behave like {{HTMLElement("rt")}} HTML elements.
-    - `ruby-base-container` {{Experimental_Inline}}
+    - `ruby-base-container`
       - : These elements are generated as anonymous boxes.
-    - `ruby-text-container` {{Experimental_Inline}}
+    - `ruby-text-container`
       - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
 ### Box
