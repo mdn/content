@@ -289,7 +289,7 @@ label {
   display: none;
 }
 
-section#custom div.select div.header {
+.select div.header {
   content: "↓";
   display: flex;
   flex: 1;
