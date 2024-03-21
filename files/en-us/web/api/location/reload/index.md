@@ -13,7 +13,7 @@ The **`reload()`** method of the {{DOMXref("Location")}} interface reloads the c
 ## Syntax
 
 ```js-nolint
-reload()
+location.reload()
 ```
 
 ### Parameters
