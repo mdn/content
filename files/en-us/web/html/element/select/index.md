@@ -387,9 +387,9 @@ section#custom div.select datalist div.option {
   border-width: 0;
 }
 
-section#custom div.select datalist div.option:hover,
-section#custom div.select datalist div.option:focus,
-section#custom div.select datalist div.option:checked {
+.select datalist .option:hover,
+.select datalist .option:focus,
+.select datalist .option:checked {
   background-color: blue;
   color: white;
 }
