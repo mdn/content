@@ -13,7 +13,7 @@ We've discussed the importance of web performance. You've learned what you need 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, basic knowledge of
+        Basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
         >, and a basic understanding of

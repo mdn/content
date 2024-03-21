@@ -16,7 +16,7 @@ The **`-webkit-transition`** Boolean non-standard[CSS](/en-US/docs/Web/CSS) [med
 
 Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3); this is now called `transition` there.
 
-> **Note:** You should not use this media feature; it was never specified, has never been widely implemented, and has been [removed from most browsers](#browser-compatibility). Use a {{cssxref("@supports")}} feature query instead.
+> **Note:** You should not use this media feature; it was never specified, has never been widely implemented, and has been [removed from most browsers](#browser_compatibility). Use a {{cssxref("@supports")}} feature query instead.
 
 ## Syntax
 

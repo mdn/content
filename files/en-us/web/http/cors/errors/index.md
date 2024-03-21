@@ -56,4 +56,3 @@ Firefox's console displays messages in its console when requests fail due to COR
 - [Server-side CORS settings](/en-US/docs/Web/HTTP/CORS)
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
-- <https://www.test-cors.org> – page to test CORS requests

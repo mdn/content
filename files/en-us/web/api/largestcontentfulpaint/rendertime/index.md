@@ -3,12 +3,10 @@ title: "LargestContentfulPaint: renderTime property"
 short-title: renderTime
 slug: Web/API/LargestContentfulPaint/renderTime
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.LargestContentfulPaint.renderTime
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}
 
 The **`renderTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface represents the time that the element was rendered to the screen.
 

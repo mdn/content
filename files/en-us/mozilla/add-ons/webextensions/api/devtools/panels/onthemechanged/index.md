@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.onThemeChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the devtools theme changes.
 

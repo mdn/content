@@ -22,8 +22,7 @@ addTransceiver(trackOrKind, init)
 
 - `trackOrKind`
   - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
-    string which is used as the {{domxref("MediaStreamTrack.kind",
-    "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
+    string which is used as the {{domxref("MediaStreamTrack.kind", "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
     extension of the {{domxref("RTCRtpReceiver")}} itself.
 - `init` {{optional_inline}}
   - : An object for specifying any options when creating the new transceiver.

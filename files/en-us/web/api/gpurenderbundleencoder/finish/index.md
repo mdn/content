@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.finish
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`finish()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface completes recording of the current render bundle command sequence, returning a {{domxref("GPURenderBundle")}} object that can be passed into a {{domxref("GPURenderPassEncoder.executeBundles()")}} call to execute those commands in a specific render pass.

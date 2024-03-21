@@ -4,11 +4,10 @@ slug: Web/HTML/Element/html/manifest
 page-type: html-attribute
 status:
   - deprecated
-  - non-standard
 browser-compat: html.elements.html.manifest
 ---
 
-{{securecontext_header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{securecontext_header}}{{Deprecated_Header}}
 
 The **`manifest`** attribute of the `<html>` element specifies a URL of an application cache manifest that is downloaded in the early stages of page load.
 

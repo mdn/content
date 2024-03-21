@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.URL.username
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`username`** property of the {{domxref("URL")}} interface
 is a string containing the username specified before the domain name.
-
-{{AvailableInWorkers}}
 
 ## Value
 

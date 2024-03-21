@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.pageAction.ImageDataType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Pixel data for an image.
 

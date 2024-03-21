@@ -10,7 +10,7 @@ spec-urls: https://wicg.github.io/first-party-sets/
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](#standards_positions) for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
 Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers will grant default access for these sites to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) when they have content embedded in other set members.
 
@@ -132,7 +132,7 @@ Once a set is active:
 
 ## RWS security
 
-RWS has been designed with security in mind. It would be disasterous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
+RWS has been designed with security in mind. It would be disastrous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
 
 - **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (`i.e.` by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
 - **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e. if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
@@ -151,7 +151,7 @@ RWS has been designed with security in mind. It would be disasterous if a bad ac
 
 ### Standards positions
 
-One or more vendors oppose this specification. Known positions are as follows:
+Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification. Known positions are as follows:
 
 - Mozilla (Firefox): [Negative](https://mozilla.github.io/standards-positions/#first-party-sets)
 - Apple (Safari): [Negative](https://webkit.org/standards-positions/#position-93)

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Worklet
 ---
 
-{{APIRef("Worklets")}}
+{{APIRef("Worklets")}}{{SecureContext_Header}}
 
 The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
 

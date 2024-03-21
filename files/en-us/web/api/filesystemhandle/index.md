@@ -13,9 +13,9 @@ The **`FileSystemHandle`** interface of the {{domxref('File System API')}} is an
 
 Below is a list of interfaces based on the FileSystemHandle interface.
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxref("FileSystemFileHandle")}} {{SecureContext_Inline}}
   - : Represents a handle to a file entry.
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxref("FileSystemDirectoryHandle")}} {{SecureContext_Inline}}
   - : Provides a handle to a directory entry.
 
 ## Instance properties

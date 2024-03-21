@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.inspectedWindow.tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The ID of the {{WebExtAPIRef("tabs.Tab", "tab")}} that this instance of the devtools is attached to, represented as a number.
 

@@ -48,11 +48,11 @@ The `text-align` property is specified in one of the following ways:
   - : The same as `left` if direction is left-to-right and `right` if direction is right-to-left.
 - `end`
   - : The same as `right` if direction is left-to-right and `left` if direction is right-to-left.
-- `left`
+- `left` {{deprecated_inline}} {{non-standard_inline}}
   - : The inline contents are aligned to the left edge of the line box.
-- `right`
+- `right` {{deprecated_inline}} {{non-standard_inline}}
   - : The inline contents are aligned to the right edge of the line box.
-- `center`
+- `center` {{deprecated_inline}} {{non-standard_inline}}
   - : The inline contents are centered within the line box.
 - `justify`
   - : The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.

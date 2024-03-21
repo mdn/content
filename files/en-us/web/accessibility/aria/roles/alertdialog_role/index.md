@@ -30,7 +30,7 @@ Adding `role="alertdialog"` alone is not sufficient to make an alert dialog acce
 - The alert dialog must be properly labeled
 - Keyboard focus must be managed correctly
 
-The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an accessible description using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
+The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
 ## Examples
 
@@ -95,7 +95,7 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement("dialog")}} element
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
@@ -108,6 +108,6 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

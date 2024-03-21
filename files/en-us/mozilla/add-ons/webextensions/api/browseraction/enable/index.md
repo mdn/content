@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.enable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 

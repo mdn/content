@@ -47,7 +47,7 @@ When creating an API, remember that async iterables are designed to represent so
 
 ### Built-in async iterables
 
-[`ReadableStream`](/en-US/docs/Web/API/ReadableStream) is the only built-in JavaScript object that has the `Symbol.asyncIterator` method set by default at the time of writing.
+There is no object in the core JavaScript language that is async iterable. Some web APIs, such as {{domxref("ReadableStream")}}, have the `Symbol.asyncIterator` method set by default.
 
 ## Specifications
 

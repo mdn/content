@@ -675,8 +675,8 @@ To achieve this, we need two things:
 First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.
 
 ```html
-<body class="no-widget">
-  <form>
+<body>
+  <form class="no-widget">
     <select name="myFruit">
       <option>Cherry</option>
       <option>Lemon</option>
@@ -1366,11 +1366,20 @@ window.addEventListener("load", () => {
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        // Prevent the default action of the ArrowDown key press.
+        // Without this, the page would scroll down when the ArrowDown key is pressed.
+        event.preventDefault();
       }
 
       // When the user hits the up arrow, we jump to the previous option
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        // Prevent the default action of the ArrowUp key press.
+        event.preventDefault();
+      }
+      if (event.key === "Enter" || event.key === " ") {
+        // If Enter or Space is pressed, toggle the option list
+        toggleOptList(select);
       }
 
       updateValue(select, index);

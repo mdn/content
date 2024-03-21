@@ -13,7 +13,7 @@ In the previous articles, we covered the styling of various form controls in a g
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>, including general
         knowledge of
@@ -458,12 +458,8 @@ A fragment of the HTML is as follows — note the readonly attribute:
 If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
-:is(
-    input:read-only,
-    input:-moz-read-only,
-    textarea:-moz-read-only,
-    textarea:read-only
-  ) {
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;
