@@ -304,7 +304,7 @@ label {
   border-radius: inherit;
 }
 
-section#custom div.select div.header::after {
+.select .header::after {
   content: "↓";
   align-self: stretch;
   display: flex;
