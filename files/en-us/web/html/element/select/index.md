@@ -315,7 +315,7 @@ label {
   padding: 0.5em;
 }
 
-section#custom div.select div.header:hover::after {
+.select .header:hover::after {
   background-color: blue;
 }
 
