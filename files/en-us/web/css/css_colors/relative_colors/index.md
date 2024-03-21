@@ -93,9 +93,7 @@ rgb(from red 255 0 0)
 
 There is an important distinction to be made between the destructured origin color channel values made available in the function, and the channel values of the output color set by the developer.
 
-When a relative color is defined, the channel values of the origin color are made available in the function to use when defining the output color channel values. Those values match the function used. For example, when using an `rgb()` function the origin color channel values are available as `r`, `g`, and `b` values, when using `hsl()` they are available as `h`, `s`, and `l`, when using `lch()` they are available as `h`, `c`, and `h`, and so on.
-
-The following example defines a relative color using an `rgb()` function and uses the origin color channel values for the output channel values, meaning that the output color is the same as the origin color:
+To reiterate, when a relative color is defined, the channel values of the origin color are made available in the function to use when defining the output color channel values. The following example defines a relative color using an `rgb()` function and uses the origin color channel values (made available as `r`, `g`, and `b`) for the output channel values, meaning that the output color is the same as the origin color:
 
 ```css
 rgb(from red r g b)
