@@ -360,7 +360,7 @@ section#custom div.select[data-open] {
   border-bottom-right-radius: 0;
 }
 
-section#custom div.select[data-open] datalist {
+.select[data-open] datalist {
   display: initial;
 }
 
