@@ -13,7 +13,7 @@ The **`reload()`** method of the {{DOMXref("Location")}} interface reloads the c
 ## Syntax
 
 ```js-nolint
-location.reload()
+reload()
 ```
 
 ### Parameters
@@ -29,6 +29,13 @@ None ({{jsxref("undefined")}}).
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the {{Glossary("origin")}} of the script calling the method is not the {{Glossary("Same-origin policy", "same origin")}} of the page originally described by the {{domxref("Location")}} object, mostly when the script is hosted on a different domain.
+
+## Examples
+
+```js
+// reload the current page
+window.location.reload();
+```
 
 ## Specifications
 
