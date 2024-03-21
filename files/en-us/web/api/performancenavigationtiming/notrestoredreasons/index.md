@@ -14,7 +14,7 @@ The **`notRestoredReasons`** read-only property returns an object providing repo
 
 ## Value
 
-When the `PerformanceNavigationTiming` object represents a history navigation, `notRestoredReasons` will return an object containing the following properties:
+When the `PerformanceNavigationTiming` object represents a history navigation, `notRestoredReasons` returns an object containing the following properties:
 
 - `blocked`
   - : A boolean value specifying whether the navigated page is blocked from using the bfcache (`true`) or not (`false`).
