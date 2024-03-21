@@ -394,25 +394,25 @@ label {
   color: white;
 }
 
-section#custom div.select div.optgroup div.option[data-disabled] {
+.select .optgroup .option[data-disabled] {
   color: gray;
 }
 
-section#custom div.select div.optgroup div.option[data-checked] {
+.select .optgroup .option[data-checked] {
   background-color: blue;
   color: white;
 }
 
-section#custom div.select div.optgroup div.label {
+.select .optgroup .label {
   font-weight: bold;
 }
 
-section#custom div.select div.optgroup div.option div.label {
+.select .optgroup .option .label {
   font-weight: normal;
   padding: 0.25em;
 }
 
-section#custom div.select div.header span {
+.select .header span {
   flex: 1;
   padding: 0.5em;
 }
