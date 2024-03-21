@@ -22,8 +22,9 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ### JavaScript
 
-- {{jsxref("Intl.Segmenter")}} is now supported, allowing developers to perform locale-sensitive text segmentation.
-  This enables splitting a string into meaningful items (graphemes, words or sentences) in different locales.
+- {{jsxref("Intl.Segmenter")}} is now supported, allowing developers to perform locale-sensitive text segmentation of a string.
+  This enables, for example, splitting a string into words in languages that don't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`.
+  You can also split strings into into grapheme or sentences.
   ([Firefox bug 1423593](https://bugzil.la/1423593), [Firefox bug 1883914](https://bugzil.la/1883914).)
 
 #### Removals
