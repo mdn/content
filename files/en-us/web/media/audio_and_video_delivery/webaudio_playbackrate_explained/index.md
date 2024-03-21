@@ -96,4 +96,4 @@ There is also an event available called `ratechange`, which fires every time the
 ## See also
 
 - [Hyperaudio's Playback Rate Test](https://hyperaud.io/lab/pbr-test/)
-- [HTMLMediaElement](/en-US/docs/Web/API/HTMLMediaElement): interface used to define the {{domxref("HTMLMediaElement.playbackRate")}} property.
+- {{domxref("HTMLMediaElement")}}: interface which defines the {{domxref("HTMLMediaElement.playbackRate", "playbackrate")}} property.
