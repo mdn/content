@@ -350,8 +350,8 @@ label {
   display: inline-block;
 }
 
-section#custom div.select:focus,
-section#custom div.select:hover {
+.select:focus,
+.select:hover {
   border-color: blue;
 }
 
