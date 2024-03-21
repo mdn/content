@@ -131,7 +131,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a div with a `background-color: #2550000;` set returns the computed background color as `rgb(255 0 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), such as `background-color: rgb(from blue 255 0 0)`, calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: #2550000` set on it returns the computed background color as `rgb(255 0 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 
