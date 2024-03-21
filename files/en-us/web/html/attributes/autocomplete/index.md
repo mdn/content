@@ -11,9 +11,13 @@ The HTML `autocomplete` attribute lets web developers specify what if any permis
 
 It is available on {{HTMLElement("input")}} elements that take a text or numeric value as input, {{HTMLElement("textarea")}} elements, {{HTMLElement("select")}} elements, and {{HTMLElement("form")}} elements.
 
-The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. Perhaps the browser offers the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
 
-If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, then browsers use the `autocomplete` attribute of the element's form owner, which is either the {{HTMLElement("form")}} element that the element is a descendant of, or the `<form>` whose `id` is specified by the [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute of the element (see the `<form>` [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute).
+## Description
+
+The `autocomplete` attribute can be used to hint to the user agent how to, or indeed whether to, prefill a form control. The attribute value is either the keyword `off` or `on`, or a space-separated list of tokens.
+
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, then browsers use the `autocomplete` attribute of the element's form owner. The owning form is either the {{HTMLElement("form")}} matching the `id` is specified by the [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute of the element if present or, more commonly, the `<form>` the element is nested in (see the `<form>` [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute).
 
 > **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
 >
@@ -21,7 +25,15 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
 > 2. Be descendants of a `<form>` element
 > 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+If the same list of tokens is used in more than one form control, the user-agent will autocomplete all occurrences of the same `autocomplete` value with the same data value.
+
+Some tokens may be used more than once with potentially different expected values, such as the `zip code` token in a form that contains both shipping and billing addresses. By including multiple tokens in a space-separated list, the values are unique: in this case, `autocomplete="shipping zip-code"` and `autocomplete="billing zip-code"`.
+
+Some autocomplete values may need to be re-used multiple times. For example, a form may contain multiple shipping addresses and therefore multiple occurrences of `"shipping zip-code"` while still expecting different values. In these cases, the first token in the space-separated list of tokens can be a `section-*` token; a token whose first eight characters are an ASCII case-insensitive match for the string "section-", meaning that the field belongs to the named group.
+
+If including the `autocomplete` attribute on {{HTMLElement("input/hidden", "hidden")}} input elements (`<input type="hidden">`), its value must be an ordered list of space-separated tokens; the `on` and `off` keywords are not allowed.
+
+The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. Perhaps the browser offers the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
 
 ## Values
 
@@ -32,7 +44,13 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
     > **Note:** In most modern browsers, setting `autocomplete` to "`off`" will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [the autocomplete attribute and login fields](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
 
 - "`on`"
+
   - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.
+
+- "`section-*`"
+
+  - : Defines the name for a group of form controls. A token whose first eight characters are the string "section-", case-insensitive, followed by additional characters. If present, this token must be the first token in the space-separated list of tokens. All form controls that start with the same token belong to the named group.
+
 - "`name`"
 
   - : The field expects the value to be a person's full name. Using "`name`" rather than breaking the name down into its components is generally preferred because it avoids dealing with the wide diversity of human names and how they are structured; however, you can use the following `autocomplete` values if you do need to break the name down into its components:
