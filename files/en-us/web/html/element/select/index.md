@@ -379,7 +379,7 @@ label {
   border-bottom-right-radius: 4px;
 }
 
-section#custom div.select datalist div.option {
+.select datalist .option {
   background-color: white;
   margin-bottom: 1px;
   cursor: pointer;
