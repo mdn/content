@@ -123,7 +123,7 @@ In addition to developer tools, many tools can convert RGB to HSL for you and pr
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
-As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) and `oklab()`](/en-US/docs/Web/CSS/color_value/oklab) color coordinate system which can specify any visible color, but because of its ubiquity, sRGB is the default and preferred colorspace for accessibility.
+As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) and `oklab()`](/en-US/docs/Web/CSS/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
