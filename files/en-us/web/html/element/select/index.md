@@ -285,7 +285,7 @@ label {
   border-color: blue;
 }
 
-section#custom div.select[data-multiple] div.header {
+.select[data-multiple] header {
   display: none;
 }
 
