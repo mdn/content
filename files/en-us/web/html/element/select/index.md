@@ -364,7 +364,7 @@ label {
   display: initial;
 }
 
-section#custom div.select datalist {
+.select datalist {
   appearance: none;
   position: absolute;
   border-style: solid;
