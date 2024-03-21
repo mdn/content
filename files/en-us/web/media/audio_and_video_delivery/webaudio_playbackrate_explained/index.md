@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-The {{domxref("HTMLMediaElement.playbackRate", "`playbackRate`")}} property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
+The {{domxref("HTMLMediaElement.playbackRate", "playbackRate")}} property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
 ## playbackRate basics
 
