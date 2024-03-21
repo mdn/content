@@ -77,7 +77,7 @@ const handler3 = {
     if (prop === "message2") {
       return "world";
     }
-    return Reflect.get(...arguments);
+    return Reflect.get(target, prop, receiver);
   },
 };
 
