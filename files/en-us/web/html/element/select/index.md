@@ -338,7 +338,7 @@ label {
   display: none;
 }
 
-section#custom div.select {
+.select {
   user-select: none;
   box-sizing: border-box;
   position: relative;
