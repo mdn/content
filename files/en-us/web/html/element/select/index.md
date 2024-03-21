@@ -355,7 +355,7 @@ section#custom div.select:hover {
   border-color: blue;
 }
 
-section#custom div.select[data-open] {
+.select[data-open] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
