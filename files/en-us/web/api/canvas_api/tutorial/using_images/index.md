@@ -313,8 +313,16 @@ td {
 Tying it all together is the JavaScript to draw our framed images:
 
 ```js
-function draw() {
-  // Loop through all images
+async function draw() {
+  // Wait for all images to be loaded.
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
+  // Loop through all images.
   for (const image of document.images) {
     // Don't add a canvas for the frame image
     if (image.getAttribute("id") !== "frame") {
