@@ -90,6 +90,8 @@ There are a few perceived limitations with the Navigation API:
   - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
 - {{domxref("Navigation")}} {{Experimental_Inline}}
   - : Allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
+- {{domxref("NavigationActivation")}}
+  - : Represents a recent cross-document navigation. It contains the navigation type and current and destination document history entries.
 - {{domxref("NavigationCurrentEntryChangeEvent")}} {{Experimental_Inline}}
   - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed. It provides access to the navigation type, and the previous history entry that was navigated from.
 - {{domxref("NavigationDestination")}} {{Experimental_Inline}}
