@@ -67,7 +67,6 @@ const C = new URL("./articles", "https://developer.mozilla.org/api/v1");
 const D = new URL("../articles", "https://developer.mozilla.org/api/v1");
 // => 'https://developer.mozilla.org/articles'
 
-
 /* base path with trailing slash */
 
 const E = new URL("articles", "https://developer.mozilla.org/api/v1/");
