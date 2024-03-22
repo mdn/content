@@ -35,32 +35,28 @@ Loops are all about doing the same thing over and over again. Often, the code wi
 Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<button>Update</button> <canvas></canvas>
+<button>Update</button> <canvas width="680" height="380"></canvas>
 ```
 
 ```css hidden
-html {
-  width: 100%;
-  height: inherit;
-  background: #ddd;
-}
-
-canvas {
-  display: block;
-}
-
 body {
   margin: 0;
+  padding: 0;
+  text-align: center;
+}
+canvas {
+  border: 2px solid cornflowerblue;
+  border-radius: 5px;
 }
 
 button {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 20px;
+  left: 40px;
 }
 ```
 
-{{ EmbedLiveSample('Looping_code_example', '100%', 400) }}
+{{EmbedLiveSample('Looping_code_example', '', '400')}}
 
 Here's the JavaScript code that implements this example:
 
