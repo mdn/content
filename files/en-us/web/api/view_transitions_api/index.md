@@ -33,12 +33,10 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 ## Interfaces
 
-- {{domxref("NavigationActivation")}}
-  - : Represents a recent cross-document navigation. It contains the navigation type and current and destination document history entries.
 - {{domxref("PageRevealEvent")}}
   - : The event object for the {{domxref("Window.pagereveal_event", "pagereveal")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _to_, if a view transition was triggered by the navigation.
 - {{domxref("PageSwapEvent")}}
-  - : The event object for the {{domxref("Window.pageswap_event", "pageswap")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination documents.
+  - : The event object for the {{domxref("Window.pageswap_event", "pageswap")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination document history entries.
 - {{domxref("ViewTransition")}}
   - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
 

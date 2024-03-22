@@ -1015,9 +1015,7 @@
         "NavigationCurrentEntryChangeEvent",
         "NavigationDestination",
         "NavigationHistoryEntry",
-        "NavigationTransition",
-        "PageRevealEvent",
-        "PageSwapEvent"
+        "NavigationTransition"
       ],
       "methods": [],
       "properties": ["Window.navigation"],
@@ -1705,7 +1703,7 @@
     "View Transitions API": {
       "overview": ["View Transitions API"],
       "guides": ["/docs/Web/API/View_Transitions_API/Using"],
-      "interfaces": ["ViewTransition"],
+      "interfaces": ["PageRevealEvent", "PageSwapEvent", "ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": ["Window: pagereveal", "Window: pageswap"]
