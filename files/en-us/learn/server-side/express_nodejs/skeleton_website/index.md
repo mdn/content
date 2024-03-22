@@ -366,7 +366,7 @@ The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/w
 ### www file
 
 The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api.html) application object.
-`require()` is the [CommonJS way](https://nodejs.org/api/modules.html to import JavaScript code, JSON, and other files into the current file.
+`require()` is the [CommonJS way](https://nodejs.org/api/modules.html) to import JavaScript code, JSON, and other files into the current file.
 Here we specify **app.js** module using a relative path and omit the optional (.**js**) file extension.
 
 ```js
