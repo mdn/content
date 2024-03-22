@@ -2,7 +2,7 @@
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.shape-rendering
+browser-compat: svg.global_attributes.shape-rendering
 ---
 
 {{SVGRef}}

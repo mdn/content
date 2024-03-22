@@ -67,4 +67,4 @@ This article provides information about the changes in Firefox 93 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(92)}}
+{{Firefox_for_developers}}

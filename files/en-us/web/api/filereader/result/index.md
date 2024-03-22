@@ -35,8 +35,7 @@ The result types are described below.
       </td>
       <td>
         The <code>result</code> is a JavaScript
-        {{jsxref("Global_Objects/ArrayBuffer",
-        "ArrayBuffer")}}
+        {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}}
         containing binary data.
       </td>
     </tr>

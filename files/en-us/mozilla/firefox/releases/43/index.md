@@ -140,4 +140,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers('42')}}
+{{Firefox_for_developers}}

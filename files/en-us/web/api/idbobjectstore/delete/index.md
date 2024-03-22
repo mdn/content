@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.delete
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`delete()`** method of the
 {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
@@ -19,8 +19,6 @@ records to be deleted from a store. To delete all records in a store, use
 Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
 the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
 record — without having to explicitly look up the record's key.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

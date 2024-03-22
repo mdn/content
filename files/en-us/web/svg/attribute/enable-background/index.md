@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/enable-background
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.enable-background
+browser-compat: svg.global_attributes.enable-background
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
