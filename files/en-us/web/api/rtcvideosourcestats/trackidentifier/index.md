@@ -1,14 +1,14 @@
 ---
-title: "RTCAudioSourceStats: trackIdentifier property"
+title: "RTCVideoSourceStats: trackIdentifier property"
 short-title: trackIdentifier
-slug: Web/API/RTCAudioSourceStats/trackIdentifier
+slug: Web/API/RTCVideoSourceStats/trackIdentifier
 page-type: web-api-instance-property
 browser-compat: api.RTCStatsReport.type_media-source.trackIdentifier
 ---
 
 {{APIRef("WebRTC")}}
 
-The **`trackIdentifier`** property of the {{domxref("RTCAudioSourceStats")}} dictionary contains the `id` attribute of the associated [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack).
+The **`trackIdentifier`** property of the {{domxref("RTCVideoSourceStats")}} dictionary contains the `id` attribute of the associated [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack).
 
 ## Value
 
