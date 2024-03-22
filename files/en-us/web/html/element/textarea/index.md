@@ -133,7 +133,7 @@ textarea:valid {
 
 ### Basic example
 
-The following example shows a textarea with five rows and 15 columns, some default content, and CSS styles that prevent users resizing the element more than 500px wide and 130px high:
+The following example shows a textarea with a set numbers of rows and columns, some default content, and CSS styles that prevent users resizing the element more than 500px wide and 130px high:
 
 ```html
 <textarea name="textarea" rows="5" cols="15">Write something here</textarea>
