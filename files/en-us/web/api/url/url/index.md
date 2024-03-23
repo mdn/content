@@ -47,7 +47,7 @@ new URL(url, base)
 > Therefore a trailing slash in `base` or a leading slash in `url` affect how the resulting path is constructed.
 > If you need a strict concatenation of the two arguments the `url` must not have a leading slash
 > and the `base` must have a trailing slash.
-> You can find examples for all possible combinations under [Examples - Merging of url and base paths](#merging-of-url-and-base-paths).
+> See the examples under [Examples - Merging of url and base paths](#merging_of_url_and_base_paths).
 
 ### Exceptions
 
