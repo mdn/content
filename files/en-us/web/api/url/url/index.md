@@ -41,13 +41,13 @@ new URL(url, base)
 > {{domxref("URL")}} object for either argument, and it will stringify to the
 > object's {{domxref("URL.href", "href")}} property.
 
-> **Note:** The resulting URL is not simply a concatenation of `url` and `base`.
-> The path sections of both arguments are merged according to
-> [RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
-> Therefore a trailing slash in `base` or a leading slash in `url` affect how the resulting path is constructed.
-> If you need a strict concatenation of the two arguments the `url` must not have a leading slash
-> and the `base` must have a trailing slash.
-> See the examples under [Examples - Merging of url and base paths](#merging_of_url_and_base_paths).
+The resulting URL is not simply a concatenation of `url` and `base`.
+The path sections of both arguments are merged according to
+[RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
+Therefore a trailing slash in `base` or a leading slash in `url` affect how the resulting path is constructed.
+If you need a strict concatenation of the two arguments the `url` must not have a leading slash
+and the `base` must have a trailing slash.
+See the examples under [Examples - Merging of url and base paths](#merging_of_url_and_base_paths).
 
 ### Exceptions
 
