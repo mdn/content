@@ -7,7 +7,9 @@ browser-compat: javascript.operators.this
 
 {{jsSidebar("Operators")}}
 
-A function's **`this`** keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode.
+**`this`** is a keyword that refers to the context where the function is supposed to run. It is useful when a function is supposed to be reused in different contexts, such as the same method being used on different objects.
+
+Unlike in several other programming languages, the value of **`this`** keyword in JavaScript depends on the code that is being executed. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode. Some of the common values of `this` are: the [global object](/en-US/docs/Glossary/Global_object); within an object method `this` is the current object; within an event listener `this` is the HTML element that the event occurred on.
 
 In most cases, the value of `this` is determined by how a function is called (runtime {{Glossary("binding")}}). It can't be set by assignment during execution, and it may be different each time the function is called. The {{jsxref("Function.prototype.bind()")}} method can [set the value of a function's `this` regardless of how it's called](#the_bind_method), and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) don't provide their own `this` binding (it retains the `this` value of the enclosing lexical context).
 
@@ -31,7 +33,17 @@ The value of `this` depends on in which context it appears: function, class, or 
 
 Inside a function, the value of `this` depends on how the function is called. Think about `this` as a hidden parameter of a function — just like the parameters declared in the function definition, `this` is a binding that the language creates for you when the function body is evaluated.
 
-For a typical function, the value of `this` is the object that the function is accessed on. In other words, if the function call is in the form `obj.f()`, then `this` refers to `obj`. For example:
+Simple functions do not make use of `this` keyword. However, it is implied to be the [global object](/en-US/docs/Glossary/Global_object), i.e. the execution context or environment where all of the code is run. Example:
+
+```js
+function getSum(a, b) {
+  console.log(a + b, this);
+}
+
+getSum(1, 2); // prints: 3, Window
+```
+
+If a function is accessed on an object, the value of `this` is this object. In other words, if the function call is in the form `obj.f()`, then `this` refers to `obj`. For example:
 
 ```js
 function getThis() {
