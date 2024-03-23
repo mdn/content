@@ -103,11 +103,11 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
         <a href="/en-US/docs/Web/HTML/Element/section">section</a> element, or
         an element with
         <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a></code>
         or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a></code>
       </td>
     </tr>
     <tr>
