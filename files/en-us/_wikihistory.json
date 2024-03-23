@@ -16581,27 +16581,6 @@
       "Roc"
     ]
   },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-24T00:04:18.819Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "teoli",
-      "fscholz",
-      "mrolappe",
-      "Bedi",
-      "Mgjbot",
-      "Indigo",
-      "NickolayBot",
-      "Nickolay",
-      "Matmota",
-      "Chbok",
-      "Jesse",
-      "Dria",
-      "DarinFisher",
-      "cbiesinger"
-    ]
-  },
   "Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests": {
     "modified": "2019-03-24T00:05:36.282Z",
     "contributors": [
@@ -72120,10 +72099,6 @@
       "hhillen",
       "SteveLee"
     ]
-  },
-  "Web/Accessibility/ARIA/Annotations": {
-    "modified": "2020-04-03T08:53:49.929Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-24T00:12:10.850Z",

@@ -194,7 +194,7 @@ As [with links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#
 
 This gives us a tooltip on mouse hover, just like link titles:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum](image-with-title.png)
 
 However, this is not recommended — `title` has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 

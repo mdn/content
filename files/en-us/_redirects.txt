@@ -126,7 +126,7 @@
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Adding_Extensions_using_the_Windows_Registry	https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
 /en-US/docs/Adding_feed_readers_to_Firefox	/en-US/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
@@ -5799,6 +5799,7 @@
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 /en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
+/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
@@ -10976,6 +10977,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/ARIA/Annotations	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role

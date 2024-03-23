@@ -1,5 +1,5 @@
 ---
-title: Web forms — Working with user data
+title: Web form building blocks
 slug: Learn/Forms
 page-type: learn-module
 ---

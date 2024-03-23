@@ -422,6 +422,7 @@
     },
     "EditContext API": {
       "overview": ["EditContext API"],
+      "guides": ["/docs/Web/API/EditContext_API/Guide"],
       "interfaces": [
         "EditContext",
         "TextFormat",
@@ -2131,6 +2132,8 @@
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
+        "RTCVideoSourceStats",
+        "RTCCodecStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"
