@@ -13,7 +13,7 @@ The **`ViewTransition`** interface of the {{domxref("View Transitions API", "Vie
 
 This object type is made available in the following ways:
 
-- In the same of same-document (SPA) transitions, it is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method.
+- In the case of same-document (SPA) transitions, it is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method.
 - In the case of cross-document (MPA) transitions, it is made available:
   - In the outgoing page via the {{domxref("Window.pageswap_event", "pageswap")}} event object's {{domxref("PageSwapEvent.viewTransition")}} property.
   - In the inbound page via the {{domxref("Window.pagereveal_event", "pagereveal")}} event object's {{domxref("PageRevealEvent.viewTransition")}} property.
