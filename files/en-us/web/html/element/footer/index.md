@@ -93,8 +93,8 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>, or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a>, or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>
         if a descendant of an
         <a href="/en-US/docs/Web/HTML/Element/article">article</a>,
         <a href="/en-US/docs/Web/HTML/Element/aside">aside</a>,
@@ -102,12 +102,12 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
         <a href="/en-US/docs/Web/HTML/Element/nav">nav</a> or
         <a href="/en-US/docs/Web/HTML/Element/section">section</a> element, or
         an element with
-        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a>
+        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role">article</a></code>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role">main</a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a>
         or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role">region</a>
       </td>
     </tr>
     <tr>
