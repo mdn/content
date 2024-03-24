@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `as`
 
-  - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set, and otherwise should not be used.
+  - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
 
     Furthermore, `rel="preload"` uses this as a signal for request prioritization.
@@ -113,14 +113,22 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <div class="notecard note">
               <p>
                 <strong>Note:</strong> This value also requires
-                <code>&#x3C;link></code> to contain the crossorigin attribute.
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
               </p>
             </div>
           </td>
         </tr>
         <tr>
           <td>font</td>
-          <td>CSS @font-face</td>
+          <td>
+            <p>CSS @font-face</p>
+            <div class="notecard note">
+              <p>
+                <strong>Note:</strong> This value also requires
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
+              </p>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>image</td>
@@ -162,6 +170,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       </tbody>
     </table>
 
+- `blocking` {{Experimental_Inline}}
+
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+    - `render`: The rendering of content on the screen is blocked.
+
 - `crossorigin`
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
@@ -186,7 +199,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
-- `fetchpriority` {{Experimental_Inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
 
@@ -217,15 +230,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/CSS_media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
-    > **Note:**
-    >
-    > - In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/en-US/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`.
-    >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which are a superset of the allowed values of HTML 4.
-    > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
-
-- `prefetch` {{secureContext_inline}} {{experimental_inline}}
-  - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
-    This allows the user agent to respond faster when the resource is requested in the future.
 - `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:
@@ -240,7 +244,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `rel`
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
-- `sizes` {{Experimental_Inline}}
+- `sizes`
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
@@ -260,9 +264,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on.
     The common use of this attribute is to define the type of stylesheet being referenced (such as **text/css**), but given that CSS is the only stylesheet language used on the web, not only is it possible to omit the `type` attribute, but is actually now recommended practice.
     It is also used on `rel="preload"` link types, to make sure the browser only downloads file types that it supports.
-- `blocking` {{Experimental_Inline}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
-    - `render`: The rendering of content on the screen is blocked.
 
 ### Non-standard attributes
 
@@ -357,8 +358,10 @@ this resource will then only be loaded if the media condition is true. For examp
 You can determine when a style sheet has been loaded by watching for a `load` event to fire on it; similarly, you can detect if an error has occurred while processing a style sheet by watching for an `error` event:
 
 ```html
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
+
 <script>
-  const stylesheet = document.querySelector("#my-stylesheet");
+  const stylesheet = document.getElementById("my-stylesheet");
 
   stylesheet.onload = () => {
     // Do something interesting; the sheet has been loaded
@@ -368,8 +371,6 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
     console.log("An error occurred loading the stylesheet!");
   };
 </script>
-
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
@@ -384,7 +385,12 @@ You can include `render` token inside a `blocking` attribute;
 the rendering of the page will be blocked till the resource is fetched. For example:
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+<link
+  blocking="render"
+  rel="preload"
+  href="critical-font.woff2"
+  as="font"
+  crossorigin />
 ```
 
 ## Technical summary
@@ -408,9 +414,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
     </tr>
     <tr>
       <th>Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag must not be present
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th>Permitted parents</th>
@@ -446,3 +450,4 @@ the rendering of the page will be blocked till the resource is fetched. For exam
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- [The `integrity` attribute](https://150daysofhtml.com/book/day010/) on 150daysofhtml.com (2021)

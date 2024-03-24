@@ -21,12 +21,12 @@ It's worth noting that you don't _have_ to move sound within a full 3D space eit
 
 > **Note:** There's also a {{domxref("StereoPannerNode")}} designed to deal with the common use case of creating simple left and right stereo panning effects.
 > This is much simpler to use, but obviously nowhere near as versatile.
-> If you just want a simple stereo panning effect, our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) should give you everything you need.
+> If you just want a simple stereo panning effect, our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/main/stereo-panner-node)) should give you everything you need.
 
 ## 3D boombox demo
 
 To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) guide.
-See the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/spatialization/) (and see the [source code](https://github.com/mdn/webaudio-examples/tree/master/spatialization) also).
+See the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/spatialization/) (and see the [source code](https://github.com/mdn/webaudio-examples/tree/main/spatialization) also).
 
 ![A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it.](web-audio-spatialization.png)
 
@@ -544,7 +544,7 @@ The values can be hard to manipulate sometimes and depending on your use case it
 > The panner node does some very involved maths under the hood;
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
-Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/master/spatialization).
+Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/main/spatialization).
 There is also a [Codepen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 
 If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles.

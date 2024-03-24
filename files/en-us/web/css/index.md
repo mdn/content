@@ -21,15 +21,6 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 - CSS Reference
   - : Our [exhaustive CSS reference](/en-US/docs/Web/CSS/Reference) for seasoned Web developers describes every property and concept of CSS.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Tutorials
 
 Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that teach CSS from the ground up — no previous knowledge required.
@@ -59,7 +50,7 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
   - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - The [containing block](/en-US/docs/Web/CSS/Containing_block)
-  - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/Guide/CSS/Block_formatting_context) contexts
+  - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
   - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
   - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)

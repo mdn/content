@@ -1,17 +1,24 @@
 ---
 title: gap
 slug: Web/CSS/gap
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.gap
 ---
 
 {{CSSRef}}
 
-The **`gap`** [CSS](/en-US/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
+The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the gaps ({{glossary("gutters")}}) between rows and columns.
+
+Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-gap` as an alias for `gap`.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
-Note that `grid-gap` is an alias for this property.
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("column-gap")}}
+- {{cssxref("row-gap")}}
 
 ## Syntax
 

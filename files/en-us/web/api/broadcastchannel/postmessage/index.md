@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.BroadcastChannel.postMessage
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
 The **`BroadcastChannel.postMessage()`** sends a message,
 which can be of any kind of {{jsxref("Object")}},
 to each listener in any {{glossary("browsing context")}} with the same {{glossary("origin")}}.
 The message is transmitted as a ['message'](/en-US/docs/Web/API/BroadcastChannel/message_event) event
 targeted at each {{domxref("BroadcastChannel")}} bound to the channel.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -31,6 +29,13 @@ channel.postMessage(message)
 ### Return value
 
 None.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("BroadcastChannel")}} has already been closed.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if any part of the input data is not serializable.
 
 ## Specifications
 

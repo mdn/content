@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PermissionStatus
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}} {{AvailableInWorkers}}
 
 The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
 
@@ -23,7 +23,7 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 ### Events
 
 - {{domxref("PermissionStatus.change_event", "change")}}
-  - : An event called whenever `PermissionStatus.status` changes.
+  - : Invoked upon changes to `PermissionStatus.state`, or the deprecated `PermissionStatus.status` in the case of older browsers.
 
 ## Example
 

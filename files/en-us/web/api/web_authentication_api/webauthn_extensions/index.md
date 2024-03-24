@@ -19,7 +19,7 @@ Behind the scenes, the inputs are processed by the user agent and/or the authent
 
 For example, in a `publicKey` object for a `create()` call, we might want to request the use of two extensions:
 
-1. The `credProps` extension. Relying parties set `credProps` to request that the browser tells the relying party whether the credential is resident/discoverable after registration. This is useful when calling `create()` with `publicKey.authenticatorSelection.residentKey = "preferred"`. To request it, you also need to set `publicKey.extensions.credProps = true` when. The browser makes a credential and, depending on the type of authenticator used, it will be discoverable (for example, the FIDO2 authenticator would typically make it discoverable; FIDO1/U2F security key would be non-discoverable). `credProps` is processed by the user agent only.
+1. The `credProps` extension. Relying parties set `credProps` to request that the browser tells the relying party whether the credential is resident/discoverable after registration. This is useful when calling `create()` with `publicKey.authenticatorSelection.residentKey = "preferred"`. To request it, you also need to set `publicKey.extensions.credProps = true` when the browser makes a credential and, depending on the type of authenticator used, it will be discoverable (for example, the FIDO2 authenticator would typically make it discoverable; FIDO1/U2F security key would be non-discoverable). `credProps` is processed by the user agent only.
 2. The `minPinLength` extension allows relying parties to request the authenticator's minimum PIN length. This requires `extensions.minPinLength` to be set to `true`. `minPinLength` is processed by the authenticator, with the user agent only serving to pass the input data along to it.
 
 ```js
@@ -341,6 +341,37 @@ If the relying party is authorized to receive the `minPinLength` value (if its `
 ```
 
 If the relying party is not authorized, the extension is ignored, and no `"minPinLength"` output value is provided.
+
+### `payment`
+
+- Usable in: Registration ({{domxref("CredentialsContainer.create()","create()")}})
+- Processed by: User agent
+- Specification: [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/)
+
+Allows a relying party to request the creation of a WebAuthn credential that may be used – by both the Relying Party and other parties – with Secure Payment Confirmation; see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
+
+#### Input
+
+The inputs for the `payment` extension are defined in the [AuthenticationExtensionsPaymentInputs dictionary](https://w3c.github.io/secure-payment-confirmation/#dictdef-authenticationextensionspaymentinputs)
+
+- `isPayment`
+  - : A boolean that indicates that the extension is active.
+- `rpID`
+  - : The [Relying Party](https://w3c.github.io/webauthn/#relying-party) id of the credential(s) being used. Only used at authentication time; not registration.
+- `topOrigin`
+  - : The origin of the top-level frame. Only used at authentication time; not registration.
+- `payeeName`
+  - : The payee name, if present, that was displayed to the user. Only used at authentication time; not registration.
+- `payeeOrigin`
+  - : The payee origin, if present, that was displayed to the user. Only used at authentication time; not registration.
+- `total`
+  - : The transaction amount that was displayed to the user. Only used at authentication time; not registration. The total is of type [PaymentCurrencyAmount](https://w3c.github.io/payment-request/#dom-paymentcurrencyamount).
+- `instrument`
+  - : The instrument details that were displayed to the user. Only used at authentication time; not registration. The instrument is of type [PaymentCredentialInstrument](https://w3c.github.io/secure-payment-confirmation/#dictdef-paymentcredentialinstrument).
+
+#### Output
+
+None
 
 ## Specifications
 

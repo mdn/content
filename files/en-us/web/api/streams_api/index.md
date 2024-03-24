@@ -7,17 +7,15 @@ browser-compat:
   - api.WritableStream
 ---
 
-{{DefaultAPISidebar("Streams")}}
+{{DefaultAPISidebar("Streams")}} {{AvailableInWorkers}}
 
 The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
 Streaming involves breaking a resource that you want to receive over a network down into small chunks, then processing it bit by bit. Browsers already do this when receiving media assets — videos buffer and play as more of the content downloads, and sometimes you'll see images display gradually as more is loaded too.
 
-But this capability has never been available to JavaScript before. Previously, if we wanted to process a resource of some kind (video, text file, etc.), we'd have to download the entire file, wait for it to be deserialized into a suitable format, then process the all the data.
+But this capability has never been available to JavaScript before. Previously, if we wanted to process a resource of some kind (video, text file, etc.), we'd have to download the entire file, wait for it to be deserialized into a suitable format, then process all the data.
 
 With the Streams API, you can start processing raw data with JavaScript bit by bit, as soon as it is available, without needing to generate a buffer, string, or blob.
 
@@ -56,7 +54,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### Transform Streams
 
 - {{domxref("TransformStream")}}
-  - : Represents a set of transformable data.
+  - : Represents an abstraction for a stream object that transforms data as it passes through a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) of stream objects.
 - {{domxref("TransformStreamDefaultController")}}
   - : Provides methods to manipulate the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} associated with a transform stream.
 

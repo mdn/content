@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a web request is about to be made, to give the extension an opportunity to proxy it.
 

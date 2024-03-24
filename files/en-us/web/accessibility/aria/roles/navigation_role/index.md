@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/navigation_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#navigation
-  - https://w3c.github.io/aria-practices/#aria_lh_navigation
+  - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/navigation.html
 ---
 
 The `navigation` role is used to identify major groups of links used for navigating through a website or page content.
@@ -121,6 +121,6 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

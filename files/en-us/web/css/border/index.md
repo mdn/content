@@ -5,7 +5,7 @@ page-type: css-shorthand-property
 browser-compat: css.properties.border
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
 
@@ -50,7 +50,7 @@ The `border` property may be specified using one, two, or three of the values li
 
 - `<line-width>`
   - : Sets the thickness of the border. Defaults to `medium` if absent. See {{Cssxref("border-width")}}.
-- `<line-style>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.

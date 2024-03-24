@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Intl.Locale.toString
 
 The **`toString()`** method of {{jsxref("Intl.Locale")}} instances returns this Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html", "taller")}}
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -39,11 +43,11 @@ JSON, or any other context where an exact string representation is useful.
 
 ```js
 const myLocale = new Intl.Locale("fr-Latn-FR", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
-console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h12"
 ```
 
 ## Specifications

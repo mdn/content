@@ -5,7 +5,7 @@ page-type: css-combinator
 browser-compat: css.selectors.child
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first.
 
@@ -20,8 +20,9 @@ Elements matched by the second selector must be the immediate children of the el
 
 ## Syntax
 
-```css
-selector1 > selector2 { style properties }
+```css-nolint
+/* The white space around the > combinator is optional but recommended. */
+selector1 > selector2 { /* style properties */ }
 ```
 
 ## Examples

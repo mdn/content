@@ -6,8 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.StaticRange.endContainer
 ---
 
-{{APIRef("DOM
-    WHATWG")}}
+{{APIRef("DOM WHATWG")}}
 
 The **`endContainer`** property of the {{domxref("StaticRange")}} interface returns the end {{domxref("Node")}} for the range.
 

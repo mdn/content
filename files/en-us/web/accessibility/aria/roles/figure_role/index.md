@@ -2,9 +2,7 @@
 title: "ARIA: figure role"
 slug: Web/Accessibility/ARIA/Roles/figure_role
 page-type: aria-role
-spec-urls:
-  - https://w3c.github.io/aria/#figure
-  - https://w3c.github.io/aria-practices/#describing_with_captions
+spec-urls: https://w3c.github.io/aria/#figure
 ---
 
 The ARIA `figure` role can be used to identify a figure inside page content where appropriate semantics do not already exist. A figure is generally considered to be one or more images, code snippets, or other content that puts across information in a different way to a regular flow of text.
@@ -119,6 +117,6 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

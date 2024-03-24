@@ -17,6 +17,10 @@ The **`getUTCDay()`** method of {{jsxref("Date")}} instances returns the day of 
 getUTCDay()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer corresponding to the day of the week for the given date according to universal time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

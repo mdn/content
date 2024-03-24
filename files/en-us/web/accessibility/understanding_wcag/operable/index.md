@@ -467,7 +467,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     <p> <strong>Note:</strong> If the interface's content can be repositioned by the user, then only the initial position of the user-movable content is considered for testing to conform to this standard. Also, content opened by the user may obscure the component receiving focus. Furthermore, if the user can reveal the focused component without changing keyboard focus, the component with focus is not considered hidden for conformance and testing purposes.</p>
     </td>
     <td>
-    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum"> Understanding focus not obscured (Minimum) </a> to learn more about this standard.</p>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">Understanding focus not obscured (Minimum)</a> to learn more about this standard.</p>
     </td>
     </tr>
     <tr>
@@ -476,7 +476,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     <p> Follows the rules as 2.4.11 except when a user interface component receives focus, no part of the component can be hidden by author-created content. If the interface is configurable, only the initial positions of user-movable content are considered for testing and meeting of this standard.</p>
     </td>
     <td>
-    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced"> Understanding focus not obscured (Enhanced) (Level AAA) </a> to learn more about this standard.</p> </td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">Understanding focus not obscured (Enhanced) (Level AAA)</a> to learn more about this standard.</p> </td>
     </td>
     </tr>
 <tr>
@@ -494,7 +494,7 @@ The conformance criteria under this guideline relate to ways in which users can 
     </ul>
   </td>
   <td>
-    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html"> Understanding focus appearance (Level AAA)</a> to learn more about this standard.</p>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html">Understanding focus appearance (Level AAA)</a> to learn more about this standard.</p>
   </td>
 </tr>
   </tbody>
@@ -555,7 +555,7 @@ The conformance criteria under this guideline ensures that users are able to int
   <li> <strong>User agent control:</strong> The target's size is determined by the user agent and has not been modified by the author.</li>
   <li> <strong>Essential:</strong> A particular presentation of the target is essential or legally required for the information being conveyed.</li>
  </ul>
- <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"> Understanding target size minimum</a> </td>
+ <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">Understanding target size minimum</a> </td>
 </tr>
   </tr>
  </tbody>

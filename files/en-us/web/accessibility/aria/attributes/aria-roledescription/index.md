@@ -53,7 +53,7 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 - `<string>`
   - : A non-empty string, an unconstrained value type, containing more than just white space.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRoleDescription")}}
   - : The [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-roledescription` attribute.
@@ -68,7 +68,7 @@ Supported by all roles and by all base markup elements except for `role="generic
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 

@@ -11,7 +11,7 @@ The **`Symbol.split`** static data property represents the [well-known symbol](/
 
 For more information, see[`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split) and {{jsxref("String.prototype.split()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}
+{{EmbedInteractiveExample("pages/js/symbol-split.html", "taller")}}
 
 ## Value
 

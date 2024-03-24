@@ -2,19 +2,22 @@
 title: Set.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
 page-type: javascript-instance-method
-browser-compat: javascript.builtins.Set.values
-spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.keys
+browser-compat: javascript.builtins.Set.keys
 ---
 
 {{JSRef}}
 
-The **`keys()`** method is an alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values) method.
+The **`keys()`** method of {{jsxref("Set")}} instances is an alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values) method.
 
 ## Syntax
 
 ```js-nolint
 keys()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

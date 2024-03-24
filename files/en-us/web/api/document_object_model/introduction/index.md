@@ -69,7 +69,7 @@ For more information on what technologies are involved in writing JavaScript on 
 You don't have to do anything special to begin using the DOM.
 You use the API directly in JavaScript from within what is called a _script_, a program run by a browser.
 
-When you create a script, whether inline in a `<script>` element or included in the web page, you can immediately begin using the API for the {{domxref("document")}} or {{domxref("Window", "window")}} objects to manipulate the document itself, or any of the various elements in the web page (the descendant elements of the document). Your DOM programming may be something as simple as the following example, which displays a message on the console by using the {{domxref("console.log()")}} function:
+When you create a script, whether inline in a `<script>` element or included in the web page, you can immediately begin using the API for the {{domxref("document")}} or {{domxref("Window", "window")}} objects to manipulate the document itself, or any of the various elements in the web page (the descendant elements of the document). Your DOM programming may be something as simple as the following example, which displays a message on the console by using the {{domxref("console/log_static", "console.log()")}} function:
 
 ```html
 <body onload="console.log('Welcome to my home page!');">

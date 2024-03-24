@@ -11,7 +11,7 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 
 ## Constructor
 
-- {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}} {{Experimental_Inline}}
+- {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}}
   - : Creates a new `VideoColorSpace` object.
 
 ## Instance properties

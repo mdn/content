@@ -7,7 +7,7 @@ spec-urls:
   - https://drafts.csswg.org/css-pseudo/
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 CSS selectors are used to define a pattern of the elements that you want to select for applying a set of CSS rules on the selected elements. Combinators define the relationship between the selectors. Using various selectors and combinators, you can precisely select and style the desired elements based on their type, attributes, state, or relationship to other elements.
 
@@ -68,17 +68,17 @@ The [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), denoted 
 
 The [child combinator](/en-US/docs/Web/CSS/Child_combinator) is more specific than the descendant combinator. Denoted with the greater than character (`>`), the child combinator selects nodes that are direct children of the first element. Comparing with our previous example, `div > span` will match only the {{HTMLElement("span")}} elements that are direct children of a {{HTMLElement("div")}} element.
 
-### General sibling combinator
+### Subsequent-sibling combinator
 
-In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
+In addition to descendant selectors, CSS also enables selecting elements based on their siblings. The [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), denoted with a tilde (`~`), selects siblings. Given `A ~ B`, all elements matching `B` will be selected if they are preceded by `A`, provided both `A` and `B` share the same parent. For example, `h2 ~ p` will match all {{HTMLElement("p")}} elements that follow an {{HTMLElement("Heading_Elements", "h2")}}, immediately or not.
 
-### Adjacent sibling combinator
+### Next-sibling combinator
 
-The [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), denoted by the plus symbol (`+`), is similar to the general sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
+The [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), denoted by the plus symbol (`+`), is similar to the subsequent-sibling. However, given `A + B`, it only matches `B` if `B` is immediately preceded by `A`, with both sharing the same parent. Amending our previous example, `h2 + p` will match only the single `<p>` element that _immediately_ follows an `<h2>` element.
 
 ### Column combinator
 
-There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters ( `||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
+There is also a [column combinator](/en-US/docs/Web/CSS/Column_combinator), denoted by two pipe characters (`||`), which, when supported, selects nodes that belong to a column. For example, `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
 ### Namespace separator
 
@@ -128,6 +128,62 @@ h2 + p + p {
 
 {{EmbedLiveSample("Combinators", "100%", 300)}}
 
+### Creating complex selectors with CSS nesting
+
+The above complex selectors can also be defined using simple selectors, combinators, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), with or without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector).
+
+#### CSS
+
+In this example, we replicate the same five relative selectors using simple selectors combined with combinators, but this time with CSS nesting.
+
+```css
+h2 {
+  & + p {
+    & ~ p {
+      font-style: italic;
+    }
+    & + p {
+      color: red;
+    }
+  }
+}
+.myClass {
+  & + p {
+    text-decoration: underline;
+  }
+}
+#myId {
+  & > .myClass {
+    outline: 3px dashed red;
+  }
+}
+> p {
+  font-size: 1.1rem;
+}
+```
+
+#### HTML
+
+```html
+<h2 class="myClass" id="myId">
+  No selectors match. <span class="myClass">This span has an outline</span> as
+  it is both myClass and a child of #myId.
+</h2>
+<p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+<p>
+  The second paragraph is red. This and the following paragraphs are italic.
+</p>
+<p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
+<p class="myClass">
+  Does not have an outline; this is a sibling of H2, not a child. It is italic
+  and 1.1rem.
+</p>
+```
+
+#### Result
+
+{{EmbedLiveSample("creating_complex_selectors_with_css_nesting", "100%", 300)}}
+
 ## Attribute selectors
 
 [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) select all elements that, depending on how the selector is written, either have the given attribute or have the given attribute with a substring value match.
@@ -137,12 +193,12 @@ The case sensitivity of the attribute depends on the language. Generally, in HTM
 
 ## Pseudo-class selectors
 
-The [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](#simple-selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree. {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
+The [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree. {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
 For example, the {{cssxref(":target")}} simple selector targets element of a URL containing a fragment identifier, and the [`a:visited`](/en-US/docs/Web/CSS/:visited) [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) matches all {{HTMLElement("a")}} elements that have been visited by a user.
 
 The pseudo-classes can be categorized as [element display state](/en-US/docs/Web/CSS/Pseudo-classes#element_display_state_pseudo-classes), [input](/en-US/docs/Web/CSS/Pseudo-classes#input_pseudo-classes), [linguistic](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), [location](/en-US/docs/Web/CSS/Pseudo-classes#location_pseudo-classes), [resource state](/en-US/docs/Web/CSS/Pseudo-classes#resource_state_pseudo-classes), [time-dimensional](/en-US/docs/Web/CSS/Pseudo-classes#time-dimensional_pseudo-classes), [tree-structural](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes), [user action](/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes), and [functional](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes).
 
-Multiple pseudo-classes can be combined to create [compound selectors](#compound-selector). When combining a pseudo-class into a compound selector with a type or universal selector, the pseudo-class must follow the type selector or universal selector, if present.
+Multiple pseudo-classes can be combined to create [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector). When combining a pseudo-class into a compound selector with a type or universal selector, the pseudo-class must follow the type selector or universal selector, if present.
 
 ## Pseudo-element selectors
 
@@ -161,3 +217,4 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

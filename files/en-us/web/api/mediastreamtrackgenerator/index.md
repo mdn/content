@@ -31,7 +31,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });

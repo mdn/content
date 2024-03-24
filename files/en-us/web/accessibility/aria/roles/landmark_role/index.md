@@ -29,7 +29,7 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
 - [ARIA: `banner` role](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role)
@@ -46,6 +46,6 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

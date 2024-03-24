@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.File.name
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-Returns the name of the file represented by a {{domxref("File")}} object. For security
+The **`name`** read-only property of the {{domxref("File")}} interface returns the name of the file represented by a {{domxref("File")}} object. For security
 reasons, the path is excluded from this property.
 
 ## Value

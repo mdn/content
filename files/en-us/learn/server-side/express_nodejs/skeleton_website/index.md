@@ -134,7 +134,7 @@ express express-locallibrary-tutorial --view=pug
 
 The generator will create (and list) the project's files.
 
-```bash
+```plain
    create : express-locallibrary-tutorial\
    create : express-locallibrary-tutorial\public\
    create : express-locallibrary-tutorial\public\javascripts\
@@ -189,17 +189,17 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
    - On the Windows CMD prompt, use this command:
 
-     ```bash
+     ```batch
      SET DEBUG=express-locallibrary-tutorial:* & npm start
      ```
 
    - On Windows Powershell, use this command:
 
-     ```bash
-     $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     ```powershell
+     ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
-     > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > **Note:** Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
    - On macOS or Linux, use this command:
 
@@ -218,8 +218,10 @@ Congratulations! You now have a working Express application that can be accessed
 > **Note:** You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
 >
 > ```bash
-> >SET DEBUG=express-locallibrary-tutorial:* & npm start
+> SET DEBUG=express-locallibrary-tutorial:* & npm start
+> ```
 >
+> ```plain
 > > express-locallibrary-tutorial@0.0.0 start D:\github\mdn\test\exprgen\express-locallibrary-tutorial
 > > node ./bin/www
 >
@@ -364,6 +366,8 @@ The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/w
 ### www file
 
 The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api.html) application object.
+`require()` is the [CommonJS way](https://nodejs.org/api/modules.html) to import JavaScript code, JSON, and other files into the current file.
+Here we specify **app.js** module using a relative path and omit the optional (.**js**) file extension.
 
 ```js
 #!/usr/bin/env node
@@ -375,7 +379,9 @@ The file **/bin/www** is the application entry point! The very first thing this 
 const app = require("../app");
 ```
 
-> **Note:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
+> **Note:** Node.js 14 and later support ES6 `import` statements for importing JavaScript (ECMAScript) modules.
+> To use this feature you have to add `"type": "module",` to your Express **package.json** file, all the modules in your application have to use `import` rather than `require()`, and for _relative imports_ you must include the file extension (for more information see the [Node documentation](https://nodejs.org/api/esm.html#introduction)).
+> While there are benefits to using `import`, this tutorial uses `require()` in order to match [the Express documentation](https://expressjs.com/en/starter/hello-world.html).
 
 The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
 

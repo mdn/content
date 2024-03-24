@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 
 **Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
 
-> **Note:** Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. Order of appearance becomes relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
+> **Note:** Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
 
 ## How is specificity calculated?
 
@@ -30,9 +30,13 @@ The selector weight categories are listed here in the order of decreasing specif
 - No value
   - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight so their value is 0-0-0, but they do match elements. These selectors do not impact the specificity weight value.
 
-Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
+Combinators, such as {{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
-The negation pseudo-class, {{CSSxRef(":not", ":not()")}}, itself has no weight. Neither do the {{CSSxRef(":is", ":is()")}} or the {{CSSxRef(":has", ":has()")}} pseudo-classes. The parameters in these selectors, however, do. The values of both come from the parameter in the list of parameters that has the highest specificity. The [`:not()`, `:is()` and `:has()` exceptions](#the_is_not_and_has_exceptions) are discussed below.
+The `&` nesting combinator doesn't add specificity weight, but nested rules do. In terms of specificity, and functionality, nesting is very similar to the {{CSSxRef(":is", ":is()")}} pseudo-class.
+
+Like nesting, the {{CSSxRef(":is", ":is()")}}, {{CSSxRef(":has", ":has()")}}, and negation ({{CSSxRef(":not", ":not()")}}) pseudo-classes themselves add no weight. The parameters in these selectors, however, do. The specificity weight of each comes from the selector parameter in the list of selectors with the highest specificity. Similarly, with nested selectors, the specificity weight added by the nested selector component is the selector in the comma-separated list of nested selectors with the highest specificity.
+
+The [`:not()`, `:is()`, `:has()` and CSS nesting exceptions](#the_is_not_has_and_css_nesting_exceptions) are discussed below.
 
 #### Matching selector
 
@@ -110,7 +114,7 @@ input.myClass {
 }
 ```
 
-### The `:is()`, `:not()` and `:has()` exceptions
+### The `:is()`, `:not()`, `:has()` and CSS nesting exceptions
 
 The matches-any pseudo-class {{CSSxRef(":is", ":is()")}}, the relational pseudo-class {{CSSxRef(":has", ":has()")}}, and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
 
@@ -157,6 +161,19 @@ div:not(.inner, #fakeId) p {
 ```
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
+
+When creating complex selector lists with [CSS nesting]() this behaves in exactly the same way as the `:is()` pseudo-class.
+
+```css
+p,
+#fakeId {
+  span {
+    /* 1-0-1 */
+  }
+}
+```
+
+In the above code block the complex selector `p, #fakeId` the specificity is taken from `#fakeId` and also the `span`, so this create a specificity of `1-0-1` for both `p span` and `#fakeId span`. This is the equivalent specificity as the `:is(p, #fakeId) span` selector.
 
 Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these three pseudo-classes can help.
 
@@ -219,6 +236,38 @@ footer a {
   color: blue;
 }
 ```
+
+### How `@scope` blocks affect specificity
+
+Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit. For example:
+
+```css
+@scope (.article-body) {
+  /* img has a specificity of 0-0-1, as expected */
+  img { ... }
+}
+```
+
+However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
+
+```css
+@scope (.article-body) {
+  /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
+  :scope img { ... }
+}
+```
+
+When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally rewritten to that selector wrapped inside an {{cssxref(":is", ":is()")}} selector. So for example, in:
+
+```css
+@scope (figure, #primary) {
+  & img { ... }
+}
+```
+
+`& img` is equivalent to `:is(figure, #primary) img`.
+
+Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
 
 ## Tips for handling specificity headaches
 
@@ -427,11 +476,13 @@ A few things to remember about specificity:
 
 1. Specificity only applies when the same element is targeted by multiple declarations in the same cascade layer or origin. Specificity only matters for declarations of the same importance and same origin and [cascade layer](/en-US/docs/Web/CSS/@layer). If matching selectors are in different origins, the [cascade](/en-US/docs/Web/CSS/Cascade) determines which declaration takes precedence.
 
-2. When two selectors in the same cascade layer and origin have the same specificity, proximity is important; the last selector wins.
+2. When two selectors in the same cascade layer and origin have the same specificity, scoping proximity is then calculated; the ruleset with the lowest scoping proximity wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 
-3. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+3. If scope proximity is also the same for both selectors, source order then comes into play. When all else is equal, the last selector wins.
 
-4. [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
+4. As per CSS rules, [directly targeted elements](#directly_targeted_elements_vs._inherited_styles) will always take precedence over rules which an element inherits from its ancestor.
+
+5. [Proximity of elements](#tree_proximity_ignorance) in the document tree has no effect on the specificity.
 
 ## Specifications
 
@@ -460,3 +511,4 @@ A few things to remember about specificity:
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

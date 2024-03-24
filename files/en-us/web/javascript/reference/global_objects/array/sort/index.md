@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.sort
 
 {{JSRef}}
 
-The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
 
 The time and space complexity of the sort cannot be guaranteed as it depends on the
 implementation.
@@ -27,12 +27,20 @@ sort(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if `a` is less than `b`, positive if `a` is greater than `b`, and zero if they are equal. `NaN` is treated as `0`. The function is called with the following arguments:
+  - : A function that determines the order of the elements. The function is called with the following arguments:
 
     - `a`
       - : The first element for comparison. Will never be `undefined`.
     - `b`
       - : The second element for comparison. Will never be `undefined`.
+
+    It should return a number where:
+
+    - A negative value indicates that `a` should come before `b`.
+    - A positive value indicates that `a` should come after `b`.
+    - Zero or `NaN` indicates that `a` and `b` are considered equal.
+
+    To memorize this, remember that `(a, b) => a - b` sorts numbers in ascending order.
 
     If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
@@ -70,12 +78,11 @@ elements are sorted according to the return value of the compare function (all
 
 So, the compare function has the following form:
 
-```js
+```js-nolint
 function compareFn(a, b) {
   if (a is less than b by some ordering criterion) {
     return -1;
-  }
-  if (a is greater than b by the ordering criterion) {
+  } else if (a is greater than b by the ordering criterion) {
     return 1;
   }
   // a must be equal to b
@@ -97,7 +104,7 @@ The default lexicographic comparator satisfies all constraints above.
 
 To compare numbers instead of strings, the compare function can subtract `b`
 from `a`. The following function will sort the array in ascending order (if
-it doesn't contain `Infinity` and `NaN`):
+it doesn't contain `NaN`):
 
 ```js
 function compareNumbers(a, b) {
@@ -176,7 +183,7 @@ items.sort((a, b) => {
 
 ### Sorting non-ASCII characters
 
-For sorting strings with non-ASCII characters, i.e. strings with accented characters
+For sorting strings with non-{{Glossary("ASCII")}} characters, i.e. strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
 {{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.
@@ -351,7 +358,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

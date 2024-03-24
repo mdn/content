@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.match
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
 If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined")}}.
@@ -22,7 +22,7 @@ match(request, options)
 
 - `request`
   - : The {{domxref("Request")}} for which you are attempting to find responses in the
-    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
+    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL string.
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.

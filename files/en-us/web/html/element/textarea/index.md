@@ -18,11 +18,15 @@ The above example demonstrates a number of features of `<textarea>`:
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
 - Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
 
-The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
+The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `autocapitalize`
+
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - `autocomplete`
 
@@ -48,8 +52,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
 - `dirname`
 
-  - : This attribute is used to set the text directionality of the element in a manner similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element. Possible values include `ltr` for left-to-right and `rtl` for right-to-left. The default value is `ltr`.
-    The value of the attribute is sent in the format `{elementName}.dir={value}`, where `{elementName}` is the name of the `<textarea>` element and `{value}` may be `ltr` or `rtl`.
+  - : This attribute is used to indicate the text directionality of the element contents similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element.
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
 - `disabled`
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
@@ -237,7 +241,7 @@ I am a read-only textarea.
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

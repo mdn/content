@@ -24,7 +24,7 @@ IMSC differs from HTML in a number of ways:
 
 While attributes names and syntax are similar, styling differs from CSS in a couple of ways:
 
-- Whereas CSS properties use hyphens, like `font-size`, IMSC uses camelCase, like `tts:fontSize`.
+- Whereas CSS properties use hyphens, like `font-size`, IMSC uses {{Glossary("camel_case", "camel case")}}, like `tts:fontSize`.
 - IMSC does not use external stylesheets.
 
 ### Differences between IMSC and WebVTT

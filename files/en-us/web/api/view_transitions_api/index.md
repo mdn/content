@@ -9,20 +9,20 @@ browser-compat: api.Document.startViewTransition
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
 
-The **View Transitions API** provides a mechanism for easily creating animated transitions between different DOM states, while also updating the DOM contents in a single step.
+The **View Transitions API** provides a mechanism for easily creating animated transitions between different DOM states while also updating the DOM contents in a single step.
 
 ## Concepts and usage
 
 View transitions are a popular design choice for reducing users' cognitive load, helping them stay in context, and reducing perceived loading latency as they move between states or views of an application.
 
-However, creating view transitions on the web has historically been difficult. Transitions between states in single-page apps (SPAs) tends to involve writing significant CSS and JavaScript to:
+However, creating view transitions on the web has historically been difficult. Transitions between states in single-page apps (SPAs) tend to involve writing significant CSS and JavaScript to:
 
 - Handle the loading and positioning of the old and new content.
 - Animate the old and new states to create the transition.
 - Stop accidental user interactions with the old content from causing problems.
 - Remove the old content once the transition is complete.
 
-There is also the major issue of accessibility issues caused by having the new and old content both present in the DOM at once, such as loss of reading position, focus confusion, and strange live region announcement behavior. And cross-document view transitions (i.e. across different pages in regular websites) are impossible.
+Accessibility issues like loss of reading position, focus confusion, and strange live region announcement behavior can also result from having the new and old content both present in the DOM at once. In addition, cross-document view transitions (i.e. across different pages in regular, non-SPA websites) are impossible.
 
 The View Transitions API provides a much easier way of handling the required DOM changes and transition animations.
 
@@ -30,7 +30,7 @@ The View Transitions API provides a much easier way of handling the required DOM
 
 ### Creating a basic view transition
 
-An SPA will include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that handles both browsers that do and don't support the View Transitions API:
+As an example, an SPA may include functionality to fetch new content and update the DOM in response to an event of some kind, such as a navigation link being clicked or an update being pushed from the server. In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/) we've simplified this to a `displayNewImage()` function that shows a new full-size image based on the thumbnail that was clicked. We've encapsulated this inside an `updateView()` function that only calls the View Transition API if the browser supports it:
 
 ```js
 function updateView(event) {
@@ -54,7 +54,7 @@ function updateView(event) {
 }
 ```
 
-And that's it. This code is enough to handle the transition between displayed images. Supporting browsers will show the change from old to new images and captions as a smooth cross-fade (the default view transition), and it will still work in non-supporting browsers but without the nice animation.
+This code is enough to handle the transition between displayed images. Supporting browsers will show the change from old to new images and captions as a smooth cross-fade (the default view transition). It will still work in non-supporting browsers but without the nice animation.
 
 It is also worth mentioning that `startViewTransition()` returns a {{domxref("ViewTransition")}} instance, which includes several promises, allowing you to run code in response to different parts of the view transition process being reached.
 
@@ -88,7 +88,7 @@ Let's walk through how this works:
 
 ### Different transitions for different elements
 
-At the moment, all of the different elements that change when then DOM updates are transitioned using the same animation. If you want different elements to animate differently from the default "root" animation, you can separate them out using the {{cssxref("view-transition-name")}} property. For example:
+At the moment, all of the different elements that change when the DOM updates are transitioned using the same animation. If you want different elements to animate differently from the default "root" animation, you can separate them out using the {{cssxref("view-transition-name")}} property. For example:
 
 ```css
 figcaption {
@@ -120,7 +120,11 @@ The value of `view-transition-name` can be anything you want except for `none` â
 
 ### Customizing your animations
 
-The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](#css_additions)). You can modify the default cross-fade in any way you want using regular CSS.
+The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](#css_additions)).
+
+Notably, transitions for `height`, `width`, `position`, and `transform` do not use the smooth cross-fade animation. Instead, height and width transitions apply a smooth scaling animation. Meanwhile, position and transform transitions apply smooth movement animations to the element.
+
+You can modify the default animation in any way you want using regular CSS.
 
 For example, to change the speed of it:
 
@@ -169,7 +173,7 @@ Let's look at something more interesting â€” a custom animation for the `<figcap
 }
 ```
 
-Here we've created a custom CSS animation and applied it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements, plus we've also added a number of other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
+Here we've created a custom CSS animation and applied it to the `::view-transition-old(figure-caption)` and `::view-transition-new(figure-caption)` pseudo-elements. We've also added a number of other styles to both to keep them in the same place and stop the default styling from interfering with our custom animations.
 
 Note that we also discovered another transition option that is simpler and produced a nicer result than the above. Our final `<figcaption>` view transition ended up looking like this:
 
@@ -184,7 +188,7 @@ figcaption {
 }
 ```
 
-This works because by default, `::view-transition-group` transitions width and height between the old and new views. We just needed to set a fixed `height` on both states to make it work.
+This works because, by default, `::view-transition-group` transitions width and height between the old and new views. We just needed to set a fixed `height` on both states to make it work.
 
 > **Note:** [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
 

@@ -14,7 +14,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 - [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](https://web.archive.org/web/20190807191003/https://blobsallad.se/article/)
 - [miniPaint: Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
-- [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/billyoc/zenphoton))
 - [Multi touch in canvas demo](https://maximumroulette.com/) ([source code](https://github.com/zlatnaspirala/multi-touch-canvas-handler))
 
 ### SVG
@@ -41,7 +41,7 @@ If you know of a good demonstration or application of open web technology, pleas
 ### Virtual Reality
 
 - The Polar Sea ([source code](https://github.com/MozillaReality/polarsea))
-- [Sechelt fly-through](https://mixedreality.mozilla.org/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
+- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
 
 ## CSS
 

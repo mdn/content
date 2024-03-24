@@ -410,7 +410,7 @@ Create a new directory called "beasts", and add the three images in that directo
 
 First, double check that you have the right files in the right places:
 
-```
+```plain
 beastify/
 
     beasts/

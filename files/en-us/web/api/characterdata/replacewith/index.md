@@ -17,7 +17,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 ## Syntax
 
 ```js-nolint
-replaceWith(nodes)
+replaceWith(...nodes)
 ```
 
 ### Parameters
@@ -25,7 +25,7 @@ replaceWith(nodes)
 - `nodes` {{optional_inline}}
   - : A comma-separated list of {{domxref("Node")}} objects or strings that will replace the current node.
 
-> **Note:** If there no argument is passed, this method acts just remove the node from the DOM tree.
+> **Note:** If no arguments are passed in, this method removes the node from the DOM tree.
 
 ### Return value
 

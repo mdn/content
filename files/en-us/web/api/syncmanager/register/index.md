@@ -8,9 +8,9 @@ status:
 browser-compat: api.SyncManager.register
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
-The **`SyncManager.register`** method of the {{domxref("SyncManager")}} interface registers a synchronization event, triggering a {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event inside the associated service worker as soon as network connectivity is available.
+The **`register()`** method of the {{domxref("SyncManager")}} interface registers a synchronization event, triggering a {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event inside the associated service worker as soon as network connectivity is available.
 
 ## Syntax
 
@@ -21,14 +21,20 @@ register(tag)
 ### Parameters
 
 - `tag`
-
   - : An identifier for this synchronization event. This will be the value of the `tag` property of the {{domxref("SyncEvent")}} that gets passed into the service worker's {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event handler.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
-### Examples
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if current service worker is not active.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if background sync has been disabled by the user.
+
+## Examples
 
 The following asynchronous function registers a background sync from a browsing context:
 

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 page-type: guide
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 Every property in JavaScript objects can be classified by three factors:
 
@@ -16,7 +16,7 @@ _Enumerable properties_ are those properties whose internal enumerable flag is s
 
 Ownership of properties is determined by whether the property belongs to the object directly and not to its prototype chain.
 
-All properties, enumerable or not, string or symbol, own or inherited, can be accessed with [dot notation or bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). In this section, we will focus on JavaScript means that visit a group of object properties one-by-one.
+All properties, enumerable or not, string or symbol, own or inherited, can be accessed with [dot notation or bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). In this section, we will focus on the means provided by JavaScript to visit a group of object properties one-by-one.
 
 ## Querying object properties
 

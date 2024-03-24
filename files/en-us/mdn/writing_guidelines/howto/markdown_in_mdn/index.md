@@ -10,13 +10,13 @@ This page describes how we use Markdown to write documentation on MDN Web Docs. 
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark (<https://spec.commonmark.org/>).
 
 ## Links
 
 The GFM specification defines two basic types of links:
 
-- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text
+- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text.
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
 On MDN we allow only inline links.
@@ -82,7 +82,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `md` - Markdown
   - `latex` - LaTeX
 - Command Prompts
-  - `sh` - Bash/Shell
+  - `bash` - Bash/Shell
   - `batch` - Batch (Windows Shell)
   - `powershell` - PowerShell
 - Configuration/Data Files
@@ -91,9 +91,9 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `yaml` - YAML
   - `toml` - TOML
   - `sql` - SQL Database
-  - `diff` - Diff file
   - `ignore` - Gitignore file
   - `apacheconf` - Apache configuration
+  - `nginx` - NGINX configuration
 - Templates
   - `django` - Django templates
   - `svelte` - Svelte templates
@@ -101,7 +101,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
-  - `diff` - Git diff
+  - `diff` - Diff file
   - `http` - HTTP headers
   - `regex` - Regex
   - `uri` - URIs and URLs
@@ -477,7 +477,7 @@ The main limitations of GFM table syntax are:
 - GFM tables may not have a header column.
 - GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.
 - GFM tables cannot have classes assigned to them.
-- GFM doesn't support any table elements beyond `<table>`, `<tr>`, and `<th>`, and `<td>`.
+- GFM doesn't support any table elements beyond `<table>`, `<tr>`, `<th>`, and `<td>`.
 - GFM doesn't support any table element attributes like `colspan`, `rowspan`, or `scope`.
 
 If an author needs to use any of the unsupported features, they should write the table in HTML.
@@ -486,7 +486,7 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 
 #### GFM table maximum width
 
-Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. Consider the following table:
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "{{Glossary("ASCII")}} art" approach to tables that is not readable when table rows get long. Consider the following table:
 
 ```html
 <table>
@@ -583,7 +583,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4578>.
 
 ## Page summary
 
-The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar or page banner macros](#macros).
+The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#sidebar_generation) or [page banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) macros.
 
 This summary is used for search engine optimization (SEO) and also automatically included alongside page listings by some macros.
 The first paragraph should therefore be both succinct and informative.

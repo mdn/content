@@ -61,7 +61,7 @@
     "ja": "アニメーションタイミング属性",
     "ko": "애니메이션 타이밍 속성",
     "pt-BR": "Atributos de cronometragem da animação",
-    "ru": "Временные атрибуты анимации",
+    "ru": "Атрибуты времени для анимации",
     "zh-CN": "动画定时属性",
     "zh-TW": "動畫計時屬性"
   },
@@ -105,6 +105,7 @@
     "ja": "任意の数の説明的要素、 {{SVGElement(\"script\")}} および 2 から 4 個の {{SVGElement(\"stop\")}} 要素。",
     "ko": "임의의 개수의 설명 요소, {{SVGElement(\"script\")}}, 그리고 2개에서 4개의 {{SVGElement(\"stop\")}} 요소.",
     "pt-BR": "Qualquer número de elementos descritivos, elementos {{SVGElement(\"script\")}} e de dois a quatro elementos {{SVGElement(\"stop\")}}.",
+    "ru": "Любое количество элементов описания, {{SVGElement(\"script\")}} и от двух до четырёх элементов {{SVGElement(\"stop\")}}",
     "zh-CN": "任意数量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 个 {{SVGElement(\"stop\")}} 元素。",
     "zh-TW": "任意數量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 個 {{SVGElement(\"stop\")}} 元素。"
   },
@@ -115,6 +116,7 @@
     "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。",
     "ko": "임의의 개수의 애니메이션 요소, 설명 요소, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, 그리고 {{SVGElement(\"style\")}} 요소, 그리고 0개 또는 1개의 {{SVGElement(\"meshgradient\")}} 요소.",
     "pt-BR": "Qualquer número de elementos de animação, elementos descritivos, elementos {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, e {{SVGElement(\"style\")}}, juntamente com zero ou um elemento {{SVGElement(\"meshgradient\")}}.",
+    "ru": "Любое количество элементов анимации, элементов описания, элементов {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}} и {{SVGElement(\"style\")}}, и не более одного элемента {{SVGElement(\"meshgradient\")}}.",
     "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 个 {{SVGElement(\"meshgradient\")}} 元素。",
     "zh-TW": "任意數量的動畫元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 個 {{SVGElement(\"meshgradient\")}} 元素。"
   },
@@ -125,6 +127,7 @@
     "ja": "ARIA 属性",
     "ko": "ARIA 속성",
     "pt-BR": "Atributos ARIA",
+    "ru": "ARIA-атрибуты",
     "zh-CN": "ARIA 属性",
     "zh-TW": "ARIA 屬性"
   },
@@ -135,7 +138,7 @@
     "ja": "基本シェイプ要素",
     "ko": "기본 모양 요소",
     "pt-BR": "Elemento básico de forma",
-    "ru": "Базовые фигуры",
+    "ru": "Элементы базовых фигур",
     "zh-CN": "基本形状元素",
     "zh-TW": "基本形狀元素"
   },
@@ -179,7 +182,7 @@
     "ja": "コンテナー要素",
     "ko": "컨테이너 요소",
     "pt-BR": "Elemento recipiente",
-    "ru": "Контейнеры",
+    "ru": "Элемент-контейнер",
     "zh-CN": "容器元素",
     "zh-TW": "容器元素"
   },
@@ -234,7 +237,7 @@
     "ja": "空",
     "ko": "비어 있음",
     "pt-BR": "Vazio",
-    "ru": "Такого нет",
+    "ru": "Пусто",
     "zh-CN": "空",
     "zh-TW": "空"
   },
@@ -256,7 +259,7 @@
     "ja": "フィルター構成要素",
     "ko": "필터 원시 요소",
     "pt-BR": "Elemento de filtro primitivo",
-    "ru": "Примитивный фильтр",
+    "ru": "Элемент простого фильтра",
     "zh-CN": "滤镜元素",
     "zh-TW": "濾鏡元素"
   },
@@ -267,7 +270,7 @@
     "ja": "フィルター構成要素",
     "ko": "필터 원시 요소",
     "pt-BR": "Elementos de filtro primitivo",
-    "ru": "Примитивные фильтры",
+    "ru": "Элементы простых фильтров",
     "zh-CN": "滤镜元素",
     "zh-TW": "濾鏡元素"
   },
@@ -278,7 +281,7 @@
     "ja": "フォント要素",
     "ko": "글꼴 요소",
     "pt-BR": "Elemento de fonte",
-    "ru": "Шрифты",
+    "ru": "Элемент шрифта",
     "zh-CN": "字体元素",
     "zh-TW": "字型元素"
   },
@@ -289,6 +292,7 @@
     "ja": "グローバルイベント属性",
     "ko": "전역 이벤트 속성",
     "pt-BR": "Atributos de eventos globais",
+    "ru": "Атрибуты глобальных событий",
     "zh-CN": "全局事件属性",
     "zh-TW": "全域事件屬性"
   },
@@ -299,7 +303,7 @@
     "ja": "グラデーション要素",
     "ko": "그라데이션 요소",
     "pt-BR": "Elemento gradiente",
-    "ru": "Градиент",
+    "ru": "Элемент градиента",
     "zh-CN": "渐变元素",
     "zh-TW": "漸層元素"
   },
@@ -310,7 +314,7 @@
     "ja": "グラデーション要素",
     "ko": "그라데이션 요소",
     "pt-BR": "Elementos de gradiente",
-    "ru": "Градиенты",
+    "ru": "Элементы градиента",
     "zh-CN": "渐变元素",
     "zh-TW": "漸層元素"
   },
@@ -343,7 +347,7 @@
     "ja": "グラフィック参照要素",
     "ko": "그래픽 참조 요소",
     "pt-BR": "Elemento gráfico referenciado",
-    "ru": "Элементы отсылки к графике",
+    "ru": "Элементы графики",
     "zh-CN": "图形引用元素",
     "zh-TW": "圖形參照元素"
   },
@@ -354,6 +358,7 @@
     "ja": "SVG info はプレビューでは利用できません",
     "ko": "미리보기에서 SVG 정보를 사용할 수 없습니다",
     "pt-BR": "Informação de pré-visualização de SVG não disponível",
+    "ru": "SVG-данные недоступны для предпросмотра",
     "zh-CN": "SVG 信息在预览中不可用",
     "zh-TW": "SVG 資訊在預覽中不可用"
   },
@@ -364,7 +369,7 @@
     "ja": "光源要素",
     "ko": "조명원 요소",
     "pt-BR": "Elemento fonte de luz",
-    "ru": "Источникм света",
+    "ru": "Элемент источника света",
     "zh-CN": "光源元素",
     "zh-TW": "光源元素"
   },
@@ -375,6 +380,7 @@
     "ja": "非描画要素",
     "ko": "렌더링되지 않는 요소",
     "pt-BR": "Elemento nunca renderizado",
+    "ru": "Неотображаемые элементы",
     "zh-CN": "非渲染元素",
     "zh-TW": "非渲染元素"
   },
@@ -396,6 +402,7 @@
     "ja": "ペイントサーバー要素",
     "ko": "페인트 서버 요소",
     "pt-BR": "Elemento de servidor de pintura",
+    "ru": "Элемент сервера отрисовки",
     "zh-CN": "绘制服务器元素",
     "zh-TW": "繪製伺服器元素"
   },
@@ -417,7 +424,7 @@
     "ja": "プレゼンテーション属性",
     "ko": "표현 속성",
     "pt-BR": "Atributos de apresentação",
-    "ru": "Атрибуты показа",
+    "ru": "Атрибуты отображения",
     "zh-CN": "表现属性",
     "zh-TW": "表現屬性"
   },
@@ -428,6 +435,7 @@
     "ja": "描画可能要素",
     "ko": "렌더링 가능한 요소",
     "pt-BR": "Elemento renderizável",
+    "ru": "Отображаемый элемент",
     "zh-CN": "可渲染元素",
     "zh-TW": "彩現元素"
   },
@@ -438,7 +446,7 @@
     "ja": "図形要素",
     "ko": "모양 요소",
     "pt-BR": "Elemento de forma",
-    "ru": "Фигура",
+    "ru": "Элемент фигуры",
     "zh-CN": "形状元素",
     "zh-TW": "形狀元素"
   },
@@ -449,7 +457,7 @@
     "ja": "図形要素",
     "ko": "모양 요소",
     "pt-BR": "Elementos de forma",
-    "ru": "Фигуры",
+    "ru": "Элементы фигуры",
     "zh-CN": "形状元素",
     "zh-TW": "形狀元素"
   },
@@ -482,6 +490,7 @@
     "ja": "スタイル属性",
     "ko": "스타일 속성",
     "pt-BR": "Atributos de estilo",
+    "ru": "Атрибуты стилизации",
     "zh-CN": "样式属性",
     "zh-TW": "樣式屬性"
   },
@@ -492,7 +501,7 @@
     "ja": "テキストコンテンツの子要素",
     "ko": "텍스트 콘텐츠 자식 요소",
     "pt-BR": "Elemento filho de conteúdo textual",
-    "ru": "Текстосодержащие дочерние элементы",
+    "ru": "Дочерний элемент с текстовым контентом",
     "zh-CN": "文本内容子元素",
     "zh-TW": "文字內容子元素"
   },
@@ -503,6 +512,7 @@
     "ja": "テキストコンテンツの子要素",
     "ko": "텍스트 콘텐츠 자식 요소",
     "pt-BR": "Elementos filhos de conteúdo de texto",
+    "ru": "Дочерние элементы с текстовым контентом",
     "zh-CN": "文本内容子元素",
     "zh-TW": "文字內容子元素"
   },
@@ -535,7 +545,7 @@
     "ja": "変換関数属性",
     "ko": "전송 함수 속성",
     "pt-BR": "Atributos de função de transferência",
-    "ru": "Функция передачи атрибутов",
+    "ru": "Атрибуты функции передачи",
     "zh-CN": "变换函数属性",
     "zh-TW": "遞移函式屬性"
   },
@@ -546,7 +556,7 @@
     "ja": "XLink 属性",
     "ko": "XLink 속성",
     "pt-BR": "Atributos Xlink",
-    "ru": "XLink атрибуты",
+    "ru": "XLink-атрибуты",
     "zh-CN": "XLink 属性",
     "zh-TW": "XLink 屬性"
   }

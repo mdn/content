@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.ftpProtocolEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that determines whether the FTP protocol is enabled in the browser.
 

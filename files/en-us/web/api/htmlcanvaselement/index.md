@@ -16,9 +16,9 @@ The **`HTMLCanvasElement`** interface provides properties and methods for manipu
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : The [`height`](/en-US/docs/Web/HTML/Element/canvas#height) HTML attribute of the {{HTMLElement("canvas")}} element is a positive `integer` reflecting the number of logical pixels (or RGBA values) going down one column of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used. If no \[separate] CSS height is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the height of the canvas in the length-unit CSS Pixel.
+  - : The [`height`](/en-US/docs/Web/HTML/Element/canvas#height) HTML attribute of the {{HTMLElement("canvas")}} element is a non-negative `integer` reflecting the number of logical pixels (or RGBA values) going down one column of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used. If no \[separate] CSS height is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the height of the canvas in the length-unit CSS Pixel.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : The [`width`](/en-US/docs/Web/HTML/Element/canvas#width) HTML attribute of the {{HTMLElement("canvas")}} element is a positive `integer` reflecting the number of logical pixels (or RGBA values) going across one row of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used. If no \[separate] CSS width is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the width of the canvas in the length-unit CSS Pixel.
+  - : The [`width`](/en-US/docs/Web/HTML/Element/canvas#width) HTML attribute of the {{HTMLElement("canvas")}} element is a non-negative `integer` reflecting the number of logical pixels (or RGBA values) going across one row of the canvas. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used. If no \[separate] CSS width is assigned to the {{HTMLElement("canvas")}}, then this value will also be used as the width of the canvas in the length-unit CSS Pixel.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}} {{deprecated_inline}}
   - : A boolean value reflecting the [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque) HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported in Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}} {{non-standard_inline}}
@@ -41,7 +41,9 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+_Inherits events from its parent, {{domxref("HTMLElement")}}._
+
+Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) {{Experimental_Inline}}
   - : Fired if the user agent detects that the backing storage associated with a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context has been lost.

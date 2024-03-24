@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.FileReader.load_event
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `load` event is fired when a file has been read successfully.
+The **`load`** event is fired when a file has been read successfully.
 
 This event is not cancelable and does not bubble.
 

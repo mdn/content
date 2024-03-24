@@ -36,8 +36,8 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 
 If you do not specify the `secondsValue` and
 `msValue` parameters, the values returned from
-{{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} and
-{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} methods are
+{{jsxref("Date/getUTCSeconds", "getUTCSeconds()")}} and
+{{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} methods are
 used.
 
 If a parameter you specify is outside of the expected range,

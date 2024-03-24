@@ -8,7 +8,7 @@ status:
 browser-compat: api.EyeDropper.EyeDropper
 ---
 
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} object.
 
@@ -17,10 +17,6 @@ The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} objec
 ```js-nolint
 new EyeDropper()
 ```
-
-### Parameters
-
-None.
 
 ## Specifications
 

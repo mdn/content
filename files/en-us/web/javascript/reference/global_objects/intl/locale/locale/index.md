@@ -41,7 +41,7 @@ new Intl.Locale(tag, options)
     - `caseFirst`
       - : The case-first sort option. Possible values are `"upper"`, `"lower"`, or `"false"`.
     - `hourCycle`
-      - : The hour cycle. Possible values are `"h11"`, `"h12"`, `"h23"`, or `"h24"`.
+      - : The hour cycle. Possible values are `"h23"`, `"h12"`, `"h11"`, or the practically unused `"h24"`, which are explained in [`Intl.Locale.prototype.getHourCycles`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types)
     - `numeric`
       - : The numeric sort option. A boolean.
 
@@ -79,6 +79,6 @@ console.log(locale.hourCycle); // "h12"
 
 ## See also
 
+- [Polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
 - {{jsxref("Intl.Collator")}}
-- [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
-- [A polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
+- [Canonical Unicode Locale Identifiers](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) in the Unicode locale data markup language spec

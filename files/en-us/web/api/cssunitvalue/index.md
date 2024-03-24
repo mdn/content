@@ -31,10 +31,6 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 
 _The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
 
-## Event handlers
-
-None.
-
 ## Examples
 
 The following shows a method of creating a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors.

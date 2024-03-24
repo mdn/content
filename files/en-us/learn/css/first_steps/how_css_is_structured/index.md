@@ -13,21 +13,17 @@ Now that you are beginning to understand the purpose and use of CSS, let's exami
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
-        >, HTML basics (study
+        > and HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), and an idea of
-        <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works"
-          >How CSS works</a
-        >.
+        >).
       </td>
     </tr>
     <tr>

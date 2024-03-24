@@ -8,11 +8,11 @@ browser-compat: api.Document.DOMContentLoaded_event
 
 {{APIRef}}
 
-The **`DOMContentLoaded`** event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+The **`DOMContentLoaded`** event fires when the HTML document has been completely parsed, and all deferred scripts ([`<script defer src="…">`](/en-US/docs/Web/HTML/Element/script#defer) and [`<script type="module">`](/en-US/docs/Web/HTML/Element/script#module)) have downloaded and executed. It doesn't wait for other things like images, subframes, and async scripts to finish loading.
+
+`DOMContentLoaded` does not wait for stylesheets to load, however deferred scripts _do_ wait for stylesheets, and the `DOMContentLoaded` event is queued after deferred scripts. Also, scripts which aren't deferred or async (e.g. `<script>`) will wait for already-parsed stylesheets to load.
 
 A different event, {{domxref("Window/load_event", "load")}}, should be used only to detect a fully-loaded page. It is a common mistake to use `load` where `DOMContentLoaded` would be more appropriate.
-
-Synchronous JavaScript pauses parsing of the DOM. If you want the DOM to get parsed as fast as possible after the user has requested the page, you can make your [JavaScript asynchronous](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and [optimize loading of stylesheets](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). If loaded as usual, stylesheets slow down DOM parsing as they're loaded in parallel, "stealing" traffic from the main HTML document.
 
 This event is not cancelable.
 
@@ -22,8 +22,6 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js
 addEventListener("DOMContentLoaded", (event) => {});
-
-onDOMContentLoaded = (event) => {};
 ```
 
 ## Event type
@@ -166,4 +164,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
 ## See also
 
 - Related events: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}

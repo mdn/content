@@ -16,26 +16,7 @@ The **`HTMLTitleElement`** interface is implemented by a document's {{ HTMLEleme
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : A string representing the text of the document's title, and only the text part. For example, consider this:
-
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>
-      Hello world! <span class="highlight">Isn't this wonderful</span> really?
-    </title>
-  </head>
-  <body></body>
-</html>
-```
-
-```js
-const title = document.querySelector("title");
-console.log(title.text); // yield: "Hello world!  really?"
-```
-
-As you can see, the tag `span` and its content were skipped.
+  - : A string representing the text of the document's title.
 
 ## Instance methods
 

@@ -60,8 +60,8 @@ function readDirectory(directory) {
 
 This works by creating an internal function, `getEntries()`, which calls
 itself recursively to get all the entries in the directory, concatenating each batch to
-the array. Each iteration, {{domxref("FileSystemDirectoryReader.readEntries",
-  "readEntries()")}} is called to get more entries. When it returns an empty array, the
+the array. Each iteration, {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
+is called to get more entries. When it returns an empty array, the
 end of the directory has been reached, and the recursion ends. Once control is returned
 to `readDirectory()`, the array is returned to the caller.
 

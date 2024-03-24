@@ -6,17 +6,16 @@ page-type: web-api-global-function
 browser-compat: api.btoa
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`btoa()`** method creates a
-{{glossary("Base64")}}-encoded ASCII string from a _binary string_ (i.e., a
+{{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a _binary string_ (i.e., a
 string in which each character in the string is treated as a byte
 of binary data).
 
 You can use this method to encode data which may otherwise cause communication
-problems, transmit it, then use the {{domxref("atob",
-  "atob()")}} method to decode the data again. For example, you can encode control
-characters such as ASCII values 0 through 31.
+problems, transmit it, then use the {{domxref("atob", "atob()")}} method to decode the data again.
+For example, you can encode control characters such as ASCII values 0 through 31.
 
 ## Syntax
 

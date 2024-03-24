@@ -8,7 +8,7 @@ status:
 browser-compat: api.Notification.renotify
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`renotify`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the user should be notified
@@ -34,7 +34,7 @@ const options = {
 
 const n = new Notification("New review activity", options);
 
-console.log(n.renotify); // "true"
+console.log(n.renotify); // true
 ```
 
 ## Specifications

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.saveAsPDF
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Saves the current page as a PDF file. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF file.
 

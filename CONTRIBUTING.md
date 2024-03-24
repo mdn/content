@@ -59,7 +59,7 @@ If you are comfortable working with git and GitHub, you can skip ahead to [Contr
 If you've created a new GitHub account and want to know what to do next, you can choose one of the following ways to manage changes:
 
 - [GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files) -
-  This is the easiest way to contribute **small changes** described in [Simple changes](#simple_changes).
+  This is the easiest way to contribute **small changes** described in [Simple changes](#simple-changes).
 - [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) - A desktop app for managing interaction with GitHub.
 - [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli) - A command-line wrapper for interacting with GitHub.
 - [`git`](https://git-scm.com/downloads) - You can use `git` from the command line to interact with GitHub.
@@ -201,13 +201,13 @@ This will make it easier to submit a pull request for your changes.
 3. Check for errors by clicking `Show flaws` on each previewed page.
    You may be able to fix flaws by running:
 
-   ```sh
+   ```bash
    yarn content flaws <page_slug>
    ```
 
 4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
 
-   ```sh
+   ```bash
    # Adding all files to the commit
    git add .
    # Making a commit with a message describing the changes
@@ -223,7 +223,7 @@ To ensure that all MDN documents follow the same formatting, we use both [Pretti
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
-> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels) for help.
+> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
 
 ### Adding a new document
 
@@ -241,7 +241,7 @@ There are a few things to keep in mind:
 Moving one or more documents (or an entire tree of documents) is made easier with the `yarn content move` command.
 This command moves the file and fixes up redirects automatically. You can use this command as shown below:
 
-```sh
+```bash
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
@@ -257,7 +257,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 1. Starting from a fresh branch:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -270,13 +270,19 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 2. Move files with `yarn content move`.
    This will delete and modify existing files, as well as create new files.
 
-   ```sh
+   ```bash
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
-3. Commit all of the changes and push your branch to the remote:
+3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
 
-   ```sh
+   ```bash
+   node scripts/update-moved-file-links.js
+   ```
+
+4. Commit all the changes and push your branch to the remote:
+
+   ```bash
    git add .
    git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push
@@ -292,14 +298,14 @@ Similar to moving files, you can delete documents or a tree of documents easily 
 
 You can use this command as shown below:
 
-```sh
+```bash
 yarn content delete <document-slug> [locale] --redirect <redirect-slug-or-url>
 ```
 
 To use `yarn content delete`, provide the slug of the document you'd like to delete (e.g., `Learn/Accessibility`), and the locale as an optional second argument (this defaults to `en-US`).
 If the slug of the page you wish to delete contains special characters, include it in quotes. For example:
 
-```sh
+```bash
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
@@ -308,7 +314,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 1. Start from a fresh branch.
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -320,7 +326,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 2. Run the `yarn content delete` command and redirect all deleted documents.
 
-   ```sh
+   ```bash
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
@@ -330,7 +336,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 3. Commit all of the changes and push your branch to the remote.
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Delete Learn/Accessibility pages"
    git push
@@ -339,14 +345,14 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
 
 ### Redirecting a document
 
-If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
+If you are [moving a document](#moving-documents) as shown above you don't need to create a redirect.
 However, you may need to do so when fixing a broken link or after [deleting a document](#deleting-a-document) without the `--redirect` flag.
 
 You may do this by using the `yarn content add-redirect` command.
 
 1. Start a fresh branch to work in:
 
-   ```sh
+   ```bash
    cd ~/repos/content
    # Fetch the latest changes from the main branch on mdn/content
    git fetch upstream
@@ -358,13 +364,13 @@ You may do this by using the `yarn content add-redirect` command.
 
 2. Add a redirect with `yarn content add-redirect`. The target page can be a page on MDN or an external URL:
 
-   ```sh
+   ```bash
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
 3. Commit all of the changed files and pushing your branch to your fork:
 
-   ```sh
+   ```bash
    git add .
    git commit -m "Adding redirect after deleting Learn/Accessibility pages"
    git push
@@ -413,7 +419,7 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Contribute
+[contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
 [getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
 [how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN

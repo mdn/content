@@ -9,9 +9,9 @@ browser-compat: css.selectors.where
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
-
 The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
 
 ### Forgiving Selector Parsing
 

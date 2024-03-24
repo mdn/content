@@ -13,10 +13,9 @@ It is very important to consider how you are using JavaScript on your websites a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -129,7 +128,7 @@ First of all, you can add the `async` attribute to your `<script>` elements:
 
 This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time and won't block rendering.
 
-> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event. This has a similar effect to `async`.
+> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event. This has a similar effect to `async`.
 
 You could also just not load the JavaScript at all until an event occurs when it is needed. This could be done via DOM scripting, for example:
 
@@ -242,8 +241,8 @@ For animations that can't be handled in JavaScript, for example, animating an HT
 
 ```js
 function loop() {
-  // Clear the camvas before drawing the next frame of the animation
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  // Clear the canvas before drawing the next frame of the animation
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   // Draw objects on the canvas and update their positioning data
@@ -331,7 +330,7 @@ There are several general best practices that will make your code run more effic
 
 ## See also
 
-- [Optimize long tasks](https://web.dev/optimize-long-tasks/) on web.dev (2022)
+- [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2022)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
 
 {{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}

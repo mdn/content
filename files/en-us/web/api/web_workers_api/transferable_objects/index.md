@@ -79,6 +79,7 @@ The items that various specifications indicate can be _transferred_ are:
 - {{domxref("WritableStream")}}
 - {{domxref("TransformStream")}}
 - {{domxref("WebTransportReceiveStream")}}
+- {{domxref("WebTransportSendStream")}}
 - {{domxref("AudioData")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("VideoFrame")}}

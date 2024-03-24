@@ -208,7 +208,7 @@ Our next step is to create a rule for the class `.col`, floating it left, giving
   float: left;
   margin-left: 20px;
   width: 60px;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
@@ -265,7 +265,7 @@ With these classes created we can now lay out different width columns on the gri
 
 Try modifying the classes on your elements or even adding and removing some containers, to see how you can vary the layout. For example, you could make the second row look like this:
 
-```css
+```html
 <div class="row">
   <div class="col span8">13</div>
   <div class="col span4">14</div>
@@ -327,7 +327,7 @@ Next, update the fourth CSS rule (with the `.col` selector) like so:
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
@@ -430,8 +430,6 @@ Try replacing your bottom block of rules with the following, then reload it in t
 
 > **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
 
-> **Note:** If you can't get this to work, it might be because your browser does not support the `calc()` function, although it is fairly well supported across browsers — as far back as IE9.
-
 ### Semantic versus "unsemantic" grid systems
 
 Adding classes to your markup to define layout means that your content and markup becomes tied to your visual presentation. You will sometimes hear this use of CSS classes described as being "unsemantic" — describing how the content looks — rather than a semantic use of classes that describes the content. This is the case with our `span2`, `span3`, etc., classes.
@@ -524,7 +522,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 

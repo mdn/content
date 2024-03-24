@@ -8,9 +8,11 @@ status:
 browser-compat: api.CustomStateSet.add
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
-The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item to the `CustomStateSet`, after checking that the value is in the correct format.
+The **`add`** method of the {{domxref("CustomStateSet")}} interface adds value representing a custom state to the `CustomStateSet`.
+
+Custom elements with a specific state can be selected using the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class, specifying the desired state as an argument.
 
 ## Syntax
 
@@ -21,26 +23,21 @@ add(value)
 ### Parameters
 
 - `value`
-  - : A string which must be a `<dashed-ident>`, with the form `--mystate`.
+  - : A string that represents the custom state.
 
 ### Return value
 
 Undefined.
 
-### Exceptions
-
-- `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the string is not a `<dashed-ident>`.
-
 ## Examples
 
-The following function adds the state `--checked` to a `CustomStateSet`.
+The following function adds the state `checked` to a `CustomStateSet`.
 
 ```js
 class MyCustomElement extends HTMLElement {
   set checked(flag) {
     if (flag) {
-      this._internals.states.add("--checked");
+      this._internals.states.add("checked");
     }
   }
 }

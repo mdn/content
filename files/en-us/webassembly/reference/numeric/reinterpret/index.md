@@ -1,6 +1,7 @@
 ---
 title: Reinterpret
 slug: WebAssembly/Reference/Numeric/Reinterpret
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

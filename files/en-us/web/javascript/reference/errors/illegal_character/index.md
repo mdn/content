@@ -36,7 +36,7 @@ Some characters look similar, but will cause the parser to fail interpreting you
 Famous examples of this are quotes, the minus or semicolon
 ([greek question mark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
 
-```js example-bad
+```js-nolint example-bad
 “This looks like a string”; // SyntaxError: illegal character
 // “ and ” are not " but look like it
 
@@ -61,7 +61,7 @@ Some editors and IDEs will notify you or at least use a slightly different highl
 
 It's easy to forget a character here or there.
 
-```js example-bad
+```js-nolint example-bad
 const colors = ["#000", #333", "#666"];
 // SyntaxError: illegal character
 ```
@@ -77,7 +77,7 @@ const colors = ["#000", "#333", "#666"];
 When copy pasting code from external sources, there might be invalid characters. Watch
 out!
 
-```js example-bad
+```js-nolint example-bad
 const foo = "bar";​
 // SyntaxError: illegal character
 ```

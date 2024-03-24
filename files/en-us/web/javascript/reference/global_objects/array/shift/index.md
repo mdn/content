@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.shift
 
 {{JSRef}}
 
-The **`shift()`** method removes the **first**
+The **`shift()`** method of {{jsxref("Array")}} instances removes the **first**
 element from an array and returns that removed element. This method changes the length
 of the array.
 
@@ -18,6 +18,10 @@ of the array.
 ```js-nolint
 shift()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -103,7 +107,7 @@ console.log(plainObj);
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}

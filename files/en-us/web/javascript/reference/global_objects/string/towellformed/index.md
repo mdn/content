@@ -15,6 +15,10 @@ The **`toWellFormed()`** method of {{jsxref("String")}} values returns a string 
 toWellFormed()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string that is a copy of this string, with all lone surrogates replaced with the Unicode replacement character U+FFFD. If `str` [is well formed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/isWellFormed), a new string is still returned (essentially a copy of `str`).
@@ -33,10 +37,10 @@ When ill-formed strings are used in certain contexts, such as {{domxref("TextEnc
 
 ```js
 const strings = [
-  // Lone high surrogate
+  // Lone leading surrogate
   "ab\uD800",
   "ab\uD800c",
-  // Lone low surrogate
+  // Lone trailing surrogate
   "\uDFFFab",
   "c\uDFFFab",
   // Well-formed

@@ -64,7 +64,7 @@ IE just exposes the native virtual keycode value as `KeyboardEvent.keyCode`.
 
 Google Chrome, Chromium and Safari must decide the value from the input character. If the inputting character can be inputted with the US keyboard layout, they use the `keyCode` value on the US keyboard layout.
 
-Firefox gets `keyCode` values from ASCII characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
+Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
 
 1. If the system is Windows and the native keycode of the pressed key indicates that the key is a-z or 0-9, use a keycode for it.
 2. If the system is Mac and the native keycode of the pressed key indicates that the key is 0-9, use a keycode for it.
@@ -2971,7 +2971,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
     </tr>
     <tr>
       <td><code>DOM_VK_DOUBLE_QUOTE</code></td>
-      <td>0xA3 (162)</td>
+      <td>0xA2 (162)</td>
       <td>Double quote (""") key.</td>
     </tr>
     <tr>

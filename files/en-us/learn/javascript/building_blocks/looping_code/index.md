@@ -13,7 +13,7 @@ Programming languages are very useful for rapidly completing repetitive tasks, f
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
@@ -82,7 +82,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(
       random(canvas.width),
       random(canvas.height),
@@ -104,7 +104,7 @@ You don't have to understand all the code for now, but let's look at the part of
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.fillStyle = "rgb(255 0 0 / 50%)";
   ctx.arc(
     random(canvas.width),
     random(canvas.height),
@@ -126,7 +126,7 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ctx.arc(
   random(canvas.width),
   random(canvas.height),
@@ -161,7 +161,7 @@ for (const cat of cats) {
 In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
-2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
+2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
 3. Get the next item, and repeat (2) until you've reached the end of the collection.
 
 ### map() and filter()
@@ -185,7 +185,7 @@ console.log(upperCats);
 
 Here we pass a function into {{jsxref("Array.prototype.map()","cats.map()")}}, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array. In this case the function we provide converts the item to uppercase, so the resulting array contains all our cats in uppercase:
 
-```
+```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
@@ -207,7 +207,7 @@ console.log(filtered);
 This looks a lot like `map()`, except the function we pass in returns a [boolean](/en-US/docs/Learn/JavaScript/First_steps/Variables#booleans): if it returns `true`, then the item is included in the new array.
 Our function tests that the item starts with the letter "L", so the result is an array containing only cats whose names start with "L":
 
-```
+```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
@@ -266,7 +266,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += "\nFinished!";
+  results.textContent += "\nFinished!\n\n";
 }
 
 const calculateBtn = document.querySelector("#calculate");
@@ -347,13 +347,13 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 
 The final output sentence isn't very well-formed:
 
-```
+```plain
 My cats are called Pete, Biggles, Jasmine,
 ```
 
 We'd prefer it to handle the last cat differently, like this:
 
-```
+```plain
 My cats are called Pete, Biggles, and Jasmine.
 ```
 
@@ -496,7 +496,7 @@ Here's the output:
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -538,7 +538,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-```
+```js-nolint
 initializer
 do {
   // code to run
@@ -947,7 +947,7 @@ Let's have a look at them all again.
 
 First `for...of`:
 
-```
+```js-nolint
 for (const item of array) {
   // code to run
 }
@@ -955,7 +955,7 @@ for (const item of array) {
 
 `for`:
 
-```
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -963,7 +963,7 @@ for (initializer; condition; final-expression) {
 
 `while`:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -974,7 +974,7 @@ while (condition) {
 
 and finally `do...while`:
 
-```
+```js-nolint
 initializer
 do {
   // code to run

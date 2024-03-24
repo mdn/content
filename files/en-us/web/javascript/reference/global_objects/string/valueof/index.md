@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.String.valueOf
 
 {{JSRef}}
 
-The **`valueOf()`** method returns the primitive value of a
-{{jsxref("String")}} object.
+The **`valueOf()`** method of {{jsxref("String")}} values returns this string value.
 
 {{EmbedInteractiveExample("pages/js/string-valueof.html")}}
 
@@ -17,6 +16,10 @@ The **`valueOf()`** method returns the primitive value of a
 ```js-nolint
 valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

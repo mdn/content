@@ -110,7 +110,7 @@ The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specificat
 
 The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
-If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin, after making the request some attributes of the `PerformanceResourceTiming` object will be set to zero.
+If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin after making the request, some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -118,11 +118,11 @@ If a resource isn't served with a `Timing-Allow-Origin` or if the header does no
 </IfModule>
 ```
 
-## Custom Error Pages/Messages
+## Custom error pages/messages
 
 Apache allows you to provide custom error pages for users depending on the type of error they receive.
 
-The error pages are presented as URLs. These URLs can begin with a slash (/) for local web-paths (relative to the DocumentRoot), or be a full URL which the client can resolve.
+The error pages are presented as URLs. These URLs can begin with a slash (/) for local web paths (relative to the DocumentRoot) or be a full URL that the client can resolve.
 
 See the [ErrorDocument Directive](https://httpd.apache.org/docs/current/mod/core.html#errordocument) documentation on the HTTPD documentation site for more information.
 
@@ -130,7 +130,7 @@ See the [ErrorDocument Directive](https://httpd.apache.org/docs/current/mod/core
 ErrorDocument 500 /errors/500.html
 ErrorDocument 404 /errors/400.html
 ErrorDocument 401 https://example.com/subscription_info.html
-ErrorDocument 403 "Sorry, can't allow you access today"
+ErrorDocument 403 "Sorry, can't allow you access today."
 ```
 
 ## Error prevention
@@ -145,13 +145,13 @@ The setting disables `MultiViews` for the directory this configuration applies t
 Options -MultiViews
 ```
 
-## Media Types and Character Encodings
+## Media types and character encodings
 
 Apache uses [mod_mime](https://httpd.apache.org/docs/current/mod/mod_mime.html#addtype) to assign content metadata to the content selected for an HTTP response by mapping patterns in the URI or filenames to the metadata values.
 
-For example, the filename extensions of content files often define the content's Internet media type, language, character set, and content-encoding. This information is sent in HTTP messages containing that content and used in content negotiation when selecting alternatives, such that the user's preferences are respected when choosing one of several possible contents to serve.
+For example, the filename extensions of content files often define the content's Internet media type, language, character set, and content encoding. This information is sent in HTTP messages containing that content and used in content negotiation when selecting alternatives, such that the user's preferences are respected when choosing one of several possible contents to serve.
 
-**Changing the metadata for a file does not change the value of the Last-Modified header. Thus, previously cached copies may still be used by a client or proxy, with the previous headers. If you change the metadata (language, content type, character set, or encoding) you may need to 'touch' affected files (updating their last modified date) to ensure that all visitors receive the corrected content headers.**
+**Changing the metadata for a file does not change the value of the Last-Modified header. Thus, previously cached copies may still be used by a client or proxy, with the previous headers. If you change the metadata (language, content type, character set, or encoding), you may need to 'touch' affected files (updating their last modified date) to ensure all visitors receive the corrected content headers.**
 
 ### Serve resources with the proper media types (a.k.a. MIME types)
 
@@ -219,7 +219,7 @@ Servers should use `text/javascript` for JavaScript resources as indicated in th
 </IfModule>
 ```
 
-## Set the default Charset attribute
+## Set the default charset attribute
 
 Every piece of content on the web has a character set. Most, if not all, the content is UTF-8 Unicode.
 
@@ -258,15 +258,15 @@ Serve the following file types with the `charset` parameter set to `UTF-8` using
 </IfModule>
 ```
 
-## Mod_rewrite and the RewriteEngine directives
+## `Mod_rewrite` and the `RewriteEngine` directives
 
 [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) provides a way to modify incoming URL requests, dynamically, based on regular expression rules. This allows you to map arbitrary URLs onto your internal URL structure in any way you like.
 
 It supports an unlimited number of rules and an unlimited number of attached rule conditions for each rule to provide a really flexible and powerful URL manipulation mechanism. The URL manipulations can depend on various tests: server variables, environment variables, HTTP headers, timestamps, external database lookups, and various other external programs or handlers, can be used to achieve granular URL matching.
 
-### Enable mod_rewrite
+### Enable `mod_rewrite`
 
-The basic pattern to enable `mod_rewrite` is a pre-requisite for all other tasks that use.
+The basic pattern to enable `mod_rewrite` is a prerequisite for all other tasks that use it.
 
 The required steps are:
 
@@ -274,7 +274,7 @@ The required steps are:
 2. Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
 3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
-   - Some cloud hosting services will require you set `RewriteBase`
+   - Some cloud hosting services will require you to set `RewriteBase`
    - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
    - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
 
@@ -288,7 +288,7 @@ The required steps are:
 </IfModule>
 ```
 
-### Forcing https
+### Forcing HTTPS
 
 These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
 
@@ -300,7 +300,7 @@ These Rewrite rules will redirect from the `http://` insecure version to the `ht
 </IfModule>
 ```
 
-If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create your SSL certificates, it will fail to validate the certificate if validation requests are redirected to HTTPS. Turn on the condition(s) you need.
+If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create your TLS certificates, it will fail to validate the certificate if validation requests are redirected to HTTPS. Turn on the condition(s) you need.
 
 ```apacheconf
 <IfModule mod_rewrite.c>
@@ -313,13 +313,13 @@ If you're using cPanel AutoSSL or the Let's Encrypt webroot method to create you
 </IfModule>
 ```
 
-### Redirecting from www. URLs
+### Redirecting from `www.` URLs
 
 These directives will rewrite `www.example.com` to `example.com`.
 
-You should not duplicate content in multiple origins (with and without www);This can cause SEO problems (duplicate content), and therefore, you should choose one of the alternatives and redirect the other one. You should also use [Canonical URLs](https://www.semrush.com/blog/canonical-url-guide/) to indicate which URL should search engines crawl (if they support the feature).
+You should not duplicate content in multiple origins (with and without www). This can cause SEO problems (duplicate content), and therefore, you should choose one of the alternatives and redirect the other one. You should also use [Canonical URLs](https://www.semrush.com/blog/canonical-url-guide/) to indicate which URL should search engines crawl (if they support the feature).
 
-Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (http or https).
+Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (`http` or `https`).
 
 The rule assumes by default that both HTTP and HTTPS environments are available for redirection.
 
@@ -336,15 +336,15 @@ The rule assumes by default that both HTTP and HTTPS environments are available 
 </IfModule>
 ```
 
-### Inserting the www. at the beginning of URLs
+### Inserting the `www.` at the beginning of URLs
 
 These rules will insert `www.` at the beginning of a URL. It's important to note that you should never make the same content available under two different URLs.
 
-This can cause SEO problems (duplicate content), and therefore, you should choose one of the alternatives and redirect the other one. For search engines that support them you should use [Canonical URLs](https://www.semrush.com/blog/canonical-url-guide/) to indicate which URL should search engines crawl.
+This can cause SEO problems (duplicate content), and therefore, you should choose one of the alternatives and redirect the other one. For search engines that support them, you should use [Canonical URLs](https://www.semrush.com/blog/canonical-url-guide/) to indicate which URL should search engines crawl.
 
-Set `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (http or https).
+Set the `%{ENV:PROTO}` variable, to allow rewrites to redirect with the appropriate schema automatically (`http` or `https`).
 
-The rule assumes by default that both HTTP and HTTPS environments are available for redirection. If your SSL certificate could not handle one of the domains used during redirection, you should turn the condition on.
+The rule assumes by default that both HTTP and HTTPS environments are available for redirection. If your TLS certificate cannot handle one of the domains used during redirection, you should turn the condition on.
 
 The following might not be a good idea if you use "real" subdomains for certain parts of your website.
 
@@ -365,7 +365,7 @@ The following might not be a good idea if you use "real" subdomains for certain 
 </IfModule>
 ```
 
-## Frame Options
+## Frame options
 
 The example below sends the `X-Frame-Options` response header with DENY as the value, informing browsers not to display the content of the web page in any frame to protect the website against [clickjacking](/en-US/docs/Glossary/Clickjacking).
 
@@ -386,8 +386,6 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 [CSP (Content Security Policy)](https://content-security-policy.com/) mitigates the risk of cross-site scripting and other content-injection attacks by setting a `Content Security Policy` which allows trusted sources of content for your website.
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
-
-The example policy below:
 
 To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/home/generate/). You should also use a [validator](https://csp-evaluator.withgoogle.com) to make sure your header does what you want it to do.
 
@@ -427,7 +425,7 @@ The `.well-known/` directory represents [the standard (RFC 5785)](https://datatr
 
 Block access to backup and source files that may be left by some text editors and can pose a security risk when anyone has access to them.
 
-Update the `<FilesMatch>` regular expression in the following example to include any files that might end up on your production server and can expose sensitive information about your website. These files may include: configuration files or files that contain metadata about the project among others.
+Update the `<FilesMatch>` regular expression in the following example to include any files that might end up on your production server and can expose sensitive information about your website. These files may include configuration files or files that contain metadata about the project, among others.
 
 ```apacheconf
 <IfModule mod_authz_core.c>
@@ -443,7 +441,7 @@ If a user types `example.com` in their browser, even if the server redirects the
 
 The following header ensures that a browser only connects to your server via HTTPS, regardless of what the users type in the browser's address bar.
 
-Be aware that Strict Transport Security is not revokable, and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g. due to an expired TLS certificate) your visitors will see an error message even when attempting to connect over HTTP.
+Be aware that Strict Transport Security is not revokable, and you must ensure being able to serve the site over HTTPS for as long as you've specified in the `max-age` directive. If you don't have a valid TLS connection anymore (e.g., due to an expired TLS certificate), your visitors will see an error message even when attempting to connect over HTTP.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -460,7 +458,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
 1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
 
    - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
-   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
+   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from. Otherwise, it will be restricted to the same origin as the page making the request
 
 2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
 
@@ -486,7 +484,7 @@ Some older browsers would try and guess the content type of a resource, even whe
 </IfModule>
 ```
 
-## Referrer Policy
+## Referrer policy
 
 We include the `Referrer-Policy` header in responses for resources that are able to request (or navigate to) other resources.
 
@@ -494,7 +492,7 @@ This includes commonly used resource types: HTML, CSS, XML/SVG, PDF documents, s
 
 To prevent referrer leakage entirely, specify the `no-referrer` value instead. Note that the effect could negatively impact analytics tools.
 
-Use services like the ones below to check your Referrer Policy:
+Use services like the ones below to check your `Referrer-Policy`:
 
 - [securityheaders.com](https://securityheaders.com/)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
@@ -505,7 +503,7 @@ Use services like the ones below to check your Referrer Policy:
 </IfModule>
 ```
 
-## Disable TRACE HTTP Method
+## Disable `TRACE` HTTP Method
 
 The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
@@ -521,9 +519,9 @@ If you have access to the main server configuration file, use the [`TraceEnable`
 </IfModule>
 ```
 
-## Remove the X-Powered-By response header
+## Remove the `X-Powered-By` response header
 
-Some frameworks like PHP and ASP.NET set an `X-Powered-By` header that contains information about them (e.g.: their name, version number)
+Some frameworks like PHP and ASP.NET set an `X-Powered-By` header that contains information about them (e.g., their name, version number)
 
 This header doesn't provide any value, and in some cases, the information it provides can expose vulnerabilities
 
@@ -540,15 +538,15 @@ If you can, you should disable the `X-Powered-By` header from the language/frame
 expose_php = off;
 ```
 
-## Remove Apache-generated Server Information Footer
+## Remove Apache-generated server information footer
 
-Prevent Apache from adding a trailing footer line containing information about the server to the server-generated documents (e.g.: error messages, directory listings, etc.). See [ServerSignature Directive](https://httpd.apache.org/docs/current/mod/core.html#serversignature) for more information on what the server signature provides and the [ServerTokens Directive](https://httpd.apache.org/docs/current/mod/core.html#servertokens) for information about configuring the information provided in the signature.
+Prevent Apache from adding a trailing footer line containing information about the server to the server-generated documents (e.g., error messages, directory listings, etc.). See the [`ServerSignature` directive](https://httpd.apache.org/docs/current/mod/core.html#serversignature) documentation for more information on what the server signature provides and the [`ServerTokens` directive](https://httpd.apache.org/docs/current/mod/core.html#servertokens) for information about configuring the information provided in the signature.
 
 ```apacheconf
 ServerSignature Off
 ```
 
-## Fix broken AcceptEncoding Headers
+## Fix broken `AcceptEncoding` headers
 
 Some proxies and security software mangle or strip the `Accept-Encoding` HTTP header. See [Pushing Beyond Gzipping](https://calendar.perfplanet.com/2010/pushing-beyond-gzipping/) for a more detailed explanation.
 
@@ -612,7 +610,7 @@ Compress all output labeled with one of the following media types using the [Add
 
 ## Map extensions to media types
 
-Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these files types were served without an appropriate `Content-Encoding` response header, client applications (e.g.: browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
+Map the following filename extensions to the specified encoding type using [AddEncoding](https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding) so Apache can serve the file types with the appropriate `Content-Encoding` response header (this will NOT make Apache compress them!). If these file types were served without an appropriate `Content-Encoding` response header, client applications (e.g., browsers) wouldn't know that they first need to uncompress the response, and thus, wouldn't be able to understand the content.
 
 ```apacheconf
 <IfModule mod_deflate.c>

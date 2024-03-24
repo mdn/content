@@ -26,7 +26,7 @@ None.
 > {{domxref("Response.type")}} of `"opaque"`, the resulting {{domxref("Blob")}}
 > will have a {{domxref("Blob.size")}} of `0` and a {{domxref("Blob.type")}} of
 > empty string `""`, which renders it _useless_ for methods like
-> {{domxref("URL.createObjectURL")}}.
+> {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ### Return value
 
@@ -38,7 +38,7 @@ In our [fetch request example](https://github.com/mdn/dom-examples/tree/main/fet
 create a new request using the {{domxref("Request.Request","Request()")}} constructor,
 then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
 out of the response using `blob()`, put it into an object URL using
-{{domxref("URL.createObjectURL")}}, and then set that URL as the source of an
+{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and then set that URL as the source of an
 {{htmlelement("img")}} element to display the image.
 
 ```js

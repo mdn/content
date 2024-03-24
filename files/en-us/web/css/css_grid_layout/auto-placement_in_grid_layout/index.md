@@ -320,7 +320,7 @@ The first thing grid will do is place any items that have a position. In the exa
 
 ### Deal with items that span tracks
 
-You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting odd items to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to `span 2`. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.
+You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting items 1, 5, and 9 (4n+1) to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to `span 2`. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.
 
 You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn't fit into a track, it will move to the next row until it finds a space the item can fit in.
 
@@ -390,7 +390,7 @@ So far, other than items we have specifically placed, grid is always progressing
 
 To do this, add the property {{cssxref("grid-auto-flow")}} with a value of `dense` to the container. This is the same property you use to change the flow order to `column`, so if you were working in columns you would add both values `grid-auto-flow: column dense`.
 
-Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.
+Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in the [Grid layout and accessibility guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility), but you should take care when creating this disconnect between the visual order and display order.
 
 ```css hidden
 * {

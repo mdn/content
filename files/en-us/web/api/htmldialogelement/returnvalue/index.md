@@ -8,10 +8,7 @@ browser-compat: api.HTMLDialogElement.returnValue
 
 {{ APIRef("HTML DOM") }}
 
-The **`returnValue`** property of the
-{{domxref("HTMLDialogElement")}} interface gets or sets the return value for the
-{{htmlelement("dialog")}}, usually to indicate which button the user pressed to
-close it.
+The **`returnValue`** property of the {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the {{htmlelement("dialog")}}, usually to indicate which button the user pressed to close it.
 
 ## Value
 
@@ -19,7 +16,10 @@ A string representing the `returnValue` of the dialog.
 
 ## Examples
 
-The following example displays a button to open a {{htmlelement("dialog")}} containing a form via the `showModal()` method. The script assigns the `returnvalue` an initial value. From there, the confirm button submits the form with validation and the "X" button submits the form without validation. Submitting a form with a `method="dialog"` closes the dialog and sets the return value to the `name`, if any, of the submit button. The reset button has an event handler that closes the dialog; it has no impact on the `returnValue`. Neither does closing the dialog with the <kbd>Esc</kbd> key.
+The following example displays a button to open a {{htmlelement("dialog")}} containing a form via the `showModal()` method.
+The script assigns the `returnValue` an initial value of `initialValue`.
+The confirm button (`confirmBtn`) submits the form with validation and the "X" button submits the form without validation. Submitting a form with a `method="dialog"` closes the dialog and sets the return value to the `value`, if any, of the `button` or `input` elements of `type=submit`.
+The reset button has an event handler that closes the dialog; it has no impact on the `returnValue`. Neither does closing the dialog with the <kbd>Esc</kbd> key.
 
 ```html
 <!-- Simple pop-up dialog box containing a form -->

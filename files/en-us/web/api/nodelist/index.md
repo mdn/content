@@ -37,7 +37,7 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 
 ## Instance properties
 
-- {{domxref("NodeList.length")}}
+- {{domxref("NodeList.length")}} {{ReadOnlyInline}}
   - : The number of nodes in the `NodeList`.
 
 ## Instance methods

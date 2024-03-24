@@ -55,7 +55,7 @@ pre.textContent = result;
 
 {{EmbedLiveSample("Example", "100%", 120)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

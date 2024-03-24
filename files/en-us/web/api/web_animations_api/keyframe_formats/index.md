@@ -113,7 +113,7 @@ We have only specified the end state of the animation, and the beginning state i
 
 ## Attributes
 
-Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using camel-case so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
+Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
 
 Two exceptional CSS properties are:
 

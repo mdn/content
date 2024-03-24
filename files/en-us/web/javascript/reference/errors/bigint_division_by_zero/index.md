@@ -46,5 +46,5 @@ const quotient = b === 0n ? undefined : a / b;
 ## See also
 
 - [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [Division](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Remainder](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)

@@ -12,8 +12,8 @@ The **`orientationY`** property of the {{ domxref("PannerNode") }} interface
 indicates the Y (vertical) component of the direction the audio source is facing, in 3D Cartesian coordinate space.
 
 The complete vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY", "positionY")}},
+{{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},

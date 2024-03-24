@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.match
 
 {{JSRef}}
 
-The **`match()`** method retrieves the result of matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 {{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
 

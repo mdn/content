@@ -40,10 +40,8 @@ Assuming a runtime that supports Indonesian and German but not Balinese in durat
 ```js
 const locales = ["ban", "id-u-co-pinyin", "de-ID"];
 const options = { localeMatcher: "lookup" };
-console.log(
-  Intl.DurationFormat.supportedLocalesOf(locales, options).join(", "),
-);
-// "id-u-co-pinyin, de-ID"
+console.log(Intl.DurationFormat.supportedLocalesOf(locales, options));
+// ["id-u-co-pinyin", "de-ID"]
 ```
 
 ## Specifications

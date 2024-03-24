@@ -43,4 +43,4 @@ A new {{domxref("DOMRect")}} object.
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
-- {{domxref("DOMRect.fromRect()")}}
+- {{domxref("DOMRect.fromRect_static", "DOMRect.fromRect()")}}

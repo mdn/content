@@ -160,7 +160,7 @@ The scoping effect of the initialization block can be understood as if the decla
 
 So re-assigning the new variables within `afterthought` does not affect the bindings from the previous iteration.
 
-Creating closures allows you to get hold of a binding during any particular iteration. This explains why closures created within the `initialization` section do not get updated by re-assignments of `i` in the `afterthought`.
+A new lexical scope is also created after `initialization`, just before `condition` is evaluated for the first time. These details can be observed by creating closures, which allow to get hold of a binding at any particular point. For example, in this code a closure created within the `initialization` section does not get updated by re-assignments of `i` in the `afterthought`:
 
 ```js
 for (let i = 0, getI = () => i; i < 3; i++) {
@@ -178,7 +178,17 @@ for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
 // Logs 0, 1, 2
 ```
 
-In fact, you can capture the initial binding of the `i` variable and re-assign it later, and this updated value will not be visible to the loop body, which sees the next new binding of `i`.
+The `i` variable inside the `initialization` is distinct from the `i` variable inside every iteration, including the first. So, in this example, `getI` returns 0, even though the value of `i` inside the iteration is incremented beforehand:
+
+```js
+for (let i = 0, getI = () => i; i < 3; ) {
+  i++;
+  console.log(getI());
+}
+// Logs 0, 0, 0
+```
+
+In fact, you can capture this initial binding of the `i` variable and re-assign it later, and this updated value will not be visible to the loop body, which sees the next new binding of `i`.
 
 ```js
 for (
@@ -250,7 +260,7 @@ for (let l = 0, r = arr.length - 1; l < r; l++, r--) {
 
 ## See also
 
-- [empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
+- [Empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty)
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/while", "while")}}

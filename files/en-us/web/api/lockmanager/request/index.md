@@ -6,10 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.LockManager.request
 ---
 
-{{APIRef("Web Locks")}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
-The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}}.
+The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 The `mode` property of the `options` parameter may be either `"exclusive"` or `"shared"`.
 
@@ -62,8 +62,8 @@ request(name, options, callback)
         > Code that was previously running inside the lock continues to run, and may clash with the code that now holds the lock.
 
     - `signal` {{optional_inline}}
-      - : An `AbortSignal` (the `signal` property of an `AbortController`);
-        if specified and the `AbortController` is aborted, the lock request is dropped if it was not already granted.
+      - : An {{domxref("AbortSignal")}} (the {{domxref("AbortController.signal", "signal")}} property of an {{domxref("AbortController")}});
+        if specified and the {{domxref("AbortController")}} is aborted, the lock request is dropped if it was not already granted.
 
 - `callback`
   - : Method called when the lock is granted.
@@ -79,13 +79,13 @@ A {{jsxref('Promise')}} that resolves (or rejects) with the result of the callba
 This method may return a promise rejected with a {{domxref("DOMException")}} of one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : If the environments document is not fully active.
+  - : Thrown if the environments document is not fully active.
 - `SecurityError` {{domxref("DOMException")}}
-  - : If a lock manager cannot be obtained for the current environment.
+  - : Thrown if a lock manager cannot be obtained for the current environment.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : If `names` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
+  - : Thrown if `name` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
 - `AbortError` {{domxref("DOMException")}}
-  - : If the option `signal` exists and is aborted.
+  - : Thrown if the option `signal` exists and is aborted.
 
 ## Examples
 
@@ -100,7 +100,7 @@ await navigator.locks.request("my_resource", async (lock) => {
 });
 ```
 
-### Mode Example
+### `mode` example
 
 The following example shows how to use the `mode` option for readers and writers.
 
@@ -134,7 +134,7 @@ async function do_write() {
 }
 ```
 
-### ifAvailable Example
+### `ifAvailable` example
 
 To grab a lock only if it isn't already being held, use the `ifAvailable` option.
 In this function `await` means the method will not return until the callback is complete.
@@ -156,7 +156,7 @@ await navigator.locks.request(
 );
 ```
 
-### signal Example
+### `signal` example
 
 To only wait for a lock for a short period of time, use the `signal` option.
 

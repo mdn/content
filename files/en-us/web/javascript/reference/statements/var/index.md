@@ -22,16 +22,9 @@ var name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
-
-The [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
-
-```js
-var { bar } = foo; // where foo = { bar: 10, baz: 12 };
-// This creates a variable with the name 'bar', which has a value of 10
-```
 
 ## Description
 
@@ -68,9 +61,9 @@ for (var a of [1, 2, 3]);
 console.log(a); // 3
 ```
 
-In a script, a variable declared using `var` is added as a non-configurable property of the global object. This means its property descriptor cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. JavaScript has automatic memory management, and it would make no sense to be able to use the `delete` operator on a global variable.
+In a script, a variable declared using `var` is added as a non-configurable property of the global object. This means its property descriptor cannot be changed and it cannot be deleted using {{jsxref("Operators/delete", "delete")}}. JavaScript has automatic memory management, and it would make no sense to be able to use the `delete` operator on a global variable.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 var x = 1;
 Object.hasOwn(globalThis, "x"); // true
@@ -80,7 +73,7 @@ delete x; // SyntaxError in strict mode. Fails silently otherwise.
 
 In both NodeJS [CommonJS](https://www.commonjs.org/) modules and native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), top-level variable declarations are scoped to the module, and are not added as properties to the global object.
 
-The list that follows the `var` keyword is called a _{{glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list and get the initialized value.
+The list that follows the `var` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list and get the initialized value.
 
 ### Hoisting
 
@@ -145,14 +138,14 @@ console.log(a); // 1
 
 `var` declarations cannot be in the same scope as a {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, or {{jsxref("Statements/import", "import")}} declaration.
 
-```js example-bad
+```js-nolint example-bad
 var a = 1;
 let a = 2; // SyntaxError: Identifier 'a' has already been declared
 ```
 
 Because `var` declarations are not scoped to blocks, this also applies to the following case:
 
-```js example-bad
+```js-nolint example-bad
 let a = 1;
 {
   var a = 1; // SyntaxError: Identifier 'a' has already been declared
@@ -181,7 +174,7 @@ foo(2); // Logs 1
 
 A `var` declaration within a `catch` block can have the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a destructuring pattern. This is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements) and you should not rely on it. In this case, the declaration is hoisted to outside the `catch` block, but any value assigned within the `catch` block is not visible outside.
 
-```js example-bad
+```js-nolint example-bad
 try {
   throw 1;
 } catch (e) {
@@ -283,6 +276,18 @@ a(); // Also calls b.
 console.log(x, z); // 3 5
 console.log(typeof y); // "undefined", as y is local to function a
 ```
+
+### Declaration with destructuring
+
+The left-hand side of each `=` can also be a binding pattern. This allows creating multiple variables at once.
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+var [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ## Specifications
 

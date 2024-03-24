@@ -31,18 +31,14 @@ None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
-You should use `removeAttribute()` instead of setting the attribute value to
-`null` either directly or using {{domxref("Element.setAttribute",
-  "setAttribute()")}}. Many attributes will not behave as expected if you set them to
-`null`.
-
-{{ DOMAttributeMethods() }}
+You should use `removeAttribute()` instead of setting the attribute value to `null` either directly or using {{domxref("Element.setAttribute", "setAttribute()")}}.
+Many attributes will not behave as expected if you set them to `null`.
 
 ## Examples
 
 ```js
-// Given: <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
+// Given: <div id="div1" disabled width="200px">
+document.getElementById("div1").removeAttribute("disabled");
 // Now: <div id="div1" width="200px">
 ```
 
@@ -53,3 +49,10 @@ document.getElementById("div1").removeAttribute("align");
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

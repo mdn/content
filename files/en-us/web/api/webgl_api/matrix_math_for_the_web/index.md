@@ -26,8 +26,13 @@ What does multiplying by the identity matrix look like? The easiest example is t
 
 After adding the `w` component to the point, notice how neatly the matrix and the point line up:
 
-```js
-[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1][(4, 3, 2, 1)]; // Point at [x, y, z, w]
+```js-nolint
+[1, 0, 0, 0,
+ 0, 1, 0, 0,
+ 0, 0, 1, 0,
+ 0, 0, 0, 1]
+
+[4, 3, 2, 1] // Point at [x, y, z, w]
 ```
 
 The `w` component has some additional uses that are out of scope for this article. Check out the [WebGL model view projection](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection) article for a look into how it comes in handy.

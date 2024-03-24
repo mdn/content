@@ -16,7 +16,7 @@ Using a value of `0` would make the box completely transparent, and values betwe
 
 ## Changing the opacity of the background color only
 
-In many cases you will only want to make the background color itself partly transparent, keeping the text and other elements fully opaque. To achieve this, use a color value which has an alpha channel—such as [rgba](/en-US/docs/Web/CSS/color_value#rgb_color_model). As with `opacity`, a value of `1` for the alpha channel value makes the color fully opaque. Therefore `background-color: rgba(0,0,0,.5);` will set the background color to 50% opacity.
+In many cases you will only want to make the background color itself partly transparent, keeping the text and other elements fully opaque. To achieve this, use a [`<color>`](/en-US/docs/Web/CSS/color_value) value that has an alpha channel, such as `rgb()`. As with `opacity`, a value of `1` for the alpha channel value makes the color fully opaque. Therefore, `background-color: rgb(0 0 0 / 50%);` will set the background color to 50% opacity.
 
 Try changing the opacity and alpha channel values in the below examples to see more or less of the background image behind the box.
 

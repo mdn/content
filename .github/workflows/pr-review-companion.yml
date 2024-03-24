@@ -1,76 +1,36 @@
-# Things to do and run after a "PR Test" workflow has finished successfully.
+# Things to do and run after a "tests" job in "PR Test" workflow has completed successfully.
 # Note, as of right now, this workflow does a bunch of things. It might be
 # worth considering to break it up so there's a dedicated post-PR
 # workflow just to posting PR comments about flaws, for example.
 
 name: PR review companion
 
-on:
-  workflow_run:
-    workflows: ["PR Test"]
-    types:
-      - completed
+on: workflow_call
 
 jobs:
   review:
     runs-on: ubuntu-latest
-
-    if: >
-      ${{ github.repository == 'mdn/content' &&
-      github.event.workflow_run.event == 'pull_request' &&
-      github.event.workflow_run.conclusion == 'success' }}
-
     steps:
       - name: "Download artifact"
-        uses: actions/github-script@v6
+        uses: actions/download-artifact@v4
         with:
-          script: |
-            var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               run_id: ${{github.event.workflow_run.id }},
-            });
-            var matchArtifacts = artifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "build"
-            });
-            if (matchArtifacts.length === 0) {
-              console.warn(
-                'No artifacts to download probably just means nothing ' +
-                'was built in the "PR test" workflow. That\'s OK. ' +
-                'This is actually not a genuine CI error.'
-              );
-              throw new Error(
-                'No matched build artifacts. ' +
-                'Perhaps nothing built in the "PR test" workflow'
-              );
-            }
-            var matchArtifact = matchArtifacts[0];
-            var download = await github.rest.actions.downloadArtifact({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                artifact_id: matchArtifact.id,
-                archive_format: 'zip',
-            });
-            var fs = require('fs');
-            fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
+          name: build
+          path: build
 
-      - name: Unzip what was downloaded
-        run: 7z x build.zip -obuild -bb1
-
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: mdn/yari
           path: yari
 
       - name: Install Python
         id: setup-python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.local
           # the trailing number is used to increase for getting
@@ -85,7 +45,7 @@ jobs:
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: yari/deployer/.venv
           # the trailing number is used to increase for getting

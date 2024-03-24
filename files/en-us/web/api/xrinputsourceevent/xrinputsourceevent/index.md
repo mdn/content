@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRInputSourceEvent()`**
 constructor creates and returns a new {{domxref("XRInputSourceEvent")}} object

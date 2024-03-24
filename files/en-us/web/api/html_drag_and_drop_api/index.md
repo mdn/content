@@ -2,7 +2,7 @@
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
 page-type: web-api-overview
-spec-urls: https://html.spec.whatwg.org/multipage/#dnd
+spec-urls: https://html.spec.whatwg.org/multipage/dnd.html
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -47,7 +47,7 @@ Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/
 
 ```html
 <script>
-  function dragstart_handler(ev) {
+  function dragstartHandler(ev) {
     // Add the target element's id to the data transfer object
     ev.dataTransfer.setData("text/plain", ev.target.id);
   }
@@ -56,7 +56,7 @@ Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/
     // Get the element by id
     const element = document.getElementById("p1");
     // Add the ondragstart event listener
-    element.addEventListener("dragstart", dragstart_handler);
+    element.addEventListener("dragstart", dragstartHandler);
   });
 </script>
 
@@ -75,7 +75,7 @@ The application is free to include any number of data items in a drag operation.
 Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   // Add different types of drag data
   ev.dataTransfer.setData("text/plain", ev.target.innerText);
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
@@ -99,7 +99,7 @@ By default, the browser supplies an image that appears beside the pointer during
 // will not be created and the default drag image will be used.
 let img = new Image();
 img.src = "example.gif";
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
@@ -123,7 +123,7 @@ During the drag operation, drag effects may be modified to indicate that certain
 The following example shows how to use this property.
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   ev.dataTransfer.dropEffect = "copy";
 }
 ```
@@ -140,11 +140,11 @@ The following example shows how to use those attributes, and includes basic even
 
 ```html
 <script>
-  function dragover_handler(ev) {
+  function dragoverHandler(ev) {
     ev.preventDefault();
     ev.dataTransfer.dropEffect = "move";
   }
-  function drop_handler(ev) {
+  function dropHandler(ev) {
     ev.preventDefault();
     // Get the id of the target and add the moved element to the target's DOM
     const data = ev.dataTransfer.getData("text/plain");
@@ -152,10 +152,7 @@ The following example shows how to use those attributes, and includes basic even
   }
 </script>
 
-<p
-  id="target"
-  ondrop="drop_handler(event)"
-  ondragover="dragover_handler(event)">
+<p id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
   Drop Zone
 </p>
 ```
@@ -176,16 +173,16 @@ The following example shows a drop handler getting the source element's `id` fro
 
 ```html
 <script>
-  function dragstart_handler(ev) {
+  function dragstartHandler(ev) {
     // Add the target element's id to the data transfer object
     ev.dataTransfer.setData("application/my-app", ev.target.id);
     ev.dataTransfer.effectAllowed = "move";
   }
-  function dragover_handler(ev) {
+  function dragoverHandler(ev) {
     ev.preventDefault();
     ev.dataTransfer.dropEffect = "move";
   }
-  function drop_handler(ev) {
+  function dropHandler(ev) {
     ev.preventDefault();
     // Get the id of the target and add the moved element to the target's DOM
     const data = ev.dataTransfer.getData("application/my-app");
@@ -193,13 +190,13 @@ The following example shows a drop handler getting the source element's `id` fro
   }
 </script>
 
-<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">
+<p id="p1" draggable="true" ondragstart="dragstartHandler(event)">
   This element is draggable.
 </p>
 <div
   id="target"
-  ondrop="drop_handler(event)"
-  ondragover="dragover_handler(event)">
+  ondrop="dropHandler(event)"
+  ondragover="dragoverHandler(event)">
   Drop Zone
 </div>
 ```

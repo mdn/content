@@ -1,6 +1,7 @@
 ---
 title: Grow
 slug: WebAssembly/Reference/Memory/Grow
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

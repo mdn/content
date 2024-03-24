@@ -13,7 +13,7 @@ When writing web pages and apps, one of the most common things you'll want to do
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
+        A basic understanding of HTML, CSS, and
         JavaScript — including JavaScript objects.
       </td>
     </tr>
@@ -218,7 +218,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
    </p>
    ```
 
-> **Note:** Notice how the JavaScript property versions of the CSS styles are written in lower camel case whereas the CSS versions are hyphenated (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
+> **Note:** Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
 There is another common way to dynamically manipulate styles on your document, which we'll look at now.
 

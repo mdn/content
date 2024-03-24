@@ -70,7 +70,7 @@ The flexbox specification details what should happen if a flex item is collapsed
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
-In the following live example I have a non-wrapped flex container. The third item has more content than the others yet is set to `visibility: collapse` and therefore the flex container is retaining a _strut_ of the height required to display this item. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item disappear and the space redistribute between non-collapsed items; the height of the flex container should not change.
+In the following live example, I have a non-wrapped flex container. The third item has more content than the others yet is set to `visibility: collapse`; therefore, the flex container is retaining a _strut_ of the height required to display this item. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item appear, and the space is redistributed between non-collapsed items; the height of the flex container should not change.
 
 > **Note:** Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.
 
@@ -86,6 +86,7 @@ I have created this behavior in the next live example. You can see how the stret
 
 If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
 
-### The difference between `visibility: hidden` and `display: none`
+### Using `visibility: hidden` and `display: none`
 
-When you set an item to `display: none` in order to hide it, the item is removed from the formatting structure of the page. What this means in practice is that counters ignore it, and things like transitions do not run. Using `visibility: hidden` keeps the box in the formatting structure which is useful in that it still behaves as if it were part of the layout even though the user can't see it.
+In previous live example, try using `visibility: hidden` or `display: none` instead of `visiblity: collapse`. Using `visibility: hidden`, the item is made invisible but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
+When you use `display: none`, the item is completely removed from the formatting structure. Not only is it invisible but the structure is removed as well. This means counters ignore it and things like transitions do not run.

@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
@@ -279,7 +279,7 @@ class Server {
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
                 int opcode = bytes[0] & 0b00001111, // expecting 1 - text message
                     offset = 2;
-                ulong msglen = bytes[1] & 0b01111111;
+                ulong msglen = bytes[1] & (ulong)0b01111111;
 
                 if (msglen == 126) {
                     // bytes are reversed because websocket will print them in Big-Endian, whereas

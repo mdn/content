@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.contextualIdentities.onUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the properties of a contextual identity, such as its name, icon, or color, are changed. Contextual identities may be updated by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 

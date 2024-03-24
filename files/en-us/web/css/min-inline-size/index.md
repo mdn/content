@@ -24,6 +24,7 @@ min-inline-size: 10%;
 /* Keyword values */
 min-inline-size: max-content;
 min-inline-size: min-content;
+min-inline-size: fit-content;
 min-inline-size: fit-content(20em);
 
 /* Global values */

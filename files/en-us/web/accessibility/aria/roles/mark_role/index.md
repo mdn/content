@@ -51,12 +51,11 @@ Will be part of [WAI-ARIA 1.3](https://w3c.github.io/aria/#mark), which is still
 ## See also
 
 - HTML {{HTMLElement('mark')}} element
-- [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

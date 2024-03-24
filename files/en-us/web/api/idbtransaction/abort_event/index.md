@@ -83,7 +83,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.onabort", "onabort")}} property:
+The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.abort_event", "onabort")}} property:
 
 ```js
 // Open the database

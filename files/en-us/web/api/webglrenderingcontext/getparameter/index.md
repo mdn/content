@@ -893,8 +893,7 @@ You can query the following `pname` parameters when using a
       </td>
       <td>
         See
-        {{domxref("WebGL2RenderingContext/bindTransformFeedback",
-        "bindTransformFeedback")}}.
+        {{domxref("WebGL2RenderingContext/bindTransformFeedback", "bindTransformFeedback")}}.
       </td>
     </tr>
     <tr>

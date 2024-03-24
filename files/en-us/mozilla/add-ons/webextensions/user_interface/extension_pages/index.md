@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 page-type: guide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
 
@@ -18,7 +18,7 @@ Think of the background page as a "hidden extension page".
 
 You can include HTML files—and associated CSS or JavaScript files—in your extension. The files can be included in the root or organized within meaningful sub-folders.
 
-```
+```plain
 /my-extension
     /manifest.json
     /my-page.html
