@@ -811,10 +811,9 @@ This topic provides an index to the main _sorts_ of events you might be interest
         >,
         <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"
           ><code>WorkerGlobalScope</code></a
-        >, <a href="/en-US/docs/Web/API/Worker#events"><code>Worker</code></a
         >,
-        <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"
-          ><code>WorkerGlobalScope</code></a
+        <a href="/en-US/docs/Web/API/Worker#events"
+          ><code>Worker</code></a
         >,
         <a href="/en-US/docs/Web/API/BroadcastChannel#events"
           ><code>BroadcastChannel</code></a
