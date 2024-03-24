@@ -33,7 +33,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         Good choice for lossless animation sequences (GIF is less performant).
         AVIF and WebP have better performance but less broad browser support.<br />
-        <strong>Supported</strong>: Chrome, Edge, Firefox, Opera, Safari.
+        <strong>Support:</strong> Chrome, Edge, Firefox, Opera, Safari.
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Supported:</strong> Chrome, Edge, Firefox (still images only: animated images not implemented), Opera, Safari.
+          <strong>Support:</strong> Chrome, Edge, Firefox (still images only: animated images not implemented), Opera, Safari.
         </p>
       </td>
     </tr>
@@ -59,7 +59,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         Good choice for simple images and animations. Prefer PNG for
         lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
-        <strong>Supported:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
+        <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
       </td>
     </tr>
     <tr>
@@ -90,7 +90,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           PNG is preferred over JPEG for more precise reproduction of source
           images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited.<br />
-          <strong >Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
+          <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
     </tr>

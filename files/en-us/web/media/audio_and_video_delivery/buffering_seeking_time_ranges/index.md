@@ -211,7 +211,7 @@ The timeupdate event is fired 4 times a second as the media plays and that's whe
 
 This should give you results similar to the following, where the light grey bar represents the buffered progress and green bar shows the played progress:
 
-![A simple audio player with play button, seek bar and volume control, with a bar below it. The bar has a red portion to show played video, and a dark gray bar to show how much has been buffered.](bufferedprogress.png)
+![A simple audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
 
 > **Note:** You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
 
