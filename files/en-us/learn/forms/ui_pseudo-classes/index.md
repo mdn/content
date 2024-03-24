@@ -559,7 +559,7 @@ input:default ~ span::after {
 }
 ```
 
-This provides a little "Default" label on the item that was originally selected when the page loaded. Note here we are using the subsequent-sibling combinator (`~`) rather than the Next-sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
+This provides a little "Default" label on the item that was originally selected when the page loaded. Note here we are using the general-sibling combinator (`~`) rather than the Next-sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
 
 See the live result below:
 
