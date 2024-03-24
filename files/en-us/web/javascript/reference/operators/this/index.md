@@ -7,9 +7,9 @@ browser-compat: javascript.operators.this
 
 {{jsSidebar("Operators")}}
 
-**`this`** is a keyword that refers to the context where the function is supposed to run. It is useful when a function is supposed to be reused in different contexts, such as the same method being used on different objects.
+The **`this`** keyword refers to the context where a piece of code, such as a function's body, is supposed to run. In the most typical use case of methods, it refers to the object that the function is attached to, thus allowing the same function to be reused as a method on different objects.
 
-Unlike in several other programming languages, the value of **`this`** keyword in JavaScript depends on the code that is being executed. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode. Some of the common values of `this` are: the [global object](/en-US/docs/Glossary/Global_object); within an object method `this` is the current object; within an event listener `this` is the HTML element that the event occurred on.
+The value of `this` in JavaScript depends on how the code is executed, not how it is defined. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode.
 
 In most cases, the value of `this` is determined by how a function is called (runtime {{Glossary("binding")}}). It can't be set by assignment during execution, and it may be different each time the function is called. The {{jsxref("Function.prototype.bind()")}} method can [set the value of a function's `this` regardless of how it's called](#the_bind_method), and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) don't provide their own `this` binding (it retains the `this` value of the enclosing lexical context).
 
