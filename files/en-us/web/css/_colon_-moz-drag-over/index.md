@@ -32,6 +32,7 @@ The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
   <p>Draggable</p>
 </div>
 ```
+
 ### JavaScript
 
 Most elements are not valid places to drop data, so in order to allow a drop, you must prevent default behavior by cancelling [`dragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event) or [`dragover`](/en-US/docs/Web/API/HTMLElement/dragover_event) (or both) events.
