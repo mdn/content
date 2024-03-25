@@ -44,6 +44,8 @@ This article provides information about the changes in Firefox 125 that affect d
 
 #### Removals
 
+- The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement#svgaelement.text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
+
 ### WebAssembly
 
 #### Removals
