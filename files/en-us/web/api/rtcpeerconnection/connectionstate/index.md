@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.connectionState
 
 {{APIRef("WebRTC")}}
 
-The read-only **`connectionState`** property of the {{domxref("RTCPeerConnection")}} interface indicates the current state of the peer connection by returning one of the following string values: `new`, `connecting`, `connected`, `disconnected`, `failed`, or `closed`.
+The **`connectionState`** read-only property of the {{domxref("RTCPeerConnection")}} interface indicates the current state of the peer connection by returning one of the following string values: `new`, `connecting`, `connected`, `disconnected`, `failed`, or `closed`.
 
 This state essentially represents the aggregate state of all ICE transports (which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}}) being used by the connection.
 
