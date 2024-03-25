@@ -133,7 +133,7 @@ textarea:valid {
 
 ### Basic example
 
-The following example shows a textarea with a set numbers of rows and columns, some default content, and CSS styles that prevent users resizing the element more than 500px wide and 130px high:
+The following example shows a textarea with a set number of rows and columns, some default content, and CSS styles that prevent users from resizing the element more than 500px wide and 130px high:
 
 ```html
 <textarea name="textarea" rows="5" cols="15">Write something here</textarea>
@@ -201,7 +201,7 @@ textarea {
 ### Disabled and readonly textareas
 
 This example shows two `<textarea>`s — one is [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) and one is [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled).
-You cannot edit the contents of either elements, but the `readonly` element is focusable and its value is submitted in forms.
+You cannot edit the contents of either element, but the `readonly` element is focusable and its value is submitted in forms.
 The `disabled` element's value is not submitted and it's not focusable.
 
 ```html
