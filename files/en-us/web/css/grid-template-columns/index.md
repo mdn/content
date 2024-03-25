@@ -85,7 +85,7 @@ grid-template-columns: unset;
   - : Represents the formula `max(minimum, min(limit, max-content))`, where _minimum_ represents an `auto` minimum (which is often, but not always, equal to a {{cssxref("min-content")}} minimum), and _limit_ is the track sizing function passed as an argument to fit-content(). This is essentially calculated as the smaller of `minmax(auto, max-content)` and `minmax(auto, limit)`.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns that exhibit a recurring pattern to be written in a more compact form.
-- [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
+- [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
   - : The masonry value indicates that this axis should be laid out according to the masonry algorithm.
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.
