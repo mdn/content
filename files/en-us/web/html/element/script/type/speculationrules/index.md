@@ -100,7 +100,7 @@ Each object can contain the following properties:
     - `"href_matches"`
       - : A string containing a URL pattern, or an array containing multiple URL pattern strings, which follow the standard [URL Pattern API syntax](/en-US/docs/Web/API/URL_Pattern_API). Links in the document whose URLs match the pattern(s) will have the rule applied.
     - `"relative_to"`
-      - : In the case of an `"href_matches"` condition, this can specify where you want that condition to be matched relative to. This works in exactly the same way as the [rule-level `"relative_to"` key](/en-US/docs/Web/HTML/Element/script/type/speculationrules#relative_to), except that it only affects a single `"href_matches"` condition inside a `"where"` key.
+      - : In the case of an `"href_matches"` condition, this can specify where you want that condition to be matched relative to. This works in exactly the same way as the [rule-level `"relative_to"` key](/en-US/docs/Web/HTML/Element/script/type/speculationrules#relative_to_2), except that it only affects a single `"href_matches"` condition inside a `"where"` key.
     - `"selector_matches"`
       - : A string containing a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors), or an array containing multiple CSS selectors. Links in the document matched by those selectors will have the rule applied.
     - `"and"`
@@ -340,7 +340,7 @@ In the following complete speculation rule example, all same-origin pages are ma
 </script>
 ```
 
-> **Note:** The `where` pattern above excludes cross-site links, which are supported for prefetching (provided the user has no cookies set for the destination site, to protect against tracking) but not for prerendering.
+> **Note:** The `where` pattern above does not include cross-site links, which are supported for prefetching (provided the user has no cookies set for the destination site, to protect against tracking) but not for prerendering.
 
 ### `"relative_to"` example
 
@@ -425,6 +425,26 @@ To solve this, we can provide a hint as to what the page author expects the `No-
 ```
 
 This indicates that Option 2 described above is what the server is expected to produce. If a navigation starts while there is an ongoing prefetch of `/users`, this informs the browser that it is appropriate to wait for the prefetch, instead of immediately starting another fetch for `/users?id=345`.
+
+Document rules can also be used in conjunction with `"expects_no_vary_search"`, depending on the pattern used. For example, in the case of:
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        { "where": { "href_matches": "/users?id=*" } },
+        "expects_no_vary_search": "params=(\"id\")"
+      }
+    ]
+  }
+</script>
+<a href="/users?id=012">User Bill</a>
+<a href="/users?id=345">User Bob</a>
+<a href="/users?id=678">User Ben</a>
+```
+
+A copy of the `/users` page would start to be prefetched when one of the links was hovered over, but only one, as all three would be counted as the same page for caching purposes.
 
 ### `eagerness` example
 
