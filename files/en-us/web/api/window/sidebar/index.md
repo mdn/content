@@ -70,7 +70,6 @@ The sidebar object returned has the following methods:
           Installs a search engine (Sherlock).
           <a
             href="/en-US/docs/Web/OpenSearch#installing_sherlock_plugins"
-            title="Adding_search_engines_from_web_pages"
             >Adding Sherlock search engines </a
           >contains more details.
         </p>
