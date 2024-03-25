@@ -33,7 +33,7 @@ Most discussions do not need a formal resolution process. These MDN discussion g
    - Conclusions of each face-to-face meeting must be entered into the GitHub discussion, which is the source of truth for the discussion.
    - The driver is responsible for calling the meeting, informing all parties, and reporting results back into the GitHub discussion.
 
-Once agreement has been achieved, the resolution can be announced, the discussion can be closed, the resolution announced, and the plan for implementing the resolution can be put into action!
+Once agreement has been achieved, the resolution can be announced, the discussion can be closed, and the plan for implementing the resolution can be put into action!
 
 ## Discussion progression and timeline
 
