@@ -41,7 +41,7 @@ The transition to logical axes is ongoing and not fully defined by the module; s
 
 ### Properties for margins
 
-- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("margin")}} (`logical` keyword)
 - {{CSSxRef("margin-block")}}
 - {{CSSxRef("margin-block-end")}}
 - {{CSSxRef("margin-block-start")}}
@@ -51,7 +51,7 @@ The transition to logical axes is ongoing and not fully defined by the module; s
 
 ### Properties for paddings
 
-- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("padding")}} (`logical` keyword)
 - {{CSSxRef("padding-block")}}
 - {{CSSxRef("padding-block-end")}}
 - {{CSSxRef("padding-block-start")}}
@@ -132,10 +132,10 @@ The transition to logical axes is ongoing and not fully defined by the module; s
 
 ### Deprecated properties
 
-- `offset-block-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}})
-- `offset-block-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}})
-- `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
-- `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
+- `offset-block-end` (now {{CSSxRef("inset-block-end")}})
+- `offset-block-start` (now {{CSSxRef("inset-block-start")}})
+- `offset-inline-end` (now {{CSSxRef("inset-inline-end")}})
+- `offset-inline-start` (now {{CSSxRef("inset-inline-start")}})
 
 ### Unsupported properties
 
