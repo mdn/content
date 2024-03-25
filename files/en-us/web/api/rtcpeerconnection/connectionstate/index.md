@@ -57,4 +57,5 @@ const connectionState = peerConnection.connectionState;
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
+- {{domxref("RTCIceTransport.state")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
