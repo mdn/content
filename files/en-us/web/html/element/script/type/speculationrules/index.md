@@ -445,7 +445,8 @@ Document rules can also be used in conjunction with `"expects_no_vary_search"`, 
 ```
 
 If a link is hovered over, the browser will start prefetching that specific link.
-If the user hovers over another link before the prefetch completes, the `expects_no_vary_search` pattern tells the browser that there is no need to cancel the current prefetch, because all id URL parameter values are effectively the same page for this context (and for caching purposes).
+
+If the user hovers over another link before the prefetch completes, the `expects_no_vary_search` pattern tells the browser that there is no need to cancel the current prefetch, because all `/users` URLs with `id` URL parameter values effectively point to the same page for this context (and for caching purposes).
 
 ### `eagerness` example
 
