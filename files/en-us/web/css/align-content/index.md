@@ -114,8 +114,8 @@ In this example you can switch between the different layouts flex, grid, and blo
 
 #### HTML
 
-```html hidden
-<div class="wrapper"></div>
+```html-nolint hidden
+<div class="wrapper">
 ```
 
 ```html
@@ -149,7 +149,6 @@ In this example you can switch between the different layouts flex, grid, and blo
         <option value="space-between">space-between</option>
         <option value="space-around">space-around</option>
         <option value="space-evenly">space-evenly</option>
-        <option value="stretch">stretch</option>
       </select>
     </div>
     <h2>styles</h2>
@@ -159,6 +158,9 @@ In this example you can switch between the different layouts flex, grid, and blo
         align-content: <span id="align">normal</span>
       }
     </pre>
+    <p id="note" hidden="hidden">
+      In <a href="/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content">block layout the child elements are treated a single element</a><br>so  <code class="align">normal</code> behaves differently.
+    </p>
   </section>
 </div>
 ```
@@ -169,6 +171,13 @@ In this example you can switch between the different layouts flex, grid, and blo
 .wrapper {
   display: flex;
   gap: 1rem;
+}
+h2 {
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
+.row {
+  margin-bottom: 0.2rem;
 }
 ```
 
@@ -210,18 +219,31 @@ const values = document.querySelector("#values");
 const display = document.querySelector("#display");
 const container = document.querySelector("#outer");
 const displayTypes = document.querySelectorAll(".displayType");
-const align = document.querySelector("#align");
-
+const aligns = document.querySelectorAll(".align");
+const note = document.querySelector("#note");
+const hideNote = (a, d) => {
+  const distributions = ["space-between", "space-around", "space-evenly"];
+  if (distributions.includes(a) && d === "block") {
+    note.removeAttribute("hidden");
+  } else {
+    note.setAttribute("hidden", "hidden");
+  }
+};
 values.addEventListener("change", (evt) => {
-  container.style.alignContent = evt.target.value;
-  align.innerText = evt.target.value;
-});
-
-display.addEventListener("change", (evt) => {
-  container.className = evt.target.value;
-  displayTypes.forEach((dType) => {
-    dType.innerText = evt.target.value;
+  const alVal = evt.target.value;
+  container.style.alignContent = alVal;
+  aligns.forEach((align) => {
+    align.innerText = alVal;
   });
+  hideNote(alVal, display.value);
+});
+display.addEventListener("change", (evt) => {
+  const dVal = evt.target.value;
+  container.className = dVal;
+  displayTypes.forEach((dType) => {
+    dType.innerText = dVal;
+  });
+  hideNote(values.value, dVal);
 });
 ```
 
