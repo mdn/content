@@ -66,7 +66,7 @@ For {{SVGElement('feDropShadow')}}, `dx` defines the x offset of the dropped sha
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -91,7 +91,7 @@ For {{SVGElement('feOffset')}}, `dx` defines the x offset of the filter input gr
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -118,7 +118,7 @@ For {{SVGElement('glyphRef')}}, `dx` defines the x offset of the glyph, in the f
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -146,7 +146,7 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
       <td>
         List of
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
       </td>
     </tr>
@@ -215,7 +215,7 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
       <td>
         List of
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
       </td>
     </tr>
@@ -243,7 +243,7 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
       <td>
         List of
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
       </td>
     </tr>
