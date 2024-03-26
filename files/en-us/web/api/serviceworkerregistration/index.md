@@ -37,7 +37,7 @@ _Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
 - {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
   - : Returns a string indicating the service worker's registration scope associated with the current service worker registration.
-- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
   - : Returns a string indicating the update via cache mode associated with the current service worker registration. It can be one of the following: `imports`, `all`, or `none`.

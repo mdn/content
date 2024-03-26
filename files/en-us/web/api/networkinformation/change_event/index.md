@@ -10,8 +10,7 @@ browser-compat: api.NetworkInformation.change_event
 
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
-The **`change`** event fires when connection information changes, and the event
-is received by the {{domxref("NetworkInformation")}} object.
+The **`change`** event of the {{domxref("NetworkInformation")}} interface fires when connection information changes, and the event is received by the {{domxref("NetworkInformation")}} object.
 
 ## Syntax
 

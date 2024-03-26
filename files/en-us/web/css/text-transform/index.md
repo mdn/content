@@ -45,7 +45,7 @@ text-transform: unset;
 
 - `capitalize`
 
-  - : Is a keyword that converts the first _letter_ of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text). A letter is defined as a character that is part of Unicode's Letter or Number general categories {{experimental_inline}}; thus, any punctuation marks or symbols at the beginning of a word are ignored.
+  - : Is a keyword that converts the first _letter_ of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text). A letter is defined as a character that is part of Unicode's Letter or Number general categories; thus, any punctuation marks or symbols at the beginning of a word are ignored.
 
     > **Note:** Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
 
