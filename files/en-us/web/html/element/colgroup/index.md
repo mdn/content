@@ -175,7 +175,7 @@ table {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute is
+        If the <a href="#span"><code>span</code></a> attribute is
         present: none.<br />If
         the attribute is not present: zero or more {{HTMLElement("col")}}
         element
