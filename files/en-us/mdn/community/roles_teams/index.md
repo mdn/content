@@ -47,7 +47,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 To be a contributor, you must follow:
 
-- [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
+- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
 - Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
 
 **Privileges:**
