@@ -141,7 +141,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure"
           >Channel count</a
         >
       </th>
@@ -169,7 +169,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     </tr>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Sampling_audio"
+        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#sampling_audio"
           >Sample rate</a
         >
       </th>
@@ -184,7 +184,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure"
           >Sample size</a
         >
       </th>

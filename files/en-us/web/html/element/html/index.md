@@ -78,7 +78,7 @@ Including a valid `lang` declaration on the `<html>` element also ensures that i
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"
           >document</a
         >
       </td>
