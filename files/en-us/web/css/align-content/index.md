@@ -7,7 +7,7 @@ browser-compat: css.properties.align-content
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_grid_layout)'s block axis.
+The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross-axis](/en-US/docs/Glossary/Cross_Axis), a [grid](/en-US/docs/Web/CSS/CSS_grid_layout)'s or [block](/en-US/docs/Glossary/Block-level_content),s block axis.
 
 The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
@@ -96,6 +96,8 @@ align-content: unset;
 - `unsafe`
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
+> **Note:** The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject)
+
 ## Formal definition
 
 {{CSSInfo}}
@@ -106,143 +108,128 @@ align-content: unset;
 
 ## Examples
 
-### CSS
+### align-content switcher
+
+In this example you can switch between the different layouts flex, grid, and block. You can also switch between the different values for `align-content`.
+
+#### HTML
+
+```html hidden
+<div class="wrapper"></div>
+```
+
+```html
+<section id="outer" class="block">
+  <div id="inner" class="olive"></div>
+  <div id="inner" class="coral"></div>
+  <div id="inner" class="deepskyblue"></div>
+</section>
+```
+
+```html hidden
+<section class="controls">
+    <h2>Controls</h2>
+    <div class="row">
+      <label for="display">display: </label>
+      <select id="display">
+        <option value="flex">flex</option>
+        <option value="grid">grid</option>
+        <option value="block">block</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="values">align-content: </label>
+      <select id="values">
+        <option value="normal" selected>normal</option>
+        <option value="start">start</option>
+        <option value="center">center</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </select>
+    </div>
+    <h2>styles</h2>
+    <pre>
+      .<span class="displayType">flex</span> {
+        display: <span class="displayType">flex</span>;
+        align-content: <span id="align">normal</span>
+      }
+    </pre>
+  </section>
+</div>
+```
+
+#### CSS
+
+```css hidden
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}
+```
 
 ```css
-#container {
-  height: 200px;
-  width: 240px;
-  align-content: center; /* Can be changed in the live sample */
-  background-color: #8c8c8c;
+#outer {
+  border: solid 2px tomato;
+  height: 300px;
+  width: 300px;
 }
-
+#inner {
+  height: 75px;
+  width: 100%;
+}
+.olive {
+  background-color: olive;
+}
+.coral {
+  background-color: coral;
+}
+.deepskyblue {
+  background-color: deepskyblue;
+}
 .flex {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.2rem;
 }
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
+  gap: 0.2rem;
 }
-
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.block {
+  display: block;
 }
-
-#item1 {
-  background-color: #8cffa0;
-  min-height: 30px;
-}
-
-#item2 {
-  background-color: #a0c8ff;
-  min-height: 50px;
-}
-
-#item3 {
-  background-color: #ffa08c;
-  min-height: 40px;
-}
-
-#item4 {
-  background-color: #ffff8c;
-  min-height: 60px;
-}
-
-#item5 {
-  background-color: #ff8cff;
-  min-height: 70px;
-}
-
-#item6 {
-  background-color: #8cffff;
-  min-height: 50px;
-  font-size: 30px;
-}
-
-select {
-  font-size: 16px;
-}
-
-.row {
-  margin-top: 10px;
-}
-```
-
-### HTML
-
-```html
-<div id="container" class="flex">
-  <div id="item1">1</div>
-  <div id="item2">2</div>
-  <div id="item3">3</div>
-  <div id="item4">4</div>
-  <div id="item5">5</div>
-  <div id="item6">6</div>
-</div>
-
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
-</div>
-
-<div class="row">
-  <label for="values">align-content: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="stretch">stretch</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="space-between">space-between</option>
-    <option value="space-around">space-around</option>
-    <option value="space-evenly">space-evenly</option>
-
-    <option value="start">start</option>
-    <option value="end">end</option>
-
-    <option value="baseline">baseline</option>
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
-
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
-</div>
 ```
 
 ```js hidden
-const values = document.getElementById("values");
-const display = document.getElementById("display");
-const container = document.getElementById("container");
+const values = document.querySelector("#values");
+const display = document.querySelector("#display");
+const container = document.querySelector("#outer");
+const displayTypes = document.querySelectorAll(".displayType");
+const align = document.querySelector("#align");
 
 values.addEventListener("change", (evt) => {
   container.style.alignContent = evt.target.value;
+  align.innerText = evt.target.value;
 });
 
 display.addEventListener("change", (evt) => {
   container.className = evt.target.value;
+  displayTypes.forEach((dType) => {
+    dType.innerText = evt.target.value;
+  });
 });
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", 260, 290)}}
+Try changing the `display` value and the `align-content` value.
+
+{{EmbedLiveSample("align-content_switcher", 260, 310)}}
 
 ## Specifications
 
