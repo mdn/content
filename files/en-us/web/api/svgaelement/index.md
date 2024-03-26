@@ -32,7 +32,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}}
-  - : A string being a synonym for the {{domxref("Node.textContent")}} property.
+  - : A string that is a synonym for the {{domxref("Node.textContent")}} property.
 - {{domxref("SVGAElement.type")}}
   - : A string that reflects the `type` attribute, indicating the MIME type of the linked resource.
 

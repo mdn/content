@@ -2,12 +2,10 @@
 title: SyncManager
 slug: Web/API/SyncManager
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.SyncManager
 ---
 
-{{APIRef("Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}
 
 The **`SyncManager`** interface of the {{domxref("Background Synchronization API", "", "", "nocode")}} provides an interface for registering and listing sync registrations.
 
