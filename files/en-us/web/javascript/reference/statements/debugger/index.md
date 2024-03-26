@@ -46,4 +46,4 @@ statement. It is like a breakpoint in the script source.
 
 ## See also
 
-- [The Firefox JavaScript Debugger¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) in the Firefox source docs
+- [The Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) in the Firefox source docs
