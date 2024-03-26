@@ -53,7 +53,7 @@ page-type: guide
           </li>
           <li>
             Get familiar with the
-            <a href="/en-US/docs/Mozilla/Add-ons/AMO/Policy"
+            <a href="https://extensionworkshop.com/documentation/publish/add-on-policies/"
               >add-on policies and developer agreement</a
             >
           </li>
@@ -86,7 +86,7 @@ page-type: guide
             >
           </li>
           <li>
-            Debug with the<a href="/en-US/docs/Tools/Browser_Toolbox">
+            Debug with the<a href="https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html">
               Addon Debugging Window</a
             >
           </li>
