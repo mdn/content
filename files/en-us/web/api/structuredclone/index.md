@@ -13,6 +13,8 @@ The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glo
 The method also allows [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
 
+The method does not clone [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), as they are stored as metadata, not as properties of the object.
+
 ## Syntax
 
 ```js-nolint
