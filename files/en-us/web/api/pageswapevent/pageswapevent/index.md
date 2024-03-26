@@ -8,7 +8,7 @@ status:
 browser-compat: api.PageSwapEvent.PageSwapEvent
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`PageSwapEvent()`** constructor creates a new
 {{domxref("PageSwapEvent")}} object instance.

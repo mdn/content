@@ -258,7 +258,8 @@ The `ViewTransition` can be accessed like so:
 1. In the case of same-document (SPA) transitions, the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns the `ViewTransition` associated with the transition.
 2. In the case of cross-document (MPA) transitions:
 
-- A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} containing the navigation type and current and destination document history entries.
+- A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
+  > **Note:** If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.
 - A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](https://web.dev/articles/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
 
 Let's have a look at some example code to show how these features could be used.
@@ -331,58 +332,124 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ### A JavaScript-powered custom cross-document (MPA) transition
 
-To achieve the same circular reveal view transition during a cross-document navigation, multiple steps are required:
+The [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) demo provides a basic set of team profile pages, and demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
-1. Opt both pages in to cross-document view transitions using the {{cssxref("@view-transition")}} at rule, the same as we saw earlier:
+The JavaScript starts like this, defining the homepage path and creating {{domxref("URLPattern")}}s to represent the homepage and profile pages:
 
-   ```css
-   @view-transition {
-     navigation: auto;
-   }
-   ```
+```js
+// Path where this app is deployed. Because we don’t deploy at the root of the domain
+// we need to keep track of this and adjust any URL matching using this value.
+const basePath = "/profiles/mpa";
 
-2. Store the mouse click location on the current page in [web storage](/en-US/docs/Web/API/Web_Storage_API) so that it can be retrieved by the destination page:
+const homePagePattern = new URLPattern(`${basePath}/`, window.origin);
+const profilePagePattern = new URLPattern(
+  `${basePath}/:profile`,
+  window.origin,
+);
+```
 
-   ```js
-   addEventListener("click", (event) => {
-     sessionStorage.setItem("lastClickX", event.clientX);
-     sessionStorage.setItem("lastClickY", event.clientY);
-   });
-   ```
+The {{domxref("Window.pageswap_event", "pageswap")}} event listener looks as follows. This sets view transition names on the elements on the outbound page that link to the profile pages. When navigating from the home page to a profile page, custom animations are provided _only_ for the linked element that is clicked in each case.
 
-3. Intercept the `ViewTransition` in the new document via the `pagereveal` event and use it to create the custom animation:
+In this block we:
 
-   ```js
-   // This would run both on initial load and on reactivation from BFCache.
-   addEventListener("pagereveal", async (event) => {
-     if (!event.viewTransition) return;
+- Grab the URL of the inbound document in the navigation from the {{domxref("NavigationHistoryEntry")}} object available at {{domxref("NavigationActivation.entry", "PageSwapEvent.activation.entry")}}.
+- Skip the transition if the inbound document's URL does not start with the same `basePath` as the current document. This is done using the {{domxref("ViewTransition.skipTransition()", "skipTransition()")}} method of the {{domxref("ViewTransition")}} object available at {{domxref("PageSwapEvent.viewTransition")}}.
+- Extract the profile name from the inbound URL using the `profilePagePattern`.
+- Return out of the event listener if there is no profile name, i.e. the link is not navigating to a profile page. In this case, we don't want to customize the view transitions.
+- Set view transition names on the relevant profile name and avatar so that they are animated during the navigation, and remove previously set view transition names to tidy up and ensure that the wrong elements do not animate.
 
-     const x = sessionStorage.getItem("lastClickX") ?? innerWidth / 2;
-     const y = sessionStorage.getItem("lastClickY") ?? innerHeight / 2;
+```js
+// When going to a detail page, set `profile-name` and `profile-avatar` vt-names
+// on the elements that link to that detail page
+window.addEventListener("pageswap", async (e) => {
+  if (e.viewTransition) {
+    const url = new URL(e.activation.entry.url);
 
-     const endRadius = Math.hypot(
-       Math.max(x, innerWidth - x),
-       Math.max(y, innerHeight - y),
-     );
+    // Only transition to same basePath
+    // ~> SKIP!
+    if (!url.pathname.startsWith(basePath)) {
+      e.viewTransition.skipTransition();
+    }
 
-     await event.viewTransition.ready;
+    // Extract name from URL
+    const match = profilePagePattern.exec(url);
+    const profile = match?.pathname.groups.profile;
 
-     // Animate the new document's view
-     document.documentElement.animate(
-       {
-         clipPath: [
-           `circle(0 at ${x}px ${y}px)`,
-           `circle(${endRadius}px at ${x}px ${y}px)`,
-         ],
-       },
-       {
-         duration: 500,
-         easing: "ease-in",
-         pseudoElement: "::view-transition-new(root)",
-       },
-     );
-   });
-   ```
+    // No name extract = not going to a detail page
+    // ~> Don’t tweak VT
+    if (!profile) return;
+
+    // Set VT-names on clicked name
+    document.querySelector(`#${profile} span`).style.viewTransitionName =
+      "profile-name";
+    document.querySelector(`#${profile} img`).style.viewTransitionName =
+      "profile-avatar";
+
+    // Remove VT-names from currently shown ones when already at a detail page
+    // @TODO: Figure out why I had to set to x and y here, instead of just ''
+    if (profilePagePattern.test(window.location.href)) {
+      document.querySelector(`main h1`).style.viewTransitionName = "x";
+      document.querySelector(`main img`).style.viewTransitionName = "y";
+    }
+
+    // Restore orig VT names after snapshots have been taken
+    // (This to deal with BFCache)
+    await e.viewTransition.finished;
+    document.querySelector(`#${profile} span`).style.viewTransitionName = "z";
+    document.querySelector(`#${profile} img`).style.viewTransitionName = "w";
+    if (profilePagePattern.test(window.location.href)) {
+      document.querySelector(`main h1`).style.viewTransitionName =
+        "profile-name";
+      document.querySelector(`main img`).style.viewTransitionName =
+        "profile-avatar";
+    }
+  }
+});
+```
+
+The {{domxref("Window.pagereveal_event", "pagereveal")}} event listener looks as follows. This works in a similar way to the `pageswap` event listener, although bear in mind that here we are customizing to "to" animation, for page elements on the inbound page. In this case, we:
+
+- Return out of the event listener if there is no {{domxref("NavigationActivation.from", "PageSwapEvent.activation.from")}} history entry. We don't want an animation if we are going straight to the page and not navigation from somewhere else.
+- grab the "from" and "to" (current) URLs from the {{domxref("NavigationHistoryEntry")}} objects available at {{domxref("NavigationActivation.from", "PageRevealEvent.activation.from")}} and {{domxref("NavigationActivation.entry", "PageRevealEvent.activation.entry")}}.
+- Skip the transition if the inbound document's URL does not start with the same `basePath` as the current document. This is done using the {{domxref("ViewTransition.skipTransition()", "skipTransition()")}} method of the {{domxref("ViewTransition")}} object available at {{domxref("PageSwapEvent.viewTransition")}}.
+- Test the "from" and "to" (current) URLs using the `profilePagePattern` and `homePagePattern`, only running the next step if the "from" page is a profile page and the "to" page is the homepage.
+- Set view transition names on the relevant list item features so that they are animated during the navigation, and remove previously set view transition names to tidy up and ensure that the wrong elements do not animate.
+
+```js
+// When going from a detail page to the homepage, set `profile-name` and `profile-avatar` vt-names
+// on the list item for the profile that was viewed on the detail page.
+window.addEventListener("pagereveal", async (e) => {
+  if (!navigation.activation.from) return;
+
+  if (e.viewTransition) {
+    const fromURL = new URL(navigation.activation.from.url);
+    const currentURL = new URL(navigation.activation.entry.url);
+
+    // Only transition to/from same basePath
+    // ~> SKIP!
+    if (!fromURL.pathname.startsWith(basePath)) {
+      e.viewTransition.skipTransition();
+    }
+
+    // Went from profile page to homepage
+    // ~> Set VT names on the relevant list item
+    if (profilePagePattern.test(fromURL) && homePagePattern.test(currentURL)) {
+      const match = profilePagePattern.exec(fromURL);
+      const profile = match?.pathname.groups.profile;
+
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "profile-name";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "profile-avatar";
+
+      // Clean up after snapshots have been taken
+      await e.viewTransition.ready;
+      document.querySelector(`#${profile} span`).style.viewTransitionName = "";
+      document.querySelector(`#${profile} img`).style.viewTransitionName = "";
+    }
+  }
+});
+```
 
 ## Making cross-document transitions consistent with `rel="expect"`
 

@@ -34,39 +34,62 @@ A {{domxref("PageSwapEvent")}}. Inherits from {{domxref("Event")}}.
 ## Event properties
 
 - {{domxref("PageSwapEvent.activation")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation. If the navigation is cross-origin, it returns `null`.
+  - : Returns a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation. If the navigation has a cross-origin URL anywhere in the redirect chain, it returns `null`.
 - {{domxref("PageSwapEvent.viewTransition")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ViewTransition")}} object representing the inbound cross-document view transition, if one is active when the event is fired. If this is not the case, it returns `null`.
 
 ## Examples
 
 ```js
-window.addEventListener("pageswap", (event) => {
-  // Return if there is no active view transition
-  if (!event.viewTransition) {
-    return;
+// When going to a detail page, set `profile-name` and `profile-avatar` vt-names
+// on the elements that link to that detail page
+window.addEventListener("pageswap", async (e) => {
+  if (e.viewTransition) {
+    const url = new URL(e.activation.entry.url);
+
+    // Only transition to same basePath
+    // ~> SKIP!
+    if (!url.pathname.startsWith(basePath)) {
+      e.viewTransition.skipTransition();
+    }
+
+    // Extract name from URL
+    const match = profilePagePattern.exec(url);
+    const profile = match?.pathname.groups.profile;
+
+    // No name extract = not going to a detail page
+    // ~> Don’t tweak VT
+    if (!profile) return;
+
+    // Set VT-names on clicked name
+    document.querySelector(`#${profile} span`).style.viewTransitionName =
+      "profile-name";
+    document.querySelector(`#${profile} img`).style.viewTransitionName =
+      "profile-avatar";
+
+    // Remove VT-names from currently shown ones when already at a detail page
+    // @TODO: Figure out why I had to set to x and y here, instead of just ''
+    if (profilePagePattern.test(window.location.href)) {
+      document.querySelector(`main h1`).style.viewTransitionName = "x";
+      document.querySelector(`main img`).style.viewTransitionName = "y";
+    }
+
+    // Restore orig VT names after snapshots have been taken
+    // (This to deal with BFCache)
+    await e.viewTransition.finished;
+    document.querySelector(`#${profile} span`).style.viewTransitionName = "z";
+    document.querySelector(`#${profile} img`).style.viewTransitionName = "w";
+    if (profilePagePattern.test(window.location.href)) {
+      document.querySelector(`main h1`).style.viewTransitionName =
+        "profile-name";
+      document.querySelector(`main img`).style.viewTransitionName =
+        "profile-avatar";
+    }
   }
-
-  // Grab the paths of the from and to URLs
-  const from_path = new URL(event.activation.from).pathname;
-  const to_path = new URL(event.activation.entry).pathname;
-
-  // Skip transitions from landing to home
-  if (from_path === "/landing" && to_path === "/home") {
-    event.viewTransition.skipTransition();
-  }
-
-  // Apply a different style when going "back"
-  const is_back =
-    event.activation.navigationType === "traverse" &&
-    event.activation.entry?.index === event.activation.from?.index - 1;
-
-  // Add a class to the <html> element for targetting a different back animation
-  // Note that this would only apply to capturing the final state of the old document,
-  // The new document would have to do this or something similar in `pagereveal`.
-  document.documentElement.classList.toggle("back-nav", is_back);
 });
 ```
+
+> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a more complete example with explanations.
 
 ## Specifications
 

@@ -742,6 +742,8 @@
         "MessageEvent",
         "MessagePort",
         "Navigator",
+        "PageRevealEvent",
+        "PageSwapEvent",
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
@@ -1703,7 +1705,7 @@
     "View Transitions API": {
       "overview": ["View Transitions API"],
       "guides": ["/docs/Web/API/View_Transitions_API/Using"],
-      "interfaces": ["PageRevealEvent", "PageSwapEvent", "ViewTransition"],
+      "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
       "events": ["Window: pagereveal", "Window: pageswap"]

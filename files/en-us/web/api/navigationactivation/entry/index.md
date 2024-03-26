@@ -20,7 +20,7 @@ A {{domxref("NavigationHistoryEntry")}} object.
 
 ## Examples
 
-See the main {{domxref("NavigationActivation")}} reference page for an example.
+> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a complete example.
 
 ## Specifications
 

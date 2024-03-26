@@ -39,18 +39,10 @@ window.addEventListener("pageswap", (event) => {
   if (from_path === "/landing" && to_path === "/home") {
     event.viewTransition.skipTransition();
   }
-
-  // Apply a different style when going "back"
-  const is_back =
-    event.activation.navigationType === "traverse" &&
-    event.activation.entry?.index === event.activation.from?.index - 1;
-
-  // Add a class to the <html> element for targetting a different back animation
-  // Note that this would only apply to capturing the final state of the old document,
-  // The new document would have to do this or something similar in `pagereveal`.
-  document.documentElement.classList.toggle("back-nav", is_back);
 });
 ```
+
+> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a more complete example.
 
 ## Specifications
 

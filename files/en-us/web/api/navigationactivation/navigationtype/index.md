@@ -23,7 +23,17 @@ A string representing the type of navigation the {{domxref("NavigationActivation
 
 ## Examples
 
-See the main {{domxref("NavigationActivation")}} reference page for an example.
+```js
+window.addEventListener("pageswap", (event) => {
+  // For example, the page was hidden, or the navigation is cross-document.
+  if (!event.viewTransition) return;
+
+  // Skip the view transition for back/forward navigations.
+  if (event.activation.navigationType === "traverse") {
+    event.viewTransition.skipTransition();
+  }
+});
+```
 
 ## Specifications
 

@@ -8,17 +8,17 @@ status:
 browser-compat: api.PageSwapEvent.viewTransition
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`activation`** read-only property of the {{domxref("PageSwapEvent")}} interface contains a {{domxref("NavigationActivation")}} object representing the navigation type and current and destination document history entries.
+The **`activation`** read-only property of the {{domxref("PageSwapEvent")}} interface contains a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation.
 
 ## Value
 
-A {{domxref("NavigationActivation")}} object, or `null` if the associated navigation is a cross-origin navigation.
+A {{domxref("NavigationActivation")}} object, or `null` if the associated navigation has a cross-origin URL anywhere in the redirect chain.
 
 ## Examples
 
-See the main {{domxref("PageSwapEvent")}} reference page for an example.
+> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a complete example.
 
 ## Specifications
 

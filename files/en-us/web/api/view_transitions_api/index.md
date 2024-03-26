@@ -33,10 +33,6 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 ## Interfaces
 
-- {{domxref("PageRevealEvent")}}
-  - : The event object for the {{domxref("Window.pagereveal_event", "pagereveal")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _to_, if a view transition was triggered by the navigation.
-- {{domxref("PageSwapEvent")}}
-  - : The event object for the {{domxref("Window.pageswap_event", "pageswap")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination document history entries.
 - {{domxref("ViewTransition")}}
   - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
 
@@ -44,6 +40,10 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 - {{domxref("Document.startViewTransition()")}}
   - : Starts a new same-document (SPA) view transition and returns a {{domxref("ViewTransition")}} object to represent it.
+- {{domxref("PageRevealEvent")}}
+  - : The event object for the {{domxref("Window.pagereveal_event", "pagereveal")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _to_, if a view transition was triggered by the navigation.
+- {{domxref("PageSwapEvent")}}
+  - : The event object for the {{domxref("Window.pageswap_event", "pageswap")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination document history entries.
 - The {{domxref("Window")}} {{domxref("Window.pagereveal_event", "pagereveal")}} event
   - : Fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](https://web.dev/articles/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
 - The {{domxref("Window")}} {{domxref("Window.pageswap_event", "pageswap")}} event
@@ -84,6 +84,7 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 - [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
 - [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
+- [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/): A basic team profile pages app that demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
 ## Specifications
 

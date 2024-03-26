@@ -8,7 +8,7 @@ status:
 browser-compat: api.PageRevealEvent.viewTransition
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`viewTransition`** read-only property of the {{domxref("PageRevealEvent")}} interface contains a {{domxref("ViewTransition")}} object representing the active view transition for the cross-document navigation.
 
@@ -18,7 +18,7 @@ A {{domxref("ViewTransition")}} object, or `null` if no view transition is activ
 
 ## Examples
 
-See the main {{domxref("PageRevealEvent")}} reference page for examples.
+> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a complete example.
 
 ## Specifications
 

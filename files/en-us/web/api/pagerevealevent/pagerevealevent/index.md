@@ -8,7 +8,7 @@ status:
 browser-compat: api.PageRevealEvent.PageRevealEvent
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`PageRevealEvent()`** constructor creates a new
 {{domxref("PageRevealEvent")}} object instance.
