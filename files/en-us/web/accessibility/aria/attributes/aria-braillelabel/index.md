@@ -11,7 +11,7 @@ The global `aria-braillelabel` property defines a string value that labels the c
 
 The global `aria-braillelabel` attribute is similar to the global [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) in that it defines a string value that labels the current element. While `aria-label` is read by the screen reader, the contents of the `aria-braillelabel` attribute are converted into Braille; providing the user with a recognizable name of the object in braille.
 
-The purpose of the `aria-braillelabel` property is to override how assistive technologies localize and express the accessible name of an element in Braille. It should only be used when, without this attribute, the accessible name would not be the desired user experience when converted to Braille.
+The purpose of the `aria-braillelabel` property is to override how assistive technologies localize and express the accessible name of an element in Braille. It should only be used when, without this attribute, the accessible name would not be the desired user experience when converted to braille.
 
 When using `aria-braillelabel`, ensure that:
 
