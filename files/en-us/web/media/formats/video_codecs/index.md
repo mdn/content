@@ -1051,7 +1051,6 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
-        <p>Internet Explorer only supports HEVC for devices with a hardware decoder.</p>
         <p>Opera and other Chromium based browsers have the same support status as Chrome.</p>
         <p>Safari supports HEVC for all devices on macOS High Sierra or later.</p>
       </td>
@@ -1965,5 +1964,4 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
 - [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
-- [Video](/en-US/docs/Web/API/HTMLVideoElement) and [audio](/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

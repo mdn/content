@@ -57,7 +57,7 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#flac">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
-      <td>All browsers</td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#mpegmpeg-2">MPEG / MPEG-2</a></th>
@@ -67,14 +67,12 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
       <td>Moving Picture Experts Group 4</td>
-      <td>All browsers</td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#ogg">Ogg</a></th>
       <td>Ogg</td>
-      <td>
-        All browsers
-      </td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
@@ -84,9 +82,7 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#webm">WebM</a></th>
       <td>Web Media</td>
-      <td>
-        <p>All browsers
-      </td>
+      <td>All browsers.</td>
     </tr>
   </tbody>
 </table>

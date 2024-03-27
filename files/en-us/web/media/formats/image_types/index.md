@@ -866,7 +866,7 @@ PNG is widely supported, with all major browsers offering full support for its f
       </td>
     </tr>
     <tr>
-      <th scope="row">Maximum dimensions</t h>
+      <th scope="row">Maximum dimensions</th>
       <td>2,147,483,647×2,147,483,647 pixels</td>
     </tr>
     <tr>
