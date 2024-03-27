@@ -100,7 +100,7 @@ Each object can contain the following properties:
     - `"href_matches"`
       - : A string containing a URL pattern, or an array containing multiple URL pattern strings, which follow the standard [URL Pattern API syntax](/en-US/docs/Web/API/URL_Pattern_API). Links in the document whose URLs match the pattern(s) will have the rule applied.
     - `"relative_to"`
-      - : In the case of an `"href_matches"` condition, this can specify where you want that condition to be matched relative to. This works in exactly the same way as the [rule-level `"relative_to"` key](/en-US/docs/Web/HTML/Element/script/type/speculationrules#relative_to_2), except that it only affects a single `"href_matches"` condition inside a `"where"` key.
+      - : In the case of an `"href_matches"` condition, this can specify where you want that condition to be matched relative to. This works in exactly the same way as the [rule-level `"relative_to"` key](#relative_to_2), except that it only affects a single `"href_matches"` condition inside a `"where"` key.
     - `"selector_matches"`
       - : A string containing a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors), or an array containing multiple CSS selectors. Links in the document matched by those selectors will have the rule applied.
     - `"and"`
