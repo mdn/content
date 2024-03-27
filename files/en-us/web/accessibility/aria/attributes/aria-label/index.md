@@ -13,7 +13,7 @@ Sometimes, the default {{Glossary("accessible_name", "accessible name")}} of an 
 
 In cases where an interactive element has no accessible name or an accessible name is not accurate and there is no content visible in the DOM that can be referenced via the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, the `aria-label` attribute can be used to define a string that labels the interactive element on which it is set. This provides the interactive element with its accessible name.
 
-The code below shows an example of how to use the `aria-label` attribute to provide an accessible name for a `<button>` element. The button in this example contains an SVG graphic and lacks textual content, making the `aria-label` essential for screen reader users to understand its function, which in this case is indicated as "Close".
+The code below shows an example of how to use the `aria-label` attribute to provide an accessible name for a `<button>` element. The button in this example contains an SVG graphic and lacks textual content, making the `aria-label` essential for screen reader users to understand its function, which in this case is "Close".
 
 ```html
 <button aria-label="Close" onclick="myDialog.close()">
@@ -48,7 +48,7 @@ When using `aria-label`, you also need to consider [`aria-labelledby`](/en-US/do
 Keep the following additional guidelines in mind when using `aria-label`:
 
 - The `aria-label` attribute can be used with regular, semantic HTML elements; it is not limited to elements that have an [ARIA `role`](/en-US/docs/Web/Accessibility/ARIA/Roles) assigned.
-- Don't "overuse" `aria-label`. Remember that it's primarily for assistive technology. To provide additional instructions or to clarify the UI, use visible text with `aria-describedby` or [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description), not `aria-label`. Instructions should be accessible to all users, not just to those with screen readers (or preferably, make your UI more intuitive).
+- Don't "overuse" `aria-label`. Remember that it's primarily for assistive technologies. To provide additional instructions or to clarify the UI, use visible text with `aria-describedby` or [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description), not `aria-label`. Instructions should be accessible to all users, not just to those with screen readers (or preferably, make your UI more intuitive).
 
   > **Note:** Since `aria-label` content isn't displayed outside assistive technologies, consider making important information visible for all users.
 
