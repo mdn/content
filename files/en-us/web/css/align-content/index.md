@@ -23,8 +23,8 @@ align-content: normal;
 
 /* Basic positional alignment */
 /* align-content does not take left and right values */
-align-content: center;
 align-content: start;
+align-content: center;
 align-content: end;
 align-content: flex-start;
 align-content: flex-end;
@@ -38,6 +38,7 @@ align-content: last baseline;
 align-content: space-between;
 align-content: space-around;
 align-content: space-evenly;
+align-content: stretch;
 
 /* Overflow alignment */
 align-content: safe center;
@@ -53,8 +54,12 @@ align-content: unset;
 
 ### Values
 
+- `normal`
+  - : The items are packed in their default position as if no `align-content` value was set.
 - `start`
   - : The items are packed flush to each other against the start edge of the alignment container in the cross axis.
+- `center`
+  - : The items are packed flush to each other in the center of the alignment container along the cross axis.
 - `end`
   - : The items are packed flush to each other against the end edge of the alignment container in the cross axis.
 - `flex-start`
@@ -63,10 +68,6 @@ align-content: unset;
 - `flex-end`
   - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
-- `center`
-  - : The items are packed flush to each other in the center of the alignment container along the cross axis.
-- `normal`
-  - : The items are packed in their default position as if no `align-content` value was set.
 - `baseline`, `first baseline`, `last baseline`
 
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
