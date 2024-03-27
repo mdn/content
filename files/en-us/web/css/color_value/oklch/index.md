@@ -185,7 +185,7 @@ div {
   background-color: oklch(100% 0.4 30);
 }
 [data-color="red-chroma"] {
-  background-color: oklch(100% 0.3 40);
+  background-color: oklch(100% 0.3 30);
 }
 
 [data-color="green"] {
