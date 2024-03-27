@@ -12,7 +12,7 @@ The MDN community is encouraged to [initiate and engage in discussions](/en-US/d
 
 Most discussions do not need a formal resolution process. These MDN discussion guidelines are here for the discussions that need a timely resolution, are stalled, are at risk of becoming stalled, or are otherwise not moving toward a conclusion and would benefit from a formal process:
 
-1. Each discussion is held / rooted in a [discussion on Github](https://github.com/orgs/mdn/discussions). This Github discussion serves as the "source of truth" for the topic.
+1. Each discussion is held / rooted in a [discussion on GitHub](https://github.com/orgs/mdn/discussions). This GitHub discussion serves as the "source of truth" for the topic.
 
    - To maintain continuity, remember to capture summaries and notes from any meetings and async discussions in this GitHub discussion thread.
 
