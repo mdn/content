@@ -62,8 +62,7 @@ cd src
 # Delete the App.css file and the React logo provided by Vite
 rm App.css assets/react.svg
 # Empty the contents of App.jsx and index.css
-# Note the colon at the beginning of this command!
-: >! {App.jsx,index.css}
+echo -n > App.jsx && echo -n > index.css
 # Move back up to the root of the project
 cd ..
 ```

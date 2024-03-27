@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e. when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
 

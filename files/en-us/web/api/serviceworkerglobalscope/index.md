@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ServiceWorkerGlobalScope
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
 
@@ -25,6 +25,8 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
+- {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a reference to the {{domxref("CookieStore")}} object associated with the service worker.
 - {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
 - {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} {{ReadOnlyInline}}

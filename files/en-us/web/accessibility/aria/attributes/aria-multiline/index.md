@@ -49,7 +49,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role

@@ -2,7 +2,7 @@
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-linecap
+browser-compat: svg.global_attributes.stroke-linecap
 ---
 
 {{SVGRef}}

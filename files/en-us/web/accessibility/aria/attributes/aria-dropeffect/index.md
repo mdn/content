@@ -52,7 +52,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 - [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)

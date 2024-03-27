@@ -383,7 +383,7 @@ Once you have the object in your JavaScript variable, you can set `style` proper
           // set the cell background color
           // if the column is 0. If the column is 1 hide the cell
           if (col === 0) {
-            myCurrentCell.style.background = "rgb(255, 0, 0)";
+            myCurrentCell.style.background = "rgb(255 0 0)";
           } else {
             myCurrentCell.style.display = "none";
           }

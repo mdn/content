@@ -110,4 +110,4 @@ You can also use the {{cssxref('@supports')}} at-rule.
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/API/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

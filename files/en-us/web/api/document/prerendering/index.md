@@ -10,7 +10,7 @@ browser-compat: api.Document.prerendering
 
 {{ APIRef("Speculation Rules API") }}{{seecompattable}}
 
-The `prerendering` read-only property of the {{domxref("Document")}} interface returns `true` if the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+The **`prerendering`** read-only property of the {{domxref("Document")}} interface returns `true` if the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 
 ## Value
 

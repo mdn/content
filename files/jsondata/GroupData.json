@@ -19,8 +19,13 @@
         "BackgroundFetchUpdateUIEvent"
       ],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": ["ServiceWorkerRegistration.backgroundFetch"],
+      "events": [
+        "ServiceWorkerGlobalScope: backgroundfetchsuccess",
+        "ServiceWorkerGlobalScope: backgroundfetchfail",
+        "ServiceWorkerGlobalScope: backgroundfetchabort",
+        "ServiceWorkerGlobalScope: backgroundfetchclick"
+      ]
     },
     "Background Sync": {
       "overview": ["Background Synchronization API"],
@@ -156,7 +161,8 @@
     },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
-      "interfaces": ["ContactsManager"],
+      "interfaces": ["ContactAddress", "ContactsManager"],
+      "methods": [],
       "properties": ["Navigator.contacts"],
       "events": []
     },
@@ -196,8 +202,12 @@
         "ExtendableCookieChangeEvent"
       ],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": [
+        "Window.cookieStore",
+        "ServiceWorkerGlobalScope.cookieStore",
+        "ServiceWorkerRegistration.cookies"
+      ],
+      "events": ["ServiceWorkerGlobalScope: cookiechange"]
     },
     "Credential Management API": {
       "overview": ["Credential Management API"],
@@ -205,12 +215,10 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "OTPCredential",
-        "PasswordCredential",
-        "PublicKeyCredential"
+        "PasswordCredential"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.credentials"],
       "events": []
     },
     "CSS Counter Styles": {
@@ -412,6 +420,20 @@
       "properties": [],
       "events": []
     },
+    "EditContext API": {
+      "overview": ["EditContext API"],
+      "guides": ["/docs/Web/API/EditContext_API/Guide"],
+      "interfaces": [
+        "EditContext",
+        "TextFormat",
+        "TextUpdateEvent",
+        "TextFormatUpdateEvent",
+        "CharacterBoundsUpdateEvent"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Encoding API": {
       "overview": ["Encoding API"],
       "guides": ["/docs/Web/API/Encoding_API/Encodings"],
@@ -451,9 +473,17 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential", "IdentityProvider"],
+      "guides": [
+        "/docs/Web/API/FedCM_API/IDP_integration",
+        "/docs/Web/API/FedCM_API/RP_sign-in"
+      ],
+      "interfaces": [
+        "IdentityCredential",
+        "IdentityProvider",
+        "NavigatorLogin"
+      ],
       "methods": ["CredentialsContainer.get()"],
-      "properties": [],
+      "properties": ["Navigator.login"],
       "events": []
     },
     "Fetch API": {
@@ -466,6 +496,16 @@
       "interfaces": ["Headers", "Request", "Response"],
       "methods": ["fetch()"],
       "properties": [],
+      "events": []
+    },
+    "Fenced Frame API": {
+      "overview": ["Fenced Frame API"],
+      "guides": [
+        "/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames"
+      ],
+      "interfaces": ["Fence", "FencedFrameConfig", "HTMLFencedFrameElement"],
+      "methods": ["Navigator.deprecatedReplaceInURN"],
+      "properties": ["Window.fence"],
       "events": []
     },
     "File API": {
@@ -915,6 +955,7 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "InputDeviceInfo",
         "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
@@ -923,11 +964,14 @@
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints",
-        "InputDeviceInfo"
+        "OverconstrainedError"
       ],
-      "methods": ["HTMLCanvasElement.captureStream()"],
+      "methods": [
+        "HTMLCanvasElement.captureStream()",
+        "HTMLMediaElement.captureStream()"
+      ],
       "properties": ["Navigator.mediaDevices"],
-      "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+      "events": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
@@ -980,7 +1024,7 @@
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],
       "methods": [],
-      "properties": ["Navigator.connection"],
+      "properties": ["Navigator.connection", "WorkerNavigator.connection"],
       "events": []
     },
     "Page Visibility API": {
@@ -1536,6 +1580,14 @@
         "Element: mouseout"
       ]
     },
+    "Topics API": {
+      "overview": ["Topics API"],
+      "guides": ["/docs/Web/API/Topics_API/Using"],
+      "interfaces": [],
+      "methods": ["Document.browsingTopics()", "fetch()"],
+      "properties": ["HTMLIFrameElement.browsingTopics"],
+      "events": []
+    },
     "Touch Events": {
       "overview": ["Touch events"],
       "guides": [
@@ -2080,6 +2132,8 @@
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
+        "RTCVideoSourceStats",
+        "RTCCodecStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"
@@ -2133,8 +2187,8 @@
       "properties": [],
       "events": []
     },
-    "Websockets API": {
-      "overview": ["Websockets API"],
+    "WebSockets API": {
+      "overview": ["WebSockets API"],
       "guides": [
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",

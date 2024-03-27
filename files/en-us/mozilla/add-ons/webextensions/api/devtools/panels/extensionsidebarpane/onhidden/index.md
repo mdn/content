@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Called when the sidebar pane becomes hidden, as a result of the user switching away from it.
 

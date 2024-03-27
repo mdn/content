@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface ends a render bundle debug group, which is begun with a {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} call.

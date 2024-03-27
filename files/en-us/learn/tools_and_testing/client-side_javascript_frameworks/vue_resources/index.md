@@ -50,7 +50,7 @@ Here's where you should go to learn more about Vue:
 - [Vue GitHub Repo](https://github.com/vuejs/vue) — The Vue code itself. This is where you can report issues and/or contribute directly to the Vue codebase. Studying the Vue source code can help you better understand how the framework works, and write better code.
 - [Vue Forum](https://forum.vuejs.org/) — The official forum for getting help with Vue.
 - [Vue CLI Docs](https://cli.vuejs.org/) — Documentation for the Vue CLI. This contains information on customizing and extending the output you are generating via the CLI.
-- [NuxtJS](https://nuxtjs.org/) — NuxtJS is a Server-Side Vue Framework, with some architectural opinions that can be useful to creating maintainable applications, even if you don't use any of the Server Side Rendering features it provides. This site provides detailed documentation on using NuxtJS.
+- [Nuxt](https://nuxt.com/) — Nuxt is a Server-Side Vue Framework, with some architectural opinions that can be useful to creating maintainable applications, even if you don't use any of the Server Side Rendering features it provides. This site provides detailed documentation on using Nuxt.
 - [Vue Mastery](https://www.vuemastery.com/courses/) — A paid education platform that specializes in Vue, including some free lessons.
 - [Vue School](https://vueschool.io/) — Another paid education platform specializing in Vue.
 

@@ -33,7 +33,7 @@ Let's walk through an example:
    ```
 
 3. Run `filecheck` on each image, which might complain if something's wrong.
-   For more details, see the [Compressing images](#compressing-images) section.
+   For more details, see the [Compressing images](#compressing_images) section.
 
    ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png

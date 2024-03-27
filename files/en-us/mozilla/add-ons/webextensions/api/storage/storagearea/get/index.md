@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves one or more items from the storage area.
 

@@ -2,12 +2,10 @@
 title: CookieChangeEvent
 slug: Web/API/CookieChangeEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CookieChangeEvent
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`CookieChangeEvent`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} is the event type of the {{domxref("CookieStore/change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
 
@@ -23,16 +21,16 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
 ## Constructor
 
-- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}} {{Experimental_Inline}}
+- {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
   - : Creates a new `CookieChangeEvent`.
 
 ## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
   - : Returns an array containing one or more changed cookies.
-- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
   - : Returns an array containing one or more deleted cookies.
 
 ## Instance methods

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onSendHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This event is fired just before sending headers. If your extension or some other extension modified headers in `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, you'll see the modified version here.
 

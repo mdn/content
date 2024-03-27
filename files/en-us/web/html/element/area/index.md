@@ -138,7 +138,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <a href="/en-US/docs/Web/HTML/Element/area#href"><code>href</code></a> attribute is present, otherwise
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <a href="#href"><code>href</code></a> attribute is present, otherwise
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>

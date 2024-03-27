@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.register
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this function to register one or more content scripts.
 

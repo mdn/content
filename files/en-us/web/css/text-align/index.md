@@ -56,7 +56,7 @@ The `text-align` property is specified in one of the following ways:
   - : The inline contents are centered within the line box.
 - `justify`
   - : The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.
-- `justify-all` {{experimental_inline}}
+- `justify-all`
   - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.

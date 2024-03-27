@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.commands.Command
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information about a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 

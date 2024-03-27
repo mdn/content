@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the title of the page action.
 

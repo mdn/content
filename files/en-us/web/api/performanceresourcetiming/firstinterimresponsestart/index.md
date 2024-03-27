@@ -19,8 +19,10 @@ There is no _end_ property for `firstInterimResponseStart`.
 The `firstInterimResponseStart` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first interim bytes of the response from the server.
-- `0` if the resource was instantaneously retrieved from a cache.
+- `0` if the resource sent no interim response
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+
+**Note:** As Early Hints are typically only supported on the main navigation request, which is by definition same-origin, a `0` typically indicates Early Hints were **not** used.
 
 ## Examples
 

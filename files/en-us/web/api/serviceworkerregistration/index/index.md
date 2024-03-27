@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerRegistration.index
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the

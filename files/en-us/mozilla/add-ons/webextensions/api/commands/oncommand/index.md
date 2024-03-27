@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onCommand
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a command is executed using its associated keyboard shortcut.
 

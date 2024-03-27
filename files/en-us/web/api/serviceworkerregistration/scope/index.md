@@ -6,14 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.scope
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`scope`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a unique identifier for a
 service worker registration. The service worker must be on the same origin as the
 document that registers the {{domxref("ServiceWorker")}}.
-
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Value
 

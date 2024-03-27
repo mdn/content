@@ -55,7 +55,7 @@ history.pushState(stateObj, "", "bar.html");
 
 On the next page you could then use `history.state` to access the `stateObj` that was just added.
 
-The explanation of these two lines above can be found in the [Example of `pushState()` method](/en-US/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method) section of the [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) article. Then suppose
+The explanation of these two lines above can be found in the [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API#using_pushstate) article. Then suppose
 `https://www.mozilla.org/bar.html` executes the following
 JavaScript:
 

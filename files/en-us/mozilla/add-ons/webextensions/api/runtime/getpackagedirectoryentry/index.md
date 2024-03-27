@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns a `DirectoryEntry` object representing the package directory.
 
