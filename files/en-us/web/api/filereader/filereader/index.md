@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.FileReader.FileReader
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`FileReader()`** constructor creates a new FileReader.
 

@@ -19,11 +19,7 @@ x ??= y
 
 ## Description
 
-Nullish coalescing assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ??= y` is equivalent to:
-
-```js
-x ?? (x = y);
-```
+Nullish coalescing assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ??= y` is equivalent to `x ?? (x = y)`, except that the expression `x` is only evaluated once.
 
 No assignment is performed if the left-hand side is not nullish, due to short-circuiting of the [nullish coalescing](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) operator. For example, the following does not throw an error, despite `x` being `const`:
 

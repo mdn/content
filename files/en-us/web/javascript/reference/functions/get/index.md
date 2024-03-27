@@ -31,14 +31,20 @@ There are some additional syntax restrictions:
 
 ## Description
 
-Sometimes it is desirable to allow access to a property that returns a dynamically
-computed value, or you may want to reflect the status of an internal variable without
-requiring the use of explicit method calls. In JavaScript, this can be accomplished with
-the use of a _getter_.
+Sometimes it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a _getter_.
 
-It is not possible to simultaneously have a getter bound to a property and have that
-property actually hold a value, although it _is_ possible to use a getter and a
-setter in conjunction to create a type of pseudo-property.
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The getter syntax allows you to specify the getter function in an object initializer.
+
+```js
+const obj = {
+  get prop() {
+    // getter, the code executed when reading obj.prop
+    return someValue;
+  },
+};
+```
+
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 
@@ -84,7 +90,7 @@ console.log(instance.msg); // "hello cake"
 
 Getter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike getter properties in object literals, getter properties in classes are not enumerable.
 
-Static getters and private getters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static getters and private getters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
 
 ### Deleting a getter using the `delete` operator
 

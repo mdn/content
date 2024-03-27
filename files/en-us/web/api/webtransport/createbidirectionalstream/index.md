@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebTransport.createBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens and returns a bidirectional stream.
 
@@ -18,8 +18,6 @@ The relative order in which queued bytes are emptied from created streams can be
 If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
 If the order number is not set then the order in which bytes are sent is implementation dependent.
 Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -50,7 +48,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportBidirectionalS
 
 ## Examples
 
-An initial function is used to get references to the {{domxref("WebTransportBidirectionalStream.readable")}} and {{domxref("WebTransportBidirectionalStream.writable")}} properties. These are references to `ReadableStream` and `WritableStream` instances, which can be used to read from and write to the server.
+An initial function is used to get references to the {{domxref("WebTransportBidirectionalStream.readable")}} and {{domxref("WebTransportBidirectionalStream.writable")}} properties. These are references to `WebTransportReceiveStream` and `WebTransportSendStream` instances, which are readable and writable streams that can be used to read from and write to the server.
 
 ```js
 async function setUpBidirectional() {
@@ -67,7 +65,7 @@ async function setUpBidirectional() {
 }
 ```
 
-Reading from the `ReadableStream` can then be done as follows:
+Reading from the `WebTransportReceiveStream` can then be done as follows:
 
 ```js
 async function readData(readable) {
@@ -83,7 +81,7 @@ async function readData(readable) {
 }
 ```
 
-And writing to the `WritableStream` can be done like this:
+And writing to the `WebTransportSendStream` can be done like this:
 
 ```js
 async function writeData(writable) {
@@ -105,7 +103,8 @@ async function writeData(writable) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("WebTransport.createUnidirectionalStream()")}}
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

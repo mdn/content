@@ -9,7 +9,7 @@ browser-compat: api.KeyboardEvent
 
 **`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, or {{domxref("Element/keyup_event", "keyup")}}) identifies what kind of keyboard activity occurred.
 
-> **Note:** `KeyboardEvent` events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the {{domxref("HTMLElement/input_event", "input")}} event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.
+> **Note:** `KeyboardEvent` events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the {{domxref("Element/input_event", "input")}} event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.
 
 {{InheritanceDiagram}}
 
@@ -125,12 +125,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
   - : Returns a string representing the key value of the key represented by the event.
-- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
-
-  - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
-
-    > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
-
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
@@ -143,28 +137,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
   - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
-## Instance methods
-
-_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
-
-- {{domxref("KeyboardEvent.getModifierState()")}}
-
-  - : Returns a boolean value indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.
-
-## Obsolete methods
-
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : Initializes a `KeyboardEvent` object. This was implemented only by Firefox, and is no longer supported even there; instead, you should use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
-- {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
-  - : Initializes a `KeyboardEvent` object. This is now deprecated. You should instead use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
-
-## Obsolete properties
-
-- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}} {{Deprecated_inline}} {{ReadOnlyInline}}
-
-  - : Returns a string representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
-
-    > **Note:** If the key is used as a macro that inserts multiple characters, this property's value is the entire string, not just the first character.
+### Obsolete properties
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
@@ -180,13 +153,21 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
 
-  - : Returns a number representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
+## Instance methods
 
-    > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
+_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+
+- {{domxref("KeyboardEvent.getModifierState()")}}
+
+  - : Returns a boolean value indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.
+
+### Obsolete methods
+
+- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
+  - : Initializes a `KeyboardEvent` object. This was implemented only by Firefox, and is no longer supported even there; instead, you should use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
+- {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
+  - : Initializes a `KeyboardEvent` object. This is now deprecated. You should instead use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
 
 ## Events
 

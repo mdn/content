@@ -13,7 +13,7 @@ When styling [links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperl
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
@@ -151,7 +151,7 @@ p {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
 }
 
 a:link {
@@ -301,7 +301,7 @@ solution.addEventListener("click", () => {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
   text-decoration: none;
   padding: 2px 1px 0;
 }
@@ -368,7 +368,7 @@ p {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
   text-decoration: none;
   padding: 2px 1px 0;
 }
@@ -448,7 +448,7 @@ html {
 a {
   flex: 1;
   text-decoration: none;
-  outline: none;
+  outline-color: transparent;
   text-align: center;
   line-height: 3;
   color: black;

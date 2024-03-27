@@ -9,7 +9,7 @@ browser-compat: api.PublicKeyCredential
 
 The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
 
-> **Note:** [Passkeys](https://passkeys.dev/) are a significant use case for web authentication; see [Create a passkey for passwordless logins](https://web.dev/passkey-registration/) and [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for implementation details. See also [Google Identity > Passwordless login with passkeys](https://developers.google.com/identity/passkeys).
+> **Note:** [Passkeys](https://passkeys.dev/) are a significant use case for web authentication; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Google Identity > Passwordless login with passkeys](https://developers.google.com/identity/passkeys).
 
 ## WebAuthn concepts and usage
 
@@ -34,7 +34,11 @@ In their most basic forms, both `create()` and `get()` receive a very large rand
 
 To illustrate how the credential creation process works, let's describe the typical flow that occurs when a user wants to register a credential to a relying party:
 
-1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)).
+1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [Fetch](/en-US/docs/Web/API/Fetch_API) or [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)).
+
+   > **Note:** The format for sharing information between the relying party server and the web app is up to the application.
+   > A recommended approach is to exchange {{glossary("JSON type representation")}} objects for credentials and credential options.
+   > Convenience methods have been created in `PublicKeyCredential` for converting from the JSON representations to the form required by the authentication APIs: {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "parseCreationOptionsFromJSON()")}}, {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "parseRequestOptionsFromJSON()")}} and {{domxref("PublicKeyCredential.toJSON()")}}.
 
 2. The web app initiates generation of a new credential via the authenticator, on behalf of the relying party, via a {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} call. This call is passed a `publicKey` option specifying device capabilities, e.g., whether the device provides its own user authentication (for example with biometrics).
 
@@ -117,9 +121,12 @@ The availability of WebAuthn can be controlled using a [Permissions Policy](/en-
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
 
-Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts. In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document; `create()` on the other hand cannot be used in {{htmlelement("iframe")}}s.
+Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
+In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
-> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")}} returned by them will reject with a `SecurityError` {{domxref("DOMException")}}.
+> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", "nocode")}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ### Basic access control
 
@@ -130,28 +137,44 @@ Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
 Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
 ```
 
-### Allowing embedded `get()` calls in an `<iframe>`
+### Allowing embedded `create` and `get()` calls in an `<iframe>`
 
-If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of steps to follow:
+If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there are a couple of steps to follow:
 
 1. The site embedding the relying party site must provide permission via an `allow` attribute:
 
-   ```html
-   <iframe
-     src="https://auth.provider.com"
-     allow="publickey-credentials-get *" />
-   ```
+   - If using `get()`:
+
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-get *">
+     </iframe>
+     ```
+
+   - If using `create()`:
+
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-create 'self' https://a.auth.provider.com https://b.auth.provider.com">
+     </iframe>
+     ```
+
+     The `<iframe>` must also have {{glossary("Transient activation")}} if `create()` is called cross-origin.
 
 2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
 
    ```http
    Permissions-Policy: publickey-credentials-get=*
+   Permissions-Policy: publickey-credentials-create=*
    ```
 
    Or to allow only a specific URL to embed the relying party site in an `<iframe>`:
 
    ```http
    Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+   Permissions-Policy: publickey-credentials-create=("https://*.auth.provider.com")
    ```
 
 ## Interfaces

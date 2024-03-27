@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.mode
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`mode`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns the current mode for accessing the
 data in the object stores in the scope of the transaction (i.e. is the mode to be
 read-only, or do you want to write to the object stores?) The default value is
 `readonly`.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -28,10 +26,9 @@ The following values are available:
 - `readwrite`
   - : Allows reading and writing of data in existing data stores to be changed.
 - `versionchange`
-  - : Allows any operation to be performed, including ones that delete and
+  - : Allows any operation, including ones that delete and
     create object stores and indexes.
-    This mode is for updating the version number of transactions
-    that were started using {{domxref("IDBDatabase.setVersion()")}}.
+    This mode is for updating the version number of transactions if the need is detected when calling {{domxref("IDBFactory.open()")}}.
     Transactions of this mode cannot run concurrently with other transactions.
     Transactions in this mode are known as _upgrade transactions_.
 

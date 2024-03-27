@@ -6,9 +6,9 @@ page-type: web-api-global-function
 browser-compat: api.setInterval
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-The **`setInterval()`** method, offered on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+The **`setInterval()`** method, offered on the {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}} interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
 This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("clearInterval", "clearInterval()")}}.
 
@@ -46,7 +46,7 @@ It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > **Note:** The `delay` argument is converted to a signed 32-bit integer.
-> This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> This effectively limits `delay` to 2147483647 ms, roughly 24.8 days, since it's specified as a signed integer in the IDL.
 
 ## Examples
 
@@ -233,7 +233,7 @@ interval has completed before recursing.
 ## See also
 
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("setTimeout()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("clearInterval()")}}
+- {{domxref("window.requestAnimationFrame()")}}

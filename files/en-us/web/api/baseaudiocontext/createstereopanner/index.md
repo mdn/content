@@ -32,7 +32,7 @@ A {{domxref("StereoPannerNode")}}.
 
 ## Examples
 
-In our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
+In our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/main/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
 slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we
 create a {{domxref("MediaElementAudioSourceNode")}} and a
 {{domxref("StereoPannerNode")}}, and connect the two together using the

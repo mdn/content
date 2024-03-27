@@ -18,9 +18,7 @@ In early 2005, a small team of idealists set out to create a new, free, communit
 
 For ten years, the MDN community has been documenting the open Web. From fixing simple typos to writing entire suites of an entirely new API, everyone has something to offer and no contribution is too large or too small. We have over 90,000 pages of content that have been written or translated by members of our outstanding community of Mozillians. You can become one of them.
 
-[Learn more about contributing](/en-US/docs/MDN/Contribute)
-
-{{TenthCampaignQuote}}
+[Learn more about contributing](/en-US/docs/MDN/Community/Contributing)
 
 ## See also
 

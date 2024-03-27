@@ -13,7 +13,7 @@ The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) elem
 
 ## Instance properties
 
-_Inherits properties from its parent, {{DOMxRef("Element")}}._
+_Also inherits properties from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.accessKey")}}
   - : A string representing the access key assigned to the element.
@@ -21,16 +21,18 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Returns a string containing the element's assigned access key.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
+- {{domxref("HTMLElement.autofocus")}}
+  - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
-- {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
-  - : Returns a boolean value indicating whether or not the content of the element can be edited.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
 - {{DOMxRef("HTMLElement.dir")}}
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
   - : A boolean value indicating if the element can be dragged.
+- {{DOMxRef("HTMLElement.editContext")}} {{experimental_inline}}
+  - : Returns the {{DOMxRef("EditContext")}} associated with the element, or `null` if there isn't one.
 - {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}
@@ -43,12 +45,10 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
-- {{domxref("HTMLElement.popover")}}
-  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
+- {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
+  - : Returns a boolean value indicating whether or not the content of the element can be edited.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
-- {{DOMxRef("HTMLElement.noModule")}}
-  - : A boolean value indicating whether an import script can be executed in user agents that support module scripts.
 - {{DOMxRef("HTMLElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
 - {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
@@ -65,10 +65,10 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
     As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
-- {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…
+- {{domxref("HTMLElement.popover")}}
+  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.spellcheck")}}
-  - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
+  - : A boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint. It is available on all HTML elements, though it doesn't affect all of them.
 - {{DOMxRef("HTMLElement.style")}}
   - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
@@ -77,10 +77,12 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string containing the text that appears in a popup box when mouse is over the element.
 - {{DOMxRef("HTMLElement.translate")}}
   - : A boolean value representing the translation.
+- {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
+  - : A string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
 
 ## Instance methods
 
-_Inherits methods from its parent, {{DOMxRef("Element")}}._
+_Also inherits methods from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.attachInternals()")}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
@@ -99,74 +101,51 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
 
 ## Events
 
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{DOMxRef("HTMLElement.copy_event", "copy")}}
+_Also, inherits events from its parent, {{DOMxRef("Element")}}._
+
+- {{DOMxRef("HTMLElement/cancel_event", "cancel")}}
+  - : Fired for {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key.
+- {{DOMxRef("HTMLElement/change_event", "change")}}
+  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("Element/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
+- {{DOMxRef("HTMLElement/error_event", "error")}}
+  - : Fired when a resource failed to load, or can't be used.
+- {{DOMxRef("HTMLElement/load_event", "load")}}
+  - : Fires for elements containing a resource when the resource has successfully loaded.
+
+### Clipboard events
+
+- {{DOMxRef("HTMLElement/copy_event", "copy")}}
   - : Fired when the user initiates a copy action through the browser's user interface.
-- {{DOMxRef("HTMLElement.cut_event", "cut")}}
+- {{DOMxRef("HTMLElement/cut_event", "cut")}}
   - : Fired when the user initiates a cut action through the browser's user interface.
-- {{DOMxRef("HTMLElement.paste_event", "paste")}}
+- {{DOMxRef("HTMLElement/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
-- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
-  - : Fired when an element does not satisfy its constraints during constraint validation.
-- {{DOMxRef("HTMLElement.beforetoggle", "beforetoggle")}}
+
+### Drag & drop events
+
+- {{DOMxRef("HTMLElement/drag_event", "drag")}}
+  - : This event is fired when an element or text selection is being dragged.
+- {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
+  - : This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
+- {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
+  - : This event is fired when a dragged element or text selection enters a valid drop target.
+- {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
+  - : This event is fired when a dragged element or text selection leaves a valid drop target.
+- {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
+  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{domxref("Element/mouseover_event", "mouseover")}} ).
+- {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
+  - : This event is fired when the user starts dragging an element or text selection.
+- {{DOMxRef("HTMLElement/drop_event", "drop")}}
+  - : This event is fired when an element or text selection is dropped on a valid drop target.
+
+### Popover events
+
+- {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
   - : Fired when the element is a popover, before it is hidden or shown.
-- {{DOMxRef("HTMLElement.toggle", "toggle")}}
+- {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
   - : Fired when the element is a popover, just after it is hidden or shown.
-
-### Animation events
-
-- {{domxref("Element/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
-- {{domxref("Element/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
-- {{domxref("Element/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
-- {{domxref("Element/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
-
-### Input events
-
-- {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
-  - : Fired when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified.
-- {{domxref("HTMLElement/input_event", "input")}}
-  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-- {{domxref("HTMLElement/change_event", "change")}}
-  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
-
-### Pointer events
-
-- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
-  - : Fired when an element captures a pointer using {{domxref("Element/setPointerCapture", "setPointerCapture()")}}.
-- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
-  - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-- {{domxref("Element/pointercancel_event", "pointercancel")}}
-  - : Fired when a pointer event is canceled.
-- {{domxref("Element/pointerdown_event", "pointerdown")}}
-  - : Fired when a pointer becomes active.
-- {{domxref("Element/pointerenter_event", "pointerenter")}}
-  - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-- {{domxref("Element/pointerleave_event", "pointerleave")}}
-  - : Fired when a pointer is moved out of the hit test boundaries of an element.
-- {{domxref("Element/pointermove_event", "pointermove")}}
-  - : Fired when a pointer changes coordinates.
-- {{domxref("Element/pointerout_event", "pointerout")}}
-  - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-- {{domxref("Element/pointerover_event", "pointerover")}}
-  - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{domxref("Element/pointerup_event", "pointerup")}}
-  - : Fired when a pointer is no longer active.
-
-### Transition events
-
-- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
-- {{domxref("Element/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
-- {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
-- {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

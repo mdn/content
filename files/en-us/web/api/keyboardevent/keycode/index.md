@@ -2971,7 +2971,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
     </tr>
     <tr>
       <td><code>DOM_VK_DOUBLE_QUOTE</code></td>
-      <td>0xA3 (162)</td>
+      <td>0xA2 (162)</td>
       <td>Double quote (""") key.</td>
     </tr>
     <tr>

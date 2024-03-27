@@ -9,9 +9,9 @@ status:
 browser-compat: api.File.lastModifiedDate
 ---
 
-{{APIRef("File API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date return the current date.
+The **`lastModifiedDate`** read-only property of the {{domxref("File")}} interface returns the last modified date of the file. Files without a known last modified date return the current date.
 
 ## Value
 
@@ -32,7 +32,7 @@ for (const file of fileInput.files) {
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
+To offer protection against timing attacks and {{glossary("fingerprinting")}}, the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
 
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 

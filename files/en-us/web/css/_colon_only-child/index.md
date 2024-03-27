@@ -11,8 +11,6 @@ The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
 
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
-
 ## Syntax
 
 ```css

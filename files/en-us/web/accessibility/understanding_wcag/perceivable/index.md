@@ -417,7 +417,7 @@ This guideline relates to making sure core content is easy to discern from backg
         Use native `&#x3C;button>`s to provide accessible keyboard
         controls, as shown in
         <a
-          href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
+          href="/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
           >Video player styling basics</a
         >.
       </td>

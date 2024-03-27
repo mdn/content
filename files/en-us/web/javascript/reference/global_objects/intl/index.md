@@ -123,6 +123,24 @@ log("en-US"); // 5/24/2012 26,254.39
 log("de-DE"); // 24.5.2012 26.254,39
 ```
 
+### Using the browser's preferred language
+
+Instead of passing a hardcoded locale name to the `Intl` methods, you can use the user's preferred language provided by {{domxref("navigator.language")}}:
+
+```js
+const date = new Date("2012-05-24");
+
+const formattedDate = new Intl.DateTimeFormat(navigator.language).format(date);
+```
+
+Alternatively, the {{domxref("navigator.languages")}} property provides a sorted list of the user's preferred languages. This list can be passed directly to the `Intl` constructors to implement preference-based fallback selection of locales. The [locale negotiation](#locale_identification_and_negotiation) process is used to pick the most appropriate locale available:
+
+```js
+const count = 26254.39;
+
+const formattedCount = new Intl.NumberFormat(navigator.languages).format(count);
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -138,4 +156,6 @@ log("de-DE"); // 24.5.2012 26.254,39
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{domxref("navigator.language")}}
+- {{domxref("navigator.languages")}}
 - [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html) by Norbert Lindenberg (2012)

@@ -83,14 +83,21 @@ For example, let's say you want to move the entire
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
-3. Add and commit all of the deleted, created, and modified files as well as push your branch to your fork.
+3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
 
    ```bash
-   git commit -a
+   node scripts/update-moved-file-links.js
+   ```
+
+4. Add and commit all the deleted, created, and modified files as well as push your branch to your fork.
+
+   ```bash
+   git add .
+   git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push -u origin my-move
    ```
 
-4. Create your pull request.
+5. Create your pull request.
 
 > **Note:** `yarn content move` automatically adds the necessary redirect information to the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) about it.
 
@@ -142,7 +149,7 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
-4. Add and commit all of the deleted files as well as push your branch to your fork.
+4. Add and commit all the deleted files as well as push your branch to your fork.
 
    ```bash
    git commit -a

@@ -111,3 +111,4 @@ If an extension defines specific symbols or functions that are not available in 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - [webglreport.com](https://webglreport.com/)
+- [web3dsurvey.com - WebGL Extension Support Survey](https://web3dsurvey.com/)

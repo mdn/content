@@ -5,15 +5,14 @@ page-type: web-api-overview
 browser-compat:
   - api.MessageChannel
   - api.MessagePort
+spec-urls: https://html.spec.whatwg.org/multipage/web-messaging.html#channel-messaging
 ---
 
-{{DefaultAPISidebar("Channel Messaging API")}}
+{{DefaultAPISidebar("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **Channel Messaging API** allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly, passing messages between one another through two-way channels (or pipes) with a port at each end.
 
-{{AvailableInWorkers}}
-
-## Channel messaging concepts and usage
+## Concepts and usage
 
 A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses `port1`, and the app at the other end of the port uses `port2` — you send a message to `port2`, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)
 
@@ -25,7 +24,7 @@ When you want to stop sending messages down the channel, you can invoke {{domxre
 
 Find out more about how to use this API in [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging).
 
-## Channel messaging interfaces
+## Interfaces
 
 - {{domxref("MessageChannel")}}
   - : Creates a new message channel to send messages across.

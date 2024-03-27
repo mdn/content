@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a network request has finished and its details are available to the extension.
 

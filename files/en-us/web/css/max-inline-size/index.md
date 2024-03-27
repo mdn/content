@@ -27,6 +27,7 @@ max-inline-size: 75%;
 max-inline-size: none;
 max-inline-size: max-content;
 max-inline-size: min-content;
+max-inline-size: fit-content;
 max-inline-size: fit-content(20em);
 
 /* Global values */

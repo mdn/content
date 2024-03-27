@@ -6,15 +6,13 @@ page-type: web-api-event
 browser-compat: api.DedicatedWorkerGlobalScope.rtctransform_event
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}} {{AvailableInWorkers}}
 
-The `rtctransform` event is fired at a worker's {{domxref('DedicatedWorkerGlobalScope')}} object when an encoded video or audio frame has been queued for processing by a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+The **`rtctransform`** event is fired at a worker's {{domxref('DedicatedWorkerGlobalScope')}} object when an encoded video or audio frame has been queued for processing by a {{domxref("WebRTC API/Using Encoded Transforms", "WebRTC Encoded Transform", "", "nocode")}}.
 
 The event's {{domxref("RTCTransformEvent.transformer","transformer")}} property returns a {{domxref("RTCRtpScriptTransformer")}} that exposes the {{domxref("ReadableStream")}} on which the frame is queued, and a {{domxref("WritableStream")}} where the frame can be written to inject it back into the WebRTC pipeline.
 
 This event is not cancellable and does not bubble.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -66,7 +64,7 @@ The code first determines what transform to apply using `name` value passed in t
 Encoded frames are then piped from the readable, through the selected transform {{domxref("TransformStream")}}, to a writeable.
 The actual tranforming code is not shown.
 
-Note that this code is part of a more complete example provided in [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+Note that this code is part of a more complete example provided in {{domxref("WebRTC API/Using Encoded Transforms", "Using WebRTC Encoded Transforms", "", "nocode")}}.
 
 ## Specifications
 
@@ -78,4 +76,4 @@ Note that this code is part of a more complete example provided in [Using WebRTC
 
 ## See also
 
-- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
+- {{domxref("WebRTC API/Using Encoded Transforms", "Using WebRTC Encoded Transforms", "", "nocode")}}

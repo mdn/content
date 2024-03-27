@@ -60,18 +60,21 @@ A {{jsxref("Promise")}} that resolves after locking succeeds.
 
 The promise may be rejected with the following exceptions:
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
 
-  - : The user agent does not support locking the screen orientation.
+  - : Thrown if the document is not fully active.
 
 - `SecurityError` {{domxref("DOMException")}}
 
-  - : The user-agent's pre-lock conditions are not met.
-    For example, a browser may require that the top-level browsing context's `Document` is full screen.
-    The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.
+  - : Thrown if the document's visibility state is hidden or if the document is forbidden to use the feature (for example, by omitting the keyword `allow-orientation-lock` of the `sandbox` attribute of the `iframe` element).
 
-- {{jsxref("TypeError")}}
-  - : The `orientation` argument was not supplied.
+- `NotSupportedError` {{domxref("DOMException")}}
+
+  - : Thrown if the user agent does not support locking the screen orientation of the specific orientation.
+
+- `AbortError` {{domxref("DOMException")}}
+
+  - : Thrown if there is any other `lock()` method invoking.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
 **`getResponseHeader()`** returns the string containing the
@@ -44,8 +44,8 @@ response.
 ## Examples
 
 In this example, a request is created and sent, and a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
-handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
-  "readyState")}} to indicate that the headers have been received; when that is the case,
+handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState", "readyState")}}
+to indicate that the headers have been received; when that is the case,
 the value of the {{httpheader("Content-Type")}} header is fetched. If the
 `Content-Type` isn't the desired value, the {{DOMxRef("XMLHttpRequest")}} is
 canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
@@ -75,9 +75,8 @@ client.onreadystatechange = () => {
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
-- Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}
+- Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

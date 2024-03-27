@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Sending a message from a service worker to a client:
+The code below sends a message from a service worker to a client. The client is fetched using the {{domxref("Clients.get()", "get()")}} method on {{domxref("ServiceWorkerGlobalScope.clients", "clients")}}, which is a global in service worker scope.
 
 ```js
 addEventListener("fetch", (event) => {
@@ -48,7 +48,7 @@ addEventListener("fetch", (event) => {
       if (!event.clientId) return;
 
       // Get the client.
-      const client = await clients.get(event.clientId);
+      const client = await self.clients.get(event.clientId);
       // Exit early if we don't get the client.
       // Eg, if it closed.
       if (!client) return;

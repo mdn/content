@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}
 
 The **`pushsubscriptionchange`** event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}} to indicate a change in push subscription that was triggered outside the application's control.
 
@@ -44,7 +44,15 @@ This example, run in the context of a service worker, listens for a `pushsubscri
 self.addEventListener(
   "pushsubscriptionchange",
   (event) => {
-    const subscription = swRegistration.pushManager
+    const conv = (val) =>
+      btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
+    const getPayload = (subscription) => ({
+      endpoint: subscription.endpoint,
+      publicKey: conv(subscription.getKey("p256dh")),
+      authToken: conv(subscription.getKey("auth")),
+    });
+
+    const subscription = self.registration.pushManager
       .subscribe(event.oldSubscription.options)
       .then((subscription) =>
         fetch("register", {
@@ -53,7 +61,8 @@ self.addEventListener(
             "Content-type": "application/json",
           },
           body: JSON.stringify({
-            endpoint: subscription.endpoint,
+            old: getPayload(event.oldSubscription),
+            new: getPayload(subscription),
           }),
         }),
       );
@@ -70,7 +79,7 @@ You can also use the `onpushsubscriptionchange` event handler property to set up
 ```js
 self.onpushsubscriptionchange = (event) => {
   event.waitUntil(
-    swRegistration.pushManager
+    self.registration.pushManager
       .subscribe(event.oldSubscription.options)
       .then((subscription) => {
         /* ... */

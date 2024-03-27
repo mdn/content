@@ -1,6 +1,7 @@
 ---
 title: WebAssembly control flow instructions
 slug: WebAssembly/Reference/Control_flow
+page-type: landing-page
 ---
 
 {{WebAssemblySidebar}}

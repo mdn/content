@@ -28,21 +28,21 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - The {{ domxref("FileReaderSync") }} interface (part of the FileAPI) has been implemented.
 - Event handling in nested {{ HTMLElement("label") }}s has been fixed.
 - You can now use {{ domxref("window.postMessage()") }} to pass {{ domxref("File") }} and {{ domxref("FileList") }} objects between windows.
-- When editing {{ domxref("element.contenteditable") }} areas, exiting a heading by pressing return, or exiting list editing mode by pressing return twice, now returns to paragraph entry mode (that is, paragraphs inside {{ HTMLElement("p") }} blocks) instead of separating lines by {{ HTMLElement("br") }} elements.
-- Fixed a bug that prevents justification from taking effect properly when applied to the first line in a {{ domxref("element.contenteditable") }} area.
-- Fixed a bug that caused pressing delete or backspace at the beginning of a {{ domxref("element.contenteditable") }} area to affect the previous `contenteditable` block if one is present.
+- When editing {{ domxref("HTMLelement.contenteditable", "contenteditable") }} areas, exiting a heading by pressing return, or exiting list editing mode by pressing return twice, now returns to paragraph entry mode (that is, paragraphs inside {{ HTMLElement("p") }} blocks) instead of separating lines by {{ HTMLElement("br") }} elements.
+- Fixed a bug that prevents justification from taking effect properly when applied to the first line in a {{ domxref("HTMLelement.contenteditable", "contenteditable") }} area.
+- Fixed a bug that caused pressing delete or backspace at the beginning of a {{ domxref("HTMLelement.contenteditable", "contenteditable") }} area to affect the previous `contenteditable` block if one is present.
 - {{ domxref("Document.getSelection()") }} now returns the same `Selection` object as {{ domxref("window.getSelection()") }}, instead of _stringifying_ it.
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
 - {{ domxref("HTMLMediaElement") }} now have a `seekable` property that return a {{ domxref("TimeRanges") }} object.
 - The {{ domxref("HTMLMediaElement") }}`.preload` attribute now correctly reflects as an _enumerated value_.
 - [`crossOrigin` property](/en-US/docs/Web/HTML/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
-- {{ domxref("window.navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.
+- {{ domxref("navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.
 
 ### JavaScript
 
 - [`RegExp.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) and [`RegExp.test()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) called with no arguments now match against the string "undefined".
 - [`String.search()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) and [`String.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) called with no arguments or `undefined` now match against the empty string and thus match every string.
-- Support for watchlists has been implemented with the new (non-standard) [`watch()`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/watch) and [`unwatch()`](/en-US/docs/JavaScript/Reference/Global_Objects/Object/unwatch) methods.
+- Support for watchlists has been implemented with the new (non-standard) `watch()` and `unwatch()` methods.
 
 ### CSS
 
@@ -87,19 +87,19 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ## Changes for Mozilla and add-on developers
 
-See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8) for a guide to changes you're likely to have to make your add-ons compatible with Firefox 8.
+See [Updating add-ons for Firefox 8](/en-US/docs/Mozilla/Firefox/Releases/8/Updating_add-ons) for a guide to changes you're likely to have to make your add-ons compatible with Firefox 8.
 
-> **Note:** Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> **Note:** Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox.
 
 ### XPCOM
 
-- [`Components.utils`](/en-US/docs/Components.utils)
-  - : The new methods [`Components.utils.createObjectIn()`](/en-US/docs/Components.utils.createObjectIn) and [`Components.utils.makeObjectPropsNormal()`](/en-US/docs/Components.utils.makeObjectPropsNormal) have been created to make it easier to create objects in specific compartments.
+- `Components.utils`
+  - : The new methods `Components.utils.createObjectIn()` and `Components.utils.makeObjectPropsNormal()` have been created to make it easier to create objects in specific compartments.
 
-#### Other XPCOM related changes
+#### Other XPCOM-related changes
 
 - You can now instantiate DOM {{ domxref("File") }} objects from component code by doing new File, instead of having to instantiate an `nsIDOMFile` directly.
-- The `nsTPtrArray` array type has been removed. Its functionality is now all available on `nsTArray`, which now offers the `SafeElementAt()` method when instantiated using a pointer type. See the section on [`SafeElementAt()`](/en-US/docs/XPCOM_array_guide#Bounds-safe_access_to_elements) in the [XPCOM array guide](/en-US/docs/XPCOM_array_guide) for more information.
+- The `nsTPtrArray` array type has been removed. Its functionality is now all available on `nsTArray`, which now offers the `SafeElementAt()` method when instantiated using a pointer type.
 
 ### Workers
 
@@ -107,9 +107,9 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 
 ### XUL
 
-- A bug in {{ domxref("document.execCommand()") }} that occurred when calling it on the value of [`contentDocument`](/en-US/docs/XUL/Property/contentDocument) has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.
-- [Bootstrapped add-ons](/en-US/docs/Extensions/Bootstrapped_extensions) can now load chrome using a [`chrome.manifest`](/en-US/docs/Chrome_Registration) file. See the section [Adding user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
-- [XUL images](/en-US/docs/XUL/image) now shrink down with the same ratio in both directions when specifying maximum sizes.
+- A bug in {{ domxref("document.execCommand()") }} that occurred when calling it on the value of `contentDocument` has been fixed. Since Firefox 3, this has resulted in errors instead of working correctly.
+- Bootstrapped add-ons can now load chrome using a `chrome.manifest` file.
+- XUL images now shrink down with the same ratio in both directions when specifying maximum sizes.
 
 ### Changes to the build system
 
@@ -123,7 +123,7 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 
 ### Chrome registration
 
-- The [`platformversion`](/en-US/docs/Chrome_Registration#platformversion) flag can be used in the chrome.manifest to specify Gecko version compatibility.
+- The `platformversion` flag can be used in the chrome.manifest to specify Gecko version compatibility.
 
 ### Interface changes
 
@@ -138,7 +138,7 @@ It is no longer possible to access XPCOM objects from ChromeWorkers. XPConnect h
 - The `nsINetworkLinkService` interface has a new attribute, `linkType`. This attribute provides the type of network connection in use. All Operating Systems currently return `LINK_TYPE_UNKNOWN`. Android support was backed out due to perceived security concerns.
 - The `nsISelection2` interface has been merged into the `nsISelectionPrivate` interface.
 - The `nsISelection3` interface has been merged into the `nsISelection` interface.
-- The `nsISessionStartup` attribute state is now a [`jsval`](/en-US/SpiderMonkey/JSAPI_Reference/Jsval) instead of a string, for performance reasons.
+- The `nsISessionStartup` attribute state is now a `jsval` instead of a string, for performance reasons.
 - The `nsIDocShell` attribute `isActive` is now `false` for minimized windows.
 - The `nsIDownloadHistory.addDownload()` method now saves the target where the download is saved on the local file system.
 

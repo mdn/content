@@ -8,13 +8,17 @@ browser-compat: api.Window.beforeunload_event
 
 {{APIRef}}
 
-The **`beforeunload`** event is fired when the window, the document and its resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
+The **`beforeunload`** event is fired when the current window, contained document, and associated resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
 
-This event enables a web page to trigger a confirmation dialog asking the user if they really want to leave the page. If the user confirms, the browser navigates to the new page, otherwise it cancels the navigation.
+The main use case for this event is to trigger a browser-generated confirmation dialog that asks users to confirm if they _really_ want to leave the page when they try to close or reload it, or navigate somewhere else. This is intended to help prevent loss of unsaved data.
 
-According to the specification, to show the confirmation dialog an event handler should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event.
+The dialog can be triggered in the following ways:
 
-The HTML specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) for more details.
+- Calling the event object's {{domxref("Event.preventDefault()", "preventDefault()")}} method.
+- Setting the event object's {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} property to a non-empty string value or any other [truthy](/en-US/docs/Glossary/Truthy) value.
+- Returning any truthy value from the event handler function, e.g. `return "string"`. Note that this only works when the function is attached via the `onbeforeunload` property, not the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. This behavior is consistent across modern versions of Firefox, Safari, and Chrome.
+
+The last two mechanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object, while also setting `returnValue` to support legacy cases.
 
 ## Syntax
 
@@ -29,6 +33,27 @@ onbeforeunload = (event) => {};
 
 A {{domxref("BeforeUnloadEvent")}}. Inherits from {{domxref("Event")}}.
 
+## Usage notes
+
+To trigger the dialog being shown when the user closes or navigates the tab, a `beforeunload` event handler function should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event object. You should note that modern implementations:
+
+- Require [sticky activation](/en-US/docs/Glossary/Sticky_activation) for the dialog to be displayed. In other words, the browser will only show the dialog box if the frame or any embedded frame receives a user gesture or user interaction. If the user has never interacted with the page, then there is no user data to save, so no legitimate use case for the dialog.
+- Only show a generic browser-specified string in the displayed dialog. This cannot be controlled by the webpage code.
+
+The `beforeunload` event suffers from some problems:
+
+- It is not reliably fired, especially on mobile platforms. For example, the `beforeunload` event is not fired at all in the following scenario:
+
+  1. A mobile user visits your page.
+  2. The user then switches to a different app.
+  3. Later, the user closes the browser from the app manager.
+
+  > **Note:** It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
+
+- In Firefox, `beforeunload` is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
+
+It is therefore recommended that developers listen for `beforeunload` only when users have unsaved changes so that the dialog mentioned above can be used to warn them about impending data loss, and remove the listener again when it is not needed. Listening for `beforeunload` sparingly can minimize the effect on performance.
+
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onbeforeunload` is also available on the following targets:
@@ -37,51 +62,45 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 - {{domxref("HTMLFrameSetElement")}}
 - {{domxref("SVGSVGElement")}}
 
-## Security
-
-[Sticky activation](/en-US/docs/Glossary/Sticky_activation) is required.
-The user has to have interacted with the page in order for this feature to work.
-
-## Usage notes
-
-The `beforeunload` event suffers from the same problems as the [`unload`](/en-US/docs/Web/API/Window/unload_event) event.
-
-Especially on mobile, the `beforeunload` event is not reliably fired. For example, the `beforeunload` event is not fired at all in the following scenario:
-
-1. A mobile user visits your page.
-2. The user then switches to a different app.
-3. Later, the user closes the browser from the app manager.
-
-Additionally, on Firefox, the `beforeunload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
-
-However, unlike the `unload` event, there is a legitimate use case for the `beforeunload` event: the scenario where the user has entered unsaved data that will be lost if the page is unloaded.
-
-It is recommended that developers listen for `beforeunload` only in this scenario, and only when they actually have unsaved changes, so as to minimize the effect on performance. See the Examples section below for an example of this.
-
-See the [bfcache guide](https://web.dev/bfcache/#only-add-beforeunload-listeners-conditionally) on web.dev for more information about the problems associated with the `beforeunload` event.
-
 ## Examples
 
-In this example a page listens for changes to a [text `input`](/en-US/docs/Web/HTML/Element/input/text). If the element contains a value, it adds a listener for `beforeunload`. If the element is empty, it removes the listener:
+In the following example we have an HTML text {{htmlelement("input")}} to represent some data that could be changed and require saving:
+
+```html
+<form>
+  <input type="text" name="name" id="name" />
+</form>
+```
+
+Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a {{domxref("Window.beforeunload_event", "beforeunload")}} event listener is attached to the {{domxref("Window")}} object.
+
+If the value becomes an empty string again (i.e. the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
+
+The `beforeunload` event handler function invokes `event.preventDefault()` to trigger the warning dialog when the user closes or navigates the tab. We have also included `event.returnValue = true` in the handler function so that any browsers that don't support the `event.preventDefault()` mechanism will still run the demo correctly.
 
 ```js
-const beforeUnloadListener = (event) => {
+const beforeUnloadHandler = (event) => {
+  // Recommended
   event.preventDefault();
-  return (event.returnValue = "");
+
+  // Included for legacy support, e.g. Chrome/Edge < 119
+  event.returnValue = true;
 };
 
 const nameInput = document.querySelector("#name");
 
 nameInput.addEventListener("input", (event) => {
   if (event.target.value !== "") {
-    addEventListener("beforeunload", beforeUnloadListener, { capture: true });
+    window.addEventListener("beforeunload", beforeUnloadHandler);
   } else {
-    removeEventListener("beforeunload", beforeUnloadListener, {
-      capture: true,
-    });
+    window.removeEventListener("beforeunload", beforeUnloadHandler);
   }
 });
 ```
+
+When the `<input>` value is non-empty, if you try to close, navigate, or reload the page the browser displays the warning dialog. Try it out:
+
+{{EmbedLiveSample("Examples", "100%", 50)}}
 
 ## Specifications
 
@@ -91,44 +110,12 @@ nameInput.addEventListener("input", (event) => {
 
 {{Compat}}
 
-## Compatibility notes
-
-The HTML specification states that authors should use the
-{{domxref("Event.preventDefault()")}} method instead of using
-{{domxref("Event.returnValue")}} to prompt the user. However, this is not yet supported
-by all browsers.
-
-When this event returns (or sets the `returnValue` property to) a value
-other than `null` or `undefined`, the user will be prompted to
-confirm the page unload. In older browsers, the return value of the event is displayed
-in this dialog. Since Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
-string not under the control of the webpage is shown instead of the returned
-string. For example:
-
-- Firefox displays the string, "This page is asking you to confirm that you want to
-  leave - data you have entered may not be saved." (see [Firefox bug 588292](https://bugzil.la/588292)).
-- Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see [Chrome Platform Status](https://chromestatus.com/feature/5349061406228480)).
-
-In some browsers, calls to {{domxref("window.alert()")}},
-{{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} may be ignored
-during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#user-prompts)
-for more details.
-
-Note also, that various browsers ignore the result of the event and do not ask the user
-for confirmation at all. In such cases, the document will always be unloaded
-automatically. Firefox has a switch named `dom.disable_beforeunload` in
-_about:config_ to enable this behavior. As of Chrome 60, the confirmation [will be skipped](https://chromestatus.com/feature/5082396709879808) if
-the user has not performed a gesture in the frame or page since it was loaded. Pressing
-F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh
-arrow or pressing F5 with Chrome DevTools focused does not count as user interaction (as
-of Chrome 81).
-
 ## See also
 
-- Related events: {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}
-- [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/multipage/browsing-the-web.html#prompt-to-unload-a-document)
-- [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developer.chrome.com/blog/chrome-51-deprecations/#remove-custom-messages-in-onbeforeunload-dialogs)
-- [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in detail why you should use `visibilitychange`, not `beforeunload`/`unload`.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.
-- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
-- [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.
+- {{domxref("BeforeUnloadEvent")}} interface
+- Related events:
+  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Document/readystatechange_event", "readystatechange")}}
+  - {{domxref("Window/load_event", "load")}}
+  - {{domxref("Window/unload_event", "unload")}}
+- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) provides more useful guidance on handling page lifecycle behavior in your web apps.

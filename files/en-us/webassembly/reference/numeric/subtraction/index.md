@@ -1,6 +1,7 @@
 ---
 title: Subtraction
 slug: WebAssembly/Reference/Numeric/Subtraction
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

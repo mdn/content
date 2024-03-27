@@ -11,4 +11,3 @@ Users are said to be **privileged** when they are granted additional rights to a
 ## See also
 
 - [Privilege (computing)](<https://en.wikipedia.org/wiki/Privilege_(computing)>) on Wikipedia
-- [Information Security Tutorial](/en-US/docs/Web/Security/Information_Security_Basics)

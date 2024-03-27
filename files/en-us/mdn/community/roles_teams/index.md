@@ -95,7 +95,7 @@ As a maintainer, you engage in the following activities:
   - Process improvements
 
 <!--
-TODO: Compare with https://developer.mozilla.org/en-US/docs/MDN/Community/Users_teams#volunteer_and_partner_maintainers.
+TODO: Compare with https://developer.mozilla.org/en-US/docs/MDN/Community/Roles_teams#volunteer_and_partner_maintainers.
 What info needs to be retained? Should we use the term 'partner maintainer' or is 'maintainer' good enough?
 -->
 
@@ -110,7 +110,7 @@ To be eligible to be a maintainer, you must meet one or more of the following re
 - Consented to commit spending at least 16 hours per month working on the project.
 - Attended the community meeting that takes place once every two months.
 
-> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating-a-maintainer).
+> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
 
 **Privileges:**
 
@@ -276,7 +276,7 @@ Life happens and your commitment levels as a contributor could change over time.
 - Downgrade to a less-demanding role.
 - Step away from the project completely (apply for an emeritus status).
 
-In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact-the-mdn-team).
+In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact_the_mdn_team).
 
 ### Demoting or removing inactive contributors
 

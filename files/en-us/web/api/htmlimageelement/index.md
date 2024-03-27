@@ -30,7 +30,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/CSS_media_queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional string representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
-- {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
+- {{domxref("HTMLImageElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of the image relative to other images. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLImageElement.height")}}
   - : An integer value that reflects the [`height`](/en-US/docs/Web/HTML/Element/img#height) HTML attribute, indicating the rendered height of the image in CSS pixels.

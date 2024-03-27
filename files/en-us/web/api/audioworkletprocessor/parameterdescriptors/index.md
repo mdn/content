@@ -5,7 +5,7 @@ slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.AudioWorkletProcessor.parameterDescriptors
+spec-urls: https://webaudio.github.io/web-audio-api/#audioworkletprocess-callback-parameters
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
@@ -16,8 +16,7 @@ which returns an iterable of {{domxref("AudioParamDescriptor")}}-based objects.
 The property is not a part of the {{domxref("AudioWorkletProcessor")}}
 interface, but, if defined, it is called internally by the
 {{domxref("AudioWorkletProcessor")}} constructor to create a list of custom
-{{domxref("AudioParam")}} objects in the {{domxref("AudioWorkletNode.parameters",
-  "parameters")}} property of the associated {{domxref("AudioWorkletNode")}}.
+{{domxref("AudioParam")}} objects in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the associated {{domxref("AudioWorkletNode")}}.
 
 Defining the getter is optional.
 
@@ -44,10 +43,6 @@ See [`AudioWorkletNode.parameters`](/en-US/docs/Web/API/AudioWorkletNode/paramet
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

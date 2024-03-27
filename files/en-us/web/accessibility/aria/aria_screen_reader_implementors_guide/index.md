@@ -6,7 +6,6 @@ page-type: guide
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
@@ -45,7 +44,3 @@ This is just a guide. Live region markup is a complex area which is somewhat ope
 1. Allow for a different voice (in text-to-speech) or other varying presentational characteristics to set live changes apart.
 2. When no WAI-ARIA markup is present, automatically present some changes unless the user configures all live changes to off. For example, automatically speak changes that are caused by the user's own input, as part of the context of that input.
 3. Allow global settings to turn off the presentation of live changes, present all live changes, use markup, or be "smart" (use heuristics)
-
-### Details for Processing via Platform Accessibility APIs
-
-We hope browser manufacturers will work to provide consistent implementations. The most complete implementation of live regions currently is in Firefox 3. Here is how [WAI-ARIA live regions are exposed in Firefox 3](/en-US/docs/AJAX/WAI_ARIA_Live_Regions/API_Support).

@@ -75,7 +75,7 @@ Use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>Must have a start tag, and must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

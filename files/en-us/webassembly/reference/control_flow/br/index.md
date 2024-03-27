@@ -1,6 +1,7 @@
 ---
 title: br
 slug: WebAssembly/Reference/Control_flow/br
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

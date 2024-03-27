@@ -199,7 +199,7 @@ Instead of allowing `'unsafe-inline'`, you can use the `'unsafe-hashes'` source 
 Given a HTML page that includes the following inline event handler:
 
 ```html
-<!-- I wan't to use addEventListener, but I can't :( -->
+<!-- I want to use addEventListener, but I can't :( -->
 <button onclick="myScript()">Submit</button>
 ```
 
@@ -260,6 +260,14 @@ Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'stri
 ```
 
 will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'nonce-abcdefg'` in browsers that support CSP2, and `'nonce-abcdefg' 'strict-dynamic'` in browsers that support CSP3.
+
+### Allowing speculation rules
+
+To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive along with the `'inline-speculation-rules'` source and a hash- or nonce-source. For example:
+
+```http
+Content-Security-Policy: script-src 'inline-speculation-rules' 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC'
+```
 
 ## Specifications
 

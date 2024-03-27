@@ -24,7 +24,7 @@ register(tag, options)
 ### Parameters
 
 - `tag`
-  - : A unique {{jsxref('String')}} identifier
+  - : A unique {{jsxref('String')}} identifier.
 - `options` {{optional_inline}}
 
   - : An {{jsxref('Object')}} containing the following optional data:
@@ -35,7 +35,7 @@ register(tag, options)
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ### Exceptions
 
@@ -74,5 +74,5 @@ async function registerPeriodicNewsCheck() {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

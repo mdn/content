@@ -7,7 +7,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral's service.
 
@@ -23,11 +23,6 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
   - : Returns the properties of this characteristic.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.
-
-### Events
-
-- `oncharacteristicvaluechanged` {{Experimental_Inline}}
-  - : Event handler for the `characteristicvaluechanged` event.
 
 ## Instance methods
 
@@ -47,6 +42,11 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
   - : Returns a {{JSxRef("Promise")}} that resolves when `navigator.bluetooth` is added to the active notification context.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.stopNotifications()")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves when `navigator.bluetooth` is removed from the active notification context.
+
+## Events
+
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic/characteristicvaluechanged_event", "characteristicvaluechanged")}} {{Experimental_Inline}}
+  - : Fired on a {{domxref("BluetoothRemoteGATTCharacteristic")}} when its value changes.
 
 ## Specifications
 

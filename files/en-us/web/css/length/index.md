@@ -31,7 +31,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 
 > **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
 
-- `cap` {{experimental_inline}}
+- `cap`
   - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
 - `ch`
   - : Represents the width or more precisely the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
@@ -43,11 +43,22 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
+  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
+
+### Relative length units based on root element's font
+
+- `rcap`
+  - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
+- `rch`
+  - : Equal to the width or the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the root element's {{Cssxref("font")}}.
 - `rem`
-  - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is `16px`, but user-defined preferences may modify this).
+  - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value. A common browser default is `16px`, but user-defined preferences may modify this.
+- `rex`
+  - : Represents the x-height of the root element's {{Cssxref("font")}}.
+- `ric`
+  - : Equal to the value of [`ic`](#ic) unit on the root element's font.
 - `rlh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.
+  - : Equal to the value of [`lh`](#lh) unit on the root element's font. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
 ### Relative length units based on viewport
 
@@ -133,7 +144,7 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
-For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_container_queries).
+For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 
 - `cqw`
 
@@ -229,15 +240,15 @@ html {
   height: 50px;
   background-color: #999;
   box-shadow:
-    inset 3px 3px 5px rgb(255 255 255 / 0.5),
-    inset -3px -3px 5px rgb(0 0 0 / 0.5);
+    inset 3px 3px 5px rgb(255 255 255 / 50%),
+    inset -3px -3px 5px rgb(0 0 0 / 50%);
 }
 
 .result {
   height: 20px;
   box-shadow:
-    inset 3px 3px 5px rgba(255 255 255 / 0.5),
-    inset -3px -3px 5px rgb(0 0 0 / 0.5);
+    inset 3px 3px 5px rgb(255 255 255 / 50%),
+    inset -3px -3px 5px rgb(0 0 0 / 50%);
   background-color: orange;
   display: flex;
   align-items: center;

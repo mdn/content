@@ -37,7 +37,7 @@ The code below shows a simple slider with a maximum value of 9.
 - `<number>`
   - : An integer or decimal number that is greater than the minimum value.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueMax")}}
   - : The [`ariaValueMax`](/en-US/docs/Web/API/Element/ariaValueMax) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemax` attribute.
@@ -66,7 +66,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Element/input/range#max)

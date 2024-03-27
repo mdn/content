@@ -13,10 +13,8 @@ The **`HTMLAreaElement`** interface provides special properties and methods (bey
 
 ## Instance properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Inherits properties from its parent {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLElement.accessKey")}}
-  - : A string containing a single character that switches input focus to the control.
 - {{domxref("HTMLAreaElement.alt")}}
   - : A string that reflects the [`alt`](/en-US/docs/Web/HTML/Element/area#alt) HTML attribute, containing alternative text for the element.
 - {{domxref("HTMLAreaElement.coords")}}
@@ -39,6 +37,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string containing the password specified before the domain name.
 - {{domxref("HTMLAreaElement.pathname")}}
   - : A string containing the path name component, if any, of the referenced URL.
+- {{domxref("HTMLAreaElement.ping")}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 - {{domxref("HTMLAreaElement.port")}}
   - : A string containing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAreaElement.protocol")}}
@@ -53,8 +53,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string containing the search element (including leading question mark `'?'`), if any, of the referenced URL.
 - {{domxref("HTMLAreaElement.shape")}}
   - : A string that reflects the [`shape`](/en-US/docs/Web/HTML/Element/area#shape) HTML attribute, indicating the shape of the hot-spot, limited to known values.
-- {{domxref("HTMLElement.tabIndex")}}
-  - : A `long` containing the element's position in the tabbing order.
 - {{domxref("HTMLAreaElement.target")}}
   - : A string that reflects the [`target`](/en-US/docs/Web/HTML/Element/area#target) HTML attribute, indicating the browsing context in which to open the linked resource.
 - {{domxref("HTMLAreaElement.username")}}

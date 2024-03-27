@@ -16,7 +16,7 @@ No notable changes.
 
 ### CSS
 
-- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
+- The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module is now supported in Firefox, along with the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This allows developers to write nested CSS, which helps with the readability, modularity, and maintainability of CSS stylesheets. It also potentially helps reduce CSS file size, decreasing download sizes. ([Firefox bug 1835066](https://bugzil.la/1835066), [Firefox bug 1840781](https://bugzil.la/1840781))
 
 - The [`math-style`](/en-US/docs/Web/CSS/math-style) and [`math-depth`](/en-US/docs/Web/CSS/math-depth) properties are now supported, as well as the `math` value for the [`font-size`](/en-US/docs/Web/CSS/font-size#values) property ([Firefox bug 1845516](https://bugzil.la/1845516)).
 
@@ -46,6 +46,7 @@ No notable changes.
 - The {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} static member is now supported, allowing developers to construct a readable stream from any iterable or async iterable object ([Firefox bug 1772772](https://bugzil.la/1772772)).
 - [WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) are now supported, allowing web applications to modify incoming and outgoing WebRTC encoded video and audio frames using a {{DOMxRef("TransformStream")}} running in a worker.
   The supported interfaces include: {{domxref("RTCRtpScriptTransform")}}, {{domxref("RTCRtpScriptTransformer")}}, {{domxref("RTCRtpSender.transform")}}, {{domxref("RTCRtpReceiver.transform")}}, {{domxref("RTCEncodedVideoFrame")}}, and {{domxref("RTCEncodedAudioFrame")}}, and the {{domxref("RTCTransformEvent")}} and worker {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event ([Firefox bug 1631263](https://bugzil.la/1631263)).
+- [`CSSStyleRule`](/en-US/docs/Web/API/CSSStyleRule) now inherits from [`CSSGroupingRule`](/en-US/docs/Web/API/CSSGroupingRule) instead of directly from [`CSSRule`](/en-US/docs/Web/API/CSSRule). As a result, it additionally implements the property [`cssRules`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and the methods [`deleteRule()`](/en-US/docs/Web/API/CSSGroupingRule/cssRules) and [`insertRule()`](/en-US/docs/Web/API/CSSGroupingRule/insertRule) (Firefox bug [1846251](https://bugzil.la/1846251)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -76,4 +77,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(116)}}
+{{Firefox_for_developers}}

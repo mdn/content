@@ -54,3 +54,4 @@ _Also inherits methods from its parent {{domxref("Event")}}_.
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- CSS at-rules: {{cssxref("@starting-style")}}

@@ -5,7 +5,7 @@ page-type: web-api-overview
 spec-urls: https://w3c.github.io/FileAPI/
 ---
 
-{{DefaultAPISidebar("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 ## Concepts and Usage
 

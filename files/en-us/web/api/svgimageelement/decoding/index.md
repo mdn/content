@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.decoding
 ---
 
-{{APIRef}}
+{{APIRef("SVG")}}
 
 The **`decoding`** property of the {{domxref("SVGImageElement")}} interface provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
 

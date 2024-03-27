@@ -28,7 +28,7 @@ removeEntry(name, options)
 
   - : An optional object containing options, which are as follows:
 
-    - `recursive`
+    - `recursive` {{optional_inline}}
       - : A boolean value, which defaults to `false`. When set to `true` entries will be removed recursively.
 
 ### Return value
@@ -38,14 +38,13 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the name is not a valid string or contains characters not allowed on the file
-    system
+  - : Thrown if the name is not a valid string or contains characters not allowed on the file system.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `readwrite` mode.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if `recursive` is set to false and the entry to be removed has children.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if an entry name is not found or matched
+  - : Thrown if the current entry is not found or if the entry of the specific name is not found or matched.
 
 ## Examples
 
@@ -71,4 +70,4 @@ currentDirHandle.removeEntry(entryName).then(() => {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

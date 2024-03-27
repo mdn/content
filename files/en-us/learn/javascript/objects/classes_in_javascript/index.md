@@ -17,7 +17,7 @@ In this article, we'll go through these features. It's worth keeping in mind tha
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
@@ -168,7 +168,7 @@ class Student extends Person {
 }
 ```
 
-In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
+In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
 
 ```js
 const summers = new Student("Summers", 2);

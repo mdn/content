@@ -37,6 +37,10 @@ This interface also extends the following {{domxref('PerformanceResourceTiming')
 
 The interface also supports the following properties:
 
+- {{domxref('PerformanceNavigationTiming.activationStart')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time between when a document starts prerendering and when it is activated.
+- {{domxref('PerformanceNavigationTiming.criticalCHRestart')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time at which the connection restart occurred due to {{HTTPHeader("Critical-CH")}} HTTP response header mismatch.
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"complete"`.
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventEnd')}} {{ReadOnlyInline}}

@@ -18,14 +18,14 @@ This interface offers the same set of properties and methods as `AbstractRange`.
 ## Constructor
 
 - {{domxref("StaticRange.StaticRange", "StaticRange()")}}
-  - : Creates a new `StaticRange` object given the {{domxref("StaticRangeInit")}} dictionary specifying the default values for its properties.
+  - : Creates a new `StaticRange` object given options specifying the default values for its properties.
 
 ## Instance properties
 
 _The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
 
 - {{domxref("StaticRange.collapsed")}} {{ReadOnlyInline}}
-  - : Returns a Boolean value which is `true` if the range's start and end positions are the same, resulting in a range of length 0.
+  - : Returns a Boolean value that is `true` if the range's start and end positions are the same, resulting in a range of length 0.
 - {{domxref("StaticRange.endContainer")}} {{ReadOnlyInline}}
   - : Returns the DOM {{domxref("Node")}} which contains the ending point of the range. The offset into the node at which the end position is located is indicated by `endOffset`.
 - {{domxref("StaticRange.endOffset")}} {{ReadOnlyInline}}

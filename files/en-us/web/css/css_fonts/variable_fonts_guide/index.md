@@ -93,7 +93,7 @@ The following live example's CSS can be edited to allow you to play with font wi
 
 ### Italic
 
-The Italic (`ital`) axis works differently in that it is either on or off; there is no in-between. Italic designs often include dramatically different letterforms from their upright counterparts, so in the transition from upright to italic, several glyph (or character) substitutions usually occur. Italic and oblique are often used somewhat interchangeably, but in truth are quite different. Oblique is defined in this context with the term `slant` (see the below section), and a typeface would typically have one or the other, but not both.
+The Italic (`ital`) axis can be set in the range `[0-1]`, where `0` specifies "not italic," `0.5` specifies "halfway italic," and `1` specifies "fully italic." Italic designs often include dramatically different letterforms from their upright counterparts, so in the transition from upright to italic, several glyph (or character) substitutions usually occur. Italic and oblique are often used somewhat interchangeably, but in truth are quite different. Oblique is defined in this context with the term `slant` (see the below section), and a typeface would typically have one or the other, but not both.
 
 In CSS, both italic and oblique are applied to text using the {{cssxref("font-style")}} property. Also note the introduction of `font-synthesis: none;` — which will prevent browsers from accidentally applying the variation axis and a synthesized italic. This can be used to prevent faux-bolding as well.
 

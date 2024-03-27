@@ -33,9 +33,11 @@ To start off this assessment, you need to grab the HTML and all the images avail
 
 Access the different images in the [originals](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/mdn-splash-page-start/originals) directory and save them in the same way; you'll want to save them in a different directory for now, as you'll need to manipulate (some of) them using a graphics editor before they're ready to be used.
 
-Alternatively, you could use an online tool such as [Glitch](https://glitch.com/) to create your example. This would also be useful if you want to get it assessed, or ask for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 
 > **Note:** The example HTML file contains quite a lot of CSS, to style the page. You don't need to touch the CSS, just the HTML inside the {{htmlelement("body")}} element — as long as you insert the correct markup, the styling will make it look correct.
+>
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Project brief
 
@@ -92,17 +94,5 @@ The following screenshots show what the splash page should look like after being
 ![A wide shot of our example splash page](wide-shot.png)
 
 ![A narrow shot of our example splash page](narrow-shot.png)
-
-## Assessment or further help
-
-If you would like your work assessed or are stuck and want to ask for help:
-
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Glitch is probably better for this example, as it allows you upload assets like images, whereas some of the other tools don't.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for Mozilla splash page".
-   - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

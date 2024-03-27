@@ -8,11 +8,8 @@ browser-compat: api.History.pushState
 
 {{APIRef("History API")}}
 
-In an [HTML](/en-US/docs/Web/HTML) document, the
-**`history.pushState()`** method adds an entry to the browser's
+The **`pushState()`** method of the {{domxref("History")}} interface adds an entry to the browser's
 session history stack.
-
-This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
 
 ## Syntax
 
@@ -51,6 +48,13 @@ pushState(state, unused, url)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the provided `state` parameter is not serializable.
 
 ## Description
 

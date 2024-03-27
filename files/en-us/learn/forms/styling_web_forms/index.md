@@ -13,7 +13,7 @@ In the previous few articles, we showed how to create web forms in HTML. Now, we
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
       </td>
@@ -118,7 +118,7 @@ button {
 }
 ```
 
-In the screenshot below, the left column shows the default rendering of an \<input type="radio">, \<input type="checkbox">, \<input type="range">, \<input type="text">, \<input type="date"> input, {{htmlelement('select')}}, {{htmlelement('textarea')}},\<input type="submit">, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.
+In the screenshot below, the left column shows the default rendering of an `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.
 
 ![box model properties effect most input types.](boxmodel_formcontrols1.png)
 
@@ -309,7 +309,7 @@ When one of these fields gains focus, we highlight them with a light grey, trans
 ```css
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   border-radius: 5px;
 }
 ```
@@ -357,7 +357,6 @@ button:after {
 
 button:hover,
 button:focus {
-  outline: none;
   background: #000;
   color: #fff;
 }

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `DownloadItem` type of the {{WebExtAPIRef("downloads")}} API represents a downloaded file.
 
@@ -22,7 +22,7 @@ Values of this type are objects. They contain the following properties:
 - `canResume`
   - : A `boolean` indicating whether a currently-interrupted (e.g. paused) download can be resumed from the point where it was interrupted (`true`), or not (`false`).
 - `cookieStoreId` {{optional_inline}}
-  - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place.
+  - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `danger`
   - : A string indicating whether this download is thought to be safe or known to be suspicious. Its possible values are defined in the {{WebExtAPIRef('downloads.DangerType')}} type.
 - `endTime` {{optional_inline}}

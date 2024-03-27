@@ -51,7 +51,7 @@ In Firefox, when a site chooses to use persistent storage, the user is notified 
 
 Safari and most Chromium-based browsers, such as Chrome or Edge, automatically approve or deny the request based on the user's history of interaction with the site and do not show any prompts to the user.
 
-Note that [research from the Chrome team](https://web.dev/persistent-storage/) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
+Note that [research from the Chrome team](https://web.dev/articles/persistent-storage) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
 
 ### Private browsing
 
@@ -165,6 +165,6 @@ Only deleting some of the origin's data could cause inconsistency problems.
 
 ## See also
 
-- [Storage for the web on web.dev](https://web.dev/storage-for-the-web/)
-- [Persistent storage on web.dev](https://web.dev/persistent-storage/)
+- [Storage for the web on web.dev](https://web.dev/articles/storage-for-the-web)
+- [Persistent storage on web.dev](https://web.dev/articles/persistent-storage)
 - [Chrome Web Storage and Quota Concepts](https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit)
