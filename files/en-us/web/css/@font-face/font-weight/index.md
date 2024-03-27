@@ -7,11 +7,11 @@ browser-compat: css.at-rules.font-face.font-weight
 
 {{CSSRef}}
 
-The **`font-weight`** CSS descriptor allows authors to specify font weights for the fonts specified in the {{cssxref("@font-face")}} at-rule. The {{cssxref("font-weight")}} property can separately be used to set how thick or thin characters in text should be displayed.
+The **`font-weight`** CSS descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets the desired weight of a font.
 
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-weight` descriptor to explicitly specify the font face's weights. The values for the CSS descriptor is same as that of its corresponding font property.
+Unless it contains a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". Typically, a developer will want to use fonts from a single font family in a range of different weights. To accomplish this, you can define multiple {{cssxref("@font-face")}} at-rules for the same family, one for each weight, and set the `font-weight` descriptor to match the font's weight. Then CSS rules can select a font in the appropriate weight by setting the {{cssxref("font-weight")}} property or the {{cssxref("font")}} shorthand property.
 
-There are generally limited weights available for a particular font family. When a specified weight doesn't exist, a nearby weight is used. Fonts lacking bold typeface are often synthesized by the user agent. To prevent this, use the {{cssxref('font-synthesis')}} shorthand property.
+If a font file contains a variable font, it may contain more than one weight. To reflect this, the `font-weight` descriptor can specify a range of weights, given as a space separated pair of weight values.
 
 ## Syntax
 
@@ -21,14 +21,20 @@ font-weight: normal;
 font-weight: bold;
 font-weight: 400;
 
-/* Multiple Values */
+/* Defining a range */
 font-weight: normal bold;
 font-weight: 300 500;
 ```
 
-The `font-weight` property is described using any one of the values listed below.
-
 ### Values
+
+The syntax of the `font-weight` descriptor takes one of the following forms:
+
+- The keyword `auto`.
+- A single `<font-weight-absolute>` value.
+- A pair of `<font-weight-absolute>` values, separated by a space.
+
+Each `<font-weight-absolute>` may be any one of the following:
 
 - `normal`
   - : Normal font weight. Same as `400`.
@@ -36,10 +42,6 @@ The `font-weight` property is described using any one of the values listed below
   - : Bold font weight. Same as `700`.
 - `<number>`
   - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
-
-In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts.
-
-CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000, inclusive, and introduces [Variable fonts](#variable_fonts), which can make use of this much finer-grained range of font weights.
 
 ### Common weight name mapping
 
@@ -80,19 +82,117 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ## Examples
 
-### Setting normal font weight in a @font-face rule
+### Selecting normal and bold fonts
 
-The following finds a local Open Sans font or imports it, and allows using the font for normal font weights.
+In this example we include two fonts, one normal weight, one bold weight, from the ["Karantina"](https://fonts.google.com/specimen/Karantina) font family using two `@font-face` at rules. We set `font-weight` descriptors to match the weight of the fonts.
+
+After this, CSS rules can select the normal or the bold font for the "Karantina" family just by setting the {{cssxref("font-weight")}} property. Note that the {{htmlelement("strong")}} HTML element also selects the bold font, because by default `<strong>` elements use a bold font.
+
+#### HTML
+
+```html
+<p class="one">Karantina, normal weight paragraph</p>
+<p class="two">Karantina, bold weight paragraph</p>
+<strong>Karantina, default weight &lt;strong&gt; element</strong>
+```
+
+#### CSS
 
 ```css
 @font-face {
-  font-family: "Open Sans";
-  src:
-    local("Open Sans") format("woff2"),
-    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-  font-weight: 400;
+  font-family: "Karantina";
+  font-weight: normal;
+  src: url("Karantina-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Karantina";
+  font-weight: bold;
+  src: url("Karantina-Bold.woff2");
+}
+
+body {
+  font-family: "Karantina", serif;
+  font-size: 3rem;
+}
+
+p.one {
+  font-weight: normal;
+}
+
+p.two {
+  font-weight: bold;
 }
 ```
+
+#### Result
+
+{{embedlivesample("Selecting normal and bold fonts", "", 300)}}
+
+### Setting a range for a variable font
+
+In this example we include a variable font, ["Montserrat"](https://fonts.google.com/specimen/Montserrat), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "Montserrat" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
+
+To show the effect of this we've included another font using "Montserrat" that does not set the `font-weight` descriptor, and we've called this "Montserrat-complete".
+
+#### HTML
+
+```html
+<p class="one">Montserrat, font-weight 100</p>
+<p class="two">Montserrat, font-weight 900</p>
+<p class="three">Montserrat-complete, font-weight 100</p>
+<p class="four">Montserrat-complete, font-weight 900</p>
+```
+
+#### CSS
+
+```css
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat[wght].woff2");
+  font-weight: 300 700;
+}
+
+@font-face {
+  font-family: "Montserrat-complete";
+  src: url("Montserrat[wght].woff2");
+}
+
+p {
+  font-size: 2rem;
+}
+
+p.one {
+  font-family: "Montserrat", serif;
+  font-weight: 100;
+}
+
+p.two {
+  font-family: "Montserrat", serif;
+  font-weight: 900;
+}
+
+p.three {
+  font-family: "Montserrat-complete", serif;
+  font-weight: 100;
+}
+
+p.four {
+  font-family: "Montserrat-complete", serif;
+  font-weight: 900;
+}
+```
+
+#### Result
+
+The result of this is:
+
+- Setting the `font-weight` property to `100` for "Montserrat" gets a weight of 300.
+- Setting the `font-weight` property to `900` for "Montserrat" gets a weight of 700.
+- Setting the `font-weight` property to `100` for "Montserrat-complete" gets a weight of 100.
+- Setting the `font-weight` property to `900` for "Montserrat-complete" gets a weight of 900.
+
+{{embedlivesample("Setting a range for a variable font", "", "400")}}
 
 ## Specifications
 
