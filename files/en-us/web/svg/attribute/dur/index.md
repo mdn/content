@@ -59,7 +59,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Clock-value"
+          ><a href="/en-US/docs/Web/SVG/Content_type#clock-value"
             >&#x3C;clock-value></a
           ></code
         >

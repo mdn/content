@@ -313,7 +313,7 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role"
             >cell</a
           ></code
         >
