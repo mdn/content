@@ -50,7 +50,7 @@ The interface also supports the following properties:
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
 - {{domxref('PerformanceNavigationTiming.notRestoredReasons')}} {{ReadOnlyInline}}
-  - : An object providing report data on whether frames present in the current document were blocked from using the back/forward cache (bfcache) on navigation, and why.
+  - : A {{domxref("NotRestoredReasons")}} object providing report data on whether frames present in the current document were blocked from using the [back/forward cache (bfcache)](https://web.dev/articles/bfcache) on navigation, and why.
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
   - : A number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}

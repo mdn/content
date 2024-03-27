@@ -987,6 +987,8 @@
         "LargestContentfulPaint",
         "LayoutShift",
         "LayoutShiftAttribution",
+        "NotRestoredReasons",
+        "NotRestoredReasonDetails",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",

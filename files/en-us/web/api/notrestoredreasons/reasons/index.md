@@ -1,0 +1,37 @@
+---
+title: "NotRestoredReasons: reasons property"
+short-title: reasons
+slug: Web/API/NotRestoredReasons/reasons
+page-type: web-api-instance-property
+status:
+  - experimental
+browser-compat: api.NotRestoredReasons.reasons
+---
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
+
+The **`reasons`** read-only property of the
+{{domxref("NotRestoredReasons")}} interface returns an array of {{domxref("NotRestoredReasonDetails")}} objects, each representing a reason why the navigated page was blocked from using the [back/forward cache (bfcache)](https://web.dev/articles/bfcache).
+
+## Value
+
+An array of {{domxref("NotRestoredReasonDetails")}} objects. See [Blocking reasons](/en-US/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons#blocking_reasons) for a list of the possible blocking reasons.
+
+If the document is in a cross-origin {{htmlelement("iframe")}}, `reasons` will return `null`.
+
+## Examples
+
+See [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons) for examples.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons)
+- {{domxref("PerformanceNavigationTiming.notRestoredReasons")}}
