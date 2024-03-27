@@ -487,7 +487,7 @@ Note that the variables are _secret_: the `.env` should not be included in your 
 The Glitch editing view also provides _terminal_ access to the web app environment, which you can use to work with the web app as though it was running on your local machine.
 
 That's all the overview you need to get started.
-Next, we will set up a Glitch account, upload the Library project from Github, and connect it to a database.
+Next, we will set up a Glitch account, upload the Library project from GitHub, and connect it to a database.
 
 ### Get a Glitch account
 

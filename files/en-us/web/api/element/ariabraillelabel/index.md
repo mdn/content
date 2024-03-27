@@ -3,10 +3,12 @@ title: "Element: ariaBrailleLabel property"
 short-title: ariaBrailleLabel
 slug: Web/API/Element/ariaBrailleLabel
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Element.ariaBrailleLabel
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`ariaBrailleLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) attribute, which defines the ARIA braille label of the element.
 
