@@ -7,7 +7,7 @@ browser-compat: css.properties.align-content
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross-axis](/en-US/docs/Glossary/Cross_Axis), a [grid](/en-US/docs/Web/CSS/CSS_grid_layout)'s or [block](/en-US/docs/Glossary/Block-level_content),s block axis.
+The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross-axis](/en-US/docs/Glossary/Cross_Axis), a [grid](/en-US/docs/Web/CSS/CSS_grid_layout)'s or [block](/en-US/docs/Glossary/Block-level_content)'s block axis.
 
 The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
@@ -18,16 +18,16 @@ This property has no effect on single line flex containers (i.e. ones with `flex
 ## Syntax
 
 ```css
-/* Basic positional alignment */
-/* align-content does not take left and right values */
-align-content: center; /* Pack items around the center */
-align-content: start; /* Pack items from the start */
-align-content: end; /* Pack items from the end */
-align-content: flex-start; /* Pack flex items from the start */
-align-content: flex-end; /* Pack flex items from the end */
-
 /* Normal alignment */
 align-content: normal;
+
+/* Basic positional alignment */
+/* align-content does not take left and right values */
+align-content: center;
+align-content: start;
+align-content: end;
+align-content: flex-start;
+align-content: flex-end;
 
 /* Baseline alignment */
 align-content: baseline;
@@ -35,17 +35,9 @@ align-content: first baseline;
 align-content: last baseline;
 
 /* Distributed alignment */
-align-content: space-between; /* Distribute items evenly
-                                 The first item is flush with the start,
-                                 the last is flush with the end */
-align-content: space-around; /* Distribute items evenly
-                                 Items have a half-size space
-                                 on either end */
-align-content: space-evenly; /* Distribute items evenly
-                                 Items have equal space around them */
-align-content: stretch; /* Distribute items evenly
-                                 Stretch 'auto'-sized items to fit
-                                 the container */
+align-content: space-between;
+align-content: space-around;
+align-content: space-evenly;
 
 /* Overflow alignment */
 align-content: safe center;
