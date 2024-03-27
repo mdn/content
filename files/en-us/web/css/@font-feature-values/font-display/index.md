@@ -3,6 +3,7 @@ title: font-display
 slug: Web/CSS/@font-feature-values/font-display
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-feature-values.font-display
+spec-urls: https://drafts.csswg.org/css-fonts/#descdef-font-feature-values-font-display
 ---
 
 {{CSSRef}}
@@ -66,7 +67,7 @@ The `font-display` descriptor in this example sets the default `font-display` va
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 

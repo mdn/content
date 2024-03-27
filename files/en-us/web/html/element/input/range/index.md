@@ -65,7 +65,7 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 The `step` attribute is a number that specifies the granularity that the value must adhere to. Only values that match the specified stepping interval ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Element/input#value) otherwise, or an appropriate default value if neither of those is provided) are valid.
 
-The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_the_any_value) example for how this works in supported browsers.
+The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_any) example for how this works in supported browsers.
 
 > **Note:** When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
@@ -116,7 +116,7 @@ By default, the granularity is 1, meaning the value is always an integer. To con
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
 
-#### Setting step to "any"
+#### Setting step to `any`
 
 If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute:
 
@@ -353,7 +353,7 @@ input[type="range"][orient="vertical"] {
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

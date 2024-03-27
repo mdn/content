@@ -44,7 +44,7 @@ The HTML document used to render this content is shown below.
       <video
         id="video"
         src="media/video.mp4"
-        controls="true"
+        controls
         crossorigin="anonymous" />
     </div>
     <div>

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebSocket.readyState
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}
 
 The **`WebSocket.readyState`** read-only property returns the
 current state of the {{domxref("WebSocket")}} connection.

@@ -19,7 +19,7 @@ The MDN Web Docs community Discord server is open to the public.
 This server is a great place to see what staff and members of the community are doing on a daily basis.
 You can ask questions, seek clarifications, find out how to get involved, and join specific channels based on your areas of interest.
 
-Join the MDN Web Docs community via our [Discord invite](https://discord.gg/hkGN8VKvvD).
+Join the MDN Web Docs community via our [Discord invite](/discord).
 
 ### Matrix chat rooms
 
@@ -58,6 +58,6 @@ You can use the forums listed below for discussing code problems.
 
 Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
 
-## Mailing list
+## Email
 
-For any nonpublic communication, send an email to [mdn-admins](mailto:mdn-admins@mozilla.org).
+For any nonpublic communication, send an email to [mdn-web-docs@mozilla.com](mailto:mdn-web-docs@mozilla.com).

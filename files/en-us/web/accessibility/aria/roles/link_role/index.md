@@ -95,12 +95,12 @@ Using the {{HTMLElement('a')}} instead.
 - The {{HTMLElement('a')}} element
 - The {{HTMLElement('button')}} element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [ARIA practices `link` role examples](https://w3c.github.io/aria-practices/examples/link/link.html)
+- [ARIA practices `link` role examples](https://www.w3.org/WAI/ARIA/apg/patterns/link/examples/link/)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

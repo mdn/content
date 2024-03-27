@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsArrayBuffer
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}} {{AvailableInWorkers}}
 
-The `readAsArrayBuffer()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+The **`readAsArrayBuffer()`** method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
@@ -51,8 +51,8 @@ The following exceptions can be raised by this method:
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- {{DOMxRef("File API", "", "", "nocode")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{ domxref("Blob") }}
+- {{DOMxRef("Blob")}}

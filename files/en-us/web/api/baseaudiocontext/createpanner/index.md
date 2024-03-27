@@ -49,7 +49,7 @@ as a stereo. In the example you can see this being controlled by the functions
 panner position via the `PositionPanner()` function.
 
 To see a complete implementation, check out our [panner-node example](https://mdn.github.io/webaudio-examples/panner-node/)
-([view the source code](https://github.com/mdn/webaudio-examples/tree/master/panner-node)) — this demo transports you to the 2.5D "Room of metal", where you can
+([view the source code](https://github.com/mdn/webaudio-examples/tree/main/panner-node)) — this demo transports you to the 2.5D "Room of metal", where you can
 play a track on a boom box and then walk around the boom box to see how the sound
 changes!
 

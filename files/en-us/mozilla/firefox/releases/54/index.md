@@ -91,4 +91,4 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ## Older versions
 
-{{Firefox_for_developers(53)}}
+{{Firefox_for_developers}}

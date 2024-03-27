@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/clip
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.clip
+browser-compat: svg.global_attributes.clip
 ---
 
 {{SVGRef}}{{deprecated_header}}
@@ -77,4 +77,4 @@ The value `auto` defines a clipping path along the bounds of the viewport create
 
 ## Browser compatibility
 
-{{Compat}}s
+{{Compat}}

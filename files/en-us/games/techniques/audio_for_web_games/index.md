@@ -226,7 +226,7 @@ Let's look at some Web Audio API techniques for dynamically adjusting music from
 
 ### Loading your tracks
 
-With the Web Audio API you can load separate tracks and loops individually using {{domxref("XMLHttpRequest")}} or the [Fetch API](/en-US/docs/Web/API/Fetch_API), which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them while others load.
+With the Web Audio API you can load separate tracks and loops individually using the [Fetch API](/en-US/docs/Web/API/Fetch_API) or {{domxref("XMLHttpRequest")}}, which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them while others load.
 
 Either way you may want to synchronize tracks or loops. The Web Audio API contains the notion of an internal clock that starts ticking the moment you create an audio context. You'll need to take account of the time between creating an audio context and when the first audio track starts playing. Recording this offset and querying the playing track's current time gives you enough information to synchronize separate pieces of audio.
 
@@ -372,7 +372,7 @@ trackEls.forEach((el, i) => {
 });
 ```
 
-> **Note:** You can [see this demo in action here](https://mdn.github.io/webaudio-examples/multi-track/) and [view the source code here](https://github.com/mdn/webaudio-examples/tree/master/multi-track).
+> **Note:** You can [see this demo in action here](https://mdn.github.io/webaudio-examples/multi-track/) and [view the source code here](https://github.com/mdn/webaudio-examples/tree/main/multi-track).
 
 In the context of your game world you may have loops and samples that are played in different circumstances, and it can be useful to be able to synchronize with other tracks for a more seamless experience.
 

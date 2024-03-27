@@ -1,6 +1,7 @@
 ---
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -36,7 +37,7 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-Here we create a table (`otherTable`) from JavaScript using the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) constructor, then we load `table.wasm` into our page using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method.
+Here we create a table (`otherTable`) from JavaScript using the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) constructor, then we load `table.wasm` into our page using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method.
 
 We then get the function exported from the module, retrieve the functions it references via [`tbl.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) and log the result of invoking each one to the console. Next, we use `set()` to make the `otherTable` table contain references to the same functions as the `tbl` table.
 

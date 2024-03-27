@@ -68,5 +68,4 @@ We then output the x, y and z position and orientation values for informational 
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

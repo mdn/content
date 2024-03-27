@@ -29,8 +29,8 @@ Thus, all the following set the element to the [_hidden_](#the_hidden_state) sta
 
 ```html
 <span hidden>I'm hidden</span>
-<span hidden="hidden">I'm also hidden</span>
-<span hidden="something else">I'm hidden too!</span>
+<span hidden="">I'm also hidden</span>
+<span hidden="hidden">I'm hidden too!</span>
 ```
 
 The following sets the element to the [_hidden until found_](#the_hidden_until_found_state) state:

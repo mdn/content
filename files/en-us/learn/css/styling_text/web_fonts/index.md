@@ -13,7 +13,7 @@ In the first article of the module, we explored the basic CSS features available
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
@@ -118,7 +118,7 @@ Web services for font generation typically limit file sizes. In such a case, con
 
 1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) for converting ttf to woff
 2. [fontforge](https://fontforge.org/) for converting from ttf to svg
-3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html) for converting from ttf to svg
+3. [batik ttf2svg](https://people.apache.org/~clay/batik/ttf2svg.html) for converting from ttf to svg
 4. [woff2](https://github.com/google/woff2) for converting from ttf to woff2
 
 ### Implementing the code in your demo

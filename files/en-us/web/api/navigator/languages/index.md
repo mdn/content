@@ -26,15 +26,15 @@ the extra `qvalues` (quality values) field (e.g. `en-US;q=0.8`).
 
 ## Value
 
-A string.
+An array of strings.
 
 ## Examples
 
 ### Listing the contents of navigator.language and navigator.languages
 
 ```js
-navigator.language; //"en-US"
-navigator.languages; //["en-US", "zh-CN", "ja-JP"]
+navigator.language; // "en-US"
+navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
 ```
 
 ### Using Intl constructors to do language-specific formatting, with fallback

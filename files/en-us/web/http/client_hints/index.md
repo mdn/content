@@ -113,6 +113,8 @@ Client hints are available to web page JavaScript via the [User Agent Client Hin
 > UA client hints provide a more efficient and privacy preserving way of getting the desired information.
 > They are eventually expected to replace this older approach.
 
+> **Note:** User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+
 ### User preference media features client hints
 
 User Preference Media Features Client Hints allow a server to vary responses based on a user agent's preferences for [CSS media features](/en-US/docs/Web/CSS/@media#media_features) such as color scheme or reduced motion.
@@ -121,7 +123,7 @@ Headers include: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("
 ### Device client hints
 
 Device client hints allow a server to vary responses based on device characteristics including available memory and screen properties.
-Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
+Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
 
 ### Network client hints
 
@@ -134,4 +136,4 @@ Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTP
 - [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)
 - [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

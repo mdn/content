@@ -23,7 +23,7 @@ back(options)
 
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
-    - `info`
+    - `info` {{optional_inline}}
       - : Developer-defined information to be passed along to the {{domxref("Navigation/navigate_event", "navigate")}} event, made available in {{domxref("NavigateEvent.info")}}. This can be any data type. You might, for example, wish to display newly-navigated content with a different animation depending on how it was navigated to (swipe left, swipe right, or go home). A string indicating which animation to use could be passed in as `info`.
 
 ### Return value
@@ -40,7 +40,7 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or 0, i.e. either the current {{domxref("Document")}} is not yet active, or the current history entry is the first one in the history, meaning that backwards navigation is not possible.
+  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or 0, i.e. either the current {{domxref("Document")}} is not yet active, or the current history entry is the first one in the history, meaning that backwards navigation is not possible, or if the current {{domxref("Document")}} is unloading.
 
 ## Examples
 

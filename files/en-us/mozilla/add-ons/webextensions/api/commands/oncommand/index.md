@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onCommand
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a command is executed using its associated keyboard shortcut.
 
@@ -38,10 +38,8 @@ Events have three functions:
 
     - `name`
       - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
-
-## Browser compatibility
-
-{{Compat}}
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the command shortcut was entered.
 
 ## Examples
 
@@ -69,5 +67,9 @@ browser.commands.onCommand.addListener((command) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.

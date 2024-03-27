@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUInternalError.GPUInternalError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUInternalError()`** constructor creates a new
 {{domxref("GPUInternalError")}} object instance.

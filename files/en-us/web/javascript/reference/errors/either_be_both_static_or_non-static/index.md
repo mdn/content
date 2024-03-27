@@ -37,7 +37,7 @@ class Test {
 // SyntaxError: getter and setter for private name #foo should either be both static or non-static
 ```
 
-Since `foo` is [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), the methods must be either both {{jsxref("Classes/static", "static")}}:
+Since `foo` is [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), the methods must be either both {{jsxref("Classes/static", "static")}}:
 
 ```js example-good
 class Test {
@@ -60,4 +60,4 @@ class Test {
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Classes/static", "static")}}
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)

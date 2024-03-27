@@ -2,7 +2,7 @@
 title: lang
 slug: Web/SVG/Attribute/lang
 page-type: svg-attribute
-browser-compat: svg.attributes.core.lang
+browser-compat: svg.global_attributes.lang
 ---
 
 {{SVGRef}}

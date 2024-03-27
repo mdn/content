@@ -16,7 +16,7 @@ There are three key advantages to CSS animations over traditional script-driven 
 
 ## Configuring an animation
 
-To create a CSS animation sequence, you style the element you want to animate with the {{cssxref("animation")}} property or its sub-properties. This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does **not** configure the actual appearance of the animation, which is done using the {{cssxref("@keyframes")}} at-rule as described in the [Defining the animation sequence using keyframes](#defining_the_animation_sequence_using_keyframes) section below.
+To create a CSS animation sequence, you style the element you want to animate with the {{cssxref("animation")}} property or its sub-properties. This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does **not** configure the actual appearance of the animation, which is done using the {{cssxref("@keyframes")}} at-rule as described in the [Defining animation sequence using keyframes](#defining_animation_sequence_using_keyframes) section below.
 
 The sub-properties of the {{cssxref("animation")}} property are:
 
@@ -36,6 +36,8 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the name of the {{cssxref("@keyframes")}} at-rule describing an animation's keyframes.
 - {{cssxref("animation-play-state")}}
   - : Specifies whether to pause or play an animation sequence.
+- {{cssxref("animation-timeline")}} {{experimental_inline}}
+  - : Specifies the timeline that is used to control the progress of a CSS animation.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
 
@@ -380,6 +382,128 @@ And here's the live output.
 > **Note:** Reload page to see the animation.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
+
+### Animating display and content-visibility
+
+This example demonstrates how [`display`](/en-US/docs/Web/CSS/display) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) can be animated. This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out smoothly with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
+
+Supporting browsers animate `display` and `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that properties will flip between two values 50% of the way through animating between the two.
+
+There is an exception, however, which is when animating to/from `display: none` or `content-visibility: hidden` to a visible value. In this case, the browser will flip between the two values so that the animated content is shown for the entire animation duration.
+
+So for example:
+
+- When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+
+#### HTML
+
+The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}} in between that we will animate from `display` `none` to `block`.
+
+```html
+<p>
+  Click anywhere on the screen or press any key to toggle the
+  <code>&lt;div&gt;</code> between hidden and showing.
+</p>
+
+<div>
+  This is a <code>&lt;div&gt;</code> element that animates between
+  <code>display: none; opacity: 0</code> and
+  <code>display: block; opacity: 1</code>. Neat, huh?
+</div>
+
+<p>
+  This is another paragraph to show that <code>display: none; </code> is being
+  applied and removed on the above <code>&lt;div&gt; </code>. If only its
+  <code>opacity</code> was being changed, it would always take up the space in
+  the DOM.
+</p>
+```
+
+#### CSS
+
+```css
+html {
+  height: 100vh;
+}
+
+div {
+  font-size: 1.6rem;
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 20px;
+  width: 480px;
+  opacity: 0;
+  display: none;
+}
+
+/* Animation classes */
+
+div.fade-in {
+  display: block;
+  animation: fade-in 0.7s ease-in forwards;
+}
+
+div.fade-out {
+  animation: fade-out 0.7s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+```
+
+Note the inclusion of the `display` property in the keyframe animations.
+
+#### JavaScript
+
+Finally, we include a bit of JavaScript to set up event listeners to trigger the animations. Specifically, we add the `fade-in` class to the `<div>` when we want it to appear, and `fade-out` when we want it to disappear.
+
+```js
+const divElem = document.querySelector("div");
+const htmlElem = document.querySelector(":root");
+
+htmlElem.addEventListener("click", showHide);
+document.addEventListener("keydown", showHide);
+
+function showHide() {
+  if (divElem.classList[0] === "fade-in") {
+    divElem.classList.remove("fade-in");
+    divElem.classList.add("fade-out");
+  } else {
+    divElem.classList.remove("fade-out");
+    divElem.classList.add("fade-in");
+  }
+}
+```
+
+#### Result
+
+The code renders as follows:
+
+{{ EmbedLiveSample("Animating display and content-visibility", "100%", "350") }}
 
 ## See also
 

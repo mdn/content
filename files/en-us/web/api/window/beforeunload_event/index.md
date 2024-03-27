@@ -18,7 +18,7 @@ The dialog can be triggered in the following ways:
 - Setting the event object's {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} property to a non-empty string value or any other [truthy](/en-US/docs/Glossary/Truthy) value.
 - Returning any truthy value from the event handler function, e.g. `return "string"`. Note that this only works when the function is attached via the `onbeforeunload` property, not the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. This behavior is consistent across modern versions of Firefox, Safari, and Chrome.
 
-The last two machanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object, while also setting `returnValue` to support legacy cases.
+The last two mechanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object, while also setting `returnValue` to support legacy cases.
 
 ## Syntax
 
@@ -72,7 +72,7 @@ In the following example we have an HTML text {{htmlelement("input")}} to repres
 </form>
 ```
 
-Our JavaScript attaches an {{domxref("HTMLElement.input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a {{domxref("Window.beforeunload_event", "beforeunload")}} event listener is attached to the {{domxref("Window")}} object.
+Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a {{domxref("Window.beforeunload_event", "beforeunload")}} event listener is attached to the {{domxref("Window")}} object.
 
 If the value becomes an empty string again (i.e. the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
 

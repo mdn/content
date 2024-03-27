@@ -43,6 +43,8 @@ requestFullscreen(options)
         - `"auto"`
           - : The browser will choose which of the above settings to apply.
             This is the default value.
+    - `screen` {{optional_inline}} {{experimental_inline}}
+      - : Specifies on which screen you want to put the element in fullscreen mode. This takes a {{domxref("ScreenDetailed")}} object as a value, representing the chosen screen.
 
 ### Return value
 
@@ -156,6 +158,23 @@ elem
 
 The promise's resolve handler does nothing, but if the promise is rejected, an error
 message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.
+
+### Using the screen option
+
+If you wanted to make the element fullscreen on the primary OS screen, you could use code like the following:
+
+```js
+try {
+  const primaryScreen = (await getScreenDetails()).screens.find(
+    (screen) => screen.isPrimary,
+  );
+  await document.body.requestFullscreen({ screen: primaryScreen });
+} catch (err) {
+  console.error(err.name, err.message);
+}
+```
+
+The {{domxref("Window.getScreenDetails()")}} method is used to retrieve the {{domxref("ScreenDetails")}} object for the current device, which contains {{domxref("ScreenDetailed")}} objects representing the different available screens.
 
 ## Specifications
 

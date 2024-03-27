@@ -50,22 +50,26 @@ _This are no properties for this interface._
 ### Instantiating an `XSLTProcessor`
 
 ```js
-const xsltProcessor = new XSLTProcessor();
+async function init() {
+  const parser = new DOMParser();
+  const xsltProcessor = new XSLTProcessor();
 
-// Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
-const myXMLHTTPRequest = new XMLHttpRequest();
-myXMLHTTPRequest.open("GET", "example.xsl", false);
-myXMLHTTPRequest.send(null);
+  // Load the XSLT file, example1.xsl
+  const xslResponse = await fetch("example1.xsl");
+  const xslText = await xslResponse.text();
+  const xslStylesheet = parser.parseFromString(xslText, "application/xml");
+  xsltProcessor.importStylesheet(xslStylesheet);
 
-const xslRef = myXMLHTTPRequest.responseXML;
-
-// Finally import the .xsl
-xsltProcessor.importStylesheet(xslRef);
+  // process the file
+  // ...
+}
 ```
 
-For the actual transformation, `XSLTProcessor` requires an XML document, which is used in conjunction with the imported XSL file to produce the final result. The XML document can be a separate XML file loaded as shown in figure 1, or it can be part of the existing page. To process part of a page's DOM, it is necessary to first create an XML document in memory. Assuming that the DOM to be processed is contained by an element with the id `example`, that DOM can be "cloned" using the in-memory XML document's {{domxref('Document.importNode()')}} method. {{domxref('Document.importNode()')}} allows transferring a DOM fragment between documents, in this case from an HTML document to an XML document. The first parameter references the DOM node to clone. By making the second parameter "true", it will clone all descendants as well (a deep clone). The cloned DOM can then be easily inserted into the XML document using {{domxref('Node.appendChild()')}}, as shown in figure 2.
-
 ### Creating an XML document based on part of a document's DOM
+
+For the actual transformation, `XSLTProcessor` requires an XML document, which is used in conjunction with the imported XSL file to produce the final result. The XML document can be a separate XML file loaded using {{domxref("fetch()")}}, or it can be part of the existing page.
+
+To process part of a page's DOM, it is necessary to first create an XML document in memory. Assuming that the DOM to be processed is contained by an element with the id `example`, that DOM can be "cloned" using the in-memory XML document's {{domxref('Document.importNode()')}} method. {{domxref('Document.importNode()')}} allows transferring a DOM fragment between documents, in this case from an HTML document to an XML document. The first parameter references the DOM node to clone. By making the second parameter "true", it will clone all descendants as well (a deep clone). The cloned DOM can then be inserted into the XML document using {{domxref('Node.appendChild()')}}, as shown below.
 
 ```js
 // Create a new XML document in memory
@@ -185,38 +189,33 @@ The basic example will load an XML file and apply a XSL transformation on it. Th
 </xsl:stylesheet>
 ```
 
-The example loads using synchronous {{domxref("XMLHTTPRequest")}} both the .xsl (`xslStylesheet`) and the .xml (`xmlDoc`) files into memory. The .xsl file is then imported (`xsltProcessor.importStylesheet(xslStylesheet)`) and the transformation run (`xsltProcessor.transformToFragment(xmlDoc, document)`). This allows fetching of data after the page has been loaded, without initiating a fresh page load.
+The example loads both the .xsl (`xslStylesheet`) and the .xml (`xmlDoc`) files into memory. The .xsl file is then imported (`xsltProcessor.importStylesheet(xslStylesheet)`) and the transformation run (`xsltProcessor.transformToFragment(xmlDoc, document)`). This allows fetching of data after the page has been loaded, without initiating a fresh page load.
 
 #### JavaScript
 
 ```js
-let xslStylesheet;
-const xsltProcessor = new XSLTProcessor();
-let myDOM;
+async function init() {
+  const parser = new DOMParser();
+  const xsltProcessor = new XSLTProcessor();
 
-let xmlDoc;
-
-function Init() {
-  // Load the xslt file, example1.xsl
-  let myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example1.xsl", false);
-  myXMLHTTPRequest.send(null);
-
-  xslStylesheet = myXMLHTTPRequest.responseXML;
+  // Load the XSLT file, example1.xsl
+  const xslResponse = await fetch("example1.xsl");
+  const xslText = await xslResponse.text();
+  const xslStylesheet = parser.parseFromString(xslText, "application/xml");
   xsltProcessor.importStylesheet(xslStylesheet);
 
   // Load the XML file, example1.xml
-  myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example1.xml", false);
-  myXMLHTTPRequest.send(null);
-
-  xmlDoc = myXMLHTTPRequest.responseXML;
+  const xmlResponse = await fetch("example1.xml");
+  const xmlText = await xmlResponse.text();
+  const xmlDoc = parser.parseFromString(xmlText, "application/xml");
 
   const fragment = xsltProcessor.transformToFragment(xmlDoc, document);
-  myDOM = fragment;
+
   document.getElementById("example").textContent = "";
   document.getElementById("example").appendChild(fragment);
 }
+
+init();
 ```
 
 ### Advanced example
@@ -249,18 +248,17 @@ Once the transformation is complete, the result is appended to the document, as 
 ```js
 let xslRef;
 let xslloaded = false;
+const parser = new DOMParser();
 const xsltProcessor = new XSLTProcessor();
 let myDOM;
 
 let xmlRef = document.implementation.createDocument("", "", null);
 
-function sort() {
+async function sort() {
   if (!xslloaded) {
-    const p = new XMLHttpRequest();
-    p.open("GET", "example2.xsl", false);
-    p.send(null);
-
-    xslRef = p.responseXML;
+    const response = await fetch("example2.xsl");
+    const xslText = await response.text();
+    xslRef = parser.parseFromString(xslText, "application/xml");
     xsltProcessor.importStylesheet(xslRef);
     xslloaded = true;
   }

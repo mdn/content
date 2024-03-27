@@ -34,6 +34,8 @@ None ({{jsxref('undefined')}}).
   - : Thrown if the associated access handle is already closed, or if the modification of the file's binary data otherwise fails.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the `newSize` is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
+- {{jsxref("TypeError")}}
+  - : Thrown if the underlying file system does not support setting the file size to the new size.
 
 ## Examples
 
@@ -67,4 +69,4 @@ async function truncateFile() {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

@@ -27,7 +27,7 @@ All conditional headers try to check if the resource stored on the server matche
 Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of _equality checks_:
 
 - _Strong validation_ is used when byte to byte identity is expected, for example when resuming a download.
-- _Weak validation_ is used when the user-agent only needs to determine if the two resources have the same content. This is even if they are minor differences; like different ads, or a footer with a different date.
+- _Weak validation_ is used when the user-agent only needs to determine if two resources have the same content. The resources may be considered the same even if minor differences exist, such as different ads or a footer with a different date.
 
 The kind of validation is independent of the validator used. Both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} allow both types of validation, though the complexity to implement it on the server side may vary. HTTP uses strong validation by default, and it specifies when weak validation can be used.
 

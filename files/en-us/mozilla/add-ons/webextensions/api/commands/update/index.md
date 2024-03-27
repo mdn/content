@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.commands.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Change the description or keyboard shortcut for the given command.
 

@@ -34,10 +34,19 @@ There are some additional syntax restrictions:
 
 ## Description
 
-In JavaScript, a setter can be used to execute a function whenever a specified property
-is attempted to be changed. Setters are most often used in conjunction with getters to
-create a type of pseudo-property. It is not possible to simultaneously have a setter on
-a property that holds an actual value.
+In JavaScript, a setter can be used to execute a function whenever an attempt is made to change a property's value. Setters are most often used in conjunction with getters.
+
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The setter syntax allows you to specify the setter function in an object initializer.
+
+```js
+const obj = {
+  set prop() {
+    // setter, the code executed when setting obj.prop
+  },
+}
+```
+
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 
@@ -89,7 +98,7 @@ console.log(instance.msg); // "hello cake"
 
 Setter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike setter properties in object literals, setter properties in classes are not enumerable.
 
-Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
 
 ### Removing a setter with the `delete` operator
 

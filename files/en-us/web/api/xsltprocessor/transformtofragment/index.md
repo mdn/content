@@ -13,13 +13,15 @@ The `transformToFragment()` method of the {{domxref("XSLTProcessor")}} interface
 ## Syntax
 
 ```js-nolint
-transformToFragment(source)
+transformToFragment(source, document)
 ```
 
 ### Parameters
 
 - `source`
   - : The {{DOMxRef("Node")}} source to apply the XSLT stylesheet to.
+- `document`
+  - : The {{DOMxRef("Document")}} the document fragment will be associated with. (Any document fragment is associated with a document it can be added to).
 
 ### Return value
 

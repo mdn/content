@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.idle.IdleState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 String describing the device's idle state.
 

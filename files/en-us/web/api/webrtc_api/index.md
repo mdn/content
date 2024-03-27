@@ -63,13 +63,6 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCSctpTransport")}}
   - : Provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport and also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)'s data channels are sent and received.
 
-#### Dictionaries
-
-- {{DOMxRef("RTCIceServer")}}
-  - : Defines how to connect to a single {{Glossary("ICE")}} server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
-- {{DOMxRef("RTCRtpContributingSource")}}
-  - : Contains information about a given contributing source (CSRC) including the most recent time a packet that the source contributed was played out.
-
 #### Events
 
 - {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}

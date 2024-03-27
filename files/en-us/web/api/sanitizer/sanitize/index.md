@@ -18,7 +18,7 @@ For example when sanitizing a `Document` instance in a frame.
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
 The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
 
-> **Note:** To sanitize strings, instead use {{domxref("Element.setHTML()")}} or {{domxref("Sanitizer.sanitizeFor()")}}.
+> **Note:** To sanitize strings, instead use {{domxref("Element.setHTML()")}}.
 > See {{domxref('HTML Sanitizer API')}} for more information.
 
 ## Syntax

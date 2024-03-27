@@ -52,7 +52,7 @@ In the following code we start to play an audio file after a play button is clic
 and start off a `requestAnimationFrame` loop running, which constantly
 outputs the `contextTime` and `performanceTime`.
 
-You can see full code of this [example at output-timestamp](https://github.com/mdn/webaudio-examples/blob/master/output-timestamp/index.html) ([see it live also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
+You can see full code of this [example at output-timestamp](https://github.com/mdn/webaudio-examples/blob/main/output-timestamp/index.html) ([see it live also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
 
 ```js
 // Press the play button

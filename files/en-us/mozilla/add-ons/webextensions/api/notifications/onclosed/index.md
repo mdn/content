@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClosed
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a notification is closed, either by the system or by the user.
 

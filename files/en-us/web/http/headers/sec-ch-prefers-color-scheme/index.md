@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-Prefers-Color-Scheme
 slug: Web/HTTP/Headers/Sec-CH-Prefers-Color-Scheme
+page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
@@ -96,6 +97,6 @@ The client will include the header in subsequent requests in the current session
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [`prefers-color-scheme` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}

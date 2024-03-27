@@ -16,27 +16,37 @@ The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/We
 ```css
 /* A gradient tilted 45 degrees,
    starting blue and finishing red */
-linear-gradient(45deg, blue, red);
+linear-gradient(45deg, blue, red)
 
 /* A gradient going from the bottom right to the top left corner,
    starting blue and finishing red */
-linear-gradient(to left top, blue, red);
+linear-gradient(to left top, blue, red)
+
+/* Interpolation in rectangular color space */
+linear-gradient(in oklab, blue, red)
+
+/* Interpolation in polar color space */
+linear-gradient(in hsl, blue, red)
+
+/* Interpolation in polar color space
+  with longer hue interpolation method */
+linear-gradient(in hsl longer hue, blue, red)
 
 /* Color stop: A gradient going from the bottom to top,
    starting blue, turning green at 40% of its length,
    and finishing red */
-linear-gradient(0deg, blue, green 40%, red);
+linear-gradient(0deg, blue, green 40%, red)
 
 /* Color hint: A gradient going from the left to right,
    starting red, getting to the midpoint color
    10% of the way across the length of the gradient,
    taking the rest of the 90% of the length to change to blue */
-linear-gradient(.25turn, red, 10%, blue);
+linear-gradient(.25turn, red, 10%, blue)
 
 /* Multi-position color stop: A gradient tilted 45 degrees,
    with a red bottom-left half and a blue top-right half,
    with a hard line where the gradient changes from red to blue */
-linear-gradient(45deg, red 0 50%, blue 50% 100%);
+linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ```
 
 ### Values
@@ -147,6 +157,54 @@ body {
 
 {{EmbedLiveSample("Gradient_that_starts_at_60_of_the_gradient_line", 120, 120)}}
 
+### Interpolation in rectangular color space
+
+```css hidden
+body {
+  width: 100vw;
+  height: 100vh;
+}
+```
+
+```css
+body {
+  background: linear-gradient(90deg in oklab, blue, red);
+}
+```
+
+{{EmbedLiveSample("Interpolation in rectangular color space", 120, 120)}}
+
+### Interpolating with hue
+
+```html hidden
+<div class="shorter">shorter hue</div>
+<div class="longer">longer hue</div>
+```
+
+```css hidden
+div {
+  height: 50vh;
+  color: white;
+  font-weight: bolder;
+}
+```
+
+In this example for interpolation, [hsl](/en-US/docs/Web/CSS/color_value/hsl) color system is being used and [hue](/en-US/docs/Web/CSS/hue) is being interpolated.
+
+```css
+.shorter {
+  background: linear-gradient(90deg in hsl shorter hue, red, blue);
+}
+
+.longer {
+  background: linear-gradient(90deg in hsl longer hue, red, blue);
+}
+```
+
+The box on the top uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter), meaning color goes straight from red to blue using the shorter arc on [color wheel](/en-US/docs/Glossary/Color_wheel). The box on the bottom uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer), meaning the color goes from red to blue using the longer arc, traversing through greens, yellows, and oranges.
+
+{{EmbedLiveSample("Interpolating with hue", 120, 120)}}
+
 ### Gradient with multi-position color-stops
 
 This example uses multi-position color-stops, with adjacent colors having the same color-stop value, creating a striped effect.
@@ -189,6 +247,8 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
 - {{cssxref("element", "element()")}}
 - {{cssxref("image/image","image()")}}

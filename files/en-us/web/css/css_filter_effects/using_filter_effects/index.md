@@ -30,18 +30,18 @@ The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/
 
 The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
-| Filter function                                             | Parameter type                                                      | Min value | Max effect | Interpolation value  | Default value (no effect)             |
-| ----------------------------------------------------------- | ------------------------------------------------------------------- | --------- | ---------- | -------------------- | ------------------------------------- |
-| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                       | `0`       |            | `0`                  | `blur(0)`                             |
-| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
-| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                       | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
-| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                          |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
-| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
-| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                        |           |            | `0`                  | `hue-rotate(0deg)`                    |
-| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
-| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
-| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `saturate(100%)`                      |
-| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `sepia(0%)`                           |
+| Filter function                                             | Parameter type                                                     | Min value | Max effect | Interpolation value  | Default value (no effect)             |
+| ----------------------------------------------------------- | ------------------------------------------------------------------ | --------- | ---------- | -------------------- | ------------------------------------- |
+| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `0`                  | `blur(0)`                             |
+| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
+| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
+| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
+| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
+| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                       |           |            | `0`                  | `hue-rotate(0deg)`                    |
+| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
+| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
+| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `saturate(100%)`                      |
+| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `sepia(0%)`                           |
 
 The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the offending filter function in the comma-separated list.
 
@@ -122,7 +122,7 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: rgb(255 255 255 / 10%);
   text-shadow: 2px 2px black;
 }
 ```

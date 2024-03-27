@@ -433,7 +433,7 @@ The payload is where the main information or content is located. In normal usage
 
 A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). Instead use the escape sequence `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
 
-In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
+In addition to the three escape sequences mentioned above, there are four others. They are listed in the table below.
 
 | Name               | Character | Escape sequence |
 | ------------------ | --------- | --------------- |

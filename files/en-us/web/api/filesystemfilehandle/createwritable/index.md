@@ -40,6 +40,12 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemWritableFileStr
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `readwrite` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if current entry is not found.
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the browser is not able to acquire a lock on the file associated with the file handle.
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if implementation-defined malware scans and safe-browsing checks fails.
 
 ## Examples
 
@@ -69,4 +75,4 @@ async function writeFile(fileHandle, contents) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

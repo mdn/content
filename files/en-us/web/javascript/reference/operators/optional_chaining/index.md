@@ -111,7 +111,7 @@ function printMagicIndex(arr) {
 }
 
 printMagicIndex([0, 1, 2, 3, 4, 5]); // undefined
-printMagicIndex(); // undefined; if not using ?., this would throw
+printMagicIndex(); // undefined; if not using ?., this would throw an error: "Cannot read properties of undefined (reading '42')"
 ```
 
 ### Optional chaining not valid on the left-hand side of an assignment

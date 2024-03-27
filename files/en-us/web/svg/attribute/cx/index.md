@@ -96,7 +96,7 @@ For {{SVGElement('radialGradient')}}, `cx` defines the x-axis coordinate of the 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("length")}}</td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -173,5 +173,5 @@ svg {
 
 ## See also
 
-- [cy](/en-US/docs/Web/SVG/Attribute/cy)
-- [r](/en-US/docs/Web/SVG/Attribute/r)
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}

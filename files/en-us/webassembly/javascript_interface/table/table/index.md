@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Table() constructor
 slug: WebAssembly/JavaScript_interface/Table/Table
-browser-compat: javascript.builtins.WebAssembly.Table.Table
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Table.Table
 ---
 
 {{WebAssemblySidebar}}
@@ -86,7 +87,7 @@ Next, we load and instantiate a WebAssembly module. The `table2.wasm` module def
 )
 ```
 
-We instantiate `table2.wasm` using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method:
+We instantiate `table2.wasm` using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method:
 
 ```js
 const instantiating = WebAssembly.instantiateStreaming(

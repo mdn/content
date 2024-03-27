@@ -80,7 +80,7 @@ The keywords and data types mentioned above are described in more detail below:
 
   - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
 
-- `contents` {{Experimental_Inline}}
+- `contents`
 
   - : Adds the contents of the element itself to the generated content value.
 
@@ -108,11 +108,11 @@ The keywords and data types mentioned above are described in more detail below:
     - `no-open-quote` and `no-close-quote`
       - : Introduces no content, but increments (decrements) the level of nesting for quotes.
 
-- `<target>` {{Experimental_Inline}}
+- `<target>`
 
   - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-references obtained from the target end of a link. See [Formal syntax](#formal_syntax).
 
-- `<leader()>` {{Experimental_Inline}}
+- `<leader()>`
 
   - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
 
@@ -133,7 +133,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 ## Examples
 
-The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element-replacement-with-url).
+The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element_replacement_with_url).
 
 ### Appending strings based on an element's class
 
@@ -258,7 +258,7 @@ li::marker {
 
 {{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
 
-The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
+The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters", "counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
 
 ### Strings with attribute values
 
@@ -304,7 +304,7 @@ This example inserts an image before all links. Two `content` values are provide
 
 The CSS to show the image and set the alternative text is shown below.
 This also sets the font and color for the content.
-This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the the fallback `content` value.
+This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the fallback `content` value.
 
 ```css
 a::before {
@@ -396,7 +396,7 @@ div {
 
 {{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
 
-Check the [browser compatibility chart](#browser-compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
+Check the [browser compatibility chart](#browser_compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
 
 ### Element replacement with `image-set()`
 
@@ -451,13 +451,14 @@ If inserted content is not decorative, check that the information is provided to
 
 ## See also
 
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
-- {{cssxref("image/image-set", "image-set()")}} function
-- {{cssxref("url", "url()")}} function
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("url", "url()")}}
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

@@ -11,7 +11,7 @@ browser-compat: html.elements.input.type_submit
 
 ## Value
 
-An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise. The `value` provides the {{glossary("accessible description")}} for the button.
 
 ### Setting the value attribute
 

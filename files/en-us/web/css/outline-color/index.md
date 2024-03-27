@@ -16,7 +16,7 @@ The **`outline-color`** CSS property sets the color of an element's outline.
 ```css
 /* <color> values */
 outline-color: #f92525;
-outline-color: rgb(30, 222, 121);
+outline-color: rgb(30 222 121);
 outline-color: blue;
 
 /* Keyword value */
@@ -36,7 +36,7 @@ The `outline-color` property is specified as any one of the values listed below.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
-- `auto` {{Experimental_Inline}}
+- `auto`
   - : Computes to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it computes to the [accent color](/en-US/docs/Web/CSS/accent-color).
 
 ## Description

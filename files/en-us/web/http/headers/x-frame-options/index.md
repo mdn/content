@@ -7,11 +7,11 @@ browser-compat: http.headers.X-Frame-Options
 
 {{HTTPSidebar}}
 
-The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking) attacks, by ensuring that their content is not embedded into other sites.
+The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking) attacks, by ensuring that their content is not embedded into other sites.
 
 The added security is provided only if the user accessing the document is using a browser that supports `X-Frame-Options`.
 
-> **Note:** The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which [obsoletes](https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options) this header for supporting browsers.
+> **Warning:** The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which [obsoletes](https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options) this header for supporting browsers.
 
 <table class="properties">
   <tbody>
@@ -44,23 +44,23 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
 - `SAMEORIGIN`
   - : The page can only be displayed if all ancestor frames are same origin to the page itself.
 - `ALLOW-FROM origin` {{deprecated_inline}}
-  - : This is an obsolete directive that no longer works in modern browsers. (Using it will give the same behavior as omitting the header.) Don't use it. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.
+  - : This is an obsolete directive. Modern browsers that encounter response headers with this directive will ignore the header completely. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you should use instead.
 
 ## Examples
 
-> **Note:** Setting X-Frame-Options inside the {{HTMLElement("meta")}} element is useless! For instance, `<meta http-equiv="X-Frame-Options" content="deny">` has no effect. Do not use it! `X-Frame-Options` works only by setting through the HTTP header, as in the examples below.
+> **Warning:** Setting `X-Frame-Options` inside the {{HTMLElement("meta")}} element (e.g., `<meta http-equiv="X-Frame-Options" content="deny">`) has no effect and should not be used! `X-Frame-Options` is only enforced via HTTP headers, as shown in the examples below.
 
 ### Configuring Apache
 
 To configure Apache to send the `X-Frame-Options` header for all pages, add this to your site's configuration:
 
-```plain
+```apacheconf
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
-To configure Apache to set the `X-Frame-Options` DENY, add this to your site's configuration:
+To configure Apache to set `X-Frame-Options` to `DENY`, add this to your site's configuration:
 
-```plain
+```apacheconf
 Header set X-Frame-Options "DENY"
 ```
 
@@ -68,8 +68,14 @@ Header set X-Frame-Options "DENY"
 
 To configure Nginx to send the `X-Frame-Options` header, add this either to your http, server or location configuration:
 
-```plain
+```nginx
 add_header X-Frame-Options SAMEORIGIN always;
+```
+
+You can set the `X-Frame-Options` header to `DENY` using:
+
+```nginx
+add_header X-Frame-Options DENY always;
 ```
 
 ### Configuring IIS
@@ -79,18 +85,16 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
 ```xml
 <system.webServer>
   …
-
   <httpProtocol>
     <customHeaders>
       <add name="X-Frame-Options" value="SAMEORIGIN" />
     </customHeaders>
   </httpProtocol>
-
   …
 </system.webServer>
 ```
 
-Or see this [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-US/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) user interface.
+For more information, see the [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-US/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) user interface.
 
 ### Configuring HAProxy
 
@@ -108,19 +112,20 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 ### Configuring Express
 
-To configure Express to send the `X-Frame-Options` header, you can use [helmet](https://helmetjs.github.io/) which uses [frameguard](https://helmetjs.github.io/docs/frameguard/) to set the header. Add this to your server configuration:
+You can use [Helmet](https://helmetjs.github.io/) to configure an Express app to [set the **legacy** X-Frame-Options](https://helmetjs.github.io/#x-frame-options) header on old browsers.
+
+> **Warning:** It's recommended to use the {{HTTPHeader("Content-Security-Policy")}} HTTP header with the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive instead.
+
+To use Helmet to set `X-Frame-Options`, add the following to your server configuration to set the `SAMEORIGIN` directive:
 
 ```js
 const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
-```
-
-Alternatively, you can use frameguard directly:
-
-```js
-const frameguard = require("frameguard");
-app.use(frameguard({ action: "SAMEORIGIN" }));
+app.use(
+  helmet({
+    xFrameOptions: { action: "sameorigin" },
+  }),
+);
 ```
 
 ## Specifications

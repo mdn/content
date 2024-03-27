@@ -41,7 +41,7 @@ li::-moz-list-number {
 
 ### Result
 
-{{ EmbedLiveSample("Examples", "auto", "auto", "moz-list-number.png") }}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

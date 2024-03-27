@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript.unregister
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Unregisters the content scripts represented by this `RegisteredContentScript` object.
 

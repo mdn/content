@@ -59,13 +59,19 @@ section {
 }
 ```
 
-This causes the \<section> element to become a **flex container** and its children to become **flex items**. The result of this should be something like so:
+This causes the `<section>` element to become a **flex container** and its children become **flex items**. This is what it looks like:
 
 ![A two row container that includes a single column in the first row and a 3-column layout in the second row that shows how a webpage can be divided into different layouts depending on the contents](flexbox-example2.png)
 
-So, this single declaration gives us everything we need. Incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
+This single declaration gives us everything we need. Incredible, right? We have a multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
 
-To be clear, let's reiterate what is happening here. The element we've given a {{cssxref("display")}} value of `flex` to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are laid out as flex items. The next section will explain in more detail what this means. Note also that you can use a `display` value of `inline-flex` if you wish to lay out an element's children as flex items, but have that element behave like an inline element.
+Let's recap what's happening here. Adding a {{cssxref("display")}} value of `flex` to an element makes it a flex container. The container is displayed as [Block-level content](/en-US/docs/Glossary/Block-level_content) in terms of how it interacts with the rest of the page. When the element is converted to a flex container, its children are converted to (and laid out as) flex items.
+
+You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
+The legacy `inline-flex` display value displays the container as inline as well.
+We'll focus on how the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/display#display_value_comparison) on the `display` property page.
+
+The next sections explain in more detail what flex items are and what happens inside an element when you make it a flex container.
 
 ## The flex model
 
@@ -330,16 +336,6 @@ button {
   line-height: 1.5;
 }
 ```
-
-## Cross-browser compatibility
-
-Flexbox support is available in most new browsers: Firefox, Chrome, Opera, Microsoft Edge, and IE 11, newer versions of Android/iOS, etc. However, you should be aware that there are still older browsers in use that don't support Flexbox (or do, but support a really old, out-of-date version of it.)
-
-While you're just learning and experimenting, this doesn't matter too much; however, if you're considering using flexbox in a real website, you need to do testing and make sure that your user experience is still acceptable in as many browsers as possible.
-
-Flexbox is a bit trickier than some CSS features. For example, if a browser is missing a CSS drop shadow, then the site will likely still be usable. Not supporting flexbox features, however, will probably break a layout completely, making it unusable.
-
-We discuss strategies for overcoming cross-browser support issues in our [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
 ## Test your skills!
 

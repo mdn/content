@@ -13,8 +13,8 @@ coordinate of the touch point relative to the viewport, including any scroll off
 
 ## Value
 
-A `long` value that represents the Y coordinate of the touch point relative
-to the viewport, including any scroll offset.
+A `double` floating point value representing the Y coordinate of the touch point
+relative to the viewport, including any scroll offset.
 
 ## Examples
 

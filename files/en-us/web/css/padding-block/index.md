@@ -15,8 +15,8 @@ The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/d
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("padding-block-end")}}
 - {{cssxref("padding-block-start")}}
+- {{cssxref("padding-block-end")}}
 
 ## Syntax
 

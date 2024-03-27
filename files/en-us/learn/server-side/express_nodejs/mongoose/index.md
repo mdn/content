@@ -42,7 +42,7 @@ For more information on the options see [Database integration](https://expressjs
 There are two common approaches for interacting with a database:
 
 - Using the databases' native query language, such as SQL.
-- Using an Object Data Model ("ODM") or an Object Relational Model ("ORM"). An ODM/ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
+- Using an Object Relational Mapper ("ORM"). An ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
 
 The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. ODM's are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the ODM supports different database backends, and must make greater compromises in terms of what database features are supported).
 
@@ -107,7 +107,7 @@ Other code can execute while the server is waiting for the database operation to
 JavaScript has a number of mechanisms for supporting asynchronous behavior.
 Historically JavaScript relied heavily on passing [callback functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) to asynchronous methods to handle the success and error cases.
 In modern JavaScript callbacks have largely been replaced by [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-Promises are objects that are (immediately) returned by an asynchronous method that represent it's future state.
+Promises are objects that are (immediately) returned by an asynchronous method that represent its future state.
 When the operation completes, the promise object is "settled", and resolves an object that represents the result of the operation or an error.
 
 There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) for a high level overview of both approaches.
@@ -264,7 +264,7 @@ const SomeModelSchema = new Schema({
 const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
-The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
+The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
 
 > **Note:** Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the [Using models](#using_models) section, and when we create our views.
 
@@ -453,7 +453,7 @@ The [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) method
 
 - [`findById()`](<https://mongoosejs.com/docs/api/model.html#Model.findById()>): Finds the document with the specified `id` (every document has a unique `id`).
 - [`findOne()`](<https://mongoosejs.com/docs/api/model.html#Model.findOne()>): Finds a single document that matches the specified criteria.
-- [`findByIdAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndRemove()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
+- [`findByIdAndDelete()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndDelete()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
 
 > **Note:** There is also a [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
@@ -563,7 +563,7 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
 
 > **Note:** If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
 > In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/atlas/database).
@@ -602,7 +602,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 5. This will open the following screen. Click on the **Go to Overview** button.
    ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
-6. You will return to the _Overview_ screen. Click the on the _Database_ section under the _Deployment_ menu on the left. Click the **Browse Collections** button.
+6. You will return to the _Overview_ screen. Click on the _Database_ section under the _Deployment_ menu on the left. Click the **Browse Collections** button.
    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
 7. This will open the _Collections_ section. Click the **Add My Own Data** button.

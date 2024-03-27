@@ -33,7 +33,7 @@ The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the int
   - : An ending offset of `100%`.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A percentage of the time through the animation sequence at which the specified keyframe should occur.
-- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}} {{experimental_inline}}
+- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}}
   - : A percentage of the time through the specified {{cssxref("animation-range")}} at which the specified keyframe should occur. See [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more information on the kinds of animations that use named timeline ranges.
 
 ## Description
@@ -118,8 +118,8 @@ Declarations in a keyframe qualified with `!important` are ignored.
     margin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;
-  } /* ignored */
+    margin-top: 150px !important; /* ignored */
+  }
   to {
     margin-top: 100px;
   }
@@ -145,7 +145,7 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ### CSS animation examples
 
-See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) and [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/) for examples.
+See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) and [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) for examples.
 
 ## Specifications
 
@@ -160,5 +160,6 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 - {{cssxref("animation-range")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/articles/scroll-driven-animations/)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

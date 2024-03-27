@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.setPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setPipeline()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUComputePipeline")}} to use for this compute pass.

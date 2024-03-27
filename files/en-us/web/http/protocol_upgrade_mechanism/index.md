@@ -79,7 +79,7 @@ Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
 Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this _does not provide security_. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key confirms that "Yes, I really mean to open a WebSocket connection."
 
-This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.
+This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}} methods.
 
 ```http
 Sec-WebSocket-Key: key

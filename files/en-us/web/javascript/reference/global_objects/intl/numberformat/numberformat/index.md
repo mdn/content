@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 
 The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat.html", "taller")}}
 
 ## Syntax
 
@@ -29,7 +29,7 @@ Intl.NumberFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
 
@@ -104,7 +104,7 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `maximumSignificantDigits`
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`.
 
-The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on th value of the [`roundingPriority`](#roundingpriority) property.
+The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on the value of the [`roundingPriority`](#roundingpriority) property.
 
 - `roundingPriority`
 
@@ -181,8 +181,12 @@ The above properties fall into two groups: `minimumIntegerDigits`, `minimumFract
       - : Display grouping separators based on the locale preference, which may also be dependent on the currency.
     - `"min2"`
       - : Display grouping separators when there are at least 2 digits in a group.
+    - `true`
+      - : Same as `"always"`.
+    - `false`
+      - : Display no grouping separators.
 
-    The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise. The boolean values `true` and `false` are accepted, but are always converted to the default value.
+    The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise. The string values `"true"` and `"false"` are accepted, but are always converted to the default value.
 
 - `signDisplay`
   - : When to display the sign for the number. Possible values are:

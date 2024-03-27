@@ -36,17 +36,11 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
   - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
 - [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-  - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
 
 ## Using Performance APIs
 
-- [Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : This guide describes how to use the [`Performance`](/en-US/docs/Web/API/Performance) interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
 - [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
   - : [Resource loading and timing](/en-US/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with CORS
-- [The performance timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : The [Performance Timeline](/en-US/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/en-US/docs/Web/API/Performance) interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
 - [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)
   - : Create application specific timestamps using the [user timing API](/en-US/docs/Web/API/Performance_API/User_timing)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
@@ -73,7 +67,6 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('First contentful paint')}}
 - {{glossary('First CPU idle')}}
 - {{glossary('First input delay')}}
-- {{glossary('First interactive')}}
 - {{glossary('First meaningful paint')}}
 - {{glossary('First paint')}}
 - {{glossary('HTTP')}}
