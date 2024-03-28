@@ -77,7 +77,7 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 ## Constructor
 
 - {{jsxref("Symbol/Symbol", "Symbol()")}}
-  - : Creates a new `Symbol` object. It is not a constructor in the traditional sense, because it can only be called as a function, instead of being constructed with `new Symbol()`.
+  - : Creates a value of type `Symbol` when called as a function. Throws `TypeError` when called with the `new` operator.
 
 ## Static properties
 
