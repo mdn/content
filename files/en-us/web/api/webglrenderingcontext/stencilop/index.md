@@ -72,8 +72,7 @@ gl.stencilOp(gl.INCR, gl.DECR, gl.INVERT);
 ```
 
 To get the current information about stencil and depth pass or fail, query the
-following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FAIL);

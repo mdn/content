@@ -2,7 +2,7 @@
 title: color-interpolation
 slug: Web/SVG/Attribute/color-interpolation
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.color-interpolation
+browser-compat: svg.global_attributes.color-interpolation
 ---
 
 {{SVGRef}}

@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportDatagramDuplexStream.outgoingHighWaterMark
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`outgoingHighWaterMark`** property of the {{domxref("WebTransportDatagramDuplexStream")}} interface gets or sets the high water mark for outgoing chunks of data — this is the maximum size, in chunks, that the outgoing {{domxref("WritableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
-
-{{AvailableInWorkers}}
 
 ## Value
 

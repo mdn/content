@@ -57,6 +57,8 @@ Values of this type are objects. They contain the following properties:
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The current muted state for the tab and the reason for the last state change.
 - `openerTabId` {{optional_inline}}
   - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab still exists and is in the same window.
+- `pendingUrl`
+  - : `string`. The URL the tab is navigating to, before it has committed. This property is only present if the extension's manifest includes the "tabs" permission and there is a pending navigation.
 - `pinned`
   - : `boolean`. Whether the tab is pinned.
 - `selected` {{deprecated_inline}}

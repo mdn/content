@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.indexNames
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`indexNames`** read-only property of the
 {{domxref("IDBObjectStore")}} interface returns a list of the names of [indexes](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) on objects
 in this object store.
-
-{{AvailableInWorkers}}
 
 ## Value
 

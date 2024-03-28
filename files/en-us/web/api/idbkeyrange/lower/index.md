@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.lower
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`lower`** read-only property of the
 {{domxref("IDBKeyRange")}} interface returns the lower bound of the key range.
-
-{{AvailableInWorkers}}
 
 ## Value
 

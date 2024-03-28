@@ -3,7 +3,7 @@
 Thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)! :tada:
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
-Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+Everyone participating in this project is expected to follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
 
 ## Getting started
