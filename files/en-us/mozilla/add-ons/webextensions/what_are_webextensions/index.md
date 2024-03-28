@@ -12,7 +12,7 @@ An extension adds features and functions to a browser. It's created using famili
 
 **Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
 
-Examples: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/), [Enhancer for YouTube](https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/), and (Control Panel for Twitter)(https://addons.mozilla.org/firefox/addon/control-panel-for-twitter/).
+Examples: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/), [Enhancer for YouTube](https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/), and ([Control Panel for Twitter](https://addons.mozilla.org/firefox/addon/control-panel-for-twitter/).
 
 **Let users show their personality**: Browser extensions can manipulate the content of web pages; for example, letting users add their favorite logo or picture as a background to every page they visit. Extensions may also enable users to update the look of the Firefox UI, the same way standalone [theme add-ons](https://extensionworkshop.com/documentation/themes/) do.
 
@@ -34,7 +34,7 @@ Examples: [Worldwide Radio](https://addons.mozilla.org/firefox/addon/worldwide-r
 
 **Games**: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.
 
-Examples: (RPG Game - Dedalium by Loycom Games)(https://addons.mozilla.org/firefox/addon/rpg-game-online-dedalium/), [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
+Examples: [RPG Game - Dedalium by Loycom Games](https://addons.mozilla.org/firefox/addon/rpg-game-online-dedalium/), [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
 **Add development tools**: You may provide web development tools as your business or have developed a useful technique or approach to web development that you want to share. Either way, you can enhance the built-in Firefox developer tools by adding a new tab to the developer toolbar.
 
