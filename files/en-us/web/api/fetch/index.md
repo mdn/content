@@ -41,6 +41,17 @@ fetch(resource, options)
   - : An object containing any custom settings you want to apply to the request.
     The possible options are:
 
+    - `attributionReporting` {{experimental_inline}}
+
+      - : Indicates that you want the request to trigger the browser to set off an attribution source or trigger event. `attributionReporting` is an object containing the following properties:
+
+        - `eventSourceEligible`
+          - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If set to `false`, it won't.
+        - `triggerEligible`
+          - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If set to `false`, it won't.
+
+        > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
     - `body`
 
       - : Any body that you want to add to your request:
@@ -87,7 +98,6 @@ fetch(resource, options)
       - : The request method, e.g., `"GET"`, `"POST"`.
         The default is `"GET"`.
         Note that the {{httpheader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
         Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
         If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
 
