@@ -80,7 +80,7 @@ The keywords and data types mentioned above are described in more detail below:
 
   - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
 
-- `contents` {{Experimental_Inline}}
+- `contents`
 
   - : Adds the contents of the element itself to the generated content value.
 
@@ -108,11 +108,11 @@ The keywords and data types mentioned above are described in more detail below:
     - `no-open-quote` and `no-close-quote`
       - : Introduces no content, but increments (decrements) the level of nesting for quotes.
 
-- `<target>` {{Experimental_Inline}}
+- `<target>`
 
   - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-references obtained from the target end of a link. See [Formal syntax](#formal_syntax).
 
-- `<leader()>` {{Experimental_Inline}}
+- `<leader()>`
 
   - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
 

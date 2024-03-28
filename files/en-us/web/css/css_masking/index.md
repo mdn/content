@@ -13,7 +13,7 @@ The **CSS masking** module that defines masking and clipping for partially or fu
 
 ### Properties
 
-- {{cssxref("clip")}} {{deprecated_inline}}
+- {{cssxref("clip")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("clip-rule")}}
 - {{cssxref("mask")}}
