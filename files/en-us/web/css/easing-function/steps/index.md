@@ -9,8 +9,6 @@ browser-compat: css.types.easing-function
 
 The **`steps()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a [step function](https://en.wikipedia.org/wiki/Step_function) that divides the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
 
-{{EmbedInteractiveExample("")}}
-
 ## Syntax
 
 ```css

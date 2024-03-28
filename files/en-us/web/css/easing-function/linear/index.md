@@ -9,8 +9,6 @@ browser-compat: css.types.easing-function
 
 The **`linear()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates a piecewise linear easing, allowing the approximation of complex animations and transitions by interpolating linearly between the specified points. The interpolation occurs at a constant rate from beginning to end. A typical use of the `linear()` function is to provide many points to approximate any curve.
 
-{{EmbedInteractiveExample("")}}
-
 ## Syntax
 
 ```css
