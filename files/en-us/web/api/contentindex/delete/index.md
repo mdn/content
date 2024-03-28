@@ -20,7 +20,7 @@ content.
 ## Syntax
 
 ```js-nolint
-ContentIndex.delete(id).then(/* … */)
+delete(id)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ ContentIndex.delete(id).then(/* … */)
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 

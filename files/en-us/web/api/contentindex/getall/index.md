@@ -65,6 +65,8 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
           - : A {{jsxref('String')}} representation of the image size.
         - `type` {{Optional_Inline}}
           - : The {{Glossary("MIME type")}} of the image.
+        - `label` {{Optional_Inline}}
+          - : A string representing the accessible name of the icon.
 
 ### Exceptions
 
@@ -89,7 +91,7 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!Array.length) {
+  if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
     message.innerText =
