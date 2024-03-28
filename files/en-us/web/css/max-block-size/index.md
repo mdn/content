@@ -58,17 +58,17 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
   - : The intrinsic minimum `max-block-size`.
 - `fit-content`
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ### How writing-mode affects directionality
 
 The values of `writing-mode` affect the mapping of `max-block-size` to `max-width` or `max-height` as follows:
 
-| Values of `writing-mode`                                                                                                                                              | `max-block-size` is equivalent to |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
+| Values of `writing-mode`                                                  | `max-block-size` is equivalent to |
+| ------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
 
 > **Note:** The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
 
