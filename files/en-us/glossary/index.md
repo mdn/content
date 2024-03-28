@@ -1,5 +1,5 @@
 ---
-title: "MDN Web Docs Glossary: Definitions of Web-related terms"
+title: MDN Web Docs Glossary
 short-title: MDN Web Docs Glossary
 slug: Glossary
 page-type: landing-page
