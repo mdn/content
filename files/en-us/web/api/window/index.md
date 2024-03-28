@@ -59,7 +59,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the window is displayed in full screen or not.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Returns a reference to the history object.
-- {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
+- {{domxref("Window.indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("Window.innerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
