@@ -24,7 +24,7 @@ The two mechanisms within Web Storage are as follows:
 - `localStorage` does the same thing, but persists even when the browser is closed and reopened.
 
   - Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data.
-  - Storage limit is the maximum amongst the two.
+  - Storage limit is usually also at most 5MB (may vary between browsers).
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties (to be more precise, the `Window` object implements the `WindowLocalStorage` and `WindowSessionStorage` objects, which the `localStorage` and `sessionStorage` properties hang off) — invoking one of these will create an instance of the {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different Storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
