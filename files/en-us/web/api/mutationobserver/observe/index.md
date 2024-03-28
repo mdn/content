@@ -130,18 +130,9 @@ for example, reflect changes to users' nicknames, or to mark them as away from k
 ```js
 function callback(mutationList) {
   mutationList.forEach((mutation) => {
-    switch (mutation.type) {
-      case "attributes":
-        switch (mutation.attributeName) {
-          case "status":
-            userStatusChanged(mutation.target.username, mutation.target.status);
-            break;
-          case "username":
-            usernameChanged(mutation.oldValue, mutation.target.username);
-            break;
-        }
-        break;
-    }
+    const { attributeName, oldValue, target } = mutation;
+    const newValue = target.getAttribute(attributeName);
+    console.log(`${attributeName}: ${oldValue} -> ${newValue}`);
   });
 }
 
