@@ -40,13 +40,13 @@ The `caption-side` property is specified as one of the keyword values listed bel
   - : The caption box should be positioned above the table.
 - `bottom`
   - : The caption box should be positioned below the table.
-- `block-start`
+- `block-start` {{Experimental_Inline}}
   - : The caption box should be positioned at the block start edge of the table.
-- `block-end`
+- `block-end` {{Experimental_Inline}}
   - : The caption box should be positioned at the block end edge of the table.
-- `inline-start`
+- `inline-start` {{Experimental_Inline}}
   - : The caption box should be positioned at the inline start edge of the table.
-- `inline-end`
+- `inline-end` {{Experimental_Inline}}
   - : The caption box should be positioned at the inline end edge of the table.
 
 ## Formal definition
