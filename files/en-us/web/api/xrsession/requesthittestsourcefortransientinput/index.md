@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.requestHitTestSourceForTransientInput
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestHitTestSourceForTransientInput()`** method of the
 {{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRTransientInputHitTestSource")}} object that can be passed to {{domxref("XRFrame.getHitTestResultsForTransientInput()")}}.
@@ -74,7 +74,7 @@ xrSession
 // frame loop
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
-    transientHitTestSource
+    transientHitTestSource,
   );
 
   // do things with the transient hit test results

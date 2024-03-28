@@ -11,6 +11,12 @@ The **`text-rendering`** CSS property provides information to the rendering engi
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
 
+> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
+
+One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
+
+## Syntax
+
 ```css
 /* Keyword values */
 text-rendering: auto;
@@ -26,21 +32,15 @@ text-rendering: revert-layer;
 text-rendering: unset;
 ```
 
-> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
-
-One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
-
-## Syntax
-
 ### Values
 
-- `auto` {{Non-standard_Inline}}
+- `auto`
   - : The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. For differences in how this value is interpreted by the browser, see the compatibility table.
 - `optimizeSpeed`
   - : The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
 - `optimizeLegibility`
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
-- `geometricPrecision` {{Non-standard_Inline}}
+- `geometricPrecision`
 
   - : The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts — such as kerning — don't scale linearly. So this value can make text using those fonts look good.
 
@@ -75,10 +75,20 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 
 ```css
 .small {
-  font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    19.9px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 .big {
-  font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    20px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 ```
 
@@ -101,7 +111,12 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 
 ```css
 p {
-  font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+  font:
+    1.5em "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
 }
 
 .speed {
@@ -127,7 +142,7 @@ p {
 ## See also
 
 - [Drawing text in a `<canvas>`](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
+- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
 - Related CSS properties
 
   - [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) (and its longhand properties, such as [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line), [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style), and [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness))

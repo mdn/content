@@ -1,12 +1,11 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-status:
-  - experimental
+page-type: web-manifest-member
 browser-compat: html.manifest.categories
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>

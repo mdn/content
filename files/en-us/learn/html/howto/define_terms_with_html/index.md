@@ -1,6 +1,7 @@
 ---
 title: Define terms with HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}

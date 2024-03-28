@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates properties of a contextual identity, given its cookie store ID.
 
@@ -83,12 +83,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.update(
-  "firefox-container-1", {
+browser.contextualIdentities
+  .update("firefox-container-1", {
     name: "my-thing",
     color: "purple",
-    icon: "briefcase"
-  }).then(onUpdated, onError);
+    icon: "briefcase",
+  })
+  .then(onUpdated, onError);
 ```
 
 {{WebExtExamples}}

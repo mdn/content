@@ -30,8 +30,7 @@ A new HTML {{domxref("Document")}} object.
 
 ## Examples
 
-This example creates a new HTML document and inserts it into an {{
-  HTMLElement("iframe") }} in the current document.
+This example creates a new HTML document and inserts it into an {{HTMLElement("iframe")}} in the current document.
 
 Here's the HTML for this example:
 
@@ -87,7 +86,7 @@ replaces the contents of the frame with the new document's contents.
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

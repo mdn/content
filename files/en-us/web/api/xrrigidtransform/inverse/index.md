@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.inverse
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only **`inverse`** property
 of the {{domxref("XRRigidTransform")}} interface returns another
@@ -43,7 +43,7 @@ for (const view of pose.view) {
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.modelViewMatrix,
     false,
-    modelViewMatrix
+    modelViewMatrix,
   );
 
   // …

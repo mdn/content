@@ -1,6 +1,7 @@
 ---
 title: set:difference()
 slug: Web/EXSLT/set/difference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

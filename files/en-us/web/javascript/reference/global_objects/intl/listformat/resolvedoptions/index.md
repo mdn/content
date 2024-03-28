@@ -16,8 +16,12 @@ options computed during the construction of this `Intl.ListFormat` object.
 ## Syntax
 
 ```js-nolint
-listFormat.resolvedOptions()
+resolvedOptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

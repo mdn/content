@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.dispatchWorkgroups
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`dispatchWorkgroups()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface dispatches a specific grid of workgroups to perform the work being done by the current {{domxref("GPUComputePipeline")}} (i.e. set via {{domxref("GPUComputePassEncoder.setPipeline()")}}).
@@ -88,7 +88,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE
+  BUFFER_SIZE,
 );
 
 // End frame by passing array of command buffers to command queue for execution

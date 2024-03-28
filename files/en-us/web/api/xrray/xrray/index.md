@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRRay.XRRay
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`XRRay()`** constructor creates a new {{domxref("XRRay")}} object which is a geometric ray described by an origin point and a direction vector.
 
@@ -66,7 +66,7 @@ let ray4 = new XRRay(DOMPoint.fromPoint(origin), DOMPoint.fromPoint(direction));
 // Using rigid transform
 let rigidTransform = new XRRigidTransform(
   DOMPoint.fromPoint(origin),
-  DOMPoint.fromPoint(direction)
+  DOMPoint.fromPoint(direction),
 );
 let ray5 = new XRRay(rigidTransform);
 ```
@@ -82,4 +82,4 @@ let ray5 = new XRRay(rigidTransform);
 ## See also
 
 - {{domxref("DOMPoint")}}
-- {{domxref("DOMPoint.fromPoint()")}}
+- {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}}

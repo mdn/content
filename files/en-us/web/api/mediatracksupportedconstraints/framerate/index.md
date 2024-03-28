@@ -45,7 +45,9 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 
 ```css
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

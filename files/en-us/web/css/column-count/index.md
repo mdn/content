@@ -51,7 +51,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns using the CSS `column-count`
+  This is a bunch of text split into three columns using the CSS
+  <code>column-count</code>
   property. The text is equally distributed over the columns.
 </p>
 ```
@@ -81,4 +82,4 @@ column-count: unset;
 - {{CSSXref("column-width")}}, {{CSSXref("columns")}} shorthand
 - {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} shorthand
 - [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
-- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

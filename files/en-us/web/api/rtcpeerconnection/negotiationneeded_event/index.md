@@ -43,13 +43,13 @@ pc.addEventListener(
         sendSignalingMessage({
           type: "video-offer",
           sdp: pc.localDescription,
-        })
+        }),
       )
       .catch((err) => {
         // handle error
       });
   },
-  false
+  false,
 );
 ```
 
@@ -65,7 +65,7 @@ pc.onnegotiationneeded = (ev) => {
       sendSignalingMessage({
         type: "video-offer",
         sdp: pc.localDescription,
-      })
+      }),
     )
     .catch((err) => {
       // handle error

@@ -1,29 +1,39 @@
 ---
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
+page-type: guide
 ---
 
 {{GamesSidebar}}
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to actually see them, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
-> **Note:** We chose Three because it is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), or [PlayCanvas](https://playcanvas.com/).
+> **Note:** We chose Three because it is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html) or [PlayCanvas](https://playcanvas.com/).
 
 ## Environment setup
 
-To start developing with Three.js, you don't need much. You should:
+To start developing with Three.js, you should make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 
-- Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Create a directory to store your experiments in.
-- Save a copy of the [latest minimized Three.js library](https://threejs.org/build/three.min.js) inside your directory.
-- Open the [Three.js documentation](https://threejs.org/docs/) in a separate tab — it is useful to refer to.
+You can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
+Bear in mind that the archives include source files, which makes the download size approximately 350MB.
+
+Alternatively, you can import Three.js [using a CDN or use Node.js](https://threejs.org/docs/#manual/en/introduction/Installation).
+A Node.js setup with Three.js installed as a dependency is convenient if you want to track versions and it can speed up collaboration and deployment:
+
+```bash
+npm install --save three
+npm install --save-dev vite # For development
+npx vite
+```
+
+Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere while you're working for reference.
 
 ## HTML structure
 
 Here's the HTML structure we will use:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />

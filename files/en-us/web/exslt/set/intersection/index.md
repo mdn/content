@@ -1,6 +1,7 @@
 ---
 title: set:intersection()
 slug: Web/EXSLT/set/intersection
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

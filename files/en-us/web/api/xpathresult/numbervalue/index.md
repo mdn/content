@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.numberValue
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
 
 The read-only **`numberValue`** property of the
 {{domxref("XPathResult")}} interface returns the numeric value of a result with
 {{domxref("XPathResult.resultType")}} being `NUMBER_TYPE`.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -46,7 +44,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.NUMBER_TYPE,
-  null
+  null,
 );
 document.querySelector("output").textContent = result.numberValue;
 ```

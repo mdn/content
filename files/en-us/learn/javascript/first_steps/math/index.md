@@ -1,6 +1,7 @@
 ---
 title: Basic math in JavaScript — numbers and operators
 slug: Learn/JavaScript/First_steps/Math
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
@@ -12,7 +13,7 @@ At this point in the course, we discuss math in JavaScript — how we can use {{
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -113,7 +114,7 @@ The result is then 77, as initially expected.
 
 ## Arithmetic operators
 
-Arithmetic operators are the basic operators that we use to do sums in JavaScript:
+Arithmetic operators are used for performing mathematical calculations in JavaScript:
 
 <table class="standard-table">
   <thead>

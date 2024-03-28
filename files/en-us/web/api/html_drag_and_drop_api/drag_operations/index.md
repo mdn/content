@@ -32,7 +32,7 @@ Here is an example which allows a section of content to be dragged.
 const draggableElement = document.querySelector('p[draggable="true"]');
 
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "This text may be dragged")
+  event.dataTransfer.setData("text/plain", "This text may be dragged"),
 );
 ```
 
@@ -53,7 +53,7 @@ In this example, we add a listener for the {{domxref("HTMLElement/dragstart_even
 ```js
 const draggableElement = document.querySelector('p[draggable="true"]');
 draggableElement.addEventListener("dragstart", (event) =>
-  event.dataTransfer.setData("text/plain", "This text may be dragged")
+  event.dataTransfer.setData("text/plain", "This text may be dragged"),
 );
 ```
 
@@ -310,7 +310,7 @@ function doDrop(event) {
     "text/plain",
   ];
   const types = event.dataTransfer.types.filter((type) =>
-    supportedTypes.includes(type)
+    supportedTypes.includes(type),
   );
   if (types.length) {
     const data = event.dataTransfer.getData(types[0]);

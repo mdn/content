@@ -1,6 +1,7 @@
 ---
 title: JavaScript basics
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -19,7 +20,7 @@ With more experience, you'll be able to create games, animated 2D and 3D graphic
 JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
 
 - Browser Application Programming Interfaces ({{Glossary("API","APIs")}}) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.
-- Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.
+- Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as [Disqus](https://disqus.com/) or Facebook.
 - Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.
 
 It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's [JavaScript learning area](/en-US/docs/Learn/JavaScript), as well as in other parts of MDN.
@@ -409,9 +410,9 @@ Next, let's change the page title to a personalized welcome message when the use
    }
    ```
 
-   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
+   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK_. In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
-4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
+4. Add the following condition block after the function declaration. We could call this initialization code, as it structures the app when it first loads.
 
    ```js
    if (!localStorage.getItem("name")) {

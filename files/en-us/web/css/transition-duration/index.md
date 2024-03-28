@@ -70,7 +70,7 @@ transition-duration: unset;
   height: 100px;
   background-color: red;
   font-size: 18px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
 }
 
@@ -79,7 +79,7 @@ transition-duration: unset;
   background-color: blue;
   color: yellow;
   font-size: 12px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
 }
 
@@ -124,7 +124,7 @@ changeButton.addEventListener("click", change);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

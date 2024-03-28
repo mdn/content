@@ -1,9 +1,8 @@
 ---
 title: Firefox tracking protection
 slug: Web/Privacy/Firefox_tracking_protection
+page-type: guide
 ---
-
-{{QuicklinksWithSubPages("Web/Privacy")}}
 
 ## What is tracking protection?
 
@@ -13,7 +12,7 @@ If blocked content is part of the page layout, users may notice layout issues wh
 
 When Firefox blocks content, it logs a message to the Web Console like this:
 
-```
+```plain
 The resource at "http://some/url" was blocked because tracking protection is enabled.
 ```
 
@@ -99,3 +98,7 @@ Instead, you should account for the case when Google Analytics is missing by che
 More information about this technique is available at [Google Analytics, Privacy, and Event Tracking](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/).
 
 > **Note:** Depending on a third party in this way is not a good practice anyway, because then your site can be broken if the third party is slow or unavailable, or if the tracker has been blocked by an add-on.
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

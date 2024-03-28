@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onErased
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`onErased()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
 
@@ -56,7 +56,7 @@ browser.downloads.onErased.addListener(handleErased);
 
 let erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 ```
 

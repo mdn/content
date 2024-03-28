@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.classes.public_class_fields
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
 **Public fields** are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
 
@@ -30,7 +30,7 @@ There are some additional syntax restrictions:
 This page introduces public instance fields in detail.
 
 - For public static fields, see [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static).
-- For private fields, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+- For private fields, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 - For public methods, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 - For public accessors, see [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set).
 
@@ -101,7 +101,7 @@ const instance2 = new C();
 console.log(instance1.obj === instance2.obj); // false
 ```
 
-The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await")}} or {{jsxref("Operators/yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
+The expression is evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in the initializer expression. (Think of the initializer expression as being implicitly wrapped in a function.)
 
 Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor. However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
 
@@ -142,7 +142,7 @@ console.log(instance.d); // 3
 console.log(instance.b); // undefined
 ```
 
-> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
+> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 Because class fields are added using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 
@@ -245,9 +245,9 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
 - {{jsxref("Statements/class", "class")}}
-- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (May 2, 2018)
-- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (December 13, 2018)
+- [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
+- [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)

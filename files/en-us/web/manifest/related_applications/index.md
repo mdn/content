@@ -1,6 +1,7 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.related_applications
@@ -39,9 +40,9 @@ The `related_applications` field is an array of objects specifying native applic
 ]
 ```
 
-## Related application values
+## Related application properties
 
-Application objects may contain the following values:
+Application objects may contain the following properties:
 
 | Member     | Description                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |

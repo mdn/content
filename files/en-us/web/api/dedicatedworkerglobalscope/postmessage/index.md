@@ -22,15 +22,23 @@ The main scope that spawned the worker can send back information to the thread t
 ## Syntax
 
 ```js-nolint
-postMessage(message, transferList)
+postMessage(message)
+postMessage(message, options)
+postMessage(message, transfer)
 ```
 
 ### Parameters
 
 - `message`
+
   - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.message_event")}}.
     This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
-- `transferList` {{optional_inline}}
+
+- `options` {{optional_inline}}
+
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.
+
+- `transfer` {{optional_inline}}
 
   - : An optional ordered [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of.
     If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.

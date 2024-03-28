@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the localized string for the specified message.
 
@@ -60,9 +60,9 @@ This would work with a \_locales/en/messages.json file containing:
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -71,7 +71,7 @@ This would work with a \_locales/en/messages.json file containing:
 
 If `target.url` is "https\://developer.mozilla.org", then the value of message, in the "en" locale, would be:
 
-```
+```plain
 "You clicked https://developer.mozilla.org."
 ```
 

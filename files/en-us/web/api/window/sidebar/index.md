@@ -52,7 +52,7 @@ The sidebar object returned has the following methods:
       </td>
       <td colspan="2">
         Dummy function; does nothing. See
-        <a href="/en-US/docs/Web/OpenSearch#Autodiscovery_of_search_plugins"
+        <a href="/en-US/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
           >Autodiscovery of search plugins</a
         >.
       </td>
@@ -69,8 +69,7 @@ The sidebar object returned has the following methods:
         <p>
           Installs a search engine (Sherlock).
           <a
-            href="/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_Sherlock_plugins"
-            title="Adding_search_engines_from_web_pages"
+            href="/en-US/docs/Web/OpenSearch#installing_sherlock_plugins"
             >Adding Sherlock search engines </a
           >contains more details.
         </p>
@@ -99,5 +98,5 @@ Mozilla-specific. Not part of any standard.
 
 ## Browser compatibility
 
-Moved behind preference in Firefox 102.
+Removed in Firefox 102.
 For more information see Firefox compatibility information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).

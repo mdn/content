@@ -14,7 +14,7 @@ CSS offers several features that allow you to tweak your document's styles—or 
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule): Conditionally apply part of a [stylesheet](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom), based on the result of a media query.
 - {{domxref("Window.matchMedia()")}}: Test the viewing device against a media query

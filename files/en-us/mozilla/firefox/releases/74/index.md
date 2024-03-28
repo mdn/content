@@ -1,6 +1,7 @@
 ---
 title: Firefox 74 for developers
 slug: Mozilla/Firefox/Releases/74
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -101,4 +102,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(73)}}
+{{Firefox_for_developers}}

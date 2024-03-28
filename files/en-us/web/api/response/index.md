@@ -39,10 +39,12 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 
 ## Static methods
 
-- {{domxref("Response.error()")}}
+- {{domxref("Response.error_static","Response.error()")}}
   - : Returns a new `Response` object associated with a network error.
-- {{domxref("Response.redirect()")}}
-  - : Creates a new response with a different URL.
+- {{domxref("Response.redirect_static", "Response.redirect()")}}
+  - : Returns a new response with a different URL.
+- {{domxref("Response.json_static", "Response.json()")}}
+  - : Returns a new `Response` object for returning the provided JSON encoded data.
 
 ## Instance methods
 
@@ -84,24 +86,26 @@ You can also use the {{domxref("Response.Response", "Response()")}} constructor 
 const response = new Response();
 ```
 
-### An Ajax Call
+### A PHP Call
 
-Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.
+Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value.
 
 ```js
-// Function to do an Ajax call
-const doAjax = async () => {
-  const response = await fetch("Ajax.php"); // Generate the Response object
+// Function to fetch JSON using PHP
+const getJSON = async () => {
+  // Generate the Response object
+  const response = await fetch("getJSON.php");
   if (response.ok) {
-    const jsonValue = await response.json(); // Get JSON value from the response body
-    return Promise.resolve(jsonValue);
-  } else {
-    return Promise.reject("*** PHP file not found");
+    // Get JSON value from the response body
+    return response.json();
   }
+  throw new Error("*** PHP file not found");
 };
 
 // Call the function and output value or error message to console
-doAjax().then(console.log).catch(console.log);
+getJSON()
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 ```
 
 ## Specifications

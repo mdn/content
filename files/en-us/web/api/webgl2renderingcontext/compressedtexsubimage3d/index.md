@@ -88,7 +88,7 @@ gl.compressedTexSubImage3D(
   512,
   512,
   gl.COMPRESSED_R11_EAC,
-  textureData
+  textureData,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Book list page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
+page-type: learn-module-chapter
 ---
 
 Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
@@ -41,18 +42,18 @@ extends layout
 
 block content
   h1= title
+  if book_list.length
+    ul
+      each book in book_list
+        li
+          a(href=book.url) #{book.title}
+          |  (#{book.author.name})
 
-  ul
-    each book in book_list
-      li
-        a(href=book.url) #{book.title}
-        |  (#{book.author.name})
-
-    else
-      li There are no books.
+  else
+    p There are no books.
 ```
 
-The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in`-`else` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name.
+The view extends the **layout.pug** base template and overrides the `block` named '**content**'. It displays the `title` we passed in from the controller (via the `render()` method) and iterates through the `book_list` variable using the `each`-`in` syntax. A list item is created for each book displaying the book title as a link to the book's detail page followed by the author name.
 If there are no books in the `book_list` then the `else` clause is executed, and displays the text 'There are no books'.
 
 > **Note:** We use `book.url` to provide the link to the detail record for each book (we've implemented this route, but not the page yet). This is a virtual property of the `Book` model which uses the model instance's `_id` field to produce a unique URL path.

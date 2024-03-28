@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates a notification, given its ID.
 
@@ -81,10 +81,9 @@ browser.browserAction.onClicked.addListener(() => {
       message: "Something something cake",
       progress,
     });
-    browser.alarms.create(
-      "cake-progress",
-      { periodInMinutes: CAKE_PREP_INTERVAL }
-    );
+    browser.alarms.create("cake-progress", {
+      periodInMinutes: CAKE_PREP_INTERVAL,
+    });
   });
 });
 ```

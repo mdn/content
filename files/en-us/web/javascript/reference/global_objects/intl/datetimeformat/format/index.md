@@ -22,10 +22,9 @@ format(date)
 - `date`
   - : The date to format.
 
-## Description
+### Return value
 
-The `format` getter formats a date into a string according to the locale and
-formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
+A string representing the given `date` formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
 
 ## Examples
 
@@ -49,7 +48,7 @@ console.log(dateTimeFormat.format(new Date()));
 ### Using format with map
 
 Use the `format` getter function for formatting all dates in an array. Note
-that the function is bound to the {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+that the function is bound to the {{jsxref("Intl.DateTimeFormat")}}
 from which it was obtained, so it can be passed directly to
 {{jsxref("Array.prototype.map()")}}.
 

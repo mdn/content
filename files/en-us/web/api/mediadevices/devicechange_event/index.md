@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.MediaDevices.devicechange_event
 ---
 
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
+The **`devicechange`** event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
 This event is not cancelable and does not bubble.
 
@@ -55,7 +55,10 @@ media device is attached to or removed from the device running the sample.
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -135,7 +138,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 

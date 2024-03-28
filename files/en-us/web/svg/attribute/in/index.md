@@ -93,7 +93,7 @@ You can use this attribute with the following SVG elements:
       </filter>
     </defs>
     <image
-      xlink:href="mdn_logo_only_color.png"
+      href="mdn_logo_only_color.png"
       x="10%"
       y="10%"
       width="80%"
@@ -114,7 +114,7 @@ You can use this attribute with the following SVG elements:
       <filter id="imageMultiply">
         <!-- This is a workaround. -->
         <feImage
-          xlink:href="mdn_logo_only_color.png"
+          href="mdn_logo_only_color.png"
           x="10%"
           y="10%"
           width="80%"

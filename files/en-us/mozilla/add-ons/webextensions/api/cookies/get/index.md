@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.
 
@@ -65,14 +65,14 @@ function logCookie(cookie) {
 function getCookie(tabs) {
   let getting = browser.cookies.get({
     url: tabs[0].url,
-    name: "favorite-color"
+    name: "favorite-color",
   });
   getting.then(logCookie);
 }
 
 let getActive = browser.tabs.query({
   active: true,
-  currentWindow: true
+  currentWindow: true,
 });
 getActive.then(getCookie);
 ```

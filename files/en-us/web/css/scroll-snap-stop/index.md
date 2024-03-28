@@ -216,11 +216,5 @@ If required, you can be selective about the items that are `always` stopped at i
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- Other related CSS Scroll Snap properties:
-  - [scroll-snap-align](/en-US/docs/Web/CSS/scroll-snap-align)
-  - [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type)
-  - [scroll-behavior](/en-US/docs/Web/CSS/scroll-behavior)
-  - [scroll-margin](/en-US/docs/Web/CSS/scroll-margin)
-  - [scroll-padding](/en-US/docs/Web/CSS/scroll-padding)
-- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/) on web.dev
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

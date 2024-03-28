@@ -1,6 +1,7 @@
 ---
 title: What HTML features promote accessibility?
 slug: Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

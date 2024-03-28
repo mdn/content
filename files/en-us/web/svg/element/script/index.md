@@ -13,36 +13,38 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 ## Example
 
-```html-nolint
+```html
 Click the circle to change colors.
-<svg viewBox="0 0 10 10" height="120px" width="120px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  viewBox="0 0 10 10"
+  height="120px"
+  width="120px"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4" />
+
   <script>
     // <![CDATA[
-    window.addEventListener("DOMContentLoaded", () => {
-      function getColor() {
-        const R = Math.round(Math.random() * 255)
-          .toString(16)
-          .padStart(2, "0");
+    function getColor() {
+      const R = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-        const G = Math.round(Math.random() * 255)
-          .toString(16)
-          .padStart(2, "0");
+      const G = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-        const B = Math.round(Math.random() * 255)
-          .toString(16)
-          .padStart(2, "0");
+      const B = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-        return `#${R}${G}${B}`;
-      }
+      return `#${R}${G}${B}`;
+    }
 
-      document.querySelector("circle").addEventListener("click", (e) => {
-        e.target.style.fill = getColor();
-      });
+    document.querySelector("circle").addEventListener("click", (e) => {
+      e.target.style.fill = getColor();
     });
     // ]]>
   </script>
-
-  <circle cx="5" cy="5" r="4" />
 </svg>
 ```
 
@@ -62,15 +64,6 @@ Click the circle to change colors.
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The {{Glossary("URL")}} to the script to load.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
-
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
 ## Usage notes
 

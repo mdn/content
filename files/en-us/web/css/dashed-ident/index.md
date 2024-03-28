@@ -13,7 +13,7 @@ The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/
 
 The syntax of `<dashed-ident>` is similar to CSS identifiers (such as property names), except that it is [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). It starts with two dashes, followed by the user-defined identifier.
 
-The double dash at the beginning makes them easily identifiable when reading through a CSS code block.
+The double dash at the beginning makes them easily identifiable when reading through a CSS code block, and helps to avoid name clashes with standard CSS keywords.
 
 Just like [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) `<dashed-ident>`s are defined by the user, but unlike `<custom-ident>` [CSS](/en-US/docs/Web/CSS) will never define a `<dashed-ident>`.
 

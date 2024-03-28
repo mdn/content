@@ -31,7 +31,7 @@ A new {{domxref("Comment")}} object.
 ```js
 const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
 const comment = docu.createComment(
-  "This is a not-so-secret comment in your document"
+  "This is a not-so-secret comment in your document",
 );
 
 docu.querySelector("xml").appendChild(comment);

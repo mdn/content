@@ -5,9 +5,9 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.quantifier
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
-A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atom) a certain number of times. The quantifier is placed after the atom it applies to.
+A **quantifier** repeats an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) a certain number of times. The quantifier is placed after the atom it applies to.
 
 ## Syntax
 
@@ -42,10 +42,10 @@ atom{min,max}?
 
 ## Description
 
-A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atom) to repeat it a certain number of times. It cannot appear on its own. Each quantifier is able to specify a minimum and maximum number that a pattern must be repeated for.
+A quantifier is placed after an [atom](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#atoms) to repeat it a certain number of times. It cannot appear on its own. Each quantifier is able to specify a minimum and maximum number that a pattern must be repeated for.
 
 | Quantifier  | Minimum | Maximum  |
-|-------------|---------|----------|
+| ----------- | ------- | -------- |
 | `?`         | 0       | 1        |
 | `*`         | 0       | Infinity |
 | `+`         | 1       | Infinity |
@@ -61,15 +61,15 @@ re.test("aa"); // false
 re.test("a{1, 3}"); // true
 ```
 
-This behavior is fixed in the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, where braces cannot appear literally without [escaping](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape). The ability to use `{` and `}` literally without escaping is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+This behavior is fixed in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), where braces cannot appear literally without [escaping](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape). The ability to use `{` and `}` literally without escaping is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
-```js
+```js-nolint example-bad
 /a{1, 3}/u; // SyntaxError: Invalid regular expression: Incomplete quantifier
 ```
 
 It is a syntax error if the minimum is greater than the maximum.
 
-```js
+```js-nolint example-bad
 /a{3,2}/; // SyntaxError: Invalid regular expression: numbers out of order in {} quantifier
 ```
 
@@ -109,11 +109,11 @@ Greedy quantifiers try to match as many _times_ as possible; it does not maximiz
 
 Quantifiers apply to a single atom. If you want to quantify a longer pattern or a disjunction, you must [group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group) it. Quantifiers cannot be applied to [assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#assertions).
 
-```js
+```js-nolint example-bad
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
 ```
 
-In non-[unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) mode, [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
+In [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), [lookahead assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) can be quantified. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 
 ```js
 /(?=a)?b/.test("b"); // true; the lookahead is matched 0 time
@@ -176,7 +176,7 @@ Another paragraph
 
 ## See also
 
-- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Disjunction: `|`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)

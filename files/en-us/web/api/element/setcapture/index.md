@@ -12,8 +12,7 @@ browser-compat: api.Element.setCapture
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
-to this element until the mouse button is released or {{
-  domxref("document.releaseCapture()") }} is called.
+to this element until the mouse button is released or {{domxref("document.releaseCapture()")}} is called.
 
 > **Warning:** This interface never had much cross-browser
 > support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
@@ -41,7 +40,7 @@ In this example, the current mouse coordinates are drawn while you mouse around 
 clicking and holding down on an element.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

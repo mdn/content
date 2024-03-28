@@ -1,6 +1,7 @@
 ---
 title: Local set
 slug: WebAssembly/Reference/Variables/Local_set
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

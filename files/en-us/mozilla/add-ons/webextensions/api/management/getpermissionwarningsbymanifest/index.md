@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
@@ -42,11 +42,11 @@ Log the permission warnings for the given manifest file:
 
 ```js
 let manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 let manifestString = JSON.stringify(manifest);
 
@@ -58,7 +58,8 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-let gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+let gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 

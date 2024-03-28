@@ -44,7 +44,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 ```

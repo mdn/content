@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.invalidIteratorState
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
 
 The read-only **`invalidIteratorState`** property of the
 {{domxref("XPathResult")}} interface signifies that the iterator has become invalid. It
 is `true` if {{domxref("XPathResult.resultType")}} is
 `UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE` and
 the document has been modified since this result was returned.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -40,7 +38,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 // Invalidates the iterator state
 document.querySelector("div").remove();

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.
 
@@ -65,9 +65,9 @@ let thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {
-    browser.sidebarAction.setPanel({panel: thatPanel});
+    browser.sidebarAction.setPanel({ panel: thatPanel });
   } else {
-    browser.sidebarAction.setPanel({panel: thisPanel});
+    browser.sidebarAction.setPanel({ panel: thisPanel });
   }
 }
 

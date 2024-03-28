@@ -42,7 +42,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 nodeIterator.detach(); // detaches the iterator
 

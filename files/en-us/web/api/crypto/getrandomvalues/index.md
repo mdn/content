@@ -43,9 +43,7 @@ Note that `typedArray` is modified in-place, and no copy is made.
 
 ## Usage notes
 
-Don't use `getRandomValues()` to generate encryption keys.
-Instead, use the {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method.
-There are a few reasons for this; for example, `getRandomValues()` is not guaranteed to be running in a secure context.
+Prefer the {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method for key generation, which is guaranteed to be running in a secure context.
 
 There is no minimum degree of entropy mandated by the Web Cryptography specification.
 User agents are instead urged to provide the best entropy they can when generating random numbers,

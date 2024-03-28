@@ -1,6 +1,7 @@
 ---
 title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -73,4 +74,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(105)}}
+{{Firefox_for_developers}}

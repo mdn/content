@@ -1,6 +1,7 @@
 ---
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
@@ -12,7 +13,7 @@ The previous article showed you what the communication between web clients and s
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. Basic understanding of how server-side code
+        Basic understanding of how server-side code
         handles and responds to HTTP requests (see <a
           href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >Client-Server overview</a

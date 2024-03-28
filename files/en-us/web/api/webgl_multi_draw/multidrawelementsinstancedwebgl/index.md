@@ -111,7 +111,7 @@ ext.multiDrawElementsInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  counts.length
+  counts.length,
 );
 ```
 

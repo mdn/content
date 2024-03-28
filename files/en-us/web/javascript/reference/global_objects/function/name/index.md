@@ -306,5 +306,5 @@ In the uncompressed version, the program runs into the truthy branch and logs "'
 
 ## See also
 
-- A polyfill for functions' `.name` property is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [Polyfill for `Function: name` in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
 - {{jsxref("Function")}}

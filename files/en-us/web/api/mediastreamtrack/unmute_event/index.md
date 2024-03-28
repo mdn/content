@@ -40,7 +40,7 @@ musicTrack.addEventListener(
   (event) => {
     document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
   },
-  false
+  false,
 );
 
 musicTrack.addEventListener(
@@ -48,7 +48,7 @@ musicTrack.addEventListener(
   (event) => {
     document.getElementById("timeline-widget").style.backgroundColor = "#fff";
   },
-  false
+  false,
 );
 ```
 
@@ -61,7 +61,7 @@ musicTrack.onmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 };
 
-musicTrack.mute = (event) => {
+musicTrack.onunmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 };
 ```

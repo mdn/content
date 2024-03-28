@@ -1,6 +1,7 @@
 ---
 title: 2D collision detection
 slug: Games/Techniques/2D_collision_detection
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -38,7 +39,7 @@ rect2.bind("EnterFrame", function () {
     rect1.x < rect2.x + rect2.w &&
     rect1.x + rect1.w > rect2.x &&
     rect1.y < rect2.y + rect2.h &&
-    rect1.h + rect1.y > rect2.y
+    rect1.y + rect1.h > rect2.y
   ) {
     // Collision detected!
     this.color("green");
@@ -99,7 +100,7 @@ Crafty.c("Circle", {
       this.y + this.radius,
       this.radius,
       0,
-      Math.PI * 2
+      Math.PI * 2,
     );
     ctx.closePath();
     ctx.fill();
@@ -130,7 +131,7 @@ circle2.bind("EnterFrame", function () {
 
 ## Separating Axis Theorem
 
-This is a collision algorithm that can detect a collision between any two \*convex\* polygons. It's more complicated to implement than the above methods but is more powerful. The complexity of an algorithm like this means we will need to consider performance optimization, covered in the next section.
+This is a collision algorithm that can detect a collision between any two _convex_ polygons. It's more complicated to implement than the above methods but is more powerful. The complexity of an algorithm like this means we will need to consider performance optimization, covered in the next section.
 
 Implementing SAT is out of scope for this page so see the recommended tutorials below:
 
@@ -142,11 +143,11 @@ Implementing SAT is out of scope for this page so see the recommended tutorials 
 
 ## Collision Performance
 
-While some of these algorithms for collision detection are simple enough to calculate, it can be a waste of cycles to test \*every\* entity with every other entity. Usually games will split collision into two phases, broad and narrow.
+While some of these algorithms for collision detection are simple enough to calculate, it can be a waste of cycles to test _every_ entity with every other entity. Usually games will split collision into two phases, broad and narrow.
 
 ### Broad Phase
 
-Broad phase should give you a list of entities that \*could\* be colliding. This can be implemented with a spacial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spacial data structures are Quad Trees, R-Trees or a Spacial Hashmap.
+Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spacial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spacial data structures are Quad Trees, R-Trees or a Spacial Hashmap.
 
 ### Narrow Phase
 

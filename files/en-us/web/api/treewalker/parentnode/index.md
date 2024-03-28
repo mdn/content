@@ -39,7 +39,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.parentNode(); // returns null as there is no parent
 ```

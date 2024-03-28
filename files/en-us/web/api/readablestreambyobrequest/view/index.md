@@ -12,7 +12,7 @@ The **`view`** getter property of the {{domxref("ReadableStreamBYOBRequest")}} i
 
 ## Value
 
-A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) representing the destination region to which the controller can write generated data.
+A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) representing the destination region to which the controller can write generated data.
 
 `null` if the request has already been responded to, by calling {{domxref("ReadableStreamBYOBRequest.respond()")}} or {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}.
 

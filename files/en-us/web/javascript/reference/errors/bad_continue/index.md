@@ -10,7 +10,7 @@ The JavaScript exception "continue must be inside loop" occurs when a {{jsxref("
 
 ## Message
 
-```
+```plain
 SyntaxError: Illegal continue statement: no surrounding iteration statement (V8-based)
 SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement (V8-based)
 SyntaxError: continue must be inside loop (Firefox)
@@ -32,7 +32,7 @@ SyntaxError: Cannot continue to the label 'label' as it is not targeting a loop.
 
 If you want to proceed with the next iteration in a {{jsxref("Array/forEach", "forEach()")}} loop, use {{jsxref("Statements/return", "return")}} instead, or convert it to a {{jsxref("Statements/for...of", "for...of")}} loop.
 
-```js example-bad
+```js-nolint example-bad
 array.forEach((value) => {
   if (value === 5) {
     continue; // SyntaxError: continue must be inside loop

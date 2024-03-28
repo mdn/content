@@ -84,7 +84,7 @@ function startAnimation(persist) {
   offset = -offset;
   const animation = target.animate(
     { transform: `translate(${100 + offset}px)` },
-    { duration: 500, fill: "forwards" }
+    { duration: 500, fill: "forwards" },
   );
   stack.push(animation);
   if (persist) {

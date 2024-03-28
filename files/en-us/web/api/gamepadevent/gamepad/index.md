@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.GamepadEvent.gamepad
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`GamepadEvent.gamepad`** property of the
 **{{domxref("GamepadEvent")}} interface** returns a {{domxref("Gamepad")}}
@@ -29,7 +29,7 @@ window.addEventListener("gamepadconnected", (e) => {
     e.gamepad.index,
     e.gamepad.id,
     e.gamepad.buttons.length,
-    e.gamepad.axes.length
+    e.gamepad.axes.length,
   );
 });
 ```

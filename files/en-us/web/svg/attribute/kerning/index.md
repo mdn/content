@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/kerning
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.kerning
+browser-compat: svg.global_attributes.kerning
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -27,7 +27,11 @@ html,
 body,
 svg {
   height: 100%;
-  font: 36px Verdana, Helvetica, Arial, sans-serif;
+  font:
+    36px Verdana,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 ```
 
@@ -50,7 +54,7 @@ svg {
       <td>
         <code>auto</code> |
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Length"
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
             >&#x3C;length></a
           ></code
         >

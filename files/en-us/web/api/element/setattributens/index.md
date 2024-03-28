@@ -11,6 +11,8 @@ browser-compat: api.Element.setAttributeNS
 `setAttributeNS` adds a new attribute or changes the value of an attribute
 with the given namespace and name.
 
+If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the {{domxref("Element.setAttribute()", "setAttribute()")}} method instead.
+
 ## Syntax
 
 ```js-nolint
@@ -35,13 +37,11 @@ let d = document.getElementById("d1");
 d.setAttributeNS(
   "http://www.mozilla.org/ns/specialspace",
   "spec:align",
-  "center"
+  "center",
 );
 ```
 
 ## Notes
-
-{{ DOMAttributeMethods() }}
 
 `setAttributeNS` is the only method for namespaced attributes which expects
 the fully qualified name, i.e. `"namespace:localname"`.
@@ -53,3 +53,9 @@ the fully qualified name, i.e. `"namespace:localname"`.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

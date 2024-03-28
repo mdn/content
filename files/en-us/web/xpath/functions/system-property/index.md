@@ -1,15 +1,16 @@
 ---
 title: system-property
 slug: Web/XPath/Functions/system-property
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `system-property` function returns an object representing the given system-property.
 
 ### Syntax
 
-```
+```plain
 system-property(name)
 ```
 

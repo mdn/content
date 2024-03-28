@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.
 
@@ -45,13 +45,11 @@ This code creates a sidebar pane that displays the [`tagName`](/en-US/docs/Web/A
 
 ```js
 function onCreated(sidebarPane) {
-
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
     const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

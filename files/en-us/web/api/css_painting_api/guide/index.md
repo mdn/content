@@ -41,10 +41,10 @@ registerPaint(
         a subset of the HTML Canvas API.
     */
     paint(ctx) {
-      ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
+      ctx.fillStyle = "hsl(55 90% 60% / 100%)";
       ctx.fillRect(0, 15, 200, 20); /* order: x, y, w, h */
     }
-  }
+  },
 );
 ```
 
@@ -54,7 +54,7 @@ We have then used the `paint()` function to paint to our canvas.
 
 A `paint()` function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often referred to by the variable name `ctx`. The 2D Rendering Context is a subset of the [HTML Canvas API](/en-US/docs/Web/API/Canvas_API); the version available to Houdini (called the `PaintRenderingContext2D`) is a further subset containing most of the features available in the full Canvas API with the [exception](https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context) of the `CanvasImageData`, `CanvasUserInterface`, `CanvasText`, and `CanvasTextDrawingStyles` APIs.
 
-We define the [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) as being `hsl(55 90% 60% / 1.0)`, which is a shade of yellow, and then call `fillRect()` to create a rectangle of that color. The [`fillRect()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect) parameters are, in order, x-axis origin, y-axis origin, width, and height. `fillRect(0, 15, 200, 20)` results in the creation of a rectangle that is 200 units wide by 20 units tall, positioned 0 units from the left and 15 units from the top of the content box.
+We define the [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) as being `hsl(55 90% 60% / 100%)`, which is a shade of yellow, and then call `fillRect()` to create a rectangle of that color. The [`fillRect()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect) parameters are, in order, x-axis origin, y-axis origin, width, and height. `fillRect(0, 15, 200, 20)` results in the creation of a rectangle that is 200 units wide by 20 units tall, positioned 0 units from the left and 15 units from the top of the content box.
 
 We can use the CSS [`background-size`](/en-US/docs/Web/CSS/background-size) and [`background-position`](/en-US/docs/Web/CSS/background-position) properties to re-size or relocate this background image, but this is the default size and placement of the yellow box we created in our paint worklet.
 
@@ -98,7 +98,7 @@ We can then add the fancy class to any element on the page to add a yellow box a
 <h1 class="fancy">My Cool Header</h1>
 ```
 
-The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility).
+The following example will look like the image above in [browsers supporting the CSS Painting API](/en-US/docs/Web/API/CSS/paintWorklet_static#browser_compatibility).
 
 {{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-fixed-size/", 120, 120)}}
 
@@ -129,10 +129,10 @@ registerPaint(
     size is the paintSize, the dimensions (height and width) of the box being painted
   */
     paint(ctx, size) {
-      ctx.fillStyle = "hsl(55 90% 60% / 1.0)";
+      ctx.fillStyle = "hsl(55 90% 60% / 100%)";
       ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
     }
-  }
+  },
 );
 ```
 
@@ -176,7 +176,7 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 #### Result
 
-In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
+In [browsers that support the CSS Paint API](/en-US/docs/Web/API/CSS/paintWorklet_static#browser_compatibility), the elements in the example below should get yellow backgrounds proportional to their font size.
 
 {{EmbedGHLiveSample("dom-examples/css-painting/half-highlight-paintsize", 200, 200)}}
 
@@ -201,11 +201,11 @@ registerPaint(
     paint(drawingContext, elementSize, styleMap) {
       // Paint code goes here.
     }
-  }
+  },
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_Variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array")}} of property names. We'll take a look at `inputArguments` in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -245,10 +245,10 @@ registerPaint(
         0,
         size.height / 3,
         size.width * 0.4 - props.get("--widthSubtractor"),
-        size.height * 0.6
+        size.height * 0.6,
       );
     }
-  }
+  },
 );
 ```
 
@@ -288,16 +288,16 @@ In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties
 ```css
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60% / 1);
+  --boxColor: hsl(55 90% 60% / 100%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 1);
+  --boxColor: hsl(155 90% 60% / 100%);
   --widthSubtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 1);
+  --boxColor: hsl(255 90% 60% / 100%);
   --widthSubtractor: 40;
 }
 ```
@@ -361,18 +361,18 @@ registerPaint(
         ctx.lineTo(blockWidth + start * 10 + 20, y);
         ctx.lineTo(
           blockWidth + start * 10 + 20 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(
           blockWidth + start * 10 + 10 + highlightHeight,
-          highlightHeight
+          highlightHeight,
         );
         ctx.lineTo(blockWidth + start * 10 + 10, y);
         ctx.closePath();
         ctx.fill();
       }
     } // paint
-  }
+  },
 );
 ```
 
@@ -386,20 +386,20 @@ We can then create a little HTML that will accept this image as backgrounds:
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_Variables)
+We give each header a different value for the `--highColor` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
 
 ```css
 .fancy {
   background-image: paint(headerHighlight);
 }
 h1 {
-  --highColor: hsl(155 90% 60% / 0.7);
+  --highColor: hsl(155 90% 60% / 70%);
 }
 h3 {
-  --highColor: hsl(255 90% 60% / 0.5);
+  --highColor: hsl(255 90% 60% / 50%);
 }
 h6 {
-  --highColor: hsl(355 90% 60% / 0.3);
+  --highColor: hsl(355 90% 60% / 30%);
 }
 ```
 
@@ -572,7 +572,7 @@ registerPaint(
         ctx.stroke();
       }
     } // paint
-  }
+  },
 );
 ```
 
@@ -582,17 +582,17 @@ We can set different colors, stroke widths, and pick whether the background imag
 
 ```css
 li {
-  --boxColor: hsl(155 90% 60% / 0.5);
+  --boxColor: hsl(155 90% 60% / 50%);
   background-image: paint(hollowHighlights, stroke, 5px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(255 90% 60% / 0.5);
+  --boxColor: hsl(255 90% 60% / 50%);
   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(355 90% 60% / 0.5);
+  --boxColor: hsl(355 90% 60% / 50%);
   background-image: paint(hollowHighlights, stroke, 1px);
 }
 ```

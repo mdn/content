@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.AudioWorkletNode
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 > **Note:** Although the interface is available outside [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.
 
@@ -68,7 +68,7 @@ const audioContext = new AudioContext();
 await audioContext.audioWorklet.addModule("random-noise-processor.js");
 const randomNoiseNode = new AudioWorkletNode(
   audioContext,
-  "random-noise-processor"
+  "random-noise-processor",
 );
 randomNoiseNode.connect(audioContext.destination);
 ```

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Executes JavaScript in the window that the devtools are attached to.
 
@@ -105,8 +105,7 @@ function handleResult(result) {
 const checkjQuery = "typeof jQuery !== 'undefined'";
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
 });
 ```
 
@@ -133,8 +132,7 @@ function handleResult(result) {
 }
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(evalString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(evalString).then(handleResult);
 });
 ```
 
@@ -159,8 +157,7 @@ function handleResult(result) {
 }
 
 inspectButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(inspectString)
-    .then(handleResult);
+  browser.devtools.inspectedWindow.eval(inspectString).then(handleResult);
 });
 ```
 

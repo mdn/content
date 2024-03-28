@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.features
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`features`** read-only property of the
 {{domxref("GPUDevice")}} interface returns a {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device. Only features requested during the creation of the device (i.e. when {{domxref("GPUAdapter.requestDevice()")}} is called) are included.

@@ -1,6 +1,7 @@
 ---
 title: Server-side website programming
 slug: Learn/Server-side
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}

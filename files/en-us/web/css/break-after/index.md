@@ -61,9 +61,9 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
   - : Allows, but does not force, any break (page, column, or region) to be inserted right after the principal box.
 - `avoid`
   - : Avoids any break (page, column, or region) from being inserted right after the principal box.
-- `always` {{experimental_inline}}
+- `always`
   - : Forces a page break right after the principal box. The type of this break is that of the immediately-containing fragmentation context. If we are inside a multicol container then it would force a column break, inside paged media (but not inside a multicol container) a page break.
-- `all` {{experimental_inline}}
+- `all`
   - : Forces a page break right after the principal box. Breaking through all possible fragmentation contexts. So a break inside a multicol container, which was inside a page container would force a column and page break.
 
 #### Page break values
@@ -76,9 +76,9 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
-- `recto` {{experimental_inline}}
+- `recto`
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
-- `verso` {{experimental_inline}}
+- `verso`
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a right page in a right-to-left spread.)
 
 #### Column break values
@@ -90,9 +90,9 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
 
 #### Region break values
 
-- `avoid-region` {{experimental_inline}}
+- `avoid-region`
   - : Avoids any region break right after the principal box.
-- `region` {{experimental_inline}}
+- `region`
   - : Forces a region break right after the principal box.
 
 ## Page break aliases

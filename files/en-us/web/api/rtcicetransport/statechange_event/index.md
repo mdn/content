@@ -40,7 +40,7 @@ iceTransport.addEventListener(
       handleFailure(pc);
     }
   },
-  false
+  false,
 );
 ```
 

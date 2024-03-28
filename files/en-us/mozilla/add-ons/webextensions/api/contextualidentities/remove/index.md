@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes a contextual identity, given its cookie store ID.
 
@@ -49,8 +49,9 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.remove("firefox-container-1").
-  then(onRemoved, onError);
+browser.contextualIdentities
+  .remove("firefox-container-1")
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

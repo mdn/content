@@ -83,12 +83,14 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     See [script-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) for an example.
 - `'report-sample'`
   - : Requires a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ## Relevant directives
 
 Directives for which the above sources apply include:
 
-- {{Glossary("fetch directive", "Fetch directives")}} (all):
+- {{Glossary("fetch directive", "Fetch directives")}}:
 
   - {{CSP("default-src")}}
   - {{CSP("child-src")}}
@@ -103,15 +105,17 @@ Directives for which the above sources apply include:
   - {{CSP("script-src")}}
   - {{CSP("script-src-elem")}}
   - {{CSP("script-src-attr")}}
-  - {{CSP("style-src")}}, {{CSP("style-src-elem")}}
+  - {{CSP("style-src")}}
+  - {{CSP("style-src-elem")}}
   - {{CSP("style-src-attr")}}
   - {{CSP("worker-src")}}
 
 - {{Glossary("Document directive", "Document directives")}}:
 
   - {{CSP("base-uri")}}
+  - {{CSP("sandbox")}}
 
 - {{Glossary("Navigation directive", "Navigation directives")}}:
 
-  - {{CSP("navigate-to")}}
   - {{CSP("form-action")}}
+  - {{CSP("frame-ancestors")}}

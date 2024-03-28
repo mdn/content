@@ -46,7 +46,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/action">action</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -56,7 +56,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/align">align</a></code>
+        <code>align</code> {{deprecated_inline}}
       </td>
       <td>
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
@@ -88,6 +88,15 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Element/link#as">as</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("link") }}
+      </td>
+      <td>Specifies the type of content being loaded by the link.</td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Element/script#async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
@@ -116,20 +125,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         Indicates whether controls in this form can by default have their values
         automatically completed by the browser.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/autofocus">autofocus</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
-      </td>
-      <td>
-        The element should be automatically focused after the page loaded.
       </td>
     </tr>
     <tr>
@@ -195,16 +190,6 @@ Elements in HTML have **attributes**; these are additional values that configure
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/buffered">buffered</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
-      </td>
-      <td>Contains the time range of already buffered media.</td>
     </tr>
     <tr>
       <td>
@@ -308,18 +293,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>Indicates whether the element's content is editable.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/contextmenu">contextmenu</a></code>
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
-      </td>
-      <td>
-        Defines the ID of a {{ HTMLElement("menu") }} element which will
-        serve as the element's context menu.
-      </td>
     </tr>
     <tr>
       <td>
@@ -492,7 +465,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
-        The <a href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
+        The <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
         specifies what action label (or icon) to present for the enter key on
         virtual keyboards. The attribute can be used with form controls (such as
         the value of <code>textarea</code> elements), or in elements in an

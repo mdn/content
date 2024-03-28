@@ -34,10 +34,11 @@ const peerConnection = new RTCPeerConnection(options);
 const channel = peerConnection.createDataChannel("chat");
 channel.onopen = (event) => {
   const maximumMessageSize = peerConnection.sctp.maxMessageSize;
-  const textToSend = "This is my possibly overly long string!"
-  splitStringToMax(textToSend,maximumMessageSize).forEach( (elem) => {
-  channel.send(elem);
-});
+  const textToSend = "This is my possibly overly long string!";
+  splitStringToMax(textToSend, maximumMessageSize).forEach((elem) => {
+    channel.send(elem);
+  });
+};
 ```
 
 ## Specifications

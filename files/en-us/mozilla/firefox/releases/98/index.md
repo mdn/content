@@ -1,6 +1,7 @@
 ---
 title: Firefox 98 for developers
 slug: Mozilla/Firefox/Releases/98
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -46,4 +47,4 @@ No notable changes
 
 ## Older versions
 
-{{Firefox_for_developers(97)}}
+{{Firefox_for_developers}}

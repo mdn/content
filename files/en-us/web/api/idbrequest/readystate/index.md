@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.IDBRequest.readyState
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`readyState`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the state of the request.
@@ -14,8 +14,6 @@ The **`readyState`** read-only property of the
 Every request starts in the `pending` state. The state changes to
 `done` when the request completes successfully or when an error
 occurs.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -61,7 +59,7 @@ objectStoreTitleRequest.onsuccess = () => {
 
   // Log the readyState of this request
   console.log(
-    `The readyState of this request is ${updateTitleRequest.readyState}`
+    `The readyState of this request is ${updateTitleRequest.readyState}`,
   );
 
   // When this new request succeeds, run the displayData()

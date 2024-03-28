@@ -63,7 +63,7 @@ error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is r
 const blockSize = gl.getActiveUniformBlockParameter(
   program,
   blockIndex,
-  gl.UNIFORM_BLOCK_DATA_SIZE
+  gl.UNIFORM_BLOCK_DATA_SIZE,
 );
 ```
 

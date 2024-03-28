@@ -9,6 +9,10 @@ browser-compat: css.properties.mask-type
 
 The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property sets whether an SVG {{svgElement("mask")}} element is used as a _luminance_ or an _alpha_ mask. It applies to the `<mask>` element itself.
 
+This property may be overridden by the {{cssxref("mask-mode")}} property, which has the same effect but applies to the element where the mask is used. Alpha masks will generally be faster to render.
+
+## Syntax
+
 ```css
 /* Keyword values */
 mask-type: luminance;
@@ -21,10 +25,6 @@ mask-type: revert;
 mask-type: revert-layer;
 mask-type: unset;
 ```
-
-This property may be overridden by the {{cssxref("mask-mode")}} property, which has the same effect but applies to the element where the mask is used. Alpha masks will generally be faster to render.
-
-## Syntax
 
 The `mask-type` property is specified as one of the keyword values listed below.
 
@@ -77,7 +77,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 .redsquare {
   height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(128 128 128);
   border: solid 1px black;
   mask: url("#m");
 }
@@ -122,7 +122,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 .redsquare {
   height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(128 128 128);
   border: solid 1px black;
   mask: url("#m");
 }

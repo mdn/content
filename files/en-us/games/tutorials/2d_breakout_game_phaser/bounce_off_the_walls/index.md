@@ -1,6 +1,7 @@
 ---
 title: Bounce off the walls
 slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
+page-type: guide
 ---
 
 {{GamesSidebar}}

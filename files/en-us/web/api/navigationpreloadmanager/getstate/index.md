@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.getState
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`getState()`** method of the {{domxref("NavigationPreloadManager")}} interface returns a {{jsxref("Promise")}} that resolves to an object with properties that indicate whether preload is enabled and what value will be sent in the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header.
 
@@ -47,7 +47,7 @@ navigator.serviceWorker.ready
     console.log(state.headerValue); // string
   })
   .catch((e) =>
-    console.error(`NavigationPreloadManager not supported: ${e.message}`)
+    console.error(`NavigationPreloadManager not supported: ${e.message}`),
   );
 ```
 

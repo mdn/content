@@ -3,12 +3,10 @@ title: "HTMLElement: showPopover() method"
 short-title: showPopover()
 slug: Web/API/HTMLElement/showPopover
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HTMLElement.showPopover
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 The **`showPopover()`** method of the {{domxref("HTMLElement")}} interface shows a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by adding it to the {{glossary("top layer")}}.
 
@@ -40,7 +38,7 @@ The following example provides functionality to show a popover by pressing a par
 First, some HTML:
 
 ```html
-<div id="mypopover">
+<div id="mypopover" popover>
   <h2>Help!</h2>
 
   <p>You can use the following commands to control the app</p>

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.setZoomSettings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab.
 
@@ -44,7 +44,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let setting = browser.tabs.setZoomSettings({mode:"disabled"});
+let setting = browser.tabs.setZoomSettings({ mode: "disabled" });
 setting.then(onSet, onError);
 ```
 

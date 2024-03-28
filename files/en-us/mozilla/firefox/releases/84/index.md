@@ -1,6 +1,7 @@
 ---
 title: Firefox 84 for developers
 slug: Mozilla/Firefox/Releases/84
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -74,4 +75,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(83)}}
+{{Firefox_for_developers}}

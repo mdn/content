@@ -6,12 +6,10 @@ page-type: web-api-constructor
 browser-compat: api.URLSearchParams.URLSearchParams
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams()`** constructor creates and returns a
 new {{domxref("URLSearchParams")}} object.
-
-{{availableinworkers}}
 
 ## Syntax
 
@@ -94,7 +92,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ])}`
+    ])}`,
   );
 ```
 

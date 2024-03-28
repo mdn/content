@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.snapshotLength
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
 
 The read-only **`snapshotLength`** property of the
 {{domxref("XPathResult")}} interface represents the number of nodes in the result
 snapshot.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -46,7 +44,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null
+  null,
 );
 document.querySelector("output").textContent = result.snapshotLength;
 ```

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.beginComputePass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`beginComputePass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a compute pass, returning a {{domxref("GPUComputePassEncoder")}} that can be used to control computation.
@@ -79,7 +79,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE
+  BUFFER_SIZE,
 );
 
 // End frame by passing array of command buffers to command queue for execution

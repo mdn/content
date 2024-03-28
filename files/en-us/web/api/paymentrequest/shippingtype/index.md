@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.shippingType
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingType`** read-only property of the
 {{domxref("PaymentRequest")}} interface returns one of `"shipping"`,

@@ -1,6 +1,7 @@
 ---
 title: CSS property compatibility table for form controls
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
+page-type: learn-module-chapter
 ---
 
 {{learnsidebar}}

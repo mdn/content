@@ -31,8 +31,8 @@ abort(reason)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
-parameter.
+A {{jsxref("Promise")}}, which fulfills to `undefined` when the stream is aborted, or
+rejects with an error if the writer was inactive or the receiver stream is invalid.
 
 ### Exceptions
 
@@ -55,7 +55,7 @@ const writableStream = new WritableStream(
       // ...
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 // ...
@@ -65,9 +65,7 @@ const writer = writableStream.getWriter();
 // ...
 
 // abort the stream when desired
-writer.abort.then((reason) => {
-  console.log(reason);
-});
+await writer.abort("WritableStream aborted. Reason: ...");
 ```
 
 ## Specifications

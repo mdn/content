@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.
 
@@ -30,15 +30,15 @@ This code toggles a registered content script on a browser action click:
 let registered = null;
 
 async function register() {
-
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
-    js: [{
-      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
-    }],
-    runAt: "document_idle"
+    js: [
+      {
+        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+      },
+    ],
+    runAt: "document_idle",
   });
-
 }
 
 function toggle() {

@@ -49,7 +49,7 @@ v.addEventListener(
       v.style.height = h;
     }
   },
-  false
+  false,
 );
 ```
 

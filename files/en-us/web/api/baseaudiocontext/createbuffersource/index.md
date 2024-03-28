@@ -10,11 +10,8 @@ browser-compat: api.BaseAudioContext.createBufferSource
 
 The `createBufferSource()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to create a new {{ domxref("AudioBufferSourceNode") }}, which can be
-used to play audio data contained within an {{ domxref("AudioBuffer") }} object. {{
-    domxref("AudioBuffer") }}s are created using
-{{domxref("BaseAudioContext.createBuffer")}} or returned by
-{{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio
-track.
+used to play audio data contained within an {{ domxref("AudioBuffer") }} object.
+{{domxref("AudioBuffer")}}s are created using {{domxref("BaseAudioContext.createBuffer")}} or returned by {{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio track.
 
 > **Note:** The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
 > constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
@@ -41,7 +38,7 @@ it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly ex
 what is going on.
 
 > **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
-> or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -60,7 +57,7 @@ const frameCount = audioCtx.sampleRate * 2.0;
 const myArrayBuffer = audioCtx.createBuffer(
   channels,
   frameCount,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 button.onclick = () => {

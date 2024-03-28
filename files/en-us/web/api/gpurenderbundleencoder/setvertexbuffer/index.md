@@ -8,10 +8,10 @@ status:
 browser-compat: api.GPURenderBundleEncoder.setVertexBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setVertexBuffer()`** method of the
-{{domxref("GPURenderBundleEncoder")}} interface sets the current {{domxref("GPUBuffer")}} for the given slot that will provide vertex data for subsequent drawing commands.
+{{domxref("GPURenderBundleEncoder")}} interface sets or unsets the current {{domxref("GPUBuffer")}} for the given slot that will provide vertex data for subsequent drawing commands.
 
 > **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}}.
 
@@ -26,7 +26,7 @@ setVertexBuffer(slot, buffer, offset, size)
 - `slot`
   - : A number referencing the vertex buffer slot to set the vertex buffer for.
 - `buffer`
-  - : A {{domxref("GPUBuffer")}} representing the buffer containing the vertex data to use for subsequent drawing commands.
+  - : A {{domxref("GPUBuffer")}} representing the buffer containing the vertex data to use for subsequent drawing commands, or `null`, in which case any previously-set buffer in the given slot is unset.
 - `offset` {{optional_inline}}
   - : A number representing the offset, in bytes, into `buffer` where the vertex data begins. If omitted, `offset` defaults to 0.
 - `size` {{optional_inline}}
@@ -47,10 +47,10 @@ The following criteria must be met when calling **`setVertexBuffer()`**, otherwi
 
 ## Examples
 
+### Set vertex buffer
+
 ```js
-function recordRenderPass(
-  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder // TypeScript
-) {
+function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
     passEncoder.setPipeline(dynamicPipeline);
   } else {
@@ -72,6 +72,16 @@ function recordRenderPass(
 ```
 
 The above snippet is taken from the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer).
+
+### Unset vertex buffer
+
+```js
+// Set vertex buffer in slot 0
+passEncoder.setVertexBuffer(0, vertexBuffer);
+
+// Later, unset vertex buffer in slot 0
+passEncoder.setVertexBuffer(0, null);
+```
 
 ## Specifications
 

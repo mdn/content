@@ -1,6 +1,7 @@
 ---
 title: Compiling a New C/C++ Module to WebAssembly
 slug: WebAssembly/C_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -100,7 +101,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 ### Calling a custom function defined in C
 
-If you have a function defined in your C code that you want to call as needed from JavaScript, you can do this using the Emscripten `ccall()` function, and the `EMSCRIPTEN_KEEPALIVE` declaration (which adds your functions to the exported functions list (see [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process))). Let's look at how this works.
+If you want to call a function defined in your C code from JavaScript, you can use the Emscripten `ccall()` function and the `EMSCRIPTEN_KEEPALIVE` declaration, which adds your functions to the exported functions list (see [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-webassembly)). Let's look at how this works.
 
 1. To start with, save the following code as `hello3.c` in a new directory:
 
@@ -152,7 +153,7 @@ If you have a function defined in your C code that you want to call as needed fr
        "myFunction", // name of C function
        null, // return type
        null, // argument types
-       null // arguments
+       null, // arguments
      );
    });
    ```

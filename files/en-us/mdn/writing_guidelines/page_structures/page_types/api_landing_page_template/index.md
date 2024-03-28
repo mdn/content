@@ -12,7 +12,7 @@ page-type: mdn-writing-guide
 >
 > **Page front matter:**
 >
-> The frontmatter at the top of the page is used to define "page metadata".
+> The front matter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular interface.
 >
 > ```md
@@ -28,7 +28,7 @@ page-type: mdn-writing-guide
 > ```
 >
 > - **title**
->   - : Title heading displayed at top of page.
+>   - : Title heading displayed at the top of the page.
 >     This is the name of the API followed by the text "API": _NameOfTheAPI_ **API**.
 >     For example, [WebXR Device](/en-US/docs/Web/API/WebXR_Device_API) has a title of _WebXR Device API_, [Fetch](/en-US/docs/Web/API/Fetch_API) has a title of _Fetch API_.
 > - **slug**
@@ -38,20 +38,22 @@ page-type: mdn-writing-guide
 > - **page-type**
 >   - : The `page-type` key for Web/API landing pages is always `web-api-overview`.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 >
 > ---
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> You should update or delete them according to the advice below:
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
+> These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   If it isn't, then you can remove the macro call.
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
+>
+> You should update or delete the following macros according to the advice below:
+>
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
 >   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
@@ -61,11 +63,15 @@ page-type: mdn-writing-guide
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
+> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+>
+> Samples of the **Secure context**, **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
+>
 > ---
 >
 > **Browser compatibility**
 >
-> API landing pages optionally have a browser compatibility section that shows compatibility tables for one or more of the most important interfaces in the API. If the compatibility is similar for most interfaces in the API then often just one compatibility table is needed. If compatibility across the API is complicated/impossible to capture in a few tables, this sections should be omitted.
+> API landing pages optionally have a browser compatibility section that shows compatibility tables for one or more of the most important interfaces in the API. If the compatibility is similar for most interfaces in the API, then often just one compatibility table is needed. If compatibility across the API is complicated/impossible to capture in a few tables, this sections should be omitted.
 >
 > To fill in the browser compatibility section, you may first need to create/update entries for the API interfaces in our [Browser compat data repo](https://github.com/mdn/browser-compat-data) — see our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
@@ -85,15 +91,14 @@ page-type: mdn-writing-guide
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{APIRef("GroupDataName")}}{{securecontext_header}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The summary paragraph — start by naming the API, and saying what it is used for.
-This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the API and saying what it does. This should ideally be one or two short sentences.
 
 ## Concepts and usage
 
 In this section, describe the API's purpose and usage cases in a bit more detail — why was a need recognized for it?
-What problems does it solve? What concepts does it involve? How do you use it, from a high level perspective?
+What problems does it solve? What concepts does it involve? How do you use it, from a high-level perspective?
 
 Don't go into a lot of detail in this section, and don't include code examples.
 If there are a lot of concepts to explain around this API, you should explain them in a separate "Fundamentals" or "Concepts" article (e.g. [Fundamentals of WebXR](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)).
@@ -103,7 +108,9 @@ To help improve content discoverability and {{Glossary("SEO")}}, keep the follow
 
 ## Interfaces
 
-- {{domxref("NameOfTheInterface")}}
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), remove the backticks and backslash in the markdown file._
+
+- `\{{domxref("NameOfTheInterface")}}`
   - : Include a brief description of the interface and what it does here.
     Include one term and definition for each interface or dictionary.
 
@@ -113,13 +120,13 @@ The _name of interface_ extends the following APIs, adding the listed features.
 
 #### Interface 1
 
-- {{domxref("addition1")}}
+- `\{{domxref("addition1")}}`
   - : Description of the feature of Interface#1 that is added to that API by the API you are currently documenting.
     One \*term and definition for each feature. If this API doesn't extend any other interfaces, you can delete these sections.
 
 #### Interface 2
 
-- {{domxref("addition1")}}
+- `\{{domxref("addition1")}}`
   - : Description of the feature of Interface#2 that is added to that API by the API you are currently documenting, etc.
 
 ## Examples
@@ -162,15 +169,19 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications("path.to.feature.Interface_1")}}
+`\{{Specifications("path.to.feature.Interface_1")}}`
 
-{{Specifications("path.to.feature.Interface_2")}}
+`\{{Specifications("path.to.feature.Interface_2")}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat("path.to.feature.Interface_1")}}
+`\{{Compat("path.to.feature.Interface_1")}}`
 
-{{Compat("path.to.feature.Interface_2")}}
+`\{{Compat("path.to.feature.Interface_2")}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
@@ -178,3 +189,4 @@ Include links to reference pages and guides related to the current API. For more
 
 - link1
 - link2
+- external_link (year)

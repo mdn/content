@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.close
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Closes the sidebar in the active window, if it is the extension's own sidebar.
 
@@ -39,7 +39,7 @@ Close the sidebar when the user selects a context menu item:
 browser.menus.create({
   id: "close-sidebar",
   title: "close sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

@@ -9,6 +9,9 @@ browser-compat: http.headers.Warning
 
 {{HTTPSidebar}} {{deprecated_header}}
 
+> **Note:** The header was deprecated because it is not widely generated or surfaced to users (see [RFC9111](https://www.rfc-editor.org/rfc/rfc9111#field.warning)).
+> Some of the information can be inferred from other headers such as {{httpheader("Age")}}.
+
 The **`Warning`** HTTP header contains information about possible problems with the status of the message.
 More than one `Warning` header may appear in a response.
 
@@ -43,7 +46,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
   - : A three-digit warning number. The first digit indicates whether the `Warning` is required to be deleted from a stored response after validation.
 
-    - `1xx` warn-codes describe the freshness or validation status of the response and will be deleted by a cache after deletion.
+    - `1xx` warn-codes describe the freshness or validation status of the response and will be deleted by a cache after successful validation.
     - `2xx` warn-codes describe some aspect of the representation that is not rectified by a validation and will not be deleted by a cache after validation unless a full response is sent.
 
 - \<warn-agent>

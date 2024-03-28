@@ -1,6 +1,7 @@
 ---
 title: str:concat()
 slug: Web/EXSLT/str/concat
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

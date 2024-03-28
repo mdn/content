@@ -8,7 +8,7 @@ status:
 browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
 
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The `geometrychange` event is fired when the position, size, or visibility of a Progressive Web App's title bar area changes.
 
@@ -47,7 +47,7 @@ Using `addEventListener()`:
 navigator.windowControlsOverlay.addEventListener("geometrychange", (event) => {
   const { x, y, width, height } = event.titlebarAreaRect;
   console.log(
-    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`,
   );
 });
 ```
@@ -58,7 +58,7 @@ Using the `ongeometrychange` event handler property:
 navigator.windowControlsOverlay.ongeometrychange = (event) => {
   const { x, y, width, height } = event.titlebarAreaRect;
   console.log(
-    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`,
   );
 };
 ```

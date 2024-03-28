@@ -38,7 +38,7 @@ const video = document.querySelector("video");
 video.addEventListener("loadeddata", (event) => {
   console.log(
     "Yay! The readyState just increased to  " +
-      "HAVE_CURRENT_DATA or greater for the first time."
+      "HAVE_CURRENT_DATA or greater for the first time.",
   );
 });
 ```
@@ -51,7 +51,7 @@ const video = document.querySelector("video");
 video.onloadeddata = (event) => {
   console.log(
     "Yay! The readyState just increased to  " +
-      "HAVE_CURRENT_DATA or greater for the first time."
+      "HAVE_CURRENT_DATA or greater for the first time.",
   );
 };
 ```

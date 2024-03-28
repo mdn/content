@@ -1,6 +1,7 @@
 ---
 title: Build your own function
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
@@ -12,11 +13,10 @@ With most of the essential theory dealt with in the previous article, this artic
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
-        >,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+        >. Also, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
           >Functions — reusable blocks of code</a
         >.
       </td>
@@ -80,7 +80,7 @@ To begin with, let's put together a basic function.
    panel.appendChild(closeBtn);
 
    closeBtn.addEventListener("click", () =>
-     panel.parentNode.removeChild(panel)
+     panel.parentNode.removeChild(panel),
    );
    ```
 
@@ -220,7 +220,7 @@ As it stands, the function is still not very useful — we don't want to just sh
 
    ```js
    btn.addEventListener("click", () =>
-     displayMessage("Woo, this is a different message!")
+     displayMessage("Woo, this is a different message!"),
    );
    ```
 

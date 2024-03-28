@@ -1,6 +1,7 @@
 ---
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -52,4 +53,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(104)}}
+{{Firefox_for_developers}}

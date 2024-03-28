@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
 
@@ -57,16 +57,16 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
-      gettingIcon.then(gotIcon, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+    gettingIcon.then(gotIcon, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(getIcon, onError);

@@ -1,6 +1,7 @@
 ---
 title: Firefox 45 for developers
 slug: Mozilla/Firefox/Releases/45
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -147,4 +148,4 @@ Starting in Firefox 45, search plugins located in the user's profile's `searchpl
 
 ## Older versions
 
-{{Firefox_for_developers(44)}}
+{{Firefox_for_developers}}

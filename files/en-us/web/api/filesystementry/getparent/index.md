@@ -59,9 +59,9 @@ fileEntry.getParent(
   },
   (error) => {
     console.error(
-      `An error occurred: Unable to rename ${fileEntry.name} to newname.html.`
+      `An error occurred: Unable to rename ${fileEntry.name} to newname.html.`,
     );
-  }
+  },
 );
 ```
 

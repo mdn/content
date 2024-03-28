@@ -6,7 +6,7 @@ page-type: web-api-global-function
 browser-compat: api.structuredClone
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
@@ -84,7 +84,7 @@ For example, the code below would transfer `arrayBuffer1` from the passed in val
 ```js
 const transferred = structuredClone(
   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-  { transfer: [arrayBuffer1] }
+  { transfer: [arrayBuffer1] },
 );
 ```
 

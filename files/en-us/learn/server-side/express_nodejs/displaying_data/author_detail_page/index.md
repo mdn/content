@@ -1,6 +1,7 @@
 ---
 title: Author detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
+page-type: learn-module-chapter
 ---
 
 The author detail page needs to display the information about the specified `Author`, identified using their (automatically generated) `_id` field value, along with a list of all the `Book` objects associated with that `Author`.
@@ -61,15 +62,14 @@ block content
   div(style='margin-left:20px;margin-top:20px')
 
     h4 Books
-
-    dl
-      each book in author_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
-
-      else
-        p This author has no books.
+    if author_books.length
+      dl
+        each book in author_books
+          dt
+            a(href=book.url) #{book.title}
+          dd #{book.summary}
+    else
+      p This author has no books.
 ```
 
 Everything in this template has been demonstrated in previous sections.

@@ -11,10 +11,13 @@ The **`contenteditable`** [global attribute](/en-US/docs/Web/HTML/Global_attribu
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
+## Value
+
 The attribute must take one of the following values:
 
 - `true` or an _empty string_, which indicates that the element is editable.
 - `false`, which indicates that the element is not editable.
+- `plaintext-only`, which indicates that the element's raw text is editable, but rich text formatting is disabled.
 
 If the attribute is given without a value, like `<label contenteditable>Example Label</label>`, its value is treated as an empty string.
 
@@ -39,4 +42,4 @@ Elements that are made editable, and therefore interactive, by using the `conten
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
 - The CSS {{cssxref("caret-color")}} property
-- [HTMLElement `input` event](/en-US/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement `input` event](/en-US/docs/Web/API/Element/input_event)

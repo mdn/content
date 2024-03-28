@@ -7,7 +7,7 @@ browser-compat: css.at-rules.counter-style
 
 {{CSSRef}}
 
-The **`@counter-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you define counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
+The **`@counter-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you extend predefined list styles and define your own counter styles that are not part of the predefined set of styles. The `@counter-style` rule contains [descriptors](#descriptors) defining how the counter value is converted into a string representation.
 
 ```css
 @counter-style thumbs {
@@ -21,46 +21,60 @@ ul {
 }
 ```
 
-The initial version of CSS defined a set of useful counter styles. However, although more styles were added to this set of predefined styles over the years, this system proved too restrictive to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
+While CSS provides many useful predefined counter styles, the `@counter-style` at-rule offers an open-ended method for creating counters. This at-rule caters to the needs of worldwide typography by allowing authors to define their own counter styles when the predefined styles don't fit their requirements.
 
 ## Syntax
 
+The `@counter-style` at-rule is identified by a [counter style name](#counter_style_name), and the style of the named counter can be fine-tuned using a `<declaration-list>` consisting of one or more [descriptors](#descriptors) and their values.
+
+### Counter style name
+
+- `<counter-style-name>`
+
+  - : Provides a name for your counter style. It is specified as a case-sensitive {{cssxref("custom-ident")}} without quotes. The value should not be equal to `none`. Like all custom identifiers, the value of your counter style can't be a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords). Avoid other enumerated CSS property values, including values of [list](/en-US/docs/Web/CSS/CSS_lists#properties) and [counter style](/en-US/docs/Web/CSS/CSS_counter_styles#properties) properties. The name of your counter can't be the case-insensitive {{cssxref("list-style-type")}} property values of `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed`.
+
+    > **Note:** The non-overridable counter style names `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed` cannot be used as the name of a custom counter. However, they are valid in other contexts where the `<counter-style-name>` data type is expected, such as in `system: extend <counter-style-name>`.
+
 ### Descriptors
 
-Each `@counter-style` is identified by a name and has a set of descriptors.
-
 - {{cssxref("@counter-style/system", "system")}}
-  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation.
-- {{cssxref("@counter-style/negative", "negative")}}
-  - : Lets the author specify symbols to be appended or prepended to the counter representation if the value is negative.
-- {{cssxref("@counter-style/prefix", "prefix")}}
-  - : Specifies a symbol that should be prepended to the marker representation. Prefixes are added to the representation in the final stage, so in the final representation of the counter, it comes before the negative sign.
-- {{cssxref("@counter-style/suffix", "suffix")}}
-  - : Specifies, similar to the prefix descriptor, a symbol that is appended to the marker representation. Suffixes come after the marker representation.
-- {{cssxref("@counter-style/range", "range")}}
-  - : Defines the range of values over which the counter style is applicable. If a counter style is used to represent a counter value outside of its ranges, the counter style will drop back to its fallback style.
-- {{cssxref("@counter-style/pad", "pad")}}
-  - : Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start at 01 and go through 02, 03, 04, etc., then the pad descriptor is to be used. For representations larger than the specified pad value, the marker is constructed as normal.
-- {{cssxref("@counter-style/fallback", "fallback")}}
-  - : Specifies a system to fall back into if either the specified system is unable to construct the representation of a counter value or if the counter value is outside the specified range. If the specified fallback also fails to represent the value, then the fallback style's fallback is used, if one is specified. If there are either no fallback systems described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the decimal style.
+
+  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation. If the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must also be specified. If the value is `additive` , the `additive-symbols` descriptor must also be specified.
+
 - {{cssxref("@counter-style/symbols", "symbols")}}
 
-  - : Specifies the symbols that are to be used for the marker representations. Symbols can contain strings, images, or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
-
-    The below `@counter-style` rule uses images instead of character symbols. Image values for symbols is currently an 'at risk' feature, and is not implemented in any browser.
-
-    ```css
-    @counter-style winners-list {
-      system: fixed;
-      symbols: url(gold-medal.svg) url(silver-medal.svg) url(bronze-medal.svg);
-      suffix: " ";
-    }
-    ```
+  - : Specifies the symbols that are to be used for the marker representations. Symbols can contain strings, images, or custom identifiers. This descriptor is required if the `system` descriptor is set to `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`.
 
 - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - : While the symbols specified in the symbols descriptor is used for constructing marker representation by most algorithms, some systems such as 'additive' rely on _additive tuples_ described in this descriptor. Each additive tuple consists of a counter symbol and a non-negative integer weight. The additive tuples must be specified in the descending order of their weights.
+
+  - : Defines the _additive tuples_ for additive systems. While the symbols specified in the `symbols` descriptor are used for constructing marker representation by most algorithms, additive counter systems, such as Roman numerals, consist of a series of weighted symbols. The descriptors is a list of counter symbol along with their non-negative integer weights, listed by weight in descending order. This descriptor is required if the `system` descriptor is set to `additive`.
+
+- {{cssxref("@counter-style/negative", "negative")}}
+
+  - : Specifies to symbols to be appended or prepended to the counter representation if the value is negative.
+
+- {{cssxref("@counter-style/prefix", "prefix")}}
+
+  - : Specifies a symbol that should be prepended to the marker representation. Prefixes are added to the representation in the final stage, before any characters added to negative counter values by the `negative` descriptor.
+
+- {{cssxref("@counter-style/suffix", "suffix")}}
+
+  - : Specifies, similar to the prefix descriptor, a symbol that is appended to the marker representation. Suffixes come after the marker representation, including after any characters added to negative counter values by the `negative` descriptor.
+
+- {{cssxref("@counter-style/range", "range")}}
+
+  - : Defines the range of values over which the counter style is applicable. If a counter style is used to represent a counter value outside of the ranges defined by this descriptor, the counter style will drop back to its `fallback` style.
+
+- {{cssxref("@counter-style/pad", "pad")}}
+
+  - : Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start at 01 and go through 02, 03, 04, etc., then the `pad` descriptor is to be used. For representations larger than the specified `pad` value, the marker is constructed as normal.
+
 - {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - : Describes how to read out the counter style in speech synthesizers, such as screen readers. For example, the value of the marker symbol can be read out as numbers or alphabets for ordered lists or as audio cues for unordered lists, based on the value of this descriptor.
+
+  - : Describes how speech synthesizers, such as screen readers, should announce the counter style. For example, the value of the list item marker can be read out as numbers or alphabets for ordered lists or as audio cues for unordered lists, based on the value of this descriptor.
+
+- {{cssxref("@counter-style/fallback", "fallback")}}
+  - : Specifies the counter name of the system to fall back to if either the specified system is unable to construct the representation of a counter value or if the counter value is outside the specified `range`. If the fallback counter also fails to represent the value, then that counter's fallback is used, if one is specified. If there are either no fallback counters described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the `decimal` style.
 
 ## Formal syntax
 
@@ -86,20 +100,26 @@ The above counter style rule can be applied to lists like this:
 }
 ```
 
-Which will produce lists like this:
+The above code produces the following result:
 
-Ⓐ One
-Ⓑ Two
-Ⓒ Three
-Ⓓ Four
-Ⓔ Five
-…
-Ⓨ Twenty-five
-Ⓩ Twenty-six
-27 Twenty-seven
-28 Twenty-eight
-29 Twenty-nine
-30 Thirty
+```html hidden
+<ol class="items">
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+  <li>four</li>
+  <li>five</li>
+</ol>
+<p>...</p>
+<ol class="items" start="25">
+  <li>twenty-five</li>
+  <li>twenty-six</li>
+  <li>twenty-seven</li>
+  <li>twenty-eight</li>
+</ol>
+```
+
+{{EmbedLiveSample('Specifying symbols with counter-style', '', '300')}}
 
 See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).
 

@@ -139,7 +139,9 @@ font-family: Hawaii 5-0, sans-serif;
 The following example is technically **valid** but is not recommended:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ## Formal definition

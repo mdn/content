@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 
@@ -55,7 +55,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-let text = "L'homme est né libre, et partout il est dans les fers."
+let text = "L'homme est né libre, et partout il est dans les fers.";
 
 let detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

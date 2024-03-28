@@ -13,7 +13,7 @@ The Resize Observer API provides a performant mechanism by which code can monito
 
 There are a whole raft of use cases for responsive design techniques (and others besides) that respond to changes in an element's size, but previously their implementations have often been hacky and/or brittle.
 
-For example, [media queries](/en-US/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} are great for updating layouts at specific points when the viewport changes sizes, but what if you want to change layout in response to a specific element's size changing, which isn't the outer container?
+For example, [media queries](/en-US/docs/Web/CSS/CSS_media_queries) / {{domxref("window.matchMedia")}} are great for updating layouts at specific points when the viewport changes sizes, but what if you want to change layout in response to a specific element's size changing, which isn't the outer container?
 
 To achieve this, a limited solution would be to listen to changes to a suitable event that hints at the element you are interested in changing size (e.g. the window [resize event](/en-US/docs/Web/API/Window/resize_event)), then figure out what the new dimensions or other features of the element after a resize using {{domxref("Element.getBoundingClientRect")}} or {{domxref("Window.getComputedStyle")}}, for example.
 
@@ -48,12 +48,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }
@@ -72,4 +72,4 @@ resizeObserver.observe(document.querySelector("div"));
 
 ## See also
 
-- [ResizeObserver: It's Like document.onresize for Elements](https://web.dev/resize-observer/)
+- [ResizeObserver: It's Like document.onresize for Elements](https://web.dev/articles/resize-observer)

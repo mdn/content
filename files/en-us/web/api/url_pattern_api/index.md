@@ -5,11 +5,12 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.URLPattern
+spec-urls: https://urlpattern.spec.whatwg.org/
 ---
 
-{{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The URL Pattern API defines a syntax that is used to create URL pattern
+The **URL Pattern API** defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL
 components. The URL Pattern API is used by the {{domxref("URLPattern")}}
 interface.
@@ -31,11 +32,12 @@ can contain:
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
 
-## URL Pattern API interfaces
+## Interfaces
 
 The URL Pattern API only has a single related interface:
 
 - {{domxref("URLPattern")}} {{Experimental_Inline}}
+  - : Represents a pattern that can match URLs or parts of URLs. The pattern can contain capturing groups that extract parts of the matched URL.
 
 ## Pattern syntax
 
@@ -430,12 +432,12 @@ console.log(pattern.hash); // ''
 
 // Prints `true`
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg")
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"),
 );
 
 // Prints `false` because the search component does not match
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1")
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"),
 );
 ```
 
@@ -492,7 +494,7 @@ console.log(
   pattern.test({
     pathname: "/foo/bar",
     baseURL: "https://example.com/baz",
-  })
+  }),
 );
 
 // Prints `true` as the hostname in the second argument base URL matches.
@@ -723,7 +725,7 @@ const pattern = new URLPattern({
 });
 
 const result = pattern.exec(
-  "http://foo:bar@sub.example.com/product/view?q=12345"
+  "http://foo:bar@sub.example.com/product/view?q=12345",
 );
 
 console.log(result.username.groups.user); // 'foo'

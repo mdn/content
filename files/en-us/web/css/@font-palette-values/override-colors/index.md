@@ -22,13 +22,19 @@ override-colors: 0 red;
 override-colors: 0 #f00;
 
 /* using rgb */
-override-colors: 0 rgb(255, 0, 0);
+override-colors: 0 rgb(255 0 0);
 
 /* overriding multiple colors */
-override-colors: 0 #f00, 1 #0f0, 2 #00f;
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 
 /* overriding multiple colors with readability */
-override-colors: 0 #f00, 1 #0f0, 2 #00f;
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 ```
 
 The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
@@ -97,11 +103,11 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 @font-palette-values --red {
   font-family: "Noto Color Emoji";
   override-colors:
-    0 rgb(74, 11, 0),
-    1 rgb(149, 22, 1),
-    2 rgb(183, 27, 1),
-    3 rgb(193, 28, 1),
-    4 rgb(230, 34, 1);
+    0 rgb(74 11 0),
+    1 rgb(149 22 1),
+    2 rgb(183 27 1),
+    3 rgb(193 28 1),
+    4 rgb(230 34 1);
 }
 .red-hat {
   font-palette: --red;

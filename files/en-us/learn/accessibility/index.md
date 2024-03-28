@@ -1,6 +1,7 @@
 ---
 title: Accessibility
 slug: Learn/Accessibility
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
@@ -20,15 +21,6 @@ When someone describes a site as "accessible", they mean that any user can use a
 The Firefox Accessibility Inspector is a very useful tool for checking out accessibility issues on web pages. The following video provides a nice introduction to it:
 
 {{EmbedYouTube("7mqqgIxX_NU")}}
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 

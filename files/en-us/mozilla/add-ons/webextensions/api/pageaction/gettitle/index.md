@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.getTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the title of the page action.
 
@@ -47,7 +47,7 @@ function gotTitle(title) {
 
 browser.pageAction.onClicked.addListener((tab) => {
   let gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id
+    tabId: tab.id,
   });
   gettingTitle.then(gotTitle);
 });

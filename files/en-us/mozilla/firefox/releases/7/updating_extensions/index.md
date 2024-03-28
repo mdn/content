@@ -1,6 +1,7 @@
 ---
 title: Updating extensions for Firefox 7
 slug: Mozilla/Firefox/Releases/7/Updating_extensions
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

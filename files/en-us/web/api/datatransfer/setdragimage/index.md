@@ -61,7 +61,7 @@ default drag image.
 [demo](https://codepen.io/webgeeker/full/KBzrxE/)
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Example of DataTransfer.setDragImage()</title>

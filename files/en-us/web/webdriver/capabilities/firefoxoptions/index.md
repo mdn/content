@@ -1,6 +1,7 @@
 ---
 title: firefoxOptions
 slug: Web/WebDriver/Capabilities/firefoxOptions
+page-type: webdriver-capability
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
@@ -123,10 +124,6 @@ object that may look like `{"log": {"level": "trace"}}` to include all trace-lev
 
 Map of preference name to preference value, which can be a string, a boolean or an integer.
 
-##### `env` (Env object)
-
-Map of environment variable name to environment variable value, both of which must be strings.
-
 ### Android
 
 Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding [GeckoView](https://wiki.mozilla.org/Mobile/GeckoView) has to be controlled on Android:
@@ -173,6 +170,10 @@ For example, to specify a boolean extra that can be processed with [android.cont
   "androidIntentArguments": ["--ez", "customBooleanFlagName", "true"]
 }
 ```
+
+#### `env` (Env object)
+
+Map of environment variable name to environment variable value, both of which must be strings, that will be forwarded to application process running on the Android device.
 
 ### Log object
 

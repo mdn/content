@@ -1,6 +1,7 @@
 ---
 title: Firefox 3 for developers
 slug: Mozilla/Firefox/Releases/3
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -149,4 +150,4 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 
 ## See also
 
-{{Firefox_for_developers('2')}}
+{{Firefox_for_developers}}

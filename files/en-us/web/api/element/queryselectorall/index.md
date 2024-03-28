@@ -24,7 +24,7 @@ querySelectorAll(selectors)
 - `selectors`
 
   - : A string containing one or more selectors to match against. This
-    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
+    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_selectors)
     string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.

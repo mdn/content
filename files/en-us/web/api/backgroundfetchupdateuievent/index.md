@@ -52,7 +52,7 @@ addEventListener("backgroundfetchsuccess", (event) => {
 
       // Update the progress notification.
       event.updateUI({ title: "Episode 5 ready to listen!" });
-    })()
+    })(),
   );
 });
 ```

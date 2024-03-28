@@ -2,7 +2,11 @@
 title: Touch events
 slug: Web/API/Touch_events
 page-type: web-api-overview
-browser-compat: api.Touch
+browser-compat:
+  - api.Touch
+  - api.TouchEvent
+  - api.TouchList
+spec-urls: https://w3c.github.io/touch-events/
 ---
 
 {{DefaultAPISidebar("Touch Events")}}
@@ -126,7 +130,7 @@ function handleMove(evt) {
       log(`continuing touch ${idx}`);
       ctx.beginPath();
       log(
-        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`
+        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
       );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
@@ -325,7 +329,7 @@ function onTouch(evt) {
     evt.shiftKey,
     evt.metaKey,
     0,
-    null
+    null,
   );
   evt.originalTarget.dispatchEvent(newEvt);
 }

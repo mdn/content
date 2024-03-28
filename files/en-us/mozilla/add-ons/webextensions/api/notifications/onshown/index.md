@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired immediately after a notification has been shown.
 
@@ -50,7 +50,7 @@ function logShown(itemId) {
   console.log(`shown: ${itemId}`);
   browser.notifications.getAll().then((all) => {
     console.log(all[itemId]);
-  })
+  });
 }
 
 browser.notifications.onShown.addListener(logShown);

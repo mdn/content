@@ -24,7 +24,7 @@ console.log(self);
 
 inside a worker, you will get a worker global scope of the same type as that worker object written to the console — something like the following:
 
-```
+```plain
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity

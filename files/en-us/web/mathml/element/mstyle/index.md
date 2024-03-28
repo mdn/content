@@ -56,7 +56,7 @@ The following example uses [global attributes](/en-US/docs/Web/MathML/Global_att
 </math>
 ```
 
-{{ EmbedLiveSample('mstyle_example1', 700, 200, "", "") }}
+{{EmbedLiveSample('Attributes mapped to CSS')}}
 
 ### Legacy script attributes
 
@@ -88,7 +88,7 @@ The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/fon
 </math>
 ```
 
-{{ EmbedLiveSample('mstyle_example2', 700, 400, "", "") }}
+{{EmbedLiveSample('Legacy script attributes', 700, 400)}}
 
 ## Specifications
 

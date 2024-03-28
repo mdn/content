@@ -1,6 +1,7 @@
 ---
 title: The HTML5 input types
 slug: Learn/Forms/HTML5_input_types
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
@@ -12,7 +13,7 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
+        A basic
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >.

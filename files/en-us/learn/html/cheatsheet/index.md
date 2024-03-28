@@ -1,6 +1,7 @@
 ---
 title: HTML Cheat Sheet
 slug: Learn/HTML/Cheatsheet
+page-type: guide
 ---
 
 {{LearnSidebar}}

@@ -28,7 +28,7 @@ _Inherits methods from its parent, {{domxref("Node")}}._
 
 - {{domxref("DocumentType.after()")}}
   - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
-    object's parent, just before this node.
+    object's parent, just after this node.
 - {{domxref("DocumentType.before()")}}
   - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
     object's parent, just before this node.

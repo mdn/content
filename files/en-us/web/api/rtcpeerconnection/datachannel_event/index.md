@@ -50,7 +50,7 @@ pc.addEventListener(
     receiveChannel.onopen = myHandleOpen;
     receiveChannel.onclose = myHandleClose;
   },
-  false
+  false,
 );
 ```
 

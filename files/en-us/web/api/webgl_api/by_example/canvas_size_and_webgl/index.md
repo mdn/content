@@ -63,7 +63,7 @@ window.addEventListener(
       gl.clear(gl.COLOR_BUFFER_BIT);
     });
   },
-  false
+  false,
 );
 ```
 

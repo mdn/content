@@ -41,7 +41,7 @@ li::-moz-list-number {
 
 ### Result
 
-{{ EmbedLiveSample("Examples", "auto", "auto", "moz-list-number.png") }}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -49,5 +49,5 @@ Not part of any standard.
 
 ## See also
 
-- {{cssxref(":-moz-list-bullet")}}
+- {{cssxref("::-moz-list-bullet")}}
 - {{cssxref("::marker")}}

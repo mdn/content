@@ -34,7 +34,7 @@ gl.renderbufferStorageMultisample(
   samples,
   gl.RGBA8,
   glLayer.textureWidth,
-  glLayer.textureHeight
+  glLayer.textureHeight,
 );
 ```
 

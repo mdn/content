@@ -46,7 +46,7 @@ You can use the `boundary` event in an [`addEventListener`](/en-US/docs/Web/API/
 ```js
 utterThis.addEventListener("boundary", (event) => {
   console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
   );
 });
 ```
@@ -56,7 +56,7 @@ Or use the `onboundary` event handler property:
 ```js
 utterThis.onboundary = (event) => {
   console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
   );
 };
 ```

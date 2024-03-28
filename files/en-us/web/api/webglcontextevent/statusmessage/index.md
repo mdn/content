@@ -22,10 +22,10 @@ canvas.addEventListener(
   "webglcontextcreationerror",
   (e) => {
     console.log(
-      `WebGL context creation failed: ${e.statusMessage || "Unknown error"}`
+      `WebGL context creation failed: ${e.statusMessage || "Unknown error"}`,
     );
   },
-  false
+  false,
 );
 ```
 

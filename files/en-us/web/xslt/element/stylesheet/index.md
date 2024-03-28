@@ -1,10 +1,11 @@
 ---
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
+page-type: xslt-element
 spec-urls: https://www.w3.org/TR/xslt-30/#stylesheet-element
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
+{{XsltSidebar}}
 
 The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.
 

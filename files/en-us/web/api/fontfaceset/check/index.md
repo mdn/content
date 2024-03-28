@@ -44,7 +44,7 @@ const font = new FontFace(
     style: "normal",
     weight: "400",
     stretch: "condensed",
-  }
+  },
 );
 
 document.fonts.add(font);
@@ -76,8 +76,6 @@ If we specify a font that is not in the `FontFaceSet` and is not a system font, 
 console.log(document.fonts.check("12px i-dont-exist"));
 // true: the matching font is a nonexistent font
 ```
-
-> **Note:** In this situation Chrome incorrectly returns `false`. This can make [fingerprinting](/en-US/docs/Glossary/Fingerprinting) easier, because an attacker can easily test which system fonts the browser has.
 
 ### System and unloaded fonts
 

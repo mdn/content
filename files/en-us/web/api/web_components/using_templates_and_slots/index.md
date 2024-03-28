@@ -50,7 +50,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 ```
 
@@ -218,12 +218,12 @@ customElements.define(
     constructor() {
       super();
       const template = document.getElementById(
-        "element-details-template"
+        "element-details-template",
       ).content;
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.cloneNode(true));
     }
-  }
+  },
 );
 ```
 

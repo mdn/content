@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.NavigationPreloadManager
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.
 
@@ -57,7 +57,7 @@ addEventListener("activate", (event) => {
         // Enable navigation preloads!
         await self.registration.navigationPreload.enable();
       }
-    })()
+    })(),
   );
 });
 ```
@@ -87,7 +87,7 @@ addEventListener("fetch", (event) => {
 
       // Else try the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```
@@ -108,7 +108,7 @@ The code below shows how to set the value of the header directive to some variab
 ```js
 navigator.serviceWorker.ready
   .then((registration) =>
-    registration.navigationPreload.setHeaderValue(newValue)
+    registration.navigationPreload.setHeaderValue(newValue),
   )
   .then(() => {
     console.log("Done!");

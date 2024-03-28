@@ -1,5 +1,5 @@
 ---
-title: <header>
+title: "<header>: The Header element"
 slug: Web/HTML/Element/header
 page-type: html-element
 browser-compat: html.elements.header
@@ -17,7 +17,7 @@ The `<header>` element has an identical meaning to the site-wide [`banner`](/en-
 
 The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
-Otherwise, it is a `section` in the accessibility tree, and usually contain the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
+Otherwise, it is a `section` in the accessibility tree, and usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
 
 ### Historical Usage
 
@@ -64,7 +64,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 {{EmbedLiveSample('Article Header')}}
 
-## Accessibility
+## Accessibility concerns
 
 The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 
@@ -98,7 +98,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -115,10 +115,10 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a
         >, or
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          >generic</a
         >
         if a descendant of an
         <code><a href="/en-US/docs/Web/HTML/Element/article">article</a></code
@@ -128,28 +128,28 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
         <code><a href="/en-US/docs/Web/HTML/Element/section">section</a></code>
         element, or an element with
         <code
-          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role"
             >article</a
           ></code
         >,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role"
             >complementary</a
           ></code
         >,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role"
             >main</a
           ></code
         >,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"
             >navigation</a
           ></code
         >
         or
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"
             >region</a
           ></code
         >

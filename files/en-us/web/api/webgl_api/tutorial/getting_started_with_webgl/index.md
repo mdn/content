@@ -26,7 +26,7 @@ First, create two new files:
 The "index.html" file should contain the following:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -60,7 +60,7 @@ function main() {
   // Only continue if WebGL is available and working
   if (gl === null) {
     alert(
-      "Unable to initialize WebGL. Your browser or machine may not support it."
+      "Unable to initialize WebGL. Your browser or machine may not support it.",
     );
     return;
   }

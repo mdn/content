@@ -1,6 +1,7 @@
 ---
 title: Web audio codec guide
 slug: Web/Media/Formats/Audio_codecs
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -140,7 +141,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure"
           >Channel count</a
         >
       </th>
@@ -168,7 +169,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     </tr>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Sampling_audio"
+        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#sampling_audio"
           >Sample rate</a
         >
       </th>
@@ -183,7 +184,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure"
           >Sample size</a
         >
       </th>
@@ -400,28 +401,6 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <tbody>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-            <tr>
-              <th scope="row">AAC support</th>
-              <td>Yes</td>
-              <td>Yes</td>
-              <td>Yes</td>
-              <td>9</td>
-              <td>Yes</td>
-              <td>3.1</td>
-            </tr>
-          </tbody>
-        </table>
         <p>
           Due to patent issues, Firefox does not directly support AAC. Instead,
           Firefox relies upon a platform's native support for AAC. This
@@ -452,39 +431,6 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
         developers of codecs are required to obtain a patent license through
         <a href="https://www.via-corp.com/licensing/aac/">VIA Licensing</a>
       </td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="standard-table" style="margin-left: 4em; max-width: 30em">
-  <caption>
-    AAC support in Firefox using external library, by platform
-  </caption>
-  <thead>
-    <tr>
-      <th scope="row">Platform</th>
-      <th scope="col">First Firefox version<br />with AAC support</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Windows (Vista and later)</th>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th scope="row">Android</th>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Linux (depends on
-        <a href="https://gstreamer.freedesktop.org/">GStreamer</a>)
-      </th>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th scope="row">macOS</th>
-      <td>35</td>
     </tr>
   </tbody>
 </table>
@@ -548,13 +494,11 @@ Keep in mind, however, that lossless codecs require substantially more bandwidth
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
               <th scope="row">ALAC support</th>
-              <td>No</td>
               <td>No</td>
               <td>No</td>
               <td>No</td>
@@ -650,7 +594,6 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -659,14 +602,13 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
               <td>No</td>
               <td>?</td>
               <td>No</td>
-              <td>?</td>
               <td>No</td>
               <td>?</td>
             </tr>
           </tbody>
         </table>
         <p>
-          While the Chrome browser does not support AMR, Chrome OS supports
+          While the Chrome browser does not support AMR, ChromeOS supports
           AMR-NB (narrowband) and AMR-WB (wideband).
         </p>
       </td>
@@ -752,7 +694,6 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -761,8 +702,7 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
               <td>Yes</td>
               <td>Yes</td>
               <td>51 (desktop)<br />58 (mobile)</td>
-              <td>No</td>
-              <td>No</td>
+              <td>Yes</td>
               <td>11</td>
             </tr>
           </tbody>
@@ -845,7 +785,6 @@ This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRT
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -854,7 +793,6 @@ This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRT
               <td>23</td>
               <td>15</td>
               <td>22</td>
-              <td>No</td>
               <td>43</td>
               <td>11</td>
             </tr>
@@ -948,7 +886,6 @@ G.722 is primarily used with WebRTC connections, as it's one of the audio codecs
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -957,7 +894,6 @@ G.722 is primarily used with WebRTC connections, as it's one of the audio codecs
               <td>Yes</td>
               <td>Yes</td>
               <td>Yes</td>
-              <td>No</td>
               <td>Yes</td>
               <td>Yes</td>
             </tr>
@@ -1068,7 +1004,6 @@ The patents behind MP3 have expired, removing many or most licensing concerns ar
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1077,7 +1012,6 @@ The patents behind MP3 have expired, removing many or most licensing concerns ar
               <td>Yes</td>
               <td>Yes</td>
               <td>Yes</td>
-              <td>9</td>
               <td>Yes</td>
               <td>3.1</td>
             </tr>
@@ -1273,7 +1207,6 @@ Opus is a good all-around audio codec for use in your web applications, and can 
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1282,7 +1215,6 @@ Opus is a good all-around audio codec for use in your web applications, and can 
               <td>33</td>
               <td>14</td>
               <td>15</td>
-              <td>No</td>
               <td>20</td>
               <td>11</td>
             </tr>
@@ -1375,7 +1307,6 @@ Generally, Vorbis is more efficient in terms of size and bit rate than MP3 at si
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1384,7 +1315,6 @@ Generally, Vorbis is more efficient in terms of size and bit rate than MP3 at si
               <td>4</td>
               <td>17</td>
               <td>3.5</td>
-              <td>No</td>
               <td>11.5</td>
               <td>No</td>
             </tr>

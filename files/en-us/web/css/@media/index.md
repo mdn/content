@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media
 
 {{CSSRef}}
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > **Note:** In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
 
@@ -35,7 +35,7 @@ The `@media` at-rule may be placed at the top level of your code or nested insid
 }
 ```
 
-For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax).
+For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
 ## Description
 
@@ -47,7 +47,7 @@ Except when using the `not` or `only` logical operators, the media type is optio
 - `all`
   - : Suitable for all devices.
 - `print`
-  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Paged_Media) for information about formatting issues that are specific to these formats.)
+  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/CSS_paged_media) for information about formatting issues that are specific to these formats.)
 - `screen`
   - : Intended primarily for screens.
 
@@ -73,17 +73,17 @@ Media feature expressions test for their presence or value, and are entirely opt
     Added in Media Queries Level 4.
 - {{cssxref("@media/color-index", "color-index")}}
   - : Number of entries in the output device's color lookup table, or zero if the device does not use such a table
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
   - : Width-to-height aspect ratio of the output device.
     Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+- {{cssxref("@media/device-height", "device-height")}}
   - : Height of the rendering surface of the output device.
     Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
+- {{cssxref("@media/device-width", "device-width")}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : The display mode of the application, as specified in the web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member.
-    Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+  - : The mode in which an application is being displayed: for example [fullscreen](/en-US/docs/Web/API/Fullscreen_API) or [picture-in-picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) mode.
+    Added in Media Queries Level 5.
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : Combination of brightness, contrast ratio, and color depth that are supported by the user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/forced-colors", "forced-colors")}}
@@ -123,10 +123,12 @@ Media feature expressions test for their presence or value, and are entirely opt
     Added in Media Queries Level 5.
 - {{cssxref("@media/resolution", "resolution")}}
   - : Pixel density of the output device.
-- {{cssxref("@media/scripting", "scripting")}} {{Experimental_Inline}}
+- {{cssxref("@media/scan", "scan")}}
+  - : Whether display output is progressive or interlaced.
+- {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
-- {{cssxref("@media/update-frequency", "update")}}
+- {{cssxref("@media/update", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
@@ -163,13 +165,20 @@ You can also combine multiple media queries into a single rule by separating the
 - `or`
   - : Equivalent to the `,` operator. Added in Media Queries Level 4.
 
+### User agent client hints
+
+Some media queries have corresponding [user agent client hints](/en-US/docs/Web/HTTP/Client_hints).
+These are HTTP headers that request content that is pre-optimized for the particular media requirement.
+They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
+
 ## Accessibility concerns
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 Both [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) and [`px`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) are valid units, but [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) works better if the user changes the browser text size.
 
-Also consider using Level 4 media queries to improve the user's experience. For example, `prefers-reduced-motion` to [detect if the user has requested that the system minimize the amount of animation](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or motion it uses.
+Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
+For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
 
 ## Security
 
@@ -227,7 +236,7 @@ Introduced in Media Queries Level 4 is a new range syntax that allows for less v
 }
 ```
 
-For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Specifications
 
@@ -239,7 +248,8 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/Media_Qu
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - In JavaScript, `@media` can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [Extended WebKit media features](/en-US/docs/Web/CSS/WebKit_Extensions#media_features)

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.setPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setPipeline()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUComputePipeline")}} to use for this compute pass.
@@ -57,7 +57,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE
+  BUFFER_SIZE,
 );
 
 // End frame by passing array of command buffers to command queue for execution

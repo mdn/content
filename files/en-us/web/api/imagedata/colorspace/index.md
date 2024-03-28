@@ -49,7 +49,7 @@ console.log(srgbImageData.colorSpace); // "srgb"
 ## See also
 
 - [`CanvasRenderingContext2D.createImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData)
-- [`CanvasRenderingContext2D.getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData)
+- [`CanvasRenderingContext2D.getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)
 - [`colorSpace` setting in `canvas.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace)
 - Setting WebGL color spaces:
   - [`WebGLRenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferColorSpace)

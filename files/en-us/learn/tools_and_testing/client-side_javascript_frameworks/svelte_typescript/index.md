@@ -1,6 +1,7 @@
 ---
 title: TypeScript support in Svelte
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -143,7 +144,7 @@ Go to the root directory of the project and enter these commands:
 npx degit sveltejs/template/scripts scripts       # download script file to a scripts folder
 
 node scripts/setupTypeScript.js                   # run it
-Converted to TypeScript.
+# Converted to TypeScript.
 ```
 
 You will need to re-run your dependency manager to get started.
@@ -160,7 +161,10 @@ These instructions apply to any Svelte project you'd like to convert to TypeScri
 
 As we said before, TypeScript is a superset of JavaScript, so your application will run without modifications. Currently you will be running a regular JavaScript application with TypeScript support enabled, without taking advantage of any of the features that TypeScript provides. You can now start adding types progressively.
 
-Once you have TypeScript configured, you can start using it from a Svelte component by just adding a `<script lang='ts'>` at the beginning of the script section. To use it from regular JavaScript files, just change the file extension from `.js` to `.ts`. You'll also have to update any corresponding import statements (don't include the `.ts` in your `import` statements; TypeScript chose to omit the extensions).
+Once you have TypeScript configured, you can start using it from a Svelte component by just adding a `<script lang='ts'>` at the beginning of the script section. To use it from regular JavaScript files, just change the file extension from `.js` to `.ts`. You'll also have to update any corresponding import statements to remove the `.ts` file extension from all `import` statements.
+
+> **Note:** TypeScript will throw an error if you use the `.ts` file extension in an `import` statement, so you if you have a file `./foo.ts`, you must import it as "./foo".
+> See the [Module resolution for bundlers, TypeScript runtimes, and Node.js loaders](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders) section of the TypeScript manual for more information.
 
 > **Note:** Using TypeScript in component markup sections is [not supported yet](https://github.com/sveltejs/svelte/issues/4701). You'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
 
@@ -186,11 +190,11 @@ Clicking _Install all_ will install Svelte for VS Code.
 
 We can also see that the `setupTypeScript.js` file made a couple of changes to our project. The `main.js` file has been renamed to `main.ts`, which means that VS Code can provide hover-information on our Svelte components:
 
-![VS Code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints](03-vscode-hints-in-main-ts.png)
+![VS Code screenshot showing that when hovering on a component, it gives you hints](03-vscode-hints-in-main-ts.png)
 
 We also get type checking for free. If we pass an unknown property in the options parameter of the `App` constructor (for example a typo like `traget` instead of `target`), TypeScript will complain:
 
-![Type checking in VS Code - App object has been given an unknown property target](04-vscode-type-checking-in-main-ts.png)
+![Type checking in VS Code - App object has been given an unknown property traget](04-vscode-type-checking-in-main-ts.png)
 
 In the `App.svelte` component, the `setupTypeScript.js` script has added the `lang="ts"` attribute to the `<script>` tag. Moreover, thanks to type inference, in many cases we won't even need to specify types to get code assistance. For example, if you start adding an `ms` property to the `Alert` component call, TypeScript will infer from the default value that the `ms` property should be a number:
 
@@ -198,7 +202,7 @@ In the `App.svelte` component, the `setupTypeScript.js` script has added the `la
 
 And if you pass something that is not a number, it will complain about it:
 
-![Type checking in VS Code - App object has been given an unknown property target](06-vscode-type-checking-in-components.png)
+![Type checking in VS Code - the ms variable has been given a non-numeric value](06-vscode-type-checking-in-components.png)
 
 The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
 
@@ -206,7 +210,7 @@ In this case, if you run `npm run check` (either in the VS Code console or termi
 
 ![Check command being run inside VS Code showing type error, ms variable should be assigned a number](07-vscode-svelte-check.png)
 
-Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> clicking on the file name will take you to the line containing the error.
+Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>\`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> clicking on the file name will take you to the line containing the error.
 
 You can also run the `check` script in watch mode with `npm run check -- --watch`. In this case, the script will execute whenever you change any file. If you are running this in your regular terminal, keep it running in the background in a separate terminal window so that it can keep reporting errors but won't interfere with other terminal usage.
 
@@ -239,11 +243,11 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
    export let todo: TodoType;
    ```
 
-   > **Note:** Another reminder: When importing a `.ts` file, you have to omit the extension. Check the [`import` section](https://www.typescriptlang.org/docs/handbook/modules.html#import) of the TypeScript manual for more information.
+   Note that the `.ts` file extension is not allowed in the `import` statement, and has been omitted.
 
 6. Now from `Todos.svelte` we will instantiate a `Todo` component with a literal object as its parameter before the call to the `MoreActions` component, like this:
 
-   ```html
+   ```svelte
    <hr />
 
    <Todo todo={ { name: 'a new task with no id!', completed: false } } />
@@ -299,7 +303,10 @@ Let's start with our `Alert.svelte` component.
 1. Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `check` script:
 
    ```bash
-   $ npm run check -- --watch
+   npm run check -- --watch
+   ```
+
+   ```plain
    > svelte-check "--watch"
 
    ./svelte-todo-typescript
@@ -344,7 +351,7 @@ Now we'll do the same for the `MoreActions.svelte` component.
 
 1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter((t) =>...)`.
 
-   ```
+   ```plain
    Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
      export let todos
 
@@ -393,26 +400,26 @@ Now we'll take care of the `FilterButton` component.
 
 4. Now we will use this from the `FilterButton` component. Replace the content of the `FilterButton.svelte` file with the following:
 
-   ```html
+   ```svelte
    <!-- components/FilterButton.svelte -->
-   <script lang='ts'>
-     import { Filter } from '../types/filter.enum'
+   <script lang="ts">
+     import { Filter } from "../types/filter.enum";
 
-     export let filter: Filter = Filter.ALL
+     export let filter: Filter = Filter.ALL;
    </script>
 
    <div class="filters btn-group stack-exception">
-     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={() => filter = Filter.ALL} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={()=> filter = Filter.ALL} >
        <span class="visually-hidden">Show</span>
        <span>All</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ACTIVE} aria-pressed={filter === Filter.ACTIVE} on:click={() => filter = Filter.ACTIVE} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ACTIVE} aria-pressed={filter === Filter.ACTIVE} on:click={()=> filter = Filter.ACTIVE} >
        <span class="visually-hidden">Show</span>
        <span>Active</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={() => filter = Filter.COMPLETED} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={()=> filter = Filter.COMPLETED} >
        <span class="visually-hidden">Show</span>
        <span>Completed</span>
        <span class="visually-hidden">tasks</span>
@@ -441,8 +448,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -515,8 +522,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -542,7 +549,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 
 We are encountering the following errors related to passing `todos` to the `TodosStatus.svelte` (and `Todo.svelte`) components:
 
-```
+```plain
 ./src/components/Todos.svelte:70:39
 Error: Type 'TodoType[]' is not assignable to type 'undefined'. (ts)
   <TodosStatus bind:this={todosStatus} {todos} />
@@ -577,8 +584,8 @@ Let's fix it.
 
    To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
-   ```html
-   <h2 id="list-heading" bind:this="{headingEl}" tabindex="{-1}">
+   ```svelte
+   <h2 id="list-heading" bind:this={headingEl} tabindex={-1}>
      {completedTodos} out of {totalTodos} items completed
    </h2>
    ```
@@ -772,9 +779,9 @@ Now if we try to create a `localStore` with something that cannot be converted t
 
 ![VS Code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with JSON stringify](11-vscode-invalid-store.png)
 
-And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
+And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
 
-```html
+```svelte
 <!-- App.svelte -->
 <script lang="ts">
   import Todos from "./components/Todos.svelte";
@@ -814,7 +821,7 @@ Our stores have already been ported to TypeScript, but we can do better. We shou
 
 ### Understanding TypeScript generics
 
-Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle-brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
+Generics allow you to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified within angle brackets and are conventionally denoted with a single uppercase letter. Generic types allow you to capture the types provided by the user, ensuring they're available for future processing.
 
 Let's see a quick example, a simple `Stack` class that lets us `push` and `pop` elements, like this:
 
@@ -897,7 +904,7 @@ Svelte stores support generics out of the box. And, because of generic type infe
 
 If you open the file `Todos.svelte` and assign a `number` type to our `$alert` store, you'll get the following error:
 
-![Todo Type object property complete should be completed](13-vscode-generic-alert-error.png)
+![Argument of type 9999 is not assignable to parameter of type string](13-vscode-generic-alert-error.png)
 
 That's because when we defined our alert store in the `stores.ts` file with:
 

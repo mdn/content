@@ -69,13 +69,9 @@ If you try to call `drawImage()` before the image has finished loading, it won't
 
 ```js
 const img = new Image(); // Create new img element
-img.addEventListener(
-  "load",
-  () => {
-    // execute drawImage statements here
-  },
-  false
-);
+img.addEventListener("load", () => {
+  // execute drawImage statements here
+});
 img.src = "myImage.png"; // Set source path
 ```
 
@@ -127,7 +123,7 @@ In the following example, we will use an external image as the backdrop for a sm
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="180" height="150"></canvas>
   </body>
 </html>
@@ -150,9 +146,13 @@ function draw() {
 }
 ```
 
+```js
+draw();
+```
+
 The resulting graph looks like this:
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("Example_A_simple_line_graph", "", "160")}}
 
 ## Scaling
 
@@ -169,7 +169,7 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 
 ```html hidden
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -190,9 +190,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 The resulting canvas looks like this:
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("Example_Tiling_an_image", "", "160")}}
 
 ## Slicing
 
@@ -215,7 +219,7 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```html
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
       <img id="source" src="rhino.jpg" width="300" height="227" />
@@ -240,17 +244,18 @@ function draw() {
     21,
     20,
     87,
-    104
+    104,
   );
 
   // Draw frame
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+draw();
 ```
 
 We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags directly in our HTML source and retrieved the images from those. The images are hidden from output by setting the CSS property {{cssxref("display")}} to none for those images.
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Example_Framing_an_image", "", "160")}}
 
 The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then use `drawImage()` to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second `drawImage()` call.
 
@@ -264,7 +269,7 @@ The code below should be self-explanatory. We loop through the {{domxref("docume
 
 ```html
 <html lang="en">
-  <body onload="draw();">
+  <body>
     <table>
       <tr>
         <td><img src="gallery_1.jpg" /></td>
@@ -331,6 +336,7 @@ function draw() {
     }
   }
 }
+draw();
 ```
 
 {{EmbedLiveSample("Art_gallery_example", 725, 400)}}

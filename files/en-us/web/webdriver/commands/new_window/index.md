@@ -1,6 +1,7 @@
 ---
 title: New Window
 slug: Web/WebDriver/Commands/New_Window
+page-type: webdriver-command
 browser-compat: webdriver.commands.NewWindow
 ---
 

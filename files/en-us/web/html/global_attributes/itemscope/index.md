@@ -54,8 +54,8 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
     </tr>
     <tr>
       <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
       <td>Trailer</td>
+      <td>https://youtu.be/0AY1XIkX7bY</td>
     </tr>
   </tbody>
 </table>

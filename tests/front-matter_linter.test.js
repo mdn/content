@@ -14,20 +14,32 @@ const options = {};
 
 options.config = JSON.parse(
   fs.readFileSync(
-    fileURLToPath(new URL("config.json", SAMPLES_DIRECTORY), "utf-8")
-  )
+    fileURLToPath(new URL("config.json", SAMPLES_DIRECTORY), "utf-8"),
+  ),
 );
 options.validator = getAjvValidator(options.config.schema);
 
+function getPath(filePath) {
+  return fileURLToPath(new URL(filePath, SAMPLES_DIRECTORY));
+}
+
+function getContent(filePath) {
+  return fs.readFileSync(getPath(filePath), "utf-8");
+}
+
 describe("Test front-matter linter", () => {
   it("should use double quotes and remove unwanted quotes", async () => {
-    const filePath = fileURLToPath(
-      new URL("./double_quotes.md", SAMPLES_DIRECTORY)
-    );
-    const validPath = fileURLToPath(
-      new URL("./double_quotes.valid.md", SAMPLES_DIRECTORY)
-    );
-    const validContent = fs.readFileSync(validPath, "utf-8");
+    const filePath = getPath("./double_quotes.md");
+    const validContent = getContent("./double_quotes.valid.md");
+
+    options.fix = true;
+    const result = await checkFrontMatter(filePath, options);
+    await expect(result).toEqual([null, null, validContent]);
+  });
+
+  it("should use single quotes to enclose double quoted words", async () => {
+    const filePath = getPath("./single_quotes.md");
+    const validContent = getContent("./single_quotes.valid.md");
 
     options.fix = true;
     const result = await checkFrontMatter(filePath, options);
@@ -35,13 +47,8 @@ describe("Test front-matter linter", () => {
   });
 
   it("should enforce the attribute order", async () => {
-    const filePath = fileURLToPath(
-      new URL("./attribute_order.md", SAMPLES_DIRECTORY)
-    );
-    const validPath = fileURLToPath(
-      new URL("./attribute_order.valid.md", SAMPLES_DIRECTORY)
-    );
-    const validContent = fs.readFileSync(validPath, "utf-8");
+    const filePath = getPath("./attribute_order.md");
+    const validContent = getContent("./attribute_order.valid.md");
 
     options.fix = false;
     let result = await checkFrontMatter(filePath, options);
@@ -57,7 +64,7 @@ describe("Test front-matter linter", () => {
   });
 
   it("should flag invalid values", async () => {
-    const filePath = fileURLToPath(new URL("./values.md", SAMPLES_DIRECTORY));
+    const filePath = getPath("./values.md");
 
     options.fix = false;
     let result = await checkFrontMatter(filePath, options);
@@ -74,11 +81,8 @@ describe("Test front-matter linter", () => {
   });
 
   it("should prettify the front-matter", async () => {
-    const filePath = fileURLToPath(new URL("./prettify.md", SAMPLES_DIRECTORY));
-    const validPath = fileURLToPath(
-      new URL("./prettify.valid.md", SAMPLES_DIRECTORY)
-    );
-    const validContent = fs.readFileSync(validPath, "utf-8");
+    const filePath = getPath("./prettify.md");
+    const validContent = getContent("./prettify.valid.md");
 
     options.fix = true;
     const result = await checkFrontMatter(filePath, options);
@@ -89,13 +93,8 @@ describe("Test front-matter linter", () => {
   });
 
   it("should flag and remove unknown attribute", async () => {
-    const filePath = fileURLToPath(
-      new URL("./unknown_attribute.md", SAMPLES_DIRECTORY)
-    );
-    const validPath = fileURLToPath(
-      new URL("./unknown_attribute.valid.md", SAMPLES_DIRECTORY)
-    );
-    const validContent = fs.readFileSync(validPath, "utf-8");
+    const filePath = getPath("./unknown_attribute.md");
+    const validContent = getContent("./unknown_attribute.valid.md");
 
     options.fix = false;
     let result = await checkFrontMatter(filePath, options);

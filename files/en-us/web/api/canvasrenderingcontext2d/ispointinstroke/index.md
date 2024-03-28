@@ -98,7 +98,7 @@ canvas.addEventListener("mousemove", (event) => {
   const isPointInStroke = ctx.isPointInStroke(
     ellipse,
     event.offsetX,
-    event.offsetY
+    event.offsetY,
   );
   ctx.strokeStyle = isPointInStroke ? "green" : "red";
 

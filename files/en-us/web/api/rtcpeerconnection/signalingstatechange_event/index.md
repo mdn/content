@@ -40,7 +40,7 @@ pc.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Explaining basic 3D theory
 slug: Games/Techniques/3D_on_the_web/Basic_theory
+page-type: guide
 ---
 
 {{GamesSidebar}}

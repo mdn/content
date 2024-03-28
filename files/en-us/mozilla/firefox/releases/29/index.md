@@ -1,6 +1,7 @@
 ---
 title: Firefox 29 for developers
 slug: Mozilla/Firefox/Releases/29
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -104,4 +105,4 @@ _No change._
 
 ### Older versions
 
-{{Firefox_for_developers('28')}}
+{{Firefox_for_developers}}

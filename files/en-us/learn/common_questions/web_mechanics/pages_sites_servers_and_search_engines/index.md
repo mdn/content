@@ -1,6 +1,7 @@
 ---
 title: What is the difference between webpage, website, web server, and search engine?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

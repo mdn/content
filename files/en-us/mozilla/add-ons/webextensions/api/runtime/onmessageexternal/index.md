@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onMessageExternal
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this event to listen for messages from other extensions or web pages.
 
@@ -72,10 +72,7 @@ In this example the extension "blue\@mozilla.org" sends a message to the extensi
 // sender: browser.runtime.id === "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage(
-    "red@mozilla.org",
-    "my message"
-  );
+browser.runtime.sendMessage("red@mozilla.org", "my message");
 ```
 
 ```js

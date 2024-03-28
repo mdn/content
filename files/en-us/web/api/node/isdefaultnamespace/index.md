@@ -8,11 +8,8 @@ browser-compat: api.Node.isDefaultNamespace
 
 {{APIRef("DOM")}}
 
-The **`isDefaultNamespace()`** method of the {{domxref("Node")}} interface
-accepts a namespace URI as an argument.
-It returns a boolean value that is `true`
-if the namespace is the default namespace on the given node
-and `false` if not.
+The **`isDefaultNamespace()`** method of the {{domxref("Node")}} interface accepts a namespace URI as an argument.
+It returns a boolean value that is `true` if the namespace is the default namespace on the given node and `false` if not.
 
 > **Note:** The default namespace of an HTML element is always `""`. For a SVG element, it is set by the `xmlns` attribute.
 
@@ -30,8 +27,7 @@ isDefaultNamespace(namespaceURI)
 
 ### Return value
 
-A boolean value that holds the return value `true` or `false`,
-indicating if the parameter is the default namespace, or not.
+A boolean value that holds the return value `true` or `false`, indicating if the parameter is the default namespace, or not.
 
 ## Example
 
@@ -44,7 +40,7 @@ Is "" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br />
 Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;:
 <output>Not tested</output>.<br />
 <svg xmlns="http://www.w3.org/2000/svg" height="1"></svg>
-<button>Click to see the results</button>
+<button>Click to run tests</button>
 ```
 
 ```js
@@ -56,8 +52,8 @@ button.addEventListener("click", () => {
   const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.isDefaultNamespace(""); // true
   result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
-  result[2].value = aSvgElt.isDefaultNamespace(""); // true
-  result[3].value = aSvgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
+  result[2].value = aSvgElt.isDefaultNamespace(""); // false
+  result[3].value = aSvgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // true
 });
 ```
 

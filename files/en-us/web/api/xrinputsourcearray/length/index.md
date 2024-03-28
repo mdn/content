@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRInputSourceArray.length
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only **`length`** property returns an integer value
 indicating the number of items in the input source list represented by
@@ -34,7 +34,7 @@ if (sources.length === 0) {
     [
       { label: "Shop Now", url: "https://www.example.com/shop/controllers" },
       { label: "Quit", handler: quitGame },
-    ]
+    ],
   );
 }
 ```

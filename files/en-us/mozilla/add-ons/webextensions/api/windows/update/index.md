@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
 
@@ -67,13 +67,11 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
-
 });
 ```
 

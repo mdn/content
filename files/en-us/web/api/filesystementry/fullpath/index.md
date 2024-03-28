@@ -36,7 +36,7 @@ function gotFileSystem(fs) {
     (entry) => {
       path = fullPath;
     },
-    handleError(error)
+    handleError(error),
   );
 
   return path;

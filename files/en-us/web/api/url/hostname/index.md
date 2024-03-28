@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.URL.hostname
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`hostname`** property of the {{domxref("URL")}} interface
 is a string containing the {{glossary("domain name")}} of the URL.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -21,7 +19,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname"
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname",
 );
 console.log(url.hostname); // Logs: 'developer.mozilla.org'
 ```

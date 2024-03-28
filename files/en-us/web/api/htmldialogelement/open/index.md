@@ -18,7 +18,7 @@ available for interaction.
 A boolean value representing the state of the [`open`](/en-US/docs/Web/HTML/Element/dialog#open) HTML attribute. `true` means it is set, and therefore the dialog
 is shown. `false` means it not set, and therefore the dialog is not shown.
 
-The property is now read only — it is possible to set the value to programmatically
+The property is not read only — it is possible to set the value to programmatically
 show or hide the dialog.
 
 ## Examples

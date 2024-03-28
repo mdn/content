@@ -2,7 +2,7 @@
 title: tabindex
 slug: Web/SVG/Attribute/tabindex
 page-type: svg-attribute
-browser-compat: svg.attributes.core.tabindex
+browser-compat: svg.global_attributes.tabindex
 ---
 
 {{SVGRef}}
@@ -40,7 +40,7 @@ svg {
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="https://html.spec.whatwg.org/#valid-integer">valid integer</a>
+        <a href="https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-integer">valid integer</a>
       </td>
     </tr>
     <tr>

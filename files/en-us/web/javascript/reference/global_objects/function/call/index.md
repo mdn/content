@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Function.call
 
 {{JSRef}}
 
-The **`call()`** method calls the function with a given `this` value and arguments provided individually.
+The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 
@@ -16,14 +16,15 @@ The **`call()`** method calls the function with a given `this` value and argumen
 ```js-nolint
 call(thisArg)
 call(thisArg, arg1)
-call(thisArg, arg1, /* …, */ argN)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
 
 - `thisArg`
   - : The value to use as `this` when calling `func`. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects.
-- `arg1, …, argN` {{optional_inline}}
+- `arg1`, …, `argN` {{optional_inline}}
   - : Arguments for the function.
 
 ### Return value
@@ -87,7 +88,7 @@ display.call(); // throws TypeError: Cannot read the property of 'globProp' of u
 
 ### Transforming methods to utility functions
 
-`call()` is almost equivalent to a normal function call, except that `this` is passed as a normal parameter instead of as the value that the function was accessed on. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which avoids mutating `Array.prototype`, and allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)).
+`call()` is almost equivalent to a normal function call, except that `this` is passed as a normal parameter instead of as the value that the function was accessed on. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)) without mutating `Object.prototype`.
 
 Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use for converting an array-like object to a real array. You could create a shortcut like this:
 
@@ -124,5 +125,5 @@ slice(arguments);
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Reflect.apply()")}}
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)

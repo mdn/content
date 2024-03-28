@@ -48,7 +48,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to con
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <body>
   <script>
     const audioCtx = new AudioContext();
@@ -90,7 +90,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
       analyserNode.getFloatFrequencyData(dataArray);
 
       //Draw black background
-      canvasCtx.fillStyle = "rgb(0, 0, 0)";
+      canvasCtx.fillStyle = "rgb(0 0 0)";
       canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
       //Draw spectrum
@@ -98,13 +98,12 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
       let posX = 0;
       for (let i = 0; i < bufferLength; i++) {
         const barHeight = (dataArray[i] + 140) * 2;
-        canvasCtx.fillStyle =
-          "rgb(" + Math.floor(barHeight + 100) + ", 50, 50)";
+        canvasCtx.fillStyle = `rgb(${Math.floor(barHeight + 100)} 50 50)`;
         canvasCtx.fillRect(
           posX,
           canvas.height - barHeight / 2,
           barWidth,
-          barHeight / 2
+          barHeight / 2,
         );
         posX += barWidth + 1;
       }

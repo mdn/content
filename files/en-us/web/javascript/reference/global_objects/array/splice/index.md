@@ -7,10 +7,10 @@ browser-compat: javascript.builtins.Array.splice
 
 {{JSRef}}
 
-The **`splice()`** method changes the contents of an array by
+The **`splice()`** method of {{jsxref("Array")}} instances changes the contents of an array by
 removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
-To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
+To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array/slice", "slice()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
@@ -20,7 +20,8 @@ To create a new array with a segment removed and/or replaced without mutating th
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2, itemN)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 ### Parameters
@@ -28,7 +29,7 @@ splice(start, deleteCount, item1, item2, itemN)
 - `start`
 
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
     - If `start` is omitted (and `splice()` is called with no arguments), nothing is deleted. This is different from passing `undefined`, which is converted to `0`.
@@ -84,6 +85,30 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed is [], no elements removed
+```
+
+### Remove 0 (zero) elements at index 0, and insert "angel"
+
+`splice(0, 0, ...elements)` inserts elements at the start of the array like {{jsxref("Array/unshift", "unshift()")}}.
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
+### Remove 0 (zero) elements at last index, and insert "sturgeon"
+
+`splice(array.length, 0, ...elements)` inserts elements at the end of the array like {{jsxref("Array/push", "push()")}}.
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
 ```
 
 ### Remove 1 element at index 3
@@ -183,7 +208,7 @@ console.log(arrayLike);
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.push()")}}

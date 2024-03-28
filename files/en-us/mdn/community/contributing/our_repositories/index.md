@@ -39,7 +39,7 @@ These are repository used for project planning, documenting the project itself, 
 
 - [mdn-community](https://github.com/mdn/mdn-community)
 - [mdn/mdn](https://github.com/mdn/mdn)
-- [content-team-projects](https://github.com/mdn/content-team-projects).
+- [content-team-projects](https://github.com/mdn/content-team-projects)
 
 A Tier 3 project needs 1 admin.
 
@@ -61,7 +61,7 @@ A Tier 3 project needs 1 admin.
 
 [//]: # "TODO: UPDATE WITH REPO TRIAGE"
 
-The MDN Web Docs GitHub org contains a huge number of example repos. These generally contain free-standing code examples that are often linked to from our pages, but occasionally you'll find one of these examples embedded into a page using a macro call like this — `\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`.
+The MDN Web Docs GitHub org contains a huge number of example repos. These generally contain freestanding code examples that are often linked to from our pages, but occasionally you'll find one of these examples embedded into a page using a macro call like this — `\{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}`.
 
 Always remember, if you are updating the code on any given page, you'll need to update the corresponding example repo as well.
 

@@ -36,7 +36,7 @@ request.addEventListener("shippingoptionchange", (evt) => {
   evt.updateWith(
     new Promise((resolve, reject) => {
       updateDetails(details, request.shippingOption, resolve, reject);
-    })
+    }),
   );
 });
 

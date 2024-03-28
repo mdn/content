@@ -1,6 +1,7 @@
 ---
 title: Extend
 slug: WebAssembly/Reference/Numeric/Extend
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

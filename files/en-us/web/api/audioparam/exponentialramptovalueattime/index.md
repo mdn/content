@@ -8,11 +8,8 @@ browser-compat: api.AudioParam.exponentialRampToValueAtTime
 
 {{ APIRef("Web Audio API") }}
 
-The **`exponentialRampToValueAtTime()`** method of the {{
-    domxref("AudioParam") }} Interface schedules a gradual exponential change in the value
-of the {{domxref("AudioParam")}}. The change starts at the time specified for the
-_previous_ event, follows an exponential ramp to the new value given in the
-`value` parameter, and reaches the new value at the time given in the
+The **`exponentialRampToValueAtTime()`** method of the {{domxref("AudioParam")}} Interface schedules a gradual exponential change in the value of the {{domxref("AudioParam")}}.
+The change starts at the time specified for the _previous_ event, follows an exponential ramp to the new value given in the `value` parameter, and reaches the new value at the time given in the
 `endTime` parameter.
 
 > **Note:** Exponential ramps are considered more useful when changing
@@ -41,7 +38,7 @@ implementations of this interface return {{jsxref('undefined')}}.
 
 ## Examples
 
-In this example, we have a media source with two control buttons (see the [audio-param repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
+In this example, we have a media source with two control buttons (see the [audio-param repo](https://github.com/mdn/webaudio-examples/tree/main/audio-param) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
 is used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
 useful for fade in/fade out effects:
 

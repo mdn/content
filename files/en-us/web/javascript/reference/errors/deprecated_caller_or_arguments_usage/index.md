@@ -13,7 +13,7 @@ are used.
 
 ## Message
 
-```
+```plain
 TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them (V8-based & Firefox)
 TypeError: 'arguments', 'callee', and 'caller' cannot be accessed in this context. (Safari)
 ```
@@ -31,10 +31,10 @@ non-standard, hard to optimize and potentially a performance-harmful feature.
 
 ## Examples
 
-### Deprecated function.caller or arguments.callee.caller
+### Deprecated function.caller or arguments.callee
 
 {{jsxref("Function.prototype.caller")}} and
-[`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+[`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 are deprecated (see the reference articles for more information).
 
 ```js example-bad
@@ -83,5 +83,5 @@ console.log(`returned: ${g.arguments}`);
 - [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Function.prototype.arguments")}}
-- {{jsxref("Function.prototype.caller")}} and
-  [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- {{jsxref("Function.prototype.caller")}}
+- [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)

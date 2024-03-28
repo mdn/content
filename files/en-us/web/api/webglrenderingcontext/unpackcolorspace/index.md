@@ -61,7 +61,7 @@ gl.texImage2D(
   0,
   gl.RGBA,
   gl.UNSIGNED_BYTE,
-  imageData
+  imageData,
 );
 ```
 

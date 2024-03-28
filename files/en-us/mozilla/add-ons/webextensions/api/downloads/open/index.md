@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.open
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event fires when the item is opened for the first time.
 
@@ -48,15 +48,15 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      let opening = browser.downloads.open(downloadItems[0].id);
-      opening.then(onOpened, onError);
-    }
+  if (downloadItems.length > 0) {
+    let opening = browser.downloads.open(downloadItems[0].id);
+    opening.then(onOpened, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

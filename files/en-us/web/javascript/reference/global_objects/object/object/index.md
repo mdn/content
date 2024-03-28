@@ -12,7 +12,10 @@ The **`Object()`** constructor turns the input into an object. Its behavior depe
 ## Syntax
 
 ```js-nolint
+new Object()
 new Object(value)
+
+Object()
 Object(value)
 ```
 
@@ -20,7 +23,7 @@ Object(value)
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
   - : Any value.
 
 ### Return value
@@ -31,7 +34,7 @@ When the `Object()` constructor itself is called or constructed, its return valu
 - If the value is an object already, it returns the value.
 - Otherwise, it returns an object of a type that corresponds to the given value. For example, passing a {{jsxref("BigInt")}} primitive returns a `BigInt` wrapper object.
 
-When `Object()` is implicitly called via [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) in the constructor of a class that [extends `Object`](/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_object), it initializes a new object with `new.target.prototype` as its prototype. Any value passed to `super()` is ignored — for example, even if you pass a number, the `this` value inside the constructor does not become a {{jsxref("Number")}} instance.
+When `Object()` is constructed but [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is not the `Object` constructor itself, the behavior is slightly different — it initializes a new object with `new.target.prototype` as its prototype. Any argument value is ignored. This may happen, for example, when `Object()` is implicitly called via [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) in the constructor of a class that [extends `Object`](/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_object). In this case, even if you pass a number to `super()`, the `this` value inside the constructor does not become a {{jsxref("Number")}} instance.
 
 ## Examples
 

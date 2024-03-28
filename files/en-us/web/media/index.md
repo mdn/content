@@ -1,6 +1,7 @@
 ---
 title: Web media technologies
 slug: Web/Media
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.values
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`values()`** method of the {{domxref("URLsearchParams")}}
 interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
 through all values contained in this object. The values are string
 objects.
-
-{{availableinworkers}}
 
 ## Syntax
 
@@ -43,7 +41,7 @@ for (const value of searchParams.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```
@@ -58,7 +56,7 @@ console.log(Array.from(searchParams.values()));
 
 The result is:
 
-```
+```plain
 ['value1', 'value2']
 ```
 

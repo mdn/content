@@ -139,7 +139,7 @@ If you went through the proposal submission process, then you should already hav
 
 Each project is different, but we'd roughly recommend something like this:
 
-```
+```plain
 Landing page
 |
 ------Reference

@@ -154,12 +154,12 @@ function random(min, max) {
 }
 
 function randomColor() {
-  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
 const stylesheet = document.styleSheets[1];
 const boxParaRule = [...stylesheet.cssRules].find(
-  (r) => r.selectorText === ".box p"
+  (r) => r.selectorText === ".box p",
 );
 
 function setRandomBorder() {

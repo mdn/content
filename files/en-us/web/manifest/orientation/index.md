@@ -1,6 +1,7 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.orientation

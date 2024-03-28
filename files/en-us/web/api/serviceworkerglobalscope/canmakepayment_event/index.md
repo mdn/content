@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerGlobalScope.canmakepayment_event
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`canmakepayment`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 
@@ -43,7 +43,7 @@ self.addEventListener("canmakepayment", (e) => {
         .catch((error) => {
           reject(error);
         });
-    })
+    }),
   );
 });
 ```
@@ -61,8 +61,8 @@ self.addEventListener("canmakepayment", (e) => {
 ## See also
 
 - {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

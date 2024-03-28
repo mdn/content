@@ -44,7 +44,7 @@ result = "foo" && 4; // result is assigned 4
 
 Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be
 converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
-To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [`NOT operator`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
+To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [`NOT operator`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
 
 ### Short-circuit evaluation
 
@@ -53,7 +53,7 @@ As each operand is converted to a boolean, if the result of one conversion is fo
 
 Consider the pseudocode below.
 
-```
+```plain
 (some falsy expression) && expr
 ```
 
@@ -81,7 +81,7 @@ console.log(A() && B());
 
 The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-```js
+```js-nolint
 true || false && false; // true
 true && (false || false); // false
 (2 === 3) || (4 < 0) && (1 === 1); // false

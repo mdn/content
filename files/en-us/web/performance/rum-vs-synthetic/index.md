@@ -1,6 +1,7 @@
 ---
 title: "Performance Monitoring: RUM vs. synthetic monitoring"
 slug: Web/Performance/Rum-vs-Synthetic
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

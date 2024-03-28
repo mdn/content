@@ -1,6 +1,7 @@
 ---
 title: set:leading()
 slug: Web/EXSLT/set/leading
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

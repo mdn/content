@@ -41,7 +41,7 @@ const readableStream = new ReadableStream(
       console.log("stream error:", err);
     },
   },
-  queueingStrategy
+  queueingStrategy,
 );
 
 const size = queueingStrategy.size(chunk);

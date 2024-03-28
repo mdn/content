@@ -1,6 +1,7 @@
 ---
 title: IMSC basics
 slug: Related/IMSC/Basics
+page-type: guide
 ---
 
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
@@ -79,8 +80,8 @@ Try setting some other colors for the text and background colors:
 
 - Try other named colors like `lime` or `aqua`.
 - Use hexadecimal values like `#00ff00` or `#00ffff`.
-- You can use other color schemes like `rgb(0,255,255)`.
-- Finally, try semi-transparent variations, like `rgba(0,0,0, 80)`.
+- You can use other color schemes like `rgb(0 255 255)`.
+- Finally, try semi-transparent variations, like `rgb(0 0 0 / .8)`.
 
 > **Note:** Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 

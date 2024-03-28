@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.printPreview
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Opens print preview for the active tab.
 
@@ -35,10 +35,9 @@ In this example a background script listens for a click on a [browser action](/e
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.printPreview()
-    .then(() => {
-      console.log("Entered print preview");
-    });
+  browser.tabs.printPreview().then(() => {
+    console.log("Entered print preview");
+  });
 });
 ```
 

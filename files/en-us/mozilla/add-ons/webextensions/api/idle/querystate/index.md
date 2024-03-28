@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.idle.queryState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns `"locked"` if the system is locked, `"idle"` if the user has not generated any input for a specified number of seconds, or `"active"` otherwise.
 
@@ -38,10 +38,10 @@ In this simple snippet, we call `queryState()` and then check if the returned `n
 
 ```js
 function onGot(newState) {
-  if (newState === 'idle') {
-    console.log('Please come back — we miss you!');
-  } else if (newState === 'active') {
-    console.log('Glad to still have you with us!');
+  if (newState === "idle") {
+    console.log("Please come back — we miss you!");
+  } else if (newState === "active") {
+    console.log("Glad to still have you with us!");
   }
 }
 

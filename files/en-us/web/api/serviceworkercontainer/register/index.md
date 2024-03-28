@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.register
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`register()`** method of the
 {{domxref("ServiceWorkerContainer")}} interface creates or updates a
@@ -56,7 +56,7 @@ register(scriptURL, options)
           - : The loaded service worker is in an
             [ES module](/en-US/docs/Web/JavaScript/Guide/Modules)
             and the import statement is available on
-            worker contexts.
+            worker contexts. For ES module compatibility info, see the [browser compatibility data table for the `ServiceWorker` interface](/en-US/docs/Web/API/ServiceWorker#browser_compatibility).
 
     - `updateViaCache`
 
@@ -95,7 +95,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -120,7 +120,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -143,14 +143,14 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
 }
 ```
 
-However, Servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
+However, servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
 worker script, and then you can specify a max scope for that service worker above the
 service worker's location.
 
@@ -161,3 +161,9 @@ service worker's location.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister)
+- [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

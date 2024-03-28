@@ -1,6 +1,7 @@
 ---
 title: Full page zoom
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -21,14 +22,14 @@ ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 
 Note: This is probably out of date.
 
-You may use the fullZoom feature for a [XUL:iframe](/en-US/docs/XUL/iframe) as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:
+You may use the fullZoom feature for a `<XUL:iframe>` as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:
 
 ```js
 var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
 var docViewer = contViewer.QueryInterface(
-  Components.interfaces.nsIMarkupDocumentViewer
+  Components.interfaces.nsIMarkupDocumentViewer,
 );
 docViewer.fullZoom = zoom;
 ```

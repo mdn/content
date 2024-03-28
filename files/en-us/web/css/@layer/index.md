@@ -203,4 +203,4 @@ In the following example, two layers are created with no rules applied, then CSS
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
 - [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
-- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (September 15, 2021)
+- [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

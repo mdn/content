@@ -39,7 +39,7 @@ dc.addEventListener(
     connectButton.disabled = false;
     disconnectButton.disabled = true;
   },
-  false
+  false,
 );
 ```
 

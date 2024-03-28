@@ -1,6 +1,7 @@
 ---
 title: id
 slug: Web/Manifest/id
+page-type: web-manifest-member
 browser-compat: html.manifest.id
 ---
 

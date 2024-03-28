@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.BigInt
 
 ## Description
 
-A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} function (without the `new` operator) and giving it an integer value or string value.
+A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint` {{Glossary("Primitive", "primitive")}}, created by appending `n` to the end of an integer literal, or by calling the {{jsxref("BigInt/BigInt", "BigInt()")}} function (without the `new` operator) and giving it an integer value or string value.
 
 ```js
 const previouslyMaxSafeInteger = 9007199254740991n;
@@ -53,50 +53,39 @@ typeof Object(1n) === "object"; // true
 
 ### Operators
 
-The following operators may be used with BigInt values or object-wrapped BigInt values:
+Most operators support BigInts, however most do not permit operands to be of mixed types — both operands must be BigInt or neither:
 
-```
-+ * - % **
-```
+- [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators): `+`, `-`, `*`, `/`, `%`, `**`
+- [Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators): `>>`, `<<`, `&`, `|`, `^`, `~`
+- [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Increment/decrement](/en-US/docs/Web/JavaScript/Reference/Operators#increment_and_decrement): `++`, `--`
 
-[Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are supported as well, except `>>>` (zero-fill right shift), as every BigInt value is signed.
+The boolean-returning operators allow mixing numbers and BigInts as operands:
 
-Also unsupported is the unary operator (`+`), [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+- [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators) and [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators): `>`, `<`, `>=`, `<=`, `==`, `!=`, `===`, `!==`
+- [Logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators) only rely on the [truthiness](/en-US/docs/Glossary/Truthy) of operands
 
-```js
-const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
-// 9007199254740991n
+A couple of operators do not support BigInt at all:
 
-const maxPlusOne = previousMaxSafe + 1n;
-// 9007199254740992n
+- [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) cannot be supported due to conflicting usage in asm.js, so it has been left out [in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+- [Unsigned right shift (`>>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) is the only bitwise operator that's unsupported, as every BigInt value is signed.
 
-const theFuture = previousMaxSafe + 2n;
-// 9007199254740993n, this works now!
+Special cases:
 
-const multi = previousMaxSafe * 2n;
-// 18014398509481982n
-
-const subtr = multi - 10n;
-// 18014398509481972n
-
-const mod = multi % 10n;
-// 2n
-
-const bigN = 2n ** 54n;
-// 18014398509481984n
-
-bigN * -1n;
-// -18014398509481984n
-```
-
-The `/` operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won't return any fractional digits.
+- Addition (`+`) involving a string and a BigInt returns a string.
+- Division (`/`) truncates fractional components towards zero, since BigInt is unable to represent fractional quantities.
 
 ```js
-const expected = 4n / 2n;
-// 2n
-
-const truncated = 5n / 2n;
-// 2n, not 2.5n
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER); // 9007199254740991n
+const maxPlusOne = previousMaxSafe + 1n; // 9007199254740992n
+const theFuture = previousMaxSafe + 2n; // 9007199254740993n, this works now!
+const multi = previousMaxSafe * 2n; // 18014398509481982n
+const subtr = multi - 10n; // 18014398509481972n
+const mod = multi % 10n; // 2n
+const bigN = 2n ** 54n; // 18014398509481984n
+bigN * -1n; // -18014398509481984n
+const expected = 4n / 2n; // 2n
+const truncated = 5n / 2n; // 2n, not 2.5n
 ```
 
 ### Comparisons
@@ -187,7 +176,7 @@ Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/J
 
 ```js
 BigInt.prototype.toJSON = function () {
-  return this.toString();
+  return { $bigint: this.toString() };
 };
 ```
 
@@ -195,14 +184,14 @@ Instead of throwing, `JSON.stringify()` now produces a string like this:
 
 ```js
 console.log(JSON.stringify({ a: 1n }));
-// {"a":"1"}
+// {"a":{"$bigint":"1"}}
 ```
 
 If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
 
 ```js
 const replacer = (key, value) =>
-  typeof value === "bigint" ? value.toString() : value;
+  typeof value === "bigint" ? { $bigint: value.toString() } : value;
 
 const data = {
   number: 1,
@@ -211,26 +200,36 @@ const data = {
 const stringified = JSON.stringify(data, replacer);
 
 console.log(stringified);
-// {"number":1,"big":"18014398509481982"}
+// {"number":1,"big":{"$bigint":"18014398509481982"}}
 ```
 
-If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
+You can then use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
 
 ```js
-const reviver = (key, value) => (key === "big" ? BigInt(value) : value);
+const reviver = (key, value) =>
+  value !== null &&
+  typeof value === "object" &&
+  "$bigint" in value &&
+  typeof value.$bigint === "string"
+    ? BigInt(value.$bigint)
+    : value;
 
-const payload = '{"number":1,"big":"18014398509481982"}';
+const payload = '{"number":1,"big":{"$bigint":"18014398509481982"}}';
 const parsed = JSON.parse(payload, reviver);
 
 console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
 
-> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects as shown above, the reviver of `JSON.parse()` has to be used with caution, because the serialization is _lossy_: it's not possible to distinguish between an object that happens to have a property called `$bigint` and an actual BigInt.
+>
+> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you know the shape of the payload, it may be better to just serialize them as strings and revive them based on the property key's name instead.
+
+In fact, JSON allows number literals that are arbitrarily long; they just cannot be parsed to full precision in JavaScript. If you are communicating with another program in a language that supports longer integers (such as 64-bit integers), and you want to transmit the BigInt as a JSON number instead of a JSON string, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers).
 
 ### BigInt coercion
 
-Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/#sec-tobigint) can be summarized as follows:
+Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tobigint) can be summarized as follows:
 
 - BigInts are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.

@@ -1,6 +1,7 @@
 ---
 title: "HTML: A good basis for accessibility"
 slug: Learn/Accessibility/HTML
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -12,7 +13,7 @@ A great deal of web content can be made accessible just by making sure the corre
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML (see
+        A basic understanding of HTML (see
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an understanding of

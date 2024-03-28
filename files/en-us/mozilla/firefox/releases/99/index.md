@@ -1,6 +1,7 @@
 ---
 title: Firefox 99 for developers
 slug: Mozilla/Firefox/Releases/99
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -45,4 +46,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(98)}}
+{{Firefox_for_developers}}

@@ -1,6 +1,7 @@
 ---
 title: Client-Server Overview
 slug: Learn/Server-side/First_steps/Client-Server_overview
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -12,7 +13,7 @@ Now that you know the purpose and potential benefits of server-side programming,
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A basic understanding of what a web server is.
+        A basic understanding of what a web server is.
       </td>
     </tr>
     <tr>
@@ -187,7 +188,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Note:** The HTTP responses and requests shown in these examples were captured using the [Fiddler](https://www.telerik.com/download/fiddler) application, but you can get similar information using web sniffers (e.g. [Websniffer](https://websniffer.cc/)) or packet analyzers like [Wireshark](https://www.wireshark.org/). You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool in Firefox).
+> **Note:** The HTTP responses and requests shown in these examples were captured using the [Fiddler](https://www.telerik.com/download/fiddler) application, but you can get similar information using web sniffers (e.g. [WebSniffer](https://websniffer.com/)) or packet analyzers like [Wireshark](https://www.wireshark.org/). You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool in Firefox).
 
 ## Static sites
 
@@ -243,7 +244,7 @@ A good example of an additional task that a _Web Application_ might perform woul
 
 Server-side website code does not have to return HTML snippets/files in the response. It can instead dynamically create and return other types of files (text, PDF, CSV, etc.) or even data (JSON, XML, etc.).
 
-The idea of returning data to a web browser so that it can dynamically update its own content ({{glossary("AJAX")}}) has been around for quite a while. More recently "Single-page apps" have become popular, where the whole website is written with a single HTML file that is dynamically updated when needed. Websites created using this style of application push a lot of computational cost from the server to the web browser, and can result in websites that appear to behave a lot more like native apps (highly responsive, etc.).
+This is especially relevant for websites that work by fetching content from the server using JavaScript and updating the page dynamically, rather than always loading a new page when new content is to be shown. See [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) for more on the motivation for this approach, and what this model looks like from the client's point of view.
 
 ## Web frameworks simplify server-side web programming
 

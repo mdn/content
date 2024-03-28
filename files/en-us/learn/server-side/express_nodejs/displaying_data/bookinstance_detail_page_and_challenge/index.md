@@ -1,6 +1,7 @@
 ---
 title: BookInstance detail page and challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+page-type: learn-module-chapter
 ---
 
 ## BookInstance detail page
@@ -50,11 +51,11 @@ block content
 
   h1 ID: #{bookinstance._id}
 
-  p #[strong Title:]
+  p #[strong Title: ]
     a(href=bookinstance.book.url) #{bookinstance.book.title}
   p #[strong Imprint:] #{bookinstance.imprint}
 
-  p #[strong Status:]
+  p #[strong Status: ]
     if bookinstance.status=='Available'
       span.text-success #{bookinstance.status}
     else if bookinstance.status=='Maintenance'

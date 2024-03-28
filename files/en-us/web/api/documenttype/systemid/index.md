@@ -24,7 +24,7 @@ A string.
 const docType = document.implementation.createDocumentType(
   "svg",
   "",
-  "http://www.w3.org/2000/svg"
+  "http://www.w3.org/2000/svg",
 );
 
 console.log(docType.systemId); // Displays "http://www.w3.org/2000/svg"

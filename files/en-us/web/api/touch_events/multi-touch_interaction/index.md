@@ -90,19 +90,19 @@ function handle_pinch_zoom(ev) {
     // Check if the two target touches are the same ones that started
     // the 2-touch
     const point1 = tpCache.findLastIndex(
-      (tp) => tp.identifier === ev.targetTouches[0].identifier
+      (tp) => tp.identifier === ev.targetTouches[0].identifier,
     );
     const point2 = tpCache.findLastIndex(
-      (tp) => tp.identifier === ev.targetTouches[1].identifier
+      (tp) => tp.identifier === ev.targetTouches[1].identifier,
     );
 
     if (point1 >= 0 && point2 >= 0) {
       // Calculate the difference between the start and move coordinates
       const diff1 = Math.abs(
-        tpCache[point1].clientX - ev.targetTouches[0].clientX
+        tpCache[point1].clientX - ev.targetTouches[0].clientX,
       );
       const diff2 = Math.abs(
-        tpCache[point2].clientX - ev.targetTouches[1].clientX
+        tpCache[point2].clientX - ev.targetTouches[1].clientX,
       );
 
       // This threshold is device dependent as well as application specific

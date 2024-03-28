@@ -31,9 +31,9 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = "rgb(0, 0, 255)";
+  ctx.fillStyle = "rgb(0 0 255)";
   ctx.beginPath();
   ctx.arc(
     leftUpdate + width / 2,
@@ -41,7 +41,7 @@ function positionElem() {
     50,
     degToRad(0),
     degToRad(360),
-    false
+    false,
   );
   ctx.fill();
 

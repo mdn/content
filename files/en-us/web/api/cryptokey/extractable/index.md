@@ -53,7 +53,7 @@ window.crypto.subtle
       length: 256,
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then(setExportButton(key));
 ```

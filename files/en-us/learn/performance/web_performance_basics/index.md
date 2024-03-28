@@ -1,11 +1,12 @@
 ---
 title: Web performance resources
 slug: Learn/Performance/Web_Performance_Basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/business_case_for_performance", "Learn/Performance")}}
 
-There are many [reasons](https://web.dev/why-speed-matters/) why your website should perform as well as possible.
+There are many [reasons](https://web.dev/articles/why-speed-matters) why your website should perform as well as possible.
 Below is a quick review of best practices, tools, APIs with links to provide more information about each topic.
 
 ## Best practices

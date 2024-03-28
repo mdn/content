@@ -6,12 +6,9 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerContainer.controllerchange_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
-The **`controllerchange`** event of the
-{{domxref("ServiceWorkerContainer")}} interface fires when the document's associated
-{{domxref("ServiceWorkerRegistration")}} acquires a new
-{{domxref("ServiceWorkerRegistration.active","active")}} worker.
+The **`controllerchange`** event of the {{domxref("ServiceWorkerContainer")}} interface fires when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
 
 ## Syntax
 
@@ -30,7 +27,9 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-// TBD
+navigator.serviceWorker.addEventListener("controllerchange", () => {
+  console.log("The controller of current browsing context has changed.");
+});
 ```
 
 ## Specifications

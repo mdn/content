@@ -78,8 +78,8 @@ for us to breathe.
 - {{CSSxRef("overflow-y")}} CSS property
 - {{CSSxRef("overflow")}} CSS shorthand property
 - {{CSSxRef("overflow-clip-margin")}} CSS property
-- {{CSSxRef("scroll-behavior")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
+- {{CSSxRef("scroll-behavior")}} CSS property
 - {{cssxref("scroll-margin")}} CSS shorthand property
 - {{cssxref("scroll-padding")}} CSS shorthand property
 - {{cssxref("scroll-snap-align")}} CSS property

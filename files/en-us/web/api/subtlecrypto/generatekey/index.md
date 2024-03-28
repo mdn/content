@@ -86,7 +86,7 @@ let keyPair = await window.crypto.subtle.generateKey(
     hash: "SHA-256",
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 
@@ -102,7 +102,7 @@ let keyPair = await window.crypto.subtle.generateKey(
     namedCurve: "P-384",
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -118,7 +118,7 @@ let key = await window.crypto.subtle.generateKey(
     hash: { name: "SHA-512" },
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -134,7 +134,7 @@ let key = await window.crypto.subtle.generateKey(
     length: 256,
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: What is a progressive web app?
 slug: Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
+page-type: guide
 ---
 
 {{PWASidebar}}

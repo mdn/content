@@ -58,7 +58,7 @@ customElements.define(
 
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
 customElements.define(
@@ -76,7 +76,7 @@ customElements.define(
 
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 

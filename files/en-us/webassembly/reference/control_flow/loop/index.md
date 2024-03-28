@@ -1,6 +1,7 @@
 ---
 title: loop
 slug: WebAssembly/Reference/Control_flow/loop
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

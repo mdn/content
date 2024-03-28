@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
 
@@ -61,7 +61,7 @@ When the extension is installed, log the install reason and open <https://exampl
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "https://example.com"
+    url: "https://example.com",
   });
 }
 

@@ -117,7 +117,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"
             >listitem</a
           ></code
         >
@@ -159,5 +159,5 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 - CSS properties that may be specially useful to style the `<li>` element:
 
   - the {{cssxref("list-style")}} property, to choose the way the ordinal is displayed,
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists,
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists,
   - the {{cssxref("margin")}} property, to control the indent of the list item.

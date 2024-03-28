@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.PerformanceMeasure
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
 **`PerformanceMeasure`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`". Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _measure_) between two _marks_ to the browser's _performance timeline_.
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 
@@ -37,7 +35,7 @@ This interface has no methods.
 
 ## Example
 
-See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
+See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
 
 ## Specifications
 
@@ -49,5 +47,5 @@ See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_A
 
 ## See also
 
-- [User Timing (Overview)](/en-US/docs/Web/API/User_Timing_API)
-- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [User Timing (Overview)](/en-US/docs/Web/API/Performance_API/User_timing)
+- [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)

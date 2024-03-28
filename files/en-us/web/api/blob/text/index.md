@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Blob.text
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`text()`** method in the
+The **`text()`** method of the
 {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a
 string containing the contents of the blob, interpreted as UTF-8.
 
@@ -29,9 +29,8 @@ as a text string. The data is _always_ presumed to be in UTF-8 format.
 
 ## Usage notes
 
-The {{domxref("FileReader")}} method {{domxref("FileReader.readAsText",
-  "readAsText()")}} is an older method that performs a similar function. It works on both
-`Blob` and {{domxref("File")}} objects. There are two key differences:
+The {{domxref("FileReader")}} method {{domxref("FileReader.readAsText", "readAsText()")}} is an older method that performs a similar function.
+It works on both `Blob` and {{domxref("File")}} objects. There are two key differences:
 
 - `Blob.text()` returns a promise, whereas
   `FileReader.readAsText()` is an event based API.

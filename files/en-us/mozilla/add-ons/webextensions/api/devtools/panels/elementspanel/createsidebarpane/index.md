@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.
 
@@ -49,8 +49,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

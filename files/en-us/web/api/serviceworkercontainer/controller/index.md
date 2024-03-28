@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerContainer.controller
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`controller`** read-only
 property of the {{domxref("ServiceWorkerContainer")}} interface returns a
@@ -27,7 +27,7 @@ if ("serviceWorker" in navigator) {
   // Do a one-off check to see if a service worker's in control.
   if (navigator.serviceWorker.controller) {
     console.log(
-      `This page is currently controlled by: ${navigator.serviceWorker.controller}`
+      `This page is currently controlled by: ${navigator.serviceWorker.controller}`,
     );
   } else {
     console.log("This page is not currently controlled by a service worker.");

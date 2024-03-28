@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.resolveQuerySet
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`resolveQuerySet()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.
@@ -78,7 +78,7 @@ commandEncoder.resolveQuerySet(
   0, // First query to write
   16, // Number of queries to count
   queryBuffer,
-  0 // Buffer offset
+  0, // Buffer offset
 );
 
 // ...

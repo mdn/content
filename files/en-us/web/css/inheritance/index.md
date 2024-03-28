@@ -31,7 +31,7 @@ p {
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-{{EmbedLiveSample("","",40)}}
+{{EmbedLiveSample("Inherited properties","",40)}}
 
 The words "emphasized text" will appear green, since the `em` element has inherited the value of the [`color`](/en-US/docs/Web/CSS/color) property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
 
@@ -51,7 +51,7 @@ p {
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-{{EmbedLiveSample("","",40)}}
+{{EmbedLiveSample("Non-inherited properties","",40)}}
 
 The words "emphasized text" will not have another border (since the initial value of [`border-style`](/en-US/docs/Web/CSS/border-style) is `none`).
 
@@ -89,7 +89,7 @@ em {
 <p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
-{{EmbedLiveSample("","",40)}}
+{{EmbedLiveSample("Overriding inheritance, an example","",40)}}
 
 We can see here another border around the word "emphasized text".
 
@@ -103,10 +103,10 @@ We can see here another border around the word "emphasized text".
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.forgetClosedWindow
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes a closed window from the browser's list of recently closed windows. Note that the sites visited by that window are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 
@@ -41,12 +41,15 @@ This code forgets the single most recently-closed session, whether it's a tab or
 ```js
 function forgetMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
   if (sessionInfo.tab) {
-    browser.sessions.forgetClosedTab(sessionInfo.tab.windowId, sessionInfo.tab.sessionId);
+    browser.sessions.forgetClosedTab(
+      sessionInfo.tab.windowId,
+      sessionInfo.tab.sessionId,
+    );
   } else {
     browser.sessions.forgetClosedWindow(sessionInfo.window.sessionId);
   }
@@ -56,8 +59,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);
+browser.sessions
+  .getRecentlyClosed({ maxResults: 1 })
+  .then(forgetMostRecent, onError);
 ```
 
 {{WebExtExamples}}

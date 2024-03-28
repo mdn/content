@@ -92,7 +92,7 @@ gl.framebufferRenderbuffer(
   gl.FRAMEBUFFER,
   gl.COLOR_ATTACHMENT0,
   gl.RENDERBUFFER,
-  renderbuffer
+  renderbuffer,
 );
 ```
 

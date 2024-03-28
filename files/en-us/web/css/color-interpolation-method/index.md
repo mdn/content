@@ -23,7 +23,7 @@ When interpolating `<color>` values, the interpolation color space defaults to O
 
 The `<color-interpolation-method>` specifies whether interpolation should use a rectangular color space or a polar color space with an optional hue interpolation method:
 
-```
+```plain
 in <rectangular-color-space>
 // or
 in <polar-color-space>[ <hue-interpolation method>]

@@ -1,6 +1,7 @@
 ---
 title: set:distinct()
 slug: Web/EXSLT/set/distinct
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

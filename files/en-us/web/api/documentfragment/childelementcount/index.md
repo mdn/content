@@ -8,14 +8,14 @@ browser-compat: api.DocumentFragment.childElementCount
 
 {{ APIRef("DOM") }}
 
-The **`Document.childElementCount`** read-only property
+The **`DocumentFragment.childElementCount`** read-only property
 returns the number of child elements of a `DocumentFragment`.
 
 To get the number of children of a specific element, see {{domxref("Element.childElementCount")}}.
 
 ## Value
 
-A number representing the number of children of the element.
+A number representing the number of children of the document fragment.
 
 ## Examples
 

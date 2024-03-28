@@ -94,7 +94,7 @@ window.crypto.subtle
       length: 256,
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then((key) => {
     const exportButton = document.querySelector(".raw");
@@ -145,7 +145,7 @@ window.crypto.subtle
       hash: "SHA-256",
     },
     true,
-    ["sign", "verify"]
+    ["sign", "verify"],
   )
   .then((keyPair) => {
     const exportButton = document.querySelector(".pkcs8");
@@ -196,7 +196,7 @@ window.crypto.subtle
       hash: "SHA-256",
     },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   )
   .then((keyPair) => {
     const exportButton = document.querySelector(".spki");
@@ -231,7 +231,7 @@ window.crypto.subtle
       namedCurve: "P-384",
     },
     true,
-    ["sign", "verify"]
+    ["sign", "verify"],
   )
   .then((keyPair) => {
     const exportButton = document.querySelector(".jwk");

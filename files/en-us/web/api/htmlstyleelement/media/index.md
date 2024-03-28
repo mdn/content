@@ -18,7 +18,7 @@ A string describing a single medium or a comma-separated list.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

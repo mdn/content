@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCanvasContext.getCurrentTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getCurrentTexture()`** method of the
 {{domxref("GPUCanvasContext")}} interface returns the next {{domxref("GPUTexture")}} to be composited to the document by the canvas context.
@@ -26,6 +26,11 @@ None.
 ### Return value
 
 A {{domxref("GPUTexture")}} object instance.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `getCurrentTexture()` is called on the canvas context before it is configured (i.e. before {{domxref("GPUCanvasContext.configure()")}} has been called).
 
 ## Examples
 

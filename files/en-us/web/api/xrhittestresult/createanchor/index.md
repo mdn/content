@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRHitTestResult.createAnchor
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`createAnchor()`** method of the {{domxref("XRHitTestResult")}} interface creates an {{domxref("XRAnchor")}} from a hit test result that is attached to a real-world object.
 
@@ -39,7 +39,7 @@ hitTestResult.createAnchor().then(
   },
   (error) => {
     console.error(`Could not create anchor: ${error}`);
-  }
+  },
 );
 ```
 

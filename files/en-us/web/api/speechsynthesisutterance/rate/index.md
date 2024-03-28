@@ -15,7 +15,7 @@ If unset, a default value of 1 will be used.
 ## Value
 
 A float representing the rate value.
-It can range between 0.1 (lowest) and 10 (highest), with 1 being the default pitch for the current platform or voice, which should correspond to a normal speaking rate.
+It can range between 0.1 (lowest) and 10 (highest), with 1 being the default rate for the current platform or voice, which should correspond to a normal speaking rate.
 Other values act as a percentage relative to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.
 
 Some speech synthesis engines or voices may constrain the minimum and maximum rates further.

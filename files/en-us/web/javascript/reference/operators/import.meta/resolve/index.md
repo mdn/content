@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.operators.import_meta.resolve
 ---
 
-{{JSSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 **`import.meta.resolve()`** is a built-in function defined on the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object of a JavaScript module that resolves a module specifier to a URL using the current module's URL as base.
 
@@ -90,12 +90,12 @@ Some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dep
 
 ### Not an ECMAScript feature
 
-`import.meta.resolve()` is not specified or documented as part of the [ECMAScript specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) for JavaScript modules. Instead, the specification defines [the `import.meta` object](https://tc39.es/ecma262/#prod-ImportMeta) but [leaves all its properties as "host-defined"](https://tc39.es/ecma262/#sec-hostgetimportmetaproperties). The WHATWG HTML standard picks up where the ECMAScript standard leaves off, and [defines `import.meta.resolve`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) using its [module specifier resolution](https://html.spec.whatwg.org/#resolve-a-module-specifier).
+`import.meta.resolve()` is not specified or documented as part of the [ECMAScript specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) for JavaScript modules. Instead, the specification defines [the `import.meta` object](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta) but [leaves all its properties as "host-defined"](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties). The WHATWG HTML standard picks up where the ECMAScript standard leaves off, and [defines `import.meta.resolve`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) using its [module specifier resolution](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier).
 
 This means that `import.meta.resolve()` is not required to be implemented by all conformant JavaScript implementations. However, `import.meta.resolve()` may also be available in non-browser environments:
 
 - Deno implements [compatibility with browser behavior](https://deno.land/manual/runtime/import_meta_api).
-- Node.js has an implementation that is available using the `--experimental-import-meta-resolve` and currently returns a `Promise` instead of a string, although this may change to match browsers.
+- Node.js also implements [the `import.meta.resolve()` function](https://nodejs.org/docs/latest/api/esm.html#importmetaresolvespecifier), but adds an additional `parent` parameter if you use the `--experimental-import-meta-resolve` flag.
 
 ## Examples
 
@@ -127,6 +127,6 @@ This is also useful to calculate paths for other workers, such as [service worke
 
 ## See also
 
-- [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [Dynamic `import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
+- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)

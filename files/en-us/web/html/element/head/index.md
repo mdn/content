@@ -15,13 +15,13 @@ The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `profile` {{deprecated_inline}} {{Non-standard_Inline}}
+- `profile` {{deprecated_inline}}
   - : The {{glossary("URI")}}s of one or more metadata profiles, separated by {{Glossary("whitespace", "white space")}}.
 
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

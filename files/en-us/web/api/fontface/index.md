@@ -75,7 +75,7 @@ font.load().then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 

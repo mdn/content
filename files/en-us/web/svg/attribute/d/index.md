@@ -14,7 +14,7 @@ The commands are [detailed below](#path_commands).
 
 You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
+`d` is a presentation attribute, and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
 ## Example
 
@@ -50,7 +50,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 
 ## Using d as a CSS property
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
+`d` is a presentation attribute, and hence can be also be modified using CSS.
 The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
@@ -678,7 +678,7 @@ svg {
     <circle cx="50" cy="10" r="1.5" />
     <circle cx="90" cy="90" r="1.5" />
   </g>
-  <use xlink:href="#ControlPoints" x="100" />
+  <use href="#ControlPoints" x="100" />
 </svg>
 ```
 
@@ -870,7 +870,10 @@ svg {
 
   <!-- Highlight the curve vertex and control points -->
   <g>
-    <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
+    <polyline
+      points="10,50 25,25 40,50"
+      stroke="rgb(0 0 0 / 20%)"
+      fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
     <!-- Curve vertex points -->
@@ -880,7 +883,7 @@ svg {
     <g id="SmoothQuadraticDown">
       <polyline
         points="40,50 55,75 70,50"
-        stroke="rgba(0,0,0,.2)"
+        stroke="rgb(0 0 0 / 20%)"
         stroke-dasharray="2"
         fill="none" />
       <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
@@ -890,16 +893,16 @@ svg {
     <g id="SmoothQuadraticUp">
       <polyline
         points="70,50 85,25 100,50"
-        stroke="rgba(0,0,0,.2)"
+        stroke="rgb(0 0 0 / 20%)"
         stroke-dasharray="2"
         fill="none" />
       <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
       <circle cx="100" cy="50" r="1.5" />
     </g>
 
-    <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp" x="60" />
-    <use xlink:href="#SmoothQuadraticDown" x="120" />
+    <use href="#SmoothQuadraticDown" x="60" />
+    <use href="#SmoothQuadraticUp" x="60" />
+    <use href="#SmoothQuadraticDown" x="120" />
   </g>
 </svg>
 ```

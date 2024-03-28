@@ -61,7 +61,7 @@ window.addEventListener(
     document.getElementById("output").appendChild(p);
     window.scrollTo(0, document.body.scrollHeight);
   },
-  true
+  true,
 );
 ```
 
@@ -207,7 +207,7 @@ window.addEventListener(
       event.preventDefault();
     }
   },
-  true
+  true,
 );
 ```
 

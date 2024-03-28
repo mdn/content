@@ -1,9 +1,10 @@
 ---
 title: <xsl:strip-space>
 slug: Web/XSLT/Element/strip-space
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:strip-space>` element defines the elements in the source document for which whitespace should be removed.
 

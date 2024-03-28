@@ -42,15 +42,6 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLMarqueeElement.width")}} {{Deprecated_Inline}}
   - : Sets the width in pixels or percentage value.
 
-### Event handlers
-
-- {{DOMxRef("HTMLMarqueeElement.onbounce")}} {{Deprecated_Inline}}
-  - : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
-- {{DOMxRef("HTMLMarqueeElement.onfinish")}} {{Deprecated_Inline}}
-  - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
-- {{DOMxRef("HTMLMarqueeElement.onstart")}} {{Deprecated_Inline}}
-  - : Fires when the marquee starts scrolling.
-
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
@@ -59,6 +50,15 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
   - : Starts scrolling of the marquee.
 - {{DOMxRef("HTMLMarqueeElement.stop()")}} {{Deprecated_Inline}}
   - : Stops scrolling of the marquee.
+
+## Events
+
+- {{DOMxRef("HTMLMarqueeElement/bounce_event", "bounce")}} {{Deprecated_Inline}}
+  - : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
+- {{DOMxRef("HTMLMarqueeElement/finish_event", "finish")}} {{Deprecated_Inline}}
+  - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
+- {{DOMxRef("HTMLMarqueeElement/start_event", "start")}} {{Deprecated_Inline}}
+  - : Fires when the marquee starts scrolling.
 
 ## Examples
 
@@ -73,7 +73,7 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 

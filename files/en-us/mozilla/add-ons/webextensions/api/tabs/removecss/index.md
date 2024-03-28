@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.removeCSS
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes from a page CSS which was previously injected by a call to {{WebExtAPIRef("tabs.insertCSS()")}}.
 
@@ -58,11 +58,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let insertingCSS = browser.tabs.insertCSS(2, {code: css});
+let insertingCSS = browser.tabs.insertCSS(2, { code: css });
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  let removing = browser.tabs.removeCSS(2, {code: css});
+  let removing = browser.tabs.removeCSS(2, { code: css });
   removing.then(null, onError);
 });
 ```

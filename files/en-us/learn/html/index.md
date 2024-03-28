@@ -1,20 +1,12 @@
 ---
 title: Structuring the web with HTML
 slug: Learn/HTML
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}
 
 To build websites, you should know about {{Glossary('HTML')}} — the fundamental technology used to define the structure of a webpage. HTML is used to specify whether your web content should be recognized as a paragraph, list, heading, link, image, multimedia player, form, or one of many other available elements or even a new element that you define.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 

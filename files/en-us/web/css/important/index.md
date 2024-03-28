@@ -30,7 +30,7 @@ When a declaration is important, the order of precedence is reversed. Declaratio
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as important. It also guarantees malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security.
 
-Does anything have precedence over important declarations? Yes, [transitions](/en-US/docs/Web/CSS/CSS_Transitions). CSS transitions are a way to control the speed at which the property changes from one value to another. While transitioning from one value to another, a property will not match a specific important declaration.
+Does anything have precedence over important declarations? Yes, [transitions](/en-US/docs/Web/CSS/CSS_transitions). CSS transitions are a way to control the speed at which the property changes from one value to another. While transitioning from one value to another, a property will not match a specific important declaration.
 
 ```css
 a {
@@ -142,7 +142,7 @@ Even when working to override high-specificity styles not under your control, su
 
 If you need to override an external stylesheet containing important declarations, create a cascade layer containing the needed overrides, and declare that layer first.
 
-### Accessibility
+### Accessibility concerns
 
 Important styles from a user stylesheet take precedence over the author style sheet's important declarations, meaning adding an `!important` flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles by adding important styles in their own user's style sheet.
 

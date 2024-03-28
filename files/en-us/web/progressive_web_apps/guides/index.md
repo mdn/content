@@ -1,6 +1,7 @@
 ---
 title: Guides
 slug: Web/Progressive_web_apps/Guides
+page-type: landing-page
 ---
 
 {{PWASidebar}}

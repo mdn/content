@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.pageAction.onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
@@ -60,11 +60,10 @@ let CATGIFS = "https://giphy.com/explore/cat";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
+  browser.tabs.update({ url: CATGIFS });
 });
 
-browser.pageAction.onClicked.addListener(() => {
-});
+browser.pageAction.onClicked.addListener(() => {});
 ```
 
 {{WebExtExamples}}

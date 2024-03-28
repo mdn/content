@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript.unregister
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Unregisters the content scripts represented by this `RegisteredContentScript` object.
 
@@ -35,15 +35,15 @@ This code toggles a registered content script on a browser action click:
 let registered = null;
 
 async function register() {
-
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
-    js: [{
-      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
-    }],
-    runAt: "document_idle"
+    js: [
+      {
+        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+      },
+    ],
+    runAt: "document_idle",
   });
-
 }
 
 function toggle() {

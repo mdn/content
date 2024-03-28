@@ -1,5 +1,5 @@
 ---
-title: label
+title: Labeled statement
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
 browser-compat: javascript.statements.label
@@ -19,7 +19,7 @@ label:
 ```
 
 - `label`
-  - : Any JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that is not a reserved word.
+  - : Any JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).
 - `statement`
   - : A JavaScript statement. `break` can be used within any labeled statement, and `continue` can be used within labeled looping statements.
 
@@ -94,7 +94,7 @@ Given an array of items and an array of tests, this example counts the number of
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -117,7 +117,7 @@ Note how the `continue itemIteration;` statement skips the rest of the tests for
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -145,7 +145,7 @@ Given an array of items and an array of tests, this example determines whether a
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -167,7 +167,7 @@ Again, if you don't use a label, you would need to use a boolean flag instead.
 
 ```js
 // Numbers from 1 to 100
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -217,7 +217,7 @@ L: function F() {}
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, however, this will throw a {{jsxref("SyntaxError")}}:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -225,7 +225,7 @@ L: function F() {}
 
 Non-plain functions, such as [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) and [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) can neither be labeled in strict code, nor in non-strict code:
 
-```js example-bad
+```js-nolint example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

@@ -1,6 +1,7 @@
 ---
 title: regexp:match()
 slug: Web/EXSLT/regexp/match
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -44,7 +45,7 @@ For example:
 
 This code generates the following output:
 
-```
+```plain
 Part 1 = https://developer.mozilla.org/en/docs/Firefox_3_for_developers
 Part 2 = https
 Part 3 = developer.mozilla.org

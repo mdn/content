@@ -143,7 +143,7 @@ function myDrawFrame(currentFrameTime, frame) {
     mat4.sub(
       offsetMatrix,
       previousViewerPose.transform.matrix,
-      viewerPose.transform.matrix
+      viewerPose.transform.matrix,
     );
 
     previousViewerPose = viewerPose;

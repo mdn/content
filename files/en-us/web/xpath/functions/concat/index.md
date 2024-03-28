@@ -1,15 +1,16 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `concat` function concatenates two or more strings and returns the resulting string.
 
 ### Syntax
 
-```
+```plain
 concat( string1, string2 [,stringn]* )
 ```
 

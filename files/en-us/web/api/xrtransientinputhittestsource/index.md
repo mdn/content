@@ -47,7 +47,7 @@ xrSession
 // frame loop
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
-    transientHitTestSource
+    transientHitTestSource,
   );
 
   // do things with the transient hit test results

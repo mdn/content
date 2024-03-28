@@ -1,6 +1,7 @@
 ---
 title: Introduction to game development for the Web
 slug: Games/Introduction
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -94,6 +95,8 @@ As a game developer, whether you're an individual or a large game studio, you wa
 
 For the tech folks, let's dig into the APIs the Web brings to the table that cater to game developers. Here's a thorough list to give you a taste of what the Web can do for you:
 
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+  - : Send and receive any kind of data you want from a Web server like downloading new game levels and artwork to transmitting non-real-time game status information back and forth.
 - [Full Screen API](/en-US/docs/Web/API/Fullscreen_API)
   - : This simple API lets your game take over the entire screen, thereby immersing the player in action.
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
@@ -110,7 +113,7 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
   - : The Pointer Lock API lets you lock the mouse or other pointing device within your game's interface so that instead of absolute cursor positioning you receive coordinate deltas that give you more precise measurements of what the user is doing, and prevent the user from accidentally sending their input somewhere else, thereby missing important action.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
   - : Lets you build vector graphics that scale smoothly regardless of the size or resolution of the user's display.
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript typed arrays give you access to raw binary data from within JavaScript; this lets you manipulate GL textures, game data, or anything else, even if it's not in a native JavaScript format.
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
   - : This API for controlling the playback, synthesis, and manipulation of audio from JavaScript code lets you create awesome sound effects as well as play and manipulate music in real time.
@@ -122,5 +125,3 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
   - : The WebSocket API lets you connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Workers give you the ability to spawn background threads running their own JavaScript code, to take advantage of modern, multicore processors.
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [File API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-  - : The combination of XMLHttpRequest and the File API lets you send and receive any kind of data you want (don't let the "XML" throw you!) from a Web server. This is a great way to do anything from downloading new game levels and artwork to transmitting non-real-time game status information back and forth.

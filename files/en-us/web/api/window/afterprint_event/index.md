@@ -10,7 +10,7 @@ browser-compat: api.Window.afterprint_event
 
 The **`afterprint`** event is fired after the associated document has started printing or the print preview has been closed.
 
-The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` events allow pages to change their content before printing starts (perhaps to remove a banner, for example) and then revert those changes after printing has completed. In general, you should prefer the use of a [`@media print`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#targeting_media_types) CSS at-rule, but it may be necessary to use these events in some cases.
+The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` events allow pages to change their content before printing starts (perhaps to remove a banner, for example) and then revert those changes after printing has completed. In general, you should prefer the use of a [`@media print`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_types) CSS at-rule, but it may be necessary to use these events in some cases.
 
 ## Syntax
 

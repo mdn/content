@@ -1,6 +1,7 @@
 ---
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -112,4 +113,4 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 
 ## See also
 
-{{Firefox_for_developers('12')}}
+{{Firefox_for_developers}}

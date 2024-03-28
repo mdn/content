@@ -16,7 +16,7 @@ A string beginning with two dashes.
 
 ## Examples
 
-## Read the at-rule's name
+### Read the at-rule's name
 
 This example first defines an {{cssxref("@import")}} and an {{cssxref("@font-palette-values")}} at-rule. Then it reads the {{cssxref("@font-palette-values")}} rule and displays its name. As these rules live in the last stylesheet added to the document, the palette will be the second {{domxref("CSSRule")}} returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`). So, `rules[1]` returns a {{domxref("CSSFontPaletteValuesRule")}} object, from which we can access `name`.
 
@@ -33,7 +33,9 @@ This example first defines an {{cssxref("@import")}} and an {{cssxref("@font-pal
 
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
-  override-colors: 0 #00ffbb, 1 #007744;
+  override-colors:
+    0 #00ffbb,
+    1 #007744;
 }
 
 .alternate {

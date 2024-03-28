@@ -3,12 +3,10 @@ title: "HTMLInputElement: popoverTargetElement property"
 short-title: popoverTargetElement
 slug: Web/API/HTMLInputElement/popoverTargetElement
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLInputElement.popoverTargetElement
 ---
 
-{{ APIRef("DOM") }}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLInputElement")}} interface gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`.
 
@@ -103,4 +101,5 @@ The "auto" popover can also be light dismissed by selecting outside the bounds o
 
 ## See also
 
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

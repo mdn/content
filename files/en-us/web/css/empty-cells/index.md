@@ -45,7 +45,7 @@ The `empty-cells` property is specified as one of the keyword values listed belo
 
 {{csssyntax}}
 
-## Example
+## Examples
 
 ### Showing and hiding empty table cells
 

@@ -1,6 +1,7 @@
 ---
 title: Building up a basic demo with the PlayCanvas engine
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -27,7 +28,7 @@ To start developing with PlayCanvas, you don't need much. You should start off b
 Here's the HTML structure we will use.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -136,7 +137,8 @@ The code above assign a dark grey ambient light for the whole scene. The box loo
 
 ## Material
 
-The basic PlayCanvas material is called [PhongMaterial](https://developer.playcanvas.com/en/user-manual/assets/materials/phong-material/) — add the following lines below the previous code.
+This example uses an older [material](https://developer.playcanvas.com/user-manual/assets/types/material/) called "Phong Material" (supported as of PlayCanvas Engine v1.65.0).
+To use `PhongMaterial`, add the following lines below the previous code:
 
 ```js
 const boxMaterial = new pc.PhongMaterial();

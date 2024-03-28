@@ -1,6 +1,7 @@
 ---
 title: Using images in HTML
 slug: Web/Media/images
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

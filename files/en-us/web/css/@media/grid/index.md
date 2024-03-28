@@ -13,7 +13,7 @@ Most modern computers and smartphones have bitmap-based screens. Examples of gri
 
 ## Syntax
 
-The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`0` or `1`) representing whether or not the output device is grid-based.
+The `grid` feature is specified as a {{cssxref("CSS_media_queries/Using_media_queries", "&lt;mq-boolean&gt;")}} value (`0` or `1`) representing whether or not the output device is grid-based.
 
 ## Examples
 
@@ -69,5 +69,5 @@ The `grid` feature is specified as a {{cssxref("&lt;mq-boolean&gt;")}} value (`0
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

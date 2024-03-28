@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeWindowValue
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
 
@@ -53,13 +53,13 @@ async function removeFromActiveWindow() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

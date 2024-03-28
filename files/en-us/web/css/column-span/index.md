@@ -11,6 +11,10 @@ The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for 
 
 {{EmbedInteractiveExample("pages/css/column-span.html")}}
 
+An element that spans more than one column is called a **spanning element**.
+
+## Syntax
+
 ```css
 /* Keyword values */
 column-span: none;
@@ -23,10 +27,6 @@ column-span: revert;
 column-span: revert-layer;
 column-span: unset;
 ```
-
-An element that spans more than one column is called a **spanning element**.
-
-## Syntax
 
 The `column-span` property is specified as one of the keyword values listed below.
 

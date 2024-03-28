@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onMoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a tab is moved within a window.
 
@@ -58,7 +58,9 @@ Listen for and log move events:
 
 ```js
 function handleMoved(tabId, moveInfo) {
-  console.log(`Tab ${tabId} moved from ${moveInfo.fromIndex} to ${moveInfo.toIndex}`);
+  console.log(
+    `Tab ${tabId} moved from ${moveInfo.fromIndex} to ${moveInfo.toIndex}`,
+  );
 }
 
 browser.tabs.onMoved.addListener(handleMoved);

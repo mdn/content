@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.connect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) that belong to this extension and are running in the specified tab. This function returns a {{WebExtAPIRef("runtime.Port")}} object.
 
@@ -46,11 +46,10 @@ In this example a background script listens for a click on a [browser action](/e
 ```js
 function connectToTab(tabs) {
   if (tabs.length > 0) {
-    let examplePort = browser.tabs.connect(
-      tabs[0].id,
-      {name: "tabs-connect-example"}
-    );
-    examplePort.postMessage({greeting: "Hi from background script"});
+    let examplePort = browser.tabs.connect(tabs[0].id, {
+      name: "tabs-connect-example",
+    });
+    examplePort.postMessage({ greeting: "Hi from background script" });
   }
 }
 
@@ -60,7 +59,8 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
-    currentWindow: true, active: true
+    currentWindow: true,
+    active: true,
   });
   gettingActive.then(connectToTab, onError);
 });

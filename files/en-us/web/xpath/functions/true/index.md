@@ -1,15 +1,16 @@
 ---
 title: "true"
 slug: Web/XPath/Functions/true
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `true` function returns a boolean value of true.
 
 ### Syntax
 
-```
+```plain
 true()
 ```
 

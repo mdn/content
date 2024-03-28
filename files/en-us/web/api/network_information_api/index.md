@@ -7,21 +7,27 @@ status:
 browser-compat:
   - api.NetworkInformation
   - api.Navigator.connection
+spec-urls: https://wicg.github.io/netinfo/
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
+The **Network Information API** provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
 This can be used to select high definition content or low definition content based on the user's connection.
 
-The interface consists of a single {{domxref("NetworkInformation")}} object, an instance of which is returned by the {{domxref("Navigator.connection")}} property.
-
-{{AvailableInWorkers}}
+The interface consists of a single {{domxref("NetworkInformation")}} object, an instance of which is returned by the {{domxref("Navigator.connection")}} property or the {{domxref("WorkerNavigator.connection")}} property.
 
 ## Interfaces
 
-- {{domxref("NetworkInformation")}}
-  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interface cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.
+- {{domxref("NetworkInformation")}} {{Experimental_Inline}}
+  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interface cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface or the {{domxref("WorkerNavigator")}} interface.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+- {{domxref("WorkerNavigator.connection")}} {{ReadOnlyInline}}
+  - : Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 
 ## Examples
 
@@ -34,7 +40,7 @@ let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
   console.log(
-    `Connection type changed from ${type} to ${navigator.connection.effectiveType}`
+    `Connection type changed from ${type} to ${navigator.connection.effectiveType}`,
   );
   type = navigator.connection.effectiveType;
 }

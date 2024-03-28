@@ -125,7 +125,7 @@ async function digestMessage(message) {
 }
 
 digestMessage(text).then((digestBuffer) =>
-  console.log(digestBuffer.byteLength)
+  console.log(digestBuffer.byteLength),
 );
 ```
 

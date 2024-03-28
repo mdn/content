@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.indexOf
 
 {{JSRef}}
 
-The **`indexOf()`** method returns the first index at which a
+The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which a
 given element can be found in the array, or -1 if it is not present.
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
@@ -25,13 +25,13 @@ indexOf(searchElement, fromIndex)
   - : Element to locate in the array.
 - `fromIndex` {{optional_inline}}
   - : Zero-based index at which to start searching, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `fromIndex < 0`, `fromIndex + array.length` is used. Note, the array is still searched from front to back in this case.
+    - Negative index counts back from the end of the array — if `-array.length <= fromIndex < 0`, `fromIndex + array.length` is used. Note, the array is still searched from front to back in this case.
     - If `fromIndex < -array.length` or `fromIndex` is omitted, `0` is used, causing the entire array to be searched.
     - If `fromIndex >= array.length`, the array is not searched and `-1` is returned.
 
 ### Return value
 
-The first index of the element in the array; **-1** if not found.
+The first index of `searchElement` in the array; `-1` if not found.
 
 ## Description
 
@@ -108,7 +108,7 @@ console.log([1, , 3].indexOf(undefined)); // -1
 
 ### Calling indexOf() on non-array objects
 
-The `indexOf()` method reads the `length` property of `this` and then accesses each integer index.
+The `indexOf()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -116,6 +116,7 @@ const arrayLike = {
   0: 2,
   1: 3,
   2: 4,
+  3: 5, // ignored by indexOf() since length is 3
 };
 console.log(Array.prototype.indexOf.call(arrayLike, 2));
 // 0
@@ -134,7 +135,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

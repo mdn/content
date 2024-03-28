@@ -37,10 +37,10 @@ A link is included in content box above to demonstrate the effects of keyboard f
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
 - {{CSSxRef("block-ellipsis")}}
-- {{CSSxRef("continue")}} {{experimental_inline}}
-- {{CSSxRef("line-clamp")}} {{experimental_inline}}
-- {{CSSxRef("max-lines")}} {{experimental_inline}}
-- {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
+- {{CSSxRef("continue")}}
+- {{CSSxRef("line-clamp")}}
+- {{CSSxRef("max-lines")}}
+- {{CSSxRef("-webkit-line-clamp")}}
 
 ### Data types
 
@@ -50,15 +50,15 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
   - : CSS building block: learn what overflow is and how to manage it.
-- {{Experimental_Inline}} [Creating a named scroll timeline](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_timeline)
+- [Creating a named scroll timeline](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_timeline)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
 ## Related concepts
 
 - {{CSSxRef("scrollbar-width")}} CSS property
 - {{CSSxRef("scrollbar-color")}} CSS property
-- {{CSSxRef("scroll-behavior")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property
+- {{CSSxRef("scroll-behavior")}} CSS property
 - {{cssxref("scroll-margin")}} CSS shorthand property
 - {{cssxref("scroll-padding")}} CSS shorthand property
 - {{cssxref("scroll-snap-align")}} CSS property
@@ -87,5 +87,5 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - How to [debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

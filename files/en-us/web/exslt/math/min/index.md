@@ -1,6 +1,7 @@
 ---
 title: math:min()
 slug: Web/EXSLT/math/min
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -11,7 +12,7 @@ To compute the minimum value of the node-set, the node set is sorted into ascend
 
 ## Syntax
 
-```
+```plain
 math:min(nodeSet)
 ```
 

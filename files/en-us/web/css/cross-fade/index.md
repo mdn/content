@@ -44,10 +44,10 @@ A 25% value renders the first image at 25% and the second at 75%. The 75% value 
 The above could also have been written as:
 
 ```css
-cross-fade(url(white.png) 0%,   url(black.png)); /* fully black */
-cross-fade(url(white.png) 25%,  url(black.png)); /* 25% white, 75% black */
-cross-fade(url(white.png),      url(black.png)); /* 50% white, 50% black */
-cross-fade(url(white.png) 75%,  url(black.png)); /* 75% white, 25% black */
+cross-fade(url(white.png) 0%, url(black.png)); /* fully black */
+cross-fade(url(white.png) 25%, url(black.png)); /* 25% white, 75% black */
+cross-fade(url(white.png), url(black.png)); /* 50% white, 50% black */
+cross-fade(url(white.png) 75%, url(black.png)); /* 75% white, 25% black */
 cross-fade(url(white.png) 100%, url(black.png)); /* fully white */
 cross-fade(url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */
 ```
@@ -142,5 +142,5 @@ When using background images, make sure the contrast in color is great enough th
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}

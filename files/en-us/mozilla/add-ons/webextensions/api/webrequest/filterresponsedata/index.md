@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.filterResponseData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. It's the extension's responsibility to write and close or disconnect the stream, as the default behavior is to keep the request open without a response.
 
@@ -56,7 +56,7 @@ filter.onstop = (event) => {
 };
 ```
 
-This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
+This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/main/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
 
 ```js
 function listener(details) {
@@ -65,21 +65,21 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   filter.ondata = (event) => {
-    let str = decoder.decode(event.data, {stream: true});
+    let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension Example');
+    str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
-  }
+  };
 
   return {};
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

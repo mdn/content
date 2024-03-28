@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUPipelineError.reason
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`reason`** read-only property of the
 {{domxref("GPUPipelineError")}} interface defines the reason the pipeline creation failed in a machine-readable way.

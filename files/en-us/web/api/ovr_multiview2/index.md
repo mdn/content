@@ -13,7 +13,6 @@ The `OVR_multiview2` extension is part of the [WebGL API](/en-US/docs/Web/API/We
 For more information, see also:
 
 - [Multiview on WebXR](https://blog.mozvr.com/multiview-on-webxr/)
-- [three.js multiview demo](https://threejs.org/examples/webgl_multiple_views.html)
 - [Multiview in babylon.js](https://doc.babylonjs.com/divingDeeper/cameras/multiViewsPart1)
 - [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/arm-community-blogs/b/graphics-gaming-and-vr-blog/posts/optimizing-virtual-reality-understanding-multiview)
 - [Multiview WebGL Rendering for Oculus Browser 6.0+](https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/)
@@ -65,7 +64,7 @@ ext.framebufferTextureMultiviewOVR(
   colorTex,
   0,
   0,
-  2
+  2,
 );
 
 const depthStencilTex = gl.createTexture();
@@ -78,7 +77,7 @@ ext.framebufferTextureMultiviewOVR(
   depthStencilTex,
   0,
   0,
-  2
+  2,
 );
 gl.drawElements(/* … */); // draw will be broadcasted to the layers of colorTex and depthStencilTex.
 ```
@@ -112,4 +111,3 @@ Also, see this [three.js](https://threejs.org/examples/?q=mult#webgl_multiple_vi
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.getParameter()")}}
 - [WebXR](/en-US/docs/Web/API/WebXR_Device_API)
-- [three.js multiview demo](https://threejs.org/examples/webgl_multiple_views.html)

@@ -1,6 +1,7 @@
 ---
 title: Advanced form styling
 slug: Learn/Forms/Advanced_form_styling
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
@@ -12,7 +13,7 @@ In this article, we will see what can be done with CSS to style the types of for
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
       </td>
@@ -155,7 +156,7 @@ Different browsers handle the checkbox and span differently, often ugly ways:
 
 #### Using appearance: none on radios/checkboxes
 
-As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}`:none;` Let's take this example HTML:
+As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}`:none;`. Let's take this example HTML:
 
 ```html
 <form>

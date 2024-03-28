@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onStartup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing (incognito) profile is started, even if this extension is operating in 'split' incognito mode.
 
@@ -45,7 +45,7 @@ Open <https://giphy.com/explore/cat> when the browser starts up:
 ```js
 function handleStartup() {
   browser.tabs.create({
-    url: "https://giphy.com/explore/cat"
+    url: "https://giphy.com/explore/cat",
   });
 }
 

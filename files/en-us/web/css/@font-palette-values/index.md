@@ -31,10 +31,6 @@ The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined i
 - [override-colors](/en-US/docs/Web/CSS/@font-palette-values/override-colors)
   - : Specifies the colors in the base palette to override.
 
-## Formal definition
-
-{{cssinfo}}
-
 ## Formal syntax
 
 {{csssyntax}}
@@ -62,7 +58,9 @@ p {
 }
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
-  override-colors: 0 #00ffbb, 1 #007744;
+  override-colors:
+    0 #00ffbb,
+    1 #007744;
 }
 .alternate {
   font-palette: --Alternate;

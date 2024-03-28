@@ -37,7 +37,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("canplaythrough", (event) => {
   console.log(
-    "I think I can play through the entire video without having to stop to buffer."
+    "I think I can play through the entire video without having to stop to buffer.",
   );
 });
 ```
@@ -49,7 +49,7 @@ const video = document.querySelector("video");
 
 video.oncanplaythrough = (event) => {
   console.log(
-    "I think I can play through the entire video without having to stop to buffer."
+    "I think I can play through the entire video without having to stop to buffer.",
   );
 };
 ```

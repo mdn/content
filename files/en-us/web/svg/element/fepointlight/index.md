@@ -15,12 +15,6 @@ The **`<fePointLight>`** filter primitive defines a light source which allows to
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 - {{SVGAttr("z")}}
@@ -60,7 +54,7 @@ This element implements the {{domxref("SVGFEPointLightElement")}} interface.
   </defs>
 
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"

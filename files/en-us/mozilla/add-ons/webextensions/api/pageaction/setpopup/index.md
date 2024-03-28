@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.
 
@@ -48,12 +48,12 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
     if (changeInfo.status === "loading") {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/loading.html"
+        popup: "/popup/loading.html",
       });
     } else {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/complete.html"
+        popup: "/popup/complete.html",
       });
     }
   }

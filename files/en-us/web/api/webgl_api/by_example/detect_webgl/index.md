@@ -61,7 +61,7 @@ window.addEventListener(
           : "Failed. Your browser or device may not support WebGL.";
     }
   },
-  false
+  false,
 );
 ```
 

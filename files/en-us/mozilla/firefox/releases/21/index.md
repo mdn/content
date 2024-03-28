@@ -1,6 +1,7 @@
 ---
 title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -16,7 +17,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### JavaScript
 
-- [E4X](/en-US/docs/E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
+- EcmaScript for XML (E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
 - [parseInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) no longer treats strings with leading "0" as octal ([Firefox bug 786135](https://bugzil.la/786135)).
 
 ### CSS
@@ -24,7 +25,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - The `none` value of {{cssxref("user-select", "-moz-user-select")}} has now the same behavior than the `-moz-none` value, aligning Gecko on WebKit (Chrome, Safari), Presto (Opera) and Trident (Internet Explorer) ([Firefox bug 816298](https://bugzil.la/816298)).
 - On XHTML content, the `auto` value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ([Firefox bug 702121](https://bugzil.la/702121)).
 - An `auto` value has been added to the CSS {{cssxref("-moz-orient")}} property. The `auto` value is equivalent to `horizontal` when applied to {{HTMLElement("meter")}} and {{HTMLElement("progress")}} ([Firefox bug 835883](https://bugzil.la/835883)).
-- The media query [`-moz-windows-glass`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-glass) has been added on Windows 7 and earlier Windows system ([Firefox bug 816803](https://bugzil.la/816803)).
+- The media query [`-moz-windows-glass`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-glass) has been added on Windows 7 and earlier Windows system ([Firefox bug 816803](https://bugzil.la/816803)).
 
 ### DOM
 
@@ -36,7 +37,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ([Firefox bug 833719](https://bugzil.la/833719)).
 - Various keyCode values for OEM specific keys on Windows are now supported again ([Firefox bug 833719](https://bugzil.la/833719)).
 - The function [`window.crypto.getRandomValues`](/en-US/docs/Web/API/Crypto/getRandomValues) has been implemented ([Firefox bug 440046](https://bugzil.la/440046)).
-- The methods {{domxref("NodeIterator.expandEntityReferences()")}} and {{domxref("TreeWalker.expandEntityReferences()")}}, no more in the latest DOM spec, has been removed ([Firefox bug 672190](https://bugzil.la/672190)).
+- The non-standard methods `NodeIterator.expandEntityReferences()` and `TreeWalker.expandEntityReferences()` have been removed ([Firefox bug 672190](https://bugzil.la/672190)).
 - CSSOM: the method {{domxref("CSSKeyframesRule")}}`.insertRule` has been removed to {{domxref("CSSKeyframesRule")}}`.appendRule` to match a spec change ([Firefox bug 841896](https://bugzil.la/841896)).
 - CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is now thrown ([Firefox bug 765599](https://bugzil.la/765599)).
 - Until now, when the same headers were repeatedly set with [`XMLHttpRequest.setRequestHeader`](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader), the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ([Firefox bug 819051](https://bugzil.la/819051)).
@@ -55,7 +56,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Worker
 
-- The functions {{domxref("URL/createObjectURL", "URL.createObjectURL")}} and {{domxref("URL/revokeObjectURL", "URL.revokeObjectURL")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+- The functions {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Changes for add-on and Mozilla developers
 
@@ -113,4 +114,4 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Older versions
 
-{{Firefox_for_developers('20')}}
+{{Firefox_for_developers}}

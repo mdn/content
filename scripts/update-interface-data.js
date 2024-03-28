@@ -15,8 +15,8 @@ const idls = await Promise.all(
   Object.entries(idlnames)
     .sort(([k1], [k2]) => k1.localeCompare(k2))
     .map(([, { parsed: jsonIdlPath }]) =>
-      fs.readFile(path.join(webrefPath, jsonIdlPath), "utf-8").then(JSON.parse)
-    )
+      fs.readFile(path.join(webrefPath, jsonIdlPath), "utf-8").then(JSON.parse),
+    ),
 );
 
 const interfaceData = idls.reduce((interfaceData, idl) => {
@@ -31,5 +31,5 @@ const interfaceData = idls.reduce((interfaceData, idl) => {
 
 await fs.writeFile(
   "files/jsondata/InterfaceData.json",
-  JSON.stringify([interfaceData], null, 2) + "\n"
+  JSON.stringify([interfaceData], null, 2) + "\n",
 );

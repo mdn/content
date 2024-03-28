@@ -29,7 +29,7 @@ A {{domxref("Text")}} node.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>createTextNode example</title>

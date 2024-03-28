@@ -1,5 +1,5 @@
 ---
-title: "ReferenceError: reference to undefined property \"x\""
+title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
 page-type: javascript-error
 ---
@@ -11,7 +11,7 @@ to access an object property which doesn't exist.
 
 ## Message
 
-```
+```plain
 ReferenceError: reference to undefined property "x" (Firefox)
 ```
 

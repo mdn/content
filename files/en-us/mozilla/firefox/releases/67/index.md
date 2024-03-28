@@ -1,6 +1,7 @@
 ---
 title: Firefox 67 for developers
 slug: Mozilla/Firefox/Releases/67
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -146,4 +147,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(66)}}
+{{Firefox_for_developers}}

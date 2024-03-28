@@ -4,10 +4,11 @@ slug: Web/HTTP/Headers/Digest
 page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.Digest
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}
+{{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
 
 > **Note:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
 > Use {{HTTPHeader("Content-Digest")}} instead.

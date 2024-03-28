@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.MessagePort
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.
 
 `MessagePort` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -28,6 +26,8 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 ## Events
 
+_Inherits events from its parent, {{domxref("EventTarget")}}_.
+
 - {{domxref("MessagePort.message_event","message")}}
   - : Fired when a `MessagePort` object receives a message.
 - {{domxref("MessagePort.messageerror_event","messageerror")}}
@@ -37,7 +37,7 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} constructor.
 
-When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
+When the IFrame has loaded, we register an {{domxref("MessagePort/message_event","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
 
 When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 

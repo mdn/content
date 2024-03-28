@@ -1,6 +1,7 @@
 ---
 title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -84,4 +85,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(75)}}
+{{Firefox_for_developers}}

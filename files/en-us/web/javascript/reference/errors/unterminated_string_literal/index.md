@@ -41,7 +41,7 @@ To fix this error, check if:
 
 You can't split a string across multiple lines like this in JavaScript:
 
-```js example-bad
+```js-nolint example-bad
 const longString = "This is a very long string which needs
                     to wrap across multiple lines because
                     otherwise my code is unreadable.";

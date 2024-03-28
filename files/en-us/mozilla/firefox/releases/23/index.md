@@ -1,6 +1,7 @@
 ---
 title: Firefox 23 for developers
 slug: Mozilla/Firefox/Releases/23
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,16 +36,16 @@ slug: Mozilla/Firefox/Releases/23
 - The ability to add a sidebar panel (`window.sidebar.addPanel`) has been dropped ([Firefox bug 691647](https://bugzil.la/691647)).
 - The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ([Firefox bug 704063](https://bugzil.la/704063)). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version receives a timestamp in milliseconds ([Firefox bug 753453](https://bugzil.la/753453)).
 - The text argument for {{domxref("window.alert")}} and {{domxref("window.confirm")}} is now optional ([Firefox bug 861605](https://bugzil.la/861605)).
-- The {{domxref("HTMLMediaElement.initialTime")}} property, removed from the spec, is no more supported ([Firefox bug 742537](https://bugzil.la/742537)).
+- The `HTMLMediaElement.initialTime` property, removed from the spec, is no longer supported ([Firefox bug 742537](https://bugzil.la/742537)).
 - The {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} constructor has been added ([Firefox bug 848293](https://bugzil.la/848293)).
 - The {{domxref("AnimationEvent.pseudoElement")}} property has been implemented ([Firefox bug 848293](https://bugzil.la/848293)).
 - The {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} constructor has been added ([Firefox bug 848291](https://bugzil.la/848291)).
 - The {{domxref("TransitionEvent.pseudoElement")}} property has been implemented ([Firefox bug 848291](https://bugzil.la/848291)).
-- The non-standard {{domxref("TransitionEvent.initTransitionEvent()")}} and `AnimationEvent.initAnimationEvent()` have been removed ([Firefox bug 868751](https://bugzil.la/868751)).
+- The non-standard `TransitionEvent.initTransitionEvent()` and `AnimationEvent.initAnimationEvent()` have been removed ([Firefox bug 868751](https://bugzil.la/868751)).
 
 ### WebRTC
 
-- Instead of including usernames in the {{domxref("RTCIceServer.url")}} property (such as stun:username\@stunserver.example.com), you now need to use the new {{domxref("RTCIceServer.username")}} property.
+- Instead of including usernames in the `RTCIceServer.url` property (such as stun:username\@stunserver.example.com), you now need to use the new `RTCIceServer.username` property.
 
 ### CSS
 
@@ -69,4 +70,4 @@ Addons that overlay chrome://browser/content/debugger.xul must now overlay chrom
 
 ### Older versions
 
-{{Firefox_for_developers('22')}}
+{{Firefox_for_developers}}
