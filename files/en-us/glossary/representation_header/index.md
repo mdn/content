@@ -13,7 +13,7 @@ Representations are different forms of a particular resource.
 For example, the same data might be formatted as a particular media type such as XML, JSON, HTML or Markdown, or localized to a particular written language or geographical region.
 The underlying resource is semantically the same in each case, but its representation is different.
 
-Whilst representations are different forms of resources, representations can themselves also be transmitted in different forms: an HTTP message frames (cf. e.&hairsp;g. HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}) a particular stream of octets (cf. e.&hairsp;g. {{HTTPHeader("Content-Range")}}) derived from the _selected representation_.
+While representations are different forms of resources, representations can themselves also be transmitted in various forms: an HTTP message frames (cf., e.g., HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}), a particular stream of octets (cf., e.g., {{HTTPHeader("Content-Range")}}) derived from the _selected representation_.
 
 Clients specify the formats that they prefer to be sent during [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) (using `Accept-*` headers), and the representation headers tell the client the format of the _selected representation_ they received.
 
@@ -29,5 +29,5 @@ Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Co
 - {{Glossary("Payload header")}}
 - {{glossary("Entity header")}}
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
-- pertaining to particular forms of the selected representation: {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
+- {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
 - {{HTTPHeader("Digest")}} {{Deprecated_Inline}}, {{HTTPHeader("Want-Digest")}} {{Deprecated_Inline}}
