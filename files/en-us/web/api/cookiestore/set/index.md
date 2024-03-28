@@ -3,12 +3,10 @@ title: "CookieStore: set() method"
 short-title: set()
 slug: Web/API/CookieStore/set
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStore.set
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object.
 
@@ -41,7 +39,7 @@ Or
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
     - `path` {{Optional_Inline}}
       - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}
@@ -64,10 +62,10 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 
 ### Exceptions
 
-- {{jsxref("TypeError")}}
-  - : Thrown if setting the cookie with the given values fails.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
+  - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
+- {{jsxref("TypeError")}}
+  - : Thrown if setting the cookie with the given `name` and `value` or `options` fails.
 
 ## Examples
 

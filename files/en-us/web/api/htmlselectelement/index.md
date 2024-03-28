@@ -77,7 +77,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 - {{domxref("HTMLElement/change_event", "change")}} event
   - : Fires when the user selects an option.
-- {{domxref("HTMLElement/input_event", "input")}} event
+- {{domxref("Element/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 
 ## Example

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.add
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the value, and stores the cloned value in the object store. This is for adding new records to an object store.
 
@@ -21,8 +21,6 @@ record already exists in the object store with the `key` parameter as its
 key, then an error `ConstraintError` event is fired on the returned request
 object. For updating existing records, you should use the
 {{domxref("IDBObjectStore.put")}} method instead.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

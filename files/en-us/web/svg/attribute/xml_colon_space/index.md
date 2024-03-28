@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/xml:space
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.core.xml_space
+browser-compat: svg.global_attributes.xml_space
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

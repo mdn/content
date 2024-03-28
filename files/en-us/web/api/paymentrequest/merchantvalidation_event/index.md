@@ -87,8 +87,6 @@ For more information, see [Merchant validation](/en-US/docs/Web/API/Payment_Requ
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - `onmerchantvalidation` event handler property
 - [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)
-- {{domxref("PaymentRequest")}}
-- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event
 - {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event
 - {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} event

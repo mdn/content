@@ -55,12 +55,12 @@ grid-template-areas: unset;
 #### HTML
 
 ```html
-<section id="page">
+<div id="page">
   <header>Header</header>
   <nav>Navigation</nav>
   <main>Main area</main>
   <footer>Footer</footer>
-</section>
+</div>
 ```
 
 #### CSS

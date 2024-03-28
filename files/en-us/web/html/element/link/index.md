@@ -230,12 +230,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/CSS_media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
-    > **Note:**
-    >
-    > - In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/en-US/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`.
-    >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which are a superset of the allowed values of HTML 4.
-    > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
-
 - `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:
@@ -364,8 +358,10 @@ this resource will then only be loaded if the media condition is true. For examp
 You can determine when a style sheet has been loaded by watching for a `load` event to fire on it; similarly, you can detect if an error has occurred while processing a style sheet by watching for an `error` event:
 
 ```html
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
+
 <script>
-  const stylesheet = document.querySelector("#my-stylesheet");
+  const stylesheet = document.getElementById("my-stylesheet");
 
   stylesheet.onload = () => {
     // Do something interesting; the sheet has been loaded
@@ -375,8 +371,6 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
     console.log("An error occurred loading the stylesheet!");
   };
 </script>
-
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
@@ -420,9 +414,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
     </tr>
     <tr>
       <th>Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag must not be present
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th>Permitted parents</th>

@@ -51,7 +51,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 
-- `{{cssxref("basic-shape/xywh","xywh()")}}` {{Experimental_Inline}}
+- `{{cssxref("basic-shape/xywh","xywh()")}}`
 
   - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 

@@ -3,12 +3,10 @@ title: "CookieStore: get() method"
 short-title: get()
 slug: Web/API/CookieStore/get
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStore.get
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
 
@@ -49,7 +47,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 - `expires`
 
-  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
+  - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 
 - `name`
 
@@ -57,7 +55,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 - `partitioned`
 
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
 
 - `path`
 
@@ -83,8 +81,14 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The `options` parameter is an empty object.
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 

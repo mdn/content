@@ -83,7 +83,7 @@ h2 {
 
 h2 {
   font-size: 1em;
-  color: rgb(150, 149, 149);
+  color: rgb(150 149 149);
 }
 ```
 
@@ -152,7 +152,7 @@ h1 {
 
 h2 {
   font-size: 1em;
-  color: rgb(150, 149, 149);
+  color: rgb(150 149 149);
 }
 
 h3 {

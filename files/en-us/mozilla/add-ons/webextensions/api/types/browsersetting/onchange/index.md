@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
 

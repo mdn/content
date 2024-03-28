@@ -39,13 +39,13 @@ border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
 
 /* As a parameter in another CSS function */
 background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), transparent));
+mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), transparent));
 
 /* as part of a non-shorthand multiple value */
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 /* at-rules */
-@document url("https://www.example.com/") { /* … */ } {{Experimental_Inline}}
+@document url("https://www.example.com/") { /* … */ }
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
@@ -79,7 +79,7 @@ The **`url()`** function can be included as a value for
     - path
       - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 
-- `<url-modifier>` {{Experimental_Inline}}
+- `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
 
 ### Formal syntax

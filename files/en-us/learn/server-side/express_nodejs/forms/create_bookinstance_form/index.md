@@ -163,7 +163,7 @@ The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the n
 Open the file where you defined the `BookInstanceSchema` model (**models/bookinstance.js**).
 Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_back_formatted()` virtual function):
 
-```pug
+```js
 BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
   return DateTime.fromJSDate(this.due_back).toISODate(); // format 'YYYY-MM-DD'
 });

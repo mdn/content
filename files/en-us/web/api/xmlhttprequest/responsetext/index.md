@@ -15,9 +15,7 @@ following a request being sent.
 ## Value
 
 A string which contains either the textual data received using the
-`XMLHttpRequest` or `null` if the request failed or
-`""` if the request has not yet been sent by calling
-{{domxref("XMLHttpRequest.send", "send()")}}.
+`XMLHttpRequest` or `""` if the request failed or if no content has been received yet.
 
 While handling an asynchronous request, the value of `responseText` always
 has the current content received from the server, even if it's incomplete because the

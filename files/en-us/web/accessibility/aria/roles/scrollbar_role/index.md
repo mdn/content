@@ -9,7 +9,7 @@ A `scrollbar` is a graphical object that controls the scrolling of content withi
 
 ## Description
 
-A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ### What is scroll bar
 
@@ -154,7 +154,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
 - HTML {{HTMLElement('progress')}} element

@@ -36,7 +36,7 @@ All {{cssxref("::view-transition-group")}} pseudo-elements are positioned relati
 
 ```css
 ::view-transition {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 ```
 

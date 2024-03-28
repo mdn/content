@@ -7,7 +7,7 @@ browser-compat: api.DOMStringList
 
 {{APIRef("DOM")}}
 
-The **`DOMString`** interface is a legacy type returned by some APIs and represents a non-modifiable list of strings (`DOMString`). Modern APIs use {{jsxref("Array")}} objects (in WebIDL: `sequence<DOMString>`) instead.
+The **`DOMStringList`** interface is a legacy type returned by some APIs and represents a non-modifiable list of strings (`DOMString`). Modern APIs use {{jsxref("Array")}} objects (in WebIDL: `sequence<DOMString>`) instead.
 
 This interface is used in [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and in the {{domxref("Location")}} API:
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WebSocket.close_event
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}
 
 The `close` event is fired when a connection with a `WebSocket` is closed.
 

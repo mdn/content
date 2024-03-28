@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetails.currentscreenchange_event
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`currentscreenchange`** event of the {{domxref("ScreenDetails")}} interface is fired when the {{domxref("ScreenDetails.currentScreen")}} changes in one of the following ways:
 

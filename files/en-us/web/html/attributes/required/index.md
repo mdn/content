@@ -2,7 +2,6 @@
 title: "HTML attribute: required"
 slug: Web/HTML/Attributes/required
 page-type: html-attribute
-browser-compat: html.elements.attributes.required
 ---
 
 {{HTMLSidebar}}
@@ -58,14 +57,6 @@ Provide an indication to users informing them the form control is required. Ensu
 ### Result
 
 {{EmbedLiveSample('Example')}}
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -19,7 +19,7 @@ Preloaded resources from the early hint are effectively pre-pended to the `Docum
 
 > **Note:** For compatibility reasons [it is recommended](https://www.rfc-editor.org/rfc/rfc8297#section-3) to only send HTTP `103 Early Hints` responses over HTTP/2 or later, unless the client is known to handle informational responses correctly.
 >
-> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser-compatibility) below.
+> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser_compatibility) below.
 >
 > Despite this, the examples below use HTTP/1.1-style notation as per usual convention.
 
@@ -64,8 +64,6 @@ Content-Type: text/html
 ```
 
 ### Preload example
-
-> **Warning:** Some browsers only support `preconnect` over 103 Early Hints. See the implementation notes in the [browser compatibility](#browser-compatibility) section below.
 
 The following `103` early hint response indicates a stylesheet `style.css` might be needed by the final response.
 

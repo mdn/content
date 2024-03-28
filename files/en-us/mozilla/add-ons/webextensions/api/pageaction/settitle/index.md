@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setTitle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.
 

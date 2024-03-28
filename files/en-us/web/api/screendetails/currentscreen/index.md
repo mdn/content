@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetails.currentScreen
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`currentScreen`** read-only property of the
 {{domxref("ScreenDetails")}} interface contains a single {{domxref("ScreenDetailed")}} object representing detailed information about the screen that the current browser window is displayed in.

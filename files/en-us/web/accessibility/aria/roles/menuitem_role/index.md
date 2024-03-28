@@ -107,7 +107,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
