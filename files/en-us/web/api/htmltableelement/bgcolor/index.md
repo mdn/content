@@ -19,6 +19,8 @@ background color of the table.
 
 A string representing a color value.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.bgColor = null` is equivalent to `elt.bgColor = ""`.
+
 ## Examples
 
 ```js
