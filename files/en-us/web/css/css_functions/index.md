@@ -316,11 +316,11 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 The following functions are used as a value in transition and animation properties.
 
-- {{cssxref("easing-function#linear_easing_function", "linear()")}}
+- {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.
-- {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
+- {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
-- {{cssxref("easing-function#steps_easing_function", "steps()")}}
+- {{cssxref("easing-function/steps", "steps()")}}
   - : Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
 
 ## Animation functions

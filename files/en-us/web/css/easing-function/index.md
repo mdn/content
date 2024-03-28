@@ -260,6 +260,8 @@ selectElem.addEventListener("change", () => {
 
 {{EmbedLiveSample("comparing_the_easing_functions", "100%", 200)}}
 
+<<<<<<< HEAD
+
 ### Using the cubic-bezier() function
 
 These cubic Bézier curves are valid for use in CSS:
@@ -330,6 +332,10 @@ steps(-3, start)
 /* There must be at least one step. */
 steps(0, jump-none)
 ```
+
+=======
+
+> > > > > > > ac4c297766 (draft 1 to create the new files)
 
 ## Specifications
 
