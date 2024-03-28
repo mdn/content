@@ -134,7 +134,7 @@ Browser reader mode functionality looks for the presence of the `<main>` element
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role"
             >main</a
           ></code
         >

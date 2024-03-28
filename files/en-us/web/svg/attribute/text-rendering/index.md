@@ -2,7 +2,7 @@
 title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.text-rendering
+browser-compat: svg.global_attributes.text-rendering
 ---
 
 {{SVGRef}}

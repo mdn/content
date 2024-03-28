@@ -17,8 +17,8 @@ property.
 
 ## Value
 
-An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType",
-  "responseType")}}. You may attempt to request the data be provided in a specific format
+An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType", "responseType")}}.
+You may attempt to request the data be provided in a specific format
 by setting the value of `responseType` after calling
 {{domxref("XMLHttpRequest.open", "open()")}} to initialize the request but before
 calling {{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.

@@ -19,7 +19,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
 - {{domxref("ElementInternals.form")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HTMLFormElement")}} associated with this element.
-- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for

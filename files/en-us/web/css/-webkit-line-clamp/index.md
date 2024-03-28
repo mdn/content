@@ -37,7 +37,7 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ### Values
 
-- `none` {{experimental_inline}}
+- `none`
   - : This value specifies that the content won't be clamped.
 - {{cssxref("integer")}}
   - : This value specifies the number of lines after which the content will be clamped. It must be greater than 0.

@@ -1214,7 +1214,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by any `Content-Language` HTTP header. Or,
 - If none specified, use the browser's locale.
 
-### Technical summary
+## Technical summary
 
 <table class="properties">
   <tbody>
