@@ -36,6 +36,7 @@ An invalid array length might appear in these situations:
 - Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2<sup>31</sup>-1 (2GiB-1) on a 32-bit system, or 2<sup>33</sup> (8GiB) on a 64-bit system.
 - Creating an {{jsxref("Array")}} or setting the {{jsxref("Array/length", "length")}} property to a floating-point number.
 - Before Firefox 89: Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2<sup>31</sup>-1 (2GiB-1).
+- Modifying the array size in {{jsxref("statements/for","for")}} loop.
 
 If you are creating an `Array`, using the constructor, you probably want to
 use the literal notation instead, as the first argument is interpreted as the length of
@@ -62,6 +63,12 @@ b.length = b.length + 1; // set the length property to 2^32
 b.length = 2.5; // set the length property to a floating-point number
 
 const c = new Array(2.5); // pass a floating-point number
+
+// concurrent modification
+const arr = [1, 2, 3];
+for (let e of arr) {
+  arr.push(e * 10);
+}
 ```
 
 ### Valid cases
@@ -84,6 +91,9 @@ b.length = Math.min(0xffffffff, b.length + 1);
 b.length = 3;
 
 const c = new Array(3);
+
+const arr = [1, 2, 3];
+arr.forEach((e) => arr.push(e * 10));
 ```
 
 ## See also
