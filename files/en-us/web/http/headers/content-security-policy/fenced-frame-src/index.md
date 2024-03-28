@@ -2,10 +2,12 @@
 title: "CSP: fenced-frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src
 page-type: http-csp-directive
+status:
+  - experimental
 browser-compat: http.headers.Content-Security-Policy.fenced-frame-src
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`fenced-frame-src`** directive specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.

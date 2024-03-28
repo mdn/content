@@ -4,7 +4,10 @@ slug: Web/API/View_Transitions_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.Document.startViewTransition
+browser-compat:
+  - api.Document.startViewTransition
+  - api.ViewTransition
+spec-urls: https://drafts.csswg.org/css-view-transitions/
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}

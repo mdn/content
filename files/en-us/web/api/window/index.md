@@ -49,7 +49,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
-- {{domxref("Window.fence")}} {{ReadOnlyInline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
@@ -169,7 +169,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
   - : Displays an alert dialog.
-- {{domxref("Window.blur()")}}
+- {{domxref("Window.blur()")}} {{deprecated_inline}}
   - : Sets focus away from the window.
 - {{domxref("btoa", "Window.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
@@ -276,7 +276,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
