@@ -31,6 +31,9 @@ In Firefox, switching the browser to offline mode sends a `false` value. Until F
 Windows shows that it only looks for LAN connection like Chrome and Safari giving false
 positives.
 
+Developers should be aware that navigator.onLine may introduce false negatives,
+especially on Windows. Some Progressive Web App (PWA) services may experience issues when using navigator.onLine.
+
 You can see changes in the network state by listening to the [`online`](/en-US/docs/Web/API/Window/online_event) and [`offline`](/en-US/docs/Web/API/Window/offline_event) events.
 
 ## Value
