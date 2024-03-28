@@ -14,7 +14,7 @@ describing the type of content being requested.
 
 The string must be one of the `audio`, `audioworklet`,
 `document`, `embed`, `fencedframe`, `font`, `frame`,
-`iframe`, `image`, `manifest`, `object`,
+`iframe`, `image`, `json`, `manifest`, `object`,
 `paintworklet`, `report`, `script`, `sharedworker`,
 `style`, `track`, `video`, `worker`
 or `xslt` strings, or the empty string, which is the default value.
@@ -64,6 +64,8 @@ Possible values are:
   - : The target is a font.
 - `"image"`
   - : The target is an image.
+- `"json"`
+  - : The target is a JSON file.
 - `"manifest"`
   - : The target is a manifest.
 - `"object"`
