@@ -184,6 +184,74 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 </div>
 ```
 
+## Tokens and Sections
+
+Some autocomplete values may be used more than once in form controls that may potentially accept different values. By default, when a user enters a value into a form control with an autocomplete value, the user-agent will autocomplete the other occurrences with that value. With `section-*` tokens, they are in the `autocomplete` attribute's values to prevent the automatic autocompletion. The `section-*` token also tells the user agent that two fields with the same tokens may expect different value. These tokens should be placed in the following order:
+
+1. The first token is the hyphenated section name, with an author-defined name appended to `section-`
+2. Use the [defined autocomplete values](#values) like "shipping" or "billing" for addresses and "home", "mobile", "work", "fax", or "pager" for contact numbers
+3. A required token with an autocomplete field. See [W3's standard](https://www.w3.org/WAI/standards-guidelines/act/rules/73f2c2/2022-01-28/#correct-autocomplete-field) on this topic to learn more.
+
+> > **Note:** Numbers 1-3 are optional tokens.
+
+### Example
+
+```html
+<fieldset>
+  <legend>Send the red velvet cake to...</legend>
+  <p>
+    <label>
+      Address 1:
+      <textarea
+        name="rvc-add"
+        autocomplete="section-red velvet shipping street-address"></textarea>
+    </label>
+  </p>
+  <p>
+    <label>
+      City:
+      <input
+        name="rvc-add2"
+        autocomplete="section-red velvet shipping address-level2" />
+    </label>
+  </p>
+  <p>
+    <label>
+      Postal Code:
+      <input
+        name="rv-pc"
+        inputmode="numeric"
+        autocomplete="section-red velvet shipping postal-code" />
+    </label>
+  </p>
+</fieldset>
+<fieldset>
+  <legend>Ship the lemon cake to...</legend>
+  <p>
+    <label>
+      Address:
+      <textarea
+        name="lc-add"
+        autocomplete="section-lemon shipping street-address"></textarea>
+    </label>
+  </p>
+  <p>
+    <label>
+      City:
+      <input
+        name="lc-add2"
+        autocomplete="section-lemon shipping address-level2" />
+    </label>
+  </p>
+  <p>
+    <label>
+      Postal Code:
+      <input name="lc-pc" autocomplete="section-lemon shipping postal-code" />
+    </label>
+  </p>
+</fieldset>
+```
+
 ## Administrative levels in addresses
 
 The four administrative level fields (`address-level1` through `address-level4`) describe the address in terms of increasing levels of precision within the country in which the address is located. Each country has its own system of administrative levels, and may arrange the levels in different orders when addresses are written.
