@@ -26,6 +26,11 @@ None.
 
 A Promise that resolves with a {{jsxref("String")}}.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if object is [unusable](https://fetch.spec.whatwg.org/#body-unusable).
+
 ## Examples
 
 In our [fetch text example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-text) (run [fetch text live](https://mdn.github.io/dom-examples/fetch/fetch-text/)), we have an {{htmlelement("article")}} element and three links (stored in the `myLinks` array.)
@@ -33,6 +38,8 @@ First, we loop through all of these and give each one an `onclick` event handler
 
 When `getData()` is run, we create a new request using the {{domxref("Request.Request","Request()")}} constructor, then use it to fetch a specific `.txt` file.
 When the fetch is successful, we read a string out of the response using `text()`, then set the {{domxref("HTMLElement.innerText","innerText")}} of the {{htmlelement("article")}} element equal to the text object.
+
+If the fetch fails, or if the text object is unusable we catch and handle the {{jsxref("TypeError")}} exception.
 
 ```js
 const myArticle = document.querySelector("article");
@@ -53,6 +60,9 @@ function getData(pageId) {
     .then((response) => response.text())
     .then((text) => {
       myArticle.innertext = text;
+    })
+    .catch((error) => {
+      console.log(error.message);
     });
 }
 ```
