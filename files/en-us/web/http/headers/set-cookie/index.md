@@ -151,6 +151,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
         > **Note:** A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
 
+        > **Warning:** Cookies with the `SameSite=None; Secure` and not `Partitioned` attributes that operate in cross-site contexts are third-party cookies. In future Google Chrome versions, reading third-party cookies will be blocked. This behavior protects user data from cross-site tracking. You may use this with [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) or [Partitioned](#partitioned) attribute.
+
 - `Secure` {{optional_inline}}
 
   - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
