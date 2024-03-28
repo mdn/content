@@ -18,7 +18,7 @@ A {{jsxref("number")}}.
 
 ## Examples
 
-Logging {{domxref("BackgroundFetchRegistration.uploadTotal")}} to the console returns the uploadTotal.
+Logging this property to the console returns the total number of this upload.
 
 ```js
 console.log(bgFetch.uploadTotal);
