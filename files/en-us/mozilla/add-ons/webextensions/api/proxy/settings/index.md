@@ -34,7 +34,7 @@ The underlying value is an object. When setting this object, all properties are 
 
     You can use IPv6 addresses. For example, `[::123]`.
 
-    Hosts `localhost` and `127.0.0.1` are never proxied.
+    Hosts `localhost`, `127.0.0.1`, and `[::1]` are never proxied.
 
 - `proxyDNS` {{optional_inline}}
   - : `boolean`. Proxy DNS when using SOCKS5. Defaults to `false`.
