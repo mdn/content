@@ -23,7 +23,15 @@ x += y
 
 ## Examples
 
-### Using addition assignment
+### Addition assignment using numbers
+
+```js
+let bar = 5;
+// Number + Number -> addition
+bar += 2; // 7
+```
+
+### Addition assignment using numbers and booleans
 
 ```js
 let baz = true;
@@ -35,6 +43,8 @@ baz += 1; // 2
 baz += false; // 2
 ```
 
+### Addition assignment using booleans and strings
+
 ```js
 let foo = "foo";
 
@@ -45,15 +55,16 @@ foo += false; // "foofalse"
 foo += "bar"; // "foofalsebar"
 ```
 
+### Addition assignment using numbers and strings
+
 ```js
 let bar = 5;
-
-// Number + Number -> addition
-bar += 2; // 7
 
 // Number + String -> concatenation
 bar += "foo"; // "7foo"
 ```
+
+### Addition assignment using BigInts
 
 ```js
 let x = 1n;

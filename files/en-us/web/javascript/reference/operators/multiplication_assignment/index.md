@@ -23,14 +23,23 @@ x *= y
 
 ## Examples
 
-### Using multiplication assignment
+### Multiplication assignment using numbers
 
 ```js
 let bar = 5;
-
 bar *= 2; // 10
-bar *= "foo"; // NaN
+```
 
+### Multiplication assignment using non-numbers
+
+```js
+let bar = 5;
+bar *= "foo"; // NaN
+```
+
+### Multiplication assignment using BigInts
+
+```js
 let foo = 3n;
 foo *= 2n; // 6n
 ```
