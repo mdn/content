@@ -9,6 +9,8 @@ browser-compat: api.StorageManager.getDirectory
 
 The origin private file system (OPFS) is a storage endpoint provided as part of the [File System API](/en-US/docs/Web/API/File_System_API), which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
+{{AvailableInWorkers}}
+
 ## Working with files using the File System Access API
 
 The [File System Access API](https://wicg.github.io/file-system-access/), which extends the [File System API](/en-US/docs/Web/API/File_System_API), provides access to files using picker methods. For example:

@@ -13,6 +13,8 @@ The **`write()`** method of the
 
 Files within the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) are not visible to end-users, therefore are not subject to the same security checks as methods running on files within the user-visible file system. As a result, writes performed using `FileSystemSyncAccessHandle.write()` are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

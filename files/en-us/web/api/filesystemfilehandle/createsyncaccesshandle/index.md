@@ -15,6 +15,8 @@ but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Wor
 
 Creating a {{domxref('FileSystemSyncAccessHandle')}} takes an exclusive lock on the file associated with the file handle. This prevents the creation of further {{domxref('FileSystemSyncAccessHandle')}}s or {{domxref('FileSystemWritableFileStream')}}s for the file until the existing access handle is closed.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

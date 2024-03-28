@@ -11,6 +11,8 @@ The **`FileSystemFileHandle`** interface of the {{domxref("File System API", "Fi
 
 Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
 
+{{AvailableInWorkers}}
+
 {{InheritanceDiagram}}
 
 ## Instance properties

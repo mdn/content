@@ -12,6 +12,8 @@ The **`removeEntry()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
 directory handle contains a file or directory called the name specified.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

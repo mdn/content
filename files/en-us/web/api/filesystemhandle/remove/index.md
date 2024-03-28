@@ -17,6 +17,8 @@ The `remove()` method allows you to remove a file or directory directly from its
 
 You can also call `remove()` on the root directory of the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) to clear its contents, after which a new empty OPFS is created.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

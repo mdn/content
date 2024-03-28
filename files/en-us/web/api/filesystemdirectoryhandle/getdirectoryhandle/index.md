@@ -13,6 +13,8 @@ The **`getDirectoryHandle()`** method of the
 {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name
 within the directory handle on which the method is called.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

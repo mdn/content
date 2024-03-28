@@ -20,6 +20,8 @@ This ensures that subsequent writes do not error.
 No changes are written to the actual file on disk until the stream has been closed.
 Changes are typically written to a temporary file instead.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

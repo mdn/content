@@ -13,6 +13,8 @@ The **`keys()`** method of the
 for the iteration of the key of the entries within the `FileSystemDirectoryHandle`
 on which this method is called.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

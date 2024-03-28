@@ -9,6 +9,8 @@ browser-compat: api.FileSystemWritableFileStream
 
 The **`FileSystemWritableFileStream`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
+{{AvailableInWorkers}}
+
 {{InheritanceDiagram}}
 
 ## Instance properties

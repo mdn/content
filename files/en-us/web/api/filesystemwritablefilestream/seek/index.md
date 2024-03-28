@@ -10,6 +10,8 @@ browser-compat: api.FileSystemWritableFileStream.seek
 
 The **`seek()`** method of the {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor offset to the position (in bytes) specified when calling the method.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

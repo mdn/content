@@ -14,6 +14,8 @@ The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
 current handle.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

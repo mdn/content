@@ -14,6 +14,8 @@ The method returns a {{jsxref('Promise')}} which resolves to this created stream
 Any changes made through the stream won't be reflected in the file represented by the file handle until the stream has been closed.
 This is typically implemented by writing data to a temporary file, and only replacing the file represented by file handle with the temporary file when the writable filestream is closed.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

@@ -11,6 +11,8 @@ browser-compat: api.FileSystemSyncAccessHandle.read
 The **`read()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface reads the content of the file associated with the handle into a specified buffer, optionally at a given offset.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

@@ -13,6 +13,8 @@ The **`resolve()`** method of the
 directory names from the parent handle to the specified child entry, with the name of
 the child entry as the last array item.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

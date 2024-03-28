@@ -13,6 +13,8 @@ The **`getFileHandle()`** method of the
 {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the
 directory the method is called.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

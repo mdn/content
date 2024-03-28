@@ -11,6 +11,8 @@ The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System API"
 
 The interface can be accessed via the {{domxref('window.showDirectoryPicker()')}}, {{domxref('StorageManager.getDirectory()')}}, {{domxref('DataTransferItem.getAsFileSystemHandle()')}}, and {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} methods.
 
+{{AvailableInWorkers}}
+
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -40,8 +42,8 @@ Regular methods:
   - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : Returns a new _async iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
-- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
-  - : Returns the `entries` function by default.
+- `FileSystemDirectoryHandle[@@asyncIterator]()`
+  - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs.
 
 ## Examples
 

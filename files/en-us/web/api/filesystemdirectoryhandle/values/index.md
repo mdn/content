@@ -13,6 +13,8 @@ The **`values()`** method of the
 for the iteration of the value of the entries within the `FileSystemDirectoryHandle`
 on which this method is called.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

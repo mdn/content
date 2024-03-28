@@ -11,6 +11,8 @@ browser-compat: api.FileSystemHandle.isSameEntry
 The **`isSameEntry()`** method of the
 {{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

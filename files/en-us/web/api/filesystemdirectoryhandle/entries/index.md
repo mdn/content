@@ -14,6 +14,8 @@ for the iteration of the key-value pairs of the entries within the `FileSystemDi
 on which this method is called. The key-value pairs are
 in the form of an array like `[key, value]`.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

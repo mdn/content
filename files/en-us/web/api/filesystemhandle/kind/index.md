@@ -14,6 +14,8 @@ The **`kind`** read-only property of the
 used to distinguish files from directories when iterating over the contents of a
 directory.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A string that can be:
