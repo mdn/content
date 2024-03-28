@@ -8,14 +8,11 @@ browser-compat: api.ServiceWorkerRegistration.scope
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`scope`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface returns a unique identifier for a
-service worker registration. The service worker must be on the same origin as the
-document that registers the {{domxref("ServiceWorker")}}.
+The **`scope`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the service worker's registration scope associated with the current service worker registration using the `scope` parameter specified when register the service worker by calling {{domxref('ServiceWorkerContainer.register()')}}. The service worker must be on the {{Glossary("Same-origin policy", "same origin")}} as the document that registers the {{domxref("ServiceWorker")}}.
 
 ## Value
 
-A unique identifier.
+Returns the service worker's registration scope associated with the current service worker registration.
 
 ## Specifications
 
