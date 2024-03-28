@@ -395,11 +395,11 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 ## See also
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
 - [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
 - Attributes:
-
   - [`list`](/en-US/docs/Web/HTML/Element/input#list)
   - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
   - [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
@@ -408,5 +408,4 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
   - [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder)
   - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
   - [`size`](/en-US/docs/Web/HTML/Attributes/size)
-
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

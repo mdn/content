@@ -297,3 +297,4 @@ span {
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
