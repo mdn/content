@@ -35,6 +35,18 @@ If including the `autocomplete` attribute on {{HTMLElement("input/hidden", "hidd
 
 The source of the suggested values is generally up to the browser; typically values come from past values entered by the user, but they may also come from pre-configured values. For instance, a browser might let the user save their name, address, phone number, and email addresses for autocomplete purposes. The browser may also offer the ability to save encrypted credit card information, for autocompletion following an authentication procedure.
 
+## Usage
+
+The value is an ordered set of space-separated token(s). The value contains either a single token (either "off" or "on") or multiple autofill detail tokens.
+
+```html
+<input autocomplete="off" />
+<input autocomplete="on" />
+<input autocomplete="section-blue shipping postal-code" />
+```
+
+Multiple tokens are used to avoid confusing browsers when a form has inputs with similar values, e.g. billing vs shipping address.
+
 ## Values
 
 The attribute value is either the keyword `off` or `on`, or a space-separated `<token-list>` that describes the meaning of the autocompletion value.
