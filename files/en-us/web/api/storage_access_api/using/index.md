@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) cookies and, if not, to request access. We'll briefly look at a common storage access scenario.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and, if not, to request access. We'll briefly look at a common storage access scenario.
 
 > **Note:** When we talk about third-party cookies in the content of the Storage Access API, we implicitly mean [_unpartitioned_](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) third-party cookies.
 
