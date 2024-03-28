@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/practices/structural-roles/#when_to_use_structural_roles
 ---
 
+{{AccessibilitySidebar}}
+
 The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.
 
 ## Description
@@ -109,11 +111,3 @@ The heading role overrides the native semantic meaning of the element it is bein
 ## See also
 
 - [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

@@ -4,9 +4,7 @@ slug: Web/Accessibility/Seizure_disorders
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 This article introduces concepts behind making web content accessible for those with vestibular disorders, and how to measure and prevent content leading to seizures and/or other physical reactions.
 

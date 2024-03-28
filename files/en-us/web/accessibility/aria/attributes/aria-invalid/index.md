@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
@@ -147,8 +149,3 @@ Inherited into role:
 - CSS {{CSSXRef(':valid')}} pseudoclass
 - CSS {{CSSXRef(':invalid')}} pseudoclass
 - [Form Validation](/en-US/docs/Learn/Forms/Form_validation) tutorial
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

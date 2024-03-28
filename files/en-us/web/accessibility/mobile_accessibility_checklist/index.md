@@ -4,9 +4,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.
 

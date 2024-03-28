@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
 
 ## Description
@@ -99,8 +101,3 @@ Inherits from roles:
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

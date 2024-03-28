@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Attributes
 page-type: landing-page
 ---
 
+{{AccessibilitySidebar}}
+
 This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attributes discussed on MDN.
 
 <abbr>ARIA</abbr> attributes enable modifying an element's states and properties as defined in the accessibility tree.
@@ -113,11 +115,3 @@ The following are the reference pages covering the <abbr>WAI-ARIA</abbr> states 
 ## See also
 
 - [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
-
-<section id="Quick_links">
-
-1. [**<abbr>WAI-ARIA</abbr> attributes**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

@@ -4,7 +4,7 @@ slug: Web/Accessibility/Understanding_WCAG/Operable
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 

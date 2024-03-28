@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-label` attribute defines a string value that labels an interactive element.
 
 ## Description
@@ -100,8 +102,3 @@ The `aria-label` attribute is **NOT** supported in:
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (2023)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

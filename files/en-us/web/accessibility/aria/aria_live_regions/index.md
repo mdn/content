@@ -4,26 +4,7 @@ slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 page-type: guide
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
-    <li class="toggle">
-      <details><summary>ARIA states and properties</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA Roles</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
+{{AccessibilitySidebar}}
 
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 

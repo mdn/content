@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/
 ---
 
+{{AccessibilitySidebar}}
+
 The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
 
 ```html
@@ -239,11 +241,3 @@ What are the related properties, and in what order will this attribute or proper
 - HTML {{HTMLElement('button')}} element
 - [KeyboardEvent.key](/en-US/docs/Web/API/KeyboardEvent/key)
 - [ARIA `tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

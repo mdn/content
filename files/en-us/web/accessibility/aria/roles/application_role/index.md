@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#application
 ---
 
+{{AccessibilitySidebar}}
+
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
@@ -95,11 +97,3 @@ Applying the `application` role will cause this and all of the descendant elemen
 
 - [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
 - [Using the ARIA `application` role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

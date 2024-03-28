@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
 
 ## Description
@@ -69,8 +71,3 @@ Inherited into roles:
 
 - [HTML `readonly` attribute](/en-US/docs/Web/HTML/Attributes/readonly)
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
