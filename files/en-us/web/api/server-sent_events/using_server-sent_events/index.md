@@ -92,7 +92,7 @@ while (true) {
     $counter = rand(1, 10);
   }
 
-  ob_end_flush();
+  if (ob_get_contents()) ob_end_flush();
   flush();
 
   // Break the loop if the client aborted the connection (closed the page)
