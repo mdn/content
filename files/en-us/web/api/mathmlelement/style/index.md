@@ -55,17 +55,21 @@ const element = document.querySelector(".parameter");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSStyleDeclaration)
+// We loop through all styles
 for (const prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
-    out.textContent += `${
-      elementStyle[prop]
-    } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
+    if (Number.isNaN(Number.parseInt(prop))) {
+      out.textContent += `${prop} = '${elementStyle.getPropertyValue(prop)}'\n`;
+    } else {
+      out.textContent += `${
+        elementStyle[prop]
+      } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
+    }
   }
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "130")}}
+{{EmbedLiveSample("Getting_style_information", "100", "200")}}
 
 ## Specifications
 

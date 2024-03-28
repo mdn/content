@@ -52,17 +52,21 @@ const element = document.getElementById("elt");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSSStyleDeclaration)
+// We loop through all styles
 for (const prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
-    out.textContent += `${
-      elementStyle[prop]
-    } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
+    if (Number.isNaN(Number.parseInt(prop))) {
+      out.textContent += `${prop} = '${elementStyle.getPropertyValue(prop)}'\n`;
+    } else {
+      out.textContent += `${
+        elementStyle[prop]
+      } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
+    }
   }
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "115")}}
+{{EmbedLiveSample("Getting_style_information", "100", "200")}}
 
 Note `font-weight` is not listed as a value for `elementStyle` as it is not defined within the `style` attribute of the element itself. Rather, it is inherited from the definition on its parent. Also note that the shorthand {{cssxref("border-top")}} property, defined in the `style` attribute, is not listed directly. Rather, it is replaced by the three corresponding longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}).
 
