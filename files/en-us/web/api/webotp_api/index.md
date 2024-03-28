@@ -14,7 +14,7 @@ The verification is done via a two-step process:
 1. The app client requests a one-time password (OTP), which is obtained from a specially-formatted SMS message sent by the app server.
 2. JavaScript is used to enter the OTP into a validation form on the app client and it is submitted back to the server to verify that it matches what was originally sent in the SMS.
 
-## WebOTP concepts and usage
+## Concepts and usage
 
 Phone numbers are often used as a way to identify the user of an app. An SMS is frequently deployed to verify that the number belongs to the user. The SMS typically contains an OTP that the user is required to copy and paste into a form in the app to verify that they own the number. This is a somewhat clunky user experience.
 
@@ -103,7 +103,7 @@ Or you could specify it directly on the `<iframe>` like this:
 - {{domxref("OTPCredential")}}
   - : Returned when a WebOTP `get()` call fulfills; includes a `code` property that contains the retrieved OTP.
 
-## Extensions to other interfaces
+### Extensions to other interfaces
 
 - {{domxref("CredentialsContainer.get()")}}, the `otp` option
   - : Calling `get()` with an `otp` option instructs the user agent to attempt to retrieve an OTP from the underlying system's SMS app.
