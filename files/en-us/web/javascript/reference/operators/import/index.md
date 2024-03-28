@@ -28,7 +28,7 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 
 Returns a promise which fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
 
-The evaluation of `import()` never synchronously throws an error. `moduleName` is [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), and if coercion throws, the promise is rejected with the thrown error.
+`import()` never synchronously throws an error. For example, `moduleName` is [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), and if coercion throws, the promise is rejected with the thrown error. Similarly, if `moduleName` refers to a module that doesn't exist, the promise is rejected with the thrown error.
 
 ## Description
 
