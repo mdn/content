@@ -57,18 +57,20 @@ Next, we need to add a click handler to our in-app install button:
 ```js
 // main.js
 
-installButton.addEventListener("click", async () => {
-  if (!installPrompt) {
-    return;
-  }
+installButton.addEventListener("click", inAppInstallPrompt);
+
+async function inAppInstallPrompt() {
+  if (!installPrompt) return;
+
   const result = await installPrompt.prompt();
   console.log(`Install prompt was: ${result.outcome}`);
   disableInAppInstallPrompt();
-});
+}
 
 function disableInAppInstallPrompt() {
   installPrompt = null;
   installButton.setAttribute("hidden", "");
+  installButton.removeEventListener("click", inAppInstallPrompt);
 }
 ```
 
