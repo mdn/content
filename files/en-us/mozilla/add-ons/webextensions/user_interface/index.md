@@ -22,7 +22,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
+          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button"
           >Toolbar button</a
         >
         (browser action)

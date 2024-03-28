@@ -119,16 +119,7 @@ This attribute controls whether cookies are sent with cross-site requests and ca
 
 #### Chrome anti-tracking features
 
-Google's [privacy sandbox project](https://developer.chrome.com/en/docs/privacy-sandbox/) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
-
-Some of the most developed parts of the privacy sandbox project are as follows:
-
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)
-  - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
-- [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)
-  - : A mechanism for a company to declare relationships between different origins. Supporting browsers will then allow limited third-party cookie access across those origins for specific purposes.
-- Third-party cookie default
-  - : Chrome does not yet block third-party cookies by default, but this can be set by users in Chrome settings.
+Google's [privacy sandbox project](/en-US/docs/Web/Privacy/Privacy_sandbox) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
 
 #### Safari anti-tracking features
 
@@ -203,7 +194,7 @@ Earlier on we discussed tracking, and some of the unethical purposes they are us
 Also recall from earlier that browsers are implementing a number of technologies to limit the usage of tracking cookies, especially cross-site cookies, with the eventual aim of removing them altogether. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. For example:
 
 - Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data. This does have the downside that the data is stored per-origin, so it can't be shared.
-- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt in to using cross-site cookies in a safe, controlled way, or block them altogether. These currently have limited browser support.
+- Use a technology such as the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way.
 - Use a server-side solution for data persistence.
 
 > **Note:** To reiterate what we said earlier, make sure you clearly communicate to your users what you are doing via your privacy policy, allow them to opt-in, and easily delete their data if they change their mind at a later date.
@@ -280,5 +271,5 @@ The below tips offer some guidance on protecting your user's data:
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
 
 <section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "1", "0", "1")}}
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
 </section>

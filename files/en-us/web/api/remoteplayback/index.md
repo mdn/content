@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RemotePlayback
 ---
 
-{{DefaultAPISidebar("Remote Playback API")}}
+{{APIRef("Remote Playback API")}}
 
 The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
 

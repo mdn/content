@@ -8,16 +8,11 @@ status:
 browser-compat: api.console.timeStamp_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{APIRef("Console API")}}{{Non-standard_header}} {{AvailableInWorkers}}
 
-The **`console.timeStamp`** method adds a single marker to the browser's Performance tool ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). This lets you
-correlate a point in your code with the other events recorded in the timeline, such as
-layout and paint events.
+The **`console.timeStamp()`** static method adds a single marker to the browser's Performance tool ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events.
 
-You can optionally supply an argument to label the timestamp, and this label will then
-be shown alongside the marker.
-
-{{AvailableInWorkers}}
+You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.
 
 ## Syntax
 
@@ -27,8 +22,8 @@ timeStamp(label)
 
 ### Parameters
 
-- `label`
-  - : Label for the timestamp. Optional.
+- `label` {{Optional_Inline}}
+  - : Label for the timestamp.
 
 ### Return value
 
@@ -40,6 +35,7 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- {{domxref("console.time()")}}
-- {{domxref("console.timeEnd()")}}
+- {{domxref("console/time_static", "console.time()")}}
+- {{domxref("console/timeLog_static", "console.timeLog()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
 - [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)

@@ -189,7 +189,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
   /* The first declaration is for browsers that do not support linear gradients. */
   background: #f0f0f0;
@@ -262,7 +262,7 @@ Next, let's style the list of options:
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
   background: #f0f0f0;
 }
 ```
@@ -332,7 +332,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -382,7 +382,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -454,7 +454,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -504,7 +504,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -576,7 +576,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -626,7 +626,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -675,8 +675,8 @@ To achieve this, we need two things:
 First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.
 
 ```html
-<body class="no-widget">
-  <form>
+<body>
+  <form class="no-widget">
     <select name="myFruit">
       <option>Cherry</option>
       <option>Lemon</option>
@@ -835,7 +835,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -885,7 +885,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1132,7 +1132,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1182,7 +1182,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1366,11 +1366,20 @@ window.addEventListener("load", () => {
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        // Prevent the default action of the ArrowDown key press.
+        // Without this, the page would scroll down when the ArrowDown key is pressed.
+        event.preventDefault();
       }
 
       // When the user hits the up arrow, we jump to the previous option
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        // Prevent the default action of the ArrowUp key press.
+        event.preventDefault();
+      }
+      if (event.key === "Enter" || event.key === " ") {
+        // If Enter or Space is pressed, toggle the option list
+        toggleOptList(select);
       }
 
       updateValue(select, index);
@@ -1453,7 +1462,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1503,7 +1512,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1778,7 +1787,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1828,7 +1837,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -2042,7 +2051,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect:not(:focus-within) input:checked + label {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
   content: "▼";
@@ -2055,7 +2064,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect:focus-within {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
   background-color: #333;

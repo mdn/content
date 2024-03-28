@@ -43,7 +43,7 @@ Access-Control-Allow-Methods: *
 ## Examples
 
 ```http
-Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Methods: GET, POST
 Access-Control-Allow-Methods: *
 ```
 

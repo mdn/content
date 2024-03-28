@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.postalCode
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`postalCode`** read-only property of the
 {{domxref('PaymentAddress')}} interface returns a string containing a code used by a

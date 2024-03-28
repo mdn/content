@@ -35,19 +35,6 @@ if (elem.requestFullscreen) {
 
 This code checks for the existence of the `requestFullscreen()` method before calling it.
 
-### Presentation differences
-
-It's worth noting a key difference here between the Gecko and WebKit implementations at this time: Gecko automatically adds CSS rules to the element to stretch it to fill the screen: "`width: 100%; height: 100%`". WebKit doesn't do this; instead, it centers the fullscreen element at the same size in a screen that's otherwise black. To get the same fullscreen behavior in WebKit, you need to add your own "`width: 100%; height: 100%;`" CSS rules to the element yourself:
-
-```css
-#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
-}
-```
-
-On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you need to place the element you want to present inside another element, which you'll make fullscreen instead, and use CSS rules to adjust the inner element to match the appearance you want.
-
 ### Notification
 
 When fullscreen mode is successfully engaged, the document which contains the element receives a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event. Note that the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
@@ -95,7 +82,7 @@ When the page is loaded, this code is run to set up an event listener to watch f
 document.addEventListener(
   "keydown",
   (e) => {
-    if (e.keyCode === 13) {
+    if (e.key === "Enter") {
       toggleFullScreen();
     }
   },
@@ -120,61 +107,6 @@ function toggleFullScreen() {
 This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("element.requestFullscreen()")}}.
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
-
-## Prefixing
-
-For the moment not all browsers are implementing the unprefixed version of the API (for vendor agnostic access to the Fullscreen API you can use [Fscreen](https://github.com/rafgraph/fscreen)). Here is the table summarizing the prefixes and name differences between them:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">Standard</th>
-      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
-      <th scope="col">Gecko (Firefox)</th>
-      <th scope="col">Internet Explorer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-      </th>
-      <td><code>webkitIsFullScreen</code></td>
-      <td><code>mozFullScreen</code></td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenEnabled")}}
-      </th>
-      <td><code>webkitFullscreenEnabled</code></td>
-      <td><code>mozFullScreenEnabled</code></td>
-      <td><code>msFullscreenEnabled</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenElement")}}
-      </th>
-      <td><code>webkitFullscreenElement</code></td>
-      <td><code>mozFullScreenElement</code></td>
-      <td><code>msFullscreenElement</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{DOMxRef("Document.exitFullscreen()")}}</th>
-      <td><code>webkitExitFullscreen()</code></td>
-      <td><code>mozCancelFullScreen()</code></td>
-      <td><code>msExitFullscreen()</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Element.requestFullscreen()")}}
-      </th>
-      <td><code>webkitRequestFullscreen()</code></td>
-      <td><code>mozRequestFullScreen()</code></td>
-      <td><code>msRequestFullscreen()</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ## Specifications
 

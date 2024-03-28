@@ -4,7 +4,7 @@ slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
 
 When using orientation and motion events, it's important to understand what the values you're given by the browser mean. This article provides details about the coordinate systems at play and how you use them.
 
@@ -42,7 +42,7 @@ Rotation around the z axis — that is, twisting the device — causes the **alp
 
 ![Positive alpha rotates the device counter-clockwise.](alpha.png)
 
-The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated toward the left.
+The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated counterclockwise. As such, 90° corresponds with pointing west, 180° with south, and 270° with east.
 
 ### Beta
 

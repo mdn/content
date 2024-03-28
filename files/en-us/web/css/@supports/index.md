@@ -54,7 +54,7 @@ The following example returns true and applies the CSS style if the browser supp
 The function syntax checks if a browser supports values or expressions within the function.
 The functions supported in the function syntax are described in the following sections.
 
-#### `selector()` {{Experimental_Inline}}
+#### `selector()`
 
 This function evaluates if a browser supports the specified selector syntax.
 The following example returns true and applies the CSS style if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
@@ -78,17 +78,17 @@ The table below describes the font technologies (`<font-tech>`), including color
 
 | Technology                     | Supports                                                                                      |
 | :----------------------------- | :-------------------------------------------------------------------------------------------- |
-| **`<color-font-tech>`**        |
+| **`<color-font-tech>`**        |                                                                                               |
 | `color-colrv0`                 | Multi-colored glyphs via COLR version 0 table                                                 |
 | `color-colrv1`                 | Multi-colored glyphs via COLR version 1 table                                                 |
 | `color-svg`                    | SVG multi-colored tables                                                                      |
 | `color-sbix`                   | Standard bitmap graphics tables                                                               |
 | `color-cbdt`                   | Color bitmap data tables                                                                      |
-| **`<font-features-tech>`**     |
+| **`<font-features-tech>`**     |                                                                                               |
 | `features-opentype`            | OpenType `GSUB` and `GPOS` tables                                                             |
 | `features-aat`                 | TrueType `morx` and `kerx` tables                                                             |
 | `features-graphite`            | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
-| **Other `<font-tech>` values** |
+| **Other `<font-tech>` values** |                                                                                               |
 | `incremental-patch`            | Incremental font loading using the patch subset method                                        |
 | `incremental-range`            | Incremental font loading using the range request method                                       |
 | `incremental-auto`             | Incremental font loading using method negotiation                                             |

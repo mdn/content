@@ -3,6 +3,9 @@ title: CSS
 slug: Web/API/CSS
 page-type: web-api-interface
 browser-compat: api.CSS
+spec-urls:
+  - https://drafts.csswg.org/cssom/#namespacedef-css
+  - https://www.w3.org/TR/css-properties-values-api-1/
 ---
 
 {{APIRef("CSSOM")}}
@@ -11,7 +14,7 @@ The **`CSS`** interface holds useful CSS-related methods. No objects with this i
 
 ## Static properties
 
-- {{DOMxRef("CSS/highlights_static", "CSS.highlights")}} {{Experimental_Inline}}
+- {{DOMxRef("CSS/highlights_static", "CSS.highlights")}}
   - : Provides access to the `HighlightRegistry` used to style arbitrary text ranges using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 - {{DOMxRef("CSS/paintWorklet_static", "CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Provides access to the Worklet responsible for all the classes related to painting.

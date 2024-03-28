@@ -39,7 +39,7 @@ The Angular CLI generates two types of style files:
 - `styles.css`: In the `src` directory, the styles in this file apply to your entire application unless you specify styles at the component level.
 
 Depending on whether you are using a CSS preprocessor, the extension on your CSS files can vary.
-Angular supports plain CSS, SCSS, Sass, Less, and Stylus.
+Angular supports plain CSS, SCSS, Sass, and Less.
 
 In `src/styles.css`, paste the following styles:
 
@@ -115,8 +115,8 @@ In `app.component.css`, add the following styles:
   padding: 1rem;
   text-align: center;
   box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    0 2px 4px 0 rgb(0 0 0 / 20%),
+    0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 
 @media screen and (min-width: 600px) {

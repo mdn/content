@@ -77,7 +77,7 @@ A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid
 - `undefined` (default)
   - : The element does not own or control a grouping element that is expandable.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaExpanded")}}
   - : The [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
@@ -113,7 +113,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)

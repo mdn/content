@@ -8,7 +8,7 @@ status:
 browser-compat: api.BarcodeDetector.detect
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
 {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
@@ -23,14 +23,12 @@ detect(imageBitmapSource)
 ### Parameters
 
 - `imageBitmapSource`
-  - : Receives an `ImageBitmapSource` as a parameter. This can be an
-    {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}} of type image or an
-    {{domxref('ImageData')}} object.
+  - : Receives an image source as a parameter. This can be a {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, a {{domxref("HTMLVideoElement")}}, a {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, an {{domxref("OffscreenCanvas")}}, a {{domxref("VideoFrame")}}, a {{domxref('Blob')}} of type image or an {{domxref('ImageData')}} object.
 
 ### Return value
 
 Returns a {{jsxref('Promise')}} which fulfills with an array of
-`detectedBarcode` objects with the following properties:
+`DetectedBarcode` objects with the following properties:
 
 - `boundingBox`
   - : A {{domxref('DOMRectReadOnly')}}, which returns the
@@ -42,15 +40,18 @@ Returns a {{jsxref('Promise')}} which fulfills with an array of
     clockwise. This may not be square due to perspective distortions within the image.
 - `format`
   - : The detected barcode format. (For a full list of formats see
-    the {{domxref('Barcode Detection API', 'Barcode Detection API overview page')}}).
+    the [supported barcode format](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats)).
 - `rawValue`
   - : A string decoded from the barcode data.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : No parameter is specified or the `type` is not that of an
-    `ImageBitmapSource`.
+  - : Thrown if no parameter is specified or the `type` is not that of an `ImageBitmapSource`.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the `imageBitmapSource` has an origin and is not the same as the document's origin, or if the `imageBitmapSource` is a {{domxref('HTMLCanvasElement')}} and its [origin-clean](https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-origin-clean) flag is set to `false`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `imageBitmapSource` is an {{domxref('HTMLImageElement')}} and is not fully decoded or decoding failed, or is an {{domxref('HTMLVideoElement')}} and its {{domxref('HTMLMediaElement.readyState', 'readyState')}} is `HAVE_NOTHING` or `HAVE_METADATA`.
 
 ## Examples
 

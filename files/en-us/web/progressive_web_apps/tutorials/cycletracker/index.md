@@ -90,6 +90,6 @@ To complete this tutorial, it is helpful to have a basic level of understanding 
 
 While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
-You can try the [live period tracker](https://mdn.github.io/pwa-examples/cycletracker/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker) on GitHub.
+You can try the [live period tracker](https://mdn.github.io/pwa-examples/cycletracker/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker) on GitHub.
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the sidebar pane becomes visible as a result of the user switching to it.
 

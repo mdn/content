@@ -164,28 +164,28 @@ button {
   /* … */
 
   background-color: #ff0000;
-  background-color: rgb(255 0 0 / 1);
+  background-color: rgb(255 0 0 / 100%);
   box-shadow:
-    inset 1px 1px 3px rgb(255 255 255 / 0.4),
-    inset -1px -1px 3px rgb(0 0 0 / 0.4);
+    inset 1px 1px 3px rgb(255 255 255 / 40%),
+    inset -1px -1px 3px rgb(0 0 0 / 40%);
 }
 
 button:hover {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {
   box-shadow:
-    inset 1px 1px 3px rgb(0 0 0 / 0.4),
-    inset -1px -1px 3px rgb(255 255 255 / 0.4);
+    inset 1px 1px 3px rgb(0 0 0 / 40%),
+    inset -1px -1px 3px rgb(255 255 255 / 40%);
 }
 ```
 
-Here we are providing an [RGBA](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+Here we are providing an [RGB](/en-US/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGB colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGB colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 
-To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
+To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
@@ -213,7 +213,7 @@ form > #date
 
 Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations.
 
-For example, Firefox uses `-moz-` and Chrome/Edge/Opera/Safari use `-webkit-`. Other prefixes you may encounter in old code include `-ms-`, used by Internet Explorer and early versions of Edge, and `-o`, used in the original versions of Opera.
+For example, Firefox uses `-moz-` and Chrome/Edge/Opera/Safari use `-webkit-`. Other prefixes you may encounter in old code that can safely be removed include `-ms-`, which was used by Internet Explorer and early versions of Edge, and `-o` which was used in the original versions of Opera.
 
 Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, may cause performance issues in old browser versions that require them, and have been the cause of cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
 
@@ -265,7 +265,7 @@ To use the Mozilla Developer Network (MDN), most people do a search engine searc
 
 - Reference material with browser support information for client-side web technologies, e.g. the [\<video> reference page](/en-US/docs/Web/HTML/Element/video).
 - Other supporting reference material, e.g. the [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats),
-- Useful tutorials that solve specific problems, for example, [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player).
+- Useful tutorials that solve specific problems, for example, [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
 
 [caniuse.com](https://caniuse.com/) provides support information, along with a few useful external resource links. For example, see <https://caniuse.com/#search=video> (you just have to enter the feature you are searching for into the text box).
 

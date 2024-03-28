@@ -30,7 +30,7 @@ Lazy loading can be applied to multiple resources and through multiple strategie
 JavaScript, CSS and HTML can be split into smaller chunks. This enables sending the minimal code required to provide value upfront, improving page-load times. The rest can be loaded on demand.
 
 - Entry point splitting: separates code by entry point(s) in the app
-- Dynamic splitting: separates code where [dynamic import()](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements are used
+- Dynamic splitting: separates code where [dynamic import()](/en-US/docs/Web/JavaScript/Reference/Operators/import) expressions are used
 
 ### JavaScript
 
@@ -68,8 +68,8 @@ The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on an {{HTML
 This allows non-critical resources to load only if needed, potentially speeding up initial page loads and reducing network usage.
 
 ```html
-<img src="image.jpg" alt="..." loading="lazy" />
-<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+<img loading="lazy" src="image.jpg" alt="..." />
+<iframe loading="lazy" src="video-player.html" title="..."></iframe>
 ```
 
 The `load` event fires when the eagerly-loaded content has all been loaded. At that time, it's entirely possible (or even likely) that there may be lazily-loaded images or iframes within the {{Glossary("visual viewport")}} that haven't yet loaded.

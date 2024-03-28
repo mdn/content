@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.Tab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The type **`tabs.Tab`** contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth.
 
@@ -51,12 +51,14 @@ Values of this type are objects. They contain the following properties:
   - : `boolean`. True if the tab can be [rendered in Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), false otherwise.
 - `isInReaderMode`
   - : `boolean`. True if the tab is currently being [rendered in Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), false otherwise.
-- `lastAccessed`
+- `lastAccessed` {{optional_inline}}
   - : `double`. Time at which the tab was last accessed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The current muted state for the tab and the reason for the last state change.
 - `openerTabId` {{optional_inline}}
   - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab still exists and is in the same window.
+- `pendingUrl`
+  - : `string`. The URL the tab is navigating to, before it has committed. This property is only present if the extension's manifest includes the "tabs" permission and there is a pending navigation.
 - `pinned`
   - : `boolean`. Whether the tab is pinned.
 - `selected` {{deprecated_inline}}

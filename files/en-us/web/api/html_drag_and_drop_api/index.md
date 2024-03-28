@@ -2,7 +2,7 @@
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
 page-type: web-api-overview
-spec-urls: https://html.spec.whatwg.org/multipage/#dnd
+spec-urls: https://html.spec.whatwg.org/multipage/dnd.html
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -134,7 +134,7 @@ For more details, see:
 
 #### Define a drop zone
 
-By default, the browser prevents anything from happening when dropping something onto most HTML elements. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must have both {{domxref("HTMLElement.dragover_event","ondragover")}} and {{domxref("HTMLElement.drop_event","ondrop")}} event handler attributes.
+By default, the browser prevents anything from happening when dropping something onto most HTML elements. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must listen to both {{domxref("HTMLElement.dragover_event","dragover")}} and {{domxref("HTMLElement.drop_event","drop")}} events.
 
 The following example shows how to use those attributes, and includes basic event handlers for each attribute.
 

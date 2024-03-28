@@ -249,7 +249,7 @@ graph.options = {
   thickness: "3px",
 };
 
-graph.draw();
+graph.draw(); // Logs "From graph draw function"
 console.log(cube(3)); // 27
 console.log(foo); // 4.555806215962888
 ```

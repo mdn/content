@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when there is a change to:
 

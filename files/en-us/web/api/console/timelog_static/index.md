@@ -8,7 +8,7 @@ browser-compat: api.console.timeLog_static
 
 {{APIRef("Console API")}}{{AvailableInWorkers}}
 
-The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling {{domxref("console.time()")}}.
+The **`console.timeLog()`** static method logs the current value of a timer that was previously started by calling {{domxref("console/time_static", "console.time()")}}.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ None ({{jsxref("undefined")}}).
 
 The `console.timeLog()` method logs the current value of a timer.
 
-The method can be passed the name of a timer. This will attempt to log the value of a timer created with that name in a previous call to {{domxref("console.time()")}}:
+The method can be passed the name of a timer. This will attempt to log the value of a timer created with that name in a previous call to {{domxref("console/time_static", "console.time()")}}:
 
 ```js
 console.time("reticulating splines");
@@ -59,7 +59,7 @@ console.timeLog();
 // default: 780ms
 ```
 
-If there is no corresponding timer, `timeLog()` logs a warning like:
+If there is no corresponding timer, `console.timeLog()` logs a warning like:
 
 ```plain
 Timer "timer name" doesn't exist.
@@ -86,18 +86,14 @@ alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 
-The output from the example above shows the time taken by the user to dismiss the first
-alert box, followed by the cumulative time it took for the user to dismiss both alerts:
+The output from the example above shows the time taken by the user to dismiss the first alert box, followed by the cumulative time it took for the user to dismiss both alerts:
 
 ```plain
 answer time: 2542ms debugger eval code:3:9
 answer time: 4161ms - timer ended
 ```
 
-Notice that the timer's name is displayed when the timer value is logged using
-`timeLog()` and again when it's stopped. In addition, the call to `timeEnd()`
-has the additional information, "timer ended" to make it obvious that the timer is no
-longer tracking time.
+Notice that the timer's name is displayed when the timer value is logged using `console.timeLog()` and again when it's stopped. In addition, the call to `console.timeEnd()` has the additional information, "timer ended" to make it obvious that the timer is no longer tracking time.
 
 ## Specifications
 
@@ -106,3 +102,9 @@ longer tracking time.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("console/time_static", "console.time()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
+- [Node.JS documentation for `console.timeLog()`](https://nodejs.org/docs/latest/api/console.html#consoletimeloglabel-data)

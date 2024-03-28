@@ -18,7 +18,7 @@ The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color o
 column-rule-color: red;
 column-rule-color: rgb(192 56 78);
 column-rule-color: transparent;
-column-rule-color: hsl(0 100% 50% / 0.6);
+column-rule-color: hsl(0 100% 50% / 60%);
 
 /* Global values */
 column-rule-color: inherit;

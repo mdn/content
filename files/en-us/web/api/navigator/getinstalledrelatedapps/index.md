@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.getInstalledRelatedApps
 ---
 
-{{ ApiRef() }}{{SeeCompatTable}}
+{{ ApiRef() }}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related platform-specific apps or [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) that the user has installed. This could be used for content personalization such as removing "install our app" banners from the web app if the platform-specific app and/or PWA is already installed.
 
@@ -55,7 +55,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
   - : A string representing the [platform](https://github.com/w3c/manifest/wiki/Platforms) (ecosystem or operating system) the related app is associated with. This can be:
     - `"chrome_web_store"`: A [Google Chrome Web Store](https://chrome.google.com/webstore) app.
     - `"play"`: A [Google Play Store](https://play.google.com/) app.
-    - `"chromeos_play"`: A [Chrome OS Play](https://support.google.com/googleplay/answer/7021273) app.
+    - `"chromeos_play"`: A [ChromeOS Play](https://support.google.com/googleplay/answer/7021273) app.
     - `"webapp"`: A [Progressive Web App](/en-US/docs/Web/Progressive_web_apps).
     - `"windows"`: A [Windows Store](https://www.microsoft.com/store/apps) app.
     - `"f-droid"`: An [F-Droid](https://f-droid.org/) app.

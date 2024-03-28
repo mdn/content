@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaDevices.enumerateDevices
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the currently available media input and output devices, such as microphones, cameras, headsets, and so forth.
+The **`enumerateDevices()`** method of the {{domxref("MediaDevices")}} interface requests a list of the currently available media input and output devices, such as microphones, cameras, headsets, and so forth.
 The returned {{jsxref("Promise")}} is resolved with an array of {{domxref("MediaDeviceInfo")}} objects describing the devices.
 
 The returned list will omit any devices that are blocked by the document [Permission Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy): [`microphone`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
@@ -26,11 +26,13 @@ None.
 
 ### Return value
 
-A {{ jsxref("Promise") }} that is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects.
+A {{jsxref("Promise")}} that is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects.
 Each object in the array describes one of the available media input and output devices.
 The order is significant — the default capture devices will be listed first.
 
 Other than default devices, only devices for which permission has been granted are "available".
+
+If the media device is an input device, an {{domxref("InputDeviceInfo")}} object will be returned instead.
 
 If enumeration fails, the promise is rejected.
 
@@ -39,6 +41,7 @@ If enumeration fails, the promise is rejected.
 Access to the API is subject to the following constraints:
 
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- The document must be fully active and its visibility must be "visible".
 
 ## Examples
 

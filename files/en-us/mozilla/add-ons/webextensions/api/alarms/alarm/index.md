@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.alarms.Alarm
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information about a single alarm. This object is returned from {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.getAll()')}}, and is passed into the {{WebExtAPIRef('alarms.onAlarm')}} listener.
 

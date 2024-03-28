@@ -6,7 +6,6 @@ page-type: guide
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
@@ -77,11 +76,6 @@ The state of ARIA technology has always depended on the community. If you notice
    <td>Google Chrome</td>
    <td><a href="https://code.google.com/p/chromium/issues/list">File Chromium bugs</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td>Microsoft Edge</td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">File MS Edge Bugs</a></td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=ARIA">View existing MS Edge ARIA bugs</a></td>
   </tr>
   <tr>
    <td>Mozilla Firefox</td>

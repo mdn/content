@@ -36,6 +36,13 @@ _Inherits properties from its parent, {{DOMxRef("Screen")}}._
 - {{domxref("ScreenDetailed.top", "top")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A number representing the y-coordinate (top edge) of the total screen area.
 
+## Events
+
+_Inherits events from its parent, {{DOMxRef("Screen")}}._
+
+- `change` {{experimental_inline}}
+  - : Fired on a specific screen when any property of the screen changes — width or height, available width or available height, color depth, or orientation, screen position and available screen position, device pixel ratio, label or screen's designation.
+
 ## Examples
 
 When {{domxref("Window.getScreenDetails()")}} is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting {{domxref("ScreenDetails")}} object contains `ScreenDetailed` objects representing all the screens available to the user's system.

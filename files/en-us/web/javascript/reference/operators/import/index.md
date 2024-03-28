@@ -65,7 +65,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) process.
+Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) process.
 
 ```js
 // my-module.js

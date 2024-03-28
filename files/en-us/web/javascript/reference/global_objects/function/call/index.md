@@ -88,7 +88,7 @@ display.call(); // throws TypeError: Cannot read the property of 'globProp' of u
 
 ### Transforming methods to utility functions
 
-`call()` is almost equivalent to a normal function call, except that `this` is passed as a normal parameter instead of as the value that the function was accessed on. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which avoids mutating `Array.prototype`, and allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)).
+`call()` is almost equivalent to a normal function call, except that `this` is passed as a normal parameter instead of as the value that the function was accessed on. This is similar to how general-purpose utility functions work: instead of calling `array.map(callback)`, you use `map(array, callback)`, which allows you to use `map` with array-like objects that are not arrays (for example, [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)) without mutating `Object.prototype`.
 
 Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use for converting an array-like object to a real array. You could create a shortcut like this:
 

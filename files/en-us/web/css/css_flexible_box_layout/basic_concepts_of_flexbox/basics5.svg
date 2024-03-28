@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="1465.767" height="455.011" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 1099.46 341.301">
+  <defs>
+    <path id="a" d="M150.88 119.921h839.444v159.894H150.88z" />
+  </defs>
+  <path fill="#fff" d="M0 0h1099.46v341.301H0z" />
+  <path fill="#4f79eb" d="M170.867 139.907h119.921v119.921H170.867z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(213.998 159.89)">
+    <tspan x="0" y="58" textLength="33.369">a</tspan>
+  </text>
+  <path fill="#4f79eb" d="M310.774 139.907h119.921v119.921H310.774z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(357.721 159.894)">
+    <tspan x="0" y="58" textLength="33.369">b</tspan>
+  </text>
+  <path fill="#4f79eb" d="M450.682 139.907h119.92v119.921h-119.92z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(497.629 159.894)">
+    <tspan x="0" y="58" textLength="30">c</tspan>
+  </text>
+  <mask id="b" width="845.444" height="165.894" x="147.88" y="116.921" maskUnits="userSpaceOnUse">
+    <path fill="#fff" d="M147.88 116.921h845.444v165.894H147.88z" />
+    <use xlink:href="#a" fill-rule="evenodd" />
+  </mask>
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" />
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M981.319 59.96H839.444" />
+  <path d="m978.319 66.96 12-7-12-7z" /><text font-family="Helvetica" font-size="33" transform="translate(279.814 39.974)">
+    <tspan x="55.249" y="32" textLength="452.977">Main Axis - flex-direction: row</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m159.885 60.316 159.902-.626" />
+  <path d="m162.858 53.304-11.973 7.047 12.027 6.953z" /><text font-family="Helvetica" font-size="33" transform="translate(47.23 179.881)">
+    <tspan x="0" y="32" textLength="69.69">Start</tspan>
+  </text><text font-family="Helvetica" font-size="33" transform="translate(1017.57 179.854)">
+    <tspan x="0" y="32" textLength="58.717">End</tspan>
+  </text>
+</svg>

@@ -2,7 +2,7 @@
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.marker-mid
+browser-compat: svg.global_attributes.marker-mid
 ---
 
 {{SVGRef}}

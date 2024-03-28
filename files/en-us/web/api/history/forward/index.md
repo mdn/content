@@ -8,7 +8,7 @@ browser-compat: api.History.forward
 
 {{APIRef("History API")}}
 
-The **`History.forward()`** method causes the browser to move
+The **`forward()`** method of the {{domxref("History")}} interface causes the browser to move
 forward one page in the session history. It has the same effect as calling
 {{domxref("History.go", "history.go(1)")}}.
 
@@ -27,6 +27,11 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
 
 ## Examples
 

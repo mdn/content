@@ -39,7 +39,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A message that the browser can show while loading the object's implementation and data.
 - `type`
   - : The [content type](/en-US/docs/Glossary/MIME_type) of the resource specified by **data**. At least one of **data** and **type** must be defined.
-- `usemap`
+- `usemap` {{deprecated_inline}}
   - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a [`name`](/en-US/docs/Web/HTML/Element/map#name) of a map element.
 - `width`
   - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
@@ -62,7 +62,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 #### Result
 
-{{EmbedLiveSample}}
+{{EmbedLiveSample("Embed a video")}}
 
 If the video in the example fails to load, the user will be provided with an image as fallback content. The {{HTMLElement("img")}} tag is used to display an image. We include the `src` attribute set to the path to the image we want to embed. We also include the `alt` attribute, which provides the image with an accessible name. If the image also fails to load, the content of the `alt` attribute will be displayed.
 
@@ -78,7 +78,7 @@ If the video in the example fails to load, the user will be provided with an ima
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
-        <a href="/en-US/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="#usemap"><code>usemap</code></a> attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#form_listed">listed</a>,
         <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable">submittable</a>
         <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content">form-associated</a> element.
@@ -93,7 +93,7 @@ If the video in the example fails to load, the user will be provided with an ima
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

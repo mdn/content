@@ -3,12 +3,10 @@ title: "Highlight: type property"
 short-title: type
 slug: Web/API/Highlight/type
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Highlight.type
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The `type` property of the {{domxref("Highlight")}} interface is an enumerated {{jsxref("String")}} used to specify the meaning of the highlight. This allows assistive technologies, such as screen readers, to include this meaning when exposing the highlight to users.
 

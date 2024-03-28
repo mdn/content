@@ -115,14 +115,114 @@ drawPaddle();
 
 ## Compare your code
 
-Here's the working code for you to compare yours against:
+See how your code compares to the live sample below:
 
-{{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">Start game</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+const paddleHeight = 10;
+const paddleWidth = 75;
+let paddleX = (canvas.width - paddleWidth) / 2;
+let rightPressed = false;
+let leftPressed = false;
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+function keyDownHandler(e) {
+  if (e.key == "Right" || e.key == "ArrowRight") {
+    rightPressed = true;
+  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+    leftPressed = true;
+  }
+}
+
+function keyUpHandler(e) {
+  if (e.key == "Right" || e.key == "ArrowRight") {
+    rightPressed = false;
+  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+    leftPressed = false;
+  }
+}
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  drawPaddle();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  if (rightPressed) {
+    paddleX += 7;
+    if (paddleX + paddleWidth > canvas.width) {
+      paddleX = canvas.width - paddleWidth;
+    }
+  } else if (leftPressed) {
+    paddleX -= 7;
+    if (paddleX < 0) {
+      paddleX = 0;
+    }
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  const interval = setInterval(draw, 10);
+}
+
+document.getElementById("runButton").addEventListener("click", function () {
+  startGame();
+  this.disabled = true;
+});
+```
+
+{{embedlivesample("compare_your_code", 600, 360)}}
 
 > **Note:** Try making the paddle move faster or slower, or change its size.
 
 ## Next steps
 
-Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle forever. This will all change in the fifth chapter, [Game over](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), when we start to add in an endgame state for our game.
+Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle and there's no winning or losing implemented. This will all change in the fifth chapter, [Game over](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), when we start to add in an endgame state for our game.
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}

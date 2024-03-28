@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Worklet
 ---
 
-{{APIRef("Worklets")}}
+{{APIRef("Worklets")}}{{SecureContext_Header}}
 
 The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
 
@@ -59,6 +59,17 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
         <a
           href="https://drafts.css-houdini.org/css-layout-api-1/#layout-worklet"
           >CSS Layout API</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("SharedStorageWorklet")}}</td>
+      <td>For running private operations on cross-site data, without risk of data leakage.</td>
+      <td>Main thread</td>
+      <td>
+        <a
+          href="https://wicg.github.io/shared-storage/"
+          >Shared Storage API</a
         >
       </td>
     </tr>

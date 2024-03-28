@@ -94,7 +94,7 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('progress')}} element
 - Other range widgets include:
@@ -108,6 +108,6 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

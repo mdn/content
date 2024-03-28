@@ -33,13 +33,13 @@ A badge can have one of three possible values, which are set internally:
 
 ### Setting badges
 
-A badge is set with the methods `setAppBadge()` (for installed apps), or `setClientBadge()` (for documents). If no parameters are passed to these methods then the badge value is flag. The user agent will display its notification badge, for example, a colored circle on the icon.
+A badge is set with the methods `setAppBadge()` (for installed apps). If no parameters are passed to these methods then the badge value is flag. The user agent will display its notification badge, for example, a colored circle on the icon.
 
 These methods can also be passed a parameter `contents`, which should be a number. This will then be displayed as part of the badge. User agents may change this value in some way. For example, if you pass a very large number such as 4000, the user agent may display this as 99+ in the badge. User agents may also ignore this data and display a marker instead.
 
 ### Clearing badges
 
-Badges are cleared with the `clearAppBadge()` and `clearClientBadge()` methods. These do not take any parameters and set the badge to the value `nothing`. Additionally, passing a value of `0` to `setAppBadge()` or `setClientBadge()` will set the badge to `nothing` and clear the badge.
+Badges are cleared with the `clearAppBadge()` methods. These do not take any parameters and set the badge to the value `nothing`. Additionally, passing a value of `0` to `setAppBadge()` will set the badge to `nothing` and clear the badge.
 
 ## Interfaces
 
@@ -61,22 +61,16 @@ None.
 
 ## Examples
 
-To set a notification badge on the current document with no value:
-
-```js
-navigator.setClientBadge();
-```
-
-To clear a notification badge on the current document:
-
-```js
-navigator.clearClientBadge();
-```
-
 To set a notification badge on the current app with a value of 12:
 
 ```js
 navigator.setAppBadge(12);
+```
+
+To clear a notification badge on the current app:
+
+```js
+navigator.clearAppBadge();
 ```
 
 ## Specifications
@@ -89,5 +83,5 @@ navigator.setAppBadge(12);
 
 ## See also
 
-- [Badging for app icons](https://developer.chrome.com/articles/badging-api/)
+- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
 - [Badging API Explainer](https://github.com/w3c/badging/blob/main/explainer.md)

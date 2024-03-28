@@ -37,10 +37,10 @@ A link is included in content box above to demonstrate the effects of keyboard f
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
 - {{CSSxRef("block-ellipsis")}}
-- {{CSSxRef("continue")}} {{experimental_inline}}
-- {{CSSxRef("line-clamp")}} {{experimental_inline}}
-- {{CSSxRef("max-lines")}} {{experimental_inline}}
-- {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
+- {{CSSxRef("continue")}}
+- {{CSSxRef("line-clamp")}}
+- {{CSSxRef("max-lines")}}
+- {{CSSxRef("-webkit-line-clamp")}}
 
 ### Data types
 
@@ -50,7 +50,7 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
   - : CSS building block: learn what overflow is and how to manage it.
-- {{Experimental_Inline}} [Creating a named scroll timeline](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_timeline)
+- [Creating a named scroll timeline](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_timeline)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
 ## Related concepts

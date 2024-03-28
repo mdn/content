@@ -8,7 +8,7 @@ status:
 browser-compat: api.DocumentPictureInPicture.requestWindow
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}
+{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestWindow()`** method of the
 {{domxref("DocumentPictureInPicture")}} interface opens the Picture-in-Picture window for the current main browsing context. It returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
