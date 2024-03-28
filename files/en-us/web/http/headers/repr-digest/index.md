@@ -2,15 +2,15 @@
 title: Repr-Digest
 slug: Web/HTTP/Headers/Repr-Digest
 page-type: http-header
-browser-compat: http.headers.Repr-Digest
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-12
 status:
   - experimental
+browser-compat: http.headers.Repr-Digest
+spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-12
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Repr-Digest`** response or request header provides a {{Glossary("digest"}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource. It is invariant under e.g., {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}, which do affect the {{HTTPHeader("Content-Digest")}}. Furthermore, [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representations with different representation digests.
+The **`Repr-Digest`** response or request header provides a {{Glossary("digest")}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource. It is invariant under e.g., {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}, which do affect the {{HTTPHeader("Content-Digest")}}. Furthermore, [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representations with different representation digests.
 
 <table class="properties">
   <tbody>
@@ -43,7 +43,7 @@ Usage of digest algorithms which are considered insecure is discouraged as colli
 
 ## Examples
 
-### HTTP response where `Repr-Digest` and `Content-Digest` coincide
+### HTTP response where Repr-Digest and Content-Digest coincide
 
 An HTTP server may send content octets equivalent to the selected representation's octets:
 
@@ -59,7 +59,7 @@ Content-Range: 0-38053/38054
 ...
 ```
 
-### HTTP responses where {{HTTPHeader("Repr-Digest")}} and {{HTTPHeader("Content-Digest")}} diverge
+### HTTP responses where Repr-Digest and Content-Digest diverge
 
 A static file server may however choose to compress an HTML page, resulting in differing {{HTTPHeader("Content-Digest")}} and `Repr-Digest` header values:
 
@@ -87,7 +87,7 @@ Content-Encoding: deflate, deflate, deflate
 ...
 ```
 
-### Successful HTTP request-response employing {{HTTHeader("Want-Repr-Digest")}}, {{HTTHeader("Repr-Digest")}}, {{HTTHeader("Content-Digest")}}
+### Successful HTTP request-response employing Want-Repr-Digest, Repr-Digest, and Content-Digest
 
 ```http
 PUT /api/transact HTTP/1.1
@@ -104,7 +104,7 @@ Content-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
 ...
 ```
 
-### Unsuccessful HTTP request-response employing {{HTTHeader("Repr-Digest")}}
+### Unsuccessful HTTP request-response employing Repr-Digest
 
 ```http
 GET /api/last-transaction HTTP/1.1
