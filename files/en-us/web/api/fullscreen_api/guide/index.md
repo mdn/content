@@ -108,61 +108,6 @@ This starts by looking at the value of the `fullscreenElement` attribute on the 
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
 
-## Prefixing
-
-For the moment not all browsers are implementing the unprefixed version of the API (for vendor agnostic access to the Fullscreen API you can use [Fscreen](https://github.com/rafgraph/fscreen)). Here is the table summarizing the prefixes and name differences between them:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">Standard</th>
-      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
-      <th scope="col">Gecko (Firefox)</th>
-      <th scope="col">Internet Explorer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-      </th>
-      <td><code>webkitIsFullScreen</code></td>
-      <td><code>mozFullScreen</code></td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenEnabled")}}
-      </th>
-      <td><code>webkitFullscreenEnabled</code></td>
-      <td><code>mozFullScreenEnabled</code></td>
-      <td><code>msFullscreenEnabled</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenElement")}}
-      </th>
-      <td><code>webkitFullscreenElement</code></td>
-      <td><code>mozFullScreenElement</code></td>
-      <td><code>msFullscreenElement</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{DOMxRef("Document.exitFullscreen()")}}</th>
-      <td><code>webkitExitFullscreen()</code></td>
-      <td><code>mozCancelFullScreen()</code></td>
-      <td><code>msExitFullscreen()</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Element.requestFullscreen()")}}
-      </th>
-      <td><code>webkitRequestFullscreen()</code></td>
-      <td><code>mozRequestFullScreen()</code></td>
-      <td><code>msRequestFullscreen()</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## Specifications
 
 {{Specifications}}
