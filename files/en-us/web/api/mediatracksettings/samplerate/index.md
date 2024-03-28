@@ -3,7 +3,7 @@ title: "MediaTrackSettings: sampleRate property"
 short-title: sampleRate
 slug: Web/API/MediaTrackSettings/sampleRate
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.sampleRate
+browser-compat: api.MediaStreamTrack.applyConstraints.sampleRate_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
