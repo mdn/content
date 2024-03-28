@@ -52,9 +52,9 @@ An action is a button that your extension adds to the browser's toolbar. The but
 
 This key replaces [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) in Manifest V3 extensions.
 
-If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
+You must specify this key to include a browser toolbar button in your extension. When specified, you can manipulate the button programmatically using the {{WebExtAPIRef("action")}} API.
 
-You can also create and manipulate actions programmatically using the {{WebExtAPIRef("action")}} .
+If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
 
 ## Syntax
 
