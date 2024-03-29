@@ -94,28 +94,9 @@ HLS can also be decoded using JavaScript, which means we can support the latest 
 
 At the start of the streaming session, an [extended M3U (m3u8) playlist](https://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
 
-### Streaming File Format Support
-
-| Browser               | DASH  | HLS   | Opus (Audio) |
-| --------------------- | ----- | ----- | ------------ |
-| Firefox 32            | ✓ [1] | ✓ [2] | ✓ 14+        |
-| Safari 6+             |       | ✓     |              |
-| Chrome 24+            | ✓ [1] | ✓     |              |
-| Opera 20+             | ✓ [1] |       |              |
-| Internet Explorer 10+ | ✓ 11  | ✓ [2] |              |
-| Firefox Mobile        | ✓     | ✓     | ✓            |
-| Safari iOS6+          |       | ✓     |              |
-| Chrome Mobile         | ✓     | ✓ [2] |              |
-| Opera Mobile          | ✓ [1] | ✓     |              |
-| Android               | ✓     |       |              |
-
-\[1] Via JavaScript and MSE
-
-\[2] Via JavaScript and a CORS Proxy
-
 ## Audio Streaming File Formats
 
-There are also some audio formats beginning to see support across browsers.
+There are also several audio formats:
 
 ### Opus
 
