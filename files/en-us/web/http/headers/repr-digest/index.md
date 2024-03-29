@@ -43,7 +43,7 @@ Usage of digest algorithms which are considered insecure is discouraged as colli
 
 ## Examples
 
-### HTTP response where Repr-Digest and Content-Digest coincide
+### HTTP response where `Repr-Digest` and `Content-Digest` coincide
 
 An HTTP server may send content octets equivalent to the selected representation's octets:
 
@@ -59,7 +59,7 @@ Content-Range: 0-38053/38054
 ...
 ```
 
-### HTTP responses where Repr-Digest and Content-Digest diverge
+### HTTP responses where `Repr-Digest` and `Content-Digest` diverge
 
 A static file server may however choose to compress an HTML page, resulting in differing {{HTTPHeader("Content-Digest")}} and `Repr-Digest` header values:
 
@@ -87,7 +87,7 @@ Content-Encoding: deflate, deflate, deflate
 ...
 ```
 
-### Successful HTTP request-response employing Want-Repr-Digest, Repr-Digest, and Content-Digest
+### Successful HTTP request-response employing `Want-Repr-Digest`, `Repr-Digest`, and `Content-Digest`
 
 ```http
 PUT /api/transact HTTP/1.1
@@ -104,7 +104,7 @@ Content-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
 ...
 ```
 
-### Unsuccessful HTTP request-response employing Repr-Digest
+### Unsuccessful HTTP request-response employing `Repr-Digest`
 
 ```http
 GET /api/last-transaction HTTP/1.1
