@@ -11,9 +11,9 @@ browser-compat: api.NotRestoredReasons.children
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`children`** read-only property of the
-{{domxref("NotRestoredReasons")}} interface returns an array of {{domxref("NotRestoredReasons")}} objects representing the blocked state of any child {{htmlelement("iframe")}}s embedded in the current document.
+{{domxref("NotRestoredReasons")}} interface returns an array of {{domxref("NotRestoredReasons")}} objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames.
 
-Each object has the same structure as the parent object — this way, any number of levels of embedded `<iframes>` can be represented inside the object recursively.
+Each object has the same structure as the parent object — this way, any number of levels of embedded `<iframe>`s can be represented inside the object recursively.
 
 ## Value
 

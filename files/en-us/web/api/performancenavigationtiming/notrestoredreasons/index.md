@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`notRestoredReasons`** read-only property of the {{domxref("PerformanceNavigationTiming")}} interface returns a {{domxref("NotRestoredReasons")}} object providing report data on whether frames present in the current document were blocked from using the [back/forward cache (bfcache)](https://web.dev/articles/bfcache) on navigation, and why.
+The **`notRestoredReasons`** read-only property of the {{domxref("PerformanceNavigationTiming")}} interface returns a {{domxref("NotRestoredReasons")}} object providing report data on reasons why the current document was blocked from using the [back/forward cache (bfcache)](https://web.dev/articles/bfcache) on navigation.
 
 ## Value
 
@@ -37,7 +37,7 @@ function returnNRR() {
 }
 ```
 
-The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which represents the blocked state of a top-level frame with no embedded child `<iframe>`s:
+The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which provides reasons why the current document was blocked from using the bfcache. In this example the top-level frame has no embedded child `<iframe>`s:
 
 ```js
 {

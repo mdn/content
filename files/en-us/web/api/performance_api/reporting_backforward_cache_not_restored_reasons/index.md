@@ -9,15 +9,15 @@ browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
 
 {{DefaultAPISidebar("Performance API")}}{{SeeCompatTable}}
 
-The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property reports information on whether frames present in the document were blocked from using the [back/forward cache](https://web.dev/bfcache/) (bfcache) on navigation, and why. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
+The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property reports information on why the current document was blocked from using the [back/forward cache (bfcache)](https://web.dev/bfcache/) on navigation. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
 
 ## Concepts and usage
 
-Modern browsers provide an optimization feature for history navigation called the [back/forward cache](https://web.dev/bfcache/) (bfcache). This enables an instant loading experience when users go back to a page they have already visited. Pages can be blocked from entering the bfcache or get evicted while in the bfcache for different reasons, some required by a specification and some specific to browser implementations.
+Modern browsers provide an optimization feature for history navigation called the [back/forward cache (bfcache)](https://web.dev/bfcache/). This enables an instant loading experience when users go back to a page they have already visited. Pages can be blocked from entering the bfcache or get evicted while in the bfcache for different reasons, some required by a specification and some specific to browser implementations.
 
 To enable monitoring bfcache blocking in the field the [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) class includes a `notRestoredReasons` property. This returns an object containing related information on the top-level frame and all {{htmlelement("iframe")}}s present in the document:
 
-- Reasons why they were blocked from using the bfcache.
+- Reasons why bfcache usage was blocked.
 - Details such as frame `id` and `name`, to help identify `<iframe>`s in the HTML.
 
 > **Note:** There is also a [test in Chrome dev tools](https://web.dev/bfcache/#test) that reports on whether your pages are cacheable.
@@ -57,13 +57,13 @@ For history navigations, the {{domxref("PerformanceNavigationTiming.notRestoredR
 The properties are as follows:
 
 - {{domxref("NotRestoredReasons.children", "children")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : An array of {{domxref("NotRestoredReasons")}} objects representing the blocked state of any child {{htmlelement("iframe")}}s embedded in the current document. Each object has the same structure as the parent object — this way, any number of levels of embedded `<iframe>s` can be represented inside the object recursively. If the frame has no children, the array will be empty; if the document is in a cross-origin `<iframe>`, `children` will return `null`.
+  - : An array of {{domxref("NotRestoredReasons")}} objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames. Each object has the same structure as the parent object — this way, any number of levels of embedded `<iframe>`s can be represented inside the object recursively. If the frame has no children, the array will be empty; if the document is in a cross-origin `<iframe>`, `children` will return `null`.
 - {{domxref("NotRestoredReasons.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing the `id` attribute value of the `<iframe>` the document is contained in (for example `<iframe id="foo" src="...">`). If the document is not in an `<iframe>` or the `<iframe>` has no `id` set, `id` will return `null`.
 - {{domxref("NotRestoredReasons.name", "name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing the `name` attribute value of the `<iframe>` the document is contained in (for example `<iframe name="bar" src="...">`). If the document is not in an `<iframe>` or the `<iframe>` has no `name` set, `name` will return `null`.
 - {{domxref("NotRestoredReasons.reasons", "reasons")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : An array of {{domxref("NotRestoredReasonDetails")}} objects, each representing a reason why the navigated page was blocked from using the bfcache. If the document is in a cross-origin `<iframe>`, `reasons` will return `null`. See [Blocking reasons](#blocking_reasons) for more details on the reasons.
+  - : An array of {{domxref("NotRestoredReasonDetails")}} objects, each representing a reason why the navigated page was blocked from using the bfcache. If the document is in a cross-origin `<iframe>`, `reasons` will return `null`, but the parent document may show a `reason` of `"masked"` if any `<iframe>`s blocked bfcache usage for the top-level frame. See [Blocking reasons](#blocking_reasons) for more details on the reasons.
 - {{domxref("NotRestoredReasons.src", "src")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing the path to the source of the `<iframe>` the document is contained in (for example `<iframe src="exampleframe.html">`). If the document is not in an `<iframe>`, `src` will return `null`.
 - {{domxref("NotRestoredReasons.url", "url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -71,7 +71,7 @@ The properties are as follows:
 
 ### Reporting bfcache blocking in same-origin `<iframe>`s
 
-When a page has same-origin `<iframe>`s embedded, the returned `notRestoredReasons` value will contain an array of objects inside the `children` property representing the blocked state of each embedded frame.
+When a page has same-origin `<iframe>`s embedded, the returned `notRestoredReasons` value will contain an array of objects inside the `children` property representing the blocking reasons related to each embedded frame.
 
 For example:
 
@@ -107,7 +107,7 @@ For example:
 
 ### Reporting bfcache blocking in cross-origin `<iframe>`s
 
-When a page has cross-origin frames embedded, we limit the amount of information shared about them to avoid leaking cross-origin information. We only include information that the outer page already knows, and whether the cross-origin subtree blocked the bfcache or not. We don't include any blocking reasons or information about lower levels of the subtree (even if some sub-levels are same-origin).
+When a page has cross-origin frames embedded, we limit the amount of information shared about them to avoid leaking cross-origin information. We only include information that the outer page already knows, and whether the cross-origin subtree caused bfcache blocking or not. We don't include any blocking reasons or information about lower levels of the subtree (even if some sub-levels are same-origin).
 
 For example:
 
@@ -119,8 +119,8 @@ For example:
       id: "iframe-id",
       name: "iframe-name",
       reasons: [],
-      src: "./index.html",
-      url: "https://www.example2.com/"
+      src: "https://www.example2.com/",
+      url: null
     }
   ],
   id: null,
@@ -140,7 +140,7 @@ For all the cross-origin `<iframe>`s, no blocking reasons are reported; for the 
 
 There are many different reasons why blocking could occur, and browsers can choose to implement their own specific reasons for blocking, based on how they operate. Developers should avoid depending on specific wording for reasons and be prepared to handle new reasons being added and deleted.
 
-The values listed in the specification are:
+The initial values listed in the specification are:
 
 - `"fetch"`
   - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
@@ -157,7 +157,7 @@ The values listed in the specification are:
 - `"websocket"`
   - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
 
-Chrome implements the following additional blocking reasons (among others):
+Additional blocking reasons may be used by some browsers, for example:
 
 - `"unload-listener"`
   - : The page registers an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler, which prevents bfcache usage. This serves as a useful warning, as `unload` is deprecated. See [Deprecating the unload event](https://developer.chrome.com/docs/web-platform/deprecating-unload) for more information.
