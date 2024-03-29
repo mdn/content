@@ -7844,20 +7844,6 @@
       "icyfenix"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-11-18T06:45:07.853Z",
-    "contributors": [
-      "SphinxKnight",
-      "iamkiing2000",
-      "gammlerfranz",
-      "niceby.collectvibe",
-      "thewebsolinterns",
-      "chrisdavidmills",
-      "ohaver",
-      "davidmichaelgregg",
-      "roshan0708"
-    ]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-12-07T11:57:48.782Z",
     "contributors": [
@@ -16593,27 +16579,6 @@
       "Bc",
       "Jesse",
       "Roc"
-    ]
-  },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-24T00:04:18.819Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "teoli",
-      "fscholz",
-      "mrolappe",
-      "Bedi",
-      "Mgjbot",
-      "Indigo",
-      "NickolayBot",
-      "Nickolay",
-      "Matmota",
-      "Chbok",
-      "Jesse",
-      "Dria",
-      "DarinFisher",
-      "cbiesinger"
     ]
   },
   "Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests": {
@@ -72135,10 +72100,6 @@
       "SteveLee"
     ]
   },
-  "Web/Accessibility/ARIA/Annotations": {
-    "modified": "2020-04-03T08:53:49.929Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-24T00:12:10.850Z",
     "contributors": [
@@ -94858,18 +94819,6 @@
       "jorh"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2020-10-15T21:25:09.630Z",
-    "contributors": [
-      "teoli",
-      "Sheppy",
-      "chearon",
-      "slimsag",
-      "Jeremie",
-      "dustindowell",
-      "msherefel"
-    ]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-12-03T01:54:55.358Z",
     "contributors": [
@@ -98334,24 +98283,6 @@
       "mfluehr",
       "chrisdavidmills",
       "teoli"
-    ]
-  },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:31:57.783Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "mfuji09",
-      "SphinxKnight",
-      "ExE-Boss",
-      "rimunroe",
-      "chrisdavidmills",
-      "kbrosnan",
-      "Jamie0",
-      "Sebastianz",
-      "ddurst",
-      "teoli",
-      "Kikketer"
     ]
   },
   "Web/HTML/Global_attributes/data-*": {
@@ -123762,35 +123693,9 @@
       "sebmozilla"
     ]
   },
-  "Web/SVG/Attribute/Conditional_Processing": {
-    "modified": "2020-10-15T22:03:37.191Z",
-    "contributors": ["MelchiorIm3Tal", "sposhe", "Jeremie"]
-  },
-  "Web/SVG/Attribute/Core": {
-    "modified": "2020-10-15T22:03:41.528Z",
-    "contributors": ["MelchiorIm3Tal", "Jeremie"]
-  },
-  "Web/SVG/Attribute/Events": {
-    "modified": "2020-10-15T22:03:47.521Z",
-    "contributors": ["MelchiorIm3Tal", "Jeremie"]
-  },
   "Web/SVG/Attribute/From": {
     "modified": "2020-10-15T21:13:01.508Z",
     "contributors": ["Sebastianz", "SueSmith", "Jeremie", "sebmozilla"]
-  },
-  "Web/SVG/Attribute/Presentation": {
-    "modified": "2020-10-15T22:03:49.694Z",
-    "contributors": [
-      "MelchiorIm3Tal",
-      "valtlai",
-      "essenngee",
-      "a-mt",
-      "Jeremie"
-    ]
-  },
-  "Web/SVG/Attribute/Styling": {
-    "modified": "2020-10-15T22:03:34.429Z",
-    "contributors": ["MelchiorIm3Tal", "Jeremie"]
   },
   "Web/SVG/Attribute/To": {
     "modified": "2019-07-04T18:01:27.376Z",
@@ -124561,10 +124466,6 @@
   "Web/SVG/Attribute/numOctaves": {
     "modified": "2020-10-15T21:20:48.485Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/onclick": {
-    "modified": "2020-10-15T22:23:00.291Z",
-    "contributors": ["josh.591536", "Sebastianz"]
   },
   "Web/SVG/Attribute/opacity": {
     "modified": "2020-10-15T21:07:02.287Z",

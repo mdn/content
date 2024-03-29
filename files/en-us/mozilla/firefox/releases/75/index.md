@@ -30,7 +30,7 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### Accessibility
 
-The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations) are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
+New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
 
 - `aria-description` ([Firefox bug 1608961](https://bugzil.la/1608961)).
 - [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
@@ -110,4 +110,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(74)}}
+{{Firefox_for_developers}}

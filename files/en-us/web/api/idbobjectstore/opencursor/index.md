@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.openCursor
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`openCursor()`** method of the
 {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
@@ -15,8 +15,6 @@ Used for iterating through an object store with a cursor.
 
 To determine if the add operation has completed successfully, listen for the results's
 `success` event.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

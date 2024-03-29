@@ -2,7 +2,7 @@
 title: vector-effect
 slug: Web/SVG/Attribute/vector-effect
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.vector-effect
+browser-compat: svg.global_attributes.vector-effect
 ---
 
 {{SVGRef}}

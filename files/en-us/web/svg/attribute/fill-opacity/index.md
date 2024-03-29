@@ -2,7 +2,7 @@
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill-opacity
+browser-compat: svg.global_attributes.fill-opacity
 ---
 
 {{SVGRef}}
@@ -61,7 +61,7 @@ svg {
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
+          ><a href="/en-US/docs/Web/SVG/Content_type#paint"
             >&#x3C;percentage></a
           ></strong
         >

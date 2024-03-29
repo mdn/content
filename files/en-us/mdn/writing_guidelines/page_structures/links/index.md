@@ -71,6 +71,6 @@ To learn which parameters each macro supports and the order of parameters for ea
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
+- [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub
 - [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros ( `\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, and `\{{Compat(&lt;feature>, &lt;depth>)}}`) and specification macros (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
 - [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.

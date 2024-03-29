@@ -65,16 +65,6 @@ In it, every new value is exactly 1 times its old value, with nothing else added
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes), including the `x`, `y`, `width`, `height`, and `result` attributes.
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("in")}}: Values include `SourceGraphic`, `SourceAlpha`, `BackgroundImage`, `BackgroundAlpha`, `FillPaint`, `StrokePaint`, or a reference to another filter primitive.
 - {{SVGAttr("type")}}: Values include `matrix`, `saturate`, `hueRotate`, and `luminanceToAlpha`.
 - {{SVGAttr("values")}}: The value for the matrix type set in the `type` attribute.
@@ -169,7 +159,7 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 700, "/files/4371/test.png")}}
+{{EmbedLiveSample("Example", "100%", "700")}}
 
 ## Specifications
 
@@ -181,6 +171,7 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

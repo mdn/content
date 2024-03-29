@@ -8,15 +8,6 @@ page-type: learn-module
 
 In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you should have some familiarity with the basics of [HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS](/en-US/docs/Learn/CSS/First_steps), and you should have also worked through our previous module, [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).

@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.Notification
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`Notification`** interface of the {{domxref("Notifications API", "", "", "nocode")}} is used to configure and display desktop notifications to the user.
 
 These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 

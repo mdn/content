@@ -63,4 +63,4 @@ Support for XForms has been [**removed**](https://www.philipp-wagner.com/blog/20
 
 ### Older versions
 
-{{Firefox_for_developers('18')}}
+{{Firefox_for_developers}}
