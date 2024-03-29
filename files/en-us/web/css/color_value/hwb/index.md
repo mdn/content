@@ -31,11 +31,11 @@ hwb(from lch(40% 70 240deg) h w calc(b - 30))
 
 This [`sRGB`](/en-US/docs/Glossary/Color_space#srgb_color_spaces) color function is defined by a {{CSSXref("&lt;hue&gt;")}} angle value, a whiteness value, a blackness value, and, optionally, an alpha value representing the color's transparency.
 
-The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`, CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces, with `hwb()` being in the same color space as `hsl()`, having the same hue color angles. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/CSS_Colors#colors_in_action) to see it in action.
+The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/CSS_Colors#colors_in_action) to see it in action.
 
 An `hwb()` color is fully saturated when it's whiteness (`W`) and blackness (`B`) values are both `0`. For any hue value `H`, `hwb(H 0% 0%)` is the same color as `hsl(H 100% 50%)`. Increasing the whiteness value lightens the color. Increasing the blackness darkens the color.
 
-When both the blackness and whiteness are greater than 0, the color gets muted, tending towards grey. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100%, if `W + B > 100%`, the whiteness and blackness values of the grey color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
+When both the blackness and whiteness are greater than 0, the color gets muted, tending towards grey. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the grey color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
 
 ## Values
 
@@ -55,11 +55,11 @@ The parameters are as follows:
 
 - `W`
 
-  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness, whereas `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
+  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness. `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `B`
 
-  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's blackness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no blackness, whereas `100%` represents full blackness if `W` is `0`, otherwise both the `W` and `B` values are normalized.
+  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's blackness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no blackness. `100%` represents full blackness if `W` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `A` {{optional_inline}}
 
@@ -87,11 +87,11 @@ The parameters are as follows:
 
 - `W`
 
-  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness, whereas `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
+  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness. `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `B`
 
-  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's blackness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no blackness, whereas `100%` represents full blackness if `W` is `0`, otherwise both the `W` and `B` values are normalized.
+  - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's blackness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no blackness. `100%` represents full blackness if `W` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
