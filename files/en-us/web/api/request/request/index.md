@@ -49,6 +49,7 @@ new Request(input, options)
           - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If set to `false`, it won't.
 
         > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
     - `body`
       - : Any body that you want to add to your request: this can be a
         {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},
