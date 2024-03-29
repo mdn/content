@@ -250,8 +250,4 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 - [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
 - [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
-- {{cssxref("element", "element()")}}
-- {{cssxref("image/image","image()")}}
-- {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
 - [CSS images module](/en-US/docs/Web/CSS/CSS_images)
