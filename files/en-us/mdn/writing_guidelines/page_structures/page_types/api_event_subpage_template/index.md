@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > ```md
 > ---
 > title: "NameOfTheParentInterface: NameOfTheEvent event"
-> slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
+> slug: Web/API/NameOfTheParentInterface/NameOfTheEvent_event
 > page-type: web-api-event
 > status:
 >   - experimental
@@ -34,8 +34,8 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >     Format as "_NameOfTheParentInterface_**:** _NameOfTheEvent_ **event**".
 >     For example, the [animationcancel](/en-US/docs/Web/API/Element/animationcancel_event) event of the [Window](/en-US/docs/Web/API/Window) interface has a _title_ of `Window: animationcancel event`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
+>     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEvent_event`.
 > - **page-type**
 >   - : The `page-type` key for Web/API events is always `web-api-event`.
 > - **status**
