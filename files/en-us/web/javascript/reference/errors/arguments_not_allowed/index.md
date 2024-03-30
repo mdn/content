@@ -22,28 +22,39 @@ SyntaxError: Unexpected identifier 'arguments'. Cannot reference 'arguments' in 
 
 ## What went wrong?
 
-The `arguments` identifier cannot be read outside of a non-arrow function in a class body or a class static initialization block. Doing so is a syntax error.
+A class field initializer expression or a class static initialization block cannot read from its scope the `arguments` identifier. Doing so is a syntax error.
+
+### Notes
+
+- `arguments` can still be assigned in the above conditions:
+
+  ```js example
+  class C {
+    arguments = 42;
+  }
+  ```
+
+- This is true even if `arguments` is bound in a parent scope.
+- A non-arrow function declared in the previous conditions will still bind and be able to read its own `arguments` identifier.
 
 ## Examples
 
 ```js example-bad
 function makeOne() {
     class C {
-        args = { ...arguments };
+        args = { ...arguments }; // SyntaxError: arguments is not valid in fields
     }
     return new C();
 }
-// SyntaxError: arguments is not valid in fields
 ```
 
 ```js example-bad
 let CArgs;
 class C {
     static {
-        CArgs = arguments;
+        CArgs = arguments; // SyntaxError: arguments is not valid in fields
     }
 }
-// SyntaxError: arguments is not valid in fields
 ```
 
 ```js example-good
