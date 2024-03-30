@@ -14,7 +14,7 @@ The **`DNT`** (**D**o **N**ot
 **T**rack) request header indicates the user's tracking preference. It lets
 users indicate whether they would prefer privacy rather than personalized content.
 
-Use **`GPC`** (**G**lobal **P**rivacy **C**ontrol) instead.
+DNT is deprecated in favor of [Global Privacy Control](https://globalprivacycontrol.org/), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients from {{domxref("navigator.globalPrivacyControl")}}.
 
 <table class="properties">
   <tbody>
