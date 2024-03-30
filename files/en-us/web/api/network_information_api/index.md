@@ -17,12 +17,12 @@ The interface consists of a single {{domxref("NetworkInformation")}} object, an 
 
 ## Interfaces
 
-- {{domxref("NetworkInformation")}} {{Experimental_Inline}}
+- {{domxref("NetworkInformation")}}
   - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interface cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface or the {{domxref("WorkerNavigator")}} interface.
 
 ### Extensions to other interfaces
 
-- {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 - {{domxref("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
