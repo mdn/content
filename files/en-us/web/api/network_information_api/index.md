@@ -2,15 +2,13 @@
 title: Network Information API
 slug: Web/API/Network_Information_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - api.NetworkInformation
   - api.Navigator.connection
 spec-urls: https://wicg.github.io/netinfo/
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Network Information API")}} {{AvailableInWorkers}}
 
 The **Network Information API** provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
 This can be used to select high definition content or low definition content based on the user's connection.
