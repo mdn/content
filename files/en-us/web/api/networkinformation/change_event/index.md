@@ -3,12 +3,10 @@ title: "NetworkInformation: change event"
 short-title: change
 slug: Web/API/NetworkInformation/change_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.NetworkInformation.change_event
 ---
 
-{{apiref("Network Information API")}}{{SeeCompatTable}}
+{{apiref("Network Information API")}}
 
 The **`change`** event of the {{domxref("NetworkInformation")}} interface fires when connection information changes, and the event is received by the {{domxref("NetworkInformation")}} object.
 
