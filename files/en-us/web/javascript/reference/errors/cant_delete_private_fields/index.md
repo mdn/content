@@ -28,20 +28,22 @@ There's code trying to `delete` a private property (field or method) of an objec
 
 ```js example-bad
 class MyClass {
-    static #myPrivateField
+    #myPrivateField;
+    deleteIt() {
+        delete this.#myPrivateField; // SyntaxError: private fields can't be deleted
+    }
 }
-delete MyClass.#myPrivateField;
-// SyntaxError: private fields can't be deleted
 ```
 
 ```js example-bad
 class MyClass {
-    #myPrivateField;
-    deleteIt() {
-        delete this.#myPrivateField;
+    static #myPrivateMethod() {
+
+    }
+    #deleteIt() {
+        delete this.#myPrivateMethod; // SyntaxError: private fields can't be deleted
     }
 }
-// SyntaxError: private fields can't be deleted
 ```
 
 ## See also
