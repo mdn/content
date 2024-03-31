@@ -57,7 +57,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#List-of-Ts"
+          ><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
             >&#x3C;list of numbers></a
           ></code
         >

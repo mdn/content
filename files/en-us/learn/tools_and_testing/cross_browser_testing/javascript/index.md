@@ -51,7 +51,7 @@ Things have improved significantly since then; modern browsers do a good job of 
 These days, most cross-browser JavaScript problems are seen:
 
 - When poor-quality browser-sniffing code, feature-detection code, and vendor prefix usage block browsers from running code they could otherwise use just fine.
-- When developers make use of new/nascent JavaScript features, modern Web APIs, etc.) in their code, and find that such features don't work in older browsers.
+- When developers make use of new/nascent JavaScript features, modern Web APIs, etc. in their code, and find that such features don't work in older browsers.
 
 We'll explore all these problems and more below.
 

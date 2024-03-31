@@ -5751,6 +5751,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Downloading_accessing_and_saving_files_in_browser_extensions	/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Extension_API_differences	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview	https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Index	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Making_money_from_browser_extensions	https://extensionworkshop.com/documentation/publish/make-money-from-browser-extensions/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Notifications	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications
@@ -10977,6 +10978,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/ARIA/Annotations	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role

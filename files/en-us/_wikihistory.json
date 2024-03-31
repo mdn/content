@@ -15600,10 +15600,6 @@
       "freaktechnik"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview": {
-    "modified": "2020-06-22T16:29:35.038Z",
-    "contributors": ["Erman", "irenesmith", "hellosct1", "rebloor"]
-  },
   "Mozilla/Add-ons/WebExtensions/Implement_a_settings_page": {
     "modified": "2020-06-22T16:29:12.277Z",
     "contributors": [
@@ -72099,10 +72095,6 @@
       "hhillen",
       "SteveLee"
     ]
-  },
-  "Web/Accessibility/ARIA/Annotations": {
-    "modified": "2020-04-03T08:53:49.929Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-24T00:12:10.850Z",
