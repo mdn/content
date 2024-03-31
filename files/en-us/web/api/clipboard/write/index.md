@@ -78,7 +78,7 @@ This example writes the canvas to a blob, using the default MIME type of `image/
 ```js
 // Get canvas can add an event handler for the click event.
 const canvas = document.getElementById("canvas");
-canvas.addEventListener("click", copyCanvasContentsToClipboard());
+canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
 async function copyCanvasContentsToClipboard() {
   // Copy canvas to blob
