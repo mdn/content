@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.FileSystemDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} provides a handle to a file system directory.
 
 The interface can be accessed via the {{domxref('window.showDirectoryPicker()')}}, {{domxref('StorageManager.getDirectory()')}}, {{domxref('DataTransferItem.getAsFileSystemHandle()')}}, and {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}} methods.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 

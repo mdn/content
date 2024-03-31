@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`getFileHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a
 {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the
 directory the method is called.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
