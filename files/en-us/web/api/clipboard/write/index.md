@@ -51,7 +51,7 @@ This example function replaces the current contents of the clipboard with a spec
 Note that for this particular case, you could just as readily use `Clipboard.writeText()`.
 
 ```js
-button.addEventListener("click", setClipboard("<empty clipboard>"));
+button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
   const type = "text/plain";
