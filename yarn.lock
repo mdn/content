@@ -755,20 +755,20 @@
   dependencies:
     call-bind "^1.0.7"
 
-"@mdn/bcd-utils-api@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.6.tgz#166fd6c431702af3c84133013f337b028476e7bc"
-  integrity sha512-aT0tumSuqi8RbD2ownK9f84pygC/m9/NlXh6IAWcSxj4YtFv14ohH95KcVLiLnTFx1reokVagYvC7P9611EU2A==
+"@mdn/bcd-utils-api@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
+  integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.5.16":
-  version "5.5.16"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.16.tgz#3fe64c7497c56191094f57e159ff50097452be4f"
-  integrity sha512-za4DOflM2h73Rs2ORnhS2IU73sVRjrN4x5ZmOZ8WgLCSOVuZ1+y1K0NQKy8xqaPW52ezN+ni2N2RBUKt532ULA==
+"@mdn/browser-compat-data@^5.5.17":
+  version "5.5.17"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.17.tgz#c37ec522c38ae0ddd8c8f6d87a1929e51d7abb1f"
+  integrity sha512-M4r4nllQiFvHzbZmx+W1WhrLiMNu4XZ+t3AzzmePQ2P9zaxov2xFmd8KrOSQ0NN2QoJ8BINWdSkVU4sAcDTMJw==
 
-"@mdn/yari@2.45.1":
-  version "2.45.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.45.1.tgz#7e604197b4c1dabab2ebd0f5df6dad9ac4e83fac"
-  integrity sha512-Cv3EQINXmeahWoZU1g3MQjuzaZm4RVwxc6ZhlRl8QRzaugZw2xFOwdUTvNkYNvfNFQvcRhiZOuWGCukW/XrVxw==
+"@mdn/yari@2.46.0":
+  version "2.46.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.46.0.tgz#f5aeec14a89e0286fa277de6947f550f793f05dd"
+  integrity sha512-ISCUzmUJlgfjAv3LNGbCkQ1A+siIgoXSz+kT1uGbgoPUoySvB5ACPqdfedtIljoDd82FYerlrqhtCJ76qsj0jg==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -777,15 +777,15 @@
     "@codemirror/state" "^6.4.1"
     "@codemirror/theme-one-dark" "^6.1.2"
     "@fast-csv/parse" "^5.0.0"
-    "@mdn/bcd-utils-api" "^0.0.6"
-    "@mdn/browser-compat-data" "^5.5.16"
+    "@mdn/bcd-utils-api" "^0.0.7"
+    "@mdn/browser-compat-data" "^5.5.17"
     "@mozilla/glean" "4.0.0"
     "@sentry/integrations" "^7.108.0"
     "@sentry/node" "^7.108.0"
-    "@stripe/stripe-js" "^3.0.10"
+    "@stripe/stripe-js" "^3.1.0"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.9"
-    "@webref/css" "^6.12.4"
+    "@webref/css" "^6.12.5"
     accept-language-parser "^1.5.0"
     async "^3.2.5"
     chalk "^5.3.0"
@@ -800,7 +800,7 @@
     dexie "^3.2.7"
     dotenv "^16.4.5"
     ejs "^3.1.9"
-    express "^4.19.1"
+    express "^4.19.2"
     fdir "^6.1.1"
     feed "^4.2.2"
     file-type "^19.0.0"
@@ -853,7 +853,7 @@
     unist-builder "^4.0.0"
     unist-util-visit "^5.0.0"
     web-features "^0.6.1"
-    web-specs "^3.5.0"
+    web-specs "^3.6.0"
 
 "@mozilla/glean@4.0.0":
   version "4.0.0"
@@ -968,10 +968,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stripe/stripe-js@^3.0.10":
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.10.tgz#279b014db9bd3168589aebf0c5fbb768649db828"
-  integrity sha512-CFRNha+aPXR8GrqJss2TbK1j4aSGZXQY8gx0hvaYiSp+dU7EK/Zs5uwFTSAgV+t8H4+jcZ/iBGajAvoMYOwy+A==
+"@stripe/stripe-js@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.1.0.tgz#bb0458c5cb5e9a835c18f8d353e8980cc66b9959"
+  integrity sha512-7+ciE35i8NZ6l4FiO1qFkBoZ64ul6B2ZhBVyygB+e/2EZa2WLUyjoxrP53SagnUW7+/q25nDyDLzQq5F0ebOEw==
 
 "@szmarczak/http-timer@^5.0.1":
   version "5.0.1"
@@ -1195,10 +1195,10 @@
     proxy-from-env "^1.1.0"
     yauzl "^2.9.2"
 
-"@webref/css@^6.12.4":
-  version "6.12.4"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-6.12.4.tgz#26f67ac9f1841d411f1f8cd20c8346656ba53d76"
-  integrity sha512-2+DcmtAuBuqgKboHt8t5gWikm4IDRYT1qj/d/m8mWxDvwiUCTQVk8qNvHxjjTlVizpU9/K6tDYTDurp/8nxuxg==
+"@webref/css@^6.12.5":
+  version "6.12.5"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-6.12.5.tgz#bdb44d326e066905b856b14ac5d08a3c18580616"
+  integrity sha512-57SyuMGIaOd0oU58eQfA4TsoIDp7MvV8mvhSIcVHmUVFp12Uj3PidY0f2XwB4oDYfIN6FuiCkeMw1UoF06Z+Tw==
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -2912,7 +2912,7 @@ expect@^29.7.0:
     jest-message-util "^29.7.0"
     jest-util "^29.7.0"
 
-express@^4.19.1:
+express@^4.19.2:
   version "4.19.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.19.2.tgz#e25437827a3aa7f2a827bc8171bbbb664a356465"
   integrity sha512-5T6nhjsT+EOMzuck8JjBHARTHfMht0POzlA60WV2pMD3gyXw2LZnZ+ueGdNxG+0calOJcWKbpFcuzLZ91YWq9Q==
@@ -7929,10 +7929,10 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-specs@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.5.0.tgz#a8ba6625964fb99396016ad36dd0680c4d8cd6ba"
-  integrity sha512-8PrlDmVTMuoz0LcidzsK8PsdzBtzmKUxqrfrgY5tCmEL2+A28LYJpUTeM0SUm2tKIly9TOxAP3YQMYz4oSKABw==
+web-specs@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.6.0.tgz#055a76fb11aa2c421fe3706c843295654102cebf"
+  integrity sha512-3aA+uxqUW1s+3SNWpXW9/EoOdf+q5qUZYIMczv3BbOs331U+nUUD5E9olOJut6X66cIlMCH2v8Hd07eENs5JSg==
 
 web-streams-polyfill@4.0.0-beta.3:
   version "4.0.0-beta.3"
