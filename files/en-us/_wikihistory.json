@@ -73061,23 +73061,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2020-10-15T21:08:25.190Z",
-    "contributors": [
-      "ddbeck",
-      "Sheppy",
-      "ExE-Boss",
-      "fscholz",
-      "wbamberg",
-      "Sebastianz",
-      "Jeremie",
-      "kscarfone",
-      "teoli",
-      "berkerpeksag",
-      "grendel",
-      "barlow"
-    ]
-  },
   "Web/CSS/-webkit-mask-box-image": {
     "modified": "2020-10-15T21:08:28.807Z",
     "contributors": [
