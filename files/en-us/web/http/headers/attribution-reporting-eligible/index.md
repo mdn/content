@@ -9,9 +9,9 @@ browser-compat: http.headers.Attribution-Reporting-Eligible
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Attribution-Reporting-Eligible`** request header is used to indicate that the feature the request originated from is eligible to take part in attribution reporting, either as an attribution source or trigger.
+The **`Attribution-Reporting-Eligible`** request header is used to indicate that the response corresponding to the request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
 
-This header is typically not set manually and is instead sent by the browser in response to various HTML element or JavaScript request settings. Depending on the allowed registrations specified in the `Attribution-Reporting-Eligible` value, the server would be expected to respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration of an attribution source or trigger respectively.
+This header is never set manually and is instead sent by the browser in response to various HTML element or JavaScript request settings. Depending on the allowed registrations specified in the `Attribution-Reporting-Eligible` value, the server would be expected to respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration of an attribution source or trigger respectively.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -37,15 +37,15 @@ Attribution-Reporting-Eligible: <allowed-registrations>
 ## Directives
 
 - `<allowed-registrations>`
-  - : A comma-separated list of keys representing the registrations allowed in the corresponding response. Possible keys are:
+  - : A structured-header dictionary representing the registrations allowed in the corresponding response. Possible values are:
     - `event-source`
-      - : An image or script-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
+      - : An event-based (image or script-based) [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
     - `navigation-source`
-      - : A click-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
+      - : A navigation-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
     - `trigger`
       - : An [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_triggers) can be registered.
 
-EDITORIAL: IS IT POSSIBLE TO SEND MORE THAN ONE KEY AT ONCE - CAN AN ELEMENT/SCRIPT REGISTER AS AN EVENT SOURCE AND TRIGGER, FOR EXAMPLE?
+Every response in a redirect chain can register at most one source or one trigger.
 
 ## Examples
 

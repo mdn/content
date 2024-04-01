@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Source
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Source`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to complete registration of an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which type of report the browser will generate.
+The **`Attribution-Reporting-Register-Source`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to complete registration of an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -43,35 +43,55 @@ Attribution-Reporting-Register-Source: <json-string>
 ## Directives
 
 - `<json-string>`
+
   - : A JSON string providing the information that the browser should store when the attribution source is interacted with. Available fields are as follows:
-    - `"source_event_id"`
-      - : A string representing a unique ID for the attribution source, which can be used to map it to other information required during ad-serving time (EDITORIAL: WHAT KIND OF INFORMATION?), or aggregate information at the reporting endpoint.
+
+    - `"source_event_id"` {{optional_inline}}
+      - : A string representing a ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint. The string must consist solely of a base-10-formatted 64-bit unsigned integer.
     - `"destination"`
-      - : A string representing one or more space-separated URLs indicating where a conversion is expected to occur. These are used to match the attribution trigger to the source when a conversion occurs.
+      - : A single string or an array of 1–3 strings. These strings must contain a complete URL corresponding to the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) on which a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with.
     - `"aggregation_keys"` {{optional_inline}}
-      - : An object containing keys representing different data points that you'll want to aggregate report values under. Possible values include:
-        - `"campaignCounts"`: A hexadecimal value representing the ad campaign the ad is a part of. (EDITORIAL: WHAT RANGE DO THESE KEY VALUES HAVE? ARE THEY ALL AUTHOR-DECIDED, OR ARE THERE STANDARDIZED LISTS SOMEWHERE TO USE?)
-        - `"geoValue"`: A hexadecimal value representing the geographical region the ad was shown in.
+      - : An object containing user-provided keys representing different data points to aggregate report values under.
     - `"aggregatable_report_window"` {{optional_inline}}
-      - : A string representing a time in seconds after which conversions will no longer be included in generated aggregatable reports. The reports are still generated at the same time. If not set, the event report window falls back to the `"expiry"` value.
+      - : A string representing a time in seconds after which conversions will no longer be included in generated aggregatable reports. The reports are still generated at the same time. If not set, this defaults to the `"expiry"` value.
     - `"debug_key"` {{optional_inline}}
-      - : A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
+      - : A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
-      - : A boolean value. Set this to `true` (in addition to setting a `debug_key`) if you want the generated debug report to be a verbose debug report. If omitted, the default value (`false`) will result in the generation of a success debug report.
+      - : A boolean value. If a `debug_key` is set, set this to `true` to specify that the generated debug report should be a verbose debug report.
+    - `"event_level_epsilon"` {{optional_inline}}
+      - : A number between `0` and `64`, inclusive, which controls the amount of [noise added to reports](/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. If not specified, `"event_level_epsilon"` defaults to `64`.
     - `"event_report_window"` {{optional_inline}}
       - : A string representing a time in seconds, after which event-level reports will no longer be sent. This can be used to generate reports more quickly. If not set, the event report window falls back to the `"expiry"` value.
+        > **Note:** If `"event_report_window"` is specified, `"event_report_windows"` cannot be specified, otherwise the source registration will fail.
+    - `"event_report_windows"` {{optional_inline}}
+      - : An object representing a series of reporting windows, starting at `"start_time"`, with reports for this source being delivered after each specified end time in `"end_times"`. This can be used to vary the time of report delivery across multiple reports. If not set, the event report window falls back to the `"expiry"` value. Properties are as follows:
+        - `"start_time"` {{optional_inline}}: A non-negative number specifying the start time for the resporting windows. If not specified, it defaults to `0`.
+        - `"end_times"`: An array of positive numbers specifying end times for subsequent report windows. The values must be increasing, and greater than `"start_time"`.
+          > **Note:** If `"event_report_windows"` is specified, `"event_report_window"` cannot be specified, otherwise the source registration will fail.
     - `"expiry"` {{optional_inline}}
-      - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. the browser will no longer record attribution source events based on this source). If not specified, the default is 2592000 seconds (30 days).
+      - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. the browser will no longer record attribution source events based on this source). The maximum allowable expiry time is 2592000 seconds (30 days), which is also the default value if `"expiry"` is not explicitly set.
     - `"filter_data"` {{optional_inline}}
       - : An object defining custom data that can be used to filter which conversions generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
+    - `"max_event_level_reports"` {{optional_inline}}
+      - : A number between `0` and `20`, inclusive, which specifies the total number of event-level reports this source can generate. After this maximum is reached, the source is no longer capable of producing any new data. If not specified, `"max_event_level_reports"` defaults to `3` for navigation-based sources and `1` for event-based (image- or script-based) sources.
     - `"priority"` {{optional_inline}}
       - : A string representing a priority value for the attribution source. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to prioritise specific sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
+    - `"trigger_data"` {{optional_inline}}
+      - : An array of 32-bit unsigned integers representing data that must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place. If omitted, `"trigger_data"` defaults to `[0, 1, 2, 3, 4, 5, 6, 7]` for navigation-based sources and `[0, 1]` for event-based (image- or script-based) sources.
+    - `"trigger_data_matching"` {{optional_inline}}
+
+      - : A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. Possible values are:
+
+        - `"exact"`: The `"trigger_data"` from the trigger must exactly match a value contained in the source's `"trigger_data"`; if there is no such match, no event-level attribution takes place.
+        - `"modulus"`: The source's `"trigger_data"` must form a contiguous sequence of integers starting at 0. The trigger's `"trigger_data"` is taken modulus the cardinality of this sequence and then matched against the source `"trigger_data"`. It is an error to use `"modulus"` if the trigger data does not form such a sequence.
+
+        If not specified, `"trigger_data_matching"` defaults to `"modulus"`.
 
 ## Examples
 
 ### Registering a source for an event-level report
 
-A Node.js server might set the `Attribution-Reporting-Register-Source` response header as follows. This is the minimal set of JSON fields required to make a browser generate an event-level report when a trigger is matched to a source:
+A Node.js server might set the `Attribution-Reporting-Register-Source` response header as follows to make a browser generate an event-level report when a trigger is matched to a source:
 
 ```js
 res.set(
@@ -89,7 +109,7 @@ res.set(
 
 ### Registering a source for a summary report
 
-To make the browser generate a summary report when a trigger is matched to a source, you need to include some extra fields, _in addition_ to those included in an event-level report.
+To make the browser generate a summary report when a trigger is matched to a source, you need to include some extra fields, _in addition_ to those required for event-level report generation.
 
 ```js
 res.set(

@@ -149,7 +149,9 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
+  - : Thrown if:
+    - Use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
+    - Use of the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) is blocked by a [`attribution-reporting`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting) {{httpheader("Permissions-Policy")}}, and a `fetch()` request was made with `attributionReporting` specified.
 - {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 

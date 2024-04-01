@@ -29,12 +29,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete the registration of a script-based attribution source or attribution trigger, respectively.
 
-    Once the source/trigger are registered, the corresponding source or trigger event can be set off using whatever event you like, via a couple of different feature options:
-
-    1. Send a {{domxref("fetch()")}} request containing the `attributionReporting` option, either set directly on the `fetch()` call or on a {{domxref("Request")}} object passed into the `fetch()` call.
-    2. Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object.
-
-    See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+    > **Note:** Alternatively, script-based attribution sources or triggers can be registered by sending a {{domxref("fetch()")}} request containing the `attributionReporting` option (either set directly on the `fetch()` call or on a {{domxref("Request")}} object passed into the `fetch()` call), or by sending an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object.
 
     There are two versions of this attribute that you can set:
 
@@ -51,6 +46,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - In the case of an attribution source registration, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` rather than the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header to complete registration.
       - In the case of an attribution trigger registration, the `attributionsrc` property can only contain a single URL, which the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to. This URL can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header to complete registration.
+
+    See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 - `blocking` {{Experimental_Inline}}
 

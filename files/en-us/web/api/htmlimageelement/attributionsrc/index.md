@@ -15,9 +15,9 @@ The
 
 On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete the registration of an image-based attribution source or attribution trigger, respectively.
 
-Once the source/trigger are registered, the corresponding source or trigger event is set off once the browser receives the response containing the image file.
+The source/trigger is registered once the browser receives the response containing the image file.
 
-> **Note:** Bear in mind that users might not necessarily be able to perceive the image at all — it might just be a 1x1 transparent tracking pixel that is only being used for attribution reporting. In any case, the onus is on the developer to make sure that this image appears alongside the ad they are trying to measure attribution for (in the case of sources), or the product or other item they are trying to measure conversions for (in the case of triggers).
+> **Note:** Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 

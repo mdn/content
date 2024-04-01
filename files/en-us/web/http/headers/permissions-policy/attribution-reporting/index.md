@@ -11,7 +11,12 @@ browser-compat: http.headers.Permissions-Policy.attribution-reporting
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `attribution-reporting` directive controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 
-Specifically, where a defined policy blocks the use of this feature ... EDITORIAL: NEED TO FIND OUT EXACTLY WHAT HAPPENS IF A POLICY BLOCKS ATTRIBUTION REPORTING
+Specifically, where a defined policy blocks the use of this feature:
+
+- Background `attributionsrc` requests won't be made.
+- The {{domxref("XMLHttpRequest.setAttributionReporting()")}} method will throw an exception when called.
+- The [`attributionReporting`](/en-US/docs/Web/API/fetch#attributionreporting) option, when included on a {{domxref("fetch()")}} call, will cause it to throw an exception.
+- Registration headers ({{httpheader("Attribution-Reporting-Register-Source")}} and {{httpheader("Attribution-Reporting-Register-Trigger")}}) in HTTP responses on associated documents will be ignored.
 
 ## Syntax
 

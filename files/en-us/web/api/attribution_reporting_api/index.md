@@ -70,9 +70,9 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 - {{domxref("HTMLAnchorElement.attributionSrc")}}, {{domxref("HTMLImageElement.attributionSrc")}}, {{domxref("HTMLScriptElement.attributionSrc")}}
   - : The `attributionSrc` property allows you to get and set the `attributionsrc` attribute on {{htmlelement("a")}}, {{htmlelement("img")}}, and {{htmlelement("script")}} elements programmatically. It reflects the value of that attribute.
 - {{domxref("fetch()")}} and the {{domxref("Request.Request", "Request()")}} constructor, the `attributionReporting` option
-  - : When generating a request via {{domxref("fetch()")}}, this indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
+  - : When generating a request via {{domxref("fetch()")}}, this indicates that you want the request to register an attribution source or trigger.
 - {{domxref("XMLHttpRequest.setAttributionReporting()")}}
-  - : When generating a request via {{domxref("XMLHttpRequest")}}, this indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
+  - : When generating a request via {{domxref("XMLHttpRequest")}}, this indicates that you want the request to register an attribution source or trigger.
 - {{domxref("Window.open()")}}, the `attributionsrc` feature keyword
   - : Causes completion of the registration of an attribution source _and_ triggers the browser to store the associated source data (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method completes. Note that `Window.open()` calls cannot be used to register attribution triggers.
 
@@ -84,7 +84,7 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 ## HTTP headers
 
 - {{httpheader("Attribution-Reporting-Eligible")}}
-  - : Used to indicate that the feature the request originated from is eligible to take part in attribution reporting, either as an attribution source or trigger.
+  - : Used to indicate that the response corresponding to the request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
 - {{httpheader("Attribution-Reporting-Register-Source")}}
   - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to complete registration of an attribution source.
 - {{httpheader("Attribution-Reporting-Register-Trigger")}}
