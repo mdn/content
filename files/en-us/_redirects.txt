@@ -354,7 +354,7 @@
 /en-US/docs/CSS/-webkit-font-smoothing	/en-US/docs/Web/CSS/font-smooth
 /en-US/docs/CSS/-webkit-hyphens	/en-US/docs/Web/CSS/hyphens
 /en-US/docs/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
-/en-US/docs/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS/-webkit-mask-attachment
+/en-US/docs/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
 /en-US/docs/CSS/-webkit-mask-box-image	/en-US/docs/Web/CSS/-webkit-mask-box-image
 /en-US/docs/CSS/-webkit-mask-clip	/en-US/docs/Web/CSS/mask-clip
 /en-US/docs/CSS/-webkit-mask-composite	/en-US/docs/Web/CSS/-webkit-mask-composite
@@ -11294,6 +11294,7 @@
 /en-US/docs/Web/CSS/-webkit-justify-content	/en-US/docs/Web/CSS/justify-content
 /en-US/docs/Web/CSS/-webkit-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
+/en-US/docs/Web/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/-webkit-mask-clip	/en-US/docs/Web/CSS/mask-clip
 /en-US/docs/Web/CSS/-webkit-mask-image	/en-US/docs/Web/CSS/mask-image
 /en-US/docs/Web/CSS/-webkit-mask-origin	/en-US/docs/Web/CSS/mask-origin
