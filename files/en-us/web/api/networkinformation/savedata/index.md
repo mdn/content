@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.NetworkInformation.saveData
 ---
 
-{{APIRef("Network Information API")}}
+{{APIRef("Network Information API")}} {{AvailableInWorkers}}
 
 The **`saveData`** read-only
 property of the {{domxref("NetworkInformation")}} interface returns `true` if the user has set a reduced data usage option on the user agent.
