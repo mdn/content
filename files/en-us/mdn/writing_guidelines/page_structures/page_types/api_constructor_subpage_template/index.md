@@ -18,7 +18,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface: NameOfTheConstructor() constuctor
+> title: NameOfTheParentInterface: NameOfTheConstructor() constructor
 > slug: Web/API/NameOfTheParentInterface/NameOfTheConstructor
 > page-type: web-api-constructor
 > status:
@@ -31,7 +31,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as `NameOfTheParentInterface: NameOfTheConstructor() constuctor`.
+>     Format as `NameOfTheParentInterface: NameOfTheConstructor() constructor`.
 >     For example, the [Request()](/en-US/docs/Web/API/Request/Request) constructor has a _title_ of `Request: Request() constructor`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
