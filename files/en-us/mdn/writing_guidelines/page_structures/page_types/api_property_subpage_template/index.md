@@ -31,7 +31,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as `NameOfTheParentInterface: NameOfTheProperty property`.
+>     Format as "NameOfTheParentInterface: NameOfTheProperty property".
 >     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay: capabilities property`.
 > - **slug**
 >
