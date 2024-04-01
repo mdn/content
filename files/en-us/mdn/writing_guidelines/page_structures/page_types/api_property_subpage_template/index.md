@@ -18,7 +18,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface: NameOfTheProperty property
+> title: "NameOfTheParentInterface: NameOfTheProperty property"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
 > status:
