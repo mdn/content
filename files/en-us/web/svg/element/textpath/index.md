@@ -65,7 +65,7 @@ svg {
   - : The width of the space into which the text will render.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _auto_; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
