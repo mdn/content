@@ -215,7 +215,6 @@ values.addEventListener("change", (evt) => {
   aligns.forEach((align) => {
     align.innerText = alVal;
   });
-  hideNote(alVal, display.value);
 });
 display.addEventListener("change", (evt) => {
   const dVal = evt.target.value;
