@@ -103,7 +103,7 @@ align-content: unset;
 
 ### align-content switcher
 
-In this example you can switch between the different layouts flex, grid, and block. You can also switch between the different values for `align-content`.
+In this example, you can switch between three different {{cssxref("display")}} property values, includ `flex`, `grid`, and `block`. You can also switch between the different values for `align-content`.
 
 #### HTML
 
