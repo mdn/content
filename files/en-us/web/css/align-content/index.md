@@ -119,7 +119,7 @@ In this example, you can switch between three different {{cssxref("display")}} p
 ```
 
 ```html hidden
-<section class="controls">
+<fieldset class="controls">
     <h2>Controls</h2>
     <div class="row">
       <label for="display">display: </label>
