@@ -153,7 +153,7 @@ In this example, you can switch between three different {{cssxref("display")}} p
     <p id="note" hidden="hidden">
       In <a href="/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content">block layout the child elements are treated a single element</a><br>so  <code class="align">normal</code> behaves differently.
     </p>
-  </section>
+  </fieldset>
 </div>
 ```
 
