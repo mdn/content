@@ -43,7 +43,7 @@
     "@caporal/core": "^2.0.7",
     "@mdn/yari": "2.46.0",
     "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1",
+    "ajv-formats": "^3.0.1",
     "async": "^3.2.5",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
