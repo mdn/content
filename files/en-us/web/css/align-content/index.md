@@ -112,10 +112,10 @@ In this example, you can switch between three different {{cssxref("display")}} p
 ```
 
 ```html
-<section id="outer" class="block">
-  <div id="inner" class="olive"></div>
-  <div id="inner" class="coral"></div>
-  <div id="inner" class="deepskyblue"></div>
+<section>
+  <div class="olive"></div>
+  <div class="coral"></div>
+  <div class="deepskyblue"></div>
 </section>
 ```
 
