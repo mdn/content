@@ -67,7 +67,7 @@ These elements don't make the table any more accessible to screen reader users, 
 
 To use them, they should be included in the following order:
 
-- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} element, the table header should come just below those.
+- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} elements, the table header should come just below those.
 - The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer.
 - The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example.
 
