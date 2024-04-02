@@ -2,7 +2,6 @@
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
 page-type: html-attribute
-browser-compat: html.global_attributes.itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -71,10 +70,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

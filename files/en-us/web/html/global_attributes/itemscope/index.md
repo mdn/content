@@ -2,7 +2,6 @@
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 page-type: html-attribute
-browser-compat: html.global_attributes.itemscope
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -265,10 +264,6 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -2,7 +2,6 @@
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
 page-type: html-attribute
-browser-compat: html.global_attributes.itemprop
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -424,10 +423,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -2,7 +2,6 @@
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
 page-type: html-attribute
-browser-compat: html.global_attributes.itemref
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -52,10 +51,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
