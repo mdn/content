@@ -125,7 +125,7 @@ Bear in mind that users might not necessarily be able to perceive the image at a
 
 ## Script-based attribution sources
 
-Script-based attribution sources are by far the most versatile. You can set up a script to act as an attribution source and trigger the browser to store the associated source data based on whatever request suits your app.
+Script-based attribution sources are by far the most versatile. You can set up a script to initiate a request that is eligible to register an attribution source based on whatever request suits your app.
 
 To set up a script-based attribution source, you can:
 
