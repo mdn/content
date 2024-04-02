@@ -209,7 +209,7 @@ section div {
 ```js hidden
 const values = document.querySelector("#values");
 const display = document.querySelector("#display");
-const container = document.querySelector("#outer");
+const container = document.querySelector("section");
 const displayTypes = document.querySelectorAll(".displayType");
 const aligns = document.querySelectorAll(".align");
 const note = document.querySelector("#note");
