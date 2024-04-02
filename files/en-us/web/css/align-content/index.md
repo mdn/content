@@ -222,7 +222,6 @@ display.addEventListener("change", (evt) => {
   displayTypes.forEach((dType) => {
     dType.innerText = dVal;
   });
-  hideNote(values.value, dVal);
 });
 ```
 
