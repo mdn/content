@@ -19,7 +19,7 @@ Attribution sources take the form of links, images, or scripts contained within 
 
 However, what happens behind the scenes to register sources and retrieve and store the source data is the same in all cases.
 
-1. All of the sources send a request of some kind; when the correct attribute/option is included on the source (for example, when an {{htmlelement("a")}} element includes an `attributionsrc` attribute), an {{httpheader("Attribution-Reporting-Eligible")}} header is sent along with the request to indicate that source is eligible for attribution reporting. For example:
+1. All of the sources send a request of some kind; when the correct attribute/option is included on the source (for example, when an {{htmlelement("a")}} element includes an `attributionsrc` attribute), an {{httpheader("Attribution-Reporting-Eligible")}} header is sent along with the request to indicate that the response is eligible to register a source. For example:
 
    ```http
    Attribution-Reporting-Eligible: navigation-source
