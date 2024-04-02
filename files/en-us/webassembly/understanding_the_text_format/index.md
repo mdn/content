@@ -553,7 +553,9 @@ Each of the modules that is being compiled can import the same memory and table 
 
 ## Bulk memory operations
 
-Bulk memory operations are a newer addition to the language (for example, in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as `memcpy` and `memmove` in a more efficient, performant way.
+Bulk memory operations are a newer addition to the language — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as `memcpy` and `memmove` in a more efficient, performant way.
+
+> **Note:** See the [bulk-memory-operations](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) in the home page for browser compatibility information.
 
 The new operations are:
 
@@ -584,16 +586,20 @@ WebAssembly currently has four available _number types_:
 
 ### Reference types
 
-The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) provides two main features:
+The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) provides two main features:
 
 - A new type, `externref`, which can hold _any_ JavaScript value, for example strings, DOM references, objects, etc. `externref` is opaque from the point of view of WebAssembly — a Wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing Wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. `externref` can be used for value types and table elements.
 - A number of new instructions that allow Wasm modules to directly manipulate [WebAssembly tables](#webassembly_tables), rather than having to do it via the JavaScript API.
 
 > **Note:** The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
+> **Note:** See the [reference-types](/en-US/docs/WebAssembly#webassembly.reference-types) in the home page for browser compatibility information.
+
 ## Multi-value WebAssembly
 
-Another more recent addition to the language (for example, in [Firefox 78](/en-US/docs/Mozilla/Firefox/Releases/78)) is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
+Another more recent addition to the language is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
+
+> **Note:** See the [multi-value](/en-US/docs/WebAssembly#webassembly.multi-value) in the home page for browser compatibility information.
 
 At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:
 
@@ -614,9 +620,11 @@ But this will pave the way for more useful instruction types, and other things b
 
 ## WebAssembly threads
 
-WebAssembly Threads (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79) onwards) allow WebAssembly Memory objects to be shared across multiple WebAssembly instances running in separate Web Workers, in the same fashion as [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)s in JavaScript. This allows very fast communication between Workers, and significant performance gains in web applications.
+WebAssembly Threads allow WebAssembly Memory objects to be shared across multiple WebAssembly instances running in separate Web Workers, in the same fashion as [`SharedArrayBuffer`s](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) in JavaScript. This allows very fast communication between Workers, and significant performance gains in web applications.
 
 The threads proposal has two parts, shared memories and atomic memory accesses.
+
+> **Note:** See the [threads-and-atomics](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) in the home page for browser compatibility information.
 
 ### Shared memories
 
@@ -650,7 +658,7 @@ Unlike unshared memories, shared memories must specify a "maximum" size, in both
 
 ### Atomic memory accesses
 
-A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses). These instructions are allowed on non-shared memories as of Firefox 80.
+A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses).
 
 > **Note:** The [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) shows how to take advantage of this new functionality from Emscripten.
 
