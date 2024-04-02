@@ -147,8 +147,8 @@ In this example, you can switch between three different {{cssxref("display")}} p
     </div>
     <p>CSS applied</p>
     <pre>
-.<span class="displayStyle">block</span> {
-  display: <span class="displayStyle">block</span>;
+section {
+  display: <span id="displayStyle">block</span>;
   align-content: <span id="align">normal</span>
 }
     </pre>
@@ -222,7 +222,7 @@ section {
 const alignContent = document.querySelector("#alignContent");
 const display = document.querySelector("#display");
 const container = document.querySelector("section");
-const displayStyle = document.querySelectorAll(".displayStyle");
+const displayStyle = document.querySelector("#displayStyle");
 const alignStyle = document.querySelector("#align");
 document.addEventListener("load", () => {
   updatePage();
@@ -239,9 +239,7 @@ function updatePage() {
   container.style.alignContent = alVal;
   container.style.display = dVal;
   alignStyle.innerText = alVal;
-  displayStyle.forEach((dType) => {
-    dType.innerText = dVal;
-  });
+  displayStyle.innerText = dVal;
 }
 ```
 
