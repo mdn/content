@@ -35,7 +35,7 @@ A string. There are two versions of this property that you can get and set:
 
   This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs:
 
-  - In the case of an attribution source registration, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` rather than the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header to complete registration.
+  - In the case of an attribution source registration, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header to complete registration.
   - In the case of an attribution trigger registration, the `attributionSrc` property can only contain a single URL, which the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to. This URL can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header to complete registration.
 
 ## Examples
