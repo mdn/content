@@ -9,18 +9,18 @@ browser-compat: api.PressureObserver
 
 {{DefaultAPISidebar("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The **Compute Pressure API** is a JavaScript API that enables you observe the pressure of system resources such as the CPU.
+The **Compute Pressure API** is a JavaScript API that enables you to observe the pressure of system resources such as the CPU.
 
 ## Use cases
 
-In real-time applications, such as video conferencing web apps, the Compute Pressure API lets you detect if the system is under unmanageable stress. It notifies you of high-level pressure state changes, so you can adjust your workloads and still offer pleasent user experience. The signal is proactively delivered when the system pressure trend is either rising or easing to allow timely adaptation.
+In real-time applications, such as video conferencing web apps, the Compute Pressure API lets you detect which pressure the system is currently facing. The system will handle any stress as best as it can, but a collaboration between system and app is useful to handle the pressure best. This API notifies you of high-level pressure state changes, so you can adjust your workloads and still offer pleasant user experience. The signal is proactively delivered when the system pressure trend is either rising or easing to allow timely adaptation.
 
-You can use these pressure change signals, for example, to reduce or increase the video quality or the number of video feeds shown simultaneously to avoid dropping video frames, audio cuts, or delaying other critical parts of the application. The quality of service of your web app varies, but ideally that does not lead to a total system failure, input delay, or unresponsiveness. Instead, the set of enabled features and their quality level is balanced against the resource pressure of the end-user device.
+You can use these pressure change signals, for example, to reduce or increase the video quality or the number of video feeds shown simultaneously to avoid dropping video frames, audio cuts, or delaying other critical parts of the application. The quality of service of your web app can vary, also due to pressure from external factors and apps at unexpected times, but ideally that does not lead to a total system failure, input delay, or unresponsiveness. Instead, the set of enabled features and their quality level is balanced against the resource pressure of the end-user device. It is similar to network pressure in which case a streaming app adapts to the available bandwidth.
 
 More use cases are:
 
-- Web games, for which you could balance the quality and amount of 3D assets.
-- User interfaces, for which you could render placeholders instead of real data while the system is under pressure, and render the real content once the pressue has eased.
+- Web games, for which you could balance the quality and amount of 3D assets, change the framerate, resolution, depth of field etc, to ensure low latency and stable frame rate.
+- User interfaces, for which you could render placeholders instead of real data while the system is under pressure, and render the real content once the pressure has eased.
 
 ## Concepts and usage
 
