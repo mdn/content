@@ -244,7 +244,9 @@ display.addEventListener("change", (evt) => {
 
 Try changing the `display` value and the `align-content` value.
 
-{{EmbedLiveSample("align-content_switcher", 260, 310)}}
+{{EmbedLiveSample("Examples", 260, 310)}}
+
+In [block layout](en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `normal` behaves differently.
 
 ## Specifications
 
