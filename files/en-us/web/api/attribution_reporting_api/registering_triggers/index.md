@@ -178,7 +178,7 @@ To register a script-based attribution trigger, you can:
 
 In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
 
-However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution trigger via a separate server that you _do_ control. In this case, you can specify a single URL as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL specified in `attributionsrc` rather than the resource origin; the URL can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
+However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution trigger via a separate server that you _do_ control. In this case, you can specify a single URL as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL specified in `attributionsrc` in addition to the resource origin; the URL can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
 
 For example, in the case of an `<img>` element you could declare the URL in the `attributionsrc` attribute:
 
