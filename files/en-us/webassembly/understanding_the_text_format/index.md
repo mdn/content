@@ -284,15 +284,27 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
+The examples above show how to work with numbers in assembly code, adding them to the [stack](#stack_machines), perform operations on them, and then logging the result by calling a method in JavaScript.
 
-From JavaScript's point of view, it's as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That's literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
+For working with strings and other more complex data types we use `memory`, which can be created in the WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types))
+In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes, that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing bytes between any location in the memory and the stack.
 
-So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
+From JavaScript's point of view, it's as though memory is all inside one big growable {{jsxref("ArrayBuffer")}}.
+JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and experited. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
-The key is that JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
+Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript or `memory.grow` in the WebAssembly.
+Since `ArrayBuffer` objects can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory.
 
-Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
+Note that when you create the memory you need to define both the initial size and the maximum size to which the memory can grow.
+WebAssembly will attempt to reserve the maximum size you have requested, and if it is able to do so, it can grow the buffer more efficiently in future. If not, it won't fail unless it cannot allocate the initial size.
+
+> **Note:** Originally WebAssembly only allowed one memory per module instance.
+> You can now have [multiple_memories](#multiple_memories) when supported by the browser.
+
+To explain this by way of example, let's consider the case where we want to work with a string in our WebAssembly code.
+A string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
+
+All we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
 
 While there are many ways to encode a string's length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:
 
@@ -337,7 +349,7 @@ Our final Wasm module looks like this:
 
 > **Note:** Above, note the double semicolon syntax (`;;`) for allowing comments in WebAssembly files.
 
-Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
+Now from JavaScript we can create a `Memory` object with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
 const memory = new WebAssembly.Memory({ initial: 1 });
@@ -355,6 +367,10 @@ WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
 ```
 
 > **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+
+#### Multiple memories
+
+> **Note:** See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information.
 
 ### WebAssembly tables
 
@@ -555,7 +571,7 @@ Each of the modules that is being compiled can import the same memory and table 
 
 Bulk memory operations are a newer addition to the language — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as `memcpy` and `memmove` in a more efficient, performant way.
 
-> **Note:** See the [bulk-memory-operations](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) in the home page for browser compatibility information.
+> **Note:** See [`webassembly.bulk-memory-operations` in the home page](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) for browser compatibility information.
 
 The new operations are:
 
@@ -593,13 +609,13 @@ The [reference types proposal](https://github.com/WebAssembly/reference-types/bl
 
 > **Note:** The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
-> **Note:** See the [reference-types](/en-US/docs/WebAssembly#webassembly.reference-types) in the home page for browser compatibility information.
+> **Note:** See [`webassembly.reference-types` in the home page](/en-US/docs/WebAssembly#webassembly.reference-types) for browser compatibility information.
 
 ## Multi-value WebAssembly
 
 Another more recent addition to the language is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
 
-> **Note:** See the [multi-value](/en-US/docs/WebAssembly#webassembly.multi-value) in the home page for browser compatibility information.
+> **Note:** See [`webassembly.multi-value` in the home page](/en-US/docs/WebAssembly#webassembly.multi-value) for browser compatibility information.
 
 At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:
 
@@ -624,7 +640,7 @@ WebAssembly Threads allow WebAssembly Memory objects to be shared across multipl
 
 The threads proposal has two parts, shared memories and atomic memory accesses.
 
-> **Note:** See the [threads-and-atomics](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) in the home page for browser compatibility information.
+> **Note:** See [`webassembly.threads-and-atomics` in the home page](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) for browser compatibility information.
 
 ### Shared memories
 
