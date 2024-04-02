@@ -159,6 +159,13 @@
       "properties": [],
       "events": []
     },
+    "Compute Pressure API": {
+      "overview": ["Compute Pressure API"],
+      "interfaces": ["PressureObserver", "PressureRecord"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactAddress", "ContactsManager"],

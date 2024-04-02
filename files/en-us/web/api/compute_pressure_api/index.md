@@ -1,0 +1,110 @@
+---
+title: Compute Pressure API
+slug: Web/API/Compute_Pressure_API
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.PressureObserver
+---
+
+{{DefaultAPISidebar("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{securecontext_header}}
+
+The **Compute Pressure API** is a JavaScript API that enables you observe the pressure of system resources such as the CPU.
+
+## Use cases
+
+In real-time applications, such as video conferencing web apps, the Compute Pressure API lets you detect if the system is under unmanageable stress. It notifies you of high-level pressure state changes, so you can adjust your workloads and still offer pleasent user experience. The signal is proactively delivered when the system pressure trend is either rising or easing to allow timely adaptation.
+
+You can use these pressure change signals, for example, to reduce or increase the video quality or the number of video feeds shown simultaneously to avoid dropping video frames, audio cuts, or delaying other critical parts of the application. The quality of service of your web app varies, but ideally that does not lead to a total system failure, input delay, or unresponsiveness. Instead, the set of enabled features and their quality level is balanced against the resource pressure of the end-user device.
+
+More use cases are:
+
+- Web games, for which you could balance the quality and amount of 3D assets.
+- User interfaces, for which you could render placeholders instead of real data while the system is under pressure, and render the real content once the pressue has eased.
+
+## Concepts and usage
+
+Fast and delightful web applications should balance workloads when the system's computing resources are used at (near) full capacity. The Compute Pressure API's goal is to prevent, rather than mitigate, bad user experience in the web app itself and also for the user's device to not become too hot, too loud, or to drain the battery at an unacceptable rate. Therefore, it is advised to prefer this API over feedback mechanisms (for example, using {{domxref("window.requestAnimationFrame")}}) where bad user experience is mitigated, but not proactively avoided. For measuring and segmenting the performance of user sessions after the fact, the {{domxref("PerformanceLongTaskTiming")}} API is better suited to analyze tasks that occupy the UI thread for 50 milliseconds or more (see also [Performance API](/en-US/docs/Web/API/Performance_API) for additional performance measurement APIs).
+
+### Pressure source types
+
+In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized proccessing units). The current version of the Compute Pressure API specification supports two main source types:
+
+- `"thermals"` represents the global thermal state of the system. This state can be affected by other apps and sites than the observing site.
+- `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This source is the CPU pressure for the thread the site is using, such as the main thread (window) or workers.
+
+Additional source types, such as `"gpu"` might be supported in the future. Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Availability can vary by your user agent, your operating system, and your hardware, so be sure to check this.
+
+The Compute Pressure API can listen for pressure changes in the following contexts/threads:
+
+- {{domxref("Window")}} (main thread)
+- {{domxref("Worker")}}
+- {{domxref("SharedWorker")}}
+
+### Pressure states
+
+The Compute Pressure API exposes high-level pressure states which abstract away complexities of system bottlenecks that cannot be adequately explained with low-level metrics such as processor clock speed and utilization. In fact, metrics for CPU utilization are often [misleading](https://www.brendangregg.com/blog/2017-05-09/cpu-utilization-is-wrong.html). Therefore, the Compute Pressure API uses human-readable pressure states with the following semantics (see also the [specification](https://w3c.github.io/compute-pressure/#pressure-states)):
+
+- ⚪ `"nominal"`: The conditions of the target device are at an acceptable level with no noticeable adverse effects on the user.
+- 🟢 `"fair"`: Target device pressure, temperature and/or energy usage are slightly elevated, potentially resulting in reduced battery-life, as well as fans (or systems with fans) becoming active and audible. Apart from that the target device is running flawlessly and can take on additional work.
+- 🟡 `"serious"`: Target device pressure, temperature and/or energy usage is consistently highly elevated. The system may be throttling as a countermeasure to reduce thermals.
+- 🔴 `"critical"`: The temperature of the target device or system is significantly elevated and it requires cooling down to avoid any potential issues.
+
+The contributing factors (i.e. the underlying system metrics) for the pressure states above are not defined by the specification and can vary depending the underlying hardware and platform behavior. However, the specification requires that the change in contributing factors must be substantial to avoid flip-flopping between states. This means you can expect the API to not report different states overly often as they aren't responding to a certain fluctuating system metric.
+
+### Security and privacy considerations
+
+The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions_Policy) by the token `"compute-pressure"`. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
+
+## Reference
+
+### Interfaces
+
+The following interfaces are present in the Compute Pressure API and the API surface is similar to other observers, such as {{domxref("IntersectionObserver")}}, {{domxref("MutationObserver")}}, or {{domxref("PerformanceObserver")}}.
+
+- {{domxref("PressureObserver")}}
+  - : Notifies when the system's pressure changes for a specfied number of sources (e.g. the CPU) at a predefined sample interval.
+- {{domxref("PressureRecord")}}
+  - : Describes the pressure trend at a specific moment of transition.
+
+### Permission-Policy directive
+
+- {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} directive
+  - : Controls access to the Compute Pressure API.
+
+## Examples
+
+### Log current pressure
+
+This example registers a {{domxref("PressureObserver")}} and notifies whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
+
+```js
+function callback(records) {
+  const lastRecord = records[records.length - 1];
+  console.log(`Current pressure ${lastRecord.state}`);
+  if (lastRecord.state === "critical") {
+    // disable video feeds
+  } else if (lastRecord.state === "serious") {
+    // disable video filter effects
+  } else {
+    // enable all video feeds and filter effects
+  }
+}
+
+const observer = new PressureObserver(callback, {
+  sampleInterval: 1000, // 1000ms
+});
+await observer.observe("cpu");
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Compute Pressure demo](https://w3c.github.io/compute-pressure/demo/), which uses Mandelbrot sets and workers to create artifical pressure for test purposes.
