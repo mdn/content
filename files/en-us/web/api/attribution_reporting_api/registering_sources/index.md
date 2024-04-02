@@ -43,7 +43,15 @@ However, what happens behind the scenes to register sources and retrieve and sto
      );
      ```
 
-     > **Note:** The only required field in this context is `destination`.
+     The only required field in this context is `destination`, which specifies one or more URLs pointing to locations where a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with. The other fields specified above do the following:
+
+     - `"source_event_id"`: A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint (see [Generating reports > Basic process](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#basic_process) for endpoint information).
+     - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. the browser will no longer record attribution source events based on this source).
+     - `"priority"`: A string representing a priority value for the attribution source. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
+     - `"debug_key"`: A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
+     - `"event_report_window"`: A string representing a time in seconds, after which event-level reports will no longer be sent.
+
+     See {{httpheader("Attribution-Reporting-Register-Source")}} for a detailed description of all the available fields.
 
    - To make the browser generate a [summary report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#summary_reports) when a trigger is matched to a source, you need to include some extra fields, _in addition_ to those required for generating an event-level report.
 
@@ -67,7 +75,12 @@ However, what happens behind the scenes to register sources and retrieve and sto
      );
      ```
 
-     > **Note:** See {{httpheader("Attribution-Reporting-Register-Source")}} for a detailed description of all the available fields.
+     The additional fields in this example are:
+
+     - `"aggregation_keys"`: An object containing user-provided keys representing different data points to aggregate report values under.
+     - `"aggregatable_report_window"`: A string representing a time in seconds after which trigger data will no longer be included in generated aggregatable reports.
+
+     Again, see {{httpheader("Attribution-Reporting-Register-Source")}} for a detailed description of all the available fields.
 
 3. When the specified action occurs on the registered attribution source, the browser stores the provided source data in its private local cache.
 
@@ -175,8 +188,14 @@ To set up a script-based attribution source, you can:
    function triggerSourceInteraction() {
      const req = new XMLHttpRequest();
      req.open("GET", "https://shop.example/endpoint");
-     req.setAttributionReporting(attributionReporting);
-     req.send();
+     // Check availability of setAttributionReporting() before calling
+     if (typeof req.setAttributionReporting === "function") {
+       req.setAttributionReporting(attributionReporting);
+       req.send();
+     } else {
+       throw new Error("Attribution reporting not available");
+       // Include recovery code here as appropriate
+     }
    }
 
    // Associate the interaction trigger with whatever
@@ -215,7 +234,7 @@ const aElem = document.querySelector("a");
 aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 ```
 
-In the case of a {{domxref("Window.open()")}} call, the different URLs would have to be listed as separate `attributionsrc` features in the features parameter, separated by commas:
+In the case of a {{domxref("Window.open()")}} call, the different URLs would have to be listed as multiple separate `attributionsrc` features in the [`windowFeatures`](/en-US/docs/Web/API/Window/open#windowfeatures) parameter, separated by commas:
 
 ```js
 // encode the URLs in case they contain special characters

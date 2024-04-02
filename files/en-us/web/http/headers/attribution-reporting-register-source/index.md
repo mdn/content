@@ -47,13 +47,13 @@ Attribution-Reporting-Register-Source: <json-string>
   - : A JSON string providing the information that the browser should store when the attribution source is interacted with. Available fields are as follows:
 
     - `"source_event_id"` {{optional_inline}}
-      - : A string representing a ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint. The string must consist solely of a base-10-formatted 64-bit unsigned integer.
+      - : A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint. The string must consist solely of a base-10-formatted 64-bit unsigned integer.
     - `"destination"`
       - : A single string or an array of 1–3 strings. These strings must contain a complete URL corresponding to the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) on which a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with.
     - `"aggregation_keys"` {{optional_inline}}
       - : An object containing user-provided keys representing different data points to aggregate report values under.
     - `"aggregatable_report_window"` {{optional_inline}}
-      - : A string representing a time in seconds after which conversions will no longer be included in generated aggregatable reports. The reports are still generated at the same time. If not set, this defaults to the `"expiry"` value.
+      - : A string representing a time in seconds after which trigger data will no longer be included in generated aggregatable reports. The reports are still generated at the same time. If not set, this defaults to the `"expiry"` value.
     - `"debug_key"` {{optional_inline}}
       - : A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}

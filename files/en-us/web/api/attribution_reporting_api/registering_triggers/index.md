@@ -18,7 +18,7 @@ The different attribution trigger types are registered and triggered in differen
 
 However, what happens behind the scenes to register triggers, look for matches, etc., is the same in all cases.
 
-1. All of the trigger types cause an HTTP request to be sent. Including the correct attribute/option on a trigger causes the {{httpheader("Attribution-Reporting-Eligible")}} header to be sent along with that request, to indicate that the request is eligible for attribution reporting. For example:
+1. All of the trigger types cause an HTTP request to be sent. Including the correct attribute/option on a trigger causes the {{httpheader("Attribution-Reporting-Eligible")}} header to be sent along with that request, to indicate that the response is eligible for registering a trigger. For example:
 
    ```http
    Attribution-Reporting-Eligible: trigger
@@ -34,7 +34,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
      JSON.stringify({
        "event_trigger_data": [
          {
-           "trigger_data": "412444888111012",
+           "trigger_data": "4",
            "priority": "1000000000000",
            "deduplication_key": "2345698765",
          },
@@ -44,6 +44,16 @@ However, what happens behind the scenes to register triggers, look for matches, 
    );
    ```
 
+   The fields specified here are as follows:
+
+   - `"event_trigger_data"`: An object representing data about the trigger. This includes:
+     - : `"trigger_data"`: The data associated with the trigger.
+     - : `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
+     - : `"deduplication_key"`: A string representing a unique key that can be used to prevent reports from being counted multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
+   - `"debug_key"`: A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
+
+   See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
+
    A trigger intended to match with a [summary report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#summary_reports) attribution source requires two additional fields, as shown below:
 
    ```js
@@ -52,12 +62,13 @@ However, what happens behind the scenes to register triggers, look for matches, 
      JSON.stringify({
        "event_trigger_data": [
          {
-           "trigger_data": "412444888111012",
+           "trigger_data": "4",
            "priority": "1000000000000",
            "deduplication_key": "2345698765",
          },
        ],
        "debug_key": "1115698977",
+
        "aggregatable_trigger_data": [
          {
            "key_piece": "0x400",
@@ -76,7 +87,12 @@ However, what happens behind the scenes to register triggers, look for matches, 
    );
    ```
 
-   > **Note:** See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
+   The additional fields in this example are:
+
+   - `"aggregatable_trigger_data"`: An array of objects, each one defining an aggregation key to apply to different source keys.
+   - `"aggregatable_values"`: An object containing properties representing a value for each data point defined in `"aggregatable_trigger_data"`.
+
+   Again, see {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
 
 3. When a registered attribution trigger is set off, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) of the top-level page on which the trigger is being registered must:
 
@@ -178,7 +194,7 @@ To register a script-based attribution trigger, you can:
 
 In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
 
-However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution trigger via a separate server that you _do_ control. In this case, you can specify a single URL as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL specified in `attributionsrc` in addition to the resource origin; the URL can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
+However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution trigger via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
 
 For example, in the case of an `<img>` element you could declare the URL in the `attributionsrc` attribute:
 

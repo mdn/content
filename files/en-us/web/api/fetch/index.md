@@ -43,12 +43,12 @@ fetch(resource, options)
 
     - `attributionReporting` {{experimental_inline}}
 
-      - : Indicates that you want the request to trigger the browser to set off an attribution source or trigger event. `attributionReporting` is an object containing the following properties:
+      - : Indicates that you want the request's response to register a script-based (event-based) [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#image-based_attribution_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#image-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
 
         - `eventSourceEligible`
-          - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If set to `false`, it won't.
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.
         - `triggerEligible`
-          - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If set to `false`, it won't.
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution trigger. If set to `false`, it isn't.
 
         > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 

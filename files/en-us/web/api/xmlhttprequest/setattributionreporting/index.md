@@ -11,7 +11,7 @@ browser-compat: api.XMLHttpRequest.setAttributionReporting
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`setAttributionReporting()`** method of the
-{{domxref("XMLHttpRequest")}} interface indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
+{{domxref("XMLHttpRequest")}} interface indicates that you want the request's response to register a script-based (event-based) [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#image-based_attribution_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#image-based_attribution_triggers).
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -26,9 +26,9 @@ setAttributionReporting(options)
 - `options`
   - : An object providing attribution reporting options, which includes the following properties:
     - `eventSourceEligible`
-      - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If set to `false`, it won't.
+      - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.
     - `triggerEligible`
-      - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If set to `false`, it won't.
+      - : A boolean. If set to `true`, the request's response is eligible to register an attribution trigger. If set to `false`, it isn't.
 
 ### Return value
 
@@ -52,8 +52,14 @@ const attributionReporting = {
 function triggerSourceInteraction() {
   const req = new XMLHttpRequest();
   req.open("GET", "https://shop.example/endpoint");
-  req.setAttributionReporting(attributionReporting);
-  req.send();
+  // Check availability of setAttributionReporting() before calling
+  if (typeof req.setAttributionReporting === "function") {
+    req.setAttributionReporting(attributionReporting);
+    req.send();
+  } else {
+    throw new Error("Attribution reporting not available");
+    // Include recovery code here as appropriate
+  }
 }
 
 // Associate the interaction trigger with whatever

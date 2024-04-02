@@ -51,7 +51,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
         - `"source_keys"`
           - : An array containing one or more key values for the data.
     - `"aggregatable_values"`
-      - : An object containing a property representing a value for each data point defined in `"aggregatable_trigger_data"`. In each case, the property name is equal to the name defined in `"source_keys"`, and the property value is whatever arbitrary value you require.
+      - : An object containing properties representing a value for each data point defined in `"aggregatable_trigger_data"`. In each case, the property name is equal to the name defined in `"source_keys"`, and the property value is whatever arbitrary value you require.
     - `"debug_key"` {{optional_inline}}
       - : A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
