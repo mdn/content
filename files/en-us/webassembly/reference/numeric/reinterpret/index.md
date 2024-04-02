@@ -1,6 +1,6 @@
 ---
-title: Reinterpret
-slug: WebAssembly/Reference/Numeric/Reinterpret
+title: reinterpret
+slug: WebAssembly/Reference/Numeric/reinterpret
 page-type: webassembly-instruction
 ---
 

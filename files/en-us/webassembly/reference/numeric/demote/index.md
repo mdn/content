@@ -1,6 +1,6 @@
 ---
-title: Demote
-slug: WebAssembly/Reference/Numeric/Demote
+title: demote
+slug: WebAssembly/Reference/Numeric/demote
 page-type: webassembly-instruction
 ---
 

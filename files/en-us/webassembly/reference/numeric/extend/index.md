@@ -1,6 +1,6 @@
 ---
-title: Extend
-slug: WebAssembly/Reference/Numeric/Extend
+title: extend
+slug: WebAssembly/Reference/Numeric/extend
 page-type: webassembly-instruction
 ---
 

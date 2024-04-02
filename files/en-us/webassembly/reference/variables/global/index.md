@@ -1,6 +1,6 @@
 ---
-title: Global
-slug: WebAssembly/Reference/Variables/Global
+title: global
+slug: WebAssembly/Reference/Variables/global
 page-type: webassembly-instruction
 ---
 

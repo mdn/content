@@ -1,6 +1,6 @@
 ---
-title: Local tee
-slug: WebAssembly/Reference/Variables/Local_tee
+title: local.tee
+slug: WebAssembly/Reference/Variables/local_tee
 page-type: webassembly-instruction
 ---
 

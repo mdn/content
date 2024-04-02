@@ -1,6 +1,6 @@
 ---
-title: Local get
-slug: WebAssembly/Reference/Variables/Local_get
+title: local.get
+slug: WebAssembly/Reference/Variables/local_get
 page-type: webassembly-instruction
 ---
 

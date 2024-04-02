@@ -1,14 +1,14 @@
 ---
-title: Fill
-slug: WebAssembly/Reference/Memory/Fill
+title: memory.fill
+slug: WebAssembly/Reference/Memory/fill
 page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
 
-The **`fill`** instruction sets all bytes in a memory region to a given byte.
+The **`memory.fill`** instruction sets all bytes in a memory region to a given byte.
 
-The **`fill`** instruction does not return a value. If the memory region indicated is out of bounds this instruction will trap.
+The instruction does not return a value. If the memory region indicated is out of bounds this instruction will trap.
 
 ## Syntax
 

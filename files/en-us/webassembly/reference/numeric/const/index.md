@@ -1,6 +1,6 @@
 ---
-title: Const
-slug: WebAssembly/Reference/Numeric/Const
+title: const
+slug: WebAssembly/Reference/Numeric/const
 page-type: webassembly-instruction
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Remainder
-slug: WebAssembly/Reference/Numeric/Remainder
+title: remainder
+slug: WebAssembly/Reference/Numeric/remainder
 page-type: webassembly-instruction
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Global get
-slug: WebAssembly/Reference/Variables/Global_get
+title: global.get
+slug: WebAssembly/Reference/Variables/global_get
 page-type: webassembly-instruction
 ---
 

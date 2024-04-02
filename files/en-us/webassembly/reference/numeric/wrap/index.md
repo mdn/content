@@ -1,6 +1,6 @@
 ---
-title: Wrap
-slug: WebAssembly/Reference/Numeric/Wrap
+title: wrap
+slug: WebAssembly/Reference/Numeric/wrap
 page-type: webassembly-instruction
 ---
 

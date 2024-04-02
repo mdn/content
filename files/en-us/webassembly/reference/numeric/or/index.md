@@ -1,6 +1,6 @@
 ---
-title: OR
-slug: WebAssembly/Reference/Numeric/OR
+title: or
+slug: WebAssembly/Reference/Numeric/or
 page-type: webassembly-instruction
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Local
-slug: WebAssembly/Reference/Variables/Local
+title: local
+slug: WebAssembly/Reference/Variables/local
 page-type: webassembly-instruction
 ---
 

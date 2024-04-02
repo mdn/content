@@ -1,14 +1,14 @@
 ---
-title: Grow
-slug: WebAssembly/Reference/Memory/Grow
+title: memory.grow
+slug: WebAssembly/Reference/Memory/grow
 page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
 
-The **`grow`** instruction, increases the size of the memory instance by a specified number of pages, each page is sized 64KiB.
+The **`memory.grow`** instruction, increases the size of the memory instance by a specified number of pages, each page is sized 64KiB.
 
-The **`grow`** instruction returns previous size of memory, in pages, if the operation was successful, and returns **`-1`** if the operation failed.
+The instruction returns previous size of memory, in pages, if the operation was successful, and returns `-1` if the operation failed.
 
 {{EmbedInteractiveExample("pages/wat/grow.html", "tabbed-taller")}}
 

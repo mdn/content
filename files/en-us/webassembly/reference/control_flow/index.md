@@ -14,7 +14,7 @@ WebAssembly control flow instructions.
   - : Branches to a loop or block.
 - [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call)
   - : Calls a function.
-- [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/Drop)
+- [`drop`](/en-US/docs/WebAssembly/Reference/Control_flow/drop)
   - : Pops a value from the stack, and discards it.
 - [`end`](/en-US/docs/WebAssembly/Reference/Control_flow/end)
   - : Can be used to end a `block`, `loop`, `if`, or `else`.
