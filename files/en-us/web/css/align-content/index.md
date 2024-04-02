@@ -209,15 +209,6 @@ const display = document.querySelector("#display");
 const container = document.querySelector("section");
 const displayTypes = document.querySelectorAll(".displayType");
 const aligns = document.querySelectorAll(".align");
-const note = document.querySelector("#note");
-const hideNote = (a, d) => {
-  const distributions = ["space-between", "space-around", "space-evenly"];
-  if (distributions.includes(a) && d === "block") {
-    note.removeAttribute("hidden");
-  } else {
-    note.setAttribute("hidden", "hidden");
-  }
-};
 values.addEventListener("change", (evt) => {
   const alVal = evt.target.value;
   container.style.alignContent = alVal;
