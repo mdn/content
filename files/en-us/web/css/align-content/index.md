@@ -101,7 +101,6 @@ align-content: unset;
 
 ## Examples
 
-
 In this example, you can switch between three different {{cssxref("display")}} property values, includ `flex`, `grid`, and `block`. You can also switch between the different values for `align-content`.
 
 #### HTML
@@ -112,26 +111,29 @@ In this example, you can switch between three different {{cssxref("display")}} p
 
 ```html
 <section>
-  <div class="olive"></div>
-  <div class="coral"></div>
-  <div class="deepskyblue"></div>
+  <div class="olive">Olive</div>
+  <div class="coral">Coral</div>
+  <div class="deepskyblue">Deep<br />sky<br />blue</div>
+  <div class="orchid">Orchid</div>
+  <div class="slateblue">Slateblue</div>
+  <div class="maroon">Maroon</div>
 </section>
 ```
 
-```html hidden
+```html-nolint hidden
 <fieldset class="controls">
     <legend>Controls</legend>
     <div class="row">
       <label for="display">display: </label>
       <select id="display">
+        <option value="block" selected>block</option>
         <option value="flex">flex</option>
         <option value="grid">grid</option>
-        <option value="block">block</option>
       </select>
     </div>
     <div class="row">
-      <label for="values">align-content: </label>
-      <select id="values">
+      <label for="alignContent">align-content: </label>
+      <select id="alignContent">
         <option value="normal" selected>normal</option>
         <option value="start">start</option>
         <option value="center">center</option>
@@ -143,12 +145,12 @@ In this example, you can switch between three different {{cssxref("display")}} p
         <option value="space-evenly">space-evenly</option>
       </select>
     </div>
-    <h2>styles</h2>
+    <p>CSS applied</p>
     <pre>
-      .<span class="displayType">flex</span> {
-        display: <span class="displayType">flex</span>;
-        align-content: <span id="align">normal</span>
-      }
+.<span class="displayStyle">block</span> {
+  display: <span class="displayStyle">block</span>;
+  align-content: <span id="align">normal</span>
+}
     </pre>
   </fieldset>
 </div>
@@ -157,29 +159,31 @@ In this example, you can switch between three different {{cssxref("display")}} p
 #### CSS
 
 ```css hidden
-.wrapper {
-  display: flex;
-  gap: 1rem;
-}
-h2 {
-  margin: 0;
-  margin-bottom: 0.2rem;
-}
-.row {
-  margin-bottom: 0.2rem;
+@layer pageSetUp {
+  .wrapper {
+    font-size: 1.25rem;
+    display: flex;
+    gap: 1rem;
+  }
+  section div {
+    font-family: monospace;
+    padding: 3px;
+  }
 }
 ```
 
 ```css
 section {
-  border: solid 2px tomato;
+  border: solid 1.5px tomato;
   height: 300px;
   width: 300px;
+  flex-wrap: wrap; /* used by flex only */
+  gap: 0.2rem;
 }
-section div {
+/* section div {
   height: 75px;
   width: 100%;
-}
+} */
 .olive {
   background-color: olive;
 }
@@ -188,6 +192,17 @@ section div {
 }
 .deepskyblue {
   background-color: deepskyblue;
+}
+.orchid {
+  background-color: orchid;
+}
+.slateblue {
+  background-color: slateblue;
+  color: white;
+}
+.maroon {
+  background-color: maroon;
+  color: white;
 }
 .flex {
   display: flex;
@@ -204,25 +219,30 @@ section div {
 ```
 
 ```js hidden
-const values = document.querySelector("#values");
+const alignContent = document.querySelector("#alignContent");
 const display = document.querySelector("#display");
 const container = document.querySelector("section");
-const displayTypes = document.querySelectorAll(".displayType");
-const aligns = document.querySelectorAll(".align");
-values.addEventListener("change", (evt) => {
-  const alVal = evt.target.value;
-  container.style.alignContent = alVal;
-  aligns.forEach((align) => {
-    align.innerText = alVal;
-  });
+const displayStyle = document.querySelectorAll(".displayStyle");
+const alignStyle = document.querySelector("#align");
+document.addEventListener("load", () => {
+  updatePage();
 });
-display.addEventListener("change", (evt) => {
-  const dVal = evt.target.value;
-  container.className = dVal;
-  displayTypes.forEach((dType) => {
+alignContent.addEventListener("change", () => {
+  updatePage();
+});
+display.addEventListener("change", () => {
+  updatePage();
+});
+function updatePage() {
+  const alVal = alignContent.value;
+  const dVal = display.value;
+  container.style.alignContent = alVal;
+  container.style.display = dVal;
+  alignStyle.innerText = alVal;
+  displayStyle.forEach((dType) => {
     dType.innerText = dVal;
   });
-});
+}
 ```
 
 #### Result
@@ -231,7 +251,7 @@ Try changing the `display` value and the `align-content` value.
 
 {{EmbedLiveSample("Examples", 260, 310)}}
 
-In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `normal` behaves differently.
+In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `space-between`, `space-around`, and `space-evenly` behaves differently.
 
 ## Specifications
 
