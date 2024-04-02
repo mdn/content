@@ -354,7 +354,7 @@
 /en-US/docs/CSS/-webkit-font-smoothing	/en-US/docs/Web/CSS/font-smooth
 /en-US/docs/CSS/-webkit-hyphens	/en-US/docs/Web/CSS/hyphens
 /en-US/docs/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
-/en-US/docs/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS/-webkit-mask-attachment
+/en-US/docs/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
 /en-US/docs/CSS/-webkit-mask-box-image	/en-US/docs/Web/CSS/-webkit-mask-box-image
 /en-US/docs/CSS/-webkit-mask-clip	/en-US/docs/Web/CSS/mask-clip
 /en-US/docs/CSS/-webkit-mask-composite	/en-US/docs/Web/CSS/-webkit-mask-composite
@@ -5751,6 +5751,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Downloading_accessing_and_saving_files_in_browser_extensions	/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Extension_API_differences	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview	https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Index	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Making_money_from_browser_extensions	https://extensionworkshop.com/documentation/publish/make-money-from-browser-extensions/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Notifications	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications
@@ -11293,6 +11294,7 @@
 /en-US/docs/Web/CSS/-webkit-justify-content	/en-US/docs/Web/CSS/justify-content
 /en-US/docs/Web/CSS/-webkit-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
+/en-US/docs/Web/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/-webkit-mask-clip	/en-US/docs/Web/CSS/mask-clip
 /en-US/docs/Web/CSS/-webkit-mask-image	/en-US/docs/Web/CSS/mask-image
 /en-US/docs/Web/CSS/-webkit-mask-origin	/en-US/docs/Web/CSS/mask-origin
