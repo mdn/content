@@ -7,7 +7,7 @@ browser-compat: css.properties.align-content
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross-axis](/en-US/docs/Glossary/Cross_Axis), a [grid](/en-US/docs/Web/CSS/CSS_grid_layout)'s or [block](/en-US/docs/Glossary/Block-level_content)'s block axis.
+The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross axis](/en-US/docs/Glossary/Cross_Axis), or a [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [block-level](/en-US/docs/Glossary/Block-level_content) element's block axis.
 
 The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
