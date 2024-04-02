@@ -2,7 +2,22 @@
 title: WebAssembly
 slug: WebAssembly
 page-type: landing-page
-spec-urls: https://webassembly.github.io/spec/js-api/
+browser-compat:
+  - webassembly.api
+  - webassembly.BigInt-to-i64-integration
+  - webassembly.bulk-memory-operations
+  - webassembly.exception-handling
+  - webassembly.extended-constant-expressions
+  - webassembly.fixed-width-SIMD
+  - webassembly.garbage-collection
+  - webassembly.multiMemory
+  - webassembly.multi-value
+  - webassembly.mutable-globals
+  - webassembly.non-trapping-float-to-int-conversions
+  - webassembly.reference-types
+  - webassembly.sign-extension-operations
+  - webassembly.tail-calls
+  - webassembly.threads-and-atomics
 ---
 
 {{WebAssemblySidebar}}
@@ -83,6 +98,10 @@ And what's even better is that it is being developed as a web standard via the [
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
