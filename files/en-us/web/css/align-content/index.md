@@ -179,7 +179,7 @@ section {
   height: 300px;
   width: 300px;
 }
-#inner {
+section div {
   height: 75px;
   width: 100%;
 }
