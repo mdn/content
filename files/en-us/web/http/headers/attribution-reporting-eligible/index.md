@@ -37,7 +37,7 @@ Attribution-Reporting-Eligible: <allowed-registrations>
 ## Directives
 
 - `<allowed-registrations>`
-  - : A structured-header dictionary representing the registrations allowed in the corresponding response. Possible values are:
+  - : A structured-header dictionary representing the registrations allowed in the corresponding response. Possible keys are:
     - `event-source`
       - : An event-based (image or script-based) [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_sources) can be registered.
     - `navigation-source`
