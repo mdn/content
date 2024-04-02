@@ -120,7 +120,7 @@ In this example, you can switch between three different {{cssxref("display")}} p
 
 ```html hidden
 <fieldset class="controls">
-    <h2>Controls</h2>
+    <legend>Controls</legend>
     <div class="row">
       <label for="display">display: </label>
       <select id="display">
