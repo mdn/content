@@ -174,7 +174,7 @@ h2 {
 ```
 
 ```css
-#outer {
+section {
   border: solid 2px tomato;
   height: 300px;
   width: 300px;
