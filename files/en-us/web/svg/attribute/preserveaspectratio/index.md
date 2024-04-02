@@ -19,7 +19,7 @@ The aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attrib
 preserveAspectRatio="<align> [<meet or slice>]"
 ```
 
-The `preserveAspectRatio` attribute value consists of up to two keywords: a required alignment value and an optional `meet` or `slice` keyword:
+The `preserveAspectRatio` attribute value consists of up to two keywords: a required alignment value and an optional `meet` or `slice` keyword.
 
 The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. `xMidYMid` is the default value. The alignment value must be one of the following keyword values:
 
