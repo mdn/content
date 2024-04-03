@@ -237,7 +237,7 @@ Try changing the `display` value and the `align-content` value.
 
 {{EmbedLiveSample("Examples", 260, 310)}}
 
-In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `space-between`, `space-around`, and `space-evenly` behaves differently.
+In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `space-between`, `space-around`, and `space-evenly` behave differently.
 
 ## Specifications
 
