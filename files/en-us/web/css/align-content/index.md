@@ -159,16 +159,14 @@ section {
 #### CSS
 
 ```css hidden
-@layer pageSetUp {
-  .wrapper {
-    font-size: 1.25rem;
-    display: flex;
-    gap: 1rem;
-  }
-  section div {
-    font-family: monospace;
-    padding: 3px;
-  }
+.wrapper {
+  font-size: 1.25rem;
+  display: flex;
+  gap: 1rem;
+}
+section div {
+  font-family: monospace;
+  padding: 3px;
 }
 ```
 
@@ -178,12 +176,8 @@ section {
   height: 300px;
   width: 300px;
   flex-wrap: wrap; /* used by flex only */
-  gap: 0.2rem;
+  gap: 0.2rem; /* not used by block */
 }
-/* section div {
-  height: 75px;
-  width: 100%;
-} */
 .olive {
   background-color: olive;
 }
