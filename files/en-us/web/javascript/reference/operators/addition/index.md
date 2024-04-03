@@ -38,17 +38,26 @@ You are advised to not use `"" + x` to perform [string coercion](/en-US/docs/Web
 
 ## Examples
 
-### Number addition
+### String concatenation
 
 ```js
-// Number + Number -> addition
-1 + 2; // 3
+// String + String -> concatenation
+"foo" + "bar"; // "foobar"
 
-// Boolean + Number -> addition
-true + 1; // 2
+// Number + String -> concatenation
+5 + "foo"; // "5foo"
 
-// Boolean + Boolean -> addition
-false + false; // 0
+// String + Boolean -> concatenation
+"foo" + false; // "foofalse"
+
+// String + Number -> concatenation
+"2" + 2; // "22"
+
+// String + BigInt -> concatenation
+"str" + 1n; // "str1"
+
+// String + Symbol -> throws TypeError
+'str' + Symbol(); // TypeError: Cannot convert a Symbol value to a string
 ```
 
 ### BigInt addition
@@ -65,20 +74,17 @@ false + false; // 0
 Number(1n) + 2; // 3
 ```
 
-### String concatenation
+### Number addition
 
 ```js
-// String + String -> concatenation
-"foo" + "bar"; // "foobar"
+// Number + Number -> addition
+1 + 2; // 3
 
-// Number + String -> concatenation
-5 + "foo"; // "5foo"
+// Boolean + Number -> addition
+true + 1; // 2
 
-// String + Boolean -> concatenation
-"foo" + false; // "foofalse"
-
-// String + Number -> concatenation
-"2" + 2; // "22"
+// Boolean + Boolean -> addition
+false + false; // 0
 ```
 
 ## Specifications
