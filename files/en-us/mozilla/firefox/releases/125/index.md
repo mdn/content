@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ### CSS
 
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape (Firefox bug [1868374](https://bugzil.la/1868374)).
+
 #### Removals
 
 ### JavaScript
