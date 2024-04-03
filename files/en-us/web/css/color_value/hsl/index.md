@@ -296,7 +296,7 @@ div.comma-separated {
 
 ### Legacy versus modern syntax
 
-The example demonstrates how `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy syntaxes.
+The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy (comma-separated) syntaxes.
 
 #### HTML
 
