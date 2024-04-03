@@ -14,7 +14,7 @@ The **`hsl()`** functional notation expresses a color in the {{glossary("RGB", "
 
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
-Defining _complementary colors_ with `hsl()` can be done with a single formula, as they are positioned on the same diameter of the {{glossary("color wheel")}}. If `θ` is the hue angle of a color, its complementary one will have `180deg - θ` as its hue angle.
+Defining _complementary colors_ with `hsl()` can be done by adding or subtracting 180 degrees from the hue value, as they are positioned on the same diameter of the {{glossary("color wheel")}}. For example, if the hue angle of a color is `1θdeg`, its complementary has `190deg` as its hue angle.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 
 The `hsla()` function can also be used to express sRGB colors. This is an alias for `hsl()` that accepts the same parameters.
 
-> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120deg, 75%, 25%)`. The `none` value is not permitted in the comma-separated legacy syntax, and the `%` units are required.
+> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
 
 ### Values
 
@@ -294,15 +294,18 @@ div.comma-separated {
 
 {{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
 
-### Legacy syntax: hsla()
+### Legacy versus modern syntax
 
-The `hsla()` syntax is an alias for `hsl()`.
+The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy (comma-separated) syntaxes.
 
 #### HTML
 
 ```html
-<div class="hsl"></div>
-<div class="hsla"></div>
+<div class="modern">HSL</div>
+<div class="legacy">HSL</div>
+<div class="modernWithAlpha">HSL</div>
+<div class="modernHSLA">HSLA</div>
+<div class="legacyHSLA">HSLA</div>
 ```
 
 #### CSS
@@ -310,22 +313,43 @@ The `hsla()` syntax is an alias for `hsl()`.
 ```css
 div {
   width: 100px;
-  height: 50px;
-  margin: 1rem;
+  min-height: 50px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  display: flex;
+  gap: 20px;
+}
+```
+
+```css
+div.modern {
+  background-color: hsl(90 80% 50%);
 }
 
-div.hsl {
-  background-color: hsl(0 100% 50% / 50%);
+div.legacy {
+  background-color: hsl(90, 80%, 50%);
 }
 
-div.hsla {
-  background-color: hsla(0, 100%, 50%, 0.5);
+div.modernWithAlpha {
+  background-color: hsl(90 80% 50% / 50%);
+}
+
+div.modernHSLA {
+  background-color: hsla(90 80% 50% / 50%);
+}
+
+div.legacyHSLA {
+  background-color: hsla(90, 80%, 50%, 0.5);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("legacy_syntax_hsla", "100%", 150)}}
+{{EmbedLiveSample("legacy_versus_modern_syntax", "100%", 70)}}
 
 ## Specifications
 
@@ -337,9 +361,10 @@ div.hsla {
 
 ## See also
 
-- [List of all color notations](/en-US/docs/Web/CSS/color)
 - {{CSSXref("&lt;hue&gt;")}} data type
+- [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color functions
+- [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix#using_hue_interpolation_in_color-mix)
+- [List of all color notations](/en-US/docs/Web/CSS/color_value)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
-- [Color picker](https://colorjs.io/apps/picker/) by Lea Verou
+- [Color picker tool](https://colorjs.io/apps/picker/) by Lea Verou
