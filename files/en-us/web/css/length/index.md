@@ -23,9 +23,11 @@ The `<length>` units can be relative or absolute. Relative lengths represent a m
 
 > **Note:** Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
 
-The relative length units listed here are based on font and viewport.
+### Releative length units 
 
-### Relative length units based on font
+The relative length units listed here are based on font, container, and viewport.
+
+#### Relative length units based on font
 
 Font lengths define the `<length>` value in terms of the size of a particular character or font attribute in the font currently in effect in an element or its parent.
 
@@ -45,7 +47,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `lh`
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
-### Relative length units based on root element's font
+#### Relative length units based on root element's font
 
 - `rcap`
   - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
@@ -60,7 +62,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `rlh`
   - : Equal to the value of [`lh`](#lh) unit on the root element's font. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
-### Relative length units based on viewport
+#### Relative length units based on viewport
 
 The viewport-percentage length units are based on four different viewport sizes: small, large, dynamic, and default. The allowance for the different viewport sizes is in response to browser interfaces expanding and retracting dynamically and hiding and showing the content underneath.
 
@@ -139,7 +141,7 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
     `vi` represents the viewport-percentage length unit based on the browser default viewport size.
 
-### Container query length units
+#### Container query length units
 
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
@@ -197,7 +199,7 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 
 ## Interpolation
 
-When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The interpolation happens on the calculated value. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The {{glossary("interpolation")}} happens on the calculated value. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
