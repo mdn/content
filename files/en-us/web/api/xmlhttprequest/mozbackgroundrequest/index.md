@@ -7,7 +7,7 @@ status:
   - non-standard
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 > **Note:** This method is not available from Web content. It requires elevated privileges to access.
 
