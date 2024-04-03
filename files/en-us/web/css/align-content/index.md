@@ -204,18 +204,6 @@ section {
   background-color: maroon;
   color: white;
 }
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem;
-}
-.grid {
-  display: grid;
-  gap: 0.2rem;
-}
-.block {
-  display: block;
-}
 ```
 
 ```js hidden
