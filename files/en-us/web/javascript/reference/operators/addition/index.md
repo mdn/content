@@ -57,7 +57,7 @@ You are advised to not use `"" + x` to perform [string coercion](/en-US/docs/Web
 "str" + 1n; // "str1"
 
 // String + Symbol -> throws TypeError
-'str' + Symbol(); // TypeError: Cannot convert a Symbol value to a string
+"str" + Symbol(); // TypeError: Cannot convert a Symbol value to a string
 ```
 
 ### BigInt addition
