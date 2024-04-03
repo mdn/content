@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.close
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`close()`** method of the {{domxref("IDBDatabase")}}
 interface returns immediately and closes the connection in a separate thread.
@@ -15,8 +15,6 @@ The connection is not actually closed until all transactions created using this
 connection are complete. No new transactions can be created for this connection once
 this method is called. Methods that create transactions throw an exception if a closing
 operation is pending.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

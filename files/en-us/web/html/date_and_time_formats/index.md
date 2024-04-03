@@ -37,7 +37,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td><code>2005-06-07</code></td>
       <td>June 7, 2005</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Date_and_time_formats#date_strings"
+        <a href="#date_strings"
           >[details]</a
         >
       </td>
@@ -46,7 +46,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td><code>08:45</code></td>
       <td>8:45 AM</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Date_and_time_formats#time_strings"
+        <a href="#time_strings"
           >[details]</a
         >
       </td>
@@ -55,7 +55,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td><code>08:45:25</code></td>
       <td>8:45 AM and 25 seconds</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Date_and_time_formats#time_strings"
+        <a href="#time_strings"
           >[details]</a
         >
       </td>
@@ -65,7 +65,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td>3:40 AM on August 4, 33</td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
+          href="#local_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -75,7 +75,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td>30 seconds after 2:00 PM on April 1, 1977</td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
+          href="#local_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -85,7 +85,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td>Midnight UTC on January 1, 1901</td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
+          href="#global_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -97,7 +97,7 @@ Before getting into the intricacies of how date and time strings are written and
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
+          href="#global_date_and_time_strings"
           >[details]</a
         >
       </td>

@@ -14,9 +14,8 @@ read-only **`mediaElement`** property indicates the
 receiving audio.
 
 This stream was specified when the node was first created,
-either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode",
-  "MediaElementAudioSourceNode()")}} constructor or the
-{{domxref("AudioContext.createMediaElementSource()")}} method.
+either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode", "MediaElementAudioSourceNode()")}}
+constructor or the {{domxref("AudioContext.createMediaElementSource()")}} method.
 
 ## Value
 

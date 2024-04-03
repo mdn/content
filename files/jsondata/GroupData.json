@@ -422,6 +422,7 @@
     },
     "EditContext API": {
       "overview": ["EditContext API"],
+      "guides": ["/docs/Web/API/EditContext_API/Guide"],
       "interfaces": [
         "EditContext",
         "TextFormat",
@@ -495,6 +496,16 @@
       "interfaces": ["Headers", "Request", "Response"],
       "methods": ["fetch()"],
       "properties": [],
+      "events": []
+    },
+    "Fenced Frame API": {
+      "overview": ["Fenced Frame API"],
+      "guides": [
+        "/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames"
+      ],
+      "interfaces": ["Fence", "FencedFrameConfig", "HTMLFencedFrameElement"],
+      "methods": ["Navigator.deprecatedReplaceInURN"],
+      "properties": ["Window.fence"],
       "events": []
     },
     "File API": {
@@ -1013,7 +1024,7 @@
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],
       "methods": [],
-      "properties": ["Navigator.connection"],
+      "properties": ["Navigator.connection", "WorkerNavigator.connection"],
       "events": []
     },
     "Page Visibility API": {
@@ -1569,6 +1580,14 @@
         "Element: mouseout"
       ]
     },
+    "Topics API": {
+      "overview": ["Topics API"],
+      "guides": ["/docs/Web/API/Topics_API/Using"],
+      "interfaces": [],
+      "methods": ["Document.browsingTopics()", "fetch()"],
+      "properties": ["HTMLIFrameElement.browsingTopics"],
+      "events": []
+    },
     "Touch Events": {
       "overview": ["Touch events"],
       "guides": [
@@ -2113,6 +2132,8 @@
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
+        "RTCVideoSourceStats",
+        "RTCCodecStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"

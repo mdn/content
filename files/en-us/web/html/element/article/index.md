@@ -105,7 +105,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -121,7 +121,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role"
             >article</a
           ></code
         >

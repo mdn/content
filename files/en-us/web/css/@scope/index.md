@@ -207,7 +207,7 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
   & & { ... }
 
   /* Doesn't work */
-  :root :root { ... }
+  :scope :scope { ... }
 }
 ```
 

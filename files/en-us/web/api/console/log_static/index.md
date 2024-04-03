@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.log_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.log()`** static method outputs a message to the console. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

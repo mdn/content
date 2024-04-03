@@ -51,7 +51,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 
 ## Instance methods
 
-- {{DOMxRef('PointerEvent.getCoalescedEvents()')}}
+- {{DOMxRef('PointerEvent.getCoalescedEvents()')}} {{SecureContext_Inline}}
   - : Returns a sequence of all `PointerEvent` instances that were coalesced into the dispatched {{domxref("Element/pointermove_event", "pointermove")}} event.
 - {{DOMxRef('PointerEvent.getPredictedEvents()')}}
   - : Returns a sequence of `PointerEvent` instances that the browser predicts will follow the dispatched {{domxref("Element/pointermove_event", "pointermove")}} event's coalesced events.

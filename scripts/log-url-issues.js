@@ -19,24 +19,49 @@ const addedFragmentDetails = [];
 let deletedFragmentDetails = [];
 let isAllOk = true;
 
-function getDeletedSlugs() {
-  // git status --short --porcelain
-  let result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
+function getDeletedSlugs(fromStaging = true) {
+  let result = "";
 
-  if (result.trim()) {
-    deletedSlugs.push(
-      ...result
-        .split("\n")
-        .filter(
-          (line) =>
-            /^\s*D\s+/gi.test(line) &&
-            line.includes("files/en-us") &&
-            (IMG_RX.test(line) || line.includes("index.md")),
-        )
-        .map((line) => line.replaceAll(/^\s*|files\/en-us\/|\/index.md/gm, ""))
-        .map((line) => line.split(/\s+/)[1]),
-    );
+  if (fromStaging) {
+    // git status --short --porcelain
+    result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
+    if (result.trim()) {
+      deletedSlugs.push(
+        ...result
+          .split("\n")
+          .filter(
+            (line) =>
+              /^\s*D\s+/gi.test(line) &&
+              line.includes("files/en-us") &&
+              (IMG_RX.test(line) || line.includes("index.md")),
+          )
+          .map((line) =>
+            line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
+          )
+          .map((line) => line.split(/\s+/)[1]),
+      );
+    }
+  } else {
+    // git diff --summary origin/main...HEAD
+    result = execGit(["diff", "--summary", "origin/main...HEAD"], { cwd: "." });
+    if (result.trim()) {
+      deletedSlugs.push(
+        ...result
+          .split("\n")
+          .filter(
+            (line) =>
+              line.includes("delete mode") &&
+              line.includes("files/en-us") &&
+              (IMG_RX.test(line) || line.includes("index.md")),
+          )
+          .map((line) => line.replace(/^\s*delete mode \d+ /gm, ""))
+          .map((line) =>
+            line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
+          ),
+      );
+    }
   }
+
   console.log("deletedSlugs", deletedSlugs);
 }
 
@@ -87,6 +112,7 @@ if (process.argv[2] !== "--workflow") {
   getDeletedSlugs();
   getFragmentDetails();
 } else {
+  getDeletedSlugs(false);
   getFragmentDetails(false);
 }
 
