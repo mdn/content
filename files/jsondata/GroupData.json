@@ -879,7 +879,7 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": ["Window.indexedDB", "WorkerGlobalScope.indexedDB"],
       "events": []
     },
     "Ink API": {
