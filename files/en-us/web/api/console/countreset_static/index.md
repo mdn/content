@@ -64,8 +64,8 @@ function greet(user) {
 }
 
 greet("bob");
-greet("bob");
-greet("bob");
+greet("alice");
+greet("alice");
 console.countReset("bob");
 console.count("alice");
 ```
