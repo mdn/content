@@ -23,7 +23,7 @@ The `<length>` units can be relative or absolute. Relative lengths represent a m
 
 > **Note:** Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
 
-### Relative length units 
+### Relative length units
 
 CSS relative length units are based on font, container, or viewport sizes.
 
@@ -49,7 +49,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 
 #### Relative length units based on root element's font
 
-Root element font relative length units define the `<length>` value in terms of the size of a particular character or font attribute of the [root](en-US/docs/Web/CSS/:root) element: 
+Root element font relative length units define the `<length>` value in terms of the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/:root) element:
 
 - `rcap`
   - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
