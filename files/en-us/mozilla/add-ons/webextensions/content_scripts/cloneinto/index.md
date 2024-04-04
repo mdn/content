@@ -1,8 +1,8 @@
 ---
-title: components.utils.cloneInto()
+title: cloneInto()
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto
 page-type: webextension-api-function
-browser-compat: webextensions.api.components.utils.cloneInto
+browser-compat: webextensions.api.ContentScriptGlobalScope.cloneInto
 ---
 
 {{AddonSidebar()}}
@@ -24,7 +24,7 @@ This enables privileged code, such as an extension, to share an object with less
 ## Syntax
 
 ```js-nolint
-let clonedObject = Components.utils.cloneInto(
+let clonedObject = cloneInto(
   obj,               // object
   targetScope,       // object
   options            // object
@@ -40,9 +40,9 @@ let clonedObject = Components.utils.cloneInto(
 - `options` {{optional_inline}}
   - : `object`. Options for the function.
     - `cloneFunctions` {{optional_inline}}
-      - : `Boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`Components.utils.exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction). See [Cloning objects that have functions](#Cloning_objects_that_have_functions). {{optional_inline}}
+      - : `boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Content_scripts/exportFunction). See [Cloning objects that have functions](#Cloning_objects_that_have_functions). {{optional_inline}}
     - `wrapReflectors` {{optional_inline}}
-      - : `boolean`. Whether objects reflected from C++, such as DOM objects, should be cloned. Defaults to `false`. See [Cloning objects that contain DOM elements](#Cloning_objects_that_contain_DOM_elements).
+      - : `boolean`. Whether DOM objects should be passed by reference instead of cloned. DOM objects are usually not clonable. Defaults to `false`. See [Cloning objects that contain DOM elements](#Cloning_objects_that_contain_DOM_elements).
 
 ### Return Value
 
@@ -55,7 +55,7 @@ This add-on script creates an object, clones it into the content window and make
 ```js
 // add-on script
 var addonScriptObject = { greeting: "hello from add-on" };
-contentWindow.addonScriptObject = cloneInto(addonScriptObject, contentWindow);
+window.addonScriptObject = cloneInto(addonScriptObject, window);
 ```
 
 Scripts running in the page can access the object:
@@ -74,6 +74,7 @@ button.addEventListener(
 Of course, you don't have to assign the clone to the window itself; you can assign it to some other object in the target scope:
 
 ```js
+// Content script
 contentWindow.foo.addonScriptObject = cloneInto(
   addonScriptObject,
   contentWindow,
