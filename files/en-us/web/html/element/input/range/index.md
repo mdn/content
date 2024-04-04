@@ -41,6 +41,8 @@ If an attempt is made to set the value lower than the minimum, it is set to the 
 
 In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes.
 
+> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
+
 ### list
 
 The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
@@ -70,6 +72,12 @@ The `step` attribute can also be set to the `any` string value. This `step` valu
 > **Note:** When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
+
+## Non-standard attributes
+
+### orient
+
+Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
 
 ## Examples
 
@@ -241,7 +249,11 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range wherein the knob slides up and down, you can set the {{cssxref("writing-mode")}} property to a value of `vertical-rl` or `vertical-lr`, as explained in [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls). You can also set the CSS {{cssxref('appearance')}} property to the non-standard `slider-vertical` value if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
+To create a vertical range wherein the thumb slides up and down, set the {{cssxref("writing-mode")}} property with a value of either `vertical-rl` or `vertical-lr`.
+
+You can also set the CSS {{cssxref('appearance')}} property to the non-standard `slider-vertical` value if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
+
+See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) for examples.
 
 ## Technical summary
 
