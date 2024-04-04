@@ -6,26 +6,35 @@ page-type: web-api-instance-method
 browser-compat: api.console.dir_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-The **`console.dir()`** static method displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects.
+The **`console.dir()`** static method displays a list of the properties of the specified JavaScript object. In browser consoles, the output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects.
 
-In other words, `console.dir()` is the way to see all the properties of a specified JavaScript object in console by which the developer can easily get the properties of the object.
-
-{{AvailableInWorkers}}
+In other words, `console.dir()` is the way to see all the properties of a specified JavaScript object in the console.
 
 ![A screenshot of the Firefox console where console.dir(document.location) is run. We can see the URL of the page, followed by a block of properties. If the property is a function or an object, a disclosure triangle is prepended.](console-dir.png)
+
+In runtimes like {{glossary("Node.js", "Node")}} and {{glossary("Deno")}}, where console output goes to the terminal and is therefore not interactive, the `options` parameter provides a way to customize the way the object is presented.
 
 ## Syntax
 
 ```js-nolint
 dir(object)
+dir(object, options)
 ```
 
 ### Parameters
 
 - `object`
-  - : A JavaScript object whose properties should be output.
+  - : A JavaScript object whose properties should be printed.
+- `options` {{optional_inline}}
+  - : An object with the following properties, all optional:
+    - `colors` {{non-standard_inline}} {{optional_inline}}
+      - : A boolean value: if `true`, style the properties of the object according to their type. Defaults to `true`.
+    - `depth` {{non-standard_inline}} {{optional_inline}}
+      - : A number representing the number of nesting levels to print when an object contains other objects or arrays. The value `null` means: print all levels. Defaults to 2.
+    - `showHidden` {{non-standard_inline}} {{optional_inline}}
+      - : A boolean value: if `true`, print the object's non-enumerable and symbol properties. Defaults to `false`.
 
 ### Return value
 

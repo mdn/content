@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 `XMLHttpRequest` (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
 
@@ -14,8 +14,6 @@ browser-compat: api.XMLHttpRequest
 Despite its name, `XMLHttpRequest` can be used to retrieve any type of data, not just XML.
 
 If your communication needs to involve receiving event data or message data from a server, consider using [server-sent events](/en-US/docs/Web/API/Server-sent_events) through the {{domxref("EventSource")}} interface. For full-duplex communication, [WebSockets](/en-US/docs/Web/API/WebSockets_API) may be a better choice.
-
-{{AvailableInWorkers("notservice")}}
 
 ## Constructor
 
