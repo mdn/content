@@ -63,7 +63,6 @@ function greet(user) {
   return `hi ${user}`;
 }
 
-user = ;
 greet("bob");
 greet("bob");
 greet("bob");
