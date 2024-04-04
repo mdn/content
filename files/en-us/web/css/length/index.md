@@ -106,7 +106,7 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 
   - : Represents a percentage of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block). `1vh` is 1% of the viewport height. For example, if the viewport height is `300px`, then a value of `70vh` on a property will be `210px`.
 
-    The respective viewport-percentage units for small, large, and dynamic viewport sizes are `svh`, `lvh`, and `dvh`. `vh represents the viewport-percentage length unit based on the browser's default viewport size.
+    The respective viewport-percentage units for small, large, and dynamic viewport sizes are `svh`, `lvh`, and `dvh`. `vh` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 - `vw`
 
