@@ -1,6 +1,6 @@
 ---
 title: "PerformanceLongAnimationFrameTiming: styleAndLayoutStart property"
-short-title: renderStart
+short-title: styleAndLayoutStart
 slug: Web/API/PerformanceLongAnimationFrameTiming/styleAndLayoutStart
 page-type: web-api-instance-property
 status:

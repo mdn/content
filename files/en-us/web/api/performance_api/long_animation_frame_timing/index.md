@@ -90,7 +90,7 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
     - {{domxref("PerformanceScriptTiming.executionStart", "script.executionStart")}}
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the time script compilation finished and execution started, in milliseconds.
     - {{domxref("PerformanceScriptTiming.forcedStyleAndLayoutDuration", "script.forcedStyleAndLayoutDuration")}}
-      - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script processing forced layout/style, in milliseconds (see [Avoid layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing) for an idea of what causes this).
+      - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script processing forced layout/style, in milliseconds. See [Avoid layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing) for an idea of what causes this.
     - {{domxref("PerformanceScriptTiming.invoker", "script.invoker")}} and {{domxref("PerformanceScriptTiming.invokerType", "script.invokerType")}}
       - : String values indicating how the script was called (for example `"IMG#id.onload"` or `"Window.requestAnimationFrame"`) and the script entry point type (for example `"event-listener"` or `"resolve-promise"`).
     - {{domxref("PerformanceScriptTiming.pauseDuration", "script.pauseDuration")}}
@@ -201,7 +201,7 @@ An alternative strategy is to look at which scripts appear most often in LoAF en
 
 The execution time of common scripts (or third-party origins) in LoAFs could be summed up and reported back to identify common contributors to LoAFs across a site or a collection of sites.
 
-For example, to group scripts by URL:
+For example, to group scripts by URL and show total duration:
 
 ```js
 const observer = new PerformanceObserver(list => {
@@ -222,6 +222,8 @@ const observer = new PerformanceObserver(list => {
 
 observer.observe({type: 'long-animation-frame', buffered: true});
 ```
+
+You could replace `sourceURL` with `sourceFunctionName`, if you wished to show total duration of different functions.
 
 ## Comparison with the Long Tasks API
 

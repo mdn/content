@@ -45,7 +45,7 @@ This interface also supports the following properties:
 - {{domxref("PerformanceScriptTiming.executionStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the time script compilation finished and execution started, in milliseconds.
 - {{domxref("PerformanceScriptTiming.forcedStyleAndLayoutDuration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script processing forced layout/style, in milliseconds (see [Avoid layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing) for an idea of what causes this).
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script processing forced layout/style, in milliseconds. See [Avoid layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing) for an idea of what causes this.
 - {{domxref("PerformanceScriptTiming.invoker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string value indicating the identity of the feature that, when invoked, ran the script.
 - {{domxref("PerformanceScriptTiming.invokerType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -59,9 +59,9 @@ This interface also supports the following properties:
 - {{domxref("PerformanceScriptTiming.sourceURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string representing the URL of the script.
 - {{domxref("PerformanceScriptTiming.window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an enumerated value describing the relationship of the container (i.e. top-level document or {{htmlelement("iframe")}}) the script was executed in to the top-level document.
+  - : Returns a reference to a {{domxref("Window")}} object reference representing the `window` of the container (i.e. top-level document or {{htmlelement("iframe")}}) the LoAF-causing script was executed in.
 - {{domxref("PerformanceScriptTiming.windowAttribution")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Window")}} object reference representing the `window` of the container (i.e. top-level document or {{htmlelement("iframe")}}) the script was executed in.
+  - : Returns an enumerated value describing the relationship of the container (i.e. top-level document or {{htmlelement("iframe")}}) the LoAF-causing script was executed in to the window that the current document is running in.
 
 ## Instance methods
 

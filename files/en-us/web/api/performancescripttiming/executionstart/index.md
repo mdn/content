@@ -1,0 +1,34 @@
+---
+title: "PerformanceScriptTiming: executionStart property"
+short-title: executionStart
+slug: Web/API/PerformanceScriptTiming/executionStart
+page-type: web-api-instance-property
+status:
+  - experimental
+browser-compat: api.PerformanceScriptTiming.executionStart
+---
+
+{{SeeCompatTable}}{{APIRef("Performance API")}}
+
+The **`executionStart`** readonly property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the time script compilation finished and execution started, in milliseconds.
+
+## Value
+
+A {{domxref("DOMHighResTimeStamp")}}.
+
+## Examples
+
+See [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing) for Long Animation Frames API examples.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing)
+- {{domxref("PerformanceLongAnimationFrameTiming")}}

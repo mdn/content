@@ -1,6 +1,6 @@
 ---
 title: "PerformanceScriptTiming: invokerType property"
-short-title: attribution
+short-title: invokerType
 slug: Web/API/PerformanceScriptTiming/invokerType
 page-type: web-api-instance-property
 status:
@@ -28,6 +28,8 @@ A string indicating the invoker type of the script entry point. Possible values 
   - : The evaluation of a standard script (for example via a {{htmlelement("script")}} element or [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) statement).
 - `"module-script"`
   - : The evaluation of a module script.
+
+The {{domxref("PerformanceScriptTiming.invoker")}} value's structure depends on the script's `invokerType` value. Check out the `invoker` page for more details.
 
 ## Examples
 
