@@ -8,23 +8,23 @@ status:
 browser-compat: api.Document.startViewTransition
 ---
 
-{{APIRef("Document")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-The **`startViewTransition()`** method of the
-{{domxref("View Transitions API", "View Transitions API", "", "nocode")}} starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
+The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
 
 When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process).
 
 ## Syntax
 
 ```js-nolint
-startViewTransition(callback)
+startViewTransition()
+startViewTransition(updateCallback)
 ```
 
 ### Parameters
 
-- `callback`
-  - : A callback function typically invoked to update the DOM during the view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a screenshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
+- `updateCallback` {{optional_inline}}
+  - : An optional callback function typically invoked to update the DOM during the view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a screenshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
 
 ### Return value
 

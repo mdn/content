@@ -3,12 +3,10 @@ title: "Element: contentvisibilityautostatechange event"
 short-title: contentvisibilityautostatechange
 slug: Web/API/Element/contentvisibilityautostatechange_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Element.contentvisibilityautostatechange_event
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{APIRef("CSS Containment")}}
 
 The **`contentvisibilityautostatechange`** event fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
 

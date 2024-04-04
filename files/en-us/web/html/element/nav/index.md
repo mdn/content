@@ -109,7 +109,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"
             >navigation</a
           ></code
         >

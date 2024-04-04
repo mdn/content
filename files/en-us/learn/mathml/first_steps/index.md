@@ -1,5 +1,5 @@
 ---
-title: MathML first steps overview
+title: MathML first steps
 slug: Learn/MathML/First_steps
 page-type: learn-module
 ---

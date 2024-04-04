@@ -126,7 +126,7 @@
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Adding_Extensions_using_the_Windows_Registry	https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
 /en-US/docs/Adding_feed_readers_to_Firefox	/en-US/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
@@ -354,7 +354,7 @@
 /en-US/docs/CSS/-webkit-font-smoothing	/en-US/docs/Web/CSS/font-smooth
 /en-US/docs/CSS/-webkit-hyphens	/en-US/docs/Web/CSS/hyphens
 /en-US/docs/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
-/en-US/docs/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS/-webkit-mask-attachment
+/en-US/docs/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
 /en-US/docs/CSS/-webkit-mask-box-image	/en-US/docs/Web/CSS/-webkit-mask-box-image
 /en-US/docs/CSS/-webkit-mask-clip	/en-US/docs/Web/CSS/mask-clip
 /en-US/docs/CSS/-webkit-mask-composite	/en-US/docs/Web/CSS/-webkit-mask-composite
@@ -5751,6 +5751,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Downloading_accessing_and_saving_files_in_browser_extensions	/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Extension_API_differences	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_differentiators	https://extensionworkshop.com/documentation/develop/unique-firefox-capabilities/
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview	https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Index	/en-US/docs/Mozilla/Add-ons/WebExtensions
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Making_money_from_browser_extensions	https://extensionworkshop.com/documentation/publish/make-money-from-browser-extensions/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Notifications	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications
@@ -5799,6 +5800,7 @@
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 /en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
+/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
@@ -8646,8 +8648,8 @@
 /en-US/docs/Web/API/IDBDatabase/onclose	/en-US/docs/Web/API/IDBDatabase/close_event
 /en-US/docs/Web/API/IDBDatabase/onerror	/en-US/docs/Web/API/IDBTransaction/error_event
 /en-US/docs/Web/API/IDBDatabase/onversionchange	/en-US/docs/Web/API/IDBDatabase/versionchange_event
-/en-US/docs/Web/API/IDBEnvironment.indexedDB	/en-US/docs/Web/API/indexedDB
-/en-US/docs/Web/API/IDBEnvironment/indexedDB	/en-US/docs/Web/API/indexedDB
+/en-US/docs/Web/API/IDBEnvironment.indexedDB	/en-US/docs/Web/API/Window/indexedDB
+/en-US/docs/Web/API/IDBEnvironment/indexedDB	/en-US/docs/Web/API/Window/indexedDB
 /en-US/docs/Web/API/IDBFactory.cmp	/en-US/docs/Web/API/IDBFactory/cmp
 /en-US/docs/Web/API/IDBFactory.deleteDatabase	/en-US/docs/Web/API/IDBFactory/deleteDatabase
 /en-US/docs/Web/API/IDBFactory.open	/en-US/docs/Web/API/IDBFactory/open
@@ -10145,7 +10147,6 @@
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window/crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/fetch
-/en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
@@ -10253,7 +10254,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/crossOriginIsolated
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/en-US/docs/Web/API/Window/indexedDB
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/en-US/docs/Web/API/isSecureContext
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin	/en-US/docs/Web/API/origin
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/en-US/docs/Web/API/queueMicrotask
@@ -10307,7 +10308,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/WorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
-/en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/indexedDB
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/onerror	/en-US/docs/Web/API/WorkerGlobalScope/error_event
 /en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange	/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event
@@ -10653,6 +10653,7 @@
 /en-US/docs/Web/API/form.submit	/en-US/docs/Web/API/HTMLFormElement/submit
 /en-US/docs/Web/API/form.target	/en-US/docs/Web/API/HTMLFormElement/target
 /en-US/docs/Web/API/html.version	/en-US/docs/Web/API/HTMLHtmlElement/version
+/en-US/docs/Web/API/indexedDB	/en-US/docs/Web/API/Window/indexedDB
 /en-US/docs/Web/API/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription.sdp	/en-US/docs/Web/API/RTCSessionDescription/sdp
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
@@ -10976,6 +10977,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/ARIA/Annotations	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role
@@ -11291,6 +11293,7 @@
 /en-US/docs/Web/CSS/-webkit-justify-content	/en-US/docs/Web/CSS/justify-content
 /en-US/docs/Web/CSS/-webkit-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
+/en-US/docs/Web/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/-webkit-mask-clip	/en-US/docs/Web/CSS/mask-clip
 /en-US/docs/Web/CSS/-webkit-mask-image	/en-US/docs/Web/CSS/mask-image
 /en-US/docs/Web/CSS/-webkit-mask-origin	/en-US/docs/Web/CSS/mask-origin
@@ -12245,6 +12248,7 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/HTML/Global_attributes/contextmenu	/en-US/docs/Web/HTML/Element/menu
 /en-US/docs/Web/HTML/Index	/en-US/docs/Web/HTML
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content

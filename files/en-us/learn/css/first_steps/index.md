@@ -1,5 +1,5 @@
 ---
-title: CSS first steps overview
+title: CSS first steps
 slug: Learn/CSS/First_steps
 page-type: learn-module
 ---

@@ -97,7 +97,7 @@ ul li:last-child {
 
 ## See also
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":nth-child")}}

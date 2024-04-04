@@ -43,17 +43,17 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the right.
 - `sideways-lr`
   - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the left.
-- `lr` {{deprecated_inline}}
+- `lr`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `lr-tb` {{deprecated_inline}}
+- `lr-tb`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `rl` {{deprecated_inline}}
+- `rl`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `tb` {{deprecated_inline}}
+- `tb`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-lr` {{deprecated_inline}}
+- `tb-lr`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-rl` {{deprecated_inline}}
+- `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
 
 ## Formal definition
