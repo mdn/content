@@ -33,7 +33,7 @@ The `@counter-style` at-rule is identified by a [counter style name](#counter_st
 
   - : Provides a name for your counter style. It is specified as a case-sensitive {{cssxref("custom-ident")}} without quotes. The value should not be equal to `none`. Like all custom identifiers, the value of your counter style can't be a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords). Avoid other enumerated CSS property values, including values of [list](/en-US/docs/Web/CSS/CSS_lists#properties) and [counter style](/en-US/docs/Web/CSS/CSS_counter_styles#properties) properties. The name of your counter can't be the case-insensitive {{cssxref("list-style-type")}} property values of `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed`.
 
-    > **Note:** The non-overridable counter style names `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed` cannot be used as the name of a custom counter. However, they are valid in other contexts where the `<counter-style-name>` data type is expected, such as in `system: extend <counter-style-name>`.
+    > **Note:** The non-overridable counter style names `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed` cannot be used as the name of a custom counter. However, they are valid in other contexts where the `<counter-style-name>` data type is expected, such as in `system: extends <counter-style-name>`.
 
 ### Descriptors
 
