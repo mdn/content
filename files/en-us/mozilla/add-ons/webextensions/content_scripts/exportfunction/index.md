@@ -1,8 +1,8 @@
 ---
-title: components.utils.exportFunction()
+title: exportFunction()
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction
 page-type: webextension-api-function
-browser-compat: webextensions.api.components.utils.exportFunction
+browser-compat: webextensions.api.ContentScriptGlobalScope.exportFunction
 ---
 
 {{AddonSidebar()}}
@@ -18,7 +18,7 @@ See [Exporting functions that take arguments](#Exporting_functions_that_take_arg
 ## Syntax
 
 ```js-nolint
-let exportFunctionuating = Components.utils.exportFunction(
+let exportFunctionuating = exportFunction(
   func,              // function
   targetScope,       // object
   options            // object
@@ -57,7 +57,7 @@ An Xray for an object refers to the original. Any changes to the argument made i
 function changeMyName(user) {
   user.name = "Bill";
 }
-exportFunction(changeMyName, contentWindow, {
+exportFunction(changeMyName, window, {
   defineAs: "changeMyName",
 });
 ```
@@ -89,7 +89,7 @@ function logUser(user) {
   // console.log(user.getUser());                 // error
   console.log(user.wrappedJSObject.getUser()); // "Bill"
 }
-exportFunction(logUser, contentWindow, {
+exportFunction(logUser, window, {
   defineAs: "logUser",
 });
 ```
@@ -158,7 +158,7 @@ var salutation = "hello ";
 function greetme(user) {
   return salutation + user;
 }
-Components.utils.exportFunction(greetme, contentWindow, { defineAs: "foo" });
+exportFunction(greetme, window, { defineAs: "foo" });
 ```
 
 Instead of using `defineAs`, the script can assign the result of `exportFunction` to an object in the target scope:
@@ -169,7 +169,7 @@ var salutation = "hello ";
 function greetme(user) {
   return salutation + user;
 }
-contentWindow.foo = Components.utils.exportFunction(greetme, contentWindow);
+window.foo = exportFunction(greetme, window);
 ```
 
 Either way, code running in the content window's scope can call the function:
@@ -194,7 +194,7 @@ Now the extension script can attach the function to `bar`:
 
 ```js
 // extension-script.js
-Components.utils.exportFunction(greetme, contentWindow.bar, {
+exportFunction(greetme, window.bar, {
   defineAs: "greetme",
 });
 ```

@@ -50,11 +50,11 @@ A reference to the cloned object.
 
 ## Examples
 
-This add-on script creates an object, clones it into the content window and makes it a property of the content window global:
+This content script creates an object, clones it into the content window and makes it a property of the content window global:
 
 ```js
-// add-on script
-var addonScriptObject = { greeting: "hello from add-on" };
+// content script
+var addonScriptObject = { greeting: "hello from your extension" };
 window.addonScriptObject = cloneInto(addonScriptObject, window);
 ```
 
@@ -65,7 +65,7 @@ Scripts running in the page can access the object:
 button.addEventListener(
   "click",
   function () {
-    console.log(window.addonScriptObject.greeting); // "hello from add-on"
+    console.log(window.addonScriptObject.greeting); // "hello from your extension"
   },
   false,
 );
@@ -75,10 +75,7 @@ Of course, you don't have to assign the clone to the window itself; you can assi
 
 ```js
 // Content script
-contentWindow.foo.addonScriptObject = cloneInto(
-  addonScriptObject,
-  contentWindow,
-);
+window.foo.addonScriptObject = cloneInto(addonScriptObject, window);
 ```
 
 You can also pass it into a function defined in the page script. Suppose the page script defines a function like this:
@@ -90,12 +87,12 @@ function foo(greeting) {
 }
 ```
 
-The add-on script can define an object, clone it, and pass it into this function:
+The content script can define an object, clone it, and pass it into this function:
 
 ```js
-// add-on script
-var addonScriptObject = { message: "hello from add-on" };
-contentWindow.foo(cloneInto(addonScriptObject, contentWindow)); // "they said: hello from add-on"
+// content script
+var addonScriptObject = { message: "hello from your extension" };
+window.foo(cloneInto(addonScriptObject, window)); // "they said: hello from your extension"
 ```
 
 ### Cloning objects that have functions
@@ -103,13 +100,13 @@ contentWindow.foo(cloneInto(addonScriptObject, contentWindow)); // "they said: h
 If the object to clone contains functions, you must pass the `{cloneFunctions:true}` flag, or you get an error. If you do pass this flag, then functions in the object are cloned using the same mechanism used in [`Components.utils.exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction):
 
 ```js
-// add-on script
+// content script
 var addonScriptObject = {
   greetme: function () {
-    alert("hello from add-on");
+    alert("hello from your extension");
   },
 };
-contentWindow.addonScriptObject = cloneInto(addonScriptObject, contentWindow, {
+window.addonScriptObject = cloneInto(addonScriptObject, window, {
   cloneFunctions: true,
 });
 ```
@@ -131,11 +128,11 @@ test.addEventListener(
 By default, if the object you clone contains objects reflected from C++, such as DOM elements, the cloning operation fails with an error. If you pass the `{wrapReflectors:true}` flag, then the object you clone contains these objects:
 
 ```js
-// add-on script
+// content script
 var addonScriptObject = {
-  body: contentWindow.document.body,
+  body: window.document.body,
 };
-contentWindow.addonScriptObject = cloneInto(addonScriptObject, contentWindow, {
+window.addonScriptObject = cloneInto(addonScriptObject, window, {
   wrapReflectors: true,
 });
 ```
