@@ -22,25 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" word-spacing="2">Bigger spacing between words</text>
-  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
-</svg>
-```
-
-{{EmbedLiveSample("Example", "250", "100")}}
-
 ## Usage notes
 
 <table class="properties">
@@ -61,6 +42,25 @@ svg {
 </table>
 
 For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/letter-spacing#values) property.
+
+## Examples
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" word-spacing="2">Bigger spacing between words</text>
+  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
+</svg>
+```
+
+{{EmbedLiveSample("Examples", "250", "100")}}
 
 ## Specifications
 

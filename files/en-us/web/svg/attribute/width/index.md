@@ -14,54 +14,7 @@ spec-urls:
 
 The **`width`** attribute defines the horizontal length of an element in the user coordinate system.
 
-You can use this attribute with the following SVG elements:
-
-- {{SVGElement('feBlend')}}
-- {{SVGElement('feColorMatrix')}}
-- {{SVGElement('feComponentTransfer')}}
-- {{SVGElement('feComposite')}}
-- {{SVGElement('feConvolveMatrix')}}
-- {{SVGElement('feDiffuseLighting')}}
-- {{SVGElement('feDisplacementMap')}}
-- {{SVGElement('feDropShadow')}}
-- {{SVGElement('feFlood')}}
-- {{SVGElement('feGaussianBlur')}}
-- {{SVGElement('feImage')}}
-- {{SVGElement('feMerge')}}
-- {{SVGElement('feMorphology')}}
-- {{SVGElement('feOffset')}}
-- {{SVGElement('feSpecularLighting')}}
-- {{SVGElement('feTile')}}
-- {{SVGElement('feTurbulence')}}
-- {{SVGElement('filter')}}
-- {{SVGElement('foreignObject')}}
-- {{SVGElement('image')}}
-- {{SVGElement('mask')}}
-- {{SVGElement('pattern')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('svg')}}
-- {{SVGElement('use')}}
-
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect x="0" y="0" width="0" height="90" />
-  <rect x="0" y="100" width="60" height="90" />
-  <rect x="0" y="200" width="100%" height="90" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
+You can use this attribute with the SVG elements described in the sections below.
 
 ## feBlend
 
@@ -900,6 +853,27 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
 > **Note:** `width` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+
+## Examples
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- With a width of 0 or less, nothing will be rendered -->
+  <rect x="0" y="0" width="0" height="90" />
+  <rect x="0" y="100" width="60" height="90" />
+  <rect x="0" y="200" width="100%" height="90" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Specifications
 

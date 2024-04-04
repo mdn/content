@@ -37,7 +37,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tref")}}
 - {{SVGElement("use")}}
 
-## Usage context
+## Usage notes
 
 <table class="properties">
   <tbody>

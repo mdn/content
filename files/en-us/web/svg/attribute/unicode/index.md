@@ -21,7 +21,7 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("glyph")}}
 
-## Context notes
+## Usage notes
 
 <table class="properties">
   <tbody>
