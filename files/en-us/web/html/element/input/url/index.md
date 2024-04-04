@@ -405,7 +405,6 @@ You can also find our [pattern validation example on GitHub](https://github.com/
 ## See also
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
 - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)

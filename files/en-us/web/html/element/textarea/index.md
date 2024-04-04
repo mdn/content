@@ -312,7 +312,6 @@ textarea {
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - Other form-related elements:
   - {{ HTMLElement("form") }}
   - {{ HTMLElement("button") }}

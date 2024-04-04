@@ -337,7 +337,6 @@ Here, `object-position` is configured to draw the image in the top-right corner 
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The HTML {{HTMLElement("img")}} element
 - Positioning and sizing the image within the `<input>` element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}

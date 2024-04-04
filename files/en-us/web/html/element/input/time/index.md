@@ -559,7 +559,6 @@ minuteSelect.onchange = setMinutesToZero;
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
 - [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)

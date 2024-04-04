@@ -281,7 +281,3 @@ Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} butt
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

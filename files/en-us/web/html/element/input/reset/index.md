@@ -152,7 +152,6 @@ We've included simple examples above. There isn't really anything more to say ab
 ## See also
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
 - [HTML forms](/en-US/docs/Learn/Forms)
 - The {{HTMLElement("button")}} element

@@ -269,7 +269,6 @@ The valid range included all times between the `min` and `max` values; the time 
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date) and [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time)
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)

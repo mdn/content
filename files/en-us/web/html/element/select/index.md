@@ -676,7 +676,6 @@ The `<hr>` within a `<select>` should be considered purely decorative, as they a
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - The {{HTMLElement("option")}} element
 - The {{HTMLElement("optgroup")}} element

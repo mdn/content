@@ -530,7 +530,6 @@ input:valid + span::after {
 ## See also
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - {{HTMLElement("input")}}
   - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)

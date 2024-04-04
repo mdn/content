@@ -395,7 +395,6 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 ## See also
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
 - [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
