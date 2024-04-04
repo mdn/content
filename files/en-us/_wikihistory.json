@@ -67191,6 +67191,20 @@
       "JesseW"
     ]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2020-10-15T21:25:18.475Z",
+    "contributors": [
+      "sideshowbarker",
+      "mfluehr",
+      "fscholz",
+      "jpmedley",
+      "nmve",
+      "arronei",
+      "chrisdavidmills",
+      "libbymc",
+      "teoli"
+    ]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:42:29.125Z",
     "contributors": [
@@ -71559,20 +71573,6 @@
       "George8211",
       "matiishyn",
       "kscarfone"
-    ]
-  },
-  "Web/API/indexedDB": {
-    "modified": "2020-10-15T21:25:18.475Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "nmve",
-      "arronei",
-      "chrisdavidmills",
-      "libbymc",
-      "teoli"
     ]
   },
   "Web/API/isSecureContext": {
