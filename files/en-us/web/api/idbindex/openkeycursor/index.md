@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBIndex.openKeyCursor
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`openKeyCursor()`** method of the
 {{domxref("IDBIndex")}} interface returns an {{domxref("IDBRequest")}} object, and, in
@@ -21,8 +21,6 @@ If the key range is not specified or is null, then the range includes all the ke
 > **Note:** Cursors returned by `openKeyCursor()` do not
 > make the referenced value available as [`IDBIndex.openCursor`](/en-US/docs/Web/API/IDBIndex/openCursor) does.
 > This makes obtaining a list of keys much more efficient.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

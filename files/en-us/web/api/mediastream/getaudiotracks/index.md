@@ -27,8 +27,8 @@ None.
 ### Return value
 
 An array of {{domxref("MediaStreamTrack")}} objects, one for each audio track contained
-in the stream. Audio tracks are those tracks whose {{domxref("MediaStreamTrack.kind",
-  "kind")}} property is `audio`. The array is empty if the stream contains no
+in the stream. Audio tracks are those tracks whose {{domxref("MediaStreamTrack.kind", "kind")}}
+property is `audio`. The array is empty if the stream contains no
 audio tracks.
 
 > **Note:** The order of the returned tracks is not defined by the

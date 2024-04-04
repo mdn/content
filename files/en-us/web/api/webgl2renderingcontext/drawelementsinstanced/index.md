@@ -10,8 +10,7 @@ browser-compat: api.WebGL2RenderingContext.drawElementsInstanced
 
 The **`WebGL2RenderingContext.drawElementsInstanced()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) renders primitives from
-array data like the {{domxref("WebGLRenderingContext.drawElements()",
-  "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set
+array data like the {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set
 of elements.
 
 > **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
@@ -86,10 +85,8 @@ gl.drawElementsInstanced(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 
 ## See also
 
-- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()",
-    "ext.drawArraysInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()",
-    "ext.vertexAttribDivisorANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
 - {{domxref("WebGLRenderingContext.drawArrays()")}}
 - {{domxref("WebGLRenderingContext.drawElements()")}}
 - {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}

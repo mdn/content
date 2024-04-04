@@ -32,13 +32,13 @@ A string which indicates the track's current mode. One of:
   - : The text track is currently active but the cues aren't being displayed. If the user
     agent hasn't tried to obtain the track's cues yet, it will do so soon (thereby
     populating the track's {{domxref("TextTrack.cues")}} property). The user agent is
-    keeping a list of the active cues (in the track's {{domxref("TextTrack.activeCues",
-    "activeCues")}} property) and events are being fired at the corresponding times, even
+    keeping a list of the active cues (in the track's {{domxref("TextTrack.activeCues", "activeCues")}}
+    property) and events are being fired at the corresponding times, even
     though the text isn't being displayed.
 - `showing`
   - : The text track is currently enabled and is visible. If the track's cues list hasn't
-    been obtained yet, it will be soon. The {{domxref("TextTrack.activeCues",
-    "activeCues")}} list is being maintained and events are firing at the appropriate
+    been obtained yet, it will be soon. The {{domxref("TextTrack.activeCues", "activeCues")}}
+    list is being maintained and events are firing at the appropriate
     times; the track's text is also being drawn appropriately based on the styling and the
     track's {{domxref("TextTrack.kind", "kind")}}. This is the default value if the text
     track's [`default`](/en-US/docs/Web/HTML/Element/track#default) Boolean attribute is specified.

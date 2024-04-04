@@ -26,7 +26,7 @@ promiseInstance.finally(onFinally)
 
 ### Return value
 
-Returns an equivalent {{jsxref("Promise")}}. If the handler throws an error or returns a rejected promise, the promise returned by `finally()` will be rejected with that value instead. Otherwise, the return value of the handler does not affect the state of the original promise.
+Returns a new {{jsxref("Promise")}} immediately. This new promise is always pending when returned, regardless of the current promise's status. If `onFinally` throws an error or returns a rejected promise, the new promise will reject with that value. Otherwise, the new promise will settle with the same state as the current promise.
 
 ## Description
 

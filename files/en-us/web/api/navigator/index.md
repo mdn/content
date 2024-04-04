@@ -21,7 +21,7 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
-- {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
@@ -140,6 +140,8 @@ _Doesn't inherit any method._
   - : Returns `true` if a call to `Navigator.share()` would succeed.
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
+  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) APIs.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}

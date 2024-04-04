@@ -163,8 +163,8 @@ As we said before, TypeScript is a superset of JavaScript, so your application w
 
 Once you have TypeScript configured, you can start using it from a Svelte component by just adding a `<script lang='ts'>` at the beginning of the script section. To use it from regular JavaScript files, just change the file extension from `.js` to `.ts`. You'll also have to update any corresponding import statements to remove the `.ts` file extension from all `import` statements.
 
-> **Note:** Typescript will throw an error if you use the `.ts` file extension in an `import` statement, so you if you have a file `./foo.ts`, you must import it as "./foo".
-> See the [Module resolution for bundlers, TypeScript runtimes, and Node.js loaders](https://www.typescriptlang.org/docs/handbook/2/modules.html##module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders) section of the TypeScript manual for more information.
+> **Note:** TypeScript will throw an error if you use the `.ts` file extension in an `import` statement, so you if you have a file `./foo.ts`, you must import it as "./foo".
+> See the [Module resolution for bundlers, TypeScript runtimes, and Node.js loaders](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders) section of the TypeScript manual for more information.
 
 > **Note:** Using TypeScript in component markup sections is [not supported yet](https://github.com/sveltejs/svelte/issues/4701). You'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
 
@@ -904,7 +904,7 @@ Svelte stores support generics out of the box. And, because of generic type infe
 
 If you open the file `Todos.svelte` and assign a `number` type to our `$alert` store, you'll get the following error:
 
-![Todo Type object property complete should be completed](13-vscode-generic-alert-error.png)
+![Argument of type 9999 is not assignable to parameter of type string](13-vscode-generic-alert-error.png)
 
 That's because when we defined our alert store in the `stores.ts` file with:
 

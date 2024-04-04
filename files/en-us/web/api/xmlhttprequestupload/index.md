@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.XMLHttpRequestUpload
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`XMLHttpRequestUpload`** interface represents the upload process for a specific {{domxref("XMLHttpRequest")}}. It is an _opaque_ object that represents the underlying, browser-dependent, upload process. It is an {{domxref("XMLHttpRequestEventTarget")}} and can be obtained by calling {{domxref("XMLHttpRequest.upload")}}.
-
-{{AvailableInWorkers("notservice")}}
 
 {{InheritanceDiagram}}
 

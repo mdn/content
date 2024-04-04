@@ -391,7 +391,7 @@ py -3 -m django --version
 Source Code Management (SCM) and versioning tools allow you to reliably store and recover versions of your source code, try out changes, and share code between your experiments and "known good code" when you need to.
 
 There are many different SCM tools, including git, Mercurial, Perforce, SVN (Subversion), CVS (Concurrent Versions System), etc., and cloud SCM hosting sources such as Bitbucket, GitHub, and GitLab.
-For this tutorial we'll hosting our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and using the **git** tool to manage our source code locally and send it to Github when needed.
+For this tutorial we'll hosting our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and using the **git** tool to manage our source code locally and send it to GitHub when needed.
 
 > **Note:** Using SCM tools is good software development practice!
 > Ths instructions provide a basic introduction to git and GitHub.
@@ -399,7 +399,7 @@ For this tutorial we'll hosting our code on [GitHub](https://github.com/), one o
 
 ### Key concepts
 
-Git (and Github) use repositories ("repos") as the top level "bucket" for storing code, where each repo normally contains the source code for just one application or module.
+Git (and GitHub) use repositories ("repos") as the top level "bucket" for storing code, where each repo normally contains the source code for just one application or module.
 Repositories can be public, in which case the code is visible to everyone on the internet, or private, in which case they are restricted to the owning organization or user account.
 
 All work is done on a particular "branch" of code in your repo.
@@ -529,7 +529,7 @@ This is a useful change to make, but mostly we're doing it to show you how to pu
    ```
 
 7. At this point, the remote repo has not been changed.
-   We can push the `update_gitignore` branch to the "origin" repo (Github) using the following command:
+   We can push the `update_gitignore` branch to the "origin" repo (GitHub) using the following command:
 
    ```bash
    git push origin update_gitignore
@@ -542,7 +542,7 @@ This is a useful change to make, but mostly we're doing it to show you how to pu
 
    ![Banner asking if user wants to compare and merge recent branch updates](github_compare_and_pull_banner.png)
 
-   After merging, the "main" branch on the repo on Github will contain your changes to `.gitignore`.
+   After merging, the "main" branch on the repo on GitHub will contain your changes to `.gitignore`.
 
 9. You can continue to update your local repo as files change using this add/commit/push cycle.
 

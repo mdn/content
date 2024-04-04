@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.console
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console`** object provides access to the debugging console (e.g., the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox). The specifics of how it works vary from browser to browser or server runtimes (Node.js, for example), but there is a _de facto_ set of features that are typically provided.
 
@@ -17,14 +17,12 @@ console.log("Failed to open the specified link");
 
 This page documents the [Methods](#methods) available on the `console` object and gives a few [Usage](#usage) examples.
 
-{{AvailableInWorkers}}
-
 > **Note:** Certain online IDEs and editors may implement the console API differently than the browsers. As a result, certain functionality of the console API, such as the timer methods, may not be outputted in the console of online IDEs or editors. Always open your browser's DevTools console to see the logs as shown in this documentation.
 
 ## Instance methods
 
 - {{domxref("console/assert_static", "console.assert()")}}
-  - : Log a message and stack trace to console if the first argument is `false`.
+  - : Log an error message to console if the first argument is `false`.
 - {{domxref("console/clear_static", "console.clear()")}}
   - : Clear the console.
 - {{domxref("console/count_static", "console.count()")}}
