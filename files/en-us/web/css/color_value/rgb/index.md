@@ -138,6 +138,51 @@ rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1
 
 ## Examples
 
+### Basic syntax
+
+In this example, we have three {{htmlelement("div")}} elements with different background colors.
+
+#### HTML
+
+```html
+<div>
+  <div id="integer"></div>
+  <div id="percent"></div>
+  <div id="alpha"></div>
+</div>
+```
+
+#### CSS
+
+The background colors are set using the `rgb()` color function. The three colors are the same, with the third being semi-transparent:
+
+```css hidden
+div {
+  display: flex;
+  gap: 20px;
+  height: 50px;
+  flex: 1;
+}
+```
+
+```css
+#integer {
+  background-color: rgb(189 85 218);
+}
+
+#percent {
+  background-color: rgb(74% 33% 85%);
+}
+
+#alpha {
+  background-color: rgb(189 85 218 / 0.25);
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample("Basic syntax", "100%", "60") }}
+
 ### Using relative colors with rgb()
 
 This example styles three {{htmlelement("div")}} elements with different background colors. The left-hand one is given the unmodified `--base-color`, while the middle and right ones are given variants of that `--base-color` that successively remove more from the red channel and add more to the blue channel.
@@ -202,8 +247,6 @@ These variants are defined using relative colors — the `--base-color` [custom 
 ```
 
 #### Result
-
-The output is as follows:
 
 {{ EmbedLiveSample("Using relative colors with rgb()", "100%", "200") }}
 
