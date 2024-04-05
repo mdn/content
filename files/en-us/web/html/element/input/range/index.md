@@ -249,7 +249,7 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range wherein the thumb slides up and down, set the {{cssxref("writing-mode")}} property with a value of either `vertical-rl` or `vertical-lr`.
+To create a vertical range wherein the thumb slides up and down, set the {{cssxref("writing-mode")}} property with a value of either `vertical-rl` or `vertical-lr`:
 
 ```html hidden
 <input type="range" min="0" max="10" value="8" />
@@ -260,6 +260,8 @@ input[type="range"] {
   writing-mode: vertical-lr;
 }
 ```
+
+This causes the range slider to render vertically:
 
 {{EmbedLiveSample("Creating vertical range controls", 200, 200)}}
 
