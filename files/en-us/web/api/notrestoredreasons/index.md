@@ -16,7 +16,7 @@ These objects are accessed via the {{domxref("PerformanceNavigationTiming.notRes
 ## Instance properties
 
 - {{domxref("NotRestoredReasons.children", "children")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : An array of {{domxref("NotRestoredReasons")}} objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames. Each object has the same structure as the parent object — this way, any number of levels of embedded `<iframe>`s can be represented inside the object recursively. If the frame has no children, the array will be empty; if the document is in a cross-origin `<iframe>`, `children` will return `null`.
+  - : An array of `NotRestoredReasons` objects, one for each child {{htmlelement("iframe")}} embedded in the current document, which may contain reasons why the top-level frame was blocked relating to the child frames. Each object has the same structure as the parent object — this way, any number of levels of embedded `<iframe>`s can be represented inside the object recursively. If the frame has no children, the array will be empty; if the document is in a cross-origin `<iframe>`, `children` will return `null`.
 - {{domxref("NotRestoredReasons.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string representing the `id` attribute value of the `<iframe>` the document is contained in (for example `<iframe id="foo" src="...">`). If the document is not in an `<iframe>` or the `<iframe>` has no `id` set, `id` will return `null`.
 - {{domxref("NotRestoredReasons.name", "name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
