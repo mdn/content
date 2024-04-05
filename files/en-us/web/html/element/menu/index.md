@@ -121,7 +121,7 @@ button {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/list_role"
             >list</a
           ></code
         >

@@ -187,7 +187,7 @@ Several radio buttons can be tied together. If they share the same value for the
 </fieldset>
 ```
 
-The following screenshot shows default and disabled radio buttons in the checked state, along with focused a radio button in the unchecked state.
+The following screenshot shows default and disabled radio buttons in the checked state, along with a focused radio button in the unchecked state.
 
 ![Default, focused and disabled Radio buttons in chrome 115 on macOS](radios.png)
 

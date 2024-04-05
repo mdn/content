@@ -15600,10 +15600,6 @@
       "freaktechnik"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview": {
-    "modified": "2020-06-22T16:29:35.038Z",
-    "contributors": ["Erman", "irenesmith", "hellosct1", "rebloor"]
-  },
   "Mozilla/Add-ons/WebExtensions/Implement_a_settings_page": {
     "modified": "2020-06-22T16:29:12.277Z",
     "contributors": [
@@ -67195,6 +67191,20 @@
       "JesseW"
     ]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2020-10-15T21:25:18.475Z",
+    "contributors": [
+      "sideshowbarker",
+      "mfluehr",
+      "fscholz",
+      "jpmedley",
+      "nmve",
+      "arronei",
+      "chrisdavidmills",
+      "libbymc",
+      "teoli"
+    ]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:42:29.125Z",
     "contributors": [
@@ -71565,20 +71575,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/indexedDB": {
-    "modified": "2020-10-15T21:25:18.475Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "jpmedley",
-      "nmve",
-      "arronei",
-      "chrisdavidmills",
-      "libbymc",
-      "teoli"
-    ]
-  },
   "Web/API/isSecureContext": {
     "modified": "2020-10-15T21:51:32.759Z",
     "contributors": [
@@ -72099,10 +72095,6 @@
       "hhillen",
       "SteveLee"
     ]
-  },
-  "Web/Accessibility/ARIA/Annotations": {
-    "modified": "2020-04-03T08:53:49.929Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-24T00:12:10.850Z",
@@ -73067,23 +73059,6 @@
       "chrisdavidmills",
       "rsinohara",
       "Sebastianz"
-    ]
-  },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2020-10-15T21:08:25.190Z",
-    "contributors": [
-      "ddbeck",
-      "Sheppy",
-      "ExE-Boss",
-      "fscholz",
-      "wbamberg",
-      "Sebastianz",
-      "Jeremie",
-      "kscarfone",
-      "teoli",
-      "berkerpeksag",
-      "grendel",
-      "barlow"
     ]
   },
   "Web/CSS/-webkit-mask-box-image": {
