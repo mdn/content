@@ -6,14 +6,16 @@ page-type: guide
 
 {{SVGRef}}
 
-[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL) is an extension of [SVG](/en-US/docs/Web/SVG) allowing to animating SVG elements. SMIL allows you to:
+[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL) is an XML-based language for writing interactive multimedia presentations.
+Authors can reuse SMIL syntax in other XML-based languages to animate [SVG](/en-US/docs/Web/SVG) elements, for example.
+SMIL allows you to:
 
 - animate the numeric attributes of an element (x, y, …)
 - animate transform attributes (translation or rotation)
 - animate color attributes
 - follow a motion path
 
-This is done adding an SVG element like {{ SVGElement("animate") }} inside the SVG element to animate. Below are examples for the four different ways.
+The following sections describe how to use SMIL in the ways described in the list above.
 
 ## Animating attributes of an element
 
