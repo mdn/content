@@ -550,9 +550,9 @@
         "FileSystemWritableFileStream"
       ],
       "methods": [
-        "window.showOpenFilePicker()",
-        "window.showSaveFilePicker()",
-        "window.showDirectoryPicker()",
+        "Window.showOpenFilePicker()",
+        "Window.showSaveFilePicker()",
+        "Window.showDirectoryPicker()",
         "DataTransferItem.getAsFileSystemHandle()",
         "StorageManager.getDirectory()"
       ],
@@ -879,7 +879,7 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": ["Window.indexedDB", "WorkerGlobalScope.indexedDB"],
       "events": []
     },
     "Ink API": {

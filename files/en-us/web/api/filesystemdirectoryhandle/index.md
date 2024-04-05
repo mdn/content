@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FileSystemDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} provides a handle to a file system directory.
 
@@ -40,8 +40,8 @@ Regular methods:
   - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : Returns a new _async iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
-- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
-  - : Returns the `entries` function by default.
+- `FileSystemDirectoryHandle[@@asyncIterator]()`
+  - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs.
 
 ## Examples
 
