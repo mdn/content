@@ -140,7 +140,7 @@ rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1
 
 ### Basic syntax
 
-In this example, we have three {{htmlelement("div")}} elements with different background colors.
+In this example, we have three {{htmlelement("div")}} elements with different background colors displayed over a striped background.
 
 #### HTML
 
@@ -154,7 +154,7 @@ In this example, we have three {{htmlelement("div")}} elements with different ba
 
 #### CSS
 
-The background colors are set using the `rgb()` color function. The three colors are the same, with the third being semi-transparent:
+The background colors are set using the `rgb()` color function. The three colors are the same. The third is semi-transparent, so we included a {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} on the {{htmlelement("body")}} to better demonstrate the transparency of alpha channels.
 
 ```css hidden
 div {
@@ -163,9 +163,17 @@ div {
   height: 50px;
   flex: 1;
 }
+body {
+  height: calc(100vh - 20px);
+}
 ```
 
 ```css
+body {
+  background: repeating-linear-gradient(-45deg, #eee 0 2px, #fff 2px 6px);
+  padding: 10px;
+}
+
 #integer {
   background-color: rgb(189 85 218);
 }
@@ -181,7 +189,7 @@ div {
 
 #### Result
 
-{{ EmbedLiveSample("Basic syntax", "100%", "60") }}
+{{ EmbedLiveSample("Basic syntax", "100%", "75") }}
 
 ### Using relative colors with rgb()
 
