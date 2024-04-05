@@ -21,7 +21,7 @@ An array of `NotRestoredReasonDetails` objects can be accessed via the {{domxref
 ## Instance methods
 
 - {{domxref("NotRestoredReasonDetails.toJSON", "toJSON()")}} {{Experimental_Inline}}
-  - : A {{Glossary("Serialization","serializer")}}; returns a JSON representation of the {{domxref("NotRestoredReasonDetails")}} object.
+  - : A {{Glossary("Serialization","serializer")}}; returns a JSON representation of the `NotRestoredReasonDetails` object.
 
 ## Examples
 
