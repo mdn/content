@@ -224,6 +224,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 ```css
 :root {
   --base-color: orange;
+  /* equal to rgb(255 165 0) */
 }
 
 #one {
