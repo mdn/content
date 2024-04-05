@@ -4,6 +4,8 @@ short-title: toJSON()
 slug: Web/API/NotRestoredReasonDetails/toJSON
 page-type: web-api-instance-method
 browser-compat: api.NotRestoredReasonDetails.toJSON
+status:
+  - experimental
 spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#notrestoredreasondetails
 ---
 
