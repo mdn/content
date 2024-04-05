@@ -2,6 +2,7 @@
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
 page-type: html-attribute
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemref
 ---
 
 {{HTMLSidebar("Global_attributes")}}

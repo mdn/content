@@ -2,6 +2,7 @@
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
 page-type: html-attribute
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemtype
 ---
 
 {{HTMLSidebar("Global_attributes")}}
