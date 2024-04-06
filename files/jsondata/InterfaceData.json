@@ -808,10 +808,6 @@
       "inh": "CSSRule",
       "impl": []
     },
-    "CSSViewTransitionTypeSet": {
-      "inh": "",
-      "impl": []
-    },
     "CustomElementRegistry": {
       "inh": "",
       "impl": []
