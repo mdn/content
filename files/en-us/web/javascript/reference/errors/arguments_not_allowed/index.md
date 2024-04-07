@@ -41,10 +41,10 @@ A class field initializer expression or a class static initialization block cann
 
 ```js example-bad
 function makeOne() {
-    class C {
-        args = { ...arguments }; // SyntaxError: arguments is not valid in fields
-    }
-    return new C();
+  class C {
+    args = { ...arguments }; // SyntaxError: arguments is not valid in fields
+  }
+  return new C();
 }
 ```
 
