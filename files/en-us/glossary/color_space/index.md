@@ -14,11 +14,11 @@ The _sRGB_ color space (standard red, green, and blue) was created for the web, 
 
 ## Named color spaces
 
-The predefined sRGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
+The predefined RGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
 
 Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024/okay-color-spaces/). Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
 
-### `sRGB` color spaces
+### `RGB` color spaces
 
 RGB is a color model that represents colors as mixtures of three underlying components — red, green, and blue color channels — that create various hues when combined. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended as a common color space for the creation of images for viewing on the Internet and World Wide Web (WWW). sRGB is primarily used for displaying colors on computer screens, including laptops and smartphones.
 
@@ -28,7 +28,7 @@ CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, 
 
 The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, it is not restricted to sRGB.
 
-RGB is not the only color model that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
+The `rgb()` color function is not the only color function that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
 
 - `srgb` color space
 
@@ -54,7 +54,7 @@ RGB is not the only color model that can represent the _sRGB_ color space. Cylin
 
   - : `rec2020` is a broadcast industry standard for ultra-high definition 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
 
-> **Note:** Additional cylindrical sRGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
+> **Note:** Additional cylindrical RGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
 
 ### CIELAB color spaces
 

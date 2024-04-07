@@ -66,7 +66,7 @@ To move backwards by two pages:
 history.go(-2);
 ```
 
-And, finally either of the following statements will reload the current page:
+And finally, either of the following statements will reload the current page:
 
 ```js
 history.go();

@@ -107,7 +107,7 @@ Once you have determined the links to include in your sidebar, submit a pull req
 
 > **Note:** This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
 
-The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros) is on Github. Each macro includes the documentation for itself, including parameters, if any.
+The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros) is on GitHub. Each macro includes the documentation for itself, including parameters, if any.
 
 ## See also
 
@@ -115,4 +115,4 @@ The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros)
 - [Content link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
 - [Page section macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
 - [Banners and notices macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
-- [All macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
+- [All macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub
