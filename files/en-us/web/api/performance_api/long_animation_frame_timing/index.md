@@ -76,7 +76,7 @@ The following is a JSON representation of a complete `"long-animation-frame"` pe
 Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, this contains the following noteworthy items:
 
 - {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration", "blockingDuration")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time the animation frame was being blocked, , in milliseconds.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time the animation frame was being blocked, in milliseconds.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event (for example mouse or keyboard) to be queued during the course of the current animation frame, in milliseconds.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
@@ -96,7 +96,7 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
     - {{domxref("PerformanceScriptTiming.pauseDuration", "script.pauseDuration")}}
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script in "pausing" synchronous operations, in milliseconds (for example {{domxref("Window.alert()")}} calls, or synchronous {{domxref("XMLHttpRequest")}}s).
     - {{domxref("PerformanceScriptTiming.sourceCharPosition", "script.sourceCharPosition")}}, {{domxref("PerformanceScriptTiming.sourceFunctionName", "script.sourceFunctionName")}}, and {{domxref("PerformanceScriptTiming.sourceURL", "script.sourceURL")}}
-      - : Values representing the script character position, function name, and script URL, respectively. The source location referenced will be the script entry point, which won't necessarily be the precise location of the script feature that took up the most time. For example, if an event handler calls a library, which in turn calls a slow function, the event handler will be reported in the LoAF entry, not the library or the function.
+      - : Values representing the script character position, function name, and script URL, respectively. For example, if an event handler calls a library, which in turn calls a slow function, the event handler will be reported as the `invoker`, and the `source*` fields will report the slow function's name and location.
     - {{domxref("PerformanceScriptTiming.windowAttribution", "script.windowAttribution")}} an {{domxref("PerformanceScriptTiming.window", "script.window")}}
       - : An enumerated value describing the relationship of the container (i.e. top-level document or {{htmlelement("iframe")}}) this script was executed in to the top-level document, and a reference to its {{domxref("Window")}} object.
 
@@ -129,7 +129,7 @@ if (PerformanceObserver.supportedEntryTypes.includes("long-animation-frame")) {
 
 ### Reporting LoAFs above a certain threshold
 
-A useful strategy is to monitor all LoAFs and capture the ones above a certain threshold for further analysis (for example, send them back to an analytics endpoint):
+While LoAF thresholds are fixed at 50ms, this may lead to a large volume of reports when you first start performance optimization work. Initially, you may want to report LoAFs at a higher threshold value and gradually decrease the threshold as you improve the site and remove the worst LoAFs. The following code could be used to capture LoAFs above a specific threshold for further analysis (for example by sending them back to an analytics endpoint):
 
 ```js
 const REPORTING_THRESHOLD_MS = 150;
@@ -233,7 +233,7 @@ This is useful, as long tasks can cause responsiveness issues. For example, if a
 
 However, the Long Task API has its limitations:
 
-- An animation frame could be composed of several tasks that fall below the 50ms threshold, yet still collectively block the main thread. The Long Animation Frames API gets around this by considering the animation frame as a whole.
+- An animation frame could be composed of several tasks that fall below the 50ms threshold, yet still collectively block the main thread. The Long Animation Frames API solves this by considering the animation frame as a whole.
 - The {{domxref("PerformanceLongTaskTiming")}} entry type exposes more limited information than the {{domxref("PerformanceLongAnimationFrameTiming")}} type — it can tell you the container where a long task happened, but not the script or function that caused it, for example.
 - The Long Tasks API provides an incomplete view, as it may exclude some important tasks. Some updates (rendering, for example) happen in separate tasks that ideally should be included together with the preceding execution that caused that update to accurately measure the "total work" for that interaction.
 
