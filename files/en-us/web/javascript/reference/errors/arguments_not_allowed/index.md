@@ -51,9 +51,9 @@ function makeOne() {
 ```js example-bad
 let CArgs;
 class C {
-    static {
-        CArgs = arguments; // SyntaxError: arguments is not valid in fields
-    }
+  static {
+    CArgs = arguments; // SyntaxError: arguments is not valid in fields
+  }
 }
 ```
 
