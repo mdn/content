@@ -10,7 +10,7 @@ browser-compat: api.HTMLTableCellElement.align
 
 The **`HTMLTableCellElement.align`** property is a string indicating how to horizontally align text in the cell.
 
-**Note:** This property is deprecated and CSS should be used to horizontally align text in a cell. Usee the {{cssxref("text-align")}} property instead.
+**Note:** This property is deprecated and CSS should be used to horizontally align text in a cell. Use the {{cssxref("text-align")}} property instead.
 
 ## Value
 
