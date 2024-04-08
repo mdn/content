@@ -7,11 +7,7 @@
 name: PR Test
 
 on:
-  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
-  # is granted read/write repository access.
-  # Please pay attention to limit the permissions of each job!
-  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
@@ -35,8 +31,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: "${{ env.HEAD_SHA }}"
 
       - name: Get changed files
         run: |
@@ -143,13 +137,3 @@ jobs:
 
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
-
-  review:
-    needs: tests
-    if: ${{ needs.tests.outputs.has_assets }}
-    # write permissions are required to create a comment in the corresponding PR
-    permissions: write-all
-    uses: ./.github/workflows/pr-review-companion.yml
-    # inherit the secrets from the parent workflow
-    # https://docs.github.com/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
-    secrets: inherit

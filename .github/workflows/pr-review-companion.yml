@@ -5,7 +5,11 @@
 
 name: PR review companion
 
-on: workflow_call
+on:
+  workflow_run:
+    workflows: ["PR Test"]
+    types:
+      - completed
 
 jobs:
   review:
@@ -16,6 +20,8 @@ jobs:
         with:
           name: build
           path: build
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
 
       - uses: actions/checkout@v4
         with:
