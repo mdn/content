@@ -76,17 +76,17 @@ A `try..catch` block could be used to catch any errors writing the data.
 This example writes the canvas to a blob, using the default MIME type of `image/png`, and then writes the blob to the clipboard.
 
 ```js
-// Get canvas can add an event handler for the click event.
 const canvas = document.getElementById("canvas");
 canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
 async function copyCanvasContentsToClipboard() {
   // Copy canvas to blob
-  const blob = await canvas.toBlob();
-  // Create ClipboardItem with blob and it's type, and add to an array
-  const data = [new ClipboardItem({ [blob.type]: blob })];
-  // Write the data to the clipboard
-  await navigator.clipboard.write(data);
+  canvas.toBlob(async function (blob) {
+    // Create ClipboardItem with blob and it's type, and add to an array
+    const data = [new ClipboardItem({ [blob.type]: blob })];
+    // Write the data to the clipboard
+    await navigator.clipboard.write(data);
+  });
 }
 ```
 
