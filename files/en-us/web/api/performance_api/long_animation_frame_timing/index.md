@@ -96,7 +96,11 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
     - {{domxref("PerformanceScriptTiming.pauseDuration", "script.pauseDuration")}}
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script in "pausing" synchronous operations, in milliseconds (for example {{domxref("Window.alert()")}} calls, or synchronous {{domxref("XMLHttpRequest")}}s).
     - {{domxref("PerformanceScriptTiming.sourceCharPosition", "script.sourceCharPosition")}}, {{domxref("PerformanceScriptTiming.sourceFunctionName", "script.sourceFunctionName")}}, and {{domxref("PerformanceScriptTiming.sourceURL", "script.sourceURL")}}
-      - : Values representing the script character position, function name, and script URL, respectively. For example, if an event handler calls a library, which in turn calls a slow function, the event handler will be reported as the `invoker`, and the `source*` fields will report the slow function's name and location.
+
+      - : Values representing the script character position, function name, and script URL, respectively. It is important to note that the reported function name will be the "entry point" of the script (i.e. the top level of the stack), and not any specific slow sub-function.
+
+        For example, if an event handler calls a top-level function, which in turn calls a slow sub-function, the `source*` fields will report the top-level function's name and location, not the slow sub-function. This is because of performance reasons — a full stack trace is costly.
+
     - {{domxref("PerformanceScriptTiming.windowAttribution", "script.windowAttribution")}} an {{domxref("PerformanceScriptTiming.window", "script.window")}}
       - : An enumerated value describing the relationship of the container (i.e. top-level document or {{htmlelement("iframe")}}) this script was executed in to the top-level document, and a reference to its {{domxref("Window")}} object.
 
@@ -204,26 +208,30 @@ The execution time of common scripts (or third-party origins) in LoAFs could be 
 For example, to group scripts by URL and show total duration:
 
 ```js
-const observer = new PerformanceObserver(list => {
-  const allScripts = list.getEntries().flatMap(entry => entry.scripts);
-  const scriptSource = [...new Set(allScripts.map(script => script.sourceURL))];
-  const scriptsBySource= scriptSource.map(sourceURL => ([sourceURL,
-      allScripts.filter(script => script.sourceURL === sourceURL)
-  ]));
+const observer = new PerformanceObserver((list) => {
+  const allScripts = list.getEntries().flatMap((entry) => entry.scripts);
+  const scriptSource = [
+    ...new Set(allScripts.map((script) => script.sourceURL)),
+  ];
+  const scriptsBySource = scriptSource.map((sourceURL) => [
+    sourceURL,
+    allScripts.filter((script) => script.sourceURL === sourceURL),
+  ]);
   const processedScripts = scriptsBySource.map(([sourceURL, scripts]) => ({
     sourceURL,
     count: scripts.length,
-    totalDuration: scripts.reduce((subtotal, script) => subtotal + script.duration, 0)
+    totalDuration: scripts.reduce(
+      (subtotal, script) => subtotal + script.duration,
+      0,
+    ),
   }));
   processedScripts.sort((a, b) => b.totalDuration - a.totalDuration);
-  / Example here logs to console; real code could send to analytics endpoint
+  // Example here logs to console; real code could send to analytics endpoint
   console.table(processedScripts);
 });
 
-observer.observe({type: 'long-animation-frame', buffered: true});
+observer.observe({ type: "long-animation-frame", buffered: true });
 ```
-
-You could replace `sourceURL` with `sourceFunctionName`, if you wished to show total duration of different functions.
 
 ## Comparison with the Long Tasks API
 

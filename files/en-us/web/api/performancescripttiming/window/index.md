@@ -14,7 +14,7 @@ The **`window`** readonly property of the {{domxref("PerformanceScriptTiming")}}
 
 ## Value
 
-A {{domxref("Window")}} object, or `null` if the window is no longer active.
+A {{domxref("Window")}} object, or `null` if the window is no longer active (the object reference is a [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)).
 
 ## Examples
 
