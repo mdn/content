@@ -212,7 +212,7 @@ As of iOS 14, VoiceOver will announce that `<dl>` content is a list when navigat
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/list_role"
             >list</a
           ></code
         >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
