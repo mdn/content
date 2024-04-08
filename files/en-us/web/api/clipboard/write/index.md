@@ -82,7 +82,7 @@ canvas.addEventListener("click", copyCanvasContentsToClipboard);
 async function copyCanvasContentsToClipboard() {
   // Copy canvas to blob
   canvas.toBlob(async (blob) => {
-    // Create ClipboardItem with blob and it's type, and add to an array
+    // Create ClipboardItem with blob and its type, and add to an array
     const data = [new ClipboardItem({ [blob.type]: blob })];
     // Write the data to the clipboard
     await navigator.clipboard.write(data);
