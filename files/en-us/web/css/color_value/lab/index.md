@@ -215,7 +215,7 @@ div {
 
 ### Adjusting color axes
 
-This example demonstrates the effects of setting the `a` and `b` values of the `lab()` function to the ends of the a-axis and b-axis.
+This example demonstrates the effects of setting the `a` and `b` values of the `lab()` function to the ends and midpoints of the a-axis, which goes from green (-125) to red (125) and the b-axis, which goes from yellow (-125) to blue (125).
 
 #### HTML
 
@@ -224,24 +224,28 @@ This example demonstrates the effects of setting the `a` and `b` values of the `
 <div data-color="redzero"></div>
 <div data-color="redblue"></div>
 
+<div data-color="zeroyellow"></div>
+<div data-color="zerozero"></div>
+<div data-color="zeroblue"></div>
+
 <div data-color="greenyellow"></div>
 <div data-color="greenzero"></div>
 <div data-color="greenblue"></div>
-
-<div data-color="yellowzero"></div>
-<div data-color="zerozero"></div>
-<div data-color="bluezero"></div>
 ```
 
 #### CSS
 
+Using the CSS {{cssxref("background-color")}} property, we vary the `a` and `b` values of the `lab()` color function along the a-axis and b-axis, showing the effects of maximum, midpoint, and minimum values in each case.
+
 ```css hidden
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
 div {
-  width: 50px;
   height: 50px;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
+  flex: 0 0 28%;
   border: 1px solid black;
 }
 ```
@@ -258,6 +262,17 @@ div {
   background-color: lab(50 125 -125);
 }
 
+/* a-axis center, variable b-axis */
+[data-color="zeroyellow"] {
+  background-color: lab(50 0 125);
+}
+[data-color="zerozero"] {
+  background-color: lab(50 0 0);
+}
+[data-color="zeroblue"] {
+  background-color: lab(50 0 -125);
+}
+
 /* a-axis min, variable b-axis */
 [data-color="greenyellow"] {
   background-color: lab(50 -125 125);
@@ -268,38 +283,40 @@ div {
 [data-color="greenblue"] {
   background-color: lab(50 -125 -125);
 }
-
-/* a-axis at midpoint (neither green nor red)
-   b-axis  */
-[data-color="yellowzero"] {
-  background-color: lab(50 0 125);
-}
-[data-color="zerozero"] {
-  background-color: lab(50 0 0);
-}
-[data-color="bluezero"] {
-  background-color: lab(50 0 -125);
-}
 ```
 
 #### Result
 
-{{EmbedLiveSample("Adjusting_color_axes")}}
+{{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
 
-### The a-axis and b-axis
+The left column is at the yellow end of the b-axis and the right column is at the blue end. Top top row is at the red end of the a-axis and the bottom row is at the green end. The middle column and row are at the mid-points of the axis, with the middle cell being grey, having no red, green, yellow, or blue.
 
-This example includes linear gradients to demonstrate the progression of values of the `lab()` function along the a-axis and b-axis. In each gradient image, one axis remains static while the other axis progresses from start to end.
+### Linear gradients along the a-axis and b-axis
+
+This example includes linear gradients to demonstrate the progression of values of the `lab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from the low end to the high end of the axis values.
 
 #### HTML
 
-```html
-<div data-color="redtogreen-yellow"></div>
-<div data-color="redtogreen-zero"></div>
-<div data-color="redtogreen-blue"></div>
+```html hidden
+<div data-color="redtogreen-yellow">
+  <span>red</span><span>`b`= -125 (yellow)</span><span>green</span>
+</div>
+<div data-color="redtogreen-zero">
+  <span>red</span><span>no yellow or blue</span><span>green</span>
+</div>
+<div data-color="redtogreen-blue">
+  <span>red</span><span>`b`= 125 (blue)</span><span>green</span>
+</div>
 
-<div data-color="yellowtoblue-red"></div>
-<div data-color="yellowtoblue-zero"></div>
-<div data-color="yellowtoblue-green"></div>
+<div data-color="yellowtoblue-red">
+  <span>yellow</span><span>`a` = -125 (red)</span><span>blue</span>
+</div>
+<div data-color="yellowtoblue-zero">
+  <span>yellow</span><span>no red or green</span><span>blue</span>
+</div>
+<div data-color="yellowtoblue-green">
+  <span>yellow</span><span>`a` = 125 (green)</span><span>blue</span>
+</div>
 ```
 
 #### CSS
@@ -310,52 +327,43 @@ div {
   padding: 5px;
   margin: 5px;
   border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  background-color: #ffffffcc;
+  padding: 3px;
 }
 ```
 
-```css
+```css-nolint
 /* a-axis gradients */
 [data-color="redtogreen-yellow"] {
-  background-image: linear-gradient(
-    to right,
-    lab(50 125 125),
-    lab(50 -125 125)
-  );
+  background-image: linear-gradient(to right, lab(50 125 125), lab(50 -125 125));
 }
 [data-color="redtogreen-zero"] {
   background-image: linear-gradient(to right, lab(50 125 0), lab(50 -125 0));
 }
 [data-color="redtogreen-blue"] {
-  background-image: linear-gradient(
-    to right,
-    lab(50 125 -125),
-    lab(50 -125 -125)
-  );
+  background-image: linear-gradient(to right, lab(50 125 -125), lab(50 -125 -125));
 }
 
 /* b-axis gradients */
 [data-color="yellowtoblue-red"] {
-  background-image: linear-gradient(
-    to right,
-    lab(50 125 125),
-    lab(50 125 -125)
-  );
+  background-image: linear-gradient(to right, lab(50 125 125), lab(50 125 -125));
 }
 [data-color="yellowtoblue-zero"] {
   background-image: linear-gradient(to right, lab(50 0 125), lab(50 0 -125));
 }
 [data-color="yellowtoblue-green"] {
-  background-image: linear-gradient(
-    to right,
-    lab(50 -125 125),
-    lab(50 -125 -125)
-  );
+  background-image: linear-gradient(to right, lab(50 -125 125),lab(50 -125 -125));
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("The a-axis and b-axis", '', '400')}}
+{{EmbedLiveSample("Linear gradients along the a-axis and b-axis", '', '420')}}
 
 ### Adjusting opacity
 
