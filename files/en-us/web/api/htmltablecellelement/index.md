@@ -49,7 +49,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 > **Warning:** These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
 
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
-  - : A string containing an enumerated value reflecting the [`align`](/en-US/docs/Web/HTML/Element/td#align) attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
+  - : A string containing an enumerated value reflecting the [`align`](/en-US/docs/Web/HTML/Element/td#align) attribute. It indicates the alignment of the element's contents to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`. Use the CSS {{cssxref("text-align")}} property instead.
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
   - : A string containing a name grouping cells in virtual. It reflects the obsolete [`axis`](/en-US/docs/Web/HTML/Element/td#axis) attribute.
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
