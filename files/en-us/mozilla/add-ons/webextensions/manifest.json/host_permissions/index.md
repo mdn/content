@@ -40,7 +40,8 @@ Use the `host_permissions` key to request access for the APIs in your extension 
 ### Requested permissions and user prompts
 
 > **Note:** Most browsers treat `host_permissions` as optional. As of June 2023, Safari, Firefox, and some Chromium-based browsers won't prompt the user to grant those permissions during addon installation.
-> Also, the `<all_urls>` host permission [has no effect in Manifest V3](https://bugzilla.mozilla.org/show_bug.cgi?id=1890169). Users will still need to enable access for all websites.
+
+> The `<all_urls>` host permission has no effect for content scripts. Users will still need to enable access for all websites.
 
 Users can also grant or revoke host permissions on an ad hoc basis. For example, in Firefox, users can do this using the [extensions panel](https://blog.mozilla.org/addons/2022/11/17/unified-extensions-button-and-how-to-handle-permissions-in-manifest-v3/).
 
