@@ -412,9 +412,8 @@ Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to speci
       <td><code>ALIASED_LINE_WIDTH_RANGE</code></td>
       <td>0x846E</td>
       <td>
-        Passed to <code>getParameter</code> to get the range of available widths
-        for a line. Returns a length-2 array with the lo value at 0, and hight
-        at 1.
+        Passed to <code>getParameter</code> to get the range of available widths for a line.
+        The method returns an array with two elements: index 0 contains the minimum width value and index 1 contains the maximum width value.
       </td>
     </tr>
     <tr>
