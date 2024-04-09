@@ -295,8 +295,6 @@ The left column is at the yellow end of the b-axis and the right column is at th
 
 This example includes linear gradients to demonstrate the progression of values of the `lab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from the low end to the high end of the axis values.
 
-#### HTML
-
 ```html hidden
 <div data-color="redtogreen-yellow">
   <span>red</span><span>`b`= -125 (yellow)</span><span>green</span>
