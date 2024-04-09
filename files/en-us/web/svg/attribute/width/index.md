@@ -863,6 +863,7 @@ svg {
   height: 100%;
 }
 ```
+This example includes three {{SVGElement("rect")}} elements with varied `width` attribute values.  The first `<rect>` has a `width="0"` set.  SVG elements with a width of `0` or less are not rendered. 
 
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">

@@ -44,7 +44,7 @@ You can use this attribute with the following SVG elements:
 For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/letter-spacing#values) property.
 
 ## Examples
-
+This example includes two {{SVGElement("text")}} elements with different `word-spacing` values.  
 ```css hidden
 html,
 body,

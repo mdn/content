@@ -1294,6 +1294,7 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
 > **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
 ## Examples
+This example contains three {{SVGElement("rect")}} elements, each with an `x` value smaller than the previous value. 
 
 ```css hidden
 html,
@@ -1305,9 +1306,9 @@ svg {
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="60" height="60" />
-  <rect x="120" y="20" width="60" height="60" />
-  <rect x="220" y="20" width="60" height="60" />
+  <rect x="220" y="20" width="60" height="60" fill="red" />
+  <rect x="120" y="20" width="60" height="60" fill="yellow" />
+  <rect x="20" y="20" width="60" height="60" fill="blue" />
 </svg>
 ```
 
