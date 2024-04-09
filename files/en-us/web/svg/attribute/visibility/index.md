@@ -18,12 +18,12 @@ Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elem
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("audio")}}
-- {{SVGElement("canvas")}}
+- `<audio>`
+- `<canvas>`
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
-- {{SVGElement("iframe")}}
+- `<iframe>`
 - {{SVGElement("image")}}
 - {{SVGElement("line")}}
 - {{SVGElement("path")}}
@@ -34,7 +34,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
-- {{SVGElement("video")}}
+- `<video>`
 
 ## Usage notes
 
