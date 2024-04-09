@@ -18,8 +18,6 @@ jobs:
     # Set the permissions to `read-all`, preventing the workflow from
     # any accidental write access to the repository.
     permissions: read-all
-    outputs:
-      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -112,9 +110,6 @@ jobs:
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
-
-          # Set the output variable so the next job could skip if there are no assets
-          echo "has_assets=true" >> "$GITHUB_OUTPUT"
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
