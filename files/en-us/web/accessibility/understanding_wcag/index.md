@@ -16,7 +16,7 @@ WCAG is broadly broken down into four principles — major things that web conte
 
 Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in each of the WCAG 2.0 and 2.1 guidelines that further sub-divides each principle.
 
-- [Perceivable:](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable) Users must be able to perceive it in some way, using one or more of their senses.
+- [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable): Users must be able to perceive it in some way, using one or more of their senses.
 - [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable): Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
 - [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable): The content must be understandable to its users.
 - [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust): The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
