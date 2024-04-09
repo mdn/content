@@ -237,7 +237,7 @@ One use of this feature is inserting dynamic text, as shown in the following exa
 The double curly braces instruct Angular to interpolate the contents within them.
 The value for `title` comes from the component class:
 
-```js
+```js-nolint
 import { Component } from "@angular/core";
 
 @Component({
