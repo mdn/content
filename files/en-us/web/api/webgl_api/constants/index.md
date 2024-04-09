@@ -413,7 +413,7 @@ Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to speci
       <td>0x846E</td>
       <td>
         Passed to <code>getParameter</code> to get the range of available widths for a line.
-        The method returns an array with two elements: index 0 contains the minimum width value and index 1 contains the maximum width value.
+        The <code>getParameter</code> method then returns an array with two elements: the first element is the minimum width value and the second element is the maximum width value.
       </td>
     </tr>
     <tr>
