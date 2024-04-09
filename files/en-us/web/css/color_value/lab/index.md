@@ -289,7 +289,7 @@ div {
 
 {{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
 
-The left column is at the yellow end of the b-axis and the right column is at the blue end. Top top row is at the red end of the a-axis and the bottom row is at the green end. The middle column and row are at the mid-points of the axis, with the middle cell being grey, having no red, green, yellow, or blue.
+The left column is at the yellow end (-125) of the b-axis and the right column is at the blue end (125). The top row displays colors at the red end of the a-axis (-125) and the bottom row is at the green end (125). The middle column and row are at the midpoints (0) of each axis, with the middle cell being grey; it contains no red, green, yellow, or blue, with a `0` value for both axes.
 
 ### Linear gradients along the a-axis and b-axis
 
