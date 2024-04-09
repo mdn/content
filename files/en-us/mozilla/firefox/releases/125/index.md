@@ -70,6 +70,10 @@ This article provides information about the changes in Firefox 125 that affect d
 
 These features are newly shipped in Firefox 125 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
+
+  `<h1>` headings are no longer decreasing font size when nested into sectioning `<article>`, `<aside>`, `<nav>`, `<section>` elements. These UA styles are no longer relevant due to the changes in the HTML specification [removing the outline algorithm](https://github.com/whatwg/html/pull/7829). This is an experiment to see how this change affects existing web pages and whether it's feasible to remove them by default. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
 ## Older versions
 
 {{Firefox_for_developers}}

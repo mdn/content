@@ -819,7 +819,7 @@ The [`text-wrap`](/en-US/docs/Web/CSS/text-wrap) CSS property values `balance` a
   </tbody>
 </table>
 
-#### Vendor-prefixed transform properties
+### Vendor-prefixed transform properties
 
 The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
 Specifically, the disabled properties are:
@@ -869,7 +869,7 @@ Specifically, the disabled properties are:
   </tbody>
 </table>
 
-#### Vendor-prefixed transition properties
+### Vendor-prefixed transition properties
 
 The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
 Specifically, the disabled properties are:
@@ -914,6 +914,48 @@ Specifically, the disabled properties are:
       <td colspan="2">
       <code>layout.css.prefixes.transitions</code>
     </td>
+    </tr>
+  </tbody>
+</table>
+
+### UA styles for `<h1>` nested into sectioning elements
+
+`<h1>` headings are no longer decreasing font size when nested into sectioning `<article>`, `<aside>`, `<nav>`, `<section>` elements. These UA styles are no longer relevant due to the changes in the HTML specification [removing the outline algorithm](https://github.com/whatwg/html/pull/7829). This is an experiment to see how this change affects existing web pages and whether it's feasible to remove them by default. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>layout.css.h1-in-section-ua-styles.enabled</code>
+      </td>
     </tr>
   </tbody>
 </table>
