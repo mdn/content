@@ -208,59 +208,155 @@ The `color-mix()` function can be used to add transparency to colors, but not to
 
 ### Using hue interpolation in color-mix()
 
-When using shorter hue [interpolation](/en-US/docs/Web/CSS/color_value#interpolation), the resulting hue angle is halfway between the input angles when taking the shortest route around the color wheel.
-The longer hue interpolation method results in a hue angle which is the midpoint when taking the longer route around the color wheel.
+This example demonstrates the hue interpolation methods available to the `color-mix()` function. When using hue [interpolation](/en-US/docs/Web/CSS/color_value#interpolation), the resulting hue is between the hue values of the two colors being mixed. The value will be different based on which route is taken around the color wheel.
+
 For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
-```html
-<div class="color-one">color one</div>
-<div class="color-two">color two</div>
-<div class="shorter">mixed shorter</div>
-<div class="longer">mixed longer</div>
+```html hidden
+<p>longer</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+<p>shorter</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+<p>increasing</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+<p>decreasing</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
 ```
 
 #### CSS
 
+The `shorter hue` interpolation method takes the shorted route, the `longer hue` interpolation method is taken from the longer route around the color wheel. With `increasing hue`, the route starts with increasing values. With `decreasing hue` the value decreases. We mix two {{cssxref("named-color")}} values to create a series of `lch()` intermediary colors that differ based on which route is taken around the color wheel. The mixed colors include `red`, `blue`, and `yellow` with LCH hue values of approximately 41deg, 301deg, and 100deg, respectively.
+
+To reduce code redundancy, we used {{cssxref('--*', 'CSS custom properties')}} for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
+
 ```css hidden
 body {
-  display: flex;
-  flex-wrap: wrap;
+  font-family: monospace;
 }
-div {
-  border: 1px solid;
-  font: bold 150% monospace;
-  height: 100px;
-  margin: 10px 5%;
-  width: 30%;
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  padding: 10px;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  outline: 1px solid var(--base);
+  text-align: center;
 }
 ```
 
 ```css
-.color-one {
-  background-color: hsl(10 100% 50%);
+ul:nth-of-type(1) {
+  --distance: longer; /* 52 degree hue increments */
+  --base: red;
+  --mixin: blue;
 }
-.color-two {
-  background-color: hsl(60 100% 50%);
+ul:nth-of-type(2) {
+  /* 20 degree hue decrements */
+  --distance: shorter;
+  --base: red;
+  --mixin: blue;
 }
-.shorter {
+ul:nth-of-type(3) {
+  /* 40 degree hue increments */
+  --distance: increasing;
+  --base: yellow;
+  --mixin: blue;
+}
+ul:nth-of-type(4) {
+  /* 32 degree hue decrements */
+  --distance: decreasing;
+  --base: yellow;
+  --mixin: blue;
+}
+
+li:nth-child(1) {
   background-color: color-mix(
-    in hsl shorter hue,
-    hsl(10 100% 50%),
-    hsl(60 100% 50%)
+    in lch var(--distance) hue,
+    var(--base) 100%,
+    var(--mixin)
   );
 }
-.longer {
+
+li:nth-child(2) {
   background-color: color-mix(
-    in hsl longer hue,
-    hsl(10 100% 50%),
-    hsl(60 100% 50%)
+    in lch var(--distance) hue,
+    var(--base) 80%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(3) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 60%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(4) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 40%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(5) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 20%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(6) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 0%,
+    var(--mixin)
   );
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 250)}}
+{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 440)}}
+
+With `longer hue` the increments or decrements between colors will always be the same or larger than when using `shorter hue`. Use `increasing hue` or `descreasing hue` when the direction of the hue value change is more important than the length between values.
 
 ## Specifications
 
