@@ -38293,18 +38293,6 @@
       "JesseW"
     ]
   },
-  "Web/API/HTMLElement/mscandidatewindowhide_event": {
-    "modified": "2019-03-18T21:30:58.857Z",
-    "contributors": ["mattwojo"]
-  },
-  "Web/API/HTMLElement/mscandidatewindowshow_event": {
-    "modified": "2019-03-18T21:30:59.572Z",
-    "contributors": ["mattwojo"]
-  },
-  "Web/API/HTMLElement/mscandidatewindowupdate_event": {
-    "modified": "2019-03-18T21:28:43.354Z",
-    "contributors": ["mattwojo"]
-  },
   "Web/API/HTMLElement/nonce": {
     "modified": "2020-10-15T22:00:37.198Z",
     "contributors": [
@@ -45088,10 +45076,6 @@
   "Web/API/MediaError/message": {
     "modified": "2020-10-15T21:52:30.457Z",
     "contributors": ["fscholz", "jpmedley", "wolenetz", "foolip", "Sheppy"]
-  },
-  "Web/API/MediaError/msExtendedCode": {
-    "modified": "2019-03-23T22:00:50.075Z",
-    "contributors": ["ExE-Boss", "mattwojo", "erikadoyle"]
   },
   "Web/API/MediaKeyMessageEvent": {
     "modified": "2020-10-15T21:33:46.465Z",
@@ -52452,10 +52436,6 @@
       "trevorh",
       "teoli"
     ]
-  },
-  "Web/API/PerformanceTiming/MsFirstPaint": {
-    "modified": "2019-03-18T21:32:14.582Z",
-    "contributors": ["mattwojo", "erikadoyle"]
   },
   "Web/API/PerformanceTiming/connectEnd": {
     "modified": "2020-10-15T21:24:41.930Z",
