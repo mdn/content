@@ -237,7 +237,8 @@ svg:not(:root) {
 }
 ```
 
-The code snippet below includes three  {{SVGElement("svg")}}s  with different `viewbox` attribute values and identical {{SVGElement("rect")}} and {{SVGElement("circle")}} descendants creating very different results. The size of `<rect>` is defined using relative units, so the visual size of the square produced looks unchanged regardless of the `viewBox` value. The radius length {{SVGAttr("r")}} attribute of the `<circle>` is the same in each case, but this user unit value is resolved against the size defined in the `viewBox`, producing different results in each case.
+The code snippet below includes three {{SVGElement("svg")}}s with different `viewbox` attribute values and identical {{SVGElement("rect")}} and {{SVGElement("circle")}} descendants creating very different results. The size of `<rect>` is defined using relative units, so the visual size of the square produced looks unchanged regardless of the `viewBox` value. The radius length {{SVGAttr("r")}} attribute of the `<circle>` is the same in each case, but this user unit value is resolved against the size defined in the `viewBox`, producing different results in each case.
+
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!--
