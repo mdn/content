@@ -76,7 +76,7 @@ The following is a JSON representation of a complete `"long-animation-frame"` pe
 Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, this contains the following noteworthy items:
 
 - {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration", "blockingDuration")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time the animation frame was being blocked, in milliseconds.
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the total time the main thread was blocked from responding to high priority tasks, such as user input, in milliseconds. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results. See the {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration", "blockingDuration")}} reference page for more information.
 - {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp", "firstUIEventTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event (for example mouse or keyboard) to be queued during the course of the current animation frame, in milliseconds.
 - {{domxref("PerformanceLongAnimationFrameTiming.renderStart", "renderStart")}}
