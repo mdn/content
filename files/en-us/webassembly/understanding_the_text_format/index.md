@@ -420,7 +420,156 @@ When you run the code, the console will show the text "Hi".
 
 #### Multiple memories
 
-> **Note:** See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information.
+More recent implementations allow you to use multiple memory objects in your WebAssembly and JavaScript, in a way that is compatible with code that is written for implementations that only support a single memory.
+Multiple memories can be useful for separating data that should be treated differently to other application data, such as public vs private data, data that needs to be persisted, and data that needs to be shared between threads.
+It may also be very useful for very large applications that need to scale beyond the WASM 32-bit address space, and for other purposes.
+
+Memories that are made available to the WASM code, either declared directly or imported, are given a zero-indexed sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as `load` or `store`, can reference any particular memory via its index so you can control which memory you're working with.
+
+The memory instructions have a default index of 0, the index of the first memory added to the WebAssembly instance.
+As a result, if you only add one memory, your code doesn't have to specify the index.
+
+To show how this works in more detail, we'll extend the previous example to write strings to three different memories and log the results.
+The code below shows how we first import two memory instances, using the same approach as in the previous example.
+To show how you can create memory within the WebAssembly module, we've created a third memory instance named `$mem2` in the module and _exported_ it.
+
+```wasm
+(module
+  ;; ...
+
+  (import "js" "mem0" (memory 1))
+  (import "js" "mem1" (memory 1))
+
+  ;; Create and export a third memory
+  (memory $mem2 1)
+  (export "memory2" (memory $mem2))
+
+  ;; ...
+)
+```
+
+The three memory instances are automatically assigned an instance based on their order of creation.
+The code below shows how we can specify this index (e.g. `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
+Here we write a string that indicates each memory type.
+
+```wasm
+  (data (memory 0) (i32.const 0) "Memory 0 data")
+  (data (memory 1) (i32.const 0) "Memory 1 data")
+  (data (memory 2) (i32.const 0) "Memory 2 data")
+
+  ;; Add text to default (0-index) memory
+  (data (i32.const 13) " (Default)")
+```
+
+Note that the `(memory 0)` is the default, and hence optional.
+To demonstrate this we write the text `" (Default)"` without specifying the memory index, and this should be appended after `"Memory 0 data"` when the memory contents are logged.
+
+The WebAssembly logging code is almost exactly the same as the previous example, except that along with the string offset and length, we need to pass the index of the memory that contains the string.
+We also log all three memory instances.
+
+The complete module is shown below:
+
+```wasm
+(module
+  (import "console" "log" (func $log (param i32 i32 i32)))
+
+  (import "js" "mem0" (memory 1))
+  (import "js" "mem1" (memory 1))
+
+  ;; Create and export a third memory
+  (memory $mem2 1)
+  (export "memory2" (memory $mem2))
+
+  (data (memory 0) (i32.const 0) "Memory 0 data")
+  (data (memory 1) (i32.const 0) "Memory 1 data")
+  (data (memory 2) (i32.const 0) "Memory 2 data")
+
+  ;; Add text to default (0-index) memory
+  (data (i32.const 13) " (Default)")
+
+  (func $logMemory (param $memIndex i32) (param $memOffSet i32) (param $stringLength i32)
+    local.get $memIndex
+    local.get $memOffSet
+    local.get $stringLength
+    call $log
+  )
+
+  (func (export "logAllMemory")
+    ;; Log memory index 0, offset 0
+    (i32.const 0)  ;; memory index 0
+    (i32.const 0)  ;; memory offset 0
+    (i32.const 23)  ;; string length 23
+    (call $logMemory)
+
+    ;; Log memory index 1, offset 0
+    i32.const 1  ;; memory index 1
+    i32.const 0  ;; memory offset 0
+    i32.const 20  ;; string length 20
+    call $logMemory
+
+    ;; Log memory index 2, offset 0
+    i32.const 2  ;; memory index 2
+    i32.const 0  ;; memory offset 0
+    i32.const 12  ;; string length 12
+    call $logMemory
+  )
+
+)
+```
+
+The JavaScript code is also very similar to the previous example, except that we create and pass two memory instances to the `importObject()` and the memory exported by the module instance is accessed after it has been instantiated using the resolved promise (`obj.instance.exports`).
+The code to log each string is also a little more complicated because we need to match the memory instance number from the WebAssembly to a particular `Memory` object.
+
+```js
+const memory0 = new WebAssembly.Memory({ initial: 1 });
+const memory1 = new WebAssembly.Memory({ initial: 1 });
+let memory2; // Created by module
+
+function consoleLogString(memoryInstance, offset, length) {
+  let memory;
+  switch (memoryInstance) {
+    case 0:
+      memory = memory0;
+      break;
+    case 1:
+      memory = memory1;
+      break;
+    case 2:
+      memory = memory2;
+      break;
+    // code block
+  }
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder("utf8").decode(bytes);
+  log(string); // implementation not shown - could call console.log()
+}
+
+const importObject = {
+  console: { log: consoleLogString },
+  js: { mem0: memory0, mem1: memory1 },
+};
+
+WebAssembly.instantiateStreaming(fetch("multi-memory.wasm"), importObject).then(
+  (obj) => {
+    //Get exported memory
+    memory2 = obj.instance.exports.memory2;
+    //Log memory
+    obj.instance.exports.logAllMemory();
+  },
+);
+```
+
+The output of the example should be similar to the text below, except that "Memory 1 data" may have some trailing "rubbish characters", because the text decoder is passed more bytes than are used to encode the string.
+
+```plain
+Memory 0 data (Default)
+Memory 1 data
+Memory 2 dat
+```
+
+You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
+
+> **Note:** See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
 
 ### WebAssembly tables
 
