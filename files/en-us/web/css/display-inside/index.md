@@ -20,7 +20,7 @@ These keywords specify the element's inner {{CSSxRef("display")}} type, which de
 
 Valid `<display-inside>` values:
 
-- `flow` {{Experimental_Inline}}
+- `flow`
 
   - : The element lays out its contents using flow layout (block-and-inline layout).
 
@@ -36,7 +36,7 @@ Valid `<display-inside>` values:
   - : The element behaves like a block element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 - `grid`
   - : The element behaves like a block element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
-- `ruby` {{Experimental_Inline}}
+- `ruby`
   - : The element behaves like an inline element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > **Note:** Browsers that support the two value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`. This will result in expected behavior; for example if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block level box.

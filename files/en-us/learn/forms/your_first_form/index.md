@@ -186,10 +186,13 @@ First of all, add a {{htmlelement("style")}} element to your page, inside your H
 Inside the `style` tags, add the following CSS:
 
 ```css
-form {
+body {
   /* Center the form on the page */
-  margin: 0 auto;
-  width: 400px;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
   /* Form outline */
   padding: 1em;
   border: 1px solid #ccc;
@@ -209,7 +212,7 @@ form li + li {
 label {
   /* Uniform size & alignment */
   display: inline-block;
-  width: 90px;
+  min-width: 90px;
   text-align: right;
 }
 
@@ -218,11 +221,9 @@ textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
-
   /* Uniform text field size */
   width: 300px;
   box-sizing: border-box;
-
   /* Match form field borders */
   border: 1px solid #999;
 }
@@ -236,7 +237,6 @@ textarea:focus {
 textarea {
   /* Align multiline text fields with their labels */
   vertical-align: top;
-
   /* Provide space to type some text */
   height: 5em;
 }
