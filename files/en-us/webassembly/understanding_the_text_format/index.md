@@ -286,55 +286,90 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 The examples above show how to work with numbers in assembly code, adding them to the [stack](#stack_machines), perform operations on them, and then logging the result by calling a method in JavaScript.
 
-For working with strings and other more complex data types we use `memory`, which can be created in the WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types))
-In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes, that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing bytes between any location in the memory and the stack.
+For working with strings and other more complex data types we use `memory`, which can be created in either the WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types)).
+
+In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes, that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing bytes between the stack and any location in the memory.
 
 From JavaScript's point of view, it's as though memory is all inside one big growable {{jsxref("ArrayBuffer")}}.
-JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and experited. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
+JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and exported. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
 Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript or `memory.grow` in the WebAssembly.
 Since `ArrayBuffer` objects can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory.
 
 Note that when you create the memory you need to define both the initial size and the maximum size to which the memory can grow.
-WebAssembly will attempt to reserve the maximum size you have requested, and if it is able to do so, it can grow the buffer more efficiently in future. If not, it won't fail unless it cannot allocate the initial size.
+WebAssembly will attempt to reserve the maximum size you have requested, and if it is able to do so, it can grow the buffer more efficiently in future. Even if it can't allocate the maximum size now, it may still be able to grow later. The method will only fail if it cannot allocate the _initial_ size.
 
 > **Note:** Originally WebAssembly only allowed one memory per module instance.
 > You can now have [multiple_memories](#multiple_memories) when supported by the browser.
+> Code that doesn't use multiple memories does not need to change!
 
-To explain this by way of example, let's consider the case where we want to work with a string in our WebAssembly code.
-A string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
+To demonstrate some of this behaviour, let's consider the case where we want to work with a string in our WebAssembly code.
+A string is just a sequence of bytes somewhere inside this linear memory.
+Assuming we've written a suitable string of bytes to WebAssembly memory, we can pass that string to JavaScript by sharing the memory, the offset of the string within the memory, and some way of indicating the length.
 
-All we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
+Firstly let's create some memory and share it between the WebAssembly and JavaScript.
+WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
 
-While there are many ways to encode a string's length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:
-
-```wasm
-(import "console" "log" (func $log (param i32) (param i32)))
-```
-
-On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/TextDecoder) to easily decode our bytes into a JavaScript string. (We specify `utf8` here, but many other encodings are supported.)
+For this example we'll create the memory in JavaScript then import it into WebAssembly.
+First we create a `Memory` object with 1 page, and add it to our `importObject` under the key `js.mem`.
+We then instantiate our web assembly module, in this case "the_wasm_to_import.wasm", using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method and passing the import object:
 
 ```js
-function consoleLogString(offset, length) {
-  const bytes = new Uint8Array(memory.buffer, offset, length);
-  const string = new TextDecoder("utf8").decode(bytes);
-  console.log(string);
-}
+const memory = new WebAssembly.Memory({ initial: 1 });
+
+const importObject = {
+  js: { mem: memory },
+};
+
+WebAssembly.instantiateStreaming(
+  fetch("the_wasm_to_import.wasm"),
+  importObject,
+).then((obj) => {
+  // Call exported functions ...
+});
 ```
 
-The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
-
-For simplicity, let's create it in JavaScript then import it into WebAssembly. Our `import` statement is written as follows:
+Within our WebAssembly file we import this memory. Using the WebAssembly text format, the `import` statement is written as follows:
 
 ```wasm
 (import "js" "mem" (memory 1))
 ```
 
-The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly defines a page to be 64KB.)
+The memory must be imported using the same two-level key specified in the `importObject` (`js.mem`).
+The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly currently defines a page to be 64KB).
 
-So let's see a complete module that prints the string "Hi". In a normal compiled C program, you'd call a function to allocate some memory for the string, but since we're just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section. Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
+> **Note:** As this is the first memory imported into the WebAssembly module it has a memory index of "0".
+> You could reference this particular memory using the index in [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), but since 0 is the default index, in single-memory applications you don't need to.
 
-Our final Wasm module looks like this:
+Now that we have a shared memory instance, the next step is to write a string of data into it.
+We'll then pass information about where the string is located and its length to the JavaScript (we could alternatively encode the string's length in the string itself, but this is easier).
+
+First let's add a string of data to our memory, in this case "Hi".
+Since we own the entire linear memory, we can just write the string contents into global memory using a `data` section.
+Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
+Here we're writing the data to the default memory — with index 0 (which we do not need to specify) — at offset `0`.
+
+```wasm
+(module
+  (import "js" "mem" (memory 1))
+  ;; ...
+  (data (i32.const 0) "Hi")
+  ;;
+)
+```
+
+> **Note:** The double semicolon syntax (`;;`) above is used to indicate comments in WebAssembly files.
+> In this case we're just using them to indicate placeholders for other code.
+
+To share this data with JavaScript we'll define two functions.
+First we import a function from the JavaScript, which we will use to log the string to the console.
+This will need to be mapped to `console.log` in the `importObject` used to instantiate the WebAssembly module.
+The function is named `$log` in the WebAssembly and takes `i32` parameters for the string offset and length in the memory.
+
+The second WebAssembly function, `writeHi()`, calls the imported `$log` function with the offset and length of the string in memory (`0` and `2`).
+This is exported from the module so that it can be called from JavaScript.
+
+Our final WebAssembly module (in text format) looks like this.
 
 ```wasm
 (module
@@ -347,12 +382,18 @@ Our final Wasm module looks like this:
     call $log))
 ```
 
-> **Note:** Above, note the double semicolon syntax (`;;`) for allowing comments in WebAssembly files.
-
-Now from JavaScript we can create a `Memory` object with 1 page and pass it in. This results in "Hi" being printed to the console:
+On the JavaScript-side we need to define the logging function, pass it to the WebAssembly, and then call the exported `writeHi()` method.
+The complete code is shown below:
 
 ```js
 const memory = new WebAssembly.Memory({ initial: 1 });
+
+// Logging function ($log) called from WebAssembly
+function consoleLogString(offset, length) {
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder("utf8").decode(bytes);
+  console.log(string);
+}
 
 const importObject = {
   console: { log: consoleLogString },
@@ -361,10 +402,19 @@ const importObject = {
 
 WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
   (obj) => {
+    // Call the function exported from logger2.wasm
     obj.instance.exports.writeHi();
   },
 );
 ```
+
+Note that the logging function `consoleLogString()` is passed to the `importObject` at `console.log`, and imported by the WebAssembly module.
+The function creates a view on the string in the shared memory using an `Uint8Array` at the passed offset and with the given length.
+The bytes are then decoded from UTF8 into a string using the [TextDecoder API](/en-US/docs/Web/API/TextDecoder) (we specify `utf8` here, but many other encodings are supported).
+The string is then logged to console with `console.log()`.
+
+The final step is to call the exported `writeHi()` function, which is done after the object is instantiated.
+When you run the code, the console will show the text "Hi".
 
 > **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
 
