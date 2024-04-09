@@ -52,11 +52,6 @@
 /files/en-us/web/api/    @mdn/yari-content-web-api
 
 # ----------------------------------------------------------------------------
-# ENGLISH SVG CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/svg/    @mdn/yari-content-svg
-
-# ----------------------------------------------------------------------------
 # ENGLISH MOZILLA ADD-ONS CONTENT OWNER(S)
 # ----------------------------------------------------------------------------
 /files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
