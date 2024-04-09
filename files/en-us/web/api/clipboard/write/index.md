@@ -79,13 +79,20 @@ This example writes the canvas to a blob, using the default MIME type of `image/
 const canvas = document.getElementById("canvas");
 canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
-async function copyCanvasContentsToClipboard() {
-  // Copy canvas to blob
-  canvas.toBlob(async (blob) => {
-    // Create ClipboardItem with blob and its type, and add to an array
-    const data = [new ClipboardItem({ [blob.type]: blob })];
-    // Write the data to the clipboard
-    await navigator.clipboard.write(data);
+function copyCanvasContentsToClipboard() {
+  return new Promise((resolve, reject) => {
+    // Copy canvas to blob
+    canvas.toBlob(async (blob) => {
+      try {
+        // Create ClipboardItem with blob and its type, and add to an array
+        const data = [new ClipboardItem({ [blob.type]: blob })];
+        // Write the data to the clipboard
+        await navigator.clipboard.write(data);
+        resolve();
+      } catch (e) {
+        reject(e);
+      }
+    });
   });
 }
 ```
