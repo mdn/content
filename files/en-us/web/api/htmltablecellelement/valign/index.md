@@ -25,7 +25,7 @@ The possible values are:
 
 ## Examples
 
-Use CSS `vertical-align` instead. An [example](/en-US/docs/Web/CSS/vertical-align#vertical_alignment_in_a_table_cell) is available on the {{cssxref("vertical-align")}} page.
+Use CSS `vertical-align` instead, which takes precendence. An [example](/en-US/docs/Web/CSS/vertical-align#vertical_alignment_in_a_table_cell) is available on the {{cssxref("vertical-align")}} page.
 
 ## Specifications
 
