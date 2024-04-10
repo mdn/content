@@ -9,7 +9,7 @@ browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
 
 {{DefaultAPISidebar("Performance API")}}{{SeeCompatTable}}
 
-The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property reports information on why the current document was blocked from using the [back/forward cache (bfcache)](https://web.dev/bfcache/) on navigation. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
+The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property reports information on why the current document was blocked from using the {{Glossary("bfcache")}} on navigation. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
 
 ## Concepts and usage
 
