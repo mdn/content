@@ -18,7 +18,7 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ### CSS
 
-- The {{cssxref("align-content")}} property has now been enabled to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to block enabling developers easily align content without convert the container to a `flex` or `grid` container simply to do so. ([Firefox bug 1882853](https://bugzil.la/1882853)).
+- The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
 
 #### Removals
 
