@@ -109,6 +109,8 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 
 ### Colorize tables
 
+This example demonstrates the use of `background-color` on HTML {{HTMLelement("table")}} elements, including {{HTMLelement("tr")}} rows and {{HTMLelement("td")}} cells.
+
 #### HTML
 
 ```html
