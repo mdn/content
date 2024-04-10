@@ -17,7 +17,7 @@ The **`HTMLTableCellElement.align`** property is a string indicating how to hori
 The possible values are:
 
 - `left`
-  - : Align the text to the left (default value). Use `text-align: left` instead.
+  - : Align the text to the left. Use `text-align: left` instead.
 - `right`
   - : Align the text to the right. Use `text-align: right` instead.
 - `center`
