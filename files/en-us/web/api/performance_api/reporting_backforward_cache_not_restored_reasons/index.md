@@ -1,7 +1,7 @@
 ---
 title: Reporting back/forward cache not restored reasons
 slug: Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons
-page-type: web-api-overview
+page-type: guide
 status:
   - experimental
 browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
