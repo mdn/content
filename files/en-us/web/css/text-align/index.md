@@ -155,7 +155,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ### Table alignment
 
-This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells. 
+This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells.
+
 This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells. 
 #### HTML
 
