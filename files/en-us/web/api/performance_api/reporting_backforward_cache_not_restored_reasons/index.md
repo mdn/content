@@ -20,7 +20,6 @@ To enable monitoring bfcache blocking in the field the [`PerformanceNavigationTi
 - Reasons why bfcache usage was blocked.
 - Details such as frame `id` and `name`, to help identify `<iframe>`s in the HTML.
 
-> **Note:** There is also a [test in Chrome dev tools](https://web.dev/bfcache/#test) that reports on whether your pages are cacheable.
 
 ## Examples
 
