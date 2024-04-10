@@ -4,7 +4,6 @@ slug: Web/Accessibility/Understanding_Colors_and_Luminance
 page-type: guide
 ---
 
-- [WCAG: color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
 
 <section id="Quick_links">
   {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
