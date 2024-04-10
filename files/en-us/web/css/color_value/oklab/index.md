@@ -18,7 +18,7 @@ Oklab is a perceptual color space and is useful to:
 - Modify the saturation of colors, while keeping user perception of hue and lightness
 - Create smooth and uniform gradients of colors (when interpolated manually, for example, in a {{HTMLElement("canvas")}} element).
 
-The `oklab()` works with a Cartesian coordinate system on the Oklab color space, the a- and b-axes. It can represent any color from the Oklab color space that is wider than RGB and includes wide-gamut and P3 colors. If you want a polar color system, chroma and hue, use {{cssxref("color_value/oklch", "oklch()")}}.
+`oklab()` works with a Cartesian coordinate system on the Oklab color space — a- and b-axes. It can represent a wider range of colors than RGB, including wide-gamut and P3 colors. If you want a polar color system, chroma and hue, use {{cssxref("color_value/oklch", "oklch()")}}.
 
 ## Syntax
 
@@ -265,7 +265,7 @@ div {
 
 ### Adjusting color axes
 
-This example demonstrates the effects of setting the `a` and `b` values of the `oklab()` function to the ends and midpoints of the a-axis, which goes from green (`-0.4`) to red (`0.4`) and the b-axis, which goes from yellow (`-0.4`) to blue (`0.4`).
+This example demonstrates the effects of setting the `a` and `b` values of the `oklab()` function to the ends and midpoints of the a-axis and b-axis respectively. The a-axis goes from green (`-0.4`) to red (`0.4`) and the b-axis, goes from yellow (`-0.4`) to blue (`0.4`).
 
 #### HTML
 
@@ -343,7 +343,7 @@ The left column is at the yellow end (`-0.4`) of the b-axis and the right column
 
 ### Linear gradients along the a-axis and b-axis
 
-This example includes linear gradients to demonstrate the progression of values of the `oklab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from the low end to the high end of the axis values.
+This example includes linear gradients to demonstrate the progression of values of the `oklab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from low to high values.
 
 ```html hidden
 <div data-color="redtogreen-yellow">
