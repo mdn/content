@@ -51,12 +51,6 @@ The `feMergeNode` takes the result of another filter to be processed by its pare
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
-
-### Specific attributes
-
 - {{ SVGAttr("in") }}
 
 ## DOM Interface

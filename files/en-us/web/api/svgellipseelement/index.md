@@ -13,7 +13,7 @@ The **`SVGEllipseElement`** interface provides access to the properties of {{SVG
 
 ## Instance properties
 
-_This interface also inherits properties from its parent interface, {{domxref("SVGGeometryElement")}}._
+_Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 - {{domxref("SVGEllipseElement.cx")}} {{ReadOnlyInline}}
   - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cx")}} attribute of the given {{SVGElement("ellipse")}} element.
@@ -26,7 +26,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 ## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
+_Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 ## Example
 

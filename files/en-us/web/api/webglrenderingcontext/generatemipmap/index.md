@@ -62,7 +62,5 @@ gl.generateMipmap(gl.TEXTURE_2D);
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameteri()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}

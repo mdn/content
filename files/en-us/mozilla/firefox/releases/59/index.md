@@ -175,4 +175,4 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 
 ## Older versions
 
-{{Firefox_for_developers(58)}}
+{{Firefox_for_developers}}

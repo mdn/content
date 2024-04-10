@@ -35,6 +35,8 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
   - : A boolean value. If `true`, specifies a whole word search.
 - `aSearchInFrames`
   - : A boolean value. If `true`, specifies a search in frames.
+- `aShowDialog`
+  - : A boolean value. If `true`, a search dialog is shown.
 
 ### Return value
 

@@ -146,4 +146,4 @@ The following [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/th
 
 ## Older versions
 
-{{Firefox_for_developers(69)}}
+{{Firefox_for_developers}}

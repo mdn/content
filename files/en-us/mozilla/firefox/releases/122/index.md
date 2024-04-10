@@ -47,6 +47,10 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - The {{domxref("HTMLSelectElement.showPicker()")}} method is now supported, allowing the browser picker for a {{HTMLElement("select")}} element to be programmatically launched when triggered by user interaction ([Firefox bug 1865207](https://bugzil.la/1865207)).
 
+#### Removals
+
+- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
@@ -94,4 +98,4 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 ## Older versions
 
-{{Firefox_for_developers(121)}}
+{{Firefox_for_developers}}

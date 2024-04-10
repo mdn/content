@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.getTransceivers
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} interface's **`getTransceivers()`** method returns a list of the {{domxref("RTCRtpTransceiver")}} objects being used to send and receive data on the connection.
+The **`getTransceivers()`** method of the {{domxref("RTCPeerConnection")}} interface returns a list of the {{domxref("RTCRtpTransceiver")}} objects being used to send and receive data on the connection.
 
 ## Syntax
 

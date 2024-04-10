@@ -133,4 +133,4 @@ The following interfaces were implementation details that are no longer needed:
 
 ## See also
 
-{{Firefox_for_developers('10')}}
+{{Firefox_for_developers}}

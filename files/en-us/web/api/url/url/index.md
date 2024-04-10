@@ -6,15 +6,13 @@ page-type: web-api-constructor
 browser-compat: api.URL.URL
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URL()`** constructor returns a newly created
 {{domxref("URL")}} object representing the URL defined by the parameters.
 
 If the given base URL or the resulting URL are not valid URLs, the JavaScript
 {{jsxref("TypeError")}} exception is thrown.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -40,6 +38,14 @@ new URL(url, base)
 > that accept a string. In particular, you can use an existing
 > {{domxref("URL")}} object for either argument, and it will stringify to the
 > object's {{domxref("URL.href", "href")}} property.
+
+The resulting URL is not simply a concatenation of `url` and `base`.
+The path sections of both arguments are merged according to
+[RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
+Therefore a trailing slash in `base` or a leading slash in `url` affect how the resulting path is constructed.
+If you need a strict concatenation of the two arguments the `url` must not have a leading slash
+and the `base` must have a trailing slash.
+See the examples under [Examples - Merging of url and base paths](#merging_of_url_and_base_paths).
 
 ### Exceptions
 
@@ -98,6 +104,38 @@ new URL("/a", "https://example.com/?query=1");
 
 new URL("//foo.com", "https://example.com");
 // => 'https://foo.com/' (see relative URLs)
+```
+
+### Merging of url and base paths
+
+```js
+/* base path without trailing slash */
+
+const A = new URL("articles", "https://developer.mozilla.org/api/v1");
+// => 'https://developer.mozilla.org/api/articles'
+
+const B = new URL("/articles", "https://developer.mozilla.org/api/v1");
+// => 'https://developer.mozilla.org/articles'
+
+const C = new URL("./articles", "https://developer.mozilla.org/api/v1");
+// => 'https://developer.mozilla.org/api/articles'
+
+const D = new URL("../articles", "https://developer.mozilla.org/api/v1");
+// => 'https://developer.mozilla.org/articles'
+
+/* base path with trailing slash */
+
+const E = new URL("articles", "https://developer.mozilla.org/api/v1/");
+// => 'https://developer.mozilla.org/api/v1/articles'
+
+const F = new URL("/articles", "https://developer.mozilla.org/api/v1/");
+// => 'https://developer.mozilla.org/articles'
+
+const G = new URL("./articles", "https://developer.mozilla.org/api/v1/");
+// => 'https://developer.mozilla.org/api/v1/articles'
+
+const H = new URL("../articles", "https://developer.mozilla.org/api/v1/");
+// => 'https://developer.mozilla.org/api/articles'
 ```
 
 ## Specifications
