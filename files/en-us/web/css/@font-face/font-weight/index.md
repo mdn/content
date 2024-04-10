@@ -84,35 +84,35 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ### Selecting normal and bold fonts
 
-In this example we include two fonts, one normal weight, one bold weight, from the ["Karantina"](https://fonts.google.com/specimen/Karantina) font family using two `@font-face` at rules. We set `font-weight` descriptors to match the weight of the fonts.
+In this example we include two fonts, one normal weight, one bold weight, from the ["Fira Sans"](https://fonts.google.com/specimen/Fira+Sans) font family using two `@font-face` at rules. We set `font-weight` descriptors to match the weight of the fonts.
 
-After this, CSS rules can select the normal or the bold font for the "Karantina" family just by setting the {{cssxref("font-weight")}} property. Note that the {{htmlelement("strong")}} HTML element also selects the bold font, because by default `<strong>` elements use a bold font.
+After this, CSS rules can select the normal or the bold font for the "Fira Sans" family just by setting the {{cssxref("font-weight")}} property. Note that the {{htmlelement("strong")}} HTML element also selects the bold font, because by default `<strong>` elements use a bold font.
 
 #### HTML
 
 ```html
-<p class="one">Karantina, normal weight paragraph</p>
-<p class="two">Karantina, bold weight paragraph</p>
-<strong>Karantina, default weight &lt;strong&gt; element</strong>
+<p class="one">Fira Sans, normal weight paragraph</p>
+<p class="two">Fira Sans, bold weight paragraph</p>
+<strong>Fira Sans, default weight &lt;strong&gt; element</strong>
 ```
 
 #### CSS
 
 ```css
 @font-face {
-  font-family: "FiraSans";
+  font-family: "Fira Sans";
   font-weight: normal;
   src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 @font-face {
-  font-family: "FiraSans";
+  font-family: "Fira Sans";
   font-weight: bold;
   src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2");
 }
 
 body {
-  font-family: "FiraSans", serif;
+  font-family: "Fira Sans", serif;
   font-size: 2rem;
 }
 
@@ -131,7 +131,7 @@ p.two {
 
 ### Setting a range for a variable font
 
-In this example we include a variable font, ["League Mono"](https://www.fontsquirrel.com/fonts/league-mono), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "League Mono" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
+In this example we include a variable font, ["League Mono"](https://www.theleagueofmoveabletype.com/league-mono), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "League Mono" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
 
 To show the effect of this we've included another font using "League Mono" that does not set the `font-weight` descriptor, and we've called this "League Mono-complete".
 
