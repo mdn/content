@@ -9,7 +9,7 @@ browser-compat: api.NotRestoredReasons
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`NotRestoredReasons`** interface of the {{domxref("Performance API", "Performance API", "", "nocode")}} provides report data containing reasons why the current document was blocked from using the [back/forward cache (bfcache)](https://web.dev/articles/bfcache) on navigation.
+The **`NotRestoredReasons`** interface of the {{domxref("Performance API", "Performance API", "", "nocode")}} provides report data containing reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
 
 These objects are accessed via the {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property.
 
