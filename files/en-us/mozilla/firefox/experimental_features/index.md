@@ -821,7 +821,7 @@ The [`text-wrap`](/en-US/docs/Web/CSS/text-wrap) CSS property values `balance` a
 
 ### Vendor-prefixed transform properties
 
-The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false`. ([Firefox bug 1855763](https://bugzil.la/1855763)).
 Specifically, the disabled properties are:
 
 - `-moz-backface-visibility`
@@ -871,7 +871,7 @@ Specifically, the disabled properties are:
 
 ### Vendor-prefixed transition properties
 
-The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false`. ([Firefox bug 1855763](https://bugzil.la/1855763)).
 Specifically, the disabled properties are:
 
 - `-moz-transition`
@@ -920,7 +920,7 @@ Specifically, the disabled properties are:
 
 ### UA styles for `<h1>` nested into sectioning elements
 
-Now `<h1>` headings don't decrease font size when nested into sectioning `<article>`, `<aside>`, `<nav>`, `<section>` elements. These UA styles are no longer relevant due to the changes in the HTML specification [removing the outline algorithm](https://github.com/whatwg/html/pull/7829). This is an experiment to see how this change affects existing web pages and whether it's feasible to remove them by default. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content), including `<article>`, `<aside>`, `<nav>`, and `<section>`. These UA styles are no longer relevant due to the changes in the HTML specification to [remove the outline algorithm](https://github.com/whatwg/html/pull/7829). ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
 > **Note:** It's a reverse flag: it's set to `false` only in Nightly builds, which removes the UA styles, and to `true` in all other versions, which keeps them.
 
