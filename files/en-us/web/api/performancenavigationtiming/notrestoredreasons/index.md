@@ -22,7 +22,7 @@ When the `PerformanceNavigationTiming` object does not represent a history navig
 
 ## Examples
 
-A [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) instance can be obtained from features such as [`Performance.getEntriesByType()`](/en-US/docs/Web/API/Performance/getEntriesByType) and [`PerformanceObserver`](/en-US/docs/Web/API/PerformanceObserver).
+[`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) data can be obtained from the performance timeline using [`Performance.getEntriesByType()`](/en-US/docs/Web/API/Performance/getEntriesByType) or [`PerformanceObserver`](/en-US/docs/Web/API/PerformanceObserver).
 
 For example, you could invoke the following function to return all `PerformanceNavigationTiming` objects currently present in the performance timeline and log their `notRestoredReasons`:
 
