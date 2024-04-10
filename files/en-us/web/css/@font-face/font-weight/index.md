@@ -100,20 +100,20 @@ After this, CSS rules can select the normal or the bold font for the "Karantina"
 
 ```css
 @font-face {
-  font-family: "Karantina";
+  font-family: "FiraSans";
   font-weight: normal;
-  src: url("Karantina-Regular.woff2");
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 @font-face {
-  font-family: "Karantina";
+  font-family: "FiraSans";
   font-weight: bold;
-  src: url("Karantina-Bold.woff2");
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2");
 }
 
 body {
-  font-family: "Karantina", serif;
-  font-size: 3rem;
+  font-family: "FiraSans", serif;
+  font-size: 2rem;
 }
 
 p.one {
@@ -131,54 +131,54 @@ p.two {
 
 ### Setting a range for a variable font
 
-In this example we include a variable font, ["Montserrat"](https://fonts.google.com/specimen/Montserrat), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "Montserrat" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
+In this example we include a variable font, ["League Mono"](https://www.fontsquirrel.com/fonts/league-mono), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "League Mono" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
 
-To show the effect of this we've included another font using "Montserrat" that does not set the `font-weight` descriptor, and we've called this "Montserrat-complete".
+To show the effect of this we've included another font using "League Mono" that does not set the `font-weight` descriptor, and we've called this "League Mono-complete".
 
 #### HTML
 
 ```html
-<p class="one">Montserrat, font-weight 100</p>
-<p class="two">Montserrat, font-weight 900</p>
-<p class="three">Montserrat-complete, font-weight 100</p>
-<p class="four">Montserrat-complete, font-weight 900</p>
+<p class="one">League Mono, font-weight 100</p>
+<p class="two">League Mono, font-weight 900</p>
+<p class="three">League Mono-complete, font-weight 100</p>
+<p class="four">League Mono-complete, font-weight 900</p>
 ```
 
 #### CSS
 
 ```css
 @font-face {
-  font-family: "Montserrat";
-  src: url("Montserrat[wght].woff2");
+  font-family: "League Mono";
+  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
   font-weight: 300 700;
 }
 
 @font-face {
-  font-family: "Montserrat-complete";
-  src: url("Montserrat[wght].woff2");
+  font-family: "League Mono-complete";
+  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 p.one {
-  font-family: "Montserrat", serif;
+  font-family: "League Mono", serif;
   font-weight: 100;
 }
 
 p.two {
-  font-family: "Montserrat", serif;
+  font-family: "League Mono", serif;
   font-weight: 900;
 }
 
 p.three {
-  font-family: "Montserrat-complete", serif;
+  font-family: "League Mono-complete", serif;
   font-weight: 100;
 }
 
 p.four {
-  font-family: "Montserrat-complete", serif;
+  font-family: "League Mono-complete", serif;
   font-weight: 900;
 }
 ```
@@ -187,10 +187,10 @@ p.four {
 
 The result of this is:
 
-- Setting the `font-weight` property to `100` for "Montserrat" gets a weight of 300.
-- Setting the `font-weight` property to `900` for "Montserrat" gets a weight of 700.
-- Setting the `font-weight` property to `100` for "Montserrat-complete" gets a weight of 100.
-- Setting the `font-weight` property to `900` for "Montserrat-complete" gets a weight of 900.
+- Setting the `font-weight` property to `100` for "League Mono" gets a weight of 300.
+- Setting the `font-weight` property to `900` for "League Mono" gets a weight of 700.
+- Setting the `font-weight` property to `100` for "League Mono-complete" gets a weight of 100.
+- Setting the `font-weight` property to `900` for "League Mono-complete" gets a weight of 900.
 
 {{embedlivesample("Setting a range for a variable font", "", "400")}}
 
