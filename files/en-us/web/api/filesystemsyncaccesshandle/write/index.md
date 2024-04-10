@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.write
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`write()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface writes the content of a specified buffer to the file associated with the handle, optionally at a given offset.

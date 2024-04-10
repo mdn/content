@@ -106,9 +106,9 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
-- {{CSSxRef("masonry-auto-flow")}} {{Experimental_Inline}}
-- {{CSSxRef("align-tracks")}} {{Experimental_Inline}}
-- {{CSSxRef("justify-tracks")}} {{Experimental_Inline}}
+- {{CSSxRef("masonry-auto-flow")}}
+- {{CSSxRef("align-tracks")}}
+- {{CSSxRef("justify-tracks")}}
 
 ### Functions
 
@@ -133,7 +133,7 @@ The example below shows a three-column track grid with new rows created at a min
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
-- [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
+- [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
 
 ## Specifications
 

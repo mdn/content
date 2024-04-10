@@ -41,7 +41,7 @@ svg {
 
 This element only includes global attributes
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

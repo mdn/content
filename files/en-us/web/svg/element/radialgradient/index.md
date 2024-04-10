@@ -76,7 +76,7 @@ svg {
   - : An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<radialGradient>` element that will be used as a template.
     _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
