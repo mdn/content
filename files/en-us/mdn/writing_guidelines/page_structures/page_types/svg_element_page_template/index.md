@@ -34,7 +34,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >     Format as **<**_NameOfTheElement_**>**.
 >     For example, the "[g](/en-US/docs/Web/SVG/Element/g)" element has a _title_ of `<g>`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
 > - **page-type**
 >   - : Always `svg-element`.

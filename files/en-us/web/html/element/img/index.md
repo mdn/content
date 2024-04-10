@@ -433,14 +433,14 @@ The value of the `title` attribute is usually presented to the user as a tooltip
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role"
+                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"
                     >tab</a
                   ></code
                 >

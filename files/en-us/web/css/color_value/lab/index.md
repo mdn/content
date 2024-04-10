@@ -142,19 +142,22 @@ lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0
 
 ## Examples
 
-### Adjusting lightness and color axes with lab()
+### Adjusting lightness
 
-The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `lab()` function.
+The following example shows the effect of varying the lightness value of the `lab()` function.
 
 #### HTML
 
 ```html
+<div data-color="red-dark"></div>
 <div data-color="red"></div>
-<div data-color="red-a"></div>
+<div data-color="red-light"></div>
 
+<div data-color="green-dark"></div>
 <div data-color="green"></div>
-<div data-color="green-b"></div>
+<div data-color="green-light"></div>
 
+<div data-color="blue-dark"></div>
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
 ```
@@ -162,44 +165,205 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 #### CSS
 
 ```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 div {
-  width: 50px;
   height: 50px;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
+  flex: 0 0 28%;
   border: 1px solid black;
 }
 ```
 
 ```css
+[data-color="red-dark"] {
+  background-color: lab(5 125 71);
+}
 [data-color="red"] {
-  background-color: lab(100 125 125);
+  background-color: lab(40 125 71);
 }
-[data-color="red-a"] {
-  background-color: lab(100 110 125);
+[data-color="red-light"] {
+  background-color: lab(95 125 71);
 }
 
+[data-color="green-dark"] {
+  background-color: lab(10% -120 125);
+}
 [data-color="green"] {
-  background-color: lab(75% -120 125);
+  background-color: lab(50% -120 125);
 }
-[data-color="green-b"] {
-  background-color: lab(75% -120 10);
+[data-color="green-light"] {
+  background-color: lab(90% -120 125);
 }
 
+[data-color="blue-dark"] {
+  background-color: lab(10 -120 -120);
+}
 [data-color="blue"] {
-  background-color: lab(0 -120 -120);
+  background-color: lab(50 -120 -120);
 }
 [data-color="blue-light"] {
-  background-color: lab(70 -120 -120);
+  background-color: lab(90 -120 -120);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Adjusting_lightness_and_color_axes_with_lab")}}
+{{EmbedLiveSample("Adjusting_lightness", "", "200")}}
 
-### Adjusting opacity with lab()
+### Adjusting color axes
+
+This example demonstrates the effects of setting the `a` and `b` values of the `lab()` function to the ends and midpoints of the a-axis, which goes from green (-125) to red (125) and the b-axis, which goes from yellow (-125) to blue (125).
+
+#### HTML
+
+```html
+<div data-color="redyellow"></div>
+<div data-color="redzero"></div>
+<div data-color="redblue"></div>
+
+<div data-color="zeroyellow"></div>
+<div data-color="zerozero"></div>
+<div data-color="zeroblue"></div>
+
+<div data-color="greenyellow"></div>
+<div data-color="greenzero"></div>
+<div data-color="greenblue"></div>
+```
+
+#### CSS
+
+Using the CSS {{cssxref("background-color")}} property, we vary the `a` and `b` values of the `lab()` color function along the a-axis and b-axis, showing the effects of maximum, midpoint, and minimum values in each case.
+
+```css hidden
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+div {
+  height: 50px;
+  flex: 0 0 28%;
+  border: 1px solid black;
+}
+```
+
+```css
+/* a-axis max, variable b-axis */
+[data-color="redyellow"] {
+  background-color: lab(50 125 125);
+}
+[data-color="redzero"] {
+  background-color: lab(50 125 0);
+}
+[data-color="redblue"] {
+  background-color: lab(50 125 -125);
+}
+
+/* a-axis center, variable b-axis */
+[data-color="zeroyellow"] {
+  background-color: lab(50 0 125);
+}
+[data-color="zerozero"] {
+  background-color: lab(50 0 0);
+}
+[data-color="zeroblue"] {
+  background-color: lab(50 0 -125);
+}
+
+/* a-axis min, variable b-axis */
+[data-color="greenyellow"] {
+  background-color: lab(50 -125 125);
+}
+[data-color="greenzero"] {
+  background-color: lab(50 -125 0);
+}
+[data-color="greenblue"] {
+  background-color: lab(50 -125 -125);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
+
+The left column is at the yellow end (-125) of the b-axis and the right column is at the blue end (125). The top row displays colors at the red end of the a-axis (-125) and the bottom row is at the green end (125). The middle column and row are at the midpoints (0) of each axis, with the middle cell being grey; it contains no red, green, yellow, or blue, with a `0` value for both axes.
+
+### Linear gradients along the a-axis and b-axis
+
+This example includes linear gradients to demonstrate the progression of values of the `lab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from the low end to the high end of the axis values.
+
+```html hidden
+<div data-color="redtogreen-yellow">
+  <span>red</span><span>`b`= -125 (yellow)</span><span>green</span>
+</div>
+<div data-color="redtogreen-zero">
+  <span>red</span><span>no yellow or blue</span><span>green</span>
+</div>
+<div data-color="redtogreen-blue">
+  <span>red</span><span>`b`= 125 (blue)</span><span>green</span>
+</div>
+
+<div data-color="yellowtoblue-red">
+  <span>yellow</span><span>`a` = -125 (red)</span><span>blue</span>
+</div>
+<div data-color="yellowtoblue-zero">
+  <span>yellow</span><span>no red or green</span><span>blue</span>
+</div>
+<div data-color="yellowtoblue-green">
+  <span>yellow</span><span>`a` = 125 (green)</span><span>blue</span>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  background-color: #ffffffcc;
+  padding: 3px;
+}
+```
+
+```css-nolint
+/* a-axis gradients */
+[data-color="redtogreen-yellow"] {
+  background-image: linear-gradient(to right, lab(50 125 125), lab(50 -125 125));
+}
+[data-color="redtogreen-zero"] {
+  background-image: linear-gradient(to right, lab(50 125 0), lab(50 -125 0));
+}
+[data-color="redtogreen-blue"] {
+  background-image: linear-gradient(to right, lab(50 125 -125), lab(50 -125 -125));
+}
+
+/* b-axis gradients */
+[data-color="yellowtoblue-red"] {
+  background-image: linear-gradient(to right, lab(50 125 125), lab(50 125 -125));
+}
+[data-color="yellowtoblue-zero"] {
+  background-image: linear-gradient(to right, lab(50 0 125), lab(50 0 -125));
+}
+[data-color="yellowtoblue-green"] {
+  background-image: linear-gradient(to right, lab(50 -125 125),lab(50 -125 -125));
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Linear gradients along the a-axis and b-axis", '', '420')}}
+
+### Adjusting opacity
 
 The following example shows the effect of varying the `A` (alpha) value of the `lab()` functional notation.
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
@@ -234,16 +398,16 @@ div {
 
 ```css
 [data-color="red"] {
-  background-color: lab(100 125 125);
+  background-color: lab(80 125 125);
 }
 [data-color="red-alpha"] {
-  background-color: lab(100 125 125 / 0.4);
+  background-color: lab(80 125 125 / 0.4);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Adjusting_opacity_with_lab')}}
+{{EmbedLiveSample('Adjusting_opacity')}}
 
 ### Using relative colors with lab()
 
@@ -278,6 +442,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 ```css
 :root {
   --base-color: orange;
+  /* equivalent of lab(75 24 79) */
 }
 
 #one {
@@ -297,7 +462,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 
 The output is as follows:
 
-{{ EmbedLiveSample("Using relative colors with lab()", "100%", "200") }}
+{{ EmbedLiveSample("Using relative colors with lab", "100%", "200") }}
 
 ## Specifications
 
@@ -309,7 +474,8 @@ The output is as follows:
 
 ## See also
 
-- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- [`<color>`](/en-US/docs/Web/CSS/color_value) data type
+- [`<color-function>`](/en-US/docs/Web/CSS/CSS_colors#functions) data type
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)

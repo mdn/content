@@ -33,7 +33,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - {{cssxref("initial")}}
 - {{cssxref("inherit")}}
 - {{cssxref("revert")}}
-- {{cssxref("revert-layer")}} {{Experimental_Inline}}
+- {{cssxref("revert-layer")}}
 - {{cssxref("unset")}}
 - {{cssxref("important", "!important")}} flag
 
