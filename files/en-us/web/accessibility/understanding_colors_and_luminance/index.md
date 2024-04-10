@@ -4,7 +4,6 @@ slug: Web/Accessibility/Understanding_Colors_and_Luminance
 page-type: guide
 ---
 
-
 <section id="Quick_links">
   {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
 </section>
