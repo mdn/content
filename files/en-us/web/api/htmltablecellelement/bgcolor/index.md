@@ -18,7 +18,6 @@ One of the following value types can be used:
 
 - a named color, like `red` or `blue`
 - a hex code, like `#0000dd`
-- an RGB function: `rgb(0, 255, 0)`
 
 ** Note: ** The values accepted here are a subset of the CSS color values. You can reuse HTML color values in CSS, but not in the other direction: the unknown colors would appear differently than expected.
 
