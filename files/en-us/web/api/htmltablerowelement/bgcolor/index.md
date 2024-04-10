@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableRowElement.bgColor
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`HTMLTableRowElement.disabled`** property is used to set the background color of a row. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/tr#bgcolor) attribute.
+The **`HTMLTableRowElement.bgColor`** property is used to set the background color of a row or retrieve the value of the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/tr#bgcolor) attribute, if present.
 
 **Note:** This property is deprecated and CSS should be used to set the background color. Use the {{cssxref("background-color")}} property instead.
 
