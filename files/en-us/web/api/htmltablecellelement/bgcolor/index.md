@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableCellElement.bgColor
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`HTMLTableCellElement.disabled`** property is used to set the background color of a cell. It reflects the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/td#bgcolor) attribute.
+The **`HTMLTableCellElement.bgColor`** property is used to set the background color of a cell or get the value of the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/td#bgcolor) attribute, if present.
 
 **Note:** This property is deprecated and CSS should be used to set the background color. Use the {{cssxref("background-color")}} property instead.
 
