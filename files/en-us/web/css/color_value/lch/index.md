@@ -424,7 +424,7 @@ and so on.
 
 {{EmbedLiveSample("hues in lch")}}
 
-The hue angles in `lch()` are different from {{CSSXref("color_value/hsl", "hsl()")}}. See {{cssxref("hue")}} for more information.
+The hue angles in `lch()` are different from {{CSSXref("color_value/hsl", "hsl()")}}. See {{cssxref("hue")}} for more information. In `hsl()`, an sRGB color, `0deg` is red. With CIE Lab colors, `0deg` is magenta, and red is approximately `41deg`.
 
 ### Adjusting opacity with lch()
 
