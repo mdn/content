@@ -30,7 +30,7 @@ _Also inherits properties from its parent, {{domxref("EventTarget")}}._
 - {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
 - {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("string")}} indicating whether the background fetch was successful or failed.
+  - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("string")}} with a value that indicates a reason for a background fetch failure.
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
