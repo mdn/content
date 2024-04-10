@@ -204,7 +204,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("adding transparency", "100%", 150)}}
 
-In this way, the `color-mix()` function can be used to add transparency to any color, even if the color already has a less than opaque alpha channel value. However, there is no basic `color-mix()` function that can be used to make a semi-transparent color more opaque. For this, [use relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), with a CSS [color functions](/en-US/docs/Web/CSS/CSS_colors#functions). Relative colors can be used to alter the value of any color channel, including increasing a color's alpha color to fully opaque.
+In this way, the `color-mix()` function can be used to add transparency to any color, even if the color already has a less than opaque alpha channel value. However, there is no basic `color-mix()` function that can be used to make a semi-transparent color opaque. For this, [use relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), with a CSS [color functions](/en-US/docs/Web/CSS/CSS_colors#functions). Relative colors can be used to alter the value of any color channel, including increasing a color's alpha color to fully opaque.
 
 ### Using hue interpolation in color-mix()
 
@@ -253,7 +253,7 @@ For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
 #### CSS
 
-The `shorter hue` interpolation method takes the shorted route, the `longer hue` interpolation method is taken from the longer route around the color wheel. With `increasing hue`, the route starts with increasing values. With `decreasing hue` the value decreases. We mix two {{cssxref("named-color")}} values to create a series of `lch()` intermediary colors that differ based on which route is taken around the color wheel. The mixed colors include `red`, `blue`, and `yellow` with LCH hue values of approximately 41deg, 301deg, and 100deg, respectively.
+The `shorter hue` interpolation method takes the shorter route around the color wheel, whereas the `longer hue` interpolation method takes the longer route. With `increasing hue`, the route starts with increasing values. With `decreasing hue` the value decreases. We mix two {{cssxref("named-color")}} values to create a series of `lch()` intermediary colors that differ based on which route is taken around the color wheel. The mixed colors include `red`, `blue`, and `yellow` with LCH hue values of approximately 41deg, 301deg, and 100deg, respectively.
 
 To reduce code redundancy, we used {{cssxref('--*', 'CSS custom properties')}} for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
 
