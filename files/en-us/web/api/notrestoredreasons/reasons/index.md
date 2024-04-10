@@ -11,7 +11,7 @@ browser-compat: api.NotRestoredReasons.reasons
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`reasons`** read-only property of the
-{{domxref("NotRestoredReasons")}} interface returns an array of {{domxref("NotRestoredReasonDetails")}} objects, each representing a reason why the navigated page was blocked from using the [back/forward cache (bfcache)](https://web.dev/articles/bfcache).
+{{domxref("NotRestoredReasons")}} interface returns an array of {{domxref("NotRestoredReasonDetails")}} objects, each representing a reason why the navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
 
 ## Value
 
