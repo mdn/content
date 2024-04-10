@@ -23,7 +23,7 @@ The possible values are:
 - `center`
   - : Center the text in the cell. Use `text-align: center` instead.
 
-### Examples
+## Examples
 
 Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/text-align#table_alignment) is available on the {{cssxref("text-align")}} page.
 
