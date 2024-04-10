@@ -920,35 +920,37 @@ Specifically, the disabled properties are:
 
 ### UA styles for `<h1>` nested into sectioning elements
 
-`<h1>` headings are no longer decreasing font size when nested into sectioning `<article>`, `<aside>`, `<nav>`, `<section>` elements. These UA styles are no longer relevant due to the changes in the HTML specification [removing the outline algorithm](https://github.com/whatwg/html/pull/7829). This is an experiment to see how this change affects existing web pages and whether it's feasible to remove them by default. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+Now `<h1>` headings don't decrease font size when nested into sectioning `<article>`, `<aside>`, `<nav>`, `<section>` elements. These UA styles are no longer relevant due to the changes in the HTML specification [removing the outline algorithm](https://github.com/whatwg/html/pull/7829). This is an experiment to see how this change affects existing web pages and whether it's feasible to remove them by default. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+> **Note:** It's a reverse flag: it's set to `false` only in Nightly builds, which removes the UA styles, and to `true` in all other versions, which keeps them.
 
 <table>
   <thead>
     <tr>
       <th>Release channel</th>
       <th>Version added</th>
-      <th>Enabled by default?</th>
+      <th>UA styles removed?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>126</td>
+      <td>125</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>126</td>
+      <td>125</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>126</td>
+      <td>125</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>126</td>
+      <td>125</td>
       <td>No</td>
     </tr>
     <tr>
