@@ -23,7 +23,7 @@ The possible values are:
 - `bottom`
   - : Align the text to the bottom of the cell. Use `vertical-align: bottom` instead.
 
-### Examples
+## Examples
 
 Use CSS `vertical-align` instead. An [example](/en-US/docs/Web/CSS/vertical-align#vertical_alignment_in_a_table_cell) is available on the {{cssxref("vertical-align")}} page.
 
