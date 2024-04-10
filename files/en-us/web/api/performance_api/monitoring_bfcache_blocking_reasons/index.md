@@ -1,6 +1,6 @@
 ---
-title: Reporting back/forward cache not restored reasons
-slug: Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons
+title: Monitoring bfcache blocking reasons
+slug: Web/API/Performance_API/Monitoring_bfcache_blocking_reasons
 page-type: guide
 status:
   - experimental
@@ -11,20 +11,33 @@ browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
 
 The {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property reports information on why the current document was blocked from using the {{Glossary("bfcache")}} on navigation. Developers can use this information to identify pages that need updates to make them bfcache-compatible, thereby improving site performance.
 
-## Concepts and usage
+## Back/forward cache (bfcache)
 
 Modern browsers provide an optimization feature for history navigation called the back/forward cache ({{Glossary("bfcache")}}). This enables an instant loading experience when users go back to a page they have already visited. Pages can be blocked from entering the bfcache or get evicted while in the bfcache for different reasons, some required by a specification and some specific to browser implementations.
 
-To enable monitoring bfcache blocking in the field the [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) class includes a `notRestoredReasons` property. This returns an object containing related information on the top-level frame and all {{htmlelement("iframe")}}s present in the document:
+To enable monitoring bfcache blocking reasons, the [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) class includes a `notRestoredReasons` property. This returns a {{domxref("NotRestoredReasons")}} object containing related information on the top-level frame and all {{htmlelement("iframe")}}s present in the document:
 
 - Reasons why bfcache usage was blocked.
 - Details such as frame `id` and `name`, to help identify `<iframe>`s in the HTML.
 
-## Examples
+> **Note:** Historically, the deprecated {{domxref("PerformanceNavigation.type")}} property was used to monitor the bfcache, with developers testing for a `type` of "`TYPE_BACK_FORWARD`" to get an indication of the bfcache hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The `notRestoredReasons` property should be used to monitor bfcache blocking, going forward.
 
-[`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) data can be obtained from the performance timeline using either [`Performance.getEntriesByType()`](/en-US/docs/Web/API/Performance/getEntriesByType) or [`PerformanceObserver`](/en-US/docs/Web/API/PerformanceObserver).
+## Logging bfcache blocking reasons
 
-For example, you could invoke the following function to return all `PerformanceNavigationTiming` objects currently present in the performance timeline and log their `notRestoredReasons`:
+Ongoing bfcache blocking data can be obtained using a [`PerformanceObserver`](/en-US/docs/Web/API/PerformanceObserver), like this:
+
+```js
+const observer = new PerformanceObserver((list) => {
+  let perfEntries = list.getEntries();
+  perfEntries.forEach((navEntry) => {
+    console.log(navEntry.notRestoredReasons);
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
+```
+
+Alternatively, you can obtain historical bfcache blocking data using a suitable method such as [`Performance.getEntriesByType()`](/en-US/docs/Web/API/Performance/getEntriesByType):
 
 ```js
 function returnNRR() {
@@ -37,7 +50,7 @@ function returnNRR() {
 }
 ```
 
-For history navigations, the {{domxref("PerformanceNavigationTiming.notRestoredReasons")}} property returns a {{domxref("NotRestoredReasons")}} object with the following structure, which represents the blocked state of the top-level frame:
+The code snippets shown above will log {{domxref("NotRestoredReasons")}} objects to the console. These objects have the following structure, which represents the blocked state of the top-level frame:
 
 ```js
 {
