@@ -55,7 +55,7 @@ The `text-align` property is specified in one of the following ways:
 - `center`
   - : The inline contents are centered within the line box.
 - `justify`
-  - : The inline contents are justified. The Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.
+  - : The inline contents are justified. Spaces out the content to line up its left and right edges to the left and right edges of the line box, except for the last line.
 - `justify-all`
   - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
