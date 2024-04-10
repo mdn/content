@@ -159,7 +159,7 @@ The initial values listed in the specification are:
 Additional blocking reasons may be used by some browsers, for example:
 
 - `"unload-listener"`
-  - : The page registers an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler, which prevents bfcache usage. This serves as a useful warning, as `unload` is deprecated. See [Deprecating the unload event](https://developer.chrome.com/docs/web-platform/deprecating-unload) for more information.
+  - : The page registers an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler, which prevents bfcache usage. This serves as a useful warning, as `unload` is deprecated. See [usage notes](/en-US/docs/Web/API/Window/unload_event#usage_notes) for more information.
 - `"response-cache-control-no-store"`
   - : The page uses `no-store` as a {{httpheader("Cache-Control")}} header value.
 - `"related-active-contents"`
