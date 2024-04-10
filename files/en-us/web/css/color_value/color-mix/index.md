@@ -119,11 +119,11 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
 
-When only one color has a percentage assigned, the total value of both colors is 100%. The above {{htmlelement("li")}} elements are 100%, 75%, 50%, 25%, 0%, and 50% white, respectively. In the last {{htmlelement("li")}}, when neither color was assigned a percentage, both defaulted to 50%.
+The total value of both colors in a `color-mix()` function is 100%, even if the values set by the developer don't total 100%. In this example, as only one color has a percentage assigned, the other color is implicitly given a percentage value so that the combined total equals 100%. In the last {{htmlelement("li")}}, where neither color is assigned a percentage, both default to 50%.
 
 ### Adding transparency
 
-This example demonstrates using the `ccolor-mix()` function to add transparency to a color by mixing any color with `transparent`.
+This example demonstrates using the `color-mix()` function to add transparency to a color by mixing any color with [`transparent`](/en-US/docs/Web/CSS/named-color#transparent).
 
 #### HTML
 
@@ -140,7 +140,7 @@ This example demonstrates using the `ccolor-mix()` function to add transparency 
 
 #### CSS
 
-The `color-mix()` function is used to add increasing percentages of a color, in this case `red` declared using a {{cssxref('--*', 'CSS custom property')}} named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
+The `color-mix()` function is used to add increasing percentages of `red`, which is declared using a {{cssxref('--*', 'CSS custom property')}} named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
 
 ```css hidden
 ul {
@@ -204,7 +204,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("adding transparency", "100%", 150)}}
 
-The `color-mix()` function can be used to add transparency to colors, but not to reduce transparency. [Use relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to alter the value of any color channel, including the alpha color channel, in any CSS [color function](/en-US/docs/Web/CSS/CSS_colors#functions).
+In this way, the `color-mix()` function can be used to add transparency to any color, even if the color already has a less than opaque alpha channel value. However, there is no basic `color-mix()` function that can be used to make a semi-transparent color more opaque. For this, [use relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), with a CSS [color functions](/en-US/docs/Web/CSS/CSS_colors#functions). Relative colors can be used to alter the value of any color channel, including increasing a color's alpha color to fully opaque.
 
 ### Using hue interpolation in color-mix()
 
