@@ -17,7 +17,7 @@ The **`HTMLTableCellElement.bgColor`** property is used to set the background co
 One of the following value types can be used:
 
 - a named color, like `red` or `blue`
-- a hex code, like `#0000dd`
+- a hex code, like `#0000dd` or `#00d`
 
 ** Note: ** The values accepted here are a subset of the CSS color values. You can reuse HTML color values in CSS, but not in the other direction: the unknown colors would appear differently than expected.
 
