@@ -29,9 +29,9 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer specifying the number of times the remote receiver has notified this `RTCRtpSender` that some amount of encoded video data for one or more frames has been lost, using Picture Loss Indication (PLI) packets. _Only available for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
   - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}. _Valid only for video streams._
-- {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}}
+- {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}} {{experimental_inline}}
   - : A record mapping each of the quality limitation reasons in the {{domxref("RTCRemoteInboundRtpStreamStats")}} enumeration to a floating-point value indicating the number of seconds the stream has spent with its quality limited for that reason.
-- {{domxref("RTCOutboundRtpStreamStats.qualityLimitationReason", "qualityLimitationReason")}}
+- {{domxref("RTCOutboundRtpStreamStats.qualityLimitationReason", "qualityLimitationReason")}} {{experimental_inline}}
   - : One of the string `none`, `cpu`, `bandwidth`, or `other`, explaining why the resolution and/or frame rate is being limited for this RTP stream. _Valid only for video streams_.
 - {{domxref("RTCOutboundRtpStreamStats.remoteId", "remoteId")}}
   - : A string which identifies the {{domxref("RTCRemoteInboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC. This ID is stable across multiple calls to `getStats()`.
@@ -45,7 +45,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer indicating the number of times this sender received a Slice Loss Indication (SLI) frame from the remote peer, indicating that one or more consecutive video macroblocks have been lost or corrupted. Available only for video streams.
 - {{domxref("RTCOutboundRtpStreamStats.targetBitrate", "targetBitrate")}}
   - : A value indicating the bit rate the `RTCRtpSender`'s codec is configured to attempt to achieve in its output media.
-- {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}}
+- {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}} {{experimental_inline}}
   - : A cumulative sum of the _target_ frame sizes (the targeted maximum size of the frame in bytes when the codec is asked to compress it) for all of the frames encoded so far. This will likely differ from the total of the _actual_ frame sizes.
 - {{domxref("RTCOutboundRtpStreamStats.totalEncodeTime", "totalEncodeTime")}}
   - : A floating-point value indicating the total number of seconds that have been spent encoding the frames encoded so far by this {{domxref("RTCRtpSender")}}.

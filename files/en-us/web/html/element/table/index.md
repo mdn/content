@@ -980,7 +980,7 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/table_role"
             >table</a
           ></code
         >

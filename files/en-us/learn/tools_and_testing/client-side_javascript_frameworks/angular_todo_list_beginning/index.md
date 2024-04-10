@@ -37,7 +37,7 @@ At this point, we are ready to start creating our to-do list application using A
 
 ## The to-do application structure
 
-Like any web application, an Angular application has an `index.html` as the entry point. The `index.html` acually is the app's top level HTML template:
+Like any web application, an Angular application has an `index.html` as the entry point. The `index.html` actually is the app's top level HTML template:
 
 ```html
 <!doctype html>
@@ -60,7 +60,7 @@ Components are a central building block of Angular applications.
 This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
 
 Each component is made up of a TypeScript class, HTML, and CSS.
-TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using TypeScript's extended features and streamlined syntax.
 
 ### Dynamically change the UI with \*ngIf and \*ngFor
 

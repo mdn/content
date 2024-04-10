@@ -964,48 +964,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Intl.Segmenter
-
-The {{jsxref("Intl.Segmenter")}} is supported in nightly builds, allowing developers to perform locale-sensitive text segmentation.
-This enables splitting a string into meaningful items (graphemes, words or sentences) in different locales.
-(See [Firefox bug 1423593](https://bugzil.la/1423593) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">None</td>
-    </tr>
-  </tbody>
-</table>
-
 ### SharedArrayBuffer is growable
 
 The {{jsxref("SharedArrayBuffer")}} is now growable using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
