@@ -1,14 +1,14 @@
 ---
-title: indexedDB global property
+title: "WorkerGlobalScope: indexedDB property"
 short-title: indexedDB
-slug: Web/API/indexedDB
-page-type: web-api-global-property
+slug: Web/API/WorkerGlobalScope/indexedDB
+page-type: web-api-instance-property
 browser-compat: api.indexedDB
 ---
 
-{{APIRef("IndexedDB")}}{{AvailableInWorkers}}
+{{APIRef("IndexedDB")}}
 
-The global **`indexedDB`** read-only property provides a mechanism for applications to
+The **`indexedDB`** read-only property of the {{domxref("WorkerGlobalScope")}} interface provides a mechanism for workers to
 asynchronously access the capabilities of indexed databases.
 
 ## Value
@@ -23,7 +23,7 @@ which the database is opened when the request's `onsuccess` handler is fired:
 ```js
 let db;
 function openDB() {
-  const DBOpenRequest = window.indexedDB.open("toDoList");
+  const DBOpenRequest = self.indexedDB.open("toDoList");
   DBOpenRequest.onsuccess = (e) => {
     db = DBOpenRequest.result;
   };
