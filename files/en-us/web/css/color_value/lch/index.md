@@ -10,7 +10,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **`lch()`** functional notation expresses a given color in the LCH {{glossary("color space")}}. It has the same L axis as CIE {{cssxref("color_value/lab","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
+The **`lch()`** functional notation expresses a given color using the LCH {{glossary("color space")}}, which represents lightness, chroma, and hue. It uses the same `L` axis as the {{cssxref("color_value/lab","lab()")}} color function of the [CIELab color space](/en-US/docs/Glossary/Color_space#cielab_color_spaces), but it uses the polar coordinates `C` (Chroma) and `H` (Hue).
 
 ## Syntax
 
@@ -43,14 +43,14 @@ lch(L C H[ / A])
 The parameters are as follows:
 
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's CIE lightness, or brightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%`). The number `0` corresponds to `0%` (black), and the number `100` corresponds to `100%` (white). This value specifies the color's brightness in the [CIELab color space](/en-US/docs/Glossary/Color_space#cielab_color_spaces).
 - `C`
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value is a measure of the color's chroma (roughly representing the "amount of color"). Its minimum useful value is `0%`, or `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`), with `100%` being equivalent to `150`.
 - `H`
 
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to [`0deg`, or magenta](#result_3)) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
-    > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by `lch()`), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples.
+    > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by `lch()`), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. See [Hues in LCH](#hues_in_lch) and the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples.
 
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
@@ -68,11 +68,11 @@ The parameters are as follows:
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. The origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the CIE lightness, or brightness, value of the output color. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%`). The number `0` corresponds to `0%` (black), and the number `100` corresponds to `100%` (white). This value specifies the color's brightness in the CIELab color space .
 - `C`
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's chroma value (roughly representing the "amount of color"). Its minimum useful value is `0%`, or `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`), with `100%` being equivalent to `150`.
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` representing the output color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to [`0deg`, or magenta](#result_3)) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See [hues in LCH](#hues_in_lch).
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
@@ -147,7 +147,7 @@ lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0
 
 ## Examples
 
-### Adjusting lightness
+### Adjusting the lightness of a color
 
 This example shows the effect of varying the `L` (lightness) value of the `lch()` functional notation.
 
@@ -215,11 +215,11 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("adjusting_lightness", "", "200")}}
+{{EmbedLiveSample("Adjusting the lightness of a color", "", "200")}}
 
-### Adjusting chroma
+### Adjusting color intensity via chroma
 
-The following example shows the effect of varying the `C` (chroma) values of the `lch()` functional notation.
+The following example shows the effect of varying the `C` (chroma) value of the `lch()` functional notation, with colors decreasing in intensity as the `C` value decreases from fully saturated to almost grey.
 
 #### HTML
 
@@ -242,7 +242,7 @@ The following example shows the effect of varying the `C` (chroma) values of the
 
 #### CSS
 
-We declare progressively smaller values for chroma, starting from full saturation at the highest value of `150`, or `100%`, down to an almost grey `3`, or `2%`.
+With the initial starting colors blue, red, and green, we declare progressively smaller values for chroma on them: starting from full color saturation at the highest value of `150` (equivalent to `100%`) down to `3` (equivalent to `2%`), which is almost grey for all the colors.
 
 ```css hidden
 body {
@@ -299,13 +299,13 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("adjusting_chroma", '', '200')}}
+{{EmbedLiveSample("Adjusting color intensity via chroma", '', '200')}}
 
-Had we used `0` instead of `3` and `2%`, the colors, having the same lightness values, would have all been an identical shade of grey.
+If we had used `0` instead of `3` and `2%`, with the same lightness values, the colors would have all been the same shade of grey. In this example, they are almost grey.
 
 ### Hues in LCH
 
-The following example shows 18 swatches with backgrounds with different `H` (hue) values of the `lch()` functional notation.
+The following example shows swatches with different `H` (hue) value of the `lch()` functional notation.
 
 #### HTML
 
@@ -474,7 +474,7 @@ div {
 
 ### Using relative colors with lch()
 
-This example styles three {{htmlelement("div")}} elements with different background colors, demonstrating using relative colors to change a colors lightness using the `lch()` color function. The middle `<div>` is given the unmodified `--base-color`, while the left and right `<div>`s are given lightened and darkened variants of the `--base-color`.
+This example styles three {{htmlelement("div")}} elements with different background colors, demonstrating the use of relative colors to change a color's lightness using the `lch()` color function. The middle `<div>` retains the original `--base-color`, while the left and right `<div>`s are given lightened and darkened variants of the `--base-color`.
 
 These variants are defined using relative colors — the `--base-color` [custom property](/en-US/docs/Web/CSS/--*) is passed into an `lch()` function, and the output colors have their lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 15% added to the lightness channel, and the darkened color has 15% subtracted from the lightness channel.
 
