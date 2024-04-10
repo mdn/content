@@ -20,7 +20,6 @@ To enable monitoring bfcache blocking in the field the [`PerformanceNavigationTi
 - Reasons why bfcache usage was blocked.
 - Details such as frame `id` and `name`, to help identify `<iframe>`s in the HTML.
 
-
 ## Examples
 
 [`PerformanceNavigationTiming`](/en-US/docs/Web/API/PerformanceNavigationTiming) data can be obtained from the performance timeline using either [`Performance.getEntriesByType()`](/en-US/docs/Web/API/Performance/getEntriesByType) or [`PerformanceObserver`](/en-US/docs/Web/API/PerformanceObserver).
