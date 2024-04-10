@@ -198,7 +198,7 @@ td {
 #r2 {
   text-align: center;
 }
-#r3 {
+#c31 {
   text-align: right;
 }
 ```
