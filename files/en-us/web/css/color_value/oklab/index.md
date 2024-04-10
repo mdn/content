@@ -265,7 +265,7 @@ div {
 
 ### Adjusting color axes
 
-This example demonstrates the effects of setting the `a` and `b` values of the `oklab()` function to the ends and midpoints of the a-axis and b-axis respectively. The a-axis goes from green (`-0.4`) to red (`0.4`) and the b-axis, goes from yellow (`-0.4`) to blue (`0.4`).
+This example demonstrates the effects of setting the `a` and `b` values of the `oklab()` function to the ends and midpoints of the a-axis and b-axis, respectively. The a-axis goes from green (`-0.4`) to red (`0.4`) and the b-axis goes from yellow (`-0.4`) to blue (`0.4`).
 
 #### HTML
 
