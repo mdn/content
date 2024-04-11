@@ -148,87 +148,14 @@ Most of these units are more useful when used for print, rather than screen outp
 
 #### Relative length units
 
-Relative length units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport. The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. Some of the most useful units for web development are listed in the table below.
+Relative length units are relative to something else. For example:
 
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Unit</th>
-      <th scope="col">Relative to</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>em</code></td>
-      <td>
-        Font size of the parent, in the case of typographical properties like
-        <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code
-        >, and font size of the element itself, in the case of other properties
-        like <code><a href="/en-US/docs/Web/CSS/width">width</a></code
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ex</code></td>
-      <td>x-height of the element's font.</td>
-    </tr>
-    <tr>
-      <td><code>ch</code></td>
-      <td>
-        The advance measure (width) of the glyph "0" of the element's font.
-      </td>
-    </tr>
-    <tr>
-      <td><code>rem</code></td>
-      <td>Font size of the root element.</td>
-    </tr>
-    <tr>
-      <td><code>lh</code></td>
-      <td>Line height of the element.</td>
-    </tr>
-    <tr>
-      <td><code>rlh</code></td>
-      <td>Line height of the root element. When used on the <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code> or <code><a href="/en-US/docs/Web/CSS/line-height">line-height</a></code
-        > properties of the root element, it refers to the properties' initial value.</td>
-    </tr>
-    <tr>
-      <td><code>vw</code></td>
-      <td>1% of the viewport's width.</td>
-    </tr>
-    <tr>
-      <td><code>vh</code></td>
-      <td>1% of the viewport's height.</td>
-    </tr>
-    <tr>
-      <td><code>vmin</code></td>
-      <td>1% of the viewport's smaller dimension.</td>
-    </tr>
-    <tr>
-      <td><code>vmax</code></td>
-      <td>1% of the viewport's larger dimension.</td>
-    </tr>
-    <tr>
-      <td><code>vb</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">block axis</a>.</td>
-    </tr>
-    <tr>
-      <td><code>vi</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">inline axis</a>.</td>
-    </tr>
-    <tr>
-      <td><code>svw, svh</code></td>
-      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>'s width and height, respectively.</td>
-    </tr>
-    <tr>
-      <td><code>lvw, lvh</code></td>
-      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>'s width and height, respectively.</td>
-    </tr>
-    <tr>
-      <td><code>dvw, dvh</code></td>
-      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>'s width and height, respectively.</td>
-    </tr>
-  </tbody>
-</table>
+- `em` and `rem` are relative to the font size of the parent element and the root element, respectively.
+- `vh` and `vw` are relative to the viewport's height and width, respectively.
+
+The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. For a complete list of the relative units available, see the reference page for the {{cssxref("length")}} type.
+
+In this section we'll explore some of the most common relative units.
 
 #### Exploring an example
 
@@ -394,7 +321,7 @@ In the example below, we have added a background image to the containing block o
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
 
-> **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`, but for backwards compatibility with old websites, the `rgba()` syntax is still supported, and has exactly the same behavior as `rgb()`.
+> **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`. The `rgba()` function is an alias for `rgb()`.
 
 ### SRGB values
 

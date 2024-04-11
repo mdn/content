@@ -59,4 +59,4 @@ This topic contains the following modules, in a suggested order for working thro
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free.
 - [Coding math](https://www.youtube.com/user/codingmath)
-  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://www.bit-101.com/blog/about-me/).
+  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://www.bit-101.com/2017/about-me/).

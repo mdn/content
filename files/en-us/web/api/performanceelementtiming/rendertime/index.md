@@ -24,7 +24,7 @@ For text nodes this will be the **text rendering timestamp**. This is defined as
 
 ### Logging `renderTime`
 
-In this example an {{HTMLElement("image")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
+In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
 
 ```html
 <img

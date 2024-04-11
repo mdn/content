@@ -116,8 +116,6 @@ All your signaling server now needs to do is send the messages it's asked to. Yo
 
 The signaling process involves this exchange of messages between two peers using an intermediary, the signaling server. The exact process will vary, of course, but in general there are a few key points at which signaling messages get handled:
 
-The signaling process involves this exchange of messages among a number of points:
-
 - Each user's client running within a web browser
 - Each user's web browser
 - The signaling server

@@ -51,7 +51,7 @@ This example function replaces the current contents of the clipboard with a spec
 Note that for this particular case, you could just as readily use `Clipboard.writeText()`.
 
 ```js
-button.addEventListener("click", setClipboard("<empty clipboard>"));
+button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
   const type = "text/plain";
@@ -78,7 +78,7 @@ This example writes the canvas to a blob, using the default MIME type of `image/
 ```js
 // Get canvas can add an event handler for the click event.
 const canvas = document.getElementById("canvas");
-canvas.addEventListener("click", copyCanvasContentsToClipboard());
+canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
 async function copyCanvasContentsToClipboard() {
   // Copy canvas to blob

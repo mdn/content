@@ -19,7 +19,7 @@ A `FencedFrameConfig` object instance has an exposed method, but it also maps to
 
 ## Instance methods
 
-- {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}}
+- {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} {{experimental_inline}}
   - : Passes in data from the embedding document to the `<fencedframe>`'s shared storage.
 
 ## Examples

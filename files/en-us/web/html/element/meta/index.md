@@ -104,10 +104,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     </tr>
     <tr>
       <th>Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag
-        must not be present.
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th>Permitted parents</th>
@@ -117,7 +114,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <code>&#x3C;meta charset></code>,
             <code>&#x3C;meta http-equiv></code>: a
             {{HTMLElement("head")}} element. If the
-            <a href="/en-US/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> is not an
+            <a href="#http-equiv"><code>http-equiv</code></a> is not an
             encoding declaration, it can also be inside a
             {{HTMLElement("noscript")}} element, itself inside a
             <code>&#x3C;head></code> element.

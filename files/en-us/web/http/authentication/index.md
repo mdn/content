@@ -7,7 +7,7 @@ page-type: guide
 {{HTTPSidebar}}
 
 HTTP provides a general framework for access control and authentication.
-This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" schema.
+This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" scheme.
 
 ## The general HTTP authentication framework
 
