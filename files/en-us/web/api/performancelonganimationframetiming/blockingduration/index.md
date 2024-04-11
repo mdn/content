@@ -39,7 +39,11 @@ Assuming the rendering time is 10ms, timings for the LoAFs in each of the three 
 
 `*` In options 2. and 3., there is only a single LoAF.
 
-Note that the total `duration` in all three instances is 145ms. The total `blockingDuration` in the first two is the same (55ms), but it is 50ms longer in the second as the task was not split into two. This highlights the importance of optimizing long tasks by yielding — regardless of how the browser decides to handle the tasks, the blocking duration will still be less than if you don't yield at all.
+Note that the total `duration` in all three instances is 145ms. The total `blockingDuration` in the first two is the same (55ms), and it's just a matter of how the browser decides to split it.
+
+The third option however has a much longer `blockingDuration` because the browser is completely blocked and unable to interrupt the long task at all.
+
+This highlights the importance of optimizing long tasks by yielding — regardless of how the browser decides to handle the tasks, the blocking duration will still be less than if you don't yield at all.
 
 The difference between `duration` and `blockingDuration` of LoAFs can be summarised as follows:
 
