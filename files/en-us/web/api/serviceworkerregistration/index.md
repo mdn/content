@@ -36,13 +36,13 @@ _Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
 - {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
-  - : Returns a string indicating the service worker's registration scope associated with the current service worker registration.
+  - :  A string representing a URL that defines a service worker's registration scope; that is, the range of URLs the service worker can control.
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
-  - : Returns a string indicating the update via cache mode associated with the current service worker registration. It can be one of the following: `imports`, `all`, or `none`.
+  - : Returns the value of the setting used to determine the circumstances in which the browser will consult the HTTP cache when it tries to update the service worker or any scripts that are imported via {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}.
 - {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
-  - : Returns a service worker whose state is `installed`. This is initially set to `null`
+  - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 
 ## Instance methods
 
