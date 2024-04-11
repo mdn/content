@@ -16,16 +16,15 @@ The **`blockingDuration`** readonly property of the {{domxref("PerformanceLongAn
 
 `blockingDuration` is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results. Let's look at an example to clarify what this means.
 
-Consider the case of a JavaScript file that takes a total of 145ms to process. After the first major chunk of script, which is processed after 65ms, we consider breaking the execution of the script into two tasks, the second one taking 80ms to execute. This is preferable to having it all executed in one task, as it gives the browser a chance to handle user interactions in between. This is also known as **yielding**, and could be done for example by inserting a {{domxref("setTimeout()")}} after the first major chunk of script.
+Take the case of a JavaScript file that takes a total of 145ms to process. After the first major chunk of script, which is processed after 65ms, we could consider breaking the execution of the script into two tasks, the second one taking 80ms to execute. This is preferable to having it all executed in one task, as it gives the browser a chance to handle user interactions in between. This is also known as **yielding**, and could be done for example by inserting a {{domxref("setTimeout()")}} after the first major chunk of script.
 
 > **Note:** See [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) for more information on long tasks and yielding.
 
-There are three options to consider here in how the script might end up being processed. If we yield after the first 65ms, the browser can decide to:
+There are three options to consider here in how the script might end up being processed.
 
-1. Render a frame, then run the rest of the script
-2. Run the rest of the script first, then render the frame.
-
-Alternatively — option 3. — is if we decide not to yield and let the browser deal with the entire script in one task.
+1. If we yield after the first 65ms, the browser can decide to render a frame, then run the rest of the script
+2. Alternatively, the browser could run the rest of the script first, then render the frame.
+3. We could also decide **not** to yield and let the browser deal with the entire script in one task.
 
 > **Note:** The browser will generally try to prioritize important tasks (such as user interactions) and rendering new frames over less important tasks it might have queued. The browser will _try_ to render a new frame every 16ms.
 
@@ -39,11 +38,9 @@ Assuming the rendering time is 10ms, timings for the LoAFs in each of the three 
 
 `*` In options 2. and 3., there is only a single LoAF.
 
-Note that the total `duration` in all three instances is 145ms. The total `blockingDuration` in the first two is the same (55ms), and it's just a matter of how the browser decides to split it.
+Note that the total `duration` in all three instances is 145ms. The total `blockingDuration` in the first two is the same (55ms) — the browser just decides to split the work in different ways in each.
 
-The third option however has a much longer `blockingDuration` because the browser is completely blocked and unable to interrupt the long task at all.
-
-This highlights the importance of optimizing long tasks by yielding — regardless of how the browser decides to handle the tasks, the blocking duration will still be less than if you don't yield at all.
+The third option however has a much longer `blockingDuration` because the browser is completely blocked and unable to interrupt the long task at all. This highlights the importance of optimizing long tasks by yielding — regardless of how the browser decides to handle the tasks, the blocking duration will still be less than if you don't yield at all.
 
 The difference between `duration` and `blockingDuration` of LoAFs can be summarised as follows:
 
