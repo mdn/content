@@ -98,7 +98,6 @@ This article provides information about the changes in Firefox 125 that affect d
 - Fixed an issue where recommended preferences would not be applied if only WebDriver BiDi as remote protocol, which means CDP is disabled, was enabled ([Firefox bug 1882748](https://bugzil.la/1882748)).
 - Fixed an issue where creating and switching to a new tab would not wait for the `visibilityState` to be updated ([Firefox bug 1877469](https://bugzil.la/1877469)).
 
-
 ## Changes for add-on developers
 
 ### Removals
