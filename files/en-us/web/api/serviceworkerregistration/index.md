@@ -11,7 +11,7 @@ The **`ServiceWorkerRegistration`** interface of the [Service Worker API](/en-US
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
 
-Currently the `ServiceWorkerRegistration` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} and {{domxref("ServiceWorkerGlobalScope")}} for Chrome and Firefox.
+Currently the `ServiceWorkerRegistration` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} and {{domxref("ServiceWorkerGlobalScope")}} for Firefox.
 
 {{InheritanceDiagram}}
 

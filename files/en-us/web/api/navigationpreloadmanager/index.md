@@ -5,12 +5,14 @@ page-type: web-api-interface
 browser-compat: api.NavigationPreloadManager
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.
 
 If supported, an object of this type is returned by {{domxref("ServiceWorkerRegistration.navigationPreload")}}.
 The result of a preload fetch request is waited on using the promise returned by {{domxref("FetchEvent.preloadResponse")}}.
+
+Currently the `NavigationPreloadManager` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} and {{domxref("ServiceWorkerGlobalScope")}} for Firefox.
 
 ## Instance methods
 
