@@ -13,6 +13,9 @@ The **`share()`** method of the {{domxref("Navigator")}} interface invokes the n
 The method resolves a {{jsxref("Promise")}} with `undefined`.
 On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the _share target_.
 
+The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
+The `share()` method will throw exceptions if the permission is supported but has not been granted.
+
 ## Syntax
 
 ```js-nolint
