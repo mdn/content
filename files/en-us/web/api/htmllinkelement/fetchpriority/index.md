@@ -11,7 +11,8 @@ browser-compat: api.HTMLLinkElement.fetchPriority
 The **`fetchPriority`** property of the
 {{domxref("HTMLLinkElement")}} interface represents a hint given to the browser
 on how it should prioritize the preload of the given resource relative to other
-resources of the same type.
+resources of the same
+[type](/en-US/docs/Web/HTML/Attributes/rel/preload#what_types_of_content_can_be_preloaded).
 
 ## Value
 
