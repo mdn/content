@@ -12,7 +12,7 @@ The **`remote`** read-only property of the {{domxref("HTMLMediaElement")}} inter
 
 ## Value
 
-A {{domxref("RemotePlayback")}} object that associated with the media element.
+A {{domxref("RemotePlayback")}} object associated with the media element.
 
 ## Example
 
