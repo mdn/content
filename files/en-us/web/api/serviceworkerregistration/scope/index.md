@@ -8,11 +8,11 @@ browser-compat: api.ServiceWorkerRegistration.scope
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`scope`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface is a string representing a URL that defines a service worker's registration scope; that is, the range of URLs a service worker can control. This is set using the `scope` parameter specified in the call to {{domxref('ServiceWorkerContainer.register()')}} which registered the service worker.
+The **`scope`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns a string representing a URL that defines a service worker's registration scope; that is, the range of URLs a service worker can control. This is set using the `scope` parameter specified in the call to {{domxref('ServiceWorkerContainer.register()')}} which registered the service worker.
 
 ## Value
 
-A string representing a URL that defines a service worker's registration scope.
+Returns a string representing a URL that defines a service worker's registration scope.
 
 ## Specifications
 
