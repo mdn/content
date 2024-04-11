@@ -44,6 +44,9 @@ The parameters are as follows:
 
 - `L`
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%`). The number `0` corresponds to `0%` (black), and the number `100` corresponds to `100%` (white). This value specifies the color's brightness in the [CIELab color space](/en-US/docs/Glossary/Color_space#cielab_color_spaces).
+
+    > **Note:** The `L` is the perceived lightness, meaning the visually perceived lightness we see with our eyes, or "brightness", rather than the `L` in `hsl()`, which is the lightness as compared to other colors.
+
 - `C`
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value is a measure of the color's chroma (roughly representing the "amount of color"). Its minimum useful value is `0%`, or `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`), with `100%` being equivalent to `150`.
 - `H`
