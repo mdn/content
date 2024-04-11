@@ -449,7 +449,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         > or an
-        <code>>a</code> element, and no descendant may have a specified
+        <code>a</code> element, and no descendant may have a specified
         <a
           href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
           >tabindex</a
