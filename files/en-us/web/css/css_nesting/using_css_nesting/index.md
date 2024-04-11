@@ -256,7 +256,7 @@ Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_l
 }
 ```
 
-In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading:before`.
+In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading::before`.
 
 ```css
 .notice {
@@ -267,8 +267,8 @@ In the CSS code below, nesting is used to create compound selectors both with an
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  .notice-heading:before {
-    /* equivalent to `.notice .notice-heading:before` */
+  .notice-heading::before {
+    /* equivalent to `.notice .notice-heading::before` */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -276,8 +276,8 @@ In the CSS code below, nesting is used to create compound selectors both with an
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    .warning-heading:before {
-      /* equivalent to `.notice.warning .warning-heading:before` */
+    .warning-heading::before {
+      /* equivalent to `.notice.warning .warning-heading::before` */
       content: "! ";
     }
   }
@@ -286,8 +286,8 @@ In the CSS code below, nesting is used to create compound selectors both with an
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    .success-heading:before {
-      /* equivalent to `.notice.success .success-heading:before` */
+    .success-heading::before {
+      /* equivalent to `.notice.success .success-heading::before` */
       content: "✓ ";
     }
   }

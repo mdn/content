@@ -964,48 +964,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Intl.Segmenter
-
-The {{jsxref("Intl.Segmenter")}} is supported in nightly builds, allowing developers to perform locale-sensitive text segmentation.
-This enables splitting a string into meaningful items (graphemes, words or sentences) in different locales.
-(See [Firefox bug 1423593](https://bugzil.la/1423593) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">None</td>
-    </tr>
-  </tbody>
-</table>
-
 ### SharedArrayBuffer is growable
 
 The {{jsxref("SharedArrayBuffer")}} is now growable using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
@@ -1545,65 +1503,6 @@ When shadow root is created via declarative shadow DOM, the `clonable` option is
 | Beta              | NA            | No                  |
 | Release           | NA            | No                  |
 
-#### Popover API
-
-Firefox now supports the [Popover API](/en-US/docs/Web/API/Popover_API).
-
-The following Web APIs are now implemented:
-
-- [`HTMLButtonElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement) and [`HTMLButtonElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction).
-- [`HTMLInputElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetElement) and [`HTMLInputElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetAction).
-- [`HTMLElement.popover`](/en-US/docs/Web/API/HTMLElement/popover), [`HTMLElement.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`HTMLElement.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), and [`HTMLElement.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover).
-- `HTMLElement` [`beforetoggle` event](/en-US/docs/Web/API/HTMLElement/beforetoggle_event), `HTMLElement` [`toggle_event` event](/en-US/docs/Web/API/HTMLElement/toggle_event), and [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent).
-
-CSS updates include:
-
-- [`:popover-open`](/en-US/docs/Web/CSS/:popover-open)
-- [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers
-
-The following HTML global attributes are supported:
-
-- [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
-- [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
-
-See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.element.popover.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### HTMLMediaElement method: setSinkId()
 
 {{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See [Firefox bug 934425](https://bugzil.la/934425) for more details.
@@ -2055,6 +1954,50 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Screen Wake Lock API
+
+The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) allows a web application to request that the screen not be dimmed or locked while it is active.
+This is useful for navigation and reading applications, and any application where the screen doesn't get regular tactile input while the application is in use (the default way to keep a screen awake).
+The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}.
+This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
+See [Firefox bug 1589554](https://bugzil.la/1589554) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>122</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.screenwakelock.enabled</code></td>
     </tr>
   </tbody>
 </table>

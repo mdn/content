@@ -48,15 +48,15 @@ The `text-align` property is specified in one of the following ways:
   - : The same as `left` if direction is left-to-right and `right` if direction is right-to-left.
 - `end`
   - : The same as `right` if direction is left-to-right and `left` if direction is right-to-left.
-- `left` {{deprecated_inline}} {{non-standard_inline}}
+- `left`
   - : The inline contents are aligned to the left edge of the line box.
-- `right` {{deprecated_inline}} {{non-standard_inline}}
+- `right`
   - : The inline contents are aligned to the right edge of the line box.
-- `center` {{deprecated_inline}} {{non-standard_inline}}
+- `center`
   - : The inline contents are centered within the line box.
 - `justify`
-  - : The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.
-- `justify-all` {{experimental_inline}}
+  - : The inline contents are justified. Spaces out the content to line up its left and right edges to the left and right edges of the line box, except for the last line.
+- `justify-all`
   - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
@@ -126,7 +126,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 #### Result
 
-{{EmbedLiveSample("Centered_text","100%","100%")}}
+{{EmbedLiveSample("Centered_text", "100%", "100%")}}
 
 ### Example using "justify"
 
@@ -152,6 +152,62 @@ The inconsistent spacing between words created by justified text can be problema
 #### Result
 
 {{EmbedLiveSample('Example using "justify"',"100%","100%")}}
+
+### Table alignment
+
+This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells.
+
+#### HTML
+
+```html
+<table>
+  <tr id="r1">
+    <td id="c11">11</td>
+    <td id="c12">12</td>
+    <td id="c13">13</td>
+  </tr>
+  <tr id="r2">
+    <td id="c21">21</td>
+    <td id="c22">22</td>
+    <td id="c23">23</td>
+  </tr>
+  <tr id="r3">
+    <td id="c31">31</td>
+    <td id="c32">32</td>
+    <td id="c33">33</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+}
+#r1 {
+  text-align: right;
+}
+#c12 {
+  text-align: center;
+}
+#r2 {
+  text-align: center;
+}
+#c31 {
+  text-align: right;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Table alignment', "100%", "100%")}}
 
 ## Specifications
 

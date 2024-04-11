@@ -50,6 +50,8 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
   - : Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.
 - {{HTTPHeader("Expires")}}
   - : The date/time after which the response is considered stale.
+- {{HTTPHeader("No-Vary-Search")}} {{experimental_inline}}
+  - : Specifies a set of rules that define how a URL's query parameters will affect cache matching. These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
 
 ## Conditionals
 
@@ -361,6 +363,8 @@ Network client hints allow a server to choose what information is sent based on 
   - : The [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) header field identifies an ordered list of response header fields to include in a signature.
+- {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
+  - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 

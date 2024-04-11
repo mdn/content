@@ -32,19 +32,17 @@ create(options)
 
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
 
-    - A _credential type_
-
-      - : An object defining the type of credential being requested — this can be one of one of:
-
-        - `federated`
-          - : An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `password`
-          - : An object containing requirements for creating a password credential. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `publicKey`
-          - : An object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account. See the [Web Authentication API](#web_authentication_api) section below for more details.
-
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+
+    Each of the following properties represents a _credential type_ being created. Only one of them can be specified:
+
+    - `federated` {{optional_inline}}
+      - : An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
+    - `password` {{optional_inline}}
+      - : An object containing requirements for creating a password credential. See the [Credential Management API](#credential_management_api) section below for more details.
+    - `publicKey` {{optional_inline}}
+      - : An object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
 ## Credential Management API
 
