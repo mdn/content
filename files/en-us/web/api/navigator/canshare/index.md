@@ -8,7 +8,7 @@ browser-compat: api.Navigator.canShare
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
-The **`Navigator.canShare()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) returns `true` if the equivalent call to {{domxref("navigator.share()")}} would succeed.
+The **`canShare()`** method of the {{domxref("Navigator")}} interface returns `true` if the equivalent call to {{domxref("navigator.share()")}} would succeed.
 
 The method returns `false` if the data cannot be _validated_. Reasons the data might be invalid include:
 
@@ -18,7 +18,7 @@ The method returns `false` if the data cannot be _validated_. Reasons the data m
 - Sharing the specified data would be considered a "hostile share" by the user-agent.
 
 The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
-The **`canShare()`** method will return `false` if the permission is supported but has not been granted.
+The `canShare()` method will return `false` if the permission is supported but has not been granted.
 
 ## Syntax
 
@@ -39,10 +39,14 @@ canShare(data)
 
     Possible values are:
 
-    - `url`: A string representing a URL to be shared.
-    - `text`: A string representing text to be shared.
-    - `title`: A string representing the title to be shared.
-    - `files`: An array of {{domxref("File")}} objects representing files to be shared.
+    - `url` {{optional_inline}}
+      - : A string representing a URL to be shared.
+    - `text` {{optional_inline}}
+      - : A string representing text to be shared.
+    - `title` {{optional_inline}}
+      - : A string representing the title to be shared.
+    - `files` {{optional_inline}}
+      - : An array of {{domxref("File")}} objects representing files to be shared.
 
 ### Return value
 
