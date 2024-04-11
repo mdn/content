@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ServiceWorker
 ---
 
-{{securecontext_header}}{{APIRef("Service Workers API")}}
+{{securecontext_header}}{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
 
 The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique `ServiceWorker` object.
 
@@ -21,6 +21,8 @@ The `ServiceWorker` interface is dispatched a set of lifecycle events — `insta
 
 Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
+
+Currently the `ServiceWorker` object is only exposed to {{domxref("Window")}} global scope and {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", "nocode")}}.
 
 {{InheritanceDiagram}}
 
