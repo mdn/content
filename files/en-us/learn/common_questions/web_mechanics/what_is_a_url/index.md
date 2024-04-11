@@ -35,7 +35,7 @@ This article discusses Uniform Resource Locators (URLs), explaining what they ar
 
 ## Summary
 
-**URL** stands for _Uniform Resource Locator_. A URL is nothing more than the address of a given unique resource on the Web. Alongside {{Glossary("Hypertext")}} and the {{Glossary("HTTP")}} protocol, **_URL_** is one of the key concepts of the Web as we know it. It is also one of the key mechanisms used by users of {{Glossary("Browser","browsers")}} to retrieve any published resource (such resources can be HTML pages, CSS documents, images, etc) on the web.
+A **URL** (Uniform Resource Locator) is the address of a unique resource on the internet. It is one of the key mechanisms used by {{Glossary("Browser","browsers")}} to retrieve published resources, such as HTML pages, CSS documents, images, and so on.
 
 In theory, each valid URL points to a unique resource. In practice, there are some exceptions, the most common being a URL pointing to a resource that no longer exists or that has moved. As the resource represented by the URL and the URL itself are handled by the Web server, it is up to the owner of the web server to carefully manage that resource and its associated URL.
 
