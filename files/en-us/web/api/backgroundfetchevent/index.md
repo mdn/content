@@ -11,7 +11,7 @@ browser-compat: api.BackgroundFetchEvent
 
 The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", "nocode")}}.
 
-It is the event type passed to `backgroundfetchabort` and `backgroundfetchclick`.
+It is the event type passed to {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick"}} event and {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} event.
 
 {{InheritanceDiagram}}
 
