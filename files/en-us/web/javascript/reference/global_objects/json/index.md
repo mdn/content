@@ -94,11 +94,11 @@ Insignificant {{Glossary("whitespace")}} may be present anywhere except within a
 
 ## Static methods
 
-- {{jsxref("JSON.isRawJSON()")}}
+- {{jsxref("JSON.isRawJSON()")}} {{experimental_inline}}
   - : Tests whether a value is an object returned by {{jsxref("JSON.rawJSON()")}}.
 - {{jsxref("JSON.parse()")}}
   - : Parse a piece of string text as JSON, optionally transforming the produced value and its properties, and return the value.
-- {{jsxref("JSON.rawJSON()")}}
+- {{jsxref("JSON.rawJSON()")}} {{experimental_inline}}
   - : Creates a "raw JSON" object containing a piece of JSON text. When serialized to JSON, the raw JSON object is treated as if it is already a piece of JSON. This text is required to be valid JSON.
 - {{jsxref("JSON.stringify()")}}
   - : Return a JSON string corresponding to the specified value, optionally including only certain properties or replacing property values in a user-defined manner.
