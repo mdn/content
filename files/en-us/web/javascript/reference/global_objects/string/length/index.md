@@ -53,18 +53,17 @@ function getCharacterLength(str) {
 console.log(getCharacterLength("A\uD87E\uDC04Z")); // 3
 ```
 
-If you want to get the exact number of characters in a string containing variant selectors, use the [Intl.Segmenter()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter) constructor.
-You can first ｐass the string you want to split to the [segment()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) method of the [Intl.Segmenter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object. Then, split the returned [Segments](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) object with its [iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator), which iterates by grapheme clusters:
+If you want to count characters by _grapheme clusters_, use [`Intl.Segmenter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter). You can first pass the string you want to split to the [`segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) method, and then iterate over the returned `Segments` object to get the length:
 
 ```js
-function getCharacterLength(str) {
-  const segmenter = new Intl.Segmenter("ja-JP", { granularity: "grapheme" });
+function getGraphemeCount(str) {
+  const segmenter = new Intl.Segmenter("en-US", { granularity: "grapheme" });
   // The Segments object iterator that is used here iterates over characters in grapheme clusters,
-  // not mere code units
+  // which may consist of multiple Unicode characters
   return [...segmenter.segment(str)].length;
 }
 
-console.log(getCharacterLength("葛󠄀城市👨‍👩‍👧‍👧")); // 4
+console.log(getGraphemeCount("👨‍👩‍👧‍👧")); // 1
 ```
 
 ## Examples
