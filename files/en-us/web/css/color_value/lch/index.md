@@ -48,7 +48,7 @@ The parameters are as follows:
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value is a measure of the color's chroma (roughly representing the "amount of color"). Its minimum useful value is `0%`, or `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`), with `100%` being equivalent to `150`.
 - `H`
 
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to [`0deg`, or magenta](#result_3)) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to [`0deg`](#result_3)) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
     > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by `lch()`), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. See [Hues in LCH](#hues_in_lch) and the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples.
 
@@ -72,7 +72,7 @@ The parameters are as follows:
 - `C`
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's chroma value (roughly representing the "amount of color"). Its minimum useful value is `0%`, or `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`), with `100%` being equivalent to `150`.
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to [`0deg`, or magenta](#result_3)) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See [hues in LCH](#hues_in_lch).
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to [`0deg`](#result_3)) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See [hues in LCH](#hues_in_lch).
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
@@ -147,7 +147,7 @@ lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0
 
 ## Examples
 
-### Adjusting the lightness of a color
+### Adjusting the brightness of a color
 
 This example shows the effect of varying the `L` (lightness) value of the `lch()` functional notation.
 
@@ -215,7 +215,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Adjusting the lightness of a color", "", "200")}}
+{{EmbedLiveSample("Adjusting the brightness of a color", "", "200")}}
 
 ### Adjusting color intensity via chroma
 
@@ -305,7 +305,7 @@ If we had used `0` instead of `3` and `2%`, with the same lightness values, the 
 
 ### Hues in LCH
 
-The following example shows swatches with different `H` (hue) value of the `lch()` functional notation.
+The following example shows swatches with different `H` (hue) values of the `lch()` functional notation.
 
 #### HTML
 
@@ -424,7 +424,7 @@ and so on.
 
 {{EmbedLiveSample("hues in lch")}}
 
-The hue angles in `lch()` are different from {{CSSXref("color_value/hsl", "hsl()")}}. See {{cssxref("hue")}} for more information. In `hsl()`, an sRGB color, `0deg` is red. With CIE Lab colors, `0deg` is magenta, and red is approximately `41deg`.
+The hue angles in `lch()` are different from those in {{CSSXref("color_value/hsl", "hsl()")}}. See {{cssxref("hue")}} for more information. In `hsl()`, the sRGB color `0deg` represents red. However, in the CIELab color space, `0deg` corresponds to magenta, while red is approximately `41deg`.
 
 ### Adjusting opacity with lch()
 
@@ -474,7 +474,7 @@ div {
 
 ### Using relative colors with lch()
 
-This example styles three {{htmlelement("div")}} elements with different background colors, demonstrating the use of relative colors to change a color's lightness using the `lch()` color function. The middle `<div>` retains the original `--base-color`, while the left and right `<div>`s are given lightened and darkened variants of the `--base-color`.
+This example styles three {{htmlelement("div")}} elements with different background colors, demonstrating the use of relative colors to change a color's brightness using the `lch()` color function. The middle `<div>` retains the original `--base-color`, while the left and right `<div>`s are given lightened and darkened variants of the `--base-color`.
 
 These variants are defined using relative colors — the `--base-color` [custom property](/en-US/docs/Web/CSS/--*) is passed into an `lch()` function, and the output colors have their lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 15% added to the lightness channel, and the darkened color has 15% subtracted from the lightness channel.
 
