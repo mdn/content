@@ -202,11 +202,12 @@ p {
 
 ```html
 <table>
-  <tr>
+  <tr style="vertical-align: bottom">
     <td style="vertical-align: baseline">baseline</td>
     <td style="vertical-align: top">top</td>
     <td style="vertical-align: middle">middle</td>
     <td style="vertical-align: bottom">bottom</td>
+    <td>Row's style</td>
     <td>
       <p>
         There is a theory which states that if ever anyone discovers exactly

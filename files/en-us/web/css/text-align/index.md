@@ -161,6 +161,14 @@ This example demonstrates how the use of `text-align` on {{htmlelement("table")}
 
 ```html
 <table>
+  <caption style="text-align: right">
+    Example table
+  </caption>
+  <thead>
+    <th>Col 1</th>
+    <th>Col 2</th>
+    <th style="text-align: right">Col 3</th>
+  </thead>
   <tr id="r1">
     <td id="c11">11</td>
     <td id="c12">12</td>
@@ -188,7 +196,11 @@ table {
   width: 250px;
   height: 150px;
 }
-td {
+thead {
+  text-align: left;
+}
+td,
+th {
   border: solid 1px black;
 }
 #r1 {
@@ -207,7 +219,7 @@ td {
 
 #### Result
 
-{{EmbedLiveSample('Table alignment', "100%", "100%")}}
+{{EmbedLiveSample('Table alignment', "100%", "200")}}
 
 ## Specifications
 
