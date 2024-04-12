@@ -68,7 +68,7 @@ It is also useful to combine these properties with form attributes like [`maxlen
 
 ## Examples
 
-### Growing/shrinking text fields
+### Growing and shrinking text fields
 
 This example illustrates the effect of `field-sizing: content` on single- and multi-line text fields — they change size as text is added and removed, in effect shrinkwrapping the contents, until an lower or upper size limit is reached.
 
