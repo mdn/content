@@ -3,6 +3,8 @@ title: "HTMLTableCellElement: noWrap property"
 short-title: noWrap
 slug: Web/API/HTMLTableCellElement/noWrap
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableCellElement.noWrap
 ---
 
