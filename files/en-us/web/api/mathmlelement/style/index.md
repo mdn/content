@@ -60,7 +60,10 @@ for (const prop in elementStyle) {
   // We check if the property is on the CSSStyleDeclaration instance
   // and if the property is a number indice
   // (the style directly defined via HTML style attribute)
-  if (Object.hasOwn(elementStyle, prop) && !Number.isNaN(Number.parseInt(prop))) {
+  if (
+    Object.hasOwn(elementStyle, prop) &&
+    !Number.isNaN(Number.parseInt(prop))
+  ) {
     out.textContent += `${
       elementStyle[prop]
     } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
