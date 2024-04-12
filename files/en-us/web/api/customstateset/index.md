@@ -99,13 +99,14 @@ After the example below, we'll cover what's happening in the snippet in more det
 class LabeledCheckbox extends HTMLElement {
   constructor() {
     super();
+    this._boundOnClick = this._onClick.bind(this);
+    this.addEventListener("click", this._boundOnClick);
+
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
-    // Attach an ElementInternals to get states property
-    this._internals = this.attachInternals();
-    this.addEventListener("click", this._onClick.bind(this));
-
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
         :host {
@@ -195,13 +196,13 @@ The element uses the `<labeled-checkbox>` defined in the [previous example](#mat
 class LabeledCheckbox extends HTMLElement {
   constructor() {
     super();
+    this._boundOnClick = this._onClick.bind(this);
+    this.addEventListener("click", this._boundOnClick);
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
-    // Attach an ElementInternals to get states property
-    this._internals = this.attachInternals();
-    this.addEventListener("click", this._onClick.bind(this));
-
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
         :host {
@@ -318,13 +319,14 @@ Most of the remaining code is similar to the example that demonstrates a single 
 class ManyStateElement extends HTMLElement {
   constructor() {
     super();
+    this._boundOnClick = this._onClick.bind(this);
+    this.addEventListener("click", this._boundOnClick);
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
-    // Attach an ElementInternals to get states property
-    this._internals = this.attachInternals();
     this.state = "loading";
-    this.addEventListener("click", this._onClick.bind(this));
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
@@ -426,14 +428,18 @@ Setting the state to a name without the two dashes will cause an error in some v
 
 ```js
 class CompatibleStateElement extends HTMLElement {
+  constructor () {
+    super();
+    this._internals = this.attachInternals();
+  }
+
   connectedCallback() {
-    const internals = this.attachInternals();
     // The double dash is required in browsers with the
     // legacy syntax, not supplying it will throw
     try {
-      internals.states.add("loaded");
+      this._internals.states.add("loaded");
     } catch {
-      internals.states.add("--loaded");
+      this._internals.states.add("--loaded");
     }
   }
 }
@@ -456,11 +462,15 @@ The downside to this approach is that the dashes must be included when using the
 
 ```js
 class CompatibleStateElement extends HTMLElement {
+  #internals
+  constructor () {
+    super();
+    this._internals = this.attachInternals();
+  }
   connectedCallback() {
-    const internals = this.attachInternals();
     // The double dash is required in browsers with the
     // legacy syntax, but works with the modern syntax
-    internals.states.add("--loaded");
+    this._internals.states.add("--loaded");
   }
 }
 ```
