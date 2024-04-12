@@ -33,7 +33,7 @@ In your web app or website, different tasks are fighting for the processing time
 - `"thermals"` represents the global thermal state of the system. This state can be affected by other apps and sites than the observing site.
 - `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This source is the CPU pressure for the thread the site is using, such as the main thread (window) or workers.
 
-Additional source types, such as `"gpu"` might be supported in the future. Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Availability can vary by your user agent, your operating system, and your hardware, so be sure to check this.
+The list of supported sources varies per browser, operating system, and hardware, and is evolving. Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Additional source types, such as `"gpu"` might be supported in the future.
 
 The Compute Pressure API can listen for pressure changes in the following contexts/threads:
 
