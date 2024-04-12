@@ -38,10 +38,10 @@ function callback(records) {
   console.log(lastRecord.toJSON);
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 This would log a JSON object like so:

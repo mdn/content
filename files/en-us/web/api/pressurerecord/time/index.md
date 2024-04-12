@@ -18,7 +18,7 @@ A {{domxref("DOMHighResTimeStamp")}} representing the timestamp when the {{domxr
 
 ## Examples
 
-### Using the time property
+### Using the `time` property
 
 In the following example we log the value of the `time` property in the pressure observer callback.
 
@@ -29,10 +29,10 @@ function callback(records) {
   console.log(`Current observed at ${lastRecord.time}`);
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 ## Specifications

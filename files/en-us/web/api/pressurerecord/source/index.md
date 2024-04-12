@@ -34,10 +34,10 @@ function callback(records) {
   console.log(`Current pressure source: ${lastRecord.source}`);
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 ## Specifications

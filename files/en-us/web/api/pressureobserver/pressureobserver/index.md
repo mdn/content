@@ -10,13 +10,12 @@ browser-compat: api.PressureObserver.PressureObserver
 
 {{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`PressureObserver()`** constructor creates a new {{domxref("PressureObserver")}} object with the given observer `callback`. The specified observer callback is invoked when pressure state changes occurred.
+The **`PressureObserver()`** constructor creates a new {{domxref("PressureObserver")}} object to watch for changes to pressure changes of system resources such as the CPU.
 
 ## Syntax
 
 ```js-nolint
 new PressureObserver(callback)
-new PressureObserver(callback, options)
 ```
 
 ### Parameters
@@ -27,21 +26,15 @@ new PressureObserver(callback, options)
       - : An array of {{domxref("PressureRecord")}} objects.
     - `observer`
       - : The {{domxref("PressureObserver","observer")}} object that is receiving the above records.
-- `options` {{optional_inline}}
-  - : An object to configure the `PressureObserver` with the following properties:
-    - `sampleInterval` {{optional_inline}}
-      - : A number representing the requested sampling interval expressed in milliseconds.
 
 ### Return value
 
-A new {{domxref("PressureObserver")}} object which will call the specified `callback` when observed pressure state changes occur.
+A new {{domxref("PressureObserver")}} object with the specified `callback` function that will be invoked when {{domxref("PressureObserver.observe()")}} was called to watch pressure changes.
 
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) is disallowed by a {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the `source` parameter is not one of the {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} for this user agent.
 
 ## Examples
 
@@ -62,10 +55,10 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 ## Specifications

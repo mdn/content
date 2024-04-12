@@ -76,7 +76,7 @@ The following interfaces are present in the Compute Pressure API and the API sur
 
 ### Log current pressure
 
-This example registers a {{domxref("PressureObserver")}} and notifies whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
+This example creates a {{domxref("PressureObserver")}} and takes action whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
 
 ```js
 function callback(records) {
@@ -91,10 +91,10 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 ## Specifications

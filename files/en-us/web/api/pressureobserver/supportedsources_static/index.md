@@ -29,17 +29,16 @@ PressureObserver.supportedSources;
 // returns ["cpu"] in Chrome 125 on macOS
 ```
 
-### Checking for unsupported types
+### Checking for supported types
 
-The following function checks for support of an array of possible sources. The unsupported types are logged to the console, however this information could be logged to client-side analytics to indicate that the particular source could not be observed.
+The following function checks for support of an array of possible sources. The supported types are logged to the console.
 
 ```js
 function detectSupport(sources) {
-  for (const source of sources) {
-    if (!PressureObserver.supportedSources.includes(source)) {
-      console.log(source);
-    }
-  }
+  const supported = sources.filter((source) =>
+    PressureObserver.supportedSources.includes(source),
+  );
+  console.log(supported);
 }
 
 detectSupport(["cpu", "thermal", "gpu", "npu"]);

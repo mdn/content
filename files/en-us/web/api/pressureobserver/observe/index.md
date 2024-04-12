@@ -12,20 +12,23 @@ browser-compat: api.PressureObserver.observe
 
 The **`observe()`** method of the {{domxref("PressureObserver")}} interface tells the pressure observer to start observing pressure changes. After this method is called, the observer will call its callback function when a pressure record for the specified `source` is observed.
 
-See {{domxref("PressureRecord.source")}} for a list of sources and {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} for a list of sources the user agent supports.
-
 When a matching {{domxref("PressureRecord")}} is obtained, the pressure observer's callback function is invoked.
 
 ## Syntax
 
 ```js-nolint
 observe(source)
+observe(source, options)
 ```
 
 ### Parameters
 
 - `source`
-  - : A string specifying which {{domxref("PressureRecord.source", "source")}} to observe.
+  - : A string specifying which {{domxref("PressureRecord.source", "source")}} to observe. See {{domxref("PressureRecord.source")}} for a list of sources and {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} for a list of sources the user agent supports.
+- `options` {{optional_inline}}
+  - : An object to configure observation with the following properties:
+    - `sampleInterval` {{optional_inline}}
+      - : A number representing the requested sampling interval expressed in milliseconds. Defaults to 0 meaning it will get as fast as the system can handle it.
 
 ### Return value
 
@@ -57,10 +60,10 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 ## Specifications

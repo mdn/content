@@ -23,7 +23,7 @@ A string indicating the pressure state recorded. The Compute Pressure API uses h
 
 ## Examples
 
-### Using the state property
+### Using the `state` property
 
 In the following example we log the value of the `state` property in the pressure observer callback.
 
@@ -33,10 +33,10 @@ function callback(records) {
   console.log(`Current pressure ${lastRecord.state}`);
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
   sampleInterval: 1000, // 1000ms
 });
-await observer.observe("cpu");
 ```
 
 ## Specifications
