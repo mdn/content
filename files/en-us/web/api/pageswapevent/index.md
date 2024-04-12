@@ -11,7 +11,7 @@ browser-compat: api.PageSwapEvent
 
 The **`PageSwapEvent`** event object is made available inside handler functions for the {{domxref("Window.pageswap_event", "pageswap")}} event.
 
-During a cross-document navigation, it allows you to manipulate the related [view transition](/en-US/docs/Web/API/View_Transitions_API) (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination documents.
+The pageswap event is fired when you navigate across documents, when the previous document is about to unload. During a cross-document navigation, the `PageSwapEvent`\*\* event object allows you to manipulate the related [view transition](/en-US/docs/Web/API/View_Transitions_API) (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination documents.
 
 ## Constructor
 
@@ -33,12 +33,6 @@ During a cross-document navigation, it allows you to manipulate the related [vie
 window.addEventListener("pageswap", async (e) => {
   if (e.viewTransition) {
     const url = new URL(e.activation.entry.url);
-
-    // Only transition to same basePath
-    // ~> SKIP!
-    if (!url.pathname.startsWith(basePath)) {
-      e.viewTransition.skipTransition();
-    }
 
     // Extract name from URL
     const match = profilePagePattern.exec(url);

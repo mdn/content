@@ -35,12 +35,6 @@ window.addEventListener("pagereveal", async (e) => {
     const fromURL = new URL(navigation.activation.from.url);
     const currentURL = new URL(navigation.activation.entry.url);
 
-    // Only transition to/from same basePath
-    // ~> SKIP!
-    if (!fromURL.pathname.startsWith(basePath)) {
-      e.viewTransition.skipTransition();
-    }
-
     // Went from profile page to homepage
     // ~> Set VT names on the relevant list item
     if (profilePagePattern.test(fromURL) && homePagePattern.test(currentURL)) {

@@ -13,9 +13,6 @@ browser-compat: api.ViewTransition.skipTransition
 The **`skipTransition()`** method of the
 {{domxref("ViewTransition")}} interface skips the animation part of the view transition, but doesn't skip running the associated view update.
 
-- In the case of a same-origin (SPA) transition, this would be triggered by the invocation of the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} callback that updates the DOM.
-- In the case of a cross-origin (MPA) transition, this would be triggered by a page navigation.
-
 ## Syntax
 
 ```js-nolint

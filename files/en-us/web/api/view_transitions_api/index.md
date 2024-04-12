@@ -78,7 +78,7 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
   - : The container for a view transition's old and new views — before and after the transition.
 - {{cssxref("::view-transition-old", "::view-transition-old()")}}
-  - : A static screenshot of the old view, before the transition.
+  - : A static snapshot of the old view, before the transition.
 - {{cssxref("::view-transition-new", "::view-transition-new()")}}
   - : A live representation of the new view, after the transition.
 

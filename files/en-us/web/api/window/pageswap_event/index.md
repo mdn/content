@@ -10,7 +10,7 @@ browser-compat: api.Window.pageswap_event
 
 {{APIRef("HTML DOM")}}{{seecompattable}}
 
-The **`pageswap`** event is fired when a document is about to be unloaded due to a navigation.
+The **`pageswap`** event is fired when you navigate across documents, when the previous document is about to unload.
 
 This is useful in the case of cross-document (MPA) [view transitions](/en-US/docs/Web/API/View_Transitions_API) for manipulating an active transition from the outbound page of a navigation. For example, you might wish to skip the transition, or customize the outbound transition animation via JavaScript.
 

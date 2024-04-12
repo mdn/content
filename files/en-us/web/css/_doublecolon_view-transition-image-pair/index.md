@@ -16,12 +16,13 @@ During a view transition, `::view-transition-image-pair` is included in the asso
 `::view-transition-image-pair` is given the following default styling in the UA stylesheet:
 
 ```css
-html::view-transition-image-pair(*) {
+:root::view-transition-image-pair(*) {
   position: absolute;
   inset: 0;
 
   animation-duration: inherit;
   animation-fill-mode: inherit;
+  animation-delay: inherit;
 }
 ```
 
