@@ -3,7 +3,9 @@ title: "grow: WASM text instruction"
 short-title: grow
 slug: WebAssembly/Reference/Memory/Grow
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.api.Memory.grow
+  - webassembly.multiMemory
 ---
 
 {{WebAssemblySidebar}}
@@ -36,7 +38,6 @@ memory.grow
 
 ## Browser compatibility
 
-Memorry support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
-Support for the multiMemory feature is listed below.
+> **Note:** `grow` support in WASM modules matches the grow support in the JavaScript API.
 
 {{Compat}}
