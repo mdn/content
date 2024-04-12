@@ -22,7 +22,7 @@ new PressureObserver(callback, options)
 ### Parameters
 
 - `callback`
-  - : A `PressureUpdateCallback` callback that will be invoked when pressure records are observed. When the callback is invoked, the following parameters are available:
+  - : A callback that will be invoked when pressure records are observed. When the callback is invoked, the following parameters are available:
     - `changes`
       - : An array of {{domxref("PressureRecord")}} objects.
     - `observer`
@@ -47,7 +47,7 @@ A new {{domxref("PressureObserver")}} object which will call the specified `call
 
 ### Log current pressure
 
-This example registers a {{domxref("PressureObserver")}} and notifies whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
+This example creates a {{domxref("PressureObserver")}} and takes action whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
 
 ```js
 function callback(records) {

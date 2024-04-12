@@ -7,7 +7,7 @@ status:
 browser-compat: api.PressureObserver
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The **`PressureObserver`** interface is part of the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) and is used to observe the pressure changes of system resources such as the CPU.
 

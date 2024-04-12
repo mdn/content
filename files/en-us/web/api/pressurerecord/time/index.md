@@ -20,7 +20,7 @@ A {{domxref("DOMHighResTimeStamp")}} representing the timestamp when the {{domxr
 
 ### Using the time property
 
-The following example shows the use of the `time` property which you can log during pressure observation.
+In the following example we log the value of the `time` property in the pressure observer callback.
 
 ```js
 function callback(records) {

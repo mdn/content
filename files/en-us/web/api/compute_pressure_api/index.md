@@ -13,13 +13,13 @@ The **Compute Pressure API** is a JavaScript API that enables you to observe the
 
 ## Use cases
 
-In real-time applications, such as video conferencing web apps, the Compute Pressure API lets you detect which pressure the system is currently facing. The system will handle any stress as best as it can, but a collaboration between system and app is useful to handle the pressure best. This API notifies you of high-level pressure state changes, so you can adjust your workloads and still offer pleasant user experience. The signal is proactively delivered when the system pressure trend is either rising or easing to allow timely adaptation.
+In real-time applications, such as video conferencing web apps, the Compute Pressure API lets you detect which pressure the system is currently facing. The system will handle any stress as well as it can, but a collaboration between system and app is useful to handle the pressure best. This API notifies you of high-level pressure state changes, so you can adjust your workloads and still offer a pleasant user experience. The signal is proactively delivered when the system pressure trend is either rising or easing to allow timely adaptation.
 
 You can use these pressure change signals, for example, to reduce or increase the video quality or the number of video feeds shown simultaneously to avoid dropping video frames, audio cuts, or delaying other critical parts of the application. The quality of service of your web app can vary, also due to pressure from external factors and apps at unexpected times, but ideally that does not lead to a total system failure, input delay, or unresponsiveness. Instead, the set of enabled features and their quality level is balanced against the resource pressure of the end-user device. It is similar to network pressure in which case a streaming app adapts to the available bandwidth.
 
 More use cases are:
 
-- Web games, for which you could balance the quality and amount of 3D assets, change the framerate, resolution, depth of field etc, to ensure low latency and stable frame rate.
+- Web games, for which you could balance the quality and amount of 3D assets, change the framerate, resolution, depth of field etc., to ensure low latency and stable frame rate.
 - User interfaces, for which you could render placeholders instead of real data while the system is under pressure, and render the real content once the pressure has eased.
 
 ## Concepts and usage
@@ -50,11 +50,11 @@ The Compute Pressure API exposes high-level pressure states which abstract away 
 - 🟡 `"serious"`: Target device pressure, temperature and/or energy usage is consistently highly elevated. The system may be throttling as a countermeasure to reduce thermals.
 - 🔴 `"critical"`: The temperature of the target device or system is significantly elevated and it requires cooling down to avoid any potential issues.
 
-The contributing factors (i.e. the underlying system metrics) for the pressure states above are not defined by the specification and can vary depending the underlying hardware and platform behavior. However, the specification requires that the change in contributing factors must be substantial to avoid flip-flopping between states. This means you can expect the API to not report different states overly often as they aren't responding to a certain fluctuating system metric.
+The contributing factors (that is, the underlying system metrics) for the pressure states above are not defined by the specification and can vary depending on the underlying hardware and platform behavior. However, the specification requires that the change in contributing factors must be substantial to avoid flip-flopping between states. This means you can expect the API to not report different states overly often as they aren't responding to just one fluctuating system metric.
 
 ### Security and privacy considerations
 
-The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions_Policy) by the token `"compute-pressure"`. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
+The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions_Policy) by the `"compute-pressure"` directive. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
 
 ## Reference
 

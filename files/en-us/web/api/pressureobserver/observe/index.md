@@ -10,7 +10,7 @@ browser-compat: api.PressureObserver.observe
 
 {{APIRef("Compute Pressure API")}}{{SeeCompatTable}}
 
-The **`observe()`** method of the {{domxref("PressureObserver")}} interface invokes the pressure observer's callback function when a pressure record for the specified `source` is observed.
+The **`observe()`** method of the {{domxref("PressureObserver")}} interface tells the pressure observer to start observing pressure changes. After this method is called, the observer will call its callback function when a pressure record for the specified `source` is observed.
 
 See {{domxref("PressureRecord.source")}} for a list of sources and {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} for a list of sources the user agent supports.
 
@@ -24,12 +24,12 @@ observe(source)
 
 ### Parameters
 
-- `source`:
+- `source`
   - : A string specifying which {{domxref("PressureRecord.source", "source")}} to observe.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
+A {{jsxref("Promise")}} that fulfils with {{jsxref("undefined")}}.
 
 ### Exceptions
 
@@ -42,7 +42,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 
 ### Log current pressure
 
-This example registers a {{domxref("PressureObserver")}} and notifies whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
+This example creates a {{domxref("PressureObserver")}} and takes action whenever there is a pressure change. The sample interval is set to 1000ms, meaning that there will be updates at most every second.
 
 ```js
 function callback(records) {

@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 
 ### Stopping a pressure observer
 
-The following example collects 20 samples and then disconnects the pressure observer to disable receiving any more pressure records. The {{domxref('PressureObserver.takeRecords()')}} method is useful to store records before disconnecting.
+The following example collects 20 samples and then disconnects the pressure observer to disable receiving any more pressure records. The {{domxref('PressureObserver.takeRecords()')}} method is used to store records before disconnecting.
 
 ```js
 const samples = [];

@@ -20,7 +20,7 @@ unobserve(source)
 
 ### Parameters
 
-- `source`:
+- `source`
   - : A string specifying which {{domxref("PressureRecord.source", "source")}} to unobserve.
 
 ### Return value
@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Stopping to observe a specific source
+### Stop observing a specific source
 
 The following example shows how to stop observing the "gpu" source after the observer previously observed both, the "cpu" and "gpu" sources.
 

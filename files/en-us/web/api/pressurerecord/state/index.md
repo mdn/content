@@ -25,7 +25,7 @@ A string indicating the pressure state recorded. The Compute Pressure API uses h
 
 ### Using the state property
 
-The following example shows the use of the `state` property which you can log during pressure observation.
+In the following example we log the value of the `state` property in the pressure observer callback.
 
 ```js
 function callback(records) {

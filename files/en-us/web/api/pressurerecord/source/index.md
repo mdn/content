@@ -19,13 +19,13 @@ A string indicating the origin source from which the record is coming. The curre
 - `"thermals"` represents the global thermal state of the system. This state can be affected by other apps and sites than the observing site.
 - `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This source is the CPU pressure for the thread the site is using, such as the main thread (window) or workers.
 
-Additional source types, such as `"gpu"` might be supported in the future. Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Availability can vary by your user agent, your operating system, and your hardware, so be sure to check this.
+Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Availability can vary by your user agent, your operating system, and your hardware.
 
 ## Examples
 
-### Using the source property
+### Using the `source` property
 
-The following example shows the use of the `source` property which you can log during pressure observation.
+In the following example we log the value of the `source` property in the pressure observer callback.
 
 ```js
 function callback(records) {
