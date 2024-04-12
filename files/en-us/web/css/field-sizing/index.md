@@ -163,7 +163,10 @@ Our HTML contains two sets of `<select>` elements — one that will have `field-
   </select>
 </div>
 <div>
-  <h2>Without <pre>field-sizing: content</pre></h2>
+  <h2>
+    Without
+    <pre>field-sizing: content</pre>
+  </h2>
   <select>
     <option>Bananas</option>
     <option>Strawberries</option>
