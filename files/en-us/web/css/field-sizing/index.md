@@ -225,7 +225,7 @@ select {
 
 {{ EmbedLiveSample('Controlling select element display', '100%', '150') }}
 
-Note the effects of `field-sizing: content`:
+Note the following effects of `field-sizing: content`:
 
 - The drop-down menu always fits the size of the displayed option, changing size as different options are selected. Without `field-sizing: content`, the size is fixed as big as the longest option.
 - The multi-select list box displays all of the options at once. Without `field-sizing: content`, the user has to scroll the box to view all the options.
