@@ -8,7 +8,7 @@ status:
 browser-compat: api.PushManager.hasPermission
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{deprecated_header}}{{ApiRef("Push API")}}{{AvailableInWorkers}}
 
 The **`PushManager.hasPermission()`** method of the {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to the `PushPermissionStatus` of the requesting webapp, which will be one of `granted`, `denied`, or `default`.
 
