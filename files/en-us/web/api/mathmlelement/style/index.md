@@ -69,7 +69,7 @@ for (const prop in elementStyle) {
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "200")}}
+{{EmbedLiveSample("Getting_style_information", "100", "130")}}
 
 ## Specifications
 
