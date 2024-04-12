@@ -50,7 +50,7 @@ Specifically, this property affects the following elements:
 - {{htmlelement("select")}} controls: These behave a bit differently to what you might expect with `field-sizing: content` set. The effect depends on the type of `<select>` control you are creating:
   - Regular drop-down select boxes will change width to always fit the displayed option value, as new values are selected. (By default, the drop-down would be sized large enough to display the longest option value.)
   - List boxes (`<select>` elements with the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) or [`size`](/en-US/docs/Web/HTML/Element/select#multiple) attributes set) will be large enough to display all the options without needing to scroll. (By default, the drop-down will require scrolling to view all the option values.)
-  - The [`size`](/en-US/docs/Web/HTML/Element/select#size) attribute has very little effect on `<select>` elements that also have `field-sizing: content` set on them. In such cases, the browser will check whether `size` is equal to `1` or not to determine whether the select should be a drop-down or a listbox, but it will always display all the options of a listbox even if `size` is smaller than the number of options.
+  - The [`size`](/en-US/docs/Web/HTML/Element/select#size) attribute has very little effect on `<select>` elements that have `field-sizing: content` set. In such cases, the browser checks if the `size` is equal to `1` to determine whether the `<select>` control should appear as a drop-down or a listbox. However, it will always display all the options of a listbox, even if `size` is smaller than the number of options.
 
 ### Sizing controls with CSS
 
