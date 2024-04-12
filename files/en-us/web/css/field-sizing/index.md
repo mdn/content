@@ -222,7 +222,6 @@ select {
 
 #### Result
 
-
 {{ EmbedLiveSample('Controlling select element display', '100%', '150') }}
 
 Note the following effects of `field-sizing: content`:
