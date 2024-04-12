@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.forcedStyleAndLayoutDuration
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`forcedStyleAndLayoutDuration`** readonly property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script processing forced layout/style, in milliseconds. See [Avoid layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing) for an idea of what causes this.
+The **`forcedStyleAndLayoutDuration`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script processing forced layout/style, in milliseconds. See [Avoid layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing) for an idea of what causes this.
 
 ## Value
 
