@@ -70,7 +70,7 @@ It is also useful to combine these properties with form attributes like [`maxlen
 
 ### Growing and shrinking text fields
 
-This example illustrates the effect of `field-sizing: content` on single- and multi-line text fields — they change size as text is added and removed, in effect shrinkwrapping the contents, until an lower or upper size limit is reached.
+This example illustrates the effect of `field-sizing: content` on single- and multi-line text fields. The fields adjust their size as text is added or removed, effectively shrinkwrapping the contents, until a lower or upper size limit is reached.
 
 #### HTML
 
