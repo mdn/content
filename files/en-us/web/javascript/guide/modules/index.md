@@ -98,7 +98,7 @@ export function draw(ctx, length, x, y, color) {
 }
 ```
 
-You can export functions, `var`, `let`, `const`, and — as we'll see later — classes. They need to be top-level items; you can't use `export` inside a function, for example.
+You can export functions, `var`, `let`, `const`, and — as we'll see later — classes. They need to be top-level items: for example, you can't use `export` inside a function.
 
 A more convenient way of exporting all the items you want to export is to use a single export statement at the end of your module file, followed by a comma-separated list of the features you want to export wrapped in curly braces. For example:
 

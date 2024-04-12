@@ -55,7 +55,7 @@ const combinedSignal = AbortSignal.any([
 
 try {
   const res = await fetch(someUrlToDownload, {
-    // Stop the fetch when any of the
+    // Stop the fetch when any of the signals aborts
     signal: combinedSignal,
   });
   const body = await res.blob();

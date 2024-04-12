@@ -41,6 +41,8 @@ If an attempt is made to set the value lower than the minimum, it is set to the 
 
 In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes.
 
+> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
+
 ### list
 
 The value of the `list` attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
@@ -71,13 +73,11 @@ The `step` attribute can also be set to the `any` string value. This `step` valu
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
-## Non-standard Attributes
+## Non-standard attributes
 
 ### orient
 
 Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
-
-> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
 
 ## Examples
 
@@ -249,92 +249,25 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox.
+To create a vertical range wherein the thumb slides up and down, set the {{cssxref("writing-mode")}} property with a value of either `vertical-rl` or `vertical-lr`:
 
-#### Horizontal range control
-
-Consider this range control:
-
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
+```html hidden
+<input type="range" min="0" max="10" value="8" />
 ```
-
-{{EmbedLiveSample("Horizontal_range_control", 200, 40)}}
-
-This control is horizontal (at least on most if not all major browsers; others might vary).
-
-#### Using the appearance property
-
-The {{cssxref('appearance')}} property has a non-standard value of `slider-vertical` that, well, makes sliders vertical.
-
-We use the same HTML as in the previous examples:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-We target just the inputs with a type of range:
 
 ```css
 input[type="range"] {
-  appearance: slider-vertical;
+  writing-mode: vertical-lr;
 }
 ```
 
-{{EmbedLiveSample("Using_the_appearance_property", 200, 200)}}
+This causes the range slider to render vertically:
 
-#### Using the orient attribute
+{{EmbedLiveSample("Creating vertical range controls", 200, 200)}}
 
-In Firefox only, there is a non-standard `orient` property.
+You can also set the CSS {{cssxref('appearance')}} property to the non-standard `slider-vertical` value if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
 
-Use similar HTML as in the previous examples, we add the attribute with a value of `vertical`:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-{{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
-
-#### writing-mode: bt-lr
-
-The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
-
-We use the same HTML as in the previous examples:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right:
-
-```css
-input[type="range"] {
-  writing-mode: bt-lr;
-}
-```
-
-{{EmbedLiveSample("writing-mode_bt-lr", 200, 40)}}
-
-#### Putting it all together
-
-As each of the above examples works in different browsers, you can put all of them in a single example to make it work cross browser:
-
-We keep the `orient` attribute with a value of `vertical` for Firefox:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-We target just the `input`s with a `type` of `range` and `orient` set to `vertical`, changing the `writing-mode` from the default to `bt-lr`, or bottom-to-top and left-to-right, for pre-Blink versions of Edge, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
-
-```css
-input[type="range"][orient="vertical"] {
-  writing-mode: bt-lr;
-  appearance: slider-vertical;
-}
-```
-
-{{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
+See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) for examples.
 
 ## Technical summary
 
@@ -407,5 +340,6 @@ input[type="range"][orient="vertical"] {
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
