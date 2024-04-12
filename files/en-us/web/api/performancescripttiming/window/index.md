@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.window
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`window`** readonly property of the {{domxref("PerformanceScriptTiming")}} interface returns a reference to a {{domxref("Window")}} object reference representing the `window` of the container (i.e. top-level document or {{htmlelement("iframe")}}) the long animation frame (LoAF)-causing script was executed in.
+The **`window`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a reference to a {{domxref("Window")}} object reference representing the `window` of the container (i.e. top-level document or {{htmlelement("iframe")}}) the long animation frame (LoAF)-causing script was executed in.
 
 ## Value
 
