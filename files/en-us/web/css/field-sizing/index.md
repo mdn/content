@@ -54,7 +54,7 @@ Specifically, this property affects the following elements:
 
 ### Sizing controls with CSS
 
-The sizing imposed on form controls by `field-sizing: content` can be overidden by CSS sizing properties. It doesn't really make sense to set {{cssxref("width")}} and {{cssxref("height")}} because that will reimpose a fixed size on the control, but using properties like {{cssxref("min-width")}} and {{cssxref("max-width")}} work well alongside `field-sizing: content`, allowing the control to grow and shrink with the entered text without getting too big or small.
+The sizing flexibility provided to form controls by `field-sizing: content` can be overridden if you use other CSS sizing properties. Avoid setting a fixed {{cssxref("width")}} and {{cssxref("height")}} when using `field-sizing: content` because they will reimpose a fixed size on the control. However, using properties like {{cssxref("min-width")}} and {{cssxref("max-width")}} alongside `field-sizing: content` is quite effective because they allow the control to grow and shrink with the entered text and also prevent the control from becoming too large or too small.
 
 It is also useful to combine these properties with form attributes like [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength), which will cause the control to stop growing in size when the maximum character limit is reached.
 
