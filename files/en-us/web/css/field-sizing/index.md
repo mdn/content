@@ -95,7 +95,7 @@ Note how:
 
 - The fields have a [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attribute set, which works usefully alongside `field-sizing: content` — the size of the field will stop increasing when the character limit is reached.
 - The `<textarea>`'s `maxlength` is bigger than that of the other two fields. The result is that the `<textarea>` will grow in the inline direction until the edge of the {{cssxref("min-width")}} constraint is reached, then start to add new lines in the block direction until the `maxlength` limit is reached.
-- The `email` input has a placeholder set. This causes the field to render big enough to show the entire placeholder. Once the field is focused and the user starts typing, the field changes size to the {{cssxref("min-width")}} set in the CSS. The `text` field, which doesn't have a placeholder, renders initially at the `min-width`.
+- The `email` input has a placeholder set. This causes the field to render big enough to show the entire placeholder. Once the field is focused and the user starts typing, the field changes size to the {{cssxref("min-width")}} value set in the CSS code below. The `text` field, which doesn't have a placeholder, renders initially at `min-width`.
 
 #### CSS
 
