@@ -23,7 +23,7 @@ If the frame has no children, the array will be empty; if the document is in a c
 
 ## Examples
 
-See [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons) for examples.
+See [Monitoring bfcache blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons) for examples.
 
 ## Specifications
 
@@ -35,5 +35,5 @@ See [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Perf
 
 ## See also
 
-- [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons)
+- [Monitoring bfcache blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons)
 - {{domxref("PerformanceNavigationTiming.notRestoredReasons")}}
