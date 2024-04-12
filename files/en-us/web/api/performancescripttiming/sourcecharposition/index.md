@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.sourceCharPosition
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`sourceCharPosition`** readonly property of the {{domxref("PerformanceScriptTiming")}} interface returns a number representing the script character position of the script feature that contributed to the long animation frame (LoAF).
+The **`sourceCharPosition`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a number representing the script character position of the script feature that contributed to the long animation frame (LoAF).
 
 It is important to note that the reported function location will be the "entry point" of the script, i.e. the top level of the stack, and not any specific slow sub-function. See {{domxref("PerformanceScriptTiming.sourceFunctionName")}} for more discussion around this.
 
