@@ -186,3 +186,5 @@ Additional blocking reasons may be used by some browsers, for example:
 - [`notRestoredReasons` API Explainer](https://github.com/WICG/bfcache-not-restored-reason/blob/main/NotRestoredReason.md)
 - {{domxref("PerformanceNavigationTiming.notRestoredReasons")}}
 - {{domxref("NotRestoredReasons")}}
+
+> **Note:** This article is adapted from [Back/forward cache notRestoredReasons API](https://developer.chrome.com/docs/web-platform/bfcache-notrestoredreasons/) by Chris Mills and Barry Pollard, originally published on `developer.chrome.com` in 2023 under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
