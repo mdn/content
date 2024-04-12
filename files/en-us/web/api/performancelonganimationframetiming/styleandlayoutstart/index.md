@@ -10,7 +10,7 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.styleAndLayoutStart
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`styleAndLayoutStart`** readonly property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame, in milliseconds.
+The **`styleAndLayoutStart`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame, in milliseconds.
 
 ## Value
 
