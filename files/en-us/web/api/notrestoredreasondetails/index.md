@@ -37,5 +37,5 @@ See [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Perf
 
 ## See also
 
-- [Reporting back/forward cache not restored reasons](/en-US/docs/Web/API/Performance_API/Reporting_backforward_cache_not_restored_reasons)
+- [Monitoring bfcache blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons)
 - {{domxref("PerformanceNavigationTiming.notRestoredReasons")}}
