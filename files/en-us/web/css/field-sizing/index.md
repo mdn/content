@@ -9,7 +9,7 @@ browser-compat: css.properties.field-sizing
 
 The **`field-sizing`** [CSS](/en-US/docs/Web/CSS) property sets the sizing behavior of elements that by default are given a default preferred size — i.e. form control elements. `field-sizing` enables this behavior to be overridden so that controls are instead sized to fit their contents.
 
-This property is typically used to create text [inputs](/en-US/docs/Web/HTML/Element/input) and {{htmlelement("textarea")}}s that shrinkwrap their content and grow as more text is entered.
+This property is typically used to style text [{{htmlelement("input")}} and {{htmlelement("textarea")}} elements to allow them to both shrinkwrap their content as well as grow when more text is entered into the form control.
 
 ## Syntax
 
