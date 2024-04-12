@@ -28,10 +28,6 @@ This article provides information about the changes in Firefox 115 that affect d
   These methods return a new array with elements that have been shallow copied (similarly named methods without the `to` prefix modify the array elements in place).
   ([Firefox bug 1811057](https://bugzil.la/1811057)).
 
-### SVG
-
-No notable changes.
-
 ### HTTP
 
 - The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.

@@ -20,6 +20,11 @@ The **CSS writing modes** module defines various international writing modes, su
 - {{cssxref("unicode-bidi")}}
 - {{cssxref("writing-mode")}}
 
+## Guides
+
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+  - : The article explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref("direction")}} properties to create and configure vertical form controls.
+
 ## Specifications
 
 {{Specifications}}

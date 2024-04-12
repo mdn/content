@@ -312,18 +312,17 @@ textarea {
 
 ## See also
 
-Other form-related elements:
-
-- {{ HTMLElement("form") }}
-- {{ HTMLElement("button") }}
-- {{ HTMLElement("datalist") }}
-- {{ HTMLElement("legend") }}
-- {{ HTMLElement("label") }}
-- {{ HTMLElement("select") }}
-- {{ HTMLElement("optgroup") }}
-- {{ HTMLElement("option") }}
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("fieldset") }}
-- {{ HTMLElement("output") }}
-- {{ HTMLElement("progress") }}
-- {{ HTMLElement("meter") }}
+- Other form-related elements:
+  - {{ HTMLElement("form") }}
+  - {{ HTMLElement("button") }}
+  - {{ HTMLElement("datalist") }}
+  - {{ HTMLElement("legend") }}
+  - {{ HTMLElement("label") }}
+  - {{ HTMLElement("select") }}
+  - {{ HTMLElement("optgroup") }}
+  - {{ HTMLElement("option") }}
+  - {{ HTMLElement("input") }}
+  - {{ HTMLElement("fieldset") }}
+  - {{ HTMLElement("output") }}
+  - {{ HTMLElement("progress") }}
+  - {{ HTMLElement("meter") }}

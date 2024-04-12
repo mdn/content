@@ -8,7 +8,7 @@ browser-compat: api.Navigator.vibrate
 
 {{APIRef("Vibration API")}}
 
-The **`Navigator.vibrate()`** method pulses the vibration
+The **`vibrate()`** method of the {{domxref("Navigator")}} interface pulses the vibration
 hardware on the device, if such hardware exists. If the device doesn't support
 vibration, this method has no effect. If a vibration pattern is already in progress when
 this method is called, the previous pattern is halted and the new one begins instead.
