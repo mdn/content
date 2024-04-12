@@ -95,6 +95,7 @@ The following guides help you to understand key concepts of the Performance API 
 - [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
 - [Server timing](/en-US/docs/Web/API/Performance_API/Server_timing): Collecting server-side metrics.
 - [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing): Collecting metrics on long animation frames (LoAFs) and their causes.
+- [Monitoring bfcache blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons): Reporting on why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
 
 ## Specifications
 

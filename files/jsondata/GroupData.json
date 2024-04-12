@@ -1077,13 +1077,16 @@
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
         "/docs/Web/API/Performance_API/User_timing",
-        "/docs/Web/API/Performance_API/Server_timing"
+        "/docs/Web/API/Performance_API/Server_timing",
+        "/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons"
       ],
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
         "LayoutShift",
         "LayoutShiftAttribution",
+        "NotRestoredReasons",
+        "NotRestoredReasonDetails",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
