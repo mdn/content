@@ -20,7 +20,9 @@ In its simplest form, a popover is created by adding the [`popover`](/en-US/docs
 
 > **Note:** Setting the `popover` attribute with no value is equivalent to setting `popover="auto"`.
 
-Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add some control buttons. You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
+Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add 
+some
+ control buttons. You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
@@ -41,21 +43,28 @@ If you want to change that behavior, you can use the [`popovertargetaction`](/en
 <div id="mypopover" popover>Popover content</div>
 ```
 
-You can see how the previous code snippet renders in our [Basic declarative popover example](https://mdn.github.io/dom-examples/popover-api/basic-declarative/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)).
+You can see how the previous code snippet renders in our [Basic declarative popover example](https://mdn.github.io/dom-examples/popover-api/basic-declarative/) ([so
+urce](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)).
 
 > **Note:** If the `popovertargetaction` attribute is omitted, `"toggle"` is the default action that will be performed by a control button.
 
-When a popover is shown, it has `display: none` removed from it and it is put into the {{glossary("top layer")}} so it will sit on top of all other page content.
+When a popover is shown, it has `display: none` removed from it and it is put into the {{glossary("top layer")}} 
+so
+ it will sit on top of all other page content.
 
 ## auto state, and "light dismiss"
 
 When a popover element is set with `popover` or `popover="auto"` as shown above, it is said to have **auto state**. The two important behaviors to note about auto state are:
 
 - The popover can be "light dismissed" — this means that you can hide the popover by clicking outside it.
-- The popover can also be closed, using browser-specific mechanisms such as pressing the <kbd>Esc</kbd> key.
+- The popover can al
+so
+ be closed, using browser-specific mechanisms such as pressing the <kbd>Esc</kbd> key.
 - Usually, only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See the [Nested popovers](#nested_popovers) section for more details.
 
-> **Note:** `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
+> **Note:** `popover="auto"` popovers are al
+so
+ dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
 
 Auto state is useful when you only want to show a single popover at once. Perhaps you have multiple teaching UI messages that you want to show, but don't want the display to start getting cluttered and confusing, or perhaps you are showing status messages where the new status overrides any previous status.
 
@@ -251,7 +260,7 @@ There are three different ways to create nested popovers:
    <div popover anchor="foo">Child</div>
    ```
 
-See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content , either in an SPA or multi-page website, some of all of these may not be necessary, but they have been included in this demo for illustrative purposes.
+See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content , either in an SPA or multi-page website, some or all of these may not be necessary, but they have been included in this demo for illustrative purposes.
 
 ## Styling popovers
 
