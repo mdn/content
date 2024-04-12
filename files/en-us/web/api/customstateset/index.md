@@ -462,7 +462,6 @@ The downside to this approach is that the dashes must be included when using the
 
 ```js
 class CompatibleStateElement extends HTMLElement {
-  #internals;
   constructor() {
     super();
     this._internals = this.attachInternals();
