@@ -10,7 +10,7 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.renderStart
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`renderStart`** readonly property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle in milliseconds, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
+The **`renderStart`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle in milliseconds, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
 
 ## Value
 
