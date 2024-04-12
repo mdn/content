@@ -22,7 +22,25 @@ Permissions-Policy: compute-pressure=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `compute-pressure` is `*`.
+The default allowlist for `compute-pressure` is `self` allowing usage in same-origin nested frames but preventing third-party content from using the feature. Workers (dedicated and shared) adhere to the permission policy set by their owning document(s).
+
+## Examples
+
+### Enabling compute pressure on third-party content
+
+Third-party usage can be selectively enabled using the `allow` attribute on {{HTMLElement("iframe")}} elements:
+
+```html
+<iframe src="https://example.com" allow="compute-pressure"></iframe>
+```
+
+### Disabling the Compute Pressure API completely
+
+This HTTP response header disables compute pressure completely:
+
+```http
+Permissions-Policy: {"compute-pressure": []}
+```
 
 ## Specifications
 

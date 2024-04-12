@@ -40,6 +40,7 @@ The Compute Pressure API can listen for pressure changes in the following contex
 - {{domxref("Window")}} (main thread)
 - {{domxref("Worker")}}
 - {{domxref("SharedWorker")}}
+- {{HTMLElement("iFrame")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/compute-pressure) is provided)
 
 ### Pressure states
 
