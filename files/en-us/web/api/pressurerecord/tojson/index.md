@@ -28,7 +28,7 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Pressure
 
 ## Examples
 
-### Using the toJSON method
+### Using the `toJSON` method
 
 In this example, calling `lastRecord.toJSON()` returns a JSON representation of the {{domxref("PressureRecord")}} object.
 

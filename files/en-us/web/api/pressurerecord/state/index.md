@@ -30,7 +30,7 @@ In the following example we log the value of the `state` property in the pressur
 ```js
 function callback(records) {
   const lastRecord = records[records.length - 1];
-  console.log(`Current pressure ${lastRecord.state}`);
+  console.log(`Current pressure is ${lastRecord.state}`);
 }
 
 const observer = new PressureObserver(callback);

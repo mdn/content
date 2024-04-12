@@ -10,7 +10,7 @@ browser-compat: api.PressureObserver.disconnect
 
 {{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`disconnect()`** method of the {{domxref('PressureObserver')}} interface stops the pressure observer callback from receiving pressure records from any source and clears all pending records since the callback was last invoked.
+The **`disconnect()`** method of the {{domxref('PressureObserver')}} interface stops the pressure observer callback from receiving pressure records from all sources.
 
 ## Syntax
 
@@ -39,14 +39,15 @@ function pressureChange(records, observer) {
   for (const record of records) {
     samples.push(record.state);
     // We only want 20 samples
-    if (samples.length == 20) {
-      // read records before disconnecting and clearing all records
-      const sampleRecords = observer.takeRecords();
+    if (samples.length === 20) {
       observer.disconnect();
       return;
     }
   }
 }
+
+const observer = new PressureObserver(pressureChange);
+observer.observe("cpu");
 ```
 
 ## Specifications

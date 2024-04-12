@@ -26,7 +26,7 @@ In the following example we log the value of the `time` property in the pressure
 function callback(records) {
   const lastRecord = records[records.length - 1];
   console.log(`Current pressure ${lastRecord.state}`);
-  console.log(`Current observed at ${lastRecord.time}`);
+  console.log(`Current pressure observed at ${lastRecord.time}`);
 }
 
 const observer = new PressureObserver(callback);

@@ -27,6 +27,24 @@ The **`PressureRecord`** interface is part of the [Compute Pressure API](/en-US/
 
 ## Examples
 
+### Using the `PressureRecord` object
+
+In the following example we log the properties of the `PressureRecord` object in the pressure observer callback.
+
+```js
+function callback(records) {
+  const lastRecord = records[records.length - 1];
+  console.log(`Current pressure is ${lastRecord.state}`);
+  console.log(`Current pressure observed at ${lastRecord.time}`);
+  console.log(`Current pressure source: ${lastRecord.source}`);
+}
+
+const observer = new PressureObserver(callback);
+await observer.observe("cpu", {
+  sampleInterval: 1000, // 1000ms
+});
+```
+
 ## Specifications
 
 {{Specifications}}

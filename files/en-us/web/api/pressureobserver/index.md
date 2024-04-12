@@ -28,7 +28,7 @@ The **`PressureObserver`** interface is part of the [Compute Pressure API](/en-U
 - {{domxref("PressureObserver.unobserve","PressureObserver.unobserve()")}}
   - : Stops the pressure observer callback from receiving pressure records from the specified `source`.
 - {{domxref("PressureObserver.disconnect","PressureObserver.disconnect()")}}
-  - : Stops the pressure observer callback from receiving pressure records from any source and clears all pending records since the callback was last invoked.
+  - : Stops the pressure observer callback from receiving pressure records from all sources.
 - {{domxref("PressureObserver.takeRecords","PressureObserver.takeRecords()")}}
   - : Returns the current list of pressure records stored in the pressure observer, emptying it out.
 
