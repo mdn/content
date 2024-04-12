@@ -132,7 +132,7 @@ label {
 
 #### Result
 
-The output looks like this. Try entering and removing text in a supporting browser to get a feel of the effects of `field-sizing: content`.
+Try entering and removing text in the fields below to explore the effects of `field-sizing: content` alongside other sizing properties.
 
 {{ EmbedLiveSample('Growing/shrinking text fields', '100%', '200') }}
 
