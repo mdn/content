@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.invokerType
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`invokerType`** readonly property of the {{domxref("PerformanceScriptTiming")}} interface returns a string value indicating the type of feature that, when invoked, ran the script.
+The **`invokerType`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a string value indicating the type of feature that, when invoked, ran the script.
 
 ## Value
 
