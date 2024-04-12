@@ -95,7 +95,7 @@ svg|a:active {
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

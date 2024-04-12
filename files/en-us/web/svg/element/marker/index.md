@@ -191,7 +191,7 @@ svg {
   - : This attribute defines the bound of the SVG viewport for the current SVG fragment.
     _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
