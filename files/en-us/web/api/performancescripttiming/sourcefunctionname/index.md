@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.sourceFunctionName
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`sourceFunctionName`** readonly property of the {{domxref("PerformanceScriptTiming")}} interface returns a string representing the name of the function that contributed to the LoAF.
+The **`sourceFunctionName`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a string representing the name of the function that contributed to the LoAF.
 
 It is important to note that the reported function name will be the "entry point" of the script (i.e. the top level of the stack), and not any specific slow sub-function.
 
