@@ -8,7 +8,7 @@ status:
 browser-compat: api.ContentIndex.getAll
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`getAll()`** method of the
 {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
