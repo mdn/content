@@ -29,9 +29,9 @@ field-sizing: unset;
 ### Values
 
 - `content`
-  - : Affected elements are sized to fit their contents.
+  - : Allows the element to adjust its size to fit its contents.
 - `fixed`
-  - : Affected elements are sized with a fixed preferred size.
+  - : Sets a fixed size for the element.
 
 ## Description
 
