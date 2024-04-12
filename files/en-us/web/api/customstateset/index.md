@@ -428,7 +428,7 @@ Setting the state to a name without the two dashes will cause an error in some v
 
 ```js
 class CompatibleStateElement extends HTMLElement {
-  constructor () {
+  constructor() {
     super();
     this._internals = this.attachInternals();
   }
