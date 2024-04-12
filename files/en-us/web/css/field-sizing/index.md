@@ -222,7 +222,6 @@ select {
 
 #### Result
 
-The output looks like this.
 
 {{ EmbedLiveSample('Controlling select element display', '100%', '150') }}
 
