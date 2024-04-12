@@ -155,7 +155,12 @@ The inconsistent spacing between words created by justified text can be problema
 
 ### Table alignment
 
-This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells.
+This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements:
+
+- it aligns the caption to the right
+- it aligns one column header (`th`) to the right, but keeps the other centered
+- it aligns each row differently
+- it overrides the alignment of some cells to make it different of the default row alignment.
 
 #### HTML
 
@@ -170,19 +175,19 @@ This example demonstrates how the use of `text-align` on {{htmlelement("table")}
     <th style="text-align: right">Col 3</th>
   </thead>
   <tr id="r1">
-    <td id="c11">11</td>
+    <td>11</td>
     <td id="c12">12</td>
-    <td id="c13">13</td>
+    <td>13</td>
   </tr>
   <tr id="r2">
-    <td id="c21">21</td>
-    <td id="c22">22</td>
-    <td id="c23">23</td>
+    <td>21</td>
+    <td>22</td>
+    <td>23</td>
   </tr>
   <tr id="r3">
     <td id="c31">31</td>
-    <td id="c32">32</td>
-    <td id="c33">33</td>
+    <td>32</td>
+    <td>33</td>
   </tr>
 </table>
 ```
@@ -196,23 +201,33 @@ table {
   width: 250px;
   height: 150px;
 }
+
 thead {
   text-align: left;
 }
+
 td,
 th {
   border: solid 1px black;
 }
+
 #r1 {
   text-align: right;
 }
+
 #c12 {
   text-align: center;
 }
+
 #r2 {
   text-align: center;
 }
+
 #c31 {
+  text-align: right;
+}
+
+.caption {
   text-align: right;
 }
 ```
