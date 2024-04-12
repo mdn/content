@@ -146,7 +146,10 @@ Our HTML contains two sets of `<select>` elements — one that will have `field-
 
 ```html
 <div class="field-sizing">
-  <h2>With <pre>field-sizing: content</pre></h2>
+  <h2>
+    With
+    <pre>field-sizing: content</pre>
+  </h2>
   <select>
     <option>Bananas</option>
     <option>Strawberries</option>
