@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureObserver.PressureObserver
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`PressureObserver()`** constructor creates a new {{domxref("PressureObserver")}} object with the given observer `callback`. The specified observer callback is invoked when pressure state changes occurred.
 

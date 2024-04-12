@@ -7,7 +7,7 @@ status:
 browser-compat: api.PressureObserver
 ---
 
-{{DefaultAPISidebar("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The **Compute Pressure API** is a JavaScript API that enables you to observe the pressure of system resources such as the CPU.
 

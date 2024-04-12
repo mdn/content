@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureRecord.toJSON
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PressureRecord")}} object.
 

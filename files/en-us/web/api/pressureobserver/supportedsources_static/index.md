@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureObserver.supportedSources_static
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The static **`supportedSources`** read-only property of the {{domxref("PressureObserver")}} interface returns an array of the {{domxref("PressureRecord.source","source")}} values supported by the user agent.
 

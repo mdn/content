@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureRecord.source
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The read-only **`source`** property is a string indicating the origin source from which the record is coming.
 
