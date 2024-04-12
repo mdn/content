@@ -8,13 +8,9 @@ browser-compat: api.RTCIceTransport.role
 
 {{APIRef("WebRTC")}}
 
-The read-only **{{domxref("RTCIceTransport")}}**
-property **`role`** indicates which {{Glossary("ICE")}} role
-the transport is fulfilling: that of the controlling agent, or the agent that is being
-controlled.
+The **`role`** read-only property of the {{domxref("RTCIceTransport")}} interface indicates which {{Glossary("ICE")}} role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.
 
-You can learn more about ICE roles in
-[Choosing a candidate pair](/en-US/docs/Web/API/WebRTC_API/Connectivity#choosing_a_candidate_pair).
+You can learn more about ICE roles in [Choosing a candidate pair](/en-US/docs/Web/API/WebRTC_API/Connectivity#choosing_a_candidate_pair).
 
 ## Value
 

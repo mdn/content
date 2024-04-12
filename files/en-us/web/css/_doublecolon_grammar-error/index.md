@@ -39,7 +39,9 @@ In this example, eventual supporting browsers should highlight any flagged gramm
 #### HTML
 
 ```html
-<p>My friends is coming to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends is coming to the party tonight.
+</p>
 ```
 
 #### CSS

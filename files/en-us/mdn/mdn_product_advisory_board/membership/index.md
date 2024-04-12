@@ -68,7 +68,7 @@ Provide feedback on scheduling annual and quarterly meetings;
 
 b. Members may be required to provide personal information and material (bios, etc.) for analyst, press, and/or trade publications and press releases.
 
-c. All Members must sign the MDN Product Advisory Board Agreement and agree to the MDN PAB Code of Conduct and Antitrust Policy.
+c. All Members must sign the MDN Product Advisory Board Agreement and agree to the MDN PAB [Code of Conduct](https://www.mozilla.org/about/governance/policies/participation/) and Antitrust Policy.
 
 ## 5. MDN PAB Member Benefits
 

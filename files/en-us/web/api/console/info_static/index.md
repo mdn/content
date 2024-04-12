@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.console.info_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.info()`** static method outputs an informational message to the console. In Firefox, a small "i" icon is displayed next to these items in the console's log.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

@@ -2,7 +2,7 @@
 title: textLength
 slug: Web/SVG/Attribute/textLength
 page-type: svg-attribute
-browser-compat: svg.attributes.textLength
+browser-compat: svg.global_attributes.textLength
 ---
 
 {{SVGRef}}

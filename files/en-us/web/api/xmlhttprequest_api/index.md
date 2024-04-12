@@ -6,9 +6,7 @@ browser-compat: api.XMLHttpRequest
 spec-urls: https://xhr.spec.whatwg.org/
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
-
-{{AvailableInWorkers("notservice")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **XMLHttpRequest API** enables web apps to make HTTP requests to web servers and receive the responses programmatically using JavaScript. This in turn enables a website to update just part of a page with data from the server, rather than having to navigate to a whole new page. This practice is also sometimes known as {{glossary("Ajax")}}.
 

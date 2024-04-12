@@ -148,3 +148,4 @@ Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested 
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [Nesting container queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#nested_queries)

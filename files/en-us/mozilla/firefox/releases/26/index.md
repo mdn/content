@@ -70,4 +70,4 @@ ECMAScript 2015 implementation continues!
 
 ### Older versions
 
-{{Firefox_for_developers('25')}}
+{{Firefox_for_developers}}

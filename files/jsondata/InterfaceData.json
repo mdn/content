@@ -528,6 +528,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFontFaceDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSFontFaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -656,6 +660,10 @@
       "inh": "CSSColorValue",
       "impl": []
     },
+    "CSSPageDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSPageRule": {
       "inh": "CSSGroupingRule",
       "impl": []
@@ -692,8 +700,8 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
-    "CSSPositionFallbackRule": {
-      "inh": "CSSGroupingRule",
+    "CSSPositionTryRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSPropertyRule": {
@@ -748,6 +756,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSStyleProperties": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSStyleRule": {
       "inh": "CSSGroupingRule",
       "impl": []
@@ -778,10 +790,6 @@
     },
     "CSSTranslate": {
       "inh": "CSSTransformComponent",
-      "impl": []
-    },
-    "CSSTryRule": {
-      "inh": "CSSRule",
       "impl": []
     },
     "CSSUnitValue": {
@@ -862,6 +870,10 @@
     },
     "DevicePosture": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "DigitalCredential": {
+      "inh": "Credential",
       "impl": []
     },
     "DigitalGoodsService": {
@@ -1193,6 +1205,10 @@
       "impl": []
     },
     "FontMetrics": {
+      "inh": "",
+      "impl": []
+    },
+    "ForDebuggingOnly": {
       "inh": "",
       "impl": []
     },
@@ -1876,12 +1892,20 @@
       "inh": "UIEvent",
       "impl": []
     },
+    "InstallEvent": {
+      "inh": "ExtendableEvent",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
       "impl": []
     },
-    "InterestGroupBiddingScriptRunnerGlobalScope": {
+    "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
+      "impl": []
+    },
+    "InterestGroupBiddingScriptRunnerGlobalScope": {
+      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
       "impl": []
     },
     "InterestGroupReportingScriptRunnerGlobalScope": {
@@ -1889,7 +1913,7 @@
       "impl": []
     },
     "InterestGroupScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
+      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
       "impl": []
     },
     "InterestGroupScriptRunnerGlobalScope": {
@@ -2184,10 +2208,6 @@
       "inh": "",
       "impl": []
     },
-    "MLCommandEncoder": {
-      "inh": "",
-      "impl": []
-    },
     "MLContext": {
       "inh": "",
       "impl": []
@@ -2328,6 +2348,14 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
+    "NotRestoredReasonDetails": {
+      "inh": "",
+      "impl": []
+    },
+    "NotRestoredReasons": {
+      "inh": "",
+      "impl": []
+    },
     "OES_draw_buffers_indexed": {
       "inh": "",
       "impl": []
@@ -2401,6 +2429,10 @@
       "impl": []
     },
     "PageRevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "PageSwapEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -2638,6 +2670,10 @@
     },
     "PromiseRejectionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "ProtectedAudience": {
+      "inh": "",
       "impl": []
     },
     "ProximitySensor": {
@@ -2880,10 +2916,6 @@
       "inh": "Event",
       "impl": []
     },
-    "Sanitizer": {
-      "inh": "",
-      "impl": []
-    },
     "Scheduler": {
       "inh": "",
       "impl": []
@@ -3014,14 +3046,6 @@
     },
     "SnapEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "SnapTargetArray": {
-      "inh": "",
-      "impl": []
-    },
-    "SnapTargetList": {
-      "inh": "",
       "impl": []
     },
     "SourceBuffer": {
@@ -3572,6 +3596,10 @@
       "inh": "",
       "impl": []
     },
+    "TextEvent": {
+      "inh": "UIEvent",
+      "impl": []
+    },
     "TextFormat": {
       "inh": "",
       "impl": []
@@ -3793,6 +3821,10 @@
       "impl": []
     },
     "ViewTransition": {
+      "inh": "",
+      "impl": []
+    },
+    "ViewTransitionTypeSet": {
       "inh": "",
       "impl": []
     },

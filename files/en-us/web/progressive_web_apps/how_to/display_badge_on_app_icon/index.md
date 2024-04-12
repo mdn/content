@@ -30,7 +30,7 @@ Safari and Firefox on desktop do not support the Badging API and do not support 
 
 ### Mobile support
 
-Badges are supported on mobile operating systems, including Chromium-based browsers running on Android and in Safari on iOS and iPadOS, starting with iPadOS 16.4.
+Badges are supported in Safari on iOS and iPadOS, starting with iPadOS 16.4. The badging API is not supported on Chromium-based browsers running on Android. Instead, Android automatically shows a badge on the PWA's app icon when there is an unread notification, just as it does for Android apps.
 
 ## Badge best practices
 
@@ -119,7 +119,8 @@ Badges can be useful to re-engage users with your app when they're not already u
 PWAs can use the following mechanisms to update in the background and display, update, or hide their badges:
 
 - [Push API](/en-US/docs/Web/API/Push_API)
-  - : PWAs can use this API to receive messages from a server even when the app is not running.
+  - : PWAs can use this API to receive messages from a server even when the app is not running. Most browsers require a notification to be displayed whenever a push message is received. This is fine for some use cases (for example, showing a notification when updating the badge), but makes it impossible to subtly update the badge without displaying a notification. In addition, users must grant your site notification permission in order to receive push messages.
+    For more information, see the [ServiceWorkerRegistration: showNotification() method](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
   - : PWAs can use this API to run code in the background when a stable network connection is detected.
 - [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
@@ -142,11 +143,14 @@ self.addEventListener("push", (event) => {
       navigator.clearAppBadge();
     }
   }
+  // It's obligatory to show the notification to the user.
+  self.registration.showNotification(`${unreadCount} unread messages`);
 });
 ```
 
 ## See also
 
 - [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
+- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
 - [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
 - [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)

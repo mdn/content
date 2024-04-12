@@ -74,5 +74,4 @@ let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- WebGL depth buffer related methods: {{domxref("WebGLRenderingContext.depthFunc",
-    "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}
+- WebGL depth buffer related methods: {{domxref("WebGLRenderingContext.depthFunc", "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}

@@ -51,6 +51,14 @@ oklab(59% 0.1 0.1 / 0.5)
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
+/* Relative CSS colors */
+/* HSL hue change */
+hsl(from red 240deg s l)
+/* HWB alpha channel change */
+hwb(from green h w b / 0.5)
+/* LCH lightness change */
+lch(from blue calc(l + 20) c h)
+
 /* light-dark */
 light-dark(white, black)
 light-dark(rgb(255 255 255), rgb(0 0 0))
@@ -60,11 +68,12 @@ A `<color>` value can be specified using one of the methods listed below:
 
 - By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
 - By hexadecimal notations: {{CSSXref("&lt;hex-color&gt;")}} (such as `#ff0000`).
-- By parameters in a color space using functional notations:
+- By `<color-function>`, with parameters in a {{glossary("color space")}} using functional notations:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
+- By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
 - By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
@@ -88,7 +97,7 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 
 Each component of any CSS color functions - except for those using the legacy comma-separated syntax - can be specified as the keyword `none` to be a missing component.
 
-Explicitly specifying missing components is useful in [color interpolation](#interpolation_with_missing_components) for cases where you would like to interpolate some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
+Explicitly specifying [missing components in color interpolation](#interpolation_with_missing_components) is useful for cases where you would like to {{glossary("interpolation", "interpolate")}} some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
 
 ```css
 /* These are equivalent */
@@ -438,4 +447,5 @@ div:nth-child(6) {
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

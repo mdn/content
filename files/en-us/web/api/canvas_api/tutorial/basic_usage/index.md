@@ -113,7 +113,7 @@ The script includes a function called `draw()`, which is executed once the page 
 
 Here is how a template would look in action. As shown here, it is initially blank.
 
-{{EmbedLiveSample("A_skeleton_template", 160, 160)}}
+{{EmbedLiveSample("A_skeleton_template", "", "160")}}
 
 ## A simple example
 
@@ -149,6 +149,6 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 This example looks like this:
 
-{{EmbedLiveSample("A_simple_example", 160, 160, "canvas_ex1.png")}}
+{{EmbedLiveSample("A_simple_example", "", "160")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

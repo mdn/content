@@ -20,7 +20,7 @@ The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/
 
 ## Examples
 
-The following will register a {{cssxref('--*', 'CSS custom property')}} named `--my-prop` using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
+The following will register a {{cssxref('--*', 'CSS custom property')}} named `--my-color` using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript). `--my-color` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```js
 window.CSS.registerProperty({

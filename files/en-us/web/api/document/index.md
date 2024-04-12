@@ -174,6 +174,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
+- {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -351,7 +353,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/scrollend_event", "scrollend")}}
-  - : Fired when the document view or an element has been scrolled.
+  - : Fired when the document view or an element has completed scrolling.
 
 ### Selection events
 

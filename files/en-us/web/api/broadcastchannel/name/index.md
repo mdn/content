@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.BroadcastChannel.name
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
 The read-only **`BroadcastChannel.name`** property returns a string, which uniquely identifies the given channel with its name. This name is passed to the {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} constructor at creation time and is therefore read-only.
-
-{{AvailableInWorkers}}
 
 ## Values
 

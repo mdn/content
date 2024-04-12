@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.WebTransportBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a bidirectional stream created by a server or a client that can be used for reliable transport. Provides access to a {{domxref("WebTransportReceiveStream")}} for reading incoming data, and a {{domxref("WebTransportSendStream")}} for writing outgoing data.
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 
@@ -25,7 +23,7 @@ The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTranspo
 ### Bidirectional transmission initiated by the user agent
 
 To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportBidirectionalStream")}}. The `readable` and `writable` properties return references to `WebTransportReceiveStream` and `WebTransportSendStream` instances.
-These inherit from `ReadableStream` and `WebTransportReceiveStream` respectively, and can be used to read from and write to the server.
+These inherit from `ReadableStream` and `WritableStream` respectively, and can be used to read from and write to the server.
 
 ```js
 async function setUpBidirectional() {

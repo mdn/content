@@ -84,7 +84,7 @@ Inherited into roles:
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [Toolbar example](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/toolbar/toolbar.html) - W3C WAI ARIA practices
+- [Toolbar example](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/) - W3C WAI ARIA practices
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
