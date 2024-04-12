@@ -186,7 +186,7 @@ Our HTML contains two sets of `<select>` elements — one that will have `field-
 
 #### CSS
 
-In the CSS, we set `field-sizing: content` on the first set of `<select>` elements only.
+In the CSS, `field-sizing: content` is set only on the first set of `<select>` elements.
 
 ```css hidden
 body {
