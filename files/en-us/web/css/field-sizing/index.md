@@ -136,7 +136,7 @@ Try entering and removing text in the fields below to explore the effects of `fi
 
 {{ EmbedLiveSample('Growing/shrinking text fields', '100%', '200') }}
 
-### Controlling select element display
+### Controlling `<select>` element display
 
 This example illustrates the effect of `field-sizing: content` on {{htmlelement("select")}} elements, both drop-down menu types and multiline listbox types.
 
