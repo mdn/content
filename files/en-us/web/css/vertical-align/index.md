@@ -198,25 +198,26 @@ p {
 
 ### Vertical alignment in a table cell
 
+In this example, we have a table with a single row containing six cells. The row sets `vertical-align` to `bottom` as the default value.
+
+- The first four cells each set their own `vertical-align` values, and these override the row's value.
+- The fifth cell does not set any `vertical-align` value, so inherits the row's value.
+
+The sixth cell is only used to ensure that the cells are tall enough to see the effect.
+
 #### HTML
 
 ```html
 <table>
-  <tr style="vertical-align: bottom">
-    <td style="vertical-align: baseline">baseline</td>
-    <td style="vertical-align: top">top</td>
-    <td style="vertical-align: middle">middle</td>
-    <td style="vertical-align: bottom">bottom</td>
+  <tr class="bottom">
+    <td class="baseline">baseline</td>
+    <td class="top">top</td>
+    <td class="middle">middle</td>
+    <td>bottom</td>
     <td>Row's style</td>
     <td>
-      <p>
-        There is a theory which states that if ever anyone discovers exactly
-        what the Universe is for and why it is here, it will instantly disappear
-        and be replaced by something even more bizarre and inexplicable.
-      </p>
-      <p>
-        There is another theory which states that this has already happened.
-      </p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      pretium felis eu sem mattis vulputate.
     </td>
   </tr>
 </table>
@@ -240,6 +241,22 @@ td {
 td {
   padding: 0.5em;
   font-family: monospace;
+}
+
+.bottom {
+  vertical-align: bottom;
+}
+
+.baseline {
+  vertical-align: baseline;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.middle {
+  vertical-align: middle;
 }
 ```
 
