@@ -35,9 +35,9 @@ This article discusses Uniform Resource Locators (URLs), explaining what they ar
 
 ## Summary
 
-With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, **_URL_** is one of the key concepts of the Web. It is the mechanism used by {{Glossary("Browser","browsers")}} to retrieve any published resource on the web.
+A **URL** (Uniform Resource Locator) is the address of a unique resource on the internet. It is one of the key mechanisms used by {{Glossary("Browser","browsers")}} to retrieve published resources, such as HTML pages, CSS documents, images, and so on.
 
-**URL** stands for _Uniform Resource Locator_. A URL is nothing more than the address of a given unique resource on the Web. In theory, each valid URL points to a unique resource. Such resources can be an HTML page, a CSS document, an image, etc. In practice, there are some exceptions, the most common being a URL pointing to a resource that no longer exists or that has moved. As the resource represented by the URL and the URL itself are handled by the Web server, it is up to the owner of the web server to carefully manage that resource and its associated URL.
+In theory, each valid URL points to a unique resource. In practice, there are some exceptions, the most common being a URL pointing to a resource that no longer exists or that has moved. As the resource represented by the URL and the URL itself are handled by the Web server, it is up to the owner of the web server to carefully manage that resource and its associated URL.
 
 ## Basics: anatomy of a URL
 
@@ -49,7 +49,7 @@ https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
-Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
+Any of those URLs can be typed into your browser's address bar to tell it to load the associated resource, which in all three cases is a Web page.
 
 A URL is composed of different parts, some mandatory and others optional. The most important parts are highlighted on the URL below (details are provided in the following sections):
 
