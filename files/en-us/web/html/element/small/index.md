@@ -63,7 +63,7 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
         >,
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
-        >
+        >.
       </td>
     </tr>
     <tr>
