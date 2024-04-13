@@ -50,7 +50,7 @@ setValidity(flags, message, anchor)
 - `message` {{Optional_Inline}}
   - : A string containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.
 - `anchor` {{Optional_Inline}}
-  - : An {{domxref("HTMLElement")}} which can be used by the user agent to report problems with this form submission. An anchor should be focusable, or it may result in an error, or your validation message may not appear at all depending on your browser.
+  - : An {{domxref("HTMLElement")}} which can be used by the user agent to report problems with this form submission. An anchor should be focusable, or it may result in an error, or your validation message may not appear at all depending on your browser. If no anchor is provided, ensure the host custom element is focusable, or that it has `{ delegatesFocus: true }` and a focusable element in it's shadowRoot.
 
 ### Return value
 
