@@ -44,7 +44,7 @@ get(options)
 
         If `mediation` is omitted, it will default to `"optional"`.
 
-        > **Note:** In the case of a federated authentication (FedCM API) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the IdP (via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation) and the RP (via the {{domxref("IdentityCredential.isAutoSelected")}} property). This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
+        > **Note:** In the case of a [federated authentication (FedCM API)](<](/en-US/docs/Web/API/FedCM_API)>) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the identity provider (IdP) via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation and the relying party (RP) via the {{domxref("IdentityCredential.isAutoSelected")}} property. This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
 
@@ -106,9 +106,9 @@ navigator.credentials
 
 ## Federated Credential Management API
 
-The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
+The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism to delegate authentication or authorization of an individual (user or entity) to trusted external parties called identity providers (IdPs) in a privacy-preserving way, without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and redirects.
 
-Relying parties (RPs) can call `get()` with an `identity` option to request that a user signs in to the RP with an existing IdP account that they are already signed in to on the browser.
+An individual can then use an existing IdP account (that they are already signed into on the browser) to sign into a website (a relying party or RP). The RP handles this by calling `get()` with an `identity` option.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 

@@ -12,7 +12,7 @@ spec-urls: https://wicg.github.io/first-party-sets/
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
-Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers will grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) when they have content embedded in other set members.
+Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
 
 ## Concepts and usage
 
