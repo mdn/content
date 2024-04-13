@@ -28,7 +28,7 @@ local candidate.
 ```js
 const candidatePair = pc
   .getSenders()[0]
-  .transport.transport.getSelectedCandidatePair();
+  .transport.iceTransport.getSelectedCandidatePair();
 const localCandidate = candidatePair.local;
 ```
 
