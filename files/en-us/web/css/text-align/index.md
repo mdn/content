@@ -155,7 +155,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 ### Table alignment
 
-This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements:
+This example demonstrates the use of `text-align` on {{htmlelement("table")}} elements:
 
 - it aligns the caption to the right
 - it aligns one column header (`th`) to the right, but keeps the other centered
