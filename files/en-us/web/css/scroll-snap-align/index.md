@@ -15,6 +15,7 @@ The `scroll-snap-align` property specifies the box's snap position as an alignme
 
 ```css
 /* Single keyword values */
+/* When one values is set, it will be applied to both the block axis and the inline axis */
 scroll-snap-align: none;
 scroll-snap-align: center;
 scroll-snap-align: start;
