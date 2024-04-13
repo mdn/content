@@ -8,8 +8,7 @@ browser-compat: api.Gamepad.buttons
 
 {{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
-The **`Gamepad.buttons`** property of the {{domxref("Gamepad")
-  }} interface returns an array of {{domxref("gamepadButton")}} objects representing the
+The **`Gamepad.buttons`** property of the {{domxref("Gamepad")}} interface returns an array of {{domxref("gamepadButton")}} objects representing the
 buttons present on the device.
 
 Each entry in the array is 0 if the button is not pressed, and non-zero (typically 1.0)

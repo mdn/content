@@ -2,7 +2,7 @@
 title: transform-origin
 slug: Web/SVG/Attribute/transform-origin
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.transform-origin
+browser-compat: svg.global_attributes.transform-origin
 ---
 
 {{SVGRef()}}

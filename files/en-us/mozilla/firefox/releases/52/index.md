@@ -198,4 +198,4 @@ New APIs:
 
 ## Older versions
 
-{{Firefox_for_developers(51)}}
+{{Firefox_for_developers}}

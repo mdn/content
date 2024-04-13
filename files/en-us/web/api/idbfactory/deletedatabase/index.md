@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBFactory.deleteDatabase
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`deleteDatabase()`** method of the
 {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
@@ -21,8 +21,6 @@ method.
 
 When `deleteDatabase()` is called, any other open connections to this
 particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

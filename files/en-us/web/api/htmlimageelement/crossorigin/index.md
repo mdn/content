@@ -22,9 +22,9 @@ without CORS (the fetch `no-cors` mode).
 Permitted values are:
 
 - `anonymous`
-  - : Requests by the {{HTMLElement("img")}} element have their {{domxref("Request.mode",
-    "mode")}} set to `cors` and their {{domxref("Request.credentials",
-    "credentials")}} mode set to `same-origin`. This means that CORS is enabled
+  - : Requests by the {{HTMLElement("img")}} element have their
+    {{domxref("Request.mode", "mode")}} set to `cors` and their {{domxref("Request.credentials", "credentials")}}
+    mode set to `same-origin`. This means that CORS is enabled
     and credentials are sent _if_ the image is fetched from the same origin from
     which the document was loaded.
 - `use-credentials`

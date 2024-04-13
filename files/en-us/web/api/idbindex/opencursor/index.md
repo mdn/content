@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBIndex.openCursor
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`openCursor()`** method of the {{domxref("IDBIndex")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
@@ -17,8 +17,6 @@ The method sets the position of the cursor to the appropriate record, based on t
 specified direction.
 
 If the key range is not specified or is null, then the range includes all the records.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

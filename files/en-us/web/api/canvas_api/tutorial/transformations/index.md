@@ -82,7 +82,7 @@ So far this is pretty similar to what we've done in previous sections. However o
 
 When the second `restore()` statement is called, the original state (the one we set up before the first call to `save`) is restored and the last rectangle is once again drawn in black.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "190", "canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "", "160")}}
 
 ## Translating
 
@@ -124,7 +124,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "190", "translate.png")}}
+{{EmbedLiveSample("A_translate_example", "", "160")}}
 
 ## Rotating
 
@@ -185,7 +185,7 @@ To rotate the rectangle around its own center, we translate the canvas to the ce
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "260", "rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "", "220")}}
 
 ## Scaling
 
@@ -227,7 +227,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "190", "scale.png")}}
+{{EmbedLiveSample("A_scale_example", "", "160")}}
 
 ## Transforms
 
@@ -291,6 +291,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "290", "canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "", "260")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

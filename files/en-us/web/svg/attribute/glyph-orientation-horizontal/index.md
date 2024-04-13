@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/glyph-orientation-horizontal
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
+browser-compat: svg.global_attributes.glyph-orientation-horizontal
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -32,7 +32,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Angle"
+          ><a href="/en-US/docs/Web/SVG/Content_type#angle"
             >&#x3C;angle></a
           ></code
         >

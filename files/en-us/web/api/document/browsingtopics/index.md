@@ -4,17 +4,18 @@ short-title: browsingTopics()
 slug: Web/API/Document/browsingTopics
 page-type: web-api-instance-method
 status:
+  - experimental
   - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 
-{{APIRef("Topics API")}}
+{{APIRef("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
-The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the selected topics for the current user, which can then be returned to the ad tech platform in a subsequent fetch request. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
+The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. These topics could then be returned to the ad tech platform in a subsequent fetch request. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
 
 See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
