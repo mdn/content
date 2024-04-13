@@ -56,7 +56,7 @@ See the {{cssxref("hex-color")}} data type for more information on hexadecimal s
 
 #### RGB functional notation
 
-RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colors using their red, green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of using a string, the color is defined using the CSS function {{cssxref("color_value", "rgb()", "rgb()")}}. This function accepts as its input parameters the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha channel.
+RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colors using their red, green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of using a string, the color is defined using the CSS function {{cssxref("color_value"/rgb", "rgb()")}}. This function accepts as its input parameters the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha channel.
 
 Legal values for each of these parameters are:
 
@@ -67,7 +67,7 @@ Legal values for each of these parameters are:
 
 For example, a bright red that's 50% opaque can be represented as `rgb(255 0 0 / 50%)` or `rgb(100% 0 0 / 0.5)`.
 
-See the {{cssxref("color_value", "rgb()", "rgb()")}} color function for more information on the RGB functional notation.
+See the {{cssxref("color_value/rgb", "rgb()")}} color function for more information on the RGB functional notation.
 
 ### Color functions with a hue component
 
@@ -255,9 +255,7 @@ Wouldn't it be fantastic if you could simply change a hue of a color on a site w
 
 The CIELAB and Oklab color spaces are based on human vision experiments and represent the entire range of colors that humans can see. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer.
 
-The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H).
-
-Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` are a number, an angle, or the keyword `none` (equivalent to 0deg) representing the color's `<hue>` angle. However, the angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces.
+Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` are a number, an angle, or the keyword `none` (equivalent to 0deg) representing the color's `<hue>` angle. However, the angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces. But the main benefit of these color functions is that that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
 ```html hidden live-sample___hues
 <p>sRGB</p>
@@ -315,9 +313,9 @@ div {
 
 {{embedlivesample("hues", '100', '260') }}
 
-Select the checkbox in the example above to convert the hue gradient to greyscale.
+Select the checkbox in the example above to convert the hue gradient to greyscale. You'll notice how the OKLCH gradient is more uniform in terms of lightness, and HSL is the least uniform.
 
-See the {{cssxref("hue")}} reference page for more details and examples.
+The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H).
 
 The example below shows the effect of changing component values in the `lch()` functions where each row modifies a single component.
 The first row shows changes to the `lch()` lightness value, while the second row changes the `lch()` hue component.
