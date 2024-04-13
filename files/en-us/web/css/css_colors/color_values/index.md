@@ -10,23 +10,30 @@ This article is a primer introducing colors in CSS.
 
 We'll also take a look at how to [let the user pick a color](#letting_the_user_pick_a_color).
 
+For the CIELAB color space, you can use the `lab()`, `oklab()`, `lch()` and `oklch()` functions.
+The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H). and the Lab model uses lightness (L), red/green-ness, and yellow/blue-ness along the "a" and "b" axes (rectangular coordinates) in the color space.
+
 ## How to describe a color
 
-To represent a color in CSS, you have to find a way to translate the analog concept of "color" into a digital form that a computer can use. This is typically done by breaking down the color into components, such as how much of each of a set of primary colors to mix together, or how bright to make the color. As such, there are several ways you can describe color in CSS.
+To represent a color in CSS, you have to find a way to translate the analog concept of "color" into a digital form that a computer can use. This is typically done by breaking down the color into components, such as how much of each of a set of primary colors to mix together, or how bright to make the color. Defined color models ensure that colors will appear the same no matter where they are rendered.
 
-For more detailed discussion of each of the color value types, see the reference for each of the CSS {{cssxref("&lt;color&gt;")}} data type values.
+A color model is the mathematical model that represents colors using numeric values. Color models describe how to create the available colors within a color space. RGB was the first color model for the web. The sRGB color space of the RGB color model, the standard red, green, and blue color space, was created in 1996 for computer monitors and the web. A color space is a system for grouping colors so that describing any given color is consistent. If you transform a color between different color spaces, it should look identical.
+
+Originally, monitors were limited in how many colors they could render, and CSS colors were limited by those constraints, expanding as capabilities expanded. With modern devices no longer limited to RGB, new color models are based on human perception rather, with a much wider {{glossary("gamut")}} of colors. There are several ways you can describe color in CSS, and the options keep expanding.
+
+This guide introduces the different color value types. For more detailed discussion of each of the color value types, see the reference for each of the CSS {{cssxref("&lt;color&gt;")}} types introduce below.
 
 ### Keywords
 
-A set of standard color names is defined that lets you use keywords instead of numeric representations if you choose this way of describing colors, although there must be a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`.
+A set of standard color names is defined that lets you use keywords instead of numeric representations if you choose this way of describing colors, although there must be a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`. Named colors use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space.
 
-There are two other named colors of interest: `transparent` is, well, transparent and `currentcolor` is the current value of the CSS {{cssxref("color")}} property.
+There are approximately 140 named colors. There are named colors of special interest: [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) is, well, transparent and [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) is the current value of the CSS {{cssxref("color")}} property.
 
 See the {{cssxref("named-color")}} data type for more information on color keywords.
 
 ### RGB values
 
-There are two ways to represent an RGB color in CSS.
+There are two ways to define an {{glossary("RGB")}} color by their red, green, and blue components in CSS. Like named colors, the hexadecimal and `rgb()` colors all use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space, but provide for defining a much, much wider range of colors.
 
 #### Hexadecimal string notation
 
@@ -64,35 +71,27 @@ See the {{cssxref("color_value", "rgb()", "rgb()")}} color function for more inf
 
 ### Color functions with a hue component
 
-Aside from `rgb()`, you can use `hsl()` and `hwb()` which take a `<hue>` component.
-A [`<hue>`](/en-US/docs/Web/CSS/hue) is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
-The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
-For more information on classifying these functions, see the [Color spaces and color models](#color_spaces_and_color_models) section.
+The color functions that have a hue component include the cylindrical `srgb` color functions `hsl()` and `hwb()` and the `display-p3` gamut supporting CIElab `lch()` and `oklch()` color functions.
+
+These colors all include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, an [`<angle>`](/en-US/docs/Web/CSS/angle) from that color models {{glossary("color wheel")}}. These color functions are more intuitive as the hue allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
+
+The `hsl()` and `hwb()` functions we've used above use the sRGB color space, and both use _cylindrical_ models; this is why a `<hue>` angle lets you control the color's properties like on a [color wheel](/en-US/docs/Glossary/Color_wheel).
 
 #### HSL functional notation
 
-Designers and artists often prefer to work using the [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method.
-The `hsl()` CSS function is similar to the `rgb()` function in usage otherwise.
+The `hsl()` CSS color function was the first hue-based color function. Unlike `rgb()` hex, or `hsl()` is human readable.Defining a color based on a hue (`h`), the saturation (`s`) and lightness (`l`) much more intuitive than declaring colors as red, green, and blue channel values, and HSL is also similar to the HSB (hue, saturation and brightness), color picker in Photoshop, so many people were familiar with this type of color selection when `hsl()` was first supported in browsers.
 
 The diagram below shows an HSL color cylinder. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/angle) on a circular {{glossary("color wheel")}}.
 Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue.
-As the value of luminance (or lightness) increases, the color transitions from the darkest to the brightest possible (from black to white).
+As the value of lightness increases, the color transitions from the darkest to the lightest possible (from black to white).
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
 
 Image courtesy of user [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://en.wikipedia.org/), distributed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
-The value of the hue (H) component of an HSL color is an angle from red around through yellow, green, cyan, blue, and magenta (ending up back at red again at 360°) that identifies what the base color is. The value can be specified in any {{cssxref("&lt;angle&gt;")}} unit supported by CSS, including degrees (`deg`), radians (`rad`), gradians (`grad`), or turns (`turn`). But this doesn't control how vivid or dull, or how bright or dark the color is.
+The value of the hue (H) component of an HSL (and HWB) color is an angle from red around through yellow, green, cyan, blue, and magenta (ending up back at red again at 360°) that identifies what the base color is. The value can be specified in any {{cssxref("&lt;angle&gt;")}} unit supported by CSS, including degrees (`deg`), radians (`rad`), gradians (`grad`), or turns (`turn`). The hue angle defines the hue or shade of color, but doesn't control how vivid or dull, or how light or dark the color is.
 
-The saturation (S) component of the color specifies what percentage of the final color is comprised of the specified hue. The rest is defined by the grey level provided by the luminance (L) component.
-
-Think of it like creating the perfect paint color:
-
-1. You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the **hue** (H) component: a value representing the angle around the {{glossary("color wheel")}} for the vivid hue we want to use as our base.
-2. Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white (regardless of the saturation or hue). In between values are a literal grey area.
-3. Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.
-
-You can also optionally include an alpha channel, to make the color less than 100% opaque.
+The saturation (S) component of the color specifies what percentage of the final color is comprised of the specified hue, with 100% being fully saturated and 0% being a complete lack of color (grey, white, or black). The rest is defined by the grey level provided by the lightness (L) component. You can also optionally include an alpha channel, to make the color less than 100% opaque.
 
 Here are some sample colors in HSL notation:
 
@@ -130,8 +129,8 @@ th {
   </thead>
   <tbody>
     <tr>
-      <td><code>hsl(90deg 100% 50%)</code></td>
-      <td style="background-color: hsl(90deg 100% 50%);">&nbsp;</td>
+      <td><code>hsl(90deg 0% 50%)</code></td>
+      <td style="background-color: hsl(90deg 0% 50%);">&nbsp;</td>
     </tr>
     <tr>
       <td><code>hsl(90 100% 50%)</code></td>
@@ -157,19 +156,20 @@ th {
 </table>
 ```
 
-{{EmbedLiveSample("HSL_functional_notation", 300, 260)}}
+{{EmbedLiveSample("HSL_functional_notation", 300, 200)}}
 
 > **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
 #### HWB functional notation
 
-Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
+Much like the HSL functional notation above, the [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color function uses the same hue coordinate system as `hsl()`, with `0deg` being red. Instead of `hsl`'s lightness and saturation, you specify whiteness (`W`) and blackness (`B`). This function is intuitive for those who find picking a hue and then mixing in white and or black to be intuitive to reach the desired color to be intuitive.
+
+The values of `W` and `B` and range from `0%` to `100%` (or `0` to `1`). If the combined values of `W` and `B` is 100% (or `1`) or greater, the color will be grey, similar to setting the `s` to `0%` with `hsl()`. As with `hsl()`, an optional alpha value can be included, preceded by a forward slash `/`.
 
 Here are some examples of using HWB notation:
 
 ```css
 /* These examples all specify varying shades of a lime green. */
-hwb(90 10% 10%)
 hwb(90 10% 10%)
 hwb(90 50% 10%)
 hwb(90deg 10% 10%)
@@ -181,28 +181,145 @@ hwb(90 10% 10% / 0.5)
 hwb(90 10% 10% / 50%)
 ```
 
-### Color spaces and color models
+Here are some sample colors in HWB notation. The hues are the same as the HSL example, but we are adding whiteness and blackness to each hue instead of saturation and lightness:
 
-The hexadecimal, named colors, and the `rgb()` function all use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space.
-You might see "color model" and "color space" used interchangeably, but there is a difference which is worth noting:
+```css hidden
+{/*end the bad selector*/}
+table {
+  border: 1px solid black;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
 
-- A color model is the mathematical model that represents colors using numeric values.
-  Color models describe how to create the available colors within a color space.
-- A color space is a system for grouping colors so that describing any given color is consistent.
-  If you transform a color between different color spaces, it will look identical.
+th,
+td {
+  border: 1px solid black;
+  padding: 4px 6px;
+  text-align: left;
+}
 
-The `hsl()` and `hwb()` functions we've used above use the sRGB color space, and both use _cylindrical_ models; this is why a `<hue>` angle lets you control the color's properties like on a [color wheel](/en-US/docs/Glossary/Color_wheel).
-Let's take a look at other color spaces that are available and why you might use them.
+th {
+  background-color: hwb(0 75% 25%);
+}
+```
 
-#### CIELAB and Oklab color spaces
+```html
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Color in HWB notation</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hwb(90deg 50% 50%)</code></td>
+      <td style="background-color: hwb(90deg 50% 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hwb(90 0% 0%)</code></td>
+      <td style="background-color: hwb(90 0% 0%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hwb(0.15turn 25% 0%)</code></td>
+      <td style="background-color: hwb(0.15turn 25% 0%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hwb(0.15turn 10% 25%)</code></td>
+      <td style="background-color: hwb(0.15turn 10% 25%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hwb(1turn 10% 65%)</code></td>
+      <td style="background-color: hwb(1turn 10% 65%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hwb(270deg 75% 10%)</code></td>
+      <td style="background-color: hwb(270deg 75% 10%);">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-The CIELAB and Oklab color spaces are based on human vision experiments and represent the entire range of colors that humans can see.
-The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer.
+{{EmbedLiveSample("HWB_functional_notation", 300, 200)}}
 
-For the CIELAB color space, you can use the `lab()` and `lch()` functions.
-The `lch()` function uses lightness (L), chroma (C), and hue (H) and the Lab model uses lightness (L), red/green-ness, and yellow/blue-ness along the "a" and "b" axes (rectangular coordinates) in the color space.
+#### LCH and OKLCH: CIELAB and Oklab color spaces
 
-The example below shows the effect of changing component values in the `lab()` and `lch()` functions where each row modifies a single component.
+While `hsl()` and `hwb()` are intuitive, there is a major drawback of cylindrical color spaces. With these functions, every fully saturated hue angle (`hsl(<angle> 100% 50%)` or `hsl(<angle> 0% 0%)`) has the same the same lightess, but that is not how human vision or monitors work. Putting white text on blue (`hsl(240deg 100% 50%)`) is legible, but that same text on yellow (`hsl(60deg 100% 50%)`) is not only illegible, but it will hurt your eyes. Not all hues have the same max saturation. The lightness of a color in these functions is in comparison to other colors, not to human perception.
+
+Wouldn't it be fantastic if you could simply change a hue of a color on a site without making text illegible? You can in the CIELAB and Oklab color spaces using the `lch()` and `oklch()` color functions.
+
+The CIELAB and Oklab color spaces are based on human vision experiments and represent the entire range of colors that humans can see. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer.
+
+The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H).
+
+Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` are a number, an angle, or the keyword `none` (equivalent to 0deg) representing the color's `<hue>` angle. However, the angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces.
+
+```html hidden live-sample___hues
+<p>sRGB</p>
+<div id="srgb"></div>
+<p>LCH</p>
+<div id="lch"></div>
+<p>OKLCH</p>
+<div id="oklch"></div>
+<p>
+  <label><input type="checkbox" /> Toggle black and white</label>
+</p>
+```
+
+```css hidden live-sample___hues
+div:has(~ p input:checked) {
+  filter: grayscale(100%);
+}
+p:not(:last-of-type) {
+  margin: 0 5px;
+}
+div {
+  height: 50px;
+}
+#srgb {
+  background: linear-gradient(
+    to right,
+    hsl(0deg 100% 50%),
+    hsl(90deg 100% 50%),
+    hsl(180deg 100% 50%),
+    hsl(270deg 100% 50%),
+    hsl(360deg 100% 50%)
+  );
+}
+#lch {
+  background: linear-gradient(
+    to right,
+    lch(50% 150 0deg),
+    lch(50% 150 90deg),
+    lch(50% 150 180deg),
+    lch(50% 150 270deg),
+    lch(50% 150 360deg)
+  );
+}
+#oklch {
+  background: linear-gradient(
+    to right,
+    oklch(50% 0.4 0deg),
+    oklch(50% 0.4 90deg),
+    oklch(50% 0.4 180deg),
+    oklch(50% 0.4 270deg),
+    oklch(50% 0.4 360deg)
+  );
+}
+```
+
+{{embedlivesample("hues", '100', '260') }}
+
+Select the checkbox in the example above to convert the hue gradient to greyscale.
+
+See the {{cssxref("hue")}} reference page for more details and examples.
+
+The example below shows the effect of changing component values in the `lch()` functions where each row modifies a single component.
 The first row shows changes to the `lch()` lightness value, while the second row changes the `lch()` hue component.
 The third row changes the `lab()` "b" axis, so we have a different effect than `lch()` as we're gradually adding more yellow to the color rather than cycling through the entire color wheel:
 
