@@ -294,21 +294,21 @@ div {
 #lch {
   background: linear-gradient(
     to right,
-    lch(50% 150 0deg),
-    lch(50% 150 90deg),
-    lch(50% 150 180deg),
-    lch(50% 150 270deg),
-    lch(50% 150 360deg)
+    lch(50% 100% 0deg),
+    lch(50% 100% 90deg),
+    lch(50% 100% 180deg),
+    lch(50% 100% 270deg),
+    lch(50% 100% 360deg)
   );
 }
 #oklch {
   background: linear-gradient(
     to right,
-    oklch(50% 0.4 0deg),
-    oklch(50% 0.4 90deg),
-    oklch(50% 0.4 180deg),
-    oklch(50% 0.4 270deg),
-    oklch(50% 0.4 360deg)
+    oklch(50% 100% 0deg),
+    oklch(50% 100% 90deg),
+    oklch(50% 100% 180deg),
+    oklch(50% 100% 270deg),
+    oklch(50% 100% 360deg)
   );
 }
 ```
