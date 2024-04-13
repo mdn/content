@@ -80,6 +80,10 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
   - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
+- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
+  - : An overview of color spaces and the different color notations available in CSS
+- [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
+  - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
