@@ -923,6 +923,67 @@ div {
 
 {{ EmbedLiveSample('Multiple_repeating_radial_gradients', 250, 150) }}
 
+### Repeating conic gradients
+
+This example uses {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} to create a gradient that rotates repeatedly around a center point. The colors get cycled over and over as the gradient repeats.
+
+```html hidden
+<div class="repeating-conic"></div>
+```
+
+```css hidden
+div {
+  width: 120px;
+  height: 120px;
+}
+```
+
+```css
+.repeating-conic {
+  background: repeating-conic-gradient(
+    #66ccff 0% 8.25%,
+    #6633ff 8.25% 16.5%,
+    #ff3399 16.5% 25%
+  );
+}
+```
+
+{{ EmbedLiveSample('Repeating_conic_gradients', 120, 120) }}
+
+### Multiple repeating conic gradients
+
+Just like linear and radial repeating gradients, you can stack multiple conical gradients on top of each other. You will need to ensure that the colors of the gradients on the top of the stack are partially transparent. An alternative solution might be to use the {{cssxref("background-blend-mode", "background-blend-mode")}} CSS property to blend the different backgrounds together.
+
+```html hidden
+<div class="multi-repeating-conic"></div>
+```
+
+```css hidden
+div {
+  width: 250px;
+  height: 250px;
+}
+```
+
+```css
+.multi-repeating-conic {
+  background: repeating-conic-gradient(
+      from 0deg at 80% 50%,
+      #5691f580 0% 8.25%,
+      #b338ff80 8.25% 16.5%,
+      #f8305880 16.5% 25%
+    ), repeating-conic-gradient(
+      from 15deg at 50% 50%,
+      #e856f580 0% 8.25%,
+      #ff384c80 8.25% 16.5%,
+      #e7f83080 16.5% 25%
+    ), repeating-conic-gradient(from 0deg at 20% 50%, #f58356ff 0% 8.25%, #caff38ff
+        8.25% 16.5%, #30f88aff 16.5% 25%);
+}
+```
+
+{{ EmbedLiveSample('Multiple_repeating_conic_gradients', 250, 250) }}
+
 ## See also
 
 - Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
@@ -931,3 +992,4 @@ div {
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
 - [CSS Gradients Library, by Estelle Weyl](https://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)
+- [Advanced CSS Gradient Generator](https://colorbeta.com/)
