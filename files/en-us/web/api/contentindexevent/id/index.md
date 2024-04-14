@@ -8,7 +8,7 @@ status:
 browser-compat: api.ContentIndexEvent.id
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`id`** read-only property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies

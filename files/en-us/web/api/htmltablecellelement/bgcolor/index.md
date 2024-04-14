@@ -3,6 +3,8 @@ title: "HTMLTableCellElement: bgColor property"
 short-title: bgColor
 slug: Web/API/HTMLTableCellElement/bgColor
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableCellElement.bgColor
 ---
 

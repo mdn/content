@@ -10,7 +10,7 @@ browser-compat:
 spec-urls: https://wicg.github.io/content-index/spec/
 ---
 
-{{DefaultAPISidebar("Content Index API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **Content Index API** allows developers to register their offline enabled content with the browser.
 
