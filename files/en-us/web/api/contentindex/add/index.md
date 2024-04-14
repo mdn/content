@@ -8,7 +8,7 @@ status:
 browser-compat: api.ContentIndex.add
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`add()`** method of the
 {{domxref("ContentIndex")}} interface registers an item with the [content index](/en-US/docs/Web/API/Content_Index_API).

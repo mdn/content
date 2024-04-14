@@ -69,7 +69,7 @@ function arrayBufferToStr(buf) {
 }
 
 // pk is a PublicKeyCredential that is the result of a create() or get() Promise
-const clientDataStr = arrayBufferToStr(pk.clientDataJSON);
+const clientDataStr = arrayBufferToStr(pk.response.clientDataJSON);
 const clientDataObj = JSON.parse(clientDataStr);
 
 console.log(clientDataObj.type); // "webauthn.create" or "webauthn.get"
