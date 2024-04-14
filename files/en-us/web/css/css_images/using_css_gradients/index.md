@@ -362,6 +362,51 @@ div {
 
 {{ EmbedLiveSample('Stacked_gradients', 200, 200) }}
 
+### Blending gradients
+
+In addition to transparency, stacked gradients can also be blended with the {{cssxref("background-blend-mode", "background-blend-mode")}} CSS property.
+
+```html hidden
+<div class="lighten-gradients"></div>
+<div class="difference-gradients"></div>
+<div class="multiply-gradients"></div>
+```
+
+```css hidden
+div {
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+```
+
+```css
+.lighten-gradients {
+  background: repeating-linear-gradient(to top right, red 0% 10%, blue 10% 20%),
+    repeating-conic-gradient(#9900ff 0% 10%, #00ff99 20%), radial-gradient(red
+        0% 20%, blue 100%);
+  background-blend-mode: lighten;
+}
+
+.difference-gradients {
+  background: repeating-linear-gradient(to top right, red 0% 10%, blue 10% 20%),
+    repeating-conic-gradient(#9900ff 0% 10%, #00ff99 20%), radial-gradient(red
+        0% 20%, blue 100%);
+  background-blend-mode: difference;
+}
+
+.multiply-gradients {
+  background: repeating-linear-gradient(to top right, red 0% 10%, blue 10% 20%),
+    repeating-conic-gradient(#9900ff 0% 10%, #00ff99 20%), radial-gradient(red
+        0% 20%, blue 100%);
+  background-blend-mode: multiply;
+}
+```
+
+{{ EmbedLiveSample('Blending_gradients', 120, 120) }}
+
 ## Using radial gradients
 
 Radial gradients are similar to linear gradients, except that they radiate out from a central point. You can dictate where that central point is. You can also make them circular or elliptical.
@@ -952,7 +997,7 @@ div {
 
 ### Multiple repeating conic gradients
 
-Just like linear and radial repeating gradients, you can stack multiple conical gradients on top of each other. You will need to ensure that the colors of the gradients on the top of the stack are partially transparent. An alternative solution might be to use the {{cssxref("background-blend-mode", "background-blend-mode")}} CSS property to blend the different backgrounds together.
+Just like linear and radial repeating gradients, you can stack multiple conic gradients on top of each other. You will need to ensure either that the colors of the gradients on the top of the stack are partially transparent or use the {{cssxref("background-blend-mode", "background-blend-mode")}} CSS property
 
 ```html hidden
 <div class="multi-repeating-conic"></div>
