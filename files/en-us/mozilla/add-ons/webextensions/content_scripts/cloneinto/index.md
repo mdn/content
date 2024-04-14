@@ -2,7 +2,7 @@
 title: cloneInto()
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto
 page-type: webextension-api-function
-browser-compat: webextensions.api.ContentScriptGlobalScope.cloneInto
+browser-compat: webextensions.api.contentScriptGlobalScope.cloneInto
 ---
 
 {{AddonSidebar()}}
