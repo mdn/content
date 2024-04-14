@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("commands.onCommand")}} event now passes the `tab` argument to the event listener. This enables extensions to apply a triggered shortcut to the page in which it was issued without the need to call `tabs.query()` API ([Firefox bug 1843866](https://bugzil.la/1843866)).
+
 ### Removals
 
 ### Other
