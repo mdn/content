@@ -25,7 +25,7 @@ For more information, see the [Referrer-Policy: strict-origin-when-cross-origin]
 
 ## Examples
 
-The following will output a string.
+The following will log a string containing the document's referrer.
 
 ```js
 alert(document.referrer);
