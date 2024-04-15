@@ -11,10 +11,9 @@ The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 This pseudo-class is applied according to the following rules:
 
-- If the control does not have focus, and the value is valid, apply this pseudo-class.
-- If the control has focus, and the value was valid (including empty) when it gained focus, apply this pseudo-class.
+- The following rules apply only if the user has committed a changed value or attempted to submit the form.
+- If the value is valid, apply this pseudo-class.
 - If the control has focus, and the value was invalid when it gained focus, re-validate on every keystroke.
-- If the element is required, the preceding rules apply only if the user has changed the value or attempted to submit the form.
 
 The result is that if the control was valid when the user started interacting with it, the validity styling is changed only when the user shifts focus to another control. However, if the user is trying to correct a previously-flagged value, the control shows immediately when the value becomes valid. Required items are flagged as invalid only if the user changes them or attempts to submit an unchanged invalid value.
 
