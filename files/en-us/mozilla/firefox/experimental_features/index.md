@@ -918,9 +918,9 @@ Specifically, the disabled properties are:
   </tbody>
 </table>
 
-### UA style for `<h1>` elements nested in sectioning elements
+### UA styles for `<h1>` nested in sectioning elements
 
-The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content), including `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA style for `<h1>` nested within sectioning elements is no longer relevant due to the changes in the HTML specification to [remove the outline algorithm](https://github.com/whatwg/html/pull/7829). ([Firefox bug 1883896](https://bugzil.la/1883896)).
+The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
 > **Note:** The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
@@ -929,7 +929,7 @@ The `<h1>` heading doesn't decrease in font size now when nested within [section
     <tr>
       <th>Release channel</th>
       <th>Version added</th>
-      <th>UA styles removed?</th>
+      <th>Enabled by default?</th>
     </tr>
   </thead>
   <tbody>
