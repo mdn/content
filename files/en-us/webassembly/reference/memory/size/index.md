@@ -4,6 +4,7 @@ short-title: size
 slug: WebAssembly/Reference/Memory/Size
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
+spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 ---
 
 {{WebAssemblySidebar}}
@@ -125,6 +126,10 @@ The module below shows how you might directly reference a memory by index and by
 ```
 
 The WAT files could be loaded using the same JavaScript code as the first example.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

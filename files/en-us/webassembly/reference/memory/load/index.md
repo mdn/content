@@ -4,6 +4,7 @@ short-title: load
 slug: WebAssembly/Reference/Memory/Load
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
+spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 ---
 
 {{WebAssemblySidebar}}
@@ -160,6 +161,10 @@ i32.load (memory 0)  ;; referencing memory by index
 ```
 
 The WAT files could be loaded using the same JavaScript code as the first example.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

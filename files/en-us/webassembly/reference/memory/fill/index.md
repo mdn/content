@@ -4,6 +4,7 @@ short-title: fill
 slug: WebAssembly/Reference/Memory/Fill
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
+spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 ---
 
 {{WebAssemblySidebar}}
@@ -52,6 +53,10 @@ memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 | Instruction   | Binary opcode |
 | ------------- | ------------- |
 | `memory.fill` | `0xFC 0x0b`   |
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

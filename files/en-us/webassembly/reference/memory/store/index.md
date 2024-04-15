@@ -4,6 +4,7 @@ short-title: store
 slug: WebAssembly/Reference/Memory/Store
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
+spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 ---
 
 {{WebAssemblySidebar}}
@@ -62,6 +63,10 @@ i32.store (memory $memoryName)  ;; store in memory with name "$memoryName"
 | `i64.store8`  | `0x3c`        |
 | `i64.store16` | `0x3d`        |
 | `i64.store32` | `0x3e`        |
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -4,6 +4,7 @@ short-title: copy
 slug: WebAssembly/Reference/Memory/Copy
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
+spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 ---
 
 {{WebAssemblySidebar}}
@@ -52,6 +53,10 @@ memory.copy (memory $memoryName) ;; Copy memory with memory named "$memoryName"
 | Instruction   | Binary opcode |
 | ------------- | ------------- |
 | `memory.copy` | `0xFC 0x0a`   |
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

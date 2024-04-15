@@ -6,6 +6,7 @@ page-type: webassembly-instruction
 browser-compat:
   - webassembly.api.Memory.grow
   - webassembly.multiMemory
+spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 ---
 
 {{WebAssemblySidebar}}
@@ -151,6 +152,10 @@ memory.grow (memory 0)  ;; referencing memory by index
 ```
 
 The WAT files could be loaded using the same JavaScript code as the first example.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
