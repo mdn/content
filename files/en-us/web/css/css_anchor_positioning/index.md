@@ -51,7 +51,7 @@ In addition, the specification provides mechanisms to:
 
 ## Related concepts
 
-- The HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, which provides an alternative mechanism for tethering anchored elements to anchor elements.
+- The HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, which provides an alternative mechanism for associating anchored elements with anchor elements.
 - The {{domxref("Element.anchorElement")}} property, which returns a reference to an anchored element's anchor element.
 - Positioning properties that can take an [`anchor()`](/en-US/docs/Web/CSS/anchor) function as a value:
   - The {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}} physical properties.
