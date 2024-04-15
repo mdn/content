@@ -10,7 +10,7 @@ This guide is a primer introducing how CSS can be used to apply colors to HTML e
 
 The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create just the look you want.
 
-This guide describes the [list of what you can color and what CSS properties are involved](#properties_that_can_have_color) and how to [use colors both in stylesheets and in scripts](#using_color_within_css_values).
+This guide describes the [list of what you can color and what CSS properties are involved](#properties_that_can_have_color) and how to [use colors both in stylesheets and in scripts](#colors_within_css_values).
 
 To learn more about CSS colors as a data type, see [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values).
 
@@ -65,7 +65,7 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 - {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
   - : These let you color the edges of the border closest to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
-## Using color within CSS values
+## Colors within CSS values
 
 Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under [Things that can have color](#properties_that_can_have_color), there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
 
@@ -176,7 +176,7 @@ CSS isn't the only web technology that supports color. There are graphics techno
 
 Several now obsolete HTML attributes supported color. The only {{cssxref("color_value", "&lt;color&gt;")}} types supported as HTML attribute values are {{cssxref("named-color")}} and {{cssxref("hex-color")}}.
 
-Realize that it is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Color_values#using_color_within_css_values_wisely). Always select appropriate colors, keeping in mind the needs of people with differing visual capabilities.
+Realize that it is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Color_values#colors_within_css_values_wisely). Always select appropriate colors, keeping in mind the needs of people with differing visual capabilities.
 
 For more detailed discussion of each of the color value types, see the [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide and the CSS {{cssxref("&lt;color&gt;")}} unit.
 
