@@ -39,7 +39,7 @@ field-sizing: unset;
 
 ### Elements affected by `field-sizing: content`
 
-Specifically, this property affects the following elements:
+Specifically, setting this property to `content` affects the following elements:
 
 - Form input types that accept direct text input from users. This includes [`email`](/en-US/docs/Web/HTML/Element/input/email), [`number`](/en-US/docs/Web/HTML/Element/input/number), [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), and [`url`](/en-US/docs/Web/HTML/Element/input/url) types.
   - If no minimum width is set on the control, it will only be as wide as the text cursor.
