@@ -775,7 +775,7 @@ See ([Firefox bug 1855763](https://bugzil.la/1855763) and [Firefox bug 390936](h
   </tbody>
 </table>
 
-To ensure compatibility with these changes, the [Vendor-prefixed transform properties](#vendor-prefixed-transform-properties) and the [Vendor-prefixed transition properties](#vendor-prefixed-transition-properties) are disabled in the Nightly release.
+To ensure compatibility with these changes, the [Vendor-prefixed transform properties](#vendor-prefixed_transform_properties) and the [Vendor-prefixed transition properties](#vendor-prefixed_transition_properties) are disabled in the Nightly release.
 These changes are described in the following sections.
 
 ### text-wrap: balance & stable values
