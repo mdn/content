@@ -3,6 +3,8 @@ title: "HTMLTableRowElement: bgColor property"
 short-title: bgColor
 slug: Web/API/HTMLTableRowElement/bgColor
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableRowElement.bgColor
 ---
 
