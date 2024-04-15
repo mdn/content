@@ -26,6 +26,7 @@ For more information, see the [Referrer-Policy: strict-origin-when-cross-origin]
 ## Examples
 
 The following will output a string.
+
 ```js
 alert(document.referrer);
 ```
