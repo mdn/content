@@ -1,0 +1,47 @@
+---
+title: "HTMLTableColElement: align property"
+short-title: align
+slug: Web/API/HTMLTableColElement/align
+page-type: web-api-instance-property
+status:
+  - deprecated
+browser-compat: api.HTMLTableColElement.align
+---
+
+{{APIRef("HTML DOM")}}{{deprecated_header}}
+
+The **`align`** property of the {{domxref("HTMLTableColElement")}} interface is a string indicating how to horizontally align text in a ctable column.
+
+> **Note:** This property is deprecated, and CSS should be used to align text horizontally in a column. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a cell instead.
+> As {{htmlelement("td")}} are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}, you need to select the cells of the column using a `td:nth-child(n)` or similar (`n` is the column number).
+
+## Value
+
+The possible values are:
+
+- `left`
+  - : Align the text to the left. Use `text-align: left` instead.
+- `right`
+  - : Align the text to the right. Use `text-align: right` instead.
+- `center`
+  - : Center the text in the cell. Use `text-align: center` instead.
+
+## Examples
+
+As {{htmlelement("td")}} of the column are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}, you need to select the cells using a `td:nth-child(n)` or similar (`n` is the column number). Then use CSS `text-align`.
+
+An [example](/en-US/docs/Web/CSS/:nth-child#styling_a_table_column) is available on the {{cssxref(":nth-child()")}} page.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{cssxref("text-align")}}
+- {{cssxref(":nth-child()")}}
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
