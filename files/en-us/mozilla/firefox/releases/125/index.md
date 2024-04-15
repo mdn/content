@@ -109,7 +109,7 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 125 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features are shipping in Firefox 125 but only in developer releases or behind a preference. To try these out, you can search for the related preference on the `about:config` page to see if they're enabled or disabled. To learn more about these features, see the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **CSS `transition-behavior`:** `layout.css.transition-behavior.enabled`.
   The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release.
