@@ -8,9 +8,9 @@ browser-compat: webassembly.multiMemory
 
 {{WebAssemblySidebar}}
 
-The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to load a number from memory onto the stack.
+The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to load a number from a memory onto the stack.
 
-There are `load` instructions for loading into an `i32`, `i64`, `f32`, and `f64`.
+There are `load` instructions for loading from a memory into an `i32`, `i64`, `f32`, and `f64`.
 For the integer numbers, there are separate instruction variants for loading a narrower signed number and unsigned number from memory and extending it into a wider type.
 For example, you can load an unsigned 8-bit number and convert it into an i32 usoing `i32.load8_u`.
 All the variants are [listed below](#instructions_and_opcodes).
@@ -30,23 +30,22 @@ i32.load    ;; Load from specified offset in default memory
 (i32.load (i32.const 0))
 ```
 
-With multiple memories
+Load from specified memory (if multi-memory supported)
 
 ```wasm
-;; Declare blocks of linear memory, which will be indexed sequentially from zero.
-(memory 1) ;; Default memory at index 0 (with 1 page)
-(memory $memory1 2) ;; Memory at index 1 named $memory1 (with 2 pages)
+;; Load from memory specified by index
+i32.const 0 ;; offset in memory to load from (0)
+i32.load (memory 1) ;; load from memory index 1
 
-;; Load from named memory 1, identified by name
-i32.const 0  ;; offset of number in memory (0)
-i32.load (memory $memory1) ;; load from specified offset into memory named $memory1
+;; Load from memory specified by name
+i32.const 1  ;; offset in memory to load from (1)
+i32.load (memory $memory1) ;; load from named memory $memory1
 
-;; Load from named memory identified by index
-i32.const 0
-i32.load (memory 1) ;; load from offset into memory with index 1
+;; Load from memory specified by name using an S-function
+(i32.load (memory $memory1) (i32.const 0))
 ```
 
-## Instructions and opcodes
+### Instructions and opcodes
 
 | Instruction    | Binary opcode |
 | -------------- | ------------- |
@@ -115,8 +114,8 @@ console.log(load_first_item_in_mem(100)); // 30
 ### Loading items from a specified memory
 
 As memories are defined in a WASM module they are sequentially allocated an index number from zero.
-You can load from a specific module by specifying its index, or name if it has one, after the `load` command.
-If you don't specify a memory index the default is used.
+You can load from a specific memory by specifying the `memory` instruction and the desired index or name after the `load` instruction.
+If you don't specify a particular memory the default memory with index 0 is used.
 
 The module below shows how you might directly reference a memory by index.
 
@@ -164,7 +163,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-Memorry support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
-Support for the multiMemory feature is listed below.
+> **Note:** Memory support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> The [multiMemory](#webassembly.multimemory) key indicates versions in which `load` can be used with a specified memory.
 
 {{Compat}}
