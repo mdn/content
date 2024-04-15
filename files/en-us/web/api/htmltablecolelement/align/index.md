@@ -10,10 +10,11 @@ browser-compat: api.HTMLTableColElement.align
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`align`** property of the {{domxref("HTMLTableColElement")}} interface is a string indicating how to horizontally align text in a ctable column.
+The **`align`** property of the {{domxref("HTMLTableColElement")}} interface is a string indicating how to horizontally align text in a column.
 
-> **Note:** This property is deprecated, and CSS should be used to align text horizontally in a column. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a cell instead.
-> As {{htmlelement("td")}} are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}, you need to select the cells of the column using a `td:nth-child(n)` or similar (`n` is the column number).
+> **Note:** This property is deprecated, and CSS should be used to align text horizontally in a column. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a column instead.
+>
+> As {{htmlelement("td")}} are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}} element, you need to select the cells of the column using a `td:nth-child(n)` or similar (`n` is the column number).
 
 ## Value
 
