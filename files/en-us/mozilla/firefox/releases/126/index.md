@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("runtime.MessageSender")}} type now includes the `origin` property. This enables message or connection requests to see the page or frame that opened the connection. This is useful for identifying if the origin can be trusted if it isn't apparent from the URL ([Firefox bug 1787379](https://bugzil.la/1787379)).
+
 ### Removals
 
 ### Other
