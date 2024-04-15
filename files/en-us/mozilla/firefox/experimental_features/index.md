@@ -918,11 +918,11 @@ Specifically, the disabled properties are:
   </tbody>
 </table>
 
-### UA styles for `<h1>` nested into sectioning elements
+### UA style for `<h1>` elements nested in sectioning elements
 
-The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content), including `<article>`, `<aside>`, `<nav>`, and `<section>`. These UA styles are no longer relevant due to the changes in the HTML specification to [remove the outline algorithm](https://github.com/whatwg/html/pull/7829). ([Firefox bug 1883896](https://bugzil.la/1883896)).
+The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content), including `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA style for `<h1>` nested within sectioning elements is no longer relevant due to the changes in the HTML specification to [remove the outline algorithm](https://github.com/whatwg/html/pull/7829). ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
-> **Note:** It's a reverse flag: it's set to `false` only in Nightly builds, which removes the UA styles, and to `true` in all other versions, which keeps them.
+> **Note:** The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
 <table>
   <thead>
