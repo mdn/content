@@ -296,8 +296,8 @@ JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.
 Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript or [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow) in the WebAssembly.
 Since `ArrayBuffer` objects can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory.
 
-Note that when you create the memory you need to define both the initial size, and the maximum size to which the memory can grow.
-WebAssembly will attempt to reserve the maximum size you have requested, and if it is able to do so, it can grow the buffer more efficiently in future. Even if it can't allocate the maximum size now, it may still be able to grow later.
+Note that when you create the memory you need to define the initial size, and you can optionally specify the maximum size to which the memory can grow.
+WebAssembly will attempt to reserve the maximum size (if specified), and if it is able to do so, it can grow the buffer more efficiently in future. Even if it can't allocate the maximum size now, it may still be able to grow later.
 The method will only fail if it cannot allocate the _initial_ size.
 
 > **Note:** Originally WebAssembly only allowed one memory per module instance.
@@ -513,7 +513,7 @@ The complete module is shown below:
     ;; Log memory index 2, offset 0
     i32.const 2  ;; memory index 2
     i32.const 0  ;; memory offset 0
-    i32.const 12  ;; string length 12
+    i32.const 12  ;; string length 13
     call $logMemory
   )
 
@@ -567,10 +567,10 @@ The output of the example should be similar to the text below, except that "Memo
 ```plain
 Memory 0 data (Default)
 Memory 1 data
-Memory 2 dat
+Memory 2 data
 ```
 
-You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
+You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/multi-memory.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
 
 > **Note:** See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
 

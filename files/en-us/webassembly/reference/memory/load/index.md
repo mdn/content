@@ -8,7 +8,7 @@ browser-compat: webassembly.multiMemory
 
 {{WebAssemblySidebar}}
 
-The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to are used to load a number from memory onto the stack.
+The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to load a number from memory onto the stack.
 
 There are `load` instructions for loading into an `i32`, `i64`, `f32`, and `f64`.
 For the integer numbers, there are separate instruction variants for loading a narrower signed number and unsigned number from memory and extending it into a wider type.
