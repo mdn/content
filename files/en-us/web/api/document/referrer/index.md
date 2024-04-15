@@ -28,7 +28,7 @@ For more information, see the [Referrer-Policy: strict-origin-when-cross-origin]
 The following will log a string containing the document's referrer.
 
 ```js
-alert(document.referrer);
+console.log(document.referrer);
 ```
 
 If the user navigated to the page via a link like `<a href="https://www.w3.org/">W3</a>`, then it will output the previous domain like `developer.mozilla.org`. If the user navigated to the page directly, it will output an empty string.
