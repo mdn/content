@@ -174,21 +174,23 @@ This example demonstrates the use of `text-align` on {{htmlelement("table")}} el
     <th>Col 2</th>
     <th class="right">Col 3</th>
   </thead>
-  <tr class="right">
-    <td>11</td>
-    <td class="center">12</td>
-    <td>13</td>
-  </tr>
-  <tr class="center">
-    <td>21</td>
-    <td>22</td>
-    <td>23</td>
-  </tr>
-  <tr id="r3">
-    <td class="right">31</td>
-    <td>32</td>
-    <td>33</td>
-  </tr>
+  <tbody>
+    <tr class="right">
+      <td>11</td>
+      <td class="center">12</td>
+      <td>13</td>
+    </tr>
+    <tr class="center">
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr id="r3">
+      <td class="right">31</td>
+      <td>32</td>
+      <td>33</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
