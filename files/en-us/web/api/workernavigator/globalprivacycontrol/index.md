@@ -24,7 +24,7 @@ The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP he
 ## Example
 
 ```js
-console.log(navigator.globalPrivacyControl);
+console.log(WorkerNavigator.globalPrivacyControl);
 // "true" if the user has specifically indicated they do not want their data shared or sold, otherwise "false".
 ```
 
