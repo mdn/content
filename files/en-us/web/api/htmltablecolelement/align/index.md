@@ -29,7 +29,7 @@ The possible values are:
 
 ## Examples
 
-As {{htmlelement("td")}} elements of a column are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}, you need to select the cells using a `td:nth-child(n)` or similar (`n` is the column number). Then use CSS `text-align`.
+Use CSS `text-align`. As {{htmlelement("td")}} elements of a column are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}, you need to select the cells using a `td:nth-child(n)` or similar (`n` is the column number).
 
 An [example](/en-US/docs/Web/CSS/:nth-child#styling_a_table_column) is available on the {{cssxref(":nth-child()")}} page.
 
