@@ -12,8 +12,7 @@ browser-compat:
 
 The **`grow`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) increases the size of the memory instance by a specified number of pages.
 
-The instruction returns the previous size of memory, in pages, if the operation was successful, and `-1` if the operation failed.
-In both cases the result is added to the stack.
+The instruction adds the previous size of memory (in pages) to the top of the stack if the operation was successful, or `-1` if the operation failed.
 Currently each page is 64KiB.
 
 {{EmbedInteractiveExample("pages/wat/grow.html", "tabbed-taller")}}
