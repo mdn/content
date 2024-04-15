@@ -80,16 +80,16 @@ The HTML in this example contains three form fields, each with an associated {{h
 
 ```html
 <div>
-  <label for="text">Enter name:</label>
-  <input type="text" id="text" maxlength="50" />
+  <label for="name">Enter name:</label>
+  <input type="text" id="name" maxlength="50" />
 </div>
 <div>
   <label for="email">Enter email:</label>
   <input type="email" id="email" maxlength="50" placeholder="e.g. a@b.com" />
 </div>
 <div>
-  <label for="textarea">Enter comment:</label>
-  <textarea id="textarea" maxlength="400">This is a comment.</textarea>
+  <label for="comment">Enter comment:</label>
+  <textarea id="comment" maxlength="400">This is a comment.</textarea>
 </div>
 ```
 
