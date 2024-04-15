@@ -15,7 +15,7 @@ It traps (exception) if the indicated memory region is out of bounds.
 
 ## Syntax
 
-Using default memory
+Fill within default memory
 
 ```wasm
 ;; Fill region at offset/range in default memory with 255

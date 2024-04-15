@@ -15,6 +15,8 @@ If either the source or destination range is out of bounds, the instruction trap
 
 ## Syntax
 
+Copy within default memory
+
 ```wasm
 ;; Copy data in default memory from [100, 125] to [50, 75]
 i32.const 50 ;; Destination address to copy to

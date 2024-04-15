@@ -19,7 +19,7 @@ Currently each page is 64KiB.
 
 ## Syntax
 
-Using default memory
+Grow default memory
 
 ```wasm
 ;; Grow default memory by a number of pages indicated by the top value on the stack

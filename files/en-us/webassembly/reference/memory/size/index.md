@@ -17,7 +17,7 @@ Currently each page is 64KiB.
 
 ## Syntax
 
-Using default memory
+Get size of default memory
 
 ```wasm
 ;; Get the number of pages in the default memory
@@ -25,7 +25,7 @@ memory.size
 ;; The number of pages is now added at top of stack
 ```
 
-Size of specified memory (if multi-memory supported)
+Get size of specified memory (if multi-memory supported)
 
 ```wasm
 ;; Size of memory with index 1

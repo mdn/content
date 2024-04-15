@@ -19,7 +19,7 @@ All the variants are [listed below](#instructions_and_opcodes).
 
 ## Syntax
 
-Using default memory
+Load from default memory
 
 ```wasm
 ;; Load from default memory at offset specified by value on top of stack

@@ -20,7 +20,7 @@ All the variants are [listed below](#instructions_and_opcodes).
 
 ## Syntax
 
-Using default memory
+Store in default memory
 
 ```wasm
 ;; Store value in default memory at particular offset
