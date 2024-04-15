@@ -965,7 +965,7 @@ input.custom {
 
 The {{cssxref("field-sizing")}} property enables you to control the sizing behavior of form inputs (i.e. they are given a default preferred size by default.) This property enables you to override the default behavior, allowing form controls to adjust in size to fit their contents.
 
-This property is typically used to create form fields that shrinkwrap their content and grow as more text is entered. This works with input types that accept direct text input (for example [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`url`](/en-US/docs/Web/HTML/Element/input/url)), {{htmlelement("textarea")}} elements, and input type [`file`](/en-US/docs/Web/HTML/Element/input/url).
+This property is typically used to create form fields that shrinkwrap their content and grow as more text is entered. This works with input types that accept direct text input (for example, [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`url`](/en-US/docs/Web/HTML/Element/input/url)), input type [`file`](/en-US/docs/Web/HTML/Element/input/file), and {{htmlelement("textarea")}} elements.
 
 ### object-position and object-fit
 
