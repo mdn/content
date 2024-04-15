@@ -157,10 +157,10 @@ The inconsistent spacing between words created by justified text can be problema
 
 This example demonstrates the use of `text-align` on {{htmlelement("table")}} elements:
 
-- it aligns the caption to the right
-- it aligns one column header (`th`) to the right, but keeps the other centered
-- it aligns each row differently
-- it overrides the alignment of some cells to make it different of the default row alignment.
+- The {{htmlelement("caption")}} is set to right-aligned.
+- The first two {{htmlelement("th")}} elements use the default (left) alignment, while the third is set to right-aligned.
+- Inside the {{htmlelement("tbody")}} element, the first row is set to right-aligned, the second is set to center-aligned, and the third uses the default (left) alignment.
+- Within each row, some cells (c12, c31) are set to override the alignment of the row.
 
 #### HTML
 
