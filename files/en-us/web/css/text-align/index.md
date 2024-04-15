@@ -166,26 +166,26 @@ This example demonstrates the use of `text-align` on {{htmlelement("table")}} el
 
 ```html
 <table>
-  <caption style="text-align: right">
+  <caption>
     Example table
   </caption>
   <thead>
     <th>Col 1</th>
     <th>Col 2</th>
-    <th style="text-align: right">Col 3</th>
+    <th class="right">Col 3</th>
   </thead>
-  <tr id="r1">
+  <tr class="right">
     <td>11</td>
-    <td id="c12">12</td>
+    <td class="center">12</td>
     <td>13</td>
   </tr>
-  <tr id="r2">
+  <tr class="center">
     <td>21</td>
     <td>22</td>
     <td>23</td>
   </tr>
   <tr id="r3">
-    <td id="c31">31</td>
+    <td class="right">31</td>
     <td>32</td>
     <td>33</td>
   </tr>
@@ -211,23 +211,12 @@ th {
   border: solid 1px black;
 }
 
-#r1 {
-  text-align: right;
-}
-
-#c12 {
+.center {
   text-align: center;
 }
 
-#r2 {
-  text-align: center;
-}
-
-#c31 {
-  text-align: right;
-}
-
-.caption {
+.right,
+caption {
   text-align: right;
 }
 ```
