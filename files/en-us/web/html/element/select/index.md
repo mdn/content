@@ -131,8 +131,7 @@ For more useful information on styling `<select>`, see:
 
 - [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-
-Also see the "Customizing select styles" example below for an example of you could attempt a simple `<select>` styling.
+- The {{cssxref("field-sizing")}} property, which controls how `<select>` elements are sized in relation to their contained options.
 
 ## Examples
 
