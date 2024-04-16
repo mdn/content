@@ -38,7 +38,7 @@ When working with color, it's important to know which "color space" you are work
 
 In color printing, your printer likely has cyan, magenta, yellow, and black (CMYK) ink cartridges. CMYK is a subtractive model wherein the four inks _remove_ specific wavelengths of light, reflecting only the narrow range each is associated with. RGB is an additive color model that adds different proportions of red, green, and blue lights.
 
-Currently, the RGB color space predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
+Currently, the {{glossary("RGB", "RGB color space")}} predominates as the space web developers work in. While HEX, RGB, and HSL color spaces are notated differently, browsers automatically convert values between these color notations. [CSS color modules](/en-US/docs/Web/CSS/CSS_colors) provide additional color spaces. Still, because of the current domination of the RGB color space in measuring color output, most calculations in this document are presumed to be in the RGB color space and, very specifically, in the sRGB color space.
 
 ## The sRGB color space
 
