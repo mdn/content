@@ -52,11 +52,10 @@ const element = document.getElementById("elt");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles
+// We loop through all the element's styles using `for...in`
 for (const prop in elementStyle) {
-  // We check if the property is on the CSSStyleDeclaration instance
-  // and if the property is a number indice
-  // (the style directly defined via HTML style attribute)
+  // We check if the property belongs to the CSSStyleDeclaration instance
+  // We also ensure that the property is a numeric index (indicating an inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
     !Number.isNaN(Number.parseInt(prop))
