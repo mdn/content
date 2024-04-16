@@ -90,7 +90,9 @@ This is mapped to the `checked` custom state, allowing styling to be applied usi
 #### JavaScript
 
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
-In the constructor we call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
+In the constructor we call the `super()` method, add a listener for the click event, and call {{domxref("HTMLElement.attachInternals()", "this.attachInternals()")}} to attach an {{domxref("ElementInternals", "ElementInternals")}} object.
+
+Most of the rest of the "work" is then left to `connectedCallback()`, which is invoked when a custom element is added to the page.
 The content of the element is defined using a `<style>` element to be the text `[]` or `[x]` followed by a label.
 What's noteworthy here is that the custom state pseudo class is used to select the text to display: `:host(:state(checked))`.
 After the example below, we'll cover what's happening in the snippet in more detail.
@@ -143,7 +145,6 @@ class LabeledCheckbox extends HTMLElement {
 
 In the `LabeledCheckbox` class:
 
-- The `connectedCallback()` method uses {{domxref("HTMLElement.attachInternals()", "`this.attachInternals()`")}} to attach an {{domxref("ElementInternals", "`ElementInternals`")}} object.
 - In the `get checked()` and `set checked()` we use `ElementInternals.states` to get the `CustomStateSet`.
 - The `set checked(flag)` method adds the `"checked"` identifier to the `CustomStateSet` if the flag is set and delete the identifier if the flag is `false`.
 - The `get checked()` method just checks whether the `checked` property is defined in the set.
@@ -418,11 +419,11 @@ Click the element to see a different border being applied as the state changes.
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
-If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
+If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector.
 
 ### Using a try...catch block
 
-Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS:
+Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS.
 
 #### JavaScript
 
@@ -456,7 +457,7 @@ compatible-state-element:is(:--loaded, :state(loaded)) {
 ### Using double dash prefixed idents
 
 An alternative solution can be to use the `<dashed-ident>` within JavaScript.
-The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax:
+The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax.
 
 #### JavaScript
 
