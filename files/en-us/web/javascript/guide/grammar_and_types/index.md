@@ -305,7 +305,7 @@ parseInt("101", 2); // 5
 An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
 
 ```js-nolint
-"1.1" + "1.1" // '1.11.1'
+"1.1" + "1.1"; // '1.11.1'
 (+"1.1") + (+"1.1"); // 2.2
 // Note: the parentheses are added for clarity, not required.
 ```
