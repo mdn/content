@@ -936,22 +936,22 @@ The `<h1>` heading doesn't decrease in font size now when nested within [section
     <tr>
       <th>Nightly</th>
       <td>125</td>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
       <td>125</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Beta</th>
       <td>125</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
       <td>125</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Preference name</th>
