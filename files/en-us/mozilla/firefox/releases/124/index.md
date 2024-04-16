@@ -10,10 +10,18 @@ This article provides information about the changes in Firefox 124 that affect d
 
 ## Changes for web developers
 
+### HTML
+
+No notable changes.
+
 ### CSS
 
 - The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
 - The {{cssxref("text-wrap")}} property has now been converted to a shorthand property and covers the constituent properties {{cssxref("text-wrap-mode")}} and {{cssxref("text-wrap-style")}}. ([Firefox bug 1758391](https://bugzil.la/1758391)).
+
+### JavaScript
+
+No notable changes.
 
 ### SVG
 
@@ -27,7 +35,7 @@ This article provides information about the changes in Firefox 124 that affect d
 
 #### WebDriver BiDi
 
-- Implemented the [storage.getCookies](https://w3c.github.io/webdriver-bidi/#command-storage-getCookies) command, which allows users to retrieve cookies. This command accepts two optional arguments. Clients can provide the `filter` argument to only return cookies matching specific criterias. And the `partition` argument can be used to build the partition key and retrieve cookies [owned by the corresponding partition](/en-US/docs/Web/Privacy/State_Partitioning). ([Firefox bug 1854580](https://bugzil.la/1854580))
+- Implemented the [storage.getCookies](https://w3c.github.io/webdriver-bidi/#command-storage-getCookies) command, which allows users to retrieve cookies. This command accepts two optional arguments. Clients can provide the `filter` argument to only return cookies matching specific criteria. And the `partition` argument can be used to build the partition key and retrieve cookies [owned by the corresponding partition](/en-US/docs/Web/Privacy/State_Partitioning). ([Firefox bug 1854580](https://bugzil.la/1854580))
 - Implemented the [storage.setCookie](https://w3c.github.io/webdriver-bidi/#command-storage-setCookie) command, which creates a new cookie. Users can provide information about the cookie in the `cookie` parameter, and optionally a `partition` parameter to build the partition key of the partition which should own the cookie. ([Firefox bug 1854582](https://bugzil.la/1854582))
 - Implemented various commands to intercept requests:
   - [network.addIntercept](https://w3c.github.io/webdriver-bidi/#command-network-addIntercept) which allows users to define URL patterns which will be used to intercept network requests during various phases of a network event lifecycle. This command returns the unique id generated for the created network intercept. ([Firefox bug 1826192](https://bugzil.la/1826192))

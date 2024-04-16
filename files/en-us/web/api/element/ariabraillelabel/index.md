@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaBrailleLabel
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaBrailleLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) attribute, which defines the ARIA braille label of the element.
 

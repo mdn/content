@@ -72,7 +72,7 @@ svg {
   - : This attribute determines the y coordinate of the symbol.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

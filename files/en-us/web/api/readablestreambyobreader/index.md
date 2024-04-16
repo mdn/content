@@ -17,7 +17,7 @@ Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request 
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
 Note that the methods and properties are similar to those for the default reader ({{domxref("ReadableStreamDefaultReader")}}).
-The `read()` method differs in that it provide a view into which data should be written.
+The `read()` method differs in that it provides a view into which data should be written.
 
 ## Constructor
 
