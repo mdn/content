@@ -364,12 +364,13 @@ div {
 
 ### Blending gradients
 
-In addition to transparency, stacked gradients can also be blended with the {{cssxref("background-blend-mode", "background-blend-mode")}} CSS property.
+In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, we use the {{cssxref("background-blend-mode")}} CSS property to create blended effects.
 
 ```html hidden
-<div class="lighten-gradients"></div>
+<div class="normal-gradients"></div>
+<div class="screen-gradients"></div>
+<div class="overlay-gradients"></div>
 <div class="difference-gradients"></div>
-<div class="multiply-gradients"></div>
 ```
 
 ```css hidden
@@ -383,25 +384,23 @@ div {
 ```
 
 ```css
-.lighten-gradients {
-  background: repeating-linear-gradient(to top right, red 0% 10%, blue 10% 20%),
-    repeating-conic-gradient(#9900ff 0% 10%, #00ff99 20%), radial-gradient(red
-        0% 20%, blue 100%);
-  background-blend-mode: lighten;
+.normal-gradients {
+  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+}
+
+.screen-gradients {
+  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+  background-blend-mode: screen;
+}
+
+.overlay-gradients {
+  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+  background-blend-mode: overlay;
 }
 
 .difference-gradients {
-  background: repeating-linear-gradient(to top right, red 0% 10%, blue 10% 20%),
-    repeating-conic-gradient(#9900ff 0% 10%, #00ff99 20%), radial-gradient(red
-        0% 20%, blue 100%);
+  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
   background-blend-mode: difference;
-}
-
-.multiply-gradients {
-  background: repeating-linear-gradient(to top right, red 0% 10%, blue 10% 20%),
-    repeating-conic-gradient(#9900ff 0% 10%, #00ff99 20%), radial-gradient(red
-        0% 20%, blue 100%);
-  background-blend-mode: multiply;
 }
 ```
 
