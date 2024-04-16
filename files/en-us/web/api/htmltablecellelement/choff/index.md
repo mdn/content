@@ -14,7 +14,7 @@ The **`chOff`** property of the {{domxref("HTMLTableCellElement")}} interface do
 
 > **Note:** This property was designed to participate to the ability to align table cell content on a specific character (typically the decimal point), but was never implemented by browsers.
 >
-> To achieve such alignment, watch for the support of a string value with the {{domxref("text-align")}} CSS property.
+> To achieve such alignment, watch for the support of a string value with the {{cssxref("text-align")}} CSS property.
 
 ## Value
 
@@ -30,4 +30,4 @@ An integer.
 
 ## See also
 
-- {{domxref("text-align")}}
+- {{cssxref("text-align")}}
