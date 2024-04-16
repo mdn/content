@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 125 that affect d
 ### CSS
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
-- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape (Firefox bug [1868374](https://bugzil.la/1868374)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
 
 #### Removals
 
@@ -82,6 +82,14 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ### WebAssembly
 
+- Support has been added for Wasm modules to use multiple independent linear memories.
+  Multiple memories enable more efficient interoperability between modules and better polyfills for upcoming Wasm standards. They can be used, for example, to create separate memory for internal and shared data, ephemeral and persisted data, or data that needs to be shared between threads.
+  The memory can be created in JavaScript and imported into the Wasm module, or created in the Wasm module and exported.
+  Each new linear memory in a Wasm instance is given a sequential index, starting from zero.
+  WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
+  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
+  ([Firefox bug 1860816](https://bugzil.la/1860816)).
+
 #### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
@@ -109,7 +117,11 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 125 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features are shipping in Firefox 125 but only in developer releases or behind a preference. To try these out, you can search for the related preference on the `about:config` page to see if they're enabled or disabled. To learn more about these features, see the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **CSS `transition-behavior`:** `layout.css.transition-behavior.enabled`.
+  The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release.
+  Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
 
 ## Older versions
 
