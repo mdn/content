@@ -11,6 +11,8 @@ The **`vector-effect`** property specifies the vector effect to use when drawing
 
 > **Note:** As a presentation attribute, `vector-effect` can be used as a CSS property.
 
+## Elements
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("circle")}}

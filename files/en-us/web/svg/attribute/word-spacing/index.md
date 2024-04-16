@@ -15,6 +15,8 @@ If a \<length> is provided with one of the unit identifiers (e.g. .25em or 1%), 
 
 > **Note:** As a presentation attribute, `word-spacing` can be used as a CSS property. See the {{cssxref("word-spacing", "CSS word-spacing")}} property for more information.
 
+## Elements
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("text")}}

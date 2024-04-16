@@ -15,6 +15,8 @@ It is a universal attribute allowed in all XML dialects to mark up the natural h
 
 There is also a {{SVGAttr("lang")}} attribute (without namespace). If both of them are defined, the one with namespace is used and the one without is ignored.
 
+## Elements
+
 You can use this attribute with any SVG element.
 
 ## Usage notes

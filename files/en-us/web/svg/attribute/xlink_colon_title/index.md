@@ -15,6 +15,8 @@ The use of this information is highly dependent on the type of processing being 
 
 > **Note:** New content should use a {{SVGElement("title")}} child element rather than a `xlink:title` attribute.
 
+## Elements
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}

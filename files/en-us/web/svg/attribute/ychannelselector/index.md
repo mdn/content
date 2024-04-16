@@ -9,9 +9,9 @@ browser-compat: svg.elements.feDisplacementMap.yChannelSelector
 
 The **`yChannelSelector`** attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the y-axis.
 
-You can use this attribute with the following SVG elements:
+## Elements
 
-- {{SVGElement("feDisplacementMap")}}
+You can use this attribute with the {{SVGElement("feDisplacementMap")}} SVG element.
 
 ## Usage notes
 

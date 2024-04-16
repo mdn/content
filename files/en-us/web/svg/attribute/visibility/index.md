@@ -15,6 +15,8 @@ Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elem
 
 > **Note:** As a presentation attribute, `visibility` can be used as a CSS property. See the {{cssxref("visibility", "CSS visibility")}} property for more information.
 
+## Elements
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}

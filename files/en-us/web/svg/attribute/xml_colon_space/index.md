@@ -15,6 +15,8 @@ SVG supports the built-in XML **`xml:space`** attribute to handle whitespace cha
 
 This attribute influences how browsers parse text content and therefore changes the way the {{Glossary("DOM")}} is built. Therefore, changing this attribute's value through the DOM API may have no effect.
 
+## Elements
+
 You can use this attribute with any SVG element.
 
 ## Usage notes

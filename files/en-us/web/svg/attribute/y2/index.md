@@ -11,9 +11,11 @@ spec-urls:
 
 The **`y2`** attribute is used to specify the second y-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("y")}} attribute instead.
 
+## Elements
+
 You can use this attribute with the SVG elements described in the sections below.
 
-## line
+### `<line>`
 
 For {{SVGElement('line')}}, `y2` defines the y coordinate of the ending point of the line.
 
@@ -70,7 +72,7 @@ svg {
 
 {{EmbedLiveSample('line', '100%', 200)}}
 
-## linearGradient
+### `<linearGradient>`
 
 For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the ending point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
