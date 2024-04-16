@@ -1,5 +1,5 @@
 ---
-title: "grow: WASM text instruction"
+title: "grow: Wasm text instruction"
 short-title: grow
 slug: WebAssembly/Reference/Memory/Grow
 page-type: webassembly-instruction
@@ -58,7 +58,7 @@ memory.grow (memory $memory1) ;; Grow $memory1 by 1 page
 
 ### Growing default memory
 
-The first memory added to a WASM module is the default memory and has index 0.
+The first memory added to a Wasm module is the default memory and has index 0.
 We can grow this memory by first adding a variable specifying the amount to grow the memory, and then calling `grow`.
 
 The code below shows a WAT file that demonstrates this:
@@ -107,7 +107,7 @@ start();
 
 ### Growing a specified memory
 
-As memories are defined in a WASM module they are sequentially allocated an index number from zero.
+As memories are defined in a Wasm module they are sequentially allocated an index number from zero.
 You can grow a specific memory by specifying the `memory` instruction and the desired index or name (if it has one), after the `grow` instruction.
 If you don't specify a particular memory the default memory with index 0 is used.
 
@@ -159,7 +159,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** `grow` support in WASM modules matches the grow support in the JavaScript [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) API.
+> **Note:** `grow` support in Wasm modules matches the grow support in the JavaScript [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `grow` can be used with a specified memory.
 
 {{Compat}}

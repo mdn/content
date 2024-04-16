@@ -425,9 +425,9 @@ When you run the code, the console will show the text "Hi".
 
 More recent implementations allow you to use multiple memory objects in your WebAssembly and JavaScript, in a way that is compatible with code that is written for implementations that only support a single memory.
 Multiple memories can be useful for separating data that should be treated differently to other application data, such as public vs private data, data that needs to be persisted, and data that needs to be shared between threads.
-It may also be useful for very large applications that need to scale beyond the WASM 32-bit address space, and for other purposes.
+It may also be useful for very large applications that need to scale beyond the Wasm 32-bit address space, and for other purposes.
 
-Memories that are made available to the WASM code, either declared directly or imported, are given a zero-indexed sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [load`](/en-US/docs/WebAssembly/Reference/Memory/Load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/Store), can reference any particular memory via its index so you can control which memory you're working with.
+Memories that are made available to the WebAssembly code, either declared directly or imported, are given a zero-indexed sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [load`](/en-US/docs/WebAssembly/Reference/Memory/Load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/Store), can reference any particular memory via its index so you can control which memory you're working with.
 
 The memory instructions have a default index of 0, the index of the first memory added to the WebAssembly instance.
 As a result, if you only add one memory, your code doesn't have to specify the index.

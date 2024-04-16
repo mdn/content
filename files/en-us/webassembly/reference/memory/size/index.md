@@ -1,5 +1,5 @@
 ---
-title: "size: WASM text instruction"
+title: "size: Wasm text instruction"
 short-title: size
 slug: WebAssembly/Reference/Memory/Size
 page-type: webassembly-instruction
@@ -46,7 +46,7 @@ memory.size (memory $memory2)
 
 ### Getting size of the default memory
 
-The first memory added to a WASM module is the default memory and has index 0.
+The first memory added to a Wasm module is the default memory and has index 0.
 We can get the number of pages in this memory by calling `memory.size`.
 
 The code below shows a WAT file that demonstrates this:
@@ -101,7 +101,7 @@ start();
 
 ### Getting size of a particular memory
 
-As memories are defined in a WASM module they are sequentially allocated an index number from zero.
+As memories are defined in a Wasm module they are sequentially allocated an index number from zero.
 You can get the size of a specific memory by specifying the `memory` instruction and the desired index or name (if it has one), after the `memory.size` instruction.
 If you don't specify a particular memory the default memory with index 0 is used.
 
@@ -133,7 +133,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** Memory support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> **Note:** Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `size` can be used with a specified memory.
 
 {{Compat}}

@@ -1,5 +1,5 @@
 ---
-title: "copy: WASM text instruction"
+title: "copy: Wasm text instruction"
 short-title: copy
 slug: WebAssembly/Reference/Memory/Copy
 page-type: webassembly-instruction
@@ -60,7 +60,7 @@ memory.copy (memory $memoryName) ;; Copy memory with memory named "$memoryName"
 
 ## Browser compatibility
 
-> **Note:** Memory support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> **Note:** Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `copy` can be used with a specified memory.
 
 {{Compat}}

@@ -1,5 +1,5 @@
 ---
-title: "load: WASM text instruction"
+title: "load: Wasm text instruction"
 short-title: load
 slug: WebAssembly/Reference/Memory/Load
 page-type: webassembly-instruction
@@ -69,7 +69,7 @@ i32.load (memory $memory1) ;; load from named memory $memory1
 
 ### Loading items from default memory
 
-The first memory added to a WASM module is the default memory and has index 0.
+The first memory added to a Wasm module is the default memory and has index 0.
 We can load from this memory by adding a variable specifying the offset in the default memory of the number to be loaded onto the stack, and then calling `load`.
 
 The code below shows a WAT file that demonstrates this:
@@ -95,7 +95,7 @@ That's shown in the following example.
 For completeness, we can use the compiled version of the above file `load_single.wasm` with code similar to that shown below:
 
 ```js
-// await on the specified WASM to be fetched and loaded
+// await on the specified .wasm file to be fetched and loaded
 const result = await WebAssembly.instantiateStreaming(
   fetch("load_single.wasm"),
 );
@@ -108,13 +108,13 @@ const memory = result.instance.exports.memory;
 const dataView = new DataView(memory.buffer);
 dataView.setUint32(0, 30, true);
 
-// Log the result of calling the exported WASM function
+// Log the result of calling the exported Wasm function
 console.log(load_first_item_in_mem(100)); // 30
 ```
 
 ### Loading items from a specified memory
 
-As memories are defined in a WASM module they are sequentially allocated an index number from zero.
+As memories are defined in a Wasm module they are sequentially allocated an index number from zero.
 You can load from a specific memory by specifying the `memory` instruction and the desired index or name after the `load` instruction.
 If you don't specify a particular memory the default memory with index 0 is used.
 
@@ -168,7 +168,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** Memory support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> **Note:** Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `load` can be used with a specified memory.
 
 {{Compat}}

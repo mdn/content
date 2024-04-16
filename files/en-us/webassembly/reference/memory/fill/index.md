@@ -1,5 +1,5 @@
 ---
-title: "fill: WASM text instruction"
+title: "fill: Wasm text instruction"
 short-title: fill
 slug: WebAssembly/Reference/Memory/Fill
 page-type: webassembly-instruction
@@ -60,7 +60,7 @@ memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 
 ## Browser compatibility
 
-> **Note:** Memory support in WASM modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> **Note:** Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `store` can be used with a specified memory.
 
 {{Compat}}
