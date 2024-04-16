@@ -78,12 +78,12 @@ Note that if `SameSite=None` is set then the `Secure` attribute must also be set
 
 > **Note:** Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
 
-### Working around browsers that block third-party cookies
+### Transitioning from third-party cookies
 
-There are a number of different stategies you can adopt to work around third-party cookie blocking:
+There are multiple strategies to help sites minimise breakage in browsers where third-party cookies are blocked:
 
-1. Audit your third-party cookie usage. third-party cookies have `SameSite=None` set on them; you should therefore be able to identify them by searching for this in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/) or the [Chrome Application panel](https://developer.chrome.com/docs/devtools/application/cookies/).
-2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some are no longer needed.
+1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set in order to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://developers.google.com/privacy-sandbox/3pcd/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
+2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some cookies are no longer needed.
 3. Initially at least, you could make your code more resilient so that it provides a less personalized experience when third-party cookie data is not available rather than breaking altogether. Follow the principles of [graceful degradation](/en-US/docs/Glossary/Graceful_degradation).
 4. Gather data via alternative means, such as user surveys or quizzes, or looking at data you already have such as product order histories to infer trends.
 5. Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data, or consider a server-side solution.
@@ -94,14 +94,14 @@ There are a number of different stategies you can adopt to work around third-par
 
 ## Replacing third-party cookies
 
-There are some useful features available for developers who wish to remove third-party cookies but carry on implementing their use cases, respecting user privacy and minimizing third-party tracking in the process. Some of these are in an early experimental stage, but it is worth having a look as you begin to prepare for the future.
+There are several features available to developers who wish to stop using third-party cookies but carry on implementing their use cases, while respecting user privacy and minimizing third-party tracking. Some features are in an early experimental stage, but are worth considering as you begin to prepare for the future.
 
-You can start to explore the different features available in Google's [Privacy Sandbox](https://developers.google.com/privacy-sandbox/overview) project to see if they fit your use case (these are currently experimental, and Chromium-only):
+You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
 
 - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
 - [Private State Tokens](https://developer.chrome.com/docs/privacy-sandbox/private-state-tokens/): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
-- [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/overview/): Enables interest-based advertising and content personalization.
-- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/): Enables remarketing and custom audiences.
+- [Topics API](/en-US/docs/Web/API/Topics_API): Enables interest-based advertising and content personalization.
+- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/): Use data from one app or site to help select an ad when the user is visiting another app or site.
 - [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/): Enables measurement of ad impressions and conversions.
 
 ## See also
