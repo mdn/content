@@ -5,7 +5,7 @@ slug: Web/API/HTMLTableRowElement/chOff
 page-type: web-api-instance-property
 status:
   - deprecated
-browser-compat: api.HTMLTableRowlement.chOff
+browser-compat: api.HTMLTableRowElement.chOff
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}

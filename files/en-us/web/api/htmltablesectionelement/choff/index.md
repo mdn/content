@@ -5,7 +5,7 @@ slug: Web/API/HTMLTableSectionElement/chOff
 page-type: web-api-instance-property
 status:
   - deprecated
-browser-compat: api.HTMLTableSectionlement.chOff
+browser-compat: api.HTMLTableSectionElement.chOff
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
