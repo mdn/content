@@ -10,18 +10,14 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
 - The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
-
-#### Removals
 
 ### JavaScript
 
@@ -29,20 +25,6 @@ This article provides information about the changes in Firefox 125 that affect d
   This enables, for example, splitting a string into words in languages that don't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`.
   You can also split strings into graphemes or sentences.
   ([Firefox bug 1423593](https://bugzil.la/1423593), [Firefox bug 1883914](https://bugzil.la/1883914).)
-
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -72,10 +54,6 @@ This article provides information about the changes in Firefox 125 that affect d
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
 #### Removals
 
 - The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement#svgaelement.text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
@@ -89,8 +67,6 @@ This article provides information about the changes in Firefox 125 that affect d
   WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
   For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
   ([Firefox bug 1860816](https://bugzil.la/1860816)).
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -110,10 +86,6 @@ This article provides information about the changes in Firefox 125 that affect d
 ## Changes for add-on developers
 
 - The content of the {{WebExtAPIRef("proxy.ProxyInfo")}} property `proxyAuthorization` is now passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies (in addition to the existing support for HTTPS proxies) as part of a [CONNECT](/en-US/docs/Web/HTTP/Methods/CONNECT) request ([Firefox bug 1794464](https://bugzil.la/1794464)).
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
