@@ -6,12 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-This article is a primer introducing colors in CSS.
-
-We'll also take a look at how to [let the user pick a color](#letting_the_user_pick_a_color).
-
-For the CIELAB color space, you can use the `lab()`, `oklab()`, `lch()` and `oklch()` functions.
-The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H). and the Lab model uses lightness (L), red/green-ness, and yellow/blue-ness along the "a" and "b" axes (rectangular coordinates) in the color space.
+This article introduces the various color value notations in CSS.
 
 ## How to describe a color
 
@@ -31,11 +26,11 @@ There are approximately 140 named colors. There are named colors of special inte
 
 See the {{cssxref("named-color")}} data type for more information on color keywords.
 
-### RGB values
+## RGB values
 
 There are two ways to define an {{glossary("RGB")}} color by their red, green, and blue components in CSS. Like named colors, the hexadecimal and `rgb()` colors all use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space, but provide for defining a much, much wider range of colors.
 
-#### Hexadecimal string notation
+### Hexadecimal string notation
 
 Hexadecimal string notation represents a color using hexadecimal digits to represent each of the color components (red, green, and blue). It may also include a fourth component: the alpha channel (or opacity). Each color component can be represented as a number between 0 and 255 (0x00 and 0xFF) or, optionally, as a number between 0 and 15 (0x0 and 0xF). All components _must_ be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
 
@@ -54,7 +49,69 @@ As an example, you can represent the opaque color bright blue as `"#0000ff"` or 
 
 See the {{cssxref("hex-color")}} data type for more information on hexadecimal string notation for colors.
 
-#### RGB functional notation
+#### HTML color picker
+
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. HTML provides support for browsers to provide a color picker via the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
+
+In this example, the user chooses a color which updates the {{cssxref("border-color")}} and displays the value is displayed.
+
+```html
+<div id="box">
+  <label for="colorPicker">Border color:</label>
+  <input type="color" value="#8888ff" id="colorPicker" />
+  <output></output>
+</div>
+```
+
+The HTML here creates a box that contains a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty output element ({{HTMLElement("output")}}) into which we'll output the color's value using JavaScript. The color's value will always be a hexadecimal string.
+
+{{EmbedLiveSample("HTML color picker", 525, 120)}}
+
+```css hidden
+#box {
+  width: 500px;
+  height: 100px;
+  border: 5px solid rgb(245 220 225);
+  padding: 4px 6px;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
+}
+```
+
+We include JavaScript to update the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
+
+```js
+const colorPicker = document.querySelector("#colorPicker");
+const box = document.querySelector("#box");
+const output = document.querySelector("output");
+
+box.style.borderColor = colorPicker.value;
+
+colorPicker.addEventListener(
+  "input",
+  (event) => {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
+
+colorPicker.addEventListener(
+  "change",
+  (event) => {
+    output.innerText = `${colorPicker.value}`;
+  },
+  false,
+);
+```
+
+The {{domxref("Element/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+
+The {{domxref("HTMLElement/change_event", "change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<output>` to the string value of the selected color.
+
+### RGB functional notation
 
 RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colors using their red, green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of using a string, the color is defined using the CSS function {{cssxref("color_value/rgb", "rgb()")}}. This function accepts as its input parameters the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha channel.
 
@@ -69,7 +126,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255 0 0 /
 
 See the {{cssxref("color_value/rgb", "rgb()")}} color function for more information on the RGB functional notation.
 
-### Color functions with a hue component
+## Color functions with a hue component
 
 The color functions that have a hue component include the cylindrical `srgb` color functions `hsl()` and `hwb()` and the `display-p3` gamut supporting CIElab `lch()` and `oklch()` color functions.
 
@@ -77,7 +134,7 @@ These colors all include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, an [`<a
 
 The `hsl()` and `hwb()` functions we've used above use the sRGB color space, and both use _cylindrical_ models; this is why a `<hue>` angle lets you control the color's properties like on a [color wheel](/en-US/docs/Glossary/Color_wheel).
 
-#### HSL functional notation
+### HSL functional notation
 
 The `hsl()` CSS color function was the first hue-based color function. Unlike `rgb()` hex, or `hsl()` is human readable.Defining a color based on a hue (`h`), the saturation (`s`) and lightness (`l`) much more intuitive than declaring colors as red, green, and blue channel values, and HSL is also similar to the HSB (hue, saturation and brightness), color picker in Photoshop, so many people were familiar with this type of color selection when `hsl()` was first supported in browsers.
 
@@ -160,7 +217,7 @@ th {
 
 > **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
-#### HWB functional notation
+### HWB functional notation
 
 Much like the HSL functional notation above, the [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color function uses the same hue coordinate system as `hsl()`, with `0deg` being red. Instead of `hsl`'s lightness and saturation, you specify whiteness (`W`) and blackness (`B`). This function is intuitive for those who find picking a hue and then mixing in white and or black to be intuitive to reach the desired color to be intuitive.
 
@@ -247,22 +304,27 @@ th {
 
 {{EmbedLiveSample("HWB_functional_notation", 300, 200)}}
 
-#### LCH and OKLCH: CIELAB and Oklab color spaces
+### LCH and OKLCH: CIELAB and Oklab color spaces
 
-While `hsl()` and `hwb()` are intuitive, there is a major drawback of cylindrical color spaces. With these functions, every fully saturated hue angle (`hsl(<angle> 100% 50%)` or `hsl(<angle> 0% 0%)`) has the same the same lightess, but that is not how human vision or monitors work. Putting white text on blue (`hsl(240deg 100% 50%)`) is legible, but that same text on yellow (`hsl(60deg 100% 50%)`) is not only illegible, but it will hurt your eyes. Not all hues have the same max saturation. The lightness of a color in these functions is in comparison to other colors, not to human perception.
+While `hsl()` and `hwb()` are intuitive, there is a major drawback of cylindrical color spaces. With these functions, every fully saturated hue angle (`hsl(<angle> 100% 50%)` or `hwb(<angle> 0% 0%)`) has the same the same lightess, but that is not how human vision or monitors work. Putting white text on fully saturated blue (`hsl(240deg 100% 50%)`) is legible, but that same text on fully saturated yellow (`hsl(60deg 100% 50%)`) will not only be illegible, but it will hurt your user's eyes. In these color functions, the lightness of a color is in comparison to other colors, not to human perception. In reality, not all hues have the same max saturation.
 
-Wouldn't it be fantastic if you could simply change a hue of a color on a site without making text illegible? You can in the CIELAB and Oklab color spaces using the `lch()` and `oklch()` color functions.
+Wouldn't it be fantastic if you could simply change a hue of a color on a site without making text illegible? You can in the CIELAB and Oklab color spaces. For the CIELAB and oklab color spaces, you can use the `lab()`, `oklab()`, `lch()` and `oklch()` functions.
+The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H). The `lab()` and `oklab()` functions use lightness (L), red/green-ness, and yellow/blue-ness along the "a" and "b" axes (rectangular coordinates). The main benefit of these color functions is that that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
-The CIELAB and Oklab color spaces are based on human vision experiments and represent the entire range of colors that humans can see. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer.
+The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE lab color functions include `lch()` and `lab()`. Oklab color functions include `oklch()` and `oklab()`. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered to be more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
 
-Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` are a number, an angle, or the keyword `none` (equivalent to 0deg) representing the color's `<hue>` angle. However, the angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces. But the main benefit of these color functions is that that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
+The `lch()` and `oklch()` both include a hue component, and are discussed here. The [`lab()` and `oklab()`](#lab-and-oklab) define color based on a red/green and a yellow/blue color axis and are described below.
+
+Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` are a number, an angle, or the keyword `none` (equivalent to `0deg`) representing the color's `<hue>` angle, but the colors at each angle value are not the same. The angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces.
+
+The following gradients demonstrate the hue colors at every angle form `0deg` to `360deg` in the sRGB, CIE Lab, and OKlab color spaces:
 
 ```html hidden live-sample___hues
-<p>sRGB</p>
+<p>sRGB (`hsl()` and `hwb()`)</p>
 <div id="srgb"></div>
-<p>LCH</p>
+<p>CIE Lab (`lch()`)</p>
 <div id="lch"></div>
-<p>OKLCH</p>
+<p>OKLab (`oklch()`)</p>
 <div id="oklch"></div>
 <p>
   <label><input type="checkbox" /> Toggle black and white</label>
@@ -313,16 +375,18 @@ div {
 
 {{embedlivesample("hues", '100', '260') }}
 
-Select the checkbox in the example above to convert the hue gradient to greyscale. You'll notice how the OKLCH gradient is more uniform in terms of lightness, and HSL is the least uniform.
+You may notice how the brightness of the latter gradients is more even across the spectrum of hues than the sRGB gradient. Select the checkbox in the example above to convert the hue gradient to greyscale to make this more apparent.
 
-The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H).
+In addition to noting how the OKlab gradient is more uniform in terms of lightness, and sRGB is the least uniform, notice how the spread of blue values in CIE Lab is longer than than the two others. This is the difference between `lch()` and `oklch()`. The `lch()` blue spread is due to a bug that shifts the chroma and lightness of hue values between `270deg` and `330deg`. This was resolved in the oklab color space and thereore the `oklch()` color notation.
 
-The example below shows the effect of changing component values in the `lch()` functions where each row modifies a single component.
-The first row shows changes to the `lch()` lightness value, while the second row changes the `lch()` hue component.
-The third row changes the `lab()` "b" axis, so we have a different effect than `lch()` as we're gradually adding more yellow to the color rather than cycling through the entire color wheel:
+The LCH in the `lch()` and `oklch()` functions stand for lightness (`L`), chroma (`C`), and hue (`H`). Like the other color functions, there also an optional alpha transparency value. As discussed above, the hue is an `<angle>`, `number` or the keyword `none`. The `lightness` is either a {{cssxref("percentage")}} or for `lch()` a number between `0` and `100` and for `oklch()` a number between `0` and `1`, with `0` or `0%` being the complete lack of lightness, which is black.
+
+The `C` is a `<number>`, `<percentage>`, or the keyword `none` (equivalent to `0%`) is the color's chroma, or the "amount of color", similar to the `S` saturation value of the `hsl()` color function. If the value is `0` is the complete lack of chroma or saturation; a grey between white and black inclusive, depending on the lightness value. The number values are theoretically unbounded, with `100%` being equal to `150` for `lch()` and `0.4` with `oklch()`.
+
+The example below shows the effect of changing the chroma value in the `lch()` and `oklch()` functions.
 
 ```css hidden live-sample___lch-colors
-/* Varying shades of purple */
+/* Varying shades of pink */
 .container {
   display: grid;
   font-family: sans-serif;
@@ -331,109 +395,223 @@ The third row changes the `lab()` "b" axis, so we have a different effect than `
   grid-template-columns: repeat(6, 1fr);
   gap: 4px;
 }
+[id$="99"],
+[id$="90"],
+[id$="80"] {
+  color: lch(1% 40 0deg);
+}
 
 .container div {
   border-radius: 8px;
   padding: 0.75rem;
 }
-
+#lch-1 {
+  background-color: lch(1% 40 0deg);
+}
+#lch-10 {
+  background-color: lch(10% 40 0deg);
+}
 #lch-20 {
-  background-color: lch(20 40 0);
+  background-color: lch(20% 40 0deg);
 }
 #lch-30 {
-  background-color: lch(30 40 0);
+  background-color: lch(30% 40 0deg);
 }
 #lch-40 {
-  background-color: lch(40 40 0);
+  background-color: lch(40% 40 0deg);
 }
-
 #lch-50 {
-  background-color: lch(50 40 0);
+  background-color: lch(50% 40 0deg);
 }
 #lch-60 {
-  background-color: lch(60 40 0);
+  background-color: lch(60% 40 0deg);
 }
 #lch-70 {
-  background-color: lch(70 40 0);
+  background-color: lch(70% 40 0deg);
+}
+#lch-80 {
+  background-color: lch(80% 40 0deg);
+}
+#lch-90 {
+  background-color: lch(90% 40 0deg);
+}
+#lch-99 {
+  background-color: lch(99% 40 0deg);
 }
 
-#lch-hue-10 {
-  background-color: lch(70 40 10);
+#oklch-1 {
+  background-color: oklch(1% 0.12 0deg);
 }
-#lch-hue-20 {
-  background-color: lch(70 40 20);
+#oklch-10 {
+  background-color: oklch(10% 0.12 0deg);
 }
-#lch-hue-30 {
-  background-color: lch(70 40 30);
+#oklch-20 {
+  background-color: oklch(20% 0.12 0deg);
 }
-#lch-hue-40 {
-  background-color: lch(70 40 40);
+#oklch-30 {
+  background-color: oklch(30% 0.12 0deg);
 }
-#lch-hue-50 {
-  background-color: lch(70 40 50);
+#oklch-40 {
+  background-color: oklch(40% 0.12 0deg);
 }
-#lch-hue-60 {
-  background-color: lch(70 40 60);
+#oklch-50 {
+  background-color: oklch(50% 0.12 0deg);
 }
-#lab-10 {
-  background-color: lab(70 40 10);
+#oklch-60 {
+  background-color: oklch(60% 0.12 0deg);
 }
-#lab-20 {
-  background-color: lab(70 40 20);
+#oklch-70 {
+  background-color: oklch(70% 0.12 0deg);
 }
-#lab-30 {
-  background-color: lab(70 40 30);
+#oklch-80 {
+  background-color: oklch(80% 0.12 0deg);
 }
-#lab-40 {
-  background-color: lab(70 40 40);
+#oklch-90 {
+  background-color: oklch(90% 0.12 0deg);
 }
-#lab-50 {
-  background-color: lab(70 40 50);
-}
-#lab-60 {
-  background-color: lab(70 40 60);
+#oklch-99 {
+  background-color: oklch(99% 0.12 0deg);
 }
 ```
 
 ```html hidden live-sample___lch-colors
 <div class="container">
+  <div id="lch-1">lch(1 40 0)</div>
+  <div id="lch-10">lch(10 40 0)</div>
   <div id="lch-20">lch(20 40 0)</div>
   <div id="lch-30">lch(30 40 0)</div>
   <div id="lch-40">lch(40 40 0)</div>
   <div id="lch-50">lch(50 40 0)</div>
   <div id="lch-60">lch(60 40 0)</div>
   <div id="lch-70">lch(70 40 0)</div>
-  <div id="lch-hue-10">lch(70 40 10)</div>
-  <div id="lch-hue-20">lch(70 40 20)</div>
-  <div id="lch-hue-30">lch(70 40 30)</div>
-  <div id="lch-hue-40">lch(70 40 40)</div>
-  <div id="lch-hue-50">lch(70 40 50)</div>
-  <div id="lch-hue-50">lch(70 40 60)</div>
-  <div id="lab-10">lab(70 40 10)</div>
-  <div id="lab-20">lab(70 40 20)</div>
-  <div id="lab-30">lab(70 40 30)</div>
-  <div id="lab-40">lab(70 40 40)</div>
-  <div id="lab-50">lab(70 40 50)</div>
-  <div id="lab-60">lab(70 40 60)</div>
+  <div id="lch-80">lch(80 40 0)</div>
+  <div id="lch-90">lch(90 40 0)</div>
+  <div id="lch-99">lch(99 40 0)</div>
+  <div></div>
+  <div id="oklch-1">oklch(1 .12 0)</div>
+  <div id="oklch-10">oklch(10 .12 0)</div>
+  <div id="oklch-20">oklch(20 .12 0)</div>
+  <div id="oklch-30">oklch(30 .12 0)</div>
+  <div id="oklch-40">oklch(40 .12 0)</div>
+  <div id="oklch-50">oklch(50 .12 0)</div>
+  <div id="oklch-60">oklch(60 .12 0)</div>
+  <div id="oklch-70">oklch(70 .12 0)</div>
+  <div id="oklch-80">oklch(80 .12 0)</div>
+  <div id="oklch-90">oklch(90 .12 0)</div>
+  <div id="oklch-99">oklch(99 .12 0)</div>
 </div>
 ```
 
-{{embedlivesample("lch-colors", '100', '150') }}
+{{embedlivesample("lch-colors", '100', '220') }}
 
-Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered to be more accurate than CIELAB.
-Because of this optimization, hues are more perceptually uniform, making Oklab an excellent choice for gradients.
-If you already understand `lab()` and `lch()`, you can use these functions in a similar way:
+## Lab and OKLab
 
-```css
-.oklch-red {
-  color: oklch(0.93 0.39 28);
+The `lab()` functional notation expresses a given color in the CIE L*a*b\* color space. The `oklab()` function defines colors in the OKLab color space. These functions represent the entire range of colors that humans can see by specifying the color's lightness, a red/green axis value, a blue/yellow axis value, and an optional alpha transparency value.
+
+Lab represents the entire range of colors that humans can see by specifying the color's lightness (`L`), a red/green axis value (`a`), a blue/yellow axis value (`b`), and an optional alpha transparency value.
+
+Similar to `lch()` and `oklch()`, the `lightness` is either a {{cssxref("percentage")}} or for `lab()` a number between `0` and `100` and for `oklab()` a number between `0` and `1`, with `0` or `0%` being the complete lack of lightness, which is black.
+
+The `a` value is `<number>` between `-125` and `125` for `lab()` or `-0.4` and `0.4` for `oklab()`, a `<percentage>` between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the a-axis in the color space, which defines how green (moving towards -100%) or red (moving towards +100%) the color is. Note that these values are signed (allowing both positive and negative values) and theoretically unbounded, meaning that you can set values outside the ±125 or ±0.4 (±100%) limits. In practice, values cannot exceed ±160 or ±0.5, respectively.
+
+The `b` value has the same constraints, specifies the color's distance along the b-axis in the color space, which defines how blue (moving towards -100%) or yellow (moving towards +100%) the color is. This example demonstrates the `a` axis using the `lab()` function and the `b` axis using the `oklab()` function.
+
+```html hidden live-sample___lab-colors
+<div class="container">
+  <div id="lab-100">lab(50% -100% 0)</div>
+  <div id="lab-75">lab(50% -75% 0)</div>
+  <div id="lab-50">lab(50% -50% 0)</div>
+  <div id="lab-25">lab(50% -25% 0)</div>
+  <div id="lab-0">lab(50% 0 0)</div>
+  <div id="lab--25">lab(50% 25% 0)</div>
+  <div id="lab--50">lab(50% 50% 0)</div>
+  <div id="lab--75">lab(50% 75% 0)</div>
+  <div id="lab--100">lab(50% 100% 0)</div>
+  <div></div>
+  <div id="oklab-4">oklab(50% 0 -0.4)</div>
+  <div id="oklab-3">oklab(50% 0 -0.3)</div>
+  <div id="oklab-2">oklab(50% 0 -0.2)</div>
+  <div id="oklab-1">oklab(50% 0 -0.1)</div>
+  <div id="oklab-0">oklab(50% 0 0)</div>
+  <div id="oklab--1">oklab(50% 0 0.1)</div>
+  <div id="oklab--2">oklab(50% 0 0.2)</div>
+  <div id="oklab--3">oklab(50% 0 0.3)</div>
+  <div id="oklab--4">oklab(50% 0 0.4)</div>
+</div>
+```
+
+```css hidden live-sample___lab-colors
+/* Varying shades of pink */
+.container {
+  display: grid;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: white;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
 }
-.oklab-green {
-  color: oklab(0.87 -0.2 0.18);
+#lab-100 {
+  background-color: lab(50% -100% 0);
+}
+#lab-75 {
+  background-color: lab(50% -75% 0);
+}
+#lab-50 {
+  background-color: lab(50% -50% 0);
+}
+#lab-25 {
+  background-color: lab(50% -25% 0);
+}
+#lab-0 {
+  background-color: lab(50% 0 0);
+}
+#lab--25 {
+  background-color: lab(50% 25% 0);
+}
+#lab--50 {
+  background-color: lab(50% 50% 0);
+}
+#lab--75 {
+  background-color: lab(50% 75% 0);
+}
+#lab--100 {
+  background-color: lab(50% 100% 0);
+}
+
+#oklab-4 {
+  background-color: oklab(50% 0 -0.4);
+}
+#oklab-3 {
+  background-color: oklab(50% 0 -0.3);
+}
+#oklab-2 {
+  background-color: oklab(50% 0 -0.2);
+}
+#oklab-1 {
+  background-color: oklab(50% 0 -0.1);
+}
+#oklab-0 {
+  background-color: oklab(50% 0 0);
+}
+#oklab--1 {
+  background-color: oklab(50% 0 0.1);
+}
+#oklab--2 {
+  background-color: oklab(50% 0 0.2);
+}
+#oklab--3 {
+  background-color: oklab(50% 0 0.3);
+}
+#oklab--4 {
+  background-color: oklab(50% 0 0.4);
 }
 ```
 
-#### The `color()` function
+{{embedlivesample("lab-colors", '100', '220') }}
+
+## Additional color functional notations
+
+### The `color()` function
 
 If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 This is useful to describe a color for high-definition devices with wider color [gamuts](/en-US/docs/Glossary/Gamut).
@@ -454,87 +632,23 @@ For example, if we wanted to show the `display-p3 0 0 1` color, which is outside
 
 ### Relative colors
 
-The [CSS colors module](/en-US/docs/Web/CSS/CSS_colors) defines [**relative color syntax**](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which allows {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This powerful feature enables the creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants of an original color. Relative colors provide an effective mechanism to create palettes and define color adjustments.
+Every color function listed above can be used to define [**relative colors**](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which allows {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This powerful feature enables the creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants of an original color. Relative colors provide an effective mechanism to create palettes and define color adjustments. See each color function page to learn more about the syntax for that particular function.
 
-## Letting the user pick a color
+When using `rgb()`, `hsl()`, or `hwb()` to output a relative color, the output color will be a `color()` function in the `srgb` color space.
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
+### color-mix() color function
 
-The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
+The {{cssxref("color_value/color-mix", "color-mix()")}} function takes two color values of any syntax mentioned above, optionally with proportional percent values for each color, and returns the result of mixing them in a given colorspace by a given amount.
 
-### Example: Picking a color
+### light-dark() color function
 
-Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.
-
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
-
-> **Note:** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
-
-#### HTML
-
-The HTML here creates a box that contains a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty paragraph element ({{HTMLElement("p")}}) into which we'll output some text from our JavaScript code.
-
-```html
-<div id="box">
-  <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker" />
-  <p id="output"></p>
-</div>
-```
-
-#### CSS
-
-The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color.
-
-```css
-#box {
-  width: 500px;
-  height: 200px;
-  border: 2px solid rgb(245 220 225);
-  padding: 4px 6px;
-  font:
-    16px "Lucida Grande",
-    "Helvetica",
-    "Arial",
-    "sans-serif";
-}
-```
-
-#### JavaScript
-
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
-
-```js
-const colorPicker = document.getElementById("colorPicker");
-const box = document.getElementById("box");
-const output = document.getElementById("output");
-
-box.style.borderColor = colorPicker.value;
-
-colorPicker.addEventListener(
-  "input",
-  (event) => {
-    box.style.borderColor = event.target.value;
-  },
-  false,
-);
-
-colorPicker.addEventListener(
-  "change",
-  (event) => {
-    output.innerText = `Color set to ${colorPicker.value}.`;
-  },
-  false,
-);
-```
-
-The {{domxref("Element/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
-
-The {{domxref("HTMLElement/change_event", "change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+The {{cssxref("color_value/light-dark", "light-dark()")}} light-dark() function lets you set two colors for a property - returning one of the two colors depending on whether the developer has set or the user has requested a light or dark color scheme without needing to use the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature query.
 
 ## See also
 
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
