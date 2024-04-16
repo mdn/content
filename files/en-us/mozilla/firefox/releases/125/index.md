@@ -81,8 +81,8 @@ This article provides information about the changes in Firefox 125 that affect d
 
 ### WebAssembly
 
-- WebAssembly now allows WASM modules to use multiple independent linear memories.
-  Multiple memories enable more efficient interoperability between modules, and better polyfills for upcoming wasm standards. They can be used, for example, to create separate memory for internal and shared data, ephemeral and persisted data, or data that needs to be shared between threads.
+- Support has been added for Wasm modules to use multiple independent linear memories.
+  Multiple memories enable more efficient interoperability between modules and better polyfills for upcoming Wasm standards. They can be used, for example, to create separate memory for internal and shared data, ephemeral and persisted data, or data that needs to be shared between threads.
   The memory can be created in JavaScript and imported into the WASM module, or created in the WASM module and exported.
   Each new linear memory in a WASM instance is given a sequential index, starting from zero.
   WASM [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
