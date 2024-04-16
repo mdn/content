@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### APIs
 
+- [`IDBFactory.databases()`](/en-US/docs/Web/API/IDBFactory/databases) is now supported for enumerating available [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) databases ([Firefox bug 934640](https://bugzil.la/934640)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
