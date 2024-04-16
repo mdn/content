@@ -12,14 +12,14 @@ This article explains how to register attribution sources.
 
 ## Basic methodology
 
-Attribution sources take the form of links, images, or scripts contained within an embedded ad. These cause the browser to store source data in a private local cache (accessible only by the browser) when specific actions occur. The different attribution source types are registered and signal actions in different ways — they are differentiated as:
+Attribution sources take the form of links, images, or scripts contained within content that you want to measure interactions with (for example, they might be ads that you want to measure conversions on). These cause the browser to store source data in a private local cache (accessible only by the browser) when specific actions occur. The different attribution source types are registered and signal actions in different ways — they are differentiated as:
 
 - Navigation sources, which signal in response to navigation — for example when the user clicks on a link or activates it with the keyboard, or when a navigation occurs as a result of a {{domxref("Window.open()")}} call. See [Navigation-based attribution sources](#navigation-based_attribution_sources) for examples.
-- Event sources, which signal in response to events firing. See [Image-based attribution sources](#image-based_attribution_sources) and [Script-based attribution sources](#script-based_attribution_sources) for examples.
+- Event sources, which signal in response to events firing. See [Event-based attribution sources](#event-based_attribution_sources) for examples.
 
 However, what happens behind the scenes to register sources and retrieve and store the source data is the same in all cases.
 
-1. All of the sources send a request of some kind; when the correct attribute/option is included on the source (for example, when an {{htmlelement("a")}} element includes an `attributionsrc` attribute), an {{httpheader("Attribution-Reporting-Eligible")}} header is sent along with the request to indicate that the response is eligible to register a source. For example:
+1. All of the sources send an {{httpheader("Attribution-Reporting-Eligible")}} header on a request, which indicates that the response is eligible to register a source. For example:
 
    ```http
    Attribution-Reporting-Eligible: navigation-source
@@ -43,13 +43,13 @@ However, what happens behind the scenes to register sources and retrieve and sto
      );
      ```
 
-     The only required field in this context is `destination`, which specifies one or more URLs pointing to locations where a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with. The other fields specified above do the following:
+     The only required field in this context is `destination`, which specifies 1–3 sites on which a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with. The other fields specified above do the following:
 
      - `"source_event_id"`: A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint (see [Generating reports > Basic process](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#basic_process) for endpoint information).
-     - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. the browser will no longer record attribution source events based on this source).
+     - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. subsequent triggers won't be attributable to this source).
      - `"priority"`: A string representing a priority value for the attribution source. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
      - `"debug_key"`: A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
-     - `"event_report_window"`: A string representing a time in seconds, after which event-level reports will no longer be sent.
+     - `"event_report_window"`: A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports.
 
      See {{httpheader("Attribution-Reporting-Register-Source")}} for a detailed description of all the available fields.
 
@@ -86,6 +86,10 @@ However, what happens behind the scenes to register sources and retrieve and sto
 
 ## Navigation-based attribution sources
 
+There are a couple of different types of navigation-based attribution sources that can be registered — those based on HTML (which use the `attributionsrc` attribute) and those based on {{domxref("Window.open()")}} calls (which use an `attributionsrc` window feature).
+
+### HTML-based navigation sources
+
 To register a navigation-based attribution source you can add the `attributionsrc` attribute to an appropriate {{htmlelement("a")}} element, either declaratively:
 
 ```html
@@ -103,6 +107,8 @@ aElem.attributionSrc = "";
 
 In this case, the browser stores the source data associated with the navigation-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the browser receives the response.
 
+### Window.open()-based navigation sources
+
 You can also add the `attributionsrc` feature keyword to the features property of a {{domxref("Window.open()")}} call. In this example we run it in response to a `click` event being fired:
 
 ```js
@@ -111,51 +117,55 @@ elem.addEventListener("click", () => {
 });
 ```
 
-In this case, the registration is completed _and_ the browser stores the source data associated with the attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method is invoked.
-
 > **Note:** When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screenreader and keyboard users.
 
 > **Note:** To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handler such as `click`) within five seconds of user interaction.
 
-## Image-based attribution sources
+## Event-based attribution sources
 
-To register an image-based attribution source you can add the `attributionsrc` attribute to an appropriate {{htmlelement("img")}} element, either declaratively:
+There are a couple of different types of event-based attribution sources that can be registered — those based on HTML (which use the `attributionsrc` attribute like we saw above with `<a>` element) and those based on JavaScript.
+
+### HTML-based event sources
+
+To register an event-based attribution source via HTML, you can add the `attributionsrc` attribute to an appropriate element — {{htmlelement("img")}} or {{htmlelement("script")}}.
+
+Let's look at an `<img>` element example:
 
 ```html
 <img src="advertising-image.png" attributionsrc />
 ```
 
-Or via the {{domxref("HTMLImageElement.attributionSrc")}} property:
+You could also achieve this via the {{domxref("HTMLImageElement.attributionSrc")}} property:
 
 ```js
 const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "";
 ```
 
-The browser stores the source data associated with the image-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the browser receives the response containing the image file.
+The browser stores the source data associated with the source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the browser receives the response containing the image file. Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
 
-Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
+A {{htmlelement("script")}} example might look like so:
 
-## Script-based attribution sources
+```html
+<script src="advertising-script.js" attributionsrc />
+```
 
-Script-based attribution sources are by far the most versatile. You can set up a script to initiate a request that is eligible to register an attribution source based on whatever request suits your app.
+Or via the {{domxref("HTMLScriptElement.attributionSrc")}} property:
+
+```js
+const scriptElem = document.querySelector("script");
+scriptElem.attributionSrc = "";
+```
+
+In this case, the browser stores the source data associated with the source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the browser receives the response containing the script.
+
+### JavaScript-based event sources
+
+Script-based attribution sources are more versatile than HTML-based attribution sources. You can set up a script to initiate a request that is eligible to register an attribution source based on whatever request suits your app.
 
 To set up a script-based attribution source, you can:
 
-1. Add the `attributionsrc` attribute to an appropriate {{htmlelement("script")}} element, either declaratively:
-
-   ```html
-   <script src="advertising-script.js" attributionsrc />
-   ```
-
-   Or via the {{domxref("HTMLScriptElement.attributionSrc")}} property:
-
-   ```js
-   const scriptElem = document.querySelector("script");
-   scriptElem.attributionSrc = "";
-   ```
-
-2. Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+1. Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
 
    ```js
    const attributionReporting = {
@@ -177,7 +187,7 @@ To set up a script-based attribution source, you can:
    elem.addEventListener("click", triggerSourceInteraction);
    ```
 
-3. Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
+2. Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
 
    ```js
    const attributionReporting = {
@@ -210,7 +220,7 @@ To set up a script-based attribution source, you can:
 
 So far, in all the examples we have seen, the `attributionsrc` attribute/feature or `attributionSrc` property has been left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header.
 
-However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
+However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to register the source.
 
 For example, in the case of an `<a>` element you could declare the URL(s) in the `attributionsrc` attribute:
 

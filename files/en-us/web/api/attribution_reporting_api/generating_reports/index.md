@@ -12,24 +12,27 @@ This article explains how reports are generated — both attribution reports and
 
 ## Basic process
 
-When a match occurs between a conversion trigger and a source, the browser generates a report and sends it via an uncredentialed [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request to a specific endpoint on the reporting origin:
+When a match occurs between a trigger and a source, the browser generates a report and sends it via an uncredentialed [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request to a specific endpoint on the reporting origin:
 
-- For event-level reports, this is `https://<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`.
-- For summary reports, this is `https://<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`.
+- For event-level reports, this is `<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`.
+- For summary reports, this is `<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`.
 
-The `<reporting-origin>` needs to be the same origin as the one that registered the source and trigger.
+The `<reporting-origin>` will be same-origin with the one that registered the source and trigger.
 
 The report data is contained in a JSON structure.
 
 ## Event-level reports
 
-An event level-report is, by default, generated and schduled to be sent one hour after a conversion occurs. For a given registered attribution source, attribution source events will be recorded from registration up until the source expires — this is referred to as the **report window**.
+Event-level reports are generated and scheduled to be sent at the end of their containing **report window**. The length of the report window is determined by the values set in the [`"event_report_window"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_window) or [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) field set in the source's {{httpheader("Attribution-Reporting-Register-Source")}} header.
 
-The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `event_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows) for more details.
+If neither of these fields are specified, the report window falls back to the following defaults:
 
-Once an event-level report is received at the appropriate endpoint, how the data is processed, stored, and displayed is completely up to the developer.
+- For [event-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
+- For [navigation-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), the default report windows are 2 days, 7 days, and the source's `"expiry"`.
 
-A typical event-level report might look like this:
+See [Custom report windows](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows) for more details.
+
+Once an event-level report is received at the appropriate endpoint, how the data is processed, stored, and displayed is completely up to the developer. A typical event-level report might look like this:
 
 ```json
 {
@@ -48,7 +51,7 @@ A typical event-level report might look like this:
 The properties are as follows:
 
 - `"attribution_destination"`
-  - : A string representing the attribution `destination` URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+  - : A string, or an array of 2–3 strings, depending on whether the source was registered with multiple destinations or not. These strings represent the attribution [`"destination"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) site(s) set in the source registration via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header.
 - `"source_event_id"`
   - : A string representing the attribution source ID. This is equal to the `source_event_id` set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
 - `"trigger_data"`
@@ -56,9 +59,9 @@ The properties are as follows:
 - `"report_id"`
   - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
 - `"source_type"`
-  - : A string equal to either `"navigation"` or `"event"`, which respectively indicate whether the associated attribution source was associated with a navigation (i.e. a [click-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API#click-based_attribution_sources)), or another type.
+  - : A string equal to either `"navigation"` or `"event"`, which respectively indicate whether the associated attribution source is [navigation-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), or [event-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources).
 - `"randomized_trigger_rate"`
-  - : A random number between 0 and 1 indicating how often noise is applied.
+  - : A random number between 0 and 1 indicating how often noise is applied for this particular source configuration.
 - `"scheduled_report_time"`
   - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid noise around offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}
@@ -70,7 +73,7 @@ The properties are as follows:
 
 A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://developer.chrome.com/docs/privacy-sandbox/summary-reports/#batching) to prepare them to be processed by an [aggregation service](https://developer.chrome.com/docs/privacy-sandbox/aggregation-service/). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
 
-An aggregatable report by default is generated and scheduled to be sent one hour after a conversion occurs, plus a random delay of between 10 minutes and one hour to help fuzz the timings and improve privacy. For a given registered attribution source, attribution source events will be recorded from registration up until the source expires - this is referred to as the **report window**.
+An aggregatable report by default is generated and scheduled to be sent after a trigger is interacted with, with a random delay to help fuzz the timings and improve privacy. For a given registered attribution source, attribution source events will be recorded from registration up until the source expires - this is referred to as the **report window**.
 
 The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows) for more details.
 
@@ -105,7 +108,7 @@ The properties are as follows:
     - `"report_id"`
       - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
     - `"reporting_origin"`
-      - : The origin that triggered the report generation. (EDITORIAL: ISN'T THIS THE SAME AS THE ATTRIBUTION_DESTINATION? THE ORIGINS ALL HAVE TO MATCH, RIGHT?)
+      - : The origin that triggered the report generation.
     - `"scheduled_report_time"`
       - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid noise around offline devices reporting late).
     - `"source_registration_time"`
@@ -155,13 +158,16 @@ For more information on noise, see:
 
 ## Report priorities and limits
 
-By default, all attribution sources have the same priority, and the attribution model is last-touch, meaning that a conversion is attributed to the most recent matching source event. For both event-level and aggregatable reports you can change source priority by setting a new value for the `"priority"` field in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header. The default value is `1`; if you set a `"priority"` value of `2` on a particular source, that source will be matched first, before any priority `1` sources. Sources with `"priority": "3"` will be matched before `"priority": "2"` sources, and so on.
+By default, all attribution sources have the same priority, and the attribution model is last-touch, meaning that a conversion is attributed to the most recent matching source event. For both event-level and aggregatable reports you can change source priority by setting a new value for the `"priority"` field in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header. The default value is `0`; if you set a `"priority"` value of `1` on a particular source, that source will be matched first, before any priority `0` sources. Sources with `"priority": "2"` will be matched before `"priority": "1"` sources, and so on.
 
 Attribution trigger priorities work the same way; you can also set trigger priorities by adding a `"priority"` field to the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header, but only for event-level reports.
 
-[Click-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API#click-based_attribution_sources) have a three-report limit. For example, say a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase. The purchase report would be dropped, as it comes from the fourth conversion.
+Different source types have different default limits:
 
-[Image-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API#image-based_attribution_sources) and [Script-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API#script-based_attribution_sources) only have a one-report limit.
+- [Navigation-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) have a three-report limit by default. For example, say a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase. The purchase report would be dropped, as it comes from the fourth conversion.
+- [Event-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) have a one-report limit by default.
+
+> **Note:** The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
 
 When an attribution is triggered for a given source event, if the maximum number of attributions (three for clicks, one for images/scripts) has been reached for this source the browser will:
 
@@ -185,7 +191,7 @@ To declare filters:
    }
    ```
 
-2. On trigger registration, add a `filters` field to the {{httpheader("Attribution-Reporting-Register-Trigger")}} header. The following, for example, causes conversions to only be counted if they occur on the `"electronics.megastore"` subdomain. The `"directory"` filter on the other hand is ignored, because it was not defined during the source registration.
+2. On trigger registration, add a `filters` field to the {{httpheader("Attribution-Reporting-Register-Trigger")}} header. The following, for example, causes trigger interactions to match the above source registration, as they both contain the `"electronics.megastore"` `"conversion_subdomain"` field. The `"directory"` filter on the other hand is ignored when a match is attempted, because it was not included in the above source registration.
 
    ```json
    "filters": {
@@ -194,7 +200,7 @@ To declare filters:
    }
    ```
 
-If none of the values present for a key defined in `"filter_data"` are present in `"filters"`, the trigger is ignored completely.
+If the `"filter_data"` and `"filters"` fields contain matching subfields (like `"conversion_subdomain"` in the example above) but none of the subfield's values match, the trigger is ignored, resulting in no match.
 
 ### Filtering trigger data
 
@@ -216,6 +222,8 @@ For example:
   ]
 }
 ```
+
+> **Note:** `"source_type"` is an automatically populated field available on the source's `"filter_data"`.
 
 > **Note:** `not_filters`, which filters with negation, is also supported.
 
@@ -252,7 +260,7 @@ There are two different types of debug report:
 - **Success debug reports** track successful generation of a specific attribution report. Success debug reports are generated and sent as soon as the corresponding trigger is registered.
 - **Verbose debug reports** give you more visibility into the attribution source and attribution trigger events associated with an attribution report. They enable you to ensure that sources were registered successfully, or track missing reports and determine why they're missing (for example due to failure in source or trigger event registration or failure when sending or generating the report). Verbose debug reports are sent immediately upon source or trigger registration.
 
-> **Note:** To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a third-party cookie, which means that debug reports will not be available in browsers where third party cookies are disabled/not available.
+> **Note:** To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
 
 ### Using debug reports
 
@@ -285,9 +293,9 @@ To use debug reports, you need to:
 
 4. Set up appropriate endpoints to receive the debug reports you want to generate. Debug reports are sent to three separate endpoints in the reporting origin:
 
-   - Endpoint for event-level success debug reports: `https://<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
-   - Endpoint for aggregatable success debug reports: `https://<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
-   - Endpoint for verbose debug reports: `https://<reporting-origin>/.well-known/attribution-reporting/debug/verbose`
+   - Endpoint for event-level success debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
+   - Endpoint for aggregatable success debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
+   - Endpoint for verbose debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/verbose`
 
 Generated success debug reports are identical to attribution reports, and contain the source-side and the trigger-side debug keys, in the `"source_debug_key"` and `"trigger_debug_key"` fields respectively.
 

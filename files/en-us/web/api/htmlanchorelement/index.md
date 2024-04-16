@@ -16,7 +16,7 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLAnchorElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
-  - : Gets and sets the `attributionsrc` attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a click-based attribution source.
+  - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/a#attributionsrc) attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register a navigation-based attribution source.
 - {{domxref("HTMLAnchorElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}

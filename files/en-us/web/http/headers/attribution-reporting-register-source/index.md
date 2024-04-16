@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Source
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Source`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to complete registration of an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
+The **`Attribution-Reporting-Register-Source`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to register an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -59,17 +59,17 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"debug_reporting"` {{optional_inline}}
       - : A boolean value. If a `debug_key` is set, set this to `true` to specify that the generated debug report should be a verbose debug report.
     - `"event_level_epsilon"` {{optional_inline}}
-      - : A number between `0` and `64`, inclusive, which controls the amount of [noise added to reports](/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. If not specified, `"event_level_epsilon"` defaults to `64`.
+      - : A number equal to or greater than `0`, which controls the amount of [noise added to reports](/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. The maximum and default values will vary across implementations; Chrome for example has a maximum and default value of `14`.
     - `"event_report_window"` {{optional_inline}}
-      - : A string representing a time in seconds, after which event-level reports will no longer be sent. This can be used to generate reports more quickly. If not set, the event report window falls back to the `"expiry"` value.
+      - : A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports. This is called a **report window**. If not set, the event report window falls back to the `"expiry"` value.
         > **Note:** If `"event_report_window"` is specified, `"event_report_windows"` cannot be specified, otherwise the source registration will fail.
     - `"event_report_windows"` {{optional_inline}}
-      - : An object representing a series of reporting windows, starting at `"start_time"`, with reports for this source being delivered after each specified end time in `"end_times"`. This can be used to vary the time of report delivery across multiple reports. If not set, the event report window falls back to the `"expiry"` value. Properties are as follows:
+      - : An object representing a series of report windows, starting at `"start_time"`, with reports for this source being delivered after each specified end time in `"end_times"`. This can be used to vary the time of report delivery across multiple reports. If not set, the event report window falls back to the `"expiry"` value. Properties are as follows:
         - `"start_time"` {{optional_inline}}: A non-negative number specifying the start time for the resporting windows. If not specified, it defaults to `0`.
         - `"end_times"`: An array of positive numbers specifying end times for subsequent report windows. The values must be increasing, and greater than `"start_time"`.
           > **Note:** If `"event_report_windows"` is specified, `"event_report_window"` cannot be specified, otherwise the source registration will fail.
     - `"expiry"` {{optional_inline}}
-      - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. the browser will no longer record attribution source events based on this source). The maximum allowable expiry time is 2592000 seconds (30 days), which is also the default value if `"expiry"` is not explicitly set.
+      - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. subsequent triggers won't be attributable to this source). The maximum allowable expiry time is 2592000 seconds (30 days), which is also the default value if `"expiry"` is not explicitly set.
     - `"filter_data"` {{optional_inline}}
       - : An object defining custom data that can be used to filter which conversions generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
     - `"max_event_level_reports"` {{optional_inline}}

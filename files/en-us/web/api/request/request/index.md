@@ -41,7 +41,7 @@ new Request(input, options)
 
     - `attributionReporting` {{experimental_inline}}
 
-      - : Indicates that you want the request's response to register a script-based (event-based) [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#image-based_attribution_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#image-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
+      - : Indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
 
         - `eventSourceEligible`
           - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.

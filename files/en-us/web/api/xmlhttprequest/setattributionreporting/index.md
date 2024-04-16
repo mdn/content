@@ -11,7 +11,7 @@ browser-compat: api.XMLHttpRequest.setAttributionReporting
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`setAttributionReporting()`** method of the
-{{domxref("XMLHttpRequest")}} interface indicates that you want the request's response to register a script-based (event-based) [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#image-based_attribution_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#image-based_attribution_triggers).
+{{domxref("XMLHttpRequest")}} interface indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers).
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -38,7 +38,7 @@ None (`undefined`).
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the associated {{domxref("XMLHttpRequest")}} has not yet been {{domxref("XMLHttpRequest.open", "opened", "", "nocode")}}, or has already been {{domxref("XMLHttpRequest.send", "sent", "", "nocode")}}.
-- `NotAllowedError` {{domxref("DOMException")}}
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if use of the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) is blocked by a [`attribution-reporting`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting) {{httpheader("Permissions-Policy")}}.
 
 ## Examples

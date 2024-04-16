@@ -11,9 +11,9 @@ browser-compat: api.HTMLAnchorElement.attributionSrc
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The
-**`attributionSrc`** property of the {{domxref("HTMLAnchorElement")}} interface gets and sets the `attributionsrc` attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a [navigation-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
+**`attributionSrc`** property of the {{domxref("HTMLAnchorElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/a#attributionsrc) attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register of a [navigation-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 
-The browser stores the source data associated with the navigation-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the user opens the link.
+The browser stores the source data associated with the navigation-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when it receives the navigation response.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -31,7 +31,7 @@ A string. There are two versions of this property that you can get and set:
     "https://a.example/register-source https://b.example/register-source";
   ```
 
-  This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
+  This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to register the source.
 
 ## Examples
 

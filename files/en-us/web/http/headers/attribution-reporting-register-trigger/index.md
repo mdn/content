@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Trigger
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Trigger`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to complete registration of an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_triggers).
+The **`Attribution-Reporting-Register-Trigger`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to register an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_triggers).
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -61,11 +61,11 @@ Attribution-Reporting-Register-Trigger: <json-string>
     - `"event_trigger_data"`
       - : An object representing data about the trigger. Available sub-fields are as follows:
         - `"trigger_data"`
-          - : A string representing data that describes the trigger. It usually includes an ID representing the trigger that can be used to aggregate data for that trigger together, and may also include other data such as user location ID, purchase amount, etc. The value is restricted to 1 of up to 32 distinct values based on the attributed source's [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) and [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields.
+          - : A string representing data that describes the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated event-level report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
         - `"priority"` {{optional_inline}}
           - : A string representing a priority value for the attribution trigger. By default, triggers are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to make the trigger match older sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
         - `"deduplication_key"` {{optional_inline}}
-          - : A string representing a unique key that can be used to prevent reports from being counted multiple times — for example, if a checkout completion page is accidentally reloaded causing an attribution trigger to be fired twice. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
+          - : A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
         - `"filters"` {{optional_inline}}
           - : An object containing filters that perform selective filtering to set `"trigger_data"`, `"priority"`, and `"deduplication_key"` based on the `filter_data` set in a corresponding {{httpheader("Attribution-Reporting-Register-Source")}} header. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more information.
 
@@ -93,21 +93,12 @@ res.set(
 
 ### Registering a trigger for a summary report
 
-When registering a trigger intended to match with a summary report attribution source, you need to include some extra fields, _in addition_ to those required for generating an event-level report.
+When registering a trigger intended to match with a summary report attribution source, you need to include the following fields:
 
 ```js
 res.set(
   "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
-    "event_trigger_data": [
-      {
-        "trigger_data": "412444888111012",
-        "priority": "1000000000000",
-        "deduplication_key": "2345698765",
-      },
-    ],
-    "debug_key": "1115698977",
-
     "aggregatable_trigger_data": [
       {
         "key_piece": "0x400",

@@ -12,13 +12,13 @@ This article explains how to register attribution triggers.
 
 ## Basic methodology
 
-Once you have [registered attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), you need to register attribution triggers. These are events on the advertiser's site (e.g. clicking a "purchase" button) that tell the browser a conversion may have occurred. The browser will then attempt to match the attribution trigger to an attribution source entry stored in a private local storage partition, and [generate a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) if a match is found.
+Once you have [registered attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), you need to register attribution triggers. These are events on a site where attribution is to be measured (for example, clicking a "purchase" button on an advertiser's site can indicate that a conversion may have occurred). The browser will then attempt to match the attribution trigger to an attribution source entry stored in a private local storage partition, and [generate a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) if a match is found.
 
-The different attribution trigger types are registered and triggered in different ways, which are detailed in the sections below — see [Image-based attribution triggers](#image-based_attribution_triggers) and [Script-based attribution triggers](#script-based_attribution_triggers).
+The different attribution trigger types are registered and triggered in different ways, which are detailed in the sections below — see [HTML-based attribution triggers](#html-based_attribution_triggers) and [JavaScript-based attribution triggers](#javascript-based_attribution_triggers).
 
 However, what happens behind the scenes to register triggers, look for matches, etc., is the same in all cases.
 
-1. All of the trigger types cause an HTTP request to be sent. Including the correct attribute/option on a trigger causes the {{httpheader("Attribution-Reporting-Eligible")}} header to be sent along with that request, to indicate that the response is eligible for registering a trigger. For example:
+1. All of the trigger types send an {{httpheader("Attribution-Reporting-Eligible")}} header on a request, which indicates that the response is eligible to register a trigger. For example:
 
    ```http
    Attribution-Reporting-Eligible: trigger
@@ -49,26 +49,17 @@ However, what happens behind the scenes to register triggers, look for matches, 
    - `"event_trigger_data"`: An object representing data about the trigger. This includes:
      - : `"trigger_data"`: The data associated with the trigger.
      - : `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
-     - : `"deduplication_key"`: A string representing a unique key that can be used to prevent reports from being counted multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
+     - : `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
    - `"debug_key"`: A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
 
    See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
 
-   A trigger intended to match with a [summary report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#summary_reports) attribution source requires two additional fields, as shown below:
+   A trigger intended to match with a [summary report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#summary_reports) attribution source requires the following fields, as shown below:
 
    ```js
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "event_trigger_data": [
-         {
-           "trigger_data": "4",
-           "priority": "1000000000000",
-           "deduplication_key": "2345698765",
-         },
-       ],
-       "debug_key": "1115698977",
-
        "aggregatable_trigger_data": [
          {
            "key_piece": "0x400",
@@ -87,7 +78,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
    );
    ```
 
-   The additional fields in this example are:
+   The fields in this example are:
 
    - `"aggregatable_trigger_data"`: An array of objects, each one defining an aggregation key to apply to different source keys.
    - `"aggregatable_values"`: An object containing properties representing a value for each data point defined in `"aggregatable_trigger_data"`.
@@ -103,9 +94,11 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
 > **Note:** Attribution triggers cannot be registered on {{htmlelement("a")}} elements or {{domxref("Window.open()")}} calls like attribution sources can.
 
-## Image-based attribution triggers
+## HTML-based attribution triggers
 
-You can register an attribution trigger based on an image request by adding the `attributionsrc` attribute to an appropriate {{htmlelement("img")}} element, either declaratively:
+You can register an attribution trigger by adding the `attributionsrc` attribute to an appropriate element. This can be done on {{htmlelement("img")}} and {{htmlelement("script")}} elements.
+
+Here's an `<img>` element example:
 
 ```html
 <img
@@ -115,39 +108,35 @@ You can register an attribution trigger based on an image request by adding the 
   attributionsrc />
 ```
 
-Or via the {{domxref("HTMLImageElement.attributionSrc")}} property:
+You could also achieve this via the {{domxref("HTMLImageElement.attributionSrc")}} property:
 
 ```js
 const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "";
 ```
 
-In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the image file.
+In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the image file. Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
 
-Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
+A {{htmlelement("script")}} example might look like so:
 
-## Script-based attribution triggers
+```html
+<script src="advertising-script.js" attributionsrc />
+```
 
-Script-based attribution triggers are more versatile than image-based attribution triggers. You can set up a script to act as an attribution trigger and trigger the browser to attempt a match with a stored source based on whatever request suits your app.
+```js
+const scriptElem = document.querySelector("script");
+scriptElem.attributionSrc = "";
+```
+
+The browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the script.
+
+## JavaScript-based attribution triggers
+
+JavaScript-based attribution triggers are more versatile than HTML-based attribution triggers. You can trigger the browser to attempt a match with a stored source based on whatever request suits your app.
 
 To register a script-based attribution trigger, you can:
 
-1. Add the `attributionsrc` attribute to an appropriate {{htmlelement("script")}} element, either declaratively:
-
-   ```html
-   <script src="advertising-script.js" attributionsrc />
-   ```
-
-   Or via the {{domxref("HTMLScriptElement.attributionSrc")}} property:
-
-   ```js
-   const scriptElem = document.querySelector("script");
-   scriptElem.attributionSrc = "";
-   ```
-
-   This handles the attribution source registration.
-
-2. Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+1. Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
 
    ```js
    const attributionReporting = {
@@ -168,7 +157,7 @@ To register a script-based attribution trigger, you can:
    elem.addEventListener("click", triggerMatching);
    ```
 
-3. Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
+2. Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
 
    ```js
    const attributionReporting = {
@@ -179,8 +168,14 @@ To register a script-based attribution trigger, you can:
    function triggerMatching() {
      const req = new XMLHttpRequest();
      req.open("GET", "https://shop.example/endpoint");
-     req.setAttributionReporting(attributionReporting);
-     req.send();
+     // Check availability of setAttributionReporting() before calling
+     if (typeof req.setAttributionReporting === "function") {
+       req.setAttributionReporting(attributionReporting);
+       req.send();
+     } else {
+       throw new Error("Attribution reporting not available");
+       // Include recovery code here as appropriate
+     }
    }
 
    // Associate the interaction trigger with whatever
