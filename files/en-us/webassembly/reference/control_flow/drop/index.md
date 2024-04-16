@@ -1,6 +1,6 @@
 ---
-title: Drop
-slug: WebAssembly/Reference/Control_flow/Drop
+title: drop
+slug: WebAssembly/Reference/Control_flow/drop
 page-type: webassembly-instruction
 ---
 

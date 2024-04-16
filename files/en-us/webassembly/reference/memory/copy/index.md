@@ -1,14 +1,14 @@
 ---
-title: Copy
-slug: WebAssembly/Reference/Memory/Copy
+title: memory.copy
+slug: WebAssembly/Reference/Memory/copy
 page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
 
-The **`copy`** instruction copies data from one region of memory to another.
+The **`memory.copy`** instruction copies data from one region of memory to another.
 
-The **`copy`** instruction does not return a value. If either the source or destination range is out of bounds, the instruction traps.
+The instruction does not return a value. If either the source or destination range is out of bounds, the instruction traps.
 
 ## Syntax
 

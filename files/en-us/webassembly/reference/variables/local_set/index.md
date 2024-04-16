@@ -1,6 +1,6 @@
 ---
-title: Local set
-slug: WebAssembly/Reference/Variables/Local_set
+title: local.set
+slug: WebAssembly/Reference/Variables/local_set
 page-type: webassembly-instruction
 ---
 

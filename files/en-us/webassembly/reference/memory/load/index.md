@@ -1,14 +1,15 @@
 ---
-title: Load
-slug: WebAssembly/Reference/Memory/Load
+title: load
+slug: WebAssembly/Reference/Memory/load
 page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
 
-The **`load`** instructions, are used to load a number from memory onto the stack.
+The **`load`** [memory](/en-US/docs/WebAssembly/Reference/Memory) instruction is used to load a number from memory onto the stack.
 
-For the integer numbers, you can also load a narrower number from memory and extend it into a wider type, e.g. load an unsigned 8-bit number and convert it into an i32 (**`i32.load8_u`**). These instructions are separate for signed and unsigned numbers.
+There are variants of the instruction, such as `i32.load8_u`, `i32.load16_s`, and so on (see below), for loading narrow integers from memory into a wider type. These instructions are separate for signed and unsigned numbers.
+For example, `i32.load8_u` can be used to load an unsigned 8-bit number and convert it into an `i32`.
 
 {{EmbedInteractiveExample("pages/wat/load.html", "tabbed-taller")}}
 

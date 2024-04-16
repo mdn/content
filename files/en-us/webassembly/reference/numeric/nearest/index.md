@@ -1,6 +1,6 @@
 ---
-title: Nearest
-slug: WebAssembly/Reference/Numeric/Nearest
+title: nearest
+slug: WebAssembly/Reference/Numeric/nearest
 page-type: webassembly-instruction
 ---
 

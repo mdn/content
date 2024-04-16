@@ -8,6 +8,8 @@ page-type: guide
 
 To enable WebAssembly to be read and edited by humans, there is a textual representation of the Wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing Wasm in JavaScript.
 
+> **Note:** The [WebAssembly instruction reference](/en-US/docs/WebAssembly/Reference) provides reference information for a _subset_ of instructions that can be used in the text format.
+
 > **Note:** This is potentially overkill if you are a web developer who just wants to load a Wasm module into a page and use it in your code (see [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)), but it is more useful if for example, you want to write Wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.
 
 ## S-expressions
@@ -284,7 +286,7 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
+The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/store) for reading and writing from [linear memory](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
 
 From JavaScript's point of view, it's as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That's literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
 
@@ -559,8 +561,8 @@ The new operations are:
 
 - `data.drop`: Discard the data in an data segment.
 - `elem.drop`: Discard the data in an element segment.
-- `memory.copy`: Copy from one region of linear memory to another.
-- `memory.fill`: Fill a region of linear memory with a given byte value.
+- [`memory.copy`](/en-US/docs/WebAssembly/Reference/Memory/copy): Copy from one region of linear memory to another.
+- [`memory.fill`](/en-US/docs/WebAssembly/Reference/Memory/fill): Fill a region of linear memory with a given byte value.
 - `memory.init`: Copy a region from a data segment.
 - `table.copy`: Copy from one region of a table to another.
 - `table.init`: Copy a region from an element segment.

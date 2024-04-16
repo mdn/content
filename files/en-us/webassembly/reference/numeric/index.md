@@ -10,96 +10,96 @@ WebAssembly numeric instructions.
 
 ## Constants
 
-- [`Const`](/en-US/docs/WebAssembly/Reference/Numeric/Const)
-  - : Declare a constant numbers.
+- [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const)
+  - : Declare a constant number.
 
 ## Comparison
 
-- [`Equal`](/en-US/docs/WebAssembly/Reference/Numeric/Equal)
+- [`eq`](/en-US/docs/WebAssembly/Reference/Numeric/eq)
   - : Check if two numbers are equal.
-- [`Not equal`](/en-US/docs/WebAssembly/Reference/Numeric/Not_equal)
-  - : Check if two numbers are not equal.
-- [`Greater than`](/en-US/docs/WebAssembly/Reference/Numeric/Greater_than)
+- [`gt`](/en-US/docs/WebAssembly/Reference/Numeric/gt)
   - : Check if a number is greater than another number.
-- [`Less than`](/en-US/docs/WebAssembly/Reference/Numeric/Less_than)
-  - : Check if a number is less than another number.
-- [`Greater or equal`](/en-US/docs/WebAssembly/Reference/Numeric/Greater_or_equal)
+- [`ge`](/en-US/docs/WebAssembly/Reference/Numeric/ge)
   - : Check if a number is greater than or equal to another number.
-- [`Less or equal`](/en-US/docs/WebAssembly/Reference/Numeric/Less_or_equal)
+- [`le`](/en-US/docs/WebAssembly/Reference/Numeric/le)
   - : Check if a number is less than or equal to another number.
+- [`lt`](/en-US/docs/WebAssembly/Reference/Numeric/lt)
+  - : Check if a number is less than another number.
+- [`ne`](/en-US/docs/WebAssembly/Reference/Numeric/ne)
+  - : Check if two numbers are not equal.
 
 ## Arithmetic
 
-- [`Addition`](/en-US/docs/WebAssembly/Reference/Numeric/Addition)
-  - : Add up two numbers.
-- [`Subtraction`](/en-US/docs/WebAssembly/Reference/Numeric/Subtraction)
-  - : Subtract one number from another number.
-- [`Multiplication`](/en-US/docs/WebAssembly/Reference/Numeric/Multiplication)
-  - : Multiply one number by another number.
-- [`Division`](/en-US/docs/WebAssembly/Reference/Numeric/Division)
+- [`add`](/en-US/docs/WebAssembly/Reference/Numeric/add)
+  - : Add two numbers.
+- [`div`](/en-US/docs/WebAssembly/Reference/Numeric/div)
   - : Divide one number by another number.
-- [`Remainder`](/en-US/docs/WebAssembly/Reference/Numeric/Remainder)
+- [`mul`](/en-US/docs/WebAssembly/Reference/Numeric/mul)
+  - : Multiply one number by another number.
+- [`remainder`](/en-US/docs/WebAssembly/Reference/Numeric/remainder)
   - : Calculate the remainder left over when one integer is divided by another integer.
+- [`sub`](/en-US/docs/WebAssembly/Reference/Numeric/sub)
+  - : Subtract one number from another number.
 
 ## Conversion
 
-- [`Extend`](/en-US/docs/WebAssembly/Reference/Numeric/Extend)
-  - : Convert (extend) `i32` to `i64`.
-- [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap)
-  - : Convert (wrap) `i64` to `i32`.
-- [`Promote`](/en-US/docs/WebAssembly/Reference/Numeric/Promote)
-  - : Convert (promote) `f32` to `f64`.
-- [`Demote`](/en-US/docs/WebAssembly/Reference/Numeric/Demote)
-  - : Convert (demote) `f64` to `f32`.
-- [`Convert`](/en-US/docs/WebAssembly/Reference/Numeric/Convert)
+- [`convert`](/en-US/docs/WebAssembly/Reference/Numeric/convert)
   - : Convert integers to floating points.
-- [`Truncate (float to int)`](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int)
-  - : Convert (truncate fractional part) floating points to integers.
-- [`Reinterpret`](/en-US/docs/WebAssembly/Reference/Numeric/Reinterpret)
+- [`demote`](/en-US/docs/WebAssembly/Reference/Numeric/demote)
+  - : Convert `f64` to `f32`.
+- [`extend`](/en-US/docs/WebAssembly/Reference/Numeric/Extend)
+  - : Convert `i32` to `i64`.
+- [`promote`](/en-US/docs/WebAssembly/Reference/Numeric/promote)
+  - : Convert `f32` to `f64`.
+- [`reinterpret`](/en-US/docs/WebAssembly/Reference/Numeric/reinterpret)
   - : Reinterpret the bytes of integers as floating points and vice versa.
+- [`trunc` (float to int)](/en-US/docs/WebAssembly/Reference/Numeric/trunc_float_to_int)
+  - : Convert (truncate fractional part) floating points to integers.
+- [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap)
+  - : Convert (wrap) `i64` to `i32`.
 
 ## Floating point specific instructions
 
-- [`Min`](/en-US/docs/WebAssembly/Reference/Numeric/Min)
-  - : Get the lower of two numbers.
-- [`Max`](/en-US/docs/WebAssembly/Reference/Numeric/Max)
-  - : Get the higher of two numbers.
-- [`Nearest`](/en-US/docs/WebAssembly/Reference/Numeric/Nearest)
-  - : Round a number to the nearest integer.
-- [`Ceil`](/en-US/docs/WebAssembly/Reference/Numeric/Ceil)
-  - : Round up a number.
-- [`Floor`](/en-US/docs/WebAssembly/Reference/Numeric/Floor)
-  - : Round down a number.
-- [`Truncate (float to float)`](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float)
-  - : Discard the fractional part of a number.
-- [`Absolute`](/en-US/docs/WebAssembly/Reference/Numeric/Absolute)
+- [`abs`](/en-US/docs/WebAssembly/Reference/Numeric/abs)
   - : Get the absolute value of a number.
-- [`Negate`](/en-US/docs/WebAssembly/Reference/Numeric/Negate)
-  - : Negate a number.
-- [`Square root`](/en-US/docs/WebAssembly/Reference/Numeric/Square_root)
-  - : Get the square root of a number.
-- [`Copy sign`](/en-US/docs/WebAssembly/Reference/Numeric/Copy_sign)
+- [`ceil`](/en-US/docs/WebAssembly/Reference/Numeric/ceil)
+  - : Round up a number.
+- [`copysign`](/en-US/docs/WebAssembly/Reference/Numeric/copysign)
   - : Copy just the sign bit from one number to another.
+- [`floor`](/en-US/docs/WebAssembly/Reference/Numeric/floor)
+  - : Round down a number.
+- [`trunc` (float to float)](WebAssembly/Reference/Numeric/trunc_float_to_float)
+  - : Discard the fractional part of a number.
+- [`min`](/en-US/docs/WebAssembly/Reference/Numeric/min)
+  - : Get the lower of two numbers.
+- [`max`](/en-US/docs/WebAssembly/Reference/Numeric/max)
+  - : Get the higher of two numbers.
+- [`nearest`](/en-US/docs/WebAssembly/Reference/Numeric/nearest)
+  - : Round a number to the nearest integer.
+- [`neg`](/en-US/docs/WebAssembly/Reference/Numeric/neg)
+  - : Negate a number.
+- [`sqrt`](/en-US/docs/WebAssembly/Reference/Numeric/sqrt)
+  - : Get the square root of a number.
 
 ## Bitwise
 
-- [`AND`](/en-US/docs/WebAssembly/Reference/Numeric/AND)
-  - : Used for performing a bitwise AND.
-- [`OR`](/en-US/docs/WebAssembly/Reference/Numeric/OR)
-  - : Used for performing a bitwise OR.
-- [`XOR`](/en-US/docs/WebAssembly/Reference/Numeric/XOR)
-  - : Used for performing a bitwise XOR.
-- [`Left shift`](/en-US/docs/WebAssembly/Reference/Numeric/Left_shift)
-  - : Used for performing a bitwise left-shift.
-- [`Right shift`](/en-US/docs/WebAssembly/Reference/Numeric/Right_shift)
-  - : Used for performing a bitwise right-shift.
-- [`Left rotate`](/en-US/docs/WebAssembly/Reference/Numeric/Left_rotate)
-  - : Used for performing a bitwise left-rotate.
-- [`Right rotate`](/en-US/docs/WebAssembly/Reference/Numeric/Right_rotate)
-  - : Used for performing a bitwise right-rotate.
-- [`Count leading zeros`](/en-US/docs/WebAssembly/Reference/Numeric/Count_leading_zeros)
-  - : Count the amount of leading zeros in a numbers binary representation.
-- [`Count trailing zeros`](/en-US/docs/WebAssembly/Reference/Numeric/Count_trailing_zeros)
-  - : Count the amount of trailing zeros in a numbers binary representation.
-- [`Population count`](/en-US/docs/WebAssembly/Reference/Numeric/Population_count)
-  - : Count the total amount of 1s in a numbers binary representation.
+- [`and`](/en-US/docs/WebAssembly/Reference/Numeric/and)
+  - : Bitwise AND of two numbers.
+- [`or`](/en-US/docs/WebAssembly/Reference/Numeric/OR)
+  - : Bitwise OR of two numbers.
+- [`xor`](/en-US/docs/WebAssembly/Reference/Numeric/XOR)
+  - : Bitwise XOR of two numbers.
+- [`shl`](/en-US/docs/WebAssembly/Reference/Numeric/shl)
+  - : Bitwise left-shift.
+- [`shr`](/en-US/docs/WebAssembly/Reference/Numeric/shr)
+  - : Bitwise right-shift.
+- [`rotl`](/en-US/docs/WebAssembly/Reference/Numeric/rotl)
+  - : Bitwise left-rotate.
+- [`rotr`](/en-US/docs/WebAssembly/Reference/Numeric/rotr)
+  - : Bitwise right-rotate.
+- [`clz`](/en-US/docs/WebAssembly/Reference/Numeric/clz)
+  - : Count the number of leading zeros in a number's binary representation.
+- [`ctz`](/en-US/docs/WebAssembly/Reference/Numeric/ctz)
+  - : Count the number of trailing zeros in a number's binary representation.
+- [`popcnt`](/en-US/docs/WebAssembly/Reference/Numeric/popcnt)
+  - : Count the total number of 1s in a number's binary representation.

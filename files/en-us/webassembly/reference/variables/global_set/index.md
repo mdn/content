@@ -1,6 +1,6 @@
 ---
-title: Global set
-slug: WebAssembly/Reference/Variables/Global_set
+title: global.set
+slug: WebAssembly/Reference/Variables/global_set
 page-type: webassembly-instruction
 ---
 

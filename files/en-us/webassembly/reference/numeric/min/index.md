@@ -1,6 +1,6 @@
 ---
-title: Min
-slug: WebAssembly/Reference/Numeric/Min
+title: min
+slug: WebAssembly/Reference/Numeric/min
 page-type: webassembly-instruction
 ---
 

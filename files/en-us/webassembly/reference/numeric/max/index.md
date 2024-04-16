@@ -1,6 +1,6 @@
 ---
-title: Max
-slug: WebAssembly/Reference/Numeric/Max
+title: max
+slug: WebAssembly/Reference/Numeric/max
 page-type: webassembly-instruction
 ---
 

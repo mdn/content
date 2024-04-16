@@ -1,6 +1,6 @@
 ---
-title: Convert
-slug: WebAssembly/Reference/Numeric/Convert
+title: convert
+slug: WebAssembly/Reference/Numeric/convert
 page-type: webassembly-instruction
 ---
 

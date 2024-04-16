@@ -1,6 +1,6 @@
 ---
-title: Floor
-slug: WebAssembly/Reference/Numeric/Floor
+title: floor
+slug: WebAssembly/Reference/Numeric/floor
 page-type: webassembly-instruction
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Promote
-slug: WebAssembly/Reference/Numeric/Promote
+title: promote
+slug: WebAssembly/Reference/Numeric/promote
 page-type: webassembly-instruction
 ---
 

@@ -6,9 +6,9 @@ page-type: webassembly-instruction
 
 {{WebAssemblySidebar}}
 
-The **`block`** statement creates a label that can later be branched out of with a `br`.
+The **`block`** WebAssembly text-format [control flow](/en-US/docs/WebAssembly/Reference/Control_flow) statement creates a label that can later be branched out of with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
 
-The **`loop`** statement is the opposite of the `block` statement, in the sense that while branching to a `loop` jumps to the beginning of the loop, branching to a `block` jumps to the end of the block; that is, out of the block.
+The statement is the opposite of the [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop) statement, in the sense that while branching to a `loop` jumps to the beginning of the loop, branching to a `block` jumps to the end of the block; that is, out of the block.
 
 {{EmbedInteractiveExample("pages/wat/block.html", "tabbed-taller")}}
 

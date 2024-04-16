@@ -1,6 +1,6 @@
 ---
-title: AND
-slug: WebAssembly/Reference/Numeric/AND
+title: and
+slug: WebAssembly/Reference/Numeric/and
 page-type: webassembly-instruction
 ---
 

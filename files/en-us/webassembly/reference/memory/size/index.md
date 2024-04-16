@@ -1,19 +1,19 @@
 ---
-title: Size
-slug: WebAssembly/Reference/Memory/Size
+title: memory.size
+slug: WebAssembly/Reference/Memory/size
 page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
 
-The **`size`** instruction, returns the amount of pages the memory instance currently has, each page is sized 64KiB.
+The **`memory.size`** instruction, returns the size of the memory instance, in 64KiB pages.
 
 {{EmbedInteractiveExample("pages/wat/size.html", "tabbed-standard")}}
 
 ## Syntax
 
 ```wasm
-;; get the amount of pages the memory has
+;; get the size of the memory, in pages
 memory.size
 ```
 

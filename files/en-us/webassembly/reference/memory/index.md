@@ -6,17 +6,17 @@ page-type: landing-page
 
 {{WebAssemblySidebar}}
 
-WebAssembly memory instructions.
+WebAssembly text-format memory instructions.
 
-- [`Grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow)
-  - : Increase the size of the memory instance.
-- [`Size`](/en-US/docs/WebAssembly/Reference/Memory/Size)
-  - : Get the size of the memory instance.
-- [`Load`](/en-US/docs/WebAssembly/Reference/Memory/Load)
-  - : Load a number from memory.
-- [`Store`](/en-US/docs/WebAssembly/Reference/Memory/Store)
-  - : Store a number in memory.
-- [`Copy`](/en-US/docs/WebAssembly/Reference/Memory/Copy)
+- [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/grow)
+  - : Increase the size of a memory instance.
+- [`memory.size`](/en-US/docs/WebAssembly/Reference/Memory/size)
+  - : Get the size of a memory instance in pages.
+- [`load`](/en-US/docs/WebAssembly/Reference/Memory/load)
+  - : Load a number from memory onto the stack.
+- [`store`](/en-US/docs/WebAssembly/Reference/Memory/store)
+  - : Store a number into a memory.
+- [`memory.copy`](/en-US/docs/WebAssembly/Reference/Memory/copy)
   - : Copy data from one region in memory to another
-- [`Fill`](/en-US/docs/WebAssembly/Reference/Memory/Fill)
-  - : Set all values in a region to a specific byte
+- [`memory.fill`](/en-US/docs/WebAssembly/Reference/Memory/fill)
+  - : Set all values in a region of memory to a specific byte
