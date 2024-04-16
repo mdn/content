@@ -970,7 +970,7 @@ div {
 
 ### Repeating conic gradients
 
-This example uses {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} to create a gradient that rotates repeatedly around a center point. The colors get cycled over and over as the gradient repeats.
+This example uses {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} to create a gradient that rotates repeatedly around a center point. In this case, the declared color stops are repeated four times.
 
 ```html hidden
 <div class="repeating-conic"></div>
@@ -997,7 +997,7 @@ div {
 
 ### Multiple repeating conic gradients
 
-Just like linear and radial repeating gradients, you can stack multiple conic gradients on top of each other. You will need to ensure either that the colors of the gradients on the top of the stack are partially transparent or use the {{cssxref("background-blend-mode", "background-blend-mode")}} CSS property
+Just like linear and radial repeating gradients, you can stack multiple conic gradients on top of each other, creating interesting effects by using different `at <position>` values so the conic gradients don't overlap at their centers and different `from <angle>` values so the repeating effects don't line up. This example overlaps three semi-transparent repeating radial gradients that each repeat their color schemes four times. You will need to ensure either that the colors of the gradients on the top of the stack are partially transparent or use the {{cssxref("background-blend-mode")}} CSS property.
 
 ```html hidden
 <div class="multi-repeating-conic"></div>
