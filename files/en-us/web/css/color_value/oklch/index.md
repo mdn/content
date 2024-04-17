@@ -10,9 +10,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **`oklch()`** functional notation expresses a given color in the Oklch {{glossary("color space")}}.
-
-OKlch is the cylindrical form of {{CSSXref("color_value/oklab", "OKlab")}}. It uses the same `L` axis as the {{cssxref("color_value/oklab","oklab()")}} color function of the [CIELab color space](/en-US/docs/Glossary/Color_space#cielab_color_spaces), but uses polar coordinates `C` (Chroma) and `H` (Hue).
+The **`oklch()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}. `oklch()` is the cylindrical form of {{CSSXref("color_value/oklab", "oklab()")}}, using the same `L` axis, but with polar Chroma (`C`) and Hue (`h`) coordinates.
 
 ## Syntax
 
@@ -46,7 +44,7 @@ The parameters are as follows:
 
 - `L`
 
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's perceived lightness, or "brightness". In this case, the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white).
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). In this case, the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). This value specifies the color's perceived lightness, or "brightness".
 
     > **Note:** The `L` in `oklch()` is the perceived lightness, which refers to the "brightness" we visually perceive with our eyes. This is different from the `L` in `hsl()`, where it represents lightness as compared to other colors.
 
@@ -58,7 +56,7 @@ The parameters are as follows:
 
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
-    > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by `oklch()`) color spaces. See [Hues in OKLCH](#hues_in_oklch) and the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples.
+    > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by `oklch()`) color spaces. See [Hues in `oklch()`](#hues_in_oklch) example below and the {{CSSXref("&lt;hue&gt;")}} reference page for more details and examples.
 
 - `A` {{optional_inline}}
 
@@ -88,7 +86,7 @@ The parameters are as follows:
 
 - `H`
 
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See the [hue example](#result_3) below.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See a [sample of different hues](#result_3) in the examples below.
 
 - `A` {{optional_inline}}
 
@@ -260,7 +258,7 @@ The following example shows the effect of varying the `C` (chroma) value of the 
 
 #### CSS
 
-With the initial starting colors blue, red, and green, we declare progressively smaller values for chroma on them: starting from full color saturation at the highest value of `150` (equivalent to `100%`) down to `3` (equivalent to `2%`), which is almost grey for all the colors.
+With the initial starting colors blue, red, and green, we declare progressively smaller values for chroma on them: starting from full color saturation at the high value of `0.4` (equivalent to `100%`) down to `0.01` (equivalent to `2%`), which is almost grey for all the colors.
 
 ```css hidden
 body {
