@@ -132,3 +132,4 @@ Alternatively, use the experimental [`light-dark()`](/en-US/docs/Web/CSS/color_v
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
