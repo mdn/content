@@ -83,8 +83,8 @@ Beginning in version 41, Firefox for Android will contain the Android version as
 
 Beginning in version 126, Firefox for Android will include "Linux" as part of the _platform_ token.
 
-| Form factor | Gecko user agent string                                            |
-| ----------- | ------------------------------------------------------------------ |
+| Form factor | Gecko user agent string                                                      |
+| ----------- | ---------------------------------------------------------------------------- |
 | Phone       | Mozilla/5.0 (Linux; Android 5.0; Mobile; rv:126.0) Gecko/126.0 Firefox/126.0 |
 | Tablet      | Mozilla/5.0 (Linux; Android 5.0; Tablet; rv:126.0) Gecko/126.0 Firefox/126.0 |
 
