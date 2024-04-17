@@ -17,13 +17,11 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
   - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.
 - {{domxref("PermissionStatus.state")}} {{ReadOnlyInline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`.
-- `PermissionStatus.status` {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`. Later versions of the specification replace this with {{domxref("PermissionStatus.state")}}.
 
 ### Events
 
 - {{domxref("PermissionStatus.change_event", "change")}}
-  - : Invoked upon changes to `PermissionStatus.state`, or the deprecated `PermissionStatus.status` in the case of older browsers.
+  - : Invoked upon changes to `PermissionStatus.state`.
 
 ## Example
 
