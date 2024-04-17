@@ -5,10 +5,11 @@ slug: Web/API/PushSubscription/subscriptionId
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.PushSubscription.subscriptionId
 ---
 
-{{APIRef("Push API")}}{{Deprecated_header}}
+{{APIRef("Push API")}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`subscriptionId`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a string containing
