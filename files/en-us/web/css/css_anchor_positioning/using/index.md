@@ -91,7 +91,7 @@ The anchor and infobox are now associated together, but for the moment you'll ha
 
 ### Via HTML
 
-Associating an anchored element with an anchor is even simpler in HTML. You need to give the anchor element an ID, and then reference that ID in the anchored element's [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute:
+To associate an anchored element with an anchor in HTML, you need to give the anchor element an ID, and then reference that ID in the anchored element's [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute:
 
 ```html
 <div class="anchor" id="example-anchor">⚓︎</div>
@@ -171,7 +171,92 @@ The most common `anchor()` functions you'll use will just refer to a side of the
 }
 ```
 
-Let's look at an example of this in action ... GOT HERE
+Let's look at an example of this in action. We'll start with the same HTML as in the previous examples, but with some filler text below and above to give the {{htmlelement("body")}} element some height:
+
+```html
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus
+  elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin
+  sagittis nisl rhoncus. In arcu cursus euismod quis viverra nibh cras pulvinar.
+  Vulputate ut pharetra sit amet aliquam.
+</p>
+
+<div class="anchor">⚓︎</div>
+
+<div class="infobox">
+  <p>This is an information box.</p>
+</div>
+
+<p>
+  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
+  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
+  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
+  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
+  accumsan.
+</p>
+```
+
+We'll also give the anchor element the same CSS. The `<body>` element is given a narrow width to make the content taller:
+
+```css hidden
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: hsl(240 100% 75%);
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 3px;
+}
+```
+
+```css
+.anchor {
+  anchor-name: --infobox;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+}
+```
+
+The infobox is given fixed positioning and associated with the anchor in the same way as before. However, now we tether it to the anchor using the logical {{cssxref("inset-block-start")}} and {{cssxref("inset-inline-start")}} properties (which are equivalent to {{cssxref("top")}} and {{cssxref("left")}} in horizontal writing modes):
+
+```css hidden
+.infobox {
+  color: darkblue;
+  background-color: azure;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+```
+
+```css
+.infobox {
+  position: fixed;
+  position-anchor: --infobox;
+
+  inset-block-start: calc(anchor(end) + 5px);
+  inset-inline-start: calc(anchor(self-end) + 5px);
+}
+```
+
+Let's look at the positioning declarations in more detail:
+
+- `inset-block-start: calc(anchor(end) + 5px)`: Here we are setting the anchored element's block start edge to be positioned in the same position along the block axis as the anchor's block end edge (calculated using the `anchor(end)` function), plus 5px, so a gap is left and the two edges are not flush against each other.
+- `inset-inline-start: calc(anchor(self-end) + 5px)`: Here we are setting the anchored element's inline start edge to be positioned in the same position along the inline axis as the anchor's inline end edge (calculated using the `anchor(self-end)` function), plus 5px (again, to create a gap).
+
+This gives us the following result:
+
+{{ EmbedLiveSample("Using individual inset values, via `anchor()`", "100%", "250") }}
+
+The anchored element is positioned 5px below and 5px to the right of the anchor element. As the document is scrolled up and down, the anchored element — despite being given fixed position — maintains its position relative to the anchor element.
 
 ### Using an `inset-area`
 
