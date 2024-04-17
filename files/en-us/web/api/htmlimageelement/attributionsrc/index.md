@@ -13,7 +13,7 @@ browser-compat: api.HTMLImageElement.attributionSrc
 The
 **`attributionSrc`** property of the {{domxref("HTMLImageElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
 
-On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively.
+On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 
 The source/trigger is registered once the browser receives the response containing the image file.
 
@@ -33,10 +33,7 @@ A string. There are two versions of this property that you can get and set:
     "https://a.example/register-source https://b.example/register-source";
   ```
 
-  This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs:
-
-  - In the case of an attribution source registration, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header to register the source.
-  - In the case of an attribution trigger registration, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header to register the trigger.
+  This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionSrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` rather than the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
 
 ## Examples
 

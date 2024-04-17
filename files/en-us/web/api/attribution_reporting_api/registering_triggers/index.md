@@ -73,7 +73,8 @@ However, what happens behind the scenes to register triggers, look for matches, 
        "aggregatable_values": {
          "campaignCounts": 32768,
          "geoValue": 1664
-       }
+       },
+       "debug_key": "1115698977"
      });
    );
    ```
@@ -207,3 +208,7 @@ Or in JavaScript via the `attributionSrc` property:
 const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "https://my-separate-tracking-site.example.com";
 ```
+
+## See also
+
+- [Attribution Reporting Header Validation tool](https://wicg.github.io/attribution-reporting-api/validate-headers)

@@ -196,7 +196,7 @@ To declare filters:
    ```json
    "filters": {
      "conversion_subdomain": ["electronics.megastore"],
-     "directory": ["/store/electronics]"
+     "directory": ["/store/electronics"]
    }
    ```
 

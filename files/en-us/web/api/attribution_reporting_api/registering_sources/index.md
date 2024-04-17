@@ -262,3 +262,7 @@ elem.addEventListener("click", () => {
 ```
 
 > **Note:** Specifying multiple URLs at once means that multiple attribution source events can be registered for the same attribution source. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+
+## See also
+
+- [Attribution Reporting Header Validation tool](https://wicg.github.io/attribution-reporting-api/validate-headers)

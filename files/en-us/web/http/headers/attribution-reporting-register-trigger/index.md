@@ -112,7 +112,8 @@ res.set(
     "aggregatable_values": {
       "campaignCounts": 32768,
       "geoValue": 1664
-    }
+    },
+    "debug_key": "1115698977"
   });
 );
 ```

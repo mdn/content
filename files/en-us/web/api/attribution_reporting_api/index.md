@@ -114,6 +114,7 @@ See [Demo: Attribution Reporting API](https://arapi-home.web.app/) for an exampl
 
 ## See also
 
+- [Attribution Reporting Header Validation tool](https://wicg.github.io/attribution-reporting-api/validate-headers)
 - [Attribution reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) on developer.chrome.com (2023)
 - [Register multiple reporters](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/multiple-reporters/) on developer.chrome.com (2023)
 - [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com (2023)
