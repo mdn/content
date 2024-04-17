@@ -247,7 +247,7 @@ Or we can target one edge of the box, for example:
 }
 ```
 
-The individual properties include the {{cssxref("border-width")), {{cssxref("border-style")), and {{cssxref("border-color")) shorthand properties:
+The individual properties include the {{cssxref("border-width")}}, {{cssxref("border-style")}}, and {{cssxref("border-color")}} shorthand properties:
 
 ```css
 .box {
