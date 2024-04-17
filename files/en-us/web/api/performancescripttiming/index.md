@@ -9,7 +9,7 @@ browser-compat: api.PerformanceScriptTiming
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`PerformanceScriptTiming`** interface provides metrics on individual scripts that contribute to [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
+The **`PerformanceScriptTiming`** interface is specified in the Long Animation Frames API and provides metrics on individual scripts that contribute to long animation frames (LoAFs).
 
 ## Description
 
@@ -70,7 +70,7 @@ This interface also supports the following properties:
 
 ## Examples
 
-See [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing) for Long Animation Frames API examples.
+See [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#examples) for examples related to the Long Animation Frames API.
 
 ## Specifications
 

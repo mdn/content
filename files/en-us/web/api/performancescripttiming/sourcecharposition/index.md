@@ -20,7 +20,7 @@ A number. Returns `-1` if the script character position was not found.
 
 ## Examples
 
-See [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing) for Long Animation Frames API examples.
+See [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#examples) for examples related to the Long Animation Frames API.
 
 ## Specifications
 
