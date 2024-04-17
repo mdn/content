@@ -193,7 +193,7 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
   - [@Rumyra](https://github.com/Rumyra)
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
-  - [@jpmedley](https://github.com/jpmedley)  
+  - [@jpmedley](https://github.com/jpmedley)
 
 ### Reviewer alumni
 
