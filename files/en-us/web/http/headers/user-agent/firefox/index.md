@@ -116,7 +116,7 @@ Since version 4.1, Klar for Android uses the same UA string as [Focus for Androi
 | 1.0 (WebView)                   | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Klar/1.0 Chrome/58.0.3029.83 Mobile Safari/537.36  |
 | 4.1+ (WebView)                  | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/4.1 Chrome/62.0.3029.83 Mobile Safari/537.36 |
 | 6.0+ (GeckoView)                | Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0                                                                     |
-| 126.0+ (GeckoView)              | Mozilla/5.0 (Linux; Android 7.0; Mobile; rv:126.0) Gecko/126.0 Firefox/126.0 |
+| 126.0+ (GeckoView)              | Mozilla/5.0 (Linux; Android 7.0; Mobile; rv:126.0) Gecko/126.0 Firefox/126.0                                                           |
 
 ## Focus for iOS
 
