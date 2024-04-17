@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
 
 ## Description
@@ -96,11 +98,3 @@ Used in **ALL** roles.
 ## See also
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>
