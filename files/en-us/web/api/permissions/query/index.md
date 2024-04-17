@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Permissions.query
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
 The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 

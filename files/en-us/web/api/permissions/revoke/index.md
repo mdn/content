@@ -8,7 +8,7 @@ status:
 browser-compat: api.Permissions.revoke
 ---
 
-{{APIRef("Permissions API")}}{{deprecated_header}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`Permissions.revoke()`** method of the
 {{domxref("Permissions")}} interface reverts a currently set permission back to its
