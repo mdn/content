@@ -20,9 +20,9 @@ The first step is to choose your **base color**. This is the color that in some 
 - A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
 - Browse websites that let you look at lots of existing color palettes and images to find inspiration.
 
-When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](https://www.colorzilla.com/) offers an extension ([Chrome](https://www.colorzilla.com/chrome/) / [Firefox](https://www.colorzilla.com/firefox/)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
+When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](https://www.colorzilla.com/) offers a browser extension that offers an eyedropper tool for picking colors from any webpage. It can also take averages of the colors of an area of a page.
 
-> **Note:** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
+An "average color" grab is useful because sometimes what may look like a solid block of color might actually be multiple related colors, such as grabbing the blue in a photograph of an ocean or the sky. A single pixel of blue selected from a photo may result in a color that looks out of place.
 
 ### Fleshing out the palette
 
@@ -43,17 +43,11 @@ A full review of color theory is beyond the scope of this article, but there are
 
 ## Color and accessibility
 
-There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.
+Make sure your content is [accessible](/en-US/docs/Web/Accessibility). There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem and even a lawsuit. So it's important to consider your use of color carefully.
 
-You should do at least basic research into [color blindness](https://en.wikipedia.org/wiki/Color_blindness). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
+It's important to [understand color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) and to always consider [color blindness](https://medlineplus.gov/colorblindness.html) and [vestibular disorders](). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all. There are even color and animation combinations that can lead your photosensitive users to have experience [seizures](/en-US/docs/Web/Accessibility/Seizure_disorders#colors). While normally higher [color contrast](https://digital.gov/guides/accessibility-for-teams/visual-design/#color-and-contrast) is a good thing when it comes to accessibility, when animating, especially rapidly, [reducing color contrast](/en-US/docs/Web/Accessibility/Seizure_disorders#reduce_contrast) on animating elements reduces seizure risk.
 
-> **Note:** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
-
-For more information about color blindness, see the following articles:
-
-- [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (United States National Institute of Health)
-- [American Academy of Ophthalmology: What Is Color Blindness?](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
-- [Color Blindness & Web Design](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html) (Usability.gov: United States Department of Health and Human Services)
+That said, ensure you have enough [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) between your background and foreground content to ensure legibility. Also, never use color as the only way to convey information. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, use both text and color indicators together, to make your content more accessible to the greatest number of users.
 
 ## Palette design example
 
@@ -103,6 +97,10 @@ With this set, the browser won't tamper with the appearance of the element, and 
 
 ## See also
 
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
 - [Paletton](https://paletton.com/)
