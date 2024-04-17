@@ -32,7 +32,5 @@ The older sRGB color notations, `<hex-color>`, `hsl()`, `hwb()`, and `rgb()`, do
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)ders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
-- [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Building block: Styling borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Building block: Changing background styles using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Building block: Styling backgrounds and borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 - [Learn accessibility: Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
