@@ -14,12 +14,9 @@ A value of `flex` causes the element to become a block level flex container, and
 
 ### Property reference
 
+- {{cssxref("flex-flow")}} : {{cssxref("flex-direction")}} {{cssxref("flex-wrap")}}
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}
 
 ### Further reading
