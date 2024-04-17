@@ -59,7 +59,7 @@ a[class~="logo"] {
   - : Represents elements with an attribute name of _attr_ whose value contains at least one occurrence of _value_ within the string.
 - `[attr operator value i]`
   - : Adding an `i` (or `I`) before the closing bracket causes the value to be compared case-insensitively (for characters within the {{Glossary("ASCII")}} range).
-- `[attr operator value s]` {{Experimental_Inline}}
+- `[attr operator value s]`
   - : Adding an `s` (or `S`) before the closing bracket causes the value to be compared case-sensitively (for characters within the {{Glossary("ASCII")}} range).
 
 ## Examples

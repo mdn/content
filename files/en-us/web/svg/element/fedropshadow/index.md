@@ -62,7 +62,7 @@ svg {
   - : This attribute defines the standard deviation for the blur operation in the drop shadow.
     _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

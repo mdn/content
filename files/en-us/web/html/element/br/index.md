@@ -80,7 +80,7 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        Must have a start tag, and must not have an end tag. In XHTML documents,
+        Must have a start tag and must not have an end tag. In XHTML documents,
         write this element as <code>&#x3C;br /></code>.
       </td>
     </tr>
