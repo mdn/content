@@ -502,7 +502,7 @@ The example below shows the effect of changing the chroma value in the `lch()` a
 </div>
 ```
 
-{{embedlivesample("lch-colors", '100', '220') }}
+{{embedlivesample("lch-colors", '100', '250') }}
 
 ## Lab and OKLab
 
