@@ -177,9 +177,7 @@ Let's look at an example of this in action. We'll start with the same HTML as in
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus
-  elementum sagittis vitae et. Nisi quis eleifend quam adipiscing vitae proin
-  sagittis nisl rhoncus. In arcu cursus euismod quis viverra nibh cras pulvinar.
-  Vulputate ut pharetra sit amet aliquam.
+  elementum sagittis vitae et.
 </p>
 
 <div class="anchor">⚓︎</div>
@@ -187,6 +185,12 @@ Let's look at an example of this in action. We'll start with the same HTML as in
 <div class="infobox">
   <p>This is an information box.</p>
 </div>
+
+<p>
+  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
+  cursus euismod quis viverra nibh cras pulvinar. Vulputate ut pharetra sit amet
+  aliquam.
+</p>
 
 <p>
   Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
@@ -260,7 +264,157 @@ The anchored element is positioned 5px below and 5px to the right of the anchor 
 
 ### Using an `inset-area`
 
-xx
+The {{cssxref("inset-area")}} property provides an alternative to the `anchor()` function for positioning anchored elements. `inset-area` works on the concept of a 3x3 grid of tiles, with the anchor element inside the center tile:
+
+![The inset-area grid, as described below](inset-area.png)
+
+The grid tiles are broken up into rows and columns:
+
+- The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents — `start`, `center`, and `end`.
+- The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents — `start`, `center`, and `end`.
+
+`inset-area` property values are composed of one or two values based on the row and column values described above, with a feature extra options available. For example:
+
+- You can specify two or the above values to place the anchored element in that specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`).
+- You can specify a row or column value plus a `span-*` value. The first value specifies the row or column to place the anchored element in, placing it initially in the center, and the other one specifies the amount of that column to span. For example:
+  - `span-left top` causes the anchored element to be placed in the top row, and span across the center and left tiles of that row.
+  - `span-bottom right` causes the anchored element to be placed in the right column, and span across the center and bottom tiles of that column.
+  - `span-all top` causes the anchored element to be placed in the top row, and span across the left, center, and right tiles of that row.
+- If you only specify one value, the other value defaults to `span-all` in the case of physical values (except for `center`, in which case the other value defaults to `center`), or the same as the first value in the case of logical values. So, for example:
+  - `top` gives the same effect as `top span-all`.
+  - `start` gives the same effect as `start start`.
+
+> **Note:** See the {{cssxref("inset-area")}} property for a detailed description of all the available values.
+
+Lets demonstrate some of these values in action; this example uses exactly the same HTML as the previous example, except that we've included a {{htmlelement("select")}} element that allows you to change the `inset-area` applied to the anchored element, changing its position relative to the anchor.
+
+```html
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus
+  elementum sagittis vitae et.
+</p>
+
+<div class="anchor">⚓︎</div>
+
+<div class="infobox">
+  <p>This is an information box.</p>
+</div>
+
+<p>
+  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
+  cursus euismod quis viverra nibh cras pulvinar. Vulputate ut pharetra sit amet
+  aliquam.
+</p>
+
+<p>
+  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
+  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
+  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
+  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
+  accumsan.
+</p>
+
+<form>
+  <label for="inset-area-select">Choose an inset-area:</label>
+  <select id="inset-area-select" name="inset-area-select">
+    <option>top</option>
+    <option>bottom</option>
+    <option>left</option>
+    <option>right</option>
+    <option>top left</option>
+    <option>top right</option>
+    <option>bottom left</option>
+    <option>bottom right</option>
+    <option>top span-left</option>
+    <option>bottom span-right</option>
+    <option>left span-top</option>
+    <option>right span-bottom</option>
+    <option>center</option>
+  </select>
+</form>
+```
+
+The anchor element and `<body>` element are given the same CSS as before. We have given the `<select>` form some simple styling and fixed its position in the top-left of the viewport:
+
+```css hidden
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: hsl(240 100% 75%);
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.anchor {
+  anchor-name: --infobox;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+}
+
+form {
+  background: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+select {
+  display: block;
+  margin-top: 5px;
+}
+```
+
+```css
+form {
+  position: fixed;
+  top: 0;
+  right: 2px;
+}
+```
+
+The infobox is given fixed positioning and associated with the anchor in the same way as before. This time however, it is tethered to the anchor with `inset-area: top;`, which causes it to be positioned at the top of the inset-area grid. This will be overridden once you select different values from the `<select>` menu.
+
+```css hidden
+.infobox {
+  color: darkblue;
+  background-color: azure;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+```
+
+```css
+.infobox {
+  position: fixed;
+  position-anchor: --infobox;
+
+  inset-area: top;
+}
+```
+
+We also include a short script to apply new `inset-area` values chosen from the `<select>` menu to the infobox:
+
+```js
+const infobox = document.querySelector(".infobox");
+const selectElem = document.querySelector("select");
+
+selectElem.addEventListener("change", () => {
+  infobox.style.insetArea = selectElem.value;
+});
+```
+
+The result is as follows. Try selecting new `inset-area` values from the `<select>` menu to see the effect they have on the position of the infobox:
+
+{{ EmbedLiveSample("Using an `inset-area`", "100%", "250") }}
 
 ### Combining `anchor()` and `inset-area`
 
