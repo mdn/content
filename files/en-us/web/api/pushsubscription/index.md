@@ -19,7 +19,7 @@ An instance of this interface can be serialized.
   - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
 - {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}
   - : An object containing the options used to create the subscription.
-- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : A string containing the subscription ID associated with the push subscription.
 
 ## Instance methods
