@@ -353,7 +353,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/scrollend_event", "scrollend")}}
-  - : Fired when the document view or an element has been scrolled.
+  - : Fired when the document view or an element has completed scrolling.
 
 ### Selection events
 

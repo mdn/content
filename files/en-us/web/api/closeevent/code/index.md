@@ -127,14 +127,14 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
     </tr>
     <tr>
       <td><code>1012</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Service Restart</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Service Restart</a></td>
       <td>
         The server is terminating the connection because it is restarting.
       </td>
     </tr>
     <tr>
       <td><code>1013</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Try Again Later</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Try Again Later</a></td>
       <td>
         The server is terminating the connection due to a temporary condition,
         e.g. it is overloaded and is casting off some of its clients.

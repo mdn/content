@@ -34,7 +34,7 @@ _This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and
 _This interface inherits methods from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
 
 - {{DOMxRef('InputEvent.getTargetRanges()')}}
-  - : Returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
+  - : Returns an array of {{domxref("StaticRange")}} objects that will be affected by a change to the DOM if the input event is not canceled.
 
 ## Specifications
 

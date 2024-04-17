@@ -194,7 +194,7 @@ As [with links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#
 
 This gives us a tooltip on mouse hover, just like link titles:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum](image-with-title.png)
 
 However, this is not recommended — `title` has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 
@@ -614,9 +614,9 @@ We've seen that static images can be displayed using the {{HTMLElement("img")}} 
 - [Canvas](/en-US/docs/Web/API/Canvas_API)
   - : The {{HTMLElement("canvas")}} element provides APIs to draw 2D graphics using JavaScript.
 - [SVG](/en-US/docs/Web/SVG)
-  - : Scalable Vector Graphics (SVG) lets you use lines, curves, and other geometric shapes to render 2D graphics. With vectors, you can create images that scale cleanly to any size.
+  - : Scalable Vector Graphics (SVG) let you use lines, curves, and other geometric shapes to render 2D graphics. With vectors, you can create images that scale cleanly to any size.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
-  - : The WebGL API guide will get your started with WebGL, the 3D graphics API for the Web that lets you use standard OpenGL ES in web content.
+  - : The WebGL API guide will get you started with WebGL, the 3D graphics API for the Web that lets you use standard OpenGL ES in web content.
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : Just like `<img>`, you can use HTML to embed {{htmlelement("video")}} and {{htmlelement("audio")}} into a web page and control its playback.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

@@ -36,7 +36,7 @@ text-justify: unset;
   - : The text is justified by adding space between words (effectively varying {{cssxref("word-spacing")}}), which is most appropriate for languages that separate words using spaces, like English or Korean.
 - `inter-character`
   - : The text is justified by adding space between characters (effectively varying {{cssxref("letter-spacing")}}), which is most appropriate for languages like Japanese.
-- `distribute` {{deprecated_inline}}
+- `distribute`
   - : Exhibits the same behavior as `inter-character`; this value is kept for backwards compatibility.
 
 ## Formal definition

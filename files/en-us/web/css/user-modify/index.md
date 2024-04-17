@@ -37,7 +37,7 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
   - : Default value. Contents are read-only.
 - `read-write`
   - : The user is able to read and write contents.
-- `read-write-plaintext-only` {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `read-write-plaintext-only`
   - : Same as `read-write`, but rich text formatting will be lost.
 - `write-only`
   - : The user is able to edit the content, but not to read it.

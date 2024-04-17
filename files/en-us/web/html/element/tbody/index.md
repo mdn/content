@@ -350,7 +350,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role"
             >rowgroup</a
           ></code
         >
