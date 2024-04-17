@@ -6,20 +6,23 @@ page-type: guide
 
 {{CSSRef}}
 
-This tool lets you pick a color in the sRGB {{glossary("color space")}} and convert it between various CSS [color formats](/en-US/docs/Web/CSS/color_value), including:
+This tool lets you pick a color in the sRGB {{glossary("color space")}} and converts it between various CSS [color formats](/en-US/docs/Web/CSS/color_value), including:
 
 - {{cssxref("hex-color")}}, a _hexadecimal color syntax_ of an [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency.
 - {{CSSxRef("color_value/rgb", "rgb()")}}, which defines a given color according to its red, green, blue and alpha (transparency) components.
 - {{CSSxRef("color_value/hsl", "hsl()")}}, which defines a given color according to its hue, saturation, lightness and alpha (transparency) components.
 - {{CSSxRef("color_value/hwb", "hwb()")}}, which defines a given color according to its hue, whiteness, blackness and alpha (transparency) components.
+- {{CSSxRef("color_value/color", "color()")}}, which defines a color in any given color space.
 
-When you select a color, it gets displayed in four standard Web CSS formats. Control over the alpha channel is also supported.
+When you select a color, it gets displayed in four standard CSS color formats. Control over the alpha channel is also supported.
 
 This tool will help you understand the syntax of the color notations in the sRGB color space.
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
 The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt")}} data type is supported in CSS.
+
+The older sRGB color notations, `<hex-color>`, `hsl()`, `hwb()`, and `rgb()`, do not express the full spectrum of visible colors. When using `hsl()`, `hwb()`, and `rgb()` to define a [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), the output color is serialized to `color(srgb)` to avoid these limitations, meaning querying the output color value via the {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
 
 ## See also
 
