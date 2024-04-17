@@ -32,11 +32,11 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 
 ### Values
 
-- `none` {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `none`
   - : The element does not respond to user input, and it does not become {{CSSxRef(":active")}}.
-- `enabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `enabled`
   - : The element accepts user input. For textboxes, this is the default behavior. **Please note that this value is no longer supported in Firefox 60 onwards ([Firefox bug 1405087](https://bugzil.la/1405087)).**
-- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `disabled`
   - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally. **Please note that this value is no longer supported in Firefox 60 onwards ([Firefox bug 1405087](https://bugzil.la/1405087)).**
 
 ## Formal definition

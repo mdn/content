@@ -57,7 +57,7 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#flac">FLAC</a></th>
       <td>Free Lossless Audio Codec</td>
-      <td>Chrome 56, Edge 16, Firefox 51, Safari 11</td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#mpegmpeg-2">MPEG / MPEG-2</a></th>
@@ -67,15 +67,12 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#mpeg-4_mp4">MPEG-4 (MP4)</a></th>
       <td>Moving Picture Experts Group 4</td>
-      <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#ogg">Ogg</a></th>
       <td>Ogg</td>
-      <td>
-        <p>Chrome 3, Firefox 3.5, Edge 17 (desktop only), Internet Explorer 9, Opera 10.50</p>
-        <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
-      </td>
+      <td>All browsers.</td>
     </tr>
     <tr>
       <th scope="row"><a href="#quicktime">QuickTime (MOV)</a></th>
@@ -85,10 +82,7 @@ To learn more about a specific container format, find it in this list and click 
     <tr>
       <th scope="row"><a href="#webm">WebM</a></th>
       <td>Web Media</td>
-      <td>
-        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS), Safari 15 (iOS).</p>
-        <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
-      </td>
+      <td>All browsers.</td>
     </tr>
   </tbody>
 </table>
@@ -664,6 +658,9 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_p
     </tr>
   </tbody>
 </table>
+
+> **Warning:**
+> Ogg Opus audio files longer than 12h 35m 39s are truncated and exhibit seeking issues when played on Firefox Linux 64 bit ([Firefox bug 1810378](https://bugzilla.mozilla.org/show_bug.cgi?id=1810378)).
 
 ### QuickTime
 

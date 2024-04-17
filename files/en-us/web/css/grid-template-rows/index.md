@@ -86,7 +86,7 @@ This property may be specified as:
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.
-- [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
+- [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
   - : The masonry value indicates that this axis should be laid out according to the masonry algorithm.
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.
