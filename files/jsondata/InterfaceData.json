@@ -376,6 +376,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "ChapterInformation": {
+      "inh": "",
+      "impl": []
+    },
     "CharacterBoundsUpdateEvent": {
       "inh": "Event",
       "impl": []
@@ -698,6 +702,10 @@
     },
     "CSSPerspective": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSPositionTryDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPositionTryRule": {
