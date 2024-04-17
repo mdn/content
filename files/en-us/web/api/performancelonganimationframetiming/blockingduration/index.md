@@ -45,9 +45,7 @@ The difference between `duration` and `blockingDuration` of LoAFs can be summari
 - `duration` is a measure of the LoAF's total response time, which is useful for understanding whether the frame's layout, painting, etc. took a long time.
 - `blockingDuration` is a measure of the total time the LoAF blocked the main thread from responding to high priority tasks, such as user interactions, which can cause the UI to feel [janky](/en-US/docs/Glossary/Jank). To put it another way, it is a measure of the effect the LoAF will have on responsiveness.
 
-The reason why the `blockingDuration` of each task is calculated as `duration - 50ms` is that response delays of above 50ms start to be perceptible by users. This threshold is when users start noticing sluggishness; therefore, the time above the 50ms mark is important to measure for determining the severity of jank.
-
-> **Note:** See [Total Blocking Time (TBT)](https://web.dev/articles/tbt) for more details.
+The reason why the `blockingDuration` of each task is calculated as `duration - 50ms` is that response delays of above 50ms start to be perceptible by users. This threshold is when users start noticing sluggishness; therefore, the time above the 50ms mark is important to measure for determining the severity of jank. See [Total Blocking Time (TBT)](https://web.dev/articles/tbt) for more details.
 
 ## Value
 
