@@ -364,7 +364,7 @@ div {
 
 ### Blending gradients
 
-In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, we use the {{cssxref("background-blend-mode")}} CSS property to create blended effects.
+In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, the four {{htmlelement("div")}} elements have the same gradient as a background image and we apply different {{cssxref("background-blend-mode")}} CSS property values to the last three to create blended effects.
 
 ```html hidden
 <div class="original"></div>
@@ -993,7 +993,7 @@ div {
 
 ### Multiple repeating conic gradients
 
-Just like linear and radial repeating gradients, you can stack multiple conic gradients on top of each other, creating interesting effects by using different `at <position>` values so the conic gradients don't overlap at their centers and different `from <angle>` values so the repeating effects don't line up. This example overlaps three semi-transparent repeating radial gradients that each repeat their color schemes four times. You will need to ensure either that the colors of the gradients on the top of the stack are partially transparent or use the {{cssxref("background-blend-mode")}} CSS property.
+Just like linear and radial repeating gradients, you can stack multiple conic gradients on top of each other, creating interesting effects by using different `at <position>` values so the conic gradients don't overlap at their centers and different `from <angle>` values so the repeating effects don't line up. This example overlaps three semi-transparent repeating radial gradients that each repeat their color schemes four times. To make overlapping gradients visible, you need to ensure either that the colors of the gradients on the top of the stack are partially transparent or use the {{cssxref("background-blend-mode")}} CSS property.
 
 ```html hidden
 <div class="multi-repeating-conic"></div>
