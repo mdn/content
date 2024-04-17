@@ -17,7 +17,6 @@ In addition `<flex>` can refer to [a flexible length](/en-US/docs/Web/CSS/flex_v
 ### Property reference
 
 parent: {{cssxref("flex-flow")}} : {{cssxref("flex-direction")}} {{cssxref("flex-wrap")}}
-
 child: {{cssxref("flex")}} : {{cssxref("flex-grow")}} {{cssxref("flex-shrink")}} {{cssxref("flex-basis")}}
 
 - {{cssxref("align-content")}}
