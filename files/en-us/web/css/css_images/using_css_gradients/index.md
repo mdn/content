@@ -367,10 +367,10 @@ div {
 In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, we use the {{cssxref("background-blend-mode")}} CSS property to create blended effects.
 
 ```html hidden
-<div class="normal-gradients"></div>
-<div class="screen-gradients"></div>
-<div class="overlay-gradients"></div>
-<div class="difference-gradients"></div>
+<div class="original"></div>
+<div class="screen"></div>
+<div class="overlay"></div>
+<div class="difference"></div>
 ```
 
 ```css hidden
@@ -384,22 +384,19 @@ div {
 ```
 
 ```css
-.normal-gradients {
+div {
   background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
 }
 
-.screen-gradients {
-  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+.screen {
   background-blend-mode: screen;
 }
 
-.overlay-gradients {
-  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+.overlay {
   background-blend-mode: overlay;
 }
 
-.difference-gradients {
-  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+.difference {
   background-blend-mode: difference;
 }
 ```
