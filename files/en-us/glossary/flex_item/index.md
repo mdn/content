@@ -14,10 +14,8 @@ Continuous runs of text inside flex containers will also become flex items.
 
 ### Property reference
 
+- {{cssxref("flex")}} : {{cssxref("flex-grow")}} {{cssxref("flex-shrink")}} {{cssxref("flex-basis")}}
 - {{cssxref("align-self")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
 - {{cssxref("order")}}
 
 ### Further reading
