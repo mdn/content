@@ -50,10 +50,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag
-        must not be present.
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_media-source.audioLevel
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-The {{domxref("RTCAudioSourceStats")}} dictionary's **`audioLevel`** property represents the audio level of the media source.
+The **`audioLevel`** property of the {{domxref("RTCAudioSourceStats")}} dictionary represents the audio level of the media source.
 
 The level is averaged over some small implementation-dependent interval.
 Users can alternatively calculate the average audio level over some arbitrary duration using the algorithm described in the [`RTCAudioSourceStats` description](/en-US/docs/Web/API/RTCAudioSourceStats#description).

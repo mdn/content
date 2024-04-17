@@ -35,8 +35,10 @@ A frameset document has a `<frameset>` element instead of a {{HTMLElement("body"
     <!-- Document metadata goes here -->
   </head>
   <frameset cols="50%, 50%">
-    <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />
-    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+    <frame
+      src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" />
+    <frame
+      src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" />
   </frameset>
 </html>
 ```

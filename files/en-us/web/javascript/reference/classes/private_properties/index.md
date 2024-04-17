@@ -10,7 +10,7 @@ browser-compat:
 
 {{jsSidebar("Classes")}}
 
-**Private properties** are counterparts of the regular class properties which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private properties get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class properties is enforced by JavaScript itself.
+**Private properties** are counterparts of the regular class properties which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private properties get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class properties is enforced by JavaScript itself. The only way to access a private property is via [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation), and you can only do so within the class that defines the private property.
 
 Private properties were not native to the language before this syntax existed. In prototypal inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
 
@@ -62,7 +62,7 @@ It is a syntax error to refer to `#` names from outside of the class. It is also
 class ClassWithPrivateField {
   #privateField;
 
-  constructor() {;
+  constructor() {
     delete this.#privateField; // Syntax error
     this.#undeclaredField = 42; // Syntax error
   }

@@ -3,12 +3,10 @@ title: "SyncEvent: SyncEvent() constructor"
 short-title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.SyncEvent.SyncEvent
 ---
 
-{{APIRef("Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
 The **`SyncEvent()`** constructor creates a new {{domxref("SyncEvent")}} object.
 

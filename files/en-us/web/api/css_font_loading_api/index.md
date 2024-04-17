@@ -36,7 +36,7 @@ The status is set to `loaded` when the font face data has been successfully fetc
 Font faces are created using the [`FontFace` constructor](/en-US/docs/Web/API/FontFace/FontFace), which takes as parameters: the font family, the font source, and optional descriptors.
 The format and grammar of these arguments is the same as the equivalent [`@font-face`](/en-US/docs/Web/CSS/@font-face) definition.
 
-The font source can either be binary data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a font resource at an URL.
+The font source can either be binary data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a font resource at a URL.
 A typical font face definition using a URL source might be as shown below.
 Note that the `url()` function is required for URL font sources.
 
