@@ -56,7 +56,7 @@ The parameters are as follows:
 
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
-    > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by `oklch()`) color spaces. See [Hues in `oklch()`](#hues_in_oklch) example below and the {{CSSXref("&lt;hue&gt;")}} reference page for more details and examples.
+    > **Note:** The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by `oklch()`) color spaces. See the [Hues in `oklch()`](#hues_in_oklch) example below and the {{CSSXref("&lt;hue&gt;")}} reference page for more details and examples.
 
 - `A` {{optional_inline}}
 
@@ -86,7 +86,7 @@ The parameters are as follows:
 
 - `H`
 
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See a [sample of different hues](#result_3) in the examples below.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle. See a [sample of different hues](#result_3) in the [Examples](#examples) section below.
 
 - `A` {{optional_inline}}
 
