@@ -16,16 +16,11 @@ Flexbox also enables alignment of items on the main or cross axis, thus providin
 
 ### Property reference
 
+- {{cssxref("flex-flow")}} : {{cssxref("flex-direction")}} {{cssxref("flex-wrap")}}
+- {{cssxref("flex")}} : {{cssxref("flex-grow")}} {{cssxref("flex-shrink")}} {{cssxref("flex-basis")}}
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}
 - {{cssxref("order")}}
 
