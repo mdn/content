@@ -19,7 +19,7 @@ If a transition animation fails to start, or is skipped during the animation usi
 
 ## Value
 
-A promise.
+A Promise.
 
 ## Examples
 

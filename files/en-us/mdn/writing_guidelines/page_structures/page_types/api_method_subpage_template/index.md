@@ -31,8 +31,8 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.
->     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex.count()`.
+>     Format as `"NameOfTheParentInterface: NameOfTheMethod() method"`.
+>     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex: count() method`.
 > - **slug**
 >
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
@@ -108,7 +108,7 @@ If the method doesn't return anything, just put "None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
-Include a list of all the exceptions that the constructor can raise. Include one term and definition for each exception.
+Include a list of all the exceptions that the method can raise. Include one term and definition for each exception.
 
 - `Exception1`
   - : Include descriptions of how the exception is raised.
