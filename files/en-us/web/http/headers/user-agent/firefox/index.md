@@ -105,7 +105,7 @@ Starting in Version 6, users can opt into using a GeckoView-based Focus for Andr
 | 1.0 (WebView Mobile)             | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Mobile Safari/537.36 |
 | 1.0 (WebView Tablet)             | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Safari/537.36        |
 | 6.0 (GeckoView)                  | Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0                                                                     |
-| 126.0 (GeckoView)                | Mozilla/5.0 (Linux; Android 7.0; Mobile; rv:126.0) Gecko/126.0 Firefox/126.0 |
+| 126.0 (GeckoView)                | Mozilla/5.0 (Linux; Android 7.0; Mobile; rv:126.0) Gecko/126.0 Firefox/126.0                                                           |
 
 ## Klar for Android
 
