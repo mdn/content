@@ -10,7 +10,7 @@ browser-compat: api.Permissions.revoke
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
-The **`Permissions.revoke()`** method of the
+The **`revoke()`** method of the
 {{domxref("Permissions")}} interface reverts a currently set permission back to its
 default state, which is usually `prompt`.
 This method is called on the global {{domxref("Permissions")}} object

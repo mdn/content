@@ -7,7 +7,7 @@ browser-compat: api.Permissions
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-The Permissions interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the core Permission API functionality, such as methods for querying and revoking permissions
+The **`Permissions`** interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the core Permission API functionality, such as methods for querying and revoking permissions
 
 ## Instance methods
 

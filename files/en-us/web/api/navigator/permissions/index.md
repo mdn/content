@@ -8,7 +8,7 @@ browser-compat: api.Navigator.permissions
 
 {{APIRef("HTML DOM")}}
 
-The **`Navigator.permissions`** read-only property returns a
+The **`permissions`** read-only property of the {{domxref("Navigator")}} interface returns a
 {{domxref("Permissions")}} object that can be used to query and update permission
 status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
