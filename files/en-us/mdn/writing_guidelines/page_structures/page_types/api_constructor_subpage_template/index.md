@@ -18,8 +18,8 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > ```md
 > ---
-> title: NameOfTheConstructor()
-> slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface
+> title: NameOfTheParentInterface: NameOfTheConstructor() constructor
+> slug: Web/API/NameOfTheParentInterface/NameOfTheConstructor
 > page-type: web-api-constructor
 > status:
 >   - experimental
@@ -31,12 +31,12 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as _NameOfTheParentInterface_**()**.
->     For example, the [Request()](/en-US/docs/Web/API/Request/Request) constructor has a _title_ of `Request()`.
+>     Format as `NameOfTheParentInterface: NameOfTheConstructor() constructor`.
+>     For example, the [Request()](/en-US/docs/Web/API/Request/Request) constructor has a _title_ of `Request: Request() constructor`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheParentInterface`.
->     Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheParentInterface` not `NameOfTheParentInterface()`).
+>     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheConstructor`.
+>     Note that the name of the constructor function in the slug omits the parenthesis (it ends in `NameOfTheConstructor` not `NameOfTheConstructor()`).
 > - **page-type**
 >   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **status**

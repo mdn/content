@@ -18,7 +18,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface.NameOfTheProperty
+> title: "NameOfTheParentInterface: NameOfTheProperty property"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
 > status:
@@ -31,8 +31,8 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as _NameOfTheParentInterface_**.**_NameOfTheProperty_.
->     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay.capabilities`.
+>     Format as "NameOfTheParentInterface: NameOfTheProperty property".
+>     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay: capabilities property`.
 > - **slug**
 >
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.

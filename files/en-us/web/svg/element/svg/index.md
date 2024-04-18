@@ -118,7 +118,7 @@ To change the iframe's dimensions try resizing the dotted red border from bottom
 
 > **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

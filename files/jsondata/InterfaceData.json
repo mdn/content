@@ -376,6 +376,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "ChapterInformation": {
+      "inh": "",
+      "impl": []
+    },
     "CharacterBoundsUpdateEvent": {
       "inh": "Event",
       "impl": []
@@ -528,6 +532,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFontFaceDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSFontFaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -656,6 +664,10 @@
       "inh": "CSSColorValue",
       "impl": []
     },
+    "CSSPageDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSPageRule": {
       "inh": "CSSGroupingRule",
       "impl": []
@@ -690,6 +702,10 @@
     },
     "CSSPerspective": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSPositionTryDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPositionTryRule": {
@@ -746,6 +762,10 @@
     },
     "CSSStyleDeclaration": {
       "inh": "",
+      "impl": []
+    },
+    "CSSStyleProperties": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSStyleRule": {
@@ -2904,10 +2924,6 @@
       "inh": "Event",
       "impl": []
     },
-    "Sanitizer": {
-      "inh": "",
-      "impl": []
-    },
     "Scheduler": {
       "inh": "",
       "impl": []
@@ -3038,14 +3054,6 @@
     },
     "SnapEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "SnapTargetArray": {
-      "inh": "",
-      "impl": []
-    },
-    "SnapTargetList": {
-      "inh": "",
       "impl": []
     },
     "SourceBuffer": {
@@ -3821,6 +3829,10 @@
       "impl": []
     },
     "ViewTransition": {
+      "inh": "",
+      "impl": []
+    },
+    "ViewTransitionTypeSet": {
       "inh": "",
       "impl": []
     },

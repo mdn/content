@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.SyncManager
 ---
 
-{{APIRef("Background Sync")}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers}}
 
 The **`SyncManager`** interface of the {{domxref("Background Synchronization API", "", "", "nocode")}} provides an interface for registering and listing sync registrations.
 
@@ -15,9 +15,9 @@ None.
 
 ## Instance methods
 
-- {{domxref("SyncManager.register()")}} {{Experimental_Inline}}
+- {{domxref("SyncManager.register()")}}
   - : Create a new sync registration and return a {{jsxref("Promise")}}.
-- {{domxref("SyncManager.getTags()")}} {{Experimental_Inline}}
+- {{domxref("SyncManager.getTags()")}}
   - : Return a list of developer-defined identifiers for `SyncManager` registrations.
 
 ## Specifications
