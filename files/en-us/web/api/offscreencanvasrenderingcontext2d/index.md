@@ -12,12 +12,12 @@ It is similar to the `CanvasRenderingContext2D` object, with the following diffe
 
 - there is no support for user-interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
-- it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element
+- its `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element's bitmap is updated during the `OffscreenCanvas`'s owner's rendering update.
 
 ## Example
 
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor.
-The `transferControlToOffscreen()` method is used to transfer the `OffscreenCanvas` object to the worker:
+The `transferControlToOffscreen()` method is used to get an `OffscreenCanvas` object from the {{HtmlElement("canvas")}} element so it can be transferred to the worker:
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -44,7 +44,7 @@ For a full example, see our [OffscreenCanvas worker example](https://github.com/
 
 The following method is new to the `OffscreenCanvasRenderingContext2D` interface and does not exist in the `CanvasRenderingContext2D` interface:
 
-- {{domxref("OffscreenCanvasRenderingContext2D.commit()", "commit()")}}
+- {{domxref("OffscreenCanvasRenderingContext2D.commit()", "commit()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Pushes the rendered image to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element.
 
 ## Unsupported features
@@ -186,6 +186,8 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
+  - : Creates a path for a rectangle with rounded corners at position (x, y) with a size that is determined by _width_ and _height_ and radii determined by _radii_.
 
 ### Drawing paths
 
@@ -199,8 +201,6 @@ The following methods can be used to manipulate paths of objects.
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
   - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}}
-  - : Addition to CanvasPath that allows users to render rectangles with rounded corners.
 
 ### Transformations
 
