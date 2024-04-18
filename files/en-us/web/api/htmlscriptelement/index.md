@@ -18,7 +18,7 @@ JavaScript files should be served with the `text/javascript` [MIME type](/en-US/
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the type of the script. It reflects the [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute.
+  - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.src")}}
   - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
 - {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
