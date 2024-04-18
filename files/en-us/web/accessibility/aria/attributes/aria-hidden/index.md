@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-hidden` state indicates whether the element is exposed to an accessibility API.
 
 ## Description
@@ -89,8 +91,3 @@ Used in **ALL** roles
 - HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
 - CSS {{CSSXref('display')}} property
 - CSS {{CSSXref('visibility')}} property
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
