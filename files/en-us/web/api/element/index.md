@@ -279,8 +279,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
-- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.toggleAttribute()")}}
