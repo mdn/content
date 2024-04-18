@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-snap-align
 
 {{CSSRef}}
 
-The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snap port (as the alignment container). If one value is set, it is applied to both the block and inline axes. If two values are set, the first value controls the block axis and the second value controls the inline axis.
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snap port (as the alignment container).
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 
@@ -34,6 +34,8 @@ scroll-snap-align: unset;
 ```
 
 ### Values
+
+One or two values can be specified for the `scroll-snap-align` property. If one value is set, it is applied to both the block and inline axes. If two values are set, the first value controls the block axis and the second value controls the inline axis.
 
 - `none`
   - : The box does not define a snap position in that axis.
