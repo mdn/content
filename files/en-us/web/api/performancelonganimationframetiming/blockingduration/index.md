@@ -67,4 +67,4 @@ See [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_anima
 
 - [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing)
 - {{domxref("PerformanceScriptTiming")}}
-- [Optimize long tasks](https://web.dev/articles/optimize-long-tasks), web.dev (2024): contains more information on long tasks and yielding.
+- [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2024)

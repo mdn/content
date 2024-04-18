@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.pauseDuration
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`pauseDuration`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time spent by the script in "pausing" synchronous operations, in milliseconds (for example {{domxref("Window.alert()")}} calls, or synchronous {{domxref("XMLHttpRequest")}}s).
+The **`pauseDuration`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time, in milliseconds, spent by the script on "pausing" synchronous operations (for example, {{domxref("Window.alert()")}} calls or synchronous {{domxref("XMLHttpRequest")}}s).
 
 ## Value
 

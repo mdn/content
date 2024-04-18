@@ -12,7 +12,7 @@ browser-compat: api.PerformanceScriptTiming.sourceURL
 
 The **`sourceURL`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a string representing the URL of the script.
 
-It is important to note that the reported function location will be the "entry point" of the script, i.e. the top level of the stack, and not any specific slow sub-function. See {{domxref("PerformanceScriptTiming.sourceFunctionName")}} for more discussion around this.
+It is important to note that the reported function location will be the "entry point" of the script, that is, the top level of the stack, not any specific slow sub-function. See {{domxref("PerformanceScriptTiming.sourceFunctionName")}} for more discussion around this.
 
 ## Value
 

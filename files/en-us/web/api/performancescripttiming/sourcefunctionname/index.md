@@ -10,11 +10,11 @@ browser-compat: api.PerformanceScriptTiming.sourceFunctionName
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`sourceFunctionName`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a string representing the name of the function that contributed to the LoAF.
+The **`sourceFunctionName`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a string representing the name of the function that contributed to the long animation frame (LoAF).
 
-It is important to note that the reported function name will be the "entry point" of the script (i.e. the top level of the stack), and not any specific slow sub-function.
+It is important to note that the reported function name will be the "entry point" of the script, that is, the top level of the stack, not any specific slow sub-function.
 
-For example, if an event handler calls a top-level function, which in turn calls a slow sub-function, the `source*` fields will report the top-level function's name and location, not the slow sub-function — the function that was passed to the platform API is always the one reported. This is because of performance reasons — a full stack trace is costly.
+For example, if an event handler calls a top-level function, which then calls a slow sub-function, the `source*` fields will report the name and location of the top-level function, not the slow sub-function — the function that was passed to the platform API is always the one reported. This is because of performance reasons; a full stack trace is costly.
 
 In the following snippet:
 
@@ -24,7 +24,7 @@ setTimeout(function lib_func() {
 });
 ```
 
-`sourceFunctionName` would report `lib_func`, not `slow_function`
+`sourceFunctionName` would report `lib_func`, not `slow_function`.
 
 ## Value
 

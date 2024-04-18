@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.executionStart
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`executionStart`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the time script compilation finished and execution started, in milliseconds.
+The **`executionStart`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the time script compilation finished and execution started.
 
 ## Value
 

@@ -10,7 +10,7 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.firstUIEventTimestamp
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`firstUIEventTimestamp`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the time, in milliseconds, of the first UI (for example mouse or keyboard) event to be queued during the current animation frame.
+The **`firstUIEventTimestamp`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
 
 ## Value
 

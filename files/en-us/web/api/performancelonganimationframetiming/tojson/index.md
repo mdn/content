@@ -10,7 +10,7 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.toJSON
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`toJSON()`** method of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceLongAnimationFrameTiming")}} object.
+The **`toJSON()`** method of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the `PerformanceLongAnimationFrameTiming` object.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 
 ## Examples
 
-### Using the toJSON method
+### Using the `toJSON` method
 
 In this example, calling `entry.toJSON()` returns a JSON representation of the `PerformanceLongAnimationFrameTiming` object.
 

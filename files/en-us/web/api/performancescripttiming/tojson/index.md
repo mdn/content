@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.toJSON
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`toJSON()`** method of the {{domxref("PerformanceScriptTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceScriptTiming")}} object.
+The **`toJSON()`** method of the {{domxref("PerformanceScriptTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the `PerformanceScriptTiming` object.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 
 ## Examples
 
-### Using the toJSON method
+### Using the `toJSON` method
 
 In this example, calling `entry.toJSON()` returns a JSON representation of the first `PerformanceScriptTiming` object available in an observed long animation frame.
 
