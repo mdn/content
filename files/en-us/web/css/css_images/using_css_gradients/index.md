@@ -364,7 +364,7 @@ div {
 
 ### Blending gradients
 
-In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, the four {{htmlelement("div")}} elements have the same gradient as a background image and we apply different {{cssxref("background-blend-mode")}} CSS property values to the last three to create blended effects.
+In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, the four {{htmlelement("div")}} elements have the same two fully-opaque gradients as background images. We apply different {{cssxref("background-blend-mode")}} CSS property values to the last three that blend the two background images creating different effects.
 
 ```html hidden
 <div class="original"></div>
