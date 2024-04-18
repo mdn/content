@@ -147,12 +147,34 @@ The properties are as follows:
 
 ## How noise is added to reports
 
-When aggregatable reports are aggregated into a summary report, a random amount of noise is added to the resulting final report as a method of protecting user privacy. The idea is that the exact source values cannot be identified and therefore attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning and value.
+Noise plays a significant role in both event-level and summary reports as a method of protecting user privacy.
+
+The [`source_event_id`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) contained in the `Attribution-Reporting-Register-Source` header is limited to 64 bits of information to enable uniquely identifying an interaction (such as an ad click).
+
+The trigger-side data is therefore limited quite strictly, by limiting the amount of data and by applying noise to the data. By default, [navigation sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) will be limited to only 3 bits of [`trigger_data`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) (the values 0 through 7), while [event sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) will be limited to only 1 bit (the values 0 through 1). The `trigger_data` and [`trigger_data_matching`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields can be customized to vary the amount of noise applied. You could set a smaller range of trigger data to reduce the amount of noise applied, or a larger range to increase the noise:
+
+```json
+{
+  ...,
+  // The following setting would reduce noise for a navigation
+  // source (default 0–7), but increase noise for an event
+  // source (default 0–1)
+  "trigger_data": [0, 1, 2, 3, 4]
+}
+```
+
+Noise will be applied to whether a source will be reported truthfully. When an attribution source is registered, the browser will perform one of the following steps given a probability `p` (`p` is a small percentage, which can vary based on implementation, source type, and configuration):
+
+- With probability `1 - p`, the browser logs the source as normal.
+- With probability `p`, the browser chooses randomly among all the possible output states of the API. This includes the choice of not reporting anything at all, or potentially reporting multiple fake reports for the event.
+
+When aggregatable reports are aggregated into a summary report, a random amount of noise is added to the resulting final report. The exact source values cannot therefore be identified and therefore attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning and value.
 
 The aggregation service adds noise once to each summary value — that is, once per key — every time a summary report is requested. These noise values are randomly drawn from the same specific probability distribution, regardless of whether the aggregated values are low or high. As a result, the noise will have a lower impact on larger values, and you are advised to scale up smaller values before sending the data through the aggregation service, and scale them back down when analysing the aggregated report data. You need to make sure that your scaling doesn't cause your data to exceed the contribution budget.
 
 For more information on noise, see:
 
+- [Data limits and noise](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
 - [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/)
 - [Working with noise](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/working-with-noise/)
 
@@ -204,7 +226,7 @@ If the `"filter_data"` and `"filters"` fields contain matching subfields (like `
 
 ### Filtering trigger data
 
-The `event_trigger_data` field in the {{httpheader("Attribution-Reporting-Register-Trigger")}} header can be extended to do selective filtering to set `trigger_data` based on `filter_data` defined in the {{httpheader("Attribution-Reporting-Register-Source")}} header.
+The `event_trigger_data` field in the {{httpheader("Attribution-Reporting-Register-Trigger")}} header can be extended to do selective filtering to set `trigger_data`, `priority`, or `deduplication_key`, based on `filter_data` defined in the {{httpheader("Attribution-Reporting-Register-Source")}} header.
 
 For example:
 

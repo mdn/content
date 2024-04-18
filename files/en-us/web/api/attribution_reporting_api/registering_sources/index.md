@@ -244,7 +244,7 @@ const aElem = document.querySelector("a");
 aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 ```
 
-In the case of a {{domxref("Window.open()")}} call, the different URLs would have to be listed as multiple separate `attributionsrc` features in the [`windowFeatures`](/en-US/docs/Web/API/Window/open#windowfeatures) parameter, separated by commas:
+In the case of a {{domxref("Window.open()")}} call, the different URLs would have to be listed as multiple separate `attributionsrc` features in the [`windowFeatures`](/en-US/docs/Web/API/Window/open#windowfeatures) parameter, separated by commas or whitespace:
 
 ```js
 // encode the URLs in case they contain special characters
