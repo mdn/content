@@ -54,6 +54,10 @@ No notable changes.
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
+#### Media, WebRTC, and Web Audio
+
+- The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers.
+
 #### Removals
 
 - The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement#svgaelement.text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
