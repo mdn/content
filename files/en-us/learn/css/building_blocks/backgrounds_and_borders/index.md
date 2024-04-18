@@ -81,8 +81,8 @@ The {{cssxref("background-repeat")}} property is used to control the tiling beha
 - `repeat-x` — repeat horizontally.
 - `repeat-y` — repeat vertically.
 - `repeat` — the default; repeat in both directions.
-- `space` — repeat as many times as possible, adding space between the images if there is extra space.
-- `round` — similar to `space`, but stretches the image to fill any extra space
+- `space` — repeat as many times as possible, adding space between the images if there is extra space available.
+- `round` — similar to `space`, but stretches the images to fill any extra space
 
 **Try these values out in the example below. We have set the value to `no-repeat` so you will only see one star. Try out the different values — `repeat-x` and `repeat-y` — to see what their effects are.**
 
@@ -165,7 +165,7 @@ Finally, you can also use a 4-value syntax in order to indicate a distance from 
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
-You can read more about the six different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [CSSGradient.io](https://cssgradient.io/). You can create a gradient then copy and paste out the source code that generates it.
+You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [CSSGradient.io](https://cssgradient.io/). You can create a gradient then copy and paste out the source code that generates it.
 
 Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
 
