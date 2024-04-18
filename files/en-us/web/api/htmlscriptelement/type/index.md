@@ -1,6 +1,6 @@
 ---
 title: "HTMLScriptElement: type property"
-short-title: poster
+short-title: type
 slug: Web/API/HTMLScriptElement/type
 page-type: web-api-instance-property
 browser-compat: api.HTMLScriptElement.type
