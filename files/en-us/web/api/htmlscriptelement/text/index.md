@@ -8,7 +8,7 @@ browser-compat: api.HTMLScriptElement.text
 
 {{APIRef("HTML DOM")}}
 
-The **`text`** property of the {{domxref("HTMLScriptElement")}} interface is a string that reflects the text content of the {{HTMLElement("script")}} element. It acts the same way as the {{domxref("Node.textContent")}} property.
+The **`text`** property of the {{domxref("HTMLScriptElement")}} interface is a string that reflects the text content inside the {{HTMLElement("script")}} element. It acts the same way as the {{domxref("Node.textContent")}} property.
 
 It reflects the `text` attribute of the {{HTMLElement("script")}} element.
 
