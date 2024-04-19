@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 126 that affect developers. Firefox 126 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [May 14, 2024](https://whattrainisitnow.com/release/?version=126).
+This article provides information about the changes in Firefox 126 that affect developers. Firefox 126 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 14, 2024](https://whattrainisitnow.com/release/?version=126).
 
 ## Changes for web developers
 
@@ -39,6 +39,8 @@ This article provides information about the changes in Firefox 126 that affect d
 ### APIs
 
 - [`IDBFactory.databases()`](/en-US/docs/Web/API/IDBFactory/databases) is now supported for enumerating available [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) databases ([Firefox bug 934640](https://bugzil.la/934640)).
+- The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) is now supported, allowing a web application to request that the screen not be dimmed or locked while it is active. This is useful for navigation and reading applications, and other applications where the screen doesn't get regular tactile input when in use, which would otherwise keep the screen awake. The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}. This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
+  ([Firefox bug 1589554](https://bugzil.la/1589554), [Firefox bug 1874849](https://bugzil.la/1874849)).
 
 #### DOM
 

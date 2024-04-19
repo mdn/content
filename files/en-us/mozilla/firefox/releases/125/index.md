@@ -6,22 +6,18 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 125 that affect developers. Firefox 125 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 16, 2024](https://whattrainisitnow.com/release/?version=125).
+This article provides information about the changes in Firefox 125 that affect developers. Firefox 125 was released on [April 16, 2024](https://whattrainisitnow.com/release/?version=125).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes.
 
 ### CSS
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
 - The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
-
-#### Removals
 
 ### JavaScript
 
@@ -29,20 +25,6 @@ This article provides information about the changes in Firefox 125 that affect d
   This enables, for example, splitting a string into words in languages that don't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`.
   You can also split strings into graphemes or sentences.
   ([Firefox bug 1423593](https://bugzil.la/1423593), [Firefox bug 1883914](https://bugzil.la/1883914).)
-
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -72,9 +54,9 @@ This article provides information about the changes in Firefox 125 that affect d
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
-#### DOM
-
 #### Media, WebRTC, and Web Audio
+
+- The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
 
 #### Removals
 
@@ -89,8 +71,6 @@ This article provides information about the changes in Firefox 125 that affect d
   WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
   For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
   ([Firefox bug 1860816](https://bugzil.la/1860816)).
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -111,10 +91,6 @@ This article provides information about the changes in Firefox 125 that affect d
 
 - The content of the {{WebExtAPIRef("proxy.ProxyInfo")}} property `proxyAuthorization` is now passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies (in addition to the existing support for HTTPS proxies) as part of a [CONNECT](/en-US/docs/Web/HTTP/Methods/CONNECT) request ([Firefox bug 1794464](https://bugzil.la/1794464)).
 
-### Removals
-
-### Other
-
 ## Experimental web features
 
 These features are shipping in Firefox 125 but only in developer releases or behind a preference. To try these out, you can search for the related preference on the `about:config` page to see if they're enabled or disabled. To learn more about these features, see the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
@@ -122,6 +98,12 @@ These features are shipping in Firefox 125 but only in developer releases or beh
 - **CSS `transition-behavior`:** `layout.css.transition-behavior.enabled`.
   The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release.
   Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
+
+- **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
+
+  The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+  > **Note:** The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
 ## Older versions
 

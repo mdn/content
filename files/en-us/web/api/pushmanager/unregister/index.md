@@ -5,10 +5,11 @@ slug: Web/API/PushManager/unregister
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.PushManager.unregister
 ---
 
-{{deprecated_header}}{{ ApiRef("Push API")}}
+{{deprecated_header}}{{ ApiRef("Push API")}}{{non-standard_header}}
 
 The **`unregister()`** method was used to ask the system to
 unregister and delete the specified endpoint.
