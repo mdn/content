@@ -20,15 +20,15 @@ A string.
 
 ```html
 <script id="el" type="text/javascript">
-const num = 10;
-console.log(num);
+  const num = 10;
+  console.log(num);
 </script>
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.text); // Output: "\nconst num = 10;\nconsole.log(num);\n"
-console.log(el.textContent); // Output: "\nconst num = 10;\nconsole.log(num);\n"
+console.log(el.text); // Output: "\n  const num = 10;\n  console.log(num);\n"
+console.log(el.textContent); // Output: "\n  const num = 10;\n  console.log(num);\n"
 
 el.text = "console.log(10);";
 console.log(el.text); // Output: "console.log(10);"
