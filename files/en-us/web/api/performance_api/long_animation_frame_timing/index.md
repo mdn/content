@@ -1,7 +1,7 @@
 ---
 title: Long animation frame timing
 slug: Web/API/Performance_API/Long_animation_frame_timing
-page-type: web-api-overview
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Performance API")}}
@@ -123,7 +123,7 @@ The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}
 
 ### Long Animation Frames API feature detection
 
-You can test whether the Long Animation Frames API is supported using {{domxref("PerformanceObserver.supportedEntryTypes")}}:
+You can test whether the Long Animation Frames API is supported using {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}:
 
 ```js
 if (PerformanceObserver.supportedEntryTypes.includes("long-animation-frame")) {
@@ -233,9 +233,9 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
-## Comparison with the Long Tasks API
+## Comparing with the Long Tasks API
 
-The Long Animation Frames API was preceded by the [Long Tasks API](https://w3c.github.io/longtasks/) (see {{domxref("PerformanceLongTaskTiming")}}) — these specs both have a similar purpose and usage, exposing information on [long tasks](/en-US/docs/Glossary/Long_task) that block the main thread for 50ms or more.
+The Long Animation Frames API was preceded by the [Long Tasks API](https://w3c.github.io/longtasks/) (see {{domxref("PerformanceLongTaskTiming")}}). Both the APIs have a similar purpose and usage — exposing information about [long tasks](/en-US/docs/Glossary/Long_task) that block the main thread for 50ms or more.
 
 Cutting down the number of long tasks that occur on your website is useful because long tasks can cause responsiveness issues. For example, if a user clicks a button while the main thread is dealing with a long task, the UI response to the click will be delayed until the long task is completed. Conventional wisdom is to break up long tasks into multiple smaller tasks so that important interactions can be handled in between.
 
