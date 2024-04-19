@@ -1293,6 +1293,8 @@ For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner
 
 ## Examples
 
+This example contains three {{SVGElement("rect")}} elements, each with a `y` value smaller than the previous value.
+
 ```css hidden
 html,
 body,
@@ -1303,9 +1305,9 @@ svg {
 
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="20" x="20" width="60" height="60" />
-  <rect y="120" x="20" width="60" height="60" />
-  <rect y="220" x="20" width="60" height="60" />
+  <rect y="220" x="20" width="60" height="60" fill="red" />
+  <rect y="120" x="20" width="60" height="60" fill="yellow" />
+  <rect y="20" x="20" width="60" height="60" fill="purple" />
 </svg>
 ```
 
