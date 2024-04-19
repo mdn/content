@@ -10,7 +10,7 @@ browser-compat: api.PerformanceLongAnimationFrameTiming.blockingDuration
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`blockingDuration`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds that the main thread was blocked from responding to high priority tasks, such as user input.
+The **`blockingDuration`** read-only property of the {{domxref("PerformanceLongAnimationFrameTiming")}} interface returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds for which the main thread was blocked from responding to high priority tasks, such as user input.
 
 ## Description
 

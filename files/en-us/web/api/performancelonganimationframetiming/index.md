@@ -37,7 +37,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the entry name, which is always `"long-animation-frame"`.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time in milliseconds when the animation frame started.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time when the animation frame started.
 
 This interface also supports the following properties:
 
@@ -50,7 +50,7 @@ This interface also supports the following properties:
 - {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of {{domxref("PerformanceScriptTiming")}} instances.
 - {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame, in milliseconds.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame.
 
 ## Instance methods
 
