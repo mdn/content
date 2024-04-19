@@ -7,6 +7,8 @@ status:
 spec-urls: https://w3c.github.io/aria/#aria-grabbed
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-drop operation. {{deprecated_inline}}
 
 ## Description
@@ -40,7 +42,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
 - [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)
@@ -49,8 +51,3 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - {{domxref('DataTransfer.dropEffect')}}
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
 - [Accessible Drag and Drop](https://dev.opera.com/articles/accessible-drag-and-drop/) by Gez Lemon
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

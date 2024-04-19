@@ -7,7 +7,7 @@ browser-compat: css.properties.overflow-wrap
 
 {{CSSRef}}
 
-The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to inline elements, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
+The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
@@ -138,6 +138,7 @@ p {
 ## See also
 
 - {{cssxref("word-break")}}
+- {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

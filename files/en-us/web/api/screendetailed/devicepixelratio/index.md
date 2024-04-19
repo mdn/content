@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetailed.devicePixelRatio
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`devicePixelRatio`** read-only property of the
 {{domxref("ScreenDetailed")}} interface is a number representing the screen's device pixel ratio.

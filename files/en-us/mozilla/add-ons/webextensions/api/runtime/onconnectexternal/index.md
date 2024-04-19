@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnectExternal
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when an extension receives a connection request from a different extension.
 

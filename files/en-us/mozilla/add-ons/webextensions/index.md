@@ -23,7 +23,7 @@ The technology for extensions in Firefox is, to a large extent, compatible with 
 
 ## Get started
 
-Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox.
+Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox.
 
 ## Concepts
 

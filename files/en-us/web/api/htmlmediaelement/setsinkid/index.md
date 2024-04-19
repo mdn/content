@@ -49,7 +49,7 @@ Access to the API is subject to the following constraints:
 ## Examples
 
 This example shows how to select an audio output device from the array returned by {{domxref("MediaDevices.enumerateDevices()")}}, and set it as the sink for audio.
-Note that the result of `enumerateDevices()` only includes devices for which user permission is not required or has already been been granted.
+Note that the result of `enumerateDevices()` only includes devices for which user permission is not required or has already been granted.
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();

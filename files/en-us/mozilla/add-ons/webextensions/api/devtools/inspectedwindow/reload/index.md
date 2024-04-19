@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Reloads the window that the devtools are attached to.
 

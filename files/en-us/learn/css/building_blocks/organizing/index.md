@@ -198,7 +198,7 @@ By ordering things in this way, we at least have an idea in which part of the st
 
 ### Avoid overly-specific selectors
 
-If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the below selector, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
+If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the selector below, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
 
 ```css
 article.main p.box {

@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.browsingData.settings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Browsers have a built-in "Clear History" feature, which enables the user to clear various types of browsing data. This has a UI that enables the user to select what type of data to remove (e.g. history, downloads, …) and how far back in time to remove data.
 

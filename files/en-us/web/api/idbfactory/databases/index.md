@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.IDBFactory.databases
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
-
-{{AvailableInWorkers}}
 
 > **Note:** This method is introduced in a draft of a specifications and browser compatibility is limited.
 

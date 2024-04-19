@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-Fetch-Dest
 
 The **`Sec-Fetch-Dest`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the request's _destination_. That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.
 
-This allows servers determine whether to service a request based on whether it is appropriate for how it is _expected_ to be used. For example, a request with an `audio` destination should request audio data, not some other type of resource (for example, a document that includes sensitive user information).
+This allows servers to determine whether to service a request based on whether it is appropriate for how it is _expected_ to be used. For example, a request with an `audio` destination should request audio data, not some other type of resource (for example, a document that includes sensitive user information).
 
 <table class="properties">
   <tbody>
@@ -38,6 +38,7 @@ Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document
 Sec-Fetch-Dest: embed
 Sec-Fetch-Dest: empty
+Sec-Fetch-Dest: fencedframe
 Sec-Fetch-Dest: font
 Sec-Fetch-Dest: frame
 Sec-Fetch-Dest: iframe
@@ -52,6 +53,7 @@ Sec-Fetch-Dest: sharedworker
 Sec-Fetch-Dest: style
 Sec-Fetch-Dest: track
 Sec-Fetch-Dest: video
+Sec-Fetch-Dest: webidentity
 Sec-Fetch-Dest: worker
 Sec-Fetch-Dest: xslt
 ```
@@ -72,6 +74,8 @@ Servers should ignore this header if it contains any other value.
   - : The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.
 - `empty`
   - : The destination is the empty string. This is used for destinations that do not have their own value. For example: {{domxref("fetch()")}}, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
+- `fencedframe` {{experimental_inline}}
+  - : The destination is a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 - `font`
   - : The destination is a font. This might originate from CSS {{cssxref("@font-face")}}.
 - `frame`
@@ -100,6 +104,8 @@ Servers should ignore this header if it contains any other value.
   - : The destination is an HTML text track. This might originate from an HTML {{HTMLElement("track")}} tag.
 - `video`
   - : The destination is video data. This might originate from an HTML {{HTMLElement("video")}} tag.
+- `webidentity`
+  - : The destination is an endpoint associated with verifying user identify. For example, it is used in the [FedCM API](/en-US/docs/Web/API/FedCM_API) to verify the authenticity of identity provider (IdP) endpoints, guarding against {{glossary("CSRF")}} attacks.
 - `worker`
   - : The destination is a {{domxref("Worker")}}.
 - `xslt`

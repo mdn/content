@@ -6,13 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("Streams")}}
 
-The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
+The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects that allow JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
 
 ## Readable streams
 
 A readable stream is a data source represented in JavaScript by a {{domxref("ReadableStream")}} object that flows from an **underlying source** — this is a resource somewhere on the network or elsewhere on your domain that you want to get data from.
 
-There are two types of underlying source:
+There are two types of underlying sources:
 
 - **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/en-US/docs/Web/API/WebSockets_API).
 - **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a {{domxref("fetch()")}} request.

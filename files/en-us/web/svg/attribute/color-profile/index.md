@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/color-profile
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.color-profile
+browser-compat: svg.global_attributes.color-profile
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -26,7 +26,7 @@ You can use this attribute with the following SVG elements:
       <td>
         <code>auto</code> | <code>sRGB</code> | <code>&#x3C;name></code> |
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#IRI">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>

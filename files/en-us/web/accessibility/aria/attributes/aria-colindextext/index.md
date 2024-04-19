@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-colindextext` attribute defines a human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description
@@ -90,7 +92,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`Element.ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
@@ -99,11 +101,3 @@ Inherits into roles:
 - [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

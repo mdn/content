@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.get
 ---
 
-{{APIRef("EncryptedMediaExtensions API")}}
+{{APIRef("EncryptedMediaExtensions API")}}{{SecureContext_Header}}
 
 The **`get`** property of the
 {{domxref("MediaKeyStatusMap")}} interface returns the value associated with the given

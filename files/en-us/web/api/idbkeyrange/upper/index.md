@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.upper
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`upper`** read-only property of the
 {{domxref("IDBKeyRange")}} interface returns the upper bound of the key range.
-
-{{AvailableInWorkers}}
 
 ## Value
 

@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#term
 ---
 
+{{AccessibilitySidebar}}
+
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 
 ## Description
@@ -82,15 +84,7 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `definition` role](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 - The HTML {{HTMLElement('dfn')}} element
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

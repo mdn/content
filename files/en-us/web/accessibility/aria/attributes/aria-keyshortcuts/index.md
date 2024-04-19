@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
 ## Description
@@ -128,13 +130,8 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
 - HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) attribute
 - [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

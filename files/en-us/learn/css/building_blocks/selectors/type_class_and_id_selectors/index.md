@@ -107,7 +107,7 @@ The case-sensitive ID selector begins with a `#` rather than a dot character, bu
 
 > **Warning:** Using the same ID multiple times in a document may appear to work for styling purposes, but don't do this. It results in invalid code, and will cause strange behavior in many places.
 
-> **Note:** The ID selector has high {{cssxref("specificity")}}. This means styles applied based on matching an ID selector will overrule styles applied based on other selector, including class and type selectors. Because an ID can only occur once on a page and because of the high specificity of ID selectors, it is preferable to add a class to an element instead of an ID. If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), such as `p[id="header"]`. [Learn specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+> **Note:** The ID selector has high {{cssxref("specificity")}}. This means styles applied based on matching an ID selector will overrule styles applied based on other selector, including class and type selectors. Because an ID can only occur once on a page and because of the high specificity of ID selectors, it is preferable to add a class to an element instead of an ID. If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), such as `p[id="header"]`. [Learn specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
 ## Summary
 

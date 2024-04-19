@@ -294,7 +294,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>

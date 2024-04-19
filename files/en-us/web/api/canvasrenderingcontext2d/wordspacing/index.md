@@ -14,7 +14,7 @@ This corresponds to the CSS [`word-spacing`](/en-US/docs/Web/CSS/word-spacing) p
 
 ## Value
 
-The word spacing as a string in the [CSS length](/en-US/docs/Web/CSS/length) data format.
+The word spacing as a string in the CSS {{cssxref("length")}} data format.
 The default is `0px`.
 
 The property can be used to get or set the spacing.
