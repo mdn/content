@@ -76,7 +76,7 @@ svg {
   </filter>
   <filter id="diffuseLighting2" x="0" y="0" width="100%" height="100%">
     <feDiffuseLighting in="SourceGraphic">
-      <fePointLight x="60" y="60" z="50" />
+      <fePointLight x="340" y="60" z="50" />
     </feDiffuseLighting>
   </filter>
 
@@ -85,13 +85,13 @@ svg {
     y="0"
     width="200"
     height="200"
-    style="filter: url(#diffuseLighting1);" />
+    filter="url(#diffuseLighting1)" />
   <rect
-    x="0"
+    x="200"
     y="0"
     width="200"
     height="200"
-    style="filter: url(#diffuseLighting2); transform: translateX(220px);" />
+    filter="url(#diffuseLighting2)" />
 </svg>
 ```
 

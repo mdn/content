@@ -59,7 +59,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" word-spacing="2">Bigger spacing between words</text>
+  <text y="20" word-spacing="4">Bigger spacing between words</text>
   <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
 </svg>
 ```

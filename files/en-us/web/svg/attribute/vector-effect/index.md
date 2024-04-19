@@ -97,7 +97,7 @@ You can use this attribute with the following SVG elements:
 
 #### Result
 
-{{EmbedLiveSample("Setting vector-effect as non-scaling-stroke", 550, 300)}}
+{{EmbedLiveSample("Setting vector-effect as non-scaling-stroke", 550, 330)}}
 
 ## Specifications
 

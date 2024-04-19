@@ -158,10 +158,10 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="5" x2="1" y1="1" y2="9" stroke="red" />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="5" x2="9" y1="1" y2="9" stroke="blue" />
+<svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+  <line x1="2" x2="2" y1="5" y2="20" stroke="red" />
+  <line x1="2" x2="12" y1="5" y2="20" stroke="green" />
+  <line x1="2" x2="22" y1="5" y2="20" stroke="blue" />
 </svg>
 ```
 
