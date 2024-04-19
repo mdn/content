@@ -144,7 +144,6 @@ console.log(x); // x is 5
 ```
 
 ### Variable hoisting
-`var`-declared variables are [hoisted](/en-US/docs/Glossary/Hoisting), meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet. You can see `var` declarations as being "lifted" to the top of its function or global scope. However, if you access a variable before it's declared, the value is always `undefined`, because only its _declaration_ and _default initialization(with `undefined`)_ is hoisted, but not its _value assignment_.
 
 
 ```js
