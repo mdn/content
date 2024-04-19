@@ -364,4 +364,3 @@ However if the content is hidden, having a `contain-intrinsic-size` of `none` co
 - [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
 - [`content-visibility`: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) via web.dev (2020)
-
