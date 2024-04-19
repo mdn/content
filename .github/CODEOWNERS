@@ -38,12 +38,11 @@
 /files/en-us/web/mathml/ @mdn/content-mathml
 
 # ============================= CONTROL FILES ============================= #
-# The CODEOWNERS file must end with these matches since any pull request that
-# tries to change one or more of these files should be escalated to the
-# owners specified here.
+# The CODEOWNERS file must end with these matches: Any pull request changing
+# one or more of these files should be escalated to the owners specified here.
 
 # GitHub config
-/.github/  @mdn/core-dev
+/.github/ @mdn/core-dev
 # Except issue templates
 /.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/core-yari-content
 
