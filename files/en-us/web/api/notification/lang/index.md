@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.lang
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`lang`** read-only property of the
 {{domxref("Notification")}} interface indicates the language used in the notification,
@@ -15,8 +15,6 @@ as specified in the `lang` option of the
 
 The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
-
-{{AvailableInWorkers}}
 
 ## Value
 

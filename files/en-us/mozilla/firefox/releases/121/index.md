@@ -91,4 +91,4 @@ These features are newly shipped in Firefox 121 but are disabled by default. To 
 
 ## Older versions
 
-{{Firefox_for_developers(120)}}
+{{Firefox_for_developers}}

@@ -2,7 +2,7 @@
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
 page-type: html-attribute
-browser-compat: html.global_attributes.itemtype
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemtype
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -192,10 +192,6 @@ This example uses microdata attributes to represent structured data for a produc
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

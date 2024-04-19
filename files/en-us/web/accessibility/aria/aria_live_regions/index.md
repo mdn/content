@@ -4,44 +4,25 @@ slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 page-type: guide
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
-    <li class="toggle">
-      <details><summary>ARIA states and properties</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA Roles</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
+{{AccessibilitySidebar}}
 
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
-> **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
-> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
+> **Note:** Assistive technologies will generally only announce _dynamic_ changes in the content of a live region.
+> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="status"`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript. Start with an empty live region, then – in a separate step – change the content inside the region.
+> While not explicitly documented in the specification, browsers/assistive technologies do include special handling for [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role): in most cases, the content inside `role="alert"` regions is announced, even when the region (which already contains the notification/message) is present in the initial markup of the page, or injected dynamically into the page. However, note that `role="alert"` regions are – depending on the specific browser/assistive technology combination – automatically prefixed with "Alert" when they are announced.
 
 ## Live regions
 
 Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. A live region is explicitly denoted using the `aria-live` attribute.
 
-**`aria-live`**: The `aria-live=POLITENESS_SETTING` is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: `off`, `polite` or `assertive`. The default setting is `off`. This attribute is by far the most important.
+**`aria-live`**: The `aria-live=POLITENESS_SETTING` is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: `off`, `polite` or `assertive`. This attribute is by far the most important.
 
 Normally, only `aria-live="polite"` is used. Any region which receives updates that are important for the user to receive, but not so rapid as to be annoying, should receive this attribute. The screen reader will speak changes whenever the user is idle.
 
 `aria-live="assertive"` should only be used for time-sensitive/critical notifications that absolutely require the user's immediate attention. Generally, a change to an assertive live region will interrupt any announcement a screen reader is currently making. As such, it can be extremely annoying and disruptive and should only be used sparingly.
 
-As `aria-live="off"` is the assumed default for elements, it should not be necessary to set this explicitly, unless you're trying to suppress the announcement of elements which have an implicit live region role (such as `role="alert"`).
+Unintuitively, `aria-live="off"` does not indicate that changes should not be announced. When an element has `aria-live="off"` (or has a `role` with this implicit value, such as `role="marquee"` or `role="timer"`), changes to the element's content are only supposed to be announced when focus is on, or inside, the element.
 
 ### Basic example: Dropdown box updates useful onscreen information
 

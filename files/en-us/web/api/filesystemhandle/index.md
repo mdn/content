@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FileSystemHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`FileSystemHandle`** interface of the {{domxref('File System API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 
@@ -13,9 +13,9 @@ The **`FileSystemHandle`** interface of the {{domxref('File System API')}} is an
 
 Below is a list of interfaces based on the FileSystemHandle interface.
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxref("FileSystemFileHandle")}} {{SecureContext_Inline}}
   - : Represents a handle to a file entry.
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxref("FileSystemDirectoryHandle")}} {{SecureContext_Inline}}
   - : Provides a handle to a directory entry.
 
 ## Instance properties

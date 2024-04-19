@@ -41,8 +41,6 @@ Some web browsers may try to _guess_ the correct MIME type. This allows misconfi
 
   - : Some content types, such as executable programs, are inherently unsafe. For this reason, these MIME types are usually restricted in terms of what actions a web browser will take when given that type of content. An executable program should not be executed on the user's computer and should at least cause a dialog to appear **asking the user** if they wish to download the file.
 
-    MIME type guessing has led to security exploits in Internet Explorer that were based upon a malicious author incorrectly reporting a MIME type of a dangerous file as a safe type. This bypassed the normal download dialog, resulting in Internet Explorer guessing that the content was an executable program and then running it on the user's computer.
-
 ## JavaScript legacy MIME types
 
 When looking for information about JavaScript MIME types, you may see several MIME types that reference JavaScript. Some of these MIME types include:

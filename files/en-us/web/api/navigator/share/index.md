@@ -8,10 +8,13 @@ browser-compat: api.Navigator.share
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
-The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
+The **`share()`** method of the {{domxref("Navigator")}} interface invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
 
 The method resolves a {{jsxref("Promise")}} with `undefined`.
 On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the _share target_.
+
+The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
+The `share()` method will throw exceptions if the permission is supported but has not been granted.
 
 ## Syntax
 
@@ -21,7 +24,7 @@ navigator.share(data)
 
 ### Parameters
 
-- `data`
+- `data` {{optional_inline}}
 
   - : An object containing data to share.
 
@@ -30,10 +33,14 @@ navigator.share(data)
 
     Possible values are:
 
-    - `url`: A string representing a URL to be shared.
-    - `text`: A string representing text to be shared.
-    - `title`: A string representing a title to be shared. May be ignored by the target.
-    - `files`: An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
+    - `url` {{optional_inline}}
+      - : A string representing a URL to be shared.
+    - `text` {{optional_inline}}
+      - : A string representing text to be shared.
+    - `title` {{optional_inline}}
+      - : A string representing a title to be shared. May be ignored by the target.
+    - `files` {{optional_inline}}
+      - : An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
 
 ### Return value
 
@@ -159,7 +166,7 @@ btn.addEventListener("click", async () => {
 
 Click the button to launch the share dialog on your platform. Text will appear below the button to indicate whether the share was successful or provide an error code.
 
-{{EmbedLiveSample('Sharing a URL')}}
+{{EmbedLiveSample('Sharing a URL','','','','','','web-share')}}
 
 ### Sharing files
 

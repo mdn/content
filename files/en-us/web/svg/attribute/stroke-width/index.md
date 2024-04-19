@@ -2,7 +2,7 @@
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-width
+browser-compat: svg.global_attributes.stroke-width
 ---
 
 {{SVGRef}}

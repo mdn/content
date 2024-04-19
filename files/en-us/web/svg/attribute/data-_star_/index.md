@@ -2,7 +2,7 @@
 title: data-*
 slug: Web/SVG/Attribute/data-*
 page-type: svg-attribute
-browser-compat: svg.attributes.data
+browser-compat: svg.global_attributes.data
 ---
 
 {{SVGRef}}

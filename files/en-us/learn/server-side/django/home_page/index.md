@@ -78,7 +78,7 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/4.2/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included _URLconf_ module for further processing.
+> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/5.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included _URLconf_ module for further processing.
 
 We also created a placeholder file for the _URLConf_ module, named **/catalog/urls.py**.
 Add the following lines to that file:
@@ -107,7 +107,7 @@ For example, we can use the name parameter to link to our home page from any oth
 
 A view is a function that processes an HTTP request, fetches the required data from the database, renders the data in an HTML page using an HTML template, and then returns the generated HTML in an HTTP response to display the page to the user. The index view follows this model — it fetches information about the number of `Book`, `BookInstance`, available `BookInstance` and `Author` records that we have in the database, and passes that information to a template for display.
 
-Open **catalog/views.py** and note that the file already imports the [render()](https://docs.djangoproject.com/en/4.2/topics/http/shortcuts/#django.shortcuts.render) shortcut function to generate an HTML file using a template and data:
+Open **catalog/views.py** and note that the file already imports the [render()](https://docs.djangoproject.com/en/5.0/topics/http/shortcuts/#django.shortcuts.render) shortcut function to generate an HTML file using a template and data:
 
 ```python
 from django.shortcuts import render
@@ -160,11 +160,11 @@ We'll talk more about templates and the `context` variable in the next section. 
 
 A template is a text file that defines the structure or layout of a file (such as an HTML page), it uses placeholders to represent actual content.
 
-A Django application created using **startapp** (like the skeleton of this example) will look for templates in a subdirectory named '**templates**' of your applications. For example, in the index view that we just added, the `render()` function will expect to find the file **_index.html_** in **/locallibrary/catalog/templates/** and will raise an error if the file is not present.
+A Django application created using **startapp** (like the skeleton of this example) will look for templates in a subdirectory named '**templates**' of your applications. For example, in the index view that we just added, the `render()` function will expect to find the file **_index.html_** in **/django-locallibrary-tutorial/catalog/templates/** and will raise an error if the file is not present.
 
 You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "`TemplateDoesNotExist at /catalog/`", and other details.
 
-> **Note:** Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/4.2/topics/templates/).
+> **Note:** Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
 
 #### Extending templates
 
@@ -220,7 +220,7 @@ We will use the following code snippet as the base template for the _LocalLibrar
 
 > **Note:** We also introduce two additional template tags: `url` and `load static`. These tags will be explained in following sections.
 
-Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** and paste the following code to the file:
+Create a new file **base_generic.html** in **/django-locallibrary-tutorial/catalog/templates/** and paste the following code to the file:
 
 ```django
 <!DOCTYPE html>
@@ -231,9 +231,9 @@ Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** 
     {% endblock %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous">
     <!-- Add additional CSS in static file -->
     {% load static %}
@@ -260,7 +260,7 @@ Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** 
 
 The template includes CSS from [Bootstrap](https://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap (or another client-side web framework) is a quick way to create an attractive page that displays well on different screen sizes.
 
-The base template also references a local CSS file (**styles.css**) that provides additional styling. Create a **styles.css** file in **/locallibrary/catalog/static/css/** and paste the following code in the file:
+The base template also references a local CSS file (**styles.css**) that provides additional styling. Create a **styles.css** file in **/django-locallibrary-tutorial/catalog/static/css/** and paste the following code in the file:
 
 ```css
 .sidebar-nav {
@@ -272,7 +272,7 @@ The base template also references a local CSS file (**styles.css**) that provide
 
 #### The index template
 
-Create a new HTML file **index.html** in **/locallibrary/catalog/templates/** and paste the following code in the file.
+Create a new HTML file **index.html** in **/django-locallibrary-tutorial/catalog/templates/** and paste the following code in the file.
 This code extends our base template on the first line, and then replaces the default `content` block for the template.
 
 ```django
@@ -336,9 +336,9 @@ You can add an image into the page in a similar way, for example:
   style="width:555px;height:540px;" />
 ```
 
-> **Note:** The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/locallibrary/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
+> **Note:** The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/django-locallibrary-tutorial/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
 
-For more information on working with static files see [Managing static files](https://docs.djangoproject.com/en/4.2/howto/static-files/) in the Django documentation.
+For more information on working with static files see [Managing static files](https://docs.djangoproject.com/en/5.0/howto/static-files/) in the Django documentation.
 
 #### Linking to URLs
 
@@ -377,7 +377,7 @@ The setting of `'APP_DIRS': True`, is the most important, as it tells Django to 
 
 We can also specify specific locations for Django to search for directories using `'DIRS': []` (but that isn't needed yet).
 
-> **Note:** You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/4.2/topics/templates/).
+> **Note:** You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
 
 ## What does it look like?
 
@@ -405,11 +405,11 @@ In the next article we'll build upon this knowledge to create the remaining four
 
 ## See also
 
-- [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/4.2/intro/tutorial03/) (Django docs)
-- [URL dispatcher](https://docs.djangoproject.com/en/4.2/topics/http/urls/) (Django docs)
-- [View functions](https://docs.djangoproject.com/en/4.2/topics/http/views/) (DJango docs)
-- [Templates](https://docs.djangoproject.com/en/4.2/topics/templates/) (Django docs)
-- [Managing static files](https://docs.djangoproject.com/en/4.2/howto/static-files/) (Django docs)
-- [Django shortcut functions](https://docs.djangoproject.com/en/4.2/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
+- [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/5.0/intro/tutorial03/) (Django docs)
+- [URL dispatcher](https://docs.djangoproject.com/en/5.0/topics/http/urls/) (Django docs)
+- [View functions](https://docs.djangoproject.com/en/5.0/topics/http/views/) (DJango docs)
+- [Templates](https://docs.djangoproject.com/en/5.0/topics/templates/) (Django docs)
+- [Managing static files](https://docs.djangoproject.com/en/5.0/howto/static-files/) (Django docs)
+- [Django shortcut functions](https://docs.djangoproject.com/en/5.0/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}

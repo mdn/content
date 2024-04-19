@@ -31,7 +31,7 @@ _While `XRInputSourcesChangeEvent` defines no methods of its own, it inherits me
 
 ## Event types
 
-- {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}}
+- {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} {{SecureContext_Inline}}
   - : Delivered to the {{domxref("XRSession")}} when the set of input devices available to it changes.
 
 ## Examples

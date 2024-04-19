@@ -23,8 +23,7 @@ new FocusEvent(type, options)
 ### Parameters
 
 _The `FocusEvent()` constructor also inherits arguments from
-{{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",
-    "Event()")}}._
+{{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event", "Event()")}}._
 
 - `type`
   - : A string with the name of the event.
