@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Navigator.permissions
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Permissions API")}}
 
 The **`permissions`** read-only property of the {{domxref("Navigator")}} interface returns a
 {{domxref("Permissions")}} object that can be used to query and update permission
