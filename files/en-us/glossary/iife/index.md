@@ -14,6 +14,10 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
   // …
 })();
 
+(async function () {
+  // …
+})();
+
 (() => {
   // …
 })();
