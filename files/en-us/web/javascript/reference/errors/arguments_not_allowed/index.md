@@ -26,14 +26,6 @@ A class field initializer expression or a class static initialization block cann
 
 ### Notes
 
-- `arguments` can still be assigned in the above conditions:
-
-  ```js example
-  class C {
-    arguments = 42;
-  }
-  ```
-
 - This is true even if `arguments` is bound in a parent scope.
 - A non-arrow function declared in the previous conditions will still bind and be able to read its own `arguments` identifier.
 
@@ -61,7 +53,10 @@ class C {
 class C {
   args = {};
   constructor() {
-    this.args = arguments; // You can use arguments in methods
+    this.args = arguments; // You can use arguments in constructors
+  }
+  myMethod() {
+    this.args = arguments; // You can also use it in methods
   }
 }
 ```
