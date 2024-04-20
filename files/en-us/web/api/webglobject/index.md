@@ -32,6 +32,14 @@ WebGL 2:
 - {{domxref("WebGLTransformFeedback")}}
 - {{domxref("WebGLVertexArrayObject")}} (and `WebGLVertexArrayObjectOES`)
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`WebGLRenderingContext.isContextLost()`](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost)
