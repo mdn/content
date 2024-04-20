@@ -12,7 +12,7 @@ It is similar to the `CanvasRenderingContext2D` object, with the following diffe
 
 - there is no support for user-interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
-- its `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element's bitmap is updated during the `OffscreenCanvas`'s owner's rendering update.
+- the bitmap for the placeholder {{HtmlElement("canvas")}} element belonging to the `OffscreenCanvas` object is updated during the rendering update of the `Window` or `Worker` that owns the `OffscreenCanvas`
 
 ## Example
 
