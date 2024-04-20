@@ -141,4 +141,8 @@ section {
 
 - {{CSSXref("color-scheme")}}
 - {{CSSXref("&lt;color&gt;")}}
-- [CSS color](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) {{cssxref("@media")}} feature
+- [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
+- [WCAG: color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- {{cssxref('--*', 'CSS custom properties')}} and {{cssxref("var")}}

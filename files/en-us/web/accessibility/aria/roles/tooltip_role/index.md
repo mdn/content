@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tooltip
 ---
 
+{{AccessibilitySidebar}}
+
 A `tooltip` is a contextual text bubble that displays a description for an element that appears on pointer hover or keyboard focus.
 
 ## Description
@@ -115,11 +117,3 @@ Instead of using tooltips and hiding important information, consider writing cle
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 - [Understanding SC 1.4.13:Content on Hover or Focus (WCAG Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

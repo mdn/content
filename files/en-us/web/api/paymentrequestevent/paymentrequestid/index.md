@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.paymentRequestId
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`paymentRequestId`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the ID of the

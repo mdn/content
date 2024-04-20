@@ -151,7 +151,7 @@ Where the `<page-body>` includes:
 - page-properties
 - page-margin properties
 
-and `<pseudo-selector>` represents these pseudo-classes:
+and `<pseudo-page>` represents these pseudo-classes:
 
 - [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}
