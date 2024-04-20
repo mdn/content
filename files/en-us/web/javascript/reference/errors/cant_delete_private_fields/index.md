@@ -38,7 +38,6 @@ class MyClass {
 ```js example-bad
 class MyClass {
   static #myPrivateMethod() {
-
   }
   #deleteIt() {
     delete this.#myPrivateMethod; // SyntaxError: private fields can't be deleted
