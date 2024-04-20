@@ -197,21 +197,14 @@ If you get stuck and can't get your code working, you can always reset it using 
   Press Esc to move focus away from the code area (Tab inserts a tab character).
 </p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
-  <svg width="100%" height="100%">
-    <rect width="100%" height="100%" fill="red" />
-    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
-    <polygon points="120,0 240,225 0,225" fill="green"/>
-    <text x="50" y="100" font-family="Verdana" font-size="55"
-          fill="white" stroke="black" stroke-width="2">
-            Hello!
-    </text>
-  </svg>
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="min-height: 100px; width: 95%"></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" disabled />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -242,14 +235,19 @@ const textarea = document.getElementById("code");
 const reset = document.getElementById("reset");
 const solution = document.getElementById("solution");
 const output = document.querySelector(".output");
-let code = textarea.value;
+const code = textarea.value;
 let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function () {
+const htmlSolution =
+  '<svg width="100%" height="100%">\n    <rect width="100%" height="100%" fill="red" />\n    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />\n    <polygon points="120,0 240,225 0,225" fill="green"/>\n    <text x="50" y="100" font-family="Verdana" font-size="55"\n          fill="white" stroke="black" stroke-width="2">\n            Hello!\n    </text>\n  </svg>';
+
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -257,7 +255,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";
@@ -268,16 +266,13 @@ solution.addEventListener("click", function () {
   updateCode();
 });
 
-const htmlSolution = "";
-let solutionEntry = htmlSolution;
-
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function (e) {
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret("\t");
@@ -291,12 +286,12 @@ textarea.onkeydown = function (e) {
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
+
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
     textarea.value.length,
   );
-
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -307,7 +302,7 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function () {
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
   if (solution.value === "Show solution") {
