@@ -60,7 +60,7 @@ The CSS box sizing module defines the physical, or "page relative", padding and 
 
 ### Glossary terms
 
-- {{glossary("instrinsic size")}}
+- {{glossary("intrinsic size")}}
 
 ## Guides
 
