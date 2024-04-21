@@ -83,8 +83,10 @@ Note that the star image is partially transparent and is layered over the cat im
 
 ```css
 p {
+  font-weight: bold;
   font-size: 1.5em;
-  color: #fe7f88;
+  color: #ff1d00;
+  text-shadow: 0.03em 0.03em 0.05em black;
   background-image: none;
   background-color: transparent;
 }
