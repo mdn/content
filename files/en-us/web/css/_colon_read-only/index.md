@@ -7,7 +7,7 @@ browser-compat: css.selectors.read-only
 
 {{CSSRef}}
 
-The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that do not match **:`read-write`**, such as an element that a user or checkbox cannot edit. 
+The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that do not match **:`read-write`**, such as an element that a user or checkbox cannot edit.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-only.html", "tabbed-shorter")}}
 
