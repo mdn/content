@@ -12,4 +12,5 @@ It is an uninterrupted period where the [main UI thread](/en-US/docs/Glossary/Ma
 
 ## See also
 
-- [Long task API](/en-US/docs/Web/API/PerformanceLongTaskTiming)
+- [Long Tasks API](/en-US/docs/Web/API/PerformanceLongTaskTiming)
+- [Long Animation Frames API](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing)
