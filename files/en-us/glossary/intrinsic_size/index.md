@@ -6,11 +6,11 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In CSS, the _intrinsic size_ of an element is the size it would be based on its content, if no external factors were applied to it. For example, inline elements are sized intrinsically: `width`, `height`, and vertical margin and padding have no impact, though horizontal margin and padding do.
+In CSS, the _intrinsic size_ of an element is the size it would be based on its content if no external factors were applied to it. For example, inline elements are sized intrinsically: `width`, `height`, and margin and padding in the block direction have no impact, though inline direction margin and padding do.
 
 How intrinsic sizes are calculated is defined in the [CSS sizing module](/en-US/docs/Web/CSS/CSS_box_sizing).
 
-Intrinsic sizing takes into account the `min-content` and `max-content` size of an element. For text the `min-content` size would be if the text wrapped as small as it can in the inline direction without causing an overflow, doing as much soft-wrapping as possible. For a box containing a string of text, the `min-content` size would be defined by the longest word. The keyword value of `min-content` for the {{cssxref("width")}} property will size an element according to the `min-content` size.
+Intrinsic sizing takes into account the `min-content` and `max-content` size of an element. For text the `min-content` size would be if the text wrapped as small as it can in the inline direction without causing an overflow, doing as much soft-wrapping as possible. For a box containing a string of text, the `min-content` size would be defined by the longest word. The keyword value of `min-content` for the {{cssxref("width")}} and {{cssxref("inline-size")}} properties will size an element according to the `min-content` size.
 
 The `max-content` size is the opposite — in the case of text, this would have the text display as wide as possible, doing no soft-wrapping, even if an overflow was caused. The keyword value `max-content` exposes this behavior.
 
