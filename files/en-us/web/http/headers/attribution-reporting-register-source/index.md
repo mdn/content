@@ -65,7 +65,7 @@ Attribution-Reporting-Register-Source: <json-string>
         > **Note:** If `"event_report_window"` is specified, `"event_report_windows"` cannot be specified, otherwise the source registration will fail.
     - `"event_report_windows"` {{optional_inline}}
       - : An object representing a series of report windows, starting at `"start_time"`, with reports for this source being delivered after each specified end time in `"end_times"`. This can be used to vary the time of report delivery across multiple reports. If not set, the event report window falls back to the `"expiry"` value. Properties are as follows:
-        - `"start_time"` {{optional_inline}}: A non-negative number specifying the start time for the resporting windows. If not specified, it defaults to `0`.
+        - `"start_time"` {{optional_inline}}: A non-negative number specifying the start time for the reporting windows. If not specified, it defaults to `0`.
         - `"end_times"`: An array of positive numbers specifying end times for subsequent report windows. The values must be increasing, and greater than `"start_time"`.
           > **Note:** If `"event_report_windows"` is specified, `"event_report_window"` cannot be specified, otherwise the source registration will fail.
     - `"expiry"` {{optional_inline}}
