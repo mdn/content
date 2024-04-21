@@ -13,7 +13,7 @@ The **Attribution Reporting API** enables developers to measure conversions — 
 
 ## Concepts and usage
 
-Advertisers commonly want to measure conversions so that they can figure out what advertising placements are giving them the greatest return on investment (ROI) and can adjust their strategy to suit. This usually includes capturing data such as:
+Advertisers commonly want to measure conversions so that they can figure out what advertising placements are giving them the greatest return on investment (ROI) and can adjust their strategy accordingly. This usually includes capturing data such as:
 
 - Which users converted (for example purchased an item, or signed up for a service), and how many.
 - The geographic regions they are based in.
