@@ -8,7 +8,7 @@ browser-compat: api.HTMLLinkElement.type
 
 {{APIRef("HTML DOM")}}
 
-The **`type`** property of the {{domxref("HTMLLinkElement")}} interface is a string that reflects the MIME type of the linked resource.
+The **`type`** property of the {{domxref("HTMLLinkElement")}} interface is a string that reflects the {{glossary("MIME type")}} of the linked resource.
 
 It reflects the `type` attribute of the {{HTMLElement("link")}} element.
 
