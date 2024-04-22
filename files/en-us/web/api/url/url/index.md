@@ -8,11 +8,9 @@ browser-compat: api.URL.URL
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}
 
-The **`URL()`** constructor returns a newly created
-{{domxref("URL")}} object representing the URL defined by the parameters.
+The **`URL()`** constructor returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 
-If the given base URL or the resulting URL are not valid URLs, the JavaScript
-{{jsxref("TypeError")}} exception is thrown.
+If the given base URL or the resulting URL are not valid URLs, the JavaScript {{jsxref("TypeError")}} exception is thrown.
 
 ## Syntax
 
@@ -25,33 +23,25 @@ new URL(url, base)
 
 - `url`
   - : A string or any other object with a {{Glossary("stringifier")}} — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
-    If `url` is a relative URL, `base` is
-    required, and will be used as the base URL. If `url` is an
-    absolute URL, a given `base` will be ignored.
+    If `url` is a relative URL, `base` is required, and will be used as the base URL.
+    If `url` is an absolute URL, a given `base` will be ignored.
 - `base` {{optional_inline}}
-  - : A string representing the base URL to use in cases where
-    `url` is a relative URL. If not specified, it defaults to
-    `undefined`.
+  - : A string representing the base URL to use in cases where `url` is a relative URL.
+    If not specified, it defaults to `undefined`.
 
-> **Note:** The `url` and `base` arguments will
-> each be stringified from whatever value you pass, just like with other Web APIs
-> that accept a string. In particular, you can use an existing
-> {{domxref("URL")}} object for either argument, and it will stringify to the
-> object's {{domxref("URL.href", "href")}} property.
+> **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept a string.
+> In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will stringify to the object's {{domxref("URL.href", "href")}} property.
 
 The resulting URL is not simply a concatenation of `url` and `base`.
-The path sections of both arguments are merged according to
-[RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
+The path sections of both arguments are merged according to [RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
 Therefore a trailing slash in `base` or a leading slash in `url` affect how the resulting path is constructed.
-If you need a strict concatenation of the two arguments the `url` must not have a leading slash
-and the `base` must have a trailing slash.
+If you need a strict concatenation of the two arguments the `url` must not have a leading slash and the `base` must have a trailing slash.
 See the examples under [Examples - Merging of url and base paths](#merging_of_url_and_base_paths).
 
 ### Exceptions
 
-| Exception               | Explanation                                                                                               |
-| ----------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{jsxref("TypeError")}} | `url` (in the case of absolute URLs) or `base` + `url` (in the case of relative URLs) is not a valid URL. |
+- {{jsxref("TypeError")}}
+  - : `url` (in the case of absolute URLs) or `base` + `url` (in the case of relative URLs) is not a valid URL.
 
 ## Examples
 
@@ -148,5 +138,6 @@ const H = new URL("../articles", "https://developer.mozilla.org/api/v1/");
 
 ## See also
 
+- {{domxref("URL.parse_static", "URL.parse()")}}, a non-throwing alternative to this constructor
 - [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - The interface it belongs to: {{domxref("URL")}}.
