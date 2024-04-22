@@ -8,7 +8,7 @@ browser-compat: api.HTMLScriptElement.noModule
 
 {{APIRef("HTML DOM")}}
 
-The **`noModule`** property of the {{domxref("HTMLScriptElement")}} interface is a boolean that indicates whether the script should be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support JavaScript modules.
+The **`noModule`** property of the {{domxref("HTMLScriptElement")}} interface is a boolean value that indicates whether the script should be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules). Practically, this can be used to serve fallback scripts to older browsers that do not support JavaScript modules.
 
 It reflects the `nomodule` attribute of the {{HTMLElement("script")}} element.
 
