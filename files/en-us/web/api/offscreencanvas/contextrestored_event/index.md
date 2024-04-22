@@ -8,9 +8,9 @@ status:
 browser-compat: api.OffscreenCanvas.contextrestored_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}{{SeeCompatTable}}
 
-The **`contextrestored`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent restores the backing storage for a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D).
+The **`contextrestored`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the user agent restores the backing storage for a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D).
 
 You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.
 
@@ -28,7 +28,7 @@ oncontextrestored = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 The code fragment below detects the context restored event.
 
