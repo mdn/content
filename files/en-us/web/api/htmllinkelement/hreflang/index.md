@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.hreflang
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`hreflang`** property of the {{domxref("HTMLLinkElement")}} interface is used to indicate the language and the geographical targeting of a page. This hint can be used by browsers to select the more appropriate page or to improve {{Glossary("SEO")}}.
 
