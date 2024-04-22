@@ -45,9 +45,9 @@ _Inherits events from its parent, {{domxref("EventTarget")}}._
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event) {{Experimental_Inline}}
-  - : Fired if the user agent detects that the backing storage associated with an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context has been lost.
+  - : Fired if the browser detects that the underlying system that provides the resources used by an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context, such as a GPU, has been lost.
 - [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event) {{Experimental_Inline}}
-  - : Fired if the user agent successfully restores a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context.
+  - : Fired if the browser successfully restores the underlying system that provides the resources used by an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context.
 
 ## Examples
 

@@ -10,7 +10,7 @@ browser-compat: api.OffscreenCanvas.contextlost_event
 
 {{APIRef("Canvas API")}}{{SeeCompatTable}}
 
-The **`contextlost`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the user agent detects that the backing storage associated with a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
+The **`contextlost`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the browser detects that the underlying system that provides the resources used by a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
 Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
 
 By default the user agent will attempt to restore the context and then fire the [`contextrestored` event](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event).
