@@ -21,7 +21,7 @@ A boolean, `true` means that the script should not be executed in browsers that 
 ```html
 <script id="el" nomodule>
   // If the browser supports JavaScript modules, the following script will not be executed.
-  console.log('The browser does not support JavaScript modules');
+  console.log("The browser does not support JavaScript modules");
 </script>
 ```
 
