@@ -64,8 +64,9 @@ This code checks to see if a background sync task with a given tag is registered
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.sync.getTags().then((tags) => {
-    if (tags.includes("sync-messages"))
+    if (tags.includes("sync-messages")) {
       console.log("Messages sync already requested");
+    }
   });
 });
 ```

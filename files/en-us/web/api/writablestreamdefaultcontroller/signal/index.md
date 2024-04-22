@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultController.signal
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The read-only **`signal`** property of the {{domxref("WritableStreamDefaultController")}} interface returns the {{domxref("AbortSignal")}} associated with the controller.
 
