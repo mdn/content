@@ -648,6 +648,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSNestRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -2924,6 +2928,10 @@
       "inh": "Event",
       "impl": []
     },
+    "Sanitizer": {
+      "inh": "",
+      "impl": []
+    },
     "Scheduler": {
       "inh": "",
       "impl": []
@@ -3022,18 +3030,6 @@
     },
     "SharedStorage": {
       "inh": "",
-      "impl": []
-    },
-    "SharedStorageOperation": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageRunOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
-    "SharedStorageSelectURLOperation": {
-      "inh": "SharedStorageOperation",
       "impl": []
     },
     "SharedStorageWorklet": {
