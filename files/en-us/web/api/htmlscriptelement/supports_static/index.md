@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.HTMLScriptElement.supports_static
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`supports()`** static method of the {{domxref("HTMLScriptElement")}} interface provides a simple and consistent method to feature-detect what types of scripts are supported by the user agent.
 
