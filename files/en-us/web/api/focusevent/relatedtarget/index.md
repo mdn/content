@@ -8,7 +8,7 @@ browser-compat: api.FocusEvent.relatedTarget
 
 {{APIRef("UI Events")}}
 
-The **`FocusEvent.relatedTarget`** read-only property is the secondary target, depending on the type of event:
+The **`relatedTarget`** read-only property of the {{domxref("FocusEvent")}} interface is the secondary target, depending on the type of event:
 
 <table class="no-markdown">
   <thead>
