@@ -16,6 +16,7 @@ This pseudo-class is applied if the form control is valid and any of the followi
 - The value was invalid when it gained focus, and the user made a change making it valid, even if focus is still in the control.
 
 Once this pseudo-class has been applied, the user-agent re-validates whether the control is valid at every keystroke when the control has focus.
+
 - If the control has focus, and the value was invalid when it gained focus, re-validate on every keystroke.
 
 The result is that if the control was valid when the user started interacting with it, the validity styling is changed only when the user shifts focus to another control. However, if the user is trying to correct a previously-flagged value, the control shows immediately when the value becomes valid. Required items are flagged as invalid only if the user changes them or attempts to submit an unchanged invalid value.
