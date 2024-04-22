@@ -49,6 +49,9 @@ This article provides information about the changes in Firefox 126 that affect d
 
 #### DOM
 
+- The ability to define states for custom elements and match them using CSS selectors is now available by default.
+  The custom states are represented as custom identifiers that can be added to or removed from the element's {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class takes a custom identifier as an argument and matches custom elements if the identifier is present in their set of states. ([Firefox bug 1887543](https://bugzil.la/1887543)).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
