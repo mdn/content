@@ -18,4 +18,4 @@ updates:
     labels:
       - "automated pr"
       - "dependencies"
-      - "github_actions"
+      - "github actions"
