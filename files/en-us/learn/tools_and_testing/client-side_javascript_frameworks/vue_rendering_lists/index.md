@@ -79,7 +79,7 @@ Now that we have a list of items, we can use the `v-for` directive to display th
 
 Before we do that, there's one other piece of syntax to know about that is used with `v-for`, the `key` attribute. To help Vue optimize rendering the elements in the list, it tries to patch list elements so it's not recreating them every time the list changes. However, Vue needs help. To make sure it is re-using list elements appropriately, it needs a unique "key" on the same element that you attach `v-for` to.
 
-To make sure that Vue can accurately compare the `key` attributes, they need to be string or numeric values. While it would be great to use the name field, this field will eventually be controlled by user input, which means we can't guarantee that the names would be unique. We could use `nanoid()`, however, like we did in the previous article.
+To make sure that Vue can accurately compare the `key` attributes, they need to be string or numeric values. While it would be great to use the name field, this field will eventually be controlled by user input, which means we can't guarantee that the names would be unique. We can use `nanoid()`, however, as we did in the previous article.
 
 1. Import `nanoid` into your `App` component in the same way you did with your `ToDoItem` component, using
 
