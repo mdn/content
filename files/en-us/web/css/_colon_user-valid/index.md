@@ -11,7 +11,7 @@ The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 This pseudo-class is applied if the form control is valid and any of the following has occurred:
 
-- The user made a change to the form control and committed the change such as by moving focus elsewhere
+- The user made a change to the form control and committed the change such as by moving focus elsewhere.
 - The user has attempted to submit the form, even if no change was made to the control.
 - The value was invalid when it gained focus, and the user made a change making it valid, even if focus is still in the control.
 
