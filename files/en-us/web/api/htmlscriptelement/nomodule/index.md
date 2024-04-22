@@ -14,7 +14,7 @@ It reflects the `nomodule` attribute of the {{HTMLElement("script")}} element.
 
 ## Value
 
-A boolean.
+A boolean, `true` means that the script should not be executed in browsers that support ES modules, `false` otherwise.
 
 ## Examples
 
