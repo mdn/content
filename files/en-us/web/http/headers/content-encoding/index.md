@@ -61,7 +61,7 @@ Content-Encoding: deflate, gzip
     algorithm (defined in {{rfc(1951)}}).
 - `br`
   - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm structure (defined in {{rfc(7932)}}).
-- `zstd` {{experimental_inline}}
+- `zstd`
   - : A format using the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm structure (defined in {{rfc(8878)}}).
 
 ## Examples

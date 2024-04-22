@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SyncEvent.tag
 ---
 
-{{APIRef("Background Sync")}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
 The **`tag`** read-only property of the
 {{domxref("SyncEvent")}} interface returns the developer-defined identifier for
