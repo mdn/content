@@ -20,7 +20,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.type")}}
   - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
+  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document. It reflects the `src` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
