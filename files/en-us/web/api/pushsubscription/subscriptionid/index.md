@@ -9,7 +9,7 @@ status:
 browser-compat: api.PushSubscription.subscriptionId
 ---
 
-{{APIRef("Push API")}}{{Deprecated_header}}{{non-standard_header}}
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`subscriptionId`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a string containing

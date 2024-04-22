@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`CountQueuingStrategy()`** constructor
 creates and returns a `CountQueuingStrategy` object instance.
