@@ -53,6 +53,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 #### Removals
 
+- The marquee events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handlers](/en-US/docs/Web/HTML/Element/marquee#event_handlers) defined in the [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) ([Firefox bug 1689705](https://bugzil.la/1689705)).
+
 ### WebAssembly
 
 #### Removals
