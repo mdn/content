@@ -192,7 +192,7 @@ In your terminal, try running `npm run dev` (or `yarn dev` if you prefer yarn). 
   ➜  press h + enter to show help
 ```
 
-If you navigate to the "Local" address in a new browser tab (this should be `http://localhost:5173/` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
+If you navigate to the "localhost" address in a new browser tab you should see your app (this address should be `http://localhost:5173/` as stated above, but may vary based on your setup). Right now, the app should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 
 ## Making a couple of changes
 
