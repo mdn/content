@@ -10,7 +10,7 @@ browser-compat: api.OffscreenCanvas.contextrestored_event
 
 {{APIRef("Canvas API")}}{{SeeCompatTable}}
 
-The **`contextrestored`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the browser restores the underlying system, such as a GPU, that provides resources for a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context.
+The **`contextrestored`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the browser restores a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context that was [previously lost](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event).
 
 You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.
 
