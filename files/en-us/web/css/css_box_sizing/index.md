@@ -9,17 +9,15 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS box sizing** module extends the sizing box model properties with keywords that represent content-based "intrinsic" sizes and context-based "extrinsic" sizes, allowing CSS to more easily describe boxes that fit their content or fit into a particular layout context.
+The **CSS box sizing** module extends the sizing box model properties with keywords that represent content-based {{cssxref("intrinsic sizes")}} and context-based extrinsic sizes, allowing CSS to more easily describe boxes that fit their content or fit into a particular layout context.
 
-An element's height, width, along with [margin, padding](/en-US/docs/Web/CSS/CSS_box_model), and [border](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) properties, make up the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model). The size of the content areas are defined by various properties, including the sizing properties defined here.
+Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including width, height, padding, and margin properties (with border properties defined in [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically, enabling explicitly setting an element's size to be based on the size of an element's content.
 
-Every visible element on a webpage is a box laid out according to the [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model). CSS properties define the size, position, and stacking level of each box, with the page relative box sizing properties defined here, or the [logical sizing property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Sizing) equivalents, define the intrinsic or extrinsic size.
+The sizing values introduced in this module allow elements with [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment) to specify explicit intrinsic sizes, enabling boxes to size as if its in-flow content totals to a width and height matching the specified explicit intrinsic size rather than sizing as if it were empty.
 
-Each box has a rectangular content area, with the padding being around the content, the border is around the padding, and the margin sits outside the border.
+This module also introduced the ability to define a ratio for an element's box meaning the browser can automatically adjust an element's dimensions to maintain a specified aspect ratio as long as one of the dimensions is automatically sized.
 
-A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model).
-
-The CSS box sizing module defines the physical, or "page relative", padding and margin properties. Flow-relative properties, which relate to text direction, are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) expanded the properties available in both these modules to include writing-mode relative equivalents of the corresponding physical box model and intrinsic box sizing properties.
 
 ## Reference
 
@@ -36,9 +34,10 @@ The CSS box sizing module defines the physical, or "page relative", padding and 
 - {{cssxref("max-height")}}
 - {{cssxref("max-width")}}
 - {{cssxref("min-height")}}
-- {{cssxref("min-intrinsic-sizing")}}
 - {{cssxref("min-width")}}
 - {{cssxref("width")}}
+
+> **Note:** The CSS box sizing module introduces the `min-intrinsic-sizing` property that has not yet been implemented.
 
 ### Data types and values
 
@@ -46,13 +45,6 @@ The CSS box sizing module defines the physical, or "page relative", padding and 
 - {{cssxref("min-content")}} value
 - {{cssxref("max-content")}} value
 - {{cssxref("fit-content")}} value
-<!--
-- `stretch` keyword
-- `legacy` keyword
-- `zero-if-scroll`
-- `zero-if-extrinsic`
-- `contain` keyword
-  -->
 
 ### Functions
 
@@ -76,27 +68,12 @@ The CSS box sizing module defines the physical, or "page relative", padding and 
 
   - : Explains the visual formatting model.
 
+- [Controlling ratios of flex items along the main axis](/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+
+  - : Explains intrinsic sizing as a precursor to understanding how to control the size and flexibility of flex items along the main axis using {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}.
+
 ## Related concepts
 
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
-  - {{cssxref("margin")}} shorthand
-  - {{cssxref("margin-bottom")}}
-  - {{cssxref("margin-left")}}
-  - {{cssxref("margin-right")}}
-  - {{cssxref("margin-top")}}
-  - {{cssxref("margin-trim")}}
-  - {{cssxref("padding")}} shorthand
-  - {{cssxref("padding-bottom")}}
-  - {{cssxref("padding-left")}}
-  - {{cssxref("padding-right")}}
-  - {{cssxref("padding-top")}}
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
-  - {{cssxref("border")}} shorthand
-  - {{cssxref("border-width")}} shorthand
-  - {{cssxref("border-bottom-width")}}
-  - {{cssxref("border-left-width")}}
-  - {{cssxref("border-right-width")}}
-  - {{cssxref("border-top-width")}}
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
   - {{CSSxRef("min-inline-size")}}
   - {{CSSxRef("block-size")}}
@@ -117,6 +94,25 @@ The CSS box sizing module defines the physical, or "page relative", padding and 
   - {{CSSxRef("overflow-inline")}}
   - {{CSSxRef("overscroll-behavior-block")}}
   - {{CSSxRef("overscroll-behavior-inline")}}
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+  - {{cssxref("margin")}} shorthand
+  - {{cssxref("margin-bottom")}}
+  - {{cssxref("margin-left")}}
+  - {{cssxref("margin-right")}}
+  - {{cssxref("margin-top")}}
+  - {{cssxref("margin-trim")}}
+  - {{cssxref("padding")}} shorthand
+  - {{cssxref("padding-bottom")}}
+  - {{cssxref("padding-left")}}
+  - {{cssxref("padding-right")}}
+  - {{cssxref("padding-top")}}
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+  - {{cssxref("border")}} shorthand
+  - {{cssxref("border-width")}} shorthand
+  - {{cssxref("border-bottom-width")}}
+  - {{cssxref("border-left-width")}}
+  - {{cssxref("border-right-width")}}
+  - {{cssxref("border-top-width")}}
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
   - {{CSSxRef("overflow")}} shorthand
   - {{CSSxRef("overflow-block")}}
@@ -125,6 +121,17 @@ The CSS box sizing module defines the physical, or "page relative", padding and 
   - {{CSSxRef("overflow-x")}}
   - {{CSSxRef("overflow-y")}}
   - {{CSSxRef("text-overflow")}}
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid) module
+  - {{CSSxRef("grid")}}
+  - {{CSSxRef("grid-auto-columns")}}
+  - {{CSSxRef("grid-auto-rows")}}
+  - {{CSSxRef("grid-template-columns")}}
+  - {{CSSxRef("grid-template-rows")}}
+  - {{CSSxRef("repeat")}}
+  - {{CSSxRef("minmax")}} function
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexbox) module
+  - {{CSSxRef("flex-basis")}}
+  - {{CSSxRef("flex")}}
 
 ## Specifications
 
