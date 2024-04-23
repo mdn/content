@@ -43,9 +43,7 @@ If your extension provides bad credentials, then the listener is called again. F
 
 In Firefox and Chrome Manifest V2 extensions, you must add the [`"webRequest"` and `"webRequestBlocking"` API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) to your `manifest.json`.
 
-For Chrome Manifest V3 extensions, the `"webRequestBlocking"` permission is no longer available (except for policy-installed extensions). Instead, the `"webRequest"` and `"webRequestAuthProvider"` permissions enable you to supply credentials asynchronously.
-
-> **Note:** Firefox does not support `"webRequestAuthProvider"`, but support is planned. See [bug 1820569](https://bugzilla.mozilla.org/show_bug.cgi?id=1820569).
+For Manifest V3 extensions, Chrome no longer supports the `"webRequestBlocking"` permission (except for policy-installed extensions). Instead, the `"webRequest"` and `"webRequestAuthProvider"` permissions enable you to supply credentials asynchronously. Firefox continues to support `"webRequestBlocking"` in Manifest V3 and provides `"webRequestAuthProvider"` to offer cross-browser compatibility.
 
 ## Proxy authorization
 
