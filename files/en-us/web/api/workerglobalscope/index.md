@@ -29,7 +29,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for workers to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("isSecureContext", "WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.

@@ -67241,6 +67241,18 @@
       "Wladimir_Palant"
     ]
   },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2020-10-15T21:51:32.759Z",
+    "contributors": [
+      "mfuji09",
+      "alattalatta",
+      "rugk",
+      "fscholz",
+      "kenrick95",
+      "chrisdavidmills",
+      "jpmedley"
+    ]
+  },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T21:27:31.490Z",
     "contributors": [
@@ -71553,18 +71565,6 @@
       "George8211",
       "matiishyn",
       "kscarfone"
-    ]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2020-10-15T21:51:32.759Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "rugk",
-      "fscholz",
-      "kenrick95",
-      "chrisdavidmills",
-      "jpmedley"
     ]
   },
   "Web/API/origin": {
