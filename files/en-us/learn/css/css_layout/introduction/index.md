@@ -599,7 +599,7 @@ body {
 
 ## Table layout
 
-When looking at the source code on older websites, you may discover that web developers used to use tables for laying out forms. HTML tables should be reserved for displaying tabular data. Tables may make laying out forms easy, but using tables for anything other than tabular data  has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
+When looking at the source code on older websites, you may discover that web developers used to use tables for laying out forms. HTML tables should be reserved for displaying tabular data. Tables may make laying out forms easy, but using tables for anything other than tabular data has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
 
 The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables". The example below shows one such use.
 
