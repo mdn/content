@@ -9,7 +9,7 @@ spec-urls: https://www.w3.org/TR/CSS22/tables.html
 
 The **CSS table** module helps you define how to lay out table data.
 
-This CSS module defines styles applicable to the HTML {{htmlelement("table")}} element, used to render tabular data. By default, tables are rendered as a two-dimensional grid of table cells lined up in a series of consecutive rows and columns, generated from the table structure and sized according to their content. This module enables defining the position of the table's {{htmlelement("caption")}}, if present.
+This CSS module defines styles applicable to the HTML {{htmlelement("table")}} element, which is used to render tabular data. By default, tables are rendered as a two-dimensional grid with cells lined up in a series of consecutive rows and columns. This layout is generated from the table structure and sized according to the content of the cells. This module also enables defining the position of the table's {{htmlelement("caption")}}, if present.
 
 The properties introduced in this module aren't limited to the `<table>` elements; they can be applied to any element with a table-related CSS {{cssxref("display")}} value.
 
