@@ -9,15 +9,15 @@ page-type: guide
 
 This guide is a primer introducing how CSS can be used to apply colors to HTML elements.
 
-The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create just the look you want.
+The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create the look you want.
 
-This guide describes the [list of what you can color and what CSS properties are involved](#properties_that_can_have_color) and how to [use colors both in stylesheets and in scripts](#colors_within_css_values).
+This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#colors_within_css_values) and [in other ways](#other_ways_to_use_color).
 
 To learn more about CSS colors as a data type, see [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values).
 
 ## Properties that can have color
 
-At the element level, everything in HTML can have color applied to it. Instead, let's look at things in terms of the kinds of things that are drawn in the elements, such as text and borders and so forth. For each, we'll see a list of the CSS properties that apply color to them.
+At the element level, everything in HTML can have color applied to it. Let's look at the different items rendered on the page — such as text, borders, etc. We'll provide lists of the CSS properties that apply color to each.
 
 At a fundamental level, the {{cssxref("color")}} property defines the foreground color of an HTML element's content and the {{cssxref("background-color")}} property defines the element's background color. These can be used on just about any element.
 
@@ -68,13 +68,13 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 
 ## Colors within CSS values
 
-Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under [Things that can have color](#properties_that_can_have_color), there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
+Now that you know what [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start to add color to your websites. Let's look at some examples of using color within a {{Glossary("stylesheet")}}.
 
 ### Specifying colors in stylesheets
 
 The best way to apply color to elements is to specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.
 
-Let's take a look at an example, starting by looking at the results we're trying to achieve:
+Let's look at the end result first, before going on to look at the code we need to create it:
 
 {{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
 
@@ -93,13 +93,13 @@ The HTML responsible for creating the above example is shown here:
 </div>
 ```
 
-This is pretty basic, using a {{HTMLElement("div")}} as a wrapper around the contents, which consists of two more `<div>`s, each styled differently with a single paragraph ({{HTMLElement("p")}}) in each box.
+Here we have a wrapper {{HTMLElement("div")}} containing two more `<div>`s laid out side by side, each with a single child paragraph ({{HTMLElement("p")}}). Each content `<div>` is given a different look and feel.
 
 The magic happens, as usual, in the CSS, where we'll apply colors and define the layout for the HTML above.
 
 #### CSS
 
-We'll look at the CSS to create the above results a piece at a time, so we can review the interesting parts one by one.
+Let's look at the CSS that creates the above result a piece at a time.
 
 > **Note:** We are using multiple different CSS color notations in this example to demonstrate their use. This is not recommended for production code. When writing CSS, use the style of writing CSS colors that is most intuitive for you and your team.
 
@@ -158,9 +158,9 @@ The `.boxLeft` class, which, cleverly, is used to style the box on the left, set
 
 Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. Then the following colors are established:
 
-- The `background-color` is set using the {{CSSXref("color_value/hwb", "hwb()")}} functional notation value specified using `hwb(270deg 63% 13%)`. This is a medium purple color.
+- The `background-color` is set using {{CSSXref("color_value/hwb", "hwb()")}} functional notation — `hwb(270deg 63% 13%)`. This is a medium purple color.
 - The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple using the six-digit {{cssxref("hex-color")}} `#6e1478`.
-- The foreground (text) color is specified by setting the {{cssxref("color")}} property with the {{CSSXref("color_value/hsl", "hsl()")}} functional notation to `hsl(0deg 100% 100%)`. This is one of many ways to specify the color white.
+- The foreground (text) color is specified by setting the {{cssxref("color")}} property using {{CSSXref("color_value/hsl", "hsl()")}} functional notation — `hsl(0deg 100% 100%)`. This is one of many ways to specify the color white.
 - We add a green wavy line under the text with the {{cssxref("text-decoration")}} shorthand, along with the longhand component for browser compatibility. We used the 3-digit {{cssxref("hex-color")}} `#8f8`, which is the equivalent of `#88ff88`.
 - Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
 
@@ -171,7 +171,7 @@ CSS isn't the only web technology that supports color. There are graphics techno
 - The HTML [Canvas API](/en-US/docs/Web/API/Canvas_API)
   - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) to learn more.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
-  - : Lets you draw images using commands that draw specific shapes, patterns, and lines to produce an image. SVG commands are formatted as XML, and can be embedded directly into a web page or can be placed in the page using the {{HTMLElement("img")}} element, just like any other type of image.
+  - : Lets you create images using commands that draw specific shapes, patterns, and lines. SVG commands are formatted as XML, and can be embedded directly into a web page or placed in the page using the {{HTMLElement("img")}} element, just like any other type of image.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
   - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more.
 
