@@ -38,18 +38,18 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 
 ## Event handlers
 
-- `onbounce`
+- `onbounce` {{deprecated_inline}}
   - : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
-- `onfinish`
+- `onfinish` {{deprecated_inline}}
   - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
-- `onstart`
+- `onstart` {{deprecated_inline}}
   - : Fires when the marquee starts scrolling.
 
 ## Methods
 
-- `start()`
+- `start()` {{deprecated_inline}}
   - : Starts scrolling of the marquee.
-- `stop()`
+- `stop()` {{deprecated_inline}}
   - : Stops scrolling of the marquee.
 
 ## Examples
