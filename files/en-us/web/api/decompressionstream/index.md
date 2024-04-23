@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DecompressionStream
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`DecompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for decompressing a stream of data.
 

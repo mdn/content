@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasPattern.setTransform
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`CanvasPattern.setTransform()`** method uses a {{domxref("DOMMatrix")}} object as the pattern's transformation matrix and invokes it on the pattern.
 
