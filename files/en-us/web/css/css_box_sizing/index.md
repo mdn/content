@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS box sizing** module extends the sizing box model properties with keywords that represent content-based {{cssxref("intrinsic sizes")}} and context-based extrinsic sizes, allowing CSS to more easily describe boxes that fit their content or fit into a particular layout context.
+The **CSS box sizing** module defines sizing, minimum sizing and maximum sizing properties, and extends the CSS sizing properties with keywords that represent content-based {{cssxref("intrinsic sizes")}} and context-based "extrinsic" sizes, enabling describing how elements fit their content or fit into a particular layout context.
 
 Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including width, height, padding, and margin properties (with border properties defined in [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically, enabling explicitly setting an element's size to be based on the size of an element's content.
 
