@@ -74,6 +74,7 @@ This article provides information about the changes in Firefox 126 that affect d
 
 - The {{WebExtAPIRef("commands.onCommand")}} event now passes the `tab` argument to the event listener. This enables extensions to apply a triggered shortcut to the page in which it was issued, without the need to call the `tabs.query()` method ([Firefox bug 1843866](https://bugzil.la/1843866)).
 - The {{WebExtAPIRef("runtime.MessageSender")}} type now includes the `origin` property. This enables message or connection requests to see the page or frame that opened the connection. This is useful for identifying if the origin can be trusted if it isn't apparent from the URL ([Firefox bug 1787379](https://bugzil.la/1787379)).
+- The `"webRequestAuthProvider"` permission is now supported. This provides compatibility with Chrome for requesting permission for {{WebExtAPIRef("webRequest.onAuthRequired")}} in Manifest V3 ([Firefox bug 1820569](https://bugzil.la/1820569)).
 - The [`options_page` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) is provided as an alias of the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key. This has been provided to offer extensions better compatibility with Chrome ([Firefox bug 1816960](https://bugzil.la/1816960)).
 
 ### Removals
