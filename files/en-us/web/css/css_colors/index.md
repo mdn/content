@@ -90,7 +90,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
-- [Color converter tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : The various color syntaxes in the sRGB color space.
 
 ## Related concepts
