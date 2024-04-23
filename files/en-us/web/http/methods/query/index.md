@@ -1,21 +1,19 @@
 ---
-title: GET
-slug: Web/HTTP/Methods/GET
+title: QUERY
+slug: Web/HTTP/Methods/QUERY
 page-type: http-method
-browser-compat: http.methods.GET
+# browser-compat: http.methods.QUERY
 ---
 
 {{HTTPSidebar}}
 
-The **HTTP `GET` method** requests a representation of the specified resource. Requests using `GET` should only be used to request data (they shouldn't include data).
-
-> **Note:** Sending body/payload in a `GET` request may cause some existing implementations to reject the request — while not prohibited by the specification, the semantics are undefined. It is better to just avoid sending payloads in `GET` requests. The proper way to send data to the server is by using the [`QUERY` method](/en-US/docs/Web/HTTP/Methods/QUERY) (note, that it's still an IETF draft and may be not implemented on some servers and clients).
+The **HTTP `QUERY` method** requests a representation of the specified resource. Requests using `QUERY` may use a request content of any media type with the `QUERY` method, provided that it has appropriate query semantics. The content returned in response to a QUERY cannot be assumed to be a representation of the resource identified by the effective request URI.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Request has body</th>
-      <td>No</td>
+      <td>YES</td>
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
@@ -43,7 +41,17 @@ The **HTTP `GET` method** requests a representation of the specified resource. R
 ## Syntax
 
 ```http
-GET /index.html
+POST /test
+```
+
+## Example
+
+```http
+QUERY /test HTTP/1.1
+Host: foo.example
+Content-Type: application/x-www-form-urlencoded
+
+q=foo&limit=10&sort=-date
 ```
 
 ## Specifications
@@ -58,5 +66,5 @@ GET /index.html
 
 - [HTTP Headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Range")}}
-- {{HTTPMethod("QUERY")}}
+- {{HTTPMethod("GET")}}
 - {{HTTPMethod("POST")}}

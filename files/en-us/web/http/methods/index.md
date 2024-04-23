@@ -27,6 +27,8 @@ HTTP defines a set of **request methods** to indicate the desired action to be p
   - : The `TRACE` method performs a message loop-back test along the path to the target resource.
 - [`PATCH`](/en-US/docs/Web/HTTP/Methods/PATCH)
   - : The `PATCH` method applies partial modifications to a resource.
+- [`QUERY`](/en-US/docs/Web/HTTP/Methods/QUERY)
+  - : The `QUERY` method requests a representation of the specified resource. Unlike the HTTP GET method, which requests that a server return a representation of the resource identified by the target URI, the QUERY method is used to ask the server to perform a query operation over some set of data in a request body.
 
 ## Specifications
 
