@@ -25,21 +25,21 @@ The properties introduced in this module aren't limited to the `<table>` element
 
 ## Guides
 
-- [CSS table layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction#table_layout)
+- [Learn: CSS table layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction#table_layout)
 
-  - : An overview of CSS layouts, including setting table-related `display` values to enable using CSS table properties on any element.
+  - : An overview of CSS layouts, including how to set table-related `display` values to enable using CSS table properties on any element.
 
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 
-  - : A building block guide to improving the appearance of HTML tables, covering table styling techniques.
+  - : A guide to improving the appearance of HTML tables, covering table styling techniques.
 
 - [Learn: HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 
-  - : Introduction to HTML tables, including the HTML for rows and cells, headings, making cells span multiple columns and rows, and grouping cells in a column for styling purposes.
+  - : An introduction to HTML tables, including the HTML for creating rows and cells, headings, making cells span multiple columns and rows, and grouping cells in a column for styling purposes.
 
 - [Learn: HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 
-  - : Advanced HTML table features including captions and grouping table rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
+  - : A look at advanced HTML table features, including captions and grouping table rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 
 ## Related concepts
 
@@ -47,7 +47,7 @@ The properties introduced in this module aren't limited to the `<table>` element
 - {{cssxref("vertical-align")}} property
 - {{cssxref("text-align")}} property
 
-- HTML table-related elements
+- HTML table-related elements:
 
   - {{htmlelement("table")}}
   - {{htmlelement("caption")}}
@@ -80,11 +80,11 @@ The properties introduced in this module aren't limited to the `<table>` element
 
 {{Specifications}}
 
-> **Note:** The [CSS Table Module Level 3](https://drafts.csswg.org/css-tables-3/) specification is being developed, but is not yet ready for implementation.
+> **Note:** The [CSS Table Module Level 3](https://drafts.csswg.org/css-tables-3/) specification is still being developed; it is not yet ready for implementation.
 
 ## See also
 
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-- [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
