@@ -44,6 +44,7 @@ In addition, the following notes apply:
 - It is permitted to nest `calc()` functions, in which case the inner ones are treated as simple parentheses.
 - For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
 - The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
+- Current implementations require that for the `*` and `/` operators, one of the operands has to be unitless. For `/`, the right operand must be unitless. For example `font-size: calc(1.25rem / 1.25)` is valid but `font-size: calc(1.25rem / 125%)` is invalid.
 
 ### Formal syntax
 

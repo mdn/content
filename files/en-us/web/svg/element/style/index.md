@@ -49,7 +49,7 @@ svg {
   - : This attribute the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
     _Value type_: [**`<string>`**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: _none_; _Animatable_: **no**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

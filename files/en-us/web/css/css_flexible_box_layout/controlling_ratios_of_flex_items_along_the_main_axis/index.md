@@ -134,7 +134,7 @@ Change the `flex-shrink` value to `1` and you will see each item shrink by the s
 
 You could say that `flex-shrink` works in pretty much the same way as `flex-grow`. However there are two reasons why it isn't _quite_ the same.
 
-While it is usually subtle, defined in the specification is one reason why `flex-shrink` isn't quite the same for negative space as `flex-grow` is for positive space:
+While it is usually subtle, defined in the [specification](https://drafts.csswg.org/css-flexbox/#flex-flex-shrink-factor) is one reason why `flex-shrink` isn't quite the same for negative space as `flex-grow` is for positive space. The concept of [flex base size](#what_sets_the_base_size_of_the_item) affects how negative space is distributed across flex items.
 
 > "Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won't shrink to zero before a larger item has been noticeably reduced."
 

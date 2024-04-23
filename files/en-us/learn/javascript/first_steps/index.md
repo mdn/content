@@ -1,5 +1,5 @@
 ---
-title: JavaScript First Steps
+title: JavaScript first steps
 slug: Learn/JavaScript/First_steps
 page-type: learn-module
 ---

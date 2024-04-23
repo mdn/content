@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Path2D.addPath
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`Path2D.addPath()`** method
 of the Canvas 2D API adds one {{domxref("Path2D")}} object to another

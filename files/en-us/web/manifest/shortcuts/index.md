@@ -2,12 +2,10 @@
 title: shortcuts
 slug: Web/Manifest/shortcuts
 page-type: web-manifest-member
-status:
-  - experimental
 browser-compat: html.manifest.shortcuts
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>

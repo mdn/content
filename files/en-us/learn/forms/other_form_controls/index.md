@@ -300,7 +300,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-As you'll have seen in the last few articles, there are many types of form control. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.
+As you'll have seen in the last few articles, there are many types of form controls. You don't need to remember all of these details at once, and can return to these articles as often as you like to check up on details.
 
 Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at [Styling them](/en-US/docs/Learn/Forms/Styling_web_forms).
 
