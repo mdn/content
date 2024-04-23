@@ -302,14 +302,14 @@ In this case, we can set a {{httpheader("Cache-Control")}} value to indicate wha
 const myImage = document.querySelector("img");
 const reqHeaders = new Headers();
 
-// a cached response is okay unless it's more than a week old
+// A cached response is okay unless it's more than a week old
 reqHeaders.set("Cache-Control", "max-age=604800");
 
 const options = {
   headers: reqHeaders,
 };
 
-// pass init as an "options" object with our headers
+// Pass init as an "options" object with our headers.
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
