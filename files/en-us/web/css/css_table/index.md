@@ -27,7 +27,7 @@ The properties introduced in this module aren't limited to the `<table>` element
 
 - [CSS table layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction#table_layout)
 
-  - An over of CSS layouts, including setting table-related `display` values to enable using CSS table properties on any element.
+  - : An overview of CSS layouts, including setting table-related `display` values to enable using CSS table properties on any element.
 
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 
@@ -38,6 +38,7 @@ The properties introduced in this module aren't limited to the `<table>` element
   - : Introduction to HTML tables, including the HTML for rows and cells, headings, making cells span multiple columns and rows, and grouping cells in a column for styling purposes.
 
 - [Learn: HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
+
   - : Advanced HTML table features including captions and grouping table rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 
 ## Related concepts
@@ -73,7 +74,7 @@ The properties introduced in this module aren't limited to the `<table>` element
   - {{cssxref("border")}} shorthand
   - {{cssxref("border-width")}}
   - {{cssxref("border-style")}}
-  - {{cssxref("border-size")}}
+  - {{cssxref("border-color")}}
 
 ## Specifications
 
