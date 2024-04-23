@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers("dedicated")}}
 
 The **`cancelAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface cancels an animation frame request previously scheduled through a call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}.
 

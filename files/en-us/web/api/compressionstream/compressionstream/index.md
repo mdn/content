@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CompressionStream.CompressionStream
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`CompressionStream()`** constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.
 
