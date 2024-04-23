@@ -236,7 +236,9 @@
     "ja": "セクション",
     "ko": "섹션",
     "pt-BR": "sessão",
-    "ru": "раздел"
+    "ru": "раздел",
+    "zh-CN": "章节",
+    "zh-TW": "章節"
   },
   "summary": {
     "en-US": "The documentation about this has not yet been written; please consider contributing!",
