@@ -47,7 +47,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 - {{cssxref("fit-content")}} value
 - {{cssxref("fit-content_function", "fit-content()")}} function
 
-> **Note:** The CSS box sizing module introduces the `stretch` and `contain` sizing values that have not yet been directly implemented.
+> **Note:** The CSS box sizing module introduces the `stretch` and `contain` keywords as sizing values that have not yet been implemented on the box sizing properties.
 
 ### Functions
 
