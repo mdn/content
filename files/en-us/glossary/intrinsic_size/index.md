@@ -25,6 +25,6 @@ The opposite of _intrinsic size_ is **_extrinsic size_**. Extrinsic sizing deter
 ## See also
 
 - CSS {{cssxref("min-content")}}, {{cssxref("max-content")}}, and {{cssxref("fit-content")}} property values.
-- CSS {{"aspect-ratio"}} property
+- CSS {{cssxref("aspect-ratio")}} property
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 - [CSS sizing specification: intrinsic sizes](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes)
