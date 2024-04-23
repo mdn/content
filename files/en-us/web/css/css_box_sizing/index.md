@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS box sizing** module defines sizing, minimum sizing and maximum sizing properties, and extends the CSS sizing properties with keywords that represent content-based {{cssxref("intrinsic sizes")}} and context-based "extrinsic" sizes, enabling describing how elements fit their content or fit into a particular layout context.
+The **CSS box sizing** module defines sizing, minimum sizing and maximum sizing properties, and extends the CSS sizing properties with keywords that represent content-based {{cssxref("intrinsic size")}} and context-based "extrinsic" size, enabling describing how elements fit their content or fit into a particular layout context.
 
 Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including width, height, padding, and margin properties (with border properties defined in [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically, enabling explicitly setting an element's size to be based on the size of an element's content.
 
@@ -124,7 +124,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
   - {{CSSxRef("overflow-x")}}
   - {{CSSxRef("overflow-y")}}
   - {{CSSxRef("text-overflow")}}
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
   - {{CSSxRef("grid")}}
   - {{CSSxRef("grid-auto-columns")}}
   - {{CSSxRef("grid-auto-rows")}}
@@ -132,7 +132,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
   - {{CSSxRef("grid-template-rows")}}
   - {{CSSxRef("repeat")}}
   - {{CSSxRef("minmax")}} function
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexbox) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
   - {{CSSxRef("flex-basis")}}
   - {{CSSxRef("flex")}}
 
@@ -146,5 +146,4 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 - [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
-- [CSS table](/en-US/docs/Web/CSS/CSS) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module

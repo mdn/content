@@ -112,7 +112,6 @@ The CSS box model module defines the physical, or "page relative", padding and m
   - {{cssxref("max-height")}}
   - {{cssxref("max-width")}}
   - {{cssxref("min-height")}}
-  - {{cssxref("min-intrinsic-sizing")}}
   - {{cssxref("min-width")}}
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
   - {{CSSxRef("overflow")}} shorthand
