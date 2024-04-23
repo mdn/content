@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS box sizing** module defines sizing, minimum sizing and maximum sizing properties, and extends the CSS sizing properties with keywords that represent content-based {{cssxref("intrinsic size")}} and context-based "extrinsic" size, enabling describing how elements fit their content or fit into a particular layout context.
+The **CSS box sizing** module defines sizing, minimum sizing and maximum sizing properties, and extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based "extrinsic" size, enabling describing how elements fit their content or fit into a particular layout context.
 
 Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including width, height, padding, and margin properties (with border properties defined in [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically, enabling explicitly setting an element's size to be based on the size of an element's content.
 
@@ -61,7 +61,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 
-  - : Explains one of the fundamental concept of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
+  - : Explains one of the fundamental concepts of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
 
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 
@@ -71,7 +71,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 
   - : Explains the visual formatting model.
 
-- [Controlling ratios of flex items along the main axis](/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 
   - : Explains intrinsic sizing as a precursor to understanding how to control the size and flexibility of flex items along the main axis using {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}.
 
