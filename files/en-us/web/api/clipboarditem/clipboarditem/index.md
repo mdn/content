@@ -42,11 +42,11 @@ This item is then written to the clipboard, using the {{domxref("Clipboard.write
 ```js
 async function writeClipImg() {
   try {
-    if (ClipboardItem.supports('image/png')) {
-        const imgURL = "/myimage.png";
-        const data = await fetch(imgURL);
-        const blob = await data.blob();
-        await navigator.clipboard.write([
+    if (ClipboardItem.supports("image/png")) {
+      const imgURL = "/myimage.png";
+      const data = await fetch(imgURL);
+      const blob = await data.blob();
+      await navigator.clipboard.write([
         new ClipboardItem({
             [blob.type]: blob,
         }),
