@@ -28,7 +28,7 @@ Third-party cookies are sent in common situations:
 
 Going forward in this article, we'll mainly be talking about the second case above, where third-party content is embedded into a site and makes its own requests, which result in third-party cookies being sent. Let's further illustrate the example mentioned above with a fictional company, which has separate domains for its online shop (`shop.site`), community discussion forums (`forum.site`), and customer service and returns (`service.site`).
 
-Each site has an embedded sign-in widget, hosted at `auth.site`, to persist sign-in status across sites. A user can go to any one of those sites and sign in, resulting in a cookie being set on the browser for `auth.site` containing a session ID. When the user goes to one of the other sites, the embedded `auth.site` instance will have access to the session ID cookie set when the user signed in over on the first site. It can send that up to the server, check it is still valid, and if so, sign in that site immediately.
+Each of the three sites has an embedded sign-in widget, hosted at `auth.site`, to persist sign-in status across sites. A user can sign in to any of those sites, creating a cookie set on the browser for `auth.site` containing a session ID. When the user goes to one of the other sites, the embedded `auth.site` instance will have access to the session ID cookie set when the user signs in on the first site. It can send that to the server, check it is still valid, and sign in to that site immediately.
 
 ![visual representation of the above third-party sign-in system description](3pc-example.png)
 
