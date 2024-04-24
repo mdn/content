@@ -30,11 +30,11 @@ See the {{cssxref("named-color")}} data type for more information on color keywo
 
 ## RGB values
 
-There are two ways to define an {{glossary("RGB")}} color by their red, green, and blue components in CSS —  hexadecimal and `rgb()` values. Like named colors, these methods use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space. However, they allow a much wider range of colors to be specified.
+There are two ways to define an {{glossary("RGB")}} color by their red, green, and blue components in CSS — hexadecimal and `rgb()` values. Like named colors, these methods use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space. However, they allow a much wider range of colors to be specified.
 
 ### Hexadecimal string notation
 
-Hexadecimal (hex) string notation uses a hexadecimal value to represent each component (red, green, and blue) of an RGB color. It may also include a fourth component: the alpha channel (or opacity). 
+Hexadecimal (hex) string notation uses a hexadecimal value to represent each component (red, green, and blue) of an RGB color. It may also include a fourth component: the alpha channel (or opacity).
 
 A color in hexadecimal string notation always begins with the character `"#"`. After that comes the hexadecimal digits of the color code. The string is case-insensitive.
 
@@ -47,27 +47,20 @@ A color in hexadecimal string notation always begins with the character `"#"`. A
 - `"#rgba"`
   - : Specifies a color whose red component is the hexadecimal number `0xrr`, green component is `0xgg`, and blue component is `0xbb`. The alpha channel is specified by `0xaa`; the lower this value is, the more translucent the color becomes.
 
-As shown above, each color component can be represented as a double-digit hex value (a number between 0 and 255, or 0x00 and 0xFF) or a single-digit hex value (a number between 0 and 15, or 0x0 and 0xF). For example:
+As shown above, the red, green, and blue color components can each be represented as a double-digit hex value representing a number between 0 (`00`) and 255 (`FF`) or a single-digit hex value (a number between 0 (`0`) and 15 (`F`). These two hex colors are equivalent color values; they're both red:
 
-\```css
-/* Double-digit hex representation of "full red"  */
+```css
 color: #ff0000;
-
-/* Single-digit hex representation of "full red" */
-#f00;
-\```
-
+color: #f00;
+```
 
 All components _must_ be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
 To make the values 25% opaque, add in the alpha channel value as shown below:
 
-\```css
-/* Double-digit, 25% opaque hex representation of "full red"  */
+```css
 color: #ff000044;
-
-/* Single-digit 25% opaque hex representation of "full red" */
-#f004;
-\```
+color: #f004;
+```
 
 See the {{cssxref("hex-color")}} data type for more information on hexadecimal string notation for colors.
 
@@ -537,7 +530,7 @@ Lab represents the entire range of colors that humans can see by specifying the 
 Similar to `lch()` and `oklch()`, the `lightness` is either:
 
 - A {{cssxref("percentage")}}, with `0%` being completely black and 100% being completely white.
-- A number between `0` and `100` for `lab()` and 0` and `1` for `oklab()`, where `0` is completely black and `1`/`100` is completely white.
+- A number between `0` and `100` for `lab()` and 0`and`1`for`oklab()`, where`0`is completely black and`1`/`100` is completely white.
 
 The `a` value is `<number>` between `-125` and `125` for `lab()` or `-0.4` and `0.4` for `oklab()`, a `<percentage>` between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the a-axis in the color space, which defines how green (moving towards -100%) or red (moving towards +100%) the color is. Note that these values are signed (allowing both positive and negative values) and theoretically unbounded, meaning that you can set values outside the ±125 or ±0.4 (±100%) limits. In practice, values cannot exceed ±160 or ±0.5, respectively.
 
