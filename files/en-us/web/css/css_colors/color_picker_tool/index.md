@@ -20,7 +20,7 @@ When you select a color, it gets displayed in four standard CSS color formats. C
 
 The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt")}} data type is supported in CSS.
 
-The older sRGB color notations, `<hex-color>`, `hsl()`, `hwb()`, and `rgb()`, do not express the full spectrum of visible colors. When using `hsl()`, `hwb()`, and `rgb()` to define a [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), the output color is serialized to `color(srgb)` to avoid these limitations, meaning querying the output color value via the {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
+> **Note:** The older sRGB color notations - `hsl()`, `hwb()`, and `rgb()` - do not express the full spectrum of visible colors. The `color()` function supports a much wider color gamut. For this reason, if using these functions to define [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method is a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
 
 ## See also
 
