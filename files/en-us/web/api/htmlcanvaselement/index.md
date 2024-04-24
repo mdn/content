@@ -45,9 +45,9 @@ _Inherits events from its parent, {{domxref("HTMLElement")}}._
 
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) {{Experimental_Inline}}
+- [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
   - : Fired if the browser detects that the `CanvasRenderingContext2D` context has been lost.
-- [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) {{Experimental_Inline}}
+- [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
   - : Fired if the browser successfully restores a `CanvasRenderingContext2D` context
 - [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - : Fired if the user agent is unable to create a `WebGLRenderingContext` or `WebGL2RenderingContext` context.
