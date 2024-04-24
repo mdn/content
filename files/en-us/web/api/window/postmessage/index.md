@@ -97,7 +97,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-To check if cross origin isolation has been successful, you can test against the {{domxref("crossOriginIsolated")}} property available to window and worker contexts:
+To check if cross origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
 
 ```js
 const myWorker = new Worker("worker.js");

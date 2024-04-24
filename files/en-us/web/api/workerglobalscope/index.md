@@ -21,7 +21,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
-- {{domxref("crossOriginIsolated", "WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("crypto_property", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Crypto")}} object associated to the global object.

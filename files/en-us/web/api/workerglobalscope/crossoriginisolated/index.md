@@ -1,14 +1,14 @@
 ---
-title: crossOriginIsolated global property
+title: "WorkerGlobalScope: crossOriginIsolated property"
 short-title: crossOriginIsolated
-slug: Web/API/crossOriginIsolated
+slug: Web/API/WorkerGlobalScope/crossOriginIsolated
 page-type: web-api-global-property
 browser-compat: api.crossOriginIsolated
 ---
 
-{{APIRef}}{{AvailableInWorkers}}
+{{APIRef("Web Workers API")}}
 
-The global **`crossOriginIsolated`** read-only property returns a boolean value that
+The **`crossOriginIsolated`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a boolean value that
 indicates whether the website is in a cross-origin isolation state. That state mitigates the risk of side-channel attacks and unlocks a few capabilities:
 
 - {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("Window.postMessage()")}} call.
@@ -42,8 +42,3 @@ if (crossOriginIsolated) {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
-- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
