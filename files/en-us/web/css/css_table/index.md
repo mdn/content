@@ -58,6 +58,7 @@ The properties introduced in this module aren't limited to the `<table>` element
   - {{cssxref("min-content")}} keyword
 
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+
   - {{cssxref("border")}} shorthand
   - {{cssxref("border-width")}}
   - {{cssxref("border-style")}}
