@@ -34,6 +34,9 @@ Let's walk through the process by which a view transition works:
 5. The old page snapshots animate "out", while the new view snapshots animate "in". By default, the old view snapshots animate from {{cssxref("opacity")}} 1 to 0, and the new view snapshots animate from `opacity` 0 to 1, which creates a cross-fade.
 6. When the transition animations have reached their end states, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
 
+> **Note:**
+> If the document's [page visibility state](/en-US/docs/Web/API/Page_Visibility_API) is `hidden` (for example if the document is obscured by a window, the browser is minimized, or another browser tab is active) during a {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} call, the view transition is skipped entirely.
+
 ### The view transition pseudo-element tree
 
 To handle creating the outbound and inbound transition animations, the API constructs a pseudo-element tree with the following structure:
