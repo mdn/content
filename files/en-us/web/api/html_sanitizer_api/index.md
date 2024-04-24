@@ -4,15 +4,13 @@ slug: Web/API/HTML_Sanitizer_API
 page-type: web-api-overview
 status:
   - experimental
+  - deprecated
 browser-compat: api.Sanitizer
 ---
 
-{{DefaultAPISidebar("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}{{deprecated_header}}
 
 {{securecontext_header}}
-
-> **Warning:** This documentation reflects stale browser implementations.
-> The specification has changed significantly since the docs were written, and they will need to be updated once browser implementations catch up.
 
 The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
 

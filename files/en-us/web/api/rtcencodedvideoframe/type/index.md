@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCEncodedVideoFrame.type
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The readonly **`type`** property of the {{domxref("RTCEncodedVideoFrame")}} interface indicates whether this frame is a key frame, delta frame, or empty frame.
 

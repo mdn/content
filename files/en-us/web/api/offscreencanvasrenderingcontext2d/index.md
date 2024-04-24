@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.OffscreenCanvasRenderingContext2D
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`OffscreenCanvasRenderingContext2D`** interface is a {{domxref("CanvasRenderingContext2D")}} rendering context for drawing to the bitmap of an `OffscreenCanvas` object.
 It is similar to the `CanvasRenderingContext2D` object, with the following differences:
@@ -62,7 +62,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
