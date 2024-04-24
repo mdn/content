@@ -132,7 +132,7 @@ It is tempting to ask for a lot of data from your users because you think it mig
 
 It is good to anonymize data. You should also consider whether you can get what you need by making your data request less granular. As an example, instead of asking a user their favorite products, you could ask them to select between more general categories.
 
-The best way to protect user privacy though, is to minimize the data you collect. Referring to the previous example, you could infer the same data by looking at user purchase history. As another example, users really appreciate being able to buy products anonymously. You shouldn't force them to sign up for an account; if it's not necessary for the service to operate, it should be their choice.
+The best way to protect user privacy though, is to minimize the data you collect. Referring to the previous example, you could infer the same data by looking at user purchase history. As another example, users appreciate being able to buy products anonymously. You shouldn't force them to sign up for an account; if it's not necessary for the service to operate, it should be their choice.
 
 ### Communicate clearly how you are going to use the data you collect
 
