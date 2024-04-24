@@ -317,7 +317,7 @@ The following functions are used as a value in transition and animation properti
   - : Easing function that interpolates linearly between its points.
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
-- {{cssxref("easing-function#step_easing_function", "steps()")}}
+- {{cssxref("easing-function#steps_easing_function", "steps()")}}
   - : Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
 
 ## Animation functions
