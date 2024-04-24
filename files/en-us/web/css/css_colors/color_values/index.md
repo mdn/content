@@ -239,7 +239,7 @@ The last value is semi-opaque; it includes the optional alpha value, preceded by
 
 The [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color function uses the same hue coordinate system as `hsl()`, with `0deg` being red. However, instead of `hsl()`'s lightness and saturation, `hwb()` functions specify whiteness (`W`) and blackness (`B`). This function is also fairly intuitive — allowing you to pick a hue and then mix in amounts of white and or black to achieve the desired color.
 
-The values of `W` and `B` and range from `0%` to `100%` (or `0` to `1`). If the combined values of `W` and `B` is 100% (or `1`) or greater, the color will be grey, similar to setting the `s` to `0%` with `hsl()`. As with `hsl()`, an optional alpha value can be included, preceded by a forward slash `/`.
+`W` and `B` values range from `0%` to `100%` (or `0` to `1`). If the combined value of `W` and `B` is 100% (or `1`) or greater, the color will be grey, similar to setting the `s` to `0%` with `hsl()`. As with `hsl()`, an optional alpha value can be included, preceded by a forward slash `/`.
 
 Here are some examples of using HWB notation:
 
@@ -356,11 +356,12 @@ The following gradients demonstrate the hue colors at every angle form `0deg` to
 div:has(~ p input:checked) {
   filter: grayscale(100%);
 }
-p:not(:last-of-type) {
-  margin: 0 5px;
+p {
+  margin: 0;
 }
 div {
   height: 50px;
+  margin-bottom: 10px;
 }
 #srgb {
   background: linear-gradient(
