@@ -334,8 +334,6 @@ For the CIELAB and oklab color spaces, you can use the `display-p3` gamut suppor
 
 The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H), and are discussed further in this section. The [`lab()` and `oklab()`](#lab-and-oklab) functions work differently, using lightness (L), red/green-ness (along the "a" axis), and yellow/blue-ness (along the "b" axes). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
-The `lch()` and `oklch()` both include a hue component, and are discussed here. The [`lab()` and `oklab()`](#lab-and-oklab) define color based on a red/green and a yellow/blue color axis and are described below.
-
 Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` is a number, an angle, or the keyword `none` (equivalent to `0deg`) representing the color's `<hue>` angle, but the colors at each angle value are not the same. The angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces.
 
 The following gradients demonstrate the hue colors at every angle form `0deg` to `360deg` in the sRGB, CIE Lab, and OKlab color spaces:
@@ -401,11 +399,13 @@ You may notice how the brightness of the latter gradients is more even across th
 
 Note also how the spread of blue values in CIE Lab is longer than in the other two. This is the difference between `lch()` and `oklch()`. The `lch()` blue spread is due to a bug that shifts the chroma and lightness of hue values between `270deg` and `330deg`. This was resolved in the oklab color space and therefore the `oklch()` color notation.
 
-The LCH in the `lch()` and `oklch()` functions stand for lightness (`L`), chroma (`C`), and hue (`H`). Like the other color functions, there also an optional alpha transparency value. As discussed above, the hue is an `<angle>`, `number` or the keyword `none`. The `lightness` is either a {{cssxref("percentage")}} or for `lch()` a number between `0` and `100` and for `oklch()` a number between `0` and `1`, with `0` or `0%` being the complete lack of lightness, which is black.
+As discussed above, the hue (`H`) in the `lch()` and `oklch()` is an `<angle>`, `number` or the keyword `none`. The `lightness` is either a {{cssxref("percentage")}} or for `lch()` a number between `0` and `100` and for `oklch()` a number between `0` and `1`, with `0` or `0%` being the complete lack of lightness, which is black.
 
 The `C` is a `<number>`, `<percentage>`, or the keyword `none` (equivalent to `0%`) is the color's chroma, or the "amount of color", similar to the `S` saturation value of the `hsl()` color function. If the value is `0` is the complete lack of chroma or saturation; a grey between white and black inclusive, depending on the lightness value. The number values are theoretically unbounded, with `100%` being equal to `150` for `lch()` and `0.4` with `oklch()`.
 
-The example below shows the effect of changing the chroma value in the `lch()` and `oklch()` functions.
+Like the other color functions, there also an optional alpha transparency value.
+
+The example below shows the effect of changing the lightness value in the `lch()` and `oklch()` functions.
 
 ```css hidden live-sample___lch-colors
 /* Varying shades of pink */
