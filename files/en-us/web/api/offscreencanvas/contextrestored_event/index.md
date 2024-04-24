@@ -56,6 +56,6 @@ canvas.addEventListener(
 
 ## See also
 
-- [`OffscreenCanvas: contextlost` event](/en-US/docs/Web/API/OffScreenCanvas/contextlost_event)
+- [`OffscreenCanvas: contextlost` event](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event)
 - [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.iscontextlost)
 - [`HTMLCanvasElement: contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
