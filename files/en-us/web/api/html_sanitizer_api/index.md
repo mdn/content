@@ -3,9 +3,8 @@ title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 page-type: web-api-overview
 status:
-  - deprecated
   - experimental
-  - non-standard
+  - deprecated
 browser-compat: api.Sanitizer
 ---
 
