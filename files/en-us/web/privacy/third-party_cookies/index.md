@@ -21,7 +21,7 @@ A first-party cookie is set when a user first visits a page or follows an intern
 
 Third-party cookies are sent in common situations:
 
-- When a link is clicked on one site to navigate to another site. You might for example have an affiliate link to a partner site, and set a cookie when the user follows the link so that a reward banner can be displayed with a discount if a certain product is purchased.
+- When a link is clicked on one site to navigate to another site. You might, for example, have an affiliate link to a partner site and set a cookie when the user follows the link so that a reward banner can be displayed with a discount if a certain product is purchased or a commission can be paid back to the referrer.
 - When a page embeds components from other sites, such as images or other documents embedded in {{htmlelement("iframe")}}s (often referred to as _third-party content_). As well as the original request for the component, these components may generate further requests that set more third-party cookies. For example, you might have a sign-in widget embedded on multiple different-but-related sites, which shares a cookie across all sites confirming that the user is signed in, so they don't have to sign in again on each site.
 
 ## What are third-party cookies used for?
