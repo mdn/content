@@ -94,7 +94,7 @@ ctx.fillRect(0, 0, 100, 100);
 canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
 async function copyCanvasContentsToClipboard() {
-  if (ClipboardItem.supports('image/png')) {
+  if (ClipboardItem.supports("image/png")) {
     // Copy canvas to blob
     const blob = await canvas.toBlob();
     // Create ClipboardItem with blob and it's type, and add to an array
