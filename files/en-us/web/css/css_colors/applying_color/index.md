@@ -11,9 +11,11 @@ This guide is a primer introducing how CSS can be used to apply colors to HTML e
 
 The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create the look you want.
 
-This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#colors_within_css_values) and [in other ways](#other_ways_to_use_color).
+This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 
-To learn more about CSS colors as a data type, see [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values).
+> **Note:** It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensure there is enough contrast between text and the background to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
+
+To learn more about CSS colors as a data type, see the [`<color>`](/en-US/docs/Web/CSS/Color_value) reference and [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide.
 
 ## Properties that can have color
 
@@ -66,19 +68,15 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 - {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
   - : These let you color the edges of the border closest to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
-## Colors within CSS values
+## Specifying colors as values in stylesheets
 
-Now that you know what [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start to add color to your websites. Let's look at some examples of using color within a {{Glossary("stylesheet")}}.
+Now that you know what [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start to add color to your websites. Let's look at some examples of using color within a {{Glossary("stylesheet")}}. In this example, we use several previously mentioned properties, with the concept of applying colors in CSS being the same for no matter the property.
 
-### Specifying colors in stylesheets
+Let's look at the result first, before going on to look at the code we need to create it:
 
-The best way to apply color to elements is to specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.
+{{EmbedLiveSample("Specifying colors as values in stylesheets", 650, 150)}}
 
-Let's look at the end result first, before going on to look at the code we need to create it:
-
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
-
-#### HTML
+### HTML
 
 The HTML responsible for creating the above example is shown here:
 
@@ -95,13 +93,11 @@ The HTML responsible for creating the above example is shown here:
 
 Here we have a wrapper {{HTMLElement("div")}} containing two more `<div>`s laid out side by side, each with a single child paragraph ({{HTMLElement("p")}}). Each content `<div>` is given a different look and feel.
 
-The magic happens, as usual, in the CSS, where we'll apply colors and define the layout for the HTML above.
-
-#### CSS
+### CSS
 
 Let's look at the CSS that creates the above result a piece at a time.
 
-> **Note:** We are using multiple different CSS color notations in this example to demonstrate their use. This is not recommended for production code. When writing CSS, use the style of writing CSS colors that is most intuitive for you and your team.
+> **Note:** We are using multiple [different CSS color notations](/en-US/docs/Web/CSS/CSS_colors/Color_values) in this example to demonstrate their use. This is not recommended for production code. When writing CSS, use the style of writing CSS colors that is most intuitive for you and your team.
 
 ```css
 .wrapper {
@@ -156,33 +152,34 @@ The `.boxLeft` class, which, cleverly, is used to style the box on the left, set
 
 > **Note:** We included the text-decoration-\* styles separately because Safari doesn't support {{cssxref("text-decoration")}} as a shorthand property.
 
-Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. Then the following colors are established:
+Finally, the `.boxRight` class sets several styles on the box that's drawn to the right. Then the following colors are established (using five different ways of declaring [color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)):
 
 - The `background-color` is set using {{CSSXref("color_value/hwb", "hwb()")}} functional notation — `hwb(270deg 63% 13%)`. This is a medium purple color.
-- The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple using the six-digit {{cssxref("hex-color")}} `#6e1478`.
+- The box's `outline` is used to specify that the box should be enclosed in a four-pixel thick dashed line whose color is a somewhat deeper purple using the six-digit {{cssxref("hex-color")}} `#6e1478`.
 - The foreground (text) color is specified by setting the {{cssxref("color")}} property using {{CSSXref("color_value/hsl", "hsl()")}} functional notation — `hsl(0deg 100% 100%)`. This is one of many ways to specify the color white.
 - We add a green wavy line under the text with the {{cssxref("text-decoration")}} shorthand, along with the longhand component for browser compatibility. We used the 3-digit {{cssxref("hex-color")}} `#8f8`, which is the equivalent of `#88ff88`.
-- Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
+- Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`, a {{cssxref("named-color")}} value.
+
+We used five different color syntaxes to demonstrate what is possible. In the real world, you and your team will preferably pick a preferred color notation, with everyone working on a code base using the same color syntax.
 
 ## Other ways to use color
 
-CSS isn't the only web technology that supports color. There are graphics technologies that are available on the web which also support color.
+CSS isn't the only web technology that supports color. Other examples include:
 
 - The HTML [Canvas API](/en-US/docs/Web/API/Canvas_API)
   - : Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) to learn more.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
   - : Lets you create images using commands that draw specific shapes, patterns, and lines. SVG commands are formatted as XML, and can be embedded directly into a web page or placed in the page using the {{HTMLElement("img")}} element, just like any other type of image.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
-  - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more.
+  - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more. Also see [WebGPU](/en-US/docs/Web/API/WebGPU_API), a successor to WebGL for modern GPUs.
 
-Several now obsolete HTML attributes supported color. The only {{cssxref("color_value", "&lt;color&gt;")}} types supported as HTML attribute values are {{cssxref("named-color")}} and {{cssxref("hex-color")}}.
-
-Realize that it is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Color_values#colors_within_css_values_wisely). Always select appropriate colors, keeping in mind the needs of people with differing visual capabilities.
-
-For more detailed discussion of each of the color value types, see the [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide and the CSS {{cssxref("&lt;color&gt;")}} unit.
+> **Note:** A few now obsolete HTML attributes accepted colors as values, such as `bgcolor` and `vlink`. These attribute only accepted {{cssxref("named-color")}} and three or six digit {{cssxref("hex-color")}} values.
 
 ## See also
 
+- [`<color>`](/en-US/docs/Web/CSS/Color_value) data type
+- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
+- [Using colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
-- [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
