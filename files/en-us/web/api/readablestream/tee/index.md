@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStream.tee
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`tee()`** method of the
 {{domxref("ReadableStream")}} interface [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) the current readable stream, returning a

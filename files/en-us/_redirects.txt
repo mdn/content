@@ -6202,6 +6202,7 @@
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests	https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html
 /en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
+/en-US/docs/Mozilla/Testing/ASan_Nightly_Project	https://firefox-source-docs.mozilla.org/tools/sanitizer/asan_nightly.html
 /en-US/docs/Mozilla/Thunderbird/Autoconfiguration	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/
 /en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/config-file-format.html
 /en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/how-to-create-your-own-config-file.html
