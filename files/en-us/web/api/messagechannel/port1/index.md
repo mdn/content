@@ -26,7 +26,7 @@ In the following code block, you can see a new channel being created using the
 message. The `handleMessage` handler then responds to a message being sent
 back from the `<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}),
 putting it into a paragraph. The `handleMessage` method is associated to the
-`port1` to listen when the message arrives.
+{{domxref("MessageChannel.port1", "port1")}} to listen when the message arrives.
 
 ```js
 const channel = new MessageChannel();

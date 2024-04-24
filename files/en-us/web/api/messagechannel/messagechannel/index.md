@@ -29,12 +29,13 @@ A new {{domxref("MessageChannel")}} object.
 ## Examples
 
 In the following code block, you can see a new channel being created using the
-`MessageChannel()` constructor.
-When the {{HTMLElement("iframe")}} has loaded,
-we pass {{domxref("MessageChannel.port2", "port2")}} to the `<iframe>` using {{domxref("MessagePort.postMessage")}} along with a message.
-The `handleMessage` handler then responds to a message being sent back from the
-`<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it into a paragraph.
-The {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when the message arrives.
+{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
+{{HTMLElement("iframe")}} has loaded, we pass {{domxref("MessageChannel.port2", "port2")}} to the
+{{HTMLElement("iframe")}} using {{domxref("MessagePort.postMessage")}} along with a
+message. The `handleMessage` handler then responds to a message being sent
+back from the `<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}),
+putting it into a paragraph. The `handleMessage` method is associated to the
+{{domxref("MessageChannel.port1", "port1")}} to listen when the message arrives.
 
 ```js
 const channel = new MessageChannel();
