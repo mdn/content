@@ -141,7 +141,7 @@ Once you have decided what data you are going to collect, you should publish a p
 - Data that you collect
 - Ways in which you use the data
 - Parties with whom you tend to share the data, if at all, and a declaration that you will ask for user consent before sharing
-- The duration for which you keep the data for before it is deleted
+- The duration for which you keep the data before it is deleted
 - Ways in which users can view the data you have collected from them and delete it if they want to
 
 When providing you with data, your users should be given an opportunity to read your privacy policy, and consent to it. They should be able to control if they are happy with this and agree to your terms. And as indicated above, they should also get to see what data of theirs you have collected, and delete it if they want to.
