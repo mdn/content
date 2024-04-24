@@ -26,7 +26,7 @@ A boolean value.
 ```js
 const myWorker = new Worker("worker.js");
 
-if (crossOriginIsolated) {
+if (self.crossOriginIsolated) {
   const buffer = new SharedArrayBuffer(16);
   myWorker.postMessage(buffer);
 } else {
