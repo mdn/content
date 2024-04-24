@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CompressionStream.readable
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The
 **`OffscreenCanvasRenderingContext2D.commit()`**
