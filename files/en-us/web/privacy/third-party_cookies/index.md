@@ -40,7 +40,7 @@ Other legitimate use cases for third-party cookies include:
 
 ## What is the problem with third-party cookies?
 
-The above use cases sound innocent enough individually. However, third-party servers can combine information from multiple third-party cookies set across different sites where the third-party content is embedded to create a profile of a user's browsing history, interests, habits, and personal information. This can be used to create creepy, invasive user experiences. The classic example is when you search for product information on one site and are then chased around the web by adverts for similar products wherever you go. Such information is also often sold on to other third parties.
+The above use cases sound innocent enough individually. However, third-party servers can combine information from multiple third-party cookies set across different sites where the third-party content is embedded to create a profile of a user's browsing history, interests, habits, and personal information. This can be used to create creepy, invasive user experiences. The classic example is when you search for product information on one site and are then chased around the web by adverts for similar products wherever you go. Such information is also often sold to other third parties.
 
 In such cases, third-party cookies are referred to as _tracking cookies_.
 
