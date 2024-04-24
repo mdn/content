@@ -171,7 +171,7 @@ Third-party resources are an essential part of modern web development, and bring
 - JavaScript running inside third-party content embedded in your site via an `<iframe>` is separated out by [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it wouldn't have access to other scripts and data included in the top-level browsing context.
 - However, a third-party script included directly in your page via a {{htmlelement("script")}} element _would_ have access to your other scripts and data, whether it was hosted on your site or another site. It would effectively be first-party code. A malicious script included in this way could secretly steal your users' data, for example sending it off to a third-party server.
 
-It is important to audit all of the third-party resources you use on your site. Make sure you know what data they are collecting, what requests they are making and to whom, what their privacy policies are. Your carefully designed privacy policy is no use if you are using a third-party script that violates it.
+It is important to audit all of the third-party resources you use on your site. Make sure you know what data they collect, what requests they make and to whom, and what their privacy policies are. Your carefully designed privacy policy is useless if you use a third-party script that violates it.
 
 > **Note:** There are various tools out there that can help you build up a picture of what requests a site is making, for example the [Request Map Generator](https://requestmap.webperf.tools/).
 
