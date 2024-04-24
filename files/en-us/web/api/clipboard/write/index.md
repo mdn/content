@@ -103,7 +103,7 @@ async function copyCanvasContentsToClipboard() {
     await navigator.clipboard.write(data);
   } else {
     console.log("image/png is not supported");
-  } 
+  }
 }
 
 target.addEventListener("paste", (event) => {
