@@ -44,7 +44,7 @@ The above use cases sound innocent enough individually. However, third-party ser
 
 In such cases, third-party cookies are referred to as _tracking cookies_.
 
-Legislation such as the [General Data Privacy Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) in the European Union and the [California Consumer Privacy Act](https://www.oag.ca.gov/privacy/ccpa) (CCPA) have helped by making it a legal requirement for companies to be transparent about the cookies they set and the information they collect. Examples include asking customers to opt in to such data collection, allowing them to see what data a company holds on them, and allowing them to delete the data if they wish. However, it is still not always clear to customers how their data is being used.
+Legislation such as the [General Data Privacy Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) in the European Union and the [California Consumer Privacy Act](https://www.oag.ca.gov/privacy/ccpa) (CCPA) have helped by making it a legal requirement for companies to be transparent about the cookies they set and the information they collect. Examples include asking customers to opt into such data collection, allowing them to see what data a company holds on them, and delete the data if they wish. However, it is still not always clear to customers how their data is used.
 
 ## How do browsers handle third-party cookies?
 
