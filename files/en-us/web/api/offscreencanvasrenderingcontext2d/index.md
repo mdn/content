@@ -62,7 +62,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
