@@ -474,11 +474,11 @@ Before running a cross-document transition, you ideally want to wait until the s
 
 1. Critical styles are loaded and applied.
 2. Critical scripts are loaded and run.
-3. The HTML visible for the user's initial view of the page has been parsed and is visible.
+3. The HTML visible for the user's initial view of the page has been parsed, so it renders consistently.
 
 Styles are render blocked by default, and scripts can be render blocked using the [`blocking="render"`](/en-US/docs/Web/HTML/Attributes/rel#blocking) attribute.
 
-To ensure that your initial HTML has been parsed and is visible before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect). In this element, you include the following attributes:
+To ensure that your initial HTML has been parsed and will always render consistently before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect). In this element, you include the following attributes:
 
 - `rel="expect"` to indicate that you want to use this `<link>` element to render block some HTML on the page.
 - `href="#element-id"` to indicate the ID of the elment you want to render block.
