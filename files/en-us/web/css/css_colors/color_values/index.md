@@ -425,7 +425,7 @@ The example below shows the effect of changing the lightness value in the `lch()
 
 .container div {
   border-radius: 8px;
-  padding: 0.75rem;
+  padding: 8px 4px;
 }
 #lch-1 {
   background-color: lch(1% 40 0deg);
@@ -524,13 +524,11 @@ The example below shows the effect of changing the lightness value in the `lch()
 </div>
 ```
 
-{{embedlivesample("lch-colors", '100', '250') }}
+{{embedlivesample("lch-colors", '100', '150') }}
 
 ## Lab and OKLab
 
-The `lab()` functional notation expresses a given color in the CIE L*a*b\* color space. The `oklab()` function defines colors in the OKLab color space. These functions represent the entire range of colors that humans can see by specifying the color's lightness, a red/green axis value, a blue/yellow axis value, and an optional alpha transparency value.
-
-Lab represents the entire range of colors that humans can see by specifying the color's lightness (`L`), a red/green axis value (`a`), a blue/yellow axis value (`b`), and an optional alpha transparency value.
+The [`lab()`](/en-US/docs/Web/CSS/color_value/lab) functional notation expresses a given color in the CIE L*a*b\* color space. The [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab) function defines colors in the OKLab color space. These functions represent the entire range of colors that humans can see by specifying the color's lightness (`L`), a red/green axis value (`a`), a blue/yellow axis value (`b`), and an optional alpha transparency value.
 
 Similar to `lch()` and `oklch()`, the `lightness` is either:
 
@@ -576,6 +574,10 @@ The following example demonstrates the effects of varying the `a` axis via a `la
   color: white;
   grid-template-columns: repeat(5, 1fr);
   gap: 4px;
+}
+.container div {
+  border-radius: 8px;
+  padding: 8px 4px;
 }
 #lab-100 {
   background-color: lab(50% -100% 0);
@@ -634,28 +636,31 @@ The following example demonstrates the effects of varying the `a` axis via a `la
 }
 ```
 
-{{embedlivesample("lab-colors", '100', '220') }}
+{{embedlivesample("lab-colors", '100', '150') }}
 
 ## Additional color functional notations
 
 ### The `color()` function
 
 If you want explicit control over color spaces when defining colors, you can use the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
+
 This is useful to describe a color for high-definition devices with wider color [gamuts](/en-US/docs/Glossary/Gamut).
 For example, if you wanted to show the `display-p3 0 0 1` color, which is outside of the sRGB gamut, you could use a `@media` [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) at-rule to detect if the client hardware supports colors in this range, before trying to use it:
 
 ```css
 .vibrant {
-  background-color: color(display-p3 0 0 1);
-  /* Equivalent to out-of-gamut rgb(-27 55 153) */
+  background-color: color(srgb 0 0 1);
 }
 
 @media (color-gamut: p3) {
   .vibrant {
     background-color: color(display-p3 0 0 1);
+    /* Equivalent to out-of-gamut color(srgb 0 0 1.042) */
   }
 }
 ```
+
+In addition, as the older sRGB color notations discussed above - `hsl()`, `hwb()`, and `rgb()` - do not express the full spectrum of visible colors and the `color()` function supports a much wider color gamut, when using these functions to define relative colors (discussed next), the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method will be a `color(srgb ...)` value. To see an example of converting these color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool).
 
 ### Relative colors
 
