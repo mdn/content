@@ -4,9 +4,17 @@ slug: Web/Privacy/Redirect_tracking_protection
 page-type: guide
 ---
 
-Since version 79, Firefox has protected users against redirect tracking by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
+Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
+
+## Redirect tracking defined
+
+Redirect tracking is an abuse of cross-site navigation in which a tracker momentarily redirects a user to their website for the purpose of using first-party storage to track that user across websites.
+
+Cross-site navigations are a core feature of the web; a person might search for "best running shoes" on a search engine, click a search result to read reviews, and finally click a link to buy a pair of shoes from an online store. In the past, each of these websites could embed resources from the same tracker, and the tracker could use its cookies to link all of these page visits to the same person. To protect their user's privacy, browsers block trackers from using cookies when they are embedded in a third-party context (for example see Firefox's [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) (ETP)), but still allow them to use cookies as a first party because blocking first party cookies causes websites to break. Redirect tracking takes advantage of this to circumvent third-party cookie blocking.
+
+Redirect trackers work by forcing you to make an imperceptible and momentary stopover to their website as part of that journey. So instead of navigating directly from the review website to the retailer, you'll end up navigating to the redirect tracker first rather than to the retailer. This means that the tracker is loaded as a first party. The redirect tracker associates tracking data with the identifiers they have stored in their first-party cookies and then forwards you to the retailer.
 
 ## What origins are cleared?
 

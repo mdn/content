@@ -65,7 +65,7 @@ A process very closely related to tracking is **fingerprinting**: this specifica
 
 Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations or "noise" that prevent it from being used for identification purposes.
 
-For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time as reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers in order to make them less useful for identifying the user's system.
+For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers to make them less useful for identifying the user's system.
 
 > **Note:** See [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) on web.dev for additional useful information.
 
@@ -164,11 +164,11 @@ Also recall from earlier that browsers are all starting to block third-party coo
 
 ## Carefully manage third-party resources
 
-Of course, it would be so easy to manage privacy if you were only worried about resources you have created (code, cookies, sites, etc.). The real challenge comes from the fact that your site will likely use third-party resources — as well as third-party content embeded in `<iframe>`s, this can include libraries, frameworks, APIs, externally-hosted resources such as images or videos, etc.
+Of course, it would be easy to manage privacy if you were only worried about resources you have created (code, cookies, sites, etc.). The real challenge comes from the fact that your site will likely use third-party resources. This can include third-party content embedded in `<iframe>`s, libraries, frameworks, APIs, externally-hosted resources such as images and videos, etc.
 
-Third-party resources are an essential part of modern web development, and bring with them a lot of power. However, any third-party resource you allow onto your site potentially has the same power as your own resources; it all depends on how it is included on your site:
+Third-party resources are an essential part of modern web development, they provide a lot of power. However, any third-party resource you allow onto your site potentially has the same permissions as your own resources; it all depends on how it is included on your site:
 
-- JavaScript running inside third-party content embedded in your site via an `<iframe>` is separated out by [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it wouldn't have access to other scripts and data included in the top-level browsing context.
+- JavaScript running inside third-party content embedded in your site via an `<iframe>` is separated by [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it wouldn't have access to other scripts and data included in the top-level browsing context.
 - However, a third-party script included directly in your page via a {{htmlelement("script")}} element _would_ have access to your other scripts and data, whether it was hosted on your site or another site. It would effectively be first-party code. A malicious script included in this way could secretly steal your users' data, for example sending it off to a third-party server.
 
 It is important to audit all of the third-party resources you use on your site. Make sure you know what data they collect, what requests they make and to whom, and what their privacy policies are. Your carefully designed privacy policy is useless if you use a third-party script that violates it.
@@ -198,13 +198,13 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 
 ## Protect user data
 
-You need to make sure that, once you have collected data from your users, it is transmitted and stored securely. This is more of a [security](/en-US/docs/Web/Security) topic, but it is worth mentioning here — a good privacy policy is no good if your security is lax and attackers can steal the data from you.
+You need to make sure that user data is transmitted and stored securely once you've collected it. This is more of a [security](/en-US/docs/Web/Security) topic, but it is worth mentioning here — a good privacy policy is useless if your security is lax and attackers can steal the data from you.
 
 The below tips offer some guidance on protecting your user's data:
 
 - Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as sign-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
 - If you want to roll out your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multifactor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
-- When collecting user sign-up information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, without needing to worry about remembering them, thereby avoiding a security risk by writing them down.
+- When collecting user sign-up information, enforce strong passwords so your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. Encourage your users to use a password manager to generate and store complex passwords; this way they won't worry about remembering them, or create a security risk by writing them down.
 - Don't include sensitive data in URLs — if a third party intercepts the URL (for example via the {{httpheader("Referer")}} header), they could steal that information. Use `POST` requests rather than `GET` requests to avoid this.
 - Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature usage on your site that makes it harder to introduce vulnerabilities. Be careful when doing this — if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality. This is something you can look into when auditing your third-party resources (see [Carefully manage third-party resources](#carefully_manage_third-party_resources)).
 

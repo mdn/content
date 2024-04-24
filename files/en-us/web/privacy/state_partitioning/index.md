@@ -4,7 +4,7 @@ slug: Web/Privacy/State_Partitioning
 page-type: guide
 ---
 
-State Partitioning is a broad effort to rework how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking, i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+**State Partitioning** is a broad effort by Mozilla to rework how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking, i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
 This effort aims to achieve that by providing a partitioned storage location to every website a user visits. This article gives an overview of the mechanism, lists the affected APIs and explains how to debug affected sites.
 

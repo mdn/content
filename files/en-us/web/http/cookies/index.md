@@ -6,7 +6,7 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-**Cookies** (also known as web cookies or browser cookie) are small pieces of data that a server sends to a user's web browser. The browser may store cookies, create new cookies and modify existings ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the [stateless](/en-US/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless) HTTP protocol.
+A **cookie** (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is [stateless](/en-US/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless).
 
 In this article we will explore the main uses of cookies, explain best practices for using them, and look at their privacy and security implications.
 
@@ -19,7 +19,7 @@ Typically, the server will use the contents of HTTP cookies to determine whether
 3. At a later time, the user moves to a different page on the same site. The browser sends the cookie containing the session ID along with the corresponding request to indicate that it still thinks the user is signed in.
 4. The browser checks the session ID and, if it is still valid, sends the user a personalized version of the new page. If it is not valid, the session ID is deleted and the user is shown a generic version of the page (or perhaps shown an "access denied" message and asked to sign in again).
 
-![visual representation of the above sign-in system description](cookie-basic-example.png)
+![visual representation of the above sign-in system description](https://mdn.github.io/shared-assets/images/diagrams/http/cookies/cookie-basic-example.png)
 
 Cookies are mainly used for three purposes:
 
