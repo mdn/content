@@ -131,5 +131,6 @@ The CSS box model module defines the physical, or "page relative", padding and m
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
