@@ -47,19 +47,6 @@ The properties introduced in this module aren't limited to the `<table>` element
 - {{cssxref("vertical-align")}} property
 - {{cssxref("text-align")}} property
 
-- HTML table-related elements:
-
-  - {{htmlelement("table")}}
-  - {{htmlelement("caption")}}
-  - {{htmlelement("colgroup")}}
-  - {{htmlelement("col")}}
-  - {{htmlelement("thead")}}
-  - {{htmlelement("tbody")}}
-  - {{htmlelement("tfoot")}}
-  - {{htmlelement("tr")}}
-  - {{htmlelement("th")}}
-  - {{htmlelement("td")}}
-
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 
   - {{cssxref("box-sizing")}}
@@ -75,6 +62,19 @@ The properties introduced in this module aren't limited to the `<table>` element
   - {{cssxref("border-width")}}
   - {{cssxref("border-style")}}
   - {{cssxref("border-color")}}
+
+- HTML table-related elements:
+
+  - {{htmlelement("table")}}
+  - {{htmlelement("caption")}}
+  - {{htmlelement("colgroup")}}
+  - {{htmlelement("col")}}
+  - {{htmlelement("thead")}}
+  - {{htmlelement("tbody")}}
+  - {{htmlelement("tfoot")}}
+  - {{htmlelement("tr")}}
+  - {{htmlelement("th")}}
+  - {{htmlelement("td")}}
 
 ## Specifications
 
