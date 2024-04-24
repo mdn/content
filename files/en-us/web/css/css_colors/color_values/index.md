@@ -1,5 +1,6 @@
 ---
 title: CSS color values
+short-title: Color values
 slug: Web/CSS/CSS_colors/Color_values
 page-type: guide
 ---
@@ -18,7 +19,7 @@ Originally, monitors were limited regarding how many colors they could render, a
 
 This guide introduces the different {{cssxref("&lt;color&gt;")}} value types. For a more detailed discussion, see the reference links provided below.
 
-### Keywords
+## Keywords
 
 The web defines a set of standard color names that lets you use keywords instead of numeric representations to describe colors. This is a simpler albeit more limited approach — there may not be a keyword representing the exact color you want to use.
 
@@ -64,7 +65,7 @@ color: #f004;
 
 See the {{cssxref("hex-color")}} data type for more information on hexadecimal string notation for colors.
 
-#### HTML color picker
+#### HTML color input type
 
 There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. For such use cases, the {{HTMLElement("input")}} element has a `"color"` [`type`](/en-US/docs/Web/HTML/Element/input#type), which renders a color picker control.
 
@@ -80,7 +81,7 @@ This example allows you to choose a color. Once a choice is made, the {{cssxref(
 
 The HTML creates a box containing a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty {{HTMLElement("output")}} element into which we'll output the color's value using JavaScript. The color's value will always be a hexadecimal string.
 
-{{EmbedLiveSample("HTML color picker", 525, 120)}}
+{{EmbedLiveSample("HTML color input type", 525, 120)}}
 
 ```css hidden
 #box {
@@ -143,11 +144,9 @@ See the {{cssxref("color_value/rgb", "rgb()")}} color function for more informat
 
 ## Color functions with a hue component
 
-The color functions that have a hue component include the cylindrical `srgb` color functions `hsl()` and `hwb()` and the `display-p3` gamut supporting CIElab `lch()` and `oklch()` color functions.
+The color functions that have a hue component include the `srgb` color functions `hsl()` and `hwb()`, CIElab's `lch()` function, and OKLab's `oklch()` color function.
 
 These colors all include a [`<hue>`](/en-US/docs/Web/CSS/hue) component — an [`<angle>`](/en-US/docs/Web/CSS/angle) from that color model's {{glossary("color wheel")}}. These color functions are more intuitive as the hue allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
-
-The `hsl()` and `hwb()` functions we've used above use the sRGB color space, and both use _cylindrical_ models; this is why a `<hue>` angle lets you control the color's properties like on a [color wheel](/en-US/docs/Glossary/Color_wheel).
 
 ### HSL functional notation
 
@@ -155,7 +154,7 @@ The `hsl()` CSS color function was the first hue-based color function to be supp
 
 HSL is also similar to the HSB (hue, saturation, and brightness), color picker in Photoshop. so it was immediately familiar to many people when first supported.
 
-The diagram below shows an HSL color cylinder. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/angle) on a circular {{glossary("color wheel")}}.
+The sRGB color functions `hsl()` and `hwb()` are both cylindrical. The diagram below shows an HSL color cylinder. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/angle) on a circular {{glossary("color wheel")}}.
 Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
 As the value of lightness increases, the color transitions from the darkest to the lightest possible color (from black to white).
 
@@ -224,13 +223,15 @@ th {
     </tr>
     <tr>
       <td><code>hsl(270deg 90% 50%)</code></td>
-      <td style="background-color: hsl(270deg 90% 50%);">&nbsp;</td>
+      <td style="background-color: hsl(270deg 90% 50% / 50%);">&nbsp;</td>
     </tr>
   </tbody>
 </table>
 ```
 
 {{EmbedLiveSample("HSL_functional_notation", 300, 200)}}
+
+The last value is semi-opaque; it includes the optional alpha value, preceded by a forward slash.
 
 > **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
@@ -323,12 +324,15 @@ th {
 
 ### LCH and OKLCH: CIELAB and Oklab color spaces
 
-While `hsl()` and `hwb()` are intuitive, there is a major drawback of cylindrical color spaces. With these functions, every fully saturated hue angle (`hsl(<angle> 100% 50%)` or `hwb(<angle> 0% 0%)`) has the same the same lightess, but that is not how human vision or monitors work. Putting white text on fully saturated blue (`hsl(240deg 100% 50%)`) is legible, but that same text on fully saturated yellow (`hsl(60deg 100% 50%)`) will not only be illegible, but it will hurt your user's eyes. In these color functions, the lightness of a color is in comparison to other colors, not to human perception. In reality, not all hues have the same max saturation.
+While `hsl()` and `hwb()` are intuitive, they have a major drawback. With these functions, every fully-saturated hue angle (`hsl(<angle> 100% 50%)` or `hwb(<angle> 0% 0%)`) has the same lightess, but that is not how human vision or monitors work. Putting white text on fully saturated blue (`hsl(240deg 100% 50%)`) is legible, but that same text on fully saturated yellow (`hsl(60deg 100% 50%)`) will not only be illegible, but it will hurt your user's eyes. In these color functions, the lightness of a color is relative to other colors, not to human perception. In reality, not all hues have the same max saturation.
 
-Wouldn't it be fantastic if you could simply change a hue of a color on a site without making text illegible? You can in the CIELAB and Oklab color spaces. For the CIELAB and oklab color spaces, you can use the `lab()`, `oklab()`, `lch()` and `oklch()` functions.
+Wouldn't it be fantastic if you could simply change a hue of a color on a site without making text illegible? You can with function in the CIELAB and Oklab color spaces.
+
+The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE lab color functions include `lch()` and `lab()`. Oklab color functions include `oklch()` and `oklab()`. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
+
+For the CIELAB and oklab color spaces, you can use the `display-p3` gamut supporting [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functions.
+
 The `lch()` and `oklch()` functions use lightness (L), chroma (C), and hue (H), and are discussed further in this section. The [`lab()` and `oklab()`](#lab-and-oklab) functions work differently, using lightness (L), red/green-ness (along the "a" axis), and yellow/blue-ness (along the "b" axes). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
-
-The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE lab color functions include `lch()` and `lab()`. Oklab color functions include `oklch()` and `oklab()`. The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered to be more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
 
 The `lch()` and `oklch()` both include a hue component, and are discussed here. The [`lab()` and `oklab()`](#lab-and-oklab) define color based on a red/green and a yellow/blue color axis and are described below.
 
