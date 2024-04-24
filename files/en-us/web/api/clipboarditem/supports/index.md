@@ -49,8 +49,6 @@ async function writeClipImg() {
     console.error(err.name, err.message);
   }
 }
-
-
 ```
 
 ## Specifications
