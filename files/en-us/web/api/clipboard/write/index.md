@@ -54,14 +54,18 @@ Note that for this particular case, you could just as readily use `Clipboard.wri
 button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
-  const type = "text/plain";
-  const blob = new Blob([text], { type });
-  const data = [new ClipboardItem({ [type]: blob })];
-  await navigator.clipboard.write(data);
+  if (ClipboardItem.supports('text/plain')) {
+    const type = "text/plain";
+    const blob = new Blob([text], { type });
+    const data = [new ClipboardItem({ [type]: blob })];
+    await navigator.clipboard.write(data);
+  } else {
+    console.log("text/plain is not supported");
+  }
 }
 ```
 
-The `setClipboard()` method begins by creating a new a {{domxref("Blob")}} object.
+The `setClipboard()` method begins with an if statement that returns true or false based on whether the clipboard supports 'text/plain' MIME type. If the clipboard does support the MIME type, then a new {{domxref("Blob")}} object is created.
 This object is required to construct a {{domxref("ClipboardItem")}} object which is sent to the clipboard.
 The {{domxref("Blob")}} constructor takes in the content we want to copy and its type.
 This {{domxref("Blob")}} object can be derived from many sources; for example, a [canvas](/en-US/docs/Web/API/HTMLCanvasElement).
@@ -89,21 +93,17 @@ ctx.fillRect(0, 0, 100, 100);
 
 canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
-function copyCanvasContentsToClipboard() {
-  return new Promise((resolve, reject) => {
+async function copyCanvasContentsToClipboard() {
+  if (ClipboardItem.supports('image/png')) {
     // Copy canvas to blob
-    canvas.toBlob(async (blob) => {
-      try {
-        // Create ClipboardItem with blob and its type, and add to an array
-        const data = [new ClipboardItem({ [blob.type]: blob })];
-        // Write the data to the clipboard
-        await navigator.clipboard.write(data);
-        resolve();
-      } catch (e) {
-        reject(e);
-      }
-    });
-  });
+    const blob = await canvas.toBlob();
+    // Create ClipboardItem with blob and it's type, and add to an array
+    const data = [new ClipboardItem({ [blob.type]: blob })];
+    // Write the data to the clipboard
+    await navigator.clipboard.write(data);
+  } else {
+    console.log("image/png is not supported");
+  } 
 }
 
 target.addEventListener("paste", (event) => {
@@ -132,7 +132,6 @@ body {
 }
 img {
   margin: 0.5rem;
-}
 ```
 
 ```html

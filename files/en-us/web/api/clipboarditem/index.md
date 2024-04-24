@@ -27,6 +27,13 @@ _This interface provides the following properties._
 - {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
   - : Returns one of the following: `"unspecified"`, `"inline"` or `"attachment"`.
 
+## Static methods
+
+_This interface defines the following methods._
+
+- {{domxref("ClipboardItem.supports", "supports()")}}
+  - : Returns true or false whether a {{Glossary("MIME type")}} type is supported. This allows us to detect if a {{Glossary("MIME type")}} is supported by the clipboard before attempting to write data.
+
 ## Instance methods
 
 _This interface defines the following methods._
@@ -38,22 +45,25 @@ _This interface defines the following methods._
 
 ### Writing to the clipboard
 
-Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new `ClipboardItem`.
+Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new `ClipboardItem`. Then we use {{domxref("ClipboardItem.supports", "supports()")}} to determine if the MIME data type is supported before writing it to the clipboard.
 
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = "/myimage.png";
-    const data = await fetch(imgURL);
-    const blob = await data.blob();
-
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        [blob.type]: blob,
-      }),
-    ]);
-    console.log("Fetched image copied.");
-  } catch (err) {
+    if (ClipboardItem.supports('image/png')) {
+        const imgURL = "/myimage.png";
+        const data = await fetch(imgURL);
+        const blob = await data.blob();
+        await navigator.clipboard.write([
+        new ClipboardItem({
+            [blob.type]: blob,
+        }),
+        ]);
+        console.log("Fetched image copied.");
+    } else {
+        console.log("image png is not suported");
+    }
+  } catch(err) {
     console.error(err.name, err.message);
   }
 }

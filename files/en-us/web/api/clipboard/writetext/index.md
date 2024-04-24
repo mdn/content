@@ -45,7 +45,11 @@ button.addEventListener("click", () => writeClipboardText("<empty clipboard>"));
 
 async function writeClipboardText(text) {
   try {
-    await navigator.clipboard.writeText(text);
+    if (ClipboardItem.supports('text/plain')) {
+      await navigator.clipboard.writeText(text);
+    } else {
+      console.log("text/plain is not supported");
+    }
   } catch (error) {
     console.error(error.message);
   }
