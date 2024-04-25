@@ -12,6 +12,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### Developer Tools
 
+- Added an option to disable split console ([Firefox bug 1731635](https://bugzil.la/1731635)).
+
 ### HTML
 
 #### Removals
