@@ -21,7 +21,7 @@ The web defines a set of standard color names that lets you use keywords instead
 
 Color keywords include standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`. Named colors use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space.
 
-There are over 160 named colors. There are named colors of special interest: [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) sets a transparent color value, while [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) sets the current value of the CSS {{cssxref("color")}} property. There are also named {{cssxref("system-colors")}}, such as `accentcolortext` and `buttonface`, that reflect the default color choices made by the user, the browser, or the operating system.
+There are over 160 named colors. There are named colors of special interest: [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) sets a transparent color value, while [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) sets the current value of the CSS {{cssxref("color")}} property. There are also named {{cssxref("system-color")}} colors, such as `accentcolortext` and `buttonface`, that reflect the default color choices made by the user, the browser, or the operating system.
 
 All color keywords are case-insensitive. See the {{cssxref("named-color")}} data type for more information on color keywords.
 
@@ -63,6 +63,7 @@ color: #f00;
 ```
 
 All components _must_ be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
+
 To make the values 25% opaque, add in the alpha channel value as shown below:
 
 ```css
@@ -158,7 +159,7 @@ The color functions that have a [`<hue>`](/en-US/docs/Web/CSS/hue) component —
 
 ### HSL functional notation
 
-The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()`. In addition to it being easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than to declaring colors via red, green, and blue channel values, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
+The `hsl()` CSS color function was the first hue-based color function to be supported in browsers. `hsl()` is more intuitive than `rgb()` — it is easier to determine the effect of varying hue (`h`), saturation (`s`), and lightness (`l`) values than it is to declare specific colors via red, green, and blue channel values. In addition, HSL is similar to the HSB (hue, saturation, and brightness) color picker in Photoshop, which made it immediately familiar to many people when first supported.
 
 The `hsl()` and `hwb()` sRGB color functions are both cylindrical. Hue defines the color as an [`<angle>`](/en-US/docs/Web/CSS/angle) on a circular {{glossary("color wheel")}}. The diagram below shows an HSL color cylinder. Saturation is a percentage that defines how far the color is along a scale between completely grayscale and having the maximum possible amount of the given hue.
 As the value of lightness increases, the color transitions from the darkest to the lightest possible color (from black to white).
@@ -227,7 +228,7 @@ th {
       <td style="background-color: hsl(0.15turn 90% 50%);">&nbsp;</td>
     </tr>
     <tr>
-      <td><code>hsl(270deg 90% 50%)</code></td>
+      <td><code>hsl(270deg 90% 50% / 50%)</code></td>
       <td style="background-color: hsl(270deg 90% 50% / 50%);">&nbsp;</td>
     </tr>
   </tbody>
@@ -538,7 +539,9 @@ Similar to `lch()` and `oklch()`, the `lightness` is either:
 - A {{cssxref("percentage")}}, with `0%` being completely black and `100%` being completely white.
 - A number between `0` and `100` for `lab()` and `0` and `1` for `oklab()`, where `0` is completely black and`1`/`100` is completely white.
 
-The `a` value is `<number>` between `-125` and `125` for `lab()` or `-0.4` and `0.4` for `oklab()`, a `<percentage>` between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the a-axis in the color space, which defines how green (moving towards -100%) or red (moving towards +100%) the color is. Note that these values are signed (allowing both positive and negative values) and theoretically unbounded, meaning that you can set values outside the ±125 or ±0.4 (±100%) limits. In practice, values cannot exceed ±160 or ±0.5, respectively.
+The `a` value is `<number>` between `-125` and `125` for `lab()` or `-0.4` and `0.4` for `oklab()`, a `<percentage>` between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the a-axis in the color space, which defines how green (moving towards -100%) or red (moving towards +100%) the color is.
+
+Note that these values are signed (allowing both positive and negative values) and theoretically unbounded, meaning that you can set values outside the ±125 or ±0.4 (±100%) limits. In practice, values cannot exceed ±160 or ±0.5, respectively.
 
 The `b` value has the same constraints. It specifies the color's distance along the b-axis in the color space, which defines how blue (moving towards -100%) or yellow (moving towards +100%) the color is.
 
@@ -663,7 +666,9 @@ For example, if you wanted to show the `display-p3 0 0 1` color, which is outsid
 }
 ```
 
-In addition, as the older sRGB color notations discussed above - `hsl()`, `hwb()`, and `rgb()` - do not express the full spectrum of visible colors and the `color()` function supports a much wider color gamut, when using these functions to define relative colors (discussed next), the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method will be a `color(srgb ...)` value. To see an example of converting these color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool).
+Understanding `color()` is important when it comes to relative colors, discussed next. The older sRGB color notations discussed above — `hsl()`, `hwb()`, and `rgb()`— do not express the full spectrum of visible colors, while the `color()` function supports a much wider color gamut. As a result, when using the older functions types to define relative colors, the output color returned by querying {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method will be a `color(srgb ...)` value.
+
+To see an example of converting the `hsl()`, `hwb()`, and `rgb()` color functions to `color()` in the `srgb` color space, check out our [color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool).
 
 ### Relative colors
 
