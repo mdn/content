@@ -50,20 +50,20 @@ Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem
 ```js
 async function writeClipImg() {
   try {
-    if (ClipboardItem.supports('image/png')) {
-        const imgURL = "/myimage.png";
-        const data = await fetch(imgURL);
-        const blob = await data.blob();
-        await navigator.clipboard.write([
+    if (ClipboardItem.supports("image/png")) {
+      const imgURL = "/myimage.png";
+      const data = await fetch(imgURL);
+      const blob = await data.blob();
+      await navigator.clipboard.write([
         new ClipboardItem({
-            [blob.type]: blob,
+          [blob.type]: blob,
         }),
-        ]);
-        console.log("Fetched image copied.");
+      ]);
+      console.log("Fetched image copied.");
     } else {
-        console.log("image png is not suported");
+      console.log("image png is not suported");
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }

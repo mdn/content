@@ -48,14 +48,14 @@ async function writeClipImg() {
       const blob = await data.blob();
       await navigator.clipboard.write([
         new ClipboardItem({
-            [blob.type]: blob,
+          [blob.type]: blob,
         }),
-        ]);
-        console.log("Fetched image copied.");
+      ]);
+      console.log("Fetched image copied.");
     } else {
-        console.log("image png is not suported");
+      console.log("image png is not suported");
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }
