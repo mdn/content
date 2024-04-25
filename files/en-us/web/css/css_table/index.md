@@ -81,7 +81,7 @@ The properties introduced in this module aren't limited to the `<table>` element
 
 {{Specifications}}
 
-> **Note:** The [CSS Table Module Level 3](https://drafts.csswg.org/css-tables-3/) specification is still being developed; it is not yet ready for implementation.
+> **Note:** The CSS 2.2 specification defines stable standards for web styling, including detailed specifications for table formatting. The [CSS Table Module Level 3](https://drafts.csswg.org/css-tables-3/) specification seeks to expand these capabilities with advanced features for table layout and rendering. However, the table module specification is still being developed and is not yet ready for implementation.
 
 ## See also
 
