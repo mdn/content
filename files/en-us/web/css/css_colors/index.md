@@ -134,4 +134,3 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool): This tool makes it easy to create, adjust, and experiment with custom colors.
