@@ -10,9 +10,46 @@ In CSS, the _intrinsic size_ of an element is the size it would be based purely 
 
 Inline elements are sized intrinsically: [sizing](/en-US/docs/Web/CSS/CSS_box_sizing) and [box](/en-US/docs/Web/CSS/CSS_box_model) properties including {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, and {{cssxref("padding-block")}} and {{cssxref("margin-block")}} have no impact on them ( though {{cssxref("margin-inline")}} and {{cssxref("padding-inline")}} do).
 
+#### min-content
+
 For example, the minimum intrinsic, or {{cssxref("min-content")}} size of a {{htmlelement("span")}} element is the minimum size it would have if it was floated with no other CSS box properties applied inside a container with a inline-size of `0px`. For text, the `min-content` size would be if the text was wrapped as small as possible in the inline direction without causing an overflow, with as much soft-wrapping as possible. For a box containing a string of text, the `min-content` size would be defined by the longest word. The keyword value of `min-content` for the {{cssxref("width")}} and {{cssxref("inline-size")}} properties will size an element according to the `min-content` size.
 
+```html hidden
+<div><p>Text wraps making element only as wide as its longest word.</p></div>
+```
+
+```css hidden
+p {
+  width: min-content;
+  background-color: palegoldenrod;
+}
+```
+
+{{ EmbedLiveSample('min-content', '100%', '200') }}
+
+#### max-content
+
 The maximum intrinsic size, or {{cssxref("max-content")}} size is the opposite. It is the size the element would be if the inline-size of the container were infinite. In the case of text, this would cause the text to display as wide as possible, doing no soft-wrapping, even if it overflowed the container. The keyword value `max-content` sets this behavior.
+
+```html hidden
+<div><p>Element grows as text doesn't wrap.</p></div>
+<div>
+  <p>
+    This paragraph may be wider than the width of the entire page and yet it
+    won't wrap because <code>width: max-content</code> is set, and therefore may
+    overlow the container.
+  </p>
+</div>
+```
+
+```css hidden
+p {
+  width: max-content;
+  background-color: palegoldenrod;
+}
+```
+
+{{ EmbedLiveSample('max-content', '100%', '200') }}
 
 Intrinsic sizes and how they are calculated are defined in the [CSS sizing module](/en-US/docs/Web/CSS/CSS_box_sizing).
 
