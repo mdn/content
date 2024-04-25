@@ -48,7 +48,7 @@ transform: skewX(30deg);
 transform: skewY(1.07rad);
 
 /* Multiple function values */
-transform: rotate(10deg) rotate(10deg) rotate(10deg); // equality with rotate(30deg) 
+transform: rotate(10deg) rotate(10deg) rotate(10deg); // equality with rotate(30deg)
 transform: translateX(10px) rotate(10deg) translateY(5px);
 transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 
