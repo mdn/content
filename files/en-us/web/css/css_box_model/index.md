@@ -15,6 +15,8 @@ Every visible element on a webpage is a box laid out according to the [visual fo
 
 Each box has a rectangular content area, inside which any text, images, and other content is displayed. The content may be surrounded by padding, a border, and a margin, on one or more sides. The padding is around the content, the border is around the padding, and the margin sits outside the border. The box model describes how these features — the content, padding, border, and margin — work together to create a box as displayed by CSS.
 
+![The components of the CSS box model](boxmodel.png)
+
 The CSS box model module defines physical (or "page relative") properties such as `width` and `margin-top`. Flow-relative properties such as `inline-size` and `margin-block-start` (which relate to text direction) are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values). The box model module is extended by the [CSS box sizing module](/en-US/docs/Web/CSS/CSS_box_sizing), which introduces the {{glossary("intrinsic size")}} value and enables defining aspect ratios for elements that are auto-sized in at least one dimension.
 
 ## Reference
