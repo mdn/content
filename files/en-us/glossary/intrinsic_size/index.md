@@ -33,7 +33,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('minimum intrinsic size', '100%', '200') }}
+{{ EmbedLiveSample('minimum intrinsic size', '100%', '220') }}
 
 #### maximum intrinsic size
 
