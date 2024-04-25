@@ -15,7 +15,7 @@ This guide includes [lists of the CSS properties that set color in their values]
 
 > **Note:** It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensure there is enough contrast between text and the background to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
 
-To learn more about CSS colors as a data type, see the [`<color>`](/en-US/docs/Web/CSS/Color_value) reference and [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide.
+To learn more about CSS colors as a data type, see the [`<color>`](/en-US/docs/Web/CSS/color_value) reference and [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide.
 
 ## Properties that can have color
 
@@ -177,7 +177,7 @@ CSS isn't the only web technology that supports color. Other examples include:
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/Color_value) data type
+- [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
 - [Using colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
