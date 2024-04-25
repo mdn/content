@@ -198,7 +198,7 @@ CSS isn't the only web technology that supports color. Other examples include:
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
   - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more. Also see [WebGPU](/en-US/docs/Web/API/WebGPU_API), a successor to WebGL for modern GPUs.
 
-> **Note:** A few now obsolete HTML attributes accepted colors as values, such as `bgcolor` and `vlink`. These attribute only accepted {{cssxref("named-color")}} and three or six digit {{cssxref("hex-color")}} values.
+> **Note:** A few now obsolete HTML attributes accepted colors as values, such as `bgcolor` and `vlink`. These attributes only accepted {{cssxref("named-color")}} and three- or six-digit {{cssxref("hex-color")}} values.
 
 ## See also
 
