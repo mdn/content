@@ -26,7 +26,7 @@ A floating point number; one of `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 The following code can be run in a worker:
 
 ```js
-const memory = WorkerNavigator.deviceMemory;
+const memory = navigator.deviceMemory;
 console.log(`This device has at least ${memory}GiB of RAM.`);
 ```
 

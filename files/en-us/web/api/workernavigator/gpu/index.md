@@ -21,11 +21,11 @@ A {{domxref("GPU")}} object.
 ```js
 // Can be run inside a web worker
 async function init() {
-  if (!WorkerNavigator.gpu) {
+  if (!navigator.gpu) {
     throw Error("WebGPU not supported.");
   }
 
-  const adapter = await WorkerNavigator.gpu.requestAdapter();
+  const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
     throw Error("Couldn't request WebGPU adapter.");
   }
