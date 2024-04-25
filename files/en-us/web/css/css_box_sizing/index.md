@@ -9,15 +9,15 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS box sizing** module defines sizing, minimum sizing and maximum sizing properties, and extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based "extrinsic" size, enabling describing how elements fit their content or fit into a particular layout context.
+The **CSS box sizing** module defines sizing, minimum sizing, and maximum sizing properties. It also extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based "extrinsic" size, enabling developers to specify how elements fit their content or fit into a particular layout context.
 
-Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including width, height, padding, and margin properties (with border properties defined in [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically, enabling explicitly setting an element's size to be based on the size of an element's content.
+Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including `width`, `height`, `padding`, and `margin` properties (along with `border` properties defined in the [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically — setting element size based on the size of its content.
 
-The sizing values introduced in this module allow elements with [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment) to specify explicit intrinsic sizes, enabling boxes to size as if its in-flow content totals to a width and height matching the specified explicit intrinsic size rather than sizing as if it were empty.
+The sizing values introduced in this module allow elements with [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment) to take explicit intrinsic sizes — as if their in-flow content's width and height match the specified explicit intrinsic size, rather than being sized as if they were empty.
 
-This module also introduced the ability to define a ratio for an element's box meaning the browser can automatically adjust an element's dimensions to maintain a specified aspect ratio as long as one of the dimensions is automatically sized.
+This module also introduced the ability to define an aspect ratio for an element's box, meaning the browser can automatically adjust an element's dimensions to maintain a specified aspect ratio as long as one of the dimensions is automatically sized.
 
-The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) expanded the properties available in both these modules to include writing-mode relative equivalents of the corresponding physical box model and intrinsic box sizing properties.
+The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) expanded the properties available in the box model and box sizing modules to include writing-mode-relative equivalents of the corresponding physical box model and intrinsic box sizing properties.
 
 ## Reference
 
