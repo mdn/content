@@ -10,52 +10,52 @@ In CSS, the _intrinsic size_ of an element is the size it would be based purely 
 
 Inline elements are sized intrinsically: [sizing](/en-US/docs/Web/CSS/CSS_box_sizing) and [box](/en-US/docs/Web/CSS/CSS_box_model) properties including {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, and {{cssxref("padding-block")}} and {{cssxref("margin-block")}} have no impact on them ( though {{cssxref("margin-inline")}} and {{cssxref("padding-inline")}} do).
 
-#### min-content
+For example, the minimum intrinsic size of a {{htmlelement("span")}} element is the minimum size it would have if it was floated with no other CSS box properties applied inside a container with an inline-size of `0px`. The maximum intrinsic size is the opposite. It is the size the same `<span>` would have if its container's inline size were infinite.
 
-For example, the minimum intrinsic, or {{cssxref("min-content")}} size of a {{htmlelement("span")}} element is the minimum size it would have if it was floated with no other CSS box properties applied inside a container with a inline-size of `0px`. For text, the `min-content` size would be if the text was wrapped as small as possible in the inline direction without causing an overflow, with as much soft-wrapping as possible. For a box containing a string of text, the `min-content` size would be defined by the longest word. The keyword value of `min-content` for the {{cssxref("width")}} and {{cssxref("inline-size")}} properties will size an element according to the `min-content` size.
+Intrinsic size has the same meaning for images as for text — the size at which the images are displayed if no CSS is applied to change the rendering.
+
+Pixel density and resolution affect intrinsic size. By default, images are assumed to have a "1x" pixel density (1 device pixel = 1 CSS pixel), in which case the intrinsic size is simply the pixel height and width. An image's intrinsic size and resolution can be explicitly specified in its {{Glossary("EXIF")}} data. Image pixel density may also be set for images using the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. Note that, if both mechanisms are used, the `srcset` value is applied "over" the EXIF value.
+
+Intrinsic sizes and how they are calculated are defined in the [CSS sizing module](/en-US/docs/Web/CSS/CSS_box_sizing).
+
+#### minimum intrinsic size
+
+To set an element according to its minimum intrinsic size, set the {{cssxref("inline-size")}} (or {{cssxref("width")}} in horizontal writing modes, like English and Hebrew) to {{cssxref("min-content")}}. This sets the element to the size it would be if the text was wrapped as small as possible in the inline direction without causing an overflow, with as much soft-wrapping as possible. For a box containing a string of text, the minimum intrinsic size would be defined by the longest word.
 
 ```html hidden
-<div><p>Text wraps, making the element only as wide as its longest word.</p></div>
+<p>Text wraps, making the element only as wide as its longest word.</p>
 ```
 
-```css hidden
+```css
 p {
-  width: min-content;
+  inline-size: min-content;
   background-color: palegoldenrod;
 }
 ```
 
-{{ EmbedLiveSample('min-content', '100%', '200') }}
+{{ EmbedLiveSample('minimum intrinsic size', '100%', '200') }}
 
-#### max-content
+#### maximum intrinsic size
 
-The maximum intrinsic size, or {{cssxref("max-content")}} size is the opposite. It is the element's size if the container's inline size were infinite. Text content would display as wide as possible, with no soft-wrapping, even if it overflowed its container. The keyword value `max-content` sets this behavior.
+The maximum intrinsic size is the opposite. It is the element's size if the container's inline size were infinite. Text content would display as wide as possible, with no soft-wrapping, even if it overflowed its container. The keyword value {{cssxref("max-content")}} sets this behavior.
 
 ```html hidden
-<div><p>Element grows as text doesn't wrap.</p></div>
-<div>
-  <p>
-    This paragraph may be wider than the width of the entire page and yet it
-    won't wrap because <code>width: max-content</code> is set. It therefore may
-    overflow its container.
-  </p>
-</div>
+<p>Element grows as text doesn't wrap.</p>
+<p>
+  This paragraph may be wider than the width of the entire page and yet it won't
+  wrap because <code>width: max-content</code> is set. It therefore may overflow
+  its container.
+</p>
 ```
 
-```css hidden
+```css
 p {
   width: max-content;
   background-color: palegoldenrod;
 }
 ```
 
-{{ EmbedLiveSample('max-content', '100%', '200') }}
-
-Intrinsic sizes and how they are calculated are defined in the [CSS sizing module](/en-US/docs/Web/CSS/CSS_box_sizing).
-
-Intrinsic size has the same meaning for images as for text — the size at which the images are displayed if no CSS is applied to change the rendering.
-
-Pixel density and resolution affect intrinsic size. By default, images are assumed to have a "1x" pixel density (1 device pixel = 1 CSS pixel), in which case the intrinsic size is simply the pixel height and width. An image's intrinsic size and resolution can be explicitly specified in its {{Glossary("EXIF")}} data. Image pixel density may also be set for images using the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute. Note that, if both mechanisms are used, the `srcset` value is applied "over" the EXIF value.
+{{ EmbedLiveSample('maximum intrinsic size', '100%', '200') }}
 
 ## Extrinsic sizing
 
