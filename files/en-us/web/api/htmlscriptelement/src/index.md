@@ -18,7 +18,7 @@ A string.
 
 ## Examples
 
-Assume the code is running in a website which URL is `https://example.com`.
+Assume the code is running on a website whose URL is `https://example.com`.
 
 ```html
 <script id="script-with-src" type="module" src="/main.js"></script>
