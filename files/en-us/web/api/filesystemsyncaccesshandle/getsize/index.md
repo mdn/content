@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemSyncAccessHandle.getSize
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`getSize()`** method of the
 {{domxref("FileSystemSyncAccessHandle")}} interface returns the size of the file associated with the handle in bytes.

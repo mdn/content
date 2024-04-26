@@ -50,18 +50,7 @@ svg {
   - : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
     _Value type_: [**\<opacity>**](/en-US/docs/Web/SVG/Content_type#opacity_value); _Default value_: `1`; _Animatable_: **yes**
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-- [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('stop-color')}}, {{SVGAttr('stop-opacity')}}, {{SVGAttr('visibility')}}
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

@@ -5,11 +5,17 @@ page-type: web-api-overview
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemWritableFileStream
+  - api.FileSystemSyncAccessHandle
+spec-urls:
+  - https://fs.spec.whatwg.org/
+  - https://wicg.github.io/file-system-access/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
-The File System API — with extensions provided via the [File System Access API](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
+The **File System API** — with extensions provided via the [**File System Access API**](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
 
 ## Concepts and Usage
 

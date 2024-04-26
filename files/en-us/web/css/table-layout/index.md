@@ -114,3 +114,4 @@ td {
 ## See also
 
 - [`<table>`](/en-US/docs/Web/HTML/Element/table)
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module

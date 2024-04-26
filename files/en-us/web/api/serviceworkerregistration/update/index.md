@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.update
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`update()`** method of the
 {{domxref("ServiceWorkerRegistration")}} interface attempts to update the service
 worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte
 identical to the current worker, it installs the new worker. The fetch of the worker
 bypasses any browser caches if the previous fetch occurred over 24 hours ago.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

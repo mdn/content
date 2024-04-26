@@ -45,7 +45,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
   - : The behavior is identical to `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 > **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 

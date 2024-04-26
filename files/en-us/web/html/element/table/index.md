@@ -33,11 +33,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `cellpadding` {{deprecated_inline}}
 
-  - : Defines the space between the content of a cell and its border, displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized space will be applied to all four sides of the cell's content. If the length is defined using a percentage value, the content will be centered and the total vertical space (top and bottom) will represent this value. The same is true for the total horizontal space (left and right). Apply the {{cssxref("border-collapse")}} CSS property to the `<table>` element, with its value set to `collapse`, and the {{cssxref("padding")}} CSS property to the {{HTMLElement("td")}} elements instead, as this attribute is deprecated.
+  - : Defines the space between the content of a cell and its border. This attribute is obsolete: instead of using it, apply the {{cssxref("padding")}} CSS property to the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements.
 
 - `cellspacing` {{deprecated_inline}}
 
-  - : Defines the size of the space between two cells in a percentage value or pixels. The attribute is applied both horizontally and vertically, to the space between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row. Apply the {{cssxref("border-spacing")}} CSS property to the `<table>` element instead, as this attribute is deprecated. `border-spacing` does not have any effect if the {{cssxref("border-collapse")}} CSS property is set to `collapse`.
+  - : Defines the size of the space between two cells. This attribute is obsolete: instead of using it, set the {{cssxref("border-spacing")}} CSS property on the `<table>` element. Note that this has no effect if the `<table>` element's {{cssxref("border-collapse")}} CSS property is set to `collapse`.
 
 - `frame` {{deprecated_inline}}
 
@@ -970,7 +970,7 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -980,7 +980,7 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/table_role"
             >table</a
           ></code
         >

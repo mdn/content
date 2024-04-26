@@ -7,17 +7,15 @@ status:
 browser-compat: http.headers.Supports-Loading-Mode
 ---
 
-{{HTTPSidebar}}{{seecompattable}}
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **`Supports-Loading-Mode`** response header is set by a navigation target to opt-in to using various higher-risk loading modes.
+The **`Supports-Loading-Mode`** header allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>
-        {{Glossary("Response header")}}
-      </td>
+      <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -35,15 +33,27 @@ The **`Supports-Loading-Mode`** response header is set by a navigation target to
 ## Syntax
 
 ```http
-Supports-Loading-Mode: credentialed-prerender
+Supports-Loading-Mode: <comma-separated list of client hint headers>
 ```
 
 ## Directives
 
-The `Supports-Loading-Mode` header is a list of one or more tokens, which can include the following values:
+The `Supports-Loading-Mode` header value is a list of one or more tokens, which can include the following values:
 
 - `credentialed-prerender` {{experimental_inline}}
   - : Indicates that a destination origin opts in to loading documents via cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering).
+- `fenced-frame`
+  - : The response can loaded inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API). Without this explicit opt-in, all navigations inside of a fenced frame will fail.
+
+## Examples
+
+```http
+Supports-Loading-Mode: fenced-frame
+```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -51,6 +61,7 @@ The `Supports-Loading-Mode` header is a list of one or more tokens, which can in
 
 ## See also
 
+- [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
 - [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) on developer.chrome.com (2023)

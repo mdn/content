@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DedicatedWorkerGlobalScope.requestAnimationFrame
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers("dedicated")}}
 
 The **`requestAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface tells the browser you wish to perform an animation frame request and call a user-supplied callback function before the next repaint.
 

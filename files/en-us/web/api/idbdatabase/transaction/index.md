@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.transaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately
 returns a transaction object ({{domxref("IDBTransaction")}}) containing the
 {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your
 object store.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

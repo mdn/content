@@ -47,9 +47,9 @@ This property applies to block elements that generate a box. It won't apply on a
   - : Force page breaks after the element so that the next page is formatted as a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
   - : Force page breaks after the element so that the next page is formatted as a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
-- `recto` {{experimental_inline}}
+- `recto`
   - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
-- `verso` {{experimental_inline}}
+- `verso`
   - : If pages progress left-to-right, then this acts like `left`. If pages progress right-to-left, then this acts like `right`.
 
 ## Page break aliases

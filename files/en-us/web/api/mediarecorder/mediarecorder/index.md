@@ -27,8 +27,7 @@ new MediaRecorder(stream, options)
 
 - `stream`
   - : The {{domxref("MediaStream")}} that will be recorded. This source media can come
-    from a stream created using {{domxref("MediaDevices.getUserMedia",
-    "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
+    from a stream created using {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
     {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.
 - `options` {{optional_inline}}
 

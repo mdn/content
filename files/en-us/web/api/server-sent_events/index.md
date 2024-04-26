@@ -5,11 +5,9 @@ page-type: web-api-overview
 spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 
-{{DefaultAPISidebar("Server Sent Events")}}
+{{DefaultAPISidebar("Server Sent Events")}} {{AvailableInWorkers}}
 
 Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/en-US/docs/Web/API/Event) + data_ inside the web page.
-
-{{AvailableInWorkers}}
 
 > **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See [Firefox bug 1681218](https://bugzil.la/1681218).
 

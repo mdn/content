@@ -94,7 +94,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -109,7 +109,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"
             >navigation</a
           ></code
         >

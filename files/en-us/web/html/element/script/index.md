@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
-- [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
+- [`type`](/en-US/docs/Web/HTML/Element/script/type)
 
   - : This attribute indicates the type of script represented.
     The value of this attribute will be one of the following:
@@ -231,7 +231,7 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

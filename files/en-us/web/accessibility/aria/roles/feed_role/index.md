@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
 
+{{AccessibilitySidebar}}
+
 A `feed` is a dynamic scrollable `list` of `articles` in which articles are added to or removed from either end of the list as the user scrolls. A `feed` enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.
 
 ```html
@@ -86,11 +88,3 @@ To ensure good user experience, avoid inserting or removing articles in the midd
 - The {{HTMLElement('ul')}} unordered list element
 - [ARIA: `article` role](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

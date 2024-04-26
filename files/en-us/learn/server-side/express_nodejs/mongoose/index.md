@@ -107,7 +107,7 @@ Other code can execute while the server is waiting for the database operation to
 JavaScript has a number of mechanisms for supporting asynchronous behavior.
 Historically JavaScript relied heavily on passing [callback functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) to asynchronous methods to handle the success and error cases.
 In modern JavaScript callbacks have largely been replaced by [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-Promises are objects that are (immediately) returned by an asynchronous method that represent it's future state.
+Promises are objects that are (immediately) returned by an asynchronous method that represent its future state.
 When the operation completes, the promise object is "settled", and resolves an object that represents the result of the operation or an error.
 
 There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) for a high level overview of both approaches.
@@ -264,7 +264,7 @@ const SomeModelSchema = new Schema({
 const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
-The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
+The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
 
 > **Note:** Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the [Using models](#using_models) section, and when we create our views.
 

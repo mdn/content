@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ImageData.width
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The readonly **`ImageData.width`** property returns the number
 of pixels per row in the {{domxref("ImageData")}} object.
