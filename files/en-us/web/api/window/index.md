@@ -40,7 +40,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}
-  - : Returns the browser crypto object.
+  - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
