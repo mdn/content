@@ -31,7 +31,8 @@ Note that the attribute "influences" the jitter buffer target of the user agent,
 The actual user agent jitter buffer target will vary between maximum and minimum allowed values that reflects a target range that the user agent can provide based on network conditions and memory constraints, and can change at any time.
 The value returned by `jitterBufferTarget` is not affected by the actual target of the user agent.
 
-The change in average delay can be gradually observed over time by measuring the delta [`RTCInboundRtpStreamStats.jitterBufferDelay`](/en-US/docs/Web/API/RTCInboundRtpStreamStats) divided by the delta [`RTCInboundRtpStreamStats.jitterBufferEmittedCount`](/en-US/docs/Web/API/RTCInboundRtpStreamStats).
+The average jitter buffer delay can be calculated by dividing the [`RTCInboundRtpStreamStats.jitterBufferDelay`](/en-US/docs/Web/API/RTCInboundRtpStreamStats) by the [`RTCInboundRtpStreamStats.jitterBufferEmittedCount`](/en-US/docs/Web/API/RTCInboundRtpStreamStats).
+In order to observe the effects of modifying the jitter buffer target you can track the change in the value of this average over time.
 
 If `RTCRtpReceiver` audio and video tracks are synchronized, then the larger of the two receivers `jitterBufferTarget` should be used for both receivers.
 
