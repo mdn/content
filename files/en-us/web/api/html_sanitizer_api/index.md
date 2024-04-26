@@ -5,7 +5,6 @@ page-type: web-api-overview
 status:
   - deprecated
   - experimental
-  - non-standard
 browser-compat: api.Sanitizer
 ---
 

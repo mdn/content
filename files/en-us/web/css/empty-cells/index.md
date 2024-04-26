@@ -109,3 +109,4 @@ th {
 
 - {{cssxref("border-collapse")}}
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module

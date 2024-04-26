@@ -30,6 +30,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### HTTP
 
+- The [`zstd`](/en-US/docs/Web/HTTP/Headers/Content-Encoding#zstd) directive of the `Content-Encoding` HTTP header is now supported, allowing decoding of server-sent content encoded with the {{glossary("Zstandard compression")}} algorithm ([Firefox bug 1871963](https://bugzil.la/1871963)).
+
 #### Removals
 
 ### Security
@@ -38,6 +40,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### APIs
 
+- [`IDBFactory.databases()`](/en-US/docs/Web/API/IDBFactory/databases) is now supported for enumerating available [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) databases ([Firefox bug 934640](https://bugzil.la/934640)).
+- The [`URL.parse()`](/en-US/docs/Web/API/URL/parse_static) static method is now supported for creating [`URL`](/en-US/docs/Web/API/URL) objects. This returns `null` if the passed parameters do not define a valid `URL`, and can hence be used as a non-throwing alternative to creating `URL` object with the [`URL` constructor](/en-US/docs/Web/API/URL/URL) ([Firefox bug 1823354](https://bugzil.la/1823354)).
 - The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) is now supported, allowing a web application to request that the screen not be dimmed or locked while it is active. This is useful for navigation and reading applications, and other applications where the screen doesn't get regular tactile input when in use, which would otherwise keep the screen awake. The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}. This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
   ([Firefox bug 1589554](https://bugzil.la/1589554), [Firefox bug 1874849](https://bugzil.la/1874849)).
 - All [`RTCIceCandidate`](/en-US/docs/Web/API/RTCIceCandidate) properties and methods are now supported and match the specification, with the exception of unimplemented properties: `relayProtocol` and `url`.

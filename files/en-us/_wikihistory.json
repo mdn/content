@@ -66651,6 +66651,10 @@
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/crossOriginIsolated": {
+    "modified": "2020-10-15T22:25:16.295Z",
+    "contributors": ["ExE-Boss", "chrisdavidmills"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T21:50:21.706Z",
     "contributors": [
@@ -67239,6 +67243,18 @@
       "GT",
       "Dria",
       "Wladimir_Palant"
+    ]
+  },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2020-10-15T21:51:32.759Z",
+    "contributors": [
+      "mfuji09",
+      "alattalatta",
+      "rugk",
+      "fscholz",
+      "kenrick95",
+      "chrisdavidmills",
+      "jpmedley"
     ]
   },
   "Web/API/Window/languagechange_event": {
@@ -71478,10 +71494,6 @@
       "adria"
     ]
   },
-  "Web/API/crossOriginIsolated": {
-    "modified": "2020-10-15T22:25:16.295Z",
-    "contributors": ["ExE-Boss", "chrisdavidmills"]
-  },
   "Web/API/crypto_property": {
     "modified": "2020-12-11T05:31:22.254Z",
     "contributors": [
@@ -71553,18 +71565,6 @@
       "George8211",
       "matiishyn",
       "kscarfone"
-    ]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2020-10-15T21:51:32.759Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "rugk",
-      "fscholz",
-      "kenrick95",
-      "chrisdavidmills",
-      "jpmedley"
     ]
   },
   "Web/API/origin": {

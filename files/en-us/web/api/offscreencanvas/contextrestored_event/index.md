@@ -3,12 +3,10 @@ title: "OffscreenCanvas: contextrestored event"
 short-title: contextrestored
 slug: Web/API/OffscreenCanvas/contextrestored_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.OffscreenCanvas.contextrestored_event
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`contextrestored`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the browser restores a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context that was [previously lost](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event).
 
@@ -56,6 +54,6 @@ canvas.addEventListener(
 
 ## See also
 
-- [`OffscreenCanvas: contextlost` event](/en-US/docs/Web/API/OffScreenCanvas/contextlost_event)
+- [`OffscreenCanvas: contextlost` event](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event)
 - [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.iscontextlost)
 - [`HTMLCanvasElement: contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
