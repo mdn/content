@@ -46,7 +46,7 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **Note:** Remember to [vary the response](/en-US/docs/Web/HTTP/Client_hints#varying_client_hints)
+> **Note:** Remember to [Caching and Client Hints](/en-US/docs/Web/HTTP/Client_hints#Caching_and_Client_Hints)
 > based on the accepted client hints.
 
 ## Specifications
