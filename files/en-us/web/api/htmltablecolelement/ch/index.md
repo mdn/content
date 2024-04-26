@@ -10,7 +10,7 @@ browser-compat: api.HTMLTableColElement.ch
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`ch`** property of the {{domxref("HTMLTableColElement")}} interface does nothing. It reflects the `ch` attribute of the {{HTMLElement("col")}} element.
+The **`ch`** property of the {{domxref("HTMLTableColElement")}} interface does nothing. It reflects the `char` attribute of the {{HTMLElement("col")}} element.
 
 > **Note:** This property was designed to participate to the ability to align table cell content on a specific character (typically the decimal point), but was never implemented by browsers.
 >
