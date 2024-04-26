@@ -2,7 +2,6 @@
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}

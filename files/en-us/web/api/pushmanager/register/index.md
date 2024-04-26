@@ -9,7 +9,7 @@ status:
 browser-compat: api.PushManager.register
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}{{non-standard_header}}
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`register`** method is used to ask the system to request
 a new endpoint for notifications.

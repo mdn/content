@@ -13,7 +13,7 @@ This is especially useful for saving resources and improving performance by lett
 
 ## Concepts and usage
 
-When the user minimizes the window or switches to another tab, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
+When the user minimizes the window, switches to another tab, or the document is entirely obscured by another window, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
 
 Visibility states of an {{HTMLElement("iframe")}} are the same as the parent document. Hiding an `<iframe>` using CSS properties (such as {{cssxref("display", "display: none;")}}) doesn't trigger visibility events or change the state of the document contained within the frame.
 
@@ -78,29 +78,52 @@ The Page Visibility API adds the following events to the {{domxref("Document")}}
 
 ### Pausing audio on page hide
 
-This example pauses audio when the user switches to a different tab, and plays when they switch back.
+This example pauses playing audio when the page is hidden and resumes playing when the page becomes visible again.
+There is a button which allows the user to toggle between playing and paused audio.
+The boolean `userClicked` is used to prevent audio from playing if the page changes visibility but the user hasn't clicked "Play audio" before.
 
 #### HTML
 
 ```html
 <audio
-  controls
   src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
+<button id="start">Play audio</button>
 ```
 
 #### JavaScript
 
 ```js
 const audio = document.querySelector("audio");
+const playButton = document.querySelector("#start");
 
-// Handle page visibility change:
-// - If the page is hidden, pause the audio
-// - If the page is shown, play the audio
+let userClicked = false;
+let playingOnHide = false;
+
+playButton.addEventListener("click", handleToggle);
+
+// Toggle playing states and record that the user started audio
+function handleToggle() {
+  userClicked = true;
+  if (audio.paused) {
+    audio.play();
+    playButton.textContent = "Pause audio";
+  } else {
+    audio.pause();
+    playButton.textContent = "Play audio";
+  }
+}
+
+// Handle page visibility changes
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
+    // Was the audio playing when the page changed to hidden?
+    playingOnHide = !audio.paused;
     audio.pause();
   } else {
-    audio.play();
+    // Page became visible, resume if audio was playing when hidden
+    if (playingOnHide) {
+      audio.play();
+    }
   }
 });
 ```
@@ -108,8 +131,6 @@ document.addEventListener("visibilitychange", () => {
 #### Result
 
 {{EmbedLiveSample("Pausing audio on page hide", "", 100)}}
-
-Try playing the audio, then switching to a different tab and back again.
 
 ## Specifications
 
