@@ -9,9 +9,9 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS box sizing** module defines sizing, minimum sizing, and maximum sizing properties. It also extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based "extrinsic" size, enabling developers to specify how elements fit their content or fit into a particular layout context.
+The **CSS box sizing** module enables developers to specify how elements fit their content or fit into a particular layout context. It defines sizing, minimum sizing, and maximum sizing properties, and also extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based [extrinsic](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) size.
 
-Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including `width`, `height`, `padding`, and `margin` properties (along with `border` properties defined in the [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). The box sizing module extends the box model module to enable an element to be sized intrinsically — setting element size based on the size of its content.
+Elements can either be extrinsically or intrinsically sized. The [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) defines page-relative properties to explicitly, or "extrinsically" set an element's size, including `width`, `height`, `padding`, and `margin` properties (along with `border` properties defined in the [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module). This CSS box sizing module extends the CSS box model module to enable an element to be sized intrinsically — setting element size based on the size of its content.
 
 The sizing values introduced in this module allow elements with [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment) to take explicit intrinsic sizes, as if their in-flow content's width and height match the specified explicit intrinsic size, rather than being sized as if they were empty.
 
