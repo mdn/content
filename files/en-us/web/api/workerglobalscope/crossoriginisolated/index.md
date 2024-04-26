@@ -11,7 +11,7 @@ browser-compat: api.crossOriginIsolated
 The **`crossOriginIsolated`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a boolean value that
 indicates whether the website is in a cross-origin isolation state. That state mitigates the risk of side-channel attacks and unlocks a few capabilities:
 
-- {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("Window.postMessage()")}} call.
+- {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("DedicatedWorkerGlobalScope.postMessage()")}} or a {{DOMxRef("MessagePort.postMessage()")}} call.
 - {{DOMxRef("Performance.now()")}} offers better precision.
 - {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be accessed.
 
