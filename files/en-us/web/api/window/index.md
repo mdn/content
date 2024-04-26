@@ -37,7 +37,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
-- {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
+- {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
   - : Returns the browser crypto object.

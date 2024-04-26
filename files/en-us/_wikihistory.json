@@ -66651,6 +66651,10 @@
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/crossOriginIsolated": {
+    "modified": "2020-10-15T22:25:16.295Z",
+    "contributors": ["ExE-Boss", "chrisdavidmills"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T21:50:21.706Z",
     "contributors": [
@@ -71489,10 +71493,6 @@
       "Kaku",
       "adria"
     ]
-  },
-  "Web/API/crossOriginIsolated": {
-    "modified": "2020-10-15T22:25:16.295Z",
-    "contributors": ["ExE-Boss", "chrisdavidmills"]
   },
   "Web/API/crypto_property": {
     "modified": "2020-12-11T05:31:22.254Z",
