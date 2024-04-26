@@ -1,14 +1,14 @@
 ---
-title: crypto global property
+title: "Window: crypto property"
 short-title: crypto
-slug: Web/API/crypto_property
-page-type: web-api-global-property
+slug: Web/API/Window/crypto
+page-type: web-api-instance-property
 browser-compat: api.crypto
 ---
 
-{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
+{{APIRef("Web Crypto API")}}
 
-The global read-only **`crypto`** property returns the {{domxref("Crypto")}} object associated to the global object. This object allows web pages access to certain cryptographic related services.
+The **`crypto`** read-only property of the {{domxref("Window")}} interface returns the {{domxref("Crypto")}} object associated to the global scope. This object allows web pages access to certain cryptographic related services.
 
 Although the property itself is read-only, all of its methods (and the methods of its
 child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable
@@ -29,7 +29,7 @@ This example uses the `crypto` property to access the {{domxref("Crypto.getRando
 ```js
 globalThis.genRandomNumbers = () => {
   const array = new Uint32Array(10);
-  crypto.getRandomValues(array);
+  globalThis.crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
   randText.textContent = `The random numbers are: ${array.join(" ")}`;
@@ -59,5 +59,5 @@ globalThis.genRandomNumbers = () => {
 
 ## See also
 
-- The {{domxref("Window")}} global object
 - The {{domxref("Crypto")}} interface
+- {{domxref("WorkerGlobalScope.crypto")}}
