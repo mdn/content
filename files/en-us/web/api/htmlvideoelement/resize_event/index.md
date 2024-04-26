@@ -10,7 +10,7 @@ browser-compat: api.HTMLVideoElement.resize_event
 
 The **`resize`** event of the {{domxref("HTMLVideoElement")}} interface fires when one or both of the {{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} properties have just been updated.
 
-This event is not cancelable and may bubble.
+This event is not cancelable but may bubble.
 
 ## Syntax
 
