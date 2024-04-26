@@ -2,7 +2,7 @@
 title: "WorkerGlobalScope: crossOriginIsolated property"
 short-title: crossOriginIsolated
 slug: Web/API/WorkerGlobalScope/crossOriginIsolated
-page-type: web-api-global-property
+page-type: web-api-instance-property
 browser-compat: api.crossOriginIsolated
 ---
 
