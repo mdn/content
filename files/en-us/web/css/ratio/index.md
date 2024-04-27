@@ -3,7 +3,7 @@ title: <ratio>
 slug: Web/CSS/ratio
 page-type: css-type
 browser-compat: css.types.ratio
-spec-urls: https://drafts.csswg.org/css-sizing-4/#aspect-ratio
+spec-urls: https://drafts.csswg.org/css-values-4/#ratio-value
 ---
 
 {{CSSRef}}
