@@ -113,7 +113,7 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 ## Static methods
 
 - {{jsxref("Symbol.for()")}}
-  - : Searches for existing Symbols with the given `key` and returns it if found. Otherwise a new Symbol gets created in the global Symbol registry with `key`.
+  - : Searches for existing shared Symbols in the global Symbol registry with the given `key` and returns it if found. Otherwise a new shared Symbol gets created in the global Symbol registry with `key`.
 - {{jsxref("Symbol.keyFor()")}}
   - : Retrieves a shared Symbol key from the global Symbol registry for the given Symbol.
 
