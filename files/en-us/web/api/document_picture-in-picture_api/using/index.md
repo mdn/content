@@ -73,7 +73,7 @@ The `width` and `height` options of `requestWindow()` set the Picture-in-Picture
 ```js
 async function togglePictureInPicture() {
   // Returns null if no pip window is currently open
-  if (!!window.documentPictureInPicture.window) {
+  if (!window.documentPictureInPicture.window) {
     // Open a Picture-in-Picture window.
     const pipWindow = await documentPictureInPicture.requestWindow({
       width: videoPlayer.clientWidth,
