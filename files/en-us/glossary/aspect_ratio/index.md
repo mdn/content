@@ -45,4 +45,3 @@ myTrack.applyConstraints(constraints);
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 - {{glossary("intrinsic size")}} glossary term
 - CSS {{cssxref("min-content")}}, {{cssxref("max-content")}}, and {{cssxref("fit-content")}} property values.
-- [CSS sizing specification: intrinsic sizes](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes)
