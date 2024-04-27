@@ -137,7 +137,7 @@ Derive an AES key, given:
 - their ECDH public key
 */
 function deriveSecretKey(privateKey, publicKey) {
-  return window.crypto.subtle.deriveKey(
+  return self.crypto.subtle.deriveKey(
     {
       name: "ECDH",
       public: publicKey,
@@ -156,7 +156,7 @@ async function agreeSharedSecretKey() {
   // Generate 2 ECDH key pairs: one for Alice and one for Bob
   // In more normal usage, they would generate their key pairs
   // separately and exchange public keys securely
-  let alicesKeyPair = await window.crypto.subtle.generateKey(
+  let alicesKeyPair = await self.crypto.subtle.generateKey(
     {
       name: "ECDH",
       namedCurve: "P-384",
@@ -165,7 +165,7 @@ async function agreeSharedSecretKey() {
     ["deriveKey"],
   );
 
-  let bobsKeyPair = await window.crypto.subtle.generateKey(
+  let bobsKeyPair = await self.crypto.subtle.generateKey(
     {
       name: "ECDH",
       namedCurve: "P-384",
@@ -214,7 +214,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
+  return self.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     "PBKDF2",
@@ -225,7 +225,7 @@ function getKeyMaterial() {
 
 async function encrypt(plaintext, salt, iv) {
   const keyMaterial = await getKeyMaterial();
-  const key = await window.crypto.subtle.deriveKey(
+  const key = await self.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt,
@@ -238,7 +238,7 @@ async function encrypt(plaintext, salt, iv) {
     ["encrypt", "decrypt"],
   );
 
-  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
+  return self.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
 }
 ```
 
@@ -252,7 +252,7 @@ In this example, we encrypt a message `plainText` given a shared secret `secret`
   derive an AES-GCM key using HKDF.
   */
 function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+  return self.crypto.subtle.deriveKey(
     {
       name: "HKDF",
       salt: salt,
@@ -268,13 +268,13 @@ function getKey(keyMaterial, salt) {
 
 async function encrypt(secret, plainText) {
   const message = {
-    salt: window.crypto.getRandomValues(new Uint8Array(16)),
-    iv: window.crypto.getRandomValues(new Uint8Array(12)),
+    salt: self.crypto.getRandomValues(new Uint8Array(16)),
+    iv: self.crypto.getRandomValues(new Uint8Array(12)),
   };
 
   const key = await getKey(secret, message.salt);
 
-  message.ciphertext = await window.crypto.subtle.encrypt(
+  message.ciphertext = await self.crypto.subtle.encrypt(
     {
       name: "AES-GCM",
       iv: message.iv,

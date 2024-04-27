@@ -91,7 +91,7 @@ We then use Alice's private key and Bob's public key to derive a shared secret. 
 
 ```js
 async function deriveSharedSecret(privateKey, publicKey) {
-  const sharedSecret = await window.crypto.subtle.deriveBits(
+  const sharedSecret = await self.crypto.subtle.deriveBits(
     {
       name: "ECDH",
       namedCurve: "P-384",
@@ -113,7 +113,7 @@ async function deriveSharedSecret(privateKey, publicKey) {
 // Generate 2 ECDH key pairs: one for Alice and one for Bob
 // In more normal usage, they would generate their key pairs
 // separately and exchange public keys securely
-const generateAlicesKeyPair = window.crypto.subtle.generateKey(
+const generateAlicesKeyPair = self.crypto.subtle.generateKey(
   {
     name: "ECDH",
     namedCurve: "P-384",
@@ -122,7 +122,7 @@ const generateAlicesKeyPair = window.crypto.subtle.generateKey(
   ["deriveBits"],
 );
 
-const generateBobsKeyPair = window.crypto.subtle.generateKey(
+const generateBobsKeyPair = self.crypto.subtle.generateKey(
   {
     name: "ECDH",
     namedCurve: "P-384",
@@ -159,7 +159,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
+  return self.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -173,8 +173,8 @@ Derive some bits from a password supplied by the user.
 */
 async function getDerivedBits() {
   const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const derivedBits = await window.crypto.subtle.deriveBits(
+  salt = self.crypto.getRandomValues(new Uint8Array(16));
+  const derivedBits = await self.crypto.subtle.deriveBits(
     {
       name: "PBKDF2",
       salt,
