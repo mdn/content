@@ -27,7 +27,7 @@ In SVG, the aspect ratio is defined by the a four-value [`viewBox`](/en-US/docs/
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"></svg>
 ```
 
-In JavaScript APIs, the aspect ratio is a double-precision floating-point number representing the width divided by height. For example, setting aspect ratio contraints for a 1920x1080 video using the {{domxref("MediaTrackSettings")}} dictionary's [`aspectRatio`](/en-US/docs/Web/API/MediaTrackSettings/aspectRatio) property would be computed as 16/9, or 1920/1080, which is`1.7777777778`.
+In JavaScript APIs, querying an aspect ratio returns a double-precision floating-point number representing the width divided by height. You can also use JavaScript to set an element's aspect ratio. For example, setting an aspect ratio constraint for a 1920x1080 video using the {{domxref("MediaStreamTrack")}} or {{domxref("MediaTrackSettings")}} dictionary's [`aspectRatio`](/en-US/docs/Web/API/MediaTrackSettings/aspectRatio) property would be computed as 16/9, or 1920/1080, which is `1.7777777778`:
 
 ```javascript
 const constraints = {
