@@ -8,7 +8,7 @@ spec-urls: https://drafts.csswg.org/css-sizing-4/#aspect-ratio
 
 {{CSSRef}}
 
-The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes the proportional relationship between a width and height. It is used as a value for the [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature in [media queries](/en-US/docs/Web/CSS/CSS_media_queries) and as a value for the CSS {{cssxref("aspect-ratio")}} property.
+The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes the proportional relationship between a width and height. It is used as a value for the `aspect-ratio` media feature in {{cssxref("@media")}} media queries, the `aspect-ratio` size feature in {{cssxref("@container")}} container queries, and as a value for the CSS {{cssxref("aspect-ratio")}} property.
 
 ## Syntax
 
@@ -33,6 +33,14 @@ The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 
 ```css
 @media screen and (min-aspect-ratio: 16/9) {
+  /* … */
+}
+```
+
+### Use in a @container size query
+
+```css
+@container (aspect-ratio > 1) and (width < 20em) {
   /* … */
 }
 ```
@@ -62,4 +70,10 @@ The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 
 ## See also
 
-- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature
+- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media descriptor
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) guide
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries) guide
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS unites and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
