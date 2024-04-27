@@ -89,7 +89,7 @@ async function togglePictureInPicture() {
   pipWindow.document.body.append(videoPlayer);
 
   // Display a message to say it has been moved
-  inPipMessage.style.display = 'block';
+  inPipMessage.style.display = "block";
 }
 ```
 
