@@ -234,11 +234,7 @@ function encryptMessage(key) {
   const encoded = getMessageEncoding();
   // iv will be needed for decryption
   const iv = self.crypto.getRandomValues(new Uint8Array(12));
-  return self.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv: iv },
-    key,
-    encoded,
-  );
+  return self.crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, encoded);
 }
 ```
 

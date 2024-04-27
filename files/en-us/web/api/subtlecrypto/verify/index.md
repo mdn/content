@@ -214,12 +214,7 @@ async function verifyMessage(key) {
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
-  let result = await self.crypto.subtle.verify(
-    "HMAC",
-    key,
-    signature,
-    encoded,
-  );
+  let result = await self.crypto.subtle.verify("HMAC", key, signature, encoded);
 
   signatureValue.classList.add(result ? "valid" : "invalid");
 }
