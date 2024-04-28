@@ -96,6 +96,7 @@ fit-content(40%)
 ## See also
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 - Related CSS Grid properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
 - Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
