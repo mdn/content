@@ -1,14 +1,14 @@
 ---
-title: origin global property
+title: "Window: origin property"
 short-title: origin
-slug: Web/API/origin
-page-type: web-api-global-property
+slug: Web/API/Window/origin
+page-type: web-api-instance-property
 browser-compat: api.origin
 ---
 
-{{APIRef}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}
 
-The global **`origin`** read-only property returns the origin of the global
+The **`origin`** read-only property of the {{domxref("Window")}} interface returns the origin of the global
 scope, serialized as a string.
 
 ## Value
