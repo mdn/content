@@ -43,7 +43,7 @@ The server possibly can send back a {{HTTPStatus("406")}} (Not Acceptable) error
 Accept-Language: <language>
 Accept-Language: *
 
-// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
+// Multiple types, weighted with the quality value syntax:
 Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
 ```
 
