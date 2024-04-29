@@ -14,20 +14,20 @@ The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
 
-### Common aspect ratios
-
-|                                                                              | Ratio               | Usage                                           |
-| ---------------------------------------------------------------------------- | ------------------- | ----------------------------------------------- |
-| ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `4/3`               | Traditional TV format in the twentieth century. |
-| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `16/9`              | Modern "widescreen" TV format.                  |
-| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `185/100` = `91/50` | The most common movie format since the 1960s.   |
-| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | `239/100`           | "Widescreen," anamorphic movie format.          |
-
 ## Formal syntax
 
 {{csssyntax}}
 
 ## Examples
+
+### Common aspect ratios
+
+|                                                                              | Ratio               | Usage                                           |
+| ---------------------------------------------------------------------------- | ------------------- | ----------------------------------------------- |
+| ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `aspect-ratio: 4/3`               | Traditional TV format in the twentieth century. |
+| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `aspect-ratio: 16/9`              | Modern "widescreen" TV format.                  |
+| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `aspect-ratio: 185/100` `aspect-ratio: 91/50` `aspect-ratio: 1.82` | The most common movie format since the 1960s.   |
+| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | `aspect-ratio: 239/100`  `aspect-ratio: 2.39`         | "Widescreen," anamorphic movie format.          |
 
 ### Use in a media query
 
