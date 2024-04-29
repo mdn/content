@@ -42,13 +42,13 @@ _Also inherits properties from its parent {{domxref("EventTarget")}}_.
 
 The following properties are specified as part of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), which makes them available on the {{domxref("ScreenDetailed")}} interface; this is where we have chosen to document them. However, non-standard versions of these properties are available on the `Screen` interface in browsers that don't support that API. See this page's [Browser compatibility](#browser_compatibility) table for details of the non-standard support.
 
-- {{domxref("ScreenDetailed.availLeft", "Screen.availLeft")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("ScreenDetailed.availLeft", "Screen.availLeft")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{SecureContext_Inline}}
   - : A number representing the x-coordinate (left-hand edge) of the available screen area.
-- {{domxref("ScreenDetailed.availTop", "Screen.availTop")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("ScreenDetailed.availTop", "Screen.availTop")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{SecureContext_Inline}}
   - : A number representing the y-coordinate (top edge) of the available screen area.
-- {{domxref("ScreenDetailed.left", "Screen.left")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("ScreenDetailed.left", "Screen.left")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{SecureContext_Inline}}
   - : A number representing the x-coordinate (left-hand edge) of the total screen area.
-- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{deprecated_inline}}
+- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{deprecated_inline}} {{SecureContext_Inline}}
   - : A number representing the y-coordinate (top edge) of the total screen area.
 
 ## Instance methods

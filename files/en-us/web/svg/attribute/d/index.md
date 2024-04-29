@@ -14,7 +14,7 @@ The commands are [detailed below](#path_commands).
 
 You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
+`d` is a presentation attribute, and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
 ## Example
 
@@ -50,7 +50,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 
 ## Using d as a CSS property
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
+`d` is a presentation attribute, and hence can be also be modified using CSS.
 The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.

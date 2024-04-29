@@ -39,21 +39,21 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.
 - `vertical-lr`
   - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.
-- `sideways-rl` {{experimental_inline}}
+- `sideways-rl`
   - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the right.
-- `sideways-lr` {{experimental_inline}}
+- `sideways-lr`
   - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the left.
-- `lr` {{deprecated_inline}}
+- `lr`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `lr-tb` {{deprecated_inline}}
+- `lr-tb`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `rl` {{deprecated_inline}}
+- `rl`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `tb` {{deprecated_inline}}
+- `tb`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-lr` {{deprecated_inline}}
+- `tb-lr`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-rl` {{deprecated_inline}}
+- `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
 
 ## Formal definition
@@ -297,3 +297,4 @@ span {
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

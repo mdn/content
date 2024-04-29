@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStore.get
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
-
-{{AvailableInWorkers}}
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given `name` or `options` object. The method will return the first matching cookie for the passed parameters.
 
 ## Syntax
 
@@ -41,7 +39,7 @@ Or
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted name or options. This object contains the following properties:
+A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted `name` or `options`. This object contains the following properties:
 
 - `domain`
 
@@ -57,7 +55,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 - `partitioned`
 
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
 
 - `path`
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.construct
 
 {{JSRef}}
 
-The **`Reflect.construct()`** static method is like the {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It gives also the added option to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
+The **`Reflect.construct()`** static method is like the {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It additionally allows to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
 
 {{EmbedInteractiveExample("pages/js/reflect-construct.html", "taller")}}
 
@@ -89,6 +89,8 @@ function OtherClass() {
   this.name = "other";
 }
 
+const args = [];
+const obj1 = Reflect.construct(OneClass, args, OtherClass);
 const obj2 = Object.create(OtherClass.prototype);
 OneClass.apply(obj2, args);
 
@@ -100,18 +102,6 @@ console.log(obj2 instanceof OneClass); // false
 
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
-
-// Another example to demonstrate below:
-
-function func1(a, b, c, d) {
-  console.log(arguments[3]);
-}
-
-function func2(d, e, f, g) {
-  console.log(arguments[3]);
-}
-
-const obj1 = Reflect.construct(func1, ["I", "Love", "my", "country"]);
 ```
 
 However, while the end result is the same, there is one important difference in the process. When using `Object.create()` and {{jsxref("Function.prototype.apply()")}}, the `new.target` operator will point to `undefined` within the function used as the constructor, since the `new` keyword is not being used to create the object. (In fact, it uses the [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply) semantic, not `construct`, although normal functions happen to operate nearly the same.)

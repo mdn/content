@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/form.html
 ---
 
+{{AccessibilitySidebar}}
+
 The `form` role can be used to identify a group of elements on a page that provide equivalent functionality to an HTML form. The form is not exposed as a landmark region unless it has an [accessible name](/en-US/docs/Glossary/Accessible_name).
 
 ```html
@@ -125,11 +127,3 @@ Using the {{HTMLElement('form')}} element will automatically communicate a secti
 - The {{HTMLElement('form')}} element
 - The {{HTMLElement('legend')}} element
 - [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

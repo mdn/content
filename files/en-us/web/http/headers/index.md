@@ -8,7 +8,8 @@ page-type: landing-page
 
 **HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
 
-Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in an [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229). IANA also maintains a [registry of proposed new HTTP headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers).
+Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
+The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status), which may be "permanent" (standards-defined), "provisional" (new), "deprecated" (use not recommended), or "obsolete" (no longer in use).
 
 Headers can be grouped according to their contexts:
 
@@ -49,6 +50,8 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
   - : Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.
 - {{HTTPHeader("Expires")}}
   - : The date/time after which the response is considered stale.
+- {{HTTPHeader("No-Vary-Search")}} {{experimental_inline}}
+  - : Specifies a set of rules that define how a URL's query parameters will affect cache matching. These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
 
 ## Conditionals
 
@@ -311,6 +314,8 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : User's preference to see fewer animations and content layout shifts.
 
+> **Note:** User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+
 #### Device client hints
 
 - {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
@@ -358,6 +363,8 @@ Network client hints allow a server to choose what information is sent based on 
   - : The [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) header field identifies an ordered list of response header fields to include in a signature.
+- {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
+  - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
@@ -390,5 +397,5 @@ You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/D
 ## See also
 
 - [Wikipedia page on List of HTTP headers](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-- [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)
+- [IANA registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml)
 - [HTTP Working Group](https://httpwg.org/specs/)

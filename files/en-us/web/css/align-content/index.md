@@ -7,7 +7,7 @@ browser-compat: css.properties.align-content
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_grid_layout)'s block axis.
+The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross axis](/en-US/docs/Glossary/Cross_Axis), or a [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [block-level](/en-US/docs/Glossary/Block-level_content) element's block axis.
 
 The interactive example below uses Grid Layout to demonstrate some of the values of this property.
 
@@ -18,16 +18,16 @@ This property has no effect on single line flex containers (i.e. ones with `flex
 ## Syntax
 
 ```css
-/* Basic positional alignment */
-/* align-content does not take left and right values */
-align-content: center; /* Pack items around the center */
-align-content: start; /* Pack items from the start */
-align-content: end; /* Pack items from the end */
-align-content: flex-start; /* Pack flex items from the start */
-align-content: flex-end; /* Pack flex items from the end */
-
 /* Normal alignment */
 align-content: normal;
+
+/* Basic positional alignment */
+/* align-content does not take left and right values */
+align-content: start;
+align-content: center;
+align-content: end;
+align-content: flex-start;
+align-content: flex-end;
 
 /* Baseline alignment */
 align-content: baseline;
@@ -35,17 +35,10 @@ align-content: first baseline;
 align-content: last baseline;
 
 /* Distributed alignment */
-align-content: space-between; /* Distribute items evenly
-                                 The first item is flush with the start,
-                                 the last is flush with the end */
-align-content: space-around; /* Distribute items evenly
-                                 Items have a half-size space
-                                 on either end */
-align-content: space-evenly; /* Distribute items evenly
-                                 Items have equal space around them */
-align-content: stretch; /* Distribute items evenly
-                                 Stretch 'auto'-sized items to fit
-                                 the container */
+align-content: space-between;
+align-content: space-around;
+align-content: space-evenly;
+align-content: stretch;
 
 /* Overflow alignment */
 align-content: safe center;
@@ -61,8 +54,12 @@ align-content: unset;
 
 ### Values
 
+- `normal`
+  - : The items are packed in their default position as if no `align-content` value was set.
 - `start`
   - : The items are packed flush to each other against the start edge of the alignment container in the cross axis.
+- `center`
+  - : The items are packed flush to each other in the center of the alignment container along the cross axis.
 - `end`
   - : The items are packed flush to each other against the end edge of the alignment container in the cross axis.
 - `flex-start`
@@ -71,10 +68,6 @@ align-content: unset;
 - `flex-end`
   - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
-- `center`
-  - : The items are packed flush to each other in the center of the alignment container along the cross axis.
-- `normal`
-  - : The items are packed in their default position as if no `align-content` value was set.
 - `baseline`, `first baseline`, `last baseline`
 
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
@@ -96,6 +89,8 @@ align-content: unset;
 - `unsafe`
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
+> **Note:** The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject)
+
 ## Formal definition
 
 {{CSSInfo}}
@@ -106,143 +101,137 @@ align-content: unset;
 
 ## Examples
 
-### CSS
+In this example, you can switch between three different {{cssxref("display")}} property values, including `flex`, `grid`, and `block`. You can also switch between the different values for `align-content`.
 
-```css
-#container {
-  height: 200px;
-  width: 240px;
-  align-content: center; /* Can be changed in the live sample */
-  background-color: #8c8c8c;
+#### HTML
+
+```html-nolint hidden
+<div class="wrapper">
+```
+
+```html
+<section>
+  <div class="olive">Olive</div>
+  <div class="coral">Coral</div>
+  <div class="deepskyblue">Deep<br />sky<br />blue</div>
+  <div class="orchid">Orchid</div>
+  <div class="slateblue">Slateblue</div>
+  <div class="maroon">Maroon</div>
+</section>
+```
+
+```html-nolint hidden
+<fieldset class="controls">
+    <legend>Controls</legend>
+    <div class="row">
+      <label for="display">display: </label>
+      <select id="display">
+        <option value="block" selected>block</option>
+        <option value="flex">flex</option>
+        <option value="grid">grid</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="alignContent">align-content: </label>
+      <select id="alignContent">
+        <option value="normal" selected>normal</option>
+        <option value="start">start</option>
+        <option value="center">center</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+      </select>
+    </div>
+    <p>CSS applied</p>
+    <pre>
+section {
+  display: <span id="displayStyle">block</span>;
+  align-content: <span id="align">normal</span>
 }
+    </pre>
+  </fieldset>
+</div>
+```
 
-.flex {
+#### CSS
+
+```css hidden
+.wrapper {
+  font-size: 1.25rem;
   display: flex;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
-}
-
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#item1 {
-  background-color: #8cffa0;
-  min-height: 30px;
-}
-
-#item2 {
-  background-color: #a0c8ff;
-  min-height: 50px;
-}
-
-#item3 {
-  background-color: #ffa08c;
-  min-height: 40px;
-}
-
-#item4 {
-  background-color: #ffff8c;
-  min-height: 60px;
-}
-
-#item5 {
-  background-color: #ff8cff;
-  min-height: 70px;
-}
-
-#item6 {
-  background-color: #8cffff;
-  min-height: 50px;
-  font-size: 30px;
-}
-
-select {
-  font-size: 16px;
-}
-
-.row {
-  margin-top: 10px;
+section div {
+  font-family: monospace;
+  padding: 3px;
 }
 ```
 
-### HTML
-
-```html
-<div id="container" class="flex">
-  <div id="item1">1</div>
-  <div id="item2">2</div>
-  <div id="item3">3</div>
-  <div id="item4">4</div>
-  <div id="item5">5</div>
-  <div id="item6">6</div>
-</div>
-
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
-</div>
-
-<div class="row">
-  <label for="values">align-content: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="stretch">stretch</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="space-between">space-between</option>
-    <option value="space-around">space-around</option>
-    <option value="space-evenly">space-evenly</option>
-
-    <option value="start">start</option>
-    <option value="end">end</option>
-
-    <option value="baseline">baseline</option>
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
-
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
-</div>
+```css
+section {
+  border: solid 1.5px tomato;
+  height: 300px;
+  width: 300px;
+  flex-wrap: wrap; /* used by flex only */
+  gap: 0.2rem; /* not used by block */
+}
+.olive {
+  background-color: olive;
+}
+.coral {
+  background-color: coral;
+}
+.deepskyblue {
+  background-color: deepskyblue;
+}
+.orchid {
+  background-color: orchid;
+}
+.slateblue {
+  background-color: slateblue;
+  color: white;
+}
+.maroon {
+  background-color: maroon;
+  color: white;
+}
 ```
 
 ```js hidden
-const values = document.getElementById("values");
-const display = document.getElementById("display");
-const container = document.getElementById("container");
-
-values.addEventListener("change", (evt) => {
-  container.style.alignContent = evt.target.value;
+const alignContent = document.querySelector("#alignContent");
+const display = document.querySelector("#display");
+const container = document.querySelector("section");
+const displayStyle = document.querySelector("#displayStyle");
+const alignStyle = document.querySelector("#align");
+document.addEventListener("load", () => {
+  updatePage();
 });
-
-display.addEventListener("change", (evt) => {
-  container.className = evt.target.value;
+alignContent.addEventListener("change", () => {
+  updatePage();
 });
+display.addEventListener("change", () => {
+  updatePage();
+});
+function updatePage() {
+  const alVal = alignContent.value;
+  const dVal = display.value;
+  container.style.alignContent = alVal;
+  container.style.display = dVal;
+  alignStyle.innerText = alVal;
+  displayStyle.innerText = dVal;
+}
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", 260, 290)}}
+Try changing the `display` value and the `align-content` value.
+
+{{EmbedLiveSample("Examples", 260, 310)}}
+
+In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content), child elements are treated as a single element, meaning `space-between`, `space-around`, and `space-evenly` behave differently.
 
 ## Specifications
 
@@ -258,3 +247,6 @@ display.addEventListener("change", (evt) => {
 - CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Block-level_content](/en-US/docs/Glossary/Block-level_content)
+- {{CSSXRef("display")}}

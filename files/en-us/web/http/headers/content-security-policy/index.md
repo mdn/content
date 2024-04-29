@@ -55,12 +55,13 @@ where `<policy-directive>` consists of:
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
-    directives")}}.
+  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
+- {{CSP("fenced-frame-src")}} {{experimental_inline}}
+  - : Specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 - {{CSP("font-src")}}
   - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
 - {{CSP("frame-src")}}
-  - : Specifies valid sources for nested browsing contexts loading using elements such as
+  - : Specifies valid sources for nested browsing contexts loaded into elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 - {{CSP("img-src")}}
   - : Specifies valid sources of images and favicons.
@@ -261,7 +262,7 @@ Content-Security-Policy: connect-src http://example.com/;
 ## Examples
 
 Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over https:
+scripts, etc.) over http:
 
 ### Using the HTTP header
 

@@ -4,12 +4,17 @@ slug: Web/HTTP/Headers/Want-Digest
 page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.Want-Digest
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}
+{{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
 
-The **`Want-Digest`** HTTP header is primarily used in a request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
+> **Note:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
+> Use {{HTTPHeader("Want-Content-Digest")}} instead.
+> For `id-*` digest algorithms, use {{HTTPHeader("Want-Repr-Digest")}}.
+
+The **`Want-Digest`** request or response HTTP header requests the other side to provide a {{Glossary("digest")}} using the {{HTTPHeader("Digest")}} header.
 
 The header contains identifiers for one or more digest algorithms that the sender wishes the server to use to create the digest.
 The request may use {{Glossary("quality values")}} to indicate its preference/order for particular digest algorithms.
@@ -19,7 +24,7 @@ If `Want-Digest` does not include any digest algorithms that the server supports
 - a digest calculated using a different digest algorithm, or
 - a [`400 Bad Request`](/en-US/docs/Web/HTTP/Status/400) error, and include another `Want-Digest` header with that response, listing the algorithms that it does support.
 
-See the page for the {{HTTPHeader("Digest")}} header for more information.
+See also the {{HTTPHeader("Digest")}} header.
 
 <table class="properties">
   <tbody>

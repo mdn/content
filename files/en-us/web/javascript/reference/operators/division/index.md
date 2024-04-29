@@ -25,37 +25,48 @@ For BigInt division, the result is the quotient of the two operands truncated to
 
 ## Examples
 
-### Basic division
+### Division using numbers
 
 ```js
 1 / 2; // 0.5
-
 Math.floor(3 / 2); // 1
-
 1.0 / 2.0; // 0.5
 
+2 / 0; // Infinity
+2.0 / 0.0; // Infinity, because 0.0 === 0
+2.0 / -0.0; // -Infinity
+```
+
+Other non-BigInt values are coerced to numbers:
+
+```js
+5 / "2"; // 2.5
+5 / "foo"; // NaN
+```
+
+### Division using BigInts
+
+```js
 1n / 2n; // 0n
 5n / 3n; // 1n
 -1n / 3n; // 0n
 1n / -3n; // 0n
 
-2n / 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
-
-// To do division with a BigInt and a non-BigInt, convert either operand
-2n / BigInt(2); // 1n
-Number(2n) / 2; // 1
+2n / 0n; // RangeError: BigInt division by zero
 ```
 
-### Division by zero
+You cannot mix BigInt and number operands in division.
+
+```js example-bad
+2n / 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 / 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+To do division with a BigInt and a non-BigInt, convert either operand:
 
 ```js
-2.0 / 0; // Infinity
-
-2.0 / 0.0; // Infinity, because 0.0 === 0
-
-2.0 / -0.0; // -Infinity
-
-2n / 0n; // RangeError: Division by zero
+2n / BigInt(2); // 1n
+Number(2n) / 2; // 1
 ```
 
 ## Specifications

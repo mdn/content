@@ -9,12 +9,15 @@ browser-compat: css.selectors.user-valid
 
 The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
 
-This pseudo-class is applied according to the following rules:
+This pseudo-class is applied if the form control is valid and any of the following has occurred:
 
-- If the control does not have focus, and the value is valid, apply this pseudo-class.
-- If the control has focus, and the value was valid (including empty) when it gained focus, apply this pseudo-class.
+- The user made a change to the form control and committed the change such as by moving focus elsewhere.
+- The user has attempted to submit the form, even if no change was made to the control.
+- The value was invalid when it gained focus, and the user made a change making it valid, even if focus is still in the control.
+
+Once this pseudo-class has been applied, the user-agent re-validates whether the control is valid at every keystroke when the control has focus.
+
 - If the control has focus, and the value was invalid when it gained focus, re-validate on every keystroke.
-- If the element is required, the preceding rules apply only if the user has changed the value or attempted to submit the form.
 
 The result is that if the control was valid when the user started interacting with it, the validity styling is changed only when the user shifts focus to another control. However, if the user is trying to correct a previously-flagged value, the control shows immediately when the value becomes valid. Required items are flagged as invalid only if the user changes them or attempts to submit an unchanged invalid value.
 

@@ -111,7 +111,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to
-          <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>.
+          <a href="/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
@@ -202,10 +202,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Wheel events fired on
-          <a href="/en-US/docs/Web/API/Document/wheel_event"
-            ><code>Document</code></a
-          >
-          and
           <a href="/en-US/docs/Web/API/Element/wheel_event"
             ><code>Element</code></a
           >
@@ -811,10 +807,9 @@ This topic provides an index to the main _sorts_ of events you might be interest
         >,
         <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"
           ><code>WorkerGlobalScope</code></a
-        >, <a href="/en-US/docs/Web/API/Worker#events"><code>Worker</code></a
         >,
-        <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"
-          ><code>WorkerGlobalScope</code></a
+        <a href="/en-US/docs/Web/API/Worker#events"
+          ><code>Worker</code></a
         >,
         <a href="/en-US/docs/Web/API/BroadcastChannel#events"
           ><code>BroadcastChannel</code></a

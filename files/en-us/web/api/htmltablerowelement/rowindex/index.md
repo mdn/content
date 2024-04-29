@@ -8,8 +8,8 @@ browser-compat: api.HTMLTableRowElement.rowIndex
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTableRowElement.rowIndex`** read-only property
-represents the position of a row in relation to the whole {{HtmlElement("table")}}.
+The **`rowIndex`** read-only property of the {{domxref("HTMLTableRowElement")}} interface
+represents the position of a row within the whole {{HtmlElement("table")}}.
 
 Even when the {{HtmlElement("thead")}}, {{HtmlElement("tbody")}}, and
 {{HtmlElement("tfoot")}} elements are out of order in the HTML, browsers render the
@@ -77,3 +77,7 @@ rows.forEach((row) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}}

@@ -2,7 +2,7 @@
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-dashoffset
+browser-compat: svg.global_attributes.stroke-dashoffset
 ---
 
 {{SVGRef}}

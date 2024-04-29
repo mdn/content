@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/search.html
 ---
 
+{{AccessibilitySidebar}}
+
 The `search` role is used to identify the search functionality; the section of the page used to search the page, site, or collection of sites.
 
 ```html
@@ -94,11 +96,3 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 - The {{HTMLElement('search')}} element
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>
