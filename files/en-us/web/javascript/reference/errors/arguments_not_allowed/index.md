@@ -22,12 +22,10 @@ SyntaxError: Unexpected identifier 'arguments'. Cannot reference 'arguments' in 
 
 ## What went wrong?
 
-A class field initializer expression or a class static initialization block cannot read from its scope the `arguments` identifier. Doing so is a syntax error.
+A class field initializer expression or a class static initialization block does not have `arguments` in its scope. Trying to access it is a syntax error.
 
-### Notes
-
-- This is true even if `arguments` is bound in a parent scope.
-- A non-arrow function declared in the previous conditions will still bind and be able to read its own `arguments` identifier.
+- This is true even if `arguments` is bound in a parent scope (such as when the class is nested in a non-arrow function).
+- A non-arrow function declared within this scope will still bind its own `arguments` and read it normally.
 
 ## Examples
 
@@ -74,4 +72,5 @@ function makeOne() {
 ## See also
 
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Static Initialization Blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
