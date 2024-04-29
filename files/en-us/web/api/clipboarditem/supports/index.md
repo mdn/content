@@ -1,5 +1,5 @@
 ---
-title: "ClipboardItem: supports() method"
+title: "ClipboardItem: supports() static method"
 short-title: supports()
 slug: Web/API/ClipboardItem/supports
 page-type: web-api-static-method
