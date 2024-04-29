@@ -23,10 +23,11 @@ new URL(url, base)
 
 - `url`
   - : A string or any other object with a {{Glossary("stringifier")}} that represents an absolute or relative URL.
-    If `url` is a relative URL, `base` is required, and will be used as the base URL.
+    If `url` is a relative URL, `base` is required, and is used to resolve the final absolute URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
   - : A string representing the base URL to use in cases where `url` is a relative URL.
+    Note that only the scheme and domain are used for resolving `url`: other URL parts, such as a port, path, or query parameters, are not used.
     If not specified, it defaults to `undefined`.
 
 > **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, such as an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element, just like with other Web APIs that accept a string.
