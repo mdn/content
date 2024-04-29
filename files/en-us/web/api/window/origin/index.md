@@ -8,8 +8,7 @@ browser-compat: api.origin
 
 {{APIRef("DOM")}}
 
-The **`origin`** read-only property of the {{domxref("Window")}} interface returns the origin of the global
-scope, serialized as a string.
+The **`origin`** read-only property of the {{domxref("Window")}} interface returns the origin of the global scope, serialized as a string.
 
 ## Value
 
@@ -17,18 +16,13 @@ A string.
 
 ## Examples
 
-Executed from inside a worker script, the following snippet will log the worker's
-global scope's origin to the console each time it receives a message
+Executed from inside window scope, the following snippet will log the document's global scope's origin to the console.
 
 ```js
-onmessage = () => {
-  console.log(self.origin);
-};
+console.log(window.origin);
 ```
 
-If the origin is not a scheme/host/port tuple (say you are trying to run it locally,
-i.e. via `file://` URL), `origin` will return the string
-`"null"`.
+If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via `file://` URL), `origin` will return the string `"null"`.
 
 ## Specifications
 
