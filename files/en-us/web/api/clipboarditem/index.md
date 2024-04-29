@@ -32,7 +32,7 @@ _This interface provides the following properties._
 _This interface defines the following methods._
 
 - {{domxref("ClipboardItem.supports", "supports()")}}
-  - : Returns true or false whether a {{Glossary("MIME type")}} type is supported. This allows us to detect if a {{Glossary("MIME type")}} is supported by the clipboard before attempting to write data.
+  - : Checks whether a given {{Glossary("MIME type")}} is supported by the clipboard. This allows us to detect if a MIME type is supported by the clipboard before attempting to write data.
 
 ## Instance methods
 
