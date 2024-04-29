@@ -19,7 +19,7 @@ supports(type)
 ### Parameters
 
 - `type`
-  - : A valid {{Glossary("MIME type")}}.
+  - : A string representing a {{Glossary("MIME type")}}.
 
 ### Return value
 
