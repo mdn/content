@@ -279,7 +279,7 @@ The property is only set for the matching selector and its descendants.
 
 ### Using `@property` to control inheritance
 
-The `@property` at-rule lets you explicity state whether the property inherits or not.
+The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
 Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an intital value of `cornflowerblue`.
 

@@ -8,7 +8,7 @@ browser-compat: api.CookieStore.delete
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. The `delete()` method expires the cookie by changing the date to one in the past.
+The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie with the given `name` or `options` object. The `delete()` method expires the cookie by changing the date to one in the past.
 
 ## Syntax
 
