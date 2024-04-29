@@ -51,7 +51,7 @@ This live example demonstrates how to use the `URL.parse()` static method for a 
 
 ```css hidden
 #log {
-  height: 250px;
+  height: 100px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -72,40 +72,38 @@ We also log the case when `URL.parse()` is not supported.
 
 ```js
 if ("parse" in URL) {
+  // Relative URL appended to valid base URL
   let result = URL.parse("en-US/docs", "https://developer.mozilla.org");
-  log("//Relative URL appended to valid base URL");
-  log(`Url.parse("${url}", "${base}")\n// ${result}`);
+  log(`[1]: ${result.href}`);
 
-  url = "https://example.org/some/docs";
-  result = URL.parse(url, base);
-  log("\n//Absolute URL (base URL ignored)");
-  log(`Url.parse("${url}", "${base}")\n// => ${result}`);
+  // Absolute url argument (base URL ignored)
+  result = URL.parse(
+    "https://example.org/some/docs",
+    "https://developer.mozilla.org",
+  );
+  log(`[2]: ${result.href}`);
 
-  log("\n//Invalid base URL (missing colon)");
-  base = "https//developer.mozilla.org";
-  result = URL.parse(url, base);
-  log(`Url.Parse("${url}", "${base}")\n// ${result}`);
+  // Invalid base URL (missing colon)
+  result = URL.parse("en-US/docs", "https//developer.mozilla.org");
+  log(`[3]: ${result}`);
 } else {
   log("URL.parse() not supported");
 }
 ```
 
-Last of all, the code below shows that the `baseUrl` doesn't have to be a string.
-Here we have passed a `URL` object.
+Last of all, the code below demonstrates that the arguments don't have to be strings, by passing an `URL` object for the `base` parameter.
 
 ```js
 if ("parse" in URL) {
-  log("\nRelative URL with base URL supplied as a URL object");
-  base = new URL("https://developer.mozilla.org/");
-  url = "/en-US/docs";
-  result = URL.parse(url, base);
-  log(`Url.parse("${url}", "${base}")\n// ${result}`);
+  // Relative URL with base URL supplied as a URL object
+  result = URL.parse("/en-US/docs", new URL("https://developer.mozilla.org/"));
+  log(`[4]: ${result.href}`);
 }
 ```
 
 The results of each of the checks are shown below.
 
-{{EmbedLiveSample('URL.parse()', '100%', '300')}}
+{{EmbedLiveSample('URL.parse()', '100%')}}
 
 ## Specifications
 
