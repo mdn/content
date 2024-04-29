@@ -27,7 +27,13 @@ A boolean: `true` if the given {{Glossary("MIME type")}} is supported by the cli
 
 ## Examples
 
-In the following example, we're writing data to the clipboard via the {{domxref("clipboard.write()")}} method. Then we utilize {{domxref("ClipboardItem.supports", "supports()")}} to see if the {{Glossary("MIME type")}} is supported by the clipboard before attempting to write it to the clipboard. Using {{domxref("ClipboardItem.supports", "supports()")}} saves us from costly and unesseary CPU cycles from attempting to write unsupported formats to the clipboard. A `try..catch` block can be used to catch any errors while writing the data to the clipboard.
+### Writing an image to the clipboard
+
+In the following example, we're writing an image to the clipboard.
+
+We use `supports()` to check whether the `"image/png"` MIME type is supported by the clipboard before fetching the image and writing it using {{domxref("clipboard.write()")}}.
+
+We also use a [`try..catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement to catch any errors while writing the data to the clipboard.
 
 ```js
 async function writeClipImg() {
