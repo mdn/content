@@ -1,5 +1,5 @@
 ---
-title: "HTMLTableSectionlement: chOff property"
+title: "HTMLTableSectionElement: chOff property"
 short-title: chOff
 slug: Web/API/HTMLTableSectionElement/chOff
 page-type: web-api-instance-property
