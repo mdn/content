@@ -24,10 +24,10 @@ The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 
 |                                                                              | Ratio               | Usage                                           |
 | ---------------------------------------------------------------------------- | ------------------- | ----------------------------------------------- |
-| ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `aspect-ratio: 4/3`               | Traditional TV format in the twentieth century. |
-| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `aspect-ratio: 16/9`              | Modern "widescreen" TV format.                  |
-| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `aspect-ratio: 185/100` `aspect-ratio: 91/50` `aspect-ratio: 1.82` | The most common movie format since the 1960s.   |
-| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | `aspect-ratio: 239/100`  `aspect-ratio: 2.39`         | "Widescreen," anamorphic movie format.          |
+| ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `4/3` or `1.33333`             | Traditional TV format in the twentieth century. |
+| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `16/9` or `1.7777778`           | Modern "widescreen" TV format.                  |
+| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `185/100` or `1.85` | The most common movie format since the 1960s.   |
+| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | `239/100` or  `2.39`         | "Widescreen," anamorphic movie format.          |
 
 ### Use in a media query
 
