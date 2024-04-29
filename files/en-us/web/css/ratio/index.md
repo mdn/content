@@ -16,8 +16,8 @@ The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 
 ### Common aspect ratios
 
-| Ratio               |                                                                              | Usage                                           |
-| ----------------------| ----------------------------------------------------------------------------  | ----------------------------------------------- |
+| Ratio                 |                                                                              | Usage                                           |
+| --------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------- |
 | `4/3` or `1.33333`    | ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | Traditional TV format in the twentieth century. |
 | `16/9` or `1.7777778` | ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | Modern "widescreen" TV format.                  |
 | `185/100` or `1.85`   | ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | The most common movie format since the 1960s.   |
