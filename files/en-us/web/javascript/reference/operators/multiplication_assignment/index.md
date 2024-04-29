@@ -30,7 +30,7 @@ let bar = 5;
 bar *= 2; // 10
 ```
 
-### Multiplication assignment using non-numbers
+Other non-BigInt values are coerced to numbers:
 
 ```js
 let bar = 5;
@@ -42,6 +42,7 @@ bar *= "foo"; // NaN
 ```js
 let foo = 3n;
 foo *= 2n; // 6n
+foo *= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

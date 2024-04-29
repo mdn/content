@@ -30,7 +30,7 @@ let bar = 5;
 bar **= 2; // 25
 ```
 
-### Exponentiation assignment using non-numbers
+Other non-BigInt values are coerced to numbers:
 
 ```js
 let baz = 5;
@@ -42,6 +42,7 @@ baz **= "foo"; // NaN
 ```js
 let foo = 3n;
 foo **= 2n; // 9n
+foo **= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications
