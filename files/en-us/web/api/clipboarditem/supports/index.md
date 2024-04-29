@@ -3,7 +3,7 @@ title: "ClipboardItem: supports() static method"
 short-title: supports()
 slug: Web/API/ClipboardItem/supports
 page-type: web-api-static-method
-browser-compat: api.ClipboardItem.supports
+browser-compat: api.ClipboardItem.supports_static
 ---
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
