@@ -23,7 +23,7 @@ supports(type)
 
 ### Return value
 
-True or false value based on whether that {{Glossary("MIME type")}} is supported by the clipboard.
+A boolean: `true` if the given {{Glossary("MIME type")}} is supported by the clipboard, `false` otherwise.
 
 ## Examples
 
