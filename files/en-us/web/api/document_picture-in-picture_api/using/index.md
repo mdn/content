@@ -78,7 +78,7 @@ async function togglePictureInPicture() {
   }
 
   // Open a Picture-in-Picture window.
-  const pipWindow = await documentPictureInPicture.requestWindow({
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
     width: videoPlayer.clientWidth,
     height: videoPlayer.clientHeight,
   });
