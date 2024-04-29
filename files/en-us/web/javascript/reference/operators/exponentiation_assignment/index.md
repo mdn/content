@@ -23,21 +23,21 @@ x **= y
 
 ## Examples
 
-### Exponentiation assignment with numbers
+### Exponentiation assignment using numbers
 
 ```js
 let bar = 5;
 bar **= 2; // 25
 ```
 
-### Exponentiation assignment with non-numbers
+### Exponentiation assignment using non-numbers
 
 ```js
 let baz = 5;
 baz **= "foo"; // NaN
 ```
 
-### Exponentiation assignment with BigInts
+### Exponentiation assignment using BigInts
 
 ```js
 let foo = 3n;
