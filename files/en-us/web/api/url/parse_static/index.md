@@ -27,9 +27,13 @@ URL.parse(url, base)
     If `url` is a relative URL, `base` is required, and is used to resolve the final absolute URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
+
   - : A string representing the base URL to use in cases where `url` is a relative URL.
-    Note that only the scheme and domain are used for resolving `url`: other URL parts, such as a port, path, or query parameters, are not used.
     If not specified, it defaults to `undefined`.
+
+    When using a `base`, the resulting URL is not simply a concatenation of `url` and `base`.
+    For example, the scheme and domain of the `base` are used for resolving `url`, but any URL path after the last backslash, a given port, or query parameters, are not used.
+    For more information see [Resolving relative URLs](/en-US/docs/Web/API/URL_API/Resolving_relative_urls).
 
 > **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, such as an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element, just like with other Web APIs that accept a string.
 > In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will be stringified from the object's {{domxref("URL.href", "href")}} property.
@@ -67,7 +71,7 @@ function log(text) {
 ```
 
 First we check that the `URL.parse()` method is supported using the condition `"parse" in URL`.
-If the method is supported we log the result of checking a relative URL with a base URL, a relative URL with a more complicated base URL, a valid absolute URL with a valid base URL (which is not used), and an invalid base URL that results in the method returning `null`.
+If the method is supported we log the result of checking a relative URL with a base URL, a relative URL with a more [complicated base URL](/en-US/docs/Web/API/URL_API/Resolving_relative_urls), a valid absolute URL with a valid base URL (which is not used), and an invalid base URL that results in the method returning `null`.
 
 We also log the case when `URL.parse()` is not supported.
 

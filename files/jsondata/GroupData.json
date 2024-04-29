@@ -1676,6 +1676,7 @@
     },
     "URL API": {
       "overview": ["URL API"],
+      "guides": ["Web/API/URL_API/Resolving_relative_urls"],
       "interfaces": ["URL", "URLSearchParams"],
       "methods": [],
       "properties": [],
