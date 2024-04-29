@@ -203,11 +203,11 @@ The resulting canvas looks like this:
 The third and last variant of the `drawImage()` method has eight parameters in addition to the image source. It lets us cut out a section of the source image, then scale and draw it on our canvas.
 
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
-  - : Given an `image`, this function takes the area of the source image specified by the rectangle whose top-left corner is (`sx`, `sy`) and whose width and height are `sWidth` and `sHeight` and draws it into the canvas, placing it on the canvas at (`dx`, `dy`) and scaling it to the size specified by `dWidth` and `dHeight`.
+  - : Given an `image`, this function takes the area of the source image specified by the rectangle whose top-left corner is (`sx`, `sy`) and whose width and height are `sWidth` and `sHeight` and draws it into the canvas, placing it on the canvas at (`dx`, `dy`) and scaling it to the size specified by `dWidth` and `dHeight`, maintaining its {{glossary("aspect ratio")}}.
 
 To really understand what this does, it may help to look at this image:
 
-![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, maintaining its {{glossary("aspect ratio")}}, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
+![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
 
 The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
 
