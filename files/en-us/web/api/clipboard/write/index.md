@@ -54,8 +54,8 @@ Note that for this particular case, you could just as readily use `Clipboard.wri
 button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
-  if (ClipboardItem.supports("text/plain")) {
-    const type = "text/plain";
+  const type = "text/plain";
+  if (ClipboardItem.supports(type)) {
     const blob = new Blob([text], { type });
     const data = [new ClipboardItem({ [type]: blob })];
     await navigator.clipboard.write(data);
