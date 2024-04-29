@@ -262,7 +262,7 @@ Content-Security-Policy: connect-src http://example.com/;
 ## Examples
 
 Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over https:
+scripts, etc.) over http:
 
 ### Using the HTTP header
 
