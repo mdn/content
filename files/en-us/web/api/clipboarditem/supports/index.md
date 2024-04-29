@@ -8,7 +8,7 @@ browser-compat: api.ClipboardItem.supports
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`supports()`** method of the {{domxref("ClipboardItem")}} interface returns true or false based on whether the specific {{Glossary("MIME type")}} type parameter is supprted by the clipboard.
+The **`supports()`** static method of the {{domxref("ClipboardItem")}} interface indicates whether or not the given {{Glossary("MIME type")}} is supported by the clipboard.
 
 ## Syntax
 
