@@ -45,7 +45,7 @@ _This interface defines the following methods._
 
 ### Writing to the clipboard
 
-Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new `ClipboardItem`. Then we use {{domxref("ClipboardItem.supports", "supports()")}} to determine if the MIME data type is supported before writing it to the clipboard.
+Here we use {{domxref("ClipboardItem.supports", "supports()")}} to determine if 'img/png' MIME data type is supported before generating the image data and writing it to the clipboard. The image is generated using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method is used to create a `ClipboardItem` that is written to the clipboard.
 
 ```js
 async function writeClipImg() {
