@@ -22,15 +22,15 @@ new URL(url, base)
 ### Parameters
 
 - `url`
-  - : A string or any other object with a {{Glossary("stringifier")}} — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+  - : A string or any other object with a {{Glossary("stringifier")}} that represents an absolute or relative URL.
     If `url` is a relative URL, `base` is required, and will be used as the base URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.
 
-> **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept a string.
-> In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will stringify to the object's {{domxref("URL.href", "href")}} property.
+> **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, such as an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element, just like with other Web APIs that accept a string.
+> In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will be stringified from the object's {{domxref("URL.href", "href")}} property.
 
 The resulting URL is not simply a concatenation of `url` and `base`.
 The path sections of both arguments are merged according to [RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
