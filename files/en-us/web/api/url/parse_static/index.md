@@ -72,7 +72,7 @@ We also log the case when `URL.parse()` is not supported.
 
 ```js
 if ("parse" in URL) {
-  // Relative URL appended to valid base URL
+  // Relative URL resolved to valid base URL
   let result = URL.parse("en-US/docs", "https://developer.mozilla.org");
   log(`[1]: ${result.href}`);
 
