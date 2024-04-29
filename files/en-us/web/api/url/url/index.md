@@ -24,7 +24,7 @@ new URL(url, base)
 - `url`
   - : A string or any other object with a {{Glossary("stringifier")}} — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
     If `url` is a relative URL, `base` is required, and will be used as the base URL.
-    If `url` is an absolute URL, a given `base` will be ignored.
+    If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.

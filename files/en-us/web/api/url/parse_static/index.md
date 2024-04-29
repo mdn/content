@@ -11,7 +11,7 @@ browser-compat: api.URL.parse_static
 The **`URL.parse()`** static method of the {{domxref("URL")}} interface returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 
 If the given base URL or the resulting URL are not parsable and valid URLs, `null` is returned.
-This is an alternative to using the normal constructor to construct a `URL` within a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, or using {{domxref("URL.canParse_static", "canParse()")}} to check the parameters and returning `null` if the method returns `false`.
+This is an alternative to using the {{domxref("URL.URL", "URL()")}} constructor to construct a `URL` within a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block, or using {{domxref("URL.canParse_static", "canParse()")}} to check the parameters and returning `null` if the method returns `false`.
 
 ## Syntax
 
@@ -23,9 +23,9 @@ URL.parse(url, base)
 ### Parameters
 
 - `url`
-  - : A string or any other object with a {{Glossary("stringifier")}} — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+  - : A string or any other object with a {{Glossary("stringifier")}} — including, for example, an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element — that represents an absolute or relative URL.
     If `url` is a relative URL, `base` is required, and will be used as the base URL.
-    If `url` is an absolute URL, a given `base` will be ignored.
+    If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.
@@ -68,9 +68,7 @@ We also log the case when `URL.parse()` is not supported.
 
 ```js
 if ("parse" in URL) {
-  let url = "en-US/docs";
-  let base = "https://developer.mozilla.org";
-  let result = URL.parse(url, base);
+  let result = URL.parse("en-US/docs", "https://developer.mozilla.org");
   log("//Relative URL appended to valid base URL");
   log(`Url.parse("${url}", "${base}")\n// ${result}`);
 
@@ -116,4 +114,3 @@ The results of each of the checks are shown below.
 ## See also
 
 - [`URL()` constructor](/en-US/docs/Web/API/URL/URL), which throws if the passed parameters define an invalid URL
-- [A polyfill of `URL.canParse()`](https://github.com/zloirock/core-js#url-and-urlsearchparams) is available in [`core-js`](https://github.com/zloirock/core-js)
