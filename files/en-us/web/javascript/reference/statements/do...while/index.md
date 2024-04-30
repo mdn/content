@@ -36,7 +36,7 @@ while (condition);
     `condition` [evaluates to false](/en-US/docs/Glossary/Falsy), control passes to the statement following
     the `do...while`.
 
-    Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
+    > **Note:** Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
     to false.
 
 ## Examples
