@@ -1,7 +1,7 @@
 ---
 title: "ClipboardItem: supports() static method"
 short-title: supports()
-slug: Web/API/ClipboardItem/supports
+slug: Web/API/ClipboardItem/supports_static
 page-type: web-api-static-method
 browser-compat: api.ClipboardItem.supports_static
 ---
