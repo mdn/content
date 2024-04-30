@@ -17,14 +17,6 @@ JavaScript files should be served with the `text/javascript` [MIME type](/en-US/
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the MIME type of the script. It reflects the [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute.
-- {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
-- {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
-  - : A string; an obsolete way of registering event handlers on elements in an HTML document.
-- {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
-  - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
 
   - : The `async` and `defer` attributes are boolean attributes that control how the script should be executed. **The `defer` and `async` attributes must not be specified if the `src` attribute is absent.**
@@ -39,20 +31,28 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html#start-tags) and [end](https://html.spec.whatwg.org/multipage/syntax.html#end-tags) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
 
+- {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
+  - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.crossOrigin")}}
   - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
-- {{domxref("HTMLScriptElement.text")}}
-
-  - : A string that joins and returns the contents of all [`Text` nodes](/en-US/docs/Web/API/Text) inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the [`textContent`](/en-US/docs/Web/API/Node/textContent) IDL attribute.
-
-    > **Note:** When inserted using the [`document.write()`](/en-US/docs/Web/API/Document/write) method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML) or [`outerHTML`](/en-US/docs/Web/API/Element/outerHTML), they do not execute at all.
-
+- {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
+  - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
-  - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
+  - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.noModule")}}
   - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
+- {{domxref("HTMLScriptElement.src")}}
+  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document. It reflects the `src` attribute of the {{HTMLElement("script")}} element.
+- {{domxref("HTMLScriptElement.text")}}
+
+  - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
+
+    > **Note:** When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+
+- {{domxref("HTMLScriptElement.type")}}
+  - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 
 ## Static methods
 

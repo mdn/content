@@ -50,7 +50,7 @@ the candidate's type, address (`ip` and {{domxref("RTCIceCandidate.port", "port"
 and related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} and `relatedPort`).
 
 ```js
-const ip = candidate.ip;
+const ip = candidate.address;
 const port = candidate.port;
 const relIP = candidate.relatedAddress;
 const relPort = candidate.relatedPort;

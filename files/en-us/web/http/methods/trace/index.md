@@ -36,7 +36,7 @@ Note that the client must not send content in the request, or generate fields th
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in HTML forms</th>
+      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
       <td>No</td>
     </tr>
   </tbody>

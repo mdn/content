@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`postMessage()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it.
 
