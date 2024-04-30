@@ -4,9 +4,7 @@ slug: Web/Accessibility/Information_for_Web_authors
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 ## Guidelines and Regulations
 

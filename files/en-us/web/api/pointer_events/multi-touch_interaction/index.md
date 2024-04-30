@@ -234,7 +234,7 @@ function updateBackground(ev) {
 
 #### Event logging
 
-These functions are used send to event activity to the application window (to support debugging and learning about the event flow).
+These functions are used to send event activity to the application window (to support debugging and learning about the event flow).
 
 ```js
 // Log events flag
