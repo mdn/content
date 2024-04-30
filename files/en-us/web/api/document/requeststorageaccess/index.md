@@ -70,6 +70,6 @@ document.requestStorageAccess().then(
 
 ## See also
 
-- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
+- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
 - [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

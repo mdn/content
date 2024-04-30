@@ -115,6 +115,6 @@ function checkCookie() {
 
 ## See also
 
-- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.requestStorageAccess()")}}
+- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccess()")}}
 - [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

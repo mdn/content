@@ -1425,6 +1425,7 @@
       "interfaces": [],
       "methods": [
         "Document.hasStorageAccess()",
+        "Document.hasUnpartitionedCookieAccess()",
         "Document.requestStorageAccess()",
         "Document.requestStorageAccessFor()"
       ],

@@ -12,6 +12,8 @@ The **`hasStorageAccess()`** method of the {{domxref("Document")}} interface ret
 
 This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
+This method may be available under the new name {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}.
+
 ## Syntax
 
 ```js-nolint
@@ -63,6 +65,6 @@ document.hasStorageAccess().then((hasAccess) => {
 
 ## See also
 
-- {{domxref("Document.requestStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
+- {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
 - [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)
