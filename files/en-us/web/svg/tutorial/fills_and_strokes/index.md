@@ -14,7 +14,7 @@ There are several ways to color shapes (including specifying attributes on the o
 
 ### Painting
 
-Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same CSS color naming schemes that you use in HTML, whether that's color names (like `red`), rgb values (like `rgb(255 0 0)`), hex values, rgba values, etc.
+Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same CSS color naming schemes that you use in HTML, whether that's color names (like `red`), rgb values (like `rgb(255 0 0)`), hex values, etc.
 
 ```xml
  <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
@@ -22,8 +22,6 @@ Basic coloring can be done by setting two attributes on the node: `fill` and `st
 ```
 
 In addition, you can specify the opacity of either the `fill` or `stroke` separately in SVG. These are controlled by the `fill-opacity` and `stroke-opacity` attributes.
-
-> **Note:** In Firefox, `rgba` values are also allowed, and will give the same effect. But for compatibility with other viewers, it's often best to specify the `fill`/`stroke` opacity separately. If you specify both an `rgba` value and a `fill`/`stroke` opacity value, both will be applied.
 
 ### Stroke
 

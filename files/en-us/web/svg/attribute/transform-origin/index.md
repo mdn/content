@@ -2,7 +2,7 @@
 title: transform-origin
 slug: Web/SVG/Attribute/transform-origin
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.transform-origin
+browser-compat: svg.global_attributes.transform-origin
 ---
 
 {{SVGRef()}}
@@ -19,7 +19,7 @@ You can use this attribute with any SVG element.
   <tbody>
     <tr>
       <td><strong>Values</strong></td>
-      <td>{{csssyntax("transform-origin")}}</td>
+      <td>See {{cssxref("transform-origin", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <td><strong>Default value</strong></td>

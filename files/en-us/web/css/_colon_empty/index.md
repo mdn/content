@@ -84,5 +84,5 @@ The text that provides the interactive control's accessible name can be hidden u
 
 ## See also
 
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – The {{glossary("Vendor_Prefix", "prefixed")}} implementation of the changes in [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo)
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":-moz-only-whitespace")}} – The {{glossary("Vendor_Prefix", "prefixed")}} implementation of the changes in [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo)
+- {{CSSxRef(":blank")}}

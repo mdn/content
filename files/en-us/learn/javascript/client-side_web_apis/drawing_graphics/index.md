@@ -707,7 +707,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
 
 1. To start with, make a local copy of [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
 2. Next, create a new file called `script.js`, again in the same folder as before.
-3. Next, you need to [download the three.min.js library](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) and save it in the same directory as before.
+3. Next, you need to have the Three.js library installed. You can follow the environment setup steps described in the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) so that you have Three.js working as expected.
 4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your `script.js` file:
 
    ```js
@@ -731,7 +731,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
    The [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) constructor takes four arguments:
 
    - The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.
-   - The aspect ratio: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
+   - The {{glossary("aspect ratio")}}: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
    - The near plane: How close to the camera objects can be before we stop rendering them to the screen. Think about how when you move your fingertip closer and closer to the space between your eyes, eventually you can't see it anymore.
    - The far plane: How far away things are from the camera before they are no longer rendered.
 

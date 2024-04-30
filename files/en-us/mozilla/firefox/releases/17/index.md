@@ -104,4 +104,4 @@ None removed.
 
 ### Older versions
 
-{{Firefox_for_developers('16')}}
+{{Firefox_for_developers}}

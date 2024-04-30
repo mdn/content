@@ -118,7 +118,6 @@ A few other elements belong to this category, but only if a specific condition i
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
 - {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
-- {{HTMLElement("style")}}, if the `scoped` {{deprecated_inline}} attribute is present
 
 ### Sectioning content
 

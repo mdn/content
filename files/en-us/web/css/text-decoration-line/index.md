@@ -47,7 +47,7 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
   - : Each line of text has a decorative line above it.
 - `line-through`
   - : Each line of text has a decorative line going through its middle.
-- `blink` {{deprecated_inline}}
+- `blink`
   - : The text blinks (alternates between visible and invisible). Conforming user agents may not blink the text. This value is **deprecated** in favor of [CSS animations](/en-US/docs/Web/CSS/animation).
 
 ## Formal definition

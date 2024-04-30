@@ -203,7 +203,7 @@ This leads to the same result as the previous example, yet allows for one canoni
 
 ## Inheritance of custom properties
 
-A custom property defined using two dashes `--` instead of `@property` always inherit the value of its parent.
+A custom property defined using two dashes `--` instead of `@property` always inherits the value of its parent.
 This is demonstrated in the following example:
 
 ```html live-sample___dash-custom-property-inheritance
@@ -279,7 +279,7 @@ The property is only set for the matching selector and its descendants.
 
 ### Using `@property` to control inheritance
 
-The `@property` at-rule lets you explicity state whether the property inherits or not.
+The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
 Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an intital value of `cornflowerblue`.
 

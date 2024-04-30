@@ -2,7 +2,6 @@
 title: Grid wrapper
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
 page-type: guide
-browser-compat: css.properties.grid
 ---
 
 {{CSSRef}}

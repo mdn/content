@@ -65,7 +65,7 @@ Media feature expressions test for their presence or value, and are entirely opt
   - : Is any available input mechanism a pointing device, and if so, how accurate is it?
     Added in Media Queries Level 4.
 - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - : Width-to-height aspect ratio of the viewport
+  - : Width-to-height {{glossary("aspect ratio")}} of the viewport
 - {{cssxref("@media/color", "color")}}
   - : Number of bits per color component of the output device, or zero if the device isn't color
 - {{cssxref("@media/color-gamut", "color-gamut")}}
@@ -73,17 +73,17 @@ Media feature expressions test for their presence or value, and are entirely opt
     Added in Media Queries Level 4.
 - {{cssxref("@media/color-index", "color-index")}}
   - : Number of entries in the output device's color lookup table, or zero if the device does not use such a table
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
   - : Width-to-height aspect ratio of the output device.
     Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+- {{cssxref("@media/device-height", "device-height")}}
   - : Height of the rendering surface of the output device.
     Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
+- {{cssxref("@media/device-width", "device-width")}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : The display mode of the application, as specified in the web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member.
-    Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+  - : The mode in which an application is being displayed: for example [fullscreen](/en-US/docs/Web/API/Fullscreen_API) or [picture-in-picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) mode.
+    Added in Media Queries Level 5.
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : Combination of brightness, contrast ratio, and color depth that are supported by the user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/forced-colors", "forced-colors")}}

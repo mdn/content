@@ -4,9 +4,7 @@ slug: Web/Accessibility/Cognitive_accessibility
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
@@ -279,6 +277,6 @@ The above are good design practices. They will benefit everyone.
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 - [Accessibility overview](/en-US/docs/Learn/Accessibility)
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
-- [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
+- [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
 - [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)

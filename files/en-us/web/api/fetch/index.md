@@ -12,8 +12,8 @@ The global **`fetch()`** method starts the process of fetching a resource from t
 
 The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
-A {{domxref("fetch()")}} promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar).
-A {{domxref("fetch()")}} promise _does not_ reject on HTTP errors (`404`, etc.).
+A `fetch()` promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error.
+A `fetch()` promise _does not_ reject if the server responds with HTTP status codes that indicate errors (`404`, `504`, etc.).
 Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.
 
 The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
@@ -295,50 +295,44 @@ fetch(myRequest)
   });
 ```
 
-In the [Fetch with init then Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request/index.html) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)), we do the same thing except that we pass in an
-`init` object when we invoke `fetch()`:
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
+In this case, we can set a {{httpheader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js
 const myImage = document.querySelector("img");
+const reqHeaders = new Headers();
 
-const myHeaders = new Headers();
-myHeaders.append("Accept", "image/jpeg");
+// A cached response is okay unless it's more than a week old
+reqHeaders.set("Cache-Control", "max-age=604800");
 
-const myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+const options = {
+  headers: reqHeaders,
 };
 
-const myRequest = new Request("flowers.jpg");
+// Pass init as an "options" object with our headers.
+const req = new Request("flowers.jpg", options);
 
-fetch(myRequest, myInit).then((response) => {
-  // …
+fetch(req).then((response) => {
+  // ...
 });
 ```
 
-You could also pass the `init` object in with the
-`Request` constructor to get the same effect:
+You could also pass the `init` object in with the `Request` constructor to get the same effect:
 
 ```js
-const myRequest = new Request("flowers.jpg", myInit);
+const req = new Request("flowers.jpg", options);
 ```
 
-You can also use an object literal as `headers` in
-`init`.
+You can also use an object literal as `headers` in `init`:
 
 ```js
-const myInit = {
-  method: "GET",
+const options = {
   headers: {
-    Accept: "image/jpeg",
+    "Cache-Control": "max-age=60480",
   },
-  mode: "cors",
-  cache: "default",
 };
 
-const myRequest = new Request("flowers.jpg", myInit);
+const req = new Request("flowers.jpg", options);
 ```
 
 ## Specifications

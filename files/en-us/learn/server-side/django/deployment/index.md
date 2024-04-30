@@ -98,23 +98,38 @@ The [Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_webs
 The critical settings that you must check are:
 
 - `DEBUG`. This should be set as `False` in production (`DEBUG = False`). This stops the sensitive/confidential debug trace and variable information from being displayed.
-- `SECRET_KEY`. This is a large random value used for CSRF protection, etc. It is important that the key used in production is not in source control or accessible outside the production server. The Django documents suggest that this might best be loaded from an environment variable or read from a server-only file.
+- `SECRET_KEY`. This is a large random value used for CSRF protection, etc. It is important that the key used in production is not in source control or accessible outside the production server.
 
-  ```python
-  # Read SECRET_KEY from an environment variable
-  import os
-  SECRET_KEY = os.environ['SECRET_KEY']
+The Django documents suggest that secret information might best be loaded from an environment variable or read from a server-only file.
+Let's change the _LocalLibrary_ application so that we read our `SECRET_KEY` and `DEBUG` variables from environment variables if they are defined, falling back to values defined in an **.env** file in the root, and lastly to using the default values in the configuration file.
+This is very flexible as it allows any configuration supported by the hosting server.
 
-  # OR
+For reading environment values from a file we'll use [python-dotenv](https://pypi.org/project/python-dotenv/).
+This is a library for reading key-value pairs out of a file and using them as environment variables, but only if the corresponding environment variable is not defined.
 
-  # Read secret key from a file
-  with open('/etc/secret_key.txt') as f:
-      SECRET_KEY = f.read().strip()
-  ```
+Install the library into your virtual environment as shown (and also update your `requirements.txt` file):
 
-Let's change the _LocalLibrary_ application so that we read our `SECRET_KEY` and `DEBUG` variables from environment variables if they are defined, but otherwise use the default values in the configuration file.
+```bash
+pip3 install python-dotenv
+```
 
-Open **/locallibrary/settings.py**, disable the original `SECRET_KEY` configuration and add the new lines as shown below.
+Then open **/locallibrary/settings.py** and insert the following code after `BASE_DIR` is defined, but before the security warning: `# SECURITY WARNING: keep the secret key used in production secret!`
+
+```py
+# Support env variables from .env file if defined
+import os
+from dotenv import load_dotenv
+env_path = load_dotenv(os.path.join(BASE_DIR, '.env'))
+load_dotenv(env_path)
+```
+
+This loads the `.env` file from the root of the web application.
+Variables defined as `KEY=VALUE` in the file are imported when the key is used in `os.environ.get('<KEY>'', '<DEFAULT VALUE>')`, if defined.
+
+> **Note:** Any values that you add to **.env** are likely to be _secrets_!
+> You must not save them to GitHub, and you should add `.env` to your `.gitignore` file so that it is not added by accident.
+
+Next disable the original `SECRET_KEY` configuration and add the new lines as shown below.
 During development no environment variable will be specified for the key, so the default value will be used (it shouldn't matter what key you use here, or if the key "leaks", because you won't use it in production).
 
 ```python
@@ -132,7 +147,8 @@ Then comment out the existing `DEBUG` setting and add the new line shown below.
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ```
 
-The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False`. Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`.
+The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False` or `DJANGO_DEBUG=False` is set in the **.env** file.
+Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`.
 
 You can set the environment variable to "False" on Linux by issuing the following command:
 
@@ -140,7 +156,7 @@ You can set the environment variable to "False" on Linux by issuing the followin
 export DJANGO_DEBUG=False
 ```
 
-A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
+A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
 ```python
 python3 manage.py check --deploy
@@ -202,7 +218,7 @@ The value `conn_max_age=500` makes the connection persistent, which is far more 
 
 ##### psycopg2
 
-<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/4.2/releases/4.2/#psycopg-3-support
+<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/5.0/releases/4.2/#psycopg-3-support
   But didn't work on Railway!
   Try again to update in next release.
 -->
@@ -253,7 +269,7 @@ While it will cause no harm, you might as well delete the duplicate previous ref
 
 ```python
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -328,12 +344,13 @@ After installing all the different dependencies above, your **requirements.txt**
 Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
 ```plain
-Django==4.2.3
-dj-database-url==2.0.0
-gunicorn==21.2.3
-psycopg2-binary==2.9.6
+Django==5.0.2
+dj-database-url==2.1.0
+gunicorn==21.2.0
+psycopg2-binary==2.9.9
 wheel==0.38.1
-whitenoise==6.5.0
+whitenoise==6.6.0
+python-dotenv==1.0.1
 ```
 
 ### Update your application repository in GitHub
@@ -420,7 +437,7 @@ To start using PythonAnywhere you will first need to create an account:
 
 ### Install library from GitHub
 
-Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from Github.
+Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from GitHub.
 We'll also configure the default database and collect static files so that they can be served by PythonAnywhere.
 
 1. First open the Console management screen by selecting **Consoles** in the top application bar.
@@ -578,7 +595,7 @@ This is a Django security error that is raised because our source code is not ru
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > In the next section we'll show you how to disable this level of logging on the live site using [environment variables](#using_environment_variables_on_pythonanywhere).
 
-Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.2/ref/settings/#allowed-hosts) setting to include your PythonAnywhere site URL:
+Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) setting to include your PythonAnywhere site URL:
 
 ```python
 ## For example, for a site URL at 'hamishwillee.pythonanywhere.com'
@@ -590,7 +607,7 @@ ALLOWED_HOSTS = ['hamishwillee.pythonanywhere.com', '127.0.0.1']
 # ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
 ```
 
-Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.2/ref/settings/#csrf-trusted-origins) key.
+Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/5.0/ref/settings/#csrf-trusted-origins) key.
 Open **/locallibrary/settings.py** and add a line like the one below:
 
 ```python
@@ -618,7 +635,7 @@ You should be able to log in with the superuser account you created above, and c
 
 ### Using environment variables on PythonAnywhere
 
-In the section on [Getting your website ready to publish](#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables in production.
+In the section on [Getting your website ready to publish](#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables or variables in a **.env** file in production.
 
 Specifically we set up the library so that you can set:
 
@@ -627,7 +644,8 @@ Specifically we set up the library so that you can set:
 - `DATABASE_URL` if your application uses a hosted database (we do not in this example).
 
 The way that environment variables are set depends on the hosting service.
-[PythonAnywhere recommends that you read them from an environment file](https://help.pythonanywhere.com/pages/environment-variables-for-web-apps).
+For PythonAnywhere you need to read them from an environment file.
+We're already set up for that, so all we need to do is create the file.
 
 The steps are:
 
@@ -638,47 +656,14 @@ The steps are:
    cd ~/<user-name>.pythonanywhere.com
    ```
 
-3. Make sure that the virtual environment used by the server is active.
-   If not, activate it using:
-
-   ```bash
-   workon env_local_library
-   ```
-
-4. Install [python-dotenv](https://pypi.org/project/python-dotenv/), a tool for reading key-value pairs out of a file and saving them as environment variables.
-
-   ```bash
-   pip install python-dotenv
-   ```
-
-   Note that you might also add _python-dotenv_ to your `requirements.txt` file.
-
-5. You can set the environment variables by writing them as key-value pairs to the `.env` file.
-   For example, to set `DJANGO_DEBUG` to `False` in the Bash console, enter the following following command:
+3. Set the environment variables by writing them as key-value pairs to the `.env` file.
+   For example, to set `DJANGO_DEBUG` to `False` in the Bash console, enter the following command:
 
    ```bash
    echo "DJANGO_DEBUG=False" >> .env
    ```
 
-   Note that these are _secrets_!
-   You must not save them to GitHub, and you might want to add `.env` to your `.gitignore` file so that it is not added by accident.
-
-6. The final step is to ensure that variables in the `.env` file are read into the environment.
-
-   Open the _Web_ tab and scroll down to the "Code" section.
-   Select the link to open the WSGI configuration file.
-
-   ![PythonAnywhere WGSI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
-
-   Add the following lines to the top of the file (after `import sys`), replacing the `<user-name>` with your own account, and then press the **Save** button.
-
-   ```py
-   from dotenv import load_dotenv
-   project_folder = os.path.expanduser('~/<user-name>.pythonanywhere.com') # adjust as appropriate
-   load_dotenv(os.path.join(project_folder, '.env'))
-   ```
-
-7. Restart the application.
+4. Restart the application.
 
 You can test that the operation worked by attempting to open a record that that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
 If the environment variable has been loaded you'll get a "Not found" message rather than a detailed debug trace.
@@ -838,7 +823,7 @@ This is a Django security error that is raised because our source code is not ru
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
 
-Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.2/ref/settings/#allowed-hosts) setting to include your Railway site URL:
+Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
 
 ```python
 ## For example, for a site URL at 'web-production-3640.up.railway.app'
@@ -850,7 +835,7 @@ ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
 # ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
 ```
 
-Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.2/ref/settings/#csrf-trusted-origins) key.
+Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/5.0/ref/settings/#csrf-trusted-origins) key.
 Open **/locallibrary/settings.py** and add a line like the one below:
 
 ```python
@@ -984,7 +969,7 @@ The Railway client provides the logs command to show the tail of logs (a more fu
 railway logs
 ```
 
-If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/4.2/topics/logging/).
+If you need more information than this can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/5.0/topics/logging/).
 
 ## Summary
 
@@ -994,13 +979,13 @@ The next step is to read our last few articles, and then complete the assessment
 
 ## See also
 
-- [Deploying Django](https://docs.djangoproject.com/en/4.2/howto/deployment/) (Django docs)
+- [Deploying Django](https://docs.djangoproject.com/en/5.0/howto/deployment/) (Django docs)
 
-  - [Deployment checklist](https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/) (Django docs)
-  - [Deploying static files](https://docs.djangoproject.com/en/4.2/howto/static-files/deployment/) (Django docs)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/) (Django docs)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/modwsgi/) (Django docs)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) (Django docs)
+  - [Deployment checklist](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (Django docs)
+  - [Deploying static files](https://docs.djangoproject.com/en/5.0/howto/static-files/deployment/) (Django docs)
+  - [How to deploy with WSGI](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/) (Django docs)
+  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/modwsgi/) (Django docs)
+  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Railway Docs
 
