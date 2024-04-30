@@ -65,7 +65,7 @@ async function setClipboard(text) {
 }
 ```
 
-The `setClipboard()` method first uses the {{domxref("ClipboardItem.supports()")}} static method to check whether the clipboard supports the `"text/plain"` MIME type.
+The `setClipboard()` method first uses the {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} static method to check whether the clipboard supports the `"text/plain"` MIME type.
 
 If the clipboard does support plain text, then `setClipboard()` creates a new {{domxref("Blob")}} object.
 This object is required to construct a {{domxref("ClipboardItem")}} object which is sent to the clipboard.

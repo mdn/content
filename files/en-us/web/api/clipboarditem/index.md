@@ -31,7 +31,7 @@ _This interface provides the following properties._
 
 _This interface defines the following methods._
 
-- {{domxref("ClipboardItem.supports", "supports()")}}
+- {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}}
   - : Checks whether a given {{Glossary("MIME type")}} is supported by the clipboard. This allows us to detect if a MIME type is supported by the clipboard before attempting to write data.
 
 ## Instance methods
@@ -45,7 +45,7 @@ _This interface defines the following methods._
 
 ### Writing to the clipboard
 
-Here we use {{domxref("ClipboardItem.supports", "supports()")}} to determine if 'img/png' MIME data type is supported before generating the image data and writing it to the clipboard. The image is generated using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method is used to create a `ClipboardItem` that is written to the clipboard.
+Here we use {{domxref("ClipboardItem.supports_static", "supports()")}} to determine if 'img/png' MIME data type is supported before generating the image data and writing it to the clipboard. The image is generated using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method is used to create a `ClipboardItem` that is written to the clipboard.
 
 ```js
 async function writeClipImg() {
