@@ -409,7 +409,7 @@ Radial gradients are similar to linear gradients, except that they radiate out f
 
 ### A basic radial gradient
 
-As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of its box:
+As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the {{glossary("aspect ratio")}} of its box:
 
 ```html hidden
 <div class="simple-radial"></div>

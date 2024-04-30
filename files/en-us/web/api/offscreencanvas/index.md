@@ -38,6 +38,17 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`. See the {{domxref("OffscreenCanvas.transferToImageBitmap()", "API description")}} for important notes on managing this {{domxref("ImageBitmap")}}.
 
+## Events
+
+_Inherits events from its parent, {{domxref("EventTarget")}}._
+
+Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event)
+- : Fired if the browser detects that an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
+- [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event)
+  - : Fired if the browser successfully restores an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context.
+
 ## Examples
 
 ### Synchronous display of frames produced by an `OffscreenCanvas`
