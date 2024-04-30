@@ -29,12 +29,29 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
+- `shadowrootdelegatesfocus`
+
+  - : Xxxxx
+
+- `shadowrootclonable`
+
+  - : Sets the value of [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) to `true` on a shadow root that has been created declaratively (by specifying the [`shadowrootmode`](#shadowrootmode) attribute).
+    If it is declared, a clone of the shadow host (parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
+    The value defaults to `false` and is reflected by {{domxref("HTMLTemplateElement.shadowRootClonable")}}.
+
 ## Usage notes
 
-There are two main ways to use the `<template>` element:
+There are two main ways to use the `<template>` element.
 
-1. By default, the element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment). Using the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, this fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
-2. If the element contains the `shadowrootmode` attribute, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
+### Template document fragment
+
+By default, the element's content is not rendered, but is parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment).
+Using the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, this fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+
+### Declarative Shadow DOM
+
+If the element contains the [`shadowrootmode`](#shadowrootmode) attribute, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree), which is attached to the parent element.
+This is the declarative equivalent to calling {{domxref("Element.attachShadow()")}} to attach a shadow root to an element.
 
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
@@ -110,7 +127,7 @@ table td {
 }
 ```
 
-{{EmbedLiveSample("Table row generation", 500, 120)}}
+{{EmbedLiveSample("Generating table rows", 500, 120)}}
 
 ### Implementing a declarative shadow DOM
 
