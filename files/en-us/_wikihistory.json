@@ -67831,6 +67831,17 @@
       "louisremi"
     ]
   },
+  "Web/API/Window/origin": {
+    "modified": "2020-10-15T21:51:30.388Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "Sheppy",
+      "Bzbarsky",
+      "chrisdavidmills",
+      "ziyunfei"
+    ]
+  },
   "Web/API/Window/outerHeight": {
     "modified": "2020-10-15T21:10:01.529Z",
     "contributors": [
@@ -71585,17 +71596,6 @@
       "George8211",
       "matiishyn",
       "kscarfone"
-    ]
-  },
-  "Web/API/origin": {
-    "modified": "2020-10-15T21:51:30.388Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "Sheppy",
-      "Bzbarsky",
-      "chrisdavidmills",
-      "ziyunfei"
     ]
   },
   "Web/API/queueMicrotask": {

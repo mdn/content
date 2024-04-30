@@ -94,7 +94,7 @@ The _balloons.jpg_ image used in the initial background images example, is a lar
 
 You can also use keywords:
 
-- `cover` — the browser will make the image just large enough so that it completely covers the box area while still retaining its aspect ratio. In this case, part of the image is likely to end up outside the box.
+- `cover` — the browser will make the image just large enough so that it completely covers the box area while still retaining its {{glossary("aspect ratio")}}. In this case, part of the image is likely to end up outside the box.
 - `contain` — the browser will make the image the right size to fit inside the box. In this case, you may end up with gaps on either side or on the top and bottom of the image, if the aspect ratio of the image is different from that of the box.
 
 In the example below, the _balloons.jpg_ image has length units set to size it inside the box. You can see this has distorted the image.

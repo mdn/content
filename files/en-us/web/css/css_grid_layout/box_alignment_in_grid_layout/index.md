@@ -168,7 +168,7 @@ In this next example, I am using the `align-self` property, to demonstrate the d
 
 ### Items with an intrinsic aspect ratio
 
-The specification details that the default behavior in {{cssxref("align-self")}} is to stretch, except for items which have an intrinsic aspect ratio, in this case they behave as `start`. The reason for this, is that if items with an aspect ratio are set to stretch, this default would distort them.
+The specification details that the default behavior in {{cssxref("align-self")}} is to stretch, except for items which have an intrinsic {{glossary("aspect ratio")}}, in this case they behave as `start`. The reason for this, is that if items with an aspect ratio are set to stretch, this default would distort them.
 
 This behavior has now been clarified in the specification, with browsers yet to implement the correct behavior. Until that happens, you can ensure that items do not stretch, such as images, which are direct children of the grid, by setting {{cssxref("align-self")}} and {{cssxref("justify-self")}} to start. This will mimic the correct behavior once implemented.
 
