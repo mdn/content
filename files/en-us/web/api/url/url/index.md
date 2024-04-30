@@ -45,6 +45,10 @@ new URL(url, base)
 
 ## Examples
 
+Here are some examples of using the constructor.
+
+> **Note:** [Resolving relative URLs](/en-US/docs/Web/API/URL_API/Resolving_relative_urls) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
+
 ```js
 // Base URLs:
 let baseUrl = "https://developer.mozilla.org";
@@ -69,9 +73,11 @@ new URL("/en-US/docs", A);
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
+```
 
-// Invalid URLs:
+Here are some examples of invalid URLs:
 
+```js
 new URL("/en-US/docs", "");
 // Raises a TypeError exception as '' is not a valid URL
 
@@ -94,38 +100,6 @@ new URL("/a", "https://example.com/?query=1");
 
 new URL("//foo.com", "https://example.com");
 // => 'https://foo.com/' (see relative URLs)
-```
-
-### Merging of url and base paths
-
-```js
-/* base path without trailing slash */
-
-const A = new URL("articles", "https://developer.mozilla.org/api/v1");
-// => 'https://developer.mozilla.org/api/articles'
-
-const B = new URL("/articles", "https://developer.mozilla.org/api/v1");
-// => 'https://developer.mozilla.org/articles'
-
-const C = new URL("./articles", "https://developer.mozilla.org/api/v1");
-// => 'https://developer.mozilla.org/api/articles'
-
-const D = new URL("../articles", "https://developer.mozilla.org/api/v1");
-// => 'https://developer.mozilla.org/articles'
-
-/* base path with trailing slash */
-
-const E = new URL("articles", "https://developer.mozilla.org/api/v1/");
-// => 'https://developer.mozilla.org/api/v1/articles'
-
-const F = new URL("/articles", "https://developer.mozilla.org/api/v1/");
-// => 'https://developer.mozilla.org/articles'
-
-const G = new URL("./articles", "https://developer.mozilla.org/api/v1/");
-// => 'https://developer.mozilla.org/api/v1/articles'
-
-const H = new URL("../articles", "https://developer.mozilla.org/api/v1/");
-// => 'https://developer.mozilla.org/api/articles'
 ```
 
 ## Specifications

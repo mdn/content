@@ -45,7 +45,7 @@ A `URL` if the parameters can be resolved to a valid URL; `null` otherwise.
 
 ## Examples
 
-The [`URL()` constructor](/en-US/docs/Web/API/URL/URL#examples) documentation provides many additional examples demonstrating how different `url` and `base` values are resolve to a final absolute URL.
+[Resolving relative URLs](/en-US/docs/Web/API/URL_API/Resolving_relative_urls) and [`URL()` constructor](/en-US/docs/Web/API/URL/URL#examples) provide additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL (though primarily using `URL()`).
 
 ### Using URL.parse()
 
@@ -72,15 +72,19 @@ function log(text) {
 ```
 
 First we check that the `URL.parse()` method is supported using the condition `"parse" in URL`.
-If the method is supported we log the result of checking a relative URL with a base URL, a relative URL with a more [complicated base URL](/en-US/docs/Web/API/URL_API/Resolving_relative_urls), a valid absolute URL with a valid base URL (which is not used), and an invalid base URL that results in the method returning `null`.
+If the method is supported we log the result of checking an absolute URL, a relative URL with a base URL, a relative URL with a more [complicated base URL](/en-US/docs/Web/API/URL_API/Resolving_relative_urls), a valid absolute URL with a valid base URL (which is not used), and an invalid base URL that results in the method returning `null`.
 
 We also log the case when `URL.parse()` is not supported.
 
 ```js
 if ("parse" in URL) {
-  // Relative URL resolved to valid base URL
-  let result = URL.parse("en-US/docs", "https://developer.mozilla.org");
+  // Absolute URL
+  let result = URL.parse("https://developer.mozilla.org/en-US/docs");
   log(`[1]: ${result.href}`);
+
+  // Relative URL resolved to valid base URL
+  result = URL.parse("en-US/docs", "https://developer.mozilla.org");
+  log(`[2]: ${result.href}`);
 
   // Relative URL resolved to "complicated" valid base URL
   // (only the scheme and domain are used to resolve url)
@@ -88,18 +92,18 @@ if ("parse" in URL) {
     "/different/place",
     "https://developer.mozilla.org:443/some/path?id=4",
   );
-  log(`[2]: ${result.href}`);
+  log(`[3]: ${result.href}`);
 
   // Absolute url argument (base URL ignored)
   result = URL.parse(
     "https://example.org/some/docs",
     "https://developer.mozilla.org",
   );
-  log(`[3]: ${result.href}`);
+  log(`[4]: ${result.href}`);
 
   // Invalid base URL (missing colon)
   result = URL.parse("en-US/docs", "https//developer.mozilla.org");
-  log(`[4]: ${result}`);
+  log(`[5]: ${result}`);
 } else {
   log("URL.parse() not supported");
 }
@@ -111,7 +115,7 @@ Last of all, the code below demonstrates that the arguments don't have to be str
 if ("parse" in URL) {
   // Relative URL with base URL supplied as a URL object
   result = URL.parse("/en-US/docs", new URL("https://developer.mozilla.org/"));
-  log(`[5]: ${result.href}`);
+  log(`[6]: ${result.href}`);
 }
 ```
 
