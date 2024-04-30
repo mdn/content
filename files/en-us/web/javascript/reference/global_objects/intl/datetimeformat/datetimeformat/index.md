@@ -59,7 +59,7 @@ Intl.DateTimeFormat(locales, options)
 - `hourCycle`
   - : The hour cycle to use. Possible values are `"h11"`, `"h12"`, `"h23"`, and `"h24"`. This option can also be set through the `hc` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `timeZone`
-  - : The time zone to use. The only value implementations must recognize is `"UTC"`; the default is the runtime's default time zone. Implementations may also recognize the time zone names of the [IANA time zone database](https://www.iana.org/time-zones), such as `"Asia/Shanghai"`, `"Asia/Kolkata"`, `"America/New_York"`.
+  - : The time zone to use. Time zones names correspond to the Zone and Link names of the [IANA Time Zone Database](https://www.iana.org/time-zones), such as `"Asia/Shanghai"`, `"Asia/Kolkata"`, and `"America/New_York"`. Additionally, time zones can be given as UTC offsets in the format "±hh:mm", "±hhmm", or "±hh", for example as `"+01:00"`, `"-2359"`, or `"+23"`. The default is the runtime's default time zone.
 
 #### Date-time component options
 
