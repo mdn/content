@@ -16,9 +16,9 @@ The **`HTMLTableCellElement`** interface provides special properties and methods
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTableCellElement.abbr")}}
-  - : A string that can be used on `<th>` elements (not on {{HTMLElement("td")}}), specifying an alternative label for the header cell. This alternate label can be used in other contexts, such as when describing the headers that apply to a data cell. This is used to offer a shorter term for use by screen readers in particular, and is a valuable accessibility tool. Usually, the value of `abbr` is an abbreviation or acronym, but can be any text that's appropriate contextually.
+  - : A string that can be used on `<th>` elements (not on {{HTMLElement("td")}}), specifying an alternative label for the header cell. This alternate label can be used in other contexts, such as when describing the headers that apply to a data cell. This is used to offer a shorter term for use by screen readers in particular; and is a valuable accessibility tool. Usually, the value of `abbr` is an abbreviation or acronym, but can be any text that's appropriate contextually.
 - {{domxref("HTMLTableCellElement.cellIndex")}} {{ReadOnlyInline}}
-  - : A long integer representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
+  - : A number representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
 - {{domxref("HTMLTableCellElement.colSpan")}}
   - : An unsigned long integer indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute.
 - {{domxref("HTMLTableCellElement.headers")}} {{ReadOnlyInline}}

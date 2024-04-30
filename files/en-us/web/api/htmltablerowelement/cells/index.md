@@ -1,52 +1,23 @@
 ---
-title: "HTMLTableRowElement: insertCell() method"
-short-title: insertCell()
-slug: Web/API/HTMLTableRowElement/insertCell
-page-type: web-api-instance-method
-browser-compat: api.HTMLTableRowElement.insertCell
+title: "HTMLTableRowElement: cells property"
+short-title: cells
+slug: Web/API/HTMLTableRowElement/cells
+page-type: web-api-instance-property
+browser-compat: api.HTMLTableRowElement.cells
 ---
 
-{{APIRef("HTML DOM")}}
+{{ APIRef("HTML DOM") }}
 
-The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface inserts a new
-cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
-reference to the cell.
+The **`cells`** read-only property of the {{domxref("HTMLTableRowElement")}} interface
+returns a live {{domxref("HTMLCollection")}} containing the cells in the row. The `HTMLCollection` is live and is automatically updated when cells are added or removed.
 
-> **Note:** `insertCell()` inserts the cell directly into the
-> row. The cell does not need to be appended separately
-> with {{domxref("Node.appendChild()")}} as would be the case if
-> {{domxref("Document.createElement()")}} had been used to create the new
-> `<td>` element.
->
-> You can not use `insertCell()` to create a new `<th>`
-> element though.
+## Value
 
-## Syntax
-
-```js-nolint
-insertCell()
-insertCell(index)
-```
-
-### Parameters
-
-- `index` {{optional_inline}}
-  - : The cell index of the new cell. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted it defaults to `-1`.
-
-### Return value
-
-An {{domxref("HTMLTableCellElement")}} that references the new
-cell.
-
-### Exceptions
-
-- `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than the number of cells.
+A live {{domxref("HTMLCollection")}} of {{domxref("HTMLTableCellElement")}} objects.
 
 ## Examples
 
-This example uses {{domxref("HTMLTableRowElement.insertCell()")}} to append a new cell to a
-row.
+This example uses `HTMLTableRowElement.cells` to display the number of cell in a row.
 
 ### HTML
 
@@ -138,5 +109,5 @@ removeButton.addEventListener("click", () => {
 
 ## See also
 
-- {{domxref("HTMLTableElement.insertRow()")}}
-- The HTML element representing cells: {{domxref("HTMLTableCellElement")}}
+- {{domxref("HTMLTableRowElement.insertCell()")}}
+- {{domxref("HTMLTableRowElement.deleteCell()")}}

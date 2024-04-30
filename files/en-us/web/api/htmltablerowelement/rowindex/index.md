@@ -61,10 +61,10 @@ This example uses JavaScript to label all the row numbers in a table.
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll("tr");
+const rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
-  let z = document.createElement("td");
+  const z = document.createElement("td");
   z.textContent = `(row #${row.rowIndex})`;
   row.appendChild(z);
 });
@@ -73,6 +73,10 @@ rows.forEach((row) => {
 ### Result
 
 {{EmbedLiveSample("Examples")}}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
