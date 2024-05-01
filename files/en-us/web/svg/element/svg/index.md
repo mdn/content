@@ -98,7 +98,7 @@ To change the iframe's dimensions try resizing the dotted red border from bottom
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
-  - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
+  - : How the `svg` fragment must be deformed if it is displayed with a different {{glossary("aspect ratio")}}.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : Which version of SVG is used for the inner content of the element.

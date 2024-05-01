@@ -180,7 +180,7 @@ Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 
 HTTP/1.1 204 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
@@ -198,7 +198,7 @@ Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTION
 
 ```http
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will do so with a `POST` request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will do so with `X-PINGOTHER` and `Content-Type` custom headers. Now the server has an opportunity to determine whether it can accept a request under these conditions.
@@ -476,7 +476,7 @@ Examples of this usage can be [found above.](#preflighted_requests)
 The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (for example, by passing them as the [`headers`](/en-US/docs/Web/API/Request/Request#headers) option to the {{domxref("Request.Request()", "Request()")}} constructor). This browser-side header will be answered by the complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 ```http
-Access-Control-Request-Headers: <field-name>[, <field-name>]*
+Access-Control-Request-Headers: <field-name>[,<field-name>]*
 ```
 
 Examples of this usage can be [found above](#preflighted_requests).

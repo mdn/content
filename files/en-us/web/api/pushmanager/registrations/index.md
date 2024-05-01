@@ -5,10 +5,11 @@ slug: Web/API/PushManager/registrations
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.PushManager.registrations
 ---
 
-{{deprecated_header}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`registrations`** method is used to ask the system about
 existing push endpoint registrations.

@@ -43,7 +43,7 @@ To align things on the block axis you use the properties that start with `align-
 
 These properties deal with aligning the item inside the grid area it is placed into. The properties `align-items` and `justify-items` are applied to the grid container and set the `align-self` and `justify-self` properties as a group. This means that you can set alignment for all of your grid Items at once, then override any items that need a different alignment by applying the `align-self` or `justify-self` property to the rules for the individual grid Items.
 
-The initial value for `align-self` and `justify-self` is `stretch` so the item will stretch over the entire grid area. The exception to this rule is where the item has an intrinsic aspect ratio, for example an image. In this case the item will be aligned to `start` in both dimensions in order that the image is not distorted.
+The initial value for `align-self` and `justify-self` is `stretch` so the item will stretch over the entire grid area. The exception to this rule is where the item has an intrinsic {{glossary("aspect ratio")}}, for example an image. In this case the item will be aligned to `start` in both dimensions in order that the image is not distorted.
 
 ## Content alignment
 

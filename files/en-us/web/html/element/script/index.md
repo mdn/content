@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
-- [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
+- [`type`](/en-US/docs/Web/HTML/Element/script/type)
 
   - : This attribute indicates the type of script represented.
     The value of this attribute will be one of the following:

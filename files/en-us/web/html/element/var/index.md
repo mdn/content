@@ -57,7 +57,7 @@ Here's a simple example, using `<var>` to denote variable names in a mathematica
 
 ### Overriding the default style
 
-Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
+Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered in bold, using Courier if it's available, otherwise it falls back to the default monospace font.
 
 #### CSS
 
