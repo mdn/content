@@ -12,8 +12,7 @@ The **`open()`** method of the
 {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
 the {{domxref("Cache")}} object matching the `cacheName`.
 
-You can access `CacheStorage` through the global
-{{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property or the {{domxref("WorkerGlobalScope.caches")}} property.
 
 > **Note:** If the specified {{domxref("Cache")}} does not exist, a new
 > cache is created with that `cacheName` and a {{jsxref("Promise")}} that
@@ -76,4 +75,4 @@ self.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

@@ -17,7 +17,7 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("caches", "WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
