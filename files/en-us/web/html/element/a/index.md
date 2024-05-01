@@ -33,9 +33,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       https://b.example/register-source"
       ```
 
-      This is useful in cases where the requested resource is not on a server you control, and you want to register the attribution source via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
+      This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
 
-    > **Note:** `<a>` elements cannot be used as attribution triggers, only sources.
+      > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+
+    `<a>` elements cannot be used as attribution triggers, only sources.
 
 - `download`
 

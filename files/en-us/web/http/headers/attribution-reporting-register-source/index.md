@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Source
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Source`** header is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, to register an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
+The **`Attribution-Reporting-Register-Source`** header registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). This is included as part of a response to a request that included an {{httpheader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -53,7 +53,7 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"aggregation_keys"` {{optional_inline}}
       - : An object containing user-provided keys representing different data points to aggregate report values under.
     - `"aggregatable_report_window"` {{optional_inline}}
-      - : A string representing a time in seconds after which trigger data will no longer be included in generated aggregatable reports. The reports are still generated at the same time. If not set, this defaults to the `"expiry"` value.
+      - : A string representing a time in seconds after which trigger data will no longer be included in generated aggregatable reports (this is called a **report window**). If not set, this defaults to the `"expiry"` value.
     - `"debug_key"` {{optional_inline}}
       - : A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
@@ -61,7 +61,7 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"event_level_epsilon"` {{optional_inline}}
       - : A number equal to or greater than `0`, which controls the amount of [noise added to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. The maximum and default values will vary across implementations; Chrome for example has a maximum and default value of `14`.
     - `"event_report_window"` {{optional_inline}}
-      - : A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports. This is called a **report window**. If not set, the event report window falls back to the `"expiry"` value.
+      - : A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports (this is called a **report window**). If not set, the event report window falls back to the `"expiry"` value.
         > **Note:** If `"event_report_window"` is specified, `"event_report_windows"` cannot be specified, otherwise the source registration will fail.
     - `"event_report_windows"` {{optional_inline}}
       - : An object representing a series of report windows, starting at `"start_time"`, with reports for this source being delivered after each specified end time in `"end_times"`. This can be used to vary the time of report delivery across multiple reports. If not set, the event report window falls back to the `"expiry"` value. Properties are as follows:

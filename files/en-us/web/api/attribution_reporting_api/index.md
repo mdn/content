@@ -33,25 +33,25 @@ The Attribution Reporting API provides a way to measure ad conversions in a way 
 
 Let's illustrate how the Attribution Reporting API works via an example.
 
-Say we have a online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products (contained on `ad.shop.example`) on a content site, `news.example` (aka the publisher). The online shop wants to measure how many conversions they get between users interacting with the ad, and then viewing the product page on their site and putting the product into their shopping cart.
+Say we have a online shop, `shop.example` (aka the advertiser), which embeds an ad for one of its products (contained on `ad.shop.example`) on a content site, `news.example` (aka the publisher). The online shop wants to measure how many conversions they get from users interacting with the ad, and then viewing the product page on their site and putting the product into their shopping cart.
 
 ![Image representation of the steps described below](ara-flow.png)
 
 The steps involved are as follows:
 
-1. When a user visits the `news.example` site, the site can register an **Attribution source**. This is an ad-related feature that can be used to detect an interaction with the ad. This feature can be:
-   - A link. In this case, an interaction is detected by the user clicking the link (directly via an {{htmlelement("a")}} element, or via a {{domxref("Window.open()")}} call).
-   - An image such as a 1x1 transparent pixel. The source is registered when the server responds to the image resource network request.
-   - A script. In this case you can indicate interaction with the ad via whatever resource request makes sense for your app (i.e. a {{domxref("fetch")}} or {{domxref("XMLHttpRequest")}}).
-2. When the action occurs, as determined by the attribution source, associated source data is stored in a private local cache accessible only by the browser. This data includes the contextual and first-party data available to the page and the advertiser, origin of the ad creative, and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) where you expect the conversion from that ad to occur.
-3. When the user later visits `shop.example`, this site can register an **Attribution trigger**. Attribution triggers can be registered by loading:
-   - An image, for example a 1x1 conversion pixel.
-   - Any network resource (via {{domxref("fetch")}} or {{domxref("XMLHttpRequest")}}).
-4. When the attribution trigger is set off (for example, the user clicks the "Add to cart" button on `shop.example`), the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
+1. When a user visits the `news.example` site, the site can register an **Attribution source**. This is an ad-related feature that represents an interaction with the ad. In each case, the feature will send a request along with an {{httpheader("Attribution-Reporting-Eligible")}} header to indicate that the response is eligible to register an attribution source, and registration will be completed if the response includes an appropriate {{httpheader("Attribution-Reporting-Register-Source")}} header. The feature can be, for example:
+   - A link. In this case, the interaction is the user clicking on the link (directly via an {{htmlelement("a")}} element, or via a {{domxref("Window.open()")}} call). The source is registered via the response to the navigation request.
+   - An image such as a 1x1 transparent pixel. In this case, the interaction is the user visiting the page. The source is registered when the image loads, i.e. when the server responds to the image request.
+   - A fetch request (i.e. a {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}}). In this case the interaction can be specified as whatever makes sense for your app — for example the fetch request could be invoked by a `click` or `submit` event. The source is registered once the response comes back.
+2. When the source interaction occurs, the associated source data (sent in the {{httpheader("Attribution-Reporting-Register-Source")}} header) is stored in a private local cache accessible only by the browser. This data includes the contextual and first-party data available to the page and the advertiser, the origin of the ad tech company that is collecting the conversion data, and one or more destinations ([eTLD+1](https://web.dev/same-site-same-origin/#site)s) where you expect the conversion from that ad to occur (i.e. the advertiser's site(s), for example `shop.example`).
+3. When the user later visits `shop.example`, this site can register an **Attribution trigger**. This is an feature that represents an interaction with the shop page indicating that a conversion has occurred (for example, the user clicks the "Add to cart" button on `shop.example`). In each case, the feature will send a request along with an {{httpheader("Attribution-Reporting-Eligible")}} header to indicate that the response is eligible to register an attribution trigger, and registration will be completed if the response includes an appropriate {{httpheader("Attribution-Reporting-Register-Trigger")}} header. The feature can be, for example:
+   - An image such as a 1x1 transparent pixel. In this case, the interaction is the user visiting the page. The trigger is registered when the image loads, i.e. when the server responds to the image request.
+   - A fetch request (i.e. a {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}}). In this case the interaction can be specified as whatever makes sense for your app — for example the fetch request could be invoked by a `click` or `submit` event. The trigger is registered once the response comes back.
+4. When trigger interaction occurs, the browser attempts to match the attribution trigger to a source data entry saved in the private local cache (see 2.). For a successful match, the trigger must be:
    - On a `destination` specified in the source's associated data.
    - Same-origin with the request that specified the source registration.
      > **Note:** These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be situated on the top-level site, or embedded in an {{htmlelement("iframe")}}.
-5. If a match is found successfully, the browser sends report data to an endpoint on a reporting server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint. These reports can be either:
+5. If a match is made, the browser sends report data to an endpoint on a reporting server typically owned by the ad tech provider where it can be securely analyzed. The data is not accessible by the site the ad is placed on, or the advertiser site, or any other site except for the site hosting the reporting endpoint. These reports can be either:
    - **Event-level reports**: Reports based on an attribution source event, where detailed source data is associated with coarse trigger data. For example, a report may look like "Click ID 200498 on `ad.shop.example` led to a purchase on `shop.example`", where "Click ID 200498" is the detailed source data, and "purchase" is the coarse trigger data. The detailed source data may encode first-party or contextual data from the source page, and the coarse trigger data may encode the event from the trigger page.
    - **Summary reports**: More detailed reports that combine data from multiple conversions on both the source and trigger side. For example "Campaign ID 774653 on `news.example` has led to 654 sales of widgets on `shop.example` from users in Italy, with a total revenue of $9540." Compiling a summary report requires usage of an aggregation service (see for example the [Google aggregation service](https://github.com/privacysandbox/aggregation-service)).
 
@@ -86,9 +86,9 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 - {{httpheader("Attribution-Reporting-Eligible")}}
   - : Used to indicate that the response corresponding to the request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
 - {{httpheader("Attribution-Reporting-Register-Source")}}
-  - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution source.
+  - : HTTP response that registers a page feature as an attribution source. This is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header.
 - {{httpheader("Attribution-Reporting-Register-Trigger")}}
-  - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution trigger.
+  - : HTTP response that registers a page feature as an attribution trigger. This is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header.
 - {{httpheader("Permissions-Policy")}} {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} directive
   - : Controls whether the current document is allowed to use attribution reporting.
 

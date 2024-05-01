@@ -12,9 +12,9 @@ This article explains how to register attribution triggers.
 
 ## Basic methodology
 
-Once you have [registered attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), you need to register attribution triggers. These are events on a site where attribution is to be measured (for example, clicking a "purchase" button on an advertiser's site can indicate that a conversion may have occurred). The browser will then attempt to match the attribution trigger to an attribution source entry stored in a private local storage partition, and [generate a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) if a match is found.
+Once you have [registered attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), you need to register attribution triggers. These are interactions on a site where a conversion is to be measured (for example, clicking a "purchase" button on an advertiser's site can indicate that a conversion may have occurred). The browser will then attempt to match the attribution trigger to an attribution source entry stored in a private local storage partition, and [generate a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) if a match is found.
 
-The different attribution trigger types are registered and triggered in different ways, which are detailed in the sections below — see [HTML-based attribution triggers](#html-based_attribution_triggers) and [JavaScript-based attribution triggers](#javascript-based_attribution_triggers).
+The different attribution trigger types are registered in different ways, which are detailed in the sections below — see [HTML-based attribution triggers](#html-based_attribution_triggers) and [JavaScript-based attribution triggers](#javascript-based_attribution_triggers).
 
 However, what happens behind the scenes to register triggers, look for matches, etc., is the same in all cases.
 
@@ -54,7 +54,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
    See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
 
-   A trigger intended to match with a [summary report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#summary_reports) attribution source requires the following fields, as shown below:
+   A trigger intended to match with a [summary report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#summary_reports) attribution source requires the fields shown below:
 
    ```js
    res.set(
@@ -86,7 +86,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
    Again, see {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
 
-3. When a registered attribution trigger is set off, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) of the top-level page on which the trigger is being registered must:
+3. When the user interacts with the attribution trigger, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) of the top-level page on which the trigger is being registered must:
 
    - match the site of at least one of the `destination`s specified in the source's associated data.
    - be same-origin with the request that specified the source registration.
@@ -97,7 +97,11 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
 ## HTML-based attribution triggers
 
+HTML-based attribution triggers can be used for detecting conversions on a page when it first loads — or more precisely when a tracking pixel `<img>` or specific `<script>` loads. For example, if a user has clicked an attribution source link on a publisher's page and navigated to the advertiser's page, you can to register the attribution trigger and get the browser to attempt a match with stored source entries as soon as the advertiser's page loads.
+
 You can register an attribution trigger by adding the `attributionsrc` attribute to an appropriate element. This can be done on {{htmlelement("img")}} and {{htmlelement("script")}} elements.
+
+If you leave the attribute value blank, the registration request will be sent to the server the requested resource is hosted on. It is also possible to specify an additional URL inside the value to send the registration request to; see [Specifying a URL inside attributionsrc](#specifying_a_url_inside_attributionsrc) for more details.
 
 Here's an `<img>` element example:
 
@@ -116,7 +120,7 @@ const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "";
 ```
 
-In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the image file. Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
+In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the image file (when the `load` event fires). Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
 
 A {{htmlelement("script")}} example might look like so:
 
@@ -129,60 +133,62 @@ const scriptElem = document.querySelector("script");
 scriptElem.attributionSrc = "";
 ```
 
-The browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the script.
+In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response containing the script.
 
 ## JavaScript-based attribution triggers
 
-JavaScript-based attribution triggers are more versatile than HTML-based attribution triggers. You can trigger the browser to attempt a match with a stored source based on whatever request suits your app.
+JavaScript-based attribution triggers are more versatile than HTML-based attribution triggers. You can trigger the browser to attempt a match with a stored source based on a custom interaction, for example, clicking a custom element or submitting a form.
 
-To register a script-based attribution trigger, you can:
+To register a script-based attribution trigger, you can either:
 
-1. Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
 
-   ```js
-   const attributionReporting = {
-     eventSourceEligible: false,
-     triggerEligible: true,
-   };
+  ```js
+  const attributionReporting = {
+    eventSourceEligible: false,
+    triggerEligible: true,
+  };
 
-   // Optionally set keepalive to ensure the request outlives the page
-   function triggerMatching() {
-     fetch("https://shop.example/endpoint", {
-       keepalive: true,
-       attributionReporting,
-     });
-   }
+  // Optionally set keepalive to ensure the request outlives the page
+  function triggerMatching() {
+    fetch("https://shop.example/endpoint", {
+      keepalive: true,
+      attributionReporting,
+    });
+  }
 
-   // Associate the interaction trigger with whatever
-   // element and event makes sense for your code
-   elem.addEventListener("click", triggerMatching);
-   ```
+  // Associate the interaction trigger with whatever
+  // element and event makes sense for your code
+  elem.addEventListener("click", triggerMatching);
+  ```
 
-2. Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
+- Send an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object:
 
-   ```js
-   const attributionReporting = {
-     eventSourceEligible: false,
-     triggerEligible: true,
-   };
+  ```js
+  const attributionReporting = {
+    eventSourceEligible: false,
+    triggerEligible: true,
+  };
 
-   function triggerMatching() {
-     const req = new XMLHttpRequest();
-     req.open("GET", "https://shop.example/endpoint");
-     // Check availability of setAttributionReporting() before calling
-     if (typeof req.setAttributionReporting === "function") {
-       req.setAttributionReporting(attributionReporting);
-       req.send();
-     } else {
-       throw new Error("Attribution reporting not available");
-       // Include recovery code here as appropriate
-     }
-   }
+  function triggerMatching() {
+    const req = new XMLHttpRequest();
+    req.open("GET", "https://shop.example/endpoint");
+    // Check availability of setAttributionReporting() before calling
+    if (typeof req.setAttributionReporting === "function") {
+      req.setAttributionReporting(attributionReporting);
+      req.send();
+    } else {
+      throw new Error("Attribution reporting not available");
+      // Include recovery code here as appropriate
+    }
+  }
 
-   // Associate the interaction trigger with whatever
-   // element and event makes sense for your code
-   elem.addEventListener("click", triggerMatching);
-   ```
+  // Associate the interaction trigger with whatever
+  // element and event makes sense for your code
+  elem.addEventListener("click", triggerMatching);
+  ```
+
+In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response from the fetch request.
 
 > **Note:** The request can be for any resource. It doesn't need to have anything directly to do with the Attribution Reporting API, and can be a request for JSON, plain text, an image blob, or whatever else makes sense for your app.
 
@@ -190,7 +196,7 @@ To register a script-based attribution trigger, you can:
 
 In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
 
-However, it might be the case that the requested resource is not on a server you control, and you want to register the attribution trigger via a separate server that you _do_ control. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
+However, it might be the case that the requested resource is not on a server you control, or you just want to handle registering the attribution trigger on a diffferent server. In such cases, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
 
 For example, in the case of an `<img>` element you could declare the URL in the `attributionsrc` attribute:
 

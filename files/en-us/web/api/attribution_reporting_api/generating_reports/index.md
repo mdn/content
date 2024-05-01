@@ -8,7 +8,7 @@ status:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
 
-This article explains how reports are generated — both attribution reports and debug reports — and how you can control the generated reports. This includes handling noise, prioritizing reports, filtering reports, and generating debug reports.
+This article explains how [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) reports are generated — both attribution reports and debug reports — and how you can control the generated reports. This includes handling noise, prioritizing reports, filtering reports, and generating debug reports.
 
 ## Basic process
 
@@ -53,21 +53,21 @@ The properties are as follows:
 - `"attribution_destination"`
   - : A string, or an array of 2–3 strings, depending on whether the source was registered with multiple destinations or not. These strings represent the attribution [`"destination"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) site(s) set in the source registration via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header.
 - `"source_event_id"`
-  - : A string representing the attribution source ID. This is equal to the `source_event_id` set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+  - : A string representing the attribution source ID. This is equal to the [`"source_event_id"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
 - `"trigger_data"`
-  - : A string representing coarse data originating from the attribution trigger, set in the trigger registration (via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
+  - : A string representing coarse data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
 - `"report_id"`
   - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
 - `"source_type"`
   - : A string equal to either `"navigation"` or `"event"`, which respectively indicate whether the associated attribution source is [navigation-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), or [event-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources).
 - `"randomized_trigger_rate"`
-  - : A random number between 0 and 1 indicating how often noise is applied for this particular source configuration.
+  - : A random number between 0 and 1 indicating how often [noise](#how_noise_is_added_to_reports) is applied for this particular source configuration.
 - `"scheduled_report_time"`
-  - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid noise around offline devices reporting late).
+  - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid inaccuracies as a result of offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64-bit unsigned integer representing a debugging key for the attribution source (see [Debug reports](#debug_reports)).
+  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
 - `"trigger_debug_key"` {{optional_inline}}
-  - : A 64-bit unsigned integer representing a debugging key for the attribution trigger (see [Debug reports](#debug_reports)).
+  - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
 ## Summary reports
 
@@ -104,20 +104,20 @@ The properties are as follows:
     - `"api"`
       - : A enumerated value representing the API that triggered the report generation. Curently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
     - `"attribution_destination"`
-      - : A string representing the attribution `destination` URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
+      - : A string representing the attribution [`"destination"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
     - `"report_id"`
       - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
     - `"reporting_origin"`
       - : The origin that triggered the report generation.
     - `"scheduled_report_time"`
-      - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid noise around offline devices reporting late).
+      - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid inaccuracies as a result of offline devices reporting late).
     - `"source_registration_time"`
       - : A string representing the number of seconds from the Unix Epoch until the attribution source was registered, rounded down to a whole day.
     - `"version"`
       - : A string representing the version of the API used to generate the report.
 - `"aggregation_service_payloads"`
 
-  - : An array of objects representing payload objects containing the histogram contributions used by the aggregation service to assemble the data contained in the report (EDITORIAL: I'M GUESSING HERE; I DON'T UNDERSTAND WHAT THIS DOES). Currently, only a single payload is supported per report, configured by the browser. In the future multiple, customizable payloads may be supported (EDITORIAL: AGAIN, GUESSING, BUT THIS IS WHAT THE EXPLAINER IMPLIES). Each payload object can contain the following properties:
+  - : An array of objects representing payload objects containing the histogram contributions used by the aggregation service to assemble the data contained in the report. Currently, only a single payload is supported per report, configured by the browser. In the future multiple, customizable payloads may be supported. Each payload object can contain the following properties:
 
     - `"payload"`
 
@@ -141,17 +141,17 @@ The properties are as follows:
 - `"aggregation_coordinator_origin"`
   - : The deployment option for the aggregation service.
 - `"source_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's `"debug_key"` field.
+  - : A 64 bit unsigned integer representing the debugging key for the attribution source. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header's [`"debug_key"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) field. See [Debug reports](#debug_reports) for more information.
 - `"trigger_debug_key"` {{optional_inline}}
-  - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field.
+  - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
 ## How noise is added to reports
 
 Noise plays a significant role in both event-level and summary reports as a method of protecting user privacy.
 
-The [`source_event_id`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) contained in the `Attribution-Reporting-Register-Source` header is limited to 64 bits of information to enable uniquely identifying an interaction (such as an ad click).
+The [`source_event_id`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) contained in the `Attribution-Reporting-Register-Source` header is a base-10-formatted 64-bit unsigned integer that can uniquely identify an interaction (such as an ad click).
 
-The trigger-side data is therefore limited quite strictly, by limiting the amount of data and by applying noise to the data. By default, [navigation sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) will be limited to only 3 bits of [`trigger_data`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) (the values 0 through 7), while [event sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) will be limited to only 1 bit (the values 0 through 1). The `trigger_data` and [`trigger_data_matching`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields can be customized to vary the amount of noise applied. You could set a smaller range of trigger data to reduce the amount of noise applied, or a larger range to increase the noise:
+The trigger-side data is limited quite strictly, by limiting the amount of data and by applying noise to the data. By default, [navigation sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) will be limited to only 3 bits of [`trigger_data`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) (the values 0 through 7), while [event sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) will be limited to only 1 bit (the values 0 through 1). The `trigger_data` and [`trigger_data_matching`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields can be customized to vary the amount of noise applied. You could set a smaller range of trigger data to reduce the amount of noise applied, or a larger range to increase the noise:
 
 ```json
 {
@@ -163,7 +163,7 @@ The trigger-side data is therefore limited quite strictly, by limiting the amoun
 }
 ```
 
-Noise will be applied to whether a source will be reported truthfully. When an attribution source is registered, the browser will perform one of the following steps given a probability `p` (`p` is a small percentage, which can vary based on implementation, source type, and configuration):
+When an attribution source is registered, the browser will perform one of the following steps given a probability `p` (`p` is a small percentage, which can vary based on implementation, source type, and configuration):
 
 - With probability `1 - p`, the browser logs the source as normal.
 - With probability `p`, the browser chooses randomly among all the possible output states of the API. This includes the choice of not reporting anything at all, or potentially reporting multiple fake reports for the event.
