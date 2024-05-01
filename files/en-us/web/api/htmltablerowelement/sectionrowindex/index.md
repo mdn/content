@@ -13,7 +13,7 @@ represents the position of a row within the current section ({{htmlelement("thea
 
 ## Value
 
-Returns the index of the row, or `-1` if the row is not part of the section.
+The index of the row, or `-1` if the row is not part of the section.
 
 ## Examples
 

@@ -19,7 +19,7 @@ table in the right order. Therefore the rows count from `<thead>` to
 
 ## Value
 
-Returns the index of the row, or `-1` if the row is not part of a table.
+The index of the row, or `-1` if the row is not part of a table.
 
 ## Examples
 
