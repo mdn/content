@@ -16,15 +16,15 @@ The **`HTMLTableCellElement`** interface provides special properties and methods
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTableCellElement.abbr")}}
-  - : A string that can be used on `<th>` elements (not on {{HTMLElement("td")}}), specifying an alternative label for the header cell. This alternate label can be used in other contexts, such as when describing the headers that apply to a data cell. This is used to offer a shorter term for use by screen readers in particular, and is a valuable accessibility tool. Usually, the value of `abbr` is an abbreviation or acronym, but can be any text that's appropriate contextually.
+  - : A string that can be used on `<th>` elements (not on {{HTMLElement("td")}}), specifying an alternative label for the header cell. This alternate label can be used in other contexts, such as when describing the headers that apply to a data cell. This is used to offer a shorter term for use by screen readers in particular; and is a valuable accessibility tool. Usually, the value of `abbr` is an abbreviation or acronym, but can be any text that's appropriate contextually.
 - {{domxref("HTMLTableCellElement.cellIndex")}} {{ReadOnlyInline}}
-  - : A long integer representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
+  - : A number representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
 - {{domxref("HTMLTableCellElement.colSpan")}}
-  - : An unsigned long integer indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute.
+  - : A positive number indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute.
 - {{domxref("HTMLTableCellElement.headers")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represent headers associated with the cell. It reflects the [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attribute.
 - {{domxref("HTMLTableCellElement.rowSpan")}}
-  - : An unsigned long integer indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute.
+  - : An positive number indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute.
 - {{domxref("HTMLTableCellElement.scope")}}
 
   - : A string indicating the scope of a {{HTMLElement("th")}} cell. Header cells can be configured, using the `scope` property, the apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element). If no value is specified for `scope`, the header is not associated directly with cells in this way. Permitted values for `scope` are:

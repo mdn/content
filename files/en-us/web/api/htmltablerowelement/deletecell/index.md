@@ -1,47 +1,35 @@
 ---
-title: "HTMLTableRowElement: insertCell() method"
-short-title: insertCell()
-slug: Web/API/HTMLTableRowElement/insertCell
+title: "HTMLTableRowElement: deleteCell() method"
+short-title: deleteCell()
+slug: Web/API/HTMLTableRowElement/deleteCell
 page-type: web-api-instance-method
-browser-compat: api.HTMLTableRowElement.insertCell
+browser-compat: api.HTMLTableRowElement.deleteCell
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface inserts a new
-cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
-reference to the cell.
-
-> **Note:** `insertCell()` inserts the cell directly into the
-> row. The cell does not need to be appended separately
-> with {{domxref("Node.appendChild()")}} as would be the case if
-> {{domxref("Document.createElement()")}} had been used to create the new
-> `<td>` element.
->
-> You can not use `insertCell()` to create a new `<th>`
-> element though.
+The **`deleteCell()`** method of the {{domxref("HTMLTableRowElement")}} interface removes a
+specific row cell from a given {{htmlelement("tr")}}.
 
 ## Syntax
 
 ```js-nolint
-insertCell()
-insertCell(index)
+deleteCell(index)
 ```
 
 ### Parameters
 
 - `index` {{optional_inline}}
-  - : The cell index of the new cell. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted it defaults to `-1`.
+  - : The cell index of the cell to remove. If `index` is `-1` or equal to the number of cells, the last cell of the row is removed.
 
 ### Return value
 
-An {{domxref("HTMLTableCellElement")}} that references the new
-cell.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than the number of cells.
+  - : Thrown if `index` is greater than the number of cells or if it is smaller than `-1`.
 
 ## Examples
 
