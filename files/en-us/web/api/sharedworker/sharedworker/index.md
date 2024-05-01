@@ -57,10 +57,10 @@ new SharedWorker(aURL, options)
         should be available to the worker. Can have one of the following two values:
         - 'all'
           - : `SameSite=Strict`, `SameSite=Lax`, and `SameSite=None` cookies will all be available to the worker.
-            This option is only supported in first-party contexts.
+            This option is only supported in first-party contexts, and is the default in first-party contexts.
         - 'none'
           - : Only `SameSite=None` cookies will be available to the worker. This option is supported in first-party
-            and third-party contexts.
+            and third-party contexts, and is the default in third-party contexts.
 
 ### Exceptions
 
