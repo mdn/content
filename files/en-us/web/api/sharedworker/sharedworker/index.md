@@ -4,7 +4,9 @@ short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 page-type: web-api-constructor
 browser-compat: api.SharedWorker.SharedWorker
-spec-urls: https://privacycg.github.io/saa-non-cookie-storage/
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/workers.html#dom-sharedworker-dev
+  - https://privacycg.github.io/saa-non-cookie-storage/
 ---
 
 {{APIRef("Web Workers API")}}
