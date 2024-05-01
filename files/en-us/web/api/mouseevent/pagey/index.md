@@ -8,7 +8,7 @@ browser-compat: api.MouseEvent.pageY
 
 {{APIRef("UI Events")}}
 
-The **`pageY`** read-only property of the {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
+The **`pageY`** read-only property of the {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate (in pixels) at which the mouse was clicked, relative to the top edge of the entire document.
 This includes any portion of the document not currently visible.
 
 Being based on the edge of the document as it is, this property takes into account any vertical scrolling of the page.
