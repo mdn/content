@@ -13,7 +13,7 @@ The **`getAttribute()`** method of the
 element.
 
 If the given attribute does not exist, the value returned will
-either be `null` or `""` (the empty string); see [Non-existing attributes](#non-existing_attributes) for details.
+be `null`. See [Non-existing attributes](#non-existing_attributes) for details.
 
 If you need to inspect the {{domxref("Attr")}} node's properties, you can use the {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} method instead.
 
