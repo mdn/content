@@ -1,17 +1,15 @@
 ---
-title: caches global property
+title: "Window: caches property"
 short-title: caches
-slug: Web/API/caches
-page-type: web-api-global-property
+slug: Web/API/Window/caches
+page-type: web-api-instance-property
 browser-compat: api.caches
 ---
 
-{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
+{{APIRef("Service Workers API")}}{{securecontext_header}}
 
-The global **`caches`** read-only property returns the {{domxref("CacheStorage")}} object associated with the current context.
+The **`caches`** read-only property of the {{domxref("Window")}} interface returns the {{domxref("CacheStorage")}} object associated with the current context.
 This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-
-{{securecontext_header}}
 
 ## Value
 
@@ -55,6 +53,5 @@ this.addEventListener("install", (event) => {
 ## See also
 
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
-- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - {{domxref("CacheStorage")}}
 - {{domxref("Cache")}}

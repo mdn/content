@@ -66472,6 +66472,17 @@
     "modified": "2020-10-15T22:15:43.374Z",
     "contributors": ["wbamberg", "mfuji09"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2020-10-15T21:33:54.725Z",
+    "contributors": [
+      "mfluehr",
+      "fscholz",
+      "rifai",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
+    ]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2020-10-15T21:08:32.144Z",
     "contributors": [
@@ -70908,17 +70919,6 @@
       "Celelibi",
       "Callek",
       "alecananian"
-    ]
-  },
-  "Web/API/caches": {
-    "modified": "2020-10-15T21:33:54.725Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "rifai",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
     ]
   },
   "Web/API/clearInterval": {
