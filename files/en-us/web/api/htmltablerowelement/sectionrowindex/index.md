@@ -1,6 +1,6 @@
 ---
 title: "HTMLTableRowElement: sectionRowIndex property"
-short-title: rowIndex
+short-title: sectionRowIndex
 slug: Web/API/HTMLTableRowElement/sectionRowIndex
 page-type: web-api-instance-property
 browser-compat: api.HTMLTableRowElement.sectionRowIndex
@@ -55,10 +55,10 @@ This example uses JavaScript to label all the row numbers of the `tbody`.
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll("tbody tr");
+const rows = document.querySelectorAll("tbody tr");
 
 rows.forEach((row) => {
-  let z = document.createElement("td");
+  const z = document.createElement("td");
   z.textContent = `(row #${row.rowIndex})`;
   row.appendChild(z);
 });
@@ -67,6 +67,10 @@ rows.forEach((row) => {
 ### Result
 
 {{EmbedLiveSample("Examples")}}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
