@@ -174,7 +174,7 @@ For an excellent article on the history of this feature, see [Setting height and
 
 > **Note:** Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
 >
-> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
 >
 > If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
 
