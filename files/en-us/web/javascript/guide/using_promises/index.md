@@ -422,6 +422,10 @@ for (const f of [func1, func2, func3]) {
 
 However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises concurrently so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
 
+## Cancellation
+
+There's no way to cancel any given {{jsxref("Promise")}}, but asyncronous operations can implement "cooperative cancellation", typically using [AbortController](docs/Web/API/AbortController).
+
 ## Creating a Promise around an old callback API
 
 A {{jsxref("Promise")}} can be created from scratch using its [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise). This should be needed only to wrap old APIs.
