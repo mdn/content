@@ -67,7 +67,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("display")}}</td>
+      <td>See {{cssxref("display", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>

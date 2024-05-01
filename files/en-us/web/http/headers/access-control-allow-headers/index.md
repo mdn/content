@@ -74,12 +74,12 @@ Let's look at an example of a {{glossary("preflight request")}} involving `Acces
 
 First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.
 
-The preflight request below tells the server that we want to send a CORS `GET` request with the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `x-requested-with`).
+The preflight request below tells the server that we want to send a CORS `GET` request with the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `X-Requested-With`).
 
 ```http
 OPTIONS /resource/foo
 Access-Control-Request-Method: GET
-Access-Control-Request-Headers: Content-Type, x-requested-with
+Access-Control-Request-Headers: content-type,x-requested-with
 Origin: https://foo.bar.org
 ```
 
