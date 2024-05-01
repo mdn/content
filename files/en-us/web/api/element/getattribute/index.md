@@ -29,7 +29,7 @@ getAttribute(attributeName)
 
 ### Return value
 
-A string containing the value of `attributeName`.
+A string containing the value of `attributeName` if the attribute exists, otherwise `null`.
 
 ## Examples
 
@@ -56,10 +56,6 @@ const align = div1.getAttribute("align");
 
 When called on an HTML element in a DOM flagged as an HTML document,
 `getAttribute()` lower-cases its argument before proceeding.
-
-### Non-existing attributes
-
-All modern web browsers return `null` when the specified attribute does not exist on the specified element.
 
 ### Retrieving nonce values
 
