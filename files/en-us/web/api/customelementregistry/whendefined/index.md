@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`whenDefined()`** method of the
 {{domxref("CustomElementRegistry")}} interface returns a {{jsxref("Promise")}} that

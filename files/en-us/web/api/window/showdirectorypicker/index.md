@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.showDirectoryPicker
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 The **`showDirectoryPicker()`** method of the
 {{domxref("Window")}} interface displays a directory picker which allows the user to
@@ -26,14 +26,14 @@ showDirectoryPicker()
 
   - : An object containing options, which are as follows:
 
-    - `id`
+    - `id` {{optional_inline}}
       - : By specifying an ID, the browser can remember different directories for different
         IDs. If the same ID is used for another picker, the picker opens in the same
         directory.
-    - `mode`
+    - `mode` {{optional_inline}}
       - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
         and write access to the directory.
-    - `startIn`
+    - `startIn` {{optional_inline}}
       - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
 
@@ -43,9 +43,12 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 
 ### Exceptions
 
-- `AbortError`
-  - : Thrown if the user dismisses the prompt without making a selection, or if the user
-    agent deems the selected content to be too sensitive or dangerous
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the user dismisses the prompt without making a selection,
+    or if the user agent deems the selected directory to be too sensitive or dangerous,
+    or if the {{domxref('PermissionStatus.state')}} for the selected directory is not `"granted"` in the specified `mode`.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
 
 ## Security
 
@@ -75,4 +78,4 @@ async function getDir() {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

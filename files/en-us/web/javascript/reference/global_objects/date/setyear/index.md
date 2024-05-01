@@ -7,17 +7,17 @@ status:
 browser-compat: javascript.builtins.Date.setYear
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 
-However, the way the legacy `setYear()` method sets year values is different from how the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} method sets year values — and in some cases, also different from how `new Date()` and {{jsxref("Date.parse()")}} set year values. Specifically, given two-digit numbers, such as `22` and `61`:
+However, the way the legacy `setYear()` method sets year values is different from how the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} method sets year values — and in some cases, also different from how `new Date()` and {{jsxref("Date.parse()")}} set year values. Specifically, given two-digit numbers, such as `22` and `61`:
 
 - `setYear()` interprets any two-digit number as an offset to `1900`; so `date.setYear(22)` results in the year value being set to `1922`, and `date.setYear(61)` results in the year value being set to `1961`. (In contrast, while `new Date(61, 1)` also results in the year value being set to `1961`, `new Date("2/1/22")` results in the year value being set to `2022`; and similarly for {{jsxref("Date.parse()")}}).
 
-- {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} does no special interpretation but instead uses the literal two-digit value as-is to set the year; so `date.setFullYear(61)` results in the year value being set to `0061`, and `date.setFullYear(22)` results in the year value being set to `0022`.
+- {{jsxref("Date/setFullYear", "setFullYear()")}} does no special interpretation but instead uses the literal two-digit value as-is to set the year; so `date.setFullYear(61)` results in the year value being set to `0061`, and `date.setFullYear(22)` results in the year value being set to `0022`.
 
-Because of those differences in behavior, you should no longer use the legacy `setYear()` method, but should instead use the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} method.
+Because of those differences in behavior, you should no longer use the legacy `setYear()` method, but should instead use the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} method.
 
 ## Syntax
 

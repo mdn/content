@@ -7,11 +7,9 @@ browser-compat: api.MediaStream
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStream`** interface represents a stream of media content. A stream consists of several **tracks**, such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.
+The **`MediaStream`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} represents a stream of media content. A stream consists of several **tracks**, such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.
 
-You can obtain a `MediaStream` object either by using the constructor or by calling functions such as {{domxref("MediaDevices.getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia()")}}, or {{domxref("HTMLCanvasElement.captureStream()")}}.
-
-Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.
+You can obtain a `MediaStream` object either by using the constructor or by calling functions such as {{domxref("MediaDevices.getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia()")}}, or {{domxref("HTMLCanvasElement.captureStream()")}} and {{domxref("HTMLMediaElement.captureStream()")}}.
 
 {{InheritanceDiagram}}
 
@@ -54,9 +52,9 @@ _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
   - : Fired when a new {{domxref("MediaStreamTrack")}} object is added.
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
   - : Fired when a {{domxref("MediaStreamTrack")}} object has been removed.
-- {{domxref("MediaStream/active_event", "active")}}
+- {{domxref("MediaStream/active_event", "active")}} {{Non-standard_Inline}}
   - : Fired when the MediaStream is activated.
-- {{domxref("MediaStream/inactive_event", "inactive")}}
+- {{domxref("MediaStream/inactive_event", "inactive")}} {{Non-standard_Inline}}
   - : Fired when the MediaStream is inactivated.
 
 ## Specifications

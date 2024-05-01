@@ -14,7 +14,7 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 The above example shows usage of the `<img>` element:
 
 - The `src` attribute is **required**, and contains the path to the image you want to embed.
-- The `alt` attribute holds a text description of the image, which isn't mandatory but is **incredibly useful** for accessibility — screen readers read this description out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
 
 There are many other attributes to achieve various purposes:
 
@@ -39,7 +39,7 @@ The image file formats that are most commonly used on the web are:
 - [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
 - [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
 
-Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Edge.
+Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images.
 
 SVG remains the recommended format for images that must be drawn accurately at different sizes.
 
@@ -57,9 +57,9 @@ If an error occurs while loading or rendering an image, and an `onerror` event h
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `alt`
+- [`alt`](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes)
 
-  - : Defines an alternative text description of the image.
+  - : Defines text that can replace the image in the page.
 
     > **Note:** Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:
     >
@@ -69,7 +69,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
-    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` is empty and the image failed to display.
+    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` attribute is empty and the image failed to display.
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
@@ -111,7 +111,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
 
-- `fetchpriority` {{experimental_inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
 
@@ -126,7 +126,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-    > **Note:** Including `height` and [`width`](#width) enables the aspect ratio of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > **Note:** Including `height` and [`width`](#width) enables the {{glossary("aspect ratio")}} of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 - `ismap`
 
@@ -144,6 +144,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
     > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+    > **Note:** Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazyloaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
 
 - `referrerpolicy`
 
@@ -246,7 +247,7 @@ Depending on its type, an image may have an intrinsic width and height. For some
 The following example embeds an image into the page and includes alternative text for accessibility.
 
 ```html
-<img src="favicon144.png" alt="MDN logo" />
+<img src="favicon144.png" alt="MDN" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -268,7 +269,7 @@ This example builds upon the previous one, showing how to turn the image into a 
 In this example we include a `srcset` attribute with a reference to a high-resolution version of the logo; this will be loaded instead of the `src` image on high-resolution devices. The image referenced in the `src` attribute is counted as a `1x` candidate in {{glossary("User agent", "user agents")}} that support `srcset`.
 
 ```html
-<img src="favicon72.png" alt="MDN logo" srcset="favicon144.png 2x" />
+<img src="favicon72.png" alt="MDN" srcset="favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
@@ -280,7 +281,7 @@ The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that
 ```html
 <img
   src="clock-demo-200px.png"
-  alt="Clock"
+  alt="The time is 12:45."
   srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
   sizes="(max-width: 600px) 200px, 50vw" />
 ```
@@ -297,7 +298,7 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
 
 ### Authoring meaningful alternate descriptions
 
-An `alt` attribute's value should clearly and concisely describe the image's content. It should not describe the presence of the image itself or the file name of the image. If the `alt` attribute is purposefully left off because the image has no textual equivalent, consider alternate methods to present what the image is trying to communicate.
+An `alt` attribute's value should provide a clear and concise text replacement for the image's content. It should not describe the presence of the image itself or the file name of the image. If the `alt` attribute is purposefully left off because the image has no textual equivalent, consider alternate methods to present what the image is trying to communicate.
 
 #### Don't
 
@@ -308,7 +309,7 @@ An `alt` attribute's value should clearly and concisely describe the image's con
 #### Do
 
 ```html example-good
-<img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg" />
+<img alt="A Rockhopper Penguin is standing on a beach." src="penguin.jpg" />
 ```
 
 When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
@@ -324,12 +325,12 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
-<img src="mdn.svg" alt="MDN logo" role="img" />
+<img src="mdn.svg" alt="MDN" role="img" />
 ```
 
 ### The title attribute
 
-The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
+The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
 
 The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
 
@@ -432,14 +433,14 @@ The value of the `title` attribute is usually presented to the user as a tooltip
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role"
+                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"
                     >tab</a
                   ></code
                 >

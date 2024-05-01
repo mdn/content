@@ -8,7 +8,7 @@ status:
 browser-compat: api.PeriodicSyncManager.unregister
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
@@ -28,7 +28,7 @@ unregister(tag)
 
 ### Return value
 
-A resolved {{jsxref("Promise")}}.
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ### Exceptions
 
@@ -55,5 +55,5 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

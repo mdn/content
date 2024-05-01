@@ -13,10 +13,9 @@ In this lesson we will take a look at how certain special elements are treated i
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -42,7 +41,7 @@ In this lesson we will take a look at how certain special elements are treated i
 
 Images and video are described as **[replaced elements](/en-US/docs/Web/CSS/Replaced_element)**. This means that CSS cannot affect the internal layout of these elements — only their position on the page amongst other elements. As we will see however, there are various things that CSS can do with an image.
 
-Certain replaced elements, such as images and video, are also described as having an **aspect ratio**. This means that it has a size in both the horizontal (x) and vertical (y) dimensions, and will be displayed using the intrinsic dimensions of the file by default.
+Certain replaced elements, such as images and video, are also described as having an **{{glossary("aspect ratio")}}**. This means that it has a size in both the horizontal (x) and vertical (y) dimensions, and will be displayed using the intrinsic dimensions of the file by default.
 
 ## Sizing images
 
@@ -50,7 +49,7 @@ As you already know from following these lessons, everything in CSS generates a 
 
 In the example below we have two boxes, both 200 pixels in size:
 
-- One contains an image which is smaller than 200 pixels — it is smaller than the box and doesn't stretch to fill it.
+- One contains an image that is smaller than 200 pixels — it is smaller than the box and doesn't stretch to fill it.
 - The other is larger than 200 pixels and overflows the box.
 
 {{EmbedGHLiveSample("css-examples/learn/images/size.html", '100%', 1000)}}
@@ -75,7 +74,7 @@ You could also try the value of `fill`, which will fill the box but not maintain
 
 ## Replaced elements in layout
 
-When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a flex or grid layout elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.
+When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a flex or grid layout, elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.
 
 You can see this happening in the example below where we have a two column, two row grid container, which has four items in it. All of the `<div>` elements have a background color and stretch to fill the row and column. The image, however, does not stretch.
 

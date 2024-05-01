@@ -207,7 +207,7 @@ button.addEventListener("click", () => aborter.abort());
 logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
 
 async function logChunks(url, { signal }) {
-  const response = await fetch(url, signal);
+  const response = await fetch(url, { signal });
   for await (const chunk of response.body) {
     // Do something with the chunk
   }

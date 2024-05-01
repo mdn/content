@@ -16,9 +16,9 @@ Specifically, `inert` does the following:
 - Hides the element and its content from assistive technologies by excluding them from the accessibility tree.
 
 ```html
-<body inert>
+<div inert>
   <!-- content -->
-</body>
+</div>
 ```
 
 The `inert` attribute can be added to sections of content that should not be interactive. When an element is inert, it along with all of the element's descendants, including normally interactive elements such as links, buttons, and form controls are disabled because they cannot receive focus or be clicked.
@@ -45,5 +45,5 @@ While providing visual and non-visual cues about content inertness, also remembe
 
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLElement.inert")}} HTML DOM property
-- [Introducing inert](https://developer.chrome.com/articles/inert/)
+- [Introducing inert](https://developer.chrome.com/docs/css-ui/inert)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

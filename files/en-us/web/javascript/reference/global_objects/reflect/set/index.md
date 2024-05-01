@@ -113,4 +113,4 @@ Reflect.set(target, "a", 2, receiver); // true
 - [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`Proxy`'s `set` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)
+- [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)

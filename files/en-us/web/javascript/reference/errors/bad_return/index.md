@@ -22,11 +22,11 @@ SyntaxError: Return statements are only valid inside functions. (Safari)
 
 ## What went wrong?
 
-A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions). Maybe there are missing curly brackets somewhere? The `return` statement must be in a function, because it ends function execution and specifies a value to be returned to the function caller.
+A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions). Maybe there are missing curly braces somewhere? The `return` statement must be in a function, because it ends function execution and specifies a value to be returned to the function caller.
 
 ## Examples
 
-### Missing curly brackets
+### Missing curly braces
 
 ```js-nolint example-bad
 function cheer(score) {
@@ -41,7 +41,7 @@ function cheer(score) {
 // SyntaxError: return not in function
 ```
 
-The curly brackets look correct at a first glance, but this code snippet is missing a `{` after the first `if` statement. Correct would be:
+The curly braces look correct at a first glance, but this code snippet is missing a `{` after the first `if` statement. Correct would be:
 
 ```js example-good
 function cheer(score) {

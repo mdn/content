@@ -8,7 +8,7 @@ page-type: mdn-writing-guide
 
 ## Adding images
 
-To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using an `<img>` element or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using [Markdown image syntax](https://github.github.com/gfm/#images) or the equivalent HTML `<img>` element.
 
 Let's walk through an example:
 
@@ -33,15 +33,16 @@ Let's walk through an example:
    ```
 
 3. Run `filecheck` on each image, which might complain if something's wrong.
-   For more details, see the [Compressing images](#compressing-images) section.
+   For more details, see the [Compressing images](#compressing_images) section.
 
    ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. Reference your image in the document with an `<img>` element and `alt` attribute inside `files/en-us/web/css/index.md`:
+4. Reference your image in the document using the Markdown syntax for images, providing [descriptive text for the `alt` attribute](/en-US/docs/Learn/Accessibility/HTML#text_alternatives) between the brackets that describe the image, or include an {{htmlelement("img")}} element with `alt` attribute inside `files/en-us/web/css/index.md`:
 
-   ```html
+   ```md
+   ![My cool image](my-cool-image.png)
    <img src="my-cool-image.png" alt="My cool image" />
    ```
 
@@ -77,14 +78,14 @@ Don't include "screenshot" or "Bing" as the user doesn't need to know it's a scr
 
 The syntax in markdown and HTML:
 
-```html-nolint
+```md-nolint
 ![<alt-text>](<url-of-image>)
 <img alt="<alt-text>" src="<url-of-image>">
 ```
 
 Examples:
 
-```html
+```md
 ![OpenWebDocs Logo: Carle the book worm](carle.png)
 <img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png" />
 ```
@@ -152,7 +153,7 @@ See [Working with the Animation Inspector](https://firefox-source-docs.mozilla.o
 In addition, you should consider the following tips:
 
 - The video will end up being uploaded to YouTube before embedding.
-  We recommend a 16:9 aspect ratio for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video.
+  We recommend a 16:9 {{glossary("aspect ratio")}} for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video.
   So for example, you might choose a resolution of 1024×576, 1152×648, or 1280×720.
 - Record the video in HD, so that it looks better when uploaded.
 - For DevTools videos, it is often a good idea to choose a contrasting theme to the page content. For example, choose the dark theme if the example webpage is light-themed. It is easier to see what is going on and where the DevTools start and the page ends.

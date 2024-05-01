@@ -82,11 +82,11 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 - `off`
   - : Disable automatic correction and text substitutions.
 
-### mozactionhint
+### mozactionhint {{deprecated_inline}}
 
 A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-This attribute has been deprecated: use the [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) global attribute instead.
+<strong>Deprecated: Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) instead.</strong>
 
 ## Using tel inputs
 
@@ -474,7 +474,7 @@ input:valid + span::after {
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -531,8 +531,6 @@ input:valid + span::after {
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
 - {{HTMLElement("input")}}
-
   - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

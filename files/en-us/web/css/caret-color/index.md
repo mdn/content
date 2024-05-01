@@ -25,7 +25,7 @@ caret-color: currentcolor;
 caret-color: red;
 caret-color: #5729e9;
 caret-color: rgb(0 200 0);
-caret-color: hsl(228deg 4% 24% / 0.8);
+caret-color: hsl(228deg 4% 24% / 80%);
 
 /* Global values */
 caret-color: inherit;
@@ -102,6 +102,5 @@ p.custom {
 
 - The {{HTMLElement("input")}} element
 - The HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute, which can be used to make any element's text editable
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

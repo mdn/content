@@ -7,7 +7,9 @@ browser-compat: css.properties.counter-set
 
 {{CSSRef}}
 
-The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
+The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) to the given values.
+
+The `counter-set` property will create a new counter for each named counter in the list of space-separated counter and value pairs that doesn't already exist. If a named counter in the list is missing a value, the value of the counter will be set to `0`.
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
@@ -46,7 +48,7 @@ The `counter-set` property is specified as either one of the following:
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : The name of the counter to set.
 - {{cssxref("&lt;integer&gt;")}}
-  - : The value to set the counter to on each occurrence of the element. Defaults to `0` if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of 0 (though it may then immediately set or increment that value to something different).
+  - : The value to set the counter to on each occurrence of the element. Defaults to `0` if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of `0` (though it may then immediately set or increment that value to something different).
 - `none`
   - : No counter set is to be performed. This can be used to override a `counter-set` defined in a less specific rule.
 
@@ -86,3 +88,5 @@ h1 {
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

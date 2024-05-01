@@ -13,7 +13,7 @@ Next, we'll turn our attention to strings — this is what pieces of text are ca
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -26,7 +26,7 @@ Next, we'll turn our attention to strings — this is what pieces of text are ca
 
 ## The power of words
 
-Words are very important to humans — they are a large part of how we communicate. Since the Web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to our text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript contains a number of features for manipulating strings, creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
+Words are very important to humans — they are a large part of how we communicate. Since the web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript offers many features for manipulating strings. These include creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
 
 Pretty much all of the programs we've shown you so far in the course have involved some string manipulation.
 
@@ -51,7 +51,7 @@ const badString2 = 'This is a test;
 const badString3 = This is a test';
 ```
 
-These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.
+These lines don't work because any text without quotes around it is interpreted as a variable name, property name, reserved word, or similar. If the browser doesn't recognize the unquoted text, then an error is raised (e.g., "missing; before statement"). If the browser can detect where a string starts but not its end (owing to the missing second quote), it reports an "unterminated string literal" error. If your program is raising such errors, then go back and check all your strings to make sure you have no missing quotation marks.
 
 The following will work if you previously defined the variable `string` — try it now:
 
@@ -133,11 +133,11 @@ button.addEventListener("click", greet);
 
 {{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
 
-Here we're using the {{domxref("window.prompt()", "window.prompt()")}} function, which asks the user to answer a question via a popup dialog box then stores the text they enter inside a given variable — in this case `name`. We then display a string which inserts the name into a generic greeting message.
+Here, we are using the {{domxref("window.prompt()", "window.prompt()")}} function, which prompts the user to answer a question via a popup dialog box and then stores the text they enter inside a given variable — in this case `name`. We then display a string that inserts the name into a generic greeting message.
 
 ### Concatenation using "+"
 
-You can only use `${}` with template literals, not with normal strings. You can concatenate normal strings using the `+` operator:
+You can use `${}` only with template literals, not normal strings. You can concatenate normal strings using the `+` operator:
 
 ```js
 const greeting = "Hello";
@@ -227,14 +227,14 @@ What happens when we try to concatenate a string and a number? Let's try it in o
 ```js
 const name = "Front ";
 const number = 242;
-console.log(`${name}${number}`); // "Front 242"
+console.log(name + number); // "Front 242"
 ```
 
 You might expect this to return an error, but it works just fine. How numbers should be displayed as strings is fairly well-defined, so the browser automatically converts the number to a string and concatenates the two strings.
 
-If you have a numeric variable that you want to convert to a string, or a string variable that you want to convert to a number, you can use the following two constructs:
+If you have a numeric variable that you want to convert to a string or a string variable that you want to convert to a number, you can use the following two constructs:
 
-- The {{jsxref("Number/Number", "Number()")}} function converts anything passed to it into a number, if it can. Try the following:
+- The {{jsxref("Number/Number", "Number()")}} function converts anything passed to it into a number if it can. Try the following:
 
   ```js
   const myString = "123";

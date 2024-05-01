@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.encodeURI
 
 {{jsSidebar("Objects")}}
 
-The **`encodeURI()`** function encodes a {{glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURIComponent()")}}, this function encodes fewer characters, preserving those that are part of the URI syntax.
+The **`encodeURI()`** function encodes a {{Glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{Glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURIComponent()")}}, this function encodes fewer characters, preserving those that are part of the URI syntax.
 
 {{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
 
@@ -53,6 +53,23 @@ The `encodeURI()` function does not encode characters that have special meaning 
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 
+`encodeURI`, as the name implies, is used to encode a URL as a whole, assuming it is already well-formed. If you want to dynamically assemble string values into a URL, you probably want to use {{jsxref("encodeURIComponent()")}} on each dynamic segment instead, to avoid URL syntax characters in unwanted places.
+
+```js
+const name = "Ben & Jerry's";
+
+// This is bad:
+const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
+console.log([...new URL(link).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']
+
+// Instead:
+const link = encodeURI(
+  `https://example.com/?choice=${encodeURIComponent(name)}`,
+);
+// "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
+console.log([...new URL(link).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
+```
+
 ## Examples
 
 ### encodeURI() vs. encodeURIComponent()
@@ -73,8 +90,6 @@ console.log(encodeURIComponent(set2)); // -.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encoded as %20)
 ```
 
-Note that `encodeURI()` by itself _cannot_ form proper HTTP {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} requests, such as for {{domxref("XMLHttpRequest")}}, because `&`, `+`, and `=` are not encoded, which are treated as special characters in `GET` and `POST` requests. `encodeURIComponent()`, however, does encode these characters.
-
 ### Encoding a lone surrogate throws
 
 A {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is not part of a high-low pair. For example:
@@ -94,7 +109,7 @@ You can use {{jsxref("String.prototype.toWellFormed()")}}, which replaces lone s
 
 ### Encoding for RFC3986
 
-The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
+The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) makes square brackets reserved (for {{Glossary("IPv6")}}) and thus not encoded when forming something which could be part of a URL (such as a host). It also reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL format.
 
 ```js
 function encodeRFC3986URI(str) {

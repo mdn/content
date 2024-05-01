@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.get
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`get()`** method of the
 {{domxref("CustomElementRegistry")}} interface returns the constructor for a

@@ -94,7 +94,7 @@ The reasons to use a `with` statement include saving one temporary variable and 
 
 ### Using the with statement
 
-The following `with` statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the `with` statement refer to the {{jsxref("Math.PI", "PI")}} property and the {{jsxref("Math.cos", "cos")}} and {{jsxref("Math.sin", "sin")}} methods, without specifying an object. JavaScript assumes the `Math` object for these references.
+The following `with` statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the `with` statement refer to the {{jsxref("Math/PI", "PI")}} property and the {{jsxref("Math/cos", "cos")}} and {{jsxref("Math/sin", "sin")}} methods, without specifying an object. JavaScript assumes the `Math` object for these references.
 
 ```js
 let a, x, y;
@@ -175,4 +175,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}

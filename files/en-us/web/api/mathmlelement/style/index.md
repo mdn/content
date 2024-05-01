@@ -21,7 +21,7 @@ A style declaration is reset by setting it to `null` or an empty string, e.g., `
 > **Note:** CSS property names are converted to JavaScript identifier with these rules:
 >
 > - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase).
-> - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to _camelCase_: `background-attachment` becomes `backgroundAttachment`.
+> - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to {{Glossary("camel_case", "camel case")}}: `background-attachment` becomes `backgroundAttachment`.
 > - The property `float`, being a reserved JavaScript keyword, is converted to `cssFloat`.
 >
 > The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
@@ -55,9 +55,14 @@ const element = document.querySelector(".parameter");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSStyleDeclaration)
+// We loop through all the element's styles using `for...in`
 for (const prop in elementStyle) {
-  if (Object.hasOwn(elementStyle, prop)) {
+  // We check if the property belongs to the CSSStyleDeclaration instance
+  // We also ensure that the property is a numeric index (indicating an inline style)
+  if (
+    Object.hasOwn(elementStyle, prop) &&
+    !Number.isNaN(Number.parseInt(prop))
+  ) {
     out.textContent += `${
       elementStyle[prop]
     } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;

@@ -1,6 +1,7 @@
 ---
 title: Promote
 slug: WebAssembly/Reference/Numeric/Promote
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

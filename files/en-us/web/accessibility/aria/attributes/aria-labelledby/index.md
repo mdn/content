@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-labelledby
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to.
 
 ## Description
@@ -112,15 +114,10 @@ The `aria-labelledby` attribute is **NOT** supported in:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('label')}} element
 - HTML {{HTMLElement('legend')}} element
 - HTML {{HTMLElement('caption')}} element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

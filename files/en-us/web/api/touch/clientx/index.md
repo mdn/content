@@ -13,8 +13,8 @@ point relative to the viewport, not including any scroll offset.
 
 ## Value
 
-A `long` representing the X coordinate of the touch point relative to the
-viewport, not including any scroll offset.
+A `double` floating point value representing the X coordinate of the touch point
+relative to the viewport, not including any scroll offset.
 
 ## Examples
 

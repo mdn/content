@@ -19,7 +19,7 @@ arrayInstance.with(index, value)
 
 - `index`
   - : Zero-based index at which to change the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `index < 0`, `index + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= index < 0`, `index + array.length` is used.
     - If the index after normalization is out of bounds, a {{jsxref("RangeError")}} is thrown.
 - `value`
   - : Any value to be assigned to the given index.
@@ -36,6 +36,8 @@ A new array with the element at `index` replaced with `value`.
 ## Description
 
 The `with()` method changes the value of a given index in the array, returning a new array with the element at the given index replaced with the given value. The original array is not modified. This allows you to chain array methods while doing manipulations.
+
+By combining `with()` with {{jsxref("Array/at", "at()")}}, you can both write and read (respectively) an array using negative indices.
 
 The `with()` method never produces a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). If the source array is sparse, the empty slots will be replaced with `undefined` in the new array.
 
@@ -96,8 +98,9 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.with` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.at()")}}
 - {{jsxref("TypedArray.prototype.with()")}}

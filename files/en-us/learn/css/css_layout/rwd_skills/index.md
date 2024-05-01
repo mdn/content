@@ -8,9 +8,10 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you understand [how to use media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries) and get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the layout lessons in the [CSS layout module](/en-US/docs/Learn/CSS/CSS_layout).
 
-> **Note:** Due to the need to test your design in multiple screen sizes, we do not have an Interactive Editor for this task. Download the code and work locally, or use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** Because you need to test your design in multiple screen sizes, we do not have interactive editors on this page.
+> Download the code and work locally, or use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
-> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task
 
@@ -21,15 +22,3 @@ Your task is to create a desktop version of this layout which displays when ther
 ![A two column wireframed layout.](rwd-task.png)
 
 There are a number of ways that you could create the desktop layout, enjoy experimenting. You could also add a second breakpoint perhaps creating a layout that would work well on a tablet in portrait mode.
-
-## Assessment or further help
-
-If you would like your work assessed or are stuck and want to ask for help:
-
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for responsive web design and media queries skill test".
-   - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.

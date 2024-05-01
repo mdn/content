@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -236,8 +240,28 @@
       "inh": "",
       "impl": []
     },
+    "BluetoothDataFilter": {
+      "inh": "",
+      "impl": []
+    },
     "BluetoothDevice": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "BluetoothLEScan": {
+      "inh": "",
+      "impl": []
+    },
+    "BluetoothLEScanFilter": {
+      "inh": "",
+      "impl": []
+    },
+    "BluetoothLEScanPermissionResult": {
+      "inh": "PermissionStatus",
+      "impl": []
+    },
+    "BluetoothManufacturerDataFilter": {
+      "inh": "",
       "impl": []
     },
     "BluetoothManufacturerDataMap": {
@@ -264,6 +288,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "BluetoothServiceDataFilter": {
+      "inh": "",
+      "impl": []
+    },
     "BluetoothServiceDataMap": {
       "inh": "",
       "impl": []
@@ -282,6 +310,10 @@
     },
     "BrowserCaptureMediaStreamTrack": {
       "inh": "MediaStreamTrack",
+      "impl": []
+    },
+    "BufferedChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "ByteLengthQueuingStrategy": {
@@ -344,6 +376,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "ChapterInformation": {
+      "inh": "",
+      "impl": []
+    },
     "CharacterBoundsUpdateEvent": {
       "inh": "Event",
       "impl": []
@@ -378,6 +414,10 @@
     },
     "CloseEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "CloseWatcher": {
+      "inh": "EventTarget",
       "impl": []
     },
     "Comment": {
@@ -492,6 +532,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFontFaceDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSFontFaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -604,6 +648,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSNestRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -618,6 +666,10 @@
     },
     "CSSOKLCH": {
       "inh": "CSSColorValue",
+      "impl": []
+    },
+    "CSSPageDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPageRule": {
@@ -656,8 +708,12 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
-    "CSSPositionFallbackRule": {
-      "inh": "CSSGroupingRule",
+    "CSSPositionTryDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
+    "CSSPositionTryRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSPropertyRule": {
@@ -712,6 +768,10 @@
       "inh": "",
       "impl": []
     },
+    "CSSStyleProperties": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSStyleRule": {
       "inh": "CSSGroupingRule",
       "impl": []
@@ -744,10 +804,6 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
-    "CSSTryRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
     "CSSUnitValue": {
       "inh": "CSSNumericValue",
       "impl": []
@@ -758,6 +814,10 @@
     },
     "CSSVariableReferenceValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSViewTransitionRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -822,6 +882,10 @@
     },
     "DevicePosture": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "DigitalCredential": {
+      "inh": "Credential",
       "impl": []
     },
     "DigitalGoodsService": {
@@ -1153,6 +1217,10 @@
       "impl": []
     },
     "FontMetrics": {
+      "inh": "",
+      "impl": []
+    },
+    "ForDebuggingOnly": {
       "inh": "",
       "impl": []
     },
@@ -1836,12 +1904,20 @@
       "inh": "UIEvent",
       "impl": []
     },
+    "InstallEvent": {
+      "inh": "ExtendableEvent",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
       "impl": []
     },
-    "InterestGroupBiddingScriptRunnerGlobalScope": {
+    "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
+      "impl": []
+    },
+    "InterestGroupBiddingScriptRunnerGlobalScope": {
+      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
       "impl": []
     },
     "InterestGroupReportingScriptRunnerGlobalScope": {
@@ -1849,7 +1925,7 @@
       "impl": []
     },
     "InterestGroupScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
+      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
       "impl": []
     },
     "InterestGroupScriptRunnerGlobalScope": {
@@ -1894,6 +1970,10 @@
     },
     "KeyframeEffect": {
       "inh": "AnimationEffect",
+      "impl": []
+    },
+    "KeyFrameRequestEvent": {
+      "inh": "Event",
       "impl": []
     },
     "KHR_parallel_shader_compile": {
@@ -1958,6 +2038,14 @@
     },
     "Magnetometer": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "ManagedMediaSource": {
+      "inh": "MediaSource",
+      "impl": []
+    },
+    "ManagedSourceBuffer": {
+      "inh": "SourceBuffer",
       "impl": []
     },
     "MathMLElement": {
@@ -2132,10 +2220,6 @@
       "inh": "",
       "impl": []
     },
-    "MLCommandEncoder": {
-      "inh": "",
-      "impl": []
-    },
     "MLContext": {
       "inh": "",
       "impl": []
@@ -2192,6 +2276,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationActivation": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationCurrentEntryChangeEvent": {
       "inh": "Event",
       "impl": []
@@ -2218,6 +2306,14 @@
     },
     "Navigator": {
       "inh": "",
+      "impl": []
+    },
+    "NavigatorLogin": {
+      "inh": "",
+      "impl": []
+    },
+    "NavigatorManagedData": {
+      "inh": "EventTarget",
       "impl": []
     },
     "NavigatorUAData": {
@@ -2262,6 +2358,14 @@
     },
     "NotificationEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "NotRestoredReasonDetails": {
+      "inh": "",
+      "impl": []
+    },
+    "NotRestoredReasons": {
+      "inh": "",
       "impl": []
     },
     "OES_draw_buffers_indexed": {
@@ -2336,6 +2440,14 @@
       "inh": "",
       "impl": []
     },
+    "PageRevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "PageSwapEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "PageTransitionEvent": {
       "inh": "Event",
       "impl": []
@@ -2404,6 +2516,10 @@
       "inh": "PerformanceEntry",
       "impl": []
     },
+    "PerformanceLongAnimationFrameTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceLongTaskTiming": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -2437,6 +2553,10 @@
       "impl": []
     },
     "PerformanceResourceTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
+    "PerformanceScriptTiming": {
       "inh": "PerformanceEntry",
       "impl": []
     },
@@ -2562,6 +2682,10 @@
     },
     "PromiseRejectionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "ProtectedAudience": {
+      "inh": "",
       "impl": []
     },
     "ProximitySensor": {
@@ -2773,7 +2897,7 @@
       "impl": []
     },
     "RTCRtpScriptTransformer": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "RTCRtpSender": {
@@ -2908,18 +3032,6 @@
       "inh": "",
       "impl": []
     },
-    "SharedStorageOperation": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageRunOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
-    "SharedStorageSelectURLOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
     "SharedStorageWorklet": {
       "inh": "Worklet",
       "impl": []
@@ -2934,6 +3046,10 @@
     },
     "SharedWorkerGlobalScope": {
       "inh": "WorkerGlobalScope",
+      "impl": []
+    },
+    "SnapEvent": {
+      "inh": "Event",
       "impl": []
     },
     "SourceBuffer": {
@@ -3484,6 +3600,10 @@
       "inh": "",
       "impl": []
     },
+    "TextEvent": {
+      "inh": "UIEvent",
+      "impl": []
+    },
     "TextFormat": {
       "inh": "",
       "impl": []
@@ -3708,6 +3828,10 @@
       "inh": "",
       "impl": []
     },
+    "ViewTransitionTypeSet": {
+      "inh": "",
+      "impl": []
+    },
     "VirtualKeyboard": {
       "inh": "EventTarget",
       "impl": []
@@ -3916,8 +4040,16 @@
       "inh": "ReadableStream",
       "impl": []
     },
+    "WebTransportSendGroup": {
+      "inh": "",
+      "impl": []
+    },
     "WebTransportSendStream": {
       "inh": "WritableStream",
+      "impl": []
+    },
+    "WebTransportWriter": {
+      "inh": "WritableStreamDefaultWriter",
       "impl": []
     },
     "WGSLLanguageFeatures": {
@@ -4142,6 +4274,14 @@
     },
     "XRPermissionStatus": {
       "inh": "PermissionStatus",
+      "impl": []
+    },
+    "XRPlane": {
+      "inh": "",
+      "impl": []
+    },
+    "XRPlaneSet": {
+      "inh": "",
       "impl": []
     },
     "XRPose": {

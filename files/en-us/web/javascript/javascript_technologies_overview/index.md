@@ -4,7 +4,7 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 page-type: guide
 ---
 
-{{JsSidebar("Introductory")}}
+{{jsSidebar("Introductory")}}
 
 Whereas [HTML](/en-US/docs/Web/HTML) defines a webpage's structure and content and [CSS](/en-US/docs/Web/CSS) sets the formatting and appearance, [JavaScript](/en-US/docs/Web/JavaScript) adds interactivity to a webpage and creates rich web applications.
 
@@ -35,7 +35,7 @@ ECMAScript editions are approved and published as a standard by the ECMA General
 
 Before the 6th edition of ECMAScript (known as ES6), specifications were published once every several years, and are commonly referred by their major version numbers — ES3, ES5, etc. After ES6, the specification is named by the publishing year — ES2017, ES2018, etc. ES6 is synonymous with ES2015. _ESNext_ is a dynamic name that refers to whatever the next version is at the time of writing. ESNext features are more correctly called proposals, because, by definition, the specification has not been finalized yet.
 
-The current committee-approved snapshot of ECMA-262 can be found in [PDF form](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) and [HTML form](https://262.ecma-international.org/13.0/). ECMA-262 and ECMA-402 are continuously maintained and kept up to date by the specification editors; the TC39 website hosts the latest, up-to-date [ECMA-262](https://tc39.es/ecma262/) and [ECMA-402](https://tc39.es/ecma402/) versions.
+The current committee-approved snapshot of ECMA-262 is available in PDF and HTML format on Ecma International's [ECMA-262 language specification page](https://ecma-international.org/publications-and-standards/standards/ecma-262/). ECMA-262 and ECMA-402 are continuously maintained and kept up to date by the specification editors; the TC39 website hosts the latest, up-to-date [ECMA-262](https://tc39.es/ecma262/) and [ECMA-402](https://tc39.es/ecma402/) versions.
 
 New language features, including introduction of new syntaxes and APIs and revision of existing behaviors, are discussed in the form of proposals. Each proposal goes through a [4-stage process](https://tc39.es/process-document/), and is typically implemented by JavaScript engines at stage 3 or stage 4 and thus available for public consumption.
 
@@ -106,7 +106,7 @@ Besides the above implementations, there are other popular JavaScript engines su
 
 - [Carakan](https://dev.opera.com/blog/carakan-faq/), used in earlier versions of Opera.
 - Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) engine, used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used a new JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>).
-- [LibJS](https://libjs.dev/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
+- [LibJS](https://serenityos.github.io/libjs-website/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
 - Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) engine, a JavaScript implementation written in Java, created primarily by Norris Boyd (also at Netscape).
 
 There are some engines specifically tailored for non-browser purposes:

@@ -16,7 +16,7 @@ A boolean value.
 
 ## Examples
 
-The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `sysexEnabled` to the console returns a boolean value, which is `true` if system exclusive supported is enabled.
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `sysexEnabled` to the console returns a boolean value, which is `true` if system exclusive support is enabled.
 
 ```js
 navigator.requestMIDIAccess().then((access) => {

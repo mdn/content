@@ -29,7 +29,7 @@ matchAll(regexp)
 
 ### Return value
 
-An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches. Each match is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
+An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches or an empty iterator if no matches are found. Each value yielded by the iterator is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
 
 ### Exceptions
 
@@ -92,7 +92,7 @@ str.matchAll(regexp);
 // TypeError
 ```
 
-`matchAll` internally makes a clone of the `regexp` — so, unlike {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
+`matchAll` internally makes a clone of the `regexp` — so, unlike {{jsxref("RegExp/exec", "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
 
 ```js
 const regexp = /[a-c]/g;
@@ -108,7 +108,7 @@ However, this means that unlike using [`regexp.exec()`](/en-US/docs/Web/JavaScri
 
 Another compelling reason for `matchAll` is the improved access to capture groups.
 
-Capture groups are ignored when using {{jsxref("Global_Objects/String/match", "match()")}} with the global `g` flag:
+Capture groups are ignored when using {{jsxref("String/match", "match()")}} with the global `g` flag:
 
 ```js
 const regexp = /t(e)(st(\d?))/g;
@@ -154,8 +154,8 @@ str.matchAll({
 
 - [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
-- [Capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

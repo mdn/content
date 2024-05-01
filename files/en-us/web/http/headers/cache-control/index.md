@@ -33,11 +33,11 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
 
 ## Syntax
 
-Caching directives follow the validation rules below:
+Cache directives follow these rules:
 
 - Caching directives are case-insensitive. However, lowercase is recommended because some implementations do not recognize uppercase directives.
-- Multiple directives are comma-separated.
-- Some directives have an optional argument.
+- Multiple directives are permitted and must be comma-separated (e.g., `Cache-control: max-age=180, public`).
+- Some directives have an optional argument. When an argument is provided, it is separated from the directive name by an equals symbol (`=`). Typically, arguments for the directives are integers and are therefore not enclosed in quote characters (e.g., `Cache-control: max-age=12`).
 
 ### Cache directives
 
@@ -113,7 +113,8 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
+The `s-maxage` response directive indicates how long the response remains [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) in a shared cache.
+The `s-maxage` directive is ignored by private caches, and overrides the value specified by the `max-age` directive or the `Expires` header for shared caches, if they are present.
 
 ```http
 Cache-Control: s-maxage=604800
@@ -207,8 +208,6 @@ Some intermediaries transform content for various reasons. For example, some con
 
 `no-transform` indicates that any intermediary (regardless of whether it implements a cache) shouldn't transform the response contents.
 
-Note: [Google's Web Light](https://developers.google.com/search/docs/advanced/mobile/web-light?visit_id=637855965115455923-776951611&rd=1) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection and supports `no-transform` as an opt-out option.
-
 #### `immutable`
 
 The `immutable` response directive indicates that the response will not be updated while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
@@ -282,10 +281,10 @@ Cache-Control: no-store
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
 
 ```http
-Cache-Control: max-age=3600
+Cache-Control: max-age=10800
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=10800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Many browsers use this directive for **reloading**, as explained below.
 

@@ -92,5 +92,5 @@ if (done) {
 ## See also
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators)
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)

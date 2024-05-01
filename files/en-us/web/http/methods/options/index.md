@@ -17,7 +17,7 @@ The **HTTP `OPTIONS` method** requests permitted communication options for a giv
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>Yes</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
@@ -81,7 +81,7 @@ Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 The server now can respond if it will accept a request under these circumstances. In this example, the server response says that:

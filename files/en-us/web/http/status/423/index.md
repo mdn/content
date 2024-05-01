@@ -13,7 +13,7 @@ The HTTP **`423 Locked`** error response code indicates that either the resource
 
 ## Status
 
-```plain
+```http
 423 Locked
 ```
 

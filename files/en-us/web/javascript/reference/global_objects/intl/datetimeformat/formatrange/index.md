@@ -29,7 +29,7 @@ formatRange(startDate, endDate)
 
 ### Return value
 
-A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
+A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
 
 ## Examples
 
@@ -37,7 +37,7 @@ A string representing the given date range formatted according to the locale and
 
 This method receives two {{jsxref("Date")}}s and formats the date range in the most
 concise way based on the `locale` and `options` provided when
-instantiating {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}.
+instantiating {{jsxref("Intl.DateTimeFormat")}}.
 
 ```js
 const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0)); // Wed, 10 Jan 1906 10:00:00 GMT

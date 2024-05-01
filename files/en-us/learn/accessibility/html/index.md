@@ -13,7 +13,7 @@ A great deal of web content can be made accessible just by making sure the corre
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML (see
+        A basic understanding of HTML (see
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an understanding of
@@ -254,7 +254,7 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 </footer>
 ```
 
-If you try our more modern structure example with a screen reader, you'll see that the layout markup no longer gets in the way and confuses the content readout. It is also much leaner and smaller in terms of code size, which means easier to maintain code, and less bandwidth for the user to download (particularly prevalent for those on slow connections).
+If you try our more modern structure example with a screen reader, you'll notice that the layout markup no longer interferes with or causes confusion in the content readout. It is also much leaner and smaller in terms of code size, which means the code is easier to maintain and requires less bandwidth for users to download, making it particularly beneficial for those on slow connections.
 
 Another consideration when creating layouts is using HTML semantic elements as seen in the above example (see [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning)) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating (see [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) for an idea of what screen reader support is like).
 

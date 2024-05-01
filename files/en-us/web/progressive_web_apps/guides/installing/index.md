@@ -64,7 +64,7 @@ On most desktop browsers, the install prompt is in the URL bar. On mobile, the i
 
 Once installed, the PWA behaves just like other installed applications: clicking on the application icon opens the PWA, even when the user is offline.
 
-Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—Chrome OS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—ChromeOS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
 
 Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
 

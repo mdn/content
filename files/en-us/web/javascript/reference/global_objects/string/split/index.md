@@ -21,7 +21,7 @@ split(separator, limit)
 ### Parameters
 
 - `separator`
-  - : The pattern describing where each split should occur. Can be `undefined`, a string, or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}. Omitting `separator` or passing `undefined` causes `split()` to return an array with the calling string as a single element. All values that are not `undefined` or objects with a `@@split` method are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+  - : The pattern describing where each split should occur. Can be `undefined`, a string, or an object with a [`Symbol.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) method — the typical example being a {{jsxref("RegExp", "regular expression", "", 1)}}. Omitting `separator` or passing `undefined` causes `split()` to return an array with the calling string as a single element. All values that are not `undefined` or objects with a `@@split` method are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
 - `limit` {{optional_inline}}
   - : A non-negative integer specifying a limit on the number of substrings to be included in the array. If provided, splits the string at each occurrence of the specified `separator`, but stops when `limit` entries have been placed in the array. Any leftover text is not included in the array at all.
     - The array may contain fewer entries than `limit` if the end of the string is reached before the limit is reached.
@@ -37,7 +37,7 @@ If `separator` is a non-empty string, the target string is split by all matches 
 
 If `separator` is an empty string (`""`), `str` is converted to an array of each of its UTF-16 "characters", without empty strings on either ends of the resulting string.
 
-> **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator`.
+> **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator` and `limit` is not `0`.
 
 > **Warning:** When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (code points), but by UTF-16 code units. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on StackOverflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
 
@@ -295,4 +295,4 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide

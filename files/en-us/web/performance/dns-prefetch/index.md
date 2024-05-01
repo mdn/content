@@ -50,11 +50,16 @@ There are 3 main things to keep in mind:
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 
-**Third**, consider pairing `dns-prefetch` with the [`preconnect` hint](/en-US/docs/Web/HTML/Attributes/rel/preconnect). While `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can safely use them together like so:
+**Third**, while `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Using `preconnect` provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can use it as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
+
+```http
+Link: <https://fonts.googleapis.com/>; rel=preconnect
+```
+
+or via the [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link):
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
-<link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
 > **Note:** If a page needs to make connections to many third-party domains, preconnecting them all is counterproductive. The `preconnect` hint is best used for only the most critical connections. For the others, just use `<link rel="dns-prefetch">` to save time on the first step — the DNS lookup.

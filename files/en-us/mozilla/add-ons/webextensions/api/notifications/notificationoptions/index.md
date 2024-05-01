@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.NotificationOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This type contains all the data needed to:
 

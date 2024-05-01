@@ -4,9 +4,7 @@ slug: Web/Accessibility/Seizure_disorders
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 This article introduces concepts behind making web content accessible for those with vestibular disorders, and how to measure and prevent content leading to seizures and/or other physical reactions.
 
@@ -209,7 +207,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 **Resources for detecting and controlling animated GIFs include:**
 
 - [RunKit Animated GIF Detector](https://npm.runkit.com/animated-gif-detector)
-- [rubentd.com/gifplayer/](https://rubentd.com/gifplayer/), a jQuery plugin that will help you play and stop animated gifs on your website
+- [github.com/rubentd/gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated gifs on your website
 
 ### Videos
 
@@ -396,7 +394,7 @@ function set_background() {
 
   // get the second item of the list of p elements
   myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  myP.style.background = "rgb(255 0 0)";
 }
 ```
 

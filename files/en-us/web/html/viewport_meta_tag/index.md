@@ -13,11 +13,11 @@ This article describes how to use the "viewport" `<meta>` tag to control the vie
 
 The browser's {{glossary("viewport")}} is the area of the window in which web content can be seen. This is often not the same size as the rendered page, in which case the browser provides scrollbars for the user to scroll around and access all the content.
 
-Some mobile devices and other narrow screens render pages in a virtual window or viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 640px, pages might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 640px space.
+Some mobile devices and other narrow screens render pages in a virtual window or viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then zoom and pan to look more closely at different areas of the page. For example, if a mobile screen has a width of 640px, pages might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 640px space.
 
 This is done because not all pages are optimized for mobile and break (or at least look bad) when rendered at a small viewport width. This virtual viewport is a way to make non-mobile-optimized sites in general look better on narrow screen devices.
 
-However, this mechanism is not so good for pages that are optimized for narrow screens using [media queries](/en-US/docs/Web/CSS/CSS_media_queries) — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques. The viewport meta tag mitigates this problem of virtual viewport on narrow screen devices.
+However, this mechanism is not so good for pages that are optimized for narrow screens using [media queries](/en-US/docs/Web/CSS/CSS_media_queries) — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques. The viewport `<meta>` element mitigates this problem of virtual viewport on narrow screen devices.
 
 ## Viewport basics
 
@@ -29,7 +29,7 @@ A typical mobile-optimized site contains something like the following:
 
 Not all devices are the same width; you should make sure that your pages work well in a large variation of screen sizes and orientations.
 
-The basic properties of the "viewport" `<meta>` tag include:
+The basic attributes of the "viewport" `<meta>` element include:
 
 - `width`
   - : Controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is [100vw](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), or 100% of the viewport width. Minimum: `1`. Maximum: `10000`. Negative values: ignored.

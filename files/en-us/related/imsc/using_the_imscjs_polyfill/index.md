@@ -86,17 +86,11 @@ const ttmlUrl = myVideo.getElementsByTagName("track")[0].src;
 
 ## Retrieving the IMSC file
 
-The browser will not retrieve the document automatically for us. In most browsers only [WebVTT](/en-US/docs/Web/API/WebVTT_API) is implemented at the moment. Therefore, these browsers expect that the value of the `src` attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the `src` attribute is pointing to. We use the `src` attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the `XMLHttpRequest` method for this task:
+The browser will not retrieve the document automatically for us. In most browsers only [WebVTT](/en-US/docs/Web/API/WebVTT_API) is implemented at the moment. Therefore, these browsers expect that the value of the `src` attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the `src` attribute is pointing to. We use the `src` attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the {{domxref("fetch()")}} API for this task:
 
 ```js
-const client = new XMLHttpRequest();
-
-client.open("GET", ttmlUrl);
-client.onreadystatechange = function () {
-  initTrack(client.responseText);
-};
-
-client.send();
+const response = await fetch(ttmlUrl);
+initTrack(await response.text());
 ```
 
 ## Setting the text track mode
@@ -182,9 +176,9 @@ for (let i = 0; i < timeEvents.length; i++) {
 
   let myCue;
   if (i < timeEvents.length - 1) {
-    myCue = Cue(timeEvents[i], myVideo.duration, "");
-  } else {
     myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
+  } else {
+    myCue = new Cue(timeEvents[i], myVideo.duration, "");
   }
 
   myCue.onenter = function () {
@@ -278,7 +272,7 @@ This has the effect that pointer events are going "through" the overlay (see [re
 
 The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artefacts.
 
-the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) tutorial.
+the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) tutorial.
 
 <section id="Quick_links">
   <ol>

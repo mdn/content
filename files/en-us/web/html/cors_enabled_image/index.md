@@ -54,7 +54,7 @@ In short, this configures the server to allow graphic files (those with the exte
 
 Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to [local storage](/en-US/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
 
-The key is to use the [`crossorigin`](/en-US/docs/Web/HTML/Element/image#crossorigin) attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when downloading the image data.
+The key is to use the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when downloading the image data.
 
 #### Starting the download
 
@@ -74,7 +74,7 @@ function startDownload() {
 }
 ```
 
-We're using a hard-coded URL (`imageURL`) and associated descriptive text (`imageDescription`) here, but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its `crossOrigin` attribute to `"Anonymous"` (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{domxref("Window/load_event", "load")}} event being fired on the image element, which means the image data has been received. Alternative text is added to the image; while `<canvas>` does not support the `alt` attribute, the value can be used to set an `aria-label` or the canvas's inner content.
+We're using a hard-coded URL (`imageURL`) and associated descriptive text (`imageDescription`) here, but that could easily come from anywhere. To begin downloading the image, we create a new {{domxref("HTMLImageElement")}} object by using the {{domxref("HTMLImageElement.Image", "Image()")}} constructor. The image is then configured to allow cross-origin downloading by setting its `crossOrigin` attribute to `"anonymous"` (that is, allow non-authenticated downloading of the image cross-origin). An event listener is added for the {{domxref("Window/load_event", "load")}} event being fired on the image element, which means the image data has been received. Alternative text is added to the image; while `<canvas>` does not support the `alt` attribute, the value can be used to set an `aria-label` or the canvas's inner content.
 
 Finally, the image's {{domxref("HTMLImageElement.src", "src")}} attribute is set to the URL of the image to download; this triggers the download to begin.
 

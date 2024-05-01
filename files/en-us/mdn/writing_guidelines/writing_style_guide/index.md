@@ -127,7 +127,7 @@ This solution can make translation easier for both readers and translators.
 
 While the primary goal of any writing on MDN Web Docs should always be to explain and inform about open web technology so developers can quickly learn to do what they want or to find the little details they need to know in order to perfect their code, it's important that they be able to _find_ the material we write. We can achieve this by keeping Search Engine Optimization ({{Glossary("SEO")}}) in mind while writing.
 
-This section covers the standard practices, recommendations, and requirements for content to help ensure that search engines can easily categorize and index our material to ensure that users can easily reach what they need. The SEO guidelines includes ensuring that each page writers and editors work on is reasonably well-designed, written, and marked up to give search engines the context and clues they need to properly index articles.
+This section covers the standard practices, recommendations, and requirements for content to help ensure that search engines can easily categorize and index our material to ensure that readers can easily find what they need. The SEO guidelines include ensuring that each page that writers and editors work on is reasonably well-designed, written, and marked up to give search engines the context and clues they need to properly index the articles.
 
 The following checklist is good to keep in mind while writing and reviewing content to help ensure that the page and its neighbors will be indexed properly by search engines:
 
@@ -147,7 +147,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   Here are some basic guidelines to help you create pages that have enough content to be properly searchable without resorting to cluttering them up with unnecessary text:
 
   - **Avoid stubs**: Obviously, if the article is a stub or is missing content, add it. We try to avoid outright "stub" pages on MDN web Docs, although they do exist, but there are plenty of pages that are missing large portions of their content.
-  - **Review page structure**: Review the page to ensure that it's structured properly for the [type of page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is <!--link to be revised-->. Be sure every section that it should have is present and has appropriate content.
+  - **Review page structure**: Review the page to ensure that it's structured properly for its [page type](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Check to make sure that all sections are present and have appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
@@ -155,7 +155,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
-  - **Focus on topic content**: With Google's Hummingbird update in 2013 <!--do we need to retain this-->, there has been an increasing focus on the use of natural language to convey information. This means that it is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+  - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
 
 ## Writing style
 
@@ -177,7 +177,7 @@ Other than writing grammatically correct sentences in English, we recommend you 
 
 An abbreviation is a shortened version of a longer word, while an acronym is a new word created using the first letter of each word from a phrase. This section describes guidelines for abbreviations and acronyms.
 
-- **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand it—or better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
+- **Expansions**: On the first mention of a term on a page, expand acronyms that are likely to be unfamiliar to users. When in doubt, expand the term. Better yet, link it to the article or [glossary](/en-US/docs/Glossary) entry describing the technology.
 
   - **Correct**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
   - **Incorrect**: "XUL is Mozilla's XML-based language..."
@@ -369,12 +369,15 @@ Do not use variant spelling.
 
 These are our recommendations for using certain technical terms:
 
-- **HTML elements**: Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "<>", and should be in the {{HTMLElement("code")}} style.
+- **HTML elements**: Use the term "element" to refer to HTML and XML elements, instead of "tag". In addition, the element should be wrapped in angle brackets "<>" and should be styled using backticks (\`). For example, using \<input\> inside backticks will style it as `<input>` as is expected.
 
-  When you reference a given element for the first time in a section, you should use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) <!--this link should point to the macro's documentation--> macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).
-
-  - **Correct**: the {{HTMLElement("span")}} element
+  - **Correct**: the `<span>` element
   - **Incorrect**: the span tag
+
+  On MDN, you can optionally specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
+
+  - **Using backticks**: `<span>`
+  - **Using the macro**: {{HTMLElement("span")}} (source in markdown: \\{{HTMLElement("span")\}})
 
 - **Parameters vs. arguments**: The preferred term on MDN Web Docs is **parameters**. Please avoid the term "arguments" for consistency whenever possible.
 
@@ -390,9 +393,10 @@ Try to be consistent, though.
 
 ## Page components
 
-This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
+This section lists the guidelines to follow for different parts of each page, such as headings, notes, links, and examples.
 
 - [Code examples](#code_examples)
+- [Cross-references (linking)](#cross-references_linking)
 - [External links](#external_links)
 - [Shortened URLs (shortlinks)](#shortened_urls_shortlinks)
 - [Heading levels](#heading_levels)
@@ -413,9 +417,34 @@ A page on MDN Web Docs can contain more than one code example. The following lis
   - **Result explanation**: An explanation after the example code that describes the result and how the code works.
 - In general, the code example should not only demonstrate the syntax of the feature and how it is used, but also highlight the purpose and situations in which a web developer might want or need to use the feature.
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
-- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) <!--link to be revised-->, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
+- When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the sample's code blocks that have the same type (HTML, CSS, and JavaScript) are concatenated together before running the example. This lets you break the code into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
 To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+
+### Cross-references (linking)
+
+When referencing another page or the section of a page on MDN by its title, follow sentence casing in the link text (match the page or section title). Use sentence casing in the link text even if it is different from the linked page title or section title (it might be that the case used in the page or section title is incorrect). Don't use quotation marks around the link text. To refer to a page on MDN by its title, use the following style:
+
+- **Correct**: "See the [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) guide."
+- **Incorrect**: "See the "[Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)" guide."
+
+Follow similar style when linking to a section on a page, as shown below:
+
+- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
+
+If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
+
+- **Correct**: "This concept is described in more detail in the [Accessibility concerns](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns) section below."
+
+You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
+
+- **Correct**: "Learn more about [how to order flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)."
+- **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+- **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
+
+On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
+
+We follow similar cross-referencing guidelines in the [See also](#see_also) sections at the end of reference pages, glossary pages, and guides.
 
 ### External links
 
@@ -482,7 +511,7 @@ If you include images or other media on a page, follow these guidelines:
 - Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
-- When displaying icons on a page (e.g., via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases. <!--this is not valid anymore, the repo has been archived. do we want to point readers to another resource?-->
+- Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
 
 ### Lists
 
@@ -528,7 +557,7 @@ However, depending on the type of list you are creating, you will want to adjust
 
 ### See also section
 
-Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This is a reference section containing cross-references to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
+Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross-references_linking) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
 In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
 
@@ -536,15 +565,18 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 #### Link text
 
-- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page will be:
+- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page with the page title "ARIA states and properties" will be:
   - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [WAI-ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles) page will be:
-  - **Correct**: [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
+  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
-- Use the appropriate macro to link to a page as defined in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section. The use of macro will add code formatting to the keyword in the link text, as shown in the previous example.
-- No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required after a link text because it will invariably be a term or a phrase.
-  - **Correct**: {{cssxref("revert-layer")}}
-  - **Incorrect**: The {{cssxref("revert-layer")}} keyword.
+- On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
+- No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.
+  - **Correct**: [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
+  - **Incorrect**: The [`revert-layer`](/en-US/docs/Web/CSS/revert-layer) keyword.
+  - **Correct**: [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
+  - **Incorrect**: The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API)
+- As shown in the above examples, add code formatting using backticks (\`) to keywords and literals in the link text, even though the formatting is not used in page and section titles. For example, for the page title "Array() constructor", the link text will be [`Array()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).
 
 #### Descriptive text
 
@@ -552,12 +584,13 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
   - **Correct**: {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
 - Don't use the conjunction "and" before the last item in the series.
   - **Correct**: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
-- After an external link and the source website, mention the year when the article was published within parentheses. The publication date not only helps to inform the readers about the relevance of the linked content but also helps authors to review links that are very old. For example, to link to the [Top-level await](https://v8.dev/features/top-level-await) external article, the reference will be:
-  - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
+- For external links, aim to specify the source website and the year of publication or last update (in parentheses) whenever feasible and appropriate. Providing this information upfront gives readers a clear idea of the destination they'll reach upon clicking the link. The date of publication or last update guides readers in assessing the relevance of the linked article and also helps MDN maintainers to review links to articles that have not been updated in a long time. If you provide a link to an article on Wikipedia, for example, you can ignore the publish/update date. The following list item is an example of adding a link to the [Top-level await](https://v8.dev/features/top-level-await) external article in the See also section, along with the source and year information:
+  - **Correct**: [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
+- For external links to books, you can also provide author names. You can see a few examples for this in the [Further reading](#language_grammar_and_spelling) section below. Refrain from adding author names for blog posts or GitHub repositories you might link to.
 
 #### Order of links
 
-- For cross-referencing within MDN, list the links to reference pages first and then the links to the related guide, and tutorial pages.
+- List the links to MDN pages in the order of reference pages first, followed by links to the related guides and tutorial pages. This suggested order is mainly to aid in the scanability of the items in the list.
 - If the list is a mix of internal and external links, list the internal links first and then the external ones.
 - Within each group of internal and external links, follow alphabetical or simple-to-advanced order, whatever makes more sense for the context.
 
@@ -610,6 +643,14 @@ Keep the following guidelines in mind when writing titles:
   - **Avoid common term in lower-level heading**: Do not repeat the text in the title of a higher-level heading in lower-level titles. For example, in a section titled "Commas", name the title of a subsection "After introductory clauses" instead of "Commas after introductory clauses".
   - **Don't begin with article**: Avoid starting titles with articles "a", "an", or "the".
   - **Add lead-in information**: After a title, add some introductory text to explain what will be covered in the section.
+
+## See also
+
+- [Guidelines for writing code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Guidelines for writing HTML code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
+- [Guidelines for writing CSS code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
+- [Guidelines for writing JavaScript code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
+- [Guidelines for writing shell prompt code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
 
 ## Further reading
 

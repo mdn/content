@@ -7,7 +7,7 @@ browser-compat: css.properties.contain-intrinsic-size
 
 {{CSSRef}}
 
-The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment).
+The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
 
 ## Constituent properties
 
@@ -65,7 +65,7 @@ If two `auto [<length> | none]` pairs are specified, the first pair applies to t
 
 The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).
 
-Size containment allows a user agent to layout an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
+Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.
 The `contain-intrinsic-size` property allows authors to specify an appropriate value to be used as the size for layout.
 
@@ -359,6 +359,8 @@ However if the content is hidden, having a `contain-intrinsic-size` of `none` co
 
 ## See also
 
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
+- [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [`content-visibility`: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) via web.dev (2020)

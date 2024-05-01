@@ -7,17 +7,19 @@ browser-compat: webextensions.api.pageAction
 
 {{AddonSidebar}}
 
-A [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) is a clickable icon inside the browser's address bar.
+The API to control [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
 
 ![Paw print icon representing a page action](page-action.png)
 
-You can listen for clicks on the icon, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that will open when the icon is clicked.
+You can listen for clicks on the icon in a background script, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that opens when the icon is clicked.
 
-If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript—just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.
+If you specify a popup, you define its contents and behavior using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts. Despite being named `pageAction`, the action code doesn't get access to web page content. To access web page DOM, you need to add a [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and interact with it.
 
-You can define most of a page action's properties declaratively using the [`page_action` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), but can also redefine them programmatically using this API.
+The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `page_action` {{WebExtAPIRef("menus.ContextType")}}.
 
-Page actions are for actions that are only relevant to particular pages (such as "bookmark the current tab"). If they are relevant to the browser as a whole (such as "show all bookmarks"), use a browser action instead.
+You can define most of a page action's properties declaratively using the [`page_action` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), and redefine them programmatically using this API.
+
+Page actions are for actions that are only relevant to particular pages (such as "bookmark the current tab"). If they are relevant to the browser as a whole (such as "show all bookmarks"), use a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) instead.
 
 ## Types
 

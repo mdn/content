@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.BroadcastChannel.close
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{APIRef("BroadCastChannel API")}} {{AvailableInWorkers}}
 
 The **`BroadcastChannel.close()`** terminates the connection to
 the underlying channel, allowing the object to be garbage collected.
 This is a necessary step to perform
 as there is no other way for a browser to know
 that this channel is not needed anymore.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

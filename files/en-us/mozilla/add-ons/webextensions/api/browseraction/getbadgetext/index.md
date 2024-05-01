@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getBadgeText
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the browser action's badge text.
 

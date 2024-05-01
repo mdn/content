@@ -8,7 +8,7 @@ page-type: guide
 
 The flexible box layout module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.
 
-When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout), which controls columns and rows together.
+When we describe flexbox as being one-dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout), which controls columns and rows together.
 
 ## The two axes of flexbox
 
@@ -25,21 +25,21 @@ The main axis is defined by `flex-direction`, which has four possible values:
 
 Should you choose `row` or `row-reverse`, your main axis will run along the row in the **inline direction**.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
 
 Choose `column` or `column-reverse` and your main axis will run from the top of the page to the bottom — in the **block direction**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
 
 ### The cross axis
 
 The cross axis runs perpendicular to the main axis, therefore if your `flex-direction` (main axis) is set to `row` or `row-reverse` the cross axis runs down the columns.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
 If your main axis is `column` or `column-reverse` then the cross axis runs along the rows.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
 ## Start and end lines
 
@@ -49,30 +49,32 @@ You can [read more about the relationship between flexbox and the Writing Modes 
 
 If the `flex-direction` is `row` and I am working in English, then the start edge of the main axis will be on the left, the end edge on the right.
 
-![Working in English the start edge is on the left.](basics5.png)
+![Working in English the start edge is on the left.](basics5.svg)
 
 If I were to work in Arabic, then the start edge of my main axis would be on the right and the end edge on the left.
 
-![The start edge in a RTL language is on the right.](basics6.png)
+![The start edge in a RTL language is on the right.](basics6.svg)
 
-In both cases the start edge of the cross axis is at the top of the flex container and the end edge at the bottom, as both languages have a horizontal writing mode.
+In both cases the start edge of the cross-axis is at the top of the flex container and the end edge at the bottom, as both languages have a horizontal writing mode.
 
 After a while, thinking about start and end rather than left and right becomes natural, and will be useful to you when dealing with other layout methods such as CSS Grid Layout which follow the same patterns.
 
 ## The flex container
 
-An area of a document laid out using flexbox is called a **flex container**. To create a flex container, we set the value of the area's container's {{cssxref("display")}} property to `flex` or `inline-flex`. As soon as we do this the direct children of that container become **flex items**. As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
+An area of a document that is laid out using flexbox is called a **flex container**. To create a flex container, set the area's {{cssxref("display")}} property to `flex`. When we do this, the direct children of that container become **flex items**. You can explicitly control whether the container itself is displayed inline or in block formatting context using `inline flex` or `inline-flex` for inline flex containers or `block flex` or `flex` for block level flex containers.
+
+As with all properties in CSS, some initial values are defined, so the contents of a new flex container will behave in the following way:
 
 - Items display in a row (the `flex-direction` property's default is `row`).
 - The items start from the start edge of the main axis.
-- The items do not stretch on the main dimension, but can shrink.
-- The items will stretch to fill the size of the cross axis.
-- The {{cssxref("flex-basis")}} property is set to `auto`.
-- The {{cssxref("flex-wrap")}} property is set to `nowrap`.
+- The items do not stretch on the main dimension but can shrink.
+- The items will stretch to fill the size of the cross-axis.
+- The {{cssxref("flex-basis")}} property is set to `auto`. This means that, in each case, it will be equal to the flex item {{cssxref("width")}} in horizontal writing mode, and the flex item {{cssxref("height")}} in vertical writing mode. If the corresponding `width`/`height` is also set to `auto`, the `flex-basis` content value is used instead.
+- The {{cssxref("flex-wrap")}} property is set to `nowrap`. This means that the flex items will always remain in a single row or column, overflowing their container if their combined `width`/`height` exceeds the containing element `width`/`height`.
 
-The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the cross axis to fill its full size.
+The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the full length of the cross-axis.
 
-You can see in the live example below how this looks. Try editing the items or adding additional items in order to test the initial behavior of flexbox.
+You can see in the live example below how this looks. Try editing the items or adding additional items to test the initial behavior of flexbox.
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 480)}}
 
@@ -118,7 +120,7 @@ Before we can make sense of these properties we need to consider the concept of 
 
 If we have three 100 pixel-wide items in a container which is 500 pixels wide, then the space we need to lay out our items is 300 pixels. This leaves 200 pixels of available space. If we don't change the initial values then flexbox will put that space after the last item.
 
-![This flex container has available space after laying out the items.](basics7.png)
+![This flex container has available space after laying out the items.](basics7.svg)
 
 If we instead would like the items to grow and fill the space, then we need to have a method of distributing the leftover space between the items. This is what the `flex` properties that we apply to the items themselves, will do.
 
@@ -159,7 +161,7 @@ There are also some predefined shorthand values which cover most of the use case
 - `flex: none`
 - `flex: <positive-number>`
 
-Setting `flex: initial` resets the item to the initial values of Flexbox. This is the same as `flex: 0 1 auto`. In this case the value of `flex-grow` is 0, so items will not grow larger than their `flex-basis` size. The value of `flex-shrink` is 1, so items can shrink if they need to rather than overflowing. The value of `flex-basis` is `auto`. Items will either use any size set on the item in the main dimension, or they will get their size from the content size.
+Setting `flex: initial` resets the item to the initial values of flexbox. This is the same as `flex: 0 1 auto`. In this case the value of `flex-grow` is 0, so items will not grow larger than their `flex-basis` size. The value of `flex-shrink` is 1, so items can shrink if they need to rather than overflowing. The value of `flex-basis` is `auto`. Items will either use any size set on the item in the main dimension, or they will get their size from the content size.
 
 Using `flex: auto` is the same as using `flex: 1 1 auto`; everything is as with `flex:initial` but in this case the items can grow and fill the container as well as shrink if required.
 
@@ -215,4 +217,4 @@ The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in 
 
 ## Next steps
 
-After reading this article you should have an understanding of the basic features of Flexbox. In the next article we will look at [how this specification relates to other parts of CSS](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods).
+After reading this article you should have an understanding of the basic features of flexbox. In the next article, we will look at [how this specification relates to other parts of CSS](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods).

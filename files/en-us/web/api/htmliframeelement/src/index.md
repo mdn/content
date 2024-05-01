@@ -9,15 +9,15 @@ browser-compat: api.HTMLIFrameElement.src
 {{APIRef}}
 
 The **`HTMLIFrameElement.src`**
-property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy) attribute of the
-{{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
-resource.
+A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded.
+
+Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame.
 
 ## Syntax
 
 ```js-nolint
-refStr = iframeElt.src
-iframeElt.src= refStr
+src = iframeElt.src
+iframeElt.src= src
 ```
 
 ## Example

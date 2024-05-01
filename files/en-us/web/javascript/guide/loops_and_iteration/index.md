@@ -5,8 +5,7 @@ page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
-{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
-  "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Loops offer a quick and easy way to do something repeatedly. This
 chapter of the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
@@ -44,7 +43,7 @@ The statements for loops provided in JavaScript are:
 
 ## for statement
 
-A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates to false. The JavaScript `for` loop is similar to the Java and C `for` loop.
+A {{jsxref("Statements/for", "for")}} loop repeats until a specified condition evaluates to false. The JavaScript `for` loop is similar to the Java and C `for` loop.
 
 A `for` statement looks as follows:
 
@@ -146,7 +145,7 @@ do {
 
 ## while statement
 
-A {{jsxref("statements/while","while")}} statement executes its statements as long as a
+A {{jsxref("Statements/while", "while")}} statement executes its statements as long as a
 specified condition evaluates to `true`. A `while` statement looks
 as follows:
 
@@ -212,7 +211,7 @@ while (true) {
 
 ## labeled statement
 
-A {{jsxref("statements/label","label")}} provides a statement with an identifier that
+A {{jsxref("Statements/label", "label")}} provides a statement with an identifier that
 lets you refer to it elsewhere in your program. For example, you can use a label to
 identify a loop, and then use the `break` or `continue` statements
 to indicate whether a program should interrupt the loop or continue its execution.
@@ -230,7 +229,7 @@ any statement. For examples of using labeled statements, see the examples of `br
 
 ## break statement
 
-Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
+Use the {{jsxref("Statements/break", "break")}} statement to terminate a loop,
 `switch`, or in conjunction with a labeled statement.
 
 - When you use `break` without a label, it terminates the innermost
@@ -285,7 +284,7 @@ labelCancelLoops: while (true) {
 
 ## continue statement
 
-The {{jsxref("statements/continue","continue")}} statement can be used to restart a
+The {{jsxref("Statements/continue", "continue")}} statement can be used to restart a
 `while`, `do-while`, `for`, or `label`
 statement.
 
@@ -366,7 +365,7 @@ checkiandj: while (i < 4) {
 
 ## for...in statement
 
-The {{jsxref("statements/for...in","for...in")}} statement iterates a specified
+The {{jsxref("Statements/for...in", "for...in")}} statement iterates a specified
 variable over all the enumerable properties of an object. For each distinct property,
 JavaScript executes the specified statements. A `for...in` statement looks as
 follows:
@@ -406,17 +405,17 @@ Although it may be tempting to use this as a way to iterate over {{jsxref("Array
 elements, the `for...in` statement will return the name of your user-defined
 properties in addition to the numeric indexes.
 
-Therefore, it is better to use a traditional {{jsxref("statements/for","for")}} loop
+Therefore, it is better to use a traditional {{jsxref("Statements/for", "for")}} loop
 with a numeric index when iterating over arrays, because the `for...in`
 statement iterates over user-defined properties in addition to the array elements, if
 you modify the Array object (such as adding custom properties or methods).
 
 ## for...of statement
 
-The {{jsxref("statements/for...of","for...of")}} statement creates a loop Iterating
+The {{jsxref("Statements/for...of", "for...of")}} statement creates a loop Iterating
 over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (including
 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}},
-{{jsxref("functions/arguments","arguments")}} object and so on), invoking a custom
+{{jsxref("Functions/arguments", "arguments")}} object and so on), invoking a custom
 iteration hook with statements to be executed for the value of each distinct property.
 
 ```js-nolint
@@ -425,7 +424,7 @@ for (variable of object)
 ```
 
 The following example shows the difference between a `for...of` loop and a
-{{jsxref("statements/for...in","for...in")}} loop. While `for...in` iterates
+{{jsxref("Statements/for...in", "for...in")}} loop. While `for...in` iterates
 over property names, `for...of` iterates over property values:
 
 ```js
@@ -455,5 +454,4 @@ for (const [key, val] of Object.entries(obj)) {
 // "bar" 2
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
-  "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

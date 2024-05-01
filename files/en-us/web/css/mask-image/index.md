@@ -20,11 +20,11 @@ mask-image: none;
 mask-image: url(masks.svg#mask1);
 
 /* <image> values */
-mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* Multiple values */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+mask-image: image(url(mask.png), skyblue), linear-gradient(rgb(0 0 0 / 100%), transparent);
 
 /* Global values */
 mask-image: inherit;
@@ -68,4 +68,4 @@ mask-image: unset;
 ## See also
 
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
-- [Apply effects to images with CSS's mask-image property](https://web.dev/css-masking/)
+- [Apply effects to images with CSS's mask-image property](https://web.dev/articles/css-masking)

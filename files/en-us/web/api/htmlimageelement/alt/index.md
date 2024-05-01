@@ -12,8 +12,8 @@ The {{domxref("HTMLImageElement")}} property **`alt`** provides fallback (altern
 
 This may be the case because of an error, because the user has disabled the loading of images, or because the image hasn't finished loading yet.
 
-Perhaps the most important reason to use the `alt` property is to support [accessibility](/en-US/docs/Web/Accessibility), as the `alt` text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content.
-It will be read aloud or sent to the touch device, for example, to support visually impaired users.
+Perhaps the most important reason to use the `alt` property is to support [accessibility](/en-US/docs/Web/Accessibility), as the `alt` text may be used by screen readers and other assistive technologies to help people with a disability make full use of your content.
+It will be read aloud or sent to a braille output device, for example, to support blind or visually impaired users.
 
 > **Think of it like this:** When choosing `alt` strings for your images, imagine what you would say when reading the page to someone over the phone without mentioning that there's an image on the page.
 
@@ -49,7 +49,7 @@ In the HTML for this example, shown below, the {{HTMLElement("img")}} element in
 ```html
 <div class="container">
   <div class="left-margin">
-    <img src="/files/16861/margin-flourish.svg" alt="" />
+    <img src="margin-flourish.svg" alt="" />
   </div>
   <div class="contents">
     <p>
@@ -91,7 +91,7 @@ p {
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237);
+  background-color: rgb(241 240 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -107,7 +107,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235);
+  background-color: rgb(241 240 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;

@@ -16,8 +16,9 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - If you need to find if a value **exists** in an array, use {{jsxref("Array/includes", "includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
+- If you need to find all elements that satisfy the provided testing function, use {{jsxref("Array/filter", "filter()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
 
 ## Syntax
 
@@ -46,17 +47,9 @@ Otherwise, {{jsxref("undefined")}} is returned.
 
 ## Description
 
-The `find()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `find()` then returns that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `find()` returns {{jsxref("undefined")}}.
+The `find()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `find()` then returns that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `find()` returns {{jsxref("undefined")}}. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
-
-`find()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
-
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `find()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are visited as if they were `undefined`.
-
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `find()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -110,6 +103,24 @@ function isPrime(element, index, array) {
 
 console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
 console.log([4, 5, 8, 12].find(isPrime)); // 5
+```
+
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `find()` to find the first element that is less than its neighbors.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const firstTrough = numbers
+  .filter((num) => num > 0)
+  .find((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(firstTrough); // 1
 ```
 
 ### Using find() on sparse arrays
@@ -179,7 +190,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## See also
 
 - [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLast()")}}

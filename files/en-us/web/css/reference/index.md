@@ -52,7 +52,7 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Index
 
-> **Note:** This index does not include SVG-exclusive [presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation), which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
+> **Note:** This index does not include SVG-exclusive presentation attributes, which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
 
 > **Note:** The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
 
@@ -81,9 +81,9 @@ The following are the various [selectors](/en-US/docs/Web/CSS/CSS_selectors), wh
 
 Combinators are selectors that establish a relationship between two or more simple selectors, such as "`A` is a child of `B`" or "`A` is adjacent to `B`", creating a complex selector.
 
-- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : Specifies that the elements selected by both `A` and `B` have the same parent and that the element selected by `B` immediately follows the element selected by `A` horizontally.
-- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [Subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : Specifies that the elements selected by both `A` and `B` share the same parent and that the element selected by `A` comes before—but not necessarily immediately before—the element selected by `B`.
 - [Child combinator](/en-US/docs/Web/CSS/Child_combinator) `A > B`
   - : Specifies that the element selected by `B` is the direct child of the element selected by `A`.
@@ -130,7 +130,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Layout
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)

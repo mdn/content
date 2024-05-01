@@ -8,10 +8,8 @@ browser-compat: api.BaseAudioContext.sampleRate
 
 {{ APIRef("Web Audio API") }}
 
-The `sampleRate` property of the {{
-    domxref("BaseAudioContext") }} interface returns a floating point number representing
-the sample rate, in samples per second, used by all nodes in this audio
-context. This limitation means that sample-rate converters are not supported.
+The `sampleRate` property of the {{domxref("BaseAudioContext")}} interface returns a floating point number representing the sample rate, in samples per second, used by all nodes in this audio context.
+This limitation means that sample-rate converters are not supported.
 
 ## Value
 

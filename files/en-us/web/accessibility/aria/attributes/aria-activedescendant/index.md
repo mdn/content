@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
 page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-activedescendant
-  - https://w3c.github.io/aria-practices/#kbd_focus_activedescendant
+  - https://www.w3.org/TR/wai-aria-1.2/#aria-activedescendant
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-activedescendant` attribute identifies the currently active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role).
 
@@ -47,13 +49,3 @@ Relevant only as an attribute on elements with the following roles:
 ## Specifications
 
 {{Specifications}}
-
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-
-</section>

@@ -6,7 +6,7 @@ page-type: web-api-global-function
 browser-compat: api.atob
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`atob()`** function decodes a
 string of data which has been encoded using {{glossary("Base64")}} encoding. You can use

@@ -17,7 +17,7 @@ Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/opt
 
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
-You can further nest `<option>` elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.
+You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
 
 For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls).
 
@@ -131,8 +131,7 @@ For more useful information on styling `<select>`, see:
 
 - [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-
-Also see the "Customizing select styles" example below for an example of you could attempt a simple `<select>` styling.
+- The {{cssxref("field-sizing")}} property, which controls how `<select>` elements are sized in relation to their contained options.
 
 ## Examples
 
@@ -152,6 +151,48 @@ The following example creates a very simple dropdown menu, the second option of 
 #### Result
 
 {{EmbedLiveSample("Basic_select", "", "100")}}
+
+### Select with grouping options
+
+The following example creates a dropdown menu with grouping using {{HTMLElement("optgroup")}} and {{HTMLElement("hr")}} to make it easier for the user to understand the content in the dropdown.
+
+```html
+<label for="hr-select">Your favorite food</label> <br />
+
+<select name="foods" id="hr-select">
+  <option value="">Choose a food</option>
+  <hr />
+  <optgroup label="Fruit">
+    <option value="apple">Apples</option>
+    <option value="banana">Bananas</option>
+    <option value="cherry">Cherries</option>
+    <option value="damson">Damsons</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Vegetables">
+    <option value="artichoke">Artichokes</option>
+    <option value="broccoli">Broccoli</option>
+    <option value="cabbage">Cabbages</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Meat">
+    <option value="beef">Beef</option>
+    <option value="chicken">Chicken</option>
+    <option value="pork">Pork</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Fish">
+    <option value="cod">Cod</option>
+    <option value="haddock">Haddock</option>
+    <option value="salmon">Salmon</option>
+    <option value="turbot">Turbot</option>
+  </optgroup>
+</select>
+```
+
+#### Result
+
+{{EmbedLiveSample("select_with_grouping_options", "", "100")}}
 
 ### Advanced select with multiple features
 
@@ -190,35 +231,36 @@ You'll see that:
 
 This example shows how you could use some CSS and JavaScript to provide extensive custom styling for a `<select>` box.
 
-This example basically:
+The example:
 
 - Clones the `<select>`'s context (the [`<option>`](/en-US/docs/Web/HTML/Element/option) elements) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
 - Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
 
-> **Note:** Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.
+> **Note:** Not all native features are supported; this example is a proof of concept. It starts from standard HTML but the same results could be achieved starting from JSON data, custom HTML, or other solutions.
 
 #### HTML
 
 ```html
 <form>
-  <fieldset>
-    <legend>Standard controls</legend>
-    <select name="1A" id="select" autocomplete="off" required>
+  <section>
+    <label for="select-standard">Standard controls:</label>
+    <select name="1A" id="select-standard">
       <option>Carrots</option>
       <option>Peas</option>
       <option>Beans</option>
       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
     </select>
-  </fieldset>
-  <fieldset id="custom">
-    <legend>Custom controls</legend>
-    <select name="2A" id="select" autocomplete="off" required>
+  </section>
+  <hr />
+  <section id="custom">
+    <label for="select-custom">Custom controls:</label>
+    <select name="2A" id="select-custom">
       <option>Carrots</option>
       <option>Peas</option>
       <option>Beans</option>
       <option>Pneumonoultramicroscopicsilicovolcanoconiosis</option>
     </select>
-  </fieldset>
+  </section>
 </form>
 ```
 
@@ -227,17 +269,26 @@ This example basically:
 ```css
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+label {
+  margin-right: 10px;
 }
 
 .select:focus {
   border-color: blue;
 }
 
-html body form fieldset#custom div.select[data-multiple] div.header {
+.select[data-multiple] header {
   display: none;
 }
 
-html body form fieldset#custom div.select div.header {
+.select div.header {
   content: "↓";
   display: flex;
   flex: 1;
@@ -252,7 +303,7 @@ html body form fieldset#custom div.select div.header {
   border-radius: inherit;
 }
 
-html body form fieldset#custom div.select div.header::after {
+.select .header::after {
   content: "↓";
   align-self: stretch;
   display: flex;
@@ -263,7 +314,7 @@ html body form fieldset#custom div.select div.header::after {
   padding: 0.5em;
 }
 
-html body form fieldset#custom div.select div.header:hover::after {
+.select .header:hover::after {
   background-color: blue;
 }
 
@@ -286,7 +337,7 @@ html body form fieldset#custom div.select div.header:hover::after {
   display: none;
 }
 
-html body form fieldset#custom div.select {
+.select {
   user-select: none;
   box-sizing: border-box;
   position: relative;
@@ -298,21 +349,21 @@ html body form fieldset#custom div.select {
   display: inline-block;
 }
 
-html body form fieldset#custom div.select:focus,
-html body form fieldset#custom div.select:hover {
+.select:focus,
+.select:hover {
   border-color: blue;
 }
 
-html body form fieldset#custom div.select[data-open] {
+.select[data-open] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-html body form fieldset#custom div.select[data-open] datalist {
+.select[data-open] datalist {
   display: initial;
 }
 
-html body form fieldset#custom div.select datalist {
+.select datalist {
   appearance: none;
   position: absolute;
   border-style: solid;
@@ -327,7 +378,7 @@ html body form fieldset#custom div.select datalist {
   border-bottom-right-radius: 4px;
 }
 
-html body form fieldset#custom div.select datalist div.option {
+.select datalist .option {
   background-color: white;
   margin-bottom: 1px;
   cursor: pointer;
@@ -335,44 +386,32 @@ html body form fieldset#custom div.select datalist div.option {
   border-width: 0;
 }
 
-html body form fieldset#custom div.select datalist div.option:hover,
-html body form fieldset#custom div.select datalist div.option:focus,
-html body form fieldset#custom div.select datalist div.option:checked {
+.select datalist .option:hover,
+.select datalist .option:focus,
+.select datalist .option:checked {
   background-color: blue;
   color: white;
 }
 
-html
-  body
-  form
-  fieldset#custom
-  div.select
-  div.optgroup
-  div.option[data-disabled] {
+.select .optgroup .option[data-disabled] {
   color: gray;
 }
 
-html
-  body
-  form
-  fieldset#custom
-  div.select
-  div.optgroup
-  div.option[data-checked] {
+.select .optgroup .option[data-checked] {
   background-color: blue;
   color: white;
 }
 
-html body form fieldset#custom div.select div.optgroup div.label {
+.select .optgroup .label {
   font-weight: bold;
 }
 
-html body form fieldset#custom div.select div.optgroup div.option div.label {
+.select .optgroup .option .label {
   font-weight: normal;
   padding: 0.25em;
 }
 
-html body form fieldset#custom div.select div.header span {
+.select .header span {
   flex: 1;
   padding: 0.5em;
 }
@@ -537,7 +576,11 @@ document.forms[0].onsubmit = (e) => {
 
 #### Result
 
-{{EmbedGHLiveSample("html-examples/custom-select", '100%', 300)}}
+{{ EmbedLiveSample("Customizing select styles", "100%", "270") }}
+
+## Accessibility concerns
+
+The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
 
 ## Technical summary
 
@@ -580,13 +623,13 @@ document.forms[0].onsubmit = (e) => {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("option")}} or
-        {{HTMLElement("optgroup")}} elements.
+        Zero or more {{HTMLElement("option")}},
+        {{HTMLElement("optgroup")}} or {{HTMLElement("hr")}} elements.
       </td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -632,6 +675,6 @@ document.forms[0].onsubmit = (e) => {
 
 ## See also
 
-- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}
+- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - The {{HTMLElement("option")}} element
 - The {{HTMLElement("optgroup")}} element

@@ -31,6 +31,11 @@ for (variable in object)
 
 The loop will iterate over all enumerable properties of the object itself and those the object inherits from its prototype chain (properties of nearer prototypes take precedence over those of prototypes further away from the object in its prototype chain).
 
+Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and goes to the next iteration of the loop.
+
 A `for...in` loop only iterates over enumerable, non-symbol properties. Objects created from built–in constructors like `Array` and `Object` have inherited non–enumerable properties from `Array.prototype` and `Object.prototype`, such as {{jsxref("Array")}}'s {{jsxref("Array/indexOf", "indexOf()")}} method or {{jsxref("Object")}}'s {{jsxref("Object/toString", "toString()")}} method, which will not be visited in the `for...in` loop.
 
 The traversal order, as of modern ECMAScript specification, is well-defined and consistent across implementations. Within each component of the prototype chain, all non-negative integer keys (those that can be array indices) will be traversed first in ascending order by value, then other string keys in ascending chronological order of property creation.
@@ -71,8 +76,8 @@ It is better to use a {{jsxref("Statements/for", "for")}} loop with a numeric in
 
 If you only want to consider properties attached to the object itself, and not its prototypes, you can use one of the following techniques:
 
-- {{jsxref("Object.keys", "Object.keys(myObject)")}}
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObject)")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
 
 `Object.keys` will return a list of enumerable own string properties, while `Object.getOwnPropertyNames` will also contain non-enumerable ones.
 
@@ -99,7 +104,7 @@ for (const prop in obj) {
 
 ### Iterating own properties
 
-The following function illustrates the use of {{jsxref("Object.hasOwn", "Object.hasOwn()")}}: the inherited properties are not displayed.
+The following function illustrates the use of {{jsxref("Object.hasOwn()")}}: the inherited properties are not displayed.
 
 ```js
 const triangle = { a: 1, b: 2, c: 3 };

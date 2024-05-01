@@ -4,7 +4,7 @@
     "title": "Front matter schema",
     "type": "object",
     "additionalProperties": false,
-    "required": ["title", "slug"],
+    "required": ["title", "slug", "page-type"],
     "properties": {
       "title": {
         "title": "Title",
@@ -285,6 +285,31 @@
           "properties": {
             "page-type": {
               "enum": ["guide", "landing-page", "web-manifest-member"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^WebAssembly/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "webassembly-function",
+                "webassembly-constructor",
+                "webassembly-interface",
+                "webassembly-instance-property",
+                "webassembly-instance-method",
+                "webassembly-static-method",
+                "webassembly-instruction"
+              ]
             }
           }
         },

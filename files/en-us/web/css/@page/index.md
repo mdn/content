@@ -151,7 +151,7 @@ Where the `<page-body>` includes:
 - page-properties
 - page-margin properties
 
-and `<pseudo-selector>` represents these pseudo-classes:
+and `<pseudo-page>` represents these pseudo-classes:
 
 - [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}
@@ -195,7 +195,7 @@ Other margin-at rules include:
 @right-bottom
 ```
 
-#### Page-margin properties
+### Page-margin properties
 
 The page-margin properties are the set of CSS properties can be set in any individual margin at-rule. They include:
 

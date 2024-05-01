@@ -9,7 +9,7 @@ browser-compat: javascript.functions.arrow_functions
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 
-- Arrow functions don't have their own {{glossary("binding", "bindings")}} to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
+- Arrow functions don't have their own {{Glossary("binding", "bindings")}} to [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), and should not be used as [methods](/en-US/docs/Glossary/Method).
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 
@@ -69,7 +69,7 @@ Let's decompose a traditional anonymous function down to the simplest arrow func
   return a + 100;
 });
 
-// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+// 1. Remove the word "function" and place arrow between the argument and opening body brace
 (a) => {
   return a + 100;
 };
@@ -136,13 +136,13 @@ const bob2 = (a) => a + 100;
 
 ### Function body
 
-Arrow functions can have either a _concise body_ or the usual _block body_.
+Arrow functions can have either an _expression body_ or the usual _block body_.
 
-In a concise body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
+In an expression body, only a single expression is specified, which becomes the implicit return value. In a block body, you must use an explicit `return` statement.
 
 ```js
 const func = (x) => x * x;
-// concise body syntax, implied "return"
+// expression body syntax, implied "return"
 
 const func2 = (x, y) => {
   return x + y;
@@ -150,7 +150,7 @@ const func2 = (x, y) => {
 // with block body, explicit "return" needed
 ```
 
-Returning object literals using the concise body syntax `(params) => { object: literal }` does not work as expected.
+Returning object literals using the expression body syntax `(params) => { object: literal }` does not work as expected.
 
 ```js-nolint example-bad
 const func = () => { foo: 1 };
@@ -163,7 +163,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-This is because JavaScript only sees the arrow function as having a concise body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal.
+This is because JavaScript only sees the arrow function as having an expression body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal.
 
 To fix this, wrap the object literal in parentheses:
 
@@ -471,7 +471,7 @@ obj.doSomethingLater(); // logs 11
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)

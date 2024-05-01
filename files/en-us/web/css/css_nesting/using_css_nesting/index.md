@@ -6,13 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to wite your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors the file size can also be reduced.
+The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
 CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor. Also, in CSS nesting, the [specificity of the `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) is similar to the {{cssxref(':is',':is()')}} function; it is calculated using the highest specificity in the associated selector list.
 
 This guide shows different ways to arrange nesting in CSS.
-
-> **Note:** Early versions of the specification did not allow nesting of [type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has been updated so the `&` nesting selector is no longer needed. At the time of writing (Aug. 2023) Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector for type selector nesting.
 
 ## Child selectors
 
@@ -52,9 +50,13 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
 
-#### HTML
+> **Note:** This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
+
+#### Without nesting selector
+
+##### HTML
 
 ```html-nolint
 <form>
@@ -65,8 +67,6 @@ In these examples, one without and one with the `&` nesting selector, the `<inpu
   <input type="text" id="email" />
 </form>
 ```
-
-#### Without `&` nesting selector
 
 ##### CSS
 
@@ -97,9 +97,21 @@ label {
 
 ##### Result
 
-{{EmbedLiveSample('Without_&_nesting_selector','100%','120')}}
+{{EmbedLiveSample('Without_nesting_selector','100%','120')}}
 
-#### With `&` nesting selector
+#### With nesting selector
+
+##### HTML
+
+```html-nolint
+<form>
+  <label for="name">Name:
+    <input type="text" id="name" />
+  </label>
+  <label for="email">email:</label>
+  <input type="text" id="email" />
+</form>
+```
 
 ##### CSS
 
@@ -130,7 +142,7 @@ label {
 
 ##### Result
 
-{{EmbedLiveSample('With_&_nesting_selector','100%','120')}}
+{{EmbedLiveSample('With_nesting_selector','100%','120')}}
 
 ## Combinators
 
@@ -140,7 +152,7 @@ label {
 
 #### Nesting the sibling combinator
 
-In this example, the first paragraph after each `<h2>` is targeted with the [adjacent sibling combinator (`+`)](/en-US/docs/Web/CSS/Adjacent_sibling_combinator) using CSS nesting.
+In this example, the first paragraph after each `<h2>` is targeted with the [next-sibling combinator (`+`)](/en-US/docs/Web/CSS/Next-sibling_combinator) using CSS nesting.
 
 ##### HTML
 
@@ -216,15 +228,15 @@ In this example the `&` nesting selector is used to create compound selectors to
 ```html
 <div class="notices">
   <div class="notice">
-    <h2>Notice</h2>
+    <h2 class="notice-heading">Notice</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice warning">
-    <h2>Warning</h2>
+    <h2 class="warning-heading">Warning</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
   <div class="notice success">
-    <h2>Success</h2>
+    <h2 class="success-heading">Success</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
   </div>
 </div>
@@ -244,7 +256,7 @@ Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_l
 }
 ```
 
-This CSS uses nesting to create compound selectors. The top-level selector defines the basic styles for an element with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`.
+In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading::before`.
 
 ```css
 .notice {
@@ -255,8 +267,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  h2:before {
-    /* same as `.notice h2:before` */
+  .notice-heading::before {
+    /* equivalent to `.notice .notice-heading::before` */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -264,8 +276,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.warning h2:before` */
+    .warning-heading::before {
+      /* equivalent to `.notice.warning .warning-heading::before` */
       content: "! ";
     }
   }
@@ -274,8 +286,8 @@ This CSS uses nesting to create compound selectors. The top-level selector defin
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    h2:before {
-      /* equivalent to `.notice.success h2:before` */
+    .success-heading::before {
+      /* equivalent to `.notice.success .success-heading::before` */
       content: "✓ ";
     }
   }
@@ -310,7 +322,7 @@ As opposed to:
 .foo {
   /* .foo styles */
   .bar & {
-    /* .bar .for styles */
+    /* .bar .foo styles */
   }
 }
 ```
@@ -319,7 +331,7 @@ As opposed to:
 
 #### Appending nesting selector
 
-In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the .featured .h2 can be nested in the style for the `h2`.
+In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the `.featured .h2` can be nested in the style for the `h2`.
 
 ##### HTML
 
@@ -351,7 +363,7 @@ In this example there are 3 cards, one of which is featured. The cards are all e
 }
 ```
 
-In the following CSS we are creating the styles for `.card`, `.card h2` and then in the `h2` styles we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card .featured h2`.
+In the following CSS, we are creating the styles for `.card` and `.card h2`. Then, in the `h2` style block, we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card :is(.featured h2)`, which is equivalent to `:is(.card h2):is(.featured h2)`.
 
 ```css
 .card {
@@ -362,7 +374,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured .card` */
+      /* equivalent to `:is(.card h2):is(.featured h2)` */
       color: tomato;
     }
   }
@@ -375,7 +387,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
 
 ## Concatenation (is not possible)
 
-In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](http://getbem.com/naming/).
+In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
 
 ```css example-bad
 .component {
@@ -422,7 +434,7 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 }
 ```
 
-## See Also
+## See also
 
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)

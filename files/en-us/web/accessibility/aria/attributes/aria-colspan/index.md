@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
@@ -139,10 +141,10 @@ If we had used a {{HTMLElement('table')}} and semantic table elements our markup
 - `<integer>`
   - : An integer greater than or equal to the default value of 1 defining the number of columns spanned by the cell. The value must be less than what would cause a cell to overlap the next cell in the same row.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaColSpan")}}
-  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of each element's interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
 ## Associated roles
 
@@ -159,7 +161,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - The {{HTMLElement('th')}} and {{HTMLElement('td')}} [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property
@@ -167,11 +169,3 @@ Inherits into roles:
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

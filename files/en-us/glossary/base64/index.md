@@ -52,7 +52,9 @@ function base64ToBytes(base64) {
 }
 
 function bytesToBase64(bytes) {
-  const binString = Array.from(bytes, (x) => String.fromCodePoint(x)).join("");
+  const binString = Array.from(bytes, (byte) =>
+    String.fromCodePoint(byte),
+  ).join("");
   return btoa(binString);
 }
 
@@ -65,7 +67,7 @@ new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE")); // "a ƒÄ ê
 
 The `bytesToBase64` and `base64ToBytes` functions in the previous section can be used directly to convert between Base64 strings and [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)s.
 
-Alternatively, asynchronous conversion between base64 data URLs is possible natively within the web platform via the [`FileReader`](/en-US/docs/Web/API/FileReader) and [`fetch`](/en-US/docs/Web/API/Fetch_API) APIs:
+For better performance, asynchronous conversion between base64 data URLs is possible natively within the web platform via the [`FileReader`](/en-US/docs/Web/API/FileReader) and [`fetch`](/en-US/docs/Web/API/Fetch_API) APIs:
 
 ```js
 async function bytesToBase64DataUrl(bytes, type = "application/octet-stream") {

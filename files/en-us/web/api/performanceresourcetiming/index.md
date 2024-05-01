@@ -101,7 +101,7 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 - {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : Indicates how the resource was delivered; currently can either be "`cache`", or the empty string. (The set of possible values is expected to be expanded in the future.)
+  - : Indicates how the resource was delivered — for example from the cache or from a navigational prefetch.
 
 ## Instance methods
 

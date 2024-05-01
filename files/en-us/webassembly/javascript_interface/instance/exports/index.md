@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-browser-compat: javascript.builtins.WebAssembly.Instance.exports
+page-type: webassembly-instance-property
+browser-compat: webassembly.api.Instance.exports
 ---
 
 {{WebAssemblySidebar}}
@@ -16,7 +17,7 @@ to be accessed and used by JavaScript.
 ### Using exports
 
 After fetching some WebAssembly bytecode using fetch, we compile and instantiate the
-module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, importing a
+module using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function, importing a
 JavaScript function into the WebAssembly Module in the process. We then call an [Exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions)
 that is exported by the `Instance`.
 
@@ -34,7 +35,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-> **Note:** You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)
+> **Note:** You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html)
 > on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)).
 
 ## Specifications

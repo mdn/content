@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.fill
 
 The **`fill()`** method of {{jsxref("TypedArray")}} instances changes all elements within a range of indices in a typed array to a static value. It returns the modified typed array. This method has the same algorithm as {{jsxref("Array.prototype.fill()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-fill.html", "shorter")}}
 
 ## Syntax
 
@@ -30,7 +30,7 @@ fill(value, start, end)
 
 ### Return value
 
-The modified array, filled with `value`.
+The modified typed array, filled with `value`.
 
 ## Description
 
@@ -59,6 +59,6 @@ new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.fill()")}}

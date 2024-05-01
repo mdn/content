@@ -2,12 +2,10 @@
 title: ":popover-open"
 slug: Web/CSS/:popover-open
 page-type: css-pseudo-class
-status:
-  - experimental
 browser-compat: css.selectors.popover-open
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`:popover-open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a {{domxref("Popover API", "popover", "", "nocode")}} element (i.e. one with a [`popover` attribute](/en-US/docs/Web/HTML/Global_attributes/popover)) that is in the showing state. You can use this to apply style to popover elements only when they are shown.
 
@@ -63,3 +61,4 @@ To override the default styles and get the popover to appear somewhere else on y
 ## See also
 
 - [Popover API](/en-US/docs/Web/API/Popover_API)
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute

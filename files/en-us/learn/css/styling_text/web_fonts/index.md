@@ -13,7 +13,7 @@ In the first article of the module, we explored the basic CSS features available
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
@@ -118,7 +118,7 @@ Web services for font generation typically limit file sizes. In such a case, con
 
 1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) for converting ttf to woff
 2. [fontforge](https://fontforge.org/) for converting from ttf to svg
-3. [batik ttf2svf](https://people.apache.org/~clay/batik/ttf2svg.html) for converting from ttf to svg
+3. [batik ttf2svg](https://people.apache.org/~clay/batik/ttf2svg.html) for converting from ttf to svg
 4. [woff2](https://github.com/google/woff2) for converting from ttf to woff2
 
 ### Implementing the code in your demo
@@ -193,7 +193,7 @@ Let's go through it to see what it does:
 - `src`: These lines specify the paths to the font files to be imported into your CSS (the `url` part), and the format of each font file (the `format` part). The latter part in each case is optional, but is useful to declare because it allows browsers to more quickly determine which font they can use. Multiple declarations can be listed, separated by commas. Because the browser will search through them according to the rules of the cascade, it's best to state your preferred formats, like WOFF2, at the beginning.
 - {{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. [@font-face tip: define font-weight and font-style to keep your CSS simple](https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) by Roger Johansson shows what to do in more detail.
 
-> **Note:** You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you want to use out of the web font — in supporting browsers, only the specified characters will be downloaded, saving unnecessary downloading. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) by Drew McLellan provides some useful ideas on how to make use of this.
+> **Note:** You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you might want to use out of the web font. In supporting browsers, the font will only be downloaded if the page contains those specified characters, saving unnecessary downloading. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) by Drew McLellan provides some useful ideas on how to make use of this.
 
 ## Variable fonts
 

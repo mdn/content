@@ -28,8 +28,7 @@ image height, it will be rendered this tall.
 An integer value indicating the intrinsic height, in CSS pixels, of the image. This is
 the height at which the image is naturally drawn when no constraint or specific value is
 established for the image. This natural height is corrected for the pixel density of the
-device on which it's being presented, unlike {{domxref("HTMLImageElement.height",
-  "height")}}.
+device on which it's being presented, unlike {{domxref("HTMLImageElement.height", "height")}}.
 
 If the intrinsic height is not available—either because the image does not specify an
 intrinsic height or because the image data is not available in order to obtain this
@@ -49,7 +48,7 @@ its rendered size as altered by the page's CSS and other factors.
     class="image"
     alt="A round wall clock with a white dial and black numbers" />
 </div>
-<div class="output"></div>
+<pre></pre>
 ```
 
 The HTML features a 400x398 pixel image which is placed inside a
@@ -66,10 +65,6 @@ The HTML features a 400x398 pixel image which is placed inside a
 .image {
   width: 100%;
 }
-
-.output {
-  padding-top: 2em;
-}
 ```
 
 The main thing of note in the CSS above is that the style used for the container the
@@ -79,21 +74,21 @@ image will be drawn in is 200px wide, and the image will be drawn to fill its wi
 ### JavaScript
 
 ```js
-let output = document.querySelector(".output");
-let image = document.querySelector("img");
+const output = document.querySelector("pre");
+const image = document.querySelector("img");
 
-window.addEventListener("load", (event) => {
-  output.innerHTML +=
-    `Natural size: ${image.naturalWidth} x ` +
-    `${image.naturalHeight} pixels<br>`;
-  output.innerHTML +=
-    `Displayed size: ${image.width} x ` + `${image.height} pixels`;
+image.addEventListener("load", (event) => {
+  const { naturalWidth, naturalHeight, width, height } = image;
+  output.textContent = `
+Natural size: ${naturalWidth} x ${naturalHeight} pixels
+Displayed size: ${width} x ${height} pixels
+`;
 });
 ```
 
 The JavaScript code dumps the natural and as-displayed sizes into the
-{{HTMLElement("div")}} with the class `output`. This is done in response to
-the window's {{domxref("Window.load_event", "load")}} event handler, in order to ensure
+{{HTMLElement("pre")}}. This is done in response to
+the images's {{domxref("HTMLElement.load_event", "load")}} event handler, in order to ensure
 that the image is available before attempting to examine its width and height.
 
 ### Result

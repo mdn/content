@@ -5,7 +5,7 @@ page-type: javascript-operator
 browser-compat: javascript.operators.nullish_coalescing
 ---
 
-{{JSSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 The **nullish coalescing (`??`)** operator is a logical
 operator that returns its right-hand side operand when its left-hand side operand is

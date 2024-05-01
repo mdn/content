@@ -15,12 +15,12 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 
 ```js-nolint
 switch (expression) {
-  case value1:
+  case caseExpression1:
     statements
-  case value2:
+  case caseExpression2:
     statements
   // …
-  case valueN:
+  case caseExpressionN:
     statements
   default:
     statements
@@ -29,8 +29,8 @@ switch (expression) {
 
 - `expression`
   - : An expression whose result is matched against each `case` clause.
-- `case valueN` {{optional_inline}}
-  - : A `case` clause used to match against `expression`. If the `expression` matches the specified `valueN` (which can be any expression), execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
+- `case caseExpressionN` {{optional_inline}}
+  - : A `case` clause used to match against `expression`. If the value of `expression` matches the value of any `caseExpressionN`, execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
 - `default` {{optional_inline}}
   - : A `default` clause; if provided, this clause is executed if the value of `expression` doesn't match any of the `case` clauses. A `switch` statement can only have one `default` clause.
 
@@ -38,7 +38,7 @@ switch (expression) {
 
 A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) comparison) and transfers control to that clause, executing all statements following that clause.
 
-The clause values are only evaluated when necessary — if a match is already found, subsequent `case` clause values will not be evaluated, even when they will be visited by [fall-through](#breaking_and_fall-through).
+The clause expressions are only evaluated when necessary — if a match is already found, subsequent `case` clause expressions will not be evaluated, even when they will be visited by [fall-through](#breaking_and_fall-through).
 
 ```js
 switch (undefined) {
@@ -54,7 +54,7 @@ If no matching `case` clause is found, the program looks for the optional `defau
 
 You can use the [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement within a `switch` statement's body to break out early, often when all statements between two `case` clauses have been executed. Execution will continue at the first statement following `switch`.
 
-If `break` is omitted, execution will proceed to the next `case` clause, even to the `default` clause, regardless of whether the value of that clause matches. This behavior is called "fall-through".
+If `break` is omitted, execution will proceed to the next `case` clause, even to the `default` clause, regardless of whether the value of that clause's expression matches. This behavior is called "fall-through".
 
 ```js
 const foo = 0;

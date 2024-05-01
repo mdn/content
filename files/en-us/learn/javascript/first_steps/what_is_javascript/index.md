@@ -13,7 +13,7 @@ In this article we will look at JavaScript from a high level, answering question
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>Basic computer literacy, a basic understanding of HTML and CSS.</td>
+      <td>A basic understanding of HTML and CSS.</td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
@@ -36,45 +36,43 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 - {{glossary("CSS")}} is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
 - {{glossary("JavaScript")}} is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)
 
-The three layers build on top of one another nicely. Let's take a simple text label as an example. We can mark it up using HTML to give it structure and purpose:
+The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
 ```html
-<p>Player 1: Chris</p>
+<button type="button">Player 1: Chris</button>
 ```
 
-![Paragraph of Player 1: Chris as plain text](just-html.png)
+![Button showing Player 1: Chris with no styling](just-html.png)
 
 Then we can add some CSS into the mix to get it looking nice:
 
 ```css
-p {
+button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
-  border: 2px solid rgb(0 0 200 / 0.6);
-  background: rgb(0 0 200 / 0.6);
-  color: rgb(255 255 255 / 1);
-  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+  border: 2px solid rgb(200 200 0 / 60%);
+  background-color: rgb(0 217 217 / 60%);
+  color: rgb(100 0 0 / 100%);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
   border-radius: 10px;
   padding: 3px 10px;
-  display: inline-block;
   cursor: pointer;
 }
 ```
 
-![Styled paragraph of Player 1: Chris](html-and-css.png)
+![Button showing Player 1: Chris with styling](html-and-css.png)
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js
-const para = document.querySelector("p");
+const button = document.querySelector("button");
 
-para.addEventListener("click", updateName);
+button.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
+  button.textContent = `Player 1: ${name}`;
 }
 ```
 
@@ -110,7 +108,7 @@ They generally fall into two categories.
   This is how [Google Maps](https://www.google.com/maps) is able to find your location and plot it on a map.
 - The {{domxref("Canvas_API","Canvas")}} and {{domxref("WebGL_API","WebGL")}} APIs allow you to create animated 2D and 3D graphics.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
-- [Audio and Video APIs](/en-US/docs/Web/Guide/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and {{domxref("WebRTC API", "WebRTC")}} allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
+- [Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and {{domxref("WebRTC API", "WebRTC")}} allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
 > **Note:** Many of the above demos won't work in an older browser — when experimenting, it's a good idea to use a modern browser like Firefox, Chrome, Edge or Opera to run your code in.
 > You will need to consider [cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) in more detail when you get closer to delivering production code (i.e. real code that real customers will use).
@@ -151,20 +149,20 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const para = document.querySelector("p");
+const button = document.querySelector("button");
 
-para.addEventListener("click", updateName);
+button.addEventListener("click", updateName);
 
 function updateName() {
   const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
+  button.textContent = `Player 1: ${name}`;
 }
 ```
 
-Here we are selecting a text paragraph (line 1), then attaching an event listener to it (line 3) so that when the paragraph is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the paragraph to update the display.
+Here we are selecting a button (line 1), then attaching an event listener to it (line 3) so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`.
-This means that the `para` object does not exist yet, so we can't add an event listener to it.
+If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
+This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > **Note:** This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 
@@ -370,7 +368,7 @@ There are actually two modern features we can use to bypass the problem of the b
 Let's look at the difference between these two.
 
 Scripts loaded using the `async` attribute will download the script without blocking the page while the script is being fetched.
-However, once the download is complete, the script will execute, which blocks the page from rendering.
+However, once the download is complete, the script will execute, which blocks the page from rendering. This means that the rest of the content on the web page is prevented from being processed and displayed to the user until the script finishes executing.
 You get no guarantee that scripts will run in any specific order.
 It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
 

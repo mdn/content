@@ -1,5 +1,5 @@
 ---
-title: CSS first steps overview
+title: CSS first steps
 slug: Learn/CSS/First_steps
 page-type: learn-module
 ---
@@ -7,15 +7,6 @@ page-type: learn-module
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 

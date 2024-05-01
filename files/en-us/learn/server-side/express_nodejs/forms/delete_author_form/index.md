@@ -73,7 +73,7 @@ exports.author_delete_post = asyncHandler(async (req, res, next) => {
     return;
   } else {
     // Author has no books. Delete object and redirect to the list of authors.
-    await Author.findByIdAndRemove(req.body.authorid);
+    await Author.findByIdAndDelete(req.body.authorid);
     res.redirect("/catalog/authors");
   }
 });
@@ -85,7 +85,7 @@ If there are no books then we delete the author object and redirect to the list 
 If there are still books then we just re-render the form, passing in the author and list of books to be deleted.
 
 > **Note:** We could check if the call to `findById()` returns any result, and if not, immediately render the list of all authors.
-> We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after `findByIdAndRemove()`).
+> We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after `findByIdAndDelete()`).
 
 ## View
 
@@ -95,29 +95,27 @@ Create **/views/author_delete.pug** and copy in the text below.
 extends layout
 
 block content
+
   h1 #{title}: #{author.name}
   p= author.lifespan
 
   if author_books.length
 
     p #[strong Delete the following books before attempting to delete this author.]
-
     div(style='margin-left:20px;margin-top:20px')
-
       h4 Books
-
       dl
-      each book in author_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
+        each book in author_books
+          dt
+            a(href=book.url) #{book.title}
+          dd #{book.summary}
 
   else
     p Do you really want to delete this Author?
 
-    form(method='POST' action='')
+    form(method='POST')
       div.form-group
-        input#authorid.form-control(type='hidden',name='authorid', required='true', value=author._id )
+        input#authorid.form-control(type='hidden', name='authorid', value=author._id )
 
       button.btn.btn-primary(type='submit') Delete
 ```

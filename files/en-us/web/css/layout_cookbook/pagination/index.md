@@ -2,9 +2,6 @@
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
 page-type: guide
-browser-compat:
-  - css.properties.justify-content
-  - css.properties.column-gap.flex_context
 ---
 
 {{CSSRef}}
@@ -31,11 +28,7 @@ Typically, the pagination component will be centered horizontally underneath the
 
 This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
 
-The list itself also becomes a flex container to lay the items out as a row. To space the items out we will use a {{cssxref("margin")}} on the flex items.
-
-## Alternative methods
-
-Once the {{cssxref("column-gap")}} property has implementation in browsers this could be used instead of margins to space out the items.
+The list itself also becomes a flex container to lay the items out as a row. To space the items out we can either use a {{cssxref("margin")}} on the flex items or add a {{cssxref("gap")}} on the flex container.
 
 ```css
 .pagination {
@@ -43,7 +36,7 @@ Once the {{cssxref("column-gap")}} property has implementation in browsers this 
   margin: 0;
   padding: 0;
   display: flex;
-  column-gap: 2px;
+  gap: 2px;
 }
 ```
 
@@ -55,18 +48,10 @@ We have also added some additional content that would be read by a screen reader
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- {{Cssxref("justify-content")}}, {{Cssxref("column-gap")}}
-- [Know your ARIA: 'Hidden' vs 'None'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html)
-- [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques)
-- [Writing CSS With Accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
-- [a11y Style Guide: Pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)
+- {{Cssxref("justify-content")}}, {{Cssxref("gap")}}
+- [Know your ARIA: 'hidden' vs 'none'](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) (2018)
+- [Invisible content just for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques) via WebAIM.org (2020)
+- [Writing CSS with accessibility in mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) (2017)
+- [a11y style guide: pagination](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

@@ -5,13 +5,15 @@ page-type: web-api-interface
 browser-compat: api.RemotePlayback
 ---
 
-{{DefaultAPISidebar("Remote Playback API")}}
+{{APIRef("Remote Playback API")}}
 
 The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
+
+_Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
 
@@ -26,14 +28,18 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 
 ## Instance methods
 
+_Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
+
 - {{domxref("RemotePlayback.watchAvailability()")}}
-  - : A {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.
+  - : Watches the list of available remote playback devices and returns a {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.
 - {{domxref("RemotePlayback.cancelWatchAvailability()")}}
   - : Cancels the request to monitor the availability of remote playback devices.
 - {{domxref("RemotePlayback.prompt()")}}
   - : Prompts the user to select and give permission to connect to a remote playback device.
 
 ## Events
+
+_Also inherits events from its parent interface, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("RemotePlayback.connecting_event", "connecting")}}
   - : Fired when the user agent initiates remote playback.

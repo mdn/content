@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-colindextext` attribute defines a human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description
@@ -68,6 +70,13 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 - `<string>`
   - The human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 
+## Associated interfaces
+
+- {{domxref("Element.ariaColIndexText")}}
+  - : The [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindextext` attribute.
+- {{domxref("ElementInternals.ariaColIndexText")}}
+  - : The [`ariaColIndexText`](/en-US/docs/Web/API/ElementInternals/ariaColIndexText) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-colindextext` attribute.
+
 ## Associated roles
 
 Used in roles:
@@ -83,19 +92,12 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
+- [`Element.ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 - [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
 - [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

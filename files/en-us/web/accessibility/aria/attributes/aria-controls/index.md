@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
 
 ## Description
@@ -78,12 +80,12 @@ In this tabs example, each tab controls one tabpanel:
 ## Values
 
 - `id` list
-  - : Space separated list of one or more ID values referencing the elements being controlled by the current element
+  - : A space-separated list of one or more ID values referencing the elements being controlled by the current element
 
-## ARIAMixin API
+## Associated interfaces
 
-- {{domxref("Element.ariaBusy")}}
-  - : The [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
+- {{domxref("Element.ariaControlsElements")}}
+  - : The `ariaControlsElements` property is part of each element's interface. Its value is a list of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-controls` attribute.
 
 ## Associated roles
 
@@ -93,14 +95,6 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

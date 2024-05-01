@@ -1,6 +1,7 @@
 ---
 title: Compiling from Rust to WebAssembly
 slug: WebAssembly/Rust_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -177,7 +178,11 @@ The last section is the `[dependencies]` section. Here's where we tell Cargo wha
 
 ### Building the package
 
-Now that we've got everything set up, let's build the package. Type this into your terminal:
+Now that we've got everything set up, let's build the package.
+We'll be using the generated code in a native ES module and in Node.js.
+For this purpose, we'll use the [`--target` argument](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target) in `wasm-pack build` to specify what kind of WebAssembly and JavaScript is generated.
+
+Firstly, run the following command:
 
 ```bash
 wasm-pack build --target web
@@ -205,7 +210,7 @@ Let's start by creating a file named `index.html` in the root of the project, so
 ```plain
 ├── Cargo.lock
 ├── Cargo.toml
-├── index.html
+├── index.html  <-- new index.html file
 ├── pkg
 │   ├── hello_wasm.d.ts
 │   ├── hello_wasm.js
@@ -240,7 +245,7 @@ Put the following content in the `index.html` file:
 </html>
 ```
 
-The script in this file will import the js glue code, initialize the Wasm module, and call the `greet` function we wrote in rust.
+The script in this file will import the JavaScript glue code, initialize the Wasm module, and call the `greet` function we wrote in Rust.
 
 Serve the root directory of the project with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
@@ -250,26 +255,16 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 
 ## Making our package available to npm
 
-If you want to use the WebAssembly module with npm, we'll need to make a few changes.
-
-Let's start by recompiling our Rust with the target bundler option:
-
-```bash
-wasm-pack build --target bundler
-```
-
-### Install Node.js and npm
-
 We are building an npm package, so you need to have Node.js and npm installed.
 
 To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions.
-This tutorial targets node 16, if you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
+This tutorial targets node 20. If you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
 
-Next, let's use `npm link` to make this package available to other JavaScript packages installed
+If you want to use the WebAssembly module with npm, we'll need to make a few changes.
+Let's start by recompiling our Rust with `bundler` option as the target:
 
 ```bash
-cd pkg
-npm link
+wasm-pack build --target bundler
 ```
 
 We now have an npm package, written in Rust, but compiled to WebAssembly. It's ready for use from JavaScript, and doesn't require the user to have Rust installed; the code included was the WebAssembly code, not the Rust source.
@@ -278,37 +273,28 @@ We now have an npm package, written in Rust, but compiled to WebAssembly. It's r
 
 Let's build a website that uses our new npm package. Many people use npm packages through various bundler tools, and we'll be using one of them, `webpack`, in this tutorial. It's only a bit complex, and shows a realistic use-case.
 
-Let's move back out of the `pkg` directory, and make a new directory, `site`, to try this out in:
+Let's move back out of the `pkg` directory, and make a new directory, `site`, to try this out.
+We haven't published the package to the npm registry yet, so we can install it from a local version using `npm i /path/to/package`.
+You may use [`npm link`](https://docs.npmjs.com/cli/v10/commands/npm-link), but installing from a local path is convenient for the purposes of this demo:
 
 ```bash
 cd ..
-mkdir site
-cd site
-npm link hello-wasm
+mkdir site && cd site
+npm i ../pkg
 ```
 
-Create a new file, `package.json`, and put the following code in it:
+Install the `webpack` dev dependencies:
 
-```json
-{
-  "scripts": {
-    "serve": "webpack-dev-server"
-  },
-  "dependencies": {
-    "hello-wasm": "^0.1.0"
-  },
-  "devDependencies": {
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
-  }
-}
+```bash
+npm i -D webpack@5 webpack-cli@5 webpack-dev-server@4 copy-webpack-plugin@11
 ```
 
 Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
 
 ```js
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
+
 module.exports = {
   entry: "./index.js",
   output: {
@@ -316,18 +302,46 @@ module.exports = {
     filename: "index.js",
   },
   mode: "development",
+  experiments: {
+    asyncWebAssembly: true,
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "index.html" }],
+    }),
+  ],
 };
+```
+
+In your `package.json`, you can add `build` and `serve` scripts that will run webpack with the config file we just created:
+
+```json
+{
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack serve --config webpack.config.js --open"
+  },
+  "dependencies": {
+    "hello-wasm": "file:../pkg"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
 ```
 
 Next, create a file named `index.js`, and give it these contents:
 
 ```js
-import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
-  js.greet("WebAssembly with npm");
-});
+import * as wasm from "hello-wasm";
+
+wasm.greet("WebAssembly with npm");
 ```
 
-This imports the new module from the `node_modules` folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the `greet` function from that module, passing `"WebAssembly"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
+This imports the module from the `node_modules` folder and calls the `greet` function, passing `"WebAssembly with npm"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
 
 Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
 
@@ -350,7 +364,7 @@ The `hello-wasm/site` directory should look like this:
 ├── index.html
 ├── index.js
 ├── node_modules
-│   └── hello-wasm -> ../../pkg
+├── package-lock.json
 ├── package.json
 └── webpack.config.js
 ```
@@ -358,14 +372,38 @@ The `hello-wasm/site` directory should look like this:
 We're done making files. Let's give this a shot:
 
 ```bash
-npm install
 npm run serve
 ```
 
-This starts a web server. Load `http://localhost:8080` and an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm.
+This starts a web server and opens `http://localhost:8080`. You should see an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm!
+
+If you would like to use your WebAssembly outside of local development, you can publish the package using the `pack` and `publish` commands:
+
+```bash
+wasm-pack pack
+npm notice
+npm notice 📦  hello-wasm@0.1.0
+npm notice === Tarball Contents ===
+npm notice 1.6kB  README.md
+npm notice 2.5kB  hello_wasm_bg.js
+npm notice 17.5kB hello_wasm_bg.wasm
+npm notice 115B   hello_wasm.d.ts
+npm notice 157B   hello_wasm.js
+npm notice 531B   package.json
+...
+hello-wasm-0.1.0.tgz
+[INFO]: 🎒  packed up your package!
+```
+
+To publish to npm, you will need an [npm account](https://www.npmjs.com/) and authorize your machine using [`npm adduser`](https://docs.npmjs.com/cli/v10/commands/npm-adduser).
+When you are ready, you can publish using `wasm-pack` which calls `npm publish` under the hood:
+
+```bash
+wasm-pack publish
+```
 
 ## Conclusion
 
 This is the end of our tutorial; we hope you've found it useful.
 
-There's lots of exciting work going on in this space; if you'd like to help make it even better, check out [the Rust WebAssembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html).
+There's lots of exciting work going on in this space; if you'd like to help make it even better, check out the [Rust and WebAssembly Working Group](https://github.com/rustwasm/team/blob/master/README.md#get-involved).

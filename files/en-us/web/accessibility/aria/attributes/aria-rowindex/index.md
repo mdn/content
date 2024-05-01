@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindex
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
 
 ## Description
@@ -67,7 +69,7 @@ Note both `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell,
 - `<integer>`
   - : An integer greater than or equal to 1, greater than the `aria-rowindex` of the previous row, if any, and less than or equal to the value of [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount).
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRowIndex")}}
   - : The [`ariaRowIndex`](/en-US/docs/Web/API/Element/ariaRowIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindex` attribute.
@@ -91,15 +93,10 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
 - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 - The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Roles/tree_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tree
-  - https://w3c.github.io/aria-practices/#TreeView
+  - https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/
 ---
+
+{{AccessibilitySidebar}}
 
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
 
@@ -235,12 +237,4 @@ The alternative multi-selection model is a modifier key model in which moving fo
 
 {{Specifications}}
 
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
+## See also

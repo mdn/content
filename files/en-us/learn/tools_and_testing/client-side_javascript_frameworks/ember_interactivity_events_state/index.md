@@ -266,9 +266,9 @@ Now we can access the data using `this.todos.all`, which is much more intuitive.
 
 With a dynamic `#each` block (which is basically syntactic sugar over the top of JavaScript's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) that creates a `<Todo />` component for each todo available in the list of todos returned by the service's `all()` getter:
 
-```hbs
+```hbs-nolint
 \{{#each this.todos.all as |todo|}}
-<Todo @todo="\{{todo}}" />
+<Todo @todo=\{{todo}} />
 \{{/each}}
 ```
 

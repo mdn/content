@@ -9,50 +9,6 @@ browser-compat: html.elements.script
 
 The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. The `<script>` element can also be used with other languages, such as [WebGL](/en-US/docs/Web/API/WebGL_API)'s GLSL shader programming language and [JSON](/en-US/docs/Glossary/JSON).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content">Metadata content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>Dynamic script such as <code>text/javascript</code>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content">metadata content</a>,
-        or any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLScriptElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -61,13 +17,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : For classic scripts, if the `async` attribute is present, then the classic script will be fetched in parallel to parsing and evaluated as soon as it is available.
 
-    For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be executed in the defer queue, therefore they will get fetched in parallel to parsing and evaluated as soon as they are available.
+    For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
 
     This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
+
+- `blocking` {{Experimental_Inline}}
+
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+    - `render`: The rendering of content on the screen is blocked.
 
 - `crossorigin`
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
@@ -85,7 +46,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 
-- `fetchpriority` {{Experimental_Inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
@@ -119,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
-- [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
+- [`type`](/en-US/docs/Web/HTML/Element/script/type)
 
   - : This attribute indicates the type of script represented.
     The value of this attribute will be one of the following:
@@ -128,23 +89,22 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
         JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
+    - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
+      - : This value indicates that the body of the element contains an import map.
+        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
     - `module`
       - : This value causes the code to be treated as a JavaScript module.
         The processing of the script contents is deferred.
         The `charset` and `defer` attributes have no effect.
         For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
         Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
-    - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
-      - : This value indicates that the body of the element contains an import map.
-        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
+    - [`speculationrules`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+      - : This value indicates that the body of the element contains speculation rules.
+        Speculation rules take the form of a JSON object that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
     - **Any other value**
       - : The embedded content is treated as a data block, and won't be processed by the browser.
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
         All of the other attributes will be ignored, including the `src` attribute.
-
-- `blocking` {{Experimental_Inline}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
-    - `render`: The rendering of content on the screen is blocked.
 
 ### Deprecated attributes
 
@@ -250,6 +210,52 @@ so that the script doesn't block parsing but is guaranteed to be evaluated befor
 ```html
 <script blocking="render" async src="async-script.js"></script>
 ```
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content">Metadata content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>Dynamic script such as <code>text/javascript</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content">metadata content</a>,
+        or any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLScriptElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

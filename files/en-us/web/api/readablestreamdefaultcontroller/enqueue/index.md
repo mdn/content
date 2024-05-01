@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.enqueue
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`enqueue()`** method of the
 {{domxref("ReadableStreamDefaultController")}} interface enqueues a given chunk in the

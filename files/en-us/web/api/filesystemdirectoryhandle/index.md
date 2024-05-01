@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FileSystemDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} provides a handle to a file system directory.
 
@@ -40,8 +40,8 @@ Regular methods:
   - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : Returns a new _async iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
-- [`FileSystemDirectoryHandle[@@asyncIterator]()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries)
-  - : Returns the `entries` function by default.
+- `FileSystemDirectoryHandle[@@asyncIterator]()`
+  - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs.
 
 ## Examples
 
@@ -69,7 +69,7 @@ async function returnPathDirectories(directoryHandle) {
     return;
   }
 
-  // Check if handle exists inside directory our directory handle
+  // Check if handle exists inside our directory handle
   const relativePaths = await directoryHandle.resolve(handle);
 
   if (relativePath === null) {
@@ -119,4 +119,4 @@ for await (const fileHandle of getFilesRecursively(directoryHandle)) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

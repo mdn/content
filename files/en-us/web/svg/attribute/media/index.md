@@ -7,7 +7,7 @@ browser-compat: svg.elements.style.media
 
 {{SVGRef}}
 
-The **`media`** attribute specifies a {{Glossary("media query")}} that must be matched for a style sheet to apply.
+The **`media`** attribute specifies a [media query](/en-US/docs/Web/CSS/CSS_media_queries) that must be matched for a style sheet to apply.
 
 You can use this attribute with the following SVG elements:
 

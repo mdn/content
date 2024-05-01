@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ReadableStreamBYOBReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source.
 It is used for efficient copying from underlying sources where the data is delivered as an "anonymous" sequence of bytes, such as files.
@@ -17,7 +17,7 @@ Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request 
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
 Note that the methods and properties are similar to those for the default reader ({{domxref("ReadableStreamDefaultReader")}}).
-The `read()` method differs in that it provide a view into which data should be written.
+The `read()` method differs in that it provides a view into which data should be written.
 
 ## Constructor
 
@@ -47,7 +47,7 @@ As this is a "Bring Your Own Buffer" reader, we also need to create an `ArrayBuf
 
 ```js
 const reader = stream.getReader({ mode: "byob" });
-let buffer = new ArrayBuffer(4000);
+let buffer = new ArrayBuffer(200);
 ```
 
 A function that uses the reader is shown below.
@@ -62,30 +62,33 @@ function readStream(reader) {
   let bytesReceived = 0;
   let offset = 0;
 
-  while (offset < buffer.byteLength) {
-    // read() returns a promise that resolves when a value has been received
-    reader
-      .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
-      .then(function processBytes({ done, value }) {
-        // Result objects contain two properties:
-        // done  - true if the stream has already given all its data.
-        // value - some data. Always undefined when done is true.
+  // read() returns a promise that resolves when a value has been received
+  reader
+    .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+    .then(function processText({ done, value }) {
+      // Result objects contain two properties:
+      // done  - true if the stream has already given all its data.
+      // value - some data. Always undefined when done is true.
 
-        if (done) {
-          // There is no more data in the stream
-          return;
-        }
+      if (done) {
+        logConsumer(`readStream() complete. Total bytes: ${bytesReceived}`);
+        return;
+      }
 
-        buffer = value.buffer;
-        offset += value.byteLength;
-        bytesReceived += value.byteLength;
+      buffer = value.buffer;
+      offset += value.byteLength;
+      bytesReceived += value.byteLength;
 
-        // Read some more, and call this function again
-        return reader
-          .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
-          .then(processBytes);
-      });
-  }
+      logConsumer(
+        `Read ${value.byteLength} (${bytesReceived}) bytes: ${value}`,
+      );
+      result += value;
+
+      // Read some more, and call this function again
+      return reader
+        .read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+        .then(processText);
+    });
 }
 ```
 

@@ -78,5 +78,5 @@ console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

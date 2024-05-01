@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
 page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
-  - https://w3c.github.io/aria-practices/#kbd_shortcuts
+  - https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
 ---
+
+{{AccessibilitySidebar}}
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
@@ -64,7 +66,7 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
+In trying to improve the accessibility of your sites and applications, there are some best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
@@ -113,7 +115,7 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 <a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
 ```
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
@@ -128,13 +130,8 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
 - HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) attribute
 - [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

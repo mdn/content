@@ -28,28 +28,62 @@ A new instance of the {{domxref("EventTarget")}} object.
 
 ## Examples
 
+### Implementing a counter
+
+This example implements a `Counter` class, with `increment()` and `decrement()` methods. It fires a custom `"valuechange"` event when either of these methods is called.
+
+#### HTML
+
+```html
+<button id="dec" aria-label="Decrement">-</button>
+<span id="currentValue">0</span>
+<button id="inc" aria-label="Increment">+</button>
+```
+
+#### JavaScript
+
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
+class Counter extends EventTarget {
+  constructor(initialValue = 0) {
     super();
-    this._secret = mySecret;
+    this.value = initialValue;
   }
 
-  get secret() {
-    return this._secret;
+  #emitChangeEvent() {
+    this.dispatchEvent(new CustomEvent("valuechange", { detail: this.value }));
+  }
+
+  increment() {
+    this.value++;
+    this.#emitChangeEvent();
+  }
+
+  decrement() {
+    this.value--;
+    this.#emitChangeEvent();
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // === 5
-myEventTarget.addEventListener("foo", (e) => {
-  myEventTarget._secret = e.detail;
+const initialValue = 0;
+const counter = new Counter(initialValue);
+document.querySelector("#currentValue").innerText = initialValue;
+
+counter.addEventListener("valuechange", (event) => {
+  document.querySelector("#currentValue").innerText = event.detail;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // === 7
+document.querySelector("#inc").addEventListener("click", () => {
+  counter.increment();
+});
+
+document.querySelector("#dec").addEventListener("click", () => {
+  counter.decrement();
+});
 ```
+
+#### Result
+
+{{EmbedLiveSample("Implementing a counter")}}
 
 ## Specifications
 

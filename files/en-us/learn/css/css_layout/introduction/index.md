@@ -77,7 +77,7 @@ The methods that can change how elements are laid out in CSS are:
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
+- **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to lay out in columns, as you might see in a newspaper.
 
 ## The display property
 
@@ -103,7 +103,7 @@ However, if we add `display: flex` to the parent, the three items now arrange th
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -136,7 +136,7 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -178,7 +178,7 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -216,7 +216,7 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -285,8 +285,8 @@ p {
 }
 
 .box {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   border-radius: 5px;
 }
@@ -358,18 +358,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -408,21 +406,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  position: relative;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  top: 30px;
-  left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -459,18 +452,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -517,8 +508,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -586,8 +577,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -608,13 +599,11 @@ body {
 
 ## Table layout
 
-HTML tables are fine for displaying tabular data, but many years ago — before even basic CSS was supported reliably across browsers — web developers used to also use tables for entire web page layouts, putting their headers, footers, columns, etc. into various table rows and columns. This worked at the time, but it has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
+When looking at the source code on older websites, you may discover that tables have been used for laying out forms. HTML tables should be reserved for displaying tabular data. Using tables for anything other than tabular data has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
 
-The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables".
+The appearance of a table on a webpage when you use table markup is due to a set of CSS properties that define its layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables". The example below shows one such use.
 
-The example below shows one such use. It must be noted, that using CSS tables for layout should be considered a legacy method at this point, and should only be used to support old browsers that lack support for Flexbox or Grid.
-
-Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.
+Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label. We also included a caption inside a paragraph; though another option is using a {{htmlelement("fieldset")}} with a {{htmlelement("legend")}}. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.
 
 ```html
 <form>
@@ -683,7 +672,7 @@ This gives us the following result:
 
 You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
-> **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module due to its legacy application.
+> **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module. Use [grid layout](#grid_layout) instead.
 
 ## Multi-column layout
 

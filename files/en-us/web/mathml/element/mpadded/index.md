@@ -14,15 +14,15 @@ The **`<mpadded>`** [MathML](/en-US/docs/Web/MathML) element is used to add extr
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `depth`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the `<mpadded>` element.
+  - : A {{cssxref("length-percentage")}} indicating the desired depth (below the baseline) of the `<mpadded>` element.
 - `height`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired height (above the baseline) of the `<mpadded>` element.
+  - : A {{cssxref("length-percentage")}} indicating the desired height (above the baseline) of the `<mpadded>` element.
 - `lspace`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the horizontal location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
+  - : A {{cssxref("length-percentage")}} indicating the horizontal location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
 - `voffset`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the vertical location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
+  - : A {{cssxref("length-percentage")}} indicating the vertical location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
 - `width`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired horizontal length of the `<mpadded>` element.
+  - : A {{cssxref("length-percentage")}} indicating the desired horizontal length of the `<mpadded>` element.
 
 ### Legacy syntax
 

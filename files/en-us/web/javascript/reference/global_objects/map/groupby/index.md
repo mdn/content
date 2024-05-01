@@ -2,12 +2,10 @@
 title: Map.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Map.groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 > **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
 
@@ -15,7 +13,7 @@ The **`Map.groupBy()`** static method groups the elements of a given iterable us
 
 The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time. If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
 
-<!-- {{EmbedInteractiveExample("pages/js/map-groupby.html")}} -->
+{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
 
 ## Syntax
 
@@ -42,7 +40,7 @@ A {{jsxref("Map")}} object with keys for each group, each assigned to an array c
 
 `Map.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a value indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the {{jsxref("Map")}} returned by `Map.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
 
-The elements in the returned {{jsxref("Map")}} and the original iterable are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned {{jsxref("Map")}}.
+The elements in the returned {{jsxref("Map")}} and the original iterable are the same (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned {{jsxref("Map")}}.
 
 This method is useful when you need to group information that is related to a particular object that might potentially change over time. This is because even if the object is modified, it will continue to work as a key to the returned `Map`. If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Object.groupBy()")}}, you must maintain the mapping between the original object and its representation as the object changes.
 
@@ -104,7 +102,7 @@ console.log(result.get(restock2)); // undefined
 ## See also
 
 - [Polyfill of `Map.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Map/Map", "Map()")}}
 - {{jsxref("Object.groupBy()")}}

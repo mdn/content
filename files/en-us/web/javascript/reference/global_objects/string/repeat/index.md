@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.String.repeat
 The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
 which contains the specified number of copies of this string, concatenated together.
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/string-repeat.html", "shorter")}}
 
 ## Syntax
 
@@ -22,7 +22,7 @@ repeat(count)
 
 - `count`
   - : An integer between `0` and
-    {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
+    {{jsxref("Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
     number of times to repeat the string.
 
 ### Return value

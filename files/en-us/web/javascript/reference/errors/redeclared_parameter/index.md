@@ -63,4 +63,4 @@ function g(arg) {
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/var", "var")}}
-- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

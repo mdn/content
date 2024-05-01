@@ -83,69 +83,57 @@ This is explained further on the {{jsxref("Array/length", "length")}} page.
 
 ### Array methods and empty slots
 
-Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave inconsistently between array methods. Generally, the older methods will skip empty slots, while newer ones treat them as `undefined`.
+Array methods have different behaviors when encountering empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). In general, older methods (e.g. `forEach`) treat empty slots differently from indices that contain `undefined`.
 
-Among methods that iterate through multiple elements, the following do an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check before accessing the index and do not conflate empty slots with `undefined`:
+Methods that have special treatment for empty slots include the following: {{jsxref("Array/concat", "concat()")}}, {{jsxref("Array/copyWithin", "copyWithin()")}}, {{jsxref("Array/every", "every()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/flat", "flat()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/forEach", "forEach()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/reduce", "reduce()")}}, {{jsxref("Array/reduceRight", "reduceRight()")}}, {{jsxref("Array/reverse", "reverse()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/some", "some()")}}, {{jsxref("Array/sort", "sort()")}}, and {{jsxref("Array/splice", "splice()")}}. Iteration methods such as `forEach` don't visit empty slots at all. Other methods, such as `concat`, `copyWithin`, etc., preserve empty slots when doing the copying, so in the end the array is still sparse.
 
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/indexOf", "indexOf()")}}
-- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/some", "some()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
+```js
+const colors = ["red", "yellow", "blue"];
+colors[5] = "purple";
+colors.forEach((item, index) => {
+  console.log(`${index}: ${item}`);
+});
+// Output:
+// 0: red
+// 1: yellow
+// 2: blue
+// 5: purple
 
-For exactly how they treat empty slots, see the page for each method.
+colors.reverse(); // ['purple', empty × 2, 'blue', 'yellow', 'red']
+```
 
-These methods treat empty slots as if they are `undefined`:
+Newer methods (e.g. `keys`) do not treat empty slots specially and treat them as if they contain `undefined`. Methods that conflate empty slots with `undefined` elements include the following: {{jsxref("Array/entries", "entries()")}}, {{jsxref("Array/fill", "fill()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/includes", "includes()")}}, {{jsxref("Array/join", "join()")}}, {{jsxref("Array/keys", "keys()")}}, {{jsxref("Array/toLocaleString", "toLocaleString()")}}, {{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/toSpliced", "toSpliced()")}}, {{jsxref("Array/values", "values()")}}, and {{jsxref("Array/with", "with()")}}.
 
-- {{jsxref("Array/entries", "entries()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/includes", "includes()")}}
-- {{jsxref("Array/join", "join()")}}
-- {{jsxref("Array/keys", "keys()")}}
-- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
-- {{jsxref("Array/values", "values()")}}
+```js
+const colors = ["red", "yellow", "blue"];
+colors[5] = "purple";
+const iterator = colors.keys();
+for (const key of iterator) {
+  console.log(`${key}: ${colors[key]}`);
+}
+// Output
+// 0: red
+// 1: yellow
+// 2: blue
+// 3: undefined
+// 4: undefined
+// 5: purple
+
+const newColors = colors.toReversed(); // ['purple', undefined, undefined, 'blue', 'yellow', 'red']
+```
 
 ### Copying methods and mutating methods
 
 Some methods do not mutate the existing array that the method was called on, but instead return a new array. They do so by first constructing a new array and then populating it with elements. The copy always happens [_shallowly_](/en-US/docs/Glossary/Shallow_copy) — the method never copies anything beyond the initially created array. Elements of the original array(s) are copied into the new array as follows:
 
 - Objects: the object reference is copied into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays.
-- Primitive types such as strings, numbers and booleans (not {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, and {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): their values are copied into the new array.
+- Primitive types such as strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}}, and {{jsxref("Boolean")}} objects): their values are copied into the new array.
 
 Other methods mutate the array that the method was called on, in which case their return value differs depending on the method: sometimes a reference to the same array, sometimes the length of the new array.
 
-The following methods create new arrays by accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use:
+The following methods create new arrays by accessing [`this.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to determine the constructor to use: {{jsxref("Array/concat", "concat()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/flat", "flat()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/slice", "slice()")}}, and {{jsxref("Array/splice", "splice()")}} (to construct the array of removed elements that's returned).
 
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/splice", "splice()")}} (to construct the array of removed elements that's returned)
-
-The following methods always create new arrays with the `Array` base constructor:
-
-- {{jsxref("Array/toReversed", "toReversed()")}}
-- {{jsxref("Array/toSorted", "toSorted()")}}
-- {{jsxref("Array/toSpliced", "toSpliced()")}}
-- {{jsxref("Array/with", "with()")}}
+The following methods always create new arrays with the `Array` base constructor: {{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/toSpliced", "toSpliced()")}}, and {{jsxref("Array/with", "with()")}}.
 
 The following table lists the methods that mutate the original array, and the corresponding non-mutating alternative:
 
@@ -188,31 +176,41 @@ Where `callbackFn` takes three arguments:
 
 What `callbackFn` is expected to return depends on the array method that was called.
 
-The `thisArg` argument (defaults to `undefined`) will be used as the `this` value when calling `callbackFn`. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules](/en-US/docs/Web/JavaScript/Reference/Operators/this): if `callbackFn` is [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution), primitive `this` values are wrapped into objects, and `undefined`/`null` is substituted with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis). The `thisArg` argument is irrelevant for any `callbackFn` defined with an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as arrow functions don't have their own `this` {{glossary("binding")}}.
+The `thisArg` argument (defaults to `undefined`) will be used as the `this` value when calling `callbackFn`. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules](/en-US/docs/Web/JavaScript/Reference/Operators/this): if `callbackFn` is [non-strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution), primitive `this` values are wrapped into objects, and `undefined`/`null` is substituted with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis). The `thisArg` argument is irrelevant for any `callbackFn` defined with an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), as arrow functions don't have their own `this` {{Glossary("binding")}}.
+
+The `array` argument passed to `callbackFn` is most useful if you want to read another index during iteration, because you may not always have an existing variable that refers to the current array. You should generally not mutate the array during iteration (see [mutating initial array in iterative methods](#mutating_initial_array_in_iterative_methods)), but you can also use this argument to do so. The `array` argument is _not_ the array that is being built, in the case of methods like `map()`, `filter()`, and `flatMap()` — there is no way to access the array being built from the callback function.
 
 All iterative methods are [copying](#copying_methods_and_mutating_methods) and [generic](#generic_array_methods), although they behave differently with [empty slots](#array_methods_and_empty_slots).
 
-The following methods are iterative:
-
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/some", "some()")}}
+The following methods are iterative:{{jsxref("Array/every", "every()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/forEach", "forEach()")}}, {{jsxref("Array/map", "map()")}}, and {{jsxref("Array/some", "some()")}}.
 
 In particular, {{jsxref("Array/every", "every()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, and {{jsxref("Array/some", "some()")}} do not always invoke `callbackFn` on every element — they stop iteration as soon as the return value is determined.
 
-There are two other methods that take a callback function and run it at most once for each element in the array, but they have slightly different signatures from typical iterative methods (for example, they don't accept `thisArg`):
-
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
+The {{jsxref("Array/reduce", "reduce()")}} and {{jsxref("Array/reduceRight", "reduceRight()")}} methods also take a callback function and run it at most once for each element in the array, but they have slightly different signatures from typical iterative methods (for example, they don't accept `thisArg`).
 
 The {{jsxref("Array/sort", "sort()")}} method also takes a callback function, but it is not an iterative method. It mutates the array in-place, doesn't accept `thisArg`, and may invoke the callback multiple times on an index.
+
+Iterative methods iterate the array like the following (with a lot of technical details omitted):
+
+```js
+function method(callbackFn, thisArg) {
+  const length = this.length;
+  for (let i = 0; i < length; i++) {
+    if (i in this) {
+      const result = callbackFn.call(thisArg, this[i], i, this);
+      // Do something with result; maybe return early
+    }
+  }
+}
+```
+
+Note the following:
+
+1. Not all methods do the `i in this` test. The `find`, `findIndex`, `findLast`, and `findLastIndex` methods do not, but other methods do.
+2. The `length` is memorized before the loop starts. This affects how insertions and deletions during iteration are handled (see [mutating initial array in iterative methods](#mutating_initial_array_in_iterative_methods)).
+3. The method doesn't memorize the array contents, so if any index is modified during iteration, the new value might be observed.
+4. The code above iterates the array in ascending order of index. Some methods iterate in descending order of index (`for (let i = length - 1; i >= 0; i--)`): `reduceRight()`, `findLast()`, and `findLastIndex()`.
+5. `reduce` and `reduceRight` have slightly different signatures and do not always start at the first/last element.
 
 ### Generic array methods
 
@@ -790,6 +788,143 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
 
+### Mutating initial array in iterative methods
+
+[Iterative methods](#iterative_methods) do not mutate the array on which it is called, but the function provided as `callbackFn` can. The key principle to remember is that only indexes between 0 and `arrayLength - 1` are visited, where `arrayLength` is the length of the array at the time the array method was first called, but the element passed to the callback is the value at the time the index is visited. Therefore:
+
+- `callbackFn` will not visit any elements added beyond the array's initial length when the call to the iterative method began.
+- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. Removed elements are not visited.
+
+> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+
+The following examples use the `forEach` method as an example, but other methods that visit indexes in ascending order work in the same way. We will first define a helper function:
+
+```js
+function testSideEffect(effect) {
+  const arr = ["e1", "e2", "e3", "e4"];
+  arr.forEach((elem, index, arr) => {
+    console.log(`array: [${arr.join(", ")}], index: ${index}, elem: ${elem}`);
+    effect(arr, index);
+  });
+  console.log(`Final array: [${arr.join(", ")}]`);
+}
+```
+
+Modification to indexes not visited yet will be visible once the index is reached:
+
+```js
+testSideEffect((arr, index) => {
+  if (index + 1 < arr.length) arr[index + 1] += "*";
+});
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e1, e2*, e3, e4], index: 1, elem: e2*
+// array: [e1, e2*, e3*, e4], index: 2, elem: e3*
+// array: [e1, e2*, e3*, e4*], index: 3, elem: e4*
+// Final array: [e1, e2*, e3*, e4*]
+```
+
+Modification to already visited indexes does not change iteration behavior, although the array will be different afterwards:
+
+```js
+testSideEffect((arr, index) => {
+  if (index > 0) arr[index - 1] += "*";
+});
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e1, e2, e3, e4], index: 1, elem: e2
+// array: [e1*, e2, e3, e4], index: 2, elem: e3
+// array: [e1*, e2*, e3, e4], index: 3, elem: e4
+// Final array: [e1*, e2*, e3*, e4]
+```
+
+Inserting _n_ elements at unvisited indexes that are less than the initial array length will make them be visited. The last _n_ elements in the original array that now have index greater than the initial array length will not be visited:
+
+```js
+testSideEffect((arr, index) => {
+  if (index === 1) arr.splice(2, 0, "new");
+});
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e1, e2, e3, e4], index: 1, elem: e2
+// array: [e1, e2, new, e3, e4], index: 2, elem: new
+// array: [e1, e2, new, e3, e4], index: 3, elem: e3
+// Final array: [e1, e2, new, e3, e4]
+// e4 is not visited because it now has index 4
+```
+
+Inserting _n_ elements with index greater than the initial array length will not make them be visited:
+
+```js
+testSideEffect((arr) => arr.push("new"));
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e1, e2, e3, e4, new], index: 1, elem: e2
+// array: [e1, e2, e3, e4, new, new], index: 2, elem: e3
+// array: [e1, e2, e3, e4, new, new, new], index: 3, elem: e4
+// Final array: [e1, e2, e3, e4, new, new, new, new]
+```
+
+Inserting _n_ elements at already visited indexes will not make them be visited, but it shifts remaining elements back by _n_, so the current index and the _n - 1_ elements before it are visited again:
+
+```js
+testSideEffect((arr, index) => arr.splice(index, 0, "new"));
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [new, e1, e2, e3, e4], index: 1, elem: e1
+// array: [new, new, e1, e2, e3, e4], index: 2, elem: e1
+// array: [new, new, new, e1, e2, e3, e4], index: 3, elem: e1
+// Final array: [new, new, new, new, e1, e2, e3, e4]
+// e1 keeps getting visited because it keeps getting shifted back
+```
+
+Deleting _n_ elements at unvisited indexes will make them not be visited anymore. Because the array has shrunk, the last _n_ iterations will visit out-of-bounds indexes. If the method ignores non-existent indexes (see [array methods and empty slots](#array_methods_and_empty_slots)), the last _n_ iterations will be skipped; otherwise, they will receive `undefined`:
+
+```js
+testSideEffect((arr, index) => {
+  if (index === 1) arr.splice(2, 1);
+});
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e1, e2, e3, e4], index: 1, elem: e2
+// array: [e1, e2, e4], index: 2, elem: e4
+// Final array: [e1, e2, e4]
+// Does not visit index 3 because it's out-of-bounds
+
+// Compare this with find(), which treats nonexistent indexes as undefined:
+const arr2 = ["e1", "e2", "e3", "e4"];
+arr2.find((elem, index, arr) => {
+  console.log(`array: [${arr.join(", ")}], index: ${index}, elem: ${elem}`);
+  if (index === 1) arr.splice(2, 1);
+  return false;
+});
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e1, e2, e3, e4], index: 1, elem: e2
+// array: [e1, e2, e4], index: 2, elem: e4
+// array: [e1, e2, e4], index: 3, elem: undefined
+```
+
+Deleting _n_ elements at already visited indexes does not change the fact that they were visited before they get deleted. Because the array has shrunk, the next _n_ elements after the current index are skipped. If the method ignores non-existent indexes, the last _n_ iterations will be skipped; otherwise, they will receive `undefined`:
+
+```js
+testSideEffect((arr, index) => arr.splice(index, 1));
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// Does not visit e2 because e2 now has index 0, which has already been visited
+// array: [e2, e3, e4], index: 1, elem: e3
+// Does not visit e4 because e4 now has index 1, which has already been visited
+// Final array: [e2, e4]
+// Index 2 is out-of-bounds, so it's not visited
+
+// Compare this with find(), which treats nonexistent indexes as undefined:
+const arr2 = ["e1", "e2", "e3", "e4"];
+arr2.find((elem, index, arr) => {
+  console.log(`array: [${arr.join(", ")}], index: ${index}, elem: ${elem}`);
+  arr.splice(index, 1);
+  return false;
+});
+// array: [e1, e2, e3, e4], index: 0, elem: e1
+// array: [e2, e3, e4], index: 1, elem: e3
+// array: [e2, e4], index: 2, elem: undefined
+// array: [e2, e4], index: 3, elem: undefined
+```
+
+For methods that iterate in descending order of index, insertion causes elements to be skipped, and deletion causes elements to be visited multiple times. Adjust the code above yourself to see the effects.
+
 ## Specifications
 
 {{Specifications}}
@@ -800,6 +935,6 @@ For more information about the result of a match, see the {{jsxref("RegExp.proto
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

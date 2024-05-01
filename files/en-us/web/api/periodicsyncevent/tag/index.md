@@ -8,7 +8,7 @@ status:
 browser-compat: api.PeriodicSyncEvent.tag
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
@@ -42,5 +42,5 @@ self.addEventListener("periodicsync", (event) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

@@ -321,6 +321,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | --------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                   |
 | [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                          |
+| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls automatic capitalization in inputted text.                                   |
 | [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
 | [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
@@ -364,6 +365,10 @@ A few additional non-standard attributes are listed following the descriptions o
 - `alt`
 
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
+
+- `autocapitalize`
+
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
@@ -626,12 +631,6 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
-      <td>
-        A string indicating how auto-capitalization should be applied to the content of text elements. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
         A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
@@ -646,13 +645,12 @@ The following non-standard attributes are also available on some browsers. As a 
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
         <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
         field; this is used to determine an appropriate label for that key on a
-        virtual keyboard.</p>
-        <p><strong>Deprecated: use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
+        virtual keyboard. <strong>Since this attribute is deprecated, use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
       </td>
     </tr>
     <tr>
@@ -678,19 +676,6 @@ The following non-standard attributes are also available on some browsers. As a 
   </tbody>
 </table>
 
-- `autocapitalize` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates how auto-capitalization should be applied while the user is editing this field. Permitted values are:
-
-    - `none`
-      - : Do not automatically capitalize any text
-    - `sentences`
-      - : Automatically capitalize the first character of each sentence.
-    - `words`
-      - : Automatically capitalize the first character of each word.
-    - `characters`
-      - : Automatically capitalize every character.
-
 - `autocorrect` {{non-standard_inline}}
 
   - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
@@ -710,7 +695,7 @@ The following non-standard attributes are also available on some browsers. As a 
 
 - `orient` {{non-standard_inline}}
 
-  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
+  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically. See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) for a modern approach to creating vertical form controls.
 
 - `results` {{non-standard_inline}}
 
@@ -740,6 +725,8 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
   - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
   - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+- {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
+  - : Displays the browser picker for the input element that would normally be displayed when the element is selected, but triggered from a button press or other user interaction.
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
   - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
@@ -974,9 +961,15 @@ input.custom {
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
 
+### field-sizing
+
+The {{cssxref("field-sizing")}} property enables you to control the sizing behavior of form inputs (i.e. they are given a default preferred size by default.) This property enables you to override the default behavior, allowing form controls to adjust in size to fit their contents.
+
+This property is typically used to create form fields that shrinkwrap their content and grow as more text is entered. This works with input types that accept direct text input (for example, [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`url`](/en-US/docs/Web/HTML/Element/input/url)), input type [`file`](/en-US/docs/Web/HTML/Element/input/file), and {{htmlelement("textarea")}} elements.
+
 ### object-position and object-fit
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties
+In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
 
 ### Styling
 
@@ -1221,7 +1214,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by any `Content-Language` HTTP header. Or,
 - If none specified, use the browser's locale.
 
-### Technical summary
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -1444,3 +1437,4 @@ Interactive elements such as form input should provide an area large enough that
 - [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - [CSS property compatibility table](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

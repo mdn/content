@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DangerType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `DangerType` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons that a downloadable file might be considered dangerous.
 

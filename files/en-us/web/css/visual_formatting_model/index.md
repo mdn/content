@@ -108,13 +108,13 @@ In addition, the references for specific values of display explain how these for
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [CSS lists](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
 ### Independent formatting contexts
 
 Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new **Grid Formatting Context** for its children.
 
-**Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+**Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap round the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
 

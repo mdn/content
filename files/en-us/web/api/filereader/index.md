@@ -5,15 +5,13 @@ page-type: web-api-interface
 browser-compat: api.FileReader
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`FileReader`** object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using {{domxref("File")}} or {{domxref("Blob")}} objects to specify the file or data to read.
 
 File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, or from a drag and drop operation's {{domxref("DataTransfer")}} object.
 
-`FileReader` can only access the contents of files that the user has explicitly selected, either using an HTML `<input type="file">` element or by drag and drop. It cannot be used to read a file by pathname from the user's file system. To read files on the client's file system by pathname, use the [File System Access API](/en-US/docs/Web/API/File_System_API). To read server-side files, use standard Ajax solutions, with CORS permission if reading cross-domain.
-
-{{AvailableInWorkers}}
+`FileReader` can only access the contents of files that the user has explicitly selected, either using an HTML `<input type="file">` element or by drag and drop. It cannot be used to read a file by pathname from the user's file system. To read files on the client's file system by pathname, use the [File System Access API](/en-US/docs/Web/API/File_System_API). To read server-side files, use {{domxref("fetch()")}}, with [CORS](/en-US/docs/Web/HTTP/CORS) permission if reading cross-domain.
 
 {{InheritanceDiagram}}
 
@@ -47,7 +45,7 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
   - : Aborts the read operation. Upon return, the `readyState` will be `DONE`.
 - {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains an {{jsxref("ArrayBuffer")}} representing the file's data.
-- {{domxref("FileReader.readAsBinaryString()")}}
+- {{domxref("FileReader.readAsBinaryString()")}} {{deprecated_inline}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains the raw binary data from the file as a string.
 - {{domxref("FileReader.readAsDataURL()")}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains a `data:` URL representing the file's data.

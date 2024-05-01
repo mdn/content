@@ -92,10 +92,10 @@ In this example the box has a thick dotted border. The first gradient uses the `
   color: #fff;
   background: linear-gradient(
       90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 0.6) 60%,
-      rgba(252, 176, 69, 1) 100%
-    ), radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
+      rgb(131 58 180 / 100%) 0%,
+      rgb(253 29 29 / 60%) 60%,
+      rgb(252 176 69 / 100%) 100%
+    ), radial-gradient(circle, rgb(255 255 255 / 100%) 0%, rgb(0 0 0 / 100%) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

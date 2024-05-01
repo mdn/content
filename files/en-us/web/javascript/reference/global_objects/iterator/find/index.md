@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Iterator.find
 
 {{JSRef}}{{SeeCompatTable}}
 
-The **`find()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.every()")}}: it returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
+The **`find()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.find()")}}: it returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 ## Syntax
 
@@ -77,3 +77,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.find` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- {{jsxref("Iterator")}}
+- {{jsxref("Iterator.prototype.every()")}}
+- {{jsxref("Iterator.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}

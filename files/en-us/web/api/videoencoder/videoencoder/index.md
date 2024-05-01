@@ -22,7 +22,7 @@ new VideoEncoder(options)
   - : An object containing two required callbacks.
     - `output`
       - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:
-        - `decoderconfig` {{Optional_Inline}}
+        - `decoderConfig` {{Optional_Inline}}
           - : An object containing:
             - `codec`
               - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
@@ -37,7 +37,7 @@ new VideoEncoder(options)
             - `displayAspectHeight` {{Optional_Inline}}
               - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}}'s aspect ratio when displayed.
             - `colorSpace` {{Optional_Inline}}
-              - : An object you pass to the {{domxref("VideoColorSpace")}} constructor as the `init` argument, configuring the {{domxref("VideoFrame.colorSpace")}} for {{domxref("VideoFrame","VideoFrames")}} associated with this `decoderconfig` object. If `colorSpace` exists, the provided values will override any in-band values from the bitstream.
+              - : An object you pass to the {{domxref("VideoColorSpace")}} constructor as the `init` argument, configuring the {{domxref("VideoFrame.colorSpace")}} for {{domxref("VideoFrame","VideoFrames")}} associated with this `decoderConfig` object. If `colorSpace` exists, the provided values will override any in-band values from the bitstream.
             - `hardwareAcceleration` {{Optional_Inline}}
               - : A string that configures hardware acceleration for this codec. Defaults to `"no-preference"`. Options are:
                 - `"no-preference"`

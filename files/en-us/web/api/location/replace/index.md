@@ -1,5 +1,5 @@
 ---
-title: "location: replace() method"
+title: "Location: replace() method"
 short-title: replace()
 slug: Web/API/Location/replace
 page-type: web-api-instance-method
@@ -11,18 +11,8 @@ browser-compat: api.Location.replace
 The **`replace()`** method of the {{DOMXref("Location")}}
 interface replaces the current resource with the one at the provided URL. The difference
 from the {{domxref("Location.assign","assign()")}} method is that after using
-`replace()` the current page will not be saved in session
-{{domxref("History")}}, meaning the user won't be able to use the _back_ button
-to navigate to it.
-
-If the assignment can't happen because of a security violation, a
-{{domxref("DOMException")}} of the `SECURITY_ERROR` type is thrown. This
-happens if the origin of the script calling the method is different from the origin of
-the page originally described by the {{domxref("Location")}} object, mostly when the
-script is hosted on a different domain.
-
-If the provided URL is not valid, a {{domxref("DOMException")}} of the
-`SYNTAX_ERROR` type is thrown.
+`replace()` the current page will not be saved in session {{domxref("History")}},
+meaning the user won't be able to use the _back_ button to navigate to it.
 
 ## Syntax
 
@@ -34,6 +24,11 @@ replace(url)
 
 - `url`
   - : A string containing the URL of the page to navigate to.
+
+### Exceptions
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the provided `url` parameter is not a valid URL.
 
 ### Return value
 

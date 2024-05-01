@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TransformStream.TransformStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`TransformStream()`** constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.
 
@@ -67,7 +67,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 ### Transforming text to uppercase
 
-The following example transforms text to uppercase chunk by chunk. This example is from [Streams—The Definitive Guide](https://web.dev/streams/), which has a number of examples of different types of streams.
+The following example transforms text to uppercase chunk by chunk. This example is from [Streams—The Definitive Guide](https://web.dev/articles/streams), which has a number of examples of different types of streams.
 
 ```js
 function upperCaseStream() {

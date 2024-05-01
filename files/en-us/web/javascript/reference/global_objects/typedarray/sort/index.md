@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.sort
 
 The **`sort()`** method of {{jsxref("TypedArray")}} instances sorts the elements of a typed array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same typed array, now sorted. This method has the same algorithm as {{jsxref("Array.prototype.sort()")}}, except that it sorts the values numerically instead of as strings by default.
 
-{{EmbedInteractiveExample("pages/js/typedarray-sort.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-sort.html", "shorter")}}
 
 ## Syntax
 
@@ -22,18 +22,26 @@ sort(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if `a` is less than `b`, positive if `a` is greater than `b`, and zero if they are equal. `NaN` is treated as `0`. The function is called with the following arguments:
+  - : A function that determines the order of the elements. The function is called with the following arguments:
 
     - `a`
-      - : The first element for comparison. Will never be `undefined`.
+      - : The first element for comparison.
     - `b`
-      - : The second element for comparison. Will never be `undefined`.
+      - : The second element for comparison.
 
-    If omitted, the array elements are sorted according to numeric value.
+    It should return a number where:
+
+    - A negative value indicates that `a` should come before `b`.
+    - A positive value indicates that `a` should come after `b`.
+    - Zero or `NaN` indicates that `a` and `b` are considered equal.
+
+    To memorize this, remember that `(a, b) => a - b` sorts numbers in ascending order.
+
+    If omitted, the typed array elements are sorted according to numeric value.
 
 ### Return value
 
-The reference to the original array, now sorted. Note that the array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
+The reference to the original typed array, now sorted. Note that the typed array is sorted _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
 
 ## Description
 
@@ -72,7 +80,7 @@ numbers.sort((a, b) => a - b); // compare numbers
 ## See also
 
 - [Polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.reverse()")}}
 - {{jsxref("TypedArray.prototype.toSorted()")}}

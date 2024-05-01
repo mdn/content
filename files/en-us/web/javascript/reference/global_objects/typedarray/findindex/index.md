@@ -33,7 +33,7 @@ findIndex(callbackFn, thisArg)
 
 ### Return value
 
-The index of the first element in the array that passes the test. Otherwise, `-1`.
+The index of the first element in the typed array that passes the test. Otherwise, `-1`.
 
 ## Description
 
@@ -75,7 +75,7 @@ console.log(uint16.findIndex(isPrime)); // 2
 ## See also
 
 - [Polyfill of `TypedArray.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.findLast()")}}

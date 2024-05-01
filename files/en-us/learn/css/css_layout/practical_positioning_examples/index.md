@@ -35,16 +35,14 @@ The first example we'll look at is a classic tabbed info box — a very common f
 
 > **Note:** You can see the finished example running live at [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
-You might be thinking "why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design. In addition, so-called "single page apps" are becoming very popular — especially for mobile web UIs — because having everything served as a single file cuts down on the number of HTTP requests required to view all the content, thereby improving performance.
-
-> **Note:** Some web developers take things even further, only having one page of information loaded at once, and dynamically changing the information shown using a JavaScript feature such as [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest). At this point in your learning however we want to keep things as simple as possible. There is some JavaScript later on, but only a tiny bit.
+You might be thinking "why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design.
 
 To start with, we'd like you to make a local copy of the starting HTML file — [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html). Save this somewhere sensible on your local computer, and open it up in your text editor. Let's look at the HTML contained within the body:
 
 ```html
 <section class="info-box">
   <ul>
-    <li><a href="#" class="active">Tab 1</a></li>
+    <li><a href="#" class="active-tab">Tab 1</a></li>
     <li><a href="#">Tab 2</a></li>
     <li><a href="#">Tab 3</a></li>
   </ul>
@@ -160,7 +158,7 @@ Add the following CSS:
 }
 ```
 
-Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
+Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active-tab` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
 .info-box li a:focus,
@@ -169,7 +167,7 @@ Finally for this section we'll set some styles on the link states. First, we'll 
   color: white;
 }
 
-.info-box li a.active {
+.info-box li a.active-tab {
   background-color: #a60000;
   color: white;
 }
@@ -227,7 +225,7 @@ function setTabHandler(tab, tabPos) {
       tab.className = "";
     }
 
-    tab.className = "active";
+    tab.className = "active-tab";
 
     for (const panel of panels) {
       panel.className = "";
@@ -245,7 +243,7 @@ This code does the following:
 - In the `setTabHandler()` function, the tab has an `onclick` event handler set on it, so that when the tab is clicked, the following occurs:
 
   - A `for` loop is used to cycle through all the tabs and remove any classes that are present on them.
-  - A `class` of `active` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
+  - A `class` of `active-tab` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
   - A `for` loop is used to cycle through all the panels and remove any classes that are present on them.
   - A class of `active-panel` is set on the panel that corresponds to the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets its {{cssxref("z-index")}} to 1, making it appear over the top of the other panels.
 

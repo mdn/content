@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-valuenow` attribute defines the current value for a `range` widget.
 
 ## Description
@@ -86,7 +88,7 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 - `<number>`
   - : A decimal number, between the minimum and maximum values.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueNow")}}
   - : The [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.
@@ -115,15 +117,10 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `value` attribute](/en-US/docs/Web/HTML/Element/input/range#value)
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: fecPacketsReceived property"
 short-title: fecPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.fecPacketsReceived
+browser-compat: api.RTCStatsReport.type_inbound-rtp.fecPacketsReceived
 ---
 
 {{APIRef("WebRTC")}}
@@ -45,8 +45,7 @@ previously-received FEC packet. This may also happen if the FEC packet arrives o
 the window of time in which the client will attempt to use it.
 
 If you wish to know how many of the received packets were discarded, you can examine
-the value of {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded",
-    "fecPacketsDiscarded")}}.
+the value of {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}.
 
 ## Specifications
 

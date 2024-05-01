@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 
 The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}} objects.
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html", "shorter")}}
 
 ## Syntax
 
@@ -78,4 +78,4 @@ buffer.grow(12);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide

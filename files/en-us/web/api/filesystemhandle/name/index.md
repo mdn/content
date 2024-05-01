@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.name
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`name`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
@@ -44,4 +44,4 @@ async function getFile() {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

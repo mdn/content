@@ -37,7 +37,7 @@ reduce(callbackFn, initialValue)
 
 ### Return value
 
-The value that results from running the "reducer" callback function to completion over the entire array.
+The value that results from running the "reducer" callback function to completion over the entire typed array.
 
 ### Exceptions
 
@@ -68,8 +68,10 @@ const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
 ## See also
 
 - [Polyfill of `TypedArray.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

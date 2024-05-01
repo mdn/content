@@ -50,13 +50,13 @@ for (let i = 0; i < 5; ++i) {
 }
 ```
 
-### Not enough brackets
+### Not enough parentheses
 
-Sometimes, you leave out brackets around `if` statements:
+Sometimes, you leave out parentheses around `if` statements:
 
 ```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
-  if (n > upperBound) || (n < lowerBound) { // Not enough brackets here!
+  if (n > upperBound) || (n < lowerBound) { // Not enough parenthese here!
     throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
@@ -66,8 +66,8 @@ function round(n, upperBound, lowerBound) {
 } // SyntaxError: expected expression, got '||'
 ```
 
-The brackets may look correct at first, but note how the `||` is outside the
-brackets. Correct would be putting brackets around the `||`:
+The parentheses may look correct at first, but note how the `||` is outside the
+parentheses. Correct would be putting parentheses around the `||`:
 
 ```js-nolint example-good
 function round(n, upperBound, lowerBound) {

@@ -64,7 +64,7 @@ In some cases, search engines covering specific regions may provide locally-spec
   <span itemprop="operatingSystem">ANDROID</span><br />
   <link
     itemprop="applicationCategory"
-    href="https://schema.org/GameApplication" />
+    href="https://schema.org/SoftwareApplication" />
 
   <div
     itemprop="aggregateRating"
@@ -106,7 +106,7 @@ In some cases, search engines covering specific regions may provide locally-spec
     <tr>
       <td>itemprop</td>
       <td>applicationCategory</td>
-      <td>GameApplication (https://schema.org/GameApplication)</td>
+      <td>SoftwareApplication (https://schema.org/SoftwareApplication)</td>
     </tr>
     <tr>
       <td rowspan="3">itemscope</td>
@@ -146,10 +146,6 @@ In some cases, search engines covering specific regions may provide locally-spec
 {{ EmbedLiveSample('HTML', '', '100') }}
 
 > **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data). Try it on the HTML shown above.
-
-## Browser compatibility
-
-Supported in Firefox 16. Removed in Firefox 49.
 
 ## See also
 

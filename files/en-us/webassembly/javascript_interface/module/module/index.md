@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Module() constructor
 slug: WebAssembly/JavaScript_interface/Module/Module
-browser-compat: javascript.builtins.WebAssembly.Module.Module
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Module.Module
 ---
 
 {{WebAssemblySidebar}}
@@ -13,7 +14,7 @@ browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/
 The `WebAssembly.Module()` constructor function can be called to
 synchronously compile given WebAssembly binary code. However, the primary way to get a
 `Module` is through an asynchronous compilation function like
-[`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile).
+[`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile_static).
 
 > **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
@@ -23,7 +24,7 @@ synchronously compile given WebAssembly binary code. However, the primary way to
 > **Warning:** Since compilation for large modules can be expensive,
 > developers should only use the `Module()` constructor when synchronous
 > compilation is absolutely required; the asynchronous
-> [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) method should be used at all other times.
+> [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) method should be used at all other times.
 
 ```js-nolint
 new WebAssembly.Module(bufferSource)

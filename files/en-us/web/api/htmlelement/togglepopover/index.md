@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLElement.togglePopover
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Popover API")}}
 
 The **`togglePopover()`** method of the {{domxref("HTMLElement")}} interface toggles a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) between the hidden and showing states.
 
@@ -118,4 +118,5 @@ You can test this out using the live example below.
 
 ## See also
 
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

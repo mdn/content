@@ -189,8 +189,6 @@ gl.getTexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER);
 
 ## See also
 
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameteri()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}

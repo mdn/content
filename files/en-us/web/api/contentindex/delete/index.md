@@ -8,7 +8,7 @@ status:
 browser-compat: api.ContentIndex.delete
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`delete()`** method of the
 {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed
@@ -20,16 +20,17 @@ content.
 ## Syntax
 
 ```js-nolint
-ContentIndex.delete(id).then(/* … */)
+delete(id)
 ```
 
 ### Parameters
 
-This method receives no parameters.
+- `id`
+  - : The unique identifier of the indexed content you want the {{domxref("ContentIndex")}} object to remove.
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
@@ -72,6 +73,6 @@ self.registration.index.delete("my-id");
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

@@ -30,13 +30,15 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then((response) => {
-  console.log(response.status); // returns 200
-  response.blob().then((myBlob) => {
+fetch(myRequest)
+  .then((response) => {
+    console.log("response.status =", response.status); // response.status = 200
+    return response.blob();
+  })
+  .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});
 ```
 
 ## Specifications

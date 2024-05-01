@@ -8,7 +8,7 @@ status:
 browser-compat: api.ContentIndex.add
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`add()`** method of the
 {{domxref("ContentIndex")}} interface registers an item with the [content index](/en-US/docs/Web/API/Content_Index_API).
@@ -29,9 +29,6 @@ add(contentDescription)
       - : A unique {{jsxref('String')}} identifier.
     - `title`
       - : A {{jsxref('String')}} title for the item. Used in
-        user-visible lists of content.
-    - `title`
-      - : A {{jsxref('String')}} title of the item. Used in
         user-visible lists of content.
     - `description`
       - : A {{jsxref('String')}} description of the item. Used
@@ -62,10 +59,12 @@ add(contentDescription)
           - : A {{jsxref('String')}} representation of the image size.
         - `type` {{Optional_Inline}}
           - : The {{Glossary("MIME type")}} of the image.
+        - `label` {{Optional_Inline}}
+          - : A string representing the accessible name of the icon.
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
@@ -73,11 +72,10 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
 
   - : This exception is thrown in the following conditions:
 
-    - The service worker's registration is not present or the service worker does not
-      contain a {{domxref('FetchEvent')}}.
-    - The `id`, `title`, `description` or
-      `url` are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
-    - The items referenced by `icons` are not of image type.
+    - The service worker's registration is not present or the service worker does not contain a {{domxref('FetchEvent')}}.
+    - One of `id`, `title`, `description` or `url` parameter are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
+    - The `url` parameter is not {{glossary("same-origin policy")}} with the {{domxref("ServiceWorker", "service worker", "", "nocode")}}.
+    - One of the items in `icons` are not an image type, or fetching one of the items in `icons` failed with a network error or decode error.
 
 ## Examples
 
@@ -155,6 +153,6 @@ self.registration.index.add(item);
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

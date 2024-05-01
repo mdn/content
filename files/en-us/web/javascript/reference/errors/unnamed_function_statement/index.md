@@ -106,7 +106,7 @@ const greeter = {
 ### Callback syntax
 
 Also, check your syntax when using callbacks.
-Brackets and commas can quickly get confusing.
+Braces and commas can quickly get confusing.
 
 ```js-nolint example-bad
 promise.then(
@@ -134,8 +134,8 @@ promise.then(
 
 ## See also
 
-- [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- {{glossary("IIFE")}}
-- [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{Glossary("IIFE")}}
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)

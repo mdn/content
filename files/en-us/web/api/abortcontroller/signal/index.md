@@ -8,7 +8,7 @@ browser-compat: api.AbortController.signal
 
 {{APIRef("DOM")}}
 
-The **`signal`** read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort a DOM request as desired.
+The **`signal`** read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort an asynchronous operation as desired.
 
 ## Value
 

@@ -29,7 +29,7 @@ Intl.DateTimeFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
 
@@ -44,22 +44,22 @@ Intl.DateTimeFormat(locales, options)
 
 - `options` {{optional_inline}}
 
-  - : An object. For ease of reading, the property list is broken into sections based on their purposes.
+  - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [date-time component options](#date-time_component_options), and [style shortcuts](#style_shortcuts).
 
 #### Locale options
 
 - `localeMatcher`
   - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `calendar`
-  - : The calendar to use. For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types). This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The calendar to use, such as `"chinese"`, `"gregory"`, `"persian"`, and so on. For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types). This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `numberingSystem`
-  - : The numbering system to use for number formatting. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `hour12`
-  - : Whether to use 12-hour time (as opposed to 24-hour time). Possible values are `true` and `false`; the default is locale dependent. This option overrides the `hc` locale extension tag and/or the `hourCycle` option in case both are present. It sets `hourCycle` to `"h11"` or `"h12"` when `true`, and `"h23"` or `"h24"` when `false`, the exact choice depending on the locale — for example, if the locale most prefers `"h23"` but `hour12` is `true`, then the final hour cycle is `"h11"`.
+  - : Whether to use 12-hour time (as opposed to 24-hour time). Possible values are `true` and `false`; the default is locale dependent. When `true`, this option sets `hourCycle` to either `"h11"` or `"h12"`, depending on the locale. When `false`, it sets `hourCycle` to `"h23"`. `hour12` overrides both the `hc` locale extension tag and the `hourCycle` option, should either or both of those be present.
 - `hourCycle`
   - : The hour cycle to use. Possible values are `"h11"`, `"h12"`, `"h23"`, and `"h24"`. This option can also be set through the `hc` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `timeZone`
-  - : The time zone to use. The only value implementations must recognize is `"UTC"`; the default is the runtime's default time zone. Implementations may also recognize the time zone names of the [IANA time zone database](https://www.iana.org/time-zones), such as `"Asia/Shanghai"`, `"Asia/Kolkata"`, `"America/New_York"`.
+  - : The time zone to use. Time zone names correspond to the Zone and Link names of the [IANA Time Zone Database](https://www.iana.org/time-zones), such as `"UTC"`, `"Asia/Shanghai"`, `"Asia/Kolkata"`, and `"America/New_York"`. Additionally, time zones can be given as UTC offsets in the format "±hh:mm", "±hhmm", or "±hh", for example as `"+01:00"`, `"-2359"`, or `"+23"`. The default is the runtime's default time zone.
 
 #### Date-time component options
 
@@ -121,7 +121,7 @@ Intl.DateTimeFormat(locales, options)
     - `"shortOffset"`
       - : Short localized GMT format (e.g., `GMT-8`)
     - `"longOffset"`
-      - : Long localized GMT format (e.g., `GMT-0800`)
+      - : Long localized GMT format (e.g., `GMT-08:00`)
     - `"shortGeneric"`
       - : Short generic non-location format (e.g.: `PT`, `Los Angeles Zeit`).
     - `"longGeneric"`
@@ -307,4 +307,4 @@ for (const zoneName of timezoneNames) {
 
 - {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

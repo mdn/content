@@ -8,7 +8,7 @@ status:
 browser-compat: api.Element.setHTML
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setHTML()`** method of the {{domxref("Element")}} interface is used to parse and sanitize a string of HTML and then insert it into the DOM as a subtree of the element.
 It should be used instead of {{domxref("Element.innerHTML")}} for inserting untrusted strings of HTML into an element.
@@ -16,8 +16,6 @@ It should be used instead of {{domxref("Element.innerHTML")}} for inserting untr
 The parsing process drops any elements in the HTML string that are invalid in the context of the current element, while sanitizing removes any unsafe or otherwise unwanted elements, attributes or comments.
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
 The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
-
-> **Note:** Use {{domxref("Sanitizer.sanitizeFor()")}} instead of this method if the string must be inserted into the DOM at a later point, for example if the target element is not yet available.
 
 ## Syntax
 
@@ -71,8 +69,3 @@ document
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("Sanitizer.sanitizeFor()")}}
-- {{domxref('HTML Sanitizer API')}}

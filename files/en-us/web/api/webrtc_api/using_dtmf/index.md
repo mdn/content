@@ -97,7 +97,7 @@ These are, in order:
 - `hasAddTrack`
   - : Because some browsers have not yet implemented {{domxref("RTCPeerConnection.addTrack()")}}, therefore requiring the use of the obsolete {{domxref("RTCPeerConnection.addStream", "addStream()")}} method, we use this Boolean to determine whether or not the user agent supports `addTrack()`; if it doesn't, we'll fall back to `addStream()`. This gets figured out in `connectAndDial()`, as shown in [Starting the connection process](#starting_the_connection_process).
 - `mediaConstraints`
-  - : An object conforming to the {{domxref("MediaConstraints")}} dictionary specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
+  - : An object specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
 - `offerOptions`
   - : An object providing options to specify when calling {{domxref("RTCPeerConnection.createOffer()")}}. In this case, we state that we want to receive audio but not video.
 - `dialButton` and `logElement`
@@ -238,7 +238,7 @@ The [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is 
 
 In this example, we log to the screen which tone just finished playing. In a more advanced application, you might update the user interface, for example, to indicate which note is currently playing.
 
-On the other hand, if the tone buffer is empty, our example is designed to disconnect the call. This is done by stopping each stream on both the caller and the receiver by iterating over each `RTCPeerConnection`'s track list (as returned by its {{domxref("RTCPeerConnection.getTracks", "getTracks()")}} method) and calling each track's {{domxref("MediaStreamTrack.stop", "stop()")}} method.
+On the other hand, if the tone buffer is empty, our example is designed to disconnect the call. This is done by stopping each stream on both the caller and the receiver by iterating over each `RTCPeerConnection`'s track list (as returned by its {{domxref("MediaStream.getTracks", "getTracks()")}} method) and calling each track's {{domxref("MediaStreamTrack.stop", "stop()")}} method.
 
 Once both the caller's and the receiver's media tracks are all stopped, we pause the {{HTMLElement("audio")}} element and set its {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to `null`. This detaches the audio stream from the {{HTMLElement("audio")}} element.
 
@@ -369,7 +369,7 @@ If `event.candidate` is `null`, that indicates that there are no more candidates
 
 #### Adding media to the receiver
 
-When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
+When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this. Since some browsers haven't been updated to support this yet, we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. This is demonstrated in the `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods below.
 
 ```js
 function handleReceiverTrackEvent(event) {
@@ -383,7 +383,7 @@ function handleReceiverAddStreamEvent(event) {
 
 The `track` event includes a {{domxref("RTCTrackEvent.streams", "streams")}} property containing an array of the streams the track is a member of (one track can be part of many streams). We take the first stream and attach it to the {{HTMLElement("audio")}} element.
 
-The `addstream` event includes a {{domxref("RTCTrackEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the `<audio>` element.
+The `addstream` event includes a {{domxref("MediaStreamEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the `<audio>` element.
 
 #### Logging
 
@@ -397,11 +397,11 @@ function log(msg) {
 
 ### Result
 
-You can try this example here. When you click the "Dial" button, you should see a series of logging messages output, then the dialing will begin. If your browser plays the tones audibly as part of its user experience, you should hear them as they're transmitted.
+You can try this example here. When you click the "Dial" button, you should see a series of logging messages output; then the dialing will begin. If your browser plays the tones audibly as part of its user experience, you should hear them as they're transmitted.
 
 {{ EmbedLiveSample('Simple_example', 600, 500, "", "", "", "microphone") }}
 
-Once transmission of the tones is complete, the connection is closed. You can click "Dial" again to reconnect and send the tones again.
+Once transmission of the tones is complete, the connection is closed. You can click "Dial" again to reconnect and send the tones.
 
 ## See also
 

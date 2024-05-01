@@ -59,17 +59,17 @@ Let's try this out, revisiting an example we first met in the previous article.
 
 > **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
-## Adding structure with \<thead>, \<tfoot>, and \<tbody>
+## Adding structure with \<thead>, \<tbody>, and \<tfoot>
 
-As your tables get a bit more complex in structure, it is useful to give them more structural definition. One clear way to do this is by using {{htmlelement("thead")}}, {{htmlelement("tfoot")}}, and {{htmlelement("tbody")}}, which allow you to mark up a header, footer, and body section for the table.
+As your tables get a bit more complex in structure, it is useful to give them more structural definition. One clear way to do this is by using {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfoot")}}, which allow you to mark up a header, body, and footer section for the table.
 
 These elements don't make the table any more accessible to screen reader users, and don't result in any visual enhancement on their own. They are however very useful for styling and layout — acting as useful hooks for adding CSS to your table. To give you some interesting examples, in the case of a long table you could make the table header and footer repeat on every printed page, and you could make the table body display on a single page and have the contents available by scrolling up and down.
 
-To use them:
+To use them, they should be included in the following order:
 
-- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} element, the table header should come just below those.
-- The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. You can include the table footer right at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
-- The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it.
+- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} elements, the table header should come just below those.
+- The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer.
+- The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example.
 
 > **Note:** `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
 
@@ -159,10 +159,8 @@ th {
 Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
-  <caption>
-    Items Sold August 2016
-  </caption>
-  <tbody>
+  <caption>Items Sold August 2016</caption>
+  <thead>
     <tr>
       <td colspan="2" rowspan="2"></td>
       <th colspan="3" scope="colgroup">Clothes</th>
@@ -175,6 +173,8 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
       <th scope="col">Bracelets</th>
       <th scope="col">Rings</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <th rowspan="3" scope="rowgroup">Belgium</th>
       <th scope="row">Antwerp</th>
@@ -260,51 +260,84 @@ And each row could have a header defined like this (if we added row headers as w
 </tr>
 ```
 
-screen readers will recognize markup structured like this, and allow their users to read out the entire column or row at once, for example.
+Screen readers will recognize markup structured like this, and allow their users to read out the entire column or row at once, for example.
 
-`scope` has two more possible values — `colgroup` and `rowgroup`. These are used for headings that sit over the top of multiple columns or rows. If you look back at the "Items Sold August 2016" table at the start of this section of the article, you'll see that the "Clothes" cell sits above the "Trousers", "Skirts", and "Dresses" cells. All of these cells should be marked up as headers (`<th>`), but "Clothes" is a heading that sits over the top and defines the other three subheadings. "Clothes" therefore should get an attribute of `scope="colgroup"`, whereas the others would get an attribute of `scope="col"`.
-
-### The id and headers attributes
-
-An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to create associations between headers and cells. The way they are used is as follows:
-
-1. You add a unique `id` to each `<th>` element.
-2. You add a `headers` attribute to each `<td>` element. Each `headers` attribute has to contain a list of the `id`s of all the `<th>` elements that act as a header for that cell, separated by spaces.
-
-This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. For it to work well, the table really needs both column and row headers.
-
-Returning to our spending costs example, the previous two snippets could be rewritten like this:
+`scope` has two more possible values — `colgroup` and `rowgroup`. These are used for headings that sit over the top of multiple columns or rows. If you look back at the "Items Sold August 2016" table at the start of this section of the article, you'll see that the "Clothes" cell sits above the "Trousers", "Skirts", and "Dresses" cells. All of these cells should be marked up as headers (`<th>`), but "Clothes" is a heading that sits over the top and defines the other three subheadings. "Clothes" therefore should get an attribute of `scope="colgroup"`, whereas the others would get an attribute of `scope="col"`:
 
 ```html
 <thead>
   <tr>
-    <th id="purchase">Purchase</th>
-    <th id="location">Location</th>
-    <th id="date">Date</th>
-    <th id="evaluation">Evaluation</th>
-    <th id="cost">Cost (€)</th>
+    <th colspan="3" scope="colgroup">Clothes</th>
+  </tr>
+  <tr>
+    <th scope="col">Trousers</th>
+    <th scope="col">Skirts</th>
+    <th scope="col">Dresses</th>
+  </tr>
+</thead>
+```
+
+The same applies to headers for multiple grouped rows. Take another look at the "Items Sold August 2016" table, this time focusing on the rows with the "Amsterdam" and "Utrecht" headers (`<th>`). You'll notice that the "The Netherlands" header, also marked up as a `<th>` element, spans both rows, being the heading for the other two subheadings. Therefore, `scope="rowgroup"` should be specified on this header cell to help screen readers create the correct associations:
+
+```html
+<tr>
+  <th rowspan="2" scope="rowgroup">The Netherlands</th>
+  <th scope="row">Amsterdam</th>
+  <td>89</td>
+  <td>34</td>
+  <td>69</td>
+</tr>
+<tr>
+  <th scope="row">Utrecht</th>
+  <td>80</td>
+  <td>12</td>
+  <td>43</td>
+</tr>
+```
+
+### The id and headers attributes
+
+An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to create associations between headers and cells.
+
+The `headers` attribute takes a list of unordered, space-separated {{Glossary("string", "strings")}}, each corresponding to the unique `id` of the `<th>` elements that provide headings for either a data cell (`<td>` element) or another header cell (`<th>` element).
+
+This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. For it to work well, the table really needs both column and row headers.
+
+Returning to our "Items Sold August 2016" example, we can use the `id` and `headers` attributes as follows:
+
+1. Add a unique `id` to each `<th>` element in the table.
+2. Add a `headers` attribute to each `<th>` element that acts as a subheading, i.e., has a header element above it. The value is the `id` of the heading that sits over the top and defines the subheadings, which is `"clothes"` for the column headers and `"belgium"` for the row header in our example.
+3. Add a `headers` attribute to each `<td>` element and add the `id`s of the associated `<th>` element(s) in form of a space-separated list. You can proceed as you would in a spreadsheet: Find the data cell and search for the corresponding headings for the row and column. The order of the specified `id`s doesn't matter, but you should be consistent to keep it organized.
+
+```html
+<thead>
+  <tr>
+    <th id="clothes" colspan="3">Clothes</th>
+  </tr>
+  <tr>
+    <th id="trousers" headers="clothes">Trousers</th>
+    <th id="skirts" headers="clothes">Skirts</th>
+    <th id="dresses" headers="clothes">Dresses</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <th id="haircut">Haircut</th>
-    <td headers="location haircut">Hairdresser</td>
-    <td headers="date haircut">12/09</td>
-    <td headers="evaluation haircut">Great idea</td>
-    <td headers="cost haircut">30</td>
+    <th id="belgium" rowspan="3">Belgium</th>
+    <th id="antwerp" headers="belgium">Antwerp</th>
+    <td headers="antwerp belgium clothes trousers">56</td>
+    <td headers="antwerp belgium clothes skirts">22</td>
+    <td headers="antwerp belgium clothes dresses">43</td>
   </tr>
-
-  …
 </tbody>
 ```
 
-> **Note:** This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually enough for most tables.
+> **Note:** This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.
 
 ### Active learning: playing with scope and headers
 
 1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css), in a new directory.
-2. Now try adding in the appropriate `scope` attributes to make this table more appropriate.
-3. Finally, try making another copy of the starter files, and this time make the table more accessible using `id` and `headers` attributes.
+2. Now try adding in the appropriate `scope` attributes to make this table more accessible.
+3. Finally, try making another copy of the starter files, and this time make the table more accessible by creating precise and explicit associations using `id` and `headers` attributes.
 
 > **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 

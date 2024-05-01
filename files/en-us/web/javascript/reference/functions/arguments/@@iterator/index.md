@@ -47,11 +47,11 @@ You may still manually call the `next()` method of the returned iterator object 
 ```js
 function f() {
   const argsIter = arguments[Symbol.iterator]();
-  console.log(argsIter.next().value); // a
-  console.log(argsIter.next().value); // b
-  console.log(argsIter.next().value); // c
-  console.log(argsIter.next().value); // d
-  console.log(argsIter.next().value); // e
+  console.log(argsIter.next().value); // w
+  console.log(argsIter.next().value); // y
+  console.log(argsIter.next().value); // k
+  console.log(argsIter.next().value); // o
+  console.log(argsIter.next().value); // p
 }
 f("w", "y", "k", "o", "p");
 ```
@@ -66,7 +66,7 @@ f("w", "y", "k", "o", "p");
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Array.prototype.values()")}}

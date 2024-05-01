@@ -20,7 +20,7 @@ at(index)
 ### Parameters
 
 - `index`
-  - : Zero-based index of the array element to be returned, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). Negative index counts back from the end of the array — if `index < 0`, `index + array.length` is accessed.
+  - : Zero-based index of the typed array element to be returned, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). Negative index counts back from the end of the typed array — if `index < 0`, `index + array.length` is accessed.
 
 ### Return value
 
@@ -80,9 +80,10 @@ console.log(atWay); // 11
 ## See also
 
 - [Polyfill of `TypedArray.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.with()")}}
 - {{jsxref("Array.prototype.at()")}}
 - {{jsxref("String.prototype.at()")}}

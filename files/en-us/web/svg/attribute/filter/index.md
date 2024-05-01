@@ -2,7 +2,7 @@
 title: filter
 slug: Web/SVG/Attribute/filter
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.filter
+browser-compat: svg.global_attributes.filter
 ---
 
 {{SVGRef}}
@@ -44,7 +44,7 @@ svg {
       <td>
         <code>none</code>
         <a
-          href="/en-US/docs/CSS/Value_definition_syntax#Single_bar"
+          href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar"
           title="Single bar: exactly one of the entities must be present"
           >|</a
         >

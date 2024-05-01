@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristic
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothGATTService.getCharacteristic()`** method
 returns a {{jsxref("Promise")}} to an instance of

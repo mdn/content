@@ -21,12 +21,11 @@ join(separator)
 ### Parameters
 
 - `separator` {{optional_inline}}
-  - : A string to separate each pair of adjacent elements of the array. If omitted, the typed array elements are separated with a comma (",").
+  - : A string to separate each pair of adjacent elements of the typed array. If omitted, the typed array elements are separated with a comma (",").
 
 ### Return value
 
-A string with all array elements joined. If `arr.length` is
-`0`, the empty string is returned.
+A string with all typed array elements joined. If `array.length` is `0`, the empty string is returned.
 
 ## Description
 
@@ -54,7 +53,7 @@ uint8.join(""); // '123'
 ## See also
 
 - [Polyfill of `TypedArray.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.toString()")}}
 - {{jsxref("Array.prototype.join()")}}

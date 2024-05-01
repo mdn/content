@@ -4,7 +4,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
@@ -417,7 +417,7 @@ This guideline relates to making sure core content is easy to discern from backg
         Use native `&#x3C;button>`s to provide accessible keyboard
         controls, as shown in
         <a
-          href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
+          href="/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
           >Video player styling basics</a
         >.
       </td>

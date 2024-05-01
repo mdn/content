@@ -15,10 +15,9 @@ In recent years however, CSS has evolved in order to better support different di
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -55,7 +54,7 @@ So the `writing-mode` property is in reality setting the direction in which bloc
 
 ## Writing modes and block and inline layout
 
-We have already discussed [block and inline layout](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+We have already discussed [block and inline layout](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
 If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses `writing-mode: horizontal-tb`, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses `writing-mode: vertical-rl`; this is a writing mode that is written vertically and from right to left.
 
@@ -122,8 +121,6 @@ For example, you can float an image left to cause text to wrap round the image. 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1000)}}
 
 Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
-
-> **Note:** Currently, only Firefox supports flow relative values for `float`. If you are using **Google Chrome** or **Microsoft Edge**, you may find that the image did not float.
 
 ### Should you use physical or logical properties?
 

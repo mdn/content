@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUCommandEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUCommandEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a command encoder, used to encode commands to be issued to the GPU.
 
@@ -50,7 +50,7 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 
 - {{domxref("GPUCommandEncoder.resolveQuerySet", "resolveQuerySet()")}} {{Experimental_Inline}}
   - : Encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.
-- {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{deprecated_inline}}
   - : Encodes a command that writes a timestamp into a {{domxref("GPUQuerySet")}} once the previous commands recorded into the same queued {{domxref("GPUCommandBuffer")}} have been executed by the GPU.
 
 ## Examples

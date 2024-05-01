@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tablist
 ---
 
+{{AccessibilitySidebar}}
+
 The `tablist` role identifies the element that serves as the container for a set of `tabs`. The tab content are referred to as `tabpanel` elements.
 
 ## Description
@@ -79,7 +81,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 <!--
 ### Required JavaScript features
 
-## Accessibility Concerns
+## Accessibility concerns
 
 ## Best Practices
 
@@ -94,15 +96,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 - [`tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

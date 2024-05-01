@@ -36,8 +36,8 @@ A {{domxref("DOMHighResTimeStamp")}} value (which is a floating-point number)
 representing the number of milliseconds the user agent estimates are left in the current
 idle period. The value is ideally accurate to within about 5 microseconds.
 
-If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
-  "didTimeout")}} property is true, this method returns zero.
+If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout", "didTimeout")}}
+property is true, this method returns zero.
 
 ## Examples
 

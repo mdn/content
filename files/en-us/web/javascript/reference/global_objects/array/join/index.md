@@ -28,12 +28,11 @@ join(separator)
 
 ### Return value
 
-A string with all array elements joined. If `arr.length` is
-`0`, the empty string is returned.
+A string with all array elements joined. If `array.length` is `0`, the empty string is returned.
 
 ## Description
 
-The string conversions of all array elements are joined into one string. If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
+The string conversions of all array elements are joined into one string. If an element is `undefined` or `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
 The `join` method is accessed internally by [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) with no arguments. Overriding `join` of an array instance will override its `toString` behavior as well.
 
@@ -116,7 +115,7 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 ## See also
 
 - [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.prototype.join()")}}

@@ -17,7 +17,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Root element of the document (`<html>`).
 - Element with a {{cssxref("position")}} value `absolute` or `relative` and {{cssxref("z-index")}} value other than `auto`.
 - Element with a {{cssxref("position")}} value `fixed` or `sticky` (sticky for all mobile browsers, but not older desktop browsers).
-- Element with a {{cssxref("container-type")}} value `size` or `inline-size` set, intended for [container queries](/en-US/docs/Web/CSS/CSS_container_queries).
+- Element with a {{cssxref("container-type")}} value `size` or `inline-size` set, intended for [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 - Element that is a child of a [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) container, with {{cssxref("z-index")}} value other than `auto`.
 - Element that is a child of a {{cssxref("grid")}} container, with {{cssxref("z-index")}} value other than `auto`.
 - Element with an {{cssxref("opacity")}} value less than `1` (See [the specification for opacity](https://www.w3.org/TR/css-color-3/#transparency)).
@@ -34,6 +34,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with an {{cssxref("isolation")}} value `isolate`.
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](https://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
+- Element placed into the [top layer](/en-US/docs/Glossary/Top_layer) and its corresponding {{cssxref("::backdrop")}}. Examples include [fullscreen](/en-US/docs/Web/API/Fullscreen_API) and [popover](/en-US/docs/Web/API/Popover_API) elements.
 
 Within a stacking context, child elements are stacked according to the same rules explained just above. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
@@ -221,3 +222,4 @@ h1 {
 - [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
 - [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
 - [Stacking context example 3](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level
+- [Top layer](/en-US/docs/Glossary/Top_layer)

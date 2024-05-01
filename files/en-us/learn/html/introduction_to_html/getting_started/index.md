@@ -13,10 +13,9 @@ In this article, we cover the absolute basics of HTML. To get you started, this 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -245,22 +244,25 @@ An attribute should have:
 
 ### Active learning: Adding attributes to an element
 
-Another example of an element is {{htmlelement("a")}}. This stands for _anchor_. An anchor can make the text it encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
+The `<img>` element can take a number of attributes, including:
 
-- `href`
-  - : This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
-- `title`
-  - : The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
-- `target`
-  - : The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+- `src`
+  - : The `src` attribute is a **required** attribute that specifies the location of the image. For example: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`.
+- `alt`
+  - : The `alt` attribute specifies a text description of the image. For example: `alt="The Firefox icon"`.
+- `width`
+  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`.
+- `height`
+  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`.
 
-Edit the line below in the _Input_ area to turn it into a link to your favorite website.
+Edit the line below in the _Input_ area to turn it into an image.
 
-1. Add the `<a>` element.
-2. Add the `href` attribute and the `title` attribute.
-3. Specify the `target` attribute to open the link in the new tab.
+1. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
+2. Back in the area below, add the `src` attribute and fill it with the link from step 1.
+3. Set the `alt` attribute.
+4. Add the `width` and `height` attributes.
 
-You will be able to see your changes live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name and between each attribute.
+You will be able to see your changes live in the _Output_ area.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -275,7 +277,7 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;A link to my favorite website.&lt;/p&gt;
+&lt;img alt="I should be an image" &gt;
 </textarea>
 
 <div class="playable-buttons">
@@ -319,7 +321,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+  '<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" width="100" height="100" />';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -416,13 +418,13 @@ For reference, the example above also includes a non-disabled form input element
 
 ### Omitting quotes around attribute values
 
-If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with _only_ the `href` attribute, like this:
+If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. The element in the code snippet below, `<a>`, is called an anchor. Anchors enclose text and turn them into links. The `href` attribute specifies the web address the link points to. You can write this basic version below with _only_ the `href` attribute, like this:
 
 ```html
 <a href=https://www.mozilla.org/>favorite website</a>
 ```
 
-However, as soon as we add the `title` attribute in this way, there are problems:
+Anchors can also have a `title` attribute, a description of the linked page. However, as soon as we add the `title` in the same fashion as the `href` attribute there are problems:
 
 ```html-nolint example-bad
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
@@ -710,7 +712,7 @@ You do this with character references. These are special codes that represent ch
 | '                 | `&apos;`                       |
 | &                 | `&amp;`                        |
 
-The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;', quotation for ' \&quot; ' and similarly for others. To find more about entity references, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
+The character reference equivalent could be easily remembered because the text it uses can be seen as less than for `&lt;`, quotation for `&quot;` and similarly for others. To find more about entity references, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 
 In the example below, there are two paragraphs:
 

@@ -32,6 +32,8 @@ The `at()` method is equivalent to the bracket notation when `index` is non-nega
 
 The usual practice is to access {{jsxref("Array/length", "length")}} and calculate the index from that — for example, `array[array.length - 1]`. The `at()` method allows relative indexing, so this can be shortened to `array.at(-1)`.
 
+By combining `at()` with {{jsxref("Array/with", "with()")}}, you can both read and write (respectively) an array using negative indices.
+
 The `at()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
@@ -106,9 +108,10 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ## See also
 
 - [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.with()")}}
 - {{jsxref("TypedArray.prototype.at()")}}
 - {{jsxref("String.prototype.at()")}}

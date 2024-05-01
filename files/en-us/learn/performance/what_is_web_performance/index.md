@@ -13,10 +13,9 @@ Web performance is all about making websites fast, including making slow process
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -64,7 +63,7 @@ To effectively understand web performance, the issues behind it, and the major t
 
 - **Source order**. Your HTML index file's source order can significantly affect performance. The download of additional assets linked to from the index file is generally sequential, based on source order, but this can be manipulated and should definitely be optimized, realizing that some resources block additional downloads until their content is parsed and executed.
 - **The critical path**. This is the process that the browser uses to construct the web document once the files have been downloaded from the server. The browser follows a well-defined set of steps, and optimizing the critical rendering path to prioritize the display of content that relates to the current user action will lead to significant improvements in content rendering time. See [Critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path) for more information.
-- The **document object model**. The document object model, or DOM, is a tree structure that represents the content and elements of your HTML as a tree of nodes. This includes all the HTML attributes and the relationships between the nodes. Extensive DOM manipulation after the pages has loaded (e.g., adding, deleting, or moving of nodes) can affect performance, so it is worth understanding how to DOM works, and how such issues can be mitigated. Find out more at [Document Object Model](/en-US/docs/Web/API/Document_Object_Model).
+- The **document object model**. The document object model, or DOM, is a tree structure that represents the content and elements of your HTML as a tree of nodes. This includes all the HTML attributes and the relationships between the nodes. Extensive DOM manipulation after the pages has loaded (e.g., adding, deleting, or moving of nodes) can affect performance, so it is worth understanding how the DOM works, and how such issues can be mitigated. Find out more at [Document Object Model](/en-US/docs/Web/API/Document_Object_Model).
 - **Latency**. We mention this briefly earlier on, but in brief, latency is the time it takes for your website assets to travel from the server to a user's computer. There is overhead involved in establishing TCP and HTTP connections, and some unavoidable latency in pushing the request and response bytes back and forth across the network, but there are certain ways to reduce latency (e.g. reducing the number of HTTP request you make by downloading fewer files, using a [CDN](/en-US/docs/Glossary/CDN) to make your site more universally performant across the world, and using HTTP/2 to serve files more efficiently from the server). You can read all about this topic at [Understanding Latency](/en-US/docs/Web/Performance/Understanding_latency).
 
 ## Conclusion

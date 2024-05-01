@@ -113,7 +113,7 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 ## Static methods
 
 - {{jsxref("Symbol.for()")}}
-  - : Searches for existing Symbols with the given `key` and returns it if found. Otherwise a new Symbol gets created in the global Symbol registry with `key`.
+  - : Searches for existing registered Symbols in the global Symbol registry with the given `key` and returns it if found. Otherwise a new Symbol gets created and registered with `key`.
 - {{jsxref("Symbol.keyFor()")}}
   - : Retrieves a shared Symbol key from the global Symbol registry for the given Symbol.
 
@@ -211,5 +211,5 @@ obj[Object(sym)]; // still 1
 
 - [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
 - [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) on hacks.mozilla.org (2015)

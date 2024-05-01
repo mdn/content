@@ -73,7 +73,7 @@ async function shareData(data) {
 
 ### Sharing text data
 
-The following example demonstrates how to share a link and some text when a button in the app is clicked. The `canBrowserShareData` function used in the example is described in [Checking for support](#checking-for-support) and not repeated here.
+The following example demonstrates how to share a link and some text when a button in the app is clicked. The `canBrowserShareData` function used in the example is described in [Checking for support](#checking_for_support) and not repeated here.
 
 ```js
 // Retrieve the button from the DOM. The button is hidden for now.
@@ -279,7 +279,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an {{domxref("IndexedDB")}} database which can be accessed both by your service worker and app's main JavaScript code.
+In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an [Indexed DB](/en-US/docs/Web/API/IndexedDB_API) database which can be accessed both by your service worker and app's main JavaScript code.
 
 For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
 
@@ -287,6 +287,6 @@ For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/
 
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
 - [`share_target` manifest member](/en-US/docs/Web/Manifest/share_target)
-- [Integrate with the OS sharing UI with the Web Share API](https://web.dev/web-share/) on web.dev
-- [Receiving shared data with the Web Share Target API](https://developer.chrome.com/articles/web-share-target/) on chrome.com
+- [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
+- [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) on developer.chrome.com
 - [Share content with other apps](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com
