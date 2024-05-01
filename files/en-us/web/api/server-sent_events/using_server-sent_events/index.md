@@ -71,8 +71,9 @@ The {{Glossary("PHP")}} code for the example we're using here follows:
 
 ```php
 date_default_timezone_set("America/New_York");
-header("Cache-Control: no-store");
+header("X-Accel-Buffering: no");
 header("Content-Type: text/event-stream");
+header("Cache-Control: no-cache");
 
 $counter = rand(1, 10);
 while (true) {
