@@ -678,25 +678,14 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 300px;">
-  <label for="theme">Select theme: </label>
-  <select id="theme">
-    <option value="white">White</option>
-    <option value="black">Black</option>
-    <option value="purple">Purple</option>
-    <option value="yellow">Yellow</option>
-    <option value="psychedelic">Psychedelic</option>
-  </select>
-
-  <h1>This is my website</h1>
-</div>
+<iframe id="output" width="100%" height="350px"></iframe>
 
 <h2>Editable code</h2>
 <p class="a11y-label">
   Press Esc to move focus away from the code area (Tab inserts a tab character).
 </p>
 
-<textarea id="code" class="playable-code" style="height: 450px;width: 95%">
+<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
@@ -741,36 +730,14 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById("code");
 const reset = document.getElementById("reset");
 const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
+const outputIFrame = document.querySelector("#output");
+const textarea = document.getElementById("code");
+const initialCode = textarea.value;
+let userCode = textarea.value;
 
-function updateCode() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const jsSolution = `const select = document.querySelector('select');
+const solutionCode = `const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
 select.addEventListener('change', () => {
@@ -800,15 +767,65 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }`;
 
-let solutionEntry = jsSolution;
+function outputDocument(code) {
+  const outputBody = `
+<div class="output" style="height: 300px;">
+  <label for="theme">Select theme: </label>
+  <select id="theme">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+    <option value="purple">Purple</option>
+    <option value="yellow">Yellow</option>
+    <option value="psychedelic">Psychedelic</option>
+  </select>
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+  <h1>This is my website</h1>
+</div>`;
+
+  return `
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    ${outputBody}
+    <script>${code}</script>
+  </body>
+</html>`;
+}
+
+function update() {
+  output.setAttribute("srcdoc", outputDocument(textarea.value));
+}
+
+update();
+
+textarea.addEventListener("input", update);
+
+reset.addEventListener("click", () => {
+  textarea.value = initialCode;
+  userEntry = textarea.value;
+  solution.value = "Show solution";
+  update();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
+    // remember the state of the user's code
+    // so we can restore it
+    userCode = textarea.value;
+    textarea.value = solutionCode;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userCode;
+    solution.value = "Show solution";
+  }
+  update();
+});
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret("\t");
@@ -835,20 +852,6 @@ function insertAtCaret(text) {
   textarea.focus();
   textarea.scrollTop = scrollPos;
 }
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
 ```
 
 {{ EmbedLiveSample('Active_learning_More_color_choices', '100%', 950) }}
