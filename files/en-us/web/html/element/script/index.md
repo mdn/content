@@ -23,7 +23,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
 
-    The `async` attribute takes higher priority than the `defer` attribute, which means that, if the two attributes both specified, the `async` attribute will take effect.
+    If the attribute is specified with the `defer` attribute, the element will act as if only the `async` attribute is specified.
 
     This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
@@ -50,7 +50,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 
-    The `defer` attribute takes lower priority than the `async` attribute, which means that, if the two attributes both specified, the `defer` attribute will not take effect.
+    If the attribute is specified with the `async` attribute, the element will act as if only the `async` attribute is specified.
 
 - `fetchpriority`
 
