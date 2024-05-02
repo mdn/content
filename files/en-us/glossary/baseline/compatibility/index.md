@@ -61,3 +61,4 @@ If you have questions, feedback, or want to help update and expand the features 
 - [web-platform-dx/web-features repository](https://github.com/web-platform-dx/web-features)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)
+- [Baseline (Configuration Management)](<https://en.wikipedia.org/wiki/Baseline_(configuration_management)>) on Wikipedia
