@@ -52,7 +52,9 @@ The following example shows the use of the `height` and `width` properties along
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="https://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
