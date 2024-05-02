@@ -50,7 +50,7 @@ create(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves one of the following:
+A {{jsxref("Promise")}} that resolves with one of the following:
 
 - A {{domxref("FederatedCredential")}}, if the credential type was a `federated` object.
 - A {{domxref("PasswordCredential")}}, if the created credential type was a `password` object.
