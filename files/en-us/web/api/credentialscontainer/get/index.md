@@ -257,7 +257,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("OTPCredential")}} objec
 - `AbortError` {{domxref("DOMException")}}
   - : The `get()` operation is associated with an {{domxref("AbortSignal")}} (i.e., set in the `signal` property) that has already been aborted.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : The calling origin is an opaque origin.
+  - : The calling origin is an [opaque origin](en-US/docs/Web/HTTP/Headers/Origin#null).
 - `SecurityError` {{domxref("DOMException")}}
   - : Either the usage is blocked by a {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) or the calling domain is not a valid domain.
 
