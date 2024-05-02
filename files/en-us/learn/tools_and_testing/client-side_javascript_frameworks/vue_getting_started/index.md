@@ -42,6 +42,9 @@ Now let's introduce Vue, the third of our frameworks. In this article we'll look
   </tbody>
 </table>
 
+> **Note:**
+> This tutorial targets [Vue version 3.4.26](https://github.com/vuejs/core/blob/main/CHANGELOG.md#3426-2024-04-29) using [`create-vue` 3.10.2](https://github.com/vuejs/create-vue/releases/tag/v3.10.2) (with Node.js version `v20.11.0`) and was last revised in May 2024.
+
 ## A clearer Vue
 
 Vue is a modern JavaScript framework that provides useful facilities for progressive enhancement — unlike many other frameworks, you can use Vue to enhance existing HTML. This lets you use Vue as a drop-in replacement for a library like [jQuery](https://jquery.com/).
