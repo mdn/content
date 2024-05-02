@@ -41,6 +41,8 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
 - {{domxref("scheduler_property", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+- {{domxref("WorkerGlobalScope.trustedTypes")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
 - {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
 
