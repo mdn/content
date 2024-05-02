@@ -161,12 +161,12 @@ Path commands are instructions that define a path to be drawn. Each command is c
 
 SVG defines 6 types of path commands, for a total of 20 commands:
 
-- MoveTo: `M`, `m`
-- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-- Cubic Bézier Curve: `C`, `c`, `S`, `s`
-- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-- Elliptical Arc Curve: `A`, `a`
-- ClosePath: `Z`, `z`
+- [MoveTo](#moveto_path_commands): `M`, `m`
+- [LineTo](#lineto_path_commands): `L`, `l`, `H`, `h`, `V`, `v`
+- [Cubic Bézier curve]: `C`, `c`, `S`, `s`
+- [Quadratic Bézier curve]: `Q`, `q`, `T`, `t`
+- [Elliptical arc curve]: `A`, `a`
+- [ClosePath]: `Z`, `z`
 
 > **Note:** Commands are _case-sensitive_. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
@@ -456,7 +456,7 @@ svg {
 
 {{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}
 
-### Cubic Bézier Curve
+### Cubic Bézier curve commands
 
 _Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using four points:
 
@@ -684,7 +684,7 @@ svg {
 
 {{EmbedLiveSample('Cubic_Bézier_Curve', '100%', 200)}}
 
-### Quadratic Bézier Curve
+### Quadratic Bézier curve commands
 
 _Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using three points:
 
@@ -909,7 +909,7 @@ svg {
 
 {{EmbedLiveSample('Quadratic_Bézier_Curve', '100%', 200)}}
 
-### Elliptical Arc Curve
+### Elliptical arc curve commands
 
 _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is sometimes easier to draw highly regular curves with an elliptical arc than with a Bézier curve.
 
@@ -1063,7 +1063,7 @@ svg {
 
 {{EmbedLiveSample('Elliptical_Arc_Curve', '100%', 200)}}
 
-### ClosePath
+### ClosePath commands
 
 _ClosePath_ instructions draw a straight line from the _current position_ to the first point in the path.
 

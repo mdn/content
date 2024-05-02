@@ -22,7 +22,7 @@ path(<string>)
 When used in {{cssxref("clip-path")}}:
 
 ```css
-path([<'fill-rule'>,]?<string>)
+path( [<fill-rule>,]? <string> )
 ```
 
 ### Parameters
