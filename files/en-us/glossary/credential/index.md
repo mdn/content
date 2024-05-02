@@ -15,7 +15,7 @@ In web security, types of credential include:
 - a token entered from a one-time SMS code
 - the key used to make authentication assertions in a public-key system such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API)
 
-The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) enables develepers to create, store, and retrieve various types of credential.
+The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) enables developers to create, store, and retrieve various types of credential.
 
 ## See also
 
