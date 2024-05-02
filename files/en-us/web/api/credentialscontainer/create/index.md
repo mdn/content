@@ -52,9 +52,9 @@ create(options)
 
 A {{jsxref("Promise")}} that resolves with one of the following:
 
-- A {{domxref("FederatedCredential")}}, if the credential type was a `federated` object.
-- A {{domxref("PasswordCredential")}}, if the created credential type was a `password` object.
-- A {{domxref("PublicKeyCredential")}}, if the created credential type was a `publicKey` object.
+- A {{domxref("FederatedCredential")}}, if the credential type was `federated`.
+- A {{domxref("PasswordCredential")}}, if the credential type was `password`.
+- A {{domxref("PublicKeyCredential")}}, if the credential type was `publicKey`.
 
 If no credential object can be created, the promise resolves with `null`.
 
