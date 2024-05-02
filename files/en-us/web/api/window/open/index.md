@@ -72,7 +72,7 @@ open(url, target, windowFeatures)
     - `noreferrer`
       - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
 
-    A ["null"](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
+    A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
 
 > **Note:** Requested position (`top`, `left`), and requested dimension (`width`, `height`) values in `windowFeatures` **will be corrected** if any of such requested value does not allow the entire browser popup to be rendered within the work area for applications of the user's operating system. In other words, no part of the new popup can be initially positioned offscreen.
 
