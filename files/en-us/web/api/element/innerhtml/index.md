@@ -22,6 +22,8 @@ descendants. Setting the value of `innerHTML` removes all of the element's
 descendants and replaces them with nodes constructed by parsing the HTML given in the
 string _htmlString_.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`.
+
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
