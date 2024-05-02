@@ -42,7 +42,7 @@ function* name(param0, param1, /* …, */ paramN) {
 
 ## Description
 
-A `function*` declaration creates a {{jsxref("GeneratorFunction")}} object. Each time when a generator function is called, it returns a new {{jsxref("Generator")}} object, which conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). When the iterator's `next()`
+A `function*` declaration creates a {{jsxref("GeneratorFunction")}} object. Each time a generator function is called, it returns a new {{jsxref("Generator")}} object, which conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). When the iterator's `next()`
 method is called, the generator function's body is executed until the first
 {{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be
 returned from the iterator or, with {{jsxref("Operators/yield*", "yield*")}}, delegates

@@ -118,3 +118,8 @@ td {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module

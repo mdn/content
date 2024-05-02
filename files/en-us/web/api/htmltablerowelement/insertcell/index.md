@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableRowElement.insertCell
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableRowElement.insertCell()`** method inserts a new
+The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface inserts a new
 cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
 reference to the cell.
 
@@ -28,9 +28,6 @@ insertCell()
 insertCell(index)
 ```
 
-{{domxref("HTMLTableRowElement")}} is a reference to an HTML {{HtmlElement("tr")}}
-element.
-
 ### Parameters
 
 - `index` {{optional_inline}}
@@ -48,55 +45,88 @@ cell.
 
 ## Examples
 
-This example uses {{domxref("HTMLTableElement.insertRow()")}} to append a new row to a
-table.
-
-We then use `insertCell(0)` to insert a new cell in the new row. (To be
-valid HTML, a `<tr>` must have at least one `<td>`
-element.) Finally, we add some text to the cell using
-{{domxref("Document.createTextNode()")}} and {{domxref("Node.appendChild()")}}.
+This example uses {{domxref("HTMLTableRowElement.insertCell()")}} to append a new cell to a
+row.
 
 ### HTML
 
 ```html
-<table id="my-table">
-  <tr>
-    <td>Row 1</td>
-  </tr>
-  <tr>
-    <td>Row 2</td>
-  </tr>
-  <tr>
-    <td>Row 3</td>
-  </tr>
+<table>
+  <thead>
+    <tr>
+      <th>C1</th>
+      <th>C2</th>
+      <th>C3</th>
+      <th>C4</th>
+      <th>C5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+  </tbody>
 </table>
+
+<button id="add">Add a cell</button>
+<button id="remove">Remove last cell</button>
+<div>This first row has <output>2</output> cell(s).</div>
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+}
+
+th,
+td,
+table {
+  border: 1px solid black;
+}
+
+button {
+  margin: 1em 1em 1em 0;
+}
 ```
 
 ### JavaScript
 
 ```js
-function addRow(tableID) {
-  // Get a reference to the table
-  let tableRef = document.getElementById(tableID);
+// Obtain relevant interface elements
+const bodySection = document.querySelectorAll("tbody")[0];
+const row = bodySection.rows[0]; // Select the first row of the body section
+const cells = row.cells; // The collection is live, therefore always up-to-date
+const cellNumberDisplay = document.querySelectorAll("output")[0];
 
-  // Insert a row at the end of the table
-  let newRow = tableRef.insertRow(-1);
+const addButton = document.getElementById("add");
+const removeButton = document.getElementById("remove");
 
-  // Insert a cell in the row at index 0
-  let newCell = newRow.insertCell(0);
-
-  // Append a text node to the cell
-  let newText = document.createTextNode("New bottom row");
-  newCell.appendChild(newText);
+function updateCellNumber() {
+  cellNumberDisplay.textContent = cells.length;
 }
 
-// Call addRow() with the table's ID
-addRow("my-table");
+addButton.addEventListener("click", () => {
+  // Add a new cell at the end of the first row
+  const newCell = row.insertCell();
+  newCell.textContent = `Cell ${cells.length}`;
+
+  // Update the row counter
+  updateCellNumber();
+});
+
+removeButton.addEventListener("click", () => {
+  // Delete the row from the body
+  row.deleteCell(-1);
+
+  // Update the row counter
+  updateCellNumber();
+});
 ```
 
 ### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "100%", 175)}}
 
 ## Specifications
 
