@@ -35,7 +35,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let d = document.getElementById("d1");
 d.setAttributeNS(
-  "https://www.mozilla.org/ns/specialspace",
+  "http://www.mozilla.org/ns/specialspace",
   "spec:align",
   "center",
 );

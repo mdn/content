@@ -20,7 +20,7 @@ The XML file that describes a search engine follows the basic template below. Se
 
 ```xml
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
-                       xmlns:moz="https://www.mozilla.org/2006/browser/search/">
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
   <ShortName>[SNK]</ShortName>
   <Description>[Search engine full name and summary]</Description>
   <InputEncoding>[UTF-8]</InputEncoding>
