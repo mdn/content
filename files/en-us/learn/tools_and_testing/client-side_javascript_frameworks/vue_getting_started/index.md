@@ -163,7 +163,7 @@ Open your `App.vue` file — you'll see that it has three parts: `<template>`, `
 
 `<script>` contains all of the non-display logic of your component. Most importantly, your `<script>` tag is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a `render()` function.
 
-In the case of `App.vue`, two components `TheWelcome` and `HelloWorld` are registered by means of imports. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.
+In the case of `App.vue`, two components `TheWelcome` and `HelloWorld` are registered by means of imports. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This is useful for {{Glossary("Tree shaking")}} (not loading unused code) and bundle splitting (only loading code when needed) because not every page in your app necessarily needs every component.
 
 ```vue
 <script setup>
