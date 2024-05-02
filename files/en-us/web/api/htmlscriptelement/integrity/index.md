@@ -8,7 +8,7 @@ browser-compat: api.HTMLScriptElement.integrity
 
 {{APIRef("HTML DOM")}}
 
-The **`integrity`** property of the {{domxref("HTMLScriptElement")}} interface is a string that reflects the inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation.
+The **`integrity`** property of the {{domxref("HTMLScriptElement")}} interface is a string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation.
 
 It reflects the `integrity` attribute of the {{HTMLElement("script")}} element.
 

@@ -28,7 +28,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.hreflang")}}
   - : A string representing the language code for the linked resource.
 - {{domxref("HTMLLinkElement.integrity")}}
-  - : A string that reflects the inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
+  - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.media")}}
   - : A string representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
