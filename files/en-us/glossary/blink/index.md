@@ -14,7 +14,6 @@ Blink is an open-source browser rendering engine developed by Google as part of 
 - [Blink](<https://en.wikipedia.org/wiki/Blink_(browser_engine)>) on Wikipedia
 - [FAQ](https://www.chromium.org/blink/developer-faq/) on Blink
 - [Glossary](/en-US/docs/Glossary)
-
   - {{glossary("Google Chrome")}}
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}
