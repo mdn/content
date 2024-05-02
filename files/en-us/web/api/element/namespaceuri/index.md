@@ -22,7 +22,7 @@ In this snippet, an element is being examined for its {{domxref("Element.localNa
 if (
   element.localName === "browser" &&
   element.namespaceURI ===
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    "https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 ) {
   // this is a XUL browser
 }

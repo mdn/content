@@ -66,7 +66,7 @@ elements from two different namespaces within a single document:
 
 ```xml
 <?xml version="1.0"?>
-<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+<page xmlns="https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="http://www.w3.org/1999/xhtml"
       title="||Working with elements||"
       onload="init()">

@@ -31,11 +31,11 @@ The replaced attribute node, if any, returned by this function.
 ## Examples
 
 ```js
-// <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
+// <div id="one" xmlns:myNS="https://www.mozilla.org/ns/specialspace"
 //            myNS:special-align="utterleft">one</div>
 // <div id="two">two</div>
 
-const myns = "http://www.mozilla.org/ns/specialspace";
+const myns = "https://www.mozilla.org/ns/specialspace";
 const d1 = document.getElementById("one");
 const d2 = document.getElementById("two");
 const a = d1.getAttributeNodeNS(myns, "special-align");

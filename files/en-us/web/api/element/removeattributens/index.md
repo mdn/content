@@ -33,10 +33,10 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Given:
-//   <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+//   <div id="div1" xmlns:special="https://www.mozilla.org/ns/specialspace"
 //     special:specialAlign="utterleft" width="200px" />
 d = document.getElementById("div1");
-d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
+d.removeAttributeNS("https://www.mozilla.org/ns/specialspace", "specialAlign");
 // Now: <div id="div1" width="200px" />
 ```
 
