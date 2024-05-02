@@ -43,7 +43,7 @@ Now let's introduce Vue, the third of our frameworks. In this article we'll look
 </table>
 
 > **Note:**
-> This tutorial targets [Vue version 3.4.26](https://github.com/vuejs/core/blob/main/CHANGELOG.md#3426-2024-04-29) using [`create-vue` 3.10.2](https://github.com/vuejs/create-vue/releases/tag/v3.10.2) (with Node.js version `v20.11.0`) and was last revised in May 2024.
+> This tutorial targets [Vue version 3.4.21](https://github.com/vuejs/core/blob/main/CHANGELOG.md#3421-2024-02-28) using [`create-vue` 3.10.2](https://github.com/vuejs/create-vue/releases/tag/v3.10.3) (with Node.js version `v20.11.0`) and was last revised in May 2024.
 
 ## A clearer Vue
 
