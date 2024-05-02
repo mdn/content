@@ -31,9 +31,7 @@ revoke(descriptor)
     The available options are:
 
     - `name`
-      - : The name of the API whose permissions you want to query.
-        Valid values are `'geolocation'`, `'midi'`,
-        `'notifications'`, and `'push'`.
+      - : The name of the API whose permissions you want to query. Each browser supports a different set of values. You can consult the [Firefox values](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), the [Chromium values](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and the [WebKit values](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl).
     - `userVisibleOnly`
       - : (Push only, not supported in Firefox — see the
         [Browser compatibility](#browser_compatibility) section below) Indicates whether you want to
@@ -76,6 +74,10 @@ function revokePermission() {
   });
 }
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
