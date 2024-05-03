@@ -21,90 +21,28 @@ This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/H
 
 ## Examples
 
-This example demonstrates that the `shadowRootClonable` property initially reflects the `shadowrootclonable` attribute of the `<template>` element, that the default value of the property is `false`, and that it can be set using `shadowRootClonable`.
+This example shows how you can create a shadow root declaratively, specifying the `shadowrootclonable` attribute, and then log the value.
 
-<!-- hidden logging and CSS blocks -->
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 80px;
-  padding: 0.5rem;
-  margin: 5px
-  border: 1px solid black;
-}
-```
-
-```css hidden
-table {
-  background: #000;
-}
-table td {
-  background: #fff;
-}
-```
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-<!-- end hidden content -->
-
-The HTML declaratively creates two shadow roots and adds them to their parent `<div>`.
-The first element does not specify `shadowrootclonable` while the second does.
+First we declare shadow root, using a `<template>` element with the `shadowrootmode` attribute
+The `shadowrootclonable` is also set, making it clonable.
 
 ```html
-<!-- Declarative shadow root without clonable explicitly set -->
 <div>
-  <template id="default_clonable" shadowrootmode="closed">
+  <template id="clonable" shadowrootmode="open" shadowrootclonable>
     <slot></slot>
   </template>
   <h2>Shadow root not clonable</h2>
 </div>
-
-<!-- Declarative shadow root with clonable attribute -->
-<div>
-  <template id="set_clonable" shadowrootmode="open" shadowrootclonable>
-    <slot></slot>
-  </template>
-  <h2>Shadow root clonable</h2>
-</div>
 ```
 
-The javascript first logs the `shadowRootClonable` value when the `shadowrootclonable` attribute has been omitted, and then for the case where it has been specified.
-The values should be `false` and `true`, respectively.
+We can log whether the value is clonable or not using the following JavaScript
 
 ```js
-const defaultClonableElement = document.querySelector("#default_clonable");
-log(
-  `Value without shadowrootclonable attribute: ${defaultClonableElement.shadowRootClonable}`,
-);
-const setClonableElement = document.querySelector("#set_clonable");
-log(
-  `Value with shadowrootclonable attribute: ${setClonableElement.shadowRootClonable}`,
+const clonableShadowDOM = document.querySelector("#clonable");
+console.log(
+  `Value of shadowRootClonable attribute: ${clonableShadowDOM.shadowRootClonable}`,
 );
 ```
-
-Next we explictly set the property to `true` (from `false`) and log again.
-This verifies that the shadow root can be set to clonable.
-
-```js
-defaultClonableElement.shadowRootClonable = true;
-log(
-  `Value after setting shadowRootClonable to true: ${defaultClonableElement.shadowRootClonable}`,
-);
-```
-
-The result is shown below.
-
-{{EmbedLiveSample("Examples", "100%", "200")}}
 
 ## Specifications
 
