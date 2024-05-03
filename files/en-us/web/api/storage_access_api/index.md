@@ -8,9 +8,7 @@ browser-compat:
   - api.Document.requestStorageAccess
   - api.Document.requestStorageAccessFor
   - api.Permissions.permission_storage-access
-spec-urls:
-  - https://privacycg.github.io/storage-access/
-  - https://privacycg.github.io/saa-non-cookie-storage/
+spec-urls: https://privacycg.github.io/storage-access/
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}
