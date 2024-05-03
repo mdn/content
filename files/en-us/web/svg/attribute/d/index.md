@@ -163,7 +163,7 @@ SVG defines 6 types of path commands, for a total of 20 commands:
 
 - [MoveTo](#moveto_path_commands): `M`, `m`
 - [LineTo](#lineto_path_commands): `L`, `l`, `H`, `h`, `V`, `v`
-- [Cubic Bézier curve]: `C`, `c`, `S`, `s`
+- [Cubic Bézier curve](#cubic_bézier_curve_commands): `C`, `c`, `S`, `s`
 - [Quadratic Bézier curve]: `Q`, `q`, `T`, `t`
 - [Elliptical arc curve]: `A`, `a`
 - [ClosePath]: `Z`, `z`
