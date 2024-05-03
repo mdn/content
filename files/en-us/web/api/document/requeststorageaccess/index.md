@@ -8,7 +8,7 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies). This is relevant to user agents that, by default, block access to third-party, [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning). This is relevant to user agents that, by default, block access to third-party, [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
 To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
@@ -18,15 +18,58 @@ To check whether permission to access third-party cookies has already been grant
 
 ```js-nolint
 requestStorageAccess()
+requestStorageAccess(types)
 ```
 
 ### Parameters
 
-None.
+- `types` {{optional_inline}}
+
+  - : An object containing properties that control what unpartitioned state is made accessible. Available properties are as follows:
+
+    - `all`
+      - : A boolean specifying all possible unpartitioned state should be made accessible.
+        If not specified the default is `false`.
+    - `cookies`
+      - : A boolean specifying third-party cookies should be made accessible.
+        If not specified the default is `false`.
+    - `sessionStorage`
+      - : A boolean specifying unpartitioned sessionStorage should be made accessible.
+        If not specified the default is `false`.
+    - `localStorage`
+      - : A boolean specifying unpartitioned localStorage should be made accessible.
+        If not specified the default is `false`.
+    - `indexedDB`
+      - : A boolean specifying unpartitioned indexedDB should be made accessible.
+        If not specified the default is `false`.
+    - `locks`
+      - : A boolean specifying unpartitioned locks should be made accessible.
+        If not specified the default is `false`.
+    - `caches`
+      - : A boolean specifying unpartitioned caches should be made accessible.
+        If not specified the default is `false`.
+    - `getDirectory`
+      - : A boolean specifying unpartitioned getDirectory should be made accessible.
+        If not specified the default is `false`.
+    - `estimate`
+      - : A boolean specifying unpartitioned estimate should be made accessible.
+        If not specified the default is `false`.
+    - `createObjectURL`
+      - : A boolean specifying unpartitioned createObjectURL should be made accessible.
+        If not specified the default is `false`.
+    - `revokeObjectURL`
+      - : A boolean specifying unpartitioned revokeObjectURL should be made accessible.
+        If not specified the default is `false`.
+    - `BroadcastChannel`
+      - : A boolean specifying unpartitioned BroadcastChannel should be made accessible.
+        If not specified the default is `false`.
+    - `SharedWorker`
+      - : A boolean specifying unpartitioned SharedWorker should be made accessible.
+        If not specified the default is `false`.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-party cookies was granted, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-party cookies was granted and no `types` parameter was provided, fufills with {{domxref("StorageAccessHandle")}} if the access to unpartitioned state requested by the `types` parameter was provided, and rejects if access was denied.
 
 `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they need to be run inside a user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
@@ -36,7 +79,9 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the current {{domxref("Document")}} is not yet active.
+  - : Thrown if:
+    - The current {{domxref("Document")}} is not yet active.
+    - The `types` parameter is provided and all of its properties are `false`.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
     - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
@@ -50,10 +95,19 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 ```js
 document.requestStorageAccess().then(
   () => {
-    console.log("access granted");
+    console.log("cookie access granted");
   },
   () => {
-    console.log("access denied");
+    console.log("cookie access denied");
+  },
+);
+
+document.requestStorageAccess({localStorage: true}).then(
+  (handle) => {
+    console.log("localStorage access granted");
+  },
+  () => {
+    console.log("localStorage access denied");
   },
 );
 ```
