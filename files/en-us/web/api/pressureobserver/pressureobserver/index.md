@@ -23,7 +23,7 @@ new PressureObserver(callback)
 - `callback`
   - : A callback that will be invoked when pressure records are observed. When the callback is invoked, the following parameters are available:
     - `changes`
-      - : An array of {{domxref("PressureRecord")}} objects.
+      - : An array containing all {{domxref("PressureRecord")}} objects recorded since the last time the callback was called, or the last time the observer's {{domxref("PressureObserver.takeRecord", "takeRecord()")}} method was called.
     - `observer`
       - : The {{domxref("PressureObserver","observer")}} object that is receiving the above records.
 
@@ -55,10 +55,14 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback);
-await observer.observe("cpu", {
-  sampleInterval: 1000, // 1000ms
-});
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications

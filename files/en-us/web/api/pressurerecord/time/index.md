@@ -10,7 +10,7 @@ browser-compat: api.PressureRecord.time
 
 {{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The read-only **`time`** property returns the {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for a {{domxref("PressureRecord")}}. It corresponds to the time the data was obtained from the system relative to the time origin of the global object in which the {{domxref("PressureObserver")}} generated the notification.
+The read-only **`time`** property returns the {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for a {{domxref("PressureRecord")}}. It corresponds to the time the data was obtained from the system relative to the [time origin of the global object](/en-US/docs/Web/API/Performance/timeOrigin) in which the {{domxref("PressureObserver")}} generated the notification.
 
 ## Value
 
@@ -29,10 +29,14 @@ function callback(records) {
   console.log(`Current pressure observed at ${lastRecord.time}`);
 }
 
-const observer = new PressureObserver(callback);
-await observer.observe("cpu", {
-  sampleInterval: 1000, // 1000ms
-});
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications

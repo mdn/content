@@ -16,10 +16,10 @@ The read-only **`source`** property is a string indicating the origin source fro
 
 A string indicating the origin source from which the record is coming. The current version of the Compute Pressure API specification supports two main source types:
 
-- `"thermals"` represents the global thermal state of the system. This state can be affected by other apps and sites than the observing site.
-- `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This source is the CPU pressure for the thread the site is using, such as the main thread (window) or workers.
+- `"thermals"` represents the global thermal state of the entire system.
+- `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This state can be affected by other apps and sites than the observing site.
 
-Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Availability can vary by your user agent, your operating system, and your hardware.
+Use the static {{domxref("PressureObserver.knownSources_static", "PressureObserver.knownSources")}} hint to see which source types are supported by your browser. Note that availability can also vary by your operating system and your hardware. Call {{domxref("PressureObserver.observe()", "observe()")}} and check for a `NotSupportedError` to see if pressure observation is possible.
 
 ## Examples
 
@@ -33,10 +33,14 @@ function callback(records) {
   console.log(`Current pressure source: ${lastRecord.source}`);
 }
 
-const observer = new PressureObserver(callback);
-await observer.observe("cpu", {
-  sampleInterval: 1000, // 1000ms
-});
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications

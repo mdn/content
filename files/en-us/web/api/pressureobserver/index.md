@@ -18,7 +18,7 @@ The **`PressureObserver`** interface is part of the [Compute Pressure API](/en-U
 
 ## Static properties
 
-- {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} {{ReadOnlyInline}}
+- {{domxref("PressureObserver.knownSources_static", "PressureObserver.knwonSources")}} {{ReadOnlyInline}}
   - : Returns an array of {{domxref("PressureRecord.source","source")}} values supported by the user agent.
 
 ## Instance methods
@@ -51,10 +51,14 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback);
-await observer.observe("cpu", {
-  sampleInterval: 1000, // 1000ms
-});
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications

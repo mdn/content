@@ -35,10 +35,14 @@ The following example stores the current list of pressure records into `records`
 ```js
 const observer = new PressureObserver(callback):
 observer.observe("cpu");
+
 const records = observer.takeRecords();
 observer.disconnect(); // shut down observer now that we've taken records
-console.log(records[0].state);
-console.log(records[0].time);
+
+if (records.length > 0) {
+  console.log(records[0].state);
+  console.log(records[0].time);
+}
 ```
 
 ## Specifications

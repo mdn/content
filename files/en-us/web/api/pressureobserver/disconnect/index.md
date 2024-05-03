@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 
 ### Stopping a pressure observer
 
-The following example collects 20 samples and then disconnects the pressure observer to disable receiving any more pressure records. The {{domxref('PressureObserver.takeRecords()')}} method is used to store records before disconnecting.
+The following example collects 20 samples and then disconnects the pressure observer to disable receiving any more pressure records.
 
 ```js
 const samples = [];
@@ -46,8 +46,14 @@ function pressureChange(records, observer) {
   }
 }
 
-const observer = new PressureObserver(pressureChange);
-observer.observe("cpu");
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications

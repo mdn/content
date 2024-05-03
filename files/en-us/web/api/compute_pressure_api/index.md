@@ -24,18 +24,18 @@ More use cases are:
 
 ## Concepts and usage
 
-Fast and delightful web applications should balance workloads when the system's computing resources are used at (near) full capacity. The Compute Pressure API's goal is to prevent, rather than mitigate, bad user experience in the web app itself and also for the user's device to not become too hot, too loud, or to drain the battery at an unacceptable rate. Therefore, it is advised to prefer this API over feedback mechanisms (for example, using {{domxref("window.requestAnimationFrame")}}) where bad user experience is mitigated, but not proactively avoided. For measuring and segmenting the performance of user sessions after the fact, the {{domxref("PerformanceLongTaskTiming")}} API is better suited to analyze tasks that occupy the UI thread for 50 milliseconds or more (see also [Performance API](/en-US/docs/Web/API/Performance_API) for additional performance measurement APIs).
+Fast and delightful web applications should balance workloads when the system's computing resources are used at (near) full capacity. The Compute Pressure API's goal is to prevent, rather than mitigate, bad user experience in the web app itself and also for the user's device to not become too hot, too loud, or to drain the battery at an unacceptable rate. Therefore, it is advised to prefer this API over feedback mechanisms or singular performance adjustments (for example, by lowering the frequency of {{domxref("window.requestAnimationFrame")}}) where bad user experience might be mitigated, but not proactively avoided. For measuring and segmenting the performance of user sessions after the fact, the {{domxref("PerformanceLongTaskTiming")}} API is better suited to analyze tasks that occupy the UI thread for 50 milliseconds or more (see also [Performance API](/en-US/docs/Web/API/Performance_API) for additional performance measurement APIs).
 
 ### Pressure source types
 
-In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized proccessing units). The current version of the Compute Pressure API specification supports two main source types:
+In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized proccessing units). The current version of the Compute Pressure API specification defines two main source types that can be queried to gather pressure information:
 
-- `"thermals"` represents the global thermal state of the system. This state can be affected by other apps and sites than the observing site.
-- `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This source is the CPU pressure for the thread the site is using, such as the main thread (window) or workers.
+- `"thermals"` represents the global thermal state of the entire system.
+- `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This state can be affected by other apps and sites than the observing site.
 
-The list of supported sources varies per browser, operating system, and hardware, and is evolving. Use the static {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} property to see which source types are available. Additional source types, such as `"gpu"` might be supported in the future.
+The list of supported sources varies per browser, operating system, and hardware, and is evolving. Use the static {{domxref("PressureObserver.knownSources_static", "PressureObserver.knownSources")}} hint to see which source types are available to your browser. Note that availability can also vary by your operating system and your hardware. Call {{domxref("PressureObserver.observe()", "observe()")}} and check for a `NotSupportedError` to see if pressure observation is possible.
 
-The Compute Pressure API can listen for pressure changes in the following contexts/threads:
+The Compute Pressure API is available in the following contexts:
 
 - {{domxref("Window")}} (main thread)
 - {{domxref("Worker")}}
@@ -92,10 +92,14 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback);
-await observer.observe("cpu", {
-  sampleInterval: 1000, // 1000ms
-});
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications

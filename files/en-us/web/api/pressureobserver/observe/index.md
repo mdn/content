@@ -24,7 +24,7 @@ observe(source, options)
 ### Parameters
 
 - `source`
-  - : A string specifying which {{domxref("PressureRecord.source", "source")}} to observe. See {{domxref("PressureRecord.source")}} for a list of sources and {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} for a list of sources the user agent supports.
+  - : A string specifying which {{domxref("PressureRecord.source", "source")}} to observe. See {{domxref("PressureRecord.source")}} for a list of sources and {{domxref("PressureObserver.knownSources_static", "PressureObserver.knownSources")}} for a list of sources the user agent supports.
 - `options` {{optional_inline}}
   - : An object to configure observation with the following properties:
     - `sampleInterval` {{optional_inline}}
@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} that fulfils with {{jsxref("undefined")}}.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) is disallowed by a {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the `source` parameter is not one of the {{domxref("PressureObserver.supportedSources_static", "PressureObserver.supportedSources")}} for this user agent.
+  - : Thrown if the `source` parameter is not one of the supported sources for this user agent.
 
 ## Examples
 
@@ -60,10 +60,14 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback);
-await observer.observe("cpu", {
-  sampleInterval: 1000, // 1000ms
-});
+try {
+  const observer = new PressureObserver(callback);
+  await observer.observe("cpu", {
+    sampleInterval: 1000, // 1000ms
+  });
+} catch (error) {
+  // report error setting up the observer
+}
 ```
 
 ## Specifications
