@@ -34,37 +34,37 @@ requestStorageAccess(types)
       - : A boolean specifying third-party cookies should be made accessible.
         If not specified the default is `false`.
     - `sessionStorage`
-      - : A boolean specifying unpartitioned sessionStorage should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.sessionStorage")}} should be made accessible.
         If not specified the default is `false`.
     - `localStorage`
-      - : A boolean specifying unpartitioned localStorage should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.localStorage")}} should be made accessible.
         If not specified the default is `false`.
     - `indexedDB`
-      - : A boolean specifying unpartitioned indexedDB should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.indexedDB")}} should be made accessible.
         If not specified the default is `false`.
     - `locks`
-      - : A boolean specifying unpartitioned locks should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.locks")}} should be made accessible.
         If not specified the default is `false`.
     - `caches`
-      - : A boolean specifying unpartitioned caches should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.caches")}} should be made accessible.
         If not specified the default is `false`.
     - `getDirectory`
-      - : A boolean specifying unpartitioned getDirectory should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.getDirectory()")}} should be made accessible.
         If not specified the default is `false`.
     - `estimate`
-      - : A boolean specifying unpartitioned estimate should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.estimate()")}} should be made accessible.
         If not specified the default is `false`.
     - `createObjectURL`
-      - : A boolean specifying unpartitioned createObjectURL should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.createObjectURL()")}} should be made accessible.
         If not specified the default is `false`.
     - `revokeObjectURL`
-      - : A boolean specifying unpartitioned revokeObjectURL should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.revokeObjectURL()")}} should be made accessible.
         If not specified the default is `false`.
     - `BroadcastChannel`
-      - : A boolean specifying unpartitioned BroadcastChannel should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.BroadcastChannel()")}} should be made accessible.
         If not specified the default is `false`.
     - `SharedWorker`
-      - : A boolean specifying unpartitioned SharedWorker should be made accessible.
+      - : A boolean specifying {{domxref("StorageAccessHandle.SharedWorker()")}} should be made accessible.
         If not specified the default is `false`.
 
 ### Return value

@@ -12,26 +12,26 @@ The **`StorageAccessHandle`** interface represents access to [unpartitioned stat
 ## Instance properties
 
 - {{domxref("StorageAccessHandle.sessionStorage")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Storage")}} object used to access unpartitioned sessionStorage if access was granted.
+  - : Returns an unpartitioned session {{domxref("Storage")}} object if access was granted.
 - {{domxref("StorageAccessHandle.localStorage")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Storage")}} object used to access unpartitioned localStorage if access was granted.
+  - : Returns an unpartitioned local {{domxref("Storage")}} object if access was granted.
 - {{domxref("StorageAccessHandle.indexedDB")}} {{ReadOnlyInline}}
-  - : Returns an {{domxref("IDBFactory")}} object used to access unpartitioned indexedDB if access was granted.
+  - : Returns an unpartitioned {{domxref("IDBFactory")}} object if access was granted.
 - {{domxref("StorageAccessHandle.locks")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("LockManager")}} object used to access unpartitioned locks if access was granted.
+  - : Returns an unpartitioned {{domxref("LockManager")}} object if access was granted.
 - {{domxref("StorageAccessHandle.caches")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("CacheStorage")}} object used to access unpartitioned caches if access was granted.
+  - : Returns an unpartitioned {{domxref("CacheStorage")}} object if access was granted.
 
 ## Instance methods
 
 - {{domxref("StorageAccessHandle.getDirectory()")}}
-  - : Returns a {{jsxref("Promise")}} that fufills with a {{domxref("FileSystemDirectoryHandle")}} object used to access unpartitioned getDirectory if access was granted, and rejects otherwise.
+  - : Returns a {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("FileSystemDirectoryHandle")}} object if access was granted, and rejects otherwise.
 - {{domxref("StorageAccessHandle.estimate()")}}
-  - : Returns a {{jsxref("Promise")}} that fufills with a {{domxref("StorageEstimate")}} object used to access unpartitioned estimate if access was granted, and rejects otherwise.
+  - : Returns a {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageEstimate")}} object if access was granted, and rejects otherwise.
 - {{domxref("StorageAccessHandle.createObjectURL()")}}
-  - : Returns the unpartitioned blob storage url created if access was granted, and throws otherwise.
+  - : Returns a string representing the unpartitioned blob storage url created if access was granted, and throws otherwise.
 - {{domxref("StorageAccessHandle.revokeObjectURL()")}}
-  - : Removes the unpartitioned blob storage url if access was granted, and throws otherwise.
+  - : Revokes the unpartitioned blob storage url passed in if access was granted, and throws otherwise.
 - {{domxref("StorageAccessHandle.BroadcastChannel()")}}
   - : Returns the unpartitioned {{domxref("BroadcastChannel")}} created if access was granted, and throws otherwise.
 - {{domxref("StorageAccessHandle.SharedWorker()")}}
