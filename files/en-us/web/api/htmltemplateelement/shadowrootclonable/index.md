@@ -55,4 +55,3 @@ console.log(
 ## See also
 
 - {{domxref("HTMLTemplateElement")}}
-- [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element

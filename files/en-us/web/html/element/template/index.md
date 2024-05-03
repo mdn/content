@@ -26,7 +26,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : Hides the internal shadow root DOM from JavaScript.
 
-    > **Note:** This is a feature of the HTML parser that cannot be used post-parsing by setting the `shadowrootmode` attribute through JavaScript. Only allowed values will create the shadow root; any other values, including empty ones, won't trigger this behavior.
+    > **Note:** The value is reflected by {{domxref("HTMLTemplateElement.shadowRootMode")}}.
+    > This is a feature of the HTML parser that cannot be used post-parsing by setting the `shadowrootmode` attribute through JavaScript.
+    > Only allowed values will create the shadow root; any other values, including empty ones, won't trigger this behavior.
 
     > **Note:** You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
