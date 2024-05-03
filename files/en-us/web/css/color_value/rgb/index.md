@@ -138,6 +138,59 @@ rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1
 
 ## Examples
 
+### Basic syntax
+
+In this example, we have three {{htmlelement("div")}} elements with different background colors displayed over a striped background.
+
+#### HTML
+
+```html
+<div>
+  <div id="integer"></div>
+  <div id="percent"></div>
+  <div id="alpha"></div>
+</div>
+```
+
+#### CSS
+
+The background colors are set using the `rgb()` color function. The three colors are the same. The third is semi-transparent, so we included a {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} on the {{htmlelement("body")}} to better demonstrate the transparency of alpha channels.
+
+```css hidden
+div {
+  display: flex;
+  gap: 20px;
+  height: 50px;
+  flex: 1;
+}
+body {
+  height: calc(100vh - 20px);
+}
+```
+
+```css
+body {
+  background: repeating-linear-gradient(-45deg, #eee 0 2px, #fff 2px 6px);
+  padding: 10px;
+}
+
+#integer {
+  background-color: rgb(189 85 218);
+}
+
+#percent {
+  background-color: rgb(74% 33% 85%);
+}
+
+#alpha {
+  background-color: rgb(189 85 218 / 0.25);
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample("Basic syntax", "100%", "75") }}
+
 ### Using relative colors with rgb()
 
 This example styles three {{htmlelement("div")}} elements with different background colors. The left-hand one is given the unmodified `--base-color`, while the middle and right ones are given variants of that `--base-color` that successively remove more from the red channel and add more to the blue channel.
@@ -171,6 +224,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 ```css
 :root {
   --base-color: orange;
+  /* equal to rgb(255 165 0) */
 }
 
 #one {
@@ -202,8 +256,6 @@ These variants are defined using relative colors — the `--base-color` [custom 
 ```
 
 #### Result
-
-The output is as follows:
 
 {{ EmbedLiveSample("Using relative colors with rgb()", "100%", "200") }}
 
@@ -284,5 +336,6 @@ div.rgba {
 ## See also
 
 - The {{CSSXref("&lt;color&gt;")}} data type for a list of all color notations
+- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module

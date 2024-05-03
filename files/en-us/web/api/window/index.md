@@ -37,7 +37,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
-- {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
+- {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
   - : Returns the browser crypto object.
@@ -59,13 +59,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the window is displayed in full screen or not.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Returns a reference to the history object.
-- {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
+- {{domxref("Window.indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("Window.innerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
-- {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
@@ -91,7 +91,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the navigator object.
 - {{domxref("Window.opener")}}
   - : Returns a reference to the window that opened this current window.
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if this window belongs to an origin-keyed agent cluster.

@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
+{{AccessibilitySidebar}}
+
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 
 ```html
@@ -143,11 +145,3 @@ none
 - [HTML table element](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [HTML table tutorial](/en-US/docs/Learn/HTML/Tables/Basics)
 - [ARIA: `grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

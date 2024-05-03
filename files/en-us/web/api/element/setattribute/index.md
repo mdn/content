@@ -8,9 +8,7 @@ browser-compat: api.Element.setAttribute
 
 {{APIRef("DOM")}}
 
-Sets the value of an attribute on the specified element. If
-the attribute already exists, the value is updated; otherwise a new attribute is added
-with the specified name and value.
+The **`setAttribute()`** method of the {{domxref("Element")}} interface sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 
 To get the current value of an attribute, use {{domxref("Element.getAttribute", "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute", "removeAttribute()")}}.
 

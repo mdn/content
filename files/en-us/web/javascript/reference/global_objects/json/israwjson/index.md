@@ -2,10 +2,12 @@
 title: JSON.isRawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.JSON.isRawJSON
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`JSON.isRawJSON()`** static method tests whether a value is an object returned by {{jsxref("JSON.rawJSON()")}}.
 

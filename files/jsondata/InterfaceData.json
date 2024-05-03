@@ -376,6 +376,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "ChapterInformation": {
+      "inh": "",
+      "impl": []
+    },
     "CharacterBoundsUpdateEvent": {
       "inh": "Event",
       "impl": []
@@ -528,6 +532,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFontFaceDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSFontFaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -640,6 +648,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSNestRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -654,6 +666,10 @@
     },
     "CSSOKLCH": {
       "inh": "CSSColorValue",
+      "impl": []
+    },
+    "CSSPageDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPageRule": {
@@ -690,6 +706,10 @@
     },
     "CSSPerspective": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSPositionTryDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPositionTryRule": {
@@ -746,6 +766,10 @@
     },
     "CSSStyleDeclaration": {
       "inh": "",
+      "impl": []
+    },
+    "CSSStyleProperties": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSStyleRule": {
@@ -3008,18 +3032,6 @@
       "inh": "",
       "impl": []
     },
-    "SharedStorageOperation": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageRunOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
-    "SharedStorageSelectURLOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
     "SharedStorageWorklet": {
       "inh": "Worklet",
       "impl": []
@@ -3038,14 +3050,6 @@
     },
     "SnapEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "SnapTargetArray": {
-      "inh": "",
-      "impl": []
-    },
-    "SnapTargetList": {
-      "inh": "",
       "impl": []
     },
     "SourceBuffer": {
@@ -3821,6 +3825,10 @@
       "impl": []
     },
     "ViewTransition": {
+      "inh": "",
+      "impl": []
+    },
+    "ViewTransitionTypeSet": {
       "inh": "",
       "impl": []
     },

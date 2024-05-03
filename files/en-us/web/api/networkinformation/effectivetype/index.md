@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.NetworkInformation.effectiveType
 ---
 
-{{APIRef("Network Information API")}}
+{{APIRef("Network Information API")}} {{AvailableInWorkers}}
 
 The **`effectiveType`** read-only property of the
 {{domxref("NetworkInformation")}} interface returns the effective type of the connection

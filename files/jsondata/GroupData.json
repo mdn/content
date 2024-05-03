@@ -557,9 +557,9 @@
         "FileSystemWritableFileStream"
       ],
       "methods": [
-        "window.showOpenFilePicker()",
-        "window.showSaveFilePicker()",
-        "window.showDirectoryPicker()",
+        "Window.showOpenFilePicker()",
+        "Window.showSaveFilePicker()",
+        "Window.showDirectoryPicker()",
         "DataTransferItem.getAsFileSystemHandle()",
         "StorageManager.getDirectory()"
       ],
@@ -886,7 +886,7 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": ["Window.indexedDB", "WorkerGlobalScope.indexedDB"],
       "events": []
     },
     "Ink API": {
@@ -1080,20 +1080,25 @@
       "guides": [
         "/docs/Web/API/Performance_API/Performance_data",
         "/docs/Web/API/Performance_API/High_precision_timing",
+        "/docs/Web/API/Performance_API/Long_animation_frame_timing",
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
         "/docs/Web/API/Performance_API/User_timing",
-        "/docs/Web/API/Performance_API/Server_timing"
+        "/docs/Web/API/Performance_API/Server_timing",
+        "/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons"
       ],
       "interfaces": [
         "EventCounts",
         "LargestContentfulPaint",
         "LayoutShift",
         "LayoutShiftAttribution",
+        "NotRestoredReasons",
+        "NotRestoredReasonDetails",
         "Performance",
         "PerformanceEntry",
         "PerformanceElementTiming",
         "PerformanceEventTiming",
+        "PerformanceLongAnimationFrameTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",
@@ -1103,6 +1108,7 @@
         "PerformanceObserverEntryList",
         "PerformancePaintTiming",
         "PerformanceResourceTiming",
+        "PerformanceScriptTiming",
         "PerformanceServerTiming",
         "PerformanceTiming",
         "TaskAttributionTiming",

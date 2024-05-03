@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document
 ---
 
+{{AccessibilitySidebar}}
+
 The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
 
 ## Description
@@ -71,11 +73,3 @@ The document role is an easy way to indirectly control assistive technology beha
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>
