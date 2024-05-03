@@ -105,6 +105,7 @@ document.requestStorageAccess().then(
 document.requestStorageAccess({ localStorage: true }).then(
   (handle) => {
     console.log("localStorage access granted");
+    handle.localStorage.setItem("foo", "bar");
   },
   () => {
     console.log("localStorage access denied");
