@@ -40,7 +40,7 @@ The **`StorageAccessHandle`** interface represents access to [unpartitioned stat
 ## Example
 
 ```js
-document.requestStorageAccess({localStorage: true}).then(
+document.requestStorageAccess({ localStorage: true }).then(
   (handle) => {
     console.log("localStorage access granted");
     handle.localStorage.setItem("foo", "bar");
