@@ -13,7 +13,7 @@ browser-compat: api.StorageAccessHandle.getDirectory
 ## Syntax
 
 ```js-nolint
-getDirectory()
+handle.getDirectory()
 ```
 
 ### Parameters
@@ -28,6 +28,7 @@ A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("FileSystem
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
+- See {{domxref("StorageManager.getDirectory()")}}
 
 ## Examples
 

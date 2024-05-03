@@ -13,7 +13,7 @@ browser-compat: api.StorageAccessHandle.estimate
 ## Syntax
 
 ```js-nolint
-estimate()
+handle.estimate()
 ```
 
 ### Parameters
@@ -28,6 +28,7 @@ A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageEst
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
+- See {{domxref("StorageManager.estimate()")}}
 
 ## Examples
 

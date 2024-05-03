@@ -13,13 +13,13 @@ browser-compat: api.StorageAccessHandle.revokeObjectURL
 ## Syntax
 
 ```js-nolint
-revokeObjectURL(objectURL)
+handle.revokeObjectURL(objectURL)
 ```
 
 ### Parameters
 
 - `objectURL`
-  - : A string representing an object URL that was previously created by calling {{domxref("StorageAccessHandle.createObjectURL()")}}.
+  - : See {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}.
 
 ### Return value
 
@@ -29,6 +29,7 @@ None ({{jsxref("undefined")}}).
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
+- See {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
 
 ## Examples
 

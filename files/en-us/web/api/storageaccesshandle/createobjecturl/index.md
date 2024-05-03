@@ -13,14 +13,13 @@ browser-compat: api.StorageAccessHandle.createObjectURL
 ## Syntax
 
 ```js-nolint
-createObjectURL(object)
+handle.createObjectURL(object)
 ```
 
 ### Parameters
 
 - `object`
-  - : A {{domxref("File")}}, {{domxref("Blob")}}, or {{domxref("MediaSource")}} object to
-    create an object URL for.
+  - : See {{domxref("URL.createObjectURL_static", "createObjectURL()")}}.
 
 ### Return value
 
@@ -30,6 +29,7 @@ A string containing an unpartitioned object URL that can be used to reference th
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
+- See {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
 
 ## Examples
 
