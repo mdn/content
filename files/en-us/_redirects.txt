@@ -3608,6 +3608,7 @@
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
+/en-US/docs/Glossary/Simple_header	/en-US/docs/Glossary/CORS-safelisted_request_header
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
 /en-US/docs/Glossary/Transferable_objects	/en-US/docs/Web/API/Web_Workers_API/Transferable_objects

@@ -4627,19 +4627,6 @@
     "modified": "2020-08-04T14:54:17.574Z",
     "contributors": ["jswisher", "hbloomer", "marumari", "fscholz"]
   },
-  "Glossary/Simple_header": {
-    "modified": "2019-07-06T03:48:05.558Z",
-    "contributors": [
-      "Annevk",
-      "teoli",
-      "fscholz",
-      "hbloomer",
-      "Andrew_Pfeiffer",
-      "klez",
-      "kscarfone",
-      "chrisdavidmills"
-    ]
-  },
   "Glossary/Simple_response_header": {
     "modified": "2019-08-07T09:47:15.609Z",
     "contributors": ["fscholz", "SrihariThalla", "Sheppy", "teoli"]
