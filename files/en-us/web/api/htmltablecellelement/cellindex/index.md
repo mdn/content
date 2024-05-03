@@ -17,7 +17,7 @@ Returns the index of the cell, or `-1` if the cell is not part of any row.
 
 ## Examples
 
-This example adds a label all the cell numbers of the first row of the `tbody`.
+This example adds a label to all the cell numbers of the first row of the `tbody`.
 
 ### HTML
 
