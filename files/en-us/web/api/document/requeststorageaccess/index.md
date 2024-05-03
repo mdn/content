@@ -102,7 +102,7 @@ document.requestStorageAccess().then(
   },
 );
 
-document.requestStorageAccess({localStorage: true}).then(
+document.requestStorageAccess({ localStorage: true }).then(
   (handle) => {
     console.log("localStorage access granted");
   },
