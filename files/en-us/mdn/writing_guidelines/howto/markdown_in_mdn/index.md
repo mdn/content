@@ -176,15 +176,19 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Sometimes writers want to call special attention to a piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.
+Sometimes writers want to call special attention to a piece of content. To do this, they will use the [GFM noteblock syntax](https://github.com/orgs/community/discussions/16925), which is a GFM blockquote with a special first line. There are three types of these: notes, warnings, and callouts.
 
-- To add a note, create a GFM blockquote whose first paragraph starts with `**Note:**`.
-- To add a warning, create a GFM blockquote whose first paragraph starts with `**Warning:**`.
-- To add a callout, create a GFM blockquote whose first paragraph starts with `**Callout:**`.
+> [!NOTE]
+> MDN Web Docs supported noteblocks with its own syntax before GFM adopted syntax.  As such, MDN supports only two of the five noteblock types GFM supports, and supports an additional type that GFM does not.
 
-Notes and warnings will render the **Note:** or **Warning:** text in the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
+- To add a note, create a GFM blockquote whose first line is `[!NOTE]`.
+- To add a warning, create a GFM blockquote whose first line is `[!WARNING]`.
+- To add a callout, create a GFM blockquote whose first line is `[!CALLOUT]`.
 
-Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing `<strong>Note:</strong>` will also generate a note. However, the Markdown syntax is required as a matter of style.
+Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
+
+> [!WARNING]
+> In the older MDN syntax, the type was localized and added to the first paragraph in bold text, i.e. `**Note:** Foo bar` instead of `[!NOTE] ⏎ Foo bar`.  This syntax is still supported for migration purposes.  Avoid using it in new documentation.
 
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
@@ -195,7 +199,8 @@ The blockquote can contain code blocks or other block elements.
 #### Note
 
 ```md
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can have multiple lines.
 ```
@@ -211,14 +216,16 @@ This will produce the following HTML:
 
 This HTML will be rendered as a highlighted box:
 
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can have multiple lines.
 
 #### Warnings
 
 ```md
-> **Warning:** This is how you write a warning.
+> [!WARNING]
+> This is how you write a warning.
 >
 > It can have multiple paragraphs.
 ```
@@ -234,14 +241,16 @@ This will produce the following HTML:
 
 This HTML will be rendered as a highlighted box:
 
-> **Warning:** This is how you write a warning.
+> [!WARNING]
+> This is how you write a warning.
 >
 > It can have multiple paragraphs.
 
 #### Callouts
 
 ```md
-> **Callout:** **This is how you write a callout.**
+> [!CALLOUT]
+> **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
 ```
@@ -257,38 +266,18 @@ This will produce the following HTML:
 
 This HTML will be rendered as a highlighted box:
 
-> **Callout:**
->
+> [!CALLOUT]
 > **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
-
-#### Translated warning
-
-Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
-
-The localizations are stored in [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) as JSON files in [gettext](https://www.gnu.org/software/gettext/) format. Refer to these files to determine what string should be used in place of "Note:" or "Warning:" for that locale. If a locale file is not defined, English will be used as a fallback.
-
-For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
-
-```md
-> **Warnung:** So schreibt man eine Warnung.
-```
-
-And this will produce:
-
-```html
-<div class="notecard warning">
-  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
-</div>
-```
 
 #### Note containing a code block
 
 This example contains a code block.
 
 ````md
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can contain code blocks.
 >
@@ -312,7 +301,8 @@ This will produce the following HTML:
 
 This HTML will be rendered as with a code block:
 
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can contain code blocks.
 >
