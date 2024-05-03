@@ -461,6 +461,7 @@ You also need to append the following styles to **/django-locallibrary-tutorial/
 ```
 
 Try it out by clicking the Login/Logout links in the sidebar.
+You should be taken to the logout/login pages that you defined in the [Template directory](#template_directory) above.
 
 ### Testing in views
 
