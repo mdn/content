@@ -46,7 +46,7 @@ Each of the three sites has an embedded sign-in widget, hosted at `auth.site`, t
 
 The above use cases sound innocent enough. However, third-party cookies can also be used for illegitimate purposes without the user's consent, which are technically undistinguishable from valid use cases.
 
-Following a link to a third-party or interacting with third-party content embeded in an `<iframe>` (for example, filling out a form or clicking a button) could result in cookies being set that put a user's information in the hands of someone they didn't expect. This information could be used to:
+Following a link to a third-party or interacting with third-party content embedded in an `<iframe>` (for example, filling out a form or clicking a button) could result in cookies being set that put a user's information in the hands of someone they didn't expect. This information could be used to:
 
 - Chase users around the web with targetted ads whenever they search for information on a specific product.
 - Target users with spam emails or phone calls.
