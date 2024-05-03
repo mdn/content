@@ -782,7 +782,7 @@ An important consideration with anchor-positioned elements is ensuring that they
 In CSS anchor positioning, this is managed using two properties and an at-rule:
 
 - {{cssxref("position-try-options")}}
-  - : Specifies one or more alternative **position options** for the browser to try placing the positioned element in, to stop it from overflowing. Position options can be specified using predefined options, {{cssxref("inset-area")}} values (wrapped inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)), or custom options defined using the {{cssxref("@position-try")}} at-rule. When multiple options are specified, they are separated by commas.
+  - : Specifies one or more alternative **position options** for the browser to try placing the positioned element in, to stop it from overflowing. Position options can be specified using predefined options, {{cssxref("inset-area")}} values (wrapped inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function), or custom options defined using the {{cssxref("@position-try")}} at-rule. When multiple options are specified, they are separated by commas.
 - {{cssxref("position-try-order")}}
   - : By default, the options specified in the `position-try-options` property will be tried in the order they are specified in. `position-try-order` allows you to specify various options that result in the options being tried in a different order, for example "try the option that will result in the positioned element having the largest amount of its height on-screen first."
 - {{cssxref("@position-try")}}
