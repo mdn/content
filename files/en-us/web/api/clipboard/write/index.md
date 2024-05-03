@@ -55,19 +55,13 @@ button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
   const type = "text/plain";
-  if (ClipboardItem.supports(type)) {
-    const blob = new Blob([text], { type });
-    const data = [new ClipboardItem({ [type]: blob })];
-    await navigator.clipboard.write(data);
-  } else {
-    console.log("text/plain is not supported");
-  }
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
+  await navigator.clipboard.write(data);
 }
 ```
 
-The `setClipboard()` method first uses the {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} static method to check whether the clipboard supports the `"text/plain"` MIME type.
-
-If the clipboard does support plain text, then `setClipboard()` creates a new {{domxref("Blob")}} object.
+The `setClipboard()` method begins by creating a new a {{domxref("Blob")}} object.
 This object is required to construct a {{domxref("ClipboardItem")}} object which is sent to the clipboard.
 The {{domxref("Blob")}} constructor takes in the content we want to copy and its type.
 This {{domxref("Blob")}} object can be derived from many sources; for example, a [canvas](/en-US/docs/Web/API/HTMLCanvasElement).
