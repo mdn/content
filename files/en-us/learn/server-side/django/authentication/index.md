@@ -429,7 +429,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
      <li>
-       <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+       <form id="logout-form" method="post" action="{% url 'logout' %}">
          {% csrf_token %}
          <button type="submit" class="btn btn-link">Logout</button>
        </form>
