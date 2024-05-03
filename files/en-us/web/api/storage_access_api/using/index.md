@@ -81,7 +81,10 @@ async function handleCookieAccess() {
           // Need to call requestStorageAccess() after a user interaction
           btn.addEventListener("click", async () => {
             try {
-              const handle = await document.requestStorageAccess({cookies: true, localStorage: true});
+              const handle = await document.requestStorageAccess({
+                cookies: true,
+                localStorage: true,
+              });
               doThingsWithLocalStorage(handle);
               doThingsWithCookies();
             } catch (err) {
