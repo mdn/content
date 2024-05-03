@@ -57,13 +57,13 @@ offset-path: shape(from 10% 1rem, arc to 50px 3pt of 20% cw large rotate 25deg);
 
     - `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/web/svg/attribute/d#cubic_bézier_curve_commands) to the list of shape commands. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
 
-      The `via` keyword specifies the control points of the curve as one or two `<coordinate-pair>` values. If a single `<coordinate-pair>` is provided, the command draws a quadratic Bézier curve; if two `<coordinate-pair>`s are provided, the command draws a cubic Bézier curve.
+      The `via` keyword specifies the control points of the curve as one or two `<coordinate-pair>` values. If a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/web/svg/attribute/d#quadratic-bézier-curve-commands); if two `<coordinate-pair>`s are provided, the command draws a cubic Bézier curve.
 
     - `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/web/svg/attribute/d#cubic_bézier_curve_commands) to the list of shape commands. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
 
       The `via` keyword can be optionally included to specify the control points of the curve through `<coordinate-pair>`. If `via <coordinate-pair>` is omitted, the command draws a smooth quadratic curve; if it is provided, the command draws a smooth cubic curve.
 
-    - `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an elliptical arc curve command to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
+    - `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/web/svg/attribute/d#elliptical-arc-curve-commands) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
 
       The elliptical arc curve command defines two possible ellipses, which intersect both the starting and ending points, and each can be traced in either direction, resulting in four possible arcs. The `of` keyword specifies the size of the ellipse fom which the arc is taken. The first `<length-percentage>` provides the horizontal radius of the ellipse, and the second provides the vertical radius. If only one `<length-percentage>` is provided, the same value is used for both the radii. The following parameters help to choose from a possibility of four arcs:
 
@@ -73,7 +73,7 @@ offset-path: shape(from 10% 1rem, arc to 50px 3pt of 20% cw large rotate 25deg);
 
       > **Note:** If the starting and ending points of the arc lie on exactly opposite sides of the ellipse, there is only one possible ellipse and two possible arcs. In this case, `<arc-sweep>` specifies the arc to choose, and `<arc-size>` has no effect.
 
-    - `close`
+    - `close`: Adds a [ClosePath command](/en-US/docs/web/svg/attribute/d#closepath-commands) to the list of shape commands.
 
 ## Description
 
