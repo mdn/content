@@ -61,7 +61,9 @@ async function handleCookieAccess() {
       // We have access to third-party cookies, so let's go
       doThingsWithCookies();
       // If we want to modify unpartitioned state, we need to request a handle.
-      const handle = await document.requestStorageAccess({localStorage: true});
+      const handle = await document.requestStorageAccess({
+        localStorage: true,
+      });
       doThingsWithLocalStorage(handle);
     } else {
       // Check whether third-party cookie access has been granted
