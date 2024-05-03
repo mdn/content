@@ -11,6 +11,8 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ## Instance properties
 
+- {{domxref("RTCRtpReceiver.jitterBufferTarget")}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that indicates an application's preferred hold time for media in the jitter buffer, allowing it influence the tradeoff between playout delay and the risk of running out of audio or video frames due to network jitter.
 - {{domxref("RTCRtpReceiver.track")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
 - {{domxref("RTCRtpReceiver.transport")}} {{ReadOnlyInline}}
