@@ -74,7 +74,10 @@ async function handleCookieAccess() {
         if (permission.state === "granted") {
           // If so, you can just call requestStorageAccess() without a user interaction,
           // and it will resolve automatically.
-          const handle = await document.requestStorageAccess({cookies: true, localStorage: true});
+          const handle = await document.requestStorageAccess({
+            cookies: true,
+            localStorage: true,
+          });
           doThingsWithLocalStorage(handle);
           doThingsWithCookies();
         } else if (permission.state === "prompt") {
