@@ -8,12 +8,12 @@ browser-compat: api.HTMLTemplateElement.shadowRootClonable
 
 {{APIRef("Web Components")}}
 
-The **`shadowRootClonable`** property of the {{domxref("HTMLTemplateElement")}} interface indicates whether a template element has a shadow root that is [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable).
+The **`shadowRootClonable`** property of the {{domxref("HTMLTemplateElement")}} interface indicates whether a [shadow root](/en-US/docs/Glossary/Shadow_tree) that that was [declaratively created](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) is [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable).
 
 If this is `true` then a shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
 The default value is `false`.
 
-This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
+This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
 
 ## Value
 
@@ -21,7 +21,7 @@ This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/H
 
 ## Examples
 
-This example demonstrates that the `shadowRootClonable` property reflects the `shadowrootclonable` initially reflects attribute of the `<template>` element, that the default value of the property is `false`, and that it can be set using `shadowRootClonable`.
+This example demonstrates that the `shadowRootClonable` property initially reflects the `shadowrootclonable` attribute of the `<template>` element, that the default value of the property is `false`, and that it can be set using `shadowRootClonable`.
 
 <!-- hidden logging and CSS blocks -->
 

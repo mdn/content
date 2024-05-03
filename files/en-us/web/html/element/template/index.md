@@ -15,7 +15,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `shadowrootmode`
 
-  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element. It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same {{glossary("enumerated")}} values.
+  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
+    It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same {{glossary("enumerated")}} values.
 
     - `open`
 
@@ -31,12 +32,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `shadowrootdelegatesfocus`
 
-  - : Xxxxx
+  - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If this is set and a non-focussable element in the shadow tree is selected, then focus is delegated to the first focussable element in the tree.
+    The value defaults to `false` and is reflected by {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus")}}.
 
 - `shadowrootclonable`
 
-  - : Sets the value of [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) to `true` on a shadow root that has been created declaratively (by specifying the [`shadowrootmode`](#shadowrootmode) attribute).
-    If it is declared, a clone of the shadow host (parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
+  - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
     The value defaults to `false` and is reflected by {{domxref("HTMLTemplateElement.shadowRootClonable")}}.
 
 ## Usage notes
@@ -210,6 +213,75 @@ container.appendChild(secondClone);
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
 {{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
+
+### Declarative Shadow DOM with delegated focus
+
+This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow root that is created declaratively, and the effect this has on focus.
+
+The code first declares a shadow roots inside a `<div>` elements, using the `<template>` element with the `shadowrootmode` attribute.
+This displays both a non-focussable `<div>` containing text and a focussable `<input>` element.
+It also uses CSS to style elements with [`:focus`](/en-US/docs/Web/CSS/:focus) to blue, and to set the normal styling of the host element.
+
+```html
+<div>
+  <template shadowrootmode="open">
+    <style>
+      :host {
+        display: block;
+        border: 1px dotted black;
+        padding: 10px;
+        margin: 10px;
+      }
+      :focus {
+        outline: 2px solid blue;
+      }
+    </style>
+    <div>Clickable Shadow DOM text</div>
+    <input type="text" placeholder="Input inside Shadow DOM" />
+  </template>
+</div>
+```
+
+The second code block is identical except that it sets the `shadowrootdelegatesfocus`, which delegates focus to the first focussable element in the tree if a non-focussable element in the tree is selected.
+
+```html
+<div>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <style>
+      :host {
+        display: block;
+        border: 1px dotted black;
+        padding: 10px;
+        margin: 10px;
+      }
+      :focus {
+        outline: 2px solid blue;
+      }
+    </style>
+    <div>Clickable Shadow DOM text</div>
+    <input type="text" placeholder="Input inside Shadow DOM" />
+  </template>
+</div>
+```
+
+Last of all we use the following CSS to apply a green-yellow border to the parent `<div>` element when it has focus.
+
+```css
+div:focus {
+  border: 1px solid greenyellow;
+}
+```
+
+The results are shown below.
+When the HTML is first rendered, the elements have no styling, as shown in the first image.
+For the shadow root that does not have `shadowrootdelegatesfocus` set you can click anywhere except the `<input>` and the focus does not change (if you select the `<input>` element it will look like the second image).
+
+![Screenshot of code with no focus set](template_with_no_focus.png)
+
+For the shadow root with `shadowrootdelegatesfocus` set, clicking on the text (which is non-focussable) selects the input element, as this is the first focussable element in the tree.
+This also focusses the parent element as shown below.
+
+![Screenshot of the code where the element has focus](template_with_focus.png)
 
 ## Technical summary
 

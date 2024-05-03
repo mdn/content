@@ -20,9 +20,10 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTemplateElement.shadowRootMode", "shadowRootMode")}}
   - : XXxxx.
 - {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus", "shadowRootDelegatesFocus")}}
-  - : XXxxx.
+  - : Indicates whether a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that was [declaratively created](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) will [delegate focus](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) if a non-focussable element is selected.
+    This reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Element/template#shadowrootdelegatesfocus) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
-  - : Indicates whether a shadow root that has been [declaratively created](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) is [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable).
+  - : Indicates whether a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that was [declaratively created](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) is [clonable](/en-US/docs/Web/API/ShadowRoot/clonable).
     This reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated `<template>` element.
 
 ## Instance methods
