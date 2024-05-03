@@ -147,7 +147,7 @@ The properties are as follows:
 
 ## How noise is added to reports
 
-Noise plays a significant role in both event-level and summary reports as a method of protecting user privacy.
+Noise is added to reports in order to obscure the trigger data in both event-level and summary reports, in order to protect user privacy.
 
 The [`source_event_id`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) contained in the `Attribution-Reporting-Register-Source` header is a base-10-formatted 64-bit unsigned integer that can uniquely identify an interaction (such as an ad click).
 

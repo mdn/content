@@ -25,7 +25,7 @@ However, what happens behind the scenes to register sources and retrieve and sto
    Attribution-Reporting-Eligible: navigation-source
    ```
 
-2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response. This takes a JSON string as its value that provides the information the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of report the browser will generate:
+2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response. Its value is a JSON string that provides the information the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of report the browser will generate:
 
    - The following example will cause an [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) to be generated when a [trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers) is matched to a source:
 
@@ -135,7 +135,7 @@ Event-based attribution sources cause the browser to store source data in respon
 
 ### HTML-based event sources
 
-HTML-based event sources can be used for measuring interactions with a publisher's page when it first loads — or more precisely when a tracking pixel `<img>` or specific `<script>` loads. To register an event-based attribution source via HTML, you can add the `attributionsrc` attribute to an appropriate element — {{htmlelement("img")}} or {{htmlelement("script")}}.
+HTML-based event sources can be used for measuring interactions with a publisher's page when it first loads — or more precisely when an `<img>` or `<script>` loads. To register an event-based attribution source via HTML, you can add the `attributionsrc` attribute to an appropriate element — {{htmlelement("img")}} or {{htmlelement("script")}}.
 
 If you leave the attribute value blank, the registration request will be sent to the server the requested resource is hosted on. It is also possible to specify one or more additional URLs inside the value to send the registration request to; see [Specifying URLs inside attributionsrc](#specifying_urls_inside_attributionsrc) for more details.
 
@@ -152,7 +152,7 @@ const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "";
 ```
 
-In this case, the interaction occurs and the browser stores the source data when the browser receives the response containing the image file (i.e. when the `load` event occurs). Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
+The browser stores the attribution source data when the browser receives the response containing the image file (i.e. when the `load` event occurs). Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
 
 A {{htmlelement("script")}} example might look like so:
 

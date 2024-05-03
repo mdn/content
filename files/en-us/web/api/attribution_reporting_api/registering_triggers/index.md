@@ -24,7 +24,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
    Attribution-Reporting-Eligible: trigger
    ```
 
-2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Trigger")}} along with the response. This takes a JSON string as its value containing data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values.
+2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Trigger")}} along with the response. Its value is a JSON string containing data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values.
 
    The following example is intended to match with a [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) attribution source:
 
@@ -97,7 +97,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
 ## HTML-based attribution triggers
 
-HTML-based attribution triggers can be used for detecting conversions on a page when it first loads — or more precisely when a tracking pixel `<img>` or specific `<script>` loads. For example, if a user has clicked an attribution source link on a publisher's page and navigated to the advertiser's page, you can to register the attribution trigger and get the browser to attempt a match with stored source entries as soon as the advertiser's page loads.
+HTML-based attribution triggers can be used for detecting conversions on a page when it first loads — or more precisely when an `<img>` or `<script>` loads. For example, if a user has clicked an attribution source link on a publisher's page and navigated to the advertiser's page, you can to register the attribution trigger and get the browser to attempt a match with stored source entries as soon as the advertiser's page loads.
 
 You can register an attribution trigger by adding the `attributionsrc` attribute to an appropriate element. This can be done on {{htmlelement("img")}} and {{htmlelement("script")}} elements.
 
