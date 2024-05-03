@@ -61,7 +61,7 @@ white-space: unset;
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 The following table summarizes the behavior of the various `white-space` keyword values:
 
@@ -261,6 +261,47 @@ text {
 #### Result
 
 {{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 150)}}
+
+### Controlling line wrapping in tables
+
+#### HTML
+
+```html
+<table>
+  <tr>
+    <td></td>
+    <td>Very long content that splits</td>
+    <td class="nw">Very long content that don't split</td>
+  </tr>
+  <tr>
+    <td class="nw">white-space:</td>
+    <td>normal</td>
+    <td>nowrap</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+  text-align: center;
+}
+.nw {
+  white-space: nowrap;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Controlling line wrapping in tables', "100%", "100%")}}
 
 ## Specifications
 

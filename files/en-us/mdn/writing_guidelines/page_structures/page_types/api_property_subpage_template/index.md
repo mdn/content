@@ -88,7 +88,11 @@ You could copy most of this from the property's summary on the corresponding API
 
 ## Value
 
-Include a description of the property's value, including data type and what it represents.
+Include a description of the property's value, including data type and what it represents. This should be in the form: "A [name of the property type] representing ...". For example:
+
+> A string representing...
+
+Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
 
 ## Examples
 

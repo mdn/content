@@ -53,6 +53,19 @@ function getCharacterLength(str) {
 console.log(getCharacterLength("A\uD87E\uDC04Z")); // 3
 ```
 
+If you want to count characters by _grapheme clusters_, use [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter). You can first pass the string you want to split to the [`segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) method, and then iterate over the returned `Segments` object to get the length:
+
+```js
+function getGraphemeCount(str) {
+  const segmenter = new Intl.Segmenter("en-US", { granularity: "grapheme" });
+  // The Segments object iterator that is used here iterates over characters in grapheme clusters,
+  // which may consist of multiple Unicode characters
+  return [...segmenter.segment(str)].length;
+}
+
+console.log(getGraphemeCount("👨‍👩‍👧‍👧")); // 1
+```
+
 ## Examples
 
 ### Basic usage

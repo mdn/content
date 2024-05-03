@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStore.set
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object.
+The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given `name` and `value` or `options` object.
 
 ## Syntax
 

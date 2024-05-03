@@ -376,6 +376,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "ChapterInformation": {
+      "inh": "",
+      "impl": []
+    },
     "CharacterBoundsUpdateEvent": {
       "inh": "Event",
       "impl": []
@@ -644,6 +648,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSNestRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -698,6 +706,10 @@
     },
     "CSSPerspective": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSPositionTryDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPositionTryRule": {
@@ -806,10 +818,6 @@
     },
     "CSSViewTransitionRule": {
       "inh": "CSSRule",
-      "impl": []
-    },
-    "CSSViewTransitionTypeSet": {
-      "inh": "",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -2920,6 +2928,10 @@
       "inh": "Event",
       "impl": []
     },
+    "Sanitizer": {
+      "inh": "",
+      "impl": []
+    },
     "Scheduler": {
       "inh": "",
       "impl": []
@@ -3018,18 +3030,6 @@
     },
     "SharedStorage": {
       "inh": "",
-      "impl": []
-    },
-    "SharedStorageOperation": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageRunOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
-    "SharedStorageSelectURLOperation": {
-      "inh": "SharedStorageOperation",
       "impl": []
     },
     "SharedStorageWorklet": {

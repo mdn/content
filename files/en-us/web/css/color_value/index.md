@@ -97,7 +97,7 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 
 Each component of any CSS color functions - except for those using the legacy comma-separated syntax - can be specified as the keyword `none` to be a missing component.
 
-Explicitly specifying [missing components in color interpolation](#interpolation_with_missing_components) is useful for cases where you would like to interpolate some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
+Explicitly specifying [missing components in color interpolation](#interpolation_with_missing_components) is useful for cases where you would like to {{glossary("interpolation", "interpolate")}} some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
 
 ```css
 /* These are equivalent */

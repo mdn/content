@@ -53,7 +53,7 @@ This lets you look at the HTML markup of the element's content nodes.
 Setting the value of `innerHTML` lets you easily replace the existing contents of an element with new content.
 
 > **Note:** This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
-> When inserting user-supplied data you should always consider using {{domxref("Element.setHTML()")}} instead, in order to sanitize the content before it is inserted.
+> When inserting user-supplied data you should always consider using a sanitizer library, in order to sanitize the content before it is inserted.
 
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
 
@@ -142,7 +142,6 @@ el.innerHTML = name; // shows the alert
 
 For that reason, it is recommended that instead of `innerHTML` you use:
 
-- {{domxref("Element.setHTML()")}} to sanitize the text before it is inserted into the DOM.
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
 
 > **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
@@ -248,6 +247,5 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("Node.textContent")}} and {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.outerHTML")}}
-- {{domxref("Element.setHTML")}}
 - Parsing HTML or XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into an XML string: {{domxref("XMLSerializer")}}
