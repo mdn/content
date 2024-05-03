@@ -7884,9 +7884,9 @@ web-namespaces@^2.0.0:
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
 web-specs@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.8.0.tgz#8ec021ff94abee98db5491a8ed3c595de3f17293"
-  integrity sha512-tAJgIFOgHHAQiorvKW8gMCzrTDBzT+wThaXduQswmFuiMbKtQZQtBobQ74v4nIUKgPlIHi/e8ypYptcQ4OblKg==
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.9.0.tgz#c6dfe2a15c272613fbc3b978b71510a77d0b4ccf"
+  integrity sha512-DJG4kyzB96cOQ7VMSGQYOFGBRQ+YlqY6lIm1TWaj07WBZc1OIj9xBcgZnzFaBMaXc281Gspvnnh53Xt9+qWTeA==
 
 web-streams-polyfill@4.0.0-beta.3:
   version "4.0.0-beta.3"
