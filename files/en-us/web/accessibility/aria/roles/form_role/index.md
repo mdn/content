@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/form.html
 ---
 
+{{AccessibilitySidebar}}
+
 The `form` role can be used to identify a group of elements on a page that provide equivalent functionality to an HTML form. The form is not exposed as a landmark region unless it has an [accessible name](/en-US/docs/Glossary/Accessible_name).
 
 ```html
@@ -41,7 +43,7 @@ No role specific keyboard interactions
 ### Required JavaScript features
 
 - `onsubmit`
-  - : The onSubmit event handler handles the event raised when the form is submitted. Anything that is not a `<form>` cannot be submitted, therefore you would have to use JavaScript to build an alternative data submission mechanism, for example with {{domxref("XMLHTTPRequest")}}.
+  - : The onSubmit event handler handles the event raised when the form is submitted. Anything that is not a `<form>` cannot be submitted, therefore you would have to use JavaScript to build an alternative data submission mechanism, for example with {{domxref("fetch()")}}.
 
 ## Examples
 
@@ -125,11 +127,3 @@ Using the {{HTMLElement('form')}} element will automatically communicate a secti
 - The {{HTMLElement('form')}} element
 - The {{HTMLElement('legend')}} element
 - [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

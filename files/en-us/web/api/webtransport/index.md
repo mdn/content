@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.WebTransport
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} provides functionality to enable a user agent to connect to an HTTP/3 server, initiate reliable and unreliable transport in either or both directions, and close the connection once it is no longer needed.
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Constructor
 
@@ -34,8 +32,6 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a promise that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
-
-<!-- {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}} {{Experimental_Inline}} : Returns a promise that resolves if a server wants the client to gracefully close the connection. -->
 
 ## Instance methods
 

@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/xlink:arcrole
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.xlink.xlink_arcrole
+browser-compat: svg.global_attributes.xlink_arcrole
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

@@ -17,7 +17,7 @@ Transitions enable you to define the transition between two states of an element
 
 This property is a shorthand for the following CSS properties:
 
-- [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior) {{experimental_inline}}
+- [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior)
 - [`transition-delay`](/en-US/docs/Web/CSS/transition-delay)
 - [`transition-duration`](/en-US/docs/Web/CSS/transition-duration)
 - [`transition-property`](/en-US/docs/Web/CSS/transition-property)

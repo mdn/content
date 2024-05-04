@@ -14,10 +14,9 @@ In the beginning, the Web was just text, and it was really quite boring. Fortuna
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -175,7 +174,7 @@ For an excellent article on the history of this feature, see [Setting height and
 
 > **Note:** Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
 >
-> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
 >
 > If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
 
@@ -195,7 +194,7 @@ As [with links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#
 
 This gives us a tooltip on mouse hover, just like link titles:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum](image-with-title.png)
 
 However, this is not recommended — `title` has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 
@@ -361,7 +360,7 @@ Creators of original work such as songs, books, or software often release their 
 
 - Obtain explicit, written permission from the copyright holder.
 - Pay a license fee to use them. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
-- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://www.bl.uk/business-and-ip-centre/articles/fair-dealing-copyright-explained) in your jurisdiction.
+- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://copyrightservice.co.uk/copyright/p27_work_of_others) in your jurisdiction.
 
 Authors are not required to include a copyright notice or license terms with their work. Copyright exists automatically in an original work of authorship once it is created in a tangible medium. So if you find an image online and there are no copyright notices or license terms, the safest course is to assume it is protected by copyright with all rights reserved.
 
@@ -615,9 +614,9 @@ We've seen that static images can be displayed using the {{HTMLElement("img")}} 
 - [Canvas](/en-US/docs/Web/API/Canvas_API)
   - : The {{HTMLElement("canvas")}} element provides APIs to draw 2D graphics using JavaScript.
 - [SVG](/en-US/docs/Web/SVG)
-  - : Scalable Vector Graphics (SVG) lets you use lines, curves, and other geometric shapes to render 2D graphics. With vectors, you can create images that scale cleanly to any size.
+  - : Scalable Vector Graphics (SVG) let you use lines, curves, and other geometric shapes to render 2D graphics. With vectors, you can create images that scale cleanly to any size.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
-  - : The WebGL API guide will get your started with WebGL, the 3D graphics API for the Web that lets you use standard OpenGL ES in web content.
+  - : The WebGL API guide will get you started with WebGL, the 3D graphics API for the Web that lets you use standard OpenGL ES in web content.
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : Just like `<img>`, you can use HTML to embed {{htmlelement("video")}} and {{htmlelement("audio")}} into a web page and control its playback.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

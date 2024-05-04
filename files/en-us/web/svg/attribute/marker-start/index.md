@@ -2,7 +2,7 @@
 title: marker-start
 slug: Web/SVG/Attribute/marker-start
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.marker-start
+browser-compat: svg.global_attributes.marker-start
 ---
 
 {{SVGRef}}

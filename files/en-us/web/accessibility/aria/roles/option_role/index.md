@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/
 ---
 
+{{AccessibilitySidebar}}
+
 The `option` role is used for selectable items in a `listbox`.
 
 ## Description
@@ -105,9 +107,3 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `listbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-  </ol>
-</section>

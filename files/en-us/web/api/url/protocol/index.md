@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.URL.protocol
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`protocol`** property of the {{domxref("URL")}} interface
 is a string representing the protocol scheme of the URL, including the
 final `':'`.
-
-{{AvailableInWorkers}}
 
 ## Value
 

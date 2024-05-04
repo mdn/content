@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.getModuleSlots
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enumerate a module's slots. This function returns an array containing one entry for each slot. Each entry contains the slot's name and, if the slot contains a token, information about the token.
 

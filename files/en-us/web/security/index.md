@@ -24,7 +24,7 @@ Security and privacy are distinct topics, but they are also closely-related. It 
 
 - **Privacy** refers to the act of giving users the right to control how their data is collected, stored, and used, and not using it irresponsibly. For example, you should clearly communicate to users of your sites the data you are collecting, with whom it will be shared, and how it will be used. Users must be given a chance to consent to your privacy policy, have access to their data you have stored, and delete their data if they no longer wish you to have it.
 
-Good security is very essential for good privacy. You could follow all the advice listed in our [Privacy on the web](/en-US/docs/Web/Privacy) guide, but acting with integrity and having a robust privacy policy are futile if your site is not secure and attackers can just steal data anyway.
+Good security is essential for good privacy. You could follow all the advice listed in our [Privacy on the web](/en-US/docs/Web/Privacy) guide, but acting with integrity and having a robust privacy policy are futile if your site is not secure and attackers can just steal data anyway.
 
 ## Security services provided by browsers
 
@@ -85,17 +85,9 @@ There are many aspects of web security that need to be thought about on the serv
 
 ## Store client-side data responsibly
 
-Handling data responsibly is largely concerned with cutting down on [cookie usage](/en-US/docs/Web/HTTP/Cookies) and being careful about the data you store in them. Traditionally, web developers have used cookies to store all kinds of data, for all kinds of purposes, and it has been easy for attackers to exploit this tendency. As a result, browsers have started to limit what you can do with cross-site cookies, with the aim of removing access to them altogether in the future.
+Handling data responsibly is largely concerned with cutting down on [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies) usage and being careful about the data you store and share with them. Traditionally, web developers have used cookies to store all kinds of data, and it has been easy for attackers to exploit this tendency. As a result, browsers have started to limit what you can do with cross-site cookies, with the aim of removing access to them altogether in the future.
 
-You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing desired information persistence in other ways.
-
-For example:
-
-- Use an alternative client-side storage mechanism such as the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) to persist data. Web storage does have the downside that the data is stored per-origin, so it can't be shared. Note that web storage has two variants — `sessionStorage` and `localStorage`. We would recommend using `sessionStorage` for extra security, as data only persists for the lifetime of the window or tab it exists in. `localStorage` data persists even after the window or tab is closed and reopened. This means that there is a higher chance of it falling into the wrong hands, for example on a shared workstation.
-- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way or block them altogether. These technologies currently have limited browser support.
-- Use a server-side solution for data persistence.
-
-See our [privacy guide](/en-US/docs/Web/Privacy) and particularly [Cut down on tracking cookies](/en-US/docs/Web/Privacy#cut_down_on_tracking_cookies) for more context around this.
+You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing desired information persistence in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies) for more information.
 
 ## Protect user identity and manage logins
 

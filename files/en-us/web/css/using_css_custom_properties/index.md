@@ -203,7 +203,7 @@ This leads to the same result as the previous example, yet allows for one canoni
 
 ## Inheritance of custom properties
 
-A custom property defined using two dashes `--` instead of `@property` always inherit the value of its parent.
+A custom property defined using two dashes `--` instead of `@property` always inherits the value of its parent.
 This is demonstrated in the following example:
 
 ```html live-sample___dash-custom-property-inheritance
@@ -279,7 +279,7 @@ The property is only set for the matching selector and its descendants.
 
 ### Using `@property` to control inheritance
 
-The `@property` at-rule lets you explicity state whether the property inherits or not.
+The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
 Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an intital value of `cornflowerblue`.
 
@@ -370,7 +370,7 @@ You should be aware of the performance impact of this method, however, as it tak
 ### Fallbacks using the `@property` initial value
 
 Aside from using `var()`, the `initial-value` defined in the `@property` at-rule can be used as a fallback mechanism.
-In fact, we've already seen this in the [`@property` inheritance](#using-property-to-control-inheritance) section.
+In fact, we've already seen this in the [`@property` inheritance](#using_property_to_control_inheritance) section.
 
 The following example sets an initial value of `--box-color` to `cornflowerblue` using the `@property` at-rule.
 In the ruleset following the at-rule, we want to set `--box-color` to `aquamarine`, but there's a typo in the value name.
@@ -535,5 +535,6 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 - [Custom property syntax](/en-US/docs/Web/CSS/--*)
 - {{cssxref("@property")}} at-rule
-- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [`var()`](/en-US/docs/Web/CSS/var)
+- [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

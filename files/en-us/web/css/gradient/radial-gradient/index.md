@@ -18,7 +18,7 @@ The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/We
    starting red, changing to blue, and finishing green */
 radial-gradient(circle at center, red 0, blue, green 100%)
 
-/* hsl color space with lognger hue interpolation */
+/* hsl color space with longer hue interpolation */
 radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 ```
 
@@ -43,9 +43,9 @@ A radial gradient is specified by indicating the center of the gradient (where t
     | `farthest-side`   | Similar to `closest-side`, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).                            |
     | `farthest-corner` | The default value, the gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.                                                |
 
-    If `<ending-shape>` is specified as `circle`, the size may be given explicitly as a [`<length>`](/en-US/docs/Web/CSS/length), which provides an explicit circle radius. Negative values are invalid.
+    If `<ending-shape>` is specified as `circle`, the size may be given explicitly as a {{cssxref("length")}}, which provides an explicit circle radius. Negative values are invalid.
 
-    If `<ending-shape>` is specified as `ellipse`, the size may be given as a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) with two values to provide an explicit ellipse size. The first value represents the horizontal radius and the second is the vertical radius. Percentage values are relative to the corresponding dimension of the gradient box. Negative values are invalid.
+    If `<ending-shape>` is specified as `ellipse`, the size may be given as a {{cssxref("length-percentage")}} with two values to provide an explicit ellipse size. The first value represents the horizontal radius and the second is the vertical radius. Percentage values are relative to the corresponding dimension of the gradient box. Negative values are invalid.
 
     When the `<ending-shape>` keyword is omitted, the gradient shape is determined by the size given. One `<length>` value provides a circle, while two values in `<length-percentage>`units provide an ellipse. A single `<percentage>` value is not valid.
 
@@ -64,7 +64,7 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 
 ### Composition of a radial gradient
 
-![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same aspect ratio as the box upon which it is declared.](radial_gradient.png)
+![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same {{glossary("aspect ratio")}} as the box upon which it is declared.](radial_gradient.png)
 
 A radial gradient is defined by a _center point_, an _ending shape_, and two or more _color-stop points_.
 

@@ -85,4 +85,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(75)}}
+{{Firefox_for_developers}}

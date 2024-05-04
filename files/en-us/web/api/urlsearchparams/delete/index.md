@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.delete
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`delete()`** method of the {{domxref("URLSearchParams")}} interface deletes specified parameters and their associated value(s) from the list of all search parameters.
 
 A parameter name and optional value are used to match parameters.
 If only a parameter name is specified, then all search parameters that match the name are deleted, along with their associated values.
 If both a parameter name and value are specified, then all search parameters that match both the parameter name and value are deleted.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

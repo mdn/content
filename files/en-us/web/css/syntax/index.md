@@ -19,7 +19,7 @@ Both properties and values are case-insensitive by default in CSS. The pair is s
 
 ![css syntax - declaration.png](css_syntax_-_declaration.png)
 
-There are more than [100 different properties](/en-US/docs/Web/CSS/Reference) in CSS and a nearly infinite number of different values. Not all pairs of properties and values are allowed and each property defines what are the valid values. When a value is not valid for a given property, the declaration is deemed _invalid_ and is wholly ignored by the CSS engine.
+There are [hundreds of different properties](/en-US/docs/Web/CSS/Reference) in CSS and a practically endless number of different values. Not all pairs of properties and values are allowed and each property defines what are the valid values. When a value is not valid for a given property, the declaration is deemed _invalid_ and is wholly ignored by the CSS engine.
 
 ## CSS declaration blocks
 

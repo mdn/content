@@ -16,14 +16,13 @@ method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the all
 ## Syntax
 
 ```js-nolint
-const allowlist = FeaturePolicy.getAllowlistForFeature(feature)
+getAllowlistForFeature(feature)
 ```
 
 ### Parameter
 
-#### Feature name
-
-A specific feature name must be specified.
+- `feature`
+  - : The specific feature name to get its allowlist.
 
 ### Return value
 

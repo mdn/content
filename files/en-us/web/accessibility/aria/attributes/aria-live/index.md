@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-live
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-live` attribute indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 
 ## Description
@@ -64,7 +66,7 @@ A live region includes the element and all its descendants. When not set on upda
 - `polite`
   - : Indicates that updates to the region should be presented at the next graceful opportunity, such as at the end of speaking the current sentence or when the user pauses typing.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaLive")}}
   - : The [`ariaLive`](/en-US/docs/Web/API/Element/ariaLive) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-live` attribute.
@@ -79,14 +81,9 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 - [`alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

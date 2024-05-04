@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Creates and displays a notification.
 

@@ -140,7 +140,9 @@ To achieve this you can allow the browser to choose an appropriate resolution im
 
 Note that even though the image is always displayed with the same size, on higher resolution displays you get to see more details.
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
+
+In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
 
 ```css
 img {

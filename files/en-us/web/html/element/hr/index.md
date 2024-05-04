@@ -72,15 +72,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>It must have start tag, but must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
+        <ul>
+          <li>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a></li>
+          <li><a href="/en-US/docs/Web/HTML/Element/select"><code>&lt;select></code></a> element</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -111,3 +111,4 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ## See also
 
 - {{HTMLElement('p')}}
+- [`<hr>` in `<select>`](/en-US/docs/Web/HTML/Element/select#hr_in_select)

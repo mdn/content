@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ReadableStream.ReadableStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStream()`** constructor creates and returns a readable stream object from the given handlers.
 

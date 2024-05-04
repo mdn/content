@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-posinset
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-posinset` attribute defines an element's number or position in the current set of listitems or treeitems when not all items are present in the DOM.
 
 ## Description
@@ -38,7 +40,7 @@ In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLEl
 - `<integer>`
   - : Integer greater than or equal to 1, and less than or equal to the value of `aria-setsize`.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaPosInSet")}}
   - : The [`ariaPosInSet`](/en-US/docs/Web/API/Element/ariaPosInSet) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-posinset` attribute.
@@ -71,11 +73,6 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

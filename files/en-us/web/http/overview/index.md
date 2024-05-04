@@ -15,7 +15,9 @@ A complete document is reconstructed from the different sub-documents fetched, f
 Clients and servers communicate by exchanging individual messages (as opposed to a stream of data).
 The messages sent by the client, usually a Web browser, are called _requests_ and the messages sent by the server as an answer are called _responses_.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time.
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)
+
+Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time.
 It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used.
 Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results.
 HTTP can also be used to fetch parts of documents to update Web pages on demand.
@@ -218,8 +220,7 @@ Responses consist of the following elements:
 
 ## APIs based on HTTP
 
-The most commonly used API based on HTTP is the {{domxref("XMLHttpRequest")}} API, which can be used to exchange data between a {{Glossary("user agent")}} and a server.
-The modern {{domxref("Fetch API")}} provides the same features with a more powerful and flexible feature set.
+The most commonly used API based on HTTP is the [Fetch API](/en-US/docs/Web/API/Fetch_API), which can be used to make HTTP requests from JavaScript. The Fetch API replaces the {{domxref("XMLHttpRequest")}} API.
 
 Another API, [server-sent events](/en-US/docs/Web/API/Server-sent_events), is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism.
 Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers.

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.getPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the URL for the HTML document set as the popup for this page action.
 

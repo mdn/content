@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-orientation
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-orientation` attribute indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
 ## Description
@@ -44,7 +46,7 @@ Always remember that ARIA only modifies how assistive technology presents conten
 - `vertical`
   - : The element is oriented vertically.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaOrientation")}}
   - : The [`ariaOrientation`](/en-US/docs/Web/API/Element/ariaOrientation) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-orientation` attribute.
@@ -75,11 +77,6 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [Understanding WCAG: Keyboard](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

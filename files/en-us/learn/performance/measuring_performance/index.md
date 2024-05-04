@@ -17,10 +17,9 @@ This article introduces tools you can use to access web performance metrics, whi
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a

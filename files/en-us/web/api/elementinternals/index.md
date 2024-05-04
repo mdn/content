@@ -19,7 +19,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
 - {{domxref("ElementInternals.form")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("HTMLFormElement")}} associated with this element.
-- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
@@ -33,7 +33,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
 
 ### Instance properties included from ARIA
 
-The `ElementInternals` interface includes the following properties, defined on the `ARIAMixin` mixin.
+The `ElementInternals` interface also includes the following properties.
 
 > **Note:** These are included in order that default accessibility semantics can be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 

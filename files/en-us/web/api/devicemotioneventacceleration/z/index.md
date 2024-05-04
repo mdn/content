@@ -24,8 +24,3 @@ See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_even
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [`DeviceMotionEventAcceleration.x`](/en-US/docs/Web/API/DeviceMotionEventAcceleration/x)
-- [`DeviceMotionEventAcceleration.y`](/en-US/docs/Web/API/DeviceMotionEventAcceleration/y)

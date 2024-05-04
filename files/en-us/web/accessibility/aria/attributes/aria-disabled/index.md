@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-disabled` state indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
 ## Description
@@ -91,7 +93,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 - `false`
   - : The element is not disabled
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaDisabled")}}
   - : The [`ariaDisabled`](/en-US/docs/Web/API/Element/ariaDisabled) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
@@ -146,7 +148,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [Making disabled buttons more inclusive](https://css-tricks.com/making-disabled-buttons-more-inclusive/) by Sandrina Pereira
 - [Styling for Windows high contrast with new standards for forced colors](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
@@ -155,8 +157,3 @@ Inherits into roles:
 - {{domxref("ElementInternals.ariaDisabled")}}
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-details
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
 
 ## Description
@@ -64,7 +66,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
@@ -72,8 +74,3 @@ Used in **ALL** roles.
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
 - HTML [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

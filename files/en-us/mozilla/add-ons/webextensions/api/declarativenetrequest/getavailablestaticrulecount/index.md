@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getAvailableStaticRuleCount
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the number of static rules that can be activated before the global static rule limit is reached.
 

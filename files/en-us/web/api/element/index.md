@@ -58,7 +58,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
     > **Note:** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
 
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
-  - : An {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
+  - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
 - {{DOMxRef("Element.part")}}
@@ -66,7 +66,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
 - {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
-  - : An {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
+  - : An `Element`, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
 - {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
   - : Returns a number representing the scroll view height of an element.
 - {{DOMxRef("Element.scrollLeft")}}
@@ -88,12 +88,16 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 
 ### Instance properties included from ARIA
 
-_The `Element` interface includes the following properties, defined on the `ARIAMixin` mixin._
+_The `Element` interface also includes the following properties._
 
 - {{domxref("Element.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
 - {{domxref("Element.ariaAutoComplete")}}
   - : A string reflecting the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+- {{domxref("Element.ariaBrailleLabel")}}
+  - : A string reflecting the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) attribute, which defines the braille label of the element.
+- {{domxref("Element.ariaBrailleRoleDescription")}}
+  - : A string reflecting the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
 - {{domxref("Element.ariaBusy")}}
   - : A string reflecting the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 - {{domxref("Element.ariaChecked")}}
@@ -185,8 +189,10 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.before()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
+- {{DOMxRef("Element.checkVisibility()")}}
+  - : Returns whether an element is expected to be visible or not based on configurable checks.
 - {{DOMxRef("Element.closest()")}}
-  - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
+  - : Returns the `Element` which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
 - {{DOMxRef("Element.computedStyleMap()")}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("Element.getAnimations()")}}
@@ -273,7 +279,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
-- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}}
+- {{DOMxRef("Element.setHTML()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML and inserts into the DOM as a subtree of the element.
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
@@ -290,7 +296,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a script is about to be executed.
-- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
+- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
@@ -344,7 +350,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Fullscreen events
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{domxref("Element")}} when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : Sent to an `Element` when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 

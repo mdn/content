@@ -13,7 +13,7 @@ When you built up the "Guess the number" game in the previous article, you may h
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>

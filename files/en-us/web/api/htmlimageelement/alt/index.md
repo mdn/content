@@ -49,7 +49,7 @@ In the HTML for this example, shown below, the {{HTMLElement("img")}} element in
 ```html
 <div class="container">
   <div class="left-margin">
-    <img src="/files/16861/margin-flourish.svg" alt="" />
+    <img src="margin-flourish.svg" alt="" />
   </div>
   <div class="contents">
     <p>
@@ -91,7 +91,7 @@ p {
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237);
+  background-color: rgb(241 240 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -107,7 +107,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235);
+  background-color: rgb(241 240 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;

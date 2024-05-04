@@ -17,16 +17,8 @@ The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} is 
 
 _This interface also inherits properties from {{domxref("Credential")}}._
 
-- {{domxref("OTPCredential.code")}} {{Experimental_Inline}}
-  - : The OTP.
-- {{domxref("Credential.id", "OTPCredential.id")}}
-  - : Inherited from {{domxref("Credential")}}. The ID of the credential type.
-- {{domxref("Credential.type", "OTPCredential.type")}}
-  - : Inherited from {{domxref("Credential")}}. Always set to `otp` for `OTPCredential` instances.
-
-### Event handlers
-
-None.
+- {{domxref("OTPCredential.code")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The one-time password (OTP).
 
 ## Instance methods
 

@@ -25,8 +25,7 @@ that it will not be possible to draw them to the screen at the correct time.
 
 ## Examples
 
-This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
-  "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
+This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality", "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
 then determines what percentage of frames have been dropped. That value is then
 presented in an element for the user's reference.
 

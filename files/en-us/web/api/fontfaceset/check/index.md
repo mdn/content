@@ -77,8 +77,6 @@ console.log(document.fonts.check("12px i-dont-exist"));
 // true: the matching font is a nonexistent font
 ```
 
-> **Note:** In this situation Chrome incorrectly returns `false`. This can make [fingerprinting](/en-US/docs/Glossary/Fingerprinting) easier, because an attacker can easily test which system fonts the browser has.
-
 ### System and unloaded fonts
 
 If we specify both a system font and a font in the set that is not yet loaded, then `check()` returns `false`:

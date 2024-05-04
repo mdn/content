@@ -31,7 +31,10 @@ A `for...of` loop operates on the values sourced from an iterable one by one in 
 
 When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
 
-A `for...of` loop exits when the iterator has completed (the iterator's `next()` method returns an object containing `done: true`). You may also use control flow statements to change the normal control flow. [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) exits the loop and goes to the first statement after the loop body, while [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue) skips the rest of the statements of the current iteration and proceeds to the next iteration.
+A `for...of` loop exits when the iterator has completed (the `next()` result is an object with `done: true`). Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and goes to the next iteration of the loop.
 
 If the `for...of` loop exited early (e.g. a `break` statement is encountered or an error is thrown), the [`return()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method of the iterator is called to perform any cleanup.
 

@@ -59,47 +59,6 @@ Layout for `input type="search"` has been updated. This causes a search field to
   </tbody>
 </table>
 
-### showPicker() method for HTML select elements
-
-The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction.
-(See [Firefox bug 1854112](https://bugzil.la/1854112) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>121</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.select.showPicker.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Toggle password display
 
 HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
@@ -266,9 +225,13 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   </tbody>
 </table>
 
-Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
-(See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+Note:
+
+- The related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
+  These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
+  (See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+- The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
+  (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
 ### Single numbers as aspect ratio in media queries
 
@@ -346,50 +309,6 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.backdrop-filter.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### ray() CSS function
-
-The CSS {{cssxref("ray")}} function is a way to define an {{cssxref("offset-path")}}. The function defines the path as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle ([Firefox bug 1582554](https://bugzil.la/1582554)).
-
-In version 112, the `<ray_size>` optional parameter was added to the function. If no `<ray_size>` parameter is provided, it assumes the default value of `closest-side` ([Firefox bug 1820071](https://bugzil.la/1820071)).
-
-In version 116, the `at <position>` optional parameter was added to the function. If omitted, the `offset-position` value of the element is used. If both `at <position>` and `offset-position` values are absent, `offset-position: auto` is used as ray's starting position, which places the element at the `top left` corner of the element's box. ([Firefox bug 1820070](https://bugzil.la/1820070)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>72</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>72</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>72</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>72</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.motion-path-ray.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -813,131 +732,6 @@ See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
   </tbody>
 </table>
 
-### offset-position property
-
-The CSS {{cssxref("offset-position")}} property defines the initial position of an element on a path. A new keyword called `normal` has been added to the syntax of the property. When using this keyword, the initial starting position of an element on an {{cssxref("offset-path")}} depends on the CSS function used – {{cssxref("path")}} or {{cssxref("ray")}} – to specify the value of the `offset-path` property. For more information, see {{cssxref("offset-position")}}. See ([Firefox bug 1559232](https://bugzil.la/1559232)) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>116</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.motion-path-offset-position.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### rect() and xywh() basic shape functions
-
-The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions enable you to define a rectangle using the [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block as well as the width and height of the rectangle. In both the functions, you can optionally round off the corners.
-For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference names</th>
-      <td colspan="2">
-      <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
-    </td>
-    </tr>
-  </tbody>
-</table>
-
-### url() function in offset-path property
-
-The CSS {{cssxref("offset-path")}} property now supports using [`url()`](/en-US/docs/Web/CSS/offset-path#url) to specify the ID of an SVG shape element. The referenced shape defines the shape of the path that an element will follow ([Firefox bug 1598158](https://bugzil.la/1598158)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>118</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>118</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>118</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>118</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-      <code>layout.css.motion-path-url.enabled</code>
-    </td>
-    </tr>
-  </tbody>
-</table>
-
 ### zoom property
 
 The non-standard CSS {{cssxref("zoom")}} property is enabled in the Nightly release and lets you magnify an element similar to the {{cssxref("transform")}} property, but it affects the layout size of the element.
@@ -981,12 +775,53 @@ See ([Firefox bug 1855763](https://bugzil.la/1855763) and [Firefox bug 390936](h
   </tbody>
 </table>
 
-To ensure compatibility with these changes, the [Vendor-prefixed transform properties](#vendor-prefixed-transform-properties) and the [Vendor-prefixed transition properties](#vendor-prefixed-transition-properties) are disabled in the Nightly release.
+To ensure compatibility with these changes, the [Vendor-prefixed transform properties](#vendor-prefixed_transform_properties) and the [Vendor-prefixed transition properties](#vendor-prefixed_transition_properties) are disabled in the Nightly release.
 These changes are described in the following sections.
 
-#### Vendor-prefixed transform properties
+### text-wrap: balance & stable values
 
-The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+The [`text-wrap`](/en-US/docs/Web/CSS/text-wrap) CSS property values `balance` and `stable` allow the layout of short content to be wrapped in a balanced manner and for editable content to not reflow while the user is editing it, respectively.
+(See [Firefox bug 1731541](https://bugzil.la/1731541) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>120</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>120</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.text-wrap-balance.enabled, layout.css.text-wrap-balance.limit, layout.css.text-wrap-balance-after-clamp.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Vendor-prefixed transform properties
+
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false`. ([Firefox bug 1855763](https://bugzil.la/1855763)).
 Specifically, the disabled properties are:
 
 - `-moz-backface-visibility`
@@ -1034,9 +869,9 @@ Specifically, the disabled properties are:
   </tbody>
 </table>
 
-#### Vendor-prefixed transition properties
+### Vendor-prefixed transition properties
 
-The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false` ([Firefox bug 1855763](https://bugzil.la/1855763)).
+The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false`. ([Firefox bug 1855763](https://bugzil.la/1855763)).
 Specifically, the disabled properties are:
 
 - `-moz-transition`
@@ -1083,7 +918,94 @@ Specifically, the disabled properties are:
   </tbody>
 </table>
 
+### UA styles for `<h1>` nested in sectioning elements
+
+The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+> **Note:** The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>125</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>125</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>125</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>125</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>layout.css.h1-in-section-ua-styles.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
+
+### transition-behavior property
+
+The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release or by setting the `layout.css.transition-behavior.enabled` preference to `true`.
+Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>125</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>125</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>125</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>125</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+      <code>layout.css.transition-behavior.enabled</code>
+    </td>
+    </tr>
+  </tbody>
+</table>
 
 ### SVGPathSeg APIs
 
@@ -1129,47 +1051,88 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array transfer
+### SharedArrayBuffer is growable
 
-The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
-The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
-After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
-(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
+The {{jsxref("SharedArrayBuffer")}} is now growable using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
+The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
+The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be grow, and its maximum allowed size, respectively.
+([Firefox bug 1842773](https://bugzil.la/1842773)).
 
 <table>
   <thead>
     <tr>
       <th>Release channel</th>
-      <th>Version removed</th>
+      <th>Version added</th>
       <th>Enabled by default?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>117</td>
+      <td>124</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>NA</td>
+      <td>124</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>NA</td>
+      <td>124</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>NA</td>
+      <td>124</td>
       <td>No</td>
     </tr>
     <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.sharedarraybuffer_growable</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### ArrayBuffer is resizable
+
+The {{jsxref("ArrayBuffer")}} can now be resized using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
+The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
+The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
+([Firefox bug 1842773](https://bugzil.la/1842773).)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
-    </tr>
+      <td colspan="2"><code>javascript.options.experimental.arraybuffer_resizable</code></td>
     </tr>
   </tbody>
 </table>
@@ -1611,64 +1574,21 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 ### HTML DOM API
 
-#### Popover API
+#### Shadow DOM
 
-Firefox now supports the [Popover API](/en-US/docs/Web/API/Popover_API).
+Firefox now supports the `clonable` option and property for shadow DOM.
 
-The following Web APIs are now implemented:
+- The {{domxref("Element.attachShadow()")}} method's `clonable` boolean option specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
+- The {{domxref("ShadowRoot")}} interface's {{domxref("ShadowRoot.clonable", "clonable")}} read-only property returns `true` if the shadow root is clonable, and `false` otherwise.
 
-- [`HTMLButtonElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement) and [`HTMLButtonElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction).
-- [`HTMLInputElement.popoverTargetElement`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetElement) and [`HTMLInputElement.popoverTargetAction`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetAction).
-- [`HTMLElement.popover`](/en-US/docs/Web/API/HTMLElement/popover), [`HTMLElement.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`HTMLElement.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), and [`HTMLElement.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover).
-- `HTMLElement` [`beforetoggle` event](/en-US/docs/Web/API/HTMLElement/beforetoggle_event), `HTMLElement` [`toggle_event` event](/en-US/docs/Web/API/HTMLElement/toggle_event), and [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent).
+When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1868428](https://bugzil.la/1868428))
 
-CSS updates include:
-
-- [`:popover-open`](/en-US/docs/Web/CSS/:popover-open)
-- [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers
-
-The following HTML global attributes are supported:
-
-- [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
-- [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
-
-See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>114</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.element.popover.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 122           | Yes                 |
+| Developer Edition | NA            | No                  |
+| Beta              | NA            | No                  |
+| Release           | NA            | No                  |
 
 #### HTMLMediaElement method: setSinkId()
 
@@ -1752,7 +1672,8 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
 
 #### ClipboardItem
 
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See [Firefox bug 1619947](https://bugzil.la/1619947) for more details.
+The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported. It is available in nightly or early beta builds.
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1765,8 +1686,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1775,8 +1696,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
     </tr>
     <tr>
       <th>Beta</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1790,9 +1711,10 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   </tbody>
 </table>
 
-#### ClipboardRead
+#### Clipboard read and write
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See [Firefox bug 1701512](https://bugzil.la/1701512) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText), and [Clipboard.write()](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface are now available in nightly and early beta builds
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1805,8 +1727,8 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>90</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1815,8 +1737,8 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1825,7 +1747,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.read</code></td>
+      <td colspan="2"><code>dom.events.asyncClipboard.readText</code> and <code>dom.events.asyncClipboard.clipboardItem</code></td>
     </tr>
   </tbody>
 </table>
@@ -1946,47 +1868,6 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.getBoxQuads.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### Custom element state pseudo-class
-
-Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state.
-(See [Firefox bug 1861466](https://bugzil.la/1861466) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.element.customstateset.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2165,6 +2046,48 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webnotifications.requireinteraction.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Web Codecs API
+
+The [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) gives web developers low-level access to the individual frames of a video stream and chunks of audio.
+The following interfaces are supported (on Linux desktop only): [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
+([Firefox bug 1874445](https://bugzil.la/1874445)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>123</td>
+      <td>Yes. Linux desktop only.</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>123</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>123</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>123</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.media.webcodecs.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2431,48 +2354,6 @@ For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>network.cookie.sameSite.laxByDefault</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### HTTP Status 103
-
-The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code may be sent by a server to allow a user agent to start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server is still preparing the full response.
-Note that using the header to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites is already supported.
-For more details see [Firefox bug 1813035](https://bugzil.la/1813035).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>111</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>102</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>network.early-hints.enabled</code></td>
     </tr>
   </tbody>
 </table>

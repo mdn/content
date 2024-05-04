@@ -13,10 +13,9 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -152,7 +151,7 @@ So far, we have styled elements based on their HTML element names. This works as
    </ul>
    ```
 
-2. In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
+2. In your CSS, you can target the class of `special` by creating a selector that starts with a period. Add the following to your CSS file:
 
    ```css
    .special {

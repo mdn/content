@@ -74,7 +74,7 @@ The example adjusts the sizes of page elements in three ways:
 - the font size of paragraph text
 - the font size of heading text
 
-In all three cases, the page uses a combination of a viewport-relative units ([`vw`](/en-US/docs/Web/CSS/length#vw) and [`<percentage>`](/en-US/docs/Web/CSS/percentage)), to set a size that varies with the viewport width, and a value that is not viewport relative ([`rem`](/en-US/docs/Web/CSS/length#rem) and [`px`](/en-US/docs/Web/CSS/length#px)) to implement minimum and/or maximum sizes.
+In all three cases, the page uses a combination of a viewport-relative units ([`vw`](/en-US/docs/Web/CSS/length#vw) and {{cssxref("percentage")}}), to set a size that varies with the viewport width, and a value that is not viewport relative ([`rem`](/en-US/docs/Web/CSS/length#rem) and [`px`](/en-US/docs/Web/CSS/length#px)) to implement minimum and/or maximum sizes.
 
 The example is at <https://mdn.github.io/css-examples/min-max-clamp/>. Open it in a new window and try adjusting the window width.
 

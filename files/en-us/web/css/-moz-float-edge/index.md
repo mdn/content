@@ -16,10 +16,8 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ```css
 /* Keyword values */
--moz-float-edge: border-box;
 -moz-float-edge: content-box;
 -moz-float-edge: margin-box;
--moz-float-edge: padding-box;
 
 /* Global values */
 -moz-float-edge: inherit;
@@ -29,14 +27,10 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ### Values
 
-- `border-box`
-  - : The height and width properties include the content, padding and border but not the margin.
 - `content-box`
   - : The height and width properties include the content, but not the padding, border or margin.
 - `margin-box`
   - : The height and width properties include the content, padding, border and margin.
-- `padding-box`
-  - : The height and width properties include the content and padding but not the border or margin.
 
 ## Formal definition
 
@@ -46,7 +40,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ```plain
 -moz-float-edge =
-  border-box | content-box | margin-box | padding-box
+  content-box | margin-box
 ```
 
 ## Examples

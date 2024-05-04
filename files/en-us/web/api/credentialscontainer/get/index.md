@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.get
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single credential instance that matches the provided parameters, which the browser can then use to authenticate with a relying party. This is used by several different credential-related APIs with significantly different purposes:
 
@@ -30,33 +30,38 @@ get(options)
 
   - : An object that contains options for the request. The options include criteria that the credentials are required or allowed to have, and options for interacting with the user. It can contain the following properties:
 
-    - "Credential type"
-
-      - : An object or boolean defining the type of credential being requested — this can be one of one of:
-
-        - `federated`: An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `password`: A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `identity`: An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use for purposes such as signing in or signing up on a website. It causes the `get()` call to initiate a request for a user to sign in to an RP with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
-        - `otp`: An object containing transport type hints. Causes the `get()` call to initiate a request for the retrieval of an OTP. See the [WebOTP API](#webotp_api) section below for more details.
-        - `publicKey`: An object containing requirements for returned public key credentials. Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party. See the [Web Authentication API](#web_authentication_api) section below for more details.
-
     - `mediation` {{optional_inline}}
 
       - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
 
         - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
 
-        - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
+        - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
 
         - `"required"`: The user will always be asked to authenticate, even if prevent silent access (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is set to `false`. This value is intended for situations where you want to force user authentication — for example if you want a user to reauthenticate when a sensitive operation is being performed (like confirming a credit card payment), or when switching users.
 
-        - `"silent"`: The user will not be asked to authenticate. The user agent will automatically log the user in if possible; if consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
+        - `"silent"`: The user will not be asked to authenticate. The user agent will automatically reauthenticate the user and log them in if possible. If consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
 
         If `mediation` is omitted, it will default to `"optional"`.
+
+        > **Note:** In the case of a [federated authentication (FedCM API)](/en-US/docs/Web/API/FedCM_API) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the identity provider (IdP) via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation and the relying party (RP) via the {{domxref("IdentityCredential.isAutoSelected")}} property. This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
 
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+
+    Each of the following properties represents a _credential type_ being requested:
+
+    - `federated` {{optional_inline}}
+      - : An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
+    - `password` {{optional_inline}}
+      - : A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
+    - `identity` {{optional_inline}}
+      - : An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use for purposes such as signing in or signing up on a website. It causes the `get()` call to initiate a request for a user to sign in to an RP with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
+    - `otp` {{optional_inline}}
+      - : An object containing transport type hints. Causes the `get()` call to initiate a request for the retrieval of an OTP. See the [WebOTP API](#webotp_api) section below for more details.
+    - `publicKey` {{optional_inline}}
+      - : An object containing requirements for returned public key credentials. Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
 ## Credential Management API
 
@@ -89,8 +94,10 @@ If a single credential cannot be unambiguously obtained, the Promise will resolv
 ```js
 navigator.credentials
   .get({
-    protocols: ["openidconnect"],
-    providers: ["https://www.facebook.com", "https://accounts.google.com"],
+    federated: {
+      protocols: ["openidconnect"],
+      providers: ["https://www.facebook.com", "https://accounts.google.com"],
+    },
   })
   .then((fedCred) => {
     console.log(fedCred.provider);
@@ -99,7 +106,9 @@ navigator.credentials
 
 ## Federated Credential Management API
 
-The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
+The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism to delegate authentication or authorization of an individual (user or entity) to trusted external parties called identity providers (IdPs) in a privacy-preserving way, without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and redirects.
+
+An individual can then use an existing IdP account (that they are already signed into on the browser) to sign into a website (a relying party or RP). The RP handles this by calling `get()` with an `identity` option.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
@@ -114,30 +123,48 @@ The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
     - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
     - `use`: Suitable for situations where a different action, such as validating a payment, is being performed. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
 - `providers`
-  - : An array of objects specifying details of the different IdPs to be used to sign in. Each object can contain the following properties:
+
+  - : An array containing a single object specifying details of an IdP to be used to sign in. This object can contain the following properties:
+
     - `configURL`
-      - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) section on the _FedCM API_ landing page for more information.
+      - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
       - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
     - `loginHint` {{optional_inline}}
-      - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API#the_accounts_list_endpoint).
+      - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the IdP's [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
+    > **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls.
+
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters if the user identity is successfully validated by the IdP.
+
+This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
+
+The RP sends the token to its server to validate the certificate, and on success can use the (now trusted) identity information in the token to sign them into their service (starting a new session), sign them up to their service if they are a new user, etc.
+
+If the `get()` method's promise rejects, the RP can direct the user to the IdP login page to sign in or create an account.
+
+> **Note:** The exact nature of the token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
 
 ### Exceptions
 
+- `IdentityCredentialError` {{domxref("DOMException")}}
+  - : The request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about why. See the [Error API example](#example_including_error_api_information) below for more information on how it can be used.
 - `NetworkError` {{domxref("DOMException")}}
-  - : The IdP did not respond within 60 seconds, or the provided credentials were not valid/found.
+
+  - : The IdP did not respond within 60 seconds, the provided credentials were not valid/found, or the browser's login status for the IdP is set to `"logged-out"` (see [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status). In the latter case, there may be some delay in the rejection to avoid leaking the IdP login status to the RP.
+
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by an {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ### Examples
 
-Relying parties can call `get()` with the `identity` option to make a request for users to login to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
+#### Basic example
+
+Relying parties can call `get()` with the `identity` option to make a request for users to sign in to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
 
 ```js
 async function signIn() {
@@ -155,7 +182,9 @@ async function signIn() {
 }
 ```
 
-Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
+
+#### Example including context and login hint
 
 A similar call including the `context` and `loginHint` extensions would look like so:
 
@@ -177,7 +206,36 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+> **Note:** After a user has signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in. However, `getUserInfo()` offers a way to achieve this without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+
+#### Example including Error API information
+
+If the IdP is unable to validate the authentication for a request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) it will respond with an error.
+
+The error may be handled in code as shown:
+
+```js
+async function signIn() {
+  try {
+    const identityCredential = await navigator.credentials.get({
+      identity: {
+        providers: [
+          {
+            configURL: "https://accounts.idp.example/config.json",
+            clientId: "********",
+            nonce: "******",
+          },
+        ],
+      },
+    });
+  } catch (e) {
+    // Handle the error in some way, for example provide information
+    // to help the user succeed in a future sign-in attempt
+    const code = e.code;
+    const url = e.url;
+  }
+}
+```
 
 ## WebOTP API
 
@@ -198,6 +256,8 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("OTPCredential")}} objec
 
 - `AbortError` {{domxref("DOMException")}}
   - : The `get()` operation is associated with an {{domxref("AbortSignal")}} (i.e., set in the `signal` property) that has already been aborted.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : The calling origin is an [opaque origin](/en-US/docs/Web/HTTP/Headers/Origin#null).
 - `SecurityError` {{domxref("DOMException")}}
   - : Either the usage is blocked by a {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) or the calling domain is not a valid domain.
 
@@ -336,7 +396,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}}
 
 ### Exceptions
 
-- `SecurityError` {{domxref("DOMException")}}
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ### Examples

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onReplaced
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a tab is replaced with another tab due to prerendering or instant.
 

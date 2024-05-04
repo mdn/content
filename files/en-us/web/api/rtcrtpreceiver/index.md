@@ -11,12 +11,14 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ## Instance properties
 
+- {{domxref("RTCRtpReceiver.jitterBufferTarget")}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that indicates an application's preferred hold time for media in the jitter buffer, allowing it influence the tradeoff between playout delay and the risk of running out of audio or video frames due to network jitter.
 - {{domxref("RTCRtpReceiver.track")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
 - {{domxref("RTCRtpReceiver.transport")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.
 - {{domxref("RTCRtpReceiver.transform")}}
-  - : An {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} --> is used to insert a transform stream ({{domxref("TransformStream")}}) running in a worker thread into the receiver pipeline, allowing stream transforms to be applied to incoming encoded video and audio frames.
+  - : An {{domxref("RTCRtpScriptTransform")}} is used to insert a transform stream ({{domxref("TransformStream")}}) running in a worker thread into the receiver pipeline, allowing stream transforms to be applied to incoming encoded video and audio frames.
 
 ### Obsolete properties
 

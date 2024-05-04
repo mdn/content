@@ -228,7 +228,7 @@ The optional `break` statement associated with each `case` clause
 ensures that the program breaks out of `switch` once the matched statement is
 executed, and then continues execution at the statement following `switch`.
 If `break` is omitted, the program continues execution inside the
-`switch` statement (and will evaluate the next `case`, and so on).
+`switch` statement (and will execute statements under the next `case`, and so on).
 
 ##### Example
 

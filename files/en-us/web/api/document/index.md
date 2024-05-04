@@ -174,6 +174,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
+- {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
@@ -256,6 +258,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
+  - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 - {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
   - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
 
@@ -349,7 +353,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/scrollend_event", "scrollend")}}
-  - : Fired when the document view or an element has been scrolled.
+  - : Fired when the document view or an element has completed scrolling.
 
 ### Selection events
 

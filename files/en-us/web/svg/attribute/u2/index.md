@@ -9,16 +9,18 @@ browser-compat: svg.elements.hkern.u2
 
 {{SVGRef}}{{Deprecated_Header}}
 
-The **`u2`** attribute specifies list of {{Glossary("Unicode")}} characters (refer to the description of the {{SVGAttr("unicode")}} attribute of the {{SVGElement("glyph")}} element for a description of how to express individual Unicode characters) and/or ranges of Unicode characters, which identify a set of possible second {{Glossary("glyphs")}} in a kerning pair.
+The **`u2`** attribute specifies list of {{Glossary("Unicode")}} characters (refer to the description of the {{SVGAttr("unicode")}} attribute of the {{SVGElement("glyph")}} element for a description of how to express individual Unicode characters) and/or ranges of Unicode characters, which identify a set of possible second {{Glossary("glyph")}} in a kerning pair.
 
 If a given Unicode character within the set has multiple corresponding `<glyph>` elements (i.e., there are multiple `<glyph>` elements with the same `unicode` attribute value but different {{SVGAttr("glyph-name")}} values), then all such glyphs are included in the set. Comma is the separator character; thus, to kern a comma, specify the comma as part of a range of Unicode characters or as a glyph name using the {{SVGAttr("g2")}} attribute. The total set of possible second glyphs in the kerning pair is the union of glyphs specified by the `u2` and `g2` attributes.
+
+## Elements
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("hkern")}}
 - {{SVGElement("vkern")}}
 
-## Context notes
+## Usage notes
 
 <table class="properties">
   <tbody>

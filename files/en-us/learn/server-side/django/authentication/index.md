@@ -43,7 +43,7 @@ The authentication was enabled automatically when we [created the skeleton websi
 
 > **Note:** The necessary configuration was all done for us when we created the app using the `django-admin startproject` command. The database tables for users and model permissions were created when we first called `python manage.py migrate`.
 
-The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**locallibrary/locallibrary/settings.py**), as shown below:
+The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**django-locallibrary-tutorial/locallibrary/settings.py**), as shown below:
 
 ```python
 INSTALLED_APPS = [
@@ -97,7 +97,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user.save()
 > ```
 >
-> For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/4.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
+> For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
@@ -144,7 +144,7 @@ In this section, we show how to integrate the default system into the _LocalLibr
 
 ### Project URLs
 
-Add the following to the bottom of the project urls.py file (**locallibrary/locallibrary/urls.py**) file:
+Add the following to the bottom of the project urls.py file (**django-locallibrary-tutorial/locallibrary/urls.py**) file:
 
 ```python
 # Add Django site authentication urls (for login, logout, password management)
@@ -155,10 +155,10 @@ urlpatterns += [
 ```
 
 Navigate to the `http://127.0.0.1:8000/accounts/` URL (note the trailing forward slash!).
-Django will show an error that it could not find this URL, and list all the URLs it tried.
-From this you can see the URLs that will work, for example:
+Django will show an error that it could not find a mapping for this URL, and list all the URLs that it tried.
+From this you can see the URLs that will work once we have created templates.
 
-> **Note:** Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
+> **Note:** Adding the `accounts/` path as shown above adds the following URLs, along with names (given in square brackets) that can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -179,7 +179,7 @@ Exception Type:    TemplateDoesNotExist
 Exception Value:    registration/login.html
 ```
 
-The next step is to create a registration directory on the search path and then add the **login.html** file.
+The next step is to create a directory for the templates named "registration" and then add the **login.html** file.
 
 ### Template directory
 
@@ -190,7 +190,7 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 > **Note:** Your folder structure should now look like the below:
 >
 > ```plain
-> locallibrary/   # Django project folder
+> django-locallibrary-tutorial/   # Django top level project folder
 >   catalog/
 >   locallibrary/
 >   templates/
@@ -198,9 +198,9 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 > ```
 
 To make the **templates** directory visible to the template loader we need to add it in the template search path.
-Open the project settings (**/locallibrary/locallibrary/settings.py**).
+Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**).
 
-Then import the `os` module (add the following line near the top of the file).
+Then import the `os` module (add the following line near the top of the file if it isn't already present).
 
 ```python
 import os # needed by code below
@@ -222,7 +222,7 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 > **Warning:** The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customize them for your own use!
 
-Create a new HTML file called /**locallibrary/templates/registration/login.html** and give it the following contents:
+Create a new HTML file called /**django-locallibrary-tutorial/templates/registration/login.html** and give it the following contents:
 
 ```django
 {% extends "base_generic.html" %}
@@ -272,7 +272,7 @@ Navigate back to the login page (`http://127.0.0.1:8000/accounts/login/`) once y
 
 If you log in using valid credentials, you'll be redirected to another page (by default this will be `http://127.0.0.1:8000/accounts/profile/`). The problem is that, by default, Django expects that upon logging in you will want to be taken to a profile page, which may or may not be the case. As you haven't defined this page yet, you'll get another error!
 
-Open the project settings (**/locallibrary/locallibrary/settings.py**) and add the text below to the bottom. Now when you log in you should be redirected to the site homepage by default.
+Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**) and add the text below to the bottom. Now when you log in you should be redirected to the site homepage by default.
 
 ```python
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
@@ -281,9 +281,10 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Logout template
 
-If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll see some odd behavior — your user will be logged out sure enough, but you'll be taken to the **Admin** logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the `is_staff` permission).
+If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
+We'll add a form you can use to logout in a minute, but first we'll create the page that users are taken to after logging out.
 
-Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
+Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
 
 ```django
 {% extends "base_generic.html" %}
@@ -294,7 +295,7 @@ Create and open **/locallibrary/templates/registration/logged_out.html**. Copy i
 {% endblock %}
 ```
 
-This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. If you go to the logout URL again you should see this page:
+This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. The screen renders like this (after logout):
 
 ![Library logout page v1](library_logout.png)
 
@@ -306,7 +307,7 @@ The following templates can be used as a starting point.
 
 #### Password reset form
 
-This is the form used to get the user's email address (for sending the password reset email). Create **/locallibrary/templates/registration/password_reset_form.html**, and give it the following contents:
+This is the form used to get the user's email address (for sending the password reset email). Create **/django-locallibrary-tutorial/templates/registration/password_reset_form.html**, and give it the following contents:
 
 ```django
 {% extends "base_generic.html" %}
@@ -325,7 +326,7 @@ This is the form used to get the user's email address (for sending the password 
 
 #### Password reset done
 
-This form is displayed after your email address has been collected. Create **/locallibrary/templates/registration/password_reset_done.html**, and give it the following contents:
+This form is displayed after your email address has been collected. Create **/django-locallibrary-tutorial/templates/registration/password_reset_done.html**, and give it the following contents:
 
 ```django
 {% extends "base_generic.html" %}
@@ -337,7 +338,7 @@ This form is displayed after your email address has been collected. Create **/lo
 
 #### Password reset email
 
-This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
+This template provides the text of the HTML email containing the reset link that we will send to users. Create **/django-locallibrary-tutorial/templates/registration/password_reset_email.html**, and give it the following contents:
 
 ```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
@@ -346,7 +347,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 #### Password reset confirm
 
-This page is where you enter your new password after clicking the link in the password reset email. Create **/locallibrary/templates/registration/password_reset_confirm.html**, and give it the following contents:
+This page is where you enter your new password after clicking the link in the password reset email. Create **/django-locallibrary-tutorial/templates/registration/password_reset_confirm.html**, and give it the following contents:
 
 ```django
 {% extends "base_generic.html" %}
@@ -382,7 +383,7 @@ This page is where you enter your new password after clicking the link in the pa
 
 #### Password reset complete
 
-This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
+This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/django-locallibrary-tutorial/templates/registration/password_reset_complete.html**, and give it the following contents:
 
 ```django
 {% extends "base_generic.html" %}
@@ -395,14 +396,12 @@ This is the last password-reset template, which is displayed to notify you when 
 
 ### Testing the new authentication pages
 
-Now that you've added the URL configuration and created all these templates, the authentication pages should now just work!
+Now that you've added the URL configuration and created all these templates, the authentication pages (other than logout) should now just work!
 
-You can test the new authentication pages by attempting to log in to and then log out of your superuser account using these URLs:
-
-- `http://127.0.0.1:8000/accounts/login/`
-- `http://127.0.0.1:8000/accounts/logout/`
-
+You can test the new authentication pages by first attempting to log in to your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
 You'll be able to test the password reset functionality from the link in the login page. **Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!**
+
+Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
 
 > **Note:** The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
 >
@@ -410,7 +409,7 @@ You'll be able to test the password reset functionality from the link in the log
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/4.2/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/5.0/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -422,27 +421,47 @@ You can get information about the currently logged in user in templates with the
 
 Typically you will first test against the `\{{ user.is_authenticated }}` template variable to determine whether the user is eligible to see specific content. To demonstrate this, next we'll update our sidebar to display a "Login" link if the user is logged out, and a "Logout" link if they are logged in.
 
-Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
+Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
 
 ```django
   <ul class="sidebar-nav">
-
     …
-
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
+     <li>
+       <form id="logout-form" method="post" action="{% url 'logout' %}">
+         {% csrf_token %}
+         <button type="submit" class="btn btn-link">Logout</button>
+       </form>
+     </li>
    {% else %}
      <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
+    …
   </ul>
 ```
 
 As you can see, we use `if` / `else` / `endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{ request.path }}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
+We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this "`next`" value to redirect the user back to the page where they first clicked the login link.
 
-> **Note:** Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.
+The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
+By default this would render as a button, but you can style the button to display as a link.
+For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
+You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
+
+```css
+#logout-form {
+  display: inline;
+}
+#logout-form button {
+  padding: 0;
+  margin: 0;
+}
+```
+
+Try it out by clicking the Login/Logout links in the sidebar.
+You should be taken to the logout/login pages that you defined in the [Template directory](#template_directory) above.
 
 ### Testing in views
 
@@ -475,7 +494,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.2/topics/auth/default/#limiting-access-to-logged-in-users).
+For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/5.0/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Example — listing the current user's books
 
@@ -494,7 +513,7 @@ from django.conf import settings
 ```
 
 Next, add the `borrower` field to the `BookInstance` model, setting the user model for the key as the value of the setting `AUTH_USER_MODEL`.
-Since we have not overridden the setting with a [custom user model](https://docs.djangoproject.com/en/4.2/topics/auth/customizing/) this maps to the default `User` model from `django.contrib.auth.models`.
+Since we have not overridden the setting with a [custom user model](https://docs.djangoproject.com/en/5.0/topics/auth/customizing/) this maps to the default `User` model from `django.contrib.auth.models`.
 
 ```python
 borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
@@ -638,7 +657,7 @@ When the development server is running, you should now be able to view the list 
 
 The very last step is to add a link for this new page into the sidebar. We'll put this in the same section where we display other information for the logged in user.
 
-Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and add the "My Borrowed" line to the sidebar in the position shown below.
+Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_generic.html**) and add the "My Borrowed" line to the sidebar in the position shown below.
 
 ```django
  <ul class="sidebar-nav">
@@ -647,7 +666,12 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
 
-   <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
+   <li>
+     <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+       {% csrf_token %}
+       <button type="submit" class="btn btn-link">Logout</button>
+     </form>
+   </li>
    {% else %}
    <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
@@ -764,8 +788,8 @@ In our next article, we'll look at how you can use Django forms to collect user 
 
 ## See also
 
-- [User authentication in Django](https://docs.djangoproject.com/en/4.2/topics/auth/) (Django docs)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.2/topics/auth/default/) (Django docs)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [User authentication in Django](https://docs.djangoproject.com/en/5.0/topics/auth/) (Django docs)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/5.0/topics/auth/default/) (Django docs)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/5.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}

@@ -474,7 +474,7 @@ input:valid + span::after {
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -531,8 +531,6 @@ input:valid + span::after {
 
 - [HTML forms guide](/en-US/docs/Learn/Forms)
 - {{HTMLElement("input")}}
-
   - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

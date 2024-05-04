@@ -2,7 +2,7 @@
 title: display
 slug: Web/SVG/Attribute/display
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.display
+browser-compat: svg.global_attributes.display
 ---
 
 {{SVGRef}}
@@ -67,7 +67,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("display")}}</td>
+      <td>See {{cssxref("display", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>

@@ -200,7 +200,7 @@ The CSS Device Adaptation specification defines the following metadata name:
           <p>
             The <code>cover</code> value means that the viewport is scaled to fill
             the device display. It is highly recommended to make use of the
-            <a href="/en-US/docs/Web/CSS/env()">safe area inset</a> variables to
+            <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
             ensure that important content doesn't end up outside the display.
           </p>
         </td>
@@ -240,7 +240,8 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   > **Note:**
   >
   > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
-  > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, use a _{{Glossary("robots.txt")}}_ file.
+  > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, consider if using a _{{Glossary("robots.txt")}}_ file is more appropriate.
+  > - The `robots` `<meta>` tag and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
   > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.

@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/
 ---
 
+{{AccessibilitySidebar}}
+
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
 
 ## Description
@@ -137,7 +139,7 @@ While navigation keys, such as arrow keys, are moving focus from cell to cell, t
 ## Examples
 -->
 
-## Accessibility Concerns
+## Accessibility concerns
 
 It is important for all cells to be able to receive or contain keyboard focus because screen readers are generally in application reading mode, rather than their document reading mode, when users are interacting with the grid. While in application mode, a screen reader user hears only focusable elements and content that labels focusable elements. If content can't receive focus, screen reader users may unknowingly overlook elements contained in the treegrid.
 
@@ -151,12 +153,4 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 {{Specifications}}
 
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
+## See also

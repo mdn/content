@@ -29,7 +29,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
-- `controlslist` {{experimental_inline}}{{non-standard_inline}}
+- `controlslist`
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
@@ -246,8 +246,8 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
   <source src="myAudio.mp3" type="audio/mpeg" />
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
+    Download <a href="myAudio.mp3" download="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
@@ -316,7 +316,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 ```html
 <!-- Simple audio playback -->
 <audio src="AudioTest.ogg" autoplay>
-  <a href="AudioTest.ogg">Download OGG audio</a>.
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
 </audio>
 ```
 
@@ -329,7 +329,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 ```html
 <audio controls>
   <source src="foo.wav" type="audio/wav" />
-  <a href="foo.wav">Download WAV audio</a>.
+  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
 </audio>
 ```
 
@@ -377,7 +377,7 @@ Also it's a good practice to provide some content (such as the direct download l
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
     Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
@@ -402,14 +402,14 @@ Also it's a good practice to provide some content (such as the direct download l
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        <a href="/en-US/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> attribute: interactive
+        <a href="#controls"><code>controls</code></a> attribute: interactive
         content and palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the element has a <a href="/en-US/docs/Web/HTML/Element/audio#src"><code>src</code></a>
+        If the element has a <a href="#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
         {{HTMLElement("audio")}} or {{HTMLElement("video")}}
@@ -422,7 +422,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

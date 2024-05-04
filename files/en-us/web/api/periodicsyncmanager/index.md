@@ -7,9 +7,9 @@ status:
 browser-compat: api.PeriodicSyncManager
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-The **`PeriodicSyncManager`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access `PeriodicSyncManager` through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.
+The **`PeriodicSyncManager`** interface of the {{domxref('Web Periodic Background Synchronization API', '', '', 'nocode')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access `PeriodicSyncManager` through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.
 
 ## Instance properties
 
@@ -17,11 +17,11 @@ None.
 
 ## Instance methods
 
-- {{domxref('PeriodicSyncManager.register')}} {{Experimental_Inline}}
+- {{domxref('PeriodicSyncManager.register()')}} {{Experimental_Inline}}
   - : Registers a periodic sync request with the browser with the specified tag and options. Returns a {{jsxref('Promise')}} that resolves when the registration completes.
-- {{domxref('PeriodicSyncManager.getTags')}} {{Experimental_Inline}}
+- {{domxref('PeriodicSyncManager.getTags()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with a list of {{jsxref('String','strings')}} representing the tags that are currently registered for periodic syncing.
-- {{domxref('PeriodicSyncManager.unregister')}} {{Experimental_Inline}}
+- {{domxref('PeriodicSyncManager.unregister()')}} {{Experimental_Inline}}
   - : Unregisters the periodic sync request corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves when unregistration completes.
 
 ## Examples

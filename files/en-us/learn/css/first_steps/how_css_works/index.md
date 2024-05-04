@@ -14,10 +14,9 @@ We have learned the basics of CSS, what it is for and how to write simple styles
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
