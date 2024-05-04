@@ -60,8 +60,7 @@ The code above would be executed like this:
 9. When everything inside the `greeting()` function has been executed, return to its invoking line to continue executing the rest of the JS code.
 10. Delete the `greeting()` function from the call stack list.
 
-    > **Note:** Call stack list:
-    > EMPTY
+    > **Note:** Call stack list: EMPTY
 
 In summary, then, we start with an empty Call Stack. Whenever we invoke a function, it is automatically added to the Call Stack. Once the function has executed all of its code, it is automatically removed from the Call Stack. Ultimately, the Stack is empty again.
 
