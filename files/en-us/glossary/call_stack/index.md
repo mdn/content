@@ -36,14 +36,16 @@ The code above would be executed like this:
 1. Ignore all functions, until it reaches the `greeting()` function invocation.
 2. Add the `greeting()` function to the call stack list.
 
-   > **Note:** Call stack list: 
-  > - greeting
+   > **Note:** Call stack list:
+   >
+   > - greeting
 
 3. Execute all lines of code inside the `greeting()` function.
 4. Get to the `sayHi()` function invocation.
 5. Add the `sayHi()` function to the call stack list.
 
    > **Note:** Call stack list:
+   >
    > - sayHi
    > - greeting
 
@@ -52,6 +54,7 @@ The code above would be executed like this:
 8. Delete the `sayHi()` function from our call stack list.
 
    > **Note:** Call stack list:
+   >
    > - greeting
 
 9. When everything inside the `greeting()` function has been executed, return to its invoking line to continue executing the rest of the JS code.
