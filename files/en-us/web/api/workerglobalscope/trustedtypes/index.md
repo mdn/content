@@ -12,7 +12,7 @@ The **`trustedTypes`** read-only property of the {{domxref("WorkerGlobalScope")}
 
 ## Value
 
-An {{domxref("TrustedTypePolicyFactory")}} object.
+A {{domxref("TrustedTypePolicyFactory")}} object.
 
 ## Specifications
 
