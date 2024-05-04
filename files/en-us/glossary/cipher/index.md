@@ -15,10 +15,10 @@ Modern ciphers are designed to withstand attacks discovered through {{glossary("
 
 Ciphers operate either as [block ciphers](https://en.wikipedia.org/wiki/Block_cipher) on successive blocks (or buffers) of data, or as [stream ciphers](https://en.wikipedia.org/wiki/Stream_cipher) on a continuous data flow (often of sound or video).
 
-Ciphers also are classified according to how their {{glossary("key", "keys")}} are handled:
+Ciphers are also classified according to how their {{glossary("key", "keys")}} are handled:
 
 - {{Glossary("Symmetric-key cryptography", "symmetric key")}} algorithms use the same key to encode and decode a message. The key also must be sent securely if the message is to stay confidential.
-- {{Glossary("Public-key cryptography", "asymmetric key")}} algorithms use one key for encryption and another for decryption.
+- {{Glossary("Public-key cryptography", "asymmetric key")}} algorithms use one key for encryption and the other for decryption.
 
 ## See also
 
