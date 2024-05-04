@@ -20,7 +20,7 @@ Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024
 
 ### RGB color spaces
 
-RGB is a color model that represents colors as mixtures of three underlying components — red, green, and blue color channels — that create various hues when combined. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended to serve the needs of PC and the {{glossary("world wide web", "Web")}} based imaging systems.
+RGB is a color model that represents colors as mixtures of three underlying components — red, green, and blue color channels — that create various hues when combined. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended to codify the display specification of PC and the {{glossary("world wide web", "Web")}} based imaging systems. It is now usually the assumed color space for those without tagged or without an embedded color profile.
 
 There are several RGB color spaces, like the _Adobe RGB_ color space, that can represent a wider {{glossary("gamut")}} of color than the _sRGB_ color space. The coordinates in _sRGB_ and _Adobe RGB_ (`a98-rgb`) are different. There are many ways to describe the RGB components of a color. In {{Glossary("CSS")}} they can be represented as a single 24-bit integer in hexadecimal notation (for example, `#add8e6` is light blue), or in [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) functional notation as three separate numbers between 0 and 255 (for example, `rgb(46 139.5 87)`).
 
