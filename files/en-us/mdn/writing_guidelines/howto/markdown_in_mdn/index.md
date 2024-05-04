@@ -179,7 +179,7 @@ This issue was resolved in:
 Sometimes writers want to call special attention to a piece of content. To do this, they will use the [GFM noteblock syntax](https://github.com/orgs/community/discussions/16925), which is a GFM blockquote with a special first line. There are three types of these: notes, warnings, and callouts.
 
 > [!NOTE]
-> MDN Web Docs supported noteblocks with its own syntax before GFM adopted syntax.  As such, MDN supports only two of the five noteblock types GFM supports, and supports an additional type that GFM does not.
+> MDN Web Docs supported noteblocks with its own syntax before GFM adopted syntax. As such, MDN supports only two of the five noteblock types GFM supports, and supports an additional type that GFM does not.
 
 - To add a note, create a GFM blockquote whose first line is `[!NOTE]`.
 - To add a warning, create a GFM blockquote whose first line is `[!WARNING]`.
@@ -188,7 +188,7 @@ Sometimes writers want to call special attention to a piece of content. To do th
 Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
 
 > [!WARNING]
-> In the older MDN syntax, the type was localized and added to the first paragraph in bold text, i.e. `**Note:** Foo bar` instead of `[!NOTE] ⏎ Foo bar`.  This syntax is still supported for migration purposes.  Avoid using it in new documentation.
+> In the older MDN syntax, the type was localized and added to the first paragraph in bold text, i.e. `**Note:** Foo bar` instead of `[!NOTE] ⏎ Foo bar`. This syntax is still supported for migration purposes. Avoid using it in new documentation.
 
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
