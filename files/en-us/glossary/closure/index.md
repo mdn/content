@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In Computer Programming, a **closure** is a technique for implementing lexically {{glossary("scope", "scoped)}} name binding in a language with first-class {{glossary("function","functions")}}. In {{glossary("JavaScript")}}, a function creates a closure context.
+In Computer Programming, a **closure** is a technique for implementing lexically {{glossary("scope", "scoped")}} name binding in a language with first-class {{glossary("function", "functions")}}. In {{glossary("JavaScript")}}, a function creates a closure context.
 
 ## See also
 
