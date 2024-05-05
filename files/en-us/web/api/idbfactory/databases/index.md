@@ -10,7 +10,7 @@ browser-compat: api.IDBFactory.databases
 
 The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a {{jsxref("Promise")}} that fulfills with an array of objects containing the name and version of all the available databases.
 
-This is is a snapshot of the databases, intended primarily to allow web applications to check what databases have been created in order to, for example, clean up databases created by earlier versions of application code.
+This is is a snapshot of the databases, intended primarily to allow web applications to check what databases have been created — in order to, for example, clean up databases created by earlier versions of application code.
 
 ## Syntax
 
@@ -88,7 +88,7 @@ async function getDb() {
 ```
 
 To demonstrate how the above function is used, below we create two databases.
-For each database we log just before the database is opened.
+For each database, we log just before the database is opened.
 We also log on successful initialization (or error) and then also log the available databases.
 
 ```js
