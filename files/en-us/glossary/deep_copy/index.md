@@ -52,5 +52,5 @@ The web API [`structuredClone()`](/en-US/docs/Web/API/structuredClone) also crea
 
 ## See also
 
-- {{glossary("shallow_copy", "Shallow copy")}}
+- {{glossary("Shallow copy")}}
 - [`window.structuredClone()`](/en-US/docs/Web/API/structuredClone)

@@ -14,6 +14,6 @@ page-type: glossary-definition
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
 - [ARIA documentation](/en-US/docs/Web/Accessibility/ARIA)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
-- [The WAI-ARIA recommendation](https://www.w3.org/TR/wai-aria/)
+- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - [The W3C Web Accessibility Initiative](https://www.w3.org/WAI/)
 - [Web Accessibility In Mind](https://webaim.org/)

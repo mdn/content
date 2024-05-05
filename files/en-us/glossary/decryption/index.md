@@ -17,6 +17,6 @@ Decryption is the reverse of {{glossary("encryption")}} and if the key stays sec
 ## See also
 
 - [Encryption and Decryption](/en-US/docs/Encryption_and_Decryption)
-- {{glossary("encryption", "Encryption")}}
-- {{glossary("cipher", "Cipher")}}
-- {{glossary("cryptography", "Cryptography")}}
+- {{glossary("Encryption")}}
+- {{glossary("Cipher")}}
+- {{glossary("Cryptography")}}

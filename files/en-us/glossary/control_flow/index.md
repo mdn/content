@@ -29,5 +29,5 @@ Control flow means that when you read a script, you must not only read from star
 ## See also
 
 - [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow)
-- [Statements (Control flow)](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Control flow](https://en.wikipedia.org/wiki/Control_flow) on Wikipedia
