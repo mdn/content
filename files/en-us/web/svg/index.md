@@ -1,5 +1,6 @@
 ---
 title: "SVG: Scalable Vector Graphics"
+short-title: SVG
 slug: Web/SVG
 page-type: landing-page
 ---

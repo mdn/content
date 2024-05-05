@@ -36,7 +36,7 @@ Resources that are not local, to be considered secure, must meet the following c
 
 ## Feature detection
 
-Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.
+Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("Window.isSecureContext")}} or {{domxref("WorkerGlobalScope.isSecureContext")}} boolean, which is exposed on the global scope.
 
 ```js
 if (window.isSecureContext) {
@@ -54,6 +54,6 @@ if (window.isSecureContext) {
 ## See also
 
 - [Platform features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
-- {{domxref("isSecureContext")}}
+- {{domxref("Window.isSecureContext")}} and {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS
 - [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
