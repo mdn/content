@@ -765,15 +765,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.5.23":
+"@mdn/browser-compat-data@^5.5.24":
   version "5.5.25"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.25.tgz#80b86ce0211d16ac6b7de92b1d8bbeb3306d2432"
   integrity sha512-0AobSA9fCuAoJnBSIIWWpoAEuyWC3gCG5u2TshSDHzMOAO4/ef2Lv6Qma+u/wMnH3oPP3tOWsNeZMbazgkiuDg==
 
-"@mdn/yari@2.50.0":
-  version "2.50.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.50.0.tgz#c23692a422e5546a637580c4d64cf9bfdd6cacb6"
-  integrity sha512-O8lxb0uoqudj5MD50FQSH2sW0dZeeHVNGhFoc0HMtx6wHku47c4G0T8YuvKbsN8nRlDvoA8gRgvJAtuKA3h/Gg==
+"@mdn/yari@2.51.0":
+  version "2.51.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.51.0.tgz#a468211b863986c06e3b2bfd73db42d5d1221257"
+  integrity sha512-4hx0G9PQ0w/6FwyA039wXzenDODZ6l+E4TvuwnEIkL5tkn7Yz+f6vRVyhe+MMBr4NInWcPkJ1oiczJZRBqXrDw==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -783,8 +783,8 @@
     "@codemirror/theme-one-dark" "^6.1.2"
     "@fast-csv/parse" "^5.0.0"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.5.23"
-    "@mozilla/glean" "5.0.0"
+    "@mdn/browser-compat-data" "^5.5.24"
+    "@mozilla/glean" "5.0.1"
     "@sentry/integrations" "^7.112.2"
     "@sentry/node" "^7.112.2"
     "@stripe/stripe-js" "^3.3.0"
@@ -831,7 +831,7 @@
     mdn-data "^2.6.1"
     open "^10.1.0"
     open-editor "^4.1.1"
-    openai "^4.39.0"
+    openai "^4.40.0"
     pg "^8.11.5"
     pgvector "^0.1.8"
     prism-svelte "^0.5.0"
@@ -860,10 +860,10 @@
     web-features "^0.7.0"
     web-specs "^3.8.0"
 
-"@mozilla/glean@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.0.tgz#ded7afd60ce7b3a63714545f1b410eb129c1d922"
-  integrity sha512-DstT6PI8QTixlULf7Is277sEmpX61Dz+z/7rtxQBBFwGaPsvWJJsMsnNysNtSzSESIlcXoPbdPZ9RoXOcHuSlA==
+"@mozilla/glean@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.1.tgz#784bb3238b89f8c979fe2dd6f15282fb21242ee2"
+  integrity sha512-PrIvNGjJsBBzasGMf2QwoxEPK+XNGKu0il3YgiwbXXGJZ6aguFS6dakKkVho+X5Gdckj0QD7P2rjfG3y6IkGfQ==
   dependencies:
     fflate "^0.8.0"
     tslib "^2.3.1"
@@ -5921,10 +5921,10 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
-openai@^4.39.0:
-  version "4.40.0"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.40.0.tgz#6cf11702ca009ead10b61061d9e0a1635c6ac307"
-  integrity sha512-ofh9qMxRPDSZTWYvifScusMfnyIwEQL3w+fv3ucQGn3cIn0W6Zw4vXSUod8DwYfcX/hkAx9/ZvWrdkFYnVXlmQ==
+openai@^4.40.0:
+  version "4.40.1"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.40.1.tgz#095a8b7c2af7b05617ab83c825aaa944195d7e7d"
+  integrity sha512-mS7LerF4fY1/we0aKGGwIWtosTJFLKuNbBWMBR/G1TAZUHoktAdod0dqIrlQvSD39uS6jNEEbT7jRsXmzfEPBw==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
