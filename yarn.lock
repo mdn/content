@@ -766,9 +766,9 @@
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
 "@mdn/browser-compat-data@^5.5.23":
-  version "5.5.24"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.24.tgz#b66ffc3c114f37a476c1f0c44d0e31a5305070ea"
-  integrity sha512-8z/7mkez6xKhbUtmwVRrSuZ28wv3VpOWVvA8ykdovbC5kFyxlJ2QWsfRjpe+f50tirdPC7hN7TZO5eZfTvUqhg==
+  version "5.5.25"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.25.tgz#80b86ce0211d16ac6b7de92b1d8bbeb3306d2432"
+  integrity sha512-0AobSA9fCuAoJnBSIIWWpoAEuyWC3gCG5u2TshSDHzMOAO4/ef2Lv6Qma+u/wMnH3oPP3tOWsNeZMbazgkiuDg==
 
 "@mdn/yari@2.50.0":
   version "2.50.0"
