@@ -27,7 +27,7 @@ The **`StorageAccessHandle`** interface represents access to [unpartitioned stat
 - {{domxref("StorageAccessHandle.getDirectory()")}}
   - : Returns a {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("FileSystemDirectoryHandle")}} object if access was granted, and rejects otherwise.
 - {{domxref("StorageAccessHandle.estimate()")}}
-  - : Returns a {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageEstimate")}} object if access was granted, and rejects otherwise.
+  - : Returns a {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageManager.estimate()", "StorageEstimate")}} object if access was granted, and rejects otherwise.
 - {{domxref("StorageAccessHandle.createObjectURL()")}}
   - : Returns a string representing the unpartitioned blob storage url created if access was granted, and throws otherwise.
 - {{domxref("StorageAccessHandle.revokeObjectURL()")}}

@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageEstimate")}} object.
+A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageManager.estimate()", "StorageEstimate")}} object.
 
 ### Exceptions
 
