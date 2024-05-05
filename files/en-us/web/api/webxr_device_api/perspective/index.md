@@ -14,7 +14,7 @@ In this article, we examine scenarios in which the way your project calculates, 
 
 Every WebXR session, represented by an {{domxref("XRSession")}} object, offers a set of options that can be configured by creating a new {{domxref("XRRenderState")}} object and activating the updated state by calling the session's {{domxref("XRSession.updateRenderState", "updateRenderState()")}} method to replace the current configuration.
 
-The majority of these values define the XR device's [viewing frustum](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#the_viewing_frustum); that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the aspect ratio of the rendered image, and the distances to the near and far clipping planes.
+The majority of these values define the XR device's [viewing frustum](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#the_viewing_frustum); that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the {{glossary("aspect ratio")}} of the rendered image, and the distances to the near and far clipping planes.
 
 ### Welcome to the projection matrix
 
