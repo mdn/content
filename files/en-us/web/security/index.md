@@ -53,7 +53,7 @@ Related topics:
 - [HTTP Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : The `Strict-Transport-Security:` [HTTP](/en-US/docs/Web/HTTP) header lets a website specify that it may only be accessed using HTTPS.
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
-  - : **Certificate Transparency** is an open framework designed to protect against and monitor for certificate misissuances. Newly issued certificates are 'logged' to publicly run, often independent CT logs which maintain an append-only, cryptographically assured record of issued TLS certificates.
+  - : **Certificate Transparency** is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs which maintain an append-only, cryptographically assured record of issued TLS certificates.
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
   - : An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
