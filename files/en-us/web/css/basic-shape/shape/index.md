@@ -9,13 +9,11 @@ browser-compat: css.types.basic-shape.shape
 
 The **`shape()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
-<!-- {{EmbedInteractiveExample("pages/css/function-path.html")}} -->
-
 ## Syntax
 
 ```css
 /* <fill-rule> */
-offset-path: shape(nonzero from 0px 0px, line to 10px 10px);
+clip-path: shape(nonzero from 0px 0px, line to 10px 10px);
 
 /* <move-command>, <line-command>, and close */
 offset-path: shape(from 10px 10px, move by 10px 5px, line by 20px 40%, close);
