@@ -8,9 +8,9 @@ browser-compat: api.performance
 
 {{APIRef("Performance API")}}
 
-The **`performance`** property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("Performance")}} object, which can be used to gather performance information about the context it is called in worker.
+The **`performance`** property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("Performance")}} object, which can be used to gather performance information about code running in the worker's scope.
 
-Performance entries are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+Performance entries are per context. If you create a mark on a worker thread, you will not see it in the main thread or any other workers.
 
 ## Value
 

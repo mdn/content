@@ -29,7 +29,7 @@ Each performance metric is represented by a single {{domxref("PerformanceEntry")
 
 Most of the performance entries are recorded for you without you having to do anything, and are then accessible either through {{domxref("Performance.getEntries()")}} or (preferably) through {{domxref("PerformanceObserver")}}. For example, {{domxref("PerformanceEventTiming")}} entries are recorded for events that take longer than a set threshold. But the Performance API also enables you to define and record your own custom events, using the {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}} interfaces.
 
-The main {{domxref("Performance")}} interface is available for each global using {{domxref("Window.performance")}} or {{domxref("WorkerGlobalScope.performance")}} and enables you to add custom performance entries, to clear performance entries, and to retrieve performance entries.
+The main {{domxref("Performance")}} interface is available in both {{domxref("Window.performance", "Window")}} and {{domxref("WorkerGlobalScope.performance", "Worker")}} global scopes, and enables you to add custom performance entries, to clear performance entries, and to retrieve performance entries.
 
 The {{domxref("PerformanceObserver")}} interface enables you to listen for various types of performance entry as they are recorded.
 
