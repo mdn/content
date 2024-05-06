@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.desiredSize
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`desiredSize`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns the desired size required
