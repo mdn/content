@@ -115,7 +115,7 @@ The `shape()` function allows you to define complex shapes. It is similar to the
 
 However, `shape()` offers several advantages over using `path()`:
 
-- Unlike `path()`, which uses the [SVG path](/en-US/docs/web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet.
+- Unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet.
 - The `path()` function inherits some limitations from SVG, such as requiring shapes to be written as a single string and limiting units to `px`. The `shape()` function, on the other hand, supports a variety of CSS units, including percentages, `rem`, and `em`.
 - `shape()` also allows the use of CSS math functions, providing more versatility when defining shapes.
 
