@@ -429,7 +429,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
      <li>
-       <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+       <form id="logout-form" method="post" action="{% url 'logout' %}">
          {% csrf_token %}
          <button type="submit" class="btn btn-link">Logout</button>
        </form>
@@ -461,6 +461,7 @@ You also need to append the following styles to **/django-locallibrary-tutorial/
 ```
 
 Try it out by clicking the Login/Logout links in the sidebar.
+You should be taken to the logout/login pages that you defined in the [Template directory](#template_directory) above.
 
 ### Testing in views
 

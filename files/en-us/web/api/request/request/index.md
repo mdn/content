@@ -131,7 +131,6 @@ handled properly, then create an Object URL of it and display it in an
 
 ```js
 const myImage = document.querySelector("img");
-
 const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
@@ -142,51 +141,46 @@ fetch(myRequest)
   });
 ```
 
-In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)) we do the same thing except that we pass in an _options_ object when we
-invoke `fetch()`:
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
+In this case, we can set a {{httpheader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js
 const myImage = document.querySelector("img");
+const reqHeaders = new Headers();
 
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "image/jpeg");
+// A cached response is okay unless it's more than a week old.
+reqHeaders.set("Cache-Control", "max-age=604800");
 
-const myOptions = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+const options = {
+  headers: reqHeaders,
 };
 
-const myRequest = new Request("flowers.jpg", myOptions);
+// pass init as an "options" object with our headers
+const req = new Request("flowers.jpg", options);
 
-fetch(myRequest).then((response) => {
+fetch(req).then((response) => {
   // ...
 });
 ```
 
-Note that you could also pass `myOptions` into the `fetch` call to get
-the same effect, e.g.:
+Note that you could also pass `options` into the `fetch` call to get the same effect, e.g.:
 
 ```js
-fetch(myRequest, myOptions).then((response) => {
+fetch(req, options).then((response) => {
   // ...
 });
 ```
 
-You can also use an object literal as `headers` in `myOptions`.
+You can also use an object literal as `headers` in `options`.
 
 ```js
-const myOptions = {
-  method: "GET",
+const options = {
   headers: {
-    "Content-Type": "image/jpeg",
+    "Cache-Control": "max-age=60480",
   },
-  mode: "cors",
-  cache: "default",
 };
 
-const myRequest = new Request("flowers.jpg", myOptions);
+const req = new Request("flowers.jpg", options);
 ```
 
 You may also pass a {{domxref("Request")}} object to the `Request()`
@@ -194,7 +188,7 @@ constructor to create a copy of the Request (This is similar to calling the
 {{domxref("Request.clone","clone()")}} method.)
 
 ```js
-const copy = new Request(myRequest);
+const copy = new Request(req);
 ```
 
 > **Note:** This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).

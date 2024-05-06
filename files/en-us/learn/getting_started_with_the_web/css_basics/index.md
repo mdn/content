@@ -30,7 +30,9 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 
 2. Save `index.html` and load it in your browser. You should see something like this:
 
-![A Mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)If your paragraph text is red, congratulations! Your CSS is working.
+![A Mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)
+
+If your paragraph text is red, congratulations! Your CSS is working.
 
 ### Anatomy of a CSS ruleset
 
