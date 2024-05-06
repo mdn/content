@@ -23,7 +23,7 @@ This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/H
 
 This example shows how you can create a shadow root declaratively, specifying the `shadowrootclonable` attribute, and then log the value.
 
-We declare a shadow root by specifying  a `<template>` element with the `shadowrootmode` attribute set to one of the allowed values.
+We declare a shadow root by specifying a `<template>` element with the `shadowrootmode` attribute set to one of the allowed values.
 The `shadowrootclonable` is also set, making it clonable.
 
 ```html
