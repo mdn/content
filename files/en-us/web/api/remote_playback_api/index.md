@@ -8,7 +8,7 @@ spec-urls: https://w3c.github.io/remote-playback/
 
 {{DefaultAPISidebar("Remote Playback API")}}
 
-The Remote Playback API extends the {{domxref("HTMLMediaElement")}} to enable the control of media played on a remote device.
+The **Remote Playback API** extends the {{domxref("HTMLMediaElement")}} to enable the control of media played on a remote device.
 
 ## Concepts and Usage
 

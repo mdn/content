@@ -2,7 +2,6 @@
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}
@@ -48,10 +47,6 @@ We want to ensure that a person using a screen reader understands what this navi
 We have also added some additional content that would be read by a screen reader but is hidden visually, and set the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the paging arrows.
 
 The "See Also" section at the end of this document has links to related accessibility topics.
-
-## Specifications
-
-{{Specifications}}
 
 ## See also
 

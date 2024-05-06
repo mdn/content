@@ -8,7 +8,7 @@ browser-compat:
 spec-urls: https://wicg.github.io/background-sync/spec/
 ---
 
-{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}
+{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
 
 The **Background Synchronization API** enables a web app to defer tasks so that they can be run in a [service worker](/en-US/docs/Web/API/Service_Worker_API) once the user has a stable network connection.
 
@@ -64,8 +64,9 @@ This code checks to see if a background sync task with a given tag is registered
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.sync.getTags().then((tags) => {
-    if (tags.includes("sync-messages"))
+    if (tags.includes("sync-messages")) {
       console.log("Messages sync already requested");
+    }
   });
 });
 ```

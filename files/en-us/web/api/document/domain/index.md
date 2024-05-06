@@ -56,7 +56,7 @@ For the URL `https://developer.mozilla.org/en-US/docs/Web`,
 `currentHostname` is also the string "`developer.mozilla.org`".
 Other alternatives that provide slightly different information are
 {{domxref("Location.host")}}, which includes the port, and
-{{domxref("origin")}}, which provides the full origin.
+{{domxref("Window.origin")}}, which provides the full origin.
 
 ### Setting the domain
 
@@ -156,4 +156,4 @@ Affected APIs include (but are not limited to):
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
-- {{domxref("origin")}}
+- {{domxref("Window.origin")}}

@@ -39,7 +39,7 @@ Note that some programming languages use the caret symbol `^` for exponentiation
 
 ## Examples
 
-### Basic exponentiation
+### Exponentiation using numbers
 
 ```js
 2 ** 3; // 8
@@ -50,13 +50,32 @@ Note that some programming languages use the caret symbol `^` for exponentiation
 NaN ** 2; // NaN
 NaN ** 0; // 1
 1 ** Infinity; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+2 ** "3"; // 8
+2 ** "hello"; // NaN
+```
+
+### Exponentiation using BigInts
+
+```js
 2n ** 3n; // 8n
 2n ** 1024n; // A very large number, but not Infinity
+```
 
+You cannot mix BigInt and number operands in exponentiation.
+
+```js example-bad
 2n ** 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 ** 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
-// To do exponentiation with a BigInt and a non-BigInt, convert either operand
+To do exponentiation with a BigInt and a non-BigInt, convert either operand:
+
+```js
 2n ** BigInt(2); // 4n
 Number(2n) ** 2; // 4
 ```
