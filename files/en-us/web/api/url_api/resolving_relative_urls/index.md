@@ -34,7 +34,7 @@ The following sections show how resolution works for each type of relative path.
 
 ## Current directory relative
 
-A relative path prefixed with `./` or no prefix, such as `./article` or `article`, is relative to the current directory of the URL represented by the `base` argument.
+A relative path prefixed with `./` or no prefix, such as `./article`, `article`, or `./article/`, is relative to the current directory of the URL represented by the `base` argument.
 
 ```html hidden
 <pre id="log"></pre>
@@ -66,11 +66,11 @@ log(new URL("article", "https://test.example.org/api/v1").href);
 ```
 
 Similarly, below both base URL strings have a current directory of `https://test.example.org/api/v2/`.
-We append `story` and `story` to these to resolve the final absolute URL.
+We append `story/` and `story` to these to resolve the final absolute URL.
 
 ```js
 log(new URL("./story/", "https://test.example.org/api/v2/").href);
-// => https://test.example.org/api/v2/story
+// => https://test.example.org/api/v2/story/
 log(new URL("./story", "https://test.example.org/api/v2/v3").href);
 // => https://test.example.org/api/v2/story
 ```
