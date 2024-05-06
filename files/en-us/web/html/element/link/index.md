@@ -191,7 +191,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
     See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disabled` {{Non-standard_Inline}}
+- `disabled`
 
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
@@ -223,7 +223,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute is [a sourceset attribute](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `integrity`
   - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
-    The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation.
+    The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
+    The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
     See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `media`
 
