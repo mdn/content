@@ -8,9 +8,9 @@ page-type: guide
 
 The [`URL()` constructor](/en-US/docs/Web/API/URL/URL) or the {{domxref("URL.parse_static", "URL.parse()")}} static method of the [URL API](/en-US/docs/Web/API/URL_API) can be used to resolve a relative URL and a base URL to an absolute URL.
 
-Both methods take up to two string arguments and return [`URL()`](/en-US/docs/Web/API/URL) object representing an absolute URL.
+Both methods take up to two string arguments and return a [`URL()`](/en-US/docs/Web/API/URL) object representing an absolute URL.
 The first argument represents either an absolute URL or a relative URL, while the second is a base URL that is used to resolve the relative URL — if one is specified in the first argument.
-The methods resolve the relative URL in the same way: the main difference between them is that the `URL()` constructor throws if invalid URLs are passed, while `parse()` returns `null`.
+The methods resolve the relative URL in the same way, except that the `URL()` constructor throws if invalid URLs are passed, while `parse()` returns `null`.
 
 The code below shows how the methods are used with the same `url` and `base` URL values.
 
@@ -25,7 +25,7 @@ const parseResult = URL.parse(url, base);
 
 You can see from the example that resolving the `URL` from a supplied base URL and relative URL is not simply a concantenation of the supplied parameters.
 
-In this case a path relative to the current directory is passed (`article`).
+In this case a path relative to the current directory is passed (`articles`).
 The current directory of the `base` URL is the URL string up to the last forward slash.
 Here `https://developer.mozilla.org/some/path` has no trailing forward slash, so the current directory is `https://developer.mozilla.org/some/`, and hence resolves to a final URL of `https://developer.mozilla.org/url/some/articles`.
 

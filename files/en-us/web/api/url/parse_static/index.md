@@ -31,8 +31,8 @@ URL.parse(url, base)
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.
 
-    When specify a `base` URL, the resolved URL is not simply a concatenation of `url` and `base`.
-    Parent-relative and current-directory-relative URLS are relative to the current directory of the `base` URL, which includes only path segments up until the last forward-slash, but not any after.
+    When you specify a `base` URL, the resolved URL is not simply a concatenation of `url` and `base`.
+    Parent-relative and current-directory-relative URLs are relative to the current directory of the `base` URL, which includes only path segments up until the last forward-slash, but not any after.
     Root-relative URLs are relative to the base origin.
     For more information see [Resolving relative URLs](/en-US/docs/Web/API/URL_API/Resolving_relative_urls).
 
