@@ -25,7 +25,7 @@ Note that only the following performance interfaces are available in worker cont
 
 ## Value
 
-A {{domxref("Performance")}} object offering access to performance and timing-related information for the context it is called on worker.
+A {{domxref("Performance")}} object offering access to performance and timing-related information for the context it is called on.
 
 ## Specifications
 
