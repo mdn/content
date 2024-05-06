@@ -47,9 +47,9 @@ transaction(storeNames, mode, options)
     - `readonly`
       - : Open a transaction for reading from an object store. This is the default mode.
     - `readwrite`
-      : Open a transaction for both reading and writing from an object store.
-      This should only be used if need to write into the database.
-    - `readwriteflush` {{non-standard-inline}} {{experimental_inline}}
+      - : Open a transaction for both reading and writing from an object store.
+        This should only be used if need to write into the database.
+    - `readwriteflush` {{non-standard_inline}} {{experimental_inline}}
       - : Force a transaction to flush to disk before delivering the `complete` event.
         This might be used for storing critical data that cannot be recomputed later.
 
