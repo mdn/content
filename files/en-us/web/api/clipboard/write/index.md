@@ -73,22 +73,75 @@ A `try..catch` block could be used to catch any errors writing the data.
 
 ### Write canvas contents to the clipboard
 
-This example writes the canvas to a blob, using the default MIME type of `image/png`, and then writes the blob to the clipboard.
+This example draws a blue rectangle to the canvas and writes the canvas to a blob in the clipboard when you click the canvas.
+An event listener is triggered on [`paste` events](/en-US/docs/Web/API/Element/paste_event) in an element where we want to display the clipboard contents as an image.
+
+The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:
 
 ```js
-// Get canvas can add an event handler for the click event.
+const target = document.getElementById("target");
 const canvas = document.getElementById("canvas");
+
+// Set up canvas
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "cornflowerblue";
+ctx.fillRect(0, 0, 100, 100);
+
 canvas.addEventListener("click", copyCanvasContentsToClipboard);
 
-async function copyCanvasContentsToClipboard() {
-  // Copy canvas to blob
-  const blob = await canvas.toBlob();
-  // Create ClipboardItem with blob and it's type, and add to an array
-  const data = [new ClipboardItem({ [blob.type]: blob })];
-  // Write the data to the clipboard
-  await navigator.clipboard.write(data);
+function copyCanvasContentsToClipboard() {
+  return new Promise((resolve, reject) => {
+    // Copy canvas to blob
+    canvas.toBlob(async (blob) => {
+      try {
+        // Create ClipboardItem with blob and its type, and add to an array
+        const data = [new ClipboardItem({ [blob.type]: blob })];
+        // Write the data to the clipboard
+        await navigator.clipboard.write(data);
+        resolve();
+      } catch (e) {
+        reject(e);
+      }
+    });
+  });
+}
+
+target.addEventListener("paste", (event) => {
+  const items = (event.clipboardData || window.clipboardData).items;
+  const blob = items[0].getAsFile();
+  const reader = new FileReader();
+
+  reader.addEventListener("load", (event) => {
+    const img = new Image();
+    img.src = event.target.result;
+    target.appendChild(img);
+  });
+
+  reader.readAsDataURL(blob);
+});
+```
+
+```css hidden
+body {
+  font-family: sans-serif;
+}
+#target {
+  border: 2px solid;
+  padding: 1rem;
+  height: 150px;
+}
+img {
+  margin: 0.5rem;
 }
 ```
+
+```html
+<canvas id="canvas" width="100" height="100"></canvas>
+
+<div id="target">Paste here.</div>
+```
+
+{{embedlivesample("write_canvas_contents_to_the_clipboard", "", "300")}}
 
 ## Specifications
 
