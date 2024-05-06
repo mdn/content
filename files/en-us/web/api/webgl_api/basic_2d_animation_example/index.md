@@ -36,7 +36,7 @@ First, let's take a look at the vertex shader. Its job, as always, is to convert
 </script>
 ```
 
-The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.
+The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's {{glossary("aspect ratio")}}. We'll see that computation shortly.
 
 We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform `uRotationVector`, that's been computed by the JavaScript code.
 
