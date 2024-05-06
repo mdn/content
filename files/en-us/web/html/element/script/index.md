@@ -58,7 +58,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Default: Signals automatic determination of fetch priority relative to other external scripts.
 
 - `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not specified when the `src` attribute is not specified. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`
@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
-- [**`type`**](/en-US/docs/Web/HTML/Element/script/type)
+- [`type`](/en-US/docs/Web/HTML/Element/script/type)
 
   - : This attribute indicates the type of script represented.
     The value of this attribute will be one of the following:

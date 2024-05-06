@@ -54,6 +54,17 @@ No notable changes.
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
+- Added support to allow web applications to gracefully recover if a canvas temporarily loses its 2D context, which might happen if the canvas is running hardware-accelerated on a GPU, and its driver crashes ([Firefox bug 1887729](https://bugzil.la/1887729)).
+  Here are some additional details on the events for lost and restored canvas contexts:
+
+  - Applications can monitor for [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) events, which are fired on at [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement) when the context is lost and recovered, respectively, and can also check the context using [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost).
+  - After emitting `contentlost`, a browser will try and restart the lost context, by default, but code can prevent this by cancelling the event.
+  - Offscreen canvases can be monitored in the same way, but using [`OffScreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) events [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event), along with [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#context).
+
+#### Media, WebRTC, and Web Audio
+
+- The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
+
 #### Removals
 
 - The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement#svgaelement.text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).

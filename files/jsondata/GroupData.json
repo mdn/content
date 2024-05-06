@@ -1073,6 +1073,7 @@
       "guides": [
         "/docs/Web/API/Performance_API/Performance_data",
         "/docs/Web/API/Performance_API/High_precision_timing",
+        "/docs/Web/API/Performance_API/Long_animation_frame_timing",
         "/docs/Web/API/Performance_API/Resource_timing",
         "/docs/Web/API/Performance_API/Navigation_timing",
         "/docs/Web/API/Performance_API/User_timing",
@@ -1090,6 +1091,7 @@
         "PerformanceEntry",
         "PerformanceElementTiming",
         "PerformanceEventTiming",
+        "PerformanceLongAnimationFrameTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",
@@ -1099,6 +1101,7 @@
         "PerformanceObserverEntryList",
         "PerformancePaintTiming",
         "PerformanceResourceTiming",
+        "PerformanceScriptTiming",
         "PerformanceServerTiming",
         "PerformanceTiming",
         "TaskAttributionTiming",

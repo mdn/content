@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 

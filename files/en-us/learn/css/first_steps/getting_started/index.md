@@ -151,7 +151,7 @@ So far, we have styled elements based on their HTML element names. This works as
    </ul>
    ```
 
-2. In your CSS, you can target the class of `special` by creating a selector that starts with a full stop character. Add the following to your CSS file:
+2. In your CSS, you can target the class of `special` by creating a selector that starts with a period. Add the following to your CSS file:
 
    ```css
    .special {

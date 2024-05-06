@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PushSubscription
 ---
 
-{{ApiRef("Push API")}}{{SecureContext_Header}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a subscription's URL endpoint and allows unsubscribing from a push service.
 
