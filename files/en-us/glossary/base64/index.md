@@ -94,8 +94,8 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 ## See Also
 
 - JavaScript APIs:
-  - [`btoa`](/en-US/docs/Web/API/btoa)
-  - [`atob`](/en-US/docs/Web/API/atob)
-- [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+  - [btoa() global function](/en-US/docs/Web/API/btoa)
+  - [atob() global function](/en-US/docs/Web/API/atob)
+- [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - [Base64](https://en.wikipedia.org/wiki/Base64) on Wikipedia
 - Base64 Algorithm described in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)
