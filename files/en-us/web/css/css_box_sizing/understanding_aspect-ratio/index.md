@@ -71,6 +71,20 @@ img + img + img {
 
 Declaring both a width and height distorted these images, squashing the first one and stretching the third.
 
+In this examples, we used `height` and `width` to distort the image. By default, if only one of these values is set, the aspect ratio of a replaced element is preserved. We can set the {{cssxref("aspect-ratio")}} property to something other than the object's intrinsic aspect ratio to distort it. You likely don't want to do that, but it's possible.
+
+```html hidden live-sample___stretch
+<img src="flag.jpg" alt="Pride flag" />
+```
+
+```css hidden live-sample___stretch
+img {
+  aspect-ratio: 3;
+}
+```
+
+{{EmbedLiveSample("stretch", "100", "230")}}
+
 ### Non-replaced elements
 
 While the aspect ratio of a replaced element is maintained by default, when the intrinsic size of a non-replaced element is changed the aspect ratio usually changes. For example, identical content may be two lines on a widescreen or in a wide parent container and six lines on a narrow screen or container.
@@ -141,7 +155,7 @@ blockquote {
 
 {{EmbedLiveSample("words", "100", "400")}}
 
-We've always been able to preserve a replaced element's aspect ratio. With the CSS {{cssxref("aspect-ratio")}} property, we are able to specify aspect ratios for both replaced and non-replaced elements. This property can also be used to change the aspect ratio of replaced elements to something other than the object's intrinsic aspect ratio, but you likely don't want to do that.
+We've always been able to preserve a replaced element's aspect ratio. With the CSS {{cssxref("aspect-ratio")}} property, we can specify aspect ratios for both replaced and non-replaced elements.
 
 ## Common use cases
 
@@ -206,10 +220,45 @@ In this square grid item example, the grid tracks are auto-sized, taking their s
 ```css
 .grid {
   display: grid;
-  grid-template-columns: repeat(autofill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .item {
   aspect-ratio: 1;
 }
+```
+
+```css hidden
+div {
+  gap: 20px;
+}
+
+div div {
+  background-color: #ccc;
+  aspect-ratio: 1;
+  counter-increment: items;
+}
+div div:after {
+  content: counter(items);
+}
+```
+
+```html hidden
+<div class="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
 ```
