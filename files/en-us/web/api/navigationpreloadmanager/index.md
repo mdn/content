@@ -12,8 +12,6 @@ The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/
 If supported, an object of this type is returned by {{domxref("ServiceWorkerRegistration.navigationPreload")}}.
 The result of a preload fetch request is waited on using the promise returned by {{domxref("FetchEvent.preloadResponse")}}.
 
-Currently the `NavigationPreloadManager` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} for Firefox.
-
 ## Instance methods
 
 - {{domxref("NavigationPreloadManager.enable()")}}

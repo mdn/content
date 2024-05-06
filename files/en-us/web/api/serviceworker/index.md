@@ -24,6 +24,8 @@ Dynamic import is disallowed by the specification — calling [`import()`](/en-U
 
 Currently the `ServiceWorker` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} for Chrome and Firefox.
 
+Service workers can currently only be registered in the Window scope, because the `ServiceWorker` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} in some or all browsers. Check [browser compatibility](#browser_compatibility) for information.
+
 {{InheritanceDiagram}}
 
 ## Instance properties
