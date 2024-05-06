@@ -16,33 +16,6 @@ Performance entries are per context. If you create a mark on the main thread (or
 
 A {{domxref("Performance")}} object offering access to performance and timing-related information about code running in the window's scope.
 
-## Performance API availability
-
-The following table provides an overview about the availability of the performance APIs in window and worker contexts.
-
-| API                                                        | Window | Worker |
-| ---------------------------------------------------------- | ------ | ------ |
-| {{domxref("LargestContentfulPaint")}}                      | x      |        |
-| {{domxref("LayoutShift")}}                                 | x      |        |
-| {{domxref("LayoutShiftAttribution")}}                      | x      |        |
-| {{domxref("Performance")}}                                 | x      | x      |
-| {{domxref("PerformanceElementTiming")}}                    | x      |        |
-| {{domxref("PerformanceEntry")}}                            | x      | x      |
-| {{domxref("PerformanceEventTiming")}}                      | x      |        |
-| {{domxref("PerformanceLongTaskTiming")}}                   | x      |        |
-| {{domxref("PerformanceMark")}}                             | x      | x      |
-| {{domxref("PerformanceMeasure")}}                          | x      | x      |
-| {{domxref("PerformanceNavigation")}} {{deprecated_inline}} | x      |        |
-| {{domxref("PerformanceNavigationTiming")}}                 | x      |        |
-| {{domxref("PerformanceObserver")}}                         | x      | x      |
-| {{domxref("PerformanceObserverEntryList")}}                | x      | x      |
-| {{domxref("PerformancePaintTiming")}}                      | x      |        |
-| {{domxref("PerformanceResourceTiming")}}                   | x      | x      |
-| {{domxref("PerformanceServerTiming")}}                     | x      | x      |
-| {{domxref("PerformanceTiming")}} {{deprecated_inline}}     | x      |        |
-| {{domxref("TaskAttributionTiming")}}                       | x      |        |
-| {{domxref("VisibilityStateEntry")}}                        | x      |        |
-
 ## Specifications
 
 {{Specifications}}
