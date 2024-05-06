@@ -365,6 +365,7 @@ div.legacyHSLA {
 - [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color functions
 - [Hue interpolation in `color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix#using_hue_interpolation_in_color-mix)
 - [List of all color notations](/en-US/docs/Web/CSS/color_value)
+- [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - [Color picker tool](https://colorjs.io/apps/picker/) by Lea Verou

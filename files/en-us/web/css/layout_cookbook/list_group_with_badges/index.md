@@ -2,7 +2,6 @@
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}

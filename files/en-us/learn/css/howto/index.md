@@ -13,7 +13,7 @@ This page rounds up questions and answers, and other material on the MDN site th
 - [How do I add a drop-shadow to an element?](/en-US/docs/Learn/CSS/Howto/Add_a_shadow)
   - : Shadows can be added to boxes with the {{cssxref("box-shadow")}} property. This tutorial explains how it works and shows an example.
 - [How do I fill a box with an image without distorting the image?](/en-US/docs/Learn/CSS/Howto/Fill_a_box_with_an_image)
-  - : The {{cssxref("object-fit")}} property provides different ways to fit an image into a box which has a different aspect ratio, and you can find out how to use them in this tutorial.
+  - : The {{cssxref("object-fit")}} property provides different ways to fit an image into a box which has a different {{glossary("aspect ratio")}}, and you can find out how to use them in this tutorial.
 - [Which methods can be used to style boxes?](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes)
   - : A rundown of the different properties that might be useful when styling boxes using CSS.
 - [How can I make elements semi-transparent?](/en-US/docs/Learn/CSS/Howto/Make_box_transparent)

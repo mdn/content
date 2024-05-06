@@ -29,12 +29,14 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
+- {{domxref("HTMLScriptElement.integrity")}}
+  - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.noModule")}}
   - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 - {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
+  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document. It reflects the `src` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.text")}}
 
   - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.

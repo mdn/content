@@ -8000,7 +8000,7 @@
 /en-US/docs/Web/API/Document/onselectionchange	/en-US/docs/Web/API/Document/selectionchange_event
 /en-US/docs/Web/API/Document/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/Document/onvisibilitychange	/en-US/docs/Web/API/Document/visibilitychange_event
-/en-US/docs/Web/API/Document/origin	/en-US/docs/Web/API/origin
+/en-US/docs/Web/API/Document/origin	/en-US/docs/Web/API/Window/origin
 /en-US/docs/Web/API/Document/pointercancel_event	/en-US/docs/Web/API/Element/pointercancel_event
 /en-US/docs/Web/API/Document/pointerdown_event	/en-US/docs/Web/API/Element/pointerdown_event
 /en-US/docs/Web/API/Document/pointerenter_event	/en-US/docs/Web/API/Element/pointerenter_event
@@ -10258,11 +10258,11 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/crossOriginIsolated
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/Window/crossOriginIsolated
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/en-US/docs/Web/API/Window/indexedDB
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/en-US/docs/Web/API/isSecureContext
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin	/en-US/docs/Web/API/origin
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/en-US/docs/Web/API/Window/isSecureContext
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin	/en-US/docs/Web/API/Window/origin
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/en-US/docs/Web/API/queueMicrotask
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
@@ -10440,6 +10440,7 @@
 /en-US/docs/Web/API/console/timeStamp	/en-US/docs/Web/API/console/timestamp_static
 /en-US/docs/Web/API/console/trace	/en-US/docs/Web/API/console/trace_static
 /en-US/docs/Web/API/console/warn	/en-US/docs/Web/API/console/warn_static
+/en-US/docs/Web/API/crossOriginIsolated	/en-US/docs/Web/API/Window/crossOriginIsolated
 /en-US/docs/Web/API/document.URL	/en-US/docs/Web/API/Document/URL
 /en-US/docs/Web/API/document.activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/document.adoptNode	/en-US/docs/Web/API/Document/adoptNode
@@ -10517,7 +10518,7 @@
 /en-US/docs/Web/API/document.onoffline	/en-US/docs/Web/API/Window/offline_event
 /en-US/docs/Web/API/document.ononline	/en-US/docs/Web/API/Window/online_event
 /en-US/docs/Web/API/document.open	/en-US/docs/Web/API/Document/open
-/en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/origin
+/en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/Window/origin
 /en-US/docs/Web/API/document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
 /en-US/docs/Web/API/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
@@ -10660,6 +10661,7 @@
 /en-US/docs/Web/API/form.target	/en-US/docs/Web/API/HTMLFormElement/target
 /en-US/docs/Web/API/html.version	/en-US/docs/Web/API/HTMLHtmlElement/version
 /en-US/docs/Web/API/indexedDB	/en-US/docs/Web/API/Window/indexedDB
+/en-US/docs/Web/API/isSecureContext	/en-US/docs/Web/API/Window/isSecureContext
 /en-US/docs/Web/API/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription.sdp	/en-US/docs/Web/API/RTCSessionDescription/sdp
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
@@ -10704,6 +10706,7 @@
 /en-US/docs/Web/API/notification_1/vibrate	/en-US/docs/Web/API/Notification/vibrate
 /en-US/docs/Web/API/onMSVideoOptimalLayoutChanged	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/onMSVideoOptimalLayoutChanged_	/en-US/docs/Web/API/HTMLVideoElement
+/en-US/docs/Web/API/origin	/en-US/docs/Web/API/Window/origin
 /en-US/docs/Web/API/range.cloneContents	/en-US/docs/Web/API/range/cloneContents
 /en-US/docs/Web/API/range.cloneRange	/en-US/docs/Web/API/range/cloneRange
 /en-US/docs/Web/API/range.collapse	/en-US/docs/Web/API/range/collapse
