@@ -25,6 +25,42 @@ The default reference box is the `margin-box`, as demonstrated in the below imag
 
 The following shapes are supported. All `<basic-shape>` values use functional notation and are defined here using the [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax).
 
+- `{{cssxref("basic-shape/inset","inset()")}}`
+
+  - : Defines an inset rectangle.
+
+    ```css
+    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
+    ```
+
+    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
+
+    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
+
+- `{{cssxref("basic-shape/rect","rect()")}}`
+
+  - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
+
+    ```css
+    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
+    ```
+
+    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
+
+- `{{cssxref("basic-shape/xywh","xywh()")}}`
+
+  - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
+
+    ```css
+    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
+    ```
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
+
 - `{{cssxref("basic-shape/circle","circle()")}}`
 
   - : Defines a circle using a radius and a position.
@@ -49,19 +85,17 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The position argument defines the center of the ellipse. This defaults to center if omitted.
 
-- `{{cssxref("basic-shape/inset","inset()")}}`
+- `{{cssxref("basic-shape/polygon","polygon()")}}`
 
-  - : Defines an inset rectangle.
+  - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
     ```css
-    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
+    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
     ```
 
-    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
+    `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
 
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
-
-    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
+    Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
 
 - `{{cssxref("path","path()")}}`
 
@@ -75,30 +109,6 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes.
 
-- `{{cssxref("basic-shape/polygon","polygon()")}}`
-
-  - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
-
-    ```css
-    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
-    ```
-
-    `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
-
-    Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
-
-- `{{cssxref("basic-shape/rect","rect()")}}`
-
-  - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
-
-    ```css
-    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
-    ```
-
-    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
-
 - `{{cssxref("basic-shape/shape","shape()")}}` {{Experimental_Inline}}
 
   - : Defines a shape using an initial starting point and a series of shape commands.
@@ -110,16 +120,6 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
 
     `from <coordinate-pair>` represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
-
-- `{{cssxref("basic-shape/xywh","xywh()")}}`
-
-  - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
-
-    ```css
-    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
-    ```
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
 
 The arguments not defined above are defined as follows:
 
