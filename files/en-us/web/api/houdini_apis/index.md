@@ -1,7 +1,7 @@
 ---
 title: Houdini APIs
 slug: Web/API/Houdini_APIs
-page-type: web-api-overview
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Houdini API")}}
