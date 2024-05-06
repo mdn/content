@@ -73,7 +73,7 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines a shape using an optional SVG filling rule and an SVG path definition.
     - {{cssxref("basic-shape/rect","rect()")}}
       - : Defines a rectangle using the specified distances from the edges of the reference box.
-    - {{cssxref("shape","shape()")}} {{Experimental_Inline}}
+    - {{cssxref("basic-shape","shape()")}} {{Experimental_Inline}}
       - : Defines a shape using an optional SVG filling rule and shape commands for lines, curves, and arcs.
     - {{cssxref("basic-shape/xywh","xywh()")}}
       - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
