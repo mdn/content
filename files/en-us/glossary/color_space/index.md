@@ -14,11 +14,11 @@ The _sRGB_ color space (standard red, green, and blue) was created for the web, 
 
 ## Named color spaces
 
-The predefined RGB color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined XYZ color spaces include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
+The predefined [RGB color spaces](#rgb_color_spaces) include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`. The predefined [CIELAB color spaces](#cielab_color_spaces) include `lab-d50` and `lab-d65`. The predefined [XYZ color spaces](#xyz_color_spaces) include `xyz-d50`, and `xyz-d65` (and `xyz`, an alias for `xyz-d65`).
 
 Color spaces are either [rectangular or polar](https://ericportis.com/posts/2024/okay-color-spaces/). Rectangular color spaces include `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, and `xyz-d65` (or `xyz`). The polar color spaces include `hsl`, `hwb`, `lch`, and `oklch`.
 
-### `RGB` color spaces
+### RGB color spaces
 
 RGB is a color model that represents colors as mixtures of three underlying components — red, green, and blue color channels — that create various hues when combined. sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is intended as a common color space for the creation of images for viewing on the Internet and World Wide Web (WWW). sRGB is primarily used for displaying colors on computer screens, including laptops and smartphones.
 
@@ -44,11 +44,11 @@ The `rgb()` color function is not the only color function that can represent the
 
 - `a98-rgb` color space
 
-  - : `a98-rgb` is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the CIELab color space can be achieved, encompassing more cyan-green hues than other RGB color spaces. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
+  - : `a98-rgb` is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the [CIELab color space](#cielab_color_spaces) can be achieved, encompassing more cyan-green hues than other RGB color spaces. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
 
 - `prophoto-rgb`
 
-  - : Developed by Kodak, the `prophoto-rgb` color space can represent all the colors likely to occur in nature and about 90% of CIElab colors. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, with a value of 1/1.8, and a small linear portion near black. The whitepoint is D50, the same one used by CIE Lab.
+  - : Developed by Kodak, the `prophoto-rgb` color space can represent all the colors likely to occur in nature and about 90% of [CIElab colors](#cielab_color_spaces). In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, with a value of 1/1.8, and a small linear portion near black. The whitepoint is D50, the same one used by CIELab.
 
 - `rec2020`
 
@@ -58,13 +58,15 @@ The `rgb()` color function is not the only color function that can represent the
 
 ### CIELAB color spaces
 
-The CIELAB color space, also referred to as L*a*b*, represents the entire range of color that humans can see. It expresses color as three values: L* for perceptual lightness and a* and b* for the four unique colors of human vision: red, green, blue, and yellow.
+The CIELAB (or CIELab) color space, also referred to as L\*a\*b* (or Lab* for short), represents the entire range of color that humans can see. This color space was defined by International Commission on Illumination (CIE). It expresses color as three values: L\* for perceptual lightness, and a\* and b\* for the four unique colors of human vision: red, green, blue, and yellow.
 
 Lab is a rectangular coordinate system, with a central lightness `L` axis. Positive values along the `a` axis are a purplish red while negative values are the complement: green. Positive values along the `b` axis are yellow and negative are blue/violet. Desaturated colors have small values for `a` and `b` with greater absolute values being more saturated.
 
-CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` is a polar, cylindrical coordinate system using polar coordinates `C` (chroma) and `H` (hue) rather than axes. Note the hue and lightness here are different from the same-named values in `hsl()` or other sRGB color spaces.
+CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` is a polar, cylindrical coordinate system using polar coordinates `C` (chroma) and `H` (hue) rather than axes.
 
-CIE Lab color spaces, including LCH, Oklab, and Oklch, are device-independent color spaces.
+> **Note:** The hue and lightness in `lch()` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
+
+CIELab color spaces, including LCH, Oklab, and Oklch, are device-independent color spaces.
 
 - `lab-d50` color space
 
@@ -80,9 +82,9 @@ CIE Lab color spaces, including LCH, Oklab, and Oklch, are device-independent co
 
 ### XYZ color spaces
 
-While combinations of red, green, and blue work well for representing colors on screen, sRGB doesn't directly correspond to how humans perceive color. Created by the International Commission on Illumination (CIE) in 1931, the XYZ color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human vision.
+While combinations of red, green, and blue work well for representing colors on screen, sRGB doesn't directly correspond to how humans perceive color. Created by the International Commission on Illumination (CIE) in 1931, the CIEXYZ (or XYZ for short) color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human vision.
 
-People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. The CIE X, Y, and Z parameters correspond to levels of stimuli of the three kinds of cone cells which, in principle, describe every color. The CIE XYZ color space, with its tri-stimulus values, encompasses all visible colors.
+People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. The CIE X, Y, and Z parameters correspond to levels of stimuli of the three kinds of cone cells which, in principle, describe every color. The CIEXYZ color space, with its tri-stimulus values, encompasses all visible colors.
 
 - `xyz` and `xyz-d65` color space
 
@@ -97,5 +99,5 @@ People with normal vision have three kinds of cone cells that sense light, havin
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` feature
 - [CSS data type: `<color>`](/en-US/docs/Web/CSS/color_value)
 - [sRGB color space](https://webstore.iec.ch/publication/6168)
-- [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space
+- [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space) on Wikipedia
 - [Oklab](https://bottosson.github.io/posts/oklab/) color space

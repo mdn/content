@@ -64,7 +64,7 @@ svg {
   - : This attribute defines the coordinate system for attributes `x`, `y`, `width`, and `height`.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
-  - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different aspect ratio.
+  - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the pattern fragment.

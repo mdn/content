@@ -8,7 +8,7 @@ browser-compat: api.Element.previousElementSibling
 
 {{APIRef("DOM")}}
 
-The read-only **`previousElementSibling`** of the {{domxref("CharacterData")}} interface
+The read-only **`previousElementSibling`** property of the {{domxref("CharacterData")}} interface
 returns the first {{domxref("Element")}} before the current node in its parent's children list,
 or `null` if there is none.
 

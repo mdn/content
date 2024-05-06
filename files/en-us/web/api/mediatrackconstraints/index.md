@@ -125,7 +125,7 @@ Some combination—but not necessarily all—of the following properties will ex
 ### Instance properties of video tracks
 
 - {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}}
-  - : A [`ConstrainDouble`](#constraindouble) specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.
+  - : A [`ConstrainDouble`](#constraindouble) specifying the video {{glossary("aspect ratio")}} or range of aspect ratios which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.facingMode", "facingMode")}}
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a facing or an array of facings which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.frameRate", "frameRate")}}

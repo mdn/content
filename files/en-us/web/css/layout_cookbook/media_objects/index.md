@@ -2,7 +2,6 @@
 title: "Recipe: Media objects"
 slug: Web/CSS/Layout_cookbook/Media_objects
 page-type: guide
-browser-compat: css.properties.grid
 ---
 
 {{CSSRef}}

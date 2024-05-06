@@ -961,9 +961,15 @@ input.custom {
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
 
+### field-sizing
+
+The {{cssxref("field-sizing")}} property enables you to control the sizing behavior of form inputs (i.e. they are given a default preferred size by default.) This property enables you to override the default behavior, allowing form controls to adjust in size to fit their contents.
+
+This property is typically used to create form fields that shrinkwrap their content and grow as more text is entered. This works with input types that accept direct text input (for example, [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`url`](/en-US/docs/Web/HTML/Element/input/url)), input type [`file`](/en-US/docs/Web/HTML/Element/input/file), and {{htmlelement("textarea")}} elements.
+
 ### object-position and object-fit
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties
+In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
 
 ### Styling
 

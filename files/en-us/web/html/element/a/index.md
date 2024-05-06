@@ -449,9 +449,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         > or an
-        <a href="/en-US/docs/Web/HTML/Element/a"
-          >a</a
-        > element, and no descendant may have a specified
+        <code>&lt;a&gt;</code> element, and no descendant may have a specified
         <a
           href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
           >tabindex</a
@@ -468,7 +466,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
         Any element that accepts
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
-        >, but not other <code>&#x3C;a></code> elements.
+        >, but not other <code>&lt;a&gt;</code> elements.
       </td>
     </tr>
     <tr>
