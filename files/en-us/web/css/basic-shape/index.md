@@ -25,42 +25,6 @@ The default reference box is the `margin-box`, as demonstrated in the below imag
 
 The following shapes are supported. All `<basic-shape>` values use functional notation and are defined here using the [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax).
 
-- `{{cssxref("basic-shape/inset","inset()")}}`
-
-  - : Defines an inset rectangle.
-
-    ```css
-    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
-    ```
-
-    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
-
-    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
-
-- `{{cssxref("basic-shape/rect","rect()")}}`
-
-  - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
-
-    ```css
-    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
-    ```
-
-    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
-
-- `{{cssxref("basic-shape/xywh","xywh()")}}`
-
-  - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
-
-    ```css
-    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
-    ```
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
-
 - `{{cssxref("basic-shape/circle","circle()")}}`
 
   - : Defines a circle using a radius and a position.
@@ -85,17 +49,19 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The position argument defines the center of the ellipse. This defaults to center if omitted.
 
-- `{{cssxref("basic-shape/polygon","polygon()")}}`
+- `{{cssxref("basic-shape/inset","inset()")}}`
 
-  - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
+  - : Defines an inset rectangle.
 
     ```css
-    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
+    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
     ```
 
-    `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
+    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
 
-    Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
+
+    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
 
 - `{{cssxref("path","path()")}}`
 
@@ -107,7 +73,53 @@ The following shapes are supported. All `<basic-shape>` values use functional no
 
     The optional `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
 
-    The required \<string> is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes
+    The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes.
+
+- `{{cssxref("basic-shape/polygon","polygon()")}}`
+
+  - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
+
+    ```css
+    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
+    ```
+
+    `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
+
+    Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
+
+- `{{cssxref("basic-shape/rect","rect()")}}`
+
+  - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
+
+    ```css
+    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
+    ```
+
+    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
+
+- `{{cssxref("basic-shape/shape","shape()")}}` {{Experimental_Inline}}
+
+  - : Defines a shape using an initial starting point and a series of shape commands.
+
+    ```css
+    shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
+    ```
+
+    `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
+
+    `from <coordinate-pair>` represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+
+- `{{cssxref("basic-shape/xywh","xywh()")}}`
+
+  - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
+
+    ```css
+    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
+    ```
+
+    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
 
 The arguments not defined above are defined as follows:
 
@@ -134,14 +146,17 @@ The values in a `<basic-shape>` function are computed as specified, with these e
 
 ### Interpolation of basic shapes
 
-When animating between one `<basic-shape>` and another, the rules below are applied. The values in the shape functions {{Glossary("interpolation", "interpolate")}} as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
+When animating between one `<basic-shape>` and another, the rules below are applied. The values in the `<basic-shape>` functions {{Glossary("interpolation", "interpolate")}} as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
 
 - Both shapes must use the same reference box.
-- If both shapes are the same type, that type is `ellipse()` or `circle()`, and none of the radii use the `closest-side` or `farthest-side` keywords, interpolate between each value in the shape functions.
-- If both shapes are of type `inset()`, interpolate between each value in the shape functions.
-- If both shapes are of type `polygon()`, both polygons have the same number of vertices, and use the same `<fill-rule>`, interpolate between each value in the shape functions.
-- If both shapes are of type `path()`, both paths strings have the same number and types of path data commands in the same order, interpolate each path data command as real numbers.
-- In all other cases no interpolation occurs.
+- If the two shapes are of the same type, namely `ellipse()` and `circle()` and if their radii do not use the `closest-side` or `farthest-side` keywords, interpolation is applied between each value in the shape functions.
+- If both shapes are of type `inset()`, interpolation is applied between each value in the shape functions.
+- If both shapes are of type `polygon()`, and both polygons have the same number of vertices and use the same `<fill-rule>`, interpolation is applied between each value in the shape functions.
+- If both shapes are of type `path()`, and both path strings have the same number and types of path data commands and in the same order, each path data command is interpolated as a real number.
+- If the two shapes are of type `shape()` and `path()` and have matching path data commands in length and order, the interpolated value is a `path()` function if both starting and ending values are `path()` functions; otherwise, it's treated as a `shape()` function. The interpolated value must represent the same list of path data commands, with numerical components interpolated between the corresponding components of the starting and ending list.
+- If both shapes are of type `shape()`, the shape commands are considered the same if they share the identical command keyword and `<by-to>` parameters; for `<curve-command>` and `<smooth-command>`, the number of control points must match.
+- If both shapes of type `shape()` with an `<arc-command>` have different `<arc-sweep>` between their starting and ending lists, then the interpolated result uses `cw` for any progress value between `0` and `1`. If the shapes have different `<arc-size>` keywords, then the interpolated result uses `large` for any progress value between `0` and `1`.
+- In all other cases, no interpolation occurs.
 
 ## Examples
 
