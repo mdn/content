@@ -21,7 +21,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
-- {{domxref("crossOriginIsolated", "WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("crypto_property", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Crypto")}} object associated to the global object.
@@ -29,13 +29,13 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for workers to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("isSecureContext", "WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("origin", "WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.

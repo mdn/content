@@ -2,7 +2,6 @@
 title: Card
 slug: Web/CSS/Layout_cookbook/Card
 page-type: guide
-browser-compat: css.properties.grid
 ---
 
 {{CSSRef}}

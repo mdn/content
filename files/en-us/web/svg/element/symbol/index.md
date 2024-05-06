@@ -51,7 +51,7 @@ svg {
   - : This attribute determines the height of the symbol.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
-  - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.
+  - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("refX")}}
   - : This attribute determines the x coordinate of the reference point of the symbol.
