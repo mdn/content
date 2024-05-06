@@ -92,6 +92,10 @@ This article provides information about the changes in Firefox 126 that affect d
 
 These features are newly shipped in Firefox 126 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **CSS `shape()` function:** `layout.css.basic-shape-shape.enabled`.
+
+  You can use the [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the `{{cssxref("path","path()")}}` function.
+
 ## Older versions
 
 {{Firefox_for_developers}}
