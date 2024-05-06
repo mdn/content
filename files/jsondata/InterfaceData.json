@@ -864,6 +864,10 @@
       "inh": "ReportBody",
       "impl": []
     },
+    "DeviceChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "DeviceMotionEvent": {
       "inh": "Event",
       "impl": []
