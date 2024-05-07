@@ -163,6 +163,8 @@ img {
 
 Here we declared a single dimension (in this case, `100vh` is the full height of the example {{htmlelement("iframe")}} viewport). For `aspect-ratio` to apply to replaced elements, one dimension must be set. Setting both or neither doesn't work.
 
+### The `object-fit` property
+
 To fit a replaced element to the content of its container while maintaining its intrinsic aspect ratio, set the {{cssxref("object-fit")}} property set to `cover` or `contain`. This will resize the replaced element and either clip it to "cover" the container or display it at a smaller size fully "contained" within it.
 
 In this example, we're placing our square image into a grid of three items with an aspect ratio of `5 / 2`.
@@ -324,9 +326,15 @@ blockquote {
 
 Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the CSS {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same a `1 / 1`, a square; setting the block direction to be as tall as the element is wide, without the use of the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
 
-In these examples, a size was explicitly set on the element itself. When working with non-replaced elements, aspect ratio works when the size is not explicit.
+In these examples, a size was explicitly set on the element itself. When working with non-replaced elements, aspect ratio works when there is no size dimension explicitly set.
 
-In this example, the container {{htmlelement("div")}} is `200px` wide. Both elements have a {{cssxref("border-radius")}} of `50%`. The container has padding and the {{htmlelement("p")}} has top and bottom margins by default, so the container is an oval while the child, with an `aspect-ratio` of `1` but no inline or block sizing explicitly defined, is a circle.
+### Creating a circle based on the container size
+
+The inline-size of non-replaced block level elements are the size of their containers content box. Because they have an size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
+
+In this example, we have a container {{htmlelement("div")}} that is `200px` wide with a child {{htmlelement("p")}}. This `200px` includes `5px` of padding on each side, so the content-box's inline-size is `190px`. Without setting a height or width on the nested paragraph, we know its inline-size is `190px`. With `aspect-ratio: 1` set, the paragraph will be `190px` tall, unless it has visible overflowing content causing it to be taller (it doesn't) .
+
+The height of the `<div>` is not explicitly set, but it contains the 190px tall paragraph, the `5px` of padding on top and bottom, plus the combined heights of the {{htmlelement("p")}} default top and bottom margins, so it is taller than it is wide. Both elements have a {{cssxref("border-radius")}} of `50%`, so the container is an oval while the child, with an `aspect-ratio` of `1` but no inline or block sizing explicitly defined, is a circle.
 
 ```html live-sample___circle
 <div><p>Hello world</p></div>
@@ -351,6 +359,8 @@ p {
 ```
 
 {{EmbedLiveSample("circle", "100", "250")}}
+
+To make the `<div>` a circle, we could have set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`, which would clip the bottom of the paragraph's circle, or, we could have just removed the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/margin-block).
 
 ## Common use cases
 
@@ -379,13 +389,13 @@ We can use the `aspect-ratio` feature of the `@media` media query and the CSS `a
 We set the landscape-oriented Youtube video to be as wide as the viewport and both portrait-oriented Titkok and Instagram video iframes to be as tall as the viewport. If a viewport's aspect ratio is wider than 16:9, we set the Youtube video to be the height of the viewport. If the viewport is narrower than 9:16, we set both Instagram and Tiktok videos to the width of the viewport.
 
 ```css
-.youtube {
+iframe.youtube {
   aspect-ratio: 16/9;
   width: 100vw;
   height: auto;
 }
-.instagram,
-.tiktok {
+iframe.instagram,
+iframe.tiktok {
   aspect-ratio: 9/16;
   height: 100vh;
   width: auto;
@@ -393,15 +403,15 @@ We set the landscape-oriented Youtube video to be as wide as the viewport and bo
 
 /* if the viewort is very wide but not very tall */
 @media (aspect-ratio > 16 / 9) {
-  .youtube {
+  iframe.youtube {
     width: auto;
     height: 100vh;
   }
 }
 /* if the viewort is very tall but not very wide */
 @media (aspect-ratio < 9 / 16) {
-  .instagram,
-  .tiktok {
+  iframe.instagram,
+  iframe.tiktok {
     height: auto;
     width: 100vw;
   }
@@ -482,6 +492,8 @@ For the content of a grid item to not grow beyond the preferred height set by th
   max-height: 100%;
 }
 ```
+
+Alternatively, the [`object-fit` property](#the_object-fit_property) can be used.
 
 {{EmbedLiveSample("grid of square cells", "100", "350")}}
 
