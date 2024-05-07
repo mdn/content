@@ -157,14 +157,18 @@ anchor(anchor-element anchor-side, length-percentage)
 - `anchor-side` specifies the side of the anchor element that the positioned element will be positioned relative to. This can be expressed using a variety of values, for example physical (`top`, `left`, etc.) or logical (`start`, `end`, etc.)
 - The {{cssxref("length-percentage")}} is a fallback value that specifies what the function should resolve to if the `anchor()` function is invalid.
 
-The most common `anchor()` functions you'll use will just refer to a side of the default anchor. You will also likely use them inside {{cssxref("calc")}} functions, to add some spacing between the edge of the anchor and the edge of the positioned element. For example:
+The most common `anchor()` functions you'll use will just refer to a side of the default anchor; you could then add some {{cssxref("margin")}} to create some spacing between the edges of the anchor and positioned element as required. You could also use `anchor()` functions inside {{cssxref("calc")}} functions to add the spacing. For example:
 
 ```css
 .elem {
   /* Position the right edge of the positioned element
-     flush to the anchor element's left edge  */
+     flush to the anchor element's left edge then add
+     margin to make some space between the adges  */
   right: anchor(left);
+  margin-left: 10px;
+}
 
+.elem {
   /* Position the positioned element's logical block end edge
      10px from the anchor element's logical block start edge  */
   inset-block-end: calc(anchor(start) + 10px);
@@ -228,7 +232,7 @@ body {
 }
 ```
 
-The infobox is given fixed positioning and associated with the anchor in the same way as before. However, now we tether it to the anchor using the logical {{cssxref("inset-block-start")}} and {{cssxref("inset-inline-start")}} properties (which are equivalent to {{cssxref("top")}} and {{cssxref("left")}} in horizontal writing modes):
+The infobox is given fixed positioning and associated with the anchor in the same way as before. However, now we tether it to the anchor using the logical {{cssxref("inset-block-start")}} and {{cssxref("inset-inline-start")}} properties (which are equivalent to {{cssxref("top")}} and {{cssxref("left")}} in horizontal writing modes). We also give the infobox some `margin` to create some extra space between the positioned element and anchor:
 
 ```css hidden
 .infobox {
@@ -246,15 +250,16 @@ The infobox is given fixed positioning and associated with the anchor in the sam
   position: fixed;
   position-anchor: --infobox;
 
-  inset-block-start: calc(anchor(end) + 5px);
-  inset-inline-start: calc(anchor(self-end) + 5px);
+  inset-block-start: anchor(end);
+  inset-inline-start: anchor(self-end);
+  margin: 5px 0 0 5px;
 }
 ```
 
 Let's look at the positioning declarations in more detail:
 
-- `inset-block-start: calc(anchor(end) + 5px)`: Here we are setting the positioned element's block start edge to have the same position along the block axis as the anchor's block end edge (calculated using the `anchor(end)` function), plus 5px, so a gap is left and the two edges are not flush against each other.
-- `inset-inline-start: calc(anchor(self-end) + 5px)`: Here we are setting the positioned element's inline start edge to have the same position along the inline axis as the anchor's inline end edge (calculated using the `anchor(self-end)` function), plus 5px (again, to create a gap).
+- `inset-block-start: anchor(end)`: Here we are setting the positioned element's block start edge to have the same position along the block axis as the anchor's block end edge (calculated using the `anchor(end)` function).
+- `inset-inline-start: anchor(self-end)`: Here we are setting the positioned element's inline start edge to have the same position along the inline axis as the anchor's inline end edge (calculated using the `anchor(self-end)` function).
 
 This gives us the following result:
 
@@ -405,11 +410,10 @@ The infobox is given fixed positioning and associated with the anchor in the sam
   position-anchor: --infobox;
 
   inset-area: top;
-  margin-bottom: 5px;
 }
 ```
 
-We also include a short script to apply new `inset-area` values chosen from the `<select>` menu to the infobox, and give the infobox appropriate margin values to put spacing between it and the anchor:
+We also include a short script to apply new `inset-area` values chosen from the `<select>` menu to the infobox:
 
 ```js
 const infobox = document.querySelector(".infobox");
@@ -423,24 +427,6 @@ selectElem.addEventListener("change", () => {
 
   // Set the inset-area to the value chosen in the select box
   infobox.style.insetArea = area;
-
-  // This looks fiddly, but basically I am setting the opposite
-  // margin for the side the positioned element is placed on, in
-  // each case, but not when the side value is included in a span-*
-  // value. If this were the case, the positioned element edge would
-  // not be aligned with the anchor element edge.
-  if (area.includes("top") && !area.includes("span-top")) {
-    infobox.style.marginBottom = "5px";
-  }
-  if (area.includes("bottom") && !area.includes("span-bottom")) {
-    infobox.style.marginTop = "5px";
-  }
-  if (area.includes("left") && !area.includes("span-left")) {
-    infobox.style.marginRight = "5px";
-  }
-  if (area.includes("right") && !area.includes("span-right")) {
-    infobox.style.marginLeft = "5px";
-  }
 });
 ```
 
@@ -456,7 +442,7 @@ If the positioned element is placed into a corner or side grid square (say with 
 
 If the positioned element is vertically aligned with the center tile (say with `inset-area: bottom center`), it will align with the specified grid square but adopt the same width as the anchor element — it is being sized according to the anchor element's containing block size. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
 
-### Centering on the anchor using `anchor-center`
+## Centering on the anchor using `anchor-center`
 
 The properties {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("align-items")}} exist to allow developers to easily align elements in the inline or block direction inside various layout systems, for example along the main or cross axis in the case of flex children.
 
@@ -535,7 +521,8 @@ The infobox is given fixed positioning and tethered to the anchor's bottom edge.
   position: fixed;
   position-anchor: --infobox;
 
-  top: calc(anchor(bottom) + 5px);
+  top: anchor(bottom);
+  margin-top: 5px;
   justify-self: anchor-center;
 }
 ```
@@ -562,14 +549,16 @@ anchor-size(anchor-element anchor-size, length-percentage)
   > **Note:** The dimension of the positioned element does not need to match the anchor's dimension it is being sized relative to. For example, `width: anchor-size(height);` is valid.
 - The {{cssxref("length-percentage")}} is a fallback value that specifies what the function should resolve to if the `anchor-size()` function is invalid.
 
-The most common `anchor-size()` functions you'll use will just refer to a dimension of the default anchor. You will also likely use them inside {{cssxref("calc")}} functions, to modify the size applied to the positioned element. For example:
+The most common `anchor-size()` functions you'll use will just refer to a dimension of the default anchor. You can also use them inside {{cssxref("calc")}} functions, to modify the size applied to the positioned element. For example:
 
 ```css
 .elem {
   /* Size the positioned element's width
      equal to the anchor element's width  */
   width: anchor-size(width);
+}
 
+.elem {
   /* Size the positioned element's inline size
      equal to 4 times the anchor element's inline size  */
   inline-size: calc(anchor-size(self-inline) * 4);
@@ -1030,7 +1019,7 @@ If you want to use specific try options that aren't available via the above mech
 ```
 
 - The {{cssxref("dashed-ident")}} is developer-defined identifying name for the position try option, which can then be used to add that option to the {{cssxref("position-try-options")}} list.
-- The `declaration-list` is a list of declarations that define the behavior of the custom try option, i.e where it will result in the positioned element being placed. Only certain properties can be used in a `@position-try` `declaration-list`. This includes:
+- The `declaration-list` is a list of declarations that define the behavior of the custom try option, i.e where it will result in the positioned element being placed. Only certain properties can be used inside a `@position-try` block. This includes:
   - {{cssxref("position-anchor")}}
   - {{cssxref("inset-area")}}
   - Inset properties such as {{cssxref("top")}} or {{cssxref("inset-block-start")}}
@@ -1141,13 +1130,13 @@ One last subject to cover in this section is the effect of the {{cssxref("positi
 - `normal`
   - : The default. The try options will be tried in the order they appear in the `position-try-options` list.
 - `most-height`
-  - : The try options that give the positioned element the largest height will be tried first.
+  - : The try options will be tried in positioned element height order, largest first.
 - `most-width`
-  - : The try options that give the positioned element the largest width will be tried first.
+  - : The try options will be tried in positioned element width order, largest first.
 - `most-block-size`
-  - : The try options that give the positioned element the largest block size will be tried first.
+  - : The try options will be tried in positioned element block size order, largest first.
 - `most-inline-size`
-  - : The try options that give the positioned element the largest inline size will be tried first.
+  - : The try options will be tried in positioned element inline size order, largest first.
 
 Let's have a look at a demo that shows the effect of this property. The HTML is the same as in previous demos, except that we've added a `<form>` containing radio buttons, allowing you to select different values of `position-try-order` to see what their effects are.
 
@@ -1190,7 +1179,7 @@ Let's have a look at a demo that shows the effect of this property. The HTML is 
 </form>
 ```
 
-The CSS for the example is generally the same; The infobox positioning code is the same as in the [`inset-area` try options](#inset-area_try_options) demo.
+The CSS for the example is generally the same, except that we include some custom try options that deliberately set a large height and a large width on the infobox, respectively:
 
 ```css hidden
 body {
@@ -1233,15 +1222,31 @@ form {
 ```
 
 ```css
+@position-try --square-left {
+  inset-area: left;
+  width: 125px;
+  height: 125px;
+  margin: 0 10px 0 0;
+}
+
+@position-try --rectangle-right {
+  inset-area: right;
+  width: 250px;
+  height: 50px;
+  margin: 0 0 0 10px;
+}
+```
+
+We position the infobox to the top-right of the anchor by default, but then give it some try options including the custom try options defined earlier that give the positioned element specific width/height, and some `inset-area()` try options that don't modify the positioned element dimensions:
+
+```css
 .infobox {
   position: fixed;
   position-anchor: --infobox;
 
   inset-area: top left;
-  position-try-options: inset-area(top), inset-area(top right), inset-area(
-      right
-    ), inset-area(bottom right), inset-area(bottom), inset-area(bottom left),
-    inset-area(left);
+  position-try-options: inset-area(right), --rectangle-right, inset-area(left),
+    --square-left, inset-area(bottom);
 }
 ```
 
@@ -1264,9 +1269,9 @@ function setTryOrder(e) {
 
 Select each order option in turn. For each one, look at which position is applied by default, then scroll the page and check out which of the position try options is applied as the anchor nears the edge of the viewport:
 
-- When `normal` is selected, the options are tried as you'd expect.
-- When `most-width` is selected, the `inset-area(top)` option is immediately applied, overriding the default position, as it is the first option that provides more infobox width than the default. When the anchor is scrolled near the top of the viewport, the next option tried is `inset-area(bottom)` — this is tried before `inset-area(right)`, for example, as it results in more infobox width.
-- When `most-height` is selected, the `inset-area(right)` option is immediately applied, overriding the default position, as it is the first option that provides more infobox height than the default. When the anchor is scrolled near the top of the viewport, the next option tried is `inset-area(bottom right)` — this is the next option to provide as much infobox height.
+- When `normal` is selected, the options are tried as you'd expect when the infobox starts to overflow the top of the viewport, in the order the options appear in `position-try-options`.
+- When `most-width` is selected, the `--rectangle-right` option is tried first, as soon as the infobox starts to overflow the top of the viewport. This is because `--rectangle-right` sets the infobox to have a larger width than any of the other options.
+- When `most-height` is selected, the `--square-left` option is tried first, as soon as the infobox starts to overflow the top of the viewport. This is because `--square-left` sets the infobox to have a larger height than any of the other options.
 
 {{ EmbedLiveSample("The effect of `position-try-order`", "100%", "250") }}
 
