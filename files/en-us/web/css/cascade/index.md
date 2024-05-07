@@ -189,9 +189,9 @@ margin-left: 3px;
 
 > **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles. _Order of appearance_ only matters when both origin, importance, and specificity are equal.
 
-## Author styles: inline styles, layers, and precedence
+## Author styles: inline styles, layers, presentational  attributes, and precedence
 
-The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precedence within each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles land in the cascade order.
+The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precedence within each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles and presentation attribuets land in the cascade order.
 
 The order in which layers are declared is important in determining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity.
 
@@ -217,23 +217,32 @@ and then in the body of the document we have inline styles:
 <p style="line-height: 1.6em; text-decoration: overline !important;">Hello</p>
 ```
 
-In the CSS code block above, three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer.
-The "All unlayered styles" in the list below (normal author style precedence - order 4) includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
+and presentation attributes:
 
-| Order (low to high) | Author style         | Importance   |
-| ------------------- | -------------------- | ------------ |
-| 1                   | A - first layer      | normal       |
-| 2                   | B - second layer     | normal       |
-| 3                   | C - last layer       | normal       |
-| 4                   | All unlayered styles | normal       |
-| 5                   | inline `style`       | normal       |
-| 6                   | animations           |              |
-| 7                   | All unlayered styles | `!important` |
-| 8                   | C - last layer       | `!important` |
-| 9                   | B - second layer     | `!important` |
-| 10                  | A - first layer      | `!important` |
-| 11                  | inline `style`       | `!important` |
-| 12                  | transitions          |              |
+```html
+<svg>
+  <rect width="100" height="100" fill="red"/>
+</svg>
+```
+
+In the CSS code block above, three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer.
+The "All unlayered styles" in the list below (normal author style precedence - order 4) includes styles from these two stylesheets and the additional unlayered CSS style blocks. There are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration. And there are three presentation attributes, `width`, `height`, and `fill`.
+
+| Order (low to high) | Author style            | Importance   |
+| ------------------- | ----------------------- | ------------ |
+| 1                   | presentation attributes |              |
+| 2                   | A - first layer         | normal       |
+| 3                   | B - second layer        | normal       |
+| 4                   | C - last layer          | normal       |
+| 5                   | All unlayered styles    | normal       |
+| 6                   | inline `style`          | normal       |
+| 7                   | animations              |              |
+| 8                   | All unlayered styles    | `!important` |
+| 9                   | C - last layer          | `!important` |
+| 10                  | B - second layer        | `!important` |
+| 11                  | A - first layer         | `!important` |
+| 12                  | inline `style`          | `!important` |
+| 13                  | transitions             |              |
 
 In all origin types, the non important styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself.
 
@@ -243,11 +252,17 @@ The layer order of precedence is inverted for styles declared as `!important`. I
 
 ### Inline styles
 
-Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`.
+Inline styles are styles declared within the `style` attribute. They are considered to be part of the author styles. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`.
 
 Normal inline styles take precedence over any other normal author styles unless the property is being altered by a CSS animation.
 
 All important inline styles take precedence over all author styles, important and not, inline and not, layered and not. Important styles also take precedence over animated properties, but not transitioning properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a property value being transitioned.
+
+### Presentational attributes
+
+Presentational attributes are other attributes in the source document that can affect styling. For example, `align` in HTML or `fill` in SVG. They are considered to be part of the author styles. Presentational attributes have the least precedence. Layered, unlayered, and inline styles all take precedence over presentational attributes.
+
+Presentational attributes cannot be declared `!important`.
 
 ### Importance and layers
 
@@ -302,7 +317,8 @@ Now that we have a better understanding of origin type and cascade layer precede
   <tr><td rowspan="3">2</td><td>user - first declared layer</td><td rowspan="3">normal</td></tr>
   <tr><td>user - last declared layer</td></tr>
   <tr><td>user - unlayered styles</td></tr>
-  <tr><td rowspan="4">3</td><td>author - first declared layer</td><td rowspan="4">normal</td></tr>
+  <tr><td rowspan="5">3</td><td>presentational attributes</td><td rowspan="5">normal</td></tr>
+  <td>author - first declared layer</td>
   <tr><td>author - last declared layer</td></tr>
   <tr><td>author - unlayered styles</td></tr>
   <tr><td>inline <code>style</code></td></tr>
