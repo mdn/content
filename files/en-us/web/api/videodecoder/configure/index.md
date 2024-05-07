@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.configure
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
