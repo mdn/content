@@ -183,7 +183,7 @@
       "overview": ["CSS Custom Highlight API"],
       "interfaces": ["Highlight", "HighlightRegistry"],
       "methods": [],
-      "properties": ["CSS.highlights"],
+      "properties": ["CSS.highlights_static"],
       "events": []
     },
     "Console API": {
@@ -247,7 +247,7 @@
         "PaintRenderingContext2D",
         "PaintSize"
       ],
-      "methods": ["CSS.paintWorklet"],
+      "methods": ["CSS.paintWorklet_static"],
       "properties": [],
       "events": []
     },
@@ -255,7 +255,7 @@
       "overview": ["CSS Properties and Values API"],
       "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
       "interfaces": ["CSSPropertyRule"],
-      "methods": ["CSS.registerProperty"],
+      "methods": ["CSS.registerProperty_static"],
       "properties": [],
       "events": []
     },
@@ -566,8 +566,8 @@
       "methods": [],
       "properties": [
         "MouseEvent.webkitForce",
-        "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
-        "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN"
+        "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static",
+        "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static"
       ],
       "events": [
         "Element: webkitmouseforcewillbegin",
@@ -657,7 +657,7 @@
         "StylePropertyMap",
         "Worklet"
       ],
-      "methods": ["CSS.registerProperty", "Worklet.addModule"],
+      "methods": ["CSS.registerProperty_static", "Worklet.addModule"],
       "properties": [],
       "events": []
     },
