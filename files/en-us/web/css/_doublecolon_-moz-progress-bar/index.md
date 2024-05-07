@@ -50,6 +50,10 @@ If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozi
 
 Not part of any standard.
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{HTMLElement("progress")}}

@@ -52,6 +52,10 @@ span:-moz-first-node {
 
 Not part of any standard.
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{cssxref(":-moz-last-node")}}
