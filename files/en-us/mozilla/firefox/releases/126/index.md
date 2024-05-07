@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
   ([Firefox bug 1322186](https://bugzil.la/1322186)).
 
+- The {{domxref("Element.currentCSSZoom")}} read only property is now supported for getting the effective CSS [zoom](/en-US/docs/Web/CSS/zoom) of an element ([Firefox bug 1880189](https://bugzil.la/1880189)).
+
 #### DOM
 
 - The ability to define states for custom elements and match them using CSS selectors is now available by default.
