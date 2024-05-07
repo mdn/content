@@ -12,8 +12,12 @@ The **`currentCSSZoom`** read-only property of the {{domxref("Element")}} interf
 
 The value calculated by multiplying the `zoom` value of the element by the zoom values to all its parents.
 For example, if three elements with zoom values of 2, 1.5, and 3, are nested within each other, the most deeply nested element will have a `currentCSSZoom` value of 9.
+If the element is not rendered, for example because `display: none` is set on it, then the `currentCSSZoom` is set to 1.
 
-Note that if the element is not rendered, for example because `display: none` is set on it, then the `currentCSSZoom` is set to 1.
+Note that some APIs, such as {{domxref("Element.getBoundingClientRect()")}}, return values that are relative to the viewport, and hence include the effects of CSS `zoom`.
+Other APIs return values relative to the element itself, which do not include the effects of zooming.
+These include, for example, `client*` properties such as {{domxref("Element.clientHeight")}}, `scroll*()` methods like {{domxref("Element.scroll()")}}, and `offset*` properties such as {{domxref("HTMLElement.offsetHeight")}}.
+The `currentCSSZoom` property can be used to scale these values to adjust for the effects of zooming.
 
 ## Value
 
