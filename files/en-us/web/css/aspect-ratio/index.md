@@ -45,6 +45,10 @@ If the element is not a replaced element, then the given `ratio` is used.
 
   - : The box's preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
 
+- `auto && <ratio>`
+
+  - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
+
 ## Formal definition
 
 {{cssinfo}}

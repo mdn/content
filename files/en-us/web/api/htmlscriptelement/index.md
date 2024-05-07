@@ -19,13 +19,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.async")}}
   - : A boolean value that controls how the script should be executed. For classic scripts, if the `async` property is set to `true`, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` property is set to `true`, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
-- {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
+- `HTMLScriptElement.charset` {{deprecated_inline}}
   - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.crossOrigin")}}
   - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
 - {{domxref("HTMLScriptElement.defer")}}
   - : A boolean value that controls how the script should be executed. For classic scripts, if the `defer` property is set to `true`, the external script will be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), the `defer` property has no effect.
-- {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
+- `HTMLScriptElement.event` {{deprecated_inline}}
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
