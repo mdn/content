@@ -11,7 +11,7 @@ browser-compat:
 spec-urls: https://wicg.github.io/background-fetch/
 ---
 
-{{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
+{{DefaultAPISidebar("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **Background Fetch API** provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.
 
