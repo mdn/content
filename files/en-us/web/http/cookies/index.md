@@ -99,7 +99,7 @@ To update a cookie via HTTP, the server can send a {{HTTPHeader("Set-Cookie")}} 
 Set-Cookie: id=new-value
 ```
 
-There are several reasons why you might want to do this, for example if a user has updated their preferences and theb application wants to reflect the changes in client-side data (you could also do this with a client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API)).
+There are several reasons why you might want to do this, for example if a user has updated their preferences and the application wants to reflect the changes in client-side data (you could also do this with a client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API)).
 
 #### Updating cookies via JavaScript
 
