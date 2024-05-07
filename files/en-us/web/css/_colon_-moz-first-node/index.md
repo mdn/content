@@ -4,6 +4,7 @@ slug: Web/CSS/:-moz-first-node
 page-type: css-pseudo-class
 status:
   - non-standard
+browser-compat: css.selectors.-moz-first-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}

@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
 status:
   - non-standard
+browser-compat: css.selectors.-moz-progress-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -4,6 +4,7 @@ slug: Web/CSS/:-moz-last-node
 page-type: css-pseudo-class
 status:
   - non-standard
+browser-compat: css.selectors.-moz-last-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}

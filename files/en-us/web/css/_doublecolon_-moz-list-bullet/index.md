@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-list-bullet
 page-type: css-pseudo-element
 status:
   - non-standard
+browser-compat: css.selectors.-moz-list-bullet
 ---
 
 {{CSSRef}}{{Non-standard_header}}
