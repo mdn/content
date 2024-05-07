@@ -12,9 +12,9 @@ The **`Selection.getComposedRanges()`** method returns an array of {{domxref("St
 
 As the selection range endpoints may be within a shadow tree, or even different shadow trees, and because these may be closed, the method cannot by default return nodes from within a shadow tree.
 If the method needs to return a selection that includes nodes inside shadow trees, then the {{domxref("ShadowRoot")}} objects for these trees must be passed as arguments to the method.
-If a corresponding roots are not provided and the start or endpoint of the selection are within a shadow tree, the returned range is rescoped to include the host of the shadow root rather than some node with in the root.
+If a corresponding roots are not provided and the start or endpoint of the selection are within a shadow tree, the returned range is re-scoped to include the host of the shadow root rather than some node with in the root.
 
-The returned ranges are represent the range when `getComposedRanges()` was called.
+The returned ranges represent the range at the time that `getComposedRanges()` was called.
 If the DOM or a shadow DOM is mutated, the selected range is likely to be incorrect.
 Application code might use a {{domxref("MutationObserver")}} to monitor for DOM mutations and then call {{domxref("Selection.setBaseAndExtent()")}} to update the selection.
 
@@ -35,7 +35,7 @@ getComposedRanges(shadowRoot1, shadowRoot2, /* …, */ shadowRootN)
 
 - `shadowRoot1, …, shadowRootN`
   - : Zero or more {{domxref("ShadowRoot")}} arguments.
-    If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within it's corresponding Shadow DOM tree.
+    If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
     Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
 
 ### Return value
@@ -213,7 +213,7 @@ applySelectionGetRangeAtButton.addEventListener("click", () => {
 
 The running example is shown below.
 Select text in the top line starting from some normal text and ending in a bold section so that you have selected nodes from the DOM into a shadow root.
-If you select the "Copy range passing shadow roots" and then the "Apply selection" button you will note that the selection doesn't change, because the code has given access to all the nodes in the shadow root, even if it is closed.
+If you select "Copy range passing shadow roots" and then the "Apply selection" button, you will note that the selection doesn't change, because the code has given access to all the nodes in the shadow root, even if it is closed.
 If you then select the button "Copy range not passing shadow roots" and then apply, the selection will extend to the end of the text in the shadow root.
 This is because the selection is re-scoped to the end of the host node, since the `getComposedRanges()` method was not given visibility inside the shadow tree.
 
