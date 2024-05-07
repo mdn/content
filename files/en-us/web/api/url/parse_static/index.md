@@ -23,8 +23,8 @@ URL.parse(url, base)
 ### Parameters
 
 - `url`
-  - : A string or any other object with a {{Glossary("stringifier")}} that represents an absolute or relative URL.
-    If `url` is a relative URL, `base` is required, and is used to resolve the final absolute URL.
+  - : A string or any other object with a {{Glossary("stringifier")}} that represents an absolute URL or a relative reference to a URL.
+    If `url` is a relative reference, `base` is required, and is used to resolve the final URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
 
@@ -32,9 +32,9 @@ URL.parse(url, base)
     If not specified, it defaults to `undefined`.
 
     When you specify a `base` URL, the resolved URL is not simply a concatenation of `url` and `base`.
-    Parent-relative and current-directory-relative URLs are relative to the current directory of the `base` URL, which includes only path segments up until the last forward-slash, but not any after.
-    Root-relative URLs are relative to the base origin.
-    For more information see [Resolving relative URLs](/en-US/docs/Web/API/URL_API/Resolving_relative_urls).
+    Relative references to the parent and current directory are resolved are relative to the current directory of the `base` URL, which includes only path segments up until the last forward-slash, but not any after.
+    Relative references to the root are resolved relative to the base origin.
+    For more information see [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references).
 
 > **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, such as an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element, just like with other Web APIs that accept a string.
 > In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will be stringified from the object's {{domxref("URL.href", "href")}} property.
@@ -45,11 +45,11 @@ A `URL` if the parameters can be resolved to a valid URL; `null` otherwise.
 
 ## Examples
 
-[Resolving relative URLs](/en-US/docs/Web/API/URL_API/Resolving_relative_urls) and [`URL()` constructor](/en-US/docs/Web/API/URL/URL#examples) provide additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL (though primarily using `URL()`).
+[Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) and [`URL()` constructor](/en-US/docs/Web/API/URL/URL#examples) provide additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL (though primarily using `URL()`).
 
 ### Using URL.parse()
 
-This live example demonstrates how to use the `URL.parse()` static method for a few different absolute and relative URL values.
+This live example demonstrates how to use the `URL.parse()` static method for a few different absolute and relative reference values.
 
 ```html hidden
 <pre id="log"></pre>
@@ -72,7 +72,7 @@ function log(text) {
 ```
 
 First we check that the `URL.parse()` method is supported using the condition `"parse" in URL`.
-If the method is supported we log the result of checking an absolute URL, a relative URL with a base URL, a relative URL with a more [complicated base URL](/en-US/docs/Web/API/URL_API/Resolving_relative_urls), a valid absolute URL with a valid base URL (which is not used), and an invalid base URL that results in the method returning `null`.
+If the method is supported we log the result of checking an absolute URL, a relative reference and a base URL, a relative reference with a more [complicated base URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references), a valid absolute URL with a valid base URL (which is not used), and an invalid base URL that results in the method returning `null`.
 
 We also log the case when `URL.parse()` is not supported.
 
@@ -82,11 +82,11 @@ if ("parse" in URL) {
   let result = URL.parse("https://developer.mozilla.org/en-US/docs");
   log(`[1]: ${result.href}`);
 
-  // Relative URL resolved to valid base URL
+  // Relative reference to a valid base URL
   result = URL.parse("en-US/docs", "https://developer.mozilla.org");
   log(`[2]: ${result.href}`);
 
-  // Relative URL resolved to "complicated" valid base URL
+  // Relative reference to a "complicated" valid base URL
   // (only the scheme and domain are used to resolve url)
   result = URL.parse(
     "/different/place",
@@ -113,7 +113,7 @@ Last of all, the code below demonstrates that the arguments don't have to be str
 
 ```js
 if ("parse" in URL) {
-  // Relative URL with base URL supplied as a URL object
+  // Relative reference with base URL supplied as a URL object
   result = URL.parse("/en-US/docs", new URL("https://developer.mozilla.org/"));
   log(`[6]: ${result.href}`);
 }
