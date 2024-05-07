@@ -189,7 +189,7 @@ margin-left: 3px;
 
 > **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles. _Order of appearance_ only matters when both origin, importance, and specificity are equal.
 
-## Author styles: inline styles, layers, presentational  attributes, and precedence
+## Author styles: inline styles, layers, presentational attributes, and precedence
 
 The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precedence within each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles and presentation attribuets land in the cascade order.
 
@@ -221,7 +221,7 @@ and presentation attributes:
 
 ```html
 <svg>
-  <rect width="100" height="100" fill="red"/>
+  <rect width="100" height="100" fill="red" />
 </svg>
 ```
 
