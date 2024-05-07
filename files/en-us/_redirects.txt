@@ -10439,8 +10439,8 @@
 /en-US/docs/Web/API/console/timeStamp	/en-US/docs/Web/API/console/timestamp_static
 /en-US/docs/Web/API/console/trace	/en-US/docs/Web/API/console/trace_static
 /en-US/docs/Web/API/console/warn	/en-US/docs/Web/API/console/warn_static
-/en-US/docs/Web/API/crypto_property	/en-US/docs/Web/API/Window/crypto
 /en-US/docs/Web/API/crossOriginIsolated	/en-US/docs/Web/API/Window/crossOriginIsolated
+/en-US/docs/Web/API/crypto_property	/en-US/docs/Web/API/Window/crypto
 /en-US/docs/Web/API/document.URL	/en-US/docs/Web/API/Document/URL
 /en-US/docs/Web/API/document.activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/document.adoptNode	/en-US/docs/Web/API/Document/adoptNode
