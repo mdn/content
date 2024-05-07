@@ -24,7 +24,12 @@ A string. Must be a space-separated list of blocking tokens listed below indicat
 ## Examples
 
 ```html
-<link id="el" rel="stylesheet" href="/example.css" blocking="render" crossorigin />
+<link
+  id="el"
+  rel="stylesheet"
+  href="/example.css"
+  blocking="render"
+  crossorigin />
 ```
 
 ```js
