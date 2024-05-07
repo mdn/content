@@ -13,7 +13,7 @@ With CSS, we can size replaced and non-replaced elements based on their aspect r
 
 In this guide, we learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
 
-### CSS `aspect-ratio` property
+## CSS `aspect-ratio` property
 
 The CSS {{cssxref("aspect-ratio")}} property value defines the preferred width-to-height ratio of an element's box. The value is either a {{cssxref("ratio")}}, the keyword `auto`, or a space-separated combination of both.
 
@@ -78,13 +78,11 @@ When both the height and width or inline and block sizes are explicitly set, the
 
 With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)properties, etc.
 
-## Understanding aspect ratio
-
 When an element is rendered to the page, if no CSS is applied and no HTML sizing attributes are included, the user agent will render the object at its natural size.
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. These natural dimensions, the size of the media object without any sizing, scaling, zooming, or borders applied, is its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by any formatting ([box sizing](/en-US/docs/Web/CSS/CSS_box_sizing), border, margin, padding, etc.) applied.
 
-### Replaced elements
+## Replaced elements
 
 Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are replaced with media that have set dimensions and, therefore, an intrinsic aspect ratio. Consider a raster image, such as a JPEG, PNG, or GIF. If you place an image on a page and do not set a height or width, either via {{htmlelement("img")}} attributes or with CSS, it will be displayed at its intrinsic size.
 
@@ -220,7 +218,7 @@ img {
 
 Only the first image is distorted (stretched). We could have used the `fill` value of `object-fit` to create the same effect. The `cover` image is the full width of the container, centered vertically, and clipped to fit in the container. The `contain` value is contained; shrunk to fit and centered horizontally.
 
-### Non-replaced elements
+## Non-replaced elements
 
 While the aspect ratio of a replaced element is maintained by default, when the intrinsic size of a non-replaced element is changed the aspect ratio usually changes. For example, identical content may be three lines on a widescreen or in a wide parent container and eight lines on a narrow screen or container.
 
@@ -355,6 +353,8 @@ p {
 {{EmbedLiveSample("circle", "100", "250")}}
 
 ## Common use cases
+
+Let's look at a few examples of using `aspect-ratio` to solve some common use cases in responsive designs:
 
 ### Responsive external assets
 
