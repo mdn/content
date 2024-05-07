@@ -20,5 +20,6 @@ Compilers may also translate among higher-level languages — for example, from 
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly)
 - [Compiler](https://en.wikipedia.org/wiki/Compiler) on Wikipedia
+- [WebAssembly](/en-US/docs/WebAssembly)
+
