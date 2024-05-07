@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.create
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`create()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that resolves with a new credential instance based on the provided options, the information from which can then be stored and later used to authenticate users via {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}.
 
@@ -32,19 +32,17 @@ create(options)
 
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
 
-    - A _credential type_
-
-      - : An object defining the type of credential being requested — this can be one of one of:
-
-        - `federated`
-          - : An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `password`
-          - : An object containing requirements for creating a password credential. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `publicKey`
-          - : An object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account. See the [Web Authentication API](#web_authentication_api) section below for more details.
-
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+
+    Each of the following properties represents a _credential type_ being created. Only one of them can be specified:
+
+    - `federated` {{optional_inline}}
+      - : An object containing requirements for creating a federated identify provider credential. Bear in mind that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
+    - `password` {{optional_inline}}
+      - : An object containing requirements for creating a password credential. See the [Credential Management API](#credential_management_api) section below for more details.
+    - `publicKey` {{optional_inline}}
+      - : An object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account. See the [Web Authentication API](#web_authentication_api) section below for more details.
 
 ## Credential Management API
 
@@ -110,10 +108,12 @@ If a single credential cannot be successfully created, the Promise will resolve 
 ```js
 navigator.credentials
   .create({
-    id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
-    name: "fluffybunny",
-    origin: "example.com",
-    password: "fluffyhaxx0r",
+    password: {
+      id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
+      name: "fluffybunny",
+      origin: "example.com",
+      password: "fluffyhaxx0r",
+    },
   })
   .then((pwdCred) => {
     console.log(pwdCred.name);
@@ -313,8 +313,11 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}}
 
 ### Exceptions
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Possible causes include:
+    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
+    - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
 
 ## Examples
 

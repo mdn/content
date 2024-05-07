@@ -265,12 +265,12 @@ In WebAssembly text format, it looks something like this (see [global.wat](https
 
 ```wasm
 (module
-   (global $g (import "js" "global") (mut i32))
-   (func (export "getGlobal") (result i32)
-        (global.get $g))
-   (func (export "incGlobal")
-        (global.set $g
-            (i32.add (global.get $g) (i32.const 1))))
+  (global $g (import "js" "global") (mut i32))
+  (func (export "getGlobal") (result i32)
+    (global.get $g))
+  (func (export "incGlobal")
+    (global.set $g
+      (i32.add (global.get $g) (i32.const 1))))
 )
 ```
 
@@ -284,45 +284,93 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 ### WebAssembly Memory
 
-The above example is a pretty terrible logging function: it only prints a single integer! What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides **memory** (although we also have [Reference types](#reference_types) in newer implementation of WebAssembly). According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like `i32.load` and `i32.store` for reading and writing from [linear memory](https://webassembly.github.io/spec/core/exec/index.html#linear-memory).
+The examples above show how to work with numbers in assembly code, adding them to the [stack](#stack_machines), perform operations on them, and then logging the result by calling a method in JavaScript.
 
-From JavaScript's point of view, it's as though memory is all inside one big (resizable) {{jsxref("ArrayBuffer")}}. That's literally all that asm.js has to play with (except that it isn't resizable; see the asm.js [Programming model](http://asmjs.org/spec/latest/#programming-model)).
+For working with strings and other more complex data types we use `memory`, which can be created in either the WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types)).
 
-So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
+In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes, that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/Load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/Store) for reading and writing bytes between the stack and any location in a memory.
 
-The key is that JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
+From JavaScript's point of view, it's as though memory is all inside one big growable {{jsxref("ArrayBuffer")}}.
+JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and exported. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
-Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
+Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) method in JavaScript or [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow) in the WebAssembly.
+Since `ArrayBuffer` objects can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory.
 
-While there are many ways to encode a string's length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:
+Note that when you create the memory you need to define the initial size, and you can optionally specify the maximum size to which the memory can grow.
+WebAssembly will attempt to reserve the maximum size (if specified), and if it is able to do so, it can grow the buffer more efficiently in future. Even if it can't allocate the maximum size now, it may still be able to grow later.
+The method will only fail if it cannot allocate the _initial_ size.
 
-```wasm
-(import "console" "log" (func $log (param i32) (param i32)))
-```
+> **Note:** Originally WebAssembly only allowed one memory per module instance.
+> You can now have [multiple_memories](#multiple_memories) when supported by the browser.
+> Code that doesn't use multiple memories does not need to change!
 
-On the JavaScript side, we can use the [TextDecoder API](/en-US/docs/Web/API/TextDecoder) to easily decode our bytes into a JavaScript string. (We specify `utf8` here, but many other encodings are supported.)
+To demonstrate some of this behaviour, let's consider the case where we want to work with a string in our WebAssembly code.
+A string is just a sequence of bytes somewhere inside this linear memory.
+Assuming we've written a suitable string of bytes to WebAssembly memory, we can pass that string to JavaScript by sharing the memory, the offset of the string within the memory, and some way of indicating the length.
+
+Firstly let's create some memory and share it between the WebAssembly and JavaScript.
+WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
+
+For this example we'll create the memory in JavaScript then import it into WebAssembly.
+First we create a `Memory` object with 1 page, and add it to our `importObject` under the key `js.mem`.
+We then instantiate our web assembly module, in this case "the_wasm_to_import.wasm", using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method and passing the import object:
 
 ```js
-function consoleLogString(offset, length) {
-  const bytes = new Uint8Array(memory.buffer, offset, length);
-  const string = new TextDecoder("utf8").decode(bytes);
-  console.log(string);
-}
+const memory = new WebAssembly.Memory({ initial: 1 });
+
+const importObject = {
+  js: { mem: memory },
+};
+
+WebAssembly.instantiateStreaming(
+  fetch("the_wasm_to_import.wasm"),
+  importObject,
+).then((obj) => {
+  // Call exported functions ...
+});
 ```
 
-The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
-
-For simplicity, let's create it in JavaScript then import it into WebAssembly. Our `import` statement is written as follows:
+Within our WebAssembly file we import this memory. Using the WebAssembly text format, the `import` statement is written as follows:
 
 ```wasm
 (import "js" "mem" (memory 1))
 ```
 
-The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly defines a page to be 64KB.)
+The memory must be imported using the same two-level key specified in the `importObject` (`js.mem`).
+The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly currently defines a page to be 64KB).
 
-So let's see a complete module that prints the string "Hi". In a normal compiled C program, you'd call a function to allocate some memory for the string, but since we're just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a `data` section. Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
+> **Note:** As this is the first memory imported into the WebAssembly module it has a memory index of "0".
+> You could reference this particular memory using the index in [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), but since 0 is the default index, in single-memory applications you don't need to.
 
-Our final Wasm module looks like this:
+Now that we have a shared memory instance, the next step is to write a string of data into it.
+We'll then pass information about where the string is located and its length to the JavaScript (we could alternatively encode the string's length in the string itself, but passing a length is easier for us to implement).
+
+First let's add a string of data to our memory, in this case "Hi".
+Since we own the entire linear memory, we can just write the string contents into global memory using a `data` section.
+Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the `.data` sections in native executable formats.
+Here we're writing the data to the default memory (which we do not need to specify) at offset 0:
+
+```wasm
+(module
+  (import "js" "mem" (memory 1))
+  ;; ...
+  (data (i32.const 0) "Hi")
+  ;;
+)
+```
+
+> **Note:** The double semicolon syntax (`;;`) above is used to indicate comments in WebAssembly files.
+> In this case we're just using them to indicate placeholders for other code.
+
+To share this data with JavaScript we'll define two functions.
+First we import a function from the JavaScript, which we will use to log the string to the console.
+This will need to be mapped to `console.log` in the `importObject` used to instantiate the WebAssembly module.
+The function is named `$log` in the WebAssembly and takes `i32` parameters for the string offset and length in the memory.
+
+The second WebAssembly function, `writeHi()`, calls the imported `$log` function with the offset and length of the string in memory (`0` and `2`).
+This is exported from the module so that it can be called from JavaScript.
+
+Our final WebAssembly module (in text format) looks like this.
 
 ```wasm
 (module
@@ -332,15 +380,23 @@ Our final Wasm module looks like this:
   (func (export "writeHi")
     i32.const 0  ;; pass offset 0 to log
     i32.const 2  ;; pass length 2 to log
-    call $log))
+    call $log
+  )
+)
 ```
 
-> **Note:** Above, note the double semicolon syntax (`;;`) for allowing comments in WebAssembly files.
-
-Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
+On the JavaScript-side we need to define the logging function, pass it to the WebAssembly, and then call the exported `writeHi()` method.
+The complete code is shown below:
 
 ```js
 const memory = new WebAssembly.Memory({ initial: 1 });
+
+// Logging function ($log) called from WebAssembly
+function consoleLogString(offset, length) {
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder("utf8").decode(bytes);
+  console.log(string);
+}
 
 const importObject = {
   console: { log: consoleLogString },
@@ -349,12 +405,174 @@ const importObject = {
 
 WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
   (obj) => {
+    // Call the function exported from logger2.wasm
     obj.instance.exports.writeHi();
   },
 );
 ```
 
+Note that the logging function `consoleLogString()` is passed to the `importObject` in the property `console.log`, and imported by the WebAssembly module.
+The function creates a view on the string in the shared memory using an `Uint8Array` at the passed offset and with the given length.
+The bytes are then decoded from UTF-8 into a string using the [TextDecoder API](/en-US/docs/Web/API/TextDecoder) (we specify `utf8` here, but many other encodings are supported).
+The string is then logged to console with `console.log()`.
+
+The final step is to call the exported `writeHi()` function, which is done after the object is instantiated.
+When you run the code, the console will show the text "Hi".
+
 > **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+
+#### Multiple memories
+
+More recent implementations allow you to use multiple memory objects in your WebAssembly and JavaScript, in a way that is compatible with code that is written for implementations that only support a single memory.
+Multiple memories can be useful for separating data that should be treated differently to other application data, such as public vs private data, data that needs to be persisted, and data that needs to be shared between threads.
+It may also be useful for very large applications that need to scale beyond the Wasm 32-bit address space, and for other purposes.
+
+Memories that are made available to the WebAssembly code, either declared directly or imported, are given a zero-indexed sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [`load`](/en-US/docs/WebAssembly/Reference/Memory/Load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/Store), can reference any particular memory via its index so you can control which memory you're working with.
+
+The memory instructions have a default index of 0, the index of the first memory added to the WebAssembly instance.
+As a result, if you only add one memory, your code doesn't have to specify the index.
+
+To show how this works in more detail, we'll extend the previous example to write strings to three different memories and log the results.
+The code below shows how we first import two memory instances, using the same approach as in the previous example.
+To show how you can create memory within the WebAssembly module, we've created a third memory instance named `$mem2` in the module and _exported_ it.
+
+```wasm
+(module
+  ;; ...
+
+  (import "js" "mem0" (memory 1))
+  (import "js" "mem1" (memory 1))
+
+  ;; Create and export a third memory
+  (memory $mem2 1)
+  (export "memory2" (memory $mem2))
+
+  ;; ...
+)
+```
+
+The three memory instances are automatically assigned an instance based on their order of creation.
+The code below shows how we can specify this index (e.g. `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
+Here we write a string that indicates each memory type.
+
+```wasm
+  (data (memory 0) (i32.const 0) "Memory 0 data")
+  (data (memory 1) (i32.const 0) "Memory 1 data")
+  (data (memory 2) (i32.const 0) "Memory 2 data")
+
+  ;; Add text to default (0-index) memory
+  (data (i32.const 13) " (Default)")
+```
+
+Note that the `(memory 0)` is the default, and hence optional.
+To demonstrate this we write the text `" (Default)"` without specifying the memory index, and this should be appended after `"Memory 0 data"` when the memory contents are logged.
+
+The WebAssembly logging code is almost exactly the same as the previous example, except that along with the string offset and length, we need to pass the index of the memory that contains the string.
+We also log all three memory instances.
+
+The complete module is shown below:
+
+```wasm
+(module
+  (import "console" "log" (func $log (param i32 i32 i32)))
+
+  (import "js" "mem0" (memory 1))
+  (import "js" "mem1" (memory 1))
+
+  ;; Create and export a third memory
+  (memory $mem2 1)
+  (export "memory2" (memory $mem2))
+
+  (data (memory 0) (i32.const 0) "Memory 0 data")
+  (data (memory 1) (i32.const 0) "Memory 1 data")
+  (data (memory 2) (i32.const 0) "Memory 2 data")
+
+  ;; Add text to default (0-index) memory
+  (data (i32.const 13) " (Default)")
+
+  (func $logMemory (param $memIndex i32) (param $memOffSet i32) (param $stringLength i32)
+    local.get $memIndex
+    local.get $memOffSet
+    local.get $stringLength
+    call $log
+  )
+
+  (func (export "logAllMemory")
+    ;; Log memory index 0, offset 0
+    (i32.const 0)  ;; memory index 0
+    (i32.const 0)  ;; memory offset 0
+    (i32.const 23)  ;; string length 23
+    (call $logMemory)
+
+    ;; Log memory index 1, offset 0
+    i32.const 1  ;; memory index 1
+    i32.const 0  ;; memory offset 0
+    i32.const 20  ;; string length 20
+    call $logMemory
+
+    ;; Log memory index 2, offset 0
+    i32.const 2  ;; memory index 2
+    i32.const 0  ;; memory offset 0
+    i32.const 12  ;; string length 13
+    call $logMemory
+  )
+
+)
+```
+
+The JavaScript code is also very similar to the previous example, except that we create and pass two memory instances to the `importObject()` and the memory exported by the module instance is accessed after it has been instantiated using the resolved promise (`obj.instance.exports`).
+The code to log each string is also a little more complicated because we need to match the memory instance number from the WebAssembly to a particular `Memory` object.
+
+```js
+const memory0 = new WebAssembly.Memory({ initial: 1 });
+const memory1 = new WebAssembly.Memory({ initial: 1 });
+let memory2; // Created by module
+
+function consoleLogString(memoryInstance, offset, length) {
+  let memory;
+  switch (memoryInstance) {
+    case 0:
+      memory = memory0;
+      break;
+    case 1:
+      memory = memory1;
+      break;
+    case 2:
+      memory = memory2;
+      break;
+    // code block
+  }
+  const bytes = new Uint8Array(memory.buffer, offset, length);
+  const string = new TextDecoder("utf8").decode(bytes);
+  log(string); // implementation not shown - could call console.log()
+}
+
+const importObject = {
+  console: { log: consoleLogString },
+  js: { mem0: memory0, mem1: memory1 },
+};
+
+WebAssembly.instantiateStreaming(fetch("multi-memory.wasm"), importObject).then(
+  (obj) => {
+    //Get exported memory
+    memory2 = obj.instance.exports.memory2;
+    //Log memory
+    obj.instance.exports.logAllMemory();
+  },
+);
+```
+
+The output of the example should be similar to the text below, except that "Memory 1 data" may have some trailing "rubbish characters", because the text decoder is passed more bytes than are used to encode the string.
+
+```plain
+Memory 0 data (Default)
+Memory 1 data
+Memory 2 data
+```
+
+You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/multi-memory.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
+
+> **Note:** See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
 
 ### WebAssembly tables
 
@@ -553,7 +771,9 @@ Each of the modules that is being compiled can import the same memory and table 
 
 ## Bulk memory operations
 
-Bulk memory operations are a newer addition to the language (for example, in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as `memcpy` and `memmove` in a more efficient, performant way.
+Bulk memory operations are a newer addition to the language — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as `memcpy` and `memmove` in a more efficient, performant way.
+
+> **Note:** See [`webassembly.bulk-memory-operations` in the home page](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) for browser compatibility information.
 
 The new operations are:
 
@@ -584,16 +804,20 @@ WebAssembly currently has four available _number types_:
 
 ### Reference types
 
-The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79)) provides two main features:
+The [reference types proposal](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) provides two main features:
 
 - A new type, `externref`, which can hold _any_ JavaScript value, for example strings, DOM references, objects, etc. `externref` is opaque from the point of view of WebAssembly — a Wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing Wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. `externref` can be used for value types and table elements.
 - A number of new instructions that allow Wasm modules to directly manipulate [WebAssembly tables](#webassembly_tables), rather than having to do it via the JavaScript API.
 
 > **Note:** The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
+> **Note:** See [`webassembly.reference-types` in the home page](/en-US/docs/WebAssembly#webassembly.reference-types) for browser compatibility information.
+
 ## Multi-value WebAssembly
 
-Another more recent addition to the language (for example, in [Firefox 78](/en-US/docs/Mozilla/Firefox/Releases/78)) is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
+Another more recent addition to the language is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
+
+> **Note:** See [`webassembly.multi-value` in the home page](/en-US/docs/WebAssembly#webassembly.multi-value) for browser compatibility information.
 
 At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:
 
@@ -614,9 +838,11 @@ But this will pave the way for more useful instruction types, and other things b
 
 ## WebAssembly threads
 
-WebAssembly Threads (supported in [Firefox 79](/en-US/docs/Mozilla/Firefox/Releases/79) onwards) allow WebAssembly Memory objects to be shared across multiple WebAssembly instances running in separate Web Workers, in the same fashion as [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)s in JavaScript. This allows very fast communication between Workers, and significant performance gains in web applications.
+WebAssembly Threads allow WebAssembly Memory objects to be shared across multiple WebAssembly instances running in separate Web Workers, in the same fashion as [`SharedArrayBuffer`s](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) in JavaScript. This allows very fast communication between Workers, and significant performance gains in web applications.
 
 The threads proposal has two parts, shared memories and atomic memory accesses.
+
+> **Note:** See [`webassembly.threads-and-atomics` in the home page](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) for browser compatibility information.
 
 ### Shared memories
 
@@ -650,7 +876,7 @@ Unlike unshared memories, shared memories must specify a "maximum" size, in both
 
 ### Atomic memory accesses
 
-A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses). These instructions are allowed on non-shared memories as of Firefox 80.
+A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses).
 
 > **Note:** The [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) shows how to take advantage of this new functionality from Emscripten.
 

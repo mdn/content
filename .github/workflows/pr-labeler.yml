@@ -16,9 +16,10 @@ jobs:
     name: Label by path
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v5
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          sync-labels: true
 
   # Docs: https://github.com/CodelyTV/pr-size-labeler
   label-by-size:
@@ -35,11 +36,11 @@ jobs:
           xs_label: "size/xs"
           xs_max_size: "5"
           s_label: "size/s"
-          s_max_size: "10"
+          s_max_size: "50"
           m_label: "size/m"
-          m_max_size: "50"
+          m_max_size: "500"
           l_label: "size/l"
-          l_max_size: "100"
+          l_max_size: "1000"
           xl_label: "size/xl"
           fail_if_xl: "false"
           message_if_xl: ""

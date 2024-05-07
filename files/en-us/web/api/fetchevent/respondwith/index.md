@@ -16,15 +16,15 @@ In most cases you can provide any response that the receiver understands. For ex
 if an {{HTMLElement('img')}} initiates the request, the response body needs to be
 image data. For security reasons, there are a few global rules:
 
-- You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-  "type")}} "`opaque`" if the {{domxref("fetchEvent.request")}} object's
+- You can only return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
+  "`opaque`" if the {{domxref("fetchEvent.request")}} object's
   {{domxref("request.mode", "mode")}} is "`no-cors`". This prevents the
   leaking of private data.
-- You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-  "type")}} "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
+- You can only return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
+  "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
   object's {{domxref("request.mode", "mode")}} is "`manual`".
-- You cannot return {{domxref("Response")}} objects of {{domxref("Response.type",
-  "type")}} "`cors`" if the {{domxref("fetchEvent.request")}} object's
+- You cannot return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
+  "`cors`" if the {{domxref("fetchEvent.request")}} object's
   {{domxref("request.mode", "mode")}} is "`same-origin`".
 
 ### Specifying the final URL of a resource

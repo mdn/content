@@ -49,12 +49,11 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
 
   - `;max-age=max-age-in-seconds`: The maximum age of the cookie in seconds (e.g., `60*60*24*365` or 31536000 for a year).
 
-  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more details.
+  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more details.
 
-  - `;path=path`: The value of the cookie's [`Path` attribute](/en-US/docs/Web/HTTP/Cookies#path_attribute).
+  - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Cookies#define_where_cookies_are_sent) for more information).
 
-  - `;samesite`: [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site
-    requests. Possible values are `lax`, `strict` or `none`.
+  - `;samesite`: The `SameSite` attribute of a {{httpheader("Set-Cookie")}} header can be set by a server to specify when the cookie will be sent. Possible values are `lax`, `strict` or `none` (see also [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)).
 
     - The `lax` value will send the cookie for all same-site requests and top-level navigation GET requests.
       This is sufficient for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks.

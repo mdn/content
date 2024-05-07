@@ -2,13 +2,13 @@
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
 page-type: web-api-overview
-status:
-  - experimental
-browser-compat: api.SyncManager
+browser-compat:
+  - api.SyncManager
+  - api.ServiceWorkerGlobalScope.sync_event
 spec-urls: https://wicg.github.io/background-sync/spec/
 ---
 
-{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
 
 The **Background Synchronization API** enables a web app to defer tasks so that they can be run in a [service worker](/en-US/docs/Web/API/Service_Worker_API) once the user has a stable network connection.
 
@@ -35,7 +35,7 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run once the device has network connectivity.
-- [`ServiceWorkerGlobalScope: sync`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/sync_event) event
+- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens as soon as the network becomes available.
 
 ## Examples
@@ -64,8 +64,9 @@ This code checks to see if a background sync task with a given tag is registered
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.sync.getTags().then((tags) => {
-    if (tags.includes("sync-messages"))
+    if (tags.includes("sync-messages")) {
       console.log("Messages sync already requested");
+    }
   });
 });
 ```

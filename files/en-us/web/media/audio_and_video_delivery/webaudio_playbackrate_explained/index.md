@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
+The {{domxref("HTMLMediaElement.playbackRate", "playbackRate")}} property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
 ## playbackRate basics
 
@@ -88,7 +88,7 @@ There is also an event available called `ratechange`, which fires every time the
 
 - Most browsers stop playing audio outside `playbackRate` bounds of 0.5 and 4, leaving the video playing silently. For most applications, it's recommended that you limit the range to between 0.5 and 4.
 - The pitch of the audio track does not change when `playBackRate` is altered.
-- Negative values will not cause the media to play in reverse.
+- Negative values indicating the media should play in reverse is not currently supported by most browsers.
 - IE9+ switches to the default playback rate when an `ended` event is fired.
 - Firefox generates a `ratechange` event when the media source is substituted.
 - On iOS 7 you can only affect the `playbackRate` when the media is paused (not while it's playing).
@@ -96,4 +96,4 @@ There is also an event available called `ratechange`, which fires every time the
 ## See also
 
 - [Hyperaudio's Playback Rate Test](https://hyperaud.io/lab/pbr-test/)
-- [HTMLMediaElement reference](/en-US/docs/Web/API/HTMLMediaElement)
+- {{domxref("HTMLMediaElement")}}: interface which defines the {{domxref("HTMLMediaElement.playbackRate", "playbackrate")}} property.

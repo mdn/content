@@ -31,12 +31,14 @@ ruby-position: unset;
 ### Values
 
 - `over`
-  - : ![Over example](screen_shot_2015-03-04_at_13.02.20.png)Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.
+  - : ![Over example](screen_shot_2015-03-04_at_13.02.20.png)
+    Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.
 - `under`
-  - : ![Under example](screen_shot_2015-03-04_at_13.02.07.png)Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.
-- `inter-character` {{Experimental_Inline}}
+  - : ![Under example](screen_shot_2015-03-04_at_13.02.07.png)
+    Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.
+- `inter-character`
   - : Is a keyword indicating that the ruby has to be placed between the different characters.
-- `alternate` {{Experimental_Inline}}
+- `alternate`
   - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
 
 ## Formal definition

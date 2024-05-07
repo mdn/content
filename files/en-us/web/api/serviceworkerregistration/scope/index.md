@@ -6,18 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.scope
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`scope`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface returns a unique identifier for a
-service worker registration. The service worker must be on the same origin as the
-document that registers the {{domxref("ServiceWorker")}}.
-
-{{AvailableInWorkers}}
+The **`scope`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns a string representing a URL that defines a service worker's registration scope; that is, the range of URLs a service worker can control. This is set using the `scope` parameter specified in the call to {{domxref('ServiceWorkerContainer.register()')}} which registered the service worker.
 
 ## Value
 
-A unique identifier.
+Returns a string representing a URL that defines a service worker's registration scope.
 
 ## Specifications
 

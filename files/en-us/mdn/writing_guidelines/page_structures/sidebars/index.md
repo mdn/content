@@ -101,13 +101,13 @@ For example, when developing the Accessibility sidebar, we could have temporaril
 
 If listed as the last content in the page, Yari, the engine that renders MDN, recognizes the `Quick_links` ID in the opening tag and converts the content of the identified `<section>` into a sidebar.
 
-The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to all the Accessibilty documents, followed by the ARIA roles and attributes.
+The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to all the Accessibility documents, followed by the ARIA roles and attributes.
 
 Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/blob/main/kumascript/macros/).
 
 > **Note:** This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
 
-The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros) is on Github. Each macro includes the documentation for itself, including parameters, if any.
+The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros) is on GitHub. Each macro includes the documentation for itself, including parameters, if any.
 
 ## See also
 
@@ -115,4 +115,4 @@ The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros)
 - [Content link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
 - [Page section macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
 - [Banners and notices macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
-- [All macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
+- [All macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub

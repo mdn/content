@@ -46,7 +46,6 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 - {{CSSxRef("-webkit-margin-after")}}
 - {{CSSxRef("-webkit-margin-before")}}
-- {{CSSxRef("-webkit-mask-attachment")}}
 - {{CSSxRef("-webkit-mask-box-image-outset")}}
 - {{CSSxRef("-webkit-mask-box-image-repeat")}}
 - {{CSSxRef("-webkit-mask-box-image-slice")}}

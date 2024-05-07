@@ -21,7 +21,7 @@ The syntax of `<custom-ident>` is similar to CSS identifiers (such as property n
 - any decimal digit (`0` to `9`),
 - a hyphen (`-`),
 - an underscore (`_`),
-- an [escaped character](#escaping-characters) (preceded by a backslash, `\`),
+- an [escaped character](#escaping_characters) (preceded by a backslash, `\`),
 - a [Unicode](https://en.wikipedia.org/wiki/Unicode) character (in the format of a backslash, `\`, followed by one to six hexadecimal digits, representing its Unicode code point)
 
 Note that `id1`, `Id1`, `iD1`, and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity).

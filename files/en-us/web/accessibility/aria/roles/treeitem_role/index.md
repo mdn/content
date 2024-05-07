@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/
 ---
 
+{{AccessibilitySidebar}}
+
 A `treeitem` is an item in a `tree`.
 
 ## Description
@@ -232,12 +234,4 @@ If the tree has more than 7 tree items, including type ahead functionality is re
 
 {{Specifications}}
 
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>
+## See also

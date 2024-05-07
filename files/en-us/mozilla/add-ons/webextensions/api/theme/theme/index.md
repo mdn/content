@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.theme.Theme
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A Theme object represents the specification of a theme.
 

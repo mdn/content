@@ -8,7 +8,7 @@ status:
 browser-compat: api.SerialPort.forget
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the serial port is closed and is forgotten.
 

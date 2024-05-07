@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
+{{AccessibilitySidebar}}
+
 The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row contains header information for a column, similar to the native {{HTMLElement('th')}} element with column scope.
 
 ## Description
@@ -70,7 +72,7 @@ Columnheader has the same semantics `<th scope="col">`.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
 - [`grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
@@ -81,11 +83,3 @@ Columnheader has the same semantics `<th scope="col">`.
 - [The `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The `<tr>` element](/en-US/docs/Web/HTML/Element/tr)
 - [The `<td>` element](/en-US/docs/Web/HTML/Element/td)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

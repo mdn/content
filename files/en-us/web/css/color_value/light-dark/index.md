@@ -2,12 +2,10 @@
 title: light-dark()
 slug: Web/CSS/color_value/light-dark
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.color.light-dark
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions) enables setting two colors for a property - returning one of the two colors options by detecting if the developer has set a light or dark color scheme or the user has requested light or dark color theme - without needing to encase the theme colors within a [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) query.
 Users are able to indicate their color-scheme preference through their operating system settings (e.g. light or dark mode) or their user agent settings. The `light-dark()` function enables providing two color values where any `<color>` value is accepted. The `light-dark()` CSS color function returns the first value if the user's preference is set to `light` or if no preference is set and the second value if the user's preference is set to `dark`.
@@ -108,7 +106,7 @@ code {
 
 In addition to enabling the `light-dark()` function, the `color-scheme` property enables overriding a user's color scheme for document sections. Forcing a page section to only use a light or dark color scheme can be done by setting the `color-scheme` property to `light` or `dark`.
 
-> **Note:** Generally this should not be done, we are using it here for demonstation purposes. If the user has made a preference, you generally should not override their preferences.
+> **Note:** Generally this should not be done, we are using it here for demonstration purposes. If the user has made a preference, you generally should not override their preferences.
 
 ```css
 .light {
@@ -143,4 +141,8 @@ section {
 
 - {{CSSXref("color-scheme")}}
 - {{CSSXref("&lt;color&gt;")}}
-- [CSS color](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) {{cssxref("@media")}} feature
+- [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
+- [WCAG: color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- {{cssxref('--*', 'CSS custom properties')}} and {{cssxref("var")}}

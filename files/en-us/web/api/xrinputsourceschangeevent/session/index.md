@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSourcesChangeEvent.session
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The {{domxref("XRInputSourcesChangeEvent")}} property
 {{domxref("XRInputSourcesChangeEvent.session", "session")}} specifies the

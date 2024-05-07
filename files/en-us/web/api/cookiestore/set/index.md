@@ -3,16 +3,12 @@ title: "CookieStore: set() method"
 short-title: set()
 slug: Web/API/CookieStore/set
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStore.set
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object.
-
-{{AvailableInWorkers}}
+The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given `name` and `value` or `options` object.
 
 ## Syntax
 
@@ -43,7 +39,7 @@ Or
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
     - `path` {{Optional_Inline}}
       - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}

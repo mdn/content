@@ -16,7 +16,7 @@ The **`HTMLAnchorElement`** interface represents hyperlink elements and provides
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLAnchorElement.download")}}
-  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
+  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represents the proposed name of the file. If the name is not a valid filename of the underlying OS, the browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}
   - : A string representing the fragment identifier, including the leading hash mark ('`#`'), if any, in the referenced URL.
 - {{domxref("HTMLAnchorElement.host")}}
@@ -33,6 +33,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string containing the password specified before the domain name.
 - {{domxref("HTMLAnchorElement.pathname")}}
   - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+- {{domxref("HTMLAnchorElement.ping")}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 - {{domxref("HTMLAnchorElement.port")}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.protocol")}}

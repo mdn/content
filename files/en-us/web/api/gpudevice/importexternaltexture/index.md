@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.importExternalTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`importExternalTexture()`** method of the
 {{domxref("GPUDevice")}} interface takes an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}} object as an input and returns a {{domxref("GPUExternalTexture")}} wrapper object containing a snapshot of the video that can be used as a frame in GPU rendering operations.

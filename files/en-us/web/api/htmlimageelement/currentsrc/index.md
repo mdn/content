@@ -33,7 +33,7 @@ document.
 
 ```html
 <img
-  src="/files/16797/clock-demo-400px.png"
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
   alt="Clock"
   srcset="
     /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,

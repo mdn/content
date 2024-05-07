@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 
 ## Description
@@ -122,12 +124,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

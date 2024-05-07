@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PushManager
 ---
 
-{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
 
@@ -27,13 +27,13 @@ This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushMana
 
 ### Deprecated methods
 
-- {{domxref("PushManager.hasPermission()")}} {{deprecated_inline}}
+- {{domxref("PushManager.hasPermission()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to the `PushPermissionStatus` of the requesting webapp, which will be one of `granted`, `denied`, or `default`. Replaced by {{domxref("PushManager.permissionState()")}}.
-- {{domxref("PushManager.register()")}} {{deprecated_inline}}
+- {{domxref("PushManager.register()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Subscribes to a push subscription. Replaced by {{domxref("PushManager.subscribe()")}}.
-- {{domxref("PushManager.registrations()")}} {{deprecated_inline}}
+- {{domxref("PushManager.registrations()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Retrieves existing push subscriptions. Replaced by {{domxref("PushManager.getSubscription()")}}.
-- {{domxref("PushManager.unregister()")}} {{deprecated_inline}}
+- {{domxref("PushManager.unregister()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Unregisters and deletes a specified subscription endpoint. In the updated API, a subscription is unregistered by calling the {{domxref("PushSubscription.unsubscribe()")}} method.
 
 ## Example

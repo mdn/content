@@ -15,7 +15,9 @@ A complete document is reconstructed from the different sub-documents fetched, f
 Clients and servers communicate by exchanging individual messages (as opposed to a stream of data).
 The messages sent by the client, usually a Web browser, are called _requests_ and the messages sent by the server as an answer are called _responses_.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time.
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)
+
+Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time.
 It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used.
 Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results.
 HTTP can also be used to fetch parts of documents to update Web pages on demand.

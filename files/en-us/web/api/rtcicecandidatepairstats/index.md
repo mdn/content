@@ -67,7 +67,7 @@ The following properties have been removed from the specification and should no 
 You should update any existing code to avoid using them as soon as is practical.
 Check the [compatibility table](#browser_compatibility) for details on which browsers support them and in which versions.
 
-- {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{Deprecated_Inline}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats.priority", "priority")}} {{Deprecated_Inline}} {{optional_inline}} {{non-standard_inline}}
   - : An integer value indicating the candidate pair's priority.
 - {{domxref("RTCIceCandidatePairStats.readable", "readable")}} {{Deprecated_Inline}} {{optional_inline}} {{Non-standard_Inline}}
   - : A Boolean value indicating whether or not data can be sent over the connection described by the candidate pair.

@@ -98,7 +98,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
       let posX = 0;
       for (let i = 0; i < bufferLength; i++) {
         const barHeight = (dataArray[i] + 140) * 2;
-        canvasCtx.fillStyle = "rgb(" + Math.floor(barHeight + 100) + " 50 50)";
+        canvasCtx.fillStyle = `rgb(${Math.floor(barHeight + 100)} 50 50)`;
         canvasCtx.fillRect(
           posX,
           canvas.height - barHeight / 2,

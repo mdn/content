@@ -6,22 +6,16 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`updateViaCache`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface updates the cache using
-the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}.
-Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers
-control over this behavior.
-
-{{AvailableInWorkers}}
+The **`updateViaCache`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the value of the setting used to determine the circumstances in which the browser will consult the HTTP cache when it tries to update the service worker or any scripts that are imported via {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}.
 
 ## Value
 
 Returns one of the following values:
 
-- `imports`, meaning the HTTP cache is not consulted for update of the service worker, but is consulted for `importScripts`.
-- `all`, meaning the HTTP cache is consulted in both cases
+- `imports`, meaning the HTTP cache is not consulted for updates to the service worker script, but is consulted for scripts imported using {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}. This is the default value.
+- `all`, meaning the HTTP cache is consulted for updates to the service worker script and for scripts imported using {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}.
 - `none`, meaning the HTTP cache is never consulted.
 
 ## Examples

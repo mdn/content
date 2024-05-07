@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPURenderBundleEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is used to pre-record bundles of commands.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.windows.CreateType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Specifies the type of browser window to create.
 

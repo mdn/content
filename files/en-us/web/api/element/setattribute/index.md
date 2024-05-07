@@ -8,13 +8,11 @@ browser-compat: api.Element.setAttribute
 
 {{APIRef("DOM")}}
 
-Sets the value of an attribute on the specified element. If
-the attribute already exists, the value is updated; otherwise a new attribute is added
-with the specified name and value.
+The **`setAttribute()`** method of the {{domxref("Element")}} interface sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 
-To get the current value of an attribute, use {{domxref("Element.getAttribute",
-  "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute",
-  "removeAttribute()")}}.
+To get the current value of an attribute, use {{domxref("Element.getAttribute", "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+
+If you need to work with the {{domxref("Attr")}} node (such as cloning from another element) before adding it, you can use the {{domxref("Element.setAttributeNode()", "setAttributeNode()")}} method instead.
 
 ## Syntax
 
@@ -91,8 +89,6 @@ This demonstrates two things:
   All that matters is that if the attribute is present at all, _regardless of its actual value_, its value is considered to be `true`.
   The absence of the attribute means its value is `false`. By setting the value of the `disabled` attribute to the empty string (`""`), we are setting `disabled` to `true`, which results in the button being disabled.
 
-{{DOMAttributeMethods}}
-
 ## Specifications
 
 {{Specifications}}
@@ -101,9 +97,9 @@ This demonstrates two things:
 
 {{Compat}}
 
-### Gecko notes
+## See also
 
-Using `setAttribute()` to modify certain attributes, most notably
-`value` in XUL, works inconsistently, as the attribute specifies the default
-value. To access or modify the current values, you should use the properties. For
-example, use `Element.value` instead of `Element.setAttribute()`.
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

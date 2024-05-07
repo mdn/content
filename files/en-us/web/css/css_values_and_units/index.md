@@ -135,7 +135,7 @@ These are all covered in subsections below.
 
 Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute. Relative length units specify a length in relation to something else.
 
-There are two types of relative lengths: font-relative lengths and viewport-percentage lengths. These both come in two types. Font-relative length units are either local font-relative or root font-relative. Viewport percentage lengths are either relative to the viewport height or width size or, as defined in the [CSS Containment module](/en-US/docs/Web/CSS/CSS_containment), relative to a [container](/en-US/docs/Web/CSS/CSS_container_queries#container_query_length_units).
+There are two types of relative lengths: font-relative lengths and viewport-percentage lengths. These both come in two types. Font-relative length units are either local font-relative or root font-relative. Viewport percentage lengths are either relative to the viewport height or width size or, as defined in the [CSS Containment module](/en-US/docs/Web/CSS/CSS_containment), relative to a [container](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units).
 
 ##### Local font-relative lengths
 
@@ -187,7 +187,7 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 
 ##### Container units
 
-Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
+Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
 | Unit    | Relative to                           |
@@ -318,7 +318,7 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 
 White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
-Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
+Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `hsl()`, and `hsla()`, used commas, but commas are generally only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 
 ## Specifications
 

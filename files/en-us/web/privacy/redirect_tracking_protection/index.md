@@ -4,23 +4,19 @@ slug: Web/Privacy/Redirect_tracking_protection
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
+Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
-Firefox 79 includes protection against redirect tracking. This document describes how the protections work.
+Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
 ## Redirect tracking defined
 
-**Redirect tracking** is an abuse of cross-site navigation in which a tracker momentarily redirects a user to their website for the purpose of using first-party storage to track that user across websites.
+Redirect tracking is an abuse of cross-site navigation in which a tracker momentarily redirects a user to their website for the purpose of using first-party storage to track that user across websites.
 
-Cross-site navigations are a core feature of the web; a person might search for "best running shoes" on a search engine, click a search result to read reviews, and finally click a link to buy a pair of shoes from an online store. In the past, each of these websites could embed resources from the same tracker, and the tracker could use its cookies to link all of these page visits to the same person. To protect the privacy of Firefox users, [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) (ETP) already blocks trackers from using cookies when they are embedded in a third-party context, but still allows them to use cookies as a first party because blocking first party cookies causes websites to break. Redirect tracking takes advantage of this to circumvent third-party cookie blocking.
+Cross-site navigations are a core feature of the web; a person might search for "best running shoes" on a search engine, click a search result to read reviews, and finally click a link to buy a pair of shoes from an online store. In the past, each of these websites could embed resources from the same tracker, and the tracker could use its cookies to link all of these page visits to the same person. To protect their user's privacy, browsers block trackers from using cookies when they are embedded in a third-party context (for example see Firefox's [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) (ETP)), but still allow them to use cookies as a first party because blocking first party cookies causes websites to break. Redirect tracking takes advantage of this to circumvent third-party cookie blocking.
 
 Redirect trackers work by forcing you to make an imperceptible and momentary stopover to their website as part of that journey. So instead of navigating directly from the review website to the retailer, you'll end up navigating to the redirect tracker first rather than to the retailer. This means that the tracker is loaded as a first party. The redirect tracker associates tracking data with the identifiers they have stored in their first-party cookies and then forwards you to the retailer.
 
-## Redirect tracking protection explained
-
-To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`). Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
-
-### What origins are cleared?
+## What origins are cleared?
 
 An origin will be cleared if it fulfills the following conditions:
 
@@ -31,7 +27,7 @@ An origin will be cleared if it fulfills the following conditions:
    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
    - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
 
-### What data is cleared?
+## What data is cleared?
 
 Firefox will clear the [following data](https://searchfox.org/mozilla-central/rev/622dbd3409610ad3f71b56c9a6a92da905dab0aa/toolkit/components/antitracking/PurgeTrackerService.jsm#209-225):
 
@@ -53,7 +49,7 @@ Firefox will clear the [following data](https://searchfox.org/mozilla-central/re
 
 Storage clearing ignores origin attributes. This means that storage will be cleared across [containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) and isolated storage (i.e. from [First-Party Isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)).
 
-### How frequently is data cleared?
+## How frequently is data cleared?
 
 Firefox clears storage based on the firing of an internal event called `idle-daily`, which is defined by the following conditions:
 
@@ -85,3 +81,7 @@ WebKit first shipped redirect tracking protection in [ITP 2.0](https://webkit.or
 - The list of origins to be cleared in Firefox is based on our [tracking protection list](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained); WebKit relies on ITP's classification.
 - Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit's does not.
 - Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit's interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

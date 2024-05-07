@@ -2,7 +2,7 @@
 title: href
 slug: Web/SVG/Attribute/href
 page-type: svg-attribute
-browser-compat: svg.attributes.href
+browser-compat: svg.global_attributes.href
 ---
 
 {{SVGRef}}
@@ -60,7 +60,7 @@ For {{SVGElement("a")}}, `href` defines the location of the referenced object, e
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -93,7 +93,7 @@ Except for any SVG-specific rules explicitly mentioned in this specification, th
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -118,7 +118,7 @@ For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resour
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -143,7 +143,7 @@ For {{SVGElement("image")}}, `href` defines a URL referring to the image to rend
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -184,7 +184,7 @@ For {{SVGElement("linearGradient")}}, `href` defines URL referring to a template
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -209,7 +209,7 @@ For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement(
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -234,7 +234,7 @@ For {{SVGElement("pattern")}}, `href` defines a URL referring to a different `<p
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -259,7 +259,7 @@ For {{SVGElement("radialGradient")}}, `href` defines URL referring to a template
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -284,7 +284,7 @@ For {{SVGElement("script")}}, `href` defines a URL referring to an external reso
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -309,7 +309,7 @@ For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGEleme
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -336,7 +336,7 @@ The `<use>` element can reference an entire SVG document by specifying an `href`
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#URL">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>

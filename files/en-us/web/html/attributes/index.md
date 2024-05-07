@@ -1,5 +1,6 @@
 ---
 title: HTML attribute reference
+short-title: Attributes
 slug: Web/HTML/Attributes
 page-type: landing-page
 ---
@@ -85,6 +86,15 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>Alternative text in case an image can't be displayed.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Element/link#as">as</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("link") }}
+      </td>
+      <td>Specifies the type of content being loaded by the link.</td>
     </tr>
     <tr>
       <td>
@@ -181,16 +191,6 @@ Elements in HTML have **attributes**; these are additional values that configure
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/buffered">buffered</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
-      </td>
-      <td>Contains the time range of already buffered media.</td>
     </tr>
     <tr>
       <td>
@@ -294,18 +294,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>Indicates whether the element's content is editable.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
-      </td>
-      <td>
-        Defines the ID of a {{ HTMLElement("menu") }} element which will
-        serve as the element's context menu.
-      </td>
     </tr>
     <tr>
       <td>

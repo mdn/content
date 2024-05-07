@@ -1,18 +1,27 @@
 ---
 title: text-wrap
 slug: Web/CSS/text-wrap
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
 ---
 
 {{CSSRef}}
 
-The **`text-wrap`** CSS property controls how text inside an element is wrapped. The different values provide:
+The **`text-wrap`** CSS shorthand property controls how text inside an element is wrapped. The different values provide:
 
 - Typographic improvements, for example more balanced line lengths across broken headings
 - A way to turn text wrapping off completely.
 
 > **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
+
+{{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- [`text-wrap-mode`](/en-US/docs/Web/CSS/text-wrap-mode)
+- [`text-wrap-style`](/en-US/docs/Web/CSS/text-wrap-style)
 
 ## Syntax
 
@@ -36,15 +45,15 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ### Values
 
-- `wrap` {{experimental_inline}}
+- `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
-- `nowrap` {{experimental_inline}}
+- `nowrap`
   - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
 - `balance`
-  - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six for Chromium and ten for Firefox).
+  - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six or less for Chromium and ten or less for Firefox).
 - `pretty`
   - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
-- `stable` {{experimental_inline}}
+- `stable`
   - : Results in the same behavior as `wrap`, except that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
 
 ## Description

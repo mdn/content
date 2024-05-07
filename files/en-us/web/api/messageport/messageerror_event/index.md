@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.MessagePort.messageerror_event
 ---
 
-{{APIRef}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-The `messageerror` event is fired on a {{domxref('MessagePort')}} object when it receives a message that can't be deserialized.
+The **`messageerror`** event is fired on a {{domxref('MessagePort')}} object when it receives a message that can't be deserialized.
 
 This event is not cancellable and does not bubble.
 

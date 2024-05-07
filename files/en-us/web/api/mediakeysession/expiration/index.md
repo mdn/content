@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.expiration
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The **`MediaKeySession.expiration`** read-only property returns
 the time after which the keys in the current session can no longer be used to decrypt
