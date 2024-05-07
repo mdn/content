@@ -18,6 +18,8 @@ The following code provides examples of different boolean attribute forms in HTM
 <input required />
 <!-- is equivalent to -->
 <input required="" />
+<!-- or -->
+<input required="anything" />
 ```
 
 In XML, attributes without equals sign or value will throw a syntax error:
