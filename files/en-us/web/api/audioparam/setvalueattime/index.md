@@ -60,7 +60,7 @@ const targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");
 // Feed the HTMLMediaElement into it
 const source = audioCtx.createMediaElementSource(myAudio);
 
-// Create a gain node and set it's gain value to 0.5
+// Create a gain node and set its gain value to 0.5
 const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
 let currGain = gainNode.gain.value;

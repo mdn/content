@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.AbortController.signal
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`signal`** read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort an asynchronous operation as desired.
 

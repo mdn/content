@@ -91,7 +91,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the navigator object.
 - {{domxref("Window.opener")}}
   - : Returns a reference to the window that opened this current window.
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if this window belongs to an origin-keyed agent cluster.
@@ -105,7 +105,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : An alias for {{domxref("window.scrollY")}}.
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
-- {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
+- {{domxref("Window.performance")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
