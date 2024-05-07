@@ -1108,7 +1108,7 @@
         "VisibilityStateEntry"
       ],
       "methods": [],
-      "properties": ["performance_property"],
+      "properties": ["Window.performance", "WorkerGlobalScope.performance"],
       "events": []
     },
     "Periodic Background Sync": {

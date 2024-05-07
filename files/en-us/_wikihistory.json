@@ -67960,6 +67960,26 @@
     "modified": "2020-10-15T22:16:14.230Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/performance": {
+    "modified": "2020-10-15T21:22:10.802Z",
+    "contributors": [
+      "sideshowbarker",
+      "connorshea",
+      "Sheppy",
+      "anonyco",
+      "kmag",
+      "sarafec",
+      "smarts",
+      "jsantell",
+      "fscholz",
+      "paul.irish",
+      "teoli",
+      "julienw",
+      "iamanupmenon",
+      "ethertank",
+      "MattBrubeck"
+    ]
+  },
   "Web/API/Window/personalbar": {
     "modified": "2020-10-15T21:14:01.101Z",
     "contributors": [
@@ -71576,26 +71596,6 @@
       "George8211",
       "matiishyn",
       "kscarfone"
-    ]
-  },
-  "Web/API/performance_property": {
-    "modified": "2020-10-15T21:22:10.802Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "Sheppy",
-      "anonyco",
-      "kmag",
-      "sarafec",
-      "smarts",
-      "jsantell",
-      "fscholz",
-      "paul.irish",
-      "teoli",
-      "julienw",
-      "iamanupmenon",
-      "ethertank",
-      "MattBrubeck"
     ]
   },
   "Web/API/queueMicrotask": {
