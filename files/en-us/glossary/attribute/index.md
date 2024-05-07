@@ -10,17 +10,17 @@ An **attribute** extends an HTML or XML {{Glossary("element")}}, changing its be
 
 An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value).
 
-You may see attributes without the equals sign or a value. That is a shorthand for providing the empty string in HTML, which is considered as a [boolean attribute](/en-US/docs/Web/HTML/Attributes#boolean_attributes). However, this is not allowed in XML, as XML required attribute name must follows an equals sign.
+You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML; such attributes are considered to be [boolean attributes](/en-US/docs/Web/HTML/Attributes#boolean_attributes). However, this is not allowed in XML: XML requires the equals sign followed by the attribute name.
 
-The following code shows a good example of a boolean attribute in HTML:
+The following code provides examples of different boolean attribute forms in HTML:
 
-```html
+```html example-good
 <input required />
-<!-- equivalent in HTML -->
+<!-- is equivalent to -->
 <input required="" />
 ```
 
-While in XML, code like this will throw a syntax error:
+In XML, attributes without equals sign or value will throw a syntax error:
 
 ```xml-nolint example-bad
 <tag id />
