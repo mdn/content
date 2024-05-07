@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.currentTarget
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`currentTarget`** read-only property of the {{domxref("Event")}} interface identifies the element to which the event handler has been attached.
 
