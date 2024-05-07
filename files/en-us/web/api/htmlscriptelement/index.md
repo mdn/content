@@ -33,11 +33,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.blocking")}} {{Experimental_Inline}}
   - : A string indicating that certain operations should be blocked on the fetching of the script. It reflects the `blocking` attribute of the {{HTMLElement("script")}} element.
-- {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
+- `HTMLScriptElement.charset` {{deprecated_inline}}
   - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.crossOrigin")}}
   - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
-- {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
+- `HTMLScriptElement.event` {{deprecated_inline}}
   - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
