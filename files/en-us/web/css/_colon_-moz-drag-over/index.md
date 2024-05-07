@@ -90,10 +90,6 @@ The following CSS changes the drop target color to red when the draggable elemen
 
 Not part of any standard.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
