@@ -360,7 +360,48 @@ p {
 
 {{EmbedLiveSample("circle", "100", "250")}}
 
-To make the `<div>` a circle, we could have set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`, which would clip the bottom of the paragraph's circle, or, we could have just removed the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/margin-block).
+To make the `<div>` a circle, we could have set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`, or we could have just removed the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/margin-block).
+
+```html live-sample___circle2
+<section>
+  <div><p>Hello world</p></div>
+  <div><p>Hello world</p></div>
+  <section></section>
+</section>
+```
+
+```css hidden live-sample___circle2
+section {
+  display: flex;
+  gap: 20px;
+}
+div {
+  width: 200px;
+  padding: 5px;
+  background-color: #66ccff;
+}
+p {
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: #f4aab9;
+}
+```
+
+```css live-sample___circle2
+div,
+p {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+div:first-of-type {
+  overflow: hidden;
+}
+div:last-of-type p {
+  margin-block: 0;
+}
+```
+
+{{EmbedLiveSample("circle2", "100", "250")}}
 
 ## Common use cases
 
