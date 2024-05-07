@@ -56,9 +56,9 @@ text-decoration-skip-ink: unset;
 ```html
 <p>You should go on a quest for a cup of coffee.</p>
 <p class="no-skip-ink">Or maybe you'd prefer some tea?</p>
-<p>この文は、 text-decoration-skip-ink: auto の使用例を示しています。</p>
+<p>この文は、text-decoration-skip-ink: auto の使用例を示しています。</p>
 <p class="skip-ink-all">
-  この文は、 text-decoration-skip-ink: all の使用例を示しています。
+  この文は、text-decoration-skip-ink: all の使用例を示しています。
 </p>
 ```
 

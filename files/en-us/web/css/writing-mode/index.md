@@ -91,35 +91,35 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
     <td>我家没有电脑。</td>
     <td>Example text</td>
     <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
+    <td>1994 年に至っては</td>
   </tr>
   <tr class="text2">
     <th>vertical-lr</th>
     <td>我家没有电脑。</td>
     <td>Example text</td>
     <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
+    <td>1994 年に至っては</td>
   </tr>
   <tr class="text3">
     <th>vertical-rl</th>
     <td>我家没有电脑。</td>
     <td>Example text</td>
     <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
+    <td>1994 年に至っては</td>
   </tr>
   <tr class="experimental text4">
     <th>sideways-lr</th>
     <td>我家没有电脑。</td>
     <td>Example text</td>
     <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
+    <td>1994 年に至っては</td>
   </tr>
   <tr class="experimental text5">
     <th>sideways-rl</th>
     <td>我家没有电脑。</td>
     <td>Example text</td>
     <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
+    <td>1994 年に至っては</td>
   </tr>
 </table>
 <p class="notice">
