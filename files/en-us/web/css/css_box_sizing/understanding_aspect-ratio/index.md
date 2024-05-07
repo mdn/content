@@ -163,7 +163,7 @@ img {
 
 {{EmbedLiveSample("stretch", "100", "230")}}
 
-Here we declared a single dimension (in this case, `100vh` is the full height of the example {{htmlement("iframe")}} viewport). For `aspect-ratio` to apply to replaced elements, one dimension must be set. Setting both or neither doesn't work.
+Here we declared a single dimension (in this case, `100vh` is the full height of the example {{htmlelement("iframe")}} viewport). For `aspect-ratio` to apply to replaced elements, one dimension must be set. Setting both or neither doesn't work.
 
 To fit a replaced element to the content of its container while maintaining its intrinsic aspect ratio, set the {{cssxref("object-fit")}} property set to `cover` or `contain`. This will resize the replaced element and either clip it to "cover" the container or display it at a smaller size fully "contained" within it.
 
