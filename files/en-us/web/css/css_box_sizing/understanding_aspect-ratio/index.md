@@ -85,7 +85,7 @@ Every element rendered to the page has a height and a width, and, therefore, an 
 Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are replaced with media that have set dimensions and, therefore, an intrinsic aspect ratio. Consider a raster image, such as a JPEG, PNG, or GIF. If you place an image on a page and do not set a height or width, either via {{htmlelement("img")}} attributes or with CSS, it will be displayed at its intrinsic size.
 
 ```html hidden live-sample___original
-<img src="flag.jpg" alt="Pride flag" />
+<img src="flag.jpg?image=good" alt="Pride flag" />
 ```
 
 {{EmbedLiveSample("original", "100", "230")}}
