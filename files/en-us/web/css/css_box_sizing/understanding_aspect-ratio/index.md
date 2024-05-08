@@ -1,5 +1,5 @@
 ---
-title: Understanding aspect-ratio
+title: Understanding aspect ratios and the aspect-ratio property
 slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
@@ -7,11 +7,9 @@ spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
 
 {{CSSRef}}
 
-When developing responsive sites, you often want to be able to set the inline-direction size to a percentage and have the block-direction change size proportionally, maintaining a specific aspect ratio. When it comes to images and video, maintaining these replaced elements' aspect ratio is not only necessary for {{glossary("responsive web design")}}, but it's a vital component of good user experience by preventing cumulative {{domxref("LayoutShift", "layout shift")}}.
+When developing responsive sites, you often want to be able to set the width of an element to a percentage and have the height change size proportionally, maintaining a specific aspect ratio. When it comes to replaced elements, like images and video, maintaining a specific aspect ratio is not only necessary for {{glossary("responsive web design")}}, but it's a vital component of good user experience by preventing [cumulative layout shift](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 
-With CSS, we can size replaced and non-replaced elements based on their aspect ratio. In this guide, we discuss controlling aspect ratio with CSS for design aesthetics and to improve user experience and page loading performance.
-
-In this guide, we learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
+Using CSS, you can adjust the size of replaced and non-replaced elements based on their aspect ratio. In this guide, we will learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
 
 ## CSS `aspect-ratio` property
 
@@ -82,7 +80,7 @@ When an element is rendered to the page, if no CSS is applied and no HTML sizing
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. These natural dimensions, the size of the media object without any sizing, scaling, zooming, or borders applied, is its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by any formatting ([box sizing](/en-US/docs/Web/CSS/CSS_box_sizing), border, margin, padding, etc.) applied.
 
-## Replaced elements
+## Adjusting aspect ratios of replaced elements
 
 Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are replaced with media that have set dimensions and, therefore, an intrinsic aspect ratio. Consider a raster image, such as a JPEG, PNG, or GIF. If you place an image on a page and do not set a height or width, either via {{htmlelement("img")}} attributes or with CSS, it will be displayed at its intrinsic size.
 
@@ -220,7 +218,7 @@ img {
 
 Only the first image is distorted (stretched). We could have used the `fill` value of `object-fit` to create the same effect. The `cover` image is the full width of the container, centered vertically, and clipped to fit in the container. The `contain` value is contained; shrunk to fit and centered horizontally.
 
-## Non-replaced elements
+## Defining aspect ratios for non-replaced elements
 
 While the aspect ratio of a replaced element is maintained by default, when the intrinsic size of a non-replaced element is changed the aspect ratio usually changes. For example, identical content may be three lines on a widescreen or in a wide parent container and eight lines on a narrow screen or container.
 
