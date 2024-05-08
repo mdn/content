@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoColorSpace.transfer
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`transfer`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the opto-electronic transfer characteristics of the video.
 

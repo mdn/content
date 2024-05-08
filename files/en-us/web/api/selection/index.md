@@ -19,6 +19,8 @@ A user may make a selection from left to right (in document order) or right to l
   - : Returns the {{DOMxRef("Node")}} in which the selection begins. Can return `null` if selection never existed in the document (e.g., an iframe that was never clicked on).
 - {{DOMxRef("Selection.anchorOffset")}} {{ReadOnlyInline}}
   - : Returns a number representing the offset of the selection's anchor within the `anchorNode`. If `anchorNode` is a text node, this is the number of characters within anchorNode preceding the anchor. If `anchorNode` is an element, this is the number of child nodes of the `anchorNode` preceding the anchor.
+- {{DOMxRef("Selection.direction")}} {{ReadOnlyInline}}
+  - : A string describing the direction of the current selection.
 - {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
 - {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
@@ -46,6 +48,8 @@ A user may make a selection from left to right (in document order) or right to l
   - : Deletes the selection's content from the document.
 - {{DOMxRef("Selection.extend()")}}
   - : Moves the focus of the selection to a specified point.
+- {{DOMxRef("Selection.getComposedRanges()")}} {{experimental_inline}}
+  - : Returns an array of {{DOMxRef("StaticRange")}} objects, each that represents a selection that might cross shadow DOM boundaries.
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.
 - {{DOMxRef("Selection.modify()")}}

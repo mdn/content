@@ -58,7 +58,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`.
 - `preload`
 
-  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
+  - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
 
     - `none`: Indicates that the audio should not be preloaded.
     - `metadata`: Indicates that only audio metadata (e.g. length) is fetched.
