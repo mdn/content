@@ -13,10 +13,7 @@ The **`Accept-Patch`** response HTTP header advertises which media-type the serv
 
 A server receiving a PATCH request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an Accept-Patch header referencing one or more supported media types.
 
-> **Note:**
->
-> - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
-> - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.
+> **Note:** An IANA registry maintains [a list of media types](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
 <table class="properties">
   <tbody>
