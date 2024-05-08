@@ -48,7 +48,7 @@ A user may make a selection from left to right (in document order) or right to l
   - : Deletes the selection's content from the document.
 - {{DOMxRef("Selection.extend()")}}
   - : Moves the focus of the selection to a specified point.
-- {{DOMxRef("Selection.getComposedRanges()")}}
+- {{DOMxRef("Selection.getComposedRanges()")}} {{experimental_inline}}
   - : Returns an array of {{DOMxRef("StaticRange")}} objects, each that represents a selection that might cross shadow DOM boundaries.
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.
