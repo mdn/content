@@ -15,8 +15,8 @@ A server receiving a PATCH request with an unsupported media type could reply wi
 
 > **Note:**
 >
-> - An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
-> - Two others content encoding, `bzip` and `bzip2`, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.
+> - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.
 
 <table class="properties">
   <tbody>

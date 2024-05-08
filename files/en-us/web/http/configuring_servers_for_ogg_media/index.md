@@ -42,7 +42,7 @@ For more information, see [HTTP range requests](/en-US/docs/Web/HTTP/Range_reque
 
 When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
 
-By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+By default, [`ffmpeg2theora`](https://gitlab.xiph.org/xiph/ffmpeg2theora) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
 > **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
