@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioDecoder.state
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the {{domxref("AudioDecoder")}} interface returns the current state of the underlying codec.
 
