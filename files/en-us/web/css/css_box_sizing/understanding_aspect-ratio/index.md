@@ -68,7 +68,7 @@ div + div {
 
 The effect of the `auto` keyword depends on whether the element on which it is applied is a replaced element or not. For replaced elements with an intrinsic aspect ratio, `auto` means the intrinsic aspect ratio should be used. In all other instances, the `auto` value means the box has no preferred aspect ratio. In both cases, this is the default behavior as if no `aspect-ratio` property were applied.
 
-When the value contains both the `auto` keyword and a `<ratio>` value, such as `aspect-ratio: auto 2 / 3;` or `aspect-ratio: 0.75 auto;`, the `auto` value is applied to replaced elements with a natural aspect ratio and the specified ratio of the `width` / `height` or `<number>` is used as the preferred aspect ratio.
+When the value contains both the `auto` keyword and a `<ratio>` value, such as `aspect-ratio: auto 2 / 3;` or `aspect-ratio: 0.75 auto;`, the `auto` value is applied to replaced elements with a natural aspect ratio and the specified ratio of the `width / height` or `<number>` is used as the preferred aspect ratio.
 
 You will have noticed the word "preferred" in the definitions above. The `aspect-ratio` value is not always applied when set. The `aspect-ratio` property sets a "preferred" aspect ratio, so only ever has an effect if at least one of the box's sizes is automatic.
 
@@ -90,11 +90,11 @@ Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are r
 
 {{EmbedLiveSample("original", "100", "230")}}
 
-This is a 220px square image with no CSS applied; it is displayed at its intrinsic or default size.
+This is a `220px` square image with no CSS applied; it is displayed at its intrinsic or default size.
 
-If replaced content is auto-sized or you provide a size for only one dimension, such as the width, the browser will automatically resize the other dimension, in this case, the height, maintaining the media's original aspect ratio.
+If replaced content is auto-sized or you provide a size for only one dimension, such as setting a value forwidth, the browser will automatically resize the other dimension, in this case, the height, while maintaining the media's original aspect ratio.
 
-In this example, a single dimension is set on the image, so the user agent preserves its aspect ratio. The image is displayed at `width: 55px`, `width: 110px`, and at its natural [`width: auto`](/en-US/docs/Web/CSS/width) size of `220px`.
+In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the [`width: auto`](/en-US/docs/Web/CSS/width) value.
 
 ```html hidden live-sample___image
 <img src="flag.jpg" alt="Pride flag" />
@@ -117,9 +117,9 @@ img + img + img {
 
 {{EmbedLiveSample("image", "100", "230")}}
 
-Only when you provide sizes for both dimensions is there a risk of distorting the replaced element. For example, setting `width: 100vw; height: 100vh;` on an image creates a variable aspect ratio; the image will appear either stretched or squashed when the viewport's aspect ratio differs from the image's natural aspect ratio.
+Only when you provide sizes for both dimensions is there a risk of distorting the replaced element. For example, setting `width: 100vw;` and `height: 100vh;` on an image creates a variable aspect ratio; the image will appear either stretched or squashed when the viewport's aspect ratio differs from the image's natural aspect ratio.
 
-In this example, the same image is repeated three times, explicitly sized with the same {{cssxref("height")}} value (`110px`) but different {{cssxref("width")}} values (`55px`, `110px`, and `220px`):
+In this example, the same image is repeated three times, explicitly sized with the same {{cssxref("height")}} value (`110px`) but different {{cssxref("width")}} values (`55px`, `110px`, and `220px`).
 
 ```html hidden live-sample___imagebad
 <img src="flag.jpg" alt="Pride flag" />
@@ -142,7 +142,7 @@ img + img + img {
 
 {{EmbedLiveSample("imagebad", "100", "120")}}
 
-In this example, we used `height` and `width` to distort the image. We squashed the first one and stretched the third.
+We distorted the image by setting both a `height` and `width`. We squashed the first one and stretched the third.
 
 We could have created this same distorted effect using the CSS {{cssxref("aspect-ratio")}} property, by setting a single dimension (not both or neither) and providing a value other than `1` (or `1 / 1`). You likely don't want to do this, but it's good to know that it's possible.
 
@@ -159,7 +159,7 @@ img {
 
 {{EmbedLiveSample("stretch", "100", "230")}}
 
-Here we declared a single dimension (in this case, `100vh` is the full height of the example {{htmlelement("iframe")}} viewport). For `aspect-ratio` to apply to replaced elements, one dimension must be set. Setting both or neither doesn't work.
+We declared a single dimension; `100vh` is the full height of the example {{htmlelement("iframe")}} viewport. For `aspect-ratio` to apply to replaced elements, one dimension must be set. Setting both or neither doesn't work.
 
 ### The `object-fit` property
 
