@@ -28,6 +28,7 @@ justify-self: normal;
 justify-self: stretch;
 
 /* Positional alignment */
+justify-self: anchor-center; /* Pack item around the center of an associated anchor element */
 justify-self: center; /* Pack item around the center */
 justify-self: start; /* Pack item from the start */
 justify-self: end; /* Pack item from the end */
@@ -105,6 +106,8 @@ This property can take one of three different forms:
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of an **anchor-positioned** element (see [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the item to the center of the associated anchor element in the inline direction.
 
 ## Formal definition
 

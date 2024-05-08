@@ -27,6 +27,7 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Positional alignment */
+justify-items: anchor-center; /* Pack items around the center of an associated anchor element */
 justify-items: center; /* Pack items around the center */
 justify-items: start; /* Pack items from the start */
 justify-items: end; /* Pack items from the end */
@@ -104,6 +105,8 @@ This property can take one of four different forms:
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 - `legacy`
   - : Makes the value inherited by the box descendants. Note that if a descendant has a `justify-self: auto` value, the `legacy` keyword is not considered by the descend, only the `left`, `right`, or `center` value associated to it.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of **anchor-positioned** elements (see [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the items to the center of the associated anchor element in the inline direction.
 
 ## Formal definition
 
@@ -117,7 +120,7 @@ This property can take one of four different forms:
 
 ### Simple demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
+In the following example, we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
 
 If you hover or tab onto the grid container however, it is given a `justify-items` value of `center`, which causes the grid items to span only as wide as their content width, and align in the center of their cells.
 

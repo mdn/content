@@ -22,6 +22,7 @@ align-items: stretch;
 
 /* Positional alignment */
 /* align-items does not take left and right values */
+justify-items: anchor-center; /* Pack items around the center of an associated anchor element */
 align-items: center;
 align-items: start;
 align-items: end;
@@ -79,6 +80,8 @@ align-items: unset;
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of **anchor-positioned** elements (see [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the items to the center of the associated anchor element in the block direction.
 
 ## Formal definition
 
