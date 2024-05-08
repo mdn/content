@@ -3,10 +3,12 @@ title: "Selection: getComposedRanges() method"
 short-title: getComposedRanges()
 slug: Web/API/Selection/getComposedRanges
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Selection.getComposedRanges
 ---
 
-{{ ApiRef("DOM") }}
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 The **`Selection.getComposedRanges()`** method returns an array of {{domxref("StaticRange")}} objects representing the current selection ranges, and can return ranges that potentially cross shadow boundaries.
 
