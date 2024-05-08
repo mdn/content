@@ -26,7 +26,6 @@ They also are classified according to how their {{glossary("key", "keys")}} are 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Block cipher mode of operation")}}
-  - {{Glossary("Cipher")}}
   - {{Glossary("Ciphertext")}}
   - {{Glossary("Cipher suite")}}
   - {{Glossary("Cryptanalysis")}}

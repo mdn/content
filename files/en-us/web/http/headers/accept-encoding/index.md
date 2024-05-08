@@ -45,7 +45,7 @@ Accept-Encoding: zstd
 Accept-Encoding: identity
 Accept-Encoding: *
 
-// Multiple algorithms, weighted with the {{Glossary("Quality Values", "quality value")}} syntax:
+// Multiple algorithms, weighted with the quality value syntax:
 Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ```
 

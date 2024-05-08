@@ -33,7 +33,7 @@ You can use this attribute with the following SVG elements:
       <td>
         <code>auto</code> |
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Angle"
+          ><a href="/en-US/docs/Web/SVG/Content_type#angle"
             >&#x3C;angle></a
           ></code
         >

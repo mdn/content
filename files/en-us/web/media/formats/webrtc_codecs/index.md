@@ -100,7 +100,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
 
 VP8, which we [describe in general](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs), has some specific requirements that must be followed when using it to encode or decode a video track on a WebRTC connection.
 
-Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an aspect ratio of 1:1).
+Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an {{glossary("aspect ratio")}} of 1:1).
 
 #### Other notes
 

@@ -1,5 +1,6 @@
 ---
 title: SVG Attribute reference
+short-title: Attributes
 slug: Web/SVG/Attribute
 page-type: landing-page
 ---
@@ -529,4 +530,4 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - [SVG element reference](/en-US/docs/Web/SVG/Element)
 - [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG interface reference](/en-US/docs/Web/API/SVG_API#interfaces)

@@ -8,13 +8,10 @@ browser-compat: api.RTCPeerConnection.setIdentityProvider
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnection.setIdentityProvider()`** method sets
-the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol
-used to communicate with it (optional) and an optional username. The IdP will be used
-only when an assertion is needed.
+The **`setIdentityProvider()`** method of the {{domxref("RTCPeerConnection")}} interface sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username.
+The IdP will be used only when an assertion is needed.
 
-If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-`"closed"`, an `InvalidStateError` is raised.
+If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to `"closed"`, an `InvalidStateError` is raised.
 
 ## Syntax
 
@@ -29,9 +26,8 @@ setIdentityProvider(domainname, protocol, username)
 - `domainname`
   - : A string representing the domain name where the IdP is.
 - `protocol` {{optional_Inline}}
-  - : A string representing the protocol used to communicate with the
-    IdP. It defaults to `"default"` and is used to determine the URL where the
-    IdP is listening.
+  - : A string representing the protocol used to communicate with the IdP.
+    It defaults to `"default"` and is used to determine the URL where the IdP is listening.
 - `username` {{optional_Inline}}
   - : A string representing the username associated with the IdP.
 

@@ -4,7 +4,7 @@ slug: Web/CSS/:-moz-drag-over
 page-type: css-pseudo-class
 status:
   - non-standard
-browser-compat: css.selectors:-moz-drag-over
+browser-compat: css.selectors.-moz-drag-over
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -24,24 +24,67 @@ The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ### HTML
 
 ```html
-<table border="1">
-  <tr>
-    <td width="100px" height="100px">Drag Over</td>
-  </tr>
-</table>
+<div id="drop-target">
+  <p>Drop target</p>
+</div>
+
+<div draggable="true">
+  <p>Draggable</p>
+</div>
+```
+
+### JavaScript
+
+Most elements are not valid places to drop data, so in order to allow a drop, you must prevent default behavior by cancelling [`dragenter`](/en-US/docs/Web/API/HTMLElement/dragenter_event) or [`dragover`](/en-US/docs/Web/API/HTMLElement/dragover_event) (or both) events.
+In this example, we only need to cancel the `dragenter` event, which is the first event fired when the browser evaluates if an element can be a drop target.
+For more information, see [Drag operations: Specifying drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets).
+
+```js
+const target = document.getElementById("drop-target");
+/* dragenter event fired on the drop target */
+target.addEventListener(
+  "dragenter",
+  (event) => {
+    // prevent default to allow drop
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 ### CSS
 
 ```css
-td:-moz-drag-over {
-  color: red;
+body {
+  font-family: arial;
+}
+div {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border: 2px dotted black;
+  background-color: aquamarine;
+  margin: 1rem;
+}
+p {
+  padding: 1rem;
+}
+```
+
+The following CSS changes the drop target color to red when the draggable element overlays the drop area.
+
+```css
+#drop-target {
+  background-color: cornflowerblue;
+}
+#drop-target:-moz-drag-over {
+  background-color: red;
 }
 ```
 
 ### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Examples", "100%", "200px")}}
 
 ## Specifications
 

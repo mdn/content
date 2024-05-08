@@ -24,7 +24,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("font-stretch")}}</td>
+      <td>See {{cssxref("font-stretch", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

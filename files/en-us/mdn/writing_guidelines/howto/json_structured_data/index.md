@@ -65,7 +65,7 @@ An entry in `GroupData.json` has the following structure:
   - : This lists the methods that are part of the API.
     > **Note:** The methods of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-method` or `web-api-instance-method`.
 - `"properties"`
-  - : This lists the methods on other interfaces that are part of the API, like `navigator.xr` (a property that the WebXR API adds to the `navigator` object)
+  - : This lists the properties on other interfaces that are part of the API, like `navigator.xr` (a property that the WebXR API adds to the `navigator` object)
     > **Note:** The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
 - `"events"`
   - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)

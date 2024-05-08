@@ -1,5 +1,6 @@
 ---
 title: HTML attribute reference
+short-title: Attributes
 slug: Web/HTML/Attributes
 page-type: landing-page
 ---

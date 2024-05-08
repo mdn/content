@@ -7,7 +7,7 @@ browser-compat: css.properties.width.max-content
 
 {{CSSRef}}
 
-The `max-content` sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+The `max-content` sizing keyword represents the {{glossary("intrinsic size", "intrinsic")}} maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
 
 ## Syntax
 
@@ -105,3 +105,4 @@ grid-template-columns: 200px 1fr max-content;
 ## See also
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module

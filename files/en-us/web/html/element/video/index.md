@@ -70,12 +70,12 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
 - `preload`
 
-  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
+  - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
     - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
     - `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
-    - _empty string_: Synonym of the `auto` value.
+    - _empty string_: A synonym of the `auto` value.
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
@@ -476,7 +476,7 @@ Captions should not obstruct the main subject of the video. They can be position
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        <a href="/en-US/docs/Web/HTML/Element/video#controls"><code>controls</code></a> attribute: interactive
+        <a href="#controls"><code>controls</code></a> attribute: interactive
         content and palpable content.
       </td>
     </tr>
@@ -484,7 +484,7 @@ Captions should not obstruct the main subject of the video. They can be position
       <th scope="row">Permitted content</th>
       <td>
         <p>
-          If the element has a <a href="/en-US/docs/Web/HTML/Element/video#src"><code>src</code></a>
+          If the element has a <a href="#src"><code>src</code></a>
           attribute: zero or more {{HTMLElement("track")}} elements,
           followed by transparent content that contains no media elements–that
           is no {{HTMLElement("audio")}} or
