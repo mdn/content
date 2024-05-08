@@ -24,6 +24,10 @@ inset-inline-end: 10%;
 /* Keyword value */
 inset-inline-end: auto;
 
+/* anchor() function values */
+inset-inline-end: anchor(self-start);
+inset-inline-end: anchor(--my-anchor 50%);
+
 /* Global values */
 inset-inline-end: inherit;
 inset-inline-end: initial;
@@ -37,6 +41,8 @@ The shorthand for {{cssxref("inset-inline-start")}} and `inset-inline-end` is {{
 ### Values
 
 The `inset-inline-end` property takes the same values as the {{cssxref("left")}} property.
+
+Note that the {{cssxref("anchor()")}} function behaves equivalently, but somewhat differently. In the case of `inset-inline-end`, its value is relative to the position of the associated **anchor element**'s logical inline start and/or end edges, rather than its left and/or right edges.
 
 ## Formal definition
 
@@ -92,3 +98,4 @@ div {
 - The properties which defines other insets: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, and {{cssxref("inset-inline-start")}}
 - The mapped physical properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

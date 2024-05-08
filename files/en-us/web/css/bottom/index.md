@@ -33,6 +33,10 @@ bottom: 10%;
 /* Keyword value */
 bottom: auto;
 
+/* anchor() function values */
+bottom: anchor(top);
+bottom: anchor(--my-anchor 50%);
+
 /* Global values */
 bottom: inherit;
 bottom: initial;
@@ -58,6 +62,10 @@ bottom: unset;
 
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("top")}} property, while `height: auto` is treated as a height based on the content; or if `top` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("top")}} property; or if `top` is also `auto`, the element is not moved vertically at all.
+
+- {{cssxref("anchor()")}} {{experimental_inline}}
+
+  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the top and/or bottom edges of an absolutely- or fixed-positioned element's associated **anchor element**.
 
 - `inherit`
   - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
@@ -131,3 +139,4 @@ div {
 - {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}
 - The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
+- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

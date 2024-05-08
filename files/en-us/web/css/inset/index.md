@@ -37,6 +37,10 @@ inset: 10% 5% 5% 5%;
 /* Keyword value */
 inset: auto;
 
+/* anchor() function values */
+inset: anchor(50%) anchor(self-start) auto auto;
+inset: auto auto anchor(center) anchor(self-end);
+
 /* Global values */
 inset: inherit;
 inset: initial;
@@ -48,6 +52,8 @@ inset: unset;
 ### Values
 
 The `inset` property takes the same values as the {{cssxref("left")}} property.
+
+Note that, when using {{cssxref("anchor()")}} functions in `inset` values, setting the same value for both constituent inline or block properties (for example, `inset: anchor(start) auto`), or all four constituent properties (for example, `inset: anchor(start)`) may produce strange or expected results. The values will be relative to a single line on an anchor element (for example, one of its sides) rather than two or four separate sides of the viewport or a containing block. In addition, some `anchor-side` values are not valid for inline or block inset values.
 
 ## Formal definition
 
@@ -104,3 +110,4 @@ div {
 - The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
 - The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - The {{cssxref("margin")}} shorthand multi-value syntax.
+- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

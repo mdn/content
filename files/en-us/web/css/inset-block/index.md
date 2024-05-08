@@ -32,6 +32,10 @@ inset-block: 10% 5%;
 /* Keyword value */
 inset-block: auto;
 
+/* anchor() function values */
+inset-block: auto anchor(start);
+inset-block: anchor(--my-anchor 50%) auto;
+
 /* Global values */
 inset-block: inherit;
 inset-block: initial;
@@ -43,6 +47,8 @@ inset-block: unset;
 ### Values
 
 The `inset-block` property takes the same values as the {{cssxref("left")}} property.
+
+Note that the {{cssxref("anchor()")}} function behaves equivalently, but somewhat differently. In the case of `inset-block`, its values are relative to the position of the associated **anchor element**'s logical block start and/or end edges, rather than its left and/or right edges. Note also that setting the same value for both constituent properties (for example, `inset-block: anchor(start)`) may produce strange or expected results, as the values will both be relative to a single line on an anchor element (e.g. one of its sides) rather than two separate sides of the viewport or a containing block.
 
 ## Formal definition
 
@@ -99,3 +105,4 @@ div {
 - The mapped physical shortcut: {{cssxref("inset")}}
 - The mapped inline shortcut: {{cssxref("inset-inline")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
