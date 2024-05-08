@@ -17,7 +17,7 @@ A boolean value.
 ## Examples
 
 ```html
-<input id="myfileinput" type=file multiple>
+<input id="myfileinput" type="file" multiple />
 ```
 
 ```js
