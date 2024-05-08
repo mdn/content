@@ -73,7 +73,7 @@ The `width` and `height` options of `requestWindow()` set the Picture-in-Picture
 ```js
 async function togglePictureInPicture() {
   // Early return if there's already a Picture-in-Picture window open
-  if (window.documentPictureInPicture.window != null) {
+  if (window.documentPictureInPicture.window) {
     return;
   }
 
