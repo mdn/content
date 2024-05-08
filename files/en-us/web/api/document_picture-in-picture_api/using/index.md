@@ -8,7 +8,7 @@ page-type: guide
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 
-> **Note:** You can see the featured demo in action at [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) (see the full [source code](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture) also).
+> **Note:** You can see the featured demo in action at [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture) also).
 
 ## Sample HTML
 
