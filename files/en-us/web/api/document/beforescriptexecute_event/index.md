@@ -42,7 +42,7 @@ document.onbeforescriptexecute = starting;
 
 ## Specifications
 
-{{Specifications}}
+Not part of any specification.
 
 ## Browser compatibility
 

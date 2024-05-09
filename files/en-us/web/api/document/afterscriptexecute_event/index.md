@@ -42,7 +42,7 @@ document.onafterscriptexecute = finished;
 
 ## Specifications
 
-{{Specifications}}
+Not part of any specification.
 
 ## Browser compatibility
 

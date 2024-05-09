@@ -52,7 +52,7 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 
 ## Specifications
 
-{{Specifications}}
+Not part of any specification.
 
 ## Browser compatibility
 

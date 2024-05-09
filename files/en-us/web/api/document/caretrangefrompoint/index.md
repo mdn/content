@@ -43,7 +43,7 @@ Visit the {{domxref("Document.caretPositionFromPoint#Examples", "Document.caretP
 
 ## Specifications
 
-{{Specifications}}
+Not part of any specification.
 
 ## Browser compatibility
 
