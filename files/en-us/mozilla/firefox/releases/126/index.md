@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 126 that affect d
 
   ([Firefox bug 1322186](https://bugzil.la/1322186)).
 
+- The {{domxref("Element.currentCSSZoom")}} read only property is now supported for getting the effective CSS [zoom](/en-US/docs/Web/CSS/zoom) of an element ([Firefox bug 1880189](https://bugzil.la/1880189)).
+
 #### DOM
 
 - The ability to define states for custom elements and match them using CSS selectors is now available by default.
@@ -71,11 +73,13 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
-#### Marionette
+- Added the `contexts` argument to the `network.addIntercept` command to limit the interception of network requests to particular top-level browsing contexts ([Firefox bug 1884935](https://bugzil.la/1882260)).
+- Both the commands `session.subscribe` and `session.unsubscribe` now raise an `invalid argument` error when the value of the arguments `events` or `contexts` are empty arrays ([Firefox bug 1884935](https://bugzil.la/1887871)).
+- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behaviour. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1884935](https://bugzil.la/1879503)).
+- Removed the `ownership` and `sandbox` arguments for the `browsingContext.locateNodes` command because they are no longer necessary ([Firefox bug 1884935](https://bugzil.la/1838152)).
+- Improved error message for the `session.new` command when no capabilities are specified ([Firefox bug 1885495](https://bugzil.la/1838152)).
 
 ## Changes for add-on developers
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageDecoder.close
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`close()`** method of the {{domxref("ImageDecoder")}} interface ends all pending work and releases system resources.
 
