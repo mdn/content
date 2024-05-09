@@ -30,6 +30,10 @@ max-inline-size: min-content;
 max-inline-size: fit-content;
 max-inline-size: fit-content(20em);
 
+/* anchor-size() function values */
+max-inline-size: anchor-size(width);
+max-inline-size: anchor-size(--my-anchor inline);
+
 /* Global values */
 max-inline-size: inherit;
 max-inline-size: initial;

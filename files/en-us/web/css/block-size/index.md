@@ -30,6 +30,10 @@ block-size: fit-content;
 block-size: fit-content(20em);
 block-size: auto;
 
+/* anchor-size() function values */
+block-size: anchor-size(height);
+block-size: anchor-size(--my-anchor block);
+
 /* Global values */
 block-size: inherit;
 block-size: initial;

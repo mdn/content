@@ -29,6 +29,10 @@ min-block-size: min-content;
 min-block-size: fit-content;
 min-block-size: fit-content(20em);
 
+/* anchor-size() function values */
+min-block-size: anchor-size(height);
+min-block-size: anchor-size(--my-anchor block);
+
 /* Global values */
 min-block-size: inherit;
 min-block-size: initial;

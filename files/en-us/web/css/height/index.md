@@ -31,6 +31,10 @@ height: fit-content;
 height: fit-content(20em);
 height: auto;
 
+/* anchor-size() function values */
+height: anchor-size(height);
+height: anchor-size(--my-anchor block);
+
 /* Global values */
 height: inherit;
 height: initial;
@@ -57,6 +61,8 @@ height: unset;
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 - {{cssxref("clamp", "clamp()")}}
   - : Enables selecting a middle value within a range of values between a defined minimum and maximum.
+- {{cssxref("anchor-size()")}} {{experimental_inline}}
+  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated **anchor element**.
 
 ## Accessibility concerns
 
@@ -133,3 +139,4 @@ div {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

@@ -30,6 +30,10 @@ inline-size: fit-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 
+/* anchor-size() function values */
+inline-size: anchor-size(width);
+inline-size: anchor-size(--my-anchor inline);
+
 /* Global values */
 inline-size: inherit;
 inline-size: initial;

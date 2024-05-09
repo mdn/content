@@ -29,6 +29,10 @@ max-width: min-content;
 max-width: fit-content;
 max-width: fit-content(20em);
 
+/* anchor-size() function values */
+max-width: anchor-size(width);
+max-width: anchor-size(--my-anchor inline);
+
 /* Global values */
 max-width: inherit;
 max-width: initial;
@@ -53,6 +57,8 @@ max-width: unset;
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
+- {{cssxref("anchor-size()")}} {{experimental_inline}}
+  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated **anchor element**.
 
 ## Accessibility concerns
 
@@ -117,3 +123,4 @@ In this example, the "child" will be either 150 pixels wide or the width of the 
 - [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("width")}}, {{cssxref("min-width")}}
 - The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
+- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
