@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 **BiDi** (BiDirectional) denotes the characteristic a document has, signifying that both right-to-left (RTL) and left-to-right (LTR) text orientations occurred in one document.
 
-User Interfaces should design to display BiDi content correctly, but many failed in this. An example is the RTL Hebrew name Sarah: שרה, spelled sin (ש) on the right, resh (ר) in the middle, and heh (ה) on the left, which, many programs would display the Hebrew word in the opposite order.
+User Interfaces should display BiDi content correctly, but many fail. An example is the Hebrew translation of the name Sarah: שרה, spelled (from right-to-left) sin (ש), resh (ר), heh (ה). Many programs would display the letters in the opposite order.
 
 It is possible to flip the left-to-right display order to a right-to-left display order, but doing this sacrifices the ability to display BiDi scripts correctly — at least one is always incorrectly displayed. With bidirectional script support, it is possible to mix characters from different scripts on the same page, regardless of writing direction.
 
