@@ -21,10 +21,10 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
   - : Indicates the value of the [`mode`](/en-US/docs/Web/API/ShadowRoot/mode) property of a declaratively created [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
     This reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus", "shadowRootDelegatesFocus")}}
-  - : Indicates the [delegateFocus](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a declaratively created [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
+  - : Indicates the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a declaratively created [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
     This reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Element/template#shadowrootdelegatesfocus) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
-  - : Indicates the [clonable](/en-US/docs/Web/API/ShadowRoot/clonable) property of a declaratively created [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
+  - : Indicates the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a declaratively created [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
     This reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated `<template>` element.
 
 ## Instance methods

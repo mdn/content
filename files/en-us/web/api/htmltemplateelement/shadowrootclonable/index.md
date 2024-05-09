@@ -21,10 +21,10 @@ This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/H
 
 ## Examples
 
-This example shows how you can create a shadow root declaratively, specifying the `shadowrootclonable` attribute, and then log the value.
+This example shows how you can create a shadow root declaratively, specifying the `shadowrootclonable` attribute on the associated `<template>` and then logging the `shadowRootClonable` value to show that the shadow root is clonable.
 
 We declare a shadow root by specifying a `<template>` element with the `shadowrootmode` attribute set to one of the allowed values.
-The `shadowrootclonable` is also set, making it clonable.
+The `shadowrootclonable` attribute is also set, making the shadow root clonable.
 
 ```html
 <div>
@@ -35,7 +35,7 @@ The `shadowrootclonable` is also set, making it clonable.
 </div>
 ```
 
-We can log whether the value is clonable or not using the following JavaScript
+We can log whether the shadow root is clonable or not using the following JavaScript:
 
 ```js
 const clonableShadowDOM = document.querySelector("#clonable");
