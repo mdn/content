@@ -16,7 +16,7 @@ on which this method is called.
 ## Syntax
 
 ```js-nolint
-FileSystemDirectoryHandle.keys()
+keys()
 ```
 
 ### Parameters
