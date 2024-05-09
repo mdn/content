@@ -106,14 +106,14 @@ clip-path: shape(
 
       > **Note:** If the starting and ending points of the arc lie on exactly opposite sides of the ellipse, there is only one possible ellipse and two possible arcs. In this case, `<arc-sweep>` specifies the arc to choose, and `<arc-size>` has no effect.
 
-    - `close`: Adds a [ClosePath command](/en-US/docs/Web/SVG/Attribute/d#closepath-commands) to the list of shape commands.
+    - `close`: Adds a [ClosePath command](/en-US/docs/Web/SVG/Attribute/d#closepath_commands) to the list of shape commands.
 
 ## Description
 
 The `shape()` function allows you to define complex shapes. It is similar to the `{{cssxref("path","path()")}}` function in several ways:
 
 - The `<fill-rule>` parameter in the `shape()` function works exactly like the same parameter in the `path()` function.
-- The `shape()` function requires specifying one or more `<shape-command>`s, where each command uses an underlying [path command](/en-US/docs/Web/SVG/Attribute/d#path_commands), such as [MoveTo](/en-US/docs/Web/SVG/Attribute/d#moveto_path_commands), [LineTo](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands), and [ClosePath](/en-US/docs/Web/SVG/Attribute/d#closepath-commands).
+- The `shape()` function requires specifying one or more `<shape-command>`s, where each command uses an underlying [path command](/en-US/docs/Web/SVG/Attribute/d#path_commands), such as [MoveTo](/en-US/docs/Web/SVG/Attribute/d#moveto_path_commands), [LineTo](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands), and [ClosePath](/en-US/docs/Web/SVG/Attribute/d#closepath_commands).
 
 However, `shape()` offers several advantages over using `path()`:
 
