@@ -45,9 +45,16 @@ Baseline tracks availability with the following browsers:
 
 ## Extra considerations
 
-Baseline is a summary guide to support and doesn't cover every situation.
-If your site needs to work with an older device or browser release, or a browser not covered by the Baseline status, then you may need to do your own research or testing.
-If Baseline doesn't cover your situation, then consider reading browser compatibility tables on MDN or visiting [caniuse.com](https://caniuse.com/) before committing to a feature.
+Baseline is a summary guide to browser support, to help you make decisions before committing to a feature.
+But it's not a substitute for testing your application for accessibility, usability, performance, and other considerations.
+
+Baseline may not tell you whether a feature works with:
+
+- Older devices and browser releases
+- Browsers not covered by the Baseline browser set, such as operating system web views
+- Assistive technology, such as screen readers
+
+If Baseline doesn't cover your situation, then consider reading browser compatibility tables on MDN and visiting [caniuse.com](https://caniuse.com/) and [a11ysupport.io](https://a11ysupport.io/).
 
 ## Contributing
 
