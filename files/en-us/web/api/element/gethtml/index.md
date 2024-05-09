@@ -8,7 +8,7 @@ browser-compat: api.Element.getHTML
 
 {{APIRef("DOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`getHTML()`** method of the {{domxref("Element")}} interface is used to serialize an Element's DOM to an HTML string.
+The **`getHTML()`** method of the {{domxref("Element")}} interface is used to serialize an element's DOM to an HTML string.
 
 ## Syntax
 
