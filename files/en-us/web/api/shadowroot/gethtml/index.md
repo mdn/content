@@ -8,7 +8,7 @@ browser-compat: api.ShadowRoot.getHTML
 
 {{APIRef("DOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`getHTML()`** method of the {{domxref("ShadowRoot")}} interface is used to serialize a ShadowRoot's DOM to an HTML string.
+The **`getHTML()`** method of the {{domxref("ShadowRoot")}} interface is used to serialize a shadow root's DOM to an HTML string.
 
 ## Syntax
 
@@ -25,12 +25,12 @@ const html = shadowRoot.getHTML(options)
     - `serializableShadowRoots`
       - : A boolean value that specifies whether to include serializable shadow roots. The default value is `false`.
     - `shadowRoots`
-      - : An array of {{domxref("ShadowRoot")}} objects to serialize, these are included regardless of whether they
+      - : An array of {{domxref("ShadowRoot")}} objects to serialize. These are included regardless of whether they
         are marked as serializable. The default value is an empty array.
 
 ### Return value
 
-A string that represents the HTML serialization of the ShadowRoot.
+A string that represents the HTML serialization of the shadow root.
 
 ### Exceptions
 

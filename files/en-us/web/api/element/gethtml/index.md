@@ -25,12 +25,12 @@ const html = element.getHTML(options)
     - `serializableShadowRoots`
       - : A boolean value that specifies whether to include serializable shadow roots. The default value is `false`.
     - `shadowRoots`
-      - : An array of {{domxref("ShadowRoot")}} objects to serialize, these are included regardless of whether they
+      - : An array of {{domxref("ShadowRoot")}} objects to serialize. These are included regardless of whether they
         are marked as serializable. The default value is an empty array.
 
 ### Return value
 
-A string that represents the HTML serialization of the Element.
+A string that represents the HTML serialization of the element.
 
 ### Exceptions
 
