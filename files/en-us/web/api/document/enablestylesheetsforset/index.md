@@ -50,6 +50,10 @@ None ({{jsxref("undefined")}}).
 document.enableStyleSheetsForSet("Some style sheet set name");
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
