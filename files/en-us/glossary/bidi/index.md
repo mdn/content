@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 User Interfaces should design to display BiDi content correctly, but many failed in this. An example is the RTL Hebrew name Sarah: שרה, spelled sin (ש) on the right, resh (ר) in the middle, and heh (ה) on the left, which, many programs would display the Hebrew word in the opposite order.
 
-It is possible to simply flip the left-to-right display order to a right-to-left display order, but doing this sacrifices the ability to correctly display left-to-right scripts. With bidirectional script support, it is possible to mix characters from different scripts on the same page, regardless of writing direction.
+It is possible to flip the left-to-right display order to a right-to-left display order, but doing this sacrifices the ability to display BiDi scripts correctly — at least one is always incorrectly displayed. With bidirectional script support, it is possible to mix characters from different scripts on the same page, regardless of writing direction.
 
 The Unicode standard provides foundations for complete BiDi support, with detailed rules as to how mixtures of left-to-right and right-to-left scripts are to be encoded and displayed.
 
