@@ -82,9 +82,10 @@ After you have made changes to your branch, open a [pull request](https://docs.g
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
 
-If you're not certain of the changes that you want to make, [get in touch with us][https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels]!
+If you're not certain of the changes that you want to make, [get in touch with us]!
 
-> **Note:** You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> [!NOTE]  
+> You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
@@ -191,7 +192,8 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note:** Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
+> [!NOTE]  
+> Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
 
@@ -223,7 +225,9 @@ To ensure that all MDN documents follow the same formatting, we use both [Pretti
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
-> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
+> [!NOTE]  
+> Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
+> This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
 
 ### Adding a new document
 
@@ -245,7 +249,7 @@ This command moves the file and fixes up redirects automatically. You can use th
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-> **Warning**
+> [!WARNING] 
 > Don't edit the `_redirects.txt` file manually.
 > See the [Redirecting a document](#redirecting-a-document) section for more information.
 
@@ -293,7 +297,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 Similar to moving files, you can delete documents or a tree of documents easily by using the `yarn content delete` command.
 
-> **Warning:**
+> [!WARNING]
 > Don't delete files or directories from the repository manually; the `yarn content delete` command handles the necessary changes such as updating the `_wikihistory.json` file.
 
 You can use this command as shown below:
@@ -330,7 +334,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
-   > **Warning:**
+   > [!WARNING]
    > You should always add a redirect when deleting documents. If there is no obvious alternative, redirect to the nearest "parent" of the deleted topic.
    > If you forget to redirect when deleting a file, you can do it afterwards. See the [Redirecting a document](#redirecting-a-document) section.
 
