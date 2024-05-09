@@ -62,6 +62,8 @@ clip-path: shape(
 
     - `evenodd`: A point is considered inside the shape if a ray drawn from the point crosses an odd number of path segments.
 
+    > **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
+
 - `from <coordinate-pair>`
 
   - : Defines the starting point for the first `<shape-command>` as a pair of coordinates that are measured from the top-left corner of the reference box. The coordinates are specified as a {{cssxref("&lt;length-percentage&gt;")}} value. Add a comma after this parameter.
@@ -86,15 +88,15 @@ clip-path: shape(
 
     - `<hv-line-command>`: Specified as `[hline | vline] [by | to] <length-percentage>`. This command adds a horizontal (`hline`) or vertical (`vline`) [LineTo command](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands) to the list of shape commands. It draws a horizontal or vertical line from the command's starting point to its ending point. The `by`or `to` keyword determine the "relative" or "absolute" ending point, respectively. This command is equivalent to `<line-command>` with `<length-percentage>` providing the horizontal or vertical component.
 
-    - `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Attribute/d#cubic_bézier_curve_commands) to the list of shape commands. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
+    - `<curve-command>`: Specified as `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`. This command adds a [Bézier curve command](/en-US/docs/Web/SVG/Attribute/d#cubic_b%C3%A9zier_curve_commands) to the list of shape commands. The `by`or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
 
-      The `via` keyword specifies the control points of the curve as one or two `<coordinate-pair>` values. If a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Attribute/d#quadratic-bézier-curve-commands); if two `<coordinate-pair>`s are provided, the command draws a cubic Bézier curve.
+      The `via` keyword specifies the control points of the curve as one or two `<coordinate-pair>` values. If a single `<coordinate-pair>` is provided, the command draws a [quadratic Bézier curve](/en-US/docs/Web/SVG/Attribute/d#quadratic_b%C3%A9zier_curve_commands); if two `<coordinate-pair>`s are provided, the command draws a cubic Bézier curve.
 
-    - `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Attribute/d#cubic_bézier_curve_commands) to the list of shape commands. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
+    - `<smooth-command>`: Specified as `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`. This command adds a smooth [Bézier curve command](/en-US/docs/Web/SVG/Attribute/d#cubic_b%C3%A9zier_curve_commands) to the list of shape commands. The `by`or `to` keyword determines whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
 
       The `via` keyword can be optionally included to specify the control points of the curve through `<coordinate-pair>`. If `via <coordinate-pair>` is omitted, the command draws a smooth quadratic curve; if it is provided, the command draws a smooth cubic curve.
 
-    - `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/Web/SVG/Attribute/d#elliptical-arc-curve-commands) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
+    - `<arc-command>`: Specified as `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`. This command adds an [elliptical arc curve command](/en-US/docs/Web/SVG/Attribute/d#elliptical_arc_curve_commands) to the list of shape commands. It draws an elliptical arc between a starting point and an ending point. The `by`or `to` keyword determine whether the ending point of the curve, specified by the first `<coordinate-pair>`, is "relative" or "absolute", respectively.
 
       The elliptical arc curve command defines two possible ellipses, which intersect both the starting and ending points, and each can be traced in either direction, resulting in four possible arcs. The `of` keyword specifies the size of the ellipse fom which the arc is taken. The first `<length-percentage>` provides the horizontal radius of the ellipse, and the second provides the vertical radius. If only one `<length-percentage>` is provided, the same value is used for both the radii. The following parameters help to choose from a possibility of four arcs:
 

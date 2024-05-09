@@ -105,7 +105,7 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     path( [ <fill-rule>, ]? <string> )
     ```
 
-    The optional `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
+    `<fill-rule>`, if present, determines the interior of the path. Default value when omitted is `nonzero`.
 
     The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes.
 
@@ -117,9 +117,11 @@ The following shapes are supported. All `<basic-shape>` values use functional no
     shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
     ```
 
-    `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
+    `<fill-rule>`, if present, determines the interior of the path. Default value when omitted is `nonzero`.
 
     `from <coordinate-pair>` represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+
+> **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
 
 The arguments not defined above are defined as follows:
 
@@ -146,17 +148,25 @@ The values in a `<basic-shape>` function are computed as specified, with these e
 
 ### Interpolation of basic shapes
 
-When animating between one `<basic-shape>` and another, the rules below are applied. The values in the `<basic-shape>` functions {{Glossary("interpolation", "interpolate")}} as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
+When animating from one `<basic-shape>` to another, the {{Glossary("interpolation")}} rules listed below are followed. For any interpolation between two shapes, both must use the same reference box. The values between two `<basic-shape>` functions interpolate based on their computed values, forming a simple list. The list values are interpolated as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If the list values are not one of those types but are identical (such as `nonzero` in the same position in both `basic-shape` functions), those values also interpolate.
 
-- Both shapes must use the same reference box.
-- If the two shapes are of the same type, namely `ellipse()` and `circle()` and if their radii do not use the `closest-side` or `farthest-side` keywords, interpolation is applied between each value in the shape functions.
-- If both shapes are of type `inset()`, interpolation is applied between each value in the shape functions.
-- If both shapes are of type `polygon()`, and both polygons have the same number of vertices and use the same `<fill-rule>`, interpolation is applied between each value in the shape functions.
-- If both shapes are of type `path()`, and both path strings have the same number and types of path data commands and in the same order, each path data command is interpolated as a real number.
-- If the two shapes are of type `shape()` and `path()` and have matching path data commands in length and order, the interpolated value is a `path()` function if both starting and ending values are `path()` functions; otherwise, it's treated as a `shape()` function. The interpolated value must represent the same list of path data commands, with numerical components interpolated between the corresponding components of the starting and ending list.
-- If both shapes are of type `shape()`, the shape commands are considered the same if they share the identical command keyword and `<by-to>` parameters; for `<curve-command>` and `<smooth-command>`, the number of control points must match.
-- If both shapes of type `shape()` with an `<arc-command>` have different `<arc-sweep>` between their starting and ending lists, then the interpolated result uses `cw` for any progress value between `0` and `1`. If the shapes have different `<arc-size>` keywords, then the interpolated result uses `large` for any progress value between `0` and `1`.
-- In all other cases, no interpolation occurs.
+- **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as {{cssxref("&lt;length-percentage&gt;")}} (rather than keywords such as `closest-side` or `farthest-side`).
+
+- **Both shapes are of type `inset()`**: Interpolation is applied between each corresponding value.
+
+- **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value, including the vertices (specified as x/y coordinate pairs), if they have the same number of vertices and use the same `<fill-rule>`.
+
+- **Both shapes are of type `path()`**: Each parameter of the path data command is interpolated as a real number if the path strings in both `path()` shapes have the same number and type of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) in the same sequence.
+
+- **Both shapes are of type `shape()`**: Interpolation is applied between each corresponding value if they have the identical command keyword and use the same `<by-to>` keyword. If `shape()` is used in the {{cssxref("clip-path")}} property, the two shapes interpolate if they also have the same `<fill-rule>`.
+
+  - If they use the `<curve-command>` or the `<smooth-command>`, the number of control points must match for interpolation.
+
+  - If they use the `<arc-command>` with different `<arc-sweep>` directions, the interpolated result goes clockwise (`cw`). If they use different `<arc-size>` keywords, the size is interpolated using the `large` value.
+
+- **One shape is of type `path()` and the other is of type `shape()`**: Interpolation is applied between each corresponding value if the list of path data commands is identical in number as well as sequence. The interpolated shape is a `shape()` function, maintaining the same list of path data commands.
+
+In all other cases, no interpolation occurs and the animation is discrete.
 
 ## Examples
 
