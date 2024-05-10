@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### CSS
 
-- The {{cssxref("zoom")}} property has been enabled by default, following lots of web compatibility work, and standardization work in the CSSWG. This feature allows the zooming of an element and it's contents. It differs from {{cssxref("transform")}} [`scale()`](/en-US/docs/Web/CSS/transform-function/scale) which allows scaling in `x`, `y` or both and uses a {{cssxref("transform-origin")}} to determin from what point an element is scaled where as `zoom` scales from `top` `center`. ([Firefox bug 390936](https://bugzil.la/390936)).
+- The {{cssxref("zoom")}} property has been enabled, following lots of web compatibility work, and standardization work in the CSSWG. This feature allows the zooming of an element and it's contents. ([Firefox bug 390936](https://bugzil.la/390936)).
 
 #### Removals
 
