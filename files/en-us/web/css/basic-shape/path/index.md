@@ -1,6 +1,6 @@
 ---
 title: path()
-slug: Web/CSS/path
+slug: Web/CSS/basic-shape/path
 page-type: css-function
 browser-compat: css.types.basic-shape.path
 ---

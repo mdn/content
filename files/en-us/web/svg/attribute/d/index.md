@@ -119,7 +119,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 ## Using d as a CSS property
 
 `d` is a presentation attribute, and hence can be also be modified using CSS.
-The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
+The property takes either [path()](/en-US/docs/Web/CSS/basic-shape/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
