@@ -27,7 +27,7 @@ A number indicating the effective CSS zoom on the element, or 1 if the element i
 
 This example demonstrates how the `currentCSSZoom` is calculated.
 
-First we define a nested structure of `<div>` elements where the "parent" is unzoomed and contains a nested element child1 that has `zoom: 2` applied, which in turn contains a nested element "child2" with `zoom: 3` applied.
+First we define a nested structure of `<div>` elements where the "parent" is unzoomed and contains a nested element "child1" that has `zoom: 2` applied, which in turn contains a nested element "child2" with `zoom: 3` applied.
 The "child2" element contains two nested elements, one of which is not rendered, and neither of which have the zoom property applied.
 
 ```html
