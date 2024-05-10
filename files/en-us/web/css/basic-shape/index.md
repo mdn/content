@@ -148,7 +148,7 @@ The values in a `<basic-shape>` function are computed as specified, with these e
 
 ### Interpolation of basic shapes
 
-When animating from one `<basic-shape>` to another, the {{Glossary("interpolation")}} rules listed below are followed. For any interpolation between two shapes, both must use the same reference box. The values between two `<basic-shape>` functions interpolate based on their computed values, forming a simple list. The list values are interpolated as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If the list values are not one of those types but are identical (such as `nonzero` in the same position in both `basic-shape` functions), those values also interpolate.
+When animating from one `<basic-shape>` to another, the {{Glossary("interpolation")}} rules listed below are followed. For any interpolation to happen between two shapes, both must use the same reference box. The values between two `<basic-shape>` functions interpolate based on their computed values, forming a simple list. The list values are interpolated as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;angle&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If the list values are not one of those types but are identical (such as `nonzero` in the same position in both `basic-shape` functions), those values also interpolate.
 
 - **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as {{cssxref("&lt;length-percentage&gt;")}} (rather than keywords such as `closest-side` or `farthest-side`).
 
@@ -156,7 +156,7 @@ When animating from one `<basic-shape>` to another, the {{Glossary("interpolatio
 
 - **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value, including the vertices (specified as x/y coordinate pairs), if they have the same number of vertices and use the same `<fill-rule>`.
 
-- **Both shapes are of type `path()`**: Each parameter of the path data command is interpolated as a real number if the path strings in both `path()` shapes have the same number and type of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) in the same sequence.
+- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
 
 - **Both shapes are of type `shape()`**: Interpolation is applied between each corresponding value if they have the identical command keyword and use the same `<by-to>` keyword. If `shape()` is used in the {{cssxref("clip-path")}} property, the two shapes interpolate if they also have the same `<fill-rule>`.
 
