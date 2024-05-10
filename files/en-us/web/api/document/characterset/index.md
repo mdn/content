@@ -16,8 +16,7 @@ document that it's currently rendered with.
 > name of this property, it returns the _encoding_.
 
 Users can override the developer-specified encoding inside the [Content-Type](/en-US/docs/Web/HTTP/Headers/Content-Type) header or inline
-like `<meta charset="utf-8">`, such as with Firefox's <kbd>View → Text
-Encoding</kbd> menu. This override is provided to fix incorrect developer-specified
+like `<meta charset="utf-8">`, such as with Firefox's <kbd>View → Repair Text Encoding </kbd> menu. This override is provided to fix incorrect developer-specified
 encodings that result in [garbled text](https://en.wikipedia.org/wiki/Mojibake).
 
 > **Note:** The properties `document.charset` and `document.inputEncoding`
