@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.getHTML
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`getHTML()`** method of the {{domxref("Element")}} interface is used to serialize an element's DOM to an HTML string.
 
