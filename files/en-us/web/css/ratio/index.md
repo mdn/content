@@ -71,6 +71,7 @@ The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 ## See also
 
 - [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media descriptor
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) guide
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries) guide
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
