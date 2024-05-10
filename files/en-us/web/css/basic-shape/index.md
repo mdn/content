@@ -13,130 +13,119 @@ The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/C
 
 ## Syntax
 
-The `<basic-shape>` data type is defined with one of the basic shape functions listed below.
+The `<basic-shape>` data type is defined using one of the basic shape functions described in the sections below. All `<basic-shape>` values use functional notation and are defined using the [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax).
+
+Parameters common across some basic shape functions include:
+
+- `round <'border-radius'>`
+
+  - : Defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is specified in the `inset()`, `rect()`, and `xywh()` functions.
+
+- `<shape-radius>`
+
+  - : Defines the radius for a circle or an ellipse. The valid values include `<length>`, `<percentage>`, `closest-side` and `farthest-side`. Negative values are invalid. It defaults to `closest-side` if omitted.
+
+    `closest-side` uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension. For ellipses, this is the closest side in the radius dimension.
+
+    `farthest-side` uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.
+
+- `<position>`
+
+  - : Defines the center of the shape. It defaults to center of the shape if omitted. This parameter is specified in the `circle()` and `ellipse()` functions.
+
+- `<fill-rule>`
+
+  - : Represents the {{SVGAttr("fill-rule")}} used to determine the interior of the shape. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`. This parameter is specified in the `polygon()`, `path()`, and `shape()` functions.
+
+    > **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
+
+### Inset
+
+The `{{cssxref("basic-shape/inset","inset()")}}` function defines an inset rectangle.
+
+```plain
+inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
+```
+
+When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
+
+A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
+
+### Rectangle by distance
+
+The `{{cssxref("basic-shape/rect","rect()")}}` function defines a rectangle using the specified distances from the top and left edges of the reference box.
+
+```plain
+rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
+```
+
+You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
+
+### Rectangle with dimensions
+
+The `{{cssxref("basic-shape/xywh","xywh()")}}` function defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
+
+```plain
+xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
+```
+
+### Circle
+
+The `{{cssxref("basic-shape/circle","circle()")}}` function defines a circle using a radius and a position.
+
+```plain
+circle( <shape-radius>? [ at <position> ]? )
+```
+
+The `<shape-radius>` argument represents _r_, the radius of the circle. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`.
+
+### Ellipse
+
+The `{{cssxref("basic-shape/ellipse","ellipse()")}}` function defines an ellipse using two radii and a position.
+
+```plain
+ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
+```
+
+The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.
+
+### Polygon
+
+The `{{cssxref("basic-shape/polygon","polygon()")}}` function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
+
+```plain
+polygon( <fill-rule>? [ <length-percentage> <length-percentage> ]# )
+```
+
+Each `<length-percentage>` pair in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
+
+### Path
+
+The `{{cssxref("path","path()")}}` function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
+
+```plain
+path( [ <fill-rule>, ]? <string> )
+```
+
+The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes.
+
+### Shape {{Experimental_Inline}}
+
+The `{{cssxref("basic-shape/shape","shape()")}}` function defines a shape using an initial starting point and a series of shape commands.
+
+```plain
+shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
+```
+
+The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+
+## Description
 
 When creating a shape, the reference box is defined by each property that uses `<basic-shape>` values. The coordinate system for the shape has its origin at the top-left corner of the reference box, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the used dimensions of the reference box.
 
 The default reference box is the `margin-box`, as demonstrated in the below image which shows a circle created using `shape-outside: circle(50%)`. The shape is being defined with reference to the margin box.
 
 ![An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted.](shapes-reference-box.png)
-
-### Shape functions
-
-The following shapes are supported. All `<basic-shape>` values use functional notation and are defined here using the [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax).
-
-- `{{cssxref("basic-shape/inset","inset()")}}`
-
-  - : Defines an inset rectangle.
-
-    ```css
-    inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
-    ```
-
-    When all of the first four arguments are supplied, they represent the top, right, bottom and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
-
-    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
-
-- `{{cssxref("basic-shape/rect","rect()")}}`
-
-  - : Defines a rectangle using the specified distances from the top and left edges of the reference box.
-
-    ```css
-    rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
-    ```
-
-    You specify four values to create the rectangle. Each of the four values is either a `<length>`, a `<percentage>`, or the keyword `auto`. When using the `rect()` function, you do not define the width and height of the rectangle. The rectangle's dimensions depend on the size of the reference box and the offset values.
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
-
-- `{{cssxref("basic-shape/xywh","xywh()")}}`
-
-  - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
-
-    ```css
-    xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
-    ```
-
-    The optional `round <'border-radius'>` parameter defines rounded corners for the inset rectangle using the [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand syntax.
-
-- `{{cssxref("basic-shape/circle","circle()")}}`
-
-  - : Defines a circle using a radius and a position.
-
-    ```css
-    circle( <shape-radius>? [ at <position> ]? )
-    ```
-
-    The `<shape-radius>` argument represents _r_, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`.
-
-    The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.
-
-- `{{cssxref("basic-shape/ellipse","ellipse()")}}`
-
-  - : Defines an ellipse using two radii and a position.
-
-    ```css
-    ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
-    ```
-
-    The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.
-
-    The position argument defines the center of the ellipse. This defaults to center if omitted.
-
-- `{{cssxref("basic-shape/polygon","polygon()")}}`
-
-  - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
-
-    ```css
-    polygon( <fill-rule>? [ <shape-arg> <shape-arg> ]# )
-    ```
-
-    `<fill-rule>` is optional and represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
-
-    Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
-
-- `{{cssxref("path","path()")}}`
-
-  - : Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
-
-    ```css
-    path( [ <fill-rule>, ]? <string> )
-    ```
-
-    `<fill-rule>`, if present, determines the interior of the path. Default value when omitted is `nonzero`.
-
-    The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes.
-
-- `{{cssxref("basic-shape/shape","shape()")}}` {{Experimental_Inline}}
-
-  - : Defines a shape using an initial starting point and a series of shape commands.
-
-    ```css
-    shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
-    ```
-
-    `<fill-rule>`, if present, determines the interior of the path. Default value when omitted is `nonzero`.
-
-    `from <coordinate-pair>` represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
-
-> **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
-
-The arguments not defined above are defined as follows:
-
-```css
-<shape-arg> = <length> | <percentage>
-<shape-radius> = <length> | <percentage> | closest-side | farthest-side
-```
-
-Defines a radius for a circle or ellipse. If omitted it defaults to `closest-side`.
-
-`closest-side` uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension. For ellipses, this is the closest side in the radius dimension.
-
-`farthest-side` uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.
-
-## Description
 
 ### Computed values of basic shapes
 

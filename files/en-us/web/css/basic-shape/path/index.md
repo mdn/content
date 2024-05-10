@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape.path
 
 {{CSSRef}}
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes) and CSS Motion Path to enable a shape to be drawn.
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes) and CSS Motion Path to enable a shape to be drawn. The `path()` function is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
 {{EmbedInteractiveExample("pages/css/function-path.html")}}
 
