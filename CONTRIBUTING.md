@@ -69,7 +69,7 @@ If you've created a new GitHub account and want to know what to do next, you can
 ### Simple changes
 
 If you want to make a small change like fixing a typo, the GitHub UI is the easiest way to get started.
-If you've found a typo on the [JavaScript landing page], for example, you can propose a fix as follows:
+If you've found a typo on the [JavaScript landing page][], for example, you can propose a fix as follows:
 
 1. Sign in to [GitHub](https://github.com/)
 2. Navigate to [https://github.com/mdn/content](https://github.com/mdn/content)
