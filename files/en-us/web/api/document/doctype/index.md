@@ -8,8 +8,7 @@ browser-compat: api.Document.doctype
 
 {{ApiRef("DOM")}}
 
-The **`doctype`** read-only property of the {{domxref("Document")}} interface returns the Document Type Declaration (DTD) associated with current document. The
-returned object implements the {{domxref("DocumentType")}} interface. Use {{domxref("DOMImplementation.createDocumentType()")}} to create a `DocumentType`.
+The **`doctype`** read-only property of the {{domxref("Document")}} interface is a {{domxref("DocumentType")}} object representing the the {{glossary("Doctype", "Document Type Declaration (DTD)")}} associated with the current document.
 
 ## Value
 
