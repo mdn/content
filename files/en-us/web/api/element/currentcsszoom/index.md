@@ -8,7 +8,7 @@ browser-compat: api.Element.currentCSSZoom
 
 {{APIRef("DOM")}}
 
-The **`currentCSSZoom`** read-only property of the {{domxref("Element")}} interface is the "effective" [CSS `zoom`](/en-US/docs/Web/CSS/zoom) of an element, taking into account the zoom applied to the element and all its parent elements.
+The **`currentCSSZoom`** read-only property of the {{domxref("Element")}} interface provides the "effective" [CSS `zoom`](/en-US/docs/Web/CSS/zoom) of an element, taking into account the zoom applied to the element and all its parent elements.
 
 The value calculated by multiplying the `zoom` value of the element by the zoom values to all its parents.
 For example, if three elements with zoom values of 2, 1.5, and 3, are nested within each other, the most deeply nested element will have a `currentCSSZoom` value of 9.
