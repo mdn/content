@@ -175,47 +175,6 @@ document
 
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
 
-## Avoiding DocumentFragment pitfalls
-
-When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
-
-Consider the following HTML and JavaScript:
-
-### HTML
-
-```html
-<div id="container"></div>
-
-<template id="template">
-  <div>Click me</div>
-</template>
-```
-
-### JavaScript
-
-```js
-const container = document.getElementById("container");
-const template = document.getElementById("template");
-
-function clickHandler(event) {
-  event.target.append(" — Clicked this div");
-}
-
-const firstClone = template.content.cloneNode(true);
-firstClone.addEventListener("click", clickHandler);
-container.appendChild(firstClone);
-
-const secondClone = template.content.cloneNode(true);
-secondClone.children[0].addEventListener("click", clickHandler);
-container.appendChild(secondClone);
-```
-
-### Result
-
-Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
-
-{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
-
 ### Declarative Shadow DOM with delegated focus
 
 This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow root that is created declaratively, and the effect this has on focus.
@@ -284,6 +243,47 @@ For the shadow root with `shadowrootdelegatesfocus` set, clicking on the text (w
 This also focusses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
+
+## Avoiding DocumentFragment pitfalls
+
+When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
+
+Consider the following HTML and JavaScript:
+
+### HTML
+
+```html
+<div id="container"></div>
+
+<template id="template">
+  <div>Click me</div>
+</template>
+```
+
+### JavaScript
+
+```js
+const container = document.getElementById("container");
+const template = document.getElementById("template");
+
+function clickHandler(event) {
+  event.target.append(" — Clicked this div");
+}
+
+const firstClone = template.content.cloneNode(true);
+firstClone.addEventListener("click", clickHandler);
+container.appendChild(firstClone);
+
+const secondClone = template.content.cloneNode(true);
+secondClone.children[0].addEventListener("click", clickHandler);
+container.appendChild(secondClone);
+```
+
+### Result
+
+Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
+
+{{EmbedLiveSample('Avoiding_DocumentFragment_pitfall')}}
 
 ## Technical summary
 
