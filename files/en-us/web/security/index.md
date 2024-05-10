@@ -89,6 +89,10 @@ Handling data responsibly is largely concerned with cutting down on [third-party
 
 You should prepare for the removal of cross-site cookies by limiting the amount of tracking activities you rely on and/or by implementing desired information persistence in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies) for more information.
 
+## Backup data regularly
+
+Data backup is a critical component of maintaining data integrity and resilience against potential data loss incidents. Selecting a reputable data protection provider is essential when implementing a reliable data backup strategy, especially for sensitive information like client-side data. Popular backup systems, such as [NAKIVO](https://www.nakivo.com) often incorporate advanced encryption techniques and secure storage solutions to ensure the confidentiality and availability of backed-up data. Consider utilizing specialized backup services tailored to specific needs, such as cloud-based options or enterprise-grade data protection platforms. You can effectively mitigate the risks associated with data loss and ensure operational continuity in the event of unforeseen circumstances by selecting a reputable and specialized approach to data backup.
+
 ## Protect user identity and manage logins
 
 When implementing a secure solution that involves data collection, particularly if the data is sensitive such as log-in credentials, it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose, for example an identity provider solution or a secure online survey provider.
