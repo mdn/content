@@ -21,7 +21,31 @@ This property reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs
 
 ## Examples
 
-There is a more complete example in the [Declarative Shadow DOM with delegated focus](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom_with_delegated_focus) example in the `<template>` documentation.
+This example shows how you can create a shadow root declaratively, specifying the `shadowrootdelegatesfocus` attribute on the associated `<template>`.
+It then logs the `shadowRootDelegatesFocus` property of the shadow root.
+
+We declare a shadow root by specifying a `<template>` element with the `shadowrootmode` attribute set to one of the allowed values.
+The `shadowrootdelegatesfocus` attribute is also set, making the shadow root clonable.
+
+```html
+<div>
+  <template id="delegatesfocus" shadowrootmode="open" shadowrootdelegatesfocus>
+    <slot></slot>
+  </template>
+  <h2>Shadow root not clonable</h2>
+</div>
+```
+
+We can log whether the shadow root delegates focus or not using the following JavaScript:
+
+```js
+const delegatesFocusRoot = document.querySelector("#delegatesfocus");
+console.log(
+  `Value of shadowRootDelegatesFocus property: ${delegatesFocusRoot.shadowRootDelegatesFocus}`,
+);
+```
+
+The [Declarative Shadow DOM with delegated focus](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom_with_delegated_focus) example in the `<template>` documentation demonstrates the effects of delegating focus.
 
 ## Specifications
 
