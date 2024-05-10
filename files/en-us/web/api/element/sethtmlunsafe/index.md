@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.setHTMLUnsafe
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML and then insert it into the DOM as a subtree of the element.
 

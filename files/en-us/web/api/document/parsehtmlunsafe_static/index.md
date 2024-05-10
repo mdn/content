@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.Document.parseHTMLUnsafe_static
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`Document.parseHTMLUnsafe()`** static method is used to parse a string of HTML as a new document object.
 
