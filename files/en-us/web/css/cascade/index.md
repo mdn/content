@@ -323,7 +323,11 @@ Now that we have a better understanding of origin type and cascade layer precede
 
 ## Which CSS entities participate in the cascade
 
-Only CSS property/value pair declarations participate in the cascade. This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
+Only CSS property/value pair declarations participate in the cascade.
+
+### At-rules
+
+This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
 
 For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
@@ -334,6 +338,15 @@ Declarations in {{cssxref("@keyframes")}} don't participate in the cascade. As w
 When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](/en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
 
 Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by the cascade algorithm.
+
+### Presentational attributes
+
+Presentational attributes are other attributes in the source document that can affect styling. For example, `align` in HTML or `fill` in SVG. They are considered to be part of the author styles. Presentational attributes do not participate in the cascade.
+
+If they are respected by the user agent, these attributes are translated to the corresponding CSS rules with specificity equal to 0, and are treated as if they were inserted at the start of the author style sheet. Their interaction with
+layers is undefined.
+
+Presentational attributes cannot be declared `!important`.
 
 ## CSS animations and the cascade
 
