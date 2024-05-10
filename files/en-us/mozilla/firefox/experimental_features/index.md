@@ -1574,6 +1574,52 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 ### HTML DOM API
 
+#### Selections crossing shadow DOM boundary
+
+The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
+Unlike {{domxref("Selection.getRangeAt()")}} the method can return ranges with anchor or focus nodes inside a shadow DOM — provided it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
+Otherwise it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
+The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
+
+User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.
+([Firefox bug 1867058](https://bugzil.la/1867058)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.shadowdom.selection_across_boundary.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 #### HTMLMediaElement method: setSinkId()
 
 {{domxref("HTMLMediaElement.setSinkId()")}} allows you to set the sink ID of an audio output device on an {{domxref("HTMLMediaElement")}}, thereby changing where the audio is being output. See [Firefox bug 934425](https://bugzil.la/934425) for more details.
