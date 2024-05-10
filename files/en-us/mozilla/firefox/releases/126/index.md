@@ -60,6 +60,7 @@ This article provides information about the changes in Firefox 126 that affect d
 
 - The ability to define states for custom elements and match them using CSS selectors is now available by default.
   The custom states are represented as custom identifiers that can be added to or removed from the element's {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class takes a custom identifier as an argument and matches custom elements if the identifier is present in their set of states. ([Firefox bug 1887543](https://bugzil.la/1887543)).
+- The {{domxref("Selection.direction")}} property is now supported for indicating the direction of a range ([Firefox bug 1867058](https://bugzil.la/1867058)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -95,6 +96,8 @@ This article provides information about the changes in Firefox 126 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 126 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- {{domxref("Selection.getComposedRanges()")}} can be used to get selection ranges that have anchor or focus nodes inside a shadow DOM — provided it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes. `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root ([Firefox bug 1867058](https://bugzil.la/1867058)).
 
 ## Older versions
 
