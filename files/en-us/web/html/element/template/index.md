@@ -229,7 +229,7 @@ Last of all we use the following CSS to apply a green-yellow border to the paren
 
 ```css
 div:focus {
-  border: 1px solid greenyellow;
+  border: 2px solid red;
 }
 ```
 

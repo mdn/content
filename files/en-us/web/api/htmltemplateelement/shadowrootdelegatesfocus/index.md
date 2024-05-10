@@ -19,6 +19,10 @@ This property reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs
 
 `true` if the shadow root delegates focus; otherwise `false`.
 
+## Examples
+
+There is a more complete example in the [Declarative Shadow DOM with delegated focus](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom_with_delegated_focus) example in the `<template>` documentation.
+
 ## Specifications
 
 {{Specifications}}
