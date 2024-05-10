@@ -9,6 +9,12 @@ browser-compat: css.properties.zoom
 
 The **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
 
+## Difference between zoom and transform:scale()
+
+The `zoom` CSS property scales the whole element that is being targeted and this will have an effect on the layout of the page. When scaling the zoomed element scales from `top` `center` when using the default {{CSSXRef("writing-mode")}}.
+
+{{cssxref("transform-function/scale", "transform: scale()")}} the element being targeted will remain the same and the content within will scale, if scaling makes the element larger than the containing element then {{CSSXRef("overflow")}} comes into place. When scaling the transformed element scales from the `center` (by default) this can be changed with {{CSSXRef("transform-origin")}} CSS property.
+
 ## Syntax
 
 ```css
