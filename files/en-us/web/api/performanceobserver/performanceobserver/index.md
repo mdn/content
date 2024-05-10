@@ -19,15 +19,22 @@ new PerformanceObserver(callback)
 ### Parameters
 
 - `callback`
+
   - : A `PerformanceObserverCallback` callback that will be invoked when observed performance events are recorded. When the callback is invoked, the following parameters are available:
+
     - `entries`
       - : The {{domxref("PerformanceObserverEntryList","list of performance observer entries", '', 'true')}}.
     - `observer`
       - : The {{domxref("PerformanceObserver","observer")}} object that is receiving the above entries.
     - `options`
+
       - : An object with the following properties:
-        - `droppedEntriesCount` {{optional_inline}}
-          - : The number of buffered entries which got dropped from the buffer due to the buffer being full. See the [`buffered`](/en-US/docs/Web/API/PerformanceObserver/observe#parameters) flag.
+
+        - `droppedEntriesCount`
+
+          - : The number of [buffered](/en-US/docs/Web/API/PerformanceObserver/observe#buffered) entries which got dropped from the buffer due to the buffer being full.
+
+            Note that this is only provided the first time the observer calls the callback, because once the observer starts emitting observations, it can clear the buffer. After the first time, `droppedEntriesCount` will be `undefined`.
 
 ### Return value
 
@@ -58,20 +65,25 @@ observer.observe({ entryTypes: ["measure", "mark"] });
 ### Dropped buffer entries
 
 You can use {{domxref("PerformanceObserver")}} with a `buffered` flag to listen to past performance entries.
-There is a buffer size limit, though. The performance observer callback contains an `options` object with a `droppedEntriesCount` property that tells you how many entries were dropped due to the buffer storage being full.
+There is a buffer size limit, though. The performance observer callback contains an `options` object: the first time the observer calls the callback, the `options` parameter will have a `droppedEntriesCount` property that tells you how many entries were dropped due to the buffer storage being full.
 
 ```js
 function perfObserver(list, observer, options) {
   list.getEntries().forEach((entry) => {
     // do something with the entries
   });
-  if (options?.droppedEntriesCount > 0) {
-    console.warn(
-      `${options?.droppedEntriesCount} entries got dropped due to the buffer being full.`,
-    );
+  if (isFirstObservation) {
+    isFirstObservation = false;
+    if (options?.droppedEntriesCount > 0) {
+      console.warn(
+        `${options?.droppedEntriesCount} entries got dropped due to the buffer being full.`,
+      );
+    }
   }
 }
+
 const observer = new PerformanceObserver(perfObserver);
+const isFirstObservation = true;
 observer.observe({ type: "resource", buffered: true });
 ```
 
