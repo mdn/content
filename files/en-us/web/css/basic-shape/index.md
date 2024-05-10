@@ -41,7 +41,7 @@ Parameters common across some basic shape functions include:
 
 ### Inset
 
-The `{{cssxref("basic-shape/inset","inset()")}}` function defines an inset rectangle.
+The {{cssxref("basic-shape/inset","inset()")}} function defines an inset rectangle.
 
 ```plain
 inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
@@ -53,7 +53,7 @@ A pair of insets in either dimension that add up to more than the used dimension
 
 ### Rectangle by distance
 
-The `{{cssxref("basic-shape/rect","rect()")}}` function defines a rectangle using the specified distances from the top and left edges of the reference box.
+The {{cssxref("basic-shape/rect","rect()")}} function defines a rectangle using the specified distances from the top and left edges of the reference box.
 
 ```plain
 rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
@@ -63,7 +63,7 @@ You specify four values to create the rectangle. Each of the four values is eith
 
 ### Rectangle with dimensions
 
-The `{{cssxref("basic-shape/xywh","xywh()")}}` function defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
+The {{cssxref("basic-shape/xywh","xywh()")}} function defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 
 ```plain
 xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
@@ -71,7 +71,7 @@ xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-rad
 
 ### Circle
 
-The `{{cssxref("basic-shape/circle","circle()")}}` function defines a circle using a radius and a position.
+The {{cssxref("basic-shape/circle","circle()")}} function defines a circle using a radius and a position.
 
 ```plain
 circle( <shape-radius>? [ at <position> ]? )
@@ -81,7 +81,7 @@ The `<shape-radius>` argument represents _r_, the radius of the circle. A percen
 
 ### Ellipse
 
-The `{{cssxref("basic-shape/ellipse","ellipse()")}}` function defines an ellipse using two radii and a position.
+The {{cssxref("basic-shape/ellipse","ellipse()")}} function defines an ellipse using two radii and a position.
 
 ```plain
 ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
@@ -91,7 +91,7 @@ The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii 
 
 ### Polygon
 
-The `{{cssxref("basic-shape/polygon","polygon()")}}` function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
+The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
 ```plain
 polygon( <fill-rule>? [ <length-percentage> <length-percentage> ]# )
@@ -101,7 +101,7 @@ Each `<length-percentage>` pair in the list represents _xi_ and _yi_ - the x and
 
 ### Path
 
-The `{{cssxref("path","path()")}}` function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
+The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
 ```plain
 path( [ <fill-rule>, ]? <string> )
@@ -111,7 +111,7 @@ The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string
 
 ### Shape {{Experimental_Inline}}
 
-The `{{cssxref("basic-shape/shape","shape()")}}` function defines a shape using an initial starting point and a series of shape commands.
+The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an initial starting point and a series of shape commands.
 
 ```plain
 shape( <fill-rule>? from <coordinate-pair>, <shape-command># )

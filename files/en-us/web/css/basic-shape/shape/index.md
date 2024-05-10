@@ -110,7 +110,7 @@ clip-path: shape(
 
 ## Description
 
-The `shape()` function allows you to define complex shapes. It is similar to the `{{cssxref("path","path()")}}` function in several ways:
+The `shape()` function allows you to define complex shapes. It is similar to the {{cssxref("basic-shape/path","path()")}} function in several ways:
 
 - The `<fill-rule>` parameter in the `shape()` function works exactly like the same parameter in the `path()` function.
 - The `shape()` function requires specifying one or more `<shape-command>`s, where each command uses an underlying [path command](/en-US/docs/Web/SVG/Attribute/d#path_commands), such as [MoveTo](/en-US/docs/Web/SVG/Attribute/d#moveto_path_commands), [LineTo](/en-US/docs/Web/SVG/Attribute/d#lineto_path_commands), and [ClosePath](/en-US/docs/Web/SVG/Attribute/d#closepath).
