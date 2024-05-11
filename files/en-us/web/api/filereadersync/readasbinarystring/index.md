@@ -30,7 +30,7 @@ readAsBinaryString(Blob)
 
 A string representing the input data.
 
-## Exceptions
+### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.

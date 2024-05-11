@@ -26,7 +26,7 @@ readAsDataURL(Blob)
 
 A string representing the input data as a data URL.
 
-## Exceptions
+### Exceptions
 
 The following exceptions can be raised by this method:
 
