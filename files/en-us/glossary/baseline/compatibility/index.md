@@ -17,9 +17,8 @@ Baseline features are described as either newly available in current stable brow
 
 ![Green widget with the checkmark: Baseline, widely available. Four browsers logos, all with checkmarks.](high.png)
 
-If you see a **widely available** Baseline badge, then you can trust that the feature has a consistent history of support in each of the Baseline browsers.
-A widely available feature has been in multiple browsers for years.
-It works with many browsers and devices, even ones that aren't yet up to date with the latest browser releases.
+If you see a **widely available** Baseline badge, then you can trust that the feature has a consistent history of support in each of the Baseline browsers for at least 2.5 years.
+A widely available feature works with many browsers and devices, even ones that aren't yet up to date with the latest browser releases.
 
 ![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](limited.png)
 

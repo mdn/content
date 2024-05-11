@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.Rule
 
 {{AddonSidebar}}
 
-The object describing the actions to take for matching requests. These can be specified in the static rule resources linked by the [manifest.json's `declarative_net_request` key](Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), or more dynamically through the {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} methods.
+The object describing the actions to take for matching requests. These can be specified in the static rule resources linked by the [manifest.json's `declarative_net_request` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), or more dynamically through the {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateSessionRules")}} methods.
 
 See [Rules](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#rules) on the API overview page for more information about rules.
 

@@ -56,7 +56,7 @@ where `<policy-directive>` consists of:
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
-- {{CSP("fenced-frame-src")}}
+- {{CSP("fenced-frame-src")}} {{experimental_inline}}
   - : Specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 - {{CSP("font-src")}}
   - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
@@ -262,7 +262,7 @@ Content-Security-Policy: connect-src http://example.com/;
 ## Examples
 
 Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over https:
+scripts, etc.) over http:
 
 ### Using the HTTP header
 
@@ -290,7 +290,7 @@ would have occurred:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#examples-3) for more examples.
 
 ## Specifications
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Event.stopPropagation
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`stopPropagation()`** method of the {{domxref("Event")}}
 interface prevents further propagation of the current event in the capturing and

@@ -2,14 +2,12 @@
 title: zoom
 slug: Web/CSS/zoom
 page-type: css-property
-status:
-  - non-standard
 browser-compat: css.properties.zoom
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{CSSRef}}
 
-The non-standard **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
+The **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element. {{cssxref("transform-function/scale", "transform: scale()")}} should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
 
 ## Syntax
 
@@ -140,7 +138,7 @@ div#c {
 
 ## Specifications
 
-Not part of any standard. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov of Microsoft has [an unofficial draft specification proposal on GitHub](https://github.com/atanassov/css-zoom).
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -149,4 +147,3 @@ Not part of any standard. Apple has [a description in the Safari CSS Reference](
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
-- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzil.la/390936) on the Firefox issue tracker Bugzilla
