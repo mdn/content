@@ -6,7 +6,7 @@ browser-compat: api.trustedTypes
 spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{DefaultAPISidebar("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **Trusted Types API** gives web developers a way to lock down the insecure parts of the {{domxref("Document Object Model","DOM API")}} to prevent client-side {{Glossary("Cross-site scripting")}} (XSS) attacks.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TrustedTypePolicyFactory.defaultPolicy
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`defaultPolicy`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.
 

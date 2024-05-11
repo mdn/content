@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element's property.
 
