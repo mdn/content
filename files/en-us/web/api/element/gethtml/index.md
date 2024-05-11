@@ -3,6 +3,8 @@ title: "Element: getHTML() method"
 short-title: getHTML()
 slug: Web/API/Element/getHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.getHTML
 ---
 
