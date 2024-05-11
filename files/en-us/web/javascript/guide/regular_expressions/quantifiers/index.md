@@ -97,7 +97,7 @@ Quantifiers indicate numbers of characters or expressions to match.
       </td>
       <td>
         <p>
-          Where "n" and "m" are non-negative integers and <code>m >= n</code>
+          Where "n" and "m" are non-negative integers and <code>m >= n</code>,
           matches at least "n" and at most "m" occurrences of the preceding
           item "x". For example, <code>/a{1,3}/</code> matches nothing in
           "cndy", the "a" in "candy", the two "a"'s in "caandy", and the first
