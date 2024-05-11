@@ -160,24 +160,6 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-
-form {
-  background: white;
-  border: 1px solid black;
-  padding: 5px;
-  position: fixed;
-  top: 0;
-  right: 2px;
-}
-
-select {
-  display: block;
-  margin-top: 5px;
-}
-
-form div:last-child {
-  margin-top: 10px;
-}
 ```
 
 ```css
