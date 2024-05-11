@@ -10,7 +10,7 @@ browser-compat: api.HTMLEmbedElement.src
 
 The **`src`** property of the {{domxref("HTMLEmbedElement")}} interface returns a string that indicates the URL of the resource being embedded.
 
-It reflects the `height` attribute of the {{HTMLElement("embed")}} element.
+It reflects the `src` attribute of the {{HTMLElement("embed")}} element.
 
 ## Value
 
