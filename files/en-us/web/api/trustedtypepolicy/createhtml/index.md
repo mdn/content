@@ -8,7 +8,7 @@ browser-compat: api.TrustedTypePolicy.createHTML
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedHTML")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
+The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedHTML")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 

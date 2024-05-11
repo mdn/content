@@ -34,11 +34,11 @@ A string with one of:
 - `"TrustedScript"`
 - `"TrustedScriptURL"`
 
-Or, null.
+Or, `null`.
 
 ## Examples
 
-In this example, passing the {{htmlelement("div")}} element and `innerHTML` property to `getPropertyType` returns "TrustedHTML".
+In this example, passing the {{htmlelement("div")}} element and `innerHTML` attribute to `getPropertyType()` returns "TrustedHTML".
 
 ```js
 console.log(trustedTypes.getPropertyType("div", "innerHTML")); // "TrustedHTML"

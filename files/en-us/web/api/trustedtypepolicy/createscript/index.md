@@ -8,7 +8,7 @@ browser-compat: api.TrustedTypePolicy.createScript
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
+The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 

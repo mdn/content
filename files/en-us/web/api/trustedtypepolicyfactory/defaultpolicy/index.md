@@ -14,11 +14,11 @@ The **`defaultPolicy`** read-only property of the {{domxref("TrustedTypePolicyFa
 
 ## Value
 
-A {{domxref("TrustedTypePolicy")}} or null.
+A {{domxref("TrustedTypePolicy")}} or `null`.
 
 ## Examples
 
-The first line below returns null as no default policy has been created. Once a default policy is created, calling `defaultPolicy` returns that policy object.
+The first line below returns `null` as no default policy has been created. Once a default policy is created, calling `defaultPolicy` returns that policy object.
 
 ```js
 console.log(trustedTypes.defaultPolicy); // null
