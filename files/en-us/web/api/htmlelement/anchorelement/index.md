@@ -40,7 +40,7 @@ We also include a {{htmlelement("p")}} element to output some results into.
 
 #### JavaScript
 
-In the JavaScript, we get references to the positioned element and the output element, and then print the value of the positioned element's `anchorElement` property's associated `id` to the output, proving that the anchor element is the positioned element's `anchorElement`.
+In the JavaScript, we get references to the positioned element and the output element, and then print the value of the positioned element's `anchorElement` property's associated `id` to the output, showing that the anchor element is the positioned element's `anchorElement`.
 
 ```js
 const posElem = document.querySelector(".infobox");

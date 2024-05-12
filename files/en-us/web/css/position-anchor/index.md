@@ -32,13 +32,14 @@ position-anchor: unset;
 
 ### Values
 
-- `implicit`
-  - : Associates the positioned element with its implicit anchor element. This currently doesn't do much, but future specs may specify an implicit anchor element for a given positioned element under certain circumstances.
 - {{cssxref("dashed-ident")}}
 
-  - : Specifies the anchor name of the anchor element to associate the positioned element with, as defined by its {{cssxref("anchor-name")}} property. This is sometimes called the _default anchor specifier_.
+  - : Specifies the anchor name of the anchor element to associate the positioned element with, as defined by its {{cssxref("anchor-name")}} property. This is sometimes called the **default anchor specifier**.
 
     If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+
+- `implicit`
+  - : Associates the positioned element with its implicit anchor element. This is currently of limited use, but future specs may specify an implicit anchor element for a given positioned element under certain circumstances. For example, the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute creates an implicit anchor element.
 
 > **Note:** You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 

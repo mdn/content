@@ -41,7 +41,7 @@ anchor-name: unset;
 
   - : Defines the element as an anchor element and gives it one or more identifying anchor names, which can then be set as values of positioned elements' {{cssxref("position-anchor")}} properties to associate them with the anchor. The values need to be {{cssxref("dashed-ident")}} values; if multiple values are specified, they are separated with commas.
 
-    If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+    If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element with that name in the source order.
 
 > **Note:** You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 
@@ -161,7 +161,7 @@ The result looks like this. Try scrolling the page to demonstrate how the infobo
 
 ### Multiple positioned elements
 
-This example demonstrates how you can set multiple anchor names on one anchor element, and use them to associate multiple positioned elements with one anchor.
+This example demonstrates how you can associate multiple positioned elements with one anchor.
 
 #### HTML
 
@@ -202,7 +202,7 @@ The HTML is the same as for the previous example, except that this time we have 
 
 #### CSS
 
-The CSS is mostly the same as the previous example too. We declare the `anchor` `<div>` as an anchor element using the `anchor-name` property. This time, however, we give it multiple anchor names separated by commas.
+The CSS is mostly the same as the previous example too. We declare the `anchor` `<div>` as an anchor element using the `anchor-name` property and give it an anchor name as before.
 
 ```css hidden
 body {
@@ -224,11 +224,11 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --right-infobox, --top-infobox;
+  anchor-name: --infobox;
 }
 ```
 
-Each of the two positioned elements are associated with the anchor element by setting one of its anchor names as each positioned element's {{cssxref("position-anchor")}} property value. The positioned elements are then positioned in different places relative to the anchor using a combination of inset, alignment, and margin properties.
+Each of the two positioned elements are associated with the anchor element by setting its anchor name as each positioned element's {{cssxref("position-anchor")}} property value. The positioned elements are then positioned in different places relative to the anchor using a combination of inset, alignment, and margin properties.
 
 ```css hidden
 .infobox {
@@ -243,7 +243,7 @@ Each of the two positioned elements are associated with the anchor element by se
 
 ```css
 #infobox1 {
-  position-anchor: --right-infobox;
+  position-anchor: --infobox;
 
   position: fixed;
   left: anchor(right);
@@ -252,7 +252,7 @@ Each of the two positioned elements are associated with the anchor element by se
 }
 
 #infobox2 {
-  position-anchor: --top-infobox;
+  position-anchor: --infobox;
 
   position: fixed;
   bottom: anchor(top);
