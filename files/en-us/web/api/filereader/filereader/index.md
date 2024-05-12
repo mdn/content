@@ -24,7 +24,7 @@ None.
 
 ## Examples
 
-The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/API/FileReader) object using the `FileReader()` constructor and subsequent usage of the object:
+The following code snippet shows creation of a {{domxref("FileReader")}} object using the `FileReader()` constructor and subsequent usage of the object:
 
 ```js
 function printFile(file) {
