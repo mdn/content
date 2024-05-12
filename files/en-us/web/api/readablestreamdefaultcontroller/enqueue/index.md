@@ -21,7 +21,7 @@ enqueue(chunk)
 ### Parameters
 
 - `chunk`
-  - : The chunk to enqueue.
+  - : The chunk to enqueue. A chunk is a single piece of data that is written to or read from a stream. It can be of any type; streams can even contain chunks of different types. A chunk will often not be the most atomic unit of data for a given stream; for example a byte stream might contain chunks consisting of 16 KiB Uint8Arrays, instead of single bytes.
 
 ### Return value
 
