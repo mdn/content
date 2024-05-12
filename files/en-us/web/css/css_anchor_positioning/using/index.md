@@ -135,6 +135,8 @@ This gives us the same result that we achieved earlier with CSS:
 
 {{ EmbedLiveSample("Via HTML", "100%", "120") }}
 
+> **Note:** The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute is currently non-standard and disabled by default in supporting browsers. See the compatibility data on its linked reference page for information on how to enable it for testing purposes.
+
 ## Positioning elements based on anchor position
 
 As we saw above, associating a positioned element with an anchor is not really much use on its own. You also need to specify the position of the element relative to the anchor. Let's look at the machanisms available to do this.

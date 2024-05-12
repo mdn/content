@@ -48,8 +48,6 @@ In addition, the specification provides mechanisms to:
 
 ## Related concepts
 
-- The HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, which provides an alternative mechanism for associating positioned elements with anchor elements.
-- The {{domxref("Element.anchorElement")}} property, which returns a reference to an positioned element's anchor element.
 - Positioning properties that can take an [`anchor()`](/en-US/docs/Web/CSS/anchor) function as a value:
   - The {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}} physical properties.
   - The {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} logical properties.
@@ -62,6 +60,13 @@ In addition, the specification provides mechanisms to:
 - Sizing properties that can take an [`anchor-size()`](/en-US/docs/Web/CSS/anchor) function as a value:
   - The {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}} physical properties.
   - The {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-block-size")}}, {{cssxref("min-inline-size")}}, {{cssxref("max-block-size")}}, and {{cssxref("max-inline-size")}} logical properties.
+
+### Non-standard features
+
+- The HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, which provides an alternative mechanism for associating positioned elements with anchor elements.
+- The {{domxref("Element.anchorElement")}} property, which returns a reference to an positioned element's anchor element.
+
+> **Note:** The `anchor` attribute and the associated `anchorElement` property are currently non-standard and disabled by default in supporting browsers. See the compatibility data on their linked reference pages for information on how to enable them for testing purposes.
 
 ## Specifications
 
