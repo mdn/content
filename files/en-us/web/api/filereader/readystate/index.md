@@ -12,16 +12,13 @@ The **`readyState`** read-only property of the {{domxref("FileReader")}} interfa
 
 | Value | State     | Description                                                   |
 | ----- | --------- | ------------------------------------------------------------- |
-| `0`   | `EMPTY`   | Reader has been created. None of the read methods called yet. |
-| `1`   | `LOADING` | A read method has been called.                                |
-| `2`   | `DONE`    | The operation is complete.                                    |
+| `0`   | `EMPTY`   | Reader has been created, but none of the read methods called yet. |
+| `1`   | `LOADING` | A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet. |
+| `2`   | `DONE`    | The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled. |
 
-- `EMPTY`
-  - : The `FileReader` has been created, but no readAs method was called yet.
-- `LOADING`
-  - : A readAs method was invoked. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.
-- `DONE`
-  - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
+## Value
+
+A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.
 
 ## Examples
 
@@ -36,10 +33,6 @@ reader.onloadend = () => {
   console.log("DONE", reader.readyState); // readyState will be 2
 };
 ```
-
-## Value
-
-A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.
 
 ## Specifications
 
