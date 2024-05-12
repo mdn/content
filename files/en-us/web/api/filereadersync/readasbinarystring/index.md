@@ -17,8 +17,7 @@ The **`readAsBinaryString()`** method of the {{DOMxRef("FileReaderSync")}} inter
 ## Syntax
 
 ```js-nolint
-readAsBinaryString(File)
-readAsBinaryString(Blob)
+readAsBinaryString(blob)
 ```
 
 ### Parameters
