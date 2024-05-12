@@ -12,8 +12,8 @@ The **`readyState`** read-only property of the {{domxref("FileReader")}} interfa
 
 | Value | State     | Description                                                   |
 | ----- | --------- | ------------------------------------------------------------- |
-| `0`   | `EMPTY`   | Reader has been created, but none of the read methods called yet. |
-| `1`   | `LOADING` | A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet. |
+| `0`   | `EMPTY`   | Reader has been created, but none of the read methods called yet.                                                                                                                                                                                         |
+| `1`   | `LOADING` | A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.                                                                                                                                 |
 | `2`   | `DONE`    | The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled. |
 
 ## Value
