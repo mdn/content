@@ -12,7 +12,7 @@ The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 ## Syntax
 
-The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
+The `<ratio>` data type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
 
 ### Common aspect ratios
 
