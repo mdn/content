@@ -518,7 +518,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
