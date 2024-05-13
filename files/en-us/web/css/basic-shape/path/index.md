@@ -29,7 +29,7 @@ path( [<fill-rule>,]? <string> )
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
 
-  - : An optional value of [`nonzero`](/en-US/docs/Web/SVG/Attribute/fill-rule#nonzero) (the default when omitted) or [`evenodd`](/en-US/docs/Web/SVG/Attribute/fill-rule#evenodd), which specifies the filling rule.
+  - : An optional value of [`nonzero`](/en-US/docs/Web/SVG/Attribute/fill-rule#nonzero) (the default when omitted) or [`evenodd`](/en-US/docs/Web/SVG/Attribute/fill-rule#evenodd), which defines how the inside of the shape to be filled is determined.
     > **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
 
 - {{cssxref("string")}}
