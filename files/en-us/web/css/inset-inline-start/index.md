@@ -42,8 +42,6 @@ The shorthand for `inset-inline-start` and {{cssxref("inset-inline-end")}} is {{
 
 The `inset-inline-start` property takes the same values as the {{cssxref("left")}} property.
 
-Note that the {{cssxref("anchor()")}} function behaves equivalently, but somewhat differently. In the case of `inset-inline-start`, its value is relative to the position of the associated **anchor element**'s logical inline start and/or end edges, rather than its left and/or right edges.
-
 ## Formal definition
 
 {{cssinfo}}

@@ -38,7 +38,7 @@ anchor(anchor-element anchor-side, length-percentage)
 The parameters are:
 
 - `anchor-element` {{optional_inline}}
-  - : The {{cssxref("anchor-name")}} set on the anchor element you want to position an element relative to. This is optional — if omitted, the positioned element is positioned relative to the anchor referenced by its {{cssxref("position-anchor")}} property (this is sometimes referred to as the element's **default anchor**).
+  - : The {{cssxref("anchor-name")}} set on the anchor element you want to position an element relative to. This is optional — if omitted, the positioned element is positioned relative to the anchor referenced by its {{cssxref("position-anchor")}} property, or its implicit anchor in cases where an implicit anchor element exists (for example, when using the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute) and `position-anchor` is not set.
 - `anchor-side`
 
   - : Specifies the side of the anchor element that the side of the positioned element denoted by the inset property will be positioned relative to. This can be expressed using the following values:

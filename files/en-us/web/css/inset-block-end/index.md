@@ -40,8 +40,6 @@ inset-block-end: unset;
 
 The `inset-block-end` property takes the same values as the {{cssxref("left")}} property.
 
-Note that the {{cssxref("anchor()")}} function behaves equivalently, but somewhat differently. In the case of `inset-block-end`, its value is relative to the position of the associated **anchor element**'s logical block start and/or end edges, rather than its left and/or right edges.
-
 ## Formal definition
 
 {{cssinfo}}

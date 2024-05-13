@@ -28,7 +28,7 @@ justify-self: normal;
 justify-self: stretch;
 
 /* Positional alignment */
-justify-self: anchor-center; /* Pack item around the center of an associated anchor element */
+justify-self: anchor-center; /* Center item with respect to an associated anchor element */
 justify-self: center; /* Pack item around the center */
 justify-self: start; /* Pack item from the start */
 justify-self: end; /* Pack item from the end */

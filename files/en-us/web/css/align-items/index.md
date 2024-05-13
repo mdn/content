@@ -22,7 +22,7 @@ align-items: stretch;
 
 /* Positional alignment */
 /* align-items does not take left and right values */
-justify-items: anchor-center; /* Pack items around the center of an associated anchor element */
+align-items: anchor-center; /* Center items with respect to an associated anchor element */
 align-items: center;
 align-items: start;
 align-items: end;

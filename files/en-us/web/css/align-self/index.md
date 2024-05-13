@@ -22,7 +22,7 @@ align-self: normal;
 
 /* Positional alignment */
 /* align-self does not take left and right values */
-align-self: anchor-center; /* Pack item around the center of an associated anchor element */
+align-self: anchor-center; /* Center item with respect to an associated anchor element */
 align-self: center; /* Put the item around the center */
 align-self: start; /* Put the item at the start */
 align-self: end; /* Put the item at the end */
