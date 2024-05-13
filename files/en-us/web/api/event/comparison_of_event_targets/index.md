@@ -4,7 +4,7 @@ slug: Web/API/Event/Comparison_of_Event_Targets
 page-type: guide
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
 It's easy to get confused about which event target to examine when writing an event handler. This article should clarify the use of the target properties.
 
