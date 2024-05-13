@@ -3,6 +3,8 @@ title: "ShadowRoot: getHTML() method"
 short-title: getHTML()
 slug: Web/API/ShadowRoot/getHTML
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ShadowRoot.getHTML
 ---
 
