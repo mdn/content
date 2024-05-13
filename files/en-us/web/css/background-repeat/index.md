@@ -61,7 +61,7 @@ The property accepts up to two `<repeat-style>` keyterms. The first value is the
 
 - `space`
 
-  - : The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using <code>space</code> is when there isn't enough room to display one image.
+  - : The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when there isn't enough room to display one image.
 
 - `round`
 
@@ -77,38 +77,14 @@ The property accepts up to two `<repeat-style>` keyterms. The first value is the
 
 When one `<repeat-style>` keyterm is provided, the value is shorthand for the following two-value syntax:
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><strong>Single value</strong></td>
-      <td><strong>Two-value equivalent</strong></td>
-    </tr>
-    <tr>
-      <td><code>repeat-x</code></td>
-      <td><code>repeat no-repeat</code></td>
-    </tr>
-    <tr>
-      <td><code>repeat-y</code></td>
-      <td><code>no-repeat repeat</code></td>
-    </tr>
-    <tr>
-      <td><code>repeat</code></td>
-      <td><code>repeat repeat</code></td>
-    </tr>
-    <tr>
-      <td><code>space</code></td>
-      <td><code>space space</code></td>
-    </tr>
-    <tr>
-      <td><code>round</code></td>
-      <td><code>round round</code></td>
-    </tr>
-    <tr>
-      <td><code>no-repeat</code></td>
-      <td><code>no-repeat no-repeat</code></td>
-    </tr>
-  </tbody>
-</table>
+| Single value | Two-value equivalent  |
+| ------------ | --------------------- |
+| `repeat-x`   | `repeat no-repeat`    |
+| `repeat-y`   | `no-repeat repeat`    |
+| `repeat`     | `repeat repeat`       |
+| `space`      | `space space`         |
+| `round`      | `round round`         |
+| `no-repeat`  | `no-repeat no-repeat` |
 
 ## Formal definition
 
