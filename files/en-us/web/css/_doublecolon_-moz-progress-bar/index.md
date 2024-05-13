@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
 status:
   - non-standard
+browser-compat: css.selectors.-moz-progress-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -49,6 +50,10 @@ If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozi
 ## Specifications
 
 Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
