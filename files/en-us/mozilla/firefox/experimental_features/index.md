@@ -1577,8 +1577,8 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 #### Selections crossing shadow DOM boundary
 
 The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
-Unlike {{domxref("Selection.getRangeAt()")}} the method can return ranges with anchor or focus nodes inside a shadow DOM — provided it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
-Otherwise it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
+Unlike {{domxref("Selection.getRangeAt()")}}, this method can return ranges with anchor or focus nodes inside a shadow DOM, but only if it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
+Otherwise, it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
 The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
 
 User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.

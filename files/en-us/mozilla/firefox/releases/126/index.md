@@ -97,7 +97,7 @@ This article provides information about the changes in Firefox 126 that affect d
 
 These features are newly shipped in Firefox 126 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- {{domxref("Selection.getComposedRanges()")}} can be used to get selection ranges that have anchor or focus nodes inside a shadow DOM — provided it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes. `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root ([Firefox bug 1867058](https://bugzil.la/1867058)).
+- {{domxref("Selection.getComposedRanges()")}}: `dom.shadowdom.selection_across_boundary.enabled`. This method can be used to get selection ranges that have anchor or focus nodes inside a shadow DOM — provided it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes. `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root ([Firefox bug 1867058](https://bugzil.la/1867058)).
 
 ## Older versions
 
