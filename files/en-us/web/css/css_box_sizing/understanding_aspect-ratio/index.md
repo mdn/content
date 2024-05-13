@@ -428,7 +428,7 @@ div:last-of-type p {
 
 Let's look at a few situations where you can use `aspect-ratio` to address some common challenges while creating responsive designs.
 
-### Responsive external assets
+### Making external assets responsive
 
 All content should be responsive, even when that content is third-party embeds, such as videos from TikTok, YouTube, or Instagram. The code snippet you include to embed these external videos generally creates an {{htmlelement("iframe")}}.
 
@@ -447,9 +447,9 @@ For context, the standard aspect ratio of YouTube videos is 16:9 when viewed on 
 }
 ```
 
-We can use the `aspect-ratio` feature of the `@media` media query and the CSS `aspect-ratio` property to size the iframe and the video it contains so that it is always as large as possible - taking up either the full width or height of the viewports - no matter the size of the viewport, while maintaining a set aspect ratio.
+We can use the `aspect-ratio` feature within the {{cssxref("@media")}} query alongside the `aspect-ratio` property to adjust the size of both the iframe and the video it contains. This ensures that the video content is always as large as possible - taking up either the full width or height of the viewport, regardless of the viewport size - while maintaining a specific aspect ratio.
 
-We set the landscape-oriented Youtube video to be as wide as the viewport and both portrait-oriented Titkok and Instagram video iframes to be as tall as the viewport. If a viewport's aspect ratio is wider than 16:9, we set the Youtube video to be the height of the viewport. If the viewport is narrower than 9:16, we set both Instagram and Tiktok videos to the width of the viewport.
+We can set the landscape-oriented YouTube videos to be as wide as the viewport and the portrait-oriented TitTok and Instagram video iframes to be as tall as the viewport. If a viewport's aspect ratio is wider than 16:9, we set the YouTube video to be the height of the viewport. If the viewport is narrower than 9:16, we set both Instagram and TikTok videos to the width of the viewport.
 
 ```css
 iframe.youtube {
@@ -465,7 +465,7 @@ iframe.tiktok {
   width: auto;
 }
 
-/* if the viewort is very wide but not very tall */
+/* If the viewport is very wide but not very tall */
 @media (aspect-ratio > 16 / 9) {
   iframe.youtube {
     width: auto;
@@ -473,7 +473,7 @@ iframe.tiktok {
   }
 }
 
-/* if the viewort is very tall but not very wide */
+/* If the viewport is very tall but not very wide */
 @media (aspect-ratio < 9 / 16) {
   iframe.instagram,
   iframe.tiktok {
@@ -483,13 +483,13 @@ iframe.tiktok {
 }
 ```
 
-### Grid of square cells
+### Making grid cells square
 
-A grid of square cells can be created by defining fixed column track sizes with each row being the same size as the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as will fit in the container, we don't know the width of each item, so we don't know what height to set to create square items.
+A grid of square cells can be created by defining fixed {{cssxref("grid-template-columns", "column track sizes")}}, ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
 
-By setting an aspect ratio on the items, we can ensure when the grid items are laid out, each grid item will be as tall as it is wide, creating square grid items no matter the width or height.
+By setting an aspect ratio on the items, we can ensure when the grid items are laid out, each grid item will be as tall as it is wide, creating square grid items regardless of the container's dimensions.
 
-In this square grid item example, the grid tracks are auto-sized, taking their size from the items. Each item will be at least 95px wide but could be much wider. No matter the width, each item will be a square, with the height being sized by the `aspect-ratio` to be as tall as it is wide:
+In this example of square grid items, the grid tracks are auto-sized, taking their size from the items. Each item will be at least `95px` wide but could be much wider. No matter the width, each item will be a square, with the height determined by the `aspect-ratio` to match its width.
 
 ```css
 .grid {
@@ -548,7 +548,7 @@ div div::after {
 </div>
 ```
 
-For the content of a grid item to not grow beyond the preferred height set by the `aspect-ratio`, set the {{cssxref("min-height")}} to `0` and the {{cssxref("overflow")}} to a value other than `visible`. This will work for intrinsically sized content. If you have content that is intrinsically larger than the available space, set that content to not be larger than the grid item by setting the {{cssxref("max-height")}} ( or {{cssxref("max-width")}}, depending on the content) to `100%`.
+For the content of a grid item to not grow beyond the preferred height set by the `aspect-ratio`, set the {{cssxref("min-height")}} to `0` and the {{cssxref("overflow")}} to a value other than `visible`. This will work for intrinsically sized content. If you have content that is intrinsically larger than the available space, set that content to not be larger than the grid item by setting the {{cssxref("max-height")}} (or {{cssxref("max-width")}}, depending on the content) to `100%`.
 
 ```css
 .item {
@@ -561,9 +561,7 @@ For the content of a grid item to not grow beyond the preferred height set by th
 }
 ```
 
-Alternatively, the [`object-fit` property](#fitting_replaced_elements_within_their_containers) can be used.
-
-{{EmbedLiveSample("grid of square cells", "100", "350")}}
+{{EmbedLiveSample("making_grid_cells_square", "100", "380")}}
 
 ## See also
 
