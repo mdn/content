@@ -154,4 +154,4 @@ fileInput.addEventListener("change", handleSelected);
 
 ## See also
 
-- Related events: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}
+- Related events: {{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.abort_event", "abort")}}.
