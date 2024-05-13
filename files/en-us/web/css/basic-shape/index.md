@@ -37,7 +37,7 @@ The parameters common across the syntax of some basic shape functions include:
 
   - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes_experimental) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
 
-    > **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
+    > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 ### Syntax for rectangles by container insets
 

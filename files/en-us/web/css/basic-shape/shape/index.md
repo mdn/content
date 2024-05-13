@@ -62,7 +62,7 @@ clip-path: shape(
 
     - `evenodd`: A point is considered inside the shape if a ray drawn from the point crosses an odd number of path segments.
 
-    > **Note:** `<fill-rule>` is not supported in the {{cssxref("offset-path")}} property.
+    > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - `from <coordinate-pair>`
 
