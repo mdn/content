@@ -40,7 +40,7 @@ Let's further illustrate the sign-in widget example mentioned above with a ficti
 
 Each of the three sites has an embedded sign-in widget, hosted at `auth.site`, to persist sign-in status across sites. A user can sign in to any of those sites, creating a cookie set on the browser for `auth.site` containing a session ID. When the user goes to one of the other sites, the embedded `auth.site` instance will have access to the session ID cookie set when the user signs in on the first site. It can send that to the server, check it is still valid, and sign in to that site immediately.
 
-![visual representation of the above third-party sign-in system description](https://mdn.github.io/shared-assets/images/diagrams/http/cookies/3pc-example.png)
+![visual representation of the above third-party sign-in system description](3pc-example.png)
 
 ## What is the problem with third-party cookies?
 
