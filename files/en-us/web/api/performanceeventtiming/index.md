@@ -255,3 +255,8 @@ try {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

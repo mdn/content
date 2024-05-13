@@ -84,7 +84,7 @@ The **`url()`** function can be included as a value for
 
 ### Formal syntax
 
-```css
+```plain
 url( <string> <url-modifier>* )
 ```
 

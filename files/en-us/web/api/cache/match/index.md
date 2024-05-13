@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.match
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
 If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined")}}.

@@ -126,7 +126,7 @@ In addition, `get()` can be used in nested browsing contexts loaded from the sam
 `get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
 For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
-> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", "nocode")}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ### Basic access control
 

@@ -2196,7 +2196,7 @@
 /en-US/docs/DOM/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight
 /en-US/docs/DOM/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/DOM/window.parent	/en-US/docs/Web/API/Window/parent
-/en-US/docs/DOM/window.performance	/en-US/docs/Web/API/performance_property
+/en-US/docs/DOM/window.performance	/en-US/docs/Web/API/Window/performance
 /en-US/docs/DOM/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/DOM/window.personalbar	/en-US/docs/Web/API/Window/personalbar
 /en-US/docs/DOM/window.postMessage	/en-US/docs/Web/API/Window/postMessage
@@ -10209,7 +10209,6 @@
 /en-US/docs/Web/API/Window/openDialog	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/pageXOffset	/en-US/docs/Web/API/Window/scrollX
 /en-US/docs/Web/API/Window/pageYOffset	/en-US/docs/Web/API/Window/scrollY
-/en-US/docs/Web/API/Window/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/File_and_Directory_Entries_API#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
@@ -10302,7 +10301,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope.onlanguagechange	/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event
 /en-US/docs/Web/API/WorkerGlobalScope.onoffline	/en-US/docs/Web/API/WorkerGlobalScope/offline_event
 /en-US/docs/Web/API/WorkerGlobalScope.ononline	/en-US/docs/Web/API/WorkerGlobalScope/online_event
-/en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/performance_property
+/en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
 /en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
@@ -10317,7 +10316,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange	/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event
 /en-US/docs/Web/API/WorkerGlobalScope/onoffline	/en-US/docs/Web/API/WorkerGlobalScope/offline_event
 /en-US/docs/Web/API/WorkerGlobalScope/ononline	/en-US/docs/Web/API/WorkerGlobalScope/online_event
-/en-US/docs/Web/API/WorkerGlobalScope/performance	/en-US/docs/Web/API/performance_property
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
@@ -10706,6 +10704,7 @@
 /en-US/docs/Web/API/onMSVideoOptimalLayoutChanged	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/onMSVideoOptimalLayoutChanged_	/en-US/docs/Web/API/HTMLVideoElement
 /en-US/docs/Web/API/origin	/en-US/docs/Web/API/Window/origin
+/en-US/docs/Web/API/performance_property	/en-US/docs/Web/API/Window/performance
 /en-US/docs/Web/API/range.cloneContents	/en-US/docs/Web/API/range/cloneContents
 /en-US/docs/Web/API/range.cloneRange	/en-US/docs/Web/API/range/cloneRange
 /en-US/docs/Web/API/range.collapse	/en-US/docs/Web/API/range/collapse
@@ -10887,7 +10886,7 @@
 /en-US/docs/Web/API/window.outerHeight	/en-US/docs/Web/API/Window/outerHeight
 /en-US/docs/Web/API/window.outerWidth	/en-US/docs/Web/API/Window/outerWidth
 /en-US/docs/Web/API/window.parent	/en-US/docs/Web/API/Window/parent
-/en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/performance_property
+/en-US/docs/Web/API/window.performance	/en-US/docs/Web/API/Window/performance
 /en-US/docs/Web/API/window.performance.now	/en-US/docs/Web/API/Performance/now
 /en-US/docs/Web/API/window.personalbar	/en-US/docs/Web/API/Window/personalbar
 /en-US/docs/Web/API/window.postMessage	/en-US/docs/Web/API/Window/postMessage
