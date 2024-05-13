@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### CSS
 
-- The {{cssxref("zoom")}} property has been enabled, which can be used to increase or decrease the size of an element and its contents. ([Firefox bug 390936](https://bugzil.la/390936)).
+- The {{cssxref("zoom")}} property is now supported. It can be used to increase or decrease the size of an element and its contents. ([Firefox bug 390936](https://bugzil.la/390936)).
 
 #### Removals
 
