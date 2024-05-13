@@ -14,7 +14,7 @@ The `zoom` CSS property scales the targeted element, which can affect the page l
 When scaling, the zoomed element scales from `top` and `center` when using the default {{CSSXRef("writing-mode")}}.
 
 In contrast, an element scaled using {{cssxref("transform-function/scale", "scale()")}} will not cause layout recalculation or move other elements on the page.
-If scaling using `scale()` makes the contents larger than the containing element, then {{CSSXRef("overflow")}} comes into effect.
+If using `scale()` makes the contents larger than the containing element, then {{CSSXRef("overflow")}} comes into effect.
 Additionally, elements adjusted using `scale()` transform from the `center` by default; this can be changed with the {{CSSXRef("transform-origin")}} CSS property.
 
 ## Syntax
