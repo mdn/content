@@ -233,10 +233,11 @@ Note:
 - The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
   (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
-### from keyword for relative colors
+### `from` keyword for relative colors
 
-The `from` keyword is now parsed by firefox, behind a flag, this allows the work for [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to proceed.
-Currently this has no effect, but with out this the relative colors work can not proceed. (See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.)
+The `from` keyword is now parsed as valid CSS syntax when the `layout.css.relative-color-syntax.enabled` preference is set to `true`.
+Although this keyword currently has no effect, it will not produce syntax errors when used in valid places in CSS color functions, thereby supporting the ongoing work on [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.
 
 <table>
   <thead>
