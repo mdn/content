@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### CSS
 
-- The {{cssxref("zoom")}} property has been enabled, following lots of web compatibility work, and standardization work in the CSSWG. This feature allows the zooming of an element and it's contents. ([Firefox bug 390936](https://bugzil.la/390936)).
+- The {{cssxref("zoom")}} property has been enabled, following significant CSSWG web compatibility and standardization effort. This feature allows the zooming of an element and it's contents. ([Firefox bug 390936](https://bugzil.la/390936)).
 
 #### Removals
 
