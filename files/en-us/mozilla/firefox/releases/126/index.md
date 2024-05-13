@@ -102,6 +102,7 @@ These features are newly shipped in Firefox 126 but are disabled by default. To 
 - **Selections crossing shadow DOM boundary:** `dom.shadowdom.selection_across_boundary.enabled`.
 
   The {{domxref("Selection.getComposedRanges()")}} method can be used to get selection ranges that have anchor or focus nodes inside a shadow DOM — provided it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes. `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root ([Firefox bug 1867058](https://bugzil.la/1867058)).
+
 - **CSS `shape()` function:** `layout.css.basic-shape-shape.enabled`.
 
   You can use the [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the `{{cssxref("path","path()")}}` function. For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
