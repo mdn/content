@@ -136,3 +136,4 @@ The CSS box model module defines physical (or "page relative") properties such a
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

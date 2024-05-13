@@ -19,6 +19,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.async")}}
   - : A boolean value that controls how the script should be executed. For classic scripts, if the `async` property is set to `true`, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` property is set to `true`, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
+- {{domxref("HTMLScriptElement.blocking")}} {{Experimental_Inline}}
+  - : A string indicating that certain operations should be blocked on the fetching of the script. It reflects the `blocking` attribute of the {{HTMLElement("script")}} element.
 - `HTMLScriptElement.charset` {{deprecated_inline}}
   - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
 - {{domxref("HTMLScriptElement.crossOrigin")}}
