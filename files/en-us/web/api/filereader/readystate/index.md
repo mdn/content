@@ -8,25 +8,20 @@ browser-compat: api.FileReader.readyState
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`readyState`** read-only property of the {{domxref("FileReader")}} interface provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
-
-| Value | State     | Description                                                                                                                                                                                                                                               |
-| ----- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `0`   | `EMPTY`   | Reader has been created, but none of the read methods called yet.                                                                                                                                                                                         |
-| `1`   | `LOADING` | A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.                                                                                                                                 |
-| `2`   | `DONE`    | The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled. |
+The **`readyState`** read-only property of the {{domxref("FileReader")}} interface provides the current state of the reading operation.
+This will be one of the states: `EMPTY`, `LOADING`, or `DONE`.
 
 ## Value
 
 A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.
 
 - `FileReader.EMPTY`
-  - : Reader has been created, but none of the read methods have been called yet. 
+  - : Reader has been created, but none of the read methods have been called yet.
 - `FileReader.LOADING`
-  - : A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet. 
--  `FileReader.DONE`
-  - : The read operation is complete.
-    This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled. 
+  - : A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.
+- `FileReader.DONE`
+- : The read operation is complete.
+  This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
 
 ## Examples
 
