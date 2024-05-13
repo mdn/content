@@ -20,6 +20,14 @@ The **`readyState`** read-only property of the {{domxref("FileReader")}} interfa
 
 A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.
 
+- `FileReader.EMPTY`
+  - : Reader has been created, but none of the read methods have been called yet. 
+- `FileReader.LOADING`
+  - : A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet. 
+-  `FileReader.DONE`
+  - : The read operation is complete.
+    This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled. 
+
 ## Examples
 
 ```js
