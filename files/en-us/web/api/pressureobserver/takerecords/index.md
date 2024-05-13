@@ -12,6 +12,8 @@ browser-compat: api.PressureObserver.takeRecords
 
 The **`takeRecords()`** method of the {{domxref('PressureObserver')}} interface returns the current list of pressure records stored in the pressure observer, emptying it out.
 
+It is useful when you want to a stop observing a source but would like to be sure to get any records that have not yet been passed into the observer callback. 
+
 ## Syntax
 
 ```js-nolint

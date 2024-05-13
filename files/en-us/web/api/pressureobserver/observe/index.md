@@ -28,7 +28,7 @@ observe(source, options)
 - `options` {{optional_inline}}
   - : An object to configure observation with the following properties:
     - `sampleInterval` {{optional_inline}}
-      - : A number representing the requested sampling interval expressed in milliseconds. Defaults to 0 meaning it will get as fast as the system can handle it.
+      - : A number representing the requested sampling interval expressed in milliseconds. Defaults to 0 meaning it will get updates as fast as the system can handle it.
 
 ### Return value
 
