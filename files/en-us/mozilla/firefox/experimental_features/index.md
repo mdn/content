@@ -235,8 +235,9 @@ Note:
 
 ### from keyword for relative colors
 
-The `from` keyword is now parsed by firefox, behind a flag, this allows the work for [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to proceed.
-Currently this has no effect, but with out this the relative colors work can not proceed. (See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.)
+The `from` keyword is now parsed as valid CSS syntax when the `layout.css.relative-color-syntax.enabled` preference is set to `true`.
+This keyword currently has no effect but will not produce syntax errors when used in valid places in CSS color functions, allowing the work for [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) to proceed.
+See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.
 
 <table>
   <thead>
