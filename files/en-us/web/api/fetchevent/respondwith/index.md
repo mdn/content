@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FetchEvent.respondWith
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`respondWith()`** method of
 {{domxref("FetchEvent")}} prevents the browser's default fetch handling, and

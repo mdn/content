@@ -516,7 +516,7 @@ We'll take another look at `fillStyle`, in more detail, later in this tutorial. 
 
 ### Shapes with holes
 
-To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape clockwise and the inner shape anticlockwise.
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape anticlockwise and the inner shape clockwise.
 
 ```html hidden
 <html lang="en">
@@ -534,7 +534,7 @@ function draw() {
 
     ctx.beginPath();
 
-    // Outter shape clockwise ⟳
+    // Outer shape clockwise ⟳
     ctx.moveTo(0, 0);
     ctx.lineTo(150, 0);
     ctx.lineTo(75, 129.9);
@@ -555,7 +555,7 @@ draw();
 
 {{EmbedLiveSample("Shapes_with_holes", "", "160")}}
 
-In the example above the outer triangle goes clockwise (move to the top-left corner, then draw a line to the right-left corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
+In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the right-left corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 

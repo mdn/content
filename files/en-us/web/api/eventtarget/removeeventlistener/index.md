@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EventTarget.removeEventListener
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`removeEventListener()`** method of the {{domxref("EventTarget")}} interface
 removes an event listener previously registered with {{domxref("EventTarget.addEventListener()")}} from the target.
