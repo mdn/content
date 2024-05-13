@@ -6,7 +6,7 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-A recurring question among website owners is whether to choose non-www or www URLs. This page provides some advice on what's best.
+A recurring question among website owners is whether to choose 'www' (`www.example.com`) or 'non-www' (`example.com`) URLs. This page provides some advice on what's best.
 
 ## What are domain names?
 
@@ -27,17 +27,17 @@ There are different ways to choose which website is _canonical_.
 
 ### Using HTTP 301 redirects
 
-In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for www and non-www URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use non-www URLs as the canonical type, you should redirect all www URLs to their equivalent URL without the www.
+In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for 'www' and 'non-www' URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use 'non-www' URLs as the canonical type, you should redirect all 'www' URLs to their equivalent URL without the 'www'.
 
 Example:
 
 1. A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org).
-2. The server answers with a code {{HTTPStatus(301)}} with the header `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
+2. The server answers with a code {{HTTPStatus(301)}} with the {{HTTPHeader("Location")}} header `Location: http://example.org/whaddup`.
 3. The client issues a request to the location under the canonical domain: `http://example.org/whaddup`.
 
 The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-### Using \<link rel="canonical">
+### Using `<link rel="canonical">`
 
 It is possible to add a special HTML {{HTMLElement("link")}} element to a page to indicate what the canonical address of a page is. This has no impact on the human reader of the page, but tells search engine crawlers where the page actually lives. This way, search engines don't index the same page several times, potentially leading to it being considered as duplicate content or spam, and even removing or lowering your page from the search engine result pages.
 
@@ -57,8 +57,8 @@ With these techniques, you can configure your server to respond correctly for bo
 
 This is a very subjective topic — it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, here are some resources:
 
-- [Options for bare domains](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) on www.netlify.com (2020)
-- [WWW vs non-WWW – Which Is Better for WordPress SEO?](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on www.wpbeginner.com (2023)
+- [Options for bare domains](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) on netlify.com (2020)
+- [WWW vs non-WWW – Which Is Better for WordPress SEO?](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on wpbeginner.com (2023)
 
 ## See also
 

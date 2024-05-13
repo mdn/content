@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CustomEvent.CustomEvent
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}} object.
 
