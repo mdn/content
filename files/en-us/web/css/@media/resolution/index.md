@@ -44,6 +44,26 @@ The `resolution` feature is specified as a {{cssxref("&lt;resolution&gt;")}} val
     background: yellow;
   }
 }
+
+/* Resolution unit `dppx`, `x`  */
+@media (resolution: 2dppx) {
+  p {
+    background: blue;
+  }
+}
+
+@media (resolution: 2x) {
+  p {
+    background: blue;
+  }
+}
+
+/* Resolution unit `dpcm`  */
+@media (resolution: 2dpcm) {
+  p {
+    background: green;
+  }
+}
 ```
 
 ### Result
