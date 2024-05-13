@@ -59,6 +59,7 @@ div {
     5px 121px;
   background-repeat: no-repeat;
 }
+
 div + div {
   aspect-ratio: 1.5;
   background-color: lightgreen;
@@ -76,7 +77,7 @@ You will have noticed the word "preferred" in the definitions above. The `aspect
 
 When both the height and width or inline and block sizes are explicitly set, the `aspect-ratio` property value is ignored. In this case, no dimension is allowed to be automatically sized - the preferred sizes are explicitly set - so the `aspect-ratio` property has no effect. When you declare both the inline and block dimensions, those take precedence.
 
-With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)properties, etc.
+With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) properties, etc.
 
 When an element is rendered to the page, if no CSS is applied and no HTML sizing attributes are included, the user agent will render the object at its natural size.
 
@@ -109,9 +110,11 @@ img {
   width: 55px;
   margin-right: 5px;
 }
+
 img + img {
   width: 110px;
 }
+
 img + img + img {
   width: auto;
 }
@@ -134,9 +137,11 @@ img {
   width: 55px;
   height: 110px;
 }
+
 img + img {
   width: 110px;
 }
+
 img + img + img {
   width: 220px;
 }
@@ -208,9 +213,11 @@ img {
   height: 100%;
   width: 100%;
 }
+
 .cover {
   object-fit: cover;
 }
+
 .contain {
   object-fit: contain;
 }
@@ -272,13 +279,16 @@ blockquote {
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
 body:has(:checked) blockquote {
   overflow: auto;
 }
+
 :checked + code,
 :not(:checked) + code + code {
   outline: 1px solid green;
 }
+
 p:nth-last-of-type(n + 2) {
   font-weight: bold;
 }
@@ -288,9 +298,11 @@ p:nth-last-of-type(n + 2) {
 blockquote {
   width: 200px;
 }
+
 blockquote:nth-of-type(2) {
   width: 600px;
 }
+
 blockquote:nth-of-type(3) {
   height: 200px;
 }
@@ -333,11 +345,11 @@ In these examples, a size was explicitly set on the element itself. When working
 
 ### Creating a circle based on the container size
 
-The inline-size of non-replaced block level elements are the size of their containers content box. Because they have an size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
+The inline-size of non-replaced block-level elements is the size of their container's [content box](/en-US/docs/Web/CSS/box-edge#content-box). Because they have an size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
 
-In this example, we have a container {{htmlelement("div")}} that is `200px` wide with a child {{htmlelement("p")}}. This `200px` includes `5px` of padding on each side, so the content-box's inline-size is `190px`. Without setting a height or width on the nested paragraph, we know its inline-size is `190px`. With `aspect-ratio: 1` set, the paragraph will be `190px` tall, unless it has visible overflowing content causing it to be taller (it doesn't) .
+In this example, we have a container {{htmlelement("div")}} that is `200px` wide, which includes `5px` of padding on each side. Therefore, the inline-size of the content box is `190px`. Without setting a height or width on the nested {{htmlelement("p")}} element, we know its inline-size is `190px`. With `aspect-ratio: 1` set, the paragraph will be `190px` tall, unless it has visible overflowing content causing it to be taller (which it doesn't).
 
-The height of the `<div>` is not explicitly set, but it contains the 190px tall paragraph, the `5px` of padding on top and bottom, plus the combined heights of the {{htmlelement("p")}} default top and bottom margins, so it is taller than it is wide. Both elements have a {{cssxref("border-radius")}} of `50%`, so the container is an oval while the child, with an `aspect-ratio` of `1` but no inline or block sizing explicitly defined, is a circle.
+The height of the `<div>` element is not explicitly set, but it contains the `190px` tall paragraph, the `5px` of padding on top and bottom, and the combined heights of the default top and bottom margins of `<p>`. As a result, it is taller than it is wide. Both elements have a {{cssxref("border-radius")}} of `50%`, so the container is an oval while the child, with an `aspect-ratio` of `1` but no inline or block sizing explicitly defined, is a circle.
 
 ```html live-sample___circle
 <div><p>Hello world</p></div>
@@ -348,11 +360,13 @@ div,
 p {
   border-radius: 50%;
 }
+
 div {
   width: 200px;
   padding: 5px;
   background-color: #66ccff;
 }
+
 p {
   aspect-ratio: 1;
   text-align: center;
@@ -363,7 +377,7 @@ p {
 
 {{EmbedLiveSample("circle", "100", "250")}}
 
-To make the `<div>` a circle, we could have set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`, or we could have just removed the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/margin-block).
+To make the `<div>` a circle, we can set the `height` and `width` to the same value, or set `aspect-ratio: 1` and set the `overflow` to `auto` or `hidden`. Alternatively, we can simply remove the margins on the paragraph with [`margin-block: 0`](/en-US/docs/Web/CSS/margin-block). Both these options are shown below.
 
 ```html live-sample___circle2
 <section>
@@ -378,11 +392,13 @@ section {
   display: flex;
   gap: 20px;
 }
+
 div {
   width: 200px;
   padding: 5px;
   background-color: #66ccff;
 }
+
 p {
   text-align: center;
   border: 10px solid #ffffff;
@@ -396,9 +412,11 @@ p {
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
 div:first-of-type {
   overflow: hidden;
 }
+
 div:last-of-type p {
   margin-block: 0;
 }
@@ -406,22 +424,23 @@ div:last-of-type p {
 
 {{EmbedLiveSample("circle2", "100", "250")}}
 
-## Common use cases
+## Common `aspect-ratio` use cases
 
-Let's look at a few examples of using `aspect-ratio` to solve some common use cases in responsive designs:
+Let's look at a few situations where you can use `aspect-ratio` to address some common challenges while creating responsive designs.
 
 ### Responsive external assets
 
-When embedding content from third-party sites, such as videos from TikTok, Youtube, or Instagram, you want the content to be responsive. The code snippet you include on your website that includes these external videos generally creates and {{htmlelement("iframe")}} which includes the video.
+All content should be responsive, even when that content is third-party embeds, such as videos from TikTok, YouTube, or Instagram. The code snippet you include to embed these external videos generally creates an {{htmlelement("iframe")}}.
 
-While every {{htmlelement("video")}} element has the aspect ratio of its media file, we're including an `<iframe>`, not a `<video>`. We need the `<iframe>` to be responsive while always maintaining the aspect ratio of the video it contains. We may want to set the iframe's width to `100%` of its container or `100vw` to be as wide as the viewport regardless of the viewport's size. Setting a height might stretch or squash the video. Instead, we set the `aspect-ratio` of the video's container to be the same aspect ratio as the video. Problem solved!
+While a {{htmlelement("video")}} element typically adopts the aspect ratio of its media file, `iframe` elements lack this capability. This poses the challenge of ensuring that the `<iframe>` is responsive while always maintaining the aspect ratio of the video it contains. One of the techniques we can use is to set the iframe's width to `100%` of its container or `100vw` to match the viewport width regardless of the viewport's size. However, setting a fixed height might stretch or squash the video. Instead, we set the `aspect-ratio` on the video's container, aligning it to be the same aspect ratio as the video. Problem solved!
 
-The standard aspect ratio for YouTube on a computer is 16:9. For Tiktok and Instagram, it's 9:16.
+For context, the standard aspect ratio of YouTube videos is 16:9 when viewed on a desktop computer or laptop, while Tiktok and Instagram videos have a 9:16 aspect ratio.
 
 ```css
 .youtube {
   aspect-ratio: 16/9;
 }
+
 .instagram,
 .tiktok {
   aspect-ratio: 9/16;
@@ -438,6 +457,7 @@ iframe.youtube {
   width: 100vw;
   height: auto;
 }
+
 iframe.instagram,
 iframe.tiktok {
   aspect-ratio: 9/16;
@@ -452,6 +472,7 @@ iframe.tiktok {
     height: 100vh;
   }
 }
+
 /* if the viewort is very tall but not very wide */
 @media (aspect-ratio < 9 / 16) {
   iframe.instagram,
@@ -492,9 +513,11 @@ div div {
   aspect-ratio: 1;
   counter-increment: items;
 }
+
 div div::after {
   content: counter(items);
 }
+
 .item::after {
   /*  hide the number if there's content  */
   position: absolute;
@@ -532,6 +555,7 @@ For the content of a grid item to not grow beyond the preferred height set by th
   min-height: 0;
   overflow: auto;
 }
+
 .item > * {
   max-height: 100%;
 }
