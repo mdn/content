@@ -8,41 +8,15 @@ browser-compat: api.HTMLTemplateElement.shadowRootClonable
 
 {{APIRef("Web Components")}}
 
-The **`shadowRootClonable`** property of the {{domxref("HTMLTemplateElement")}} interface indicates whether a [shadow root](/en-US/docs/Glossary/Shadow_tree) that that was [declaratively created](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) is [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable).
+The **`shadowRootClonable`** property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
 
-If this is `true` then a shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
-The default value is `false`.
-
-This property reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
+Note that this property is not useful for developers.
+If a `<template>` element is used to declaratively create a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), then this object and property do not exist.
+Otherwise, if an `HTMLTemplateElement` is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.
 
 ## Value
 
-`true` if the shadow root of is clonable; otherwise `false`.
-
-## Examples
-
-This example shows how you can create a shadow root declaratively, specifying the `shadowrootclonable` attribute on the associated `<template>` and then logging the `shadowRootClonable` value to show that the shadow root is clonable.
-
-We declare a shadow root by specifying a `<template>` element with the `shadowrootmode` attribute set to one of the allowed values.
-The `shadowrootclonable` attribute is also set, making the shadow root clonable.
-
-```html
-<div>
-  <template id="clonable" shadowrootmode="open" shadowrootclonable>
-    <slot></slot>
-  </template>
-  <h2>Shadow root not clonable</h2>
-</div>
-```
-
-We can log whether the shadow root is clonable or not using the following JavaScript:
-
-```js
-const clonableShadowDOM = document.querySelector("#clonable");
-console.log(
-  `Value of shadowRootClonable attribute: ${clonableShadowDOM.shadowRootClonable}`,
-);
-```
+Reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
 
 ## Specifications
 
@@ -54,5 +28,5 @@ console.log(
 
 ## See also
 
-- {{domxref("HTMLTemplateElement")}}
 - [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element
+- [`ShadowRoot.clonable`](/en-US/docs/Web/API/ShadowRoot/clonable)

@@ -8,23 +8,15 @@ browser-compat: api.HTMLTemplateElement.shadowRootMode
 
 {{APIRef("Web Components")}}
 
-The **`shadowRootMode`** property of the {{domxref("HTMLTemplateElement")}} interface indicates whether a [shadow root](/en-US/docs/Glossary/Shadow_tree) that that was [declaratively created](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) is open or closed to inspection via JavaScript.
+The **`shadowRootMode`** property of the {{domxref("HTMLTemplateElement")}} interface reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
 
-This property reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
-
-<!--
-    > **Note:** This is a feature of the HTML parser that cannot be used post-parsing by setting the `shadowrootmode` attribute through JavaScript. Only allowed values will create the shadow root; any other values, including empty ones, won't trigger this behavior.
--->
+Note that this property is not useful for developers.
+If a `<template>` element is used to declaratively create a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), then this object and property do not exist.
+Otherwise, if an `HTMLTemplateElement` is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.
 
 ## Value
 
-- `open`
-
-  - : The internal shadow root DOM is exposed to JavaScript (recommended for most use cases).
-
-- `closed`
-
-  - : The internal shadow root DOM is hidden from JavaScript.
+Reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
 
 ## Specifications
 
@@ -36,4 +28,5 @@ This property reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/
 
 ## See also
 
-- {{domxref("HTMLTemplateElement")}}
+- [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the `<template>` element
+- [`ShadowRoot.mode`](/en-US/docs/Web/API/ShadowRoot/mode)

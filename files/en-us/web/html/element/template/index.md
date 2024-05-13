@@ -26,9 +26,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : Hides the internal shadow root DOM from JavaScript.
 
-    > **Note:** The value is reflected by {{domxref("HTMLTemplateElement.shadowRootMode")}}.
-    > This is a feature of the HTML parser that cannot be used post-parsing by setting the `shadowrootmode` attribute through JavaScript.
-    > Only allowed values will create the shadow root; any other values, including empty ones, won't trigger this behavior.
+    > **Note:** If this attribute is set, the HTML parser creates a {{domxref("ShadowRoot")}} object in the DOM.
+    > If the attribute is not set, or not set to an allowed value, then a {{domxref("HTMLTemplateElement")}} is constructed.
+    > A {{domxref("HTMLTemplateElement")}} cannot subsequently be changed into a shadow root after parsing, for example, by setting {{domxref("HTMLTemplateElement.shadowRootMode")}}.
 
     > **Note:** You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
@@ -36,13 +36,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
-    The value defaults to `false` and is reflected by {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus")}}.
+    The value defaults to `false`.
 
 - `shadowrootclonable`
 
   - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
-    The value defaults to `false` and is reflected by {{domxref("HTMLTemplateElement.shadowRootClonable")}}.
+    The value defaults to `false`.
 
 ## Usage notes
 
