@@ -215,7 +215,9 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "PasswordCredential"
+        "FederatedCredentialInit",
+        "PasswordCredential",
+        "PasswordCredentialInit"
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
@@ -1817,6 +1819,7 @@
       ],
       "interfaces": [
         "PublicKeyCredential",
+        "PublicKeyCredentialCreationOptions",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
