@@ -1181,11 +1181,10 @@ Let's have a look at a demo that shows the effect of this property. The HTML is 
 </form>
 ```
 
-The CSS for the example is generally the same, except that we include some custom try options that deliberately set a large height and a large width on the infobox, respectively:
+The CSS for the example is generally the same, except that we include some custom try options that move the infobox to the bottom of the anchor. `--normal-bottom` does this without altering the infobox's dimensions, whereas `--tall-bottom` and `--wide-bottom` deliberately set a large height and a large width on the infobox, respectively:
 
 ```css hidden
 body {
-  width: 1500px;
   height: 500px;
 }
 
@@ -1214,6 +1213,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
+  text-align: center;
 }
 
 form {
@@ -1224,31 +1224,41 @@ form {
 ```
 
 ```css
-@position-try --square-left {
-  inset-area: left;
-  width: 125px;
-  height: 125px;
-  margin: 0 10px 0 0;
+@position-try --normal-bottom {
+  top: anchor(bottom);
+  bottom: unset;
+  margin-top: 10px;
 }
 
-@position-try --rectangle-right {
-  inset-area: right;
+@position-try --tall-bottom {
+  top: anchor(bottom);
+  bottom: unset;
+  margin-top: 10px;
+  width: 125px;
+  height: 125px;
+}
+
+@position-try --wide-bottom {
+  top: anchor(bottom);
+  bottom: unset;
+  margin-top: 10px;
   width: 250px;
   height: 50px;
-  margin: 0 0 0 10px;
 }
 ```
 
-We position the infobox to the top-right of the anchor by default, but then give it some try options including the custom try options defined earlier that give the positioned element specific width/height, and some `inset-area()` try options that don't modify the positioned element dimensions:
+By default, we position the infobox at the top of the anchor, and then give it our custom try options:
 
 ```css
 .infobox {
   position: fixed;
   position-anchor: --infobox;
 
-  inset-area: top left;
-  position-try-options: inset-area(right), --rectangle-right, inset-area(left),
-    --square-left, inset-area(bottom);
+  bottom: anchor(top);
+  margin-bottom: 10px;
+  justify-self: anchor-center;
+
+  position-try-options: --normal-bottom, --wide-bottom, --tall-bottom;
 }
 ```
 
@@ -1269,13 +1279,13 @@ function setTryOrder(e) {
 }
 ```
 
-Select each order option in turn. For each one, look at which position is applied by default, then scroll the page and check out which of the position try options is applied as the anchor nears the edge of the viewport:
+Select each order option in turn. For each one, scroll the page and check out which of the position try options is applied as the anchor nears the top edge of the viewport:
 
-- When `normal` is selected, the options are tried as you'd expect when the infobox starts to overflow the top of the viewport, in the order the options appear in `position-try-options`.
-- When `most-width` is selected, the `--rectangle-right` option is tried first, as soon as the infobox starts to overflow the top of the viewport. This is because `--rectangle-right` sets the infobox to have a larger width than any of the other options.
-- When `most-height` is selected, the `--square-left` option is tried first, as soon as the infobox starts to overflow the top of the viewport. This is because `--square-left` sets the infobox to have a larger height than any of the other options.
+- When `normal` is selected, the `--normal-bottom` option is applied, as it is the first try option in the list.
+- When `most-width` is selected, the `--wide-bottom` option is applied, because it sets the infobox to have a larger width than the other options.
+- When `most-height` is selected, the `--tall-bottom` option is applied, because it sets the infobox to have a larger height than the other options.
 
-{{ EmbedLiveSample("The effect of `position-try-order`", "100%", "250") }}
+{{ EmbedLiveSample("The effect of `position-try-order`", "100%", "300") }}
 
 ## See also
 
