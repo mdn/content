@@ -1,20 +1,20 @@
 ---
-title: btoa() global function
+title: "Window: btoa() method"
 short-title: btoa()
-slug: Web/API/btoa
-page-type: web-api-global-function
+slug: Web/API/Window/btoa
+page-type: web-api-instance-method
 browser-compat: api.btoa
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The **`btoa()`** method creates a
+The **`btoa()`** method of the {{domxref("Window")}} interface creates a
 {{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a _binary string_ (i.e., a
 string in which each character in the string is treated as a byte
 of binary data).
 
 You can use this method to encode data which may otherwise cause communication
-problems, transmit it, then use the {{domxref("atob", "atob()")}} method to decode the data again.
+problems, transmit it, then use the {{domxref("Window.atob()")}} method to decode the data again.
 For example, you can encode control characters such as ASCII values 0 through 31.
 
 ## Syntax
@@ -30,20 +30,18 @@ btoa(stringToEncode)
 
 ### Return value
 
-An ASCII string containing the Base64 representation of
-`stringToEncode`.
+An ASCII string containing the Base64 representation of `stringToEncode`.
 
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : The string contained a character that did not fit in a single byte. See "Unicode
-    strings" below for more detail.
+  - : The string contained a character that did not fit in a single byte. See "Unicode strings" below for more detail.
 
 ## Examples
 
 ```js
-const encodedData = btoa("Hello, world"); // encode a string
-const decodedData = atob(encodedData); // decode the string
+const encodedData = window.btoa("Hello, world"); // encode a string
+const decodedData = window.atob(encodedData); // decode the string
 ```
 
 ## Unicode strings
@@ -60,11 +58,11 @@ console.log(ok.codePointAt(0).toString(16)); //   61: occupies < 1 byte
 const notOK = "✓";
 console.log(notOK.codePointAt(0).toString(16)); // 2713: occupies > 1 byte
 
-console.log(btoa(ok)); // YQ==
-console.log(btoa(notOK)); // error
+console.log(window.btoa(ok)); // YQ==
+console.log(window.btoa(notOK)); // error
 ```
 
-For how to work around this limitation when dealing with arbitrary Unicode text, see [The "Unicode Problem"](/en-US/docs/Glossary/Base64#the_unicode_problem) section of the {{Glossary("Base64")}} glossary entry.
+For how to work around this limitation when dealing with arbitrary Unicode text, see _The "Unicode Problem"_ section of the {{Glossary("Base64")}} glossary entry.
 
 ## Specifications
 
@@ -78,5 +76,6 @@ For how to work around this limitation when dealing with arbitrary Unicode text,
 
 - [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
-- {{domxref("atob","atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("Window.atob()")}}
 - {{Glossary("Base64")}}
