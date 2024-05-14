@@ -58,7 +58,7 @@ There are five targets to consider:
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
+        {{Non-standard_Inline}} If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
         Unlike <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> will never contain anonymous content.
       </td>
     </tr>
@@ -70,7 +70,7 @@ There are five targets to consider:
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} The original target of the event, before any retargetings.
+        {{Non-standard_Inline}} The original target of the event, before any retargetings.
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ There are five targets to consider:
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} The original non-native target of the event before composition from Shadow DOM.
+        {{Non-standard_Inline}} The original non-native target of the event before composition from Shadow DOM.
       </td>
     </tr>
   </tbody>
