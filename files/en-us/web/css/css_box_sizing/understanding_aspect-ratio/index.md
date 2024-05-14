@@ -7,9 +7,9 @@ spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
 
 {{CSSRef}}
 
-Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. These natural dimensions, the size of the media object without any sizing, scaling, zooming, or borders applied, is its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by any formatting ([box sizing](/en-US/docs/Web/CSS/CSS_box_sizing), border, margin, padding, etc.) applied.
+Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 
-When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, maintaining a specific aspect ratio, depending on the size of the viewport. When it comes to replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for {{glossary("responsive web design")}}, but also it's a vital component of good user experience; setting an asset's aspect ratio prevents loading [jank](<(/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)>), the layout shift that occurs when media loads after the page has already been painted causing a reflow because the space for the asset has not been reserved.
+When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](<(/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)>)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
 
 Using CSS, you can adjust the size of replaced and non-replaced elements based on their aspect ratio. In this guide, we will learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
 
@@ -345,7 +345,7 @@ In these examples, a size was explicitly set on the element itself. When working
 
 ### Creating a circle based on the container size
 
-The inline-size of non-replaced block-level elements is the size of their container's [content box](/en-US/docs/Web/CSS/box-edge#content-box). Because they have an size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
+The inline-size of non-replaced block-level elements is the size of their container's [content box](/en-US/docs/Web/CSS/box-edge#content-box). Because they have a size by default, they don't need to have an explicit size set for the `aspect-ratio` property to work.
 
 In this example, we have a container {{htmlelement("div")}} that is `200px` wide, which includes `5px` of padding on each side. Therefore, the inline-size of the content box is `190px`. Without setting a height or width on the nested {{htmlelement("p")}} element, we know its inline-size is `190px`. With `aspect-ratio: 1` set, the paragraph will be `190px` tall, unless it has visible overflowing content causing it to be taller (which it doesn't).
 
