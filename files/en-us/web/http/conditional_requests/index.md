@@ -83,21 +83,21 @@ Besides the setting of the validators on the server side, this mechanism is tran
 
 Partial downloading of files is a functionality of HTTP that allows resuming previous operations, saving bandwidth and time, by keeping the already obtained information:
 
-![A download has been stopped and only partial content has been retrieved.](httpresume1.png)
+![A download has been stopped and only partial content has been retrieved.](resume-download-1.svg)
 
 A server supporting partial downloads broadcasts this by sending the {{HTTPHeader("Accept-Ranges")}} header. Once this happens, the client can resume a download by sending a {{HTTPHeader("Ranges")}} header with the missing ranges:
 
-![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](httpresume2.png)
+![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](resume-download-2.svg)
 
 The principle is simple, but there is one potential problem: if the downloaded resource has been modified between both downloads, the obtained ranges will correspond to two different versions of the resource, and the final document will be corrupted.
 
 To prevent this, conditional requests are used. For ranges, there are two ways of doing this. The more flexible one makes use of {{HTTPHeader("If-Unmodified-Since")}} and {{HTTPHeader("If-Match")}} and the server returns an error if the precondition fails; the client then restarts the download from the beginning:
 
-![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](httpresume3.png)
+![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](resume-download-3.svg)
 
 Even if this method works, it adds an extra response/request exchange when the document has been changed. This impairs performance, and HTTP has a specific header to avoid this scenario: {{HTTPHeader("If-Range")}}:
 
-![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](httpresume4.png)
+![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](resume-download-4.svg)
 
 This solution is more efficient, but slightly less flexible, as only one etag can be used in the condition. Rarely is such additional flexibility needed.
 
@@ -107,17 +107,17 @@ A common operation in Web applications is to _update_ a remote document. This is
 
 With the {{HTTPMethod("PUT")}} method you are able to implement this. The client first reads the original files, modifies them, and finally pushes them to the server:
 
-![Updating a file with a PUT is very simple when concurrency is not involved.](httplock1.png)
+![Updating a file with a PUT is very simple when concurrency is not involved.](optimistic-locking-1.svg)
 
 Unfortunately, things get a little inaccurate as soon as we take into account concurrency. While a client is locally modifying its new copy of the resource, a second client can fetch the same resource and do the same on its copy. What happens next is very unfortunate: when they commit back to the server, the modifications from the first client are discarded by the next client push, as this second client is unaware of the first client's changes to the resource. The decision on who wins is not communicated to the other party. Which client's changes are to be kept, will vary with the speed they commit; this depends on the performance of the clients, of the server, and even of the human editing the document at the client. The winner will change from one time to the next. This is a _race condition_ and leads to problematic behaviors, which are difficult to detect and to debug:
 
-![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](httplock2.png)
+![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](optimistic-locking-2.svg)
 
 There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.
 
 Conditional requests allow implementing the _optimistic locking algorithm_ (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client to submit an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:
 
-![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](httplock3.png)
+![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](optimistic-locking-3.svg)
 
 This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the etag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412")}} `Precondition Failed` error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a _diff_ of both versions, helping them decide which changes they wish to keep.
 
@@ -125,7 +125,7 @@ This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unm
 
 The first upload of a resource is an edge case of the previous. Like any update of a resource, it is subject to a race condition if two clients try to perform at similar times. To prevent this, conditional requests can be used: by adding {{HTTPHeader("If-None-Match")}} with the special value of `'*'`, representing any etag. The request will succeed, only if the resource didn't exist before:
 
-![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](httpfirst.png)
+![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](first-upload.svg)
 
 `If-None-Match` will only work with HTTP/1.1 (and later) compliant servers. If unsure if the server will be compliant, you need first to issue a {{HTTPMethod("HEAD")}} request to the resource to check this.
 
