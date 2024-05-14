@@ -366,14 +366,14 @@ async function fetchProducts() {
     return data;
   } catch (error) {
     console.error(`Could not get products: ${error}`);
+    throw error;
   }
 }
 
 const promise = fetchProducts();
 promise.then((data) => {
-    if(data){ 
-    console.log(data[0].name);
-    }})
+  console.log(data[0].name);
+});
 ```
 
 Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
