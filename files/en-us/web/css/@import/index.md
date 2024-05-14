@@ -101,7 +101,7 @@ The `@import` rules in the above examples show media-dependent conditions that w
 
 ```css
 @import url("gridy.css") supports(display: grid) screen and (max-width: 400px);
-@import url("flexy.css") supports(not (display: grid) and (display: flex)) screen
+@import url("flexy.css") supports((not (display: grid)) and (display: flex)) screen
   and (max-width: 400px);
 ```
 
