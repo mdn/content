@@ -12,10 +12,12 @@ browser-compat: api.Element.getHTML
 
 The **`getHTML()`** method of the {{domxref("Element")}} interface is used to serialize an element's DOM to an HTML string.
 
+The serialized HTML does not include shadow trees by default, but options can be used to include shadow roots that have been set as {{domxref("ShadowRoot/serializable","serializable")}}, and/or a specified array of {{domxref("ShadowRoot")}} objects.
+
 ## Syntax
 
 ```js-nolint
-const html = element.getHTML(options)
+getHTML(options)
 ```
 
 ### Parameters
@@ -25,10 +27,11 @@ const html = element.getHTML(options)
   - : An options object with the following optional parameters:
 
     - `serializableShadowRoots`
-      - : A boolean value that specifies whether to include serializable shadow roots. The default value is `false`.
+      - : A boolean value that specifies whether to include {{domxref("ShadowRoot/serializable","serializable")}} shadow roots.
+        The default value is `false`.
     - `shadowRoots`
-      - : An array of {{domxref("ShadowRoot")}} objects to serialize. These are included regardless of whether they
-        are marked as serializable. The default value is an empty array.
+      - : An array of {{domxref("ShadowRoot")}} objects to serialize. These are included regardless of whether they are marked as `serializable`.
+        The default value is an empty array.
 
 ### Return value
 

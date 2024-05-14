@@ -25,10 +25,12 @@ const html = shadowRoot.getHTML(options)
   - : An options object with the following optional parameters:
 
     - `serializableShadowRoots`
-      - : A boolean value that specifies whether to include serializable shadow roots. The default value is `false`.
+      - : A boolean value that specifies whether to include [serializable](/en-US/docs/Web/API/ShadowRoot/serializable) shadow roots.
+        The default value is `false`.
     - `shadowRoots`
-      - : An array of {{domxref("ShadowRoot")}} objects to serialize. These are included regardless of whether they
-        are marked as serializable. The default value is an empty array.
+      - : An array of {{domxref("ShadowRoot")}} objects to serialize.
+        These are included regardless of whether they are marked as `serializable`.
+        The default value is an empty array.
 
 ### Return value
 
@@ -48,4 +50,5 @@ None.
 
 ## See Also
 
+- {{domxref("Element.getHTML()")}}
 - {{domxref("ShadowRoot.innerHTML")}}
