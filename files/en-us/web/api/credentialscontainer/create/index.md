@@ -121,7 +121,7 @@ makeCredential.addEventListener("click", async () => {
 
 ### Creating a public key credential
 
-This example creates a public key credential from a from a {{domxref("PublicKeyCredentialCreationOptions")}} object.
+This example creates a public key credential from a {{domxref("PublicKeyCredentialCreationOptions")}} object.
 
 ```js
 const publicKey = {
