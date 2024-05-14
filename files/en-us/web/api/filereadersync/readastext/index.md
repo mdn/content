@@ -28,7 +28,7 @@ readAsText(blob, encoding)
 
 A string representing the input data.
 
-## Exceptions
+### Exceptions
 
 The following exceptions can be raised by this method:
 
