@@ -121,7 +121,7 @@ The `from <coordinate-pair>` parameter represents the starting point for the fir
 
 ## Description
 
-When creating a shape, the reference box is defined by the element that uses `<basic-shape>` values. The coordinate system for the shape has its origin at the top-left corner of the element's margin box by default, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the dimensions of the reference box.
+When creating a shape, the reference box is defined by the property that uses `<basic-shape>` values. The coordinate system for the shape has its origin at the top-left corner of the element's margin box by default, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the dimensions of the reference box.
 
 The default reference box is the [`margin-box`](/en-US/docs/Web/CSS/box-edge#margin-box), as demonstrated in the image below. The image shows a circle created using `shape-outside: circle(50%)` and inspected using a browser's Developer Tools, highlighting the different parts of the box model. The shape here is defined with reference to the margin-box.
 
