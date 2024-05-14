@@ -77,7 +77,7 @@ The {{cssxref("basic-shape/circle","circle()")}} function defines a circle using
 circle( <shape-radius>? [ at <position> ]? )
 ```
 
-The `<shape-radius>` argument represents _r_, the radius of the circle. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`.
+The `<shape-radius>` argument represents the radius of the circle defined as either a {{cssxref("length")}} or a {{cssxref("percentage")}}. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`. If omitted, the radius is defined by `closest-side`.
 
 ### Syntax for ellipses
 
@@ -87,24 +87,24 @@ The {{cssxref("basic-shape/ellipse","ellipse()")}} function defines an ellipse u
 ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
 ```
 
-The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box. If only one radius value is provided, the `ellipse()` shape function is invalid. If no value is provided, `50% 50%` is used.
+The `<shape-radius>` arguments represent _rx_ and _ry_, the x-axis and y-axis radii of the ellipse, in that order. These values are specified as either a {{cssxref("length")}} or a {{cssxref("percentage")}}. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box. If only one radius value is provided, the `ellipse()` shape function is invalid. If no value is provided, `50% 50%` is used.
 
 ### Syntax for polygons
 
 The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of coordinates.
 
 ```plain
-polygon( <fill-rule>? [ <length-percentage> <length-percentage> ]# )
+polygon( <`fill-rule`>?, [ <length-percentage> <length-percentage> ]# )
 ```
 
-Each `<length-percentage>` pair in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
+The function takes a list of comma-separated coordinate pairs, each consisting of two space-separated `<length-percentage>` values as the _xi_ and _yi_ pair. These values represents the x and y axis coordinates of the vertex of the polygon at position _i_.
 
 ### Syntax for paths
 
 The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
 ```plain
-path( [ <fill-rule>, ]? <string> )
+path( <`fill-rule`>?, ]? <string> )
 ```
 
 The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string.
@@ -123,7 +123,7 @@ The `from <coordinate-pair>` parameter represents the starting point for the fir
 
 When creating a shape, the reference box is defined by the element that uses `<basic-shape>` values. The coordinate system for the shape has its origin at the top-left corner of the element's margin box by default, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the dimensions of the reference box.
 
-The default reference box is the `margin-box`, as demonstrated in the below image which shows a circle created using `shape-outside: circle(50%)`. The shape is being defined with reference to the margin box.
+The default reference box is the [`margin-box`](/en-US/docs/Web/CSS/box-edge#margin-box), as demonstrated in the image below. The image shows a circle created using `shape-outside: circle(50%)` and inspected using a browser's Developer Tools, highlighting the different parts of the box model. The shape here is defined with reference to the margin-box.
 
 ![An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted.](shapes-reference-box.png)
 
@@ -137,13 +137,13 @@ The values in a `<basic-shape>` function are computed as specified, with these e
 
 ### Interpolation of basic shapes
 
-When animating from one `<basic-shape>` to another, the {{Glossary("interpolation")}} rules listed below are followed. For any interpolation to happen between two shapes, both must use the same reference box. The values between two `<basic-shape>` functions interpolate based on their computed values, forming a simple list. The list values are interpolated as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;angle&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If the list values are not one of those types but are identical (such as `nonzero` in the same position in both `basic-shape` functions), those values also interpolate.
+When animating from one `<basic-shape>` to another, the {{Glossary("interpolation")}} rules listed below are followed. For any interpolation to happen between two shapes, both must use the same reference box. The values between two `<basic-shape>` functions interpolate based on their computed values, forming a list. The values in the list are interpolated as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;angle&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`, those values also interpolate.
 
-- **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as {{cssxref("&lt;length-percentage&gt;")}} (rather than keywords such as `closest-side` or `farthest-side`).
+- **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as either a {{cssxref("length")}} or a {{cssxref("percentage")}} (rather than keywords such as `closest-side` or `farthest-side`).
 
 - **Both shapes are of type `inset()`**: Interpolation is applied between each corresponding value.
 
-- **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value, including the vertices (specified as x/y coordinate pairs), if they have the same number of vertices and use the same `<fill-rule>`.
+- **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value if they use the same `<fill-rule>` and have the same number of comma-separated coordinate pairs.
 
 - **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
 

@@ -60,13 +60,13 @@ clip-path: shape(
 
     - `nonzero`: A point is considered inside the shape if a ray drawn from the point crosses more left-to-right than right-to-left path segments, resulting in a non-zero count. This is the default value when `<fill-rule>` is omitted.
 
-    - `evenodd`: A point is considered inside the shape if a ray drawn from the point crosses an odd number of path segments.
+    - `evenodd`: A point is considered inside the shape if a ray drawn from the point crosses an odd number of path segments. This means that for each time the ray enters the shape, it has not exited an equal number of times, indicating an odd count of entries without corresponding exits.
 
     > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - `from <coordinate-pair>`
 
-  - : Defines the starting point for the first `<shape-command>` as a pair of coordinates that are measured from the top-left corner of the reference box. The coordinates are specified as a {{cssxref("&lt;length-percentage&gt;")}} value. Add a comma after this parameter.
+  - : Defines the starting point for the first `<shape-command>` as a pair of coordinates that are measured from the top-left corner of the [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box). The coordinates are specified as space-separated `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} values representing the left offset and top offset, respectively. Percentage values are relative to the width and height of the element's reference box, respectively. Add a comma after this parameter.
 
 - `<shape-command>`
 
@@ -117,8 +117,8 @@ The `shape()` function allows you to define complex shapes. It is similar to the
 
 However, `shape()` offers several advantages over using `path()`:
 
-- Unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet.
-- The `path()` function inherits some limitations from SVG, such as requiring shapes to be written as a single string and limiting units to `px`. The `shape()` function, on the other hand, supports a variety of CSS units, including percentages, `rem`, and `em`.
+- `shape()` uses standard CSS syntax, making it easier to create and modify shapes directly in your stylesheet. In comparison, `path()` uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, which is less intuitive for those not familiar with SVG.
+- `shape()` supports a variety of CSS units, including percentages, `rem`, and `em`. `path()`, on the other hand, defines shapes as a single string and limits units to `px`.
 - `shape()` also allows the use of CSS math functions, providing more versatility when defining shapes.
 
 ## Formal syntax
