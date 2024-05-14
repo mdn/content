@@ -32,7 +32,7 @@ new PerformanceObserver(callback)
 
         - `droppedEntriesCount`
 
-          - : The number of [buffered](/en-US/docs/Web/API/PerformanceObserver/observe#buffered) entries which got dropped from the buffer due to the buffer being full.
+          - : The number of entries which could not be recorded because the {{domxref("Performance")}} object's internal buffer was full.
 
           Note that this is only provided the first time the observer calls the callback, when the buffered entries are replayed. Once the observer starts observing future observations, it no longer needs to use the buffer. After the first time, `options` will be an empty object (`{}`).
 
