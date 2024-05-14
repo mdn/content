@@ -12,7 +12,7 @@ Decryption is an operation which transforms a ciphertext message into plaintext 
 
 ![The decryption primitive.](decryption.png)
 
-Decryption is the reverse process of {{glossary("encryption")}} and if the key stays secret, is mathematically hard to perform. The difficulty depends on the security of the cryptographic algorithm chosen and the research progress of {{glossary("cryptanalysis")}}.
+Decryption is the reverse process of {{glossary("encryption")}} and if the key stays secret, is mathematically hard to perform. How hard it is depends on how secure the cryptographic algorithm is, and that in itself is subject to change as the study of {{glossary("cryptanalysis")}} advances.
 
 ## See also
 
