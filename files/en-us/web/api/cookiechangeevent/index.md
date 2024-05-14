@@ -7,14 +7,15 @@ browser-compat: api.CookieChangeEvent
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-The **`CookieChangeEvent`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} is the event type of the {{domxref("CookieStore/change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
+The `CookieChangeEvent` interface of the {{domxref("Cookie Store API", "", "", "nocode")}} represents a change to the contents of the cookie store. An instance of a `CookieChangeEvent` is passed into the event handler for the {{domxref("CookieStore.change_event", "change")}} event of the `CookieStore` interface.
 
-A cookie-change is a cookie and a type. Cookie-Changes that will cause the `CookieChangeEvent` to be dispatched are:
+The `CookieChangeEvent` interface use two list to represent "changed" and "deleted" cookies, and put cookie in different lists based on:
 
-- A cookie which is removed due to an insertion of another cookie with the same name, domain, and path is ignored.
-- A newly-created cookie which is not immediately evicted. In this case `type` of cookie-change is "changed".
-- A newly-created cookie which is immediately evicted. In this case `type` of cookie-change is "deleted".
-- A cookie which is otherwise evicted or removed. In this case `type` of cookie-change is "deleted".
+- A newly-created cookie which is not immediately evicted is considered "changed".
+- A newly-created cookie which is immediately evicted is considered "deleted".
+- A cookie which is otherwise evicted or removed is considered "deleted".
+
+> **Note:** that the `change` event ignores cookies which were removed removed due to an insertion of another cookie with the same name, domain, and path.
 
 {{InheritanceDiagram}}
 
