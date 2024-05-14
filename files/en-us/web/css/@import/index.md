@@ -106,8 +106,7 @@ The `@import` rules in the above examples show media-dependent conditions that w
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
-While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`, as long as you wrap each condition to be tested in parentheses.
-You can also use parentheses to indicate precedence.
+While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`. However, you must use parenthesis to define precedence when you mix them, e.g. `supports((..) or (..) and not (..))` is invalid, but `supports((..) or ((..) and (not (..))))` is valid.
 Note that if you just have a single declaration then you don't need to wrap it in additional parenthese: this is shown in the first example above.
 
 The examples above show support conditions using simple declaration syntax.
