@@ -74,7 +74,7 @@ There are five targets to consider:
       </td>
     </tr>
     <tr>
-      <td>event.composedTarget</td>
+      <td><code>event.composedTarget</code></td>
       <td>
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
