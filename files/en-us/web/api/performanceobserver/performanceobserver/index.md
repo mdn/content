@@ -65,7 +65,7 @@ observer.observe({ entryTypes: ["measure", "mark"] });
 ### Dropped buffer entries
 
 You can use {{domxref("PerformanceObserver")}} with a `buffered` flag to listen to past performance entries.
-There is a buffer size limit, though. The performance observer callback contains an `options` object: the first time the observer calls the callback, the `options` parameter will have a `droppedEntriesCount` property that tells you how many entries were dropped due to the buffer storage being full.
+There is a buffer size limit, though. The performance observer callback contains an `options` object: the first time the observer calls the callback, the `options` parameter will have a `droppedEntriesCount` property that tells you how many entries were dropped due to the buffer storage being full. Subsequent callbacks will have an empty `options` parameter.
 
 ```js
 function perfObserver(list, observer, options) {
