@@ -375,7 +375,7 @@ promise
   });
 ```
 
-Here, we moved the `try...catch` back to the `catch` handler on the returned promise. This means our `then` handler doesn't have to deal with the case where an  error got caught inside the `fetchProducts` function, causing `data` to be `undefined`. Handle errors as the last step of your promise chain.
+Here, we moved the `try...catch` back to the `catch` handler on the returned promise. This means our `then` handler doesn't have to deal with the case where an error got caught inside the `fetchProducts` function, causing `data` to be `undefined`. Handle errors as the last step of your promise chain.
 
 Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
 
