@@ -8,7 +8,7 @@ browser-compat: api.FileReader.loadend_event
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`loadend`** event is fired when a file read has completed, successfully or not.
+The **`loadend`** event of the {{domxref("FileReader")}} interface is fired when a file read has completed, successfully or not.
 
 This event is not cancelable and does not bubble.
 
