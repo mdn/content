@@ -15,7 +15,7 @@ The `CookieChangeEvent` interface use two list to represent "changed" and "delet
 - A newly-created cookie which is immediately evicted is considered "deleted".
 - A cookie which is otherwise evicted or removed is considered "deleted".
 
-> **Note:** that the `change` event ignores cookies which were removed removed due to an insertion of another cookie with the same name, domain, and path.
+> **Note:** that the `change` event ignores cookies which were removed due to an insertion of another cookie with the same name, domain, and path.
 
 {{InheritanceDiagram}}
 
