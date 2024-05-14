@@ -72,18 +72,14 @@ function perfObserver(list, observer, options) {
   list.getEntries().forEach((entry) => {
     // do something with the entries
   });
-  if (isFirstObservation) {
-    isFirstObservation = false;
-    if (options?.droppedEntriesCount > 0) {
-      console.warn(
-        `${options?.droppedEntriesCount} entries got dropped due to the buffer being full.`,
-      );
-    }
+  if (options?.droppedEntriesCount > 0) {
+    console.warn(
+      `${options?.droppedEntriesCount} entries got dropped due to the buffer being full.`,
+    );
   }
 }
 
 const observer = new PerformanceObserver(perfObserver);
-const isFirstObservation = true;
 observer.observe({ type: "resource", buffered: true });
 ```
 
