@@ -97,7 +97,7 @@ makeCredential.addEventListener("click", async () => {
 
 ### Creating a federated credential
 
-This example creates a password credential from a {{domxref("FederatedCredentialInit")}} object.
+This example creates a federated credential from a {{domxref("FederatedCredentialInit")}} object.
 
 ```js
 const credInit = {
