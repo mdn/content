@@ -34,7 +34,7 @@ new PerformanceObserver(callback)
 
           - : The number of entries which could not be recorded because the {{domxref("Performance")}} object's internal buffer was full.
 
-            Note that this is only provided the first time the observer calls the callback, when the buffered entries are replayed. Once the observer starts observing future observations, it no longer needs to use the buffer. After the first time, `options` will be an empty object (`{}`).
+            Note that this is only provided the first time the observer calls the callback, when the buffered entries are replayed. Once the observer starts making future observations, it no longer needs to use the buffer. After the first time, `options` will be an empty object (`{}`).
 
 ### Return value
 
