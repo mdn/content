@@ -18,7 +18,7 @@ This property is a shorthand for the following CSS properties:
 - `position-try-order`
 - {{cssxref("position-try-options")}}
 
-> **Note:** We've not yet documented `position-try-order`, as there were still ongoing discussions about its specified behavior, which seems likely to change.
+> **Note:** We've not yet documented `position-try-order`, as there are still ongoing discussions about its specified behavior, which seems likely to change.
 
 ## Syntax
 
