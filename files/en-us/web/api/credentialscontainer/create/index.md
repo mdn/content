@@ -18,8 +18,6 @@ This method supports three different types of credential:
 
 Note that the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the federated credential type.
 
-> **Note:** This method is restricted to top-level {{glossary("browsing context", "browsing contexts")}} (i.e., a document running directly inside a browser tab, and not embedded inside another document). Calls to it from within an `<iframe>` element will resolve without effect.
-
 ## Syntax
 
 ```js-nolint
