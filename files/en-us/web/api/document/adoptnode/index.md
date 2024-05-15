@@ -54,9 +54,6 @@ should either be:
 - cloned using {{domXref("document.importNode()")}}; or
 - adopted using `document.adoptNode()`.
 
-> **Note:** Although Firefox doesn't currently enforce this rule,
-> we encourage you to follow this rule for improved future compatibility.
-
 For more on the {{domXref("Node.ownerDocument")}} issues, see the [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 ## Specifications
