@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A promise that resolves to an array of {{domxref("VRDisplay")}} objects.
+A `promise` that resolves to an array of {{domxref("VRDisplay")}} objects.
 
 ## Examples
 
