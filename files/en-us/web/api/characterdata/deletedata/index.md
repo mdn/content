@@ -29,7 +29,7 @@ characterData.deleteData(offset, count)
 
 None.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` is greater than the length of the contained data.

@@ -267,7 +267,7 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- {{HTTPHeader("Service-Worker-Allowed")}}
+- `Service-Worker-Allowed`
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
