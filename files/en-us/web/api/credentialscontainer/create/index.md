@@ -34,7 +34,7 @@ create(options)
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
 
-    Each of the following properties represents a _credential type_ being created. Only one of them can be specified:
+    Each of the following properties represents a _credential type_ being created. One and only one of them must be specified:
 
     - `federated` {{optional_inline}}
       - : A {{domxref("FederatedCredentialInit")}} object containing requirements for creating a federated identify provider credential.
