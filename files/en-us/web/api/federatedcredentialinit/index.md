@@ -5,7 +5,7 @@ page-type: web-api-interface
 spec-urls: https://w3c.github.io/webappsec-credential-management/#dom-federatedcredential-federatedcredential
 ---
 
-{{APIRef("Credential Management API")}}{{SecureContext_Header}}
+{{APIRef("Credential Management API")}}
 
 The **`FederatedCredentialInit`** dictionary represents the object passed to {{domxref("CredentialsContainer.create()")}} as the value of the `federated` option: that is, when using `create()` to create a {{domxref("FederatedCredential")}} object representing a credential associated with a federated identify provider.
 
