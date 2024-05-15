@@ -193,8 +193,8 @@ The `relatedTarget` property for the `mouseover` event holds the node that the m
 ```xml
 <hbox id="outer">
   <hbox id="inner"
-        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
+        onmouseover="console.log('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
+        onmouseout="console.log('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
         style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
 </hbox>
 ```

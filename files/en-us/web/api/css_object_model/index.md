@@ -51,7 +51,7 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 
 Several other interfaces are also extended by the CSSOM-related specifications: {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, and {{DOMxRef("SVGElement")}}.
 
-### CSS Typed Object Model {{Experimental_Inline}}
+### CSS Typed Object Model
 
 - {{DOMxRef("CSSImageValue")}}
 - {{DOMxRef("CSSKeywordValue")}}
