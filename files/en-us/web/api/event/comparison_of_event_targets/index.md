@@ -53,33 +53,35 @@ There are six targets to consider:
     <tr>
       <td>
         <code><a href="/en-US/docs/Web/API/Event/explicitOriginalTarget">event.explicitOriginalTarget</a></code>
+        {{Non-standard_Inline}}
       </td>
       <td>
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{Non-standard_Inline}} If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes, and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
+         If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes, and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
         Unlike <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> will never contain anonymous content.
       </td>
     </tr>
     <tr>
       <td>
         <code><a href="/en-US/docs/Web/API/Event/originalTarget">event.originalTarget</a></code>
+        {{Non-standard_Inline}}
       </td>
       <td>
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{Non-standard_Inline}} The original target of the event, before any retargetings.
+        The original target of the event, before any retargetings.
       </td>
     </tr>
     <tr>
-      <td><code>event.composedTarget</code></td>
+      <td><code>event.composedTarget</code> {{Non-standard_Inline}}</td>
       <td>
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{Non-standard_Inline}} The original non-native target of the event before composition from Shadow DOM.
+         The original non-native target of the event before composition from Shadow DOM.
       </td>
     </tr>
   </tbody>
