@@ -11,7 +11,7 @@ browser-compat: css.properties.position-try-options
 
 The **`position-try-options`** [CSS](/en-US/docs/Web/CSS) property enables you to specify one or more alternative **position try options** for **anchor-positioned elements** to be placed in relative to their associated **anchor elements**. The browser will try placing the positioned element in these different positions, to stop it from overflowing its container or the viewport.
 
-> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-options` and {{cssxref("position-try-order")}} values in a single declaration.
+> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-options` and `position-try-order` values in a single declaration.
 
 For detailed information on anchor positioning, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
 
@@ -328,7 +328,6 @@ Scroll the page and check out the effect of these position try options as the an
 
 ## See also
 
-- {{cssxref("position-try-order")}}
-- {{cssxref("@position-try")}}
+- The {{cssxref("@position-try")}} at-rule
 - [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
