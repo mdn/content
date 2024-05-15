@@ -13,8 +13,8 @@ Specifically, `inert` does the following:
 
 - Prevents the {{domxref("Element/click_event", "click")}} event from being fired when the user clicks on the element.
 - Prevents the {{domxref("Element/focus_event", "focus")}} event from being raised by preventing the element from gaining focus.
-- Prevents any contents of the element from being found/matched during any use of the browser's find-in-page feature. 
-- Prevents users from selecting text within the element — akin to using the CSS property {{domxref("CSS/user-select", "user-select")}} to disable text selection.
+- Prevents any contents of the element from being found/matched during any use of the browser's find-in-page feature.
+- Prevents users from selecting text within the element — akin to using the CSS property {{domxref("CSS/user-select", "user-select")}} to disable text selection.
 - Prevents users from editing any contents of the element that are otherwise editable.
 - Hides the element and its content from assistive technologies by excluding them from the accessibility tree.
 
