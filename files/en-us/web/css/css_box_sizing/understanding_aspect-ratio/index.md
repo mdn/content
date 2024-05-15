@@ -263,7 +263,8 @@ In this example, the same quote is displayed in `200px` and `600px` wide contain
 </blockquote>
 <p>
   <label
-    ><input type="checkbox" checked /> Toggle between <code>overflow</code> values <code>auto</code> and
+    ><input type="checkbox" checked /> Toggle between
+    <code>overflow</code> values <code>auto</code> and
     <code>visible</code></label
   >
 </p>
