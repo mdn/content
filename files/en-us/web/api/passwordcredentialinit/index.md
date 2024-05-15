@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/webappsec-credential-management/#typedefdef-pas
 
 {{APIRef("Credential Management API")}}
 
-The **`PasswordCredentialInit`** dictionary represents the object passed to {{domxref("CredentialsContainer.create()")}} as the value of the `password` option: that is, when using `create()` to create a password credential.
+The **`PasswordCredentialInit`** dictionary represents the object passed to {{domxref("CredentialsContainer.create()")}} as the value of the `password` option, when creating a password credential.
 
 ## Initialization from a form
 
