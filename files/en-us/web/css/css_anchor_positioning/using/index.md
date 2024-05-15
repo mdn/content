@@ -777,7 +777,7 @@ In CSS Anchor Positioning, this is managed using the following:
 - {{cssxref("@position-try")}}
   - : The `@position-try` at rule allows you to define custom position options, named with a {{cssxref("dashed-ident")}}. The `<dashed-ident>` can then be used to reference the custom position options in the `position-try-options` list.
 
-> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-options` and `position-try-order` values in a single declaration. We've not yet documented `position-try-order`, as there were still ongoing discussion about its specified behavior, which seems likely to change.
+> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-options` and `position-try-order` values in a single declaration. We've not yet documented `position-try-order`, as there are still ongoing discussions about its specified behavior, which seems likely to change.
 
 > **Note:** In some situations you might want to just hide overflowing positioned elements — as discussed in the [Conditional positioned element hiding](#conditional_positioned_element_hiding) section — but in most cases it is better to keep them on-screen and usable.
 
