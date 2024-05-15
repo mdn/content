@@ -24,8 +24,9 @@ In addition, the specification provides mechanisms to:
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-try")}}
 - {{cssxref("position-try-options")}}
-- {{cssxref("position-try-order")}}
 - {{cssxref("position-visibility")}}
+
+> **Note:** The specification also defines a property called `position-try-order`, which controls the order in which specified `position-try-options` will be tried. We've not yet documented it, as there were still ongoing discussion about its specified behavior, which seems likely to change.
 
 ### At-rules and descriptors
 
@@ -66,7 +67,7 @@ In addition, the specification provides mechanisms to:
 - The HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, which provides an alternative mechanism for associating positioned elements with anchor elements.
 - The {{domxref("Element.anchorElement")}} property, which returns a reference to an positioned element's anchor element.
 
-> **Note:** The `anchor` attribute and the associated `anchorElement` property are currently non-standard and disabled by default in supporting browsers. See the compatibility data on their linked reference pages for information on how to enable them for testing purposes.
+> **Note:** The `anchor` attribute and the associated `anchorElement` property are currently disabled by default in supporting browsers. See the compatibility data on their linked reference pages for information on how to enable them for testing purposes.
 
 ## Specifications
 
