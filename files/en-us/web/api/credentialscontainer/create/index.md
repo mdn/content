@@ -65,6 +65,8 @@ If no credential object can be created, the promise resolves with `null`.
     - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
     - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
+- `AbortError` {{domxref("DOMException")}}
+  - : The operation was aborted.
 
 ## Examples
 
