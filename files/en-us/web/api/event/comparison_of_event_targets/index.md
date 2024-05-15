@@ -85,11 +85,9 @@ There are five targets to consider:
   </tbody>
 </table>
 
-### Use of `explicitOriginalTarget` and `originalTarget`
+## Example
 
-> **Note:** These properties are only available in Mozilla-based browsers.
-
-### Example
+> **Note:** `explicitOriginalTarget` and `originalTarget` properties are only available in Mozilla-based browsers.
 
 ```css hidden
 table {
@@ -100,12 +98,17 @@ table {
 th,
 td {
   width: 50%;
+}
+
+th,
+td,
+p {
   border: 1px solid #ccc;
   padding: 0.5rem;
 }
 
-p {
-  line-height: 1.5rem;
+span {
+  background-color: lime;
 }
 ```
 
@@ -148,8 +151,8 @@ p {
 
 <p id="text">
   <span>
-    Clicking on the text will show the difference between
-    explicitOriginalTarget, originalTarget, and target
+    Hovering and clicking on the text will show the difference between event
+    targets
   </span>
 </p>
 ```
