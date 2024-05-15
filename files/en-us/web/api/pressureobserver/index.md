@@ -13,23 +13,23 @@ The **`PressureObserver`** interface is part of the [Compute Pressure API](/en-U
 
 ## Constructor
 
-- {{domxref("PressureObserver.PressureObserver","PressureObserver()")}}
+- {{domxref("PressureObserver.PressureObserver","PressureObserver()")}} {{experimental_inline}}
   - : Creates and returns a new `PressureObserver` object.
 
 ## Static properties
 
-- {{domxref("PressureObserver.knownSources_static", "PressureObserver.knwonSources")}} {{ReadOnlyInline}}
+- {{domxref("PressureObserver.knownSources_static", "PressureObserver.knwonSources")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an array of {{domxref("PressureRecord.source","source")}} values supported by the user agent.
 
 ## Instance methods
 
-- {{domxref("PressureObserver.observe","PressureObserver.observe()")}}
+- {{domxref("PressureObserver.observe","PressureObserver.observe()")}} {{experimental_inline}}
   - : Invokes the pressure observer's callback function when a pressure record for the specified `source` is observed.
-- {{domxref("PressureObserver.unobserve","PressureObserver.unobserve()")}}
+- {{domxref("PressureObserver.unobserve","PressureObserver.unobserve()")}} {{experimental_inline}}
   - : Stops the pressure observer callback from receiving pressure records from the specified `source`.
-- {{domxref("PressureObserver.disconnect","PressureObserver.disconnect()")}}
+- {{domxref("PressureObserver.disconnect","PressureObserver.disconnect()")}} {{experimental_inline}}
   - : Stops the pressure observer callback from receiving pressure records from all sources.
-- {{domxref("PressureObserver.takeRecords","PressureObserver.takeRecords()")}}
+- {{domxref("PressureObserver.takeRecords","PressureObserver.takeRecords()")}} {{experimental_inline}}
   - : Returns the current list of pressure records stored in the pressure observer, emptying it out.
 
 ## Examples
