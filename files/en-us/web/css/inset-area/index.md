@@ -16,7 +16,7 @@ For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-U
 ## Syntax
 
 ```css
-/* Two values to place the element in a single specific tile */
+/* Examples: Two keywords to place the element in a single specific tile */
 /* Physical */
 inset-area: top left;
 inset-area: bottom right;
@@ -29,7 +29,7 @@ inset-area: inline-start block-end;
 inset-area: x-start y-end;
 inset-area: center y-self-end;
 
-/* Two values to span the element across two tiles */
+/* Examples: Two keywords to span the element across two tiles */
 /* Physical */
 inset-area: top span-left;
 inset-area: span-bottom right;
@@ -39,12 +39,12 @@ inset-area: inline-start span-block-end;
 /* Coordinate-based */
 inset-area: y-start span-x-end;
 
-/* Two values to span the element across three tiles */
+/* Examples: Two keywords to span the element across three tiles */
 inset-area: top span-all;
 inset-area: block-end span-all;
 inset-area: x-self-start span-all;
 
-/* One value with an implicit second value  */
+/* Examples: One keyword with an implicit second keyword  */
 inset-area: top; /* equiv: top span-all */
 inset-area: inline-start; /* equiv: inline-start span-all */
 inset-area: center; /* equiv: center center */
@@ -62,7 +62,9 @@ inset-area: unset;
 
 ### Values
 
-The following sections explain in detail the different types of keywords that can be used in `inset-area` values. Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values.
+The following sections explain in detail the different types of keywords that can be used in `inset-area` values.
+
+> **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 #### Physical grid keywords
 
@@ -123,7 +125,6 @@ These keywords specify the position of the element on the `inset-area` grid usin
       - `span-start`: Cause the element to span the center tile and the start tile of the grid row/column.
       - `span-end`: Cause the element to span the center tile and the end tile of the grid row/column.
     - Keywords with position/direction calculated from the element's own writing mode:
-
       - `span-self-start`: Cause the element to span the center tile and the start tile of the grid row/column.
       - `span-self-end`: Cause the element to span the center tile and the end tile of the grid row/column.
 
@@ -155,7 +156,7 @@ These keywords specify the position of the element on the `inset-area` grid usin
 
       For example, `block-end span-inline-start` will cause the element to be placed in the center of the end block row, and then spanned across the tiles in that row that are also in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the element over the bottom center and bottom left of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and top right.
 
-      > **Note:** The specification does not currently define `self` equivalents of these keywords, for example — `span-block-self-start`, `span-block-self-end`, `span-inline-self-start`, and `span-inline-self-end` — and they are not supported in any browser.
+      > **Note:** The specification defines `self` equivalents of these keywords, for example — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, and `span-self-inline-end`. However, these are not currently supported in any browser.
 
       > **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid property value. For example, `block-end span-block-end` is invalid — you can't place the element in the block-end row and then try to span one tile further past the block end.
 
