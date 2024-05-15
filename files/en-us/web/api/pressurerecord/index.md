@@ -13,16 +13,16 @@ The **`PressureRecord`** interface is part of the [Compute Pressure API](/en-US/
 
 ## Instance properties
 
-- {{domxref("PressureRecord.source")}} {{ReadOnlyInline}}
+- {{domxref("PressureRecord.source")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A string indicating the origin source from which the record is coming.
-- {{domxref("PressureRecord.state")}} {{ReadOnlyInline}}
+- {{domxref("PressureRecord.state")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A string indicating the pressure state recorded.
-- {{domxref("PressureRecord.time")}} {{ReadOnlyInline}}
+- {{domxref("PressureRecord.time")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp of the record.
 
 ## Instance methods
 
-- {{domxref("PressureRecord.toJSON()")}}
+- {{domxref("PressureRecord.toJSON()")}} {{experimental_inline}}
   - : Returns a JSON representation of the `PressureRecord` object.
 
 ## Examples
