@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Clients.openWindow
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`openWindow()`** method of the {{domxref("Clients")}}
 interface creates a new top level browsing context and loads a given URL. If the calling

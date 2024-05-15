@@ -4627,23 +4627,6 @@
     "modified": "2020-08-04T14:54:17.574Z",
     "contributors": ["jswisher", "hbloomer", "marumari", "fscholz"]
   },
-  "Glossary/Simple_header": {
-    "modified": "2019-07-06T03:48:05.558Z",
-    "contributors": [
-      "Annevk",
-      "teoli",
-      "fscholz",
-      "hbloomer",
-      "Andrew_Pfeiffer",
-      "klez",
-      "kscarfone",
-      "chrisdavidmills"
-    ]
-  },
-  "Glossary/Simple_response_header": {
-    "modified": "2019-08-07T09:47:15.609Z",
-    "contributors": ["fscholz", "SrihariThalla", "Sheppy", "teoli"]
-  },
   "Glossary/Site": {
     "modified": "2020-03-27T15:47:42.365Z",
     "contributors": ["RafeyIqbalRahman", "lol768"]
@@ -67990,6 +67973,26 @@
     "modified": "2020-10-15T22:16:14.230Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/performance": {
+    "modified": "2020-10-15T21:22:10.802Z",
+    "contributors": [
+      "sideshowbarker",
+      "connorshea",
+      "Sheppy",
+      "anonyco",
+      "kmag",
+      "sarafec",
+      "smarts",
+      "jsantell",
+      "fscholz",
+      "paul.irish",
+      "teoli",
+      "julienw",
+      "iamanupmenon",
+      "ethertank",
+      "MattBrubeck"
+    ]
+  },
   "Web/API/Window/personalbar": {
     "modified": "2020-10-15T21:14:01.101Z",
     "contributors": [
@@ -71576,26 +71579,6 @@
       "George8211",
       "matiishyn",
       "kscarfone"
-    ]
-  },
-  "Web/API/performance_property": {
-    "modified": "2020-10-15T21:22:10.802Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "Sheppy",
-      "anonyco",
-      "kmag",
-      "sarafec",
-      "smarts",
-      "jsantell",
-      "fscholz",
-      "paul.irish",
-      "teoli",
-      "julienw",
-      "iamanupmenon",
-      "ethertank",
-      "MattBrubeck"
     ]
   },
   "Web/API/queueMicrotask": {

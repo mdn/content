@@ -28,6 +28,10 @@ Another alternative is `document.body.aLink`, although this is [deprecated in HT
 
 Firefox supports both `alinkColor`/`:active` and {{Cssxref(":focus")}}.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

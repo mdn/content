@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CustomEvent.detail
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The read-only **`detail`** property of the {{domxref("CustomEvent")}} interface
 returns any data passed when initializing the event.
