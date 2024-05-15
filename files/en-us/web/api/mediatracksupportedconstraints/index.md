@@ -2,7 +2,7 @@
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
 page-type: web-api-interface
-browser-compat: api.MediaTrackSupportedConstraints
+spec-urls: https://w3c.github.io/mediacapture-main/#media-track-supported-constraints
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -60,10 +60,6 @@ For tracks containing video sources from the user's screen contents, the followi
   - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}
   - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported in the current environment.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
