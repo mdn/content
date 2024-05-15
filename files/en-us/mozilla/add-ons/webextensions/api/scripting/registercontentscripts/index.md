@@ -30,7 +30,7 @@ await browser.scripting.registerContentScripts(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If there are errors during script parsing and file validation, or if the IDs specified do not exist, no scripts are registered and the promise is rejected.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. If there are errors during script parsing and file validation, or if the IDs specified exist already, no scripts are registered and the promise is rejected.
 
 ## Examples
 
