@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-template-areas
 
 {{CSSRef}}
 
-The **`grid-template-areas`** CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
+The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 
 {{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}
 

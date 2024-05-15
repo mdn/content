@@ -9,7 +9,7 @@ browser-compat: css.properties.initial-letter-align
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`initial-letter-align`** CSS property specifies the alignment of initial letters within a paragraph.
+The **`initial-letter-align`** [CSS](/en-US/docs/Web/CSS) property specifies the alignment of initial letters within a paragraph.
 
 ## Syntax
 
