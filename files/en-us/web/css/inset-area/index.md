@@ -125,6 +125,7 @@ These keywords specify the position of the element on the `inset-area` grid usin
       - `span-start`: Cause the element to span the center tile and the start tile of the grid row/column.
       - `span-end`: Cause the element to span the center tile and the end tile of the grid row/column.
     - Keywords with position/direction calculated from the element's own writing mode:
+
       - `span-self-start`: Cause the element to span the center tile and the start tile of the grid row/column.
       - `span-self-end`: Cause the element to span the center tile and the end tile of the grid row/column.
 
