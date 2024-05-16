@@ -267,3 +267,8 @@ document.getElementById("inner").addEventListener("mouseout", handleMouseout);
 ```
 
 {{ EmbedLiveSample("Use of `target` and `relatedTarget`", "100%", 300) }}
+
+## See also
+
+- {{domxref("EventTarget")}}
+- [Shadow DOM and events](https://javascript.info/shadow-dom-events) on javascript.info
