@@ -26,7 +26,6 @@ A string containing a randomly generated, 36 character long v4 UUID.
 
 ## Examples
 
-The method is accessed through the {{domxref("Window.crypto")}} property and the {{domxref("WorkerGlobalScope.crypto")}} property.
 
 ```js
 /* Assuming that self.crypto.randomUUID() is available */

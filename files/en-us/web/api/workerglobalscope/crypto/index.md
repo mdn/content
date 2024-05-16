@@ -8,7 +8,7 @@ browser-compat: api.crypto
 
 {{APIRef("Web Crypto API")}}
 
-The **`crypto`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("Crypto")}} object associated to the global scope. This object allows web pages access to certain cryptographic related services.
+The **`crypto`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("Crypto")}} object for this worker. This object gives workers access to certain cryptographic related services.
 
 Although the property itself is read-only, all of its methods (and the methods of its
 child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable
@@ -22,7 +22,7 @@ An instance of the {{domxref("Crypto")}} interface, providing access to general-
 
 ## Examples
 
-See the example on the {{domxref("Window.crypto")}}, which uses the `crypto` property to access the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.
+See the example on the page for {{domxref("Window.crypto")}}, which uses the `crypto` property to access the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.
 
 ## Specifications
 

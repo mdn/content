@@ -8,7 +8,7 @@ browser-compat: api.crypto
 
 {{APIRef("Web Crypto API")}}
 
-The **`crypto`** read-only property of the {{domxref("Window")}} interface returns the {{domxref("Crypto")}} object associated to the global scope. This object allows web pages access to certain cryptographic related services.
+The **`crypto`** read-only property of the {{domxref("Window")}} interface returns the {{domxref("Crypto")}} object for this window's scope. This object gives web pages access to certain cryptographic related services.
 
 Although the property itself is read-only, all of its methods (and the methods of its
 child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable

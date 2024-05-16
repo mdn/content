@@ -10,7 +10,7 @@ browser-compat: api.Crypto
 The **`Crypto`** interface represents basic cryptography features available in the current context.
 It allows access to a cryptographically strong random number generator and to cryptographic primitives.
 
-The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is accessed through the {{domxref("Window.crypto")}} property and the {{domxref("WorkerGlobalScope.crypto")}} property, which is a `Crypto` object.
+The `Crypto` is available in windows using the {{domxref("Window.crypto")}} property and in workers using the the {{domxref("WorkerGlobalScope.crypto")}} property.
 
 ## Instance properties
 
