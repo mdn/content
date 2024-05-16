@@ -103,9 +103,7 @@ The CLI will now begin scaffolding out your project, and installing all of your 
 If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager which defaults to `yarn`.
 The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you'd run `vue create moz-todo-vue --packageManager=npm`.
 
-> **Note:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
-
-> **Note:** there is other way to start vue project. The recommended way is with [create-vue](https://cli.vuejs.org)
+> **Note:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs. You can also try using [create-vue](https://github.com/vuejs/create-vue) the new recommended way to start a Vue project.
 
 ## Project structure
 
