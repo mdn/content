@@ -219,7 +219,7 @@ Cache-Control: public, max-age=604800, immutable
 A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That's called the **cache-busting** pattern.
 
 ```html
-<script src=https://example.com/react.0.0.0.js></script>
+<script src="https://example.com/react.0.0.0.js"></script>
 ```
 
 When a user reloads the browser, the browser will send conditional requests for validating to the origin server. But it's not necessary to revalidate those kinds of static resources even when a user reloads the browser, because they're never modified.
