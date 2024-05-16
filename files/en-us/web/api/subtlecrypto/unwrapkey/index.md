@@ -150,7 +150,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   let password = window.prompt("Enter your password");
   let enc = new TextEncoder();
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -170,7 +170,7 @@ async function getUnwrappingKey() {
   // In this example it's supplied as a constant "saltBytes".
   const saltBuffer = bytesToArrayBuffer(saltBytes);
   // 3 derive the key from key material and salt
-  return self.crypto.subtle.deriveKey(
+  return window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt: saltBuffer,
@@ -195,7 +195,7 @@ async function unwrapSecretKey(wrappedKey) {
   // 2. initialize the wrapped key
   const wrappedKeyBuffer = bytesToArrayBuffer(wrappedKey);
   // 3. unwrap the key
-  return self.crypto.subtle.unwrapKey(
+  return window.crypto.subtle.unwrapKey(
     "raw", // import format
     wrappedKeyBuffer, // ArrayBuffer representing key to unwrap
     unwrappingKey, // CryptoKey representing key encryption key
@@ -342,7 +342,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   let password = window.prompt("Enter your password");
   let enc = new TextEncoder();
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -362,7 +362,7 @@ async function getUnwrappingKey() {
   // In this example it's supplied as a constant "saltBytes".
   const saltBuffer = bytesToArrayBuffer(saltBytes);
   // 3 derive the key from key material and salt
-  return self.crypto.subtle.deriveKey(
+  return window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt: saltBuffer,
@@ -390,7 +390,7 @@ async function unwrapPrivateKey(wrappedKey) {
   // 3. initialize the iv
   const ivBuffer = bytesToArrayBuffer(ivBytes);
   // 4. unwrap the key
-  return self.crypto.subtle.unwrapKey(
+  return window.crypto.subtle.unwrapKey(
     "pkcs8", // import format
     wrappedKeyBuffer, // ArrayBuffer representing key to unwrap
     unwrappingKey, // CryptoKey representing key encryption key

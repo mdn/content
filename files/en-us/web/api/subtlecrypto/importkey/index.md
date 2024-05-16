@@ -211,7 +211,7 @@ This example imports an AES key from an `ArrayBuffer` containing the raw bytes
 to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/import-key/raw.js)
 
 ```js
-const rawKey = self.crypto.getRandomValues(new Uint8Array(16));
+const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
 
 /*
 Import an AES secret key from an ArrayBuffer containing the raw bytes.
@@ -219,7 +219,7 @@ Takes an ArrayBuffer string containing the bytes, and returns a Promise
 that will resolve to a CryptoKey representing the secret key.
 */
 function importSecretKey(rawKey) {
-  return self.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
+  return window.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
     "encrypt",
     "decrypt",
   ]);
@@ -267,7 +267,7 @@ function importPrivateKey(pem) {
   // convert from a binary string to an ArrayBuffer
   const binaryDer = str2ab(binaryDerString);
 
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "pkcs8",
     binaryDer,
     {
@@ -313,7 +313,7 @@ function importRsaKey(pem) {
   // convert from a binary string to an ArrayBuffer
   const binaryDer = str2ab(binaryDerString);
 
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "spki",
     binaryDer,
     {
@@ -348,7 +348,7 @@ Takes an object representing the JSON Web Key, and returns a Promise
 that will resolve to a CryptoKey representing the private key.
 */
 function importPrivateKey(jwk) {
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "jwk",
     jwk,
     {

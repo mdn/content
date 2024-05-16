@@ -94,7 +94,7 @@ async function verifyMessage(publicKey) {
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
-  let result = await self.crypto.subtle.verify(
+  let result = await window.crypto.subtle.verify(
     "RSASSA-PKCS1-v1_5",
     publicKey,
     signature,
@@ -132,7 +132,7 @@ async function verifyMessage(publicKey) {
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
-  let result = await self.crypto.subtle.verify(
+  let result = await window.crypto.subtle.verify(
     {
       name: "RSA-PSS",
       saltLength: 32,
@@ -173,7 +173,7 @@ async function verifyMessage(publicKey) {
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
-  let result = await self.crypto.subtle.verify(
+  let result = await window.crypto.subtle.verify(
     {
       name: "ECDSA",
       hash: { name: "SHA-384" },
@@ -214,7 +214,12 @@ async function verifyMessage(key) {
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
-  let result = await self.crypto.subtle.verify("HMAC", key, signature, encoded);
+  let result = await window.crypto.subtle.verify(
+    "HMAC",
+    key,
+    signature,
+    encoded,
+  );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
 }

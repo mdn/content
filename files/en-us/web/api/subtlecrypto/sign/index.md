@@ -134,7 +134,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await self.crypto.subtle.sign(
+let signature = await window.crypto.subtle.sign(
   "RSASSA-PKCS1-v1_5",
   privateKey,
   encoded,
@@ -160,7 +160,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await self.crypto.subtle.sign(
+let signature = await window.crypto.subtle.sign(
   {
     name: "RSA-PSS",
     saltLength: 32,
@@ -189,7 +189,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await self.crypto.subtle.sign(
+let signature = await window.crypto.subtle.sign(
   {
     name: "ECDSA",
     hash: { name: "SHA-384" },
@@ -218,7 +218,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await self.crypto.subtle.sign("HMAC", key, encoded);
+let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 ```
 
 ## Specifications

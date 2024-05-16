@@ -107,7 +107,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -121,7 +121,7 @@ Given some key material and some random salt
 derive an AES-KW key using PBKDF2.
 */
 function getKey(keyMaterial, salt) {
-  return self.crypto.subtle.deriveKey(
+  return window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt,
@@ -141,17 +141,17 @@ Wrap the given key.
 async function wrapCryptoKey(keyToWrap) {
   // get the key encryption key
   const keyMaterial = await getKeyMaterial();
-  salt = self.crypto.getRandomValues(new Uint8Array(16));
+  salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
 
-  return self.crypto.subtle.wrapKey("raw", keyToWrap, wrappingKey, "AES-KW");
+  return window.crypto.subtle.wrapKey("raw", keyToWrap, wrappingKey, "AES-KW");
 }
 
 /*
 Generate an encrypt/decrypt secret key,
 then wrap it.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "AES-GCM",
@@ -181,7 +181,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -195,7 +195,7 @@ Given some key material and some random salt
 derive an AES-GCM key using PBKDF2.
 */
 function getKey(keyMaterial, salt) {
-  return self.crypto.subtle.deriveKey(
+  return window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt,
@@ -215,11 +215,11 @@ Wrap the given key.
 async function wrapCryptoKey(keyToWrap) {
   // get the key encryption key
   const keyMaterial = await getKeyMaterial();
-  salt = self.crypto.getRandomValues(new Uint8Array(16));
+  salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
-  iv = self.crypto.getRandomValues(new Uint8Array(12));
+  iv = window.crypto.getRandomValues(new Uint8Array(12));
 
-  return self.crypto.subtle.wrapKey("pkcs8", keyToWrap, wrappingKey, {
+  return window.crypto.subtle.wrapKey("pkcs8", keyToWrap, wrappingKey, {
     name: "AES-GCM",
     iv,
   });
@@ -229,7 +229,7 @@ async function wrapCryptoKey(keyToWrap) {
 Generate a sign/verify key pair,
 then wrap the private key.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "RSA-PSS",
@@ -263,7 +263,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -277,7 +277,7 @@ Given some key material and some random salt
 derive an AES-CBC key using PBKDF2.
 */
 function getKey(keyMaterial, salt) {
-  return self.crypto.subtle.deriveKey(
+  return window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt,
@@ -297,11 +297,11 @@ Wrap the given key.
 async function wrapCryptoKey(keyToWrap) {
   // get the key encryption key
   const keyMaterial = await getKeyMaterial();
-  salt = self.crypto.getRandomValues(new Uint8Array(16));
+  salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
   iv = self.crypto.getRandomValues(new Uint8Array(16));
 
-  return self.crypto.subtle.wrapKey("spki", keyToWrap, wrappingKey, {
+  return window.crypto.subtle.wrapKey("spki", keyToWrap, wrappingKey, {
     name: "AES-CBC",
     iv,
   });
@@ -311,7 +311,7 @@ async function wrapCryptoKey(keyToWrap) {
 Generate an encrypt/decrypt key pair,
 then wrap it.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "RSA-OAEP",
@@ -343,7 +343,7 @@ The key material is a password supplied by the user.
 function getKeyMaterial() {
   const password = window.prompt("Enter your password");
   const enc = new TextEncoder();
-  return self.crypto.subtle.importKey(
+  return window.crypto.subtle.importKey(
     "raw",
     enc.encode(password),
     { name: "PBKDF2" },
@@ -357,7 +357,7 @@ Given some key material and some random salt
 derive an AES-GCM key using PBKDF2.
 */
 function getKey(keyMaterial, salt) {
-  return self.crypto.subtle.deriveKey(
+  return window.crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
       salt,
@@ -377,11 +377,11 @@ Wrap the given key.
 async function wrapCryptoKey(keyToWrap) {
   // get the key encryption key
   const keyMaterial = await getKeyMaterial();
-  salt = self.crypto.getRandomValues(new Uint8Array(16));
+  salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
-  iv = self.crypto.getRandomValues(new Uint8Array(12));
+  iv = window.crypto.getRandomValues(new Uint8Array(12));
 
-  return self.crypto.subtle.wrapKey("jwk", keyToWrap, wrappingKey, {
+  return window.crypto.subtle.wrapKey("jwk", keyToWrap, wrappingKey, {
     name: "AES-GCM",
     iv,
   });
@@ -391,7 +391,7 @@ async function wrapCryptoKey(keyToWrap) {
 Generate a sign/verify key pair,
 then wrap the private key
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "ECDSA",
