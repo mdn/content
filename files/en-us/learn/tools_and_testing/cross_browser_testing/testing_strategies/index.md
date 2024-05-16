@@ -224,7 +224,7 @@ Now the new virtual box should appear in the left-hand menu of the main Virtual 
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
-![a windows operating system running on a Virtual box machine](virtualbox-running.png)
+![Screenshot of Windows XP running hosted in Virtual box running on macOS](virtualbox-running.png)
 
 You need to treat this virtual operating system installation just like you would any real installation — for example, as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
 
