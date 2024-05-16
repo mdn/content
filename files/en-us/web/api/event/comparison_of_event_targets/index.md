@@ -87,7 +87,9 @@ There are six targets to consider:
   </tbody>
 </table>
 
-## Example
+## Examples
+
+### Difference between event targets
 
 > **Note:** `explicitOriginalTarget` and `originalTarget` properties are only available in Mozilla-based browsers.
 
@@ -173,7 +175,7 @@ document.getElementById("text").addEventListener("click", handleEvent);
 document.getElementById("text").addEventListener("mouseover", handleEvent);
 ```
 
-{{ EmbedLiveSample("Example", "100%", 300) }}
+{{ EmbedLiveSample("Difference between event targets", "100%", 300) }}
 
 ### Use of `target` and `relatedTarget`
 
@@ -184,13 +186,67 @@ The `relatedTarget` property for the `mouseover` event holds the node that the m
 | `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited                    |
 | `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered                   |
 
-#### Example
+```css hidden
+.container {
+  display: flex;
+  align-items: flex-start;
+}
 
-```xml
-<hbox id="outer">
-  <hbox id="inner"
-        onmouseover="console.log('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="console.log('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
-        style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
-</hbox>
+#outer {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#inner {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  background-color: lime;
+}
+
+#console {
+  flex-grow: 1;
+  overflow-y: scroll;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  padding: 10px;
+}
 ```
+
+```html
+<div class="container">
+  <div id="outer">
+    <div id="inner"></div>
+  </div>
+
+  <pre id="console"></pre>
+</div>
+
+<p>Hovering on the lime box will log mouseover and mouseout event targets</p>
+```
+
+```js
+const console = document.getElementById("console");
+
+function handleMouseover(event) {
+  console.append(
+    `mouseover: ${event.relatedTarget.id} -> ${event.target.id} \n`,
+  );
+  console.scroll(0, console.scrollHeight);
+}
+
+function handleMouseout(event) {
+  console.append(
+    `mouseout:  ${event.target.id} -> ${event.relatedTarget.id} \n`,
+  );
+  console.scroll(0, console.scrollHeight);
+}
+
+document.getElementById("inner").addEventListener("mouseover", handleMouseover);
+document.getElementById("inner").addEventListener("mouseout", handleMouseout);
+```
+
+{{ EmbedLiveSample("Use of `target` and `relatedTarget`", "100%", 300) }}
