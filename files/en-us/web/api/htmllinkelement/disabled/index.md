@@ -10,7 +10,7 @@ browser-compat: api.HTMLLinkElement.disabled
 
 The **`disabled`** property of the {{domxref("HTMLLinkElement")}} interface is a boolean value that represents whether the link is disabled. It only has an effect with style sheet links (`rel` property set to `stylesheet`).
 
-If `disabled` attribute is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded only when the `disabled` property is set to `false` or removed. Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
+If `disabled` attribute is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded only when the `disabled` property is set to `false` or removed. Setting the `disabled` property using JavaScript causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
 It reflects the `disabled` attribute of the {{HTMLElement("link")}} element.
 
