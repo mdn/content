@@ -54,7 +54,7 @@ The resulting object has the following properties:
     not be represented in formatted output.
 - `dateStyle`, `timeStyle`
   - : The values provided for these properties in the `options` argument, if any.
-    (The `dateStyle` and `timeStyle` shortcuts are *not* resolved to individual
+    (The `dateStyle` and `timeStyle` shortcuts are _not_ resolved to individual
     date-time format properties like `year` or `hour`.)
 
 ## Examples
