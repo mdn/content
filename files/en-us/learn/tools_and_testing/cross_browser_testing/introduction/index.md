@@ -75,7 +75,7 @@ In the initial planning phase, you will probably have several planning meetings 
 
 Once you've got an idea of the required feature set, and what technologies you will likely build these features with, you should start exploring the target audience — what browsers, devices, etc. will the target audience for this site be using? The client might already have data about this from previous research they've done, e.g. from other websites they own, or from previous versions of the website you are now working on. If not, you will be able to get a good idea by looking at other sources, such as usage stats for competitors, or countries the site will be serving. You can also use a bit of intuition.
 
-So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android) browsers — this should include Chrome (and Edge, Opera as they are based on the same rendering engine as Chrome), Firefox, and Safari.
+So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile browsers — this should include Chrome (and Edge, Opera as they are based on the same rendering engine as Chrome), Firefox, and Safari.
 It should also be accessible with WCAG AA compliance.
 
 Now you know your target testing platforms, you should go back and review the required feature set and what technologies you are going to use.
