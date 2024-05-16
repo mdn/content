@@ -282,7 +282,8 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-self.fetch(myRequest)
+self
+  .fetch(myRequest)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
