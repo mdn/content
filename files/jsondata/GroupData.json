@@ -525,7 +525,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
@@ -1918,7 +1918,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {
