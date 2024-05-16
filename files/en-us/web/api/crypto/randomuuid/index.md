@@ -26,7 +26,6 @@ A string containing a randomly generated, 36 character long v4 UUID.
 
 ## Examples
 
-
 ```js
 /* Assuming that self.crypto.randomUUID() is available */
 
