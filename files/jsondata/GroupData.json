@@ -159,6 +159,13 @@
       "properties": [],
       "events": []
     },
+    "Compute Pressure API": {
+      "overview": ["Compute Pressure API"],
+      "interfaces": ["PressureObserver", "PressureRecord"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactAddress", "ContactsManager"],
@@ -518,7 +525,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
@@ -1911,7 +1918,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {
