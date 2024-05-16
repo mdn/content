@@ -20,7 +20,7 @@ subscribe(subscriptions)
 
 - `subscriptions`
 
-  - : An object containing:
+  - : An array of objects, each of which has the following properties:
 
     - `name`
       - : A string with the name of a cookie.
