@@ -299,7 +299,7 @@ async function wrapCryptoKey(keyToWrap) {
   const keyMaterial = await getKeyMaterial();
   salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
-  iv = self.crypto.getRandomValues(new Uint8Array(16));
+  iv = window.crypto.getRandomValues(new Uint8Array(16));
 
   return window.crypto.subtle.wrapKey("spki", keyToWrap, wrappingKey, {
     name: "AES-CBC",
