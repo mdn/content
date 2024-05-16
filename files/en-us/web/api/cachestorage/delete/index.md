@@ -11,7 +11,7 @@ browser-compat: api.CacheStorage.delete
 The **`delete()`** method of the {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`.
 If no {{domxref("Cache")}} object is found, it resolves to `false`.
 
-You can access `CacheStorage` through the {{domxref("Window.caches")}} property or the {{domxref("WorkerGlobalScope.caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in window's scope or through the {{domxref("WorkerGlobalScope.caches")}} property in worker's scope.
 
 ## Syntax
 

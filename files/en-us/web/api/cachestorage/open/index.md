@@ -12,7 +12,7 @@ The **`open()`** method of the
 {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
 the {{domxref("Cache")}} object matching the `cacheName`.
 
-You can access `CacheStorage` through the {{domxref("Window.caches")}} property or the {{domxref("WorkerGlobalScope.caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in window's scope or through the {{domxref("WorkerGlobalScope.caches")}} property in worker's scope.
 
 > **Note:** If the specified {{domxref("Cache")}} does not exist, a new
 > cache is created with that `cacheName` and a {{jsxref("Promise")}} that

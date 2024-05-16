@@ -18,7 +18,7 @@ Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance
 
 Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
 
-You can access `CacheStorage` through the {{domxref("Window.caches")}} property or the {{domxref("WorkerGlobalScope.caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in window's scope or through the {{domxref("WorkerGlobalScope.caches")}} property in worker's scope.
 
 > **Note:** `CacheStorage` always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu. Furthermore, because `CacheStorage` requires file-system access, it may be unavailable in private mode in Firefox.
 
