@@ -24,9 +24,8 @@ In addition, the specification provides mechanisms to:
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-try")}}
 - {{cssxref("position-try-options")}}
+- {{cssxref("position-try-order")}}
 - {{cssxref("position-visibility")}}
-
-> **Note:** The specification also defines a property called `position-try-order`, which controls the order in which specified `position-try-options` will be tried. We've not yet documented it, as there are still ongoing discussions about its specified behavior, which seems likely to change.
 
 ### At-rules and descriptors
 

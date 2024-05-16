@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**CSS anchor positioning** enables elements to be tethered together — defining some elements as **anchor elements** and mechanisms by which other elements can be positioned and sized relative to them. In addition, you can declare conditions under which anchor-positioned elements should be hidden, and alternative position options to render them in, if their default rendering position is offscreen or overflows their containing block.
+**CSS anchor positioning** enables elements to be tethered together — defining some elements as **anchor elements** and mechanisms by which other elements can be positioned and sized relative to them. In addition, you can declare conditions under which anchor-positioned elements should be hidden, and alternative position options to render them in, if their default rendering position is offscreen or overflows their containing element.
 
 This article explains all the anchor positioning concepts, and how to use the spec's features at a basic level. For further examples and syntax details, see the reference pages linked throughout.
 
@@ -766,7 +766,7 @@ This gives us the following result:
 
 {{ EmbedLiveSample("Conditional positioned element hiding", "100%", "250") }}
 
-## Specifying alternative positions to avoid overflow
+## Specifying alternative positions
 
 An important consideration with anchor-positioned elements is ensuring that they will always appear in a convenient place for the user to interact with them if at all possible, regardless of where the anchor is positioned. This often requires changing an elements' position as its anchor gets close to the edge of its containing element or the viewport, to stop the positioned element overflowing.
 
@@ -774,10 +774,12 @@ In CSS Anchor Positioning, this is managed using the following:
 
 - {{cssxref("position-try-options")}}
   - : Specifies one or more alternative **position try options** for the browser to try placing the positioned element in, to stop it from overflowing. Position try options are tried in the order they are specified in. Options can be specified using predefined options, {{cssxref("inset-area")}} values (wrapped inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function), or custom options defined using the {{cssxref("@position-try")}} at-rule. When multiple options are specified, they are separated by commas.
+- {{cssxref("position-try-order")}}
+  - : Allows you to specify various options that result in an available position try option being set in preference to the element's initial positioning. For example, you might want to initially display the element in a space that has more available height or width.
 - {{cssxref("@position-try")}}
   - : The `@position-try` at rule allows you to define custom position options, named with a {{cssxref("dashed-ident")}}. The `<dashed-ident>` can then be used to reference the custom position options in the `position-try-options` list.
 
-> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-options` and `position-try-order` values in a single declaration. We've not yet documented `position-try-order`, as there are still ongoing discussions about its specified behavior, which seems likely to change.
+> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-options` and `position-try-order` values in a single declaration.
 
 > **Note:** In some situations you might want to just hide overflowing positioned elements — as discussed in the [Conditional positioned element hiding](#conditional_positioned_element_hiding) section — but in most cases it is better to keep them on-screen and usable.
 
@@ -1122,6 +1124,140 @@ Let's talk through how these position options work:
 Scroll the page and check out the effect of these position try options as the anchor nears the edge of the viewport:
 
 {{ EmbedLiveSample("Custom try options", "100%", "250") }}
+
+### The effect of `position-try-order`
+
+One last subject to cover in this section is the effect of the {{cssxref("position-try-order")}} property. This has a slightly different focus to the rest of the position try functionality, in that it makes use of position try options when the positioned element is first displayed, rather than when it is in the process of overflowing.
+
+It allows you to specify that you want the positioned element initially displayed using the position try option that gives its containing block the most width, or height. If no position try option is available that provides more width/height than the initial positioning assigned to the element, `position-try-order` has no effect.
+
+`position-try-order` has five possible values:
+
+- `normal`
+  - : The default. no position try options will be tried when the element is first displayed.
+- `most-height`
+  - : The position try option will be applied that gives the element's containing block the most height.
+- `most-width`
+  - : The position try option will be applied that gives the element's containing block the most width.
+- `most-block-size`
+  - : The position try option will be applied that gives the element's containing block the most size in the block direction.
+- `most-inline-size`
+  - : The position try option will be applied that gives the element's containing block the most size in the inline direction.
+
+Let's have a look at a demo that shows the effect of this property. The HTML is the same as in previous demos, except that we've added a `<form>` containing radio buttons, allowing you to select different values of `position-try-order` to see what their effects are.
+
+```html hidden
+<div class="anchor">⚓︎</div>
+
+<div class="infobox">
+  <p>This is an information box.</p>
+</div>
+
+<form>
+  <fieldset>
+    <legend>Choose a try order</legend>
+    <div>
+      <label for="radio-normal">normal</label>
+      <input
+        type="radio"
+        id="radio-normal"
+        name="position-try-order"
+        value="normal"
+        checked />
+    </div>
+    <div>
+      <label for="radio-most-height">most-height</label>
+      <input
+        type="radio"
+        id="radio-most-height"
+        name="position-try-order"
+        value="most-height" />
+    </div>
+  </fieldset>
+</form>
+```
+
+The CSS for the example is mostly the same as in previous ones. We do however include a custom try option — `--custom-bottom` — which positions the element below the anchor and gives it appropriate margin:
+
+```css hidden
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: hsl(240 100% 75%);
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.anchor {
+  anchor-name: --infobox;
+  position: absolute;
+  top: 100px;
+  left: 250px;
+}
+
+.infobox {
+  color: darkblue;
+  background-color: azure;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+form {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+}
+```
+
+```css
+@position-try --custom-bottom {
+  top: anchor(bottom);
+  bottom: unset;
+  margin-top: 10px;
+}
+```
+
+We initially position the infobox at the top of the anchor, and then give it our custom try option:
+
+```css
+.infobox {
+  position: fixed;
+  position-anchor: --infobox;
+
+  bottom: anchor(top);
+  margin-bottom: 10px;
+  justify-self: anchor-center;
+
+  position-try-options: --custom-bottom;
+}
+```
+
+Finally, we include some JavaScript. This sets a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler on the radio buttons so that, when a new value is selected, that value is applied to the infobox's `position-try-order` property.
+
+```js
+const infobox = document.querySelector(".infobox");
+const form = document.forms[0];
+const radios = form.elements["position-try-order"];
+
+for (const radio of radios) {
+  radio.addEventListener("change", setTryOrder);
+}
+
+function setTryOrder(e) {
+  const tryOrder = e.target.value;
+  infobox.style.positionTryOrder = tryOrder;
+}
+```
+
+Try selecting the `most-height` order option. This has the effect of applying the `--custom-bottom` position try option, which positions the element below the anchor. This occurs because there is more space below the anchor than there is above it.
+
+{{ EmbedLiveSample("The effect of `position-try-order`", "100%", "300") }}
 
 ## See also
 
