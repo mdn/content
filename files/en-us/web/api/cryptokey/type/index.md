@@ -33,7 +33,7 @@ async function verifyMessage(publicKey) {
 
   if (publicKey.type === "public") {
     const encoded = getMessageEncoding();
-    result = await self.crypto.subtle.verify(
+    result = await window.crypto.subtle.verify(
       "RSASSA-PKCS1-v1_5",
       publicKey,
       signature,

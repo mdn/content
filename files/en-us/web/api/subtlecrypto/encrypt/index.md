@@ -122,7 +122,7 @@ function getMessageEncoding() {
 
 function encryptMessage(publicKey) {
   let encoded = getMessageEncoding();
-  return self.crypto.subtle.encrypt(
+  return window.crypto.subtle.encrypt(
     {
       name: "RSA-OAEP",
     },
@@ -148,8 +148,8 @@ function getMessageEncoding() {
 function encryptMessage(key) {
   let encoded = getMessageEncoding();
   // counter will be needed for decryption
-  counter = self.crypto.getRandomValues(new Uint8Array(16));
-  return self.crypto.subtle.encrypt(
+  counter = window.crypto.getRandomValues(new Uint8Array(16));
+  return window.crypto.subtle.encrypt(
     {
       name: "AES-CTR",
       counter,
@@ -162,20 +162,20 @@ function encryptMessage(key) {
 ```
 
 ```js
-let iv = self.crypto.getRandomValues(new Uint8Array(16));
-let key = self.crypto.getRandomValues(new Uint8Array(16));
+let iv = window.crypto.getRandomValues(new Uint8Array(16));
+let key = window.crypto.getRandomValues(new Uint8Array(16));
 let data = new Uint8Array(12345);
 // crypto functions are wrapped in promises so we have to use await and make sure the function that
 // contains this code is an async function
 // encrypt function wants a cryptokey object
-const key_encoded = await self.crypto.subtle.importKey(
+const key_encoded = await window.crypto.subtle.importKey(
   "raw",
   key.buffer,
   "AES-CTR",
   false,
   ["encrypt", "decrypt"],
 );
-const encrypted_content = await self.crypto.subtle.encrypt(
+const encrypted_content = await window.crypto.subtle.encrypt(
   {
     name: "AES-CTR",
     counter: iv,
@@ -205,8 +205,8 @@ function getMessageEncoding() {
 function encryptMessage(key) {
   let encoded = getMessageEncoding();
   // iv will be needed for decryption
-  iv = self.crypto.getRandomValues(new Uint8Array(16));
-  return self.crypto.subtle.encrypt(
+  iv = window.crypto.getRandomValues(new Uint8Array(16));
+  return window.crypto.subtle.encrypt(
     {
       name: "AES-CBC",
       iv: iv,
@@ -233,8 +233,12 @@ function getMessageEncoding() {
 function encryptMessage(key) {
   const encoded = getMessageEncoding();
   // iv will be needed for decryption
-  const iv = self.crypto.getRandomValues(new Uint8Array(12));
-  return self.crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, encoded);
+  const iv = window.crypto.getRandomValues(new Uint8Array(12));
+  return window.crypto.subtle.encrypt(
+    { name: "AES-GCM", iv: iv },
+    key,
+    encoded,
+  );
 }
 ```
 

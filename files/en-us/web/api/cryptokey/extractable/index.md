@@ -23,7 +23,7 @@ In this example, the _Export_ button is disabled, and no listener added, if the 
 ```js
 // Export the given key and write it into the "exported-key" space.
 async function exportCryptoKey(key) {
-  const exported = await self.crypto.subtle.exportKey("raw", key);
+  const exported = await window.crypto.subtle.exportKey("raw", key);
   const exportedKeyBuffer = new Uint8Array(exported);
 
   const exportKeyOutput = document.querySelector(".exported-key");
@@ -46,7 +46,7 @@ function setExportButton(key) {
 
 // Generate an encrypt/decrypt secret key,
 // then enable and set up an event listener on the "Export" button.
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "AES-GCM",

@@ -76,7 +76,7 @@ the key. [See the complete code on GitHub](https://github.com/mdn/dom-examples/b
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await self.crypto.subtle.exportKey("raw", key);
+  const exported = await window.crypto.subtle.exportKey("raw", key);
   const exportedKeyBuffer = new Uint8Array(exported);
 
   const exportKeyOutput = document.querySelector(".exported-key");
@@ -87,7 +87,7 @@ async function exportCryptoKey(key) {
 Generate an encrypt/decrypt secret key,
 then set up an event listener on the "Export" button.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "AES-GCM",
@@ -122,7 +122,7 @@ function ab2str(buf) {
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await self.crypto.subtle.exportKey("pkcs8", key);
+  const exported = await window.crypto.subtle.exportKey("pkcs8", key);
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
   const pemExported = `-----BEGIN PRIVATE KEY-----\n${exportedAsBase64}\n-----END PRIVATE KEY-----`;
@@ -135,7 +135,7 @@ async function exportCryptoKey(key) {
 Generate a sign/verify key pair,
 then set up an event listener on the "Export" button.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "RSA-PSS",
@@ -173,7 +173,7 @@ function ab2str(buf) {
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await self.crypto.subtle.exportKey("spki", key);
+  const exported = await window.crypto.subtle.exportKey("spki", key);
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
   const pemExported = `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
@@ -186,7 +186,7 @@ async function exportCryptoKey(key) {
 Generate an encrypt/decrypt key pair,
 then set up an event listener on the "Export" button.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "RSA-OAEP",
@@ -215,7 +215,7 @@ This example exports an ECDSA private signing key as a JSON Web Key object. [See
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
-  const exported = await self.crypto.subtle.exportKey("jwk", key);
+  const exported = await window.crypto.subtle.exportKey("jwk", key);
   const exportKeyOutput = document.querySelector(".exported-key");
   exportKeyOutput.textContent = JSON.stringify(exported, null, " ");
 }
@@ -224,7 +224,7 @@ async function exportCryptoKey(key) {
 Generate a sign/verify key pair,
 then set up an event listener on the "Export" button.
 */
-self.crypto.subtle
+window.crypto.subtle
   .generateKey(
     {
       name: "ECDSA",

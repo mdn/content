@@ -26,13 +26,13 @@ An {{jsxref("Array")}} of strings from the following list:
 ## Examples
 
 ```js
-const rawKey = self.crypto.getRandomValues(new Uint8Array(16));
+const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
 
 // Import an AES secret key from an ArrayBuffer containing the raw bytes.
 // Takes an ArrayBuffer string containing the bytes, and returns a Promise
 // that will resolve to a CryptoKey representing the secret key.
 function importSecretKey(rawKey) {
-  return self.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
+  return window.crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, [
     "encrypt",
     "decrypt",
   ]);
