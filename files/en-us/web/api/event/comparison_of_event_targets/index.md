@@ -107,7 +107,7 @@ td {
 th,
 td,
 p {
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   padding: 0.5rem;
 }
 
@@ -162,13 +162,13 @@ span {
 ```
 
 ```js
-function handleEvent(e) {
-  document.getElementById("target").innerHTML = e.target;
-  document.getElementById("currentTarget").innerHTML = e.currentTarget;
-  document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+function handleEvent(event) {
+  document.getElementById("target").innerHTML = event.target;
+  document.getElementById("currentTarget").innerHTML = event.currentTarget;
+  document.getElementById("relatedTarget").innerHTML = event.relatedTarget;
   document.getElementById("explicitOriginalTarget").innerHTML =
-    e.explicitOriginalTarget;
-  document.getElementById("originalTarget").innerHTML = e.originalTarget;
+    event.explicitOriginalTarget;
+  document.getElementById("originalTarget").innerHTML = event.originalTarget;
 }
 
 document.getElementById("text").addEventListener("click", handleEvent);
@@ -195,14 +195,14 @@ The `relatedTarget` property for the `mouseover` event holds the node that the m
 #outer {
   width: 200px;
   height: 200px;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   padding: 10px;
 }
 
 #inner {
   width: 100px;
   height: 100px;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   background-color: lime;
 }
 
@@ -210,7 +210,7 @@ The `relatedTarget` property for the `mouseover` event holds the node that the m
   flex-grow: 1;
   overflow-y: scroll;
   height: 200px;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   margin: 0 10px;
   padding: 10px;
 }
