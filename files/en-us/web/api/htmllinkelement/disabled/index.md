@@ -33,7 +33,7 @@ A boolean.
 const el = document.getElementById("el");
 console.log(el.disabled); // Output: true
 
-// set disabled property to true to enable the stylesheet
+// Set the disabled property to true to enable the stylesheet
 
 el.disabled = false;
 console.log(el.disabled); // Output: false
