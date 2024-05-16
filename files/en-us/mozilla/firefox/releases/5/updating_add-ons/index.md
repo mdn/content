@@ -10,7 +10,7 @@ This article provides an overview of the changes you may need to make to your ad
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 5, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 5.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 5, and have no binary components (which need to be recompiled for every major Firefox release), have automatically been updated on AMO to indicate that they work in Firefox 5.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
@@ -24,7 +24,7 @@ Due to the short development cycle (even for our rapid release cycle; Firefox 5 
 
 ### Determining the UI language
 
-In the past, the {{ domxref("window.navigator.language") }} DOM property reflected the language of Firefox's user interface. This is no longer the case; instead, it reflects the value of the `Accept-Language` header for the current document. If you need to detect the UI language, you should instead look at the value of the `general.useragent.locale` preference.
+In the past, the {{ domxref("Navigator.language", "window.navigator.language") }} DOM property reflected the language of Firefox's user interface. This is no longer the case; instead, it reflects the value of the `Accept-Language` header for the current document. If you need to detect the UI language, you should instead look at the value of the `general.useragent.locale` preference.
 
 ## DOM changes
 
@@ -68,7 +68,7 @@ window.addEventListener(
 );
 ```
 
-An even better solution, of course, is to follow [performance best practices](/en-US/docs/Extensions/Performance_best_practices_in_extensions) and to not instantiate services until you need to use them.
+An even better solution, of course, is to follow performance best practices and to not instantiate services until you need to use them.
 
 ## See also
 

@@ -6,10 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Sensor.start
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
-The **`start`** method activates one
-of the sensors based on `Sensor`.
+The **`start()`** method of the {{domxref("Sensor")}} interface activates one of the sensors based on `Sensor`.
 
 ## Syntax
 

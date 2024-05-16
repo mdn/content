@@ -5,17 +5,17 @@ page-type: web-api-interface
 browser-compat: api.FileSystemHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-The **`FileSystemHandle`** interface of the {{domxref('File System API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
+The **`FileSystemHandle`** interface of the {{domxref('File System API', '', '', 'nocode')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 
 ## Interfaces based on FileSystemHandle
 
-Below is a list of interfaces based on the FileSystemHandle interface.
+Below is a list of interfaces based on the `FileSystemHandle` interface.
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxref("FileSystemFileHandle")}} {{SecureContext_Inline}}
   - : Represents a handle to a file entry.
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxref("FileSystemDirectoryHandle")}} {{SecureContext_Inline}}
   - : Provides a handle to a directory entry.
 
 ## Instance properties
@@ -28,7 +28,7 @@ Below is a list of interfaces based on the FileSystemHandle interface.
 ## Instance methods
 
 - {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
-  - : Compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
+  - : Compares two handles to see if the associated entries (either a file or directory) match.
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : Queries the current permission state of the current handle.
 - {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}

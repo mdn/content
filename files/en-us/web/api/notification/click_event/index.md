@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Notification.click_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`click`** event of the {{domxref("Notification")}}
 interface fires when the user clicks on displayed {{domxref("Notification")}}.
@@ -38,7 +38,7 @@ is clicked:
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 
@@ -52,5 +52,4 @@ notification.onclick = (event) => {
 
 ## See also
 
-- {{domxref("Notification")}}
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

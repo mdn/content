@@ -46,28 +46,28 @@ Following on from the above section, **personally identifiable information** (PI
 
 ### Tracking
 
-**Tracking** refers to the process of a third party recording a user's activity across many different websites. This can be done in various ways, for example:
+**Tracking** refers to the process of recording a user's activity across many different websites. This can be done in various ways, for example:
 
-- Looking at cookies that the user has set (for example, to persist a login or personalization details across different sites) if the third party is embedded on the same domain.
+- Looking at multiple [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) set across different sites where third-party content is embedded to find out various information points about the user.
 - Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
+- Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: https://example.com/article/?id=62yhgt1a&campaign=902.
+- Redirect tracking, which involves trackers momentarily (and imperceptibly) redirecting a user to their website to use first-party storage to track that user across websites. This allows trackers to get around third-party cookies being blocked. For example, if you have read a product review and want to click through to buy it, you might unwittingly navigate to the redirect tracker first, _then_ to the retailer. This means the tracker is loaded as a first party, and can associate tracking data with the identifiers they have stored in their first-party cookies before forwarding you to the retailer.
 
-Tracking data can be used to profile a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
+Tracking data can be used to build a profile of a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
 
 - **Targeted ads**: Everyone has had the unnerving experience of researching some items to buy on one device and then suddenly being bombarded by adverts for the same products on all their other devices.
 - **Selling or sharing data**: Some third parties have been known to compile tracking data and then sell it to/share it with others to use for various purposes, like targeted ads. This is obviously highly unethical and may also be illegal, depending on where in the world it happens.
 - **Prejudice via data**: In the worst cases, sharing data could result in the user being unfairly disadvantaged. For example, imagine an insurance company finding out data points about a potential customer that they didn't consent to share, and using them as a justification for increasing insurance premiums.
 
-> **Note:** See [What can third-party resources do?](https://web.dev/learn/privacy/third-parties#what_can_third-party_resources_do) for a useful related scenario description and additional information.
-
 ### Fingerprinting
 
-The process of identifying users by building up a store of data points about them is known as **fingerprinting**. This process usually has negative connotations because it can be used to track user activity across different websites in a covert manner. Think about it — tracking is annoying enough even when you consent to it, but having it happen without consent feels really invasive and erodes trust very quickly.
+A process very closely related to tracking is **fingerprinting**: this specifically refers to _identifying_ users by building up a store of data points about them that differentiate them from other users. This could be anything from cookie contents to what browser they are using and what fonts they have installed locally.
 
-Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations that prevent it from being used for identification purposes.
+Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations or "noise" that prevent it from being used for identification purposes.
 
-For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time as reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers in order to make them less useful for identifying the user's system. We'll look at other browser privacy-enhancing technologies in the section below.
+For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers to make them less useful for identifying the user's system.
 
-> **Note:** See also [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) over on web.dev for additional useful information.
+> **Note:** See [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) on web.dev for additional useful information.
 
 ## Privacy features provided by browsers
 
@@ -96,51 +96,11 @@ So-called "powerful" web API features that provide access to potentially sensiti
 
 Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third-party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
 
-For example, one change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value to `Lax` (see [Changes to the default behavior without SameSite](https://web.dev/articles/samesite-cookies-explained#changes_to_the_default_behavior_without_samesite)).
-
-This attribute controls whether cookies are sent with cross-site requests and can provide some protection against tracking and {{glossary("CSRF")}} attacks. However, the default was `None`, and not many developers adopted it, meaning cross-site cookies were being sent **everywhere**. Changing the default value to `Lax` means that cookies are not sent on cross-site requests, such as on requests to load images or frames, but are sent when a user is navigating to the origin site from an external site, for example, when following a link.
-
-> **Note:** Browsers are aiming to eventually phase out third-party cookies altogether, while providing alternative solutions for common use cases that currently require them.
-
-#### Firefox anti-tracking features
-
-- [Firefox tracking protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection)
-  - : Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
-- [Enhanced tracking protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)
-  - : This feature blocks trackers that follow you around online to collect information about your browsing habits and interests without breaking site functionality. It also includes protections against harmful scripts, such as malware that drains your battery.
-- [Redirect tracking protection](/en-US/docs/Web/Privacy/Redirect_tracking_protection)
-  - : Firefox includes protection against redirect tracking, an abuse of cross-site navigation. In redirect tracking, a tracker momentarily redirects a user to their website for first-party storage to be able to track that user across websites.
-- [State partitioning](/en-US/docs/Web/Privacy/State_Partitioning)
-  - : This concept is a reworking of how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse cross-site tracking. This is achieved by providing what is effectively a "different", isolated storage location to every website a user visits.
-- [Storage access policy](/en-US/docs/Web/Privacy/Storage_Access_Policy)
-  - : A storage access policy can block cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies available in Firefox for many years. See also our [Storage Access Policy Errors](/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors) reference.
-- [Total cookie protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)
-  - : Firefox gives third-party cookies a separate cookie jar per site, so they can't be tracked across sites
-
-#### Chrome anti-tracking features
-
-Google's [privacy sandbox project](https://developer.chrome.com/en/docs/privacy-sandbox/) is a series of proposals to satisfy cross-site use cases without requiring third-party cookies or other tracking mechanisms. Themes include identity and tracking protection, more privacy-respecting ad solutions, preventing covert tracking, and safely sharing data across browsing contexts.
-
-Some of the most developed parts of the privacy sandbox project are as follows:
-
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies)
-  - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
-- [Related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets)
-  - : A mechanism for a company to declare relationships between different sites. Supporting browsers will then allow limited third-party cookie access across those sites for specific purposes, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
-- Third-party cookie default
-  - : Chrome does not yet block third-party cookies by default, but this can be set by users in Chrome settings.
-
-#### Safari anti-tracking features
-
-- [Intelligent Tracking Prevention](https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/)
-  - : There are multiple privacy enhancements in the Safari browser to prevent tracking.
-
-#### Edge anti-tracking features
-
-- [Tracking prevention](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention)
-  - : Edge blocks trackers from unvisited sites; in addition, known harmful trackers are blocked by default.
-- Third-party cookie default
-  - : Edge does not yet block third-party cookies by default, but this can be set by users in Settings.
+- The {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value has been updated to `Lax`, to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) for more information.
+- Browsers have all started to block third-party cookies by default. See [How do browsers handle third-party cookies?](/en-US/docs/Web/Privacy/Third-party_cookies#how_do_browsers_handle_third-party_cookies) for more details.
+- Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies).
+- Several browsers strip out known tracking parameters from URLs — this includes Firefox, Safari, and Brave. Browser extensions also help to do this, for example [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
+- Browsers have implemented [redirect tracking protection](/en-US/docs/Web/Privacy/Redirect_tracking_protection).
 
 ## Privacy considerations for client-side developers
 
@@ -154,7 +114,7 @@ Companies collect lots of different data from their users for a variety of diffe
 - Emails, postal addresses, and phone numbers for communication.
 - Age, gender, geographical location, favorite pastimes, and a host of other PII for anything from site personalization to customer satisfaction surveys.
 - Browsing habits on their sites and other sites, to measure page and feature success metrics.
-  And so much more.
+- And so much more.
 
 When collecting data from your customers, you have an opportunity to behave with integrity, show them that you are trustworthy, and build a great relationship with them, in turn, improving your brand and your chance of success.
 
@@ -172,7 +132,7 @@ It is tempting to ask for a lot of data from your users because you think it mig
 
 It is good to anonymize data. You should also consider whether you can get what you need by making your data request less granular. As an example, instead of asking a user their favorite products, you could ask them to select between more general categories.
 
-The best way to protect user privacy though is to minimize the data you collect. Referring to the previous example, you could infer the same data by looking at user purchase history. As another example, users really appreciate being able to buy products anonymously. You shouldn't force them to sign up for an account; if it's not necessary for the service to operate, it should be their choice.
+The best way to protect user privacy though, is to minimize the data you collect. Referring to the previous example, you could infer the same data by looking at user purchase history. As another example, users appreciate being able to buy products anonymously. You shouldn't force them to sign up for an account; if it's not necessary for the service to operate, it should be their choice.
 
 ### Communicate clearly how you are going to use the data you collect
 
@@ -181,8 +141,8 @@ Once you have decided what data you are going to collect, you should publish a p
 - Data that you collect
 - Ways in which you use the data
 - Parties with whom you tend to share the data, if at all, and a declaration that you will ask for user consent before sharing
-- Duration for which you keep the data for before it is deleted
-- Ways in which users can view the data you have collected from them and a way for them to delete it if they want to
+- The duration for which you keep the data before it is deleted
+- Ways in which users can view the data you have collected from them and delete it if they want to
 
 When providing you with data, your users should be given an opportunity to read your privacy policy, and consent to it. They should be able to control if they are happy with this and agree to your terms. And as indicated above, they should also get to see what data of theirs you have collected, and delete it if they want to.
 
@@ -196,81 +156,57 @@ Allowing the user to choose when significant portions of data get deleted is ver
 
 > **Note:** The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
 
-## Cut down on tracking cookies
+## Cut down on tracking
 
-Earlier on we discussed tracking, and some of the unethical purposes they are used for. We shouldn't have to spell out how such uses can erode user trust; wherever possible, you should only use cookies for ethical uses, such as transferring login or other personalization status across sites.
+Earlier on we discussed tracking, and some of the unethical purposes it is used for. We shouldn't have to spell out how such uses can erode user trust; wherever possible, you should only use potential tracking mechanisms like [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) for ethical uses, such as transferring sign-in or other personalization status across sites.
 
-Also recall from earlier that browsers are implementing a number of technologies to limit the usage of tracking cookies, especially cross-site cookies, with the eventual aim of removing them altogether. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. For example:
+Also recall from earlier that browsers are all starting to block third-party cookies by default, while implementing alternative technologies to achieve common use case. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) for more information.
 
-- Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data. This does have the downside that the data is stored per-origin, so it can't be shared.
-- Use a technology such as the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way.
-- Use a server-side solution for data persistence.
+## Carefully manage third-party resources
 
-> **Note:** To reiterate what we said earlier, make sure you clearly communicate to your users what you are doing via your privacy policy, allow them to opt-in, and easily delete their data if they change their mind at a later date.
+Of course, it would be easy to manage privacy if you were only worried about resources you have created (code, cookies, sites, etc.). The real challenge comes from the fact that your site will likely use third-party resources. This can include third-party content embedded in `<iframe>`s, libraries, frameworks, APIs, externally-hosted resources such as images and videos, etc.
 
-### Carefully manage third-party resources
+Third-party resources are an essential part of modern web development, they provide a lot of power. However, any third-party resource you allow onto your site potentially has the same permissions as your own resources; it all depends on how it is included on your site:
 
-Of course, it would be so easy to manage privacy if you were only worried about resources you have created (code, cookies, sites, etc.). The real challenge comes from the fact that your site will likely use third-party resources — this can include libraries, frameworks, APIs, externally-hosted resources such as images or videos, and a host of other resources.
+- JavaScript running inside third-party content embedded in your site via an `<iframe>` is separated by [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it wouldn't have access to other scripts and data included in the top-level browsing context.
+- However, a third-party script included directly in your page via a {{htmlelement("script")}} element _would_ have access to your other scripts and data, whether it was hosted on your site or another site. It would effectively be first-party code. A malicious script included in this way could secretly steal your users' data, for example sending it off to a third-party server.
 
-Third-party resources are an essential part of modern web development, and bring with them a lot of power. However, any third party resource you allow onto your site potentially has the same power as your own resources. A malicious embedded script could secretly steal your users' data, for example sending it off to a third-party server. And a third-party service could use the {{httpheader("Referer")}} header sent with every request to build up a profile of user activity that could be used for tracking.
-
-It is important to audit all of the third party resources you use on your site. Make sure you know what data they are collecting, what requests they are making and to whom, what their privacy policies are. Your carefully designed privacy policy is no use if you are using a third-party script that violates it.
+It is important to audit all of the third-party resources you use on your site. Make sure you know what data they collect, what requests they make and to whom, and what their privacy policies are. Your carefully designed privacy policy is useless if you use a third-party script that violates it.
 
 > **Note:** There are various tools out there that can help you build up a picture of what requests a site is making, for example the [Request Map Generator](https://requestmap.webperf.tools/).
 
 Once you have audited your third-party resources and understand what they are doing, you should then consider their negatives as a trade-off for the value they bring. If a third-party script is free and really useful but collects quite a lot of user data, you could:
 
 1. Accept that trade-off, update your privacy policy to include details of it, and hope that it doesn't impact your users' trust too much.
-2. Look for an alternative, less data-hungry third party tool.
+2. Look for an alternative, less data-hungry third-party tool.
 3. Build your own tool.
 
-The following list provides some tips on how to mitigate privacy risks inherent with using third party resources:
+The following list provides some tips on how to mitigate privacy risks inherent with using third-party resources:
 
-- When embedding third party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embedded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? Also, some third-party services have privacy-enhancing options. See for example YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
-- Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on external links:
-
-  ```html
-  <a href="/some/external/resource" rel="noreferrer"></a>
-  ```
-
-  Or you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
+- When embedding third-party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embedded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? Also, some third-party services have privacy-enhancing options. See, for example, YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
+- Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
 
   > **Note:** See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
 
-- Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permissions prompts that they may not understand.
+- Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to API "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third-party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permission prompts that they may not understand. You can also control usage of "powerful features" inside third-party sites embedded inside {{htmlelement("iframe")}} elements by specifying permissions policies inside an `allow` attribute on the `<iframe>` itself.
 
-  The following example disables [Picture-in-Picture](/en-US/docs/Web/API/Picture-in-Picture_API) everywhere, allows [Geolocation](/en-US/docs/Web/API/Geolocation_API) to be used only on one specific origin, and allows camera usage everywhere:
+  > **Note:** See also our [Permissions-Policy guide](/en-US/docs/Web/HTTP/Permissions_Policy) for more information and examples, and [permissionspolicy.com](https://www.permissionspolicy.com/) for useful tools including a policy generator.
 
-  ```http
-  Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*;
-  ```
-
-  To enable usage of "powerful features" inside third party sites embedded inside {{htmlelement("iframe")}} elements, you specify permissions policies inside an `allow` attributes. The `<iframe>` equivalent of the above is as follows:
-
-  ```html
-  <iframe
-    src="https://example.com"
-    allow="picture-in-picture 'none'; geolocation 'self' https://example.com; camera '*'">
-  </iframe>
-  ```
-
-  > **Note:** See also our [Permissions-Policy guide](/en-US/docs/Web/HTTP/Permissions_Policy) for more information, and [permissionspolicy.com](https://www.permissionspolicy.com/) for useful tools including a policy generator.
-
-  > **Note:** The {{htmlelement("iframe")}} `sandbox` attribute also allows you to allow or disallow usage of certain features.
+- Use the {{htmlelement("iframe")}} `sandbox` attribute to allow or disallow usage of certain features inside the content embedded in the `<iframe>` — this includes things like downloads, form submissions, modals, and scripting.
 
 > **Note:** See [Third parties](https://web.dev/learn/privacy/third-parties/) over on web.dev for additional useful information on auditing and more.
 
 ## Protect user data
 
-You need to make sure that, once you have collected data from your users, that it is transmitted and stored securely. This is more of a [security](/en-US/docs/Web/Security) topic, but it is worth mentioning here — a good privacy policy is no good if your security is lax and attackers can steal the data from you.
+You need to make sure that user data is transmitted and stored securely once you've collected it. This is more of a [security](/en-US/docs/Web/Security) topic, but it is worth mentioning here — a good privacy policy is useless if your security is lax and attackers can steal the data from you.
 
 The below tips offer some guidance on protecting your user's data:
 
-- Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as log-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
+- Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as sign-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
 - If you want to roll out your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multifactor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
-- When collecting user sign-up information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, without needing to worry remembering them, thereby avoiding a security risk by writing them down.
+- When collecting user sign-up information, enforce strong passwords so your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. Encourage your users to use a password manager to generate and store complex passwords; this way they won't worry about remembering them, or create a security risk by writing them down.
 - Don't include sensitive data in URLs — if a third party intercepts the URL (for example via the {{httpheader("Referer")}} header), they could steal that information. Use `POST` requests rather than `GET` requests to avoid this.
-- Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature usage on your site that makes it harder to introduce vulnerabilities. Be careful when doing this — if you block usage of a feature that a third party script relies on to work, you may end up breaking your site's functionality. This is something you can look into when auditing your third party resources (see [Carefully manage third-party resources](#carefully_manage_third-party_resources)).
+- Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature usage on your site that makes it harder to introduce vulnerabilities. Be careful when doing this — if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality. This is something you can look into when auditing your third-party resources (see [Carefully manage third-party resources](#carefully_manage_third-party_resources)).
 
 ## See also
 
@@ -280,5 +216,5 @@ The below tips offer some guidance on protecting your user's data:
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
 
 <section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "1", "0", "1")}}
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
 </section>

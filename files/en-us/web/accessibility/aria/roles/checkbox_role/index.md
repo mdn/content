@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Roles/checkbox_role
 page-type: aria-role
 ---
 
+{{AccessibilitySidebar}}
+
 The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
 
 ```html
@@ -18,7 +20,7 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 > **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
-<input type="checkbox" id="chk1-label" />
+<input type="checkbox" id="chk1-label" name="RememberPreferences" />
 <label for="chk1-label">Remember my preferences</label>
 ```
 
@@ -179,11 +181,3 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

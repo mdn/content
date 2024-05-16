@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#structure
 ---
 
+{{AccessibilitySidebar}}
+
 The `structure` role is for document structural elements.
 
 > **Note:** The `structure` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
@@ -25,7 +27,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 - [ARIA: `generic` role](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
@@ -40,11 +42,3 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 - [ARIA: `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 -->
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

@@ -3,16 +3,12 @@ title: "CookieStore: getAll() method"
 short-title: getAll()
 slug: Web/API/CookieStore/getAll
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStore.getAll
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
-
-{{AvailableInWorkers}}
+The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the `name` or `options` passed to it. Passing no parameters will return all cookies for the current context.
 
 ## Syntax
 
@@ -41,7 +37,7 @@ Or
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an array of objects representing cookies that match the given name or options.
+A {{jsxref("Promise")}} that resolves with an array of objects representing cookies that match the given `name` or `options`.
 
 Each object contains the following properties:
 
@@ -59,7 +55,7 @@ Each object contains the following properties:
 
 - `partitioned`
 
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
 
 - `path`
 
@@ -85,8 +81,13 @@ Each object contains the following properties:
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie or cookies represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRInputSourcesChangeEvent()`**
 constructor creates and returns a new {{domxref("XRInputSourcesChangeEvent")}} object,

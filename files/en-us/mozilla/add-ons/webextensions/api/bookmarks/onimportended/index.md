@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onImportEnded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser has finished importing a set of bookmarks.
 

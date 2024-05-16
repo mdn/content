@@ -7,7 +7,7 @@ browser-compat: api.ClipboardEvent
 
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
+The **`ClipboardEvent`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
 
 {{InheritanceDiagram}}
 

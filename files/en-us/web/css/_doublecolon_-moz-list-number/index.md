@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-list-number
 page-type: css-pseudo-element
 status:
   - non-standard
+browser-compat: css.selectors.-moz-list-number
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -41,11 +42,15 @@ li::-moz-list-number {
 
 ### Result
 
-{{ EmbedLiveSample("Examples", "auto", "auto", "moz-list-number.png") }}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
 Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

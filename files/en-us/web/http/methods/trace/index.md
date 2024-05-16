@@ -21,7 +21,7 @@ Note that the client must not send content in the request, or generate fields th
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
@@ -36,7 +36,7 @@ Note that the client must not send content in the request, or generate fields th
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in HTML forms</th>
+      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
       <td>No</td>
     </tr>
   </tbody>

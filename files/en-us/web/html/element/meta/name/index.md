@@ -21,7 +21,7 @@ The HTML specification defines the following set of standard metadata names:
   > - Simple web pages shouldn't define an application-name.
 
 - `author`: the name of the document's author.
-- `description`: a short and accurate summary of the content of the page. Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
+- `description`: a short and accurate summary of the content of the page. Search engines like [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) may use this field to control the appearance of the webpage in the search result.
 - `generator`: the identifier of the software that generated the page.
 - `keywords`: words relevant to the page's content separated by commas.
 - `referrer`: controls the HTTP {{httpheader("Referer")}} header of requests sent from the document:
@@ -240,7 +240,8 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   > **Note:**
   >
   > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
-  > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, use a _{{Glossary("robots.txt")}}_ file.
+  > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, consider if using a _{{Glossary("robots.txt")}}_ file is more appropriate.
+  > - The `robots` `<meta>` tag and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
   > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.

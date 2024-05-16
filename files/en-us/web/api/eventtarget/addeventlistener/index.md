@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EventTarget.addEventListener
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
 sets up a function that will be called whenever the specified event is delivered to the target.
@@ -22,8 +22,7 @@ but the target may be any object that supports events (such as {{domxref("IDBReq
 > - In contrast to using an `onXYZ` property, it gives you finer-grained control of the phase when the listener is activated (capturing vs. bubbling).
 > - It works on any event target, not just HTML or SVG elements.
 
-The method `addEventListener()` works by adding a function, or an object that implements
-{{domxref("EventTarget.addEventListener", "EventListener")}}, to the list of event listeners for the specified event type
+The method `addEventListener()` works by adding a function, or an object that implements a `handleEvent()` function, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
 > **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
@@ -231,11 +230,7 @@ my_element.addEventListener("click", (e) => {
 });
 ```
 
-If an event handler (for example, {{domxref("Element.click_event",
-  "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the
-attribute value is effectively wrapped in a handler function that binds the value of
-`this` in a manner consistent with the `addEventListener()`; an
-occurrence of `this` within the code represents a reference to the element.
+If an event handler (for example, {{domxref("Element.click_event", "onclick")}}) is specified on an element in the HTML source, the JavaScript code in the attribute value is effectively wrapped in a handler function that binds the value of `this` in a manner consistent with the `addEventListener()`; an occurrence of `this` within the code represents a reference to the element.
 
 ```html
 <table id="my_table" onclick="console.log(this.id);">
@@ -508,12 +503,9 @@ If an event has a default action — for example, a {{domxref("Element/wheel_eve
 
 By setting the `passive` option to `true`, an event listener declares that it will not cancel the default action, so the browser can start the default action immediately, without waiting for the listener to finish. If the listener does then call {{domxref("Event.preventDefault()")}}, this will have no effect.
 
-The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, to realize the scroll performance benefits of passive listeners in legacy code, browsers other than Safari have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
+The specification for `addEventListener()` defines the default value for the `passive` option as always being `false`. However, to realize the scroll performance benefits of passive listeners in legacy code, modern browsers have changed the default value of the `passive` option to `true` for the {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. That prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while the user is scrolling.
 
-> **Note:** See the compatibility table below if you need to know which
-> browsers (and/or which versions of those browsers) implement this altered behavior.
-
-Because of that, when you want to override that behavior and ensure the `passive` option is `false` in all browsers, you must explicitly set the option to `false` (rather than relying on the default).
+Because of that, when you want to override that behavior and ensure the `passive` option is `false`, you must explicitly set the option to `false` (rather than relying on the default).
 
 You don't need to worry about the value of `passive` for the basic {{domxref("Element/scroll_event", "scroll")}} event.
 Since it can't be canceled, event listeners can't block page rendering anyway.

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.menus.ItemType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The type of menu item.
 

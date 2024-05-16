@@ -14,7 +14,7 @@ This corresponds to the CSS [`letter-spacing`](/en-US/docs/Web/CSS/letter-spacin
 
 ## Value
 
-The letter spacing as a string in the [CSS length](/en-US/docs/Web/CSS/length) data format.
+The letter spacing as a string in the CSS {{cssxref("length")}} data format.
 The default is `0px`.
 
 The property can be used to get or set the spacing.

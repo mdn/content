@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiline
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-multiline` attribute indicates whether a `textbox` accepts multiple lines of input or only a single line.
 
 ## Description
@@ -49,12 +51,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

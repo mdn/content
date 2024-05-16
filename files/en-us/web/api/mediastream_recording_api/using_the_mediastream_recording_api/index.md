@@ -44,8 +44,8 @@ However, we wanted to make the third area (which contains the recorded samples y
 
 ```css
 .sound-clips {
-  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 4px rgb(0 0 0 / 70%);
+  background-color: rgb(0 0 0 / 10%);
   height: calc(100% - 240px - 0.7rem);
   overflow: scroll;
 }
@@ -91,8 +91,8 @@ aside {
   background-color: #999;
   background-image: linear-gradient(
     to top right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)
+    rgb(0 0 0 / 0%),
+    rgb(0 0 0 / 50%)
   );
 }
 ```

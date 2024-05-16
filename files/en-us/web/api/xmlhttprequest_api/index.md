@@ -6,13 +6,11 @@ browser-compat: api.XMLHttpRequest
 spec-urls: https://xhr.spec.whatwg.org/
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
-
-{{AvailableInWorkers("notservice")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **XMLHttpRequest API** enables web apps to make HTTP requests to web servers and receive the responses programmatically using JavaScript. This in turn enables a website to update just part of a page with data from the server, rather than having to navigate to a whole new page. This practice is also sometimes known as {{glossary("Ajax")}}.
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) is the more flexible and powerful replacement for the XMLHttpRequest API. The Fetch API uses {{jsxref("Promise", "promises", "", "nocode")}} instead of events to handle asynchronous responses, integrates well with [service workers](/en-US/docs/Web/API/Service_Worker_API), and supports advanced aspects of HTTP such as [CORS](/en-US/docs/Web/HTTP/CORS). For these reasons, the Fetch API is usually used in modern web apps instead of {{domxref("XMLHttpRequest")}}.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) is the more flexible and powerful replacement for the XMLHttpRequest API. The Fetch API uses {{jsxref("Promise", "promises", "", 1)}} instead of events to handle asynchronous responses, integrates well with [service workers](/en-US/docs/Web/API/Service_Worker_API), and supports advanced aspects of HTTP such as [CORS](/en-US/docs/Web/HTTP/CORS). For these reasons, the Fetch API is usually used in modern web apps instead of {{domxref("XMLHttpRequest")}}.
 
 ## Concepts and usage
 

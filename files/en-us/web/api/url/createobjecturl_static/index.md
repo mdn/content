@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.URL.createObjectURL_static
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`URL.createObjectURL()`** static
 method creates a string containing a URL representing the object
@@ -17,8 +17,6 @@ in the window on which it was created. The new object URL represents the specifi
 {{domxref("File")}} object or {{domxref("Blob")}} object.
 
 To release an object URL, call {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}.
-
-{{AvailableInWorkers("notservice")}}
 
 > **Note:** This feature is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API) due to its
 > potential to create memory leaks.

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ImageData.data
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The readonly **`ImageData.data`** property returns a
 {{jsxref("Uint8ClampedArray")}} that contains the {{domxref("ImageData")}} object's

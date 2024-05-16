@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Iterator.some
 
 {{JSRef}}{{SeeCompatTable}}
 
-The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it tests whether at least one element in the array passes the test implemented by the provided function. It returns a boolean value.
+The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it tests whether at least one element produced by the iterator passes the test implemented by the provided function. It returns a boolean value.
 
 ## Syntax
 

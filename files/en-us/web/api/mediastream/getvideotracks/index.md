@@ -36,8 +36,7 @@ is empty if the stream contains no video tracks.
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses `getVideoTracks()` to
-retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
-  "ImageCapture()")}} constructor.
+retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} constructor.
 
 ```js
 let imageCapture;

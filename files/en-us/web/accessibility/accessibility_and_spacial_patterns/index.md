@@ -4,11 +4,9 @@ slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
-### Spatial Localization
+## Spatial Localization
 
 NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived. The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)"
 
@@ -16,7 +14,7 @@ NASA conducted research on the perception of color, and found that luminance con
 
 "_**Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel._"
 
-### Distance between stripes
+## Distance between stripes
 
 Photosensitive seizures may be caused by static images as well as animation. The mechanism for this is poorly understood, but is believed to be linked to "gamma oscillations" set up in the brain. These oscillations in the brain are a different kind of response than other kinds of neurological responses believed to cause photosensitive seizures.
 
@@ -36,15 +34,15 @@ In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guideline
 >
 > If so, reduce brightness.
 
-### Text and padding
+## Text and padding
 
 WCAG standards for contrast perception do not take into account the effect of padding. For example, blue text on a gray background is easier to perceive if it is surrounded "locally" by black than by white. There is such a thing as "local" adaptation to colors. The bottom line: padding matters.
 
-### Math
+## Math
 
 Spatial reasoning affects Math learning; consequently, spatial relationships in how math is presented affects cognition. The web developer can do something about this in the manner in which they display math. Animation figures strongly in this arena. For example, "how" an object looks when it is rotated, from different angles, how they look sliced, and how they relate to each other in space all make a difference in an ability to understand Math in spatial terms.
 
-### Braille
+## Braille
 
 Modern technology enables non-experts to print Braille. Adobe Illustrator, for example, allows one to Typeset ADA Braille for printing out.
 
@@ -54,7 +52,7 @@ Space has to surround the braille character. A user of braille does not lay a fi
 
 The nature of space can change depending upon what MIME type is being used, and its version. For example, borders on SVG can extend both inward and outward from its dimensions, or for newer versions of SVG, entirely outward from it, thus reducing the space around the SVG to enable perception.
 
-## See Also
+## See also
 
 ### MDN
 

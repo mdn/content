@@ -52,14 +52,16 @@ The following example shows the use of the `height` and `width` properties along
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -68,7 +70,7 @@ The following example shows the use of the `height` and `width` properties along
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -157,7 +159,7 @@ const ss = document.styleSheets;
 
 for (let i = 0; i < ss.length; i++) {
   for (let j = 0; j < ss[i].cssRules.length; j++) {
-    dump(`${ss[i].cssRules[j].selectorText}\n`);
+    console.log(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```
@@ -239,7 +241,7 @@ However, stopEvent also calls an event object method, {{domxref("event.stopPropa
 
 ## Example 6: getComputedStyle
 
-This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173, 216, 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
+This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173 216 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
 
 `getComputedStyle()` returns a {{domxref("CSSStyleDeclaration")}} object, whose individual style properties can be referenced with this object's {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} method, as the following example document shows.
 
@@ -278,7 +280,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
     <style>
       #d1 {
         margin-left: 10px;
-        background-color: rgb(173, 216, 230);
+        background-color: rgb(173 216 230);
         height: 20px;
         max-width: 20px;
       }

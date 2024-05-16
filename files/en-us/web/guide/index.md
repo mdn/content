@@ -54,7 +54,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Mobile web development
 
-- [Mobile web development](/en-US/docs/Web/Guide/Mobile)
+- [Mobile web development](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
   - : This article provides an overview of some main techniques needed to design websites that work well on mobile devices.
 
 ## Fonts

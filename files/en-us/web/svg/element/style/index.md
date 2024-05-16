@@ -46,19 +46,10 @@ svg {
   - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
     _Value type_: [**`<string>`**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: `all`; _Animatable_: **no**
 - {{SVGAttr("title")}}
-  - : This attribute the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
+  - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
     _Value type_: [**`<string>`**](/en-US/docs/Web/SVG/Content_type#string); _Default value_: _none_; _Animatable_: **no**
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

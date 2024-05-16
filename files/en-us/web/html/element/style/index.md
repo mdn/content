@@ -22,7 +22,7 @@ In the same manner as `<link>` elements, `<style>` elements can include `media` 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `blocking` {{Experimental_Inline}}
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not.
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
 - `media`
   - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing.
@@ -147,9 +147,6 @@ In this example we build on the previous one, including a `media` attribute on t
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
-        >, and if the <code>scoped</code> attribute is present:
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
         >.
       </td>
     </tr>

@@ -5,11 +5,13 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-controls
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
 
 ## Description
 
-When an interactive widget or element, be it a combobox, tab, button, etc., is used to adjust or modify another element or component in a document or application, the `aria-controls` attribute can be used to programmatically associate the corresponding element or elements the controlling element. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
+When an interactive widget or element, be it a combobox, tab, button, etc., is used to adjust or modify another element or component in a document or application, the `aria-controls` attribute can be used to programmatically associate the corresponding element or elements with the controlling element. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
 
 A [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) element has `aria-controls` set to a value that refers to the element that serves as the popup. The `aria-controls` only needs to be set when the popup is visible, but it is valid and easier to program to reference an element that is not visible.
 
@@ -82,8 +84,8 @@ In this tabs example, each tab controls one tabpanel:
 
 ## Associated interfaces
 
-- {{domxref("Element.ariaBusy")}}
-  - : The [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of each element's interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
+- {{domxref("Element.ariaControlsElements")}}
+  - : The `ariaControlsElements` property is part of each element's interface. Its value is a list of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-controls` attribute.
 
 ## Associated roles
 
@@ -93,14 +95,6 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

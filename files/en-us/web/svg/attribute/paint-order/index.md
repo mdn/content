@@ -2,7 +2,7 @@
 title: paint-order
 slug: Web/SVG/Attribute/paint-order
 page-type: svg-attribute
-browser-compat: svg.attributes.paint-order
+browser-compat: svg.global_attributes.paint-order
 ---
 
 {{SVGRef}}

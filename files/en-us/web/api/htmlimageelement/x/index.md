@@ -95,8 +95,8 @@ log(`Image's global Y: ${image.y}`);
 This uses the {{HTMLElement("table")}}'s {{domxref("HTMLTableElement.rows", "rows")}}
 property to get a list of the rows in the table, from which it looks up row 1 (which,
 being a zero-based index, means the second row from the top). Then it looks at that
-{{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells",
-  "cells")}} property to get a list of the cells in that row. The third cell is taken from
+{{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells", "cells")}}
+property to get a list of the cells in that row. The third cell is taken from
 that row (once again, specifying 2 as the zero-based offset).
 
 From there, we can get the `<img>` element itself from the cell by
@@ -117,13 +117,13 @@ The CSS defining the appearance of the table:
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(100, 100, 100);
+  border: 2px solid rgb(100 100 100);
   font-family: sans-serif;
 }
 
 td,
 th {
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(100 100 100);
   padding: 10px 14px;
 }
 

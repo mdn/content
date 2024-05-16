@@ -8,7 +8,7 @@ status:
 browser-compat: api.PeriodicSyncManager.unregister
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
@@ -28,7 +28,7 @@ unregister(tag)
 
 ### Return value
 
-A resolved {{jsxref("Promise")}}.
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ### Exceptions
 

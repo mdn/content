@@ -133,15 +133,22 @@ textarea:valid {
 
 ### Basic example
 
-The following example shows a very simple textarea, with a set numbers of rows and columns and some default content.
+The following example shows a textarea with a set number of rows and columns, some default content, and CSS styles that prevent users from resizing the element more than 500px wide and 130px high:
 
 ```html
-<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+<textarea name="textarea" rows="5" cols="15">Write something here</textarea>
+```
+
+```css
+textarea {
+  max-height: 130px;
+  max-width: 500px;
+}
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Basic_example','600','150') }}
+{{EmbedLiveSample('Basic_example')}}
 
 ### Example using "minlength" and "maxlength"
 
@@ -153,9 +160,16 @@ Write something here…
 </textarea>
 ```
 
+```css
+textarea {
+  max-height: 130px;
+  max-width: 500px;
+}
+```
+
 #### Result
 
-{{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
+{{EmbedLiveSample('Example using "minlength" and "maxlength"')}}
 
 Note that `minlength` doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the `<textarea>` invalid. Also note that even if you have a `minlength` value set (3, for example), an empty `<textarea>` is still considered valid unless you also have the `required` attribute set.
 
@@ -171,30 +185,45 @@ This example has a placeholder set. Notice how it disappears when you start typi
   placeholder="Comment text."></textarea>
 ```
 
-#### Result
-
-{{ EmbedLiveSample('Example using "placeholder"','600','100') }}
-
-> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
-
-### Disabled and readonly
-
-This example shows two `<textarea>`s — one of which is `disabled`, and one of which is `readonly`. Have a play with both and you'll see the difference in behavior — the `disabled` element is not selectable in any way (and its value is not submitted), whereas the `readonly` element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.
-
-> **Note:** In browsers other than Firefox, such as chrome, the `disabled` textarea content may be selectable and copyable.
-
-```html
-<textarea name="textarea" rows="5" cols="30" disabled>
-I am a disabled textarea.
-</textarea>
-<textarea name="textarea" rows="5" cols="30" readonly>
-I am a read-only textarea.
-</textarea>
+```css
+textarea {
+  max-height: 130px;
+  max-width: 500px;
+}
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','100') }}
+{{EmbedLiveSample('Example using "placeholder"')}}
+
+> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
+
+### Disabled and readonly textareas
+
+This example shows two `<textarea>`s — one is [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) and one is [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled).
+You cannot edit the contents of either element, but the `readonly` element is focusable and its value is submitted in forms.
+The `disabled` element's value is not submitted and it's not focusable.
+
+```html
+<textarea name="textarea" rows="5" cols="30" readonly>
+I am a read-only textarea.
+</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+I am a disabled textarea.
+</textarea>
+```
+
+```css
+textarea {
+  display: block;
+  resize: horizontal;
+  max-width: 500px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('disabled_and_readonly_textareas', '', '230')}}
 
 ## Technical summary
 
@@ -241,7 +270,7 @@ I am a read-only textarea.
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -283,18 +312,17 @@ I am a read-only textarea.
 
 ## See also
 
-Other form-related elements:
-
-- {{ HTMLElement("form") }}
-- {{ HTMLElement("button") }}
-- {{ HTMLElement("datalist") }}
-- {{ HTMLElement("legend") }}
-- {{ HTMLElement("label") }}
-- {{ HTMLElement("select") }}
-- {{ HTMLElement("optgroup") }}
-- {{ HTMLElement("option") }}
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("fieldset") }}
-- {{ HTMLElement("output") }}
-- {{ HTMLElement("progress") }}
-- {{ HTMLElement("meter") }}
+- Other form-related elements:
+  - {{ HTMLElement("form") }}
+  - {{ HTMLElement("button") }}
+  - {{ HTMLElement("datalist") }}
+  - {{ HTMLElement("legend") }}
+  - {{ HTMLElement("label") }}
+  - {{ HTMLElement("select") }}
+  - {{ HTMLElement("optgroup") }}
+  - {{ HTMLElement("option") }}
+  - {{ HTMLElement("input") }}
+  - {{ HTMLElement("fieldset") }}
+  - {{ HTMLElement("output") }}
+  - {{ HTMLElement("progress") }}
+  - {{ HTMLElement("meter") }}

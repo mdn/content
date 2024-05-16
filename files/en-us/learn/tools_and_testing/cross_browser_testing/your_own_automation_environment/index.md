@@ -461,7 +461,7 @@ const driver = new Builder().forBrowser("firefox").build();
 })();
 ```
 
-WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve it's `value` attribute value, and print a message to the console if it is not empty.
+WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve its `value` attribute value, and print a message to the console if it is not empty.
 
 > **Note:** There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
 
@@ -516,7 +516,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const { Builder, By } = require("selenium-webdriver");
+   const { By, Builder } = require("selenium-webdriver");
 
    // username: Username can be found at automation dashboard
    const USERNAME = "{username}";
@@ -559,7 +559,11 @@ Let's write an example:
          .then(function () {
            driver.getTitle().then((title) => {
              setTimeout(() => {
-               console.log(title);
+               if (title === "LambdaTest - Google Search") {
+                 driver.executeScript("lambda-status=passed");
+               } else {
+                 driver.executeScript("lambda-status=failed");
+               }
                driver.quit();
              }, 5000);
            });
@@ -581,30 +585,14 @@ Let's write an example:
    If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
 
 5. Now if you go to your [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
+   You will also see a status of **passed** or **failed** instead of **completed**, because of the `if` or `else` blocks of code.
 
-   ![LambdaTest Automation Dashboard](automation-logs-1.jpg)
-
+   [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
    You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
 > **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
 
 > **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
-
-#### Filling in test details on LambdaTest programmatically
-
-When executing numerous automation tests, marking their status as passed or failed makes the task a lot easier.
-
-1. Use the below command for marking a status as **passed** on LambdaTest.
-
-   ```bash
-   driver.executeScript("lambda-status=passed");
-   ```
-
-2. Use the below command for marking a status as **failed** on LambdaTest.
-
-   ```bash
-   driver.executeScript("lambda-status=failed");
-   ```
 
 ### BrowserStack
 
@@ -893,10 +881,10 @@ If you don't want to use a service like Sauce Labs or BrowserStack, you can alwa
 Now we've got the server running, let's create a demo test that will run on the remote selenium server.
 
 1. Create a copy of your `google_test.js` file, and call it `google_test_remote.js`; put it in your project directory.
-2. Update the second code block (which starts with `let driver = …`) like so
+2. Update the line of code (which starts with `const driver = …`) like so
 
    ```js
-   let driver = new Builder()
+   const driver = new Builder()
      .forBrowser(Browser.FIREFOX)
      .usingServer("http://localhost:4444/wd/hub")
      .build();

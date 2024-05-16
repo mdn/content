@@ -9,7 +9,7 @@ browser-compat: html.elements.input.step
 
 The **`step`** attribute is a number that specifies the granularity that the value must adhere to or the keyword `any`. It is valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types.
 
-The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value can must be a positive number - integer or float — or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max)).
+The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value must be a positive number - integer or float — or the special value `any`, which means no stepping is implied and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max)).
 
 The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 1 second, with 900 being equal to 15 minutes.
 
@@ -74,13 +74,24 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
   </tbody>
 </table>
 
-If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](/en-US/docs/Web/HTML/Attributes/min) value and increments of the step value, up to the [`max`](/en-US/docs/Web/HTML/Attributes/max) value, if specified. For example, if we have `<input type="number" min="10" step="2">` any even integer, 10 or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats, like 4.2, are not valid, as `step` defaults to 1. For 4.2 to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the min value would have had to be a number ending in .2, such as `<input type="number" min="-5.2">`
+If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](/en-US/docs/Web/HTML/Attributes/min) value and increments of the step value, up to the [`max`](/en-US/docs/Web/HTML/Attributes/max) value, if specified. The following example results in any even integer, 10 or greater, being valid:
 
-### min impact on step
+```html
+<input type="number" min="10" step="2" />
+```
 
-The value of `min` and `step` define what are valid values, even if the `step` attribute is not included, as `step` defaults to `0`.
+If `step` is omitted, any integer is valid but floats like 4.2 are not valid as `step` defaults to 1. For 4.2 to be valid:
 
-We add a big red border around invalid inputs:
+- either `step` would have to be set to `any`, 0.1, or 0.2,
+- or the `min` value would have to be a number ending in .2, such as 0.2, 1.2, or -5.2.
+
+## Examples
+
+### `min` impact on step
+
+The value of `min` defines valid values, even if the `step` attribute is not included. This is because `step` defaults to 1.
+
+In this example, we add a big red border around invalid inputs:
 
 ```css
 input:invalid {
@@ -88,17 +99,17 @@ input:invalid {
 }
 ```
 
-Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
+We then define an input with a minimum value of 1.2 and a step value of 2:
 
 ```html
 <input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
-Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Integers and even numbers followed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of `1.2` and greater
+Valid values include 1.2, 3.2, 5.2, 7.2, 9.2, 11.2, and so on. Only floats with an odd-numbered integer part and a decimal part of .2 are valid. The number spinner, if present, generates valid float values of 1.2 and greater, in increments of 2.
 
-{{EmbedLiveSample("min_impact_on_step",200,55)}}
+{{EmbedLiveSample("min_impact_on_step","100%",55)}}
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses
+> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses.
 
 See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
 

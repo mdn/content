@@ -20,9 +20,8 @@ A style declaration is reset by setting it to `null` or an empty string, e.g., `
 
 > **Note:** CSS property names are converted to JavaScript identifier with these rules:
 >
-> - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase).
+> - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase). As `float` is a reserved keyword in JavaScript, this property name was historically converted to `cssFloat`. All modern browsers now support the direct use of `float` in JavaScript to access the `float` CSS property, but `cssFloat` is used in older browsers and is still supported as an alias in modern browsers.
 > - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to {{Glossary("camel_case", "camel case")}}: `background-attachment` becomes `backgroundAttachment`.
-> - The property `float`, being a reserved JavaScript keyword, is converted to `cssFloat`.
 >
 > The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
 
@@ -53,9 +52,14 @@ const element = document.getElementById("elt");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSSStyleDeclaration)
+// We loop through all the element's styles using `for...in`
 for (const prop in elementStyle) {
-  if (Object.hasOwn(elementStyle, prop)) {
+  // We check if the property belongs to the CSSStyleDeclaration instance
+  // We also ensure that the property is a numeric index (indicating an inline style)
+  if (
+    Object.hasOwn(elementStyle, prop) &&
+    !Number.isNaN(Number.parseInt(prop))
+  ) {
     out.textContent += `${
       elementStyle[prop]
     } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
@@ -63,7 +67,7 @@ for (const prop in elementStyle) {
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "115")}}
+{{EmbedLiveSample("Getting_style_information", "100", "130")}}
 
 Note `font-weight` is not listed as a value for `elementStyle` as it is not defined within the `style` attribute of the element itself. Rather, it is inherited from the definition on its parent. Also note that the shorthand {{cssxref("border-top")}} property, defined in the `style` attribute, is not listed directly. Rather, it is replaced by the three corresponding longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}).
 
@@ -79,3 +83,5 @@ Note `font-weight` is not listed as a value for `elementStyle` as it is not defi
 
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("SVGElement.style")}}
+- {{domxref("MathMLElement.style")}}
+- {{domxref("HTMLElement.attributeStyleMap")}}

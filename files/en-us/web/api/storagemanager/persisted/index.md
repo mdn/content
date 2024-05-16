@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.StorageManager.persisted
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}} {{AvailableInWorkers}}
 
 The **`persisted()`** method of the {{domxref("StorageManager")}} interface returns a {{jsxref('Promise')}} that resolves to `true` if your site's storage bucket is persistent.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
