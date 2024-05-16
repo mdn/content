@@ -23,13 +23,13 @@ It demonstrates how to check that the property exists and then posts a task that
 
 ```js
 // Check if the prioritized task API is supported
-if ("scheduler" in this) {
+if ("scheduler" in window) {
   // Callback function - "the task"
   const myTask = () => "Task 1: user-visible";
 
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler
+  window.scheduler
     .postTask(myTask)
     // Handle resolved value
     .then((taskResult) => console.log(`${taskResult}`))
