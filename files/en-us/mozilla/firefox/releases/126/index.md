@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 126 that affect developers. Firefox 126 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [May 14, 2024](https://whattrainisitnow.com/release/?version=126).
+This article provides information about the changes in Firefox 126 that affect developers. Firefox 126 was released on [May 14, 2024](https://whattrainisitnow.com/release/?version=126).
 
 ## Changes for web developers
 
@@ -16,43 +16,36 @@ This article provides information about the changes in Firefox 126 that affect d
 
 ### HTML
 
+No notable changes.
+
+### MathML
+
 #### Removals
+
+- The automatic adjustment for vertically centered operators (+, =, <, etc.) has been disabled by default. This behavior is not defined in MathML Core and was only necessary as a workaround for non-math fonts. It can still be enabled by setting the `mathml.centered_operators.disabled` config to `false`. ([Firefox bug 1890531](https://bugzil.la/1890531)).
 
 ### CSS
 
-- The {{cssxref("zoom")}} property is now supported. It can be used to increase or decrease the size of an element and its contents. ([Firefox bug 390936](https://bugzil.la/390936)).
-
-#### Removals
+- The {{cssxref("zoom")}} property is now supported. It can be used to increase or decrease the size of an element and its contents ([Firefox bug 390936](https://bugzil.la/390936)).
 
 ### JavaScript
 
-#### Removals
-
-### SVG
-
-#### Removals
+No notable changes.
 
 ### HTTP
 
 - The [`zstd`](/en-US/docs/Web/HTTP/Headers/Content-Encoding#zstd) directive of the `Content-Encoding` HTTP header is now supported, allowing decoding of server-sent content encoded with the {{glossary("Zstandard compression")}} algorithm ([Firefox bug 1871963](https://bugzil.la/1871963)).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
 - [`IDBFactory.databases()`](/en-US/docs/Web/API/IDBFactory/databases) is now supported for enumerating available [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) databases ([Firefox bug 934640](https://bugzil.la/934640)).
 - [`IDBTransaction.durability`](/en-US/docs/Web/API/IDBTransaction/durability) can now be used for querying the transaction durability hint that the transaction was created with ([Firefox bug 1878143](https://bugzil.la/1878143)).
 - The [`URL.parse()`](/en-US/docs/Web/API/URL/parse_static) static method is now supported for creating [`URL`](/en-US/docs/Web/API/URL) objects. This returns `null` if the passed parameters do not define a valid `URL`, and can hence be used as a non-throwing alternative to creating `URL` object with the [`URL` constructor](/en-US/docs/Web/API/URL/URL) ([Firefox bug 1823354](https://bugzil.la/1823354)).
-- The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) is now supported, allowing a web application to request that the screen not be dimmed or locked while it is active. This is useful for navigation and reading applications, and other applications where the screen doesn't get regular tactile input when in use, which would otherwise keep the screen awake. The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}. This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
-  ([Firefox bug 1589554](https://bugzil.la/1589554), [Firefox bug 1874849](https://bugzil.la/1874849)).
-- All [`RTCIceCandidate`](/en-US/docs/Web/API/RTCIceCandidate) properties and methods are now supported and match the specification, with the exception of unimplemented properties: `relayProtocol` and `url`.
+- The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) is now supported, allowing a web application to request that the screen not be dimmed or locked while it is active. This is particularly useful for navigation and reading applications, as well as other applications where the screen may not receive regular tactile input when in use that would typically keep it awake. The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}. This allows you to request a {{domxref("WakeLockSentinel")}}, which can be used to monitor the status of the wake lock and release it manually ([Firefox bug 1589554](https://bugzil.la/1589554), [Firefox bug 1874849](https://bugzil.la/1874849)).
+- All [`RTCIceCandidate`](/en-US/docs/Web/API/RTCIceCandidate) properties and methods are now supported and match the specification, with the exception of the unimplemented `relayProtocol` and `url` properties. The following changes were made to the properties of `RTCIceCandidate`:
 
-  - The following properties were made read-only: [`candidate`](/en-US/docs/Web/API/RTCIceCandidate/candidate), [`sdpMid`](/en-US/docs/Web/API/RTCIceCandidate/sdpMid), [`sdpMLineIndex`](/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex), [`usernameFragment`](/en-US/docs/Web/API/RTCIceCandidate/usernameFragment),
-  - The following properties were added: [`foundation`](/en-US/docs/Web/API/RTCIceCandidate/foundation), [`component`](/en-US/docs/Web/API/RTCIceCandidate/component), [`priority`](/en-US/docs/Web/API/RTCIceCandidate/priority), [`address`](/en-US/docs/Web/API/RTCIceCandidate/address), [`protocol`](/en-US/docs/Web/API/RTCIceCandidate/protocol), [`port`](/en-US/docs/Web/API/RTCIceCandidate/port), [`type`](/en-US/docs/Web/API/RTCIceCandidate/type), [`tcpType`](/en-US/docs/Web/API/RTCIceCandidate/tcpType), [`relatedAddress`](/en-US/docs/Web/API/RTCIceCandidate/relatedAddress), [`relatedPort`](/en-US/docs/Web/API/RTCIceCandidate/relatedPort), [`usernameFragment`](/en-US/docs/Web/API/RTCIceCandidate/usernameFragment).
+  - The following properties were made read-only: [`candidate`](/en-US/docs/Web/API/RTCIceCandidate/candidate), [`sdpMid`](/en-US/docs/Web/API/RTCIceCandidate/sdpMid), [`sdpMLineIndex`](/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex), and [`usernameFragment`](/en-US/docs/Web/API/RTCIceCandidate/usernameFragment).
+  - The following properties were added: [`foundation`](/en-US/docs/Web/API/RTCIceCandidate/foundation), [`component`](/en-US/docs/Web/API/RTCIceCandidate/component), [`priority`](/en-US/docs/Web/API/RTCIceCandidate/priority), [`address`](/en-US/docs/Web/API/RTCIceCandidate/address), [`protocol`](/en-US/docs/Web/API/RTCIceCandidate/protocol), [`port`](/en-US/docs/Web/API/RTCIceCandidate/port), [`type`](/en-US/docs/Web/API/RTCIceCandidate/type), [`tcpType`](/en-US/docs/Web/API/RTCIceCandidate/tcpType), [`relatedAddress`](/en-US/docs/Web/API/RTCIceCandidate/relatedAddress), [`relatedPort`](/en-US/docs/Web/API/RTCIceCandidate/relatedPort), and [`usernameFragment`](/en-US/docs/Web/API/RTCIceCandidate/usernameFragment).
 
   ([Firefox bug 1322186](https://bugzil.la/1322186)).
 
@@ -61,7 +54,7 @@ This article provides information about the changes in Firefox 126 that affect d
 #### DOM
 
 - The ability to define states for custom elements and match them using CSS selectors is now available by default.
-  The custom states are represented as custom identifiers that can be added to or removed from the element's {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class takes a custom identifier as an argument and matches custom elements if the identifier is present in their set of states. ([Firefox bug 1887543](https://bugzil.la/1887543)).
+  The custom states are represented as custom identifiers that can be added to or removed from the element's {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class takes a custom identifier as an argument and matches custom elements if the identifier is present in their set of states ([Firefox bug 1887543](https://bugzil.la/1887543)).
 - The {{domxref("Selection.direction")}} property is now supported for indicating the direction of a range ([Firefox bug 1867058](https://bugzil.la/1867058)).
 
 #### Media, WebRTC, and Web Audio
@@ -69,10 +62,6 @@ This article provides information about the changes in Firefox 126 that affect d
 #### Removals
 
 - The marquee events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/HTML/Element/marquee#event_handlers) defined on the [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) ([Firefox bug 1689705](https://bugzil.la/1689705)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -91,8 +80,6 @@ This article provides information about the changes in Firefox 126 that affect d
 - The `"webRequestAuthProvider"` permission is now supported. This provides compatibility with Chrome for requesting permission for {{WebExtAPIRef("webRequest.onAuthRequired")}} in Manifest V3 ([Firefox bug 1820569](https://bugzil.la/1820569)).
 - The [`options_page` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) is provided as an alias of the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key. This has been provided to offer extensions better compatibility with Chrome ([Firefox bug 1816960](https://bugzil.la/1816960)).
 
-### Removals
-
 ### Other
 
 ## Experimental web features
@@ -105,7 +92,7 @@ These features are newly shipped in Firefox 126 but are disabled by default. To 
 
 - **CSS `shape()` function:** `layout.css.basic-shape-shape.enabled`.
 
-  You can use the [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the `{{cssxref("path","path()")}}` function. For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
+  You can use the [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the `{{cssxref("path","path()")}}` function ([Firefox bug 1823463](https://bugzil.la/1823463) for `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for `shape()` function support in `offset-path`, [Firefox bug 1884425](https://bugzil.la/1884425) for `shape()` interpolation support).
 
 ## Older versions
 
