@@ -1918,7 +1918,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {
