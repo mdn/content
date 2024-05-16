@@ -10,7 +10,7 @@ It's easy to get confused about which event target to examine when writing an ev
 
 There are six targets to consider:
 
-<table class="no-markdown">
+<table>
   <thead>
     <tr>
       <th>Property</th>
@@ -48,7 +48,7 @@ There are six targets to consider:
       <td>
         <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent">DOM MouseEvent Interface</a>
       </td>
-      <td>Identifies a secondary target for the event.</td>
+      <td>Identifies a secondary target for the mouse event.</td>
     </tr>
     <tr>
       <td>
@@ -181,10 +181,27 @@ document.getElementById("text").addEventListener("mouseover", handleEvent);
 
 The `relatedTarget` property for the `mouseover` event holds the node that the mouse was previously over. For the `mouseout` event, it holds the node that the mouse moved to.
 
-| Event type  | [event.target](/en-US/docs/Web/API/Event/target)  | [event.relatedTarget](/en-US/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | ------------------------------------------------- | ------------------------------------------------------------------- |
-| `mouseover` | the EventTarget which the pointing device entered | the EventTarget which the pointing device exited                    |
-| `mouseout`  | the EventTarget which the pointing device exited  | the EventTarget which the pointing device entered                   |
+<table>
+  <thead>
+    <tr>
+      <th>Event type</th>
+      <th>Value of <code>event.target</code></th>
+      <th>Value of <code>event.relatedTarget</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>mouseover</code></td>
+      <td>The EventTarget which the pointing device entered</td>
+      <td>The EventTarget which the pointing device exited</td>
+    </tr>
+    <tr>
+      <td><code>mouseout</code></td>
+      <td>The EventTarget which the pointing device exited</td>
+      <td>The EventTarget which the pointing device entered</td>
+    </tr>
+  </tbody>
+</table>
 
 ```css hidden
 .container {
