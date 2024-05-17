@@ -68,7 +68,7 @@ As a result, the document contents are replaced with a display of the page's ent
 ```js
 document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
   /</g,
-  "&lt;"
+  "&lt;",
 )}</pre>`;
 ```
 
