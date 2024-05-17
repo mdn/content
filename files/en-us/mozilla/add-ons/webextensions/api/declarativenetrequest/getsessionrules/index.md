@@ -17,7 +17,11 @@ let sessionRules = await browser.declarativeNetRequest.getSessionRules();
 
 ### Parameters
 
-This function takes no parameters.
+- `filter` {{optional_inline}}
+
+  - : An object to filter the list of returned rules.
+    - `ruleIds` {{optional_inline}}
+      - : An array of  `integer`. The IDs of rules to include in the response.
 
 ### Return value
 
