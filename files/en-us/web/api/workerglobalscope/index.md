@@ -23,7 +23,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
-- {{domxref("crypto_property", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.

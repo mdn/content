@@ -66638,6 +66638,36 @@
     "modified": "2020-10-15T22:25:16.295Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
   },
+  "Web/API/Window/crypto": {
+    "modified": "2020-12-11T05:31:22.254Z",
+    "contributors": [
+      "bershanskiy",
+      "williamwisdom",
+      "Sheppy",
+      "alattalatta",
+      "Delapouite",
+      "pinheadmz",
+      "connorshea",
+      "fscholz",
+      "joshuaptfan",
+      "xrtariq2594",
+      "libbymc",
+      "LPGhatguy",
+      "Sebastianz",
+      "teoli",
+      "acidburn0zzz",
+      "P0lip",
+      "ConorOB",
+      "mkato",
+      "kscarfone",
+      "evilpie",
+      "Mgjbot",
+      "Ptak82",
+      "Nickolay",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T21:50:21.706Z",
     "contributors": [
@@ -71506,36 +71536,6 @@
       "zeird",
       "Kaku",
       "adria"
-    ]
-  },
-  "Web/API/crypto_property": {
-    "modified": "2020-12-11T05:31:22.254Z",
-    "contributors": [
-      "bershanskiy",
-      "williamwisdom",
-      "Sheppy",
-      "alattalatta",
-      "Delapouite",
-      "pinheadmz",
-      "connorshea",
-      "fscholz",
-      "joshuaptfan",
-      "xrtariq2594",
-      "libbymc",
-      "LPGhatguy",
-      "Sebastianz",
-      "teoli",
-      "acidburn0zzz",
-      "P0lip",
-      "ConorOB",
-      "mkato",
-      "kscarfone",
-      "evilpie",
-      "Mgjbot",
-      "Ptak82",
-      "Nickolay",
-      "Dria",
-      "JesseW"
     ]
   },
   "Web/API/fetch": {

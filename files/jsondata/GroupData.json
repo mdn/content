@@ -222,7 +222,9 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "PasswordCredential"
+        "FederatedCredentialInit",
+        "PasswordCredential",
+        "PasswordCredentialInit"
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
@@ -525,7 +527,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
@@ -1828,6 +1830,7 @@
       ],
       "interfaces": [
         "PublicKeyCredential",
+        "PublicKeyCredentialCreationOptions",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
@@ -1918,7 +1921,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {
