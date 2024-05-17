@@ -211,7 +211,7 @@ This allows you to avoid blocking the main thread when the user is actively inte
 - {{domxref("Navigator.scheduling")}}
   - : This property is the entry point for using the `Scheduling.isInputPending()` method.
 - {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}
-  - : This property is the entry point for using the `Scheduler.postTask()` method.
+  - : These properties are the entry points for using the `Scheduler.postTask()` method in a window or a worker scope, respectively.
 
 ## Task scheduling examples
 
