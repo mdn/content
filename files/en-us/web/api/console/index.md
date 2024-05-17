@@ -9,8 +9,7 @@ browser-compat: api.console
 
 The **`console`** object provides access to the debugging console (e.g., the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox).
 
-Implementations of the console API may differ between runtimes (different browsers, Node.js, online IDEs, editors, etc.) but a _de facto_ set of features are typically provided.
-You can try the methods shown below in your browser's DevTools console.
+Implementations of the console API may differ between runtimes. In particular, some console methods may work differently or not work at all in some online editors and IDEs. To see the behavior described in this documentation, try the methods in your browser's developer tools, although even here, there are some differences between browsers.
 
 The `console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as `console`. For example:
 
