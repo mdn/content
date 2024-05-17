@@ -12,7 +12,10 @@ browser-compat: api.Element.getHTML
 
 The **`getHTML()`** method of the {{domxref("Element")}} interface is used to serialize an element's DOM to an HTML string.
 
-The serialized HTML does not include shadow trees by default, but options can be used to include shadow roots that have been set as {{domxref("ShadowRoot/serializable","serializable")}}, and/or a specified array of {{domxref("ShadowRoot")}} objects.
+The method provides an options argument that enables the serialization of child nodes that are shadow roots.
+The options can be used to include nested shadow roots that have been set as {{domxref("ShadowRoot/serializable","serializable")}}, and/or a specified array of {{domxref("ShadowRoot")}} objects, which may be either open or closed.
+
+Without arguments, child nodes that are shadow roots are not serialized, and this method behaves in the same way as reading the value of {{domxref("Element.innerHTML")}}.
 
 ## Syntax
 
@@ -30,7 +33,8 @@ getHTML(options)
       - : A boolean value that specifies whether to include {{domxref("ShadowRoot/serializable","serializable")}} shadow roots.
         The default value is `false`.
     - `shadowRoots`
-      - : An array of {{domxref("ShadowRoot")}} objects to serialize. These are included regardless of whether they are marked as `serializable`.
+      - : An array of {{domxref("ShadowRoot")}} objects to serialize.
+        These are included regardless of whether they are marked as `serializable`, or if they are open or closed.
         The default value is an empty array.
 
 ### Return value
@@ -53,3 +57,5 @@ None.
 
 - {{domxref("ShadowRoot.getHTML()")}}
 - {{domxref("Element.innerHTML")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}

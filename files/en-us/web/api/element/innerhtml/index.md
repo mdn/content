@@ -10,7 +10,15 @@ browser-compat: api.Element.innerHTML
 
 The {{domxref("Element")}} property **`innerHTML`** gets or sets the HTML or XML markup contained within the element.
 
+More precisely, `innerHTML` gets a serialization of the nested child DOM elements within the element, or sets HTML or XML that should be parsed to replace the DOM tree within the element.
+
 To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
+
+The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
+Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that does not contain shadow roots.
+
+So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specfied
+In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
 ## Value
 
@@ -25,8 +33,6 @@ Setting the value of `innerHTML` removes all of the element's descendants and re
   - : Thrown if an attempt was made to insert the HTML into a node whose parent is a {{domxref("Document")}}.
 
 ## Usage notes
-
-The `innerHTML` property can be used to examine the current HTML source of the page, including any changes that have been made since the page was initially loaded.
 
 ### Reading the HTML contents of an element
 
@@ -235,3 +241,7 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("Element.outerHTML")}}
 - Parsing HTML or XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into an XML string: {{domxref("XMLSerializer")}}
+- {{domxref("Element.getHTML()")}}
+- {{domxref("ShadowRoot.getHTML()")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
