@@ -10770,6 +10770,7 @@
 /en-US/docs/Web/API/treeWalker.filter	/en-US/docs/Web/API/TreeWalker/filter
 /en-US/docs/Web/API/treeWalker.root	/en-US/docs/Web/API/TreeWalker/root
 /en-US/docs/Web/API/treeWalker.whatToShow	/en-US/docs/Web/API/TreeWalker/whatToShow
+/en-US/docs/Web/API/trustedTypes	/en-US/docs/Web/API/Window/trustedTypes
 /en-US/docs/Web/API/window.URL	/en-US/docs/Web/API/URL
 /en-US/docs/Web/API/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static

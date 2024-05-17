@@ -1633,7 +1633,7 @@
         "TrustedTypePolicyFactory"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.trustedTypes", "WorkerGlobalScope.trustedTypes"],
       "events": []
     },
     "UI Events": {
