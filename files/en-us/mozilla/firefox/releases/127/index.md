@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 127 that affect d
 - The following [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) methods are now supported ([Firefox bug 1868423](https://bugzil.la/1868423)):
 
   - [`Set.prototype.intersection()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — Returns a new set containing elements in both this set and the given set.
-  - [`Set.prototype.union()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — Returns new set containing all elements in this set and the given set.
+  - [`Set.prototype.union()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — Returns a new set containing all elements in this set and the given set.
   - [`Set.prototype.difference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — Returns a new set containing elements in this set but not in the given set.
   - [`Set.prototype.symmetricDifference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference) — Returns a new set containing elements that are in either this set or the given set, but not in both.
   - [`Set.prototype.isSubsetOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf) — Returns a boolean indicating if all elements of this set are in the given set.
