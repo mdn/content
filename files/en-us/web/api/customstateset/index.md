@@ -140,7 +140,22 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    const warning = document.createElement("div");
+    warning.style.color = "red";
+    warning.textContent = "This feature is not supported by your browser.";
+    document.body.insertBefore(warning, document.body.firstChild);
+  }
+});
 ```
 
 In the `LabeledCheckbox` class:
@@ -199,6 +214,7 @@ class LabeledCheckbox extends HTMLElement {
     super();
     this._boundOnClick = this._onClick.bind(this);
     this.addEventListener("click", this._boundOnClick);
+
     // Attach an ElementInternals to get states property
     this._internals = this.attachInternals();
   }
@@ -235,9 +251,22 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
 
 customElements.define("labeled-checkbox", LabeledCheckbox);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    const warning = document.createElement("div");
+    warning.style.color = "red";
+    warning.textContent = "This feature is not supported by your browser.";
+    document.body.insertBefore(warning, document.body.firstChild);
+  }
+});
 ```
 
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
