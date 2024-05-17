@@ -65,8 +65,8 @@ No notable changes.
   These set the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that has been created declaratively using the [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
   ([Firefox bug 1880188](https://bugzil.la/1880188)).
 
-- The [`readText()`](/en-US/docs/Web/API/Clipboard/readText) method of the [`Clipboard`](/en-US/docs/Web/API/Clipboard/readText) interface is now supported for asynchronously reading text from the system clipboard.
-  A paste context menu will appear for the user to confirm when reading clipboard data not provided by the same-origin page. ([Firefox bug 1877400](https://bugzil.la/1877400)).
+- The [`readText()`](/en-US/docs/Web/API/Clipboard/readText) method of the [`Clipboard`](/en-US/docs/Web/API/Clipboard) interface is now supported for asynchronously reading text from the system clipboard.
+  When reading clipboard data that is not provided by the same-origin page, a paste context menu will appear for the user to confirm. ([Firefox bug 1877400](https://bugzil.la/1877400)).
 
 #### Media, WebRTC, and Web Audio
 

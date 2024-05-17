@@ -38,7 +38,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### APIs
 
-- Firefox now fully supports the async {{domxref('Clipboard API')}}. This release enables the {{domxref('ClipboardItem')}} interface, and the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface. ([Firefox bug 1887845](https://bugzil.la/1887845),[Firefox bug 1858788](https://bugzil.la/1858788)).
+- The async {{domxref('Clipboard API')}} is now fully supported. The {{domxref('ClipboardItem')}} interface, along with the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface, have been enabled. ([Firefox bug 1887845](https://bugzil.la/1887845),[Firefox bug 1858788](https://bugzil.la/1858788)).
 
 #### DOM
 
