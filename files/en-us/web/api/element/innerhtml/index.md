@@ -8,28 +8,21 @@ browser-compat: api.Element.innerHTML
 
 {{APIRef("DOM")}}
 
-The {{domxref("Element")}} property
-**`innerHTML`** gets or sets the HTML or XML markup contained
-within the element.
+The {{domxref("Element")}} property **`innerHTML`** gets or sets the HTML or XML markup contained within the element.
 
-To insert the HTML into the document rather than replace the contents of an element,
-use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
+To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
 ## Value
 
-A string containing the HTML serialization of the element's
-descendants. Setting the value of `innerHTML` removes all of the element's
-descendants and replaces them with nodes constructed by parsing the HTML given in the
-string _htmlString_.
+A string containing the HTML serialization of the element's descendants.
+Setting the value of `innerHTML` removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string _htmlString_.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if an attempt was made to set the value of `innerHTML` using a string which
-    is not properly-formed HTML.
+  - : Thrown if an attempt was made to set the value of `innerHTML` using a string which is not properly-formed HTML.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if an attempt was made to insert the HTML into a node whose parent is a
-    {{domxref("Document")}}.
+  - : Thrown if an attempt was made to insert the HTML into a node whose parent is a {{domxref("Document")}}.
 
 ## Usage notes
 
@@ -37,7 +30,8 @@ The `innerHTML` property can be used to examine the current HTML source of the p
 
 ### Reading the HTML contents of an element
 
-Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants. The resulting string is returned.
+Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants.
+The resulting string is returned.
 
 ```js
 let contents = myElement.innerHTML;
@@ -45,8 +39,7 @@ let contents = myElement.innerHTML;
 
 This lets you look at the HTML markup of the element's content nodes.
 
-> **Note:** The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment
-> is likely not to match the original page markup.
+> **Note:** The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
 
 ### Replacing the contents of an element
 
@@ -69,7 +62,7 @@ As a result, the document contents are replaced with a display of the page's ent
 ```js
 document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
   /</g,
-  "&lt;",
+  "&lt;"
 )}</pre>`;
 ```
 
@@ -78,10 +71,8 @@ document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.
 What exactly happens when you set value of `innerHTML`?
 Doing so causes the user agent to follow these steps:
 
-1. The specified value is parsed as HTML or XML (based on the document type),
-   resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
-2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element,
-   then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
+1. The specified value is parsed as HTML or XML (based on the document type), resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
+2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element, then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
 3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
 
 ### Appending HTML to an element
@@ -127,12 +118,9 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
-attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag
-inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
-However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements,
-so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
+However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
 For example:
 
 ```js
@@ -167,12 +155,10 @@ function log(msg) {
 log("Logging mouse events inside this container…");
 ```
 
-The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using
-{{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
+The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
 Then the message is appended to the box with the class `"log"`.
 
-We add a second method that logs information about {{domxref("MouseEvent")}} based events
-(such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
+We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
 
 ```js
 function logEvent(event) {
