@@ -10,19 +10,10 @@ browser-compat: api.ShadowRoot.clonable
 
 The **`clonable`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root is clonable, and `false` otherwise.
 
-It can be set to `true` using the `clonable` option of the {{domxref("Element.attachShadow()")}} method or by setting the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element that is being used to declaratively attach a shadow root.
+When the value is `true`, a shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a copy of the shadow root.
+
 By default the value is `false`.
-
-<!-- not sure what happens when conable vs not clonable
-My assumption is that cloning the host element will also clone all the shadow root, which includes styles and so on.
-For a custom element I guess that means the copied element will take all the behaviours of the original.
-Not sure if that is good though. If I've created a template, then I probably want a new-fresh item each time that uses the same inherited styles.
-Does cloning "share" the CSS styles of the original or is it an independent copy.
-
-Further, if not clonablee, what happens when I clone the parent element of say a custom component. Does the custom component just not get copied and my new element is the parent element minus a shadow DOM/custom element?
-
-Also this is false by default according to spec, but seems to be true for Chrome?
--->
+It can be set to `true` using the `clonable` option of the {{domxref("Element.attachShadow()")}} method or by setting the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element that is being used to declaratively attach a shadow root.
 
 ## Value
 
