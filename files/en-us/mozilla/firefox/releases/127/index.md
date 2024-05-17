@@ -58,7 +58,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ## Changes for add-on developers
 
-- Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}}  and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
+- Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
 
 ### Removals
 

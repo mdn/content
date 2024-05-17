@@ -21,7 +21,7 @@ let sessionRules = await browser.declarativeNetRequest.getSessionRules();
 
   - : An object to filter the list of returned rules.
     - `ruleIds` {{optional_inline}}
-      - : An array of  `integer`. The IDs of rules to include in the response.
+      - : An array of `integer`. The IDs of the rules to return.
 
 ### Return value
 
