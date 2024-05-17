@@ -21,7 +21,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
   - : A string that reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the associated `<template>` element.
 
-    > **Note:** The "shadow" properties of this object have has no practical use.
+    > **Note:** This object's "shadow" properties have no practical use.
     > If the corresponding `<template>` element declaratively creates a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) then there is no `HTMLTemplateElement` object.
     > Otherwise an `HTMLTemplateElement` object is created that reflects the element, but this cannot subsequently be changed to a `ShadowRoot`.
 
