@@ -86,8 +86,8 @@ attachShadow(options)
     - `serializable` {{Optional_Inline}}
 
       - : A boolean that, when set to `true`, indicates that the shadow root is serializable.
-        Its default value is `false`.
         If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
+        Its default value is `false`.
 
     - `slotAssignment` {{Optional_inline}}
 
