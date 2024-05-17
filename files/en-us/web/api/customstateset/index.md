@@ -151,9 +151,9 @@ customElements.define("labeled-checkbox", LabeledCheckbox);
 // Display a warning to unsupported browsers
 document.addEventListener("DOMContentLoaded", () => {
   if (!LabeledCheckbox.isStateSyntaxSupported()) {
-    if (!document.getElementById('state-warning')) {
+    if (!document.getElementById("state-warning")) {
       const warning = document.createElement("div");
-      warning.id = 'state-warning';
+      warning.id = "state-warning";
       warning.style.color = "red";
       warning.textContent = "This feature is not supported by your browser.";
       document.body.insertBefore(warning, document.body.firstChild);
@@ -265,9 +265,9 @@ customElements.define("labeled-checkbox", LabeledCheckbox);
 
 document.addEventListener("DOMContentLoaded", () => {
   if (!LabeledCheckbox.isStateSyntaxSupported()) {
-    if (!document.getElementById('state-warning')) {
+    if (!document.getElementById("state-warning")) {
       const warning = document.createElement("div");
-      warning.id = 'state-warning';
+      warning.id = "state-warning";
       warning.style.color = "red";
       warning.textContent = "This feature is not supported by your browser.";
       document.body.insertBefore(warning, document.body.firstChild);
@@ -424,9 +424,9 @@ customElements.define("many-state-element", ManyStateElement);
 
 document.addEventListener("DOMContentLoaded", () => {
   if (!LabeledCheckbox.isStateSyntaxSupported()) {
-    if (!document.getElementById('state-warning')) {
+    if (!document.getElementById("state-warning")) {
       const warning = document.createElement("div");
-      warning.id = 'state-warning';
+      warning.id = "state-warning";
       warning.style.color = "red";
       warning.textContent = "This feature is not supported by your browser.";
       document.body.insertBefore(warning, document.body.firstChild);
