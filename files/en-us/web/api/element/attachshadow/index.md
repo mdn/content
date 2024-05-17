@@ -76,7 +76,7 @@ attachShadow(options)
 
     - `clonable` {{Optional_Inline}}
 
-      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`, unless the shadow root is created via declarative shadow DOM.
+      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`.
 
     - `delegatesFocus` {{Optional_Inline}}
 
@@ -193,3 +193,5 @@ customElements.define("my-custom-element", MyCustomElement);
 - {{domxref("ShadowRoot.mode")}}
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
+- Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Element/template)
+- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
