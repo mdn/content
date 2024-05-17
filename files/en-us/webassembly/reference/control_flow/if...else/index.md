@@ -27,21 +27,18 @@ i32.const 0
 To leave return values on the stack, add the `result` statement.
 
 ```wasm
-(func $abs (export "abs") (param $x i32) (result i32)
-    (local.get $x)
-    (i32.const 0)
-    (i32.ge_s)
-    (if (result i32)
-      (then
-         (local.get $x)
-        )
-      (else
-        (local.get $x)
-        (i32.const -1)
-         i32.mul
-        )
-      )
+i32.const 0
+(if (result i32)
+  (then
+    ;; do something
+    (i32.const 1)
   )
+  (else
+    ;; do something else
+    (i32.const 2)
+  )
+)
+(drop)
 ```
 
 | Instruction | Binary opcode |
