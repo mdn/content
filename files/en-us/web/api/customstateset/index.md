@@ -379,17 +379,17 @@ class ManyStateElement extends HTMLElement {
   set state(stateName) {
     // Set internal state to passed value
     // Add identifier matching state and delete others
-    if (stateName == "loading") {
+    if (stateName === "loading") {
       this._state = "loading";
       this._internals.states.add("loading");
       this._internals.states.delete("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "interactive") {
+    } else if (stateName === "interactive") {
       this._state = "interactive";
       this._internals.states.delete("loading");
       this._internals.states.add("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "complete") {
+    } else if (stateName === "complete") {
       this._state = "complete";
       this._internals.states.delete("loading");
       this._internals.states.delete("interactive");
@@ -407,9 +407,22 @@ class ManyStateElement extends HTMLElement {
       this.state = "loading";
     }
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(loading))");
+  }
 }
 
 customElements.define("many-state-element", ManyStateElement);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!ManyStateElement.isStateSyntaxSupported()) {
+    const warning = document.createElement("div");
+    warning.style.color = "red";
+    warning.textContent = "This feature is not supported by your browser.";
+    document.body.insertBefore(warning, document.body.firstChild);
+  }
+});
 ```
 
 #### HTML
