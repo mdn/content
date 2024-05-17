@@ -39,7 +39,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} associated with the worker. Only a subset of the properties and methods of the `Performance` interface are available to workers.
-- {{domxref("scheduler_property", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
