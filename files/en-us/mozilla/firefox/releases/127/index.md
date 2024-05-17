@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 127 that affect d
   - [`Set.prototype.intersection()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — Returns a new set containing elements in both this set and the given set.
   - [`Set.prototype.union()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — Returns new set containing all elements in this set and the given set.
   - [`Set.prototype.difference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — Returns a new set containing elements in this set but not in the given set.
-  - [`Set.prototype.symmetricDifference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference) — Returns new set containing elements that are in either this set or the given set, but not in both.
+  - [`Set.prototype.symmetricDifference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference) — Returns a new set containing elements that are in either this set or the given set, but not in both.
   - [`Set.prototype.isSubsetOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf) — Returns a boolean indicating if all elements of this set are in the given set.
   - [`Set.prototype.isSupersetOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf) — Returns a boolean indicating if all elements of the given set are in this set.
   - [`Set.prototype.isDisjointFrom()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom) — Returns a boolean indicating if this set has no elements in common with the given set.
