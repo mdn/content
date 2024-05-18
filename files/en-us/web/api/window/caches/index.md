@@ -17,7 +17,7 @@ A {{domxref("CacheStorage")}} object.
 
 ## Examples
 
-The following example shows how to get a cached data from the cache storage in window.
+The following example shows how a window can retrieve cached data.
 
 ```js
 window.caches.open("v1").then((cache) => {
