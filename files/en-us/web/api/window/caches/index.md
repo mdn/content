@@ -17,28 +17,11 @@ A {{domxref("CacheStorage")}} object.
 
 ## Examples
 
-The following example shows how you'd use a cache in a [service worker](/en-US/docs/Web/API/Service_Worker_API) context to store assets offline.
+The following example shows how to get a cached data from the cache storage in window.
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    self.caches
-      .open("v1")
-      .then((cache) =>
-        cache.addAll([
-          "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
-        ]),
-      ),
-  );
+window.caches.open("v1").then((cache) => {
+  return cache.match("/list");
 });
 ```
 
