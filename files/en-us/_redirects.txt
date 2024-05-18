@@ -9723,7 +9723,7 @@
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onfetch	/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onmessage	/en-US/docs/Web/API/ServiceWorkerGlobalScope/message_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/activate	/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event
-/en-US/docs/Web/API/ServiceWorkerGlobalScope/caches	/en-US/docs/Web/API/caches
+/en-US/docs/Web/API/ServiceWorkerGlobalScope/caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/claim	/en-US/docs/Web/API/Clients/claim
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/install	/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event
@@ -10146,7 +10146,6 @@
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
 /en-US/docs/Web/API/Window/atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/Window/btoa	/en-US/docs/Web/API/btoa
-/en-US/docs/Web/API/Window/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/Window/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
@@ -10252,7 +10251,7 @@
 /en-US/docs/Web/API/WindowLocalStorage.localStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/caches
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
@@ -10303,10 +10302,9 @@
 /en-US/docs/Web/API/WorkerGlobalScope.ononline	/en-US/docs/Web/API/WorkerGlobalScope/online_event
 /en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
-/en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/caches
+/en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
 /en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
-/en-US/docs/Web/API/WorkerGlobalScope/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
@@ -10402,6 +10400,7 @@
 /en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/XSLTProcessor/Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Web/API/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert_static
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir_static
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error_static
