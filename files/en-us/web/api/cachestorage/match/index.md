@@ -11,7 +11,7 @@ browser-compat: api.CacheStorage.match
 The **`match()`** method of the {{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or URL string is a key for a stored {{domxref("Response")}}.
 This method returns a {{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which resolves to `undefined` if no match is found.
 
-You can access `CacheStorage` through the {{domxref("Window.caches")}} property in window's scope or through the {{domxref("WorkerGlobalScope.caches")}} property in worker's scope.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
 `Cache` objects are searched in creation order.
 
