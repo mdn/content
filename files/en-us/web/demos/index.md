@@ -90,3 +90,4 @@ If you know of a good demonstration or application of open web technology, pleas
 ### Service Worker
 
 - [Website source code syntax highlighting](https://jcubic.github.io/wayne/code/)
+- [Offline page](https://jcubic.github.io/wayne/offline/)
