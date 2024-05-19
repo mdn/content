@@ -56,7 +56,7 @@ inputElement.addEventListener("compositionstart", (event) => {
   <label for="example">
     First select textbox, then to open IME:
     <ul>
-      <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
+      <li>on macOS type <kbd>Command ⌘</kbd> + <kbd>`</kbd></li>
       <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
     </ul>
   </label>
