@@ -12,11 +12,13 @@ The **`images`** read-only property of the {{domxref("Document")}} interface ret
 
 ## Value
 
-An {{domxref("HTMLCollection")}} providing a live list of all of the images contained in the current document. Each entry in the collection is an {{domxref("HTMLImageElement")}} representing a single image element.
+An {{domxref("HTMLCollection")}} providing a live list of all of the images contained in the current document.
+Each entry in the collection is an {{domxref("HTMLImageElement")}} representing a single image element.
 
 ## Usage notes
 
-You can use either JavaScript array notation or the {{domxref("HTMLCollection.item", "item()")}} method on the returned collection to access the items in the collection. The following are equivalent:
+You can use either JavaScript array notation or the {{domxref("HTMLCollection.item", "item()")}} method on the returned collection to access the items in the collection.
+The following are equivalent:
 
 ```js
 firstImage = imageCollection.item(0);
