@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**WebM** is royalty-free and is an open web video format natively supported in Mozilla Firefox.
+**WebM** is royalty-free and is an open web video format natively supported in all modern browsers.
 
 ## See also
 
