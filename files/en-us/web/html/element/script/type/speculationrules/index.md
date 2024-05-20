@@ -296,6 +296,12 @@ URL patterns and selectors can also contain wildcard (`*`) characters, allowing 
 { "where": { "href_matches": "/user/*" } }
 ```
 
+[Search parameters (or query strings)](/en-US/docs/Web/API/URL/search) can also be targetted in `href_matches`:
+
+```json
+{ "where": { "href_matches": "/*\\?*(^|&)category=*" } }
+```
+
 Any condition can be negated by placing it inside a `"not"` condition — this means that, when matched, a link _won't_ have the speculation rule applied to it, but when _not_ matched, it _will_. The following example will cause all links that _don't_ match the URL pattern `/logout` to have the rule applied to them, but not links that match `/logout`:
 
 ```json
