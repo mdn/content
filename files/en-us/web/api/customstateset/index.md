@@ -140,7 +140,26 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+
+// Display a warning to unsupported browsers
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 In the `LabeledCheckbox` class:
@@ -199,6 +218,7 @@ class LabeledCheckbox extends HTMLElement {
     super();
     this._boundOnClick = this._onClick.bind(this);
     this.addEventListener("click", this._boundOnClick);
+
     // Attach an ElementInternals to get states property
     this._internals = this.attachInternals();
   }
@@ -235,9 +255,25 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
 
 customElements.define("labeled-checkbox", LabeledCheckbox);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
@@ -350,17 +386,17 @@ class ManyStateElement extends HTMLElement {
   set state(stateName) {
     // Set internal state to passed value
     // Add identifier matching state and delete others
-    if (stateName == "loading") {
+    if (stateName === "loading") {
       this._state = "loading";
       this._internals.states.add("loading");
       this._internals.states.delete("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "interactive") {
+    } else if (stateName === "interactive") {
       this._state = "interactive";
       this._internals.states.delete("loading");
       this._internals.states.add("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "complete") {
+    } else if (stateName === "complete") {
       this._state = "complete";
       this._internals.states.delete("loading");
       this._internals.states.delete("interactive");
@@ -378,9 +414,25 @@ class ManyStateElement extends HTMLElement {
       this.state = "loading";
     }
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(loading))");
+  }
 }
 
 customElements.define("many-state-element", ManyStateElement);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 #### HTML

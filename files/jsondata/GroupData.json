@@ -1240,7 +1240,11 @@
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "scheduler_property"],
+      "properties": [
+        "Navigator.scheduling",
+        "Window.scheduler",
+        "WorkerGlobalScope.scheduler"
+      ],
       "events": []
     },
     "Push API": {
@@ -1382,7 +1386,8 @@
       ],
       "methods": [],
       "properties": [
-        "caches",
+        "Window.caches",
+        "WorkerGlobalScope.caches",
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
@@ -1630,7 +1635,7 @@
         "TrustedTypePolicyFactory"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.trustedTypes", "WorkerGlobalScope.trustedTypes"],
       "events": []
     },
     "UI Events": {
