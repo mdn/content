@@ -46,6 +46,8 @@ const dogFound = new CustomEvent("animalfound", {
   },
 });
 
+const obj = document.createElement("div"); // create a <div> element
+
 // add an appropriate event listener
 obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
