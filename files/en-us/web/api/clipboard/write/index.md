@@ -73,7 +73,10 @@ A `try..catch` block could be used to catch any errors writing the data.
 
 ### Write canvas contents to the clipboard
 
-This example draws a blue rectangle to the canvas and writes the canvas to a blob in the clipboard when you click the canvas.
+This example first draws a blue rectangle to the canvas.
+When you click the blue rectangle the code first checks if the clipboard supports data of type `"image/png"`.
+If so, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
+
 An event listener is triggered on [`paste` events](/en-US/docs/Web/API/Element/paste_event) in an element where we want to display the clipboard contents as an image.
 
 The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:
