@@ -19,7 +19,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 
+    > **Warning:** This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts) for classic scripts, in this case it would have no effect.
+
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
+
+    If the attribute is specified with the `defer` attribute, the element will act as if only the `async` attribute is specified.
 
     This is a boolean attribute: the presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
@@ -27,14 +31,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `blocking` {{Experimental_Inline}}
 
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
 
 - `crossorigin`
   - : Normal `script` elements pass minimal information to the {{domxref('Window.error_event', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
 - `defer`
 
-  - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
+  - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event.
 
     Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating.
 
@@ -45,6 +49,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     Scripts with the `defer` attribute will execute in the order in which they appear in the document.
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
+
+    If the attribute is specified with the `async` attribute, the element will act as if only the `async` attribute is specified.
 
 - `fetchpriority`
 

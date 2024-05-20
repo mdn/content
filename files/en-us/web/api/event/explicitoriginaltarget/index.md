@@ -8,7 +8,7 @@ status:
 browser-compat: api.Event.explicitOriginalTarget
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{AvailableInWorkers}}
 
 The read-only **`explicitOriginalTarget`** property of the {{domxref("Event")}} interface returns the non-anonymous original target of the event.
 

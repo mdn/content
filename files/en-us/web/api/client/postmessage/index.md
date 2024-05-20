@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Client.postMessage
 ---
 
-{{APIRef("Service Worker API")}}
+{{APIRef("Service Worker API")}}{{AvailableInWorkers("service")}}
 
 The **`postMessage()`** method of the
 {{domxref("Client")}} interface allows a service worker to send a message to a client
