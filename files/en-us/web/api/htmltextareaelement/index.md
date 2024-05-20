@@ -15,8 +15,6 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
-  - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
   - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
