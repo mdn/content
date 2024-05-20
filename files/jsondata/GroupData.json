@@ -222,7 +222,9 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "PasswordCredential"
+        "FederatedCredentialInit",
+        "PasswordCredential",
+        "PasswordCredentialInit"
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
@@ -525,7 +527,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
@@ -1238,7 +1240,11 @@
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "scheduler_property"],
+      "properties": [
+        "Navigator.scheduling",
+        "Window.scheduler",
+        "WorkerGlobalScope.scheduler"
+      ],
       "events": []
     },
     "Push API": {
@@ -1380,7 +1386,8 @@
       ],
       "methods": [],
       "properties": [
-        "caches",
+        "Window.caches",
+        "WorkerGlobalScope.caches",
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
@@ -1627,7 +1634,7 @@
         "TrustedTypePolicyFactory"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.trustedTypes", "WorkerGlobalScope.trustedTypes"],
       "events": []
     },
     "UI Events": {
@@ -1828,6 +1835,7 @@
       ],
       "interfaces": [
         "PublicKeyCredential",
+        "PublicKeyCredentialCreationOptions",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
@@ -1918,7 +1926,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {

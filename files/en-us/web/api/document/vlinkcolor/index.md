@@ -25,6 +25,10 @@ A string representing the color as a word (e.g., `"red"`) or hexadecimal value (
 - The recommended alternative is to get/set the color of the CSS {{Cssxref(":visited")}} pseudo-class on HTML {{HtmlElement("a")}} elements (e.g., `a:visited {color:red;}`).
 - Another alternative is `document.body.vLink`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-vlink) in favor of the CSS alternative.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
