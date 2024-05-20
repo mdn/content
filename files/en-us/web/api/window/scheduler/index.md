@@ -1,17 +1,14 @@
 ---
-title: scheduler global property
+title: "Window: scheduler property"
 short-title: scheduler
-slug: Web/API/scheduler_property
-page-type: web-api-global-property
+slug: Web/API/Window/scheduler
+page-type: web-api-instance-property
 browser-compat: api.scheduler
 ---
 
 {{APIRef("Prioritized Task Scheduling API")}}
 
-The global read-only **`scheduler`** property is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
-
-It is implemented by both [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler).
-The existence of the property indicates that the API is supported in the current context, and can be accessed using `this.scheduler`.
+The **`scheduler`** read-only property of the {{domxref("Window")}} interface is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
 The object has a single instance method {{domxref('Scheduler.postTask()')}} that is used to post prioritized tasks for scheduling.
 
@@ -26,13 +23,13 @@ It demonstrates how to check that the property exists and then posts a task that
 
 ```js
 // Check if the prioritized task API is supported
-if ("scheduler" in this) {
+if ("scheduler" in window) {
   // Callback function - "the task"
   const myTask = () => "Task 1: user-visible";
 
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler
+  window.scheduler
     .postTask(myTask)
     // Handle resolved value
     .then((taskResult) => console.log(`${taskResult}`))
@@ -58,3 +55,4 @@ For comprehensive example code showing to use the API see [Prioritized Task Sche
 - [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API)
 - {{domxref('Scheduler.postTask()')}}
 - {{domxref('TaskController')}}
+- {{domxref("WorkerGlobalScope.scheduler")}}
