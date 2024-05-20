@@ -17,7 +17,7 @@ The region is an essential part of the locale identifier, as it places the local
 
 ### Setting the region in the locale identifier string argument
 
-The region is the third part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The region is a mandatory part of a
+The region is the third part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor.
 
 ```js
 const locale = new Intl.Locale("en-Latn-US");
