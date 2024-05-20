@@ -9,9 +9,9 @@ browser-compat: css.properties.position-try-order
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various options that result in an available **position try option** being set in preference to an **anchor-positioned element's** initial positioning. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
+The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various options that result in an available **position try option** being used to set an **anchor-positioned element's** position, instead of its initial position settings. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
 
-This has a slightly different focus to the rest of the position try functionality, in that it makes use of position try options when the positioned element is first displayed, rather than when it is in the process of overflowing.
+This has a slightly different focus to the rest of the position try functionality, in that it makes use of position try options when the positioned element is first displayed, rather than when it is being scrolled.
 
 > **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-options")}} values in a single declaration.
 
@@ -48,7 +48,7 @@ position-try-order: unset;
 - `most-inline-size`
   - : The position try option will be applied that gives the element's containing block the most size in the inline direction.
 
-If no position try option is available that provides more width/height than the initial positioning assigned to the element, `position-try-order` has no effect.
+> **Note:** If no position try option is available that provides more width/height than the initial positioning assigned to the element, the position try options will be tested in the same order as they appear in the `position-try-options` property. In effect, the behavior is as if `position-try-order` was set to `normal`.
 
 ## Formal definition
 
@@ -120,7 +120,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxre
 .anchor {
   anchor-name: --infobox;
   position: absolute;
-  top: 100px;
+  top: 90px;
   left: 45%;
 }
 ```
@@ -191,7 +191,7 @@ function setTryOrder(e) {
 
 Try selecting the `most-height` order option. This has the effect of applying the `--custom-bottom` position try option, which positions the element below the anchor. This occurs because there is more vertical space below the anchor than there is above it.
 
-{{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "300") }}
+{{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
 
 ## Specifications
 
