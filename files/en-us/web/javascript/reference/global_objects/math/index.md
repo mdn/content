@@ -75,9 +75,9 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
 - {{jsxref("Math.floor()")}}
   - : Returns the largest integer less than or equal to `x`.
 - {{jsxref("Math.f16round()")}}
-  - : Returns the nearest [half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of `x`.
+  - : Returns the nearest [half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of the input.
 - {{jsxref("Math.fround()")}}
-  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `x`.
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of the input.
 - {{jsxref("Math.hypot()")}}
   - : Returns the square root of the sum of squares of its arguments.
 - {{jsxref("Math.imul()")}}

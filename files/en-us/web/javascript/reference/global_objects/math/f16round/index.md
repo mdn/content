@@ -24,11 +24,11 @@ Math.f16round(doubleFloat)
 
 ### Return value
 
-The nearest [16-bit half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of `x`.
+The nearest [16-bit half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of `doubleFloat`.
 
 ## Description
 
-`Math.f16round` is the 16-bit counterpart of {{jsxref("Math.fround()")}}, which rounds to 32 bits. Internally, JavaScript continues to treat the number as a 64-bit float, it just performs a "round to even" on the 10th bit of the mantissa, and sets all following mantissa bits to `0`. If the number is outside the range of a 16-bit float, {{jsxref("Infinity")}} or `-Infinity` is returned.
+`Math.f16round` is the 16-bit counterpart of {{jsxref("Math.fround()")}}. It is intended to smooth some rough edges when interacting with float16 numbers, such as when reading from a {{jsxref("Float16Array")}}. Internally, JavaScript continues to treat the number as a 64-bit float, it just performs a "round to even" on the 10th bit of the mantissa, and sets all following mantissa bits to `0`. If the number is outside the range of a 16-bit float, {{jsxref("Infinity")}} or `-Infinity` is returned.
 
 Because `f16round()` is a static method of `Math`, you always use it as `Math.f16round()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
