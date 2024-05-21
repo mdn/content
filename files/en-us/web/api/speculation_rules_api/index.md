@@ -38,7 +38,7 @@ A script example:
             { "not": { "href_matches": "/logout" } },
             { "not": { "href_matches": "/*\\?*(^|&)add-to-cart=*" } },
             { "not": { "selector_matches": ".no-prerender" } },
-            { "not": { "selector_matches": "[rel=nofollow]" } }
+            { "not": { "selector_matches": "[rel~=nofollow]" } }
           ]
         }
       }
