@@ -11,7 +11,7 @@ The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances return
 
 ## Description
 
-The region is an essential part of the locale identifier, as it places the locale in a specific area of the world. Knowing the locale's region is vital to identifying differences between locales. For example, English is spoken in the United Kingdom and the United States of America, but there are differences in spelling and other language conventions between those two countries. Knowing the locale's region helps JavaScript programmers make sure that the content from their sites and applications is correctly displayed when viewed from different areas of the world.
+Using a region indicates a region- or country- specific preference for a locale identifier, allowing selection for differences between the same locale in, say, different countries. For example, English is spoken in the United Kingdom and the United States of America, but there are differences in spelling and other language conventions between those two countries. Knowing the locale's region helps JavaScript programmers make sure that the content from their sites and applications is correctly displayed when viewed from different areas of the world.
 
 ## Examples
 
