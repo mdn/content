@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Eligible
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Attribution-Reporting-Eligible`** request header is used to indicate that the response corresponding to the request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
+The **`Attribution-Reporting-Eligible`** request header indicates that the corresponding response is eligible to register an attribution source or trigger.
 
 This header is never set manually and is instead sent by the browser in response to various HTML element or JavaScript request settings. Depending on the allowed registrations specified in the `Attribution-Reporting-Eligible` value, the server would be expected to respond with an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header to complete registration of an attribution source or trigger, respectively.
 

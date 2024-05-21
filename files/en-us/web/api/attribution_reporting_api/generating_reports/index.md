@@ -147,11 +147,16 @@ The properties are as follows:
 
 ## How noise is added to reports
 
-Noise is added to reports in order to obscure the trigger data in both event-level and summary reports, in order to protect user privacy.
+Noise is added to reports in order to obscure the output associated with a source, in order to protect user privacy. The exact source data cannot be identified and attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning.
 
-The [`source_event_id`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) contained in the `Attribution-Reporting-Register-Source` header is a base-10-formatted 64-bit unsigned integer that can uniquely identify an interaction (such as an ad click).
+This is done using a randomized response algorithm, which works like so:
 
-The trigger-side data is limited quite strictly, by limiting the amount of data and by applying noise to the data. By default, [navigation sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) will be limited to only 3 bits of [`trigger_data`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) (the values 0 through 7), while [event sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) will be limited to only 1 bit (the values 0 through 1). The `trigger_data` and [`trigger_data_matching`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields can be customized to vary the amount of noise applied. You could set a smaller range of trigger data to reduce the amount of noise applied, or a larger range to increase the noise:
+1. When an attribution source is stored, the browser generates a list of all possible sets of reports that could originate from the source's configuration (including the set consisting of no reports).
+2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that report set to use as the source's reports. The probably of this happening is based on the number of reports in that set, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
+
+Trigger data is limited quite strictly. By default, [navigation sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) will be limited to only 3 bits of [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) (the values 0 through 7), while [event sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) will be limited to only 1 bit (the values 0 through 1). The `"trigger_data"` and [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields can be customized to vary the amount of noise applied. You could set a smaller range of trigger data to reduce the amount of noise applied, or a larger range to increase the noise:
+
+Typical settings in the {{httpheader("Attribution-Reporting-Register-Source")}} header might look like so:
 
 ```json
 {
@@ -159,18 +164,33 @@ The trigger-side data is limited quite strictly, by limiting the amount of data 
   // The following setting would reduce noise for a navigation
   // source (default 0–7), but increase noise for an event
   // source (default 0–1)
-  "trigger_data": [0, 1, 2, 3, 4]
+  "trigger_data": [0, 1, 2, 3, 4],
+  // Could also be "modulus"
+  "trigger_data_matching": "exact",
+  ...,
 }
 ```
 
-When an attribution source is registered, the browser will perform one of the following steps given a probability `p` (`p` is a small percentage, which can vary based on implementation, source type, and configuration):
+A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could containing the following:
 
-- With probability `1 - p`, the browser logs the source as normal.
-- With probability `p`, the browser chooses randomly among all the possible output states of the API. This includes the choice of not reporting anything at all, or potentially reporting multiple fake reports for the event.
+```json
+{
+  ...,
+  "event_trigger_data": [
+    {
+      // The value 4 is contained in the source data, therefore a match is possible
+      "trigger_data": "4",
+      "priority": "1000000000000",
+      "deduplication_key": "2345698765",
+    },
+  ],
+  ...,
+}
+```
 
-When aggregatable reports are aggregated into a summary report, a random amount of noise is added to the resulting final report. The exact source values cannot therefore be identified and therefore attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning and value.
+It is still possible that a match may not occur, based on the randomized response algorithm described above.
 
-The aggregation service adds noise once to each summary value — that is, once per key — every time a summary report is requested. These noise values are randomly drawn from the same specific probability distribution, regardless of whether the aggregated values are low or high. As a result, the noise will have a lower impact on larger values, and you are advised to scale up smaller values before sending the data through the aggregation service, and scale them back down when analysing the aggregated report data. You need to make sure that your scaling doesn't cause your data to exceed the contribution budget.
+> **Note:** Noise values are randomly drawn from the same specific probability distribution, regardless of whether the number of aggregated values is low or high. As a result, the noise will have a lower impact on larger values, and you are advised to scale up smaller values before sending the data through the aggregation service, and scale them back down when analysing the aggregated report data. You need to make sure that your scaling doesn't cause your data to exceed the contribution budget.
 
 For more information on noise, see:
 

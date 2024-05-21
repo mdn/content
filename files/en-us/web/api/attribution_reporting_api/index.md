@@ -86,7 +86,7 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 ## HTTP headers
 
 - {{httpheader("Attribution-Reporting-Eligible")}}
-  - : Used to indicate that the response corresponding to the request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
+  - : HTTP request that indicates that the corresponding response is eligible to register an attribution source or trigger.
 - {{httpheader("Attribution-Reporting-Register-Source")}}
   - : HTTP response that registers a page feature as an attribution source. This is included as part of a response to a request that included an `Attribution-Reporting-Eligible` header.
 - {{httpheader("Attribution-Reporting-Register-Trigger")}}

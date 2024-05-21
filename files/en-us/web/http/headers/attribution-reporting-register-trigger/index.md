@@ -81,7 +81,7 @@ res.set(
   JSON.stringify({
     "event_trigger_data": [
       {
-        "trigger_data": "412444888111012",
+        "trigger_data": "4",
         "priority": "1000000000000",
         "deduplication_key": "2345698765",
       },

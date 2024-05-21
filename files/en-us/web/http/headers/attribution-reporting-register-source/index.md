@@ -83,7 +83,9 @@ Attribution-Reporting-Register-Source: <json-string>
       - : A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. Possible values are:
 
         - `"exact"`: The `"trigger_data"` from the trigger must exactly match a value contained in the source's `"trigger_data"`; if there is no such match, no event-level attribution takes place.
-        - `"modulus"`: The source's `"trigger_data"` must form a contiguous sequence of integers starting at 0. The trigger's `"trigger_data"` is taken modulus the cardinality of this sequence and then matched against the source `"trigger_data"`. It is an error to use `"modulus"` if the trigger data does not form such a sequence.
+        - `"modulus"`: In this case, the following calculation is performed — `d % allowedValues.size` — where `d` is the `"trigger_data"` from the trigger, and `allowedValues` is the sequence of values in the source's `"trigger_data"` array. If the result of this calculation matches a value in the source's `"trigger_data"` array, the match is a success. In such a case, the value will always match, unless `allowedValues` is empty. This mode exists primarily for backwards compatibility with the API's behavior before `"exact"` was introduced, and as such, you'd be unlikely to use it. 
+        
+          > **Note:** If `"modulus"` is used, the source's `"trigger_data"` must form a contiguous sequence of integers starting at 0. If the trigger data does not form such a sequence, an error occurs.
 
         If not specified, `"trigger_data_matching"` defaults to `"modulus"`.
 
