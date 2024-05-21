@@ -24,7 +24,7 @@ Document.parseHTMLUnsafe(input)
 
 ### Parameters
 
-- `input`
+- `html`
   - : A string of HTML to be parsed.
 
 ### Return value
