@@ -305,6 +305,14 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 - {{DOMxRef("Document.writeln()")}}
   - : Writes a line of text in a document.
 
+## Static methods
+
+_This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
+
+- {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
+  - : Creates a new `Document` object from a string of HTML without performing sanitization.
+    The string may contain declarative shadow roots.
+
 ## Events
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from {{domxref("Node", "nodes", "", "nocode")}} contained in the document tree.
