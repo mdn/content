@@ -30,7 +30,7 @@ A Promise that fulfills with a {{jsxref('Boolean')}}.
 ## Examples
 
 The following function compares a single entry with an array of entries, and returns a
-Promise that fullfills with a new array with any matching entries removed.
+{{jsxref("Promise")}} that fulfils with a new array with any matching entries removed.
 
 ```js
 async function removeMatches(fileEntry, entriesArr) {
