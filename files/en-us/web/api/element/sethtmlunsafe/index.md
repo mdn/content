@@ -13,6 +13,8 @@ The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Eleme
 
 The suffix "Unsafe" in the method name indicates that the method does not sanitize or remove potentially unsafe XSS-relevant input, such as `<script>` elements, and script or event handler content attributes.
 
+If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
+
 > **Note:** This method should be used instead of {{domxref("Element.innerHTML")}} when a string of untrusted HTML may contain declarative shadow roots.
 
 ## Syntax
