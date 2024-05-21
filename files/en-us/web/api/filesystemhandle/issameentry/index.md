@@ -35,7 +35,7 @@ The following function compares a single entry with an array of entries, and ret
 ```js
 async function removeMatches(fileEntry, entriesArr) {
   const newArr = [];
-  for (let entry of entriesArr) {
+  for (const entry of entriesArr) {
     if (!(await fileEntry.isSameEntry(entry))) {
       newArr.push(entry);
     }
