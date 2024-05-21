@@ -12,7 +12,9 @@ The **`hasStorageAccess()`** method of the {{domxref("Document")}} interface ret
 
 This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-This method may be available under the new name {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}.
+This method is another name for {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}.
+
+There are no current plans to remove this method in favor of {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}.
 
 ## Syntax
 
