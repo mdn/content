@@ -30,12 +30,16 @@ A Promise that fulfills with a {{jsxref('Boolean')}}.
 ## Examples
 
 The following function compares a single entry with an array of entries, and returns a
-new array with any matching entries removed.
+Promise that fullfills with a new array with any matching entries removed.
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
-
+async function removeMatches(fileEntry, entriesArr) {
+  const newArr = [];
+  for (let entry of entriesArr) {
+    if (!(await fileEntry.isSameEntry(entry))) {
+      newArr.push(entry);
+    }
+  }
   return newArr;
 }
 ```
