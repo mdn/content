@@ -17,9 +17,9 @@ Typically, the server will use the contents of HTTP cookies to determine whether
 1. The user sends sign-in credentials to the server, for example via a form submission.
 2. If the credentials are correct, the server updates the UI to indicate that the user is signed in, and responds with a cookie containing a session ID that records their sign-in status on the browser.
 3. At a later time, the user moves to a different page on the same site. The browser sends the cookie containing the session ID along with the corresponding request to indicate that it still thinks the user is signed in.
-4. The browser checks the session ID and, if it is still valid, sends the user a personalized version of the new page. If it is not valid, the session ID is deleted and the user is shown a generic version of the page (or perhaps shown an "access denied" message and asked to sign in again).
+4. The server checks the session ID and, if it is still valid, sends the user a personalized version of the new page. If it is not valid, the session ID is deleted and the user is shown a generic version of the page (or perhaps shown an "access denied" message and asked to sign in again).
 
-![visual representation of the above sign-in system description](https://mdn.github.io/shared-assets/images/diagrams/http/cookies/cookie-basic-example.png)
+![visual representation of the above sign-in system description](cookie-basic-example.png)
 
 Cookies are mainly used for three purposes:
 
@@ -99,7 +99,7 @@ To update a cookie via HTTP, the server can send a {{HTTPHeader("Set-Cookie")}} 
 Set-Cookie: id=new-value
 ```
 
-There are several reasons why you might want to do this, for example if a user has updated their preferences and theb application wants to reflect the changes in client-side data (you could also do this with a client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API)).
+There are several reasons why you might want to do this, for example if a user has updated their preferences and the application wants to reflect the changes in client-side data (you could also do this with a client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API)).
 
 #### Updating cookies via JavaScript
 

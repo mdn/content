@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.encode
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`encode()`** method of the {{domxref("VideoEncoder")}} interface asynchronously encodes a {{domxref("VideoFrame")}}.
 Encoded data ({{domxref("EncodedVideoChunk")}}) or an error will eventually be returned via the callbacks provided to the {{domxref("VideoEncoder")}} constructor.

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.isTrusted
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`isTrusted`** read-only property of the
 {{domxref("Event")}} interface is a boolean value that is `true`

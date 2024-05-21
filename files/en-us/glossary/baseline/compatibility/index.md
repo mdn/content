@@ -17,9 +17,8 @@ Baseline features are described as either newly available in current stable brow
 
 ![Green widget with the checkmark: Baseline, widely available. Four browsers logos, all with checkmarks.](high.png)
 
-If you see a **widely available** Baseline badge, then you can trust that the feature has a consistent history of support in each of the Baseline browsers.
-A widely available feature has been in multiple browsers for years.
-It works with many browsers and devices, even ones that aren't yet up to date with the latest browser releases.
+If you see a **widely available** Baseline badge, then you can trust that the feature has a consistent history of support in each of the Baseline browsers for at least 2.5 years.
+A widely available feature works with many browsers and devices, even ones that aren't yet up to date with the latest browser releases.
 
 ![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](limited.png)
 
@@ -46,9 +45,16 @@ Baseline tracks availability with the following browsers:
 
 ## Extra considerations
 
-Baseline is a summary guide to support and doesn't cover every situation.
-If your site needs to work with an older device or browser release, or a browser not covered by the Baseline status, then you may need to do your own research or testing.
-If Baseline doesn't cover your situation, then consider reading browser compatibility tables on MDN or visiting [caniuse.com](https://caniuse.com/) before committing to a feature.
+Baseline is a summary guide to browser support to help you make decisions before committing to use a feature in your projects.
+Baseline is not a substitute for testing your application for accessibility, usability, performance, security, or other concerns.
+
+Baseline may not tell you whether a feature works with:
+
+- Older devices and browser releases
+- Browsers not covered by the Baseline browser set, such as operating system web views
+- Assistive technology, such as screen readers
+
+If Baseline doesn't cover your situation, you can find more information in the browser compatibility tables on MDN, [caniuse.com](https://caniuse.com/), and [a11ysupport.io](https://a11ysupport.io/).
 
 ## Contributing
 
