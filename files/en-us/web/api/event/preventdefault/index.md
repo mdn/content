@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Event.preventDefault
 ---
 
-{{apiref("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`preventDefault()`** method of the {{domxref("Event")}} interface tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
 

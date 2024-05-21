@@ -30,11 +30,11 @@ In the developer tools, under the network table, you can switch the throttling o
 
 | Selection      | Download speed | Upload speed | Minimum latency (ms) |
 | -------------- | -------------- | ------------ | -------------------- |
-| GPRS           | 50 Kbps        | 20 Kbps      | 500                  |
-| Regular 2G     | 250 Kbps       | 50 Kbps      | 300                  |
-| Good 2G        | 450 Kbps       | 150 Kbps     | 150                  |
-| Regular 3G     | 750 Kbps       | 250 Kbps     | 100                  |
-| Good 3G        | 1.5 Mbps       | 750 Kbps     | 40                   |
+| GPRS           | 50 kbps        | 20 kbps      | 500                  |
+| Regular 2G     | 250 kbps       | 50 kbps      | 300                  |
+| Good 2G        | 450 kbps       | 150 kbps     | 150                  |
+| Regular 3G     | 750 kbps       | 250 kbps     | 100                  |
+| Good 3G        | 1.5 Mbps       | 750 kbps     | 40                   |
 | Regular 4G/LTE | 4 Mbps         | 3 Mbps       | 20                   |
 | DSL            | 2 Mbps         | 1 Mbps       | 5                    |
 | Wi-Fi          | 30 Mbps        | 15 Mbps      | 2                    |

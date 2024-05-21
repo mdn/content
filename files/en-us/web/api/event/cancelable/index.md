@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.cancelable
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`cancelable`** read-only property of the {{domxref("Event")}} interface indicates whether the event
 can be canceled, and therefore prevented as if the event never happened.

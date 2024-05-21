@@ -10,14 +10,22 @@ An **attribute** extends an HTML or XML {{Glossary("element")}}, changing its be
 
 An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value).
 
-You may see attributes without the equals sign or a value. That is a shorthand for providing the empty string in HTML, or the attribute's name in XML.
+You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML; such attributes are considered to be [boolean attributes](/en-US/docs/Web/HTML/Attributes#boolean_attributes). However, this is not allowed in XML: XML requires the equals sign followed by the attribute name.
 
-```html
+The following code provides examples of different boolean attribute forms in HTML:
+
+```html example-good
 <input required />
-<!-- is the same as… -->
+<!-- is equivalent to -->
 <input required="" />
 <!-- or -->
-<input required="required" />
+<input required="anything" />
+```
+
+In XML, attributes without equals sign or value will throw a syntax error:
+
+```xml-nolint example-bad
+<tag id />
 ```
 
 ## Reflection of an attribute
@@ -51,3 +59,4 @@ console.log(attr.value); // Prints `Modified placeholder`
 
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
 - Information about HTML's [global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml#sec-starttags)

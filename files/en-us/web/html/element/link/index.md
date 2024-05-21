@@ -172,7 +172,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `blocking` {{Experimental_Inline}}
 
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. The operations that are to be blocked must be a space-separated list of blocking attributes listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
 
 - `crossorigin`
@@ -191,7 +191,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
     See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disabled` {{Non-standard_Inline}}
+- `disabled`
 
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
@@ -386,12 +386,7 @@ You can include `render` token inside a `blocking` attribute;
 the rendering of the page will be blocked till the resource is fetched. For example:
 
 ```html
-<link
-  blocking="render"
-  rel="preload"
-  href="critical-font.woff2"
-  as="font"
-  crossorigin />
+<link blocking="render" rel="stylesheet" href="example.css" crossorigin />
 ```
 
 ## Technical summary
