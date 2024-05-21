@@ -65,11 +65,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - `HTMLAnchorElement.name` {{deprecated_inline}}
   - : A string representing the anchor name.
 - `HTMLAnchorElement.rev` {{deprecated_inline}}
-
   - : A string representing that the [`rev`](/en-US/docs/Web/HTML/Element/a#rev) HTML attribute, specifying the relationship of the link object to the target object.
-
-    > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
-
 - `HTMLAnchorElement.shape` {{deprecated_inline}}
   - : A string representing the shape of the active area.
 
