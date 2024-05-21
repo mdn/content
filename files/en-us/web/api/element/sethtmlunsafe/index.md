@@ -8,7 +8,12 @@ browser-compat: api.Element.setHTMLUnsafe
 
 {{APIRef("DOM")}}
 
-The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML and then insert it into the DOM as a subtree of the element.
+The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the element's subtree in the DOM.
+The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom).
+
+The suffix "Unsafe" in the method name indicates that the method does not sanitize or remove potentially unsafe XSS-relevant input, such as `<script>` elements, and script or event handler content attributes.
+
+> **Note:** This method should be used instead of {{domxref("Element.innerHTML")}} when a string of untrusted HTML may contain declarative shadow roots.
 
 ## Syntax
 
@@ -52,5 +57,6 @@ document.getElementById("target").setHTMLUnsafe(value);
 
 ## See also
 
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}
 - {{domxref("Element.innerHTML")}}
 - {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}

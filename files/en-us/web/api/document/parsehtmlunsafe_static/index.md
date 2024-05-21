@@ -14,8 +14,6 @@ The suffix "Unsafe" in the method name indicates that, while `<script>` elements
 
 The resulting `Document` will have a [content type](/en-US/docs/Web/API/Document/contentType) of "text/html", a [character set](/en-US/docs/Web/API/Document/characterSet) of UTF-8, and a URL of "about:blank"
 
-
-
 ## Syntax
 
 ```js-nolint
