@@ -296,7 +296,7 @@ URL patterns and selectors can also contain wildcard (`*`) characters, allowing 
 { "where": { "href_matches": "/user/*" } }
 ```
 
-[Search parameters (or query strings)](/en-US/docs/Web/API/URL/search) can also be targeted in `href_matches`.  For example, the object below could match all same-origin URLs with a `category` search parameter (where as the first, or later parameter):
+[Search parameters (or query strings)](/en-US/docs/Web/API/URL/search) can also be targeted in `href_matches`. For example, the object below could match all same-origin URLs with a `category` search parameter (where as the first, or later parameter):
 
 ```json
 { "where": { "href_matches": "/*\\?*(^|&)category=*" } }
