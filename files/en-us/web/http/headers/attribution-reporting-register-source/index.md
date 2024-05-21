@@ -83,11 +83,13 @@ Attribution-Reporting-Register-Source: <json-string>
       - : A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. Possible values are:
 
         - `"exact"`: The `"trigger_data"` from the trigger must exactly match a value contained in the source's `"trigger_data"`; if there is no such match, no event-level attribution takes place.
-        - `"modulus"`: In this case, the following calculation is performed — `d % allowedValues.size` — where `d` is the `"trigger_data"` from the trigger, and `allowedValues` is the sequence of values in the source's `"trigger_data"` array. If the result of this calculation matches a value in the source's `"trigger_data"` array, the match is a success. In such a case, the value will always match, unless `allowedValues` is empty. This mode exists primarily for backwards compatibility with the API's behavior before `"exact"` was introduced, and as such, you'd be unlikely to use it. 
+        - `"modulus"`: In this case, the following calculation is performed — `d % allowedValues.size` — where `d` is the `"trigger_data"` from the trigger, and `allowedValues` is the sequence of values in the source's `"trigger_data"` array. If the result of this calculation matches a value in the source's `"trigger_data"` array, the match is a success. In such a case, the value will always match, unless `allowedValues` is empty.
+        
+        `"modulus"` mode exists primarily for backwards compatibility with the API's behavior before `"exact"` was introduced, and as such, you'd be unlikely to use it. It is still useful in particular cases that require a very specific kind of compression resulting in smaller registration headers. This can be required when using complex filtering logic that needs to set different trigger data based on the source type according to the maximum number of source `"trigger_data"` items. 
         
           > **Note:** If `"modulus"` is used, the source's `"trigger_data"` must form a contiguous sequence of integers starting at 0. If the trigger data does not form such a sequence, an error occurs.
 
-        If not specified, `"trigger_data_matching"` defaults to `"modulus"`.
+        If not specified, `"trigger_data_matching"` defaults to `"modulus"`. Again, the reason for this is backwards compatibility: omitting the `"trigger_data_matching"` field needs to result in the same behavior observed before this field was introduced.
 
 ## Examples
 
