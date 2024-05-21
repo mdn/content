@@ -171,7 +171,7 @@ Typical settings in the {{httpheader("Attribution-Reporting-Register-Source")}} 
 }
 ```
 
-A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could containing the following:
+A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could contain the following:
 
 ```json
 {
