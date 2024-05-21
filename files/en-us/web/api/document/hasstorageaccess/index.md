@@ -48,9 +48,11 @@ The result returned by this method can be inaccurate in a couple of circumstance
 document.hasStorageAccess().then((hasAccess) => {
   if (hasAccess) {
     // storage access has been granted already.
+    console.log("cookie access granted");
   } else {
     // storage access hasn't been granted already;
     // you may want to call requestStorageAccess().
+    console.log("cookie access denied");
   }
 });
 ```
