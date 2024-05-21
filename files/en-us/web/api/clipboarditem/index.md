@@ -45,13 +45,14 @@ _This interface defines the following methods._
 
 ### Writing to the clipboard
 
-Here we use {{domxref("ClipboardItem.supports_static", "supports()")}} to check whether the 'image/png' MIME data type is supported. If it is, we fetch the image with the ["Fetch API"](/en-US/docs/Web/API/Fetch_API), and then read it into a {{domxref("Blob")}}, which we can use to create a `ClipboardItem` that is written to the clipboard.
+Here we use {{domxref("ClipboardItem.supports_static", "supports()")}} to check whether the `image/svg+xml` MIME data type is supported.
+If it is, we fetch the image with the ["Fetch API"](/en-US/docs/Web/API/Fetch_API), and then read it into a {{domxref("Blob")}}, which we can use to create a `ClipboardItem` that is written to the clipboard.
 
 ```js
 async function writeClipImg() {
   try {
-    if (ClipboardItem.supports("image/png")) {
-      const imgURL = "/myimage.png";
+    if (ClipboardItem.supports("image/svg+xml")) {
+      const imgURL = "/myimage.svg";
       const data = await fetch(imgURL);
       const blob = await data.blob();
       await navigator.clipboard.write([
@@ -61,7 +62,7 @@ async function writeClipImg() {
       ]);
       console.log("Fetched image copied.");
     } else {
-      console.log("image png is not suported");
+      console.log("SVG images are not supported by the clipboard.");
     }
   } catch (err) {
     console.error(err.name, err.message);
