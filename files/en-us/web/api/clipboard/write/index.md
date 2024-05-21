@@ -107,6 +107,7 @@ async function getBlobFromCanvas(canvas) {
 ```
 
 Next we set up our canvas and add an event listener for the `click` event.
+
 When you click the blue rectangle the code first checks if the clipboard supports data of type `"image/png"`.
 If so, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
 
@@ -138,6 +139,9 @@ async function copyCanvasContentsToClipboard() {
   }
 }
 ```
+
+Note that clipboard support for PNG files is a mandatory part of the specification, so we don't actually need the check using {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} above (it always returns `true`).
+The check would be more useful in cases where we're fetching an optional file type, or a resource where we don't know the type in advance.
 
 We then define an event listener for [`paste` events](/en-US/docs/Web/API/Element/paste_event) on then element where we want to display the clipboard contents as an image.
 The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:
@@ -174,7 +178,7 @@ img {
 #### Result
 
 The result is shown below.
-First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinatations to paste from the clipboard (such as `Ctrl+V` on Windows)
+First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinatations to paste from the clipboard (such as `Ctrl+V` on Windows).
 
 {{embedlivesample("write_canvas_contents_to_the_clipboard", "", "300")}}
 
