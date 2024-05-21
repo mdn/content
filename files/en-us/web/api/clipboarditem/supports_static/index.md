@@ -19,27 +19,39 @@ supports(type)
 ### Parameters
 
 - `type`
-  - : A string representing a {{Glossary("MIME type")}}.
+
+  - : A string, indicating the {{Glossary("MIME type")}} to test.
+
+    These MIME types are always supported:
+
+    - `text/plain`
+    - `text/html`
+    - `image/png`
+
+    These MIME types may be supported:
+
+    - `image/svg+xml`
+    - Custom MIME-type formats starting with `"web "`.
+      The custom type (without the `"web "` prefix), must have the correct formatting for a MIME type.
 
 ### Return value
 
-A boolean: `true` if the given {{Glossary("MIME type")}} is supported by the clipboard, `false` otherwise.
+`true` if the given {{Glossary("MIME type")}} is supported by the clipboard, `false` otherwise.
 
 ## Examples
 
 ### Writing an image to the clipboard
 
-In the following example, we're writing an image to the clipboard.
+The following example fetches an SVG image to a blob, and then writes it to the clipboard.
 
-We use `supports()` to check whether the `"image/png"` MIME type is supported by the clipboard before fetching the image and writing it using {{domxref("clipboard.write()")}}.
-
-We also use a [`try..catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement to catch any errors while writing the data to the clipboard.
+We use `supports()` to check whether the `"image/svg+xml"` MIME type is supported by the clipboard before fetching the image and writing it using {{domxref("clipboard.write()")}}.
+We also wrap the whole function body in [`try..catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement to catch any other errors, such as `ClipboardItem` itself not being supported.
 
 ```js
 async function writeClipImg() {
   try {
-    if (ClipboardItem.supports("image/png")) {
-      const imgURL = "/myimage.png";
+    if (ClipboardItem.supports("image/svg+xml")) {
+      const imgURL = "/myimage.svg";
       const data = await fetch(imgURL);
       const blob = await data.blob();
       await navigator.clipboard.write([
@@ -47,9 +59,9 @@ async function writeClipImg() {
           [blob.type]: blob,
         }),
       ]);
-      console.log("Fetched image copied.");
+      console.log("Fetched image copied to clipboard.");
     } else {
-      console.log("image png is not suported");
+      console.log("SVG image not supported by clipboard");
     }
   } catch (err) {
     console.error(err.name, err.message);
