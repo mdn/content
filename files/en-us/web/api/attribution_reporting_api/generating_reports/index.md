@@ -149,7 +149,7 @@ The properties are as follows:
 
 Noise is added to reports in order to obscure the output associated with a source, in order to protect user privacy. The exact source data cannot be identified and attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning.
 
-This is done using a randomized response algorithm, which works like so:
+In the case of event-level reports, this is done using a randomized response algorithm, which works like so:
 
 1. When an attribution source is stored, the browser generates a list of all possible sets of reports that could originate from the source's configuration (including the set consisting of no reports).
 2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that list to use as the source's reports. The probability of this happening is based on the size of that list, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
@@ -179,9 +179,7 @@ A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could contai
   "event_trigger_data": [
     {
       // The value 4 is contained in the source data, therefore a match is possible
-      "trigger_data": "4",
-      "priority": "1000000000000",
-      "deduplication_key": "2345698765",
+      "trigger_data": "4"
     },
   ],
   ...,
@@ -190,12 +188,11 @@ A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could contai
 
 It is still possible that a match may not occur, based on the randomized response algorithm described above.
 
-> **Note:** Noise values are randomly drawn from the same specific probability distribution, regardless of whether the number of aggregated values is low or high. As a result, the noise will have a lower impact on larger values, and you are advised to scale up smaller values before sending the data through the aggregation service, and scale them back down when analysing the aggregated report data. You need to make sure that your scaling doesn't cause your data to exceed the contribution budget.
+For information on how noise works in summary reports, see [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
 
-For more information on noise, see:
+For further information on noise, see:
 
 - [Data limits and noise](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
-- [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/)
 - [Working with noise](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/working-with-noise/)
 
 ## Report priorities and limits
