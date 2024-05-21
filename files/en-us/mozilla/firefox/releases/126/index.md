@@ -18,6 +18,12 @@ This article provides information about the changes in Firefox 126 that affect d
 
 No notable changes.
 
+### MathML
+
+#### Removals
+
+- The automatic adjustment for vertically centered operators (+, =, <, etc.) has been disabled by default. This behavior is not defined in MathML Core and was only necessary as a workaround for non-math fonts. It can still be enabled by setting the `mathml.centered_operators.disabled` config to `false`. ([Firefox bug 1890531](https://bugzil.la/1890531)).
+
 ### CSS
 
 - The {{cssxref("zoom")}} property is now supported. It can be used to increase or decrease the size of an element and its contents ([Firefox bug 390936](https://bugzil.la/390936)).

@@ -478,7 +478,7 @@ index.openCursor().onsuccess = (event) => {
 index.openKeyCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
-    // cursor.key is a name, like "Bill", and cursor.value is the SSN.
+    // cursor.key is a name, like "Bill", and cursor.primaryKey is the SSN.
     // No way to directly get the rest of the stored object.
     console.log(`Name: ${cursor.key}, SSN: ${cursor.primaryKey}`);
     cursor.continue();
