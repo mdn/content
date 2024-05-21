@@ -6,19 +6,19 @@ page-type: web-api-instance-method
 browser-compat: api.Element.setHTMLUnsafe
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse a string of HTML and then insert it into the DOM as a subtree of the element.
 
 ## Syntax
 
 ```js-nolint
-element.setHTMLUnsafe(input)
+setHTMLUnsafe(html)
 ```
 
 ### Parameters
 
-- `input`
+- `html`
   - : A string defining HTML to be parsed.
 
 ### Return value

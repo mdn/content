@@ -6,19 +6,19 @@ page-type: web-api-instance-method
 browser-compat: api.ShadowRoot.setHTMLUnsafe
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Shadow DOM")}}
 
 The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface is used to parse a string of HTML and then insert it into the DOM as a subtree of the shadow root.
 
 ## Syntax
 
 ```js-nolint
-shadowRoot.setHTMLUnsafe(input)
+setHTMLUnsafe(html)
 ```
 
 ### Parameters
 
-- `input`
+- `html`
   - : A string defining HTML to be parsed.
 
 ### Return value

@@ -8,7 +8,7 @@ browser-compat: api.Document.parseHTMLUnsafe_static
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`Document.parseHTMLUnsafe()`** static method is used to parse a string of HTML as a new document object.
+The **`Document.parseHTMLUnsafe()`** static method is used to parse a string of HTML to create a new {{domxref("Document")}} object.
 
 ## Syntax
 
