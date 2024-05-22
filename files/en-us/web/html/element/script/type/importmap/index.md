@@ -151,7 +151,7 @@ You can use the `integrity` key to provide mapping for module [integrity metadat
 This enables you to ensure the integrity of dynamically or statically imported modules.
 `integrity` also enables you to provide a fallback for top-level or preloaded modules, in case they don't already include an `integrity` attribute.
 
-The keys of the map represent a module URL (either an absolute one or a relative one that starts with `/`, `./`, or `../`).
+The map keys represent a module URL. This can be absolute or relative (starting with `/`, `./`, or `../`).
 The values of the map represent integrity metadata, identical to what one would use as an "integrity" attribute value.
 
 For example, the map below defines integrity metadata to the square.js module, and transitively (through the `imports` key) to its bare specifier.
