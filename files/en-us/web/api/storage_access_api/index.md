@@ -4,10 +4,13 @@ slug: Web/API/Storage_Access_API
 page-type: web-api-overview
 browser-compat:
   - api.Document.hasStorageAccess
+  - api.Document.hasUnpartitionedCookieAccess
   - api.Document.requestStorageAccess
   - api.Document.requestStorageAccessFor
   - api.Permissions.permission_storage-access
-spec-urls: https://privacycg.github.io/storage-access/
+spec-urls:
+  - https://privacycg.github.io/storage-access/
+  - https://privacycg.github.io/saa-non-cookie-storage/
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}
@@ -118,6 +121,8 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 
 - {{domxref("Document.hasStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to third-party cookies.
+- {{domxref("Document.hasUnpartitionedCookieAccess()")}}
+  - : New name for {{domxref("Document.hasStorageAccess()")}}.
 - {{domxref("Document.requestStorageAccess()")}}
   - : Allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
