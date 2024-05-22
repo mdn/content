@@ -148,7 +148,7 @@ The browser falls back to the next most specific scoped path if there is no matc
 ### Integrity metadata map
 
 You can use the `integrity` key to provide mapping for module [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
-The enables you to ensure the integrity of dynamically or statically imported modules.
+This enables you to ensure the integrity of dynamically or statically imported modules.
 It also enables you to provide a fallback to top-level modules or preloaded ones, in case they don't already include an "integrity" attribute.
 
 The keys of the map represent a module URL (either an absolute one or a relative one that starts with `/`, `./`, or `../`).
