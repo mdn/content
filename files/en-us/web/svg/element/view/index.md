@@ -17,6 +17,7 @@ The `<view>` SVG element defines a particular view of the SVG document. It is us
 
 - {{SVGAttr("viewBox")}}
 - {{SVGAttr("preserveAspectRatio")}}
+- {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
 ## Example
 
