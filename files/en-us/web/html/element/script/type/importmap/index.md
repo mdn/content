@@ -146,6 +146,7 @@ If multiple scopes match the referrer URL, then the most specific scope path is 
 The browser falls back to the next most specific scoped path if there is no matching specifier, and so on, eventually falling back to the module specifier map in the `imports` key.
 
 ### Integrity metadata map
+
 You can use the `integrity` key to provide mapping for module [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
 The enables you to ensure the integrity of dynamically or statically imported modules.
 It also enables you to provide a fallback to top-level modules or preloaded ones, in case they don't already include an "integrity" attribute.
