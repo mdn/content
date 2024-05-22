@@ -1,6 +1,6 @@
 ---
 title: Hyperlink
-slug: Glossary/Hyperlink
+slug: Glossary/Hyperlink/IsabelSchoepsThiel
 page-type: glossary-definition
 ---
 
