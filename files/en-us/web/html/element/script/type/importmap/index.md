@@ -207,7 +207,7 @@ The import map must be a valid JSON object that can define at most two optional 
 
 - `integrity` {{optional_inline}}
 
-  - : Integrity defines a valid JSON object where the _keys_ are strings, defining either a valid absolute URL or a valid URL string that starts with `/`, `./`, or `../`,
+  - : Defines a valid JSON object where the _keys_ are strings containing either a valid absolute URL or relative URL that starts with `/`, `./`, or `../`,
     and the corresponding _values_ are valid [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
 
     The integrity object is a valid JSON object, mapping URLs to integrity metadata.
