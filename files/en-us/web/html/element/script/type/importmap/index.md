@@ -210,8 +210,6 @@ The import map must be a valid JSON object that can define at most two optional 
   - : Defines a valid JSON object where the _keys_ are strings containing either a valid absolute URL or relative URL that starts with `/`, `./`, or `../`,
     and the corresponding _values_ are valid [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
 
-    The integrity object is a valid JSON object, mapping URLs to integrity metadata.
-
     If the URL of a script importing or preloading a module matches a key in the `integrity` object, the corresponding integrity metadata is applied to the script's fetch options,
     unless they already have integrity metadata attached to them.
 
