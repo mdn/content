@@ -70,6 +70,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
+
 ### Removals
 
 ### Other
