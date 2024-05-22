@@ -212,7 +212,7 @@ The import map must be a valid JSON object that can define at most two optional 
 
     The integrity object is a valid JSON object, mapping URLs to integrity metadata.
 
-    If the URL of a script importing or preloading a module matches a key in the integrity object, the corresponding integrity metadata is applied to the script's fetch options,
+    If the URL of a script importing or preloading a module matches a key in the `integrity` object, the corresponding integrity metadata is applied to the script's fetch options,
     unless they already have integrity metadata attached to them.
 
 ## Specifications
