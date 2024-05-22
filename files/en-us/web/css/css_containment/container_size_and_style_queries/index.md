@@ -21,7 +21,7 @@ There are two types of container queries: _container size queries_ and _containe
 
 - **Container size queries**
 
-  - : Size queries enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of a containing element, including the orientation and aspect ratio. The containing elements need to be explicitly declared as _size query containers_.
+  - : Size queries enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of a containing element, including the orientation and {{glossary("aspect ratio")}}. The containing elements need to be explicitly declared as _size query containers_.
 
 - **Container style queries**
   - : Style queries enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). In this case, the query returns true or false depending on the computed value of the containing element's custom properties. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
@@ -431,5 +431,6 @@ These features are not yet supported in any browser.
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
+- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [Getting Started with Style Queries](https://developer.chrome.com/docs/css-ui/style-queries) (2022)
 - [Style queries](https://una.im/style-queries/) via una.im (2022)

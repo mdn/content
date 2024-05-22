@@ -4,11 +4,11 @@ short-title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 page-type: web-api-constructor
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Sanitizer.Sanitizer
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("HTML Sanitizer API")}}{{SecureContext_Header}}{{deprecated_header}}
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to sanitize untrusted strings of HTML, or untrusted {{domxref("Document")}} or {{domxref("DocumentFragment")}} objects, making them safe for insertion into a document's DOM.
 

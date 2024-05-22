@@ -7,9 +7,7 @@ browser-compat: javascript.statements.while
 
 {{jsSidebar("Statements")}}
 
-The **`while`** statement creates a loop that executes a specified statement
-as long as the test condition evaluates to true. The condition is evaluated before
-executing the statement.
+The **`while`** statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
 
 {{EmbedInteractiveExample("pages/js/statement-while.html")}}
 
@@ -21,18 +19,16 @@ while (condition)
 ```
 
 - `condition`
-  - : An expression evaluated before each pass through the loop. If this condition
-    [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. When condition
-    [evaluates to false](/en-US/docs/Glossary/Falsy), execution continues with the statement after the
-    `while` loop.
+  - : An expression evaluated _before_ each pass through the loop. If this condition [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. When condition [evaluates to false](/en-US/docs/Glossary/Falsy), execution continues with the statement after the `while` loop.
 - `statement`
+  - : A statement that is executed as long as the condition evaluates to true. You can use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) to execute multiple statements.
 
-  - : An optional statement that is executed as long as the condition evaluates to true.
-    To execute multiple statements within the loop, use a {{jsxref("Statements/block", "block", "", 1)}} statement
-    (`{ /* ... */ }`) to group those statements.
+## Description
 
-    Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
-    to true.
+Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and re-evaluates `condition`.
 
 ## Examples
 

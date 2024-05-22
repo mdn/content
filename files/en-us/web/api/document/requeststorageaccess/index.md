@@ -8,7 +8,7 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies. This is relevant to user agents that, by default, block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies). This is relevant to user agents that, by default, block access to third-party, [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
 To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
@@ -70,6 +70,6 @@ document.requestStorageAccess().then(
 
 ## See also
 
-- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
+- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
 - [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

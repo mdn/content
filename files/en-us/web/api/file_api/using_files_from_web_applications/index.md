@@ -436,7 +436,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {

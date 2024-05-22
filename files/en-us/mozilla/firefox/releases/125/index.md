@@ -54,6 +54,20 @@ No notable changes.
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
+- Added support to allow web applications to gracefully recover if a canvas temporarily loses its 2D context, which might happen if the canvas is running hardware-accelerated on a GPU, and its driver crashes ([Firefox bug 1887729](https://bugzil.la/1887729)).
+  Here are some additional details on the events for lost and restored canvas contexts:
+
+  - Applications can monitor for [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) events, which are fired on at [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement) when the context is lost and recovered, respectively, and can also check the context using [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost).
+  - After emitting `contentlost`, a browser will try and restart the lost context, by default, but code can prevent this by cancelling the event.
+  - Offscreen canvases can be monitored in the same way, but using [`OffScreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) events [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event), along with [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#context).
+
+- Added support for the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element, and the [`shadowRootClonable`](/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable) property of the `HTMLTemplateElement` interface that reflects it.
+  These set the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that has been created declaratively using the [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
+  ([Firefox bug 1880188](https://bugzil.la/1880188)).
+
+- The [`readText()`](/en-US/docs/Web/API/Clipboard/readText) method of the [`Clipboard`](/en-US/docs/Web/API/Clipboard) interface is now supported for asynchronously reading text from the system clipboard.
+  When reading clipboard data that is not provided by the same-origin page, a paste context menu will appear for the user to confirm. ([Firefox bug 1877400](https://bugzil.la/1877400)).
+
 #### Media, WebRTC, and Web Audio
 
 - The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).

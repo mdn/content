@@ -4,15 +4,18 @@ slug: Web/API/Storage_Access_API
 page-type: web-api-overview
 browser-compat:
   - api.Document.hasStorageAccess
+  - api.Document.hasUnpartitionedCookieAccess
   - api.Document.requestStorageAccess
   - api.Document.requestStorageAccessFor
   - api.Permissions.permission_storage-access
-spec-urls: https://privacycg.github.io/storage-access/
+spec-urls:
+  - https://privacycg.github.io/storage-access/
+  - https://privacycg.github.io/saa-non-cookie-storage/
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) that it would typically only have access to in a first-party context (i.e., when loaded directly in a browser tab).
+The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) that it would typically only have access to in a first-party context (i.e., when loaded directly in a browser tab).
 
 The Storage Access API is relevant to user agents that, by default, block access to third-party cookies to improve privacy (for example, to prevent tracking). There are legitimate uses for third-party cookies that we still want to enable, even with these default restrictions in place. Examples include single sign-on (SSO) with federated identity providers (IdPs), or persisting user details such as location data or viewing preferences across different sites.
 
@@ -118,6 +121,8 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 
 - {{domxref("Document.hasStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to third-party cookies.
+- {{domxref("Document.hasUnpartitionedCookieAccess()")}}
+  - : New name for {{domxref("Document.hasStorageAccess()")}}.
 - {{domxref("Document.requestStorageAccess()")}}
   - : Allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}

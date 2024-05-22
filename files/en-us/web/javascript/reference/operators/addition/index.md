@@ -38,46 +38,48 @@ You are advised to not use `"" + x` to perform [string coercion](/en-US/docs/Web
 
 ## Examples
 
-### Number addition
+### Addition using numbers
 
 ```js
-// Number + Number -> addition
 1 + 2; // 3
+```
 
-// Boolean + Number -> addition
+Other non-string, non-BigInt values are coerced to numbers:
+
+```js
 true + 1; // 2
-
-// Boolean + Boolean -> addition
 false + false; // 0
 ```
 
-### BigInt addition
+### Addion using BigInts
 
 ```js
-// BigInt + BigInt -> addition
 1n + 2n; // 3n
+```
 
-// BigInt + Number -> throws TypeError
+You cannot mix BigInt and number operands in addition.
+
+```js example-bad
 1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+"1" + 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
-// To add a BigInt to a non-BigInt, convert either operand
+To do addition with a BigInt and a non-BigInt, convert either operand:
+
+```js
 1n + BigInt(2); // 3n
 Number(1n) + 2; // 3
 ```
 
-### String concatenation
+### Addition using strings
+
+If one of the operands is a string, the other is converted to a string and they are concatenated:
 
 ```js
-// String + String -> concatenation
 "foo" + "bar"; // "foobar"
-
-// Number + String -> concatenation
 5 + "foo"; // "5foo"
-
-// String + Boolean -> concatenation
 "foo" + false; // "foofalse"
-
-// String + Number -> concatenation
 "2" + 2; // "22"
 ```
 

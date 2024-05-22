@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Path2D.Path2D
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`Path2D()`** constructor returns a newly instantiated
 `Path2D` object, optionally with another path as an argument (creates a

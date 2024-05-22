@@ -21,7 +21,7 @@ An {{domxref("HTMLCollection")}}.
 
 ```js
 if (document.anchors.length >= 5) {
-  dump("found too many anchors");
+  console.log("found too many anchors");
 }
 ```
 

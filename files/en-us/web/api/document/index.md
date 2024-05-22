@@ -240,6 +240,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
 - {{DOMxRef("Document.hasStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
+- {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}
+  - : New name for {{DOMxRef("Document.hasStorageAccess()")}}.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}

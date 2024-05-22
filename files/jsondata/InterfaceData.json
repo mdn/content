@@ -648,6 +648,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSNestRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -858,6 +862,10 @@
     },
     "DeprecationReportBody": {
       "inh": "ReportBody",
+      "impl": []
+    },
+    "DeviceChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "DeviceMotionEvent": {
@@ -2924,6 +2932,10 @@
       "inh": "Event",
       "impl": []
     },
+    "Sanitizer": {
+      "inh": "",
+      "impl": []
+    },
     "Scheduler": {
       "inh": "",
       "impl": []
@@ -3022,18 +3034,6 @@
     },
     "SharedStorage": {
       "inh": "",
-      "impl": []
-    },
-    "SharedStorageOperation": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageRunOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
-    "SharedStorageSelectURLOperation": {
-      "inh": "SharedStorageOperation",
       "impl": []
     },
     "SharedStorageWorklet": {

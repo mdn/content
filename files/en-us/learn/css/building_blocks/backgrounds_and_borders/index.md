@@ -94,7 +94,7 @@ The _balloons.jpg_ image used in the initial background images example, is a lar
 
 You can also use keywords:
 
-- `cover` — the browser will make the image just large enough so that it completely covers the box area while still retaining its aspect ratio. In this case, part of the image is likely to end up outside the box.
+- `cover` — the browser will make the image just large enough so that it completely covers the box area while still retaining its {{glossary("aspect ratio")}}. In this case, part of the image is likely to end up outside the box.
 - `contain` — the browser will make the image the right size to fit inside the box. In this case, you may end up with gaps on either side or on the top and bottom of the image, if the aspect ratio of the image is different from that of the box.
 
 In the example below, the _balloons.jpg_ image has length units set to size it inside the box. You can see this has distorted the image.
@@ -293,7 +293,7 @@ Or to make the top right corner have a horizontal radius of 1em, and a vertical 
 }
 ```
 
-> **Note:** Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties]/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties_for_border_radius).
+> **Note:** Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties_for_border_radius).
 
 We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 
