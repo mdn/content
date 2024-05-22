@@ -33,7 +33,7 @@ _The `File` interface also inherits properties from the {{DOMxRef("Blob")}} inte
 - {{DOMxRef("File.name")}} {{ReadOnlyInline}}
   - : Returns the name of the file referenced by the `File` object.
 - {{DOMxRef("File.webkitRelativePath")}} {{ReadOnlyInline}}
-  - : Returns the path the URL of the {{DOMxRef("File")}} is relative to.
+  - : Returns the path the URL of the `File` is relative to.
 
 ## Instance methods
 
