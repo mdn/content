@@ -7,7 +7,7 @@ browser-compat: svg.elements.view
 
 {{SVGRef}}
 
-The `<view>` SVG element defines a particular view of the SVG document. It is used by referencing the element’s id as the target fragment of a URL.
+The `<view>` SVG element defines a particular view of the SVG document. It is used by referencing the element's id as the target fragment of a URL.
 
 ## Usage context
 
