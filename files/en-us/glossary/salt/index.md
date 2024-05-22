@@ -22,4 +22,4 @@ Although these tables may be very large, such attacks can be effective because t
 
 Adding random salt to passwords before hashing them stops this attack from working, because the hash is not calculated over the password itself, but on the password combined with the salt.
 
-The salt does not need to be secret
+Unlike the password, the salt does not need to be kept secret: it can be stored alongside the salted and hashed password in the server's database.
