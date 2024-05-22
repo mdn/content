@@ -7,7 +7,7 @@ browser-compat: svg.elements.view
 
 {{SVGRef}}
 
-A view is a defined way to view the image, like a zoom level or a detail view.
+The `<view>` SVG element defines a particular view of the SVG document. It allows you to define a rectangular region of the SVG document that will be visible within the viewport.
 
 ## Usage context
 
@@ -17,7 +17,6 @@ A view is a defined way to view the image, like a zoom level or a detail view.
 
 - {{SVGAttr("viewBox")}}
 - {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
 ## Example
 
