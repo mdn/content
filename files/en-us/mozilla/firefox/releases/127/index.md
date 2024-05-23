@@ -36,7 +36,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
-- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both as CSS properties `stroke-width: 0.5lh` and SVG attributes `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both as CSS properties `stroke-width: 0.5lh` and SVG attributes `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
 
 #### Removals
 
