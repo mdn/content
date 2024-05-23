@@ -65,19 +65,20 @@ block content
   div(style='margin-left:20px;margin-top:20px')
     h2(style='font-size: 1.5rem;') Copies
 
-    each val in book_instances
-      hr
-      if val.status=='Available'
-        p.text-success #{val.status}
-      else if val.status=='Maintenance'
-        p.text-danger #{val.status}
-      else
-        p.text-warning #{val.status}
-      p #[strong Imprint:] #{val.imprint}
-      if val.status!='Available'
-        p #[strong Due back:] #{val.due_back}
-      p #[strong Id: ]
-        a(href=val.url) #{val._id}
+    if book_instances.length
+      each val in book_instances
+        hr
+        if val.status=='Available'
+          p.text-success #{val.status}
+        else if val.status=='Maintenance'
+          p.text-danger #{val.status}
+        else
+          p.text-warning #{val.status}
+        p #[strong Imprint:] #{val.imprint}
+        if val.status!='Available'
+          p #[strong Due back:] #{val.due_back}
+        p #[strong Id: ]
+          a(href=val.url) #{val._id}
 
     else
       p There are no copies of this book in the library.
