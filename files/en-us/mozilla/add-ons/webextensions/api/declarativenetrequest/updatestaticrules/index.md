@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.updateStaticRules
 
 {{AddonSidebar}}
 
-Modifies the enabled state of rules in a static ruleset. 
+Modifies the enabled state of rules in a static ruleset.
 
 Rules belonging to a ruleset can be modified while it is disabled but don't become effective until the ruleset is enabled.
 
