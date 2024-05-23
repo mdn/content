@@ -193,10 +193,10 @@ This example shows how to use the {{ domxref("Gamepad") }} object, as well as th
 ```js
 let loopstarted = false;
 
-window.addEventListener("gamepadconnected", evt => {
+window.addEventListener("gamepadconnected", (evt) => {
   addgamepad(evt.gamepad);
 });
-window.addEventListener("gamepaddisconnected", evt => {
+window.addEventListener("gamepaddisconnected", (evt) => {
   removegamepad(evt.gamepad);
 });
 
@@ -240,7 +240,7 @@ function addgamepad(gamepad) {
   }
 
   document.body.append(d);
-  if (! loopstarted) {
+  if (!loopstarted) {
     requestAnimationFrame(updateStatus);
     loopstarted = true;
   }
@@ -252,8 +252,7 @@ function removegamepad(gamepad) {
 
 function updateStatus() {
   for (const gamepad of navigator.getGamepads()) {
-    if (! gamepad)
-      continue;
+    if (!gamepad) continue;
 
     const d = document.getElementById(`controller${gamepad.index}`);
     const buttonElements = d.getElementsByClassName("button");
