@@ -106,7 +106,7 @@ You can see what browsers and operating systems your users are using by selectin
 
 ### Other considerations
 
-You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our [Handling common accessibility problems](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) article).
+You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) article).
 
 Also, you should be aware of situation-specific needs. For example, if you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been using Opera Mini, you will probably want to make Opera Mini support a priority.
 
