@@ -254,6 +254,7 @@
       "interfaces": [
         "PaintWorkletGlobalScope",
         "PaintRenderingContext2D"
+        
       ],
       "methods": ["CSS.paintWorklet_static"],
       "properties": [],
