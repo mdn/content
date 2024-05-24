@@ -9,13 +9,13 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The **`dirname`** attribute can be used on {{htmlelement("textarea")}} and {{htmlelement("input")}} elements and describes the directionality of the element's text content during form submission.
+The **`dirname`** attribute can be used on the {{htmlelement("textarea")}} element and several {{htmlelement("input")}} types and describes the directionality of the element's text content during form submission.
 The browser uses this attribute's value to determine whether text the user has entered is left-to-right or right-to-left oriented.
 When used, the element's text directionality value is included in form submission data along with the `dirname` attribute's value as the name of the field.
 
 ## Usage notes
 
-The `dirname` attribute can be used on any {{htmlelement("textarea")}} element, or any {{htmlelement("input")}} element with {{htmlelement("input/text", "text")}}, {{htmlelement("input/search", "search")}}, {{htmlelement("input/tel", "tel")}}, {{htmlelement("input/url", "url")}}, or {{htmlelement("input/email", "email")}} type.
+The `dirname` attribute can be used on any {{htmlelement("textarea")}} element, or any {{htmlelement("input")}} element with {{htmlelement("input/hidden", "hidden")}}, {{htmlelement("input/text", "text")}}, {{htmlelement("input/search", "search")}}, {{htmlelement("input/tel", "tel")}}, {{htmlelement("input/url", "url")}}, {{htmlelement("input/email", "email")}}, {{htmlelement("input/password", "password")}}, {{htmlelement("input/submit", "submit")}}, {{htmlelement("input/reset", "reset")}} or {{htmlelement("input/button", "button")}} type.
 
 The format of the submitted data is `{dirname_value}={direction}` where `{dirname_value}` is the value of the `dirname` attribute and `{direction}` is the directionality of the text.
 For example, if the user enters "Hello" in an element with the attributes `name="comment"` and `dirname="comment-direction"`, the URL-encoded form submission data for `GET` requests will be `comment=Hello&comment-direction=ltr`.

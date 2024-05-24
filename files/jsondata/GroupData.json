@@ -1436,9 +1436,10 @@
         "/docs/Web/API/Storage_Access_API/Using",
         "/docs/Web/API/Storage_Access_API/Related_website_sets"
       ],
-      "interfaces": [],
+      "interfaces": ["StorageAccessHandle"],
       "methods": [
         "Document.hasStorageAccess()",
+        "Document.hasUnpartitionedCookieAccess()",
         "Document.requestStorageAccess()",
         "Document.requestStorageAccessFor()"
       ],
