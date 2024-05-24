@@ -47,7 +47,7 @@ No notable changes
 
 ### APIs
 
-- `AnimationFrameProvider` is now available in a [`DedicatedWorkerGlobalScope`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope). This means the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) and [`cancelAnimationFrame`](/en-US/docs/Web/API/Window/cancelAnimationFrame) methods can be used within a dedicated worker.
+- `AnimationFrameProvider` is now available in a [`DedicatedWorkerGlobalScope`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope). This means the [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame) and [`cancelAnimationFrame`](/en-US/docs/Web/API/Window/cancelAnimationFrame) methods can be used within a dedicated worker.
   (See [Firefox bug 1388931](https://bugzil.la/1388931) for more details.)
 
 #### DOM
