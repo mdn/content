@@ -74,12 +74,12 @@ In addition, the specification provides mechanisms to:
   - {{cssxref("min-inline-size")}} 
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
-  
- - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
-  - {{cssxref("align-items")}}
-  - {{cssxref("align-self")}}
-  - {{cssxref("justify-items")}}
-  - {{cssxref("justify-self")}}
+
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("justify-self")}}
 
 ### Non-standard features
 
