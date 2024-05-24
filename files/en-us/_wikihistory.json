@@ -30245,7 +30245,7 @@
       "JesseW"
     ]
   },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
+  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
     "modified": "2019-03-24T00:17:33.140Z",
     "contributors": [
       "SphinxKnight",
@@ -30264,7 +30264,7 @@
       "ericjung"
     ]
   },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2020-12-06T22:57:45.352Z",
     "contributors": [
       "jordan-git",
@@ -30282,7 +30282,7 @@
       "asadotzler"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
     "modified": "2020-12-09T01:05:18.504Z",
     "contributors": [
       "skkiennhtg2327",
@@ -30308,7 +30308,7 @@
       "Gor1"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example": {
     "modified": "2019-03-23T23:40:45.010Z",
     "contributors": [
       "mk7087",

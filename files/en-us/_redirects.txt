@@ -1381,7 +1381,7 @@
 /en-US/docs/DOM/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/DOM/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
 /en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
-/en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /en-US/docs/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/DOM/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
@@ -2843,7 +2843,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/Document_Object_Model_(DOM)/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/Document_Object_Model_(DOM)/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/NamedNodeMap	/en-US/docs/Web/API/NamedNodeMap
@@ -3994,7 +3994,7 @@
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
 /en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
-/en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
+/en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/ICC_color_correction_in_Firefox	/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
@@ -7361,9 +7361,9 @@
 /en-US/docs/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/API/XSLTProcessor
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
 /en-US/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /en-US/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -8045,9 +8045,9 @@
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
-/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
-/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_object_model/Using_the_Document_Object_Model/Example
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
 /en-US/docs/Web/API/DynamicsCompressorNode.knee	/en-US/docs/Web/API/DynamicsCompressorNode/knee
@@ -12018,7 +12018,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/Web/Guide/API/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API
@@ -12098,7 +12098,7 @@
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
 /en-US/docs/Web/Guide/DOM/Storage	/en-US/docs/Web/API/Web_Storage_API
