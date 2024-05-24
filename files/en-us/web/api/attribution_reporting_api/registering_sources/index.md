@@ -25,7 +25,7 @@ What happens behind the scenes to register sources and retrieve and store the so
    Attribution-Reporting-Eligible: navigation-source
    ```
 
-2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response. Its value is a JSON string that provides the information the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of report the browser will generate:
+2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response. Its value is a JSON string that provides the information the browser should store about the attribution source that was interacted with. The information included in this header also determines which types of report the browser will generate:
 
    - The following example will cause an [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) to be generated when a [trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers) is matched to a source:
 
