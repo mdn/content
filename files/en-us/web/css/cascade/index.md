@@ -323,11 +323,11 @@ Now that we have a better understanding of origin type and cascade layer precede
 
 ## Which CSS entities participate in the cascade
 
-Only CSS property/value pair declarations participate in the cascade.
+Only CSS property/value pair declarations participate in the cascade. CSS at-rule descriptors don't participate in the cascade and HTML presentational attributes are not part of the cascade.
 
 ### At-rules
 
-This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
+CSS [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
 
 For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
@@ -341,10 +341,9 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 ### Presentational attributes
 
-Presentational attributes are other attributes in the source document that can affect styling. For example, `align` in HTML or `fill` in SVG. They are considered to be part of the author styles. Presentational attributes do not participate in the cascade.
+Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
 
-If they are respected by the user agent, these attributes are translated to the corresponding CSS rules with specificity equal to 0, and are treated as if they were inserted at the start of the author style sheet. Their interaction with
-layers is undefined.
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML are translated to the corresponding CSS rules, such as the {{cssxref("align")}} or `fill` property (all SVG presentation attributes can be used as a CSS property) inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
 
 Presentational attributes cannot be declared `!important`.
 
