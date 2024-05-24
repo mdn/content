@@ -17,7 +17,7 @@ Attribution sources take the form of links, images, or scripts contained within 
 - Navigation sources, which cause the browser to store source data in response to navigation — for example when the user clicks on a link or activates it with the keyboard, or when a navigation occurs as a result of a {{domxref("Window.open()")}} call. See [Navigation-based attribution sources](#navigation-based_attribution_sources) for examples.
 - Event sources, which cause the browser to store source data in response to events firing. See [Event-based attribution sources](#event-based_attribution_sources) for examples.
 
-However, what happens behind the scenes to register sources and retrieve and store the source data is the same in all cases.
+What happens behind the scenes to register sources and retrieve and store the source data is the same in both cases:
 
 1. All of the sources send an {{httpheader("Attribution-Reporting-Eligible")}} header on a request to the server measuring the interactions (typically the advertiser's server), which indicates that the response is eligible to register a source. For example:
 
