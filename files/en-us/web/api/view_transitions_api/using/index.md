@@ -465,7 +465,7 @@ const setTemporaryViewTransitionNames = async (entries, vtPromise) => {
   for (const [$el, name] of entries) {
     $el.style.viewTransitionName = "";
   }
-}
+};
 ```
 
 ## Stabilizing page state to make cross-document transitions consistent
