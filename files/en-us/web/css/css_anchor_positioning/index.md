@@ -74,6 +74,6 @@ In addition, the specification provides mechanisms to:
 
 ## See also
 
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [Learn: CSS positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
