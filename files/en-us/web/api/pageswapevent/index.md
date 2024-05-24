@@ -31,7 +31,9 @@ The pageswap event is fired when you navigate across documents, when the previou
 window.addEventListener("pageswap", async (e) => {
   // Only run this if an active view transition exists
   if (e.viewTransition) {
-    const currentUrl = e.activation.from?.url ? new URL(e.activation.from.url) : null;
+    const currentUrl = e.activation.from?.url
+      ? new URL(e.activation.from.url)
+      : null;
     const targetUrl = new URL(e.activation.entry.url);
 
     // Only transition to same basePath
