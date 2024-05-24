@@ -10,7 +10,7 @@ A **federated identity** system is one in which an {{glossary("identity provider
 
 Traditionally, on the web, a user will sign into a website with a username and a password, and the password is verified by the website against a (properly {{glossary("hash", "hashed")}} and {{glossary("salt", "salted")}}) copy stored on the website's backend.
 
-In this model, if users have multiple accounts with different websites, they have to remember many passwords, and this encourages bad passwords practices such as using the same password for multiple accounts.
+In this model, if users have multiple accounts with different websites, they have to remember many passwords, and this encourages bad password practices such as using the same password for multiple accounts.
 
 In a federated identity system, an _identity provider_:
 
