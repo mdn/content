@@ -405,7 +405,7 @@ window.addEventListener("pageswap", async (e) => {
 The {{domxref("Window.pagereveal_event", "pagereveal")}} event listener looks as follows. This works in a similar way to the `pageswap` event listener, although bear in mind that here we are customizing the "to" animation, for page elements on the new page.
 
 ```js
-window.addEventListener('pagereveal', async (e) => {
+window.addEventListener("pagereveal", async (e) => {
   // If the "from" history entry does not exist, return
   if (!navigation.activation.from) return;
 
