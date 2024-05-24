@@ -60,19 +60,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ### Obsolete properties
 
-- {{domxref("HTMLAnchorElement.charset")}} {{deprecated_inline}}
+- `HTMLAnchorElement.charset` {{deprecated_inline}}
   - : A string representing the character encoding of the linked resource.
-- {{domxref("HTMLAnchorElement.coords")}} {{deprecated_inline}}
+- `HTMLAnchorElement.coords` {{deprecated_inline}}
   - : A string representing a comma-separated list of coordinates.
-- {{domxref("HTMLAnchorElement.name")}} {{deprecated_inline}}
+- `HTMLAnchorElement.name` {{deprecated_inline}}
   - : A string representing the anchor name.
-- {{domxref("HTMLAnchorElement.rev")}} {{deprecated_inline}}
-
+- `HTMLAnchorElement.rev` {{deprecated_inline}}
   - : A string representing that the [`rev`](/en-US/docs/Web/HTML/Element/a#rev) HTML attribute, specifying the relationship of the link object to the target object.
-
-    > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
-
-- {{domxref("HTMLAnchorElement.shape")}} {{deprecated_inline}}
+- `HTMLAnchorElement.shape` {{deprecated_inline}}
   - : A string representing the shape of the active area.
 
 ## Instance methods
