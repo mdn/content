@@ -266,8 +266,7 @@ function updateStatus() {
         el.textContent = `Button ${i} [PRESSED]`;
         el.style.color = "#42f593";
         el.className = "button pressed";
-      }
-      else {
+      } else {
         el.textContent = `Button ${i}`;
         el.style.color = "#2e2d33";
         el.className = "button";
