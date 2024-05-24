@@ -362,7 +362,9 @@ The {{domxref("Window.pageswap_event", "pageswap")}} event listener looks as fol
 window.addEventListener("pageswap", async (e) => {
   // Only run this if an active view transition exists
   if (e.viewTransition) {
-    const currentUrl = e.activation.from?.url ? new URL(e.activation.from.url) : null;
+    const currentUrl = e.activation.from?.url
+      ? new URL(e.activation.from.url)
+      : null;
     const targetUrl = new URL(e.activation.entry.url);
 
     // Only transition to same basePath
