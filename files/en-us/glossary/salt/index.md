@@ -20,6 +20,6 @@ To derive a password from a hash, attackers can look up the password correspondi
 
 Although these tables may be very large, such attacks can be effective because table lookup is a fast operation.
 
-Adding random salt to passwords before hashing them stops this attack from working, because the hash is not calculated over the password itself, but on the password combined with the salt.
+Adding random salt to passwords before hashing them stops this attack from working because the hash is not calculated based on the password alone but on the password combined with the salt.
 
 Unlike the password, the salt does not need to be kept secret: it can be stored alongside the salted and hashed password in the server's database.
