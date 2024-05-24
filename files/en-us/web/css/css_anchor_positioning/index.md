@@ -62,6 +62,7 @@ In addition, the specification provides mechanisms to:
   - {{cssxref("max-height")}} 
   - {{cssxref("block-size")}}
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module:
+
   - {{cssxref("inset-block-start")}}
   - {{cssxref("inset-block-end")}}
   - {{cssxref("inset-inline-start")}}
