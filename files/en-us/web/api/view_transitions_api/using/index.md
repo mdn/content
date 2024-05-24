@@ -359,7 +359,7 @@ The [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/p
 The {{domxref("Window.pageswap_event", "pageswap")}} event listener looks as follows. This sets view transition names on the elements on the outbound page that link to the profile pages. When navigating from the home page to a profile page, custom animations are provided _only_ for the linked element that is clicked in each case.
 
 ```js
-window.addEventListener('pageswap', async (e) => {
+window.addEventListener("pageswap", async (e) => {
   // Only run this if an active view transition exists
   if (e.viewTransition) {
     const currentUrl = e.activation.from?.url ? new URL(e.activation.from.url) : null;
