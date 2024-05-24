@@ -59,10 +59,13 @@ window.addEventListener("pageswap", async (e) => {
     if (isProfilePage(targetUrl)) {
       const profile = extractProfileNameFromUrl(targetUrl);
 
-      setTemporaryViewTransitionNames([
-        [document.querySelector(`#${profile} span`), 'name'],
-        [document.querySelector(`#${profile} img`), 'avatar'],
-      ], e.viewTransition.finished);
+      setTemporaryViewTransitionNames(
+        [
+          [document.querySelector(`#${profile} span`), "name"],
+          [document.querySelector(`#${profile} img`), "avatar"],
+        ],
+        e.viewTransition.finished,
+      );
     }
   }
 });
