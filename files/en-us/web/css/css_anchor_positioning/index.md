@@ -59,7 +59,7 @@ In addition, the specification provides mechanisms to:
   - {{cssxref("min-width")}}
   - {{cssxref("min-height")}}
   - {{cssxref("max-width")}}
-  - {{cssxref("max-height")}} 
+  - {{cssxref("max-height")}}
   - {{cssxref("block-size")}}
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module:
 
