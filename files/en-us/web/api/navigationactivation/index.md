@@ -45,10 +45,13 @@ window.addEventListener("pagereveal", async (e) => {
     if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
       const profile = extractProfileNameFromUrl(fromUrl);
 
-      setTemporaryViewTransitionNames([
-        [document.querySelector(`#${profile} span`), 'name'],
-        [document.querySelector(`#${profile} img`), 'avatar'],
-      ], e.viewTransition.ready);
+      setTemporaryViewTransitionNames(
+        [
+          [document.querySelector(`#${profile} span`), "name"],
+          [document.querySelector(`#${profile} img`), "avatar"],
+        ],
+        e.viewTransition.ready,
+      );
     }
 
     // Went to profile page
