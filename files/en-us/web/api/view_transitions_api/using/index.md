@@ -461,7 +461,7 @@ const setTemporaryViewTransitionNames = async (entries, vtPromise) => {
   // Await the view transition promise passed into the function, e.g. ready or finished
   await vtPromise;
 
-  // Remove the custom view transition from each element passed into the function 
+  // Remove the custom view transition from each element passed into the function
   for (const [$el, name] of entries) {
     $el.style.viewTransitionName = '';
   }
