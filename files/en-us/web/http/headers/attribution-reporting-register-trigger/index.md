@@ -63,6 +63,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
       - : An object containing custom data that can be used to filter which triggers generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
     - `"event_trigger_data"`
 
+
       - : An object representing data about the trigger. Available sub-fields are as follows:
 
         - `"trigger_data"`
