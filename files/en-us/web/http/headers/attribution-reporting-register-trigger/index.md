@@ -46,6 +46,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
 
   - : A JSON string providing data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values. Available fields are as follows:
 
+
     - `"aggregatable_trigger_data"`
       - : An array of objects, each one defining an aggregation key to apply to different source keys. Each object contains the following properties:
         - `"key_piece"`
