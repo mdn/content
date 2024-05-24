@@ -65,6 +65,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
 
       - : An object representing data about the trigger. Available sub-fields are as follows:
 
+
         - `"trigger_data"`
 
 
