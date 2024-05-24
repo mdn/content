@@ -66,10 +66,13 @@ window.addEventListener('pagereveal', async (e) => {
     // Went to profile page
     // ~> Set VT names on the main title and image
     if (isProfilePage(currentUrl)) {
-      setTemporaryViewTransitionNames([
-        [document.querySelector(`#detail main h1`), 'name'],
-        [document.querySelector(`#detail main img`), 'avatar'],
-      ], e.viewTransition.ready);
+      setTemporaryViewTransitionNames(
+        [
+          [document.querySelector(`#detail main h1`), "name"],
+          [document.querySelector(`#detail main img`), "avatar"],
+        ],
+        e.viewTransition.ready,
+      );
     }
   }
 });
