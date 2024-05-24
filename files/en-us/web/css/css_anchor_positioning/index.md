@@ -48,18 +48,38 @@ In addition, the specification provides mechanisms to:
 
 ## Related concepts
 
-- Positioning properties that can take an [`anchor()`](/en-US/docs/Web/CSS/anchor) function as a value:
-  - The {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}} physical properties.
-  - The {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} logical properties.
-  - The {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}} shorthand properties.
-- Alignment properties that can take the `anchor-center` value:
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
+  - {{cssxref("top")}}
+  - {{cssxref("left")}}
+  - {{cssxref("bottom")}}
+  - {{cssxref("right")}}
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module:
+  - {{cssxref("width")}}
+  - {{cssxref("height")}}
+  - {{cssxref("min-width")}}
+  - {{cssxref("min-height")}}
+  - {{cssxref("max-width")}}
+  - {{cssxref("max-height")}} 
+  - {{cssxref("block-size")}}
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module:
+  - {{cssxref("inset-block-start")}}
+  - {{cssxref("inset-block-end")}}
+  - {{cssxref("inset-inline-start")}}
+  - {{cssxref("inset-inline-end")}}
+  - {{cssxref("inset-block")}}
+  - {{cssxref("inset-inline")}}
+  - {{cssxref("inset")}} shorthand
+  - {{cssxref("inline-size")}}
+  - {{cssxref("min-block-size")}}
+  - {{cssxref("min-inline-size")}} 
+  - {{cssxref("max-block-size")}}
+  - {{cssxref("max-inline-size")}}
+  
+ - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
   - {{cssxref("align-items")}}
   - {{cssxref("align-self")}}
   - {{cssxref("justify-items")}}
   - {{cssxref("justify-self")}}
-- Sizing properties that can take an [`anchor-size()`](/en-US/docs/Web/CSS/anchor) function as a value:
-  - The {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}} physical properties.
-  - The {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-block-size")}}, {{cssxref("min-inline-size")}}, {{cssxref("max-block-size")}}, and {{cssxref("max-inline-size")}} logical properties.
 
 ### Non-standard features
 
