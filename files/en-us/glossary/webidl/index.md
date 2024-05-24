@@ -13,6 +13,6 @@ WebIDL is used in nearly every API {{Glossary("specification")}} for the Web, an
 ## See also
 
 - [Specification](https://webidl.spec.whatwg.org/)
-- [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)
+- [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file)
 - [Gecko WebIDL bindings](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html)
 - [WebIDL](https://en.wikipedia.org/wiki/WebIDL)

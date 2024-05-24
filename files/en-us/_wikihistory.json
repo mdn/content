@@ -11728,7 +11728,7 @@
       "nasifmdtanjim"
     ]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file": {
     "modified": "2019-10-01T06:57:46.015Z",
     "contributors": [
       "chrisdavidmills",
@@ -11744,7 +11744,7 @@
       "jryans"
     ]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars": {
     "modified": "2020-09-30T09:04:08.085Z",
     "contributors": [
       "chrisdavidmills",
