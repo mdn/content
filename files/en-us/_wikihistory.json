@@ -71762,7 +71762,7 @@
       "JesseW"
     ]
   },
-  "Web/API/window/getDefaultComputedStyle": {
+  "Web/API/Window/getDefaultComputedStyle": {
     "modified": "2020-10-15T21:20:40.098Z",
     "contributors": [
       "mfluehr",
@@ -71779,7 +71779,7 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/window/requestAnimationFrame": {
+  "Web/API/Window/requestAnimationFrame": {
     "modified": "2020-11-28T11:54:08.634Z",
     "contributors": [
       "bulk88",

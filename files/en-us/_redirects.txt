@@ -2106,7 +2106,7 @@
 /en-US/docs/DOM/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/DOM/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
 /en-US/docs/DOM/window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
-/en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
+/en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/Window/getDefaultComputedStyle
 /en-US/docs/DOM/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM/window.history	/en-US/docs/Web/API/Window/history
 /en-US/docs/DOM/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
@@ -2123,7 +2123,7 @@
 /en-US/docs/DOM/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/DOM/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
 /en-US/docs/DOM/window.mozPaintCount	/en-US/docs/Web/API/Window
-/en-US/docs/DOM/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
+/en-US/docs/DOM/window.mozRequestAnimationFrame	/en-US/docs/Web/API/Window/requestAnimationFrame
 /en-US/docs/DOM/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/DOM/window.navigator	/en-US/docs/Web/API/Window/navigator
 /en-US/docs/DOM/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
@@ -2203,7 +2203,7 @@
 /en-US/docs/DOM/window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/DOM/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/DOM/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
-/en-US/docs/DOM/window.requestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
+/en-US/docs/DOM/window.requestAnimationFrame	/en-US/docs/Web/API/Window/requestAnimationFrame
 /en-US/docs/DOM/window.resizeBy	/en-US/docs/Web/API/Window/resizeBy
 /en-US/docs/DOM/window.resizeTo	/en-US/docs/Web/API/Window/resizeTo
 /en-US/docs/DOM/window.restore	/en-US/docs/Web/API/Window/moveTo
@@ -3349,7 +3349,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.postMessage	/en-US/docs/Web/API/Window/postMessage
 /en-US/docs/Document_Object_Model_(DOM)/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/Document_Object_Model_(DOM)/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
-/en-US/docs/Document_Object_Model_(DOM)/window.requestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
+/en-US/docs/Document_Object_Model_(DOM)/window.requestAnimationFrame	/en-US/docs/Web/API/Window/requestAnimationFrame
 /en-US/docs/Document_Object_Model_(DOM)/window.resizeBy	/en-US/docs/Web/API/Window/resizeBy
 /en-US/docs/Document_Object_Model_(DOM)/window.resizeTo	/en-US/docs/Web/API/Window/resizeTo
 /en-US/docs/Document_Object_Model_(DOM)/window.restore	/en-US/docs/Web/API/Window/moveTo
@@ -10155,7 +10155,7 @@
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
-/en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
+/en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/Window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/Window/afterprint_event
 /en-US/docs/Web/API/Window/onappinstalled	/en-US/docs/Web/API/Window/appinstalled_event
@@ -10799,7 +10799,7 @@
 /en-US/docs/Web/API/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Web/API/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
 /en-US/docs/Web/API/window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
-/en-US/docs/Web/API/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
+/en-US/docs/Web/API/window.getDefaultComputedStyle	/en-US/docs/Web/API/Window/getDefaultComputedStyle
 /en-US/docs/Web/API/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/Web/API/window.history	/en-US/docs/Web/API/Window/history
 /en-US/docs/Web/API/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
@@ -10816,7 +10816,7 @@
 /en-US/docs/Web/API/window.mozInnerScreenX	/en-US/docs/Web/API/Window/mozInnerScreenX
 /en-US/docs/Web/API/window.mozInnerScreenY	/en-US/docs/Web/API/Window/mozInnerScreenY
 /en-US/docs/Web/API/window.mozPaintCount	/en-US/docs/Web/API/Window
-/en-US/docs/Web/API/window.mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
+/en-US/docs/Web/API/window.mozRequestAnimationFrame	/en-US/docs/Web/API/Window/requestAnimationFrame
 /en-US/docs/Web/API/window.name	/en-US/docs/Web/API/Window/name
 /en-US/docs/Web/API/window.navigator	/en-US/docs/Web/API/Window/navigator
 /en-US/docs/Web/API/window.navigator.appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
@@ -10895,7 +10895,7 @@
 /en-US/docs/Web/API/window.print	/en-US/docs/Web/API/Window/print
 /en-US/docs/Web/API/window.prompt	/en-US/docs/Web/API/Window/prompt
 /en-US/docs/Web/API/window.releaseEvents	/en-US/docs/Web/API/Window/releaseEvents
-/en-US/docs/Web/API/window.requestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
+/en-US/docs/Web/API/window.requestAnimationFrame	/en-US/docs/Web/API/Window/requestAnimationFrame
 /en-US/docs/Web/API/window.resizeBy	/en-US/docs/Web/API/Window/resizeBy
 /en-US/docs/Web/API/window.resizeTo	/en-US/docs/Web/API/Window/resizeTo
 /en-US/docs/Web/API/window.restore	/en-US/docs/Web/API/Window/moveTo
