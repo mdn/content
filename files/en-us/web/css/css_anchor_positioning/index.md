@@ -71,7 +71,7 @@ In addition, the specification provides mechanisms to:
   - {{cssxref("inset")}} shorthand
   - {{cssxref("inline-size")}}
   - {{cssxref("min-block-size")}}
-  - {{cssxref("min-inline-size")}} 
+  - {{cssxref("min-inline-size")}}
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
 
