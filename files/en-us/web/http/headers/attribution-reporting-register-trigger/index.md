@@ -64,6 +64,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
           - : A string representing data that describes the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated event-level report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
 
             > **Note:** The numbers that are used to represent each event are arbitrary, and up to you as the developer. They will be matched to the specific events you are trying to measure by the reporting server.
+
         - `"priority"` {{optional_inline}}
           - : A string representing a priority value for the attribution trigger. By default, triggers are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to make the trigger match older sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
         - `"deduplication_key"` {{optional_inline}}
