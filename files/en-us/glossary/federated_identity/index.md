@@ -17,7 +17,7 @@ In a federated identity system, an identity provider:
 - manages a user's credentials and can authenticate users
 - is trusted by multiple websites to make assertions about a user's identity.
 
-A user can then authenticate with the IdP, which will return a token to the user's browser if authentication is successful. The user's browser will send the token to the website, which can verify that it was issued by the IdP. If the verification succeeds, the website can sign the user in.
+A user can then authenticate with the identity provider, which will return a token to the user's browser if authentication is successful. The user's browser will send the token to the website, which can verify that it was issued by the IdP. If the verification succeeds, the website can sign the user in.
 
 Federated identity is often provided as a service by corporations: for example, users who have Google, Microsoft, or Facebook accounts can use them to sign in to many websites. Websites typically have to implement a process for verifying tokens that is specific to an identity provider. However, open standards such as [OpenID](https://en.wikipedia.org/wiki/OpenID), [OAuth](https://en.wikipedia.org/wiki/OAuth), and [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) are widely used in the implementation of federated identity systems.
 
