@@ -2,7 +2,6 @@
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}
@@ -15,9 +14,9 @@ You will often need to create a layout which has a number of columns, and CSS pr
 
 There are a number of design patterns you might want to achieve with your columns:
 
-- [A continuous thread of content broken up into newspaper-style columns](#a-continuous-thread-of-content--multi-column-layout).
-- [A single row of items arranged as columns, with all heights being equal](#a-single-row-of-items-with-equal-heights--flexbox).
-- [Multiple rows of columns lined up by row and column](#lining-items-up-in-rows-and-columns--grid-layout).
+- [A continuous thread of content broken up into newspaper-style columns](#a_continuous_thread_of_content_—_multi-column_layout).
+- [A single row of items arranged as columns, with all heights being equal](#a_single_row_of_items_with_equal_heights_—_flexbox).
+- [Multiple rows of columns lined up by row and column](#lining_items_up_in_rows_and_columns_—_grid_layout).
 
 ## The recipes
 

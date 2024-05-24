@@ -82,7 +82,7 @@ Ensure sections follow the order defined in the CSS property template
 
 ### Description
 
-The CSS property page template is defined [here](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
+The CSS property page template is defined [here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
 The task list in this issue will be used to compare the documented CSS properties with the template and track changes to the property pages for compliance.
 
 ### List of pages checked

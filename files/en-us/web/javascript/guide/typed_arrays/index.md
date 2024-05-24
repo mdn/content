@@ -205,7 +205,7 @@ In other words, the two arrays are indeed viewed on the same data buffer, treati
 ```plain
 Int16Array  |  32  |  0   |   2  |  0   |   4  |  0   |   6  |  0   |
 Int32Array  |     32      |      2      |      4      |      6      |
-ArrayBuffer | 00 02 00 00 | 02 00 00 00 | 04 00 00 00 | 06 00 00 00 |
+ArrayBuffer | 20 00 00 00 | 02 00 00 00 | 04 00 00 00 | 06 00 00 00 |
 ```
 
 You can do this with any view type, although if you set an integer and then read it as a floating-point number, you will probably get a strange result because the bits are interpreted differently.

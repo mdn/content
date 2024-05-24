@@ -6,19 +6,19 @@ page-type: guide
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) cookies and, if not, to request access. We'll briefly look at a common storage access scenario.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) and, if not, to request access. We'll briefly look at a common storage access scenario.
 
 > **Note:** When we talk about third-party cookies in the content of the Storage Access API, we implicitly mean [_unpartitioned_](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) third-party cookies.
 
 ## Usage notes
 
-The Storage Access API is designed to allow embedded content to request access to third-party cookies — most modern browsers block such access by default to protect user privacy. Since embedded content won't know what a browser's behavior is going to be in this regard, it's best to always check whether the embedded {{htmlelement("iframe")}} has storage access before attempting to read or write a cookie. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookie access is blocked.
+The Storage Access API is designed to allow embedded content to request access to third-party cookies and unpartitioned state — most modern browsers block such access by default to protect user privacy. Since embedded content won't know what a browser's behavior is going to be in this regard, it's best to always check whether the embedded {{htmlelement("iframe")}} has storage access before attempting to read or write a cookie. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookie access is blocked.
 
-In the example below, we show how an embedded cross-site {{htmlelement("iframe")}} can access third-party cookies under a browser storage access policy that would otherwise block access to them.
+In the example below, we show how an embedded cross-site {{htmlelement("iframe")}} can access third-party cookies and unpartitioned state under a browser storage access policy that would otherwise block access to them.
 
 ## Allowing a sandboxed \<iframe> to use the API
 
-First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) to allow Storage Access API requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies:
+First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) to allow Storage Access API requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies and state:
 
 ```html
 <iframe
@@ -35,15 +35,19 @@ Now on to the code executed inside the embedded document. In this code:
 
 1. We first use feature detection (`if (document.hasStorageAccess) {}`) to check whether the API is supported. If not, we run our code that accesses cookies anyway, and hope that it works. It should be coded defensively to deal with such eventualities anyway.
 2. If the API is supported, we call `document.hasStorageAccess()`.
-3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies right away.
-4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies has already been granted (i.e., to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because [some browsers don't support the `"storage-access"` permission](/en-US/docs/Web/API/Storage_Access_API#api.permissions.permission_storage-access), which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
-5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
-6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
-7. If the permission state is `"denied"`, the user has denied our requests to access third-party cookies, and our code cannot use them.
+3. If that call returns `true`, it means this {{htmlelement("iframe")}} has already obtained access, and we can run our code that accesses cookies and state right away.
+4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies and unpartitioned state has already been granted (i.e., to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because [some browsers don't support the `"storage-access"` permission](/en-US/docs/Web/API/Storage_Access_API#api.permissions.permission_storage-access), which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
+5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies and state.
+6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies and state.
+7. If the permission state is `"denied"`, the user has denied our requests to access third-party cookies or unpartitioned state, and our code cannot use them.
 
 ```js
 function doThingsWithCookies() {
   document.cookie = "foo=bar"; // set a cookie
+}
+
+function doThingsWithLocalStorage(handle) {
+  handle.localStorage.setItem("foo", "bar"); // set a local storage key
 }
 
 async function handleCookieAccess() {
@@ -56,6 +60,11 @@ async function handleCookieAccess() {
     if (hasAccess) {
       // We have access to third-party cookies, so let's go
       doThingsWithCookies();
+      // If we want to modify unpartitioned state, we need to request a handle.
+      const handle = await document.requestStorageAccess({
+        localStorage: true,
+      });
+      doThingsWithLocalStorage(handle);
     } else {
       // Check whether third-party cookie access has been granted
       // to another same-site embed
@@ -67,13 +76,21 @@ async function handleCookieAccess() {
         if (permission.state === "granted") {
           // If so, you can just call requestStorageAccess() without a user interaction,
           // and it will resolve automatically.
-          await document.requestStorageAccess();
+          const handle = await document.requestStorageAccess({
+            cookies: true,
+            localStorage: true,
+          });
+          doThingsWithLocalStorage(handle);
           doThingsWithCookies();
         } else if (permission.state === "prompt") {
           // Need to call requestStorageAccess() after a user interaction
           btn.addEventListener("click", async () => {
             try {
-              await document.requestStorageAccess();
+              const handle = await document.requestStorageAccess({
+                cookies: true,
+                localStorage: true,
+              });
+              doThingsWithLocalStorage(handle);
               doThingsWithCookies();
             } catch (err) {
               // If there is an error obtaining storage access.
@@ -98,7 +115,7 @@ async function handleCookieAccess() {
 
 ### Related website sets
 
-The Chrome-only [related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
+The Chrome-only [related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie and unpartitioned state access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
 
 ## Requesting storage access from the top-level site on behalf of embedded resources
 

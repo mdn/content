@@ -117,7 +117,7 @@ These functions can be used in building the PAC file:
 > **Note:** pactester (part of the [pacparser](https://github.com/manugarg/pacparser) package) was used to test the following syntax examples.
 >
 > - The PAC file is named `proxy.pac`
-> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `http://www.mozilla.org`)
+> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `https://www.mozilla.org`)
 
 ### isPlainHostName()
 

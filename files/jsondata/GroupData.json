@@ -159,6 +159,13 @@
       "properties": [],
       "events": []
     },
+    "Compute Pressure API": {
+      "overview": ["Compute Pressure API"],
+      "interfaces": ["PressureObserver", "PressureRecord"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactAddress", "ContactsManager"],
@@ -183,7 +190,7 @@
       "overview": ["CSS Custom Highlight API"],
       "interfaces": ["Highlight", "HighlightRegistry"],
       "methods": [],
-      "properties": ["CSS.highlights"],
+      "properties": ["CSS.highlights_static"],
       "events": []
     },
     "Console API": {
@@ -215,7 +222,9 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "PasswordCredential"
+        "FederatedCredentialInit",
+        "PasswordCredential",
+        "PasswordCredentialInit"
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
@@ -247,7 +256,7 @@
         "PaintRenderingContext2D",
         "PaintSize"
       ],
-      "methods": ["CSS.paintWorklet"],
+      "methods": ["CSS.paintWorklet_static"],
       "properties": [],
       "events": []
     },
@@ -255,7 +264,7 @@
       "overview": ["CSS Properties and Values API"],
       "guides": ["/docs/Web/API/CSS_Properties_and_Values_API/guide"],
       "interfaces": ["CSSPropertyRule"],
-      "methods": ["CSS.registerProperty"],
+      "methods": ["CSS.registerProperty_static"],
       "properties": [],
       "events": []
     },
@@ -518,7 +527,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
@@ -566,8 +575,8 @@
       "methods": [],
       "properties": [
         "MouseEvent.webkitForce",
-        "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
-        "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN"
+        "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static",
+        "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static"
       ],
       "events": [
         "Element: webkitmouseforcewillbegin",
@@ -657,7 +666,7 @@
         "StylePropertyMap",
         "Worklet"
       ],
-      "methods": ["CSS.registerProperty", "Worklet.addModule"],
+      "methods": ["CSS.registerProperty_static", "Worklet.addModule"],
       "properties": [],
       "events": []
     },
@@ -1111,7 +1120,7 @@
         "VisibilityStateEntry"
       ],
       "methods": [],
-      "properties": ["performance_property"],
+      "properties": ["Window.performance", "WorkerGlobalScope.performance"],
       "events": []
     },
     "Periodic Background Sync": {
@@ -1234,7 +1243,11 @@
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "scheduler_property"],
+      "properties": [
+        "Navigator.scheduling",
+        "Window.scheduler",
+        "WorkerGlobalScope.scheduler"
+      ],
       "events": []
     },
     "Push API": {
@@ -1376,7 +1389,8 @@
       ],
       "methods": [],
       "properties": [
-        "caches",
+        "Window.caches",
+        "WorkerGlobalScope.caches",
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
@@ -1425,9 +1439,10 @@
         "/docs/Web/API/Storage_Access_API/Using",
         "/docs/Web/API/Storage_Access_API/Related_website_sets"
       ],
-      "interfaces": [],
+      "interfaces": ["StorageAccessHandle"],
       "methods": [
         "Document.hasStorageAccess()",
+        "Document.hasUnpartitionedCookieAccess()",
         "Document.requestStorageAccess()",
         "Document.requestStorageAccessFor()"
       ],
@@ -1623,7 +1638,7 @@
         "TrustedTypePolicyFactory"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.trustedTypes", "WorkerGlobalScope.trustedTypes"],
       "events": []
     },
     "UI Events": {
@@ -1679,6 +1694,7 @@
     },
     "URL API": {
       "overview": ["URL API"],
+      "guides": ["Web/API/URL_API/Resolving_relative_urls"],
       "interfaces": ["URL", "URLSearchParams"],
       "methods": [],
       "properties": [],
@@ -1824,6 +1840,7 @@
       ],
       "interfaces": [
         "PublicKeyCredential",
+        "PublicKeyCredentialCreationOptions",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
@@ -1914,7 +1931,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {

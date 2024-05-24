@@ -3,7 +3,7 @@ title: "MediaTrackConstraints: displaySurface property"
 short-title: displaySurface
 slug: Web/API/MediaTrackConstraints/displaySurface
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackConstraints.displaySurface
+browser-compat: api.MediaStreamTrack.applyConstraints.displaySurface_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
