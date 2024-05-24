@@ -25,24 +25,45 @@ This object is accessed via the {{domxref("PageSwapEvent.activation")}} and {{do
 ## Examples
 
 ```js
-window.addEventListener("pageswap", (event) => {
-  // Return if there is no active view transition
-  if (!event.viewTransition) {
-    return;
-  }
+window.addEventListener('pagereveal', async (e) => {
+  // If the "from" history entry does not exist, return
+  if (!navigation.activation.from) return;
 
-  // Grab the paths of the from and to URLs
-  const from_path = new URL(event.activation.from).pathname;
-  const to_path = new URL(event.activation.entry).pathname;
+  // Only run this if an active view transition exists
+  if (e.viewTransition) {
+    const fromUrl = new URL(navigation.activation.from.url);
+    const currentUrl = new URL(navigation.activation.entry.url);
 
-  // Skip transitions from landing to home
-  if (from_path === "/landing" && to_path === "/home") {
-    event.viewTransition.skipTransition();
+    // Only transition to/from same basePath
+    // ~> SKIP!
+    if (!fromUrl.pathname.startsWith(basePath)) {
+      e.viewTransition.skipTransition();
+    }
+
+    // Went from profile page to homepage
+    // ~> Set VT names on the relevant list item
+    if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
+      const profile = extractProfileNameFromUrl(fromUrl);
+
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#${profile} span`), 'name'],
+        [document.querySelector(`#${profile} img`), 'avatar'],
+      ], e.viewTransition.ready);
+    }
+
+    // Went to profile page
+    // ~> Set VT names on the main title and image
+    if (isProfilePage(currentUrl)) {
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#detail main h1`), 'name'],
+        [document.querySelector(`#detail main img`), 'avatar'],
+      ], e.viewTransition.ready);
+    }
   }
 });
 ```
 
-> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a more complete example.
+> **Note:** See [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

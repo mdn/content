@@ -13,6 +13,19 @@ The **`PageRevealEvent`** event object is made available inside handler function
 
 During a cross-document navigation, it allows you to manipulate a related [view transition](/en-US/docs/Web/API/View_Transitions_API) (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _to_, if a view transition was triggered by the navigation.
 
+Outside view transitions, this event is also useful for cases such as triggering a startup animation, or reporting a page view. It's equivalent to the first {{domxref("Window.requestAnimationFrame()")}} run after a cross-document navigation, if you were to trigger `requestAnimationFrame()` in the {{htmlelement("head")}} of the document. For example, if you ran the following `reveal()` function in the `<head>`:
+
+```js
+function reveal() {
+  // Include startup animation here
+}
+/* This will fire in the first rendered frame after loading */
+requestAnimationFrame(() => reveal());
+
+/* This will fire if the page is restored from BFCache */
+window.onpagehide = () => requestAnimationFrame(() => reveal());
+```
+
 ## Constructor
 
 - {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}}
@@ -26,36 +39,45 @@ During a cross-document navigation, it allows you to manipulate a related [view 
 ## Examples
 
 ```js
-// When going from a detail page to the homepage, set `profile-name` and `profile-avatar` vt-names
-// on the list item for the profile that was viewed on the detail page.
-window.addEventListener("pagereveal", async (e) => {
+window.addEventListener('pagereveal', async (e) => {
+  // If the "from" history entry does not exist, return
   if (!navigation.activation.from) return;
 
+  // Only run this if an active view transition exists
   if (e.viewTransition) {
-    const fromURL = new URL(navigation.activation.from.url);
-    const currentURL = new URL(navigation.activation.entry.url);
+    const fromUrl = new URL(navigation.activation.from.url);
+    const currentUrl = new URL(navigation.activation.entry.url);
+
+    // Only transition to/from same basePath
+    // ~> SKIP!
+    if (!fromUrl.pathname.startsWith(basePath)) {
+      e.viewTransition.skipTransition();
+    }
 
     // Went from profile page to homepage
     // ~> Set VT names on the relevant list item
-    if (profilePagePattern.test(fromURL) && homePagePattern.test(currentURL)) {
-      const match = profilePagePattern.exec(fromURL);
-      const profile = match?.pathname.groups.profile;
+    if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
+      const profile = extractProfileNameFromUrl(fromUrl);
 
-      document.querySelector(`#${profile} span`).style.viewTransitionName =
-        "profile-name";
-      document.querySelector(`#${profile} img`).style.viewTransitionName =
-        "profile-avatar";
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#${profile} span`), 'name'],
+        [document.querySelector(`#${profile} img`), 'avatar'],
+      ], e.viewTransition.ready);
+    }
 
-      // Clean up after snapshots have been taken
-      await e.viewTransition.ready;
-      document.querySelector(`#${profile} span`).style.viewTransitionName = "";
-      document.querySelector(`#${profile} img`).style.viewTransitionName = "";
+    // Went to profile page
+    // ~> Set VT names on the main title and image
+    if (isProfilePage(currentUrl)) {
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#detail main h1`), 'name'],
+        [document.querySelector(`#detail main img`), 'avatar'],
+      ], e.viewTransition.ready);
     }
   }
 });
 ```
 
-> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a more complete example with explanations.
+> **Note:** See [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

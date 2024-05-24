@@ -1,6 +1,6 @@
 ---
 title: "PageRevealEvent: viewTransition property"
-short-title: from
+short-title: viewTransition
 slug: Web/API/PageRevealEvent/viewTransition
 page-type: web-api-instance-property
 status:
@@ -18,7 +18,7 @@ A {{domxref("ViewTransition")}} object, or `null` if no view transition is activ
 
 ## Examples
 
-> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a complete example.
+See the main {{domxref("PageRevealEvent")}} page.
 
 ## Specifications
 

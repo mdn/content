@@ -1,11 +1,11 @@
 ---
 title: "PageSwapEvent: activation property"
-short-title: from
+short-title: activation
 slug: Web/API/PageSwapEvent/activation
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.PageSwapEvent.viewTransition
+browser-compat: api.PageSwapEvent.activation
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -18,7 +18,7 @@ A {{domxref("NavigationActivation")}} object, or `null` if the associated naviga
 
 ## Examples
 
-> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a complete example.
+See the main {{domxref("PageSwapEvent")}} page.
 
 ## Specifications
 

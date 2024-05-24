@@ -356,119 +356,102 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 The [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) demo provides a basic set of team profile pages, and demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
-The JavaScript starts like this, defining the homepage path and creating {{domxref("URLPattern")}}s to represent the homepage and profile pages:
-
-```js
-const basePath = "/profiles/mpa";
-
-const homePagePattern = new URLPattern(`${basePath}/`, window.origin);
-const profilePagePattern = new URLPattern(
-  `${basePath}/:profile`,
-  window.origin,
-);
-```
-
 The {{domxref("Window.pageswap_event", "pageswap")}} event listener looks as follows. This sets view transition names on the elements on the outbound page that link to the profile pages. When navigating from the home page to a profile page, custom animations are provided _only_ for the linked element that is clicked in each case.
 
-In this block we:
-
-- Grab the URL of the inbound document in the navigation from the {{domxref("NavigationHistoryEntry")}} object available at {{domxref("NavigationActivation.entry", "PageSwapEvent.activation.entry")}}.
-- Skip the transition if the inbound document's URL does not start with the same `basePath` as the current document. This is done using the {{domxref("ViewTransition.skipTransition()", "skipTransition()")}} method of the {{domxref("ViewTransition")}} object available at {{domxref("PageSwapEvent.viewTransition")}}.
-- Extract the profile name from the inbound URL using the `profilePagePattern`.
-- Return out of the event listener if there is no profile name, i.e. the link is not navigating to a profile page. In this case, we don't want to customize the view transition animations.
-- Set view transition names on the relevant profile name and avatar so that they are animated during the navigation, and remove previously set view transition names to tidy up and ensure that the wrong elements do not animate.
-
 ```js
-// When going to a detail page, set `profile-name` and `profile-avatar` vt-names
-// on the elements that link to that detail page
-window.addEventListener("pageswap", async (e) => {
+window.addEventListener('pageswap', async (e) => {
+  // Only run this if an active view transition exists
   if (e.viewTransition) {
-    const url = new URL(e.activation.entry.url);
+    const currentUrl = e.activation.from?.url ? new URL(e.activation.from.url) : null;
+    const targetUrl = new URL(e.activation.entry.url);
 
     // Only transition to same basePath
     // ~> SKIP!
-    if (!url.pathname.startsWith(basePath)) {
+    if (!targetUrl.pathname.startsWith(basePath)) {
       e.viewTransition.skipTransition();
     }
 
-    // Extract name from URL
-    const match = profilePagePattern.exec(url);
-    const profile = match?.pathname.groups.profile;
-
-    // No name extract = not going to a detail page
-    // ~> Don’t tweak VT
-    if (!profile) return;
-
-    // Set VT-names on clicked name
-    document.querySelector(`#${profile} span`).style.viewTransitionName =
-      "profile-name";
-    document.querySelector(`#${profile} img`).style.viewTransitionName =
-      "profile-avatar";
-
-    // Remove VT-names from currently shown ones when already at a detail page
-    // @TODO: Figure out why I had to set to x and y here, instead of just ''
-    if (profilePagePattern.test(window.location.href)) {
-      document.querySelector(`main h1`).style.viewTransitionName = "x";
-      document.querySelector(`main img`).style.viewTransitionName = "y";
+    // Going from profile page to homepage
+    // ~> The big img and title are the ones!
+    if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#detail main h1`), 'name'],
+        [document.querySelector(`#detail main img`), 'avatar'],
+      ], e.viewTransition.finished);
     }
 
-    // Restore orig VT names after snapshots have been taken
-    // (This to deal with BFCache)
-    await e.viewTransition.finished;
-    document.querySelector(`#${profile} span`).style.viewTransitionName = "z";
-    document.querySelector(`#${profile} img`).style.viewTransitionName = "w";
-    if (profilePagePattern.test(window.location.href)) {
-      document.querySelector(`main h1`).style.viewTransitionName =
-        "profile-name";
-      document.querySelector(`main img`).style.viewTransitionName =
-        "profile-avatar";
+    // Going to profile page
+    // ~> The clicked items are the ones!
+    if (isProfilePage(targetUrl)) {
+      const profile = extractProfileNameFromUrl(targetUrl);
+
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#${profile} span`), 'name'],
+        [document.querySelector(`#${profile} img`), 'avatar'],
+      ], e.viewTransition.finished);
     }
   }
 });
 ```
 
-The {{domxref("Window.pagereveal_event", "pagereveal")}} event listener looks as follows. This works in a similar way to the `pageswap` event listener, although bear in mind that here we are customizing the "to" animation, for page elements on the new page. In this case, we:
-
-- Return out of the event listener if there is no {{domxref("NavigationActivation.from", "PageSwapEvent.activation.from")}} history entry. We don't want an animation if we are going straight to the page and not navigation from somewhere else.
-- grab the "from" and "to" (current) URLs from the {{domxref("NavigationHistoryEntry")}} objects available at {{domxref("NavigationActivation.from", "PageRevealEvent.activation.from")}} and {{domxref("NavigationActivation.entry", "PageRevealEvent.activation.entry")}}.
-- Skip the transition if the inbound document's URL does not start with the same `basePath` as the current document. This is done using the {{domxref("ViewTransition.skipTransition()", "skipTransition()")}} method of the {{domxref("ViewTransition")}} object available at {{domxref("PageSwapEvent.viewTransition")}}.
-- Test the "from" and "to" (current) URLs using the `profilePagePattern` and `homePagePattern`, only running the next step if the "from" page is a profile page and the "to" page is the homepage.
-- Set view transition names on the relevant list item features so that they are animated during the navigation, and remove previously set view transition names to tidy up and ensure that the wrong elements do not animate.
+The {{domxref("Window.pagereveal_event", "pagereveal")}} event listener looks as follows. This works in a similar way to the `pageswap` event listener, although bear in mind that here we are customizing the "to" animation, for page elements on the new page.
 
 ```js
-// When going from a detail page to the homepage, set `profile-name` and `profile-avatar` vt-names
-// on the list item for the profile that was viewed on the detail page.
-window.addEventListener("pagereveal", async (e) => {
+window.addEventListener('pagereveal', async (e) => {
+  // If the "from" history entry does not exist, return
   if (!navigation.activation.from) return;
 
+  // Only run this if an active view transition exists
   if (e.viewTransition) {
-    const fromURL = new URL(navigation.activation.from.url);
-    const currentURL = new URL(navigation.activation.entry.url);
+    const fromUrl = new URL(navigation.activation.from.url);
+    const currentUrl = new URL(navigation.activation.entry.url);
 
     // Only transition to/from same basePath
     // ~> SKIP!
-    if (!fromURL.pathname.startsWith(basePath)) {
+    if (!fromUrl.pathname.startsWith(basePath)) {
       e.viewTransition.skipTransition();
     }
 
     // Went from profile page to homepage
     // ~> Set VT names on the relevant list item
-    if (profilePagePattern.test(fromURL) && homePagePattern.test(currentURL)) {
-      const match = profilePagePattern.exec(fromURL);
-      const profile = match?.pathname.groups.profile;
+    if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
+      const profile = extractProfileNameFromUrl(fromUrl);
 
-      document.querySelector(`#${profile} span`).style.viewTransitionName =
-        "profile-name";
-      document.querySelector(`#${profile} img`).style.viewTransitionName =
-        "profile-avatar";
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#${profile} span`), 'name'],
+        [document.querySelector(`#${profile} img`), 'avatar'],
+      ], e.viewTransition.ready);
+    }
 
-      // Clean up after snapshots have been taken
-      await e.viewTransition.ready;
-      document.querySelector(`#${profile} span`).style.viewTransitionName = "";
-      document.querySelector(`#${profile} img`).style.viewTransitionName = "";
+    // Went to profile page
+    // ~> Set VT names on the main title and image
+    if (isProfilePage(currentUrl)) {
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#detail main h1`), 'name'],
+        [document.querySelector(`#detail main img`), 'avatar'],
+      ], e.viewTransition.ready);
     }
   }
 });
+```
+
+The `setTemporaryViewTransitionNames()` user-defined function is used repeatedly in this code. This looks like so:
+
+```js
+const setTemporaryViewTransitionNames = async (entries, vtPromise) => {
+  // Apply a custom view transition to each element passed into the function
+  for (const [$el, name] of entries) {
+    $el.style.viewTransitionName = name;
+  }
+
+  // Await the view transition promise passed into the function, e.g. ready or finished
+  await vtPromise;
+
+  // Remove the custom view transition from each element passed into the function 
+  for (const [$el, name] of entries) {
+    $el.style.viewTransitionName = '';
+  }
+}
 ```
 
 ## Stabilizing page state to make cross-document transitions consistent

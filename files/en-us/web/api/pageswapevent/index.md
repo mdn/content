@@ -28,49 +28,42 @@ The pageswap event is fired when you navigate across documents, when the previou
 ## Examples
 
 ```js
-// When going to a detail page, set `profile-name` and `profile-avatar` vt-names
-// on the elements that link to that detail page
-window.addEventListener("pageswap", async (e) => {
+window.addEventListener('pageswap', async (e) => {
+  // Only run this if an active view transition exists
   if (e.viewTransition) {
-    const url = new URL(e.activation.entry.url);
+    const currentUrl = e.activation.from?.url ? new URL(e.activation.from.url) : null;
+    const targetUrl = new URL(e.activation.entry.url);
 
-    // Extract name from URL
-    const match = profilePagePattern.exec(url);
-    const profile = match?.pathname.groups.profile;
-
-    // No name extract = not going to a detail page
-    // ~> Don’t tweak VT
-    if (!profile) return;
-
-    // Set VT-names on clicked name
-    document.querySelector(`#${profile} span`).style.viewTransitionName =
-      "profile-name";
-    document.querySelector(`#${profile} img`).style.viewTransitionName =
-      "profile-avatar";
-
-    // Remove VT-names from currently shown ones when already at a detail page
-    // @TODO: Figure out why I had to set to x and y here, instead of just ''
-    if (profilePagePattern.test(window.location.href)) {
-      document.querySelector(`main h1`).style.viewTransitionName = "x";
-      document.querySelector(`main img`).style.viewTransitionName = "y";
+    // Only transition to same basePath
+    // ~> SKIP!
+    if (!targetUrl.pathname.startsWith(basePath)) {
+      e.viewTransition.skipTransition();
     }
 
-    // Restore orig VT names after snapshots have been taken
-    // (This to deal with BFCache)
-    await e.viewTransition.finished;
-    document.querySelector(`#${profile} span`).style.viewTransitionName = "z";
-    document.querySelector(`#${profile} img`).style.viewTransitionName = "w";
-    if (profilePagePattern.test(window.location.href)) {
-      document.querySelector(`main h1`).style.viewTransitionName =
-        "profile-name";
-      document.querySelector(`main img`).style.viewTransitionName =
-        "profile-avatar";
+    // Going from profile page to homepage
+    // ~> The big img and title are the ones!
+    if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#detail main h1`), 'name'],
+        [document.querySelector(`#detail main img`), 'avatar'],
+      ], e.viewTransition.finished);
+    }
+
+    // Going to profile page
+    // ~> The clicked items are the ones!
+    if (isProfilePage(targetUrl)) {
+      const profile = extractProfileNameFromUrl(targetUrl);
+
+      setTemporaryViewTransitionNames([
+        [document.querySelector(`#${profile} span`), 'name'],
+        [document.querySelector(`#${profile} img`), 'avatar'],
+      ], e.viewTransition.finished);
     }
   }
 });
 ```
 
-> **Note:** See [A JavaScript-powered custom cross-document (MPA) transition](/en-US/docs/Web/API/View_Transitions_API/Using#a_javascript-powered_custom_cross-document_mpa_transition) for a more complete example with explanations.
+> **Note:** See [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 
