@@ -147,7 +147,7 @@ The properties are as follows:
 
 ## How noise is added to reports
 
-Noise is added to reports in order to obscure the output associated with a source, in order to protect user privacy. The exact source data cannot be identified and attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning.
+Noise is added to reports in order to obscure the output associated with a particular source, and thereby protect user privacy. The exact source data cannot be identified and attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning.
 
 In the case of event-level reports, this is done using a randomized response algorithm, which works like so:
 
