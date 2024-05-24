@@ -25,7 +25,7 @@ This object is accessed via the {{domxref("PageSwapEvent.activation")}} and {{do
 ## Examples
 
 ```js
-window.addEventListener('pagereveal', async (e) => {
+window.addEventListener("pagereveal", async (e) => {
   // If the "from" history entry does not exist, return
   if (!navigation.activation.from) return;
 
