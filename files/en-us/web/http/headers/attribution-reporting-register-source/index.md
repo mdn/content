@@ -77,6 +77,7 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"priority"` {{optional_inline}}
       - : A string representing a priority value for the attribution source. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to prioritise specific sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
     - `"trigger_data"` {{optional_inline}}
+
       - : An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place. If omitted, `"trigger_data"` defaults to `[0, 1, 2, 3, 4, 5, 6, 7]` for navigation-based sources and `[0, 1]` for event-based (image- or script-based) sources.
 
         > **Note:** The numbers that are used to represent each event are arbitrary, and up to you as the developer. They will be matched to the specific events you are trying to measure by the reporting server.
