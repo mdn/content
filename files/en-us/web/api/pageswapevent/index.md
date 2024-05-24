@@ -45,10 +45,13 @@ window.addEventListener("pageswap", async (e) => {
     // Going from profile page to homepage
     // ~> The big img and title are the ones!
     if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
-      setTemporaryViewTransitionNames([
-        [document.querySelector(`#detail main h1`), 'name'],
-        [document.querySelector(`#detail main img`), 'avatar'],
-      ], e.viewTransition.finished);
+      setTemporaryViewTransitionNames(
+        [
+          [document.querySelector(`#detail main h1`), "name"],
+          [document.querySelector(`#detail main img`), "avatar"],
+        ],
+        e.viewTransition.finished,
+      );
     }
 
     // Going to profile page
