@@ -12,20 +12,20 @@ This article explains how to register attribution sources when using the [Attrib
 
 ## Basic methodology
 
-Attribution sources take the form of links, images, or scripts contained within content that you want to measure interactions with (for example, they might be ads that you want to measure conversions on). These cause the browser to store source data in a private local cache (accessible only by the browser) when specific actions occur. The different attribution source types are registered and signal interactions in different ways — they are differentiated as:
+Attribution sources take the form of links, images, or scripts contained within content that you want to measure interactions with (for example, they might be ads that you want to measure conversions on). These cause the browser to store source data in a private local cache (accessible only by the browser) when specific user interactions occur. The different attribution source types are registered and signal interactions in different ways — they are differentiated as:
 
 - Navigation sources, which cause the browser to store source data in response to navigation — for example when the user clicks on a link or activates it with the keyboard, or when a navigation occurs as a result of a {{domxref("Window.open()")}} call. See [Navigation-based attribution sources](#navigation-based_attribution_sources) for examples.
 - Event sources, which cause the browser to store source data in response to events firing. See [Event-based attribution sources](#event-based_attribution_sources) for examples.
 
 What happens behind the scenes to register sources and retrieve and store the source data is the same in both cases:
 
-1. All of the sources send an {{httpheader("Attribution-Reporting-Eligible")}} header on a request to the server measuring the interactions (typically the advertiser's server), which indicates that the response is eligible to register a source. For example:
+1. When the user interacts with an attribution source, it sends an {{httpheader("Attribution-Reporting-Eligible")}} header on a request to the server measuring the interactions (typically the advertiser's server), which indicates that the response is eligible to register a source. For example:
 
    ```http
    Attribution-Reporting-Eligible: navigation-source
    ```
 
-2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response. Its value is a JSON string that provides the information the browser should store about the attribution source that was interacted with. The information included in this header also determines which types of report the browser will generate:
+2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response to complete source registration. Its value is a JSON string that provides the information the browser should store about the attribution source that was interacted with. The information included in this header also determines which types of report the browser will generate:
 
    - The following example will cause an [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) to be generated when a [trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers) is matched to a source:
 
@@ -35,6 +35,8 @@ What happens behind the scenes to register sources and retrieve and store the so
        JSON.stringify({
          source_event_id: "412444888111012",
          destination: "https://advertiser.example",
+         trigger_data: [0, 1, 2, 3, 4],
+         trigger_data_matching: "exact",
          expiry: "604800",
          priority: "100",
          debug_key: "122939999",
@@ -46,6 +48,9 @@ What happens behind the scenes to register sources and retrieve and store the so
      The only required field in this context is `destination`, which specifies 1–3 sites on which a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with. The other fields specified above do the following:
 
      - `"source_event_id"`: A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint (see [Generating reports > Basic process](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#basic_process) for endpoint information).
+     - `"trigger_data"`: An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place.
+       > **Note:** The numbers that are used to represent each event are arbitrary, and up to you as the developer. They will be matched to the specific events you are trying to measure by the reporting server.
+     - `"trigger_data_matching"`: A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. `"exact"` is the value you'll nearly always use, which matches exact values.
      - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. subsequent triggers won't be attributable to this source).
      - `"priority"`: A string representing a priority value for the attribution source. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
      - `"debug_key"`: A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
@@ -61,6 +66,8 @@ What happens behind the scenes to register sources and retrieve and store the so
        JSON.stringify({
          source_event_id: "412444888111012",
          destination: "https://advertiser.example",
+         trigger_data: [0, 1, 2, 3, 4],
+         trigger_data_matching: "exact",
          expiry: "604800",
          priority: "100",
          debug_key: "122939999",
@@ -82,7 +89,7 @@ What happens behind the scenes to register sources and retrieve and store the so
 
      Again, see {{httpheader("Attribution-Reporting-Register-Source")}} for a detailed description of all the fields available on this header.
 
-3. When the user interacts with the attribution source, the browser stores the provided source data in its private local cache.
+3. After a successful source registration occurs, the browser stores the provided source data in its private local cache.
 
 ## Navigation-based attribution sources
 

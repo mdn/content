@@ -47,9 +47,10 @@ However, what happens behind the scenes to register triggers, look for matches, 
    The fields specified here are as follows:
 
    - `"event_trigger_data"`: An object representing data about the trigger. This includes:
-     - : `"trigger_data"`: The data associated with the trigger.
-     - : `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
-     - : `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
+     - `"trigger_data"`: The data associated with the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
+       > **Note:** The numbers that are used to represent each event are arbitrary, and up to you as the developer. They will be matched to the specific events you are trying to measure by the reporting server.
+     - `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
+     - `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
    - `"debug_key"`: A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
 
    See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
@@ -90,6 +91,8 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
    - match the site of at least one of the `destination`s specified in the source's associated data.
    - be same-origin with the request that specified the source registration.
+
+   > **Note:** These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be embedded in an {{htmlelement("iframe")}} or situated in the top-level site.
 
    There are many other factors that will prevent a successful match outcome; for example:
 

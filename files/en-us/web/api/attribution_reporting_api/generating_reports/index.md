@@ -38,7 +38,7 @@ Once an event-level report is received at the appropriate endpoint, how the data
 {
   "attribution_destination": "https://advertiser.example",
   "source_event_id": "412444888111012",
-  "trigger_data": "412444888111012",
+  "trigger_data": "4",
   "report_id": "123e4567-e89b-12d3-a456-426614174000",
   "source_type": "navigation",
   "randomized_trigger_rate": 0.34,
@@ -55,7 +55,7 @@ The properties are as follows:
 - `"source_event_id"`
   - : A string representing the attribution source ID. This is equal to the [`"source_event_id"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id) set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
 - `"trigger_data"`
-  - : A string representing coarse data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
+  - : A string representing data originating from the attribution trigger, set in the trigger registration (the [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) set via the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} response header).
 - `"report_id"`
   - : A string representing a [Universally Unique Identifier (UUID)](/en-US/docs/Glossary/UUID) for this report, which can be used to prevent duplicate counting.
 - `"source_type"`
@@ -154,18 +154,12 @@ In the case of event-level reports, this is done using a randomized response alg
 1. When an attribution source is stored, the browser generates a list of all possible sets of reports that could originate from the source's configuration (including the set consisting of no reports).
 2. In a small percentage of cases, the browser prevents the source from being attributed and instead picks a random member of that list to use as the source's reports. The probability of this happening is based on the size of that list, the browser's implementation-specific privacy parameters, and the source's chosen [`"event_level_epsilon"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_level_epsilon).
 
-Trigger data is limited quite strictly. By default, [navigation sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) will be limited to only 3 bits of [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data) (the values 0 through 7), while [event sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) will be limited to only 1 bit (the values 0 and 1). The `"trigger_data"` and [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) fields can be customized to vary the amount of noise applied. You could set a smaller range of trigger data to reduce the amount of noise applied, or a larger range to increase the noise:
-
 Typical settings in the {{httpheader("Attribution-Reporting-Register-Source")}} header might look like so:
 
 ```json
 {
   ...,
-  // The following setting would reduce noise for a navigation
-  // source (default 0–7), but increase noise for an event
-  // source (default 0–1)
   "trigger_data": [0, 1, 2, 3, 4],
-  // Could also be "modulus"
   "trigger_data_matching": "exact",
   ...,
 }
@@ -186,7 +180,7 @@ A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could contai
 }
 ```
 
-It is still possible that a match may not occur, based on the randomized response algorithm described above.
+It is however still possible that a match may not occur, based on the randomized response algorithm described above.
 
 For information on how noise works in summary reports, see [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
 
