@@ -12,7 +12,7 @@ Traditionally, on the web, a user will sign into a website with a username and a
 
 In this model, if users have multiple accounts with different websites, they have to remember many passwords, and this encourages bad password practices such as using the same password for multiple accounts.
 
-In a federated identity system, an _identity provider_:
+In a federated identity system, an IdP:
 
 - manages a user's credentials and can authenticate users
 - is trusted by multiple websites to make assertions about a user's identity.
