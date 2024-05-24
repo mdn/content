@@ -39,7 +39,7 @@ window.onpagehide = () => requestAnimationFrame(() => reveal());
 ## Examples
 
 ```js
-window.addEventListener('pagereveal', async (e) => {
+window.addEventListener("pagereveal", async (e) => {
   // If the "from" history entry does not exist, return
   if (!navigation.activation.from) return;
 
