@@ -25,9 +25,7 @@ ontoggle = (event) => {};
 ```
 
 ```html example-bad
-<details ontoggle="console.log(this.open)" open>
-  ...
-</details>
+<details ontoggle="console.log(this.open)" open>...</details>
 ```
 
 > **Note:** In the example above the event listener will be called once without any user interaction because the `open` attribute is set. Using event handlers like this [is discouraged](/en-US/docs/Web/HTML/Attributes#event_handler_attributes).
