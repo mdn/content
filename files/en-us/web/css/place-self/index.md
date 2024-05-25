@@ -22,6 +22,7 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* Keyword values */
+place-self: anchor-center;
 place-self: auto center;
 place-self: normal start;
 
@@ -77,6 +78,8 @@ place-self: unset;
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of an **anchor-positioned** element (see [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value can be used to align the item to the center of the associated anchor element in the block and inline direction.
 
 ## Formal definition
 
