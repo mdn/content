@@ -7,12 +7,14 @@ spec-urls: https://drafts.csswg.org/css-anchor-position-1/
 
 {{CSSRef}}
 
-The **CSS anchor positioning** module defines features that allow you to tether elements together — defining **anchor elements** and mechanisms by which other elements can be positioned and sized relative to them.
+The **CSS anchor positioning** module defines features that allow you to **tether** elements together. This module provides mechanisms for defining elements as **anchor elements** and positioning and sizing other elements relative to that anchor.
 
-In addition, the specification provides mechanisms to:
+In addition, the specification provides CSS-only mechanisms to:
 
-- Declare conditions under which anchor-positioned elements should be hidden, to help in situations where it is not appropriate to tether them to anchor elements.
-- Specify a set of alternative positions that the browser can try rendering the anchor-positioned element in, if the default rendering position causes it to overflow its containing block and/or be rendered offscreen.
+- Specify a set of alternative positions for an anchored element; when the default rendering position causes it to overflow its containing block and/or be rendered offscreen, the browser will try rendering the anchored element in the alternative positions instead.
+- Declare conditions under which anchor-positioned elements should be hidden, in situations where it is not appropriate to tether them to anchor elements.
+
+> **Note:** _Tether_ means tie or link together. To understand the concept of two elements being tethered together, imagine two balls joined by a piece of string — as one ball moves, the other will also move in relation to it.
 
 ## Reference
 
@@ -37,9 +39,16 @@ In addition, the specification provides mechanisms to:
 - [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size)
 - [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)
 
+### HTML attributes
+
+The non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute is supported in browsers. It provides an alternative mechanism for associating positioned elements with anchor elements.
+
 ### Interfaces
 
+- {{domxref("CSSPositionTryDescriptors")}}
 - {{domxref("CSSPositionTryRule")}}
+
+> **Note:** The non-standard {{domxref("Element.anchorElement")}} property is supported in browsers. It returns a reference to a positioned element's anchor element.
 
 ## Guides
 
@@ -62,7 +71,6 @@ In addition, the specification provides mechanisms to:
   - {{cssxref("max-height")}}
   - {{cssxref("block-size")}}
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module:
-
   - {{cssxref("inset-block-start")}}
   - {{cssxref("inset-block-end")}}
   - {{cssxref("inset-inline-start")}}
@@ -75,19 +83,13 @@ In addition, the specification provides mechanisms to:
   - {{cssxref("min-inline-size")}}
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
-
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("justify-items")}}
-- {{cssxref("justify-self")}}
-
-### Non-standard features
-
-- The HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, which provides an alternative mechanism for associating positioned elements with anchor elements.
-- The {{domxref("Element.anchorElement")}} property, which returns a reference to an positioned element's anchor element.
-
-> **Note:** The `anchor` attribute and the associated `anchorElement` property are currently disabled by default in supporting browsers. See the compatibility data on their linked reference pages for information on how to enable them for testing purposes.
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module:
+  - {{cssxref("align-items")}}
+  - {{cssxref("align-self")}}
+  - {{cssxref("justify-items")}}
+  - {{cssxref("justify-self")}}
+  - {{cssxref("place-items")}}
+  - {{cssxref("place-self")}}
 
 ## Specifications
 
