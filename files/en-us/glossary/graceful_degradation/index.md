@@ -16,7 +16,7 @@ It is a useful technique that allows Web developers to focus on developing the b
 
 - [Handling common HTML and CSS problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- Glossary
+- [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Polyfill")}}
   - {{Glossary("Progressive enhancement")}}
