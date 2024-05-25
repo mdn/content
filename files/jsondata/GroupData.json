@@ -377,10 +377,10 @@
       "overview": ["Document Object Model"],
       "guides": [
         "/docs/Web/API/Document_Object_Model/Introduction",
-        "/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core",
+        "/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
-        "/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors",
-        "/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree",
+        "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
+        "/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree",
         "/docs/Web/API/Document_Object_Model/Events",
         "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
