@@ -50,19 +50,58 @@ The two URNs correspond to
 - ![Protocol](mdn-url-protocol@x2.png)
   - : `http://` is the protocol. It indicates which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. Common schemes are:
 
-| Scheme      | Description                                                          |
-| ----------- | -------------------------------------------------------------------- |
-| data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
-| file        | Host-specific file names                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
-| http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
-| javascript  | URL-embedded JavaScript code                                         |
-| mailto      | Electronic mail address                                              |
-| ssh         | Secure shell                                                         |
-| tel         | telephone                                                            |
-| urn         | Uniform Resource Names                                               |
-| view-source | Source code of the resource                                          |
-| ws/wss      | [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API) |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Scheme</th>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <th scope="row">data</th>
+      <td><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs">Data URLs</a></td>
+    </tr>
+    <tr>
+      <th scope="row">file</th>
+      <td>Host-specific file names</td>
+    </tr>
+    <tr>
+      <th scope="row">ftp</th>
+      <td><a href="/en-US/docs/Glossary/FTP">File Transfer Protocol</a></td>
+    </tr>
+    <tr>
+      <th scope="row">http/https</th>
+      <td><a href="/en-US/docs/Glossary/HTTP">Hyper text transfer protocol (Secure)</a></td>
+    </tr>
+    <tr>
+      <th scope="row">javascript</th>
+      <td>URL-embedded JavaScript code</td>
+    </tr>
+    <tr>
+      <th scope="row">mailto</th>
+      <td>Electronic mail address</td>
+    </tr>
+    <tr>
+      <th scope="row">ssh</th>
+      <td>Secure shell</td>
+    </tr>
+    <tr>
+      <th scope="row">tel</th>
+      <td>telephone</td>
+    </tr>
+    <tr>
+      <th scope="row">urn</th>
+      <td>Uniform Resource Names</td>
+    </tr>
+    <tr>
+      <th scope="row">view-source</th>
+      <td>Source code of the resource</td>
+    </tr>
+    <tr>
+      <th scope="row">ws/wss</th>
+      <td><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket connections (Secure)</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Authority
 
