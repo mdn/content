@@ -43,7 +43,7 @@ The positioned element is associated with the anchor element via an anchor name.
 
 If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
 
-The `position-anchor` property associates the two elements. To make it an anchor-positioned element, you have to set its {{cssxref("position")}} property to either `fixed` or `absolute`. The element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element. 
+The `position-anchor` property associates the two elements. To make it an anchor-positioned element, you have to set its {{cssxref("position")}} property to either `fixed` or `absolute`. The element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element.
 
 To place the positioned element in a specific location relative to the anchor element, a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
 
