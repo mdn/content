@@ -80630,6 +80630,10 @@
       "rebeccahauck"
     ]
   },
+  "Web/CSS/basic-shape/path": {
+    "modified": "2020-12-11T11:12:50.012Z",
+    "contributors": ["chrisdavidmills", "rachelandrew"]
+  },
   "Web/CSS/blend-mode": {
     "modified": "2020-10-15T21:29:47.283Z",
     "contributors": [
@@ -88380,10 +88384,6 @@
       "chrisdavidmills",
       "AkashMishraa"
     ]
-  },
-  "Web/CSS/path": {
-    "modified": "2020-12-11T11:12:50.012Z",
-    "contributors": ["chrisdavidmills", "rachelandrew"]
   },
   "Web/CSS/percentage": {
     "modified": "2020-12-14T06:48:33.216Z",

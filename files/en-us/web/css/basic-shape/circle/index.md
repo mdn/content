@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape.circle
 
 {{CSSRef}}
 
-The **`circle()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).
+The **`circle()`** CSS [function](/en-US/docs/Web/CSS/CSS_Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
 {{EmbedInteractiveExample("pages/css/function-circle.html")}}
 
