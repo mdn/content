@@ -8,7 +8,10 @@ browser-compat: api.ClipboardItem.supports_static
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`supports()`** static method of the {{domxref("ClipboardItem")}} interface indicates whether or not the given {{Glossary("MIME type")}} is supported by the clipboard.
+The **`supports()`** static method of the {{domxref("ClipboardItem")}} interface returns `true` if the given {{Glossary("MIME type")}} is supported by the clipboard, and `false` otherwise.
+
+Note that the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) mandates support for plain text, HTML and PNG files.
+The `supports()`  method will always return `true` for these MIME types, so testing them is unnecessary .
 
 ## Syntax
 
