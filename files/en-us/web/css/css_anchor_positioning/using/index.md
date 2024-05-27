@@ -6,31 +6,33 @@ page-type: guide
 
 {{CSSRef}}
 
-**CSS anchor positioning** enables elements to be tethered together — defining some elements as **anchor elements** and mechanisms by which other elements can be positioned and sized relative to them. In addition, you can declare conditions under which anchor-positioned elements should be hidden, and alternative position options to render them in, if their default rendering position is offscreen or overflows their containing element.
+The **CSS anchor positioning** module defines features that allow you to tether elements together — defining some elements as **anchor elements**, thereby enabling setting the size and position of anchored elements based on the size and location of the anchor element to which they are bound.
+
+CSS anchor positioning also provides CSS-only mechanisms for specifying alternative positions for an anchored element. For example, if a tooltip is anchored to a form field but the tip would be rendered offscreen in its default position settings, the browser can try rendering it in the alternative positions so it is placed onscreen, or even hide it altogether if desired.
 
 This article explains all the anchor positioning concepts, and how to use the spec's features at a basic level. For further examples and syntax details, see the reference pages linked throughout.
 
 ## Fundamental concepts
 
-It's very common to want to tether one element to another, for example:
+It's very common to want to tether, or bind, one element to another. For example:
 
 1. Error messages that appear alongside form controls.
 2. Tooltips or infoboxes that pop up next to a UI element to provide more information about it.
 3. Settings or options dialogs that can be accessed to quickly configure UI elements.
 
-Creating such uses cases is fairly simple when the element to tether to (aka the **anchor element**) is always in the same place in the UI and the tethered element (aka the **anchor-positioned element**, or just **positioned element**) can just be placed before or after it in the source order. However, things are rarely that simple, and modern interfaces will often call for reusable, dynamically-generated absolutely-positioned elements to be situated next to their respective anchor elements. Their positions relative to one another need to be maintained as the anchor element moves (e.g. by scolling, or drag and drop).
+Modern interfaces often call for reusable, dynamically-generated elements to be situated relative to an anchor element. Creating such use cases would be fairly straightforward if the element to tether to (aka the **anchor element**) was always in the same place in the UI and the tethered element (aka the **anchor-positioned element**, or just **positioned element**) could always be placed immediately before or after it in the source order. However, things are rarely that simple. The location of positioned elements relative to their anchor element needs to be maintained and adjusted as the anchor element moves or otherwise changes configuration (e.g. by scolling, changing the viewport size, drag and drop, etc.).
 
-In addition, if the anchor element gets close to the edge of the viewport, meaning that the positioned element would end up offscreen, it's common to want to move its position to put it back onscreen again. Think of how right-click (<kbd>Ctrl</kbd> + click) context menus work on common desktop OSes.
+For example, if an anchor element such as a form field gets close to the edge of the viewport, a positioned element tooltip may end up offscreen. A method needs to be set to move the tooltip to keep it on-screen as long as the field is visible on the screen. This is the default behavior when you right-click (<kbd>Ctrl</kbd> + click) context menus on your desktop or laptop operating system.
 
-Historically, implementing this functionality has required JavaScript to dynamically keep positions updated as appropriate, has significant performance issues, and is difficult to get right. The [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module allows these use cases to be implemented performantly and declaratively.
+Historically, implementing this functionality in the browser required JavaScript to dynamically keep positioned element location and size updated as appropriate. Such scripts have significant performance issues and are difficult to implement correctly for all scenarios. The features defined in the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module enable implementing these features, performantly and declaratively, with CSS instead of JavaScript.
 
 ## Associating anchor and positioned elements
 
-To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) are to be associated with that anchor. Elements need to have absolute or fixed [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) applied to them to be associated with anchors.
+To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) are to be associated with that anchor. This can be done via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute. Elements need to have absolute or fixed [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) applied to them to be associated with anchors.
 
 ### Via CSS
 
-To declare an anchor element with CSS, you need to set an anchor name on it via the {{cssxref("anchor-name")}} property. The value needs to be a {{cssxref("dashed-ident")}}:
+To declare an anchor element with CSS, you need to set an anchor name on it via the {{cssxref("anchor-name")}} property; The value needs to be a {{cssxref("dashed-ident")}}. We also set the anchor's {{cssxref("width")}} to `fit-content` to get a small square anchor.
 
 ```css hidden
 .anchor {
@@ -38,7 +40,6 @@ To declare an anchor element with CSS, you need to set an anchor name on it via 
   color: white;
   text-shadow: 1px 1px 1px black;
   background-color: hsl(240 100% 75%);
-  width: fit-content;
   border-radius: 10px;
   border: 1px solid black;
   padding: 3px;
@@ -47,11 +48,12 @@ To declare an anchor element with CSS, you need to set an anchor name on it via 
 
 ```css
 .anchor {
+  width: fit-content;
   anchor-name: --infobox;
 }
 ```
 
-The positioned element is then associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. Let's say we want to tether an infobox to the anchor:
+The positioned element is then associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property and setting its {{cssxref("position")}} to `absolute`:
 
 ```css hidden
 .infobox {
@@ -87,11 +89,11 @@ This will render as follows:
 
 The positioned element needs to be placed after the anchor element in the DOM, or be a descendant of it, for the association to work.
 
-The anchor and infobox are now associated together, but for the moment you'll have to trust us on this. They are not yet tethered to each other — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action later on, when we look at [positioning elements based on anchor position](#positioning_elements_based_on_anchor_position).
+The anchor and infobox are now associated together, but for the moment you'll have to trust us on this. They are not tethered to each other yet — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action later on, when we look at [positioning elements based on anchor position](#positioning_elements_based_on_anchor_position).
 
 ### Via HTML
 
-To associate a positioned element with an anchor in HTML, you need to give the anchor element an ID, and then reference that ID in the positioned element's [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute:
+To associate a positioned element with an anchor in HTML, you need to give the anchor element an [`id`](/en-US/docs/Web/HTML/Global_attributes/id), and then reference that `id` in the positioned element's [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute:
 
 ```html
 <div class="anchor" id="example-anchor">⚓︎</div>
@@ -131,7 +133,7 @@ We still need to give the infobox absolute or fixed position so that it can be a
 }
 ```
 
-This gives us the same result that we achieved earlier with CSS:
+This gives us the same result that we achieved earlier with CSS. We associated the positioned element with the anchor element using the `anchor` attribute on the positioned element rather than the anchor element's `anchor-name` property and positioned element's `position-anchor` property.
 
 {{ EmbedLiveSample("Via HTML", "100%", "120") }}
 
@@ -139,17 +141,19 @@ This gives us the same result that we achieved earlier with CSS:
 
 ## Positioning elements based on anchor position
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. You also need to specify the position of the element relative to the anchor. Let's look at the machanisms available to do this.
+As we saw above, associating a positioned element with an anchor is not really much use on its own. You also need to specify the position of the element relative to the anchor. This can be done by setting [`anchor()`](/en-US/docs/Web/CSS/anchor) function values on inset properties, or by specifying an {{cssxref("inset-area")}}. Let's take a look at these mechanisms.
 
-### Using individual inset values, via `anchor()`
+> **Note:** You can also [center positioned elements on the anchor using the `anchor-center`](#centering_on_the_anchor_using_anchor-center), which is covered in a separate section.
 
-Conventional positioned elements can have their position specified via `inset` properties. This includes:
+### Using inset properties with `anchor()` function values
+
+Conventional positioned elements can have their position specified via inset properties. This includes:
 
 - Physical properties: {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}.
 - Logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}.
 - Shorthand properties: {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}}.
 
-With anchor-positioned elements, we have an extra value at our disposal that can be set on the above properties — the [`anchor()`](/en-US/docs/Web/CSS/anchor) function. This resolves to a {{cssxref("length")}} value, and enables `inset` values to be expressed in terms of the position of an anchor element's sides. The syntax looks like this:
+With anchor-positioned elements, we have an different value at our disposal that can be set on the above properties — the [`anchor()`](/en-US/docs/Web/CSS/anchor) function. This resolves to a {{cssxref("length")}} value, and enables inset values to be expressed in terms of the position of an anchor element's sides. The syntax looks like this:
 
 ```text
 anchor(anchor-element anchor-side, length-percentage)

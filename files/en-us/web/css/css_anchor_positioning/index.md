@@ -39,6 +39,10 @@ In addition, the specification provides CSS-only mechanisms to:
 - [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size)
 - [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)
 
+### Data types and values
+
+- [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
+
 ### HTML attributes
 
 The non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute is supported in browsers. It provides an alternative mechanism for associating positioned elements with anchor elements.
