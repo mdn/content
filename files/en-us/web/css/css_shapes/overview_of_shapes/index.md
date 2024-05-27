@@ -45,7 +45,7 @@ The value `circle(50%)` is an example of a basic shape. The specification define
 
 There are three functions that only define rectangles. With the `inset()` function, you define four offset values, thus pulling the line boxes of any wrapping content closer to the object than would otherwise happen. The `rect()` function defines a rectangle by specifying the distance from the top and left edges of the containing block. The `xywh()` function works by specifying distances from the top and left edges of the reference box and setting the width and height of the rectangle from that starting point.
 
-We have already seen how `circle()` creates a circular shape. An `ellipse()` is essentially a squashed circle. If none of these simple shapes do the trick you can create a `polygon()` and make the shape more complex using a series of lines. The `path()` and `shape()` functions can be used to create ANY shape via a series of line, curve, and move commands. 
+We have already seen how `circle()` creates a circular shape. An `ellipse()` is essentially a squashed circle. If none of these simple shapes do the trick you can create a `polygon()` and make the shape more complex using a series of lines. The `path()` and `shape()` functions can be used to create ANY shape via a series of line, curve, and move commands.
 
 In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) we explore each of the possible Basic Shapes and how to create them.
 
