@@ -31,18 +31,21 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.
 The CSS includes a `@position-try` at-rule with a name of `--custom-right` and several declarations in its body.
 
 ```css
-@position-try --custom-right {
-  inset-area: right;
-  width: 100px;
-  margin: 0 0 0 10px;
+@position-try --custom-left {
+  inset-area: left;
+  width: 20%;
+  max-width: 200px;
+  margin: 0 10px 0 0;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let tryOption = myRules[0]; // a CSSPositionTryRule
-console.log(tryOption); // Log the CSSPositionTryRule to the console.
-```
+const myRules = document.styleSheets[0].cssRules;
+const tryOption = myRules[0];  // a CSSPositionTryRule
+console.log(tryOption); // "[object CSSPositionTryRule]"
+console.log(tryOption.name) // "--custom-left"
+console.log(tryOption.style) // "[object CSSPositionTryDescriptors]"
+console.log(tryOption.style.maxWidth) // "200px"
 
 ## Specifications
 
@@ -56,5 +59,6 @@ console.log(tryOption); // Log the CSSPositionTryRule to the console.
 
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-options")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- {{DOMxRef("CSSPositionTryDescriptors")}}

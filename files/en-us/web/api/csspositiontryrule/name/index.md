@@ -19,17 +19,17 @@ A string.
 The CSS includes a `@position-try` at-rule with a name of `--custom-right` and several declarations in its body.
 
 ```css
-@position-try --custom-right {
-  inset-area: right;
-  width: 100px;
-  margin: 0 0 0 10px;
+@position-try --custom-bottom {
+  top: anchor(bottom);
+  min-width: 100px;
+  margin: 10px 0 0 0;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let tryOption = myRules[0]; // a CSSPositionTryRule
-console.log(tryOption.name); // Logs "--custom-right" to the console.
+const myRules = document.styleSheets[0].cssRules;
+const tryOption = myRules[0]; // a CSSPositionTryRule
+console.log(tryOption.name); // "--custom-bottom"
 ```
 
 ## Specifications
@@ -44,5 +44,6 @@ console.log(tryOption.name); // Logs "--custom-right" to the console.
 
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-options")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- {{DOMxRef("CSSPositionTryDescriptors")}}
