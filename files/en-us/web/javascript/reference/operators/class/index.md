@@ -77,4 +77,4 @@ Foo.name; // "NamedFoo"
 ## See also
 
 - {{jsxref("Statements/class", "class")}}
-- {{jsxref("Classes", "Classes", "", "true")}}
+- {{jsxref("Classes", "Classes", "", 1)}}

@@ -45,7 +45,7 @@ new AudioData(init)
     - `transfer`
       - : An array of {{jsxref("ArrayBuffer")}}s that `AudioData` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `AudioData` will use that buffer directly instead of copying from it.
 
-## Exceptions
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if `init` is in an incorrect format.

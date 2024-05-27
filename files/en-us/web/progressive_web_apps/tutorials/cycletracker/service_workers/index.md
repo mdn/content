@@ -87,7 +87,7 @@ const APP_STATIC_RESOURCES = [
   "/index.html",
   "/style.css",
   "/app.js",
-  "/cycletrack.json",
+  "/cycletracker.json",
   "/icons/wheel.svg",
 ];
 ```
@@ -121,9 +121,9 @@ When a user installs a PWA or simply visits a website with a service worker, an 
 
 The `install` event happens when the app is used for the first time, or when a new version of the service worker is detected by the browser. When an older service worker is being replaced by a new one, the old service worker is used as the PWA's service worker until the new service work is activated.
 
-Only available in secure contexts, the [`caches`](/en-US/docs/Web/API/caches) global property returns a {{domxref("CacheStorage")}} object associated with the current context. The {{domxref("CacheStorage.open()")}} method returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching name of the cache, passed as a parameter.
+Only available in secure contexts, the {{domxref("WorkerGlobalScope.caches")}} property returns a {{domxref("CacheStorage")}} object associated with the current context. The {{domxref("CacheStorage.open()")}} method returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching name of the cache, passed as a parameter.
 
-The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, retrieves them, then adds the responses to the given cache. The [`waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete. While browsers are responsible for executing and terminating service workers when necessary, the `waitUntil` method is a request to the browser to not terminate the service worker while a task is being executed.
+The {{domxref("Cache.addAll()")}} method takes an array of URLs as a parameter, retrieves them, then adds the responses to the given cache. The {{domxref("ExtendableEvent.waitUntil()")}} method tells the browser that work is ongoing until the promise settles, and it shouldn't terminate the service worker if it wants that work to complete. While browsers are responsible for executing and terminating service workers when necessary, the `waitUntil` method is a request to the browser to not terminate the service worker while a task is being executed.
 
 ```js
 self.addEventListener("install", (e) => {
@@ -163,7 +163,7 @@ As mentioned, when an existing service worker is being replaced by a new one, th
 
 We listen for the current service worker's global scope [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) event.
 
-We get the names of the existing named caches. We use the {{domxref("CacheStorage.keys()")}} method (again accessing `CacheStorage` through the global {{domxref("caches")}} property) which returns a {{jsxref("Promise")}} that resolves with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects in the order they were created.
+We get the names of the existing named caches. We use the {{domxref("CacheStorage.keys()")}} method (again accessing `CacheStorage` through the {{domxref("WorkerGlobalScope.caches")}} property) which returns a {{jsxref("Promise")}} that resolves with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects in the order they were created.
 
 We use the [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) method to iterate through that list of name cache promises. The `all()` method takes as input a list of iterable promises and returns a single `Promise`. For each name in the list of named caches, check if the cache is the currently active cache. If not, delete it with the `Cache` [`delete()`](/en-US/docs/Web/API/Cache/delete) method.
 

@@ -39,7 +39,7 @@ The `object-fit` property is specified as a single keyword chosen from the list 
 - `cover`
   - : The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.
 - `fill`
-  - : The replaced content is sized to fill the element's content box. The entire object will completely fill the box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be stretched to fit.
+  - : The replaced content is sized to fill the element's content box. The entire object will completely fill the box. If the object's {{glossary("aspect ratio")}} does not match the aspect ratio of its box, then the object will be stretched to fit.
 - `none`
   - : The replaced content is not resized.
 - `scale-down`
@@ -148,3 +148,4 @@ img {
 
 - Other image-related CSS properties: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
 - {{cssxref("background-size")}}
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

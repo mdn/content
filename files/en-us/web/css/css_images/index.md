@@ -43,10 +43,23 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 ## Guides
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+
   - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
+
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+
   - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
+
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+
+  - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
+- [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
