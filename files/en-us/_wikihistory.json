@@ -11728,7 +11728,7 @@
       "nasifmdtanjim"
     ]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file": {
     "modified": "2019-10-01T06:57:46.015Z",
     "contributors": [
       "chrisdavidmills",
@@ -11744,7 +11744,7 @@
       "jryans"
     ]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars": {
     "modified": "2020-09-30T09:04:08.085Z",
     "contributors": [
       "chrisdavidmills",
@@ -30245,7 +30245,7 @@
       "JesseW"
     ]
   },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
+  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
     "modified": "2019-03-24T00:17:33.140Z",
     "contributors": [
       "SphinxKnight",
@@ -30264,7 +30264,7 @@
       "ericjung"
     ]
   },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2020-12-06T22:57:45.352Z",
     "contributors": [
       "jordan-git",
@@ -30282,7 +30282,7 @@
       "asadotzler"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
     "modified": "2020-12-09T01:05:18.504Z",
     "contributors": [
       "skkiennhtg2327",
@@ -30308,7 +30308,7 @@
       "Gor1"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example": {
     "modified": "2019-03-23T23:40:45.010Z",
     "contributors": [
       "mk7087",
@@ -64969,7 +64969,7 @@
     "modified": "2019-06-17T09:14:48.783Z",
     "contributors": ["Sheppy", "beaulac", "now-raymond", "chrisdavidmills"]
   },
-  "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call": {
+  "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call": {
     "modified": "2020-12-10T13:59:26.911Z",
     "contributors": ["lolaodelola"]
   },
@@ -71762,7 +71762,7 @@
       "JesseW"
     ]
   },
-  "Web/API/window/getDefaultComputedStyle": {
+  "Web/API/Window/getDefaultComputedStyle": {
     "modified": "2020-10-15T21:20:40.098Z",
     "contributors": [
       "mfluehr",
@@ -71779,7 +71779,7 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/window/requestAnimationFrame": {
+  "Web/API/Window/requestAnimationFrame": {
     "modified": "2020-11-28T11:54:08.634Z",
     "contributors": [
       "bulk88",
