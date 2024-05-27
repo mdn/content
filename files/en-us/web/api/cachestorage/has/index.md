@@ -12,7 +12,7 @@ The **`has()`** method of the {{domxref("CacheStorage")}}
 interface returns a {{jsxref("Promise")}} that resolves to `true` if a
 {{domxref("Cache")}} object matches the `cacheName`.
 
-You can access `CacheStorage` through the global {{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
 ## Syntax
 
@@ -62,4 +62,4 @@ caches
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
