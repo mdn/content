@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-A straightforward way to create a shape is to use a value from the [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model). This article explains how to do this.
+A straightforward way to create a shape is to use a value from the [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) module. This article explains how to do this.
 
 The {{cssxref("box-edge")}} box values allowable as a shape value are:
 
@@ -15,7 +15,7 @@ The {{cssxref("box-edge")}} box values allowable as a shape value are:
 - `border-box`
 - `margin-box`
 
-The `border-radius` values are also supported. This means you can have something on your page with a curved border, and your shape can follow the created shape.
+The {{cssxref("border-radius")}} values are also supported. This means you can give an element a curved border, and flow your content around the created shape.
 
 ## CSS box model
 
