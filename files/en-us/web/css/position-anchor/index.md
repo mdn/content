@@ -9,11 +9,7 @@ browser-compat: css.properties.position-anchor
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property enables you to associate a positioned element with an **anchor element** (i.e. an element that has had an **anchor name** set on it via the {{cssxref("anchor-name")}} property). This is done by specifying the anchor name as the value of the positioned element's `position-anchor` property.
-
-To tether the anchor element and positioned elements together, and position the latter relative to the position of the former, you need to use a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property.
-
-An element needs to have {{cssxref("position")}} `fixed` or `absolute` applied to it to be associated with an anchor, and it needs to be placed after the anchor element in the DOM, or be a descendant of it, for the association to work.
+The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property associates a positioned element with its **anchor element** (i.e. an element that has had an **anchor name** set on it via the {{cssxref("anchor-name")}} property). This is done by specifying the anchor name as the value of the positioned element's `position-anchor` property.
 
 ## Syntax
 
@@ -34,14 +30,28 @@ position-anchor: unset;
 
 - {{cssxref("dashed-ident")}}
 
-  - : Specifies the anchor name of the anchor element to associate the positioned element with, as defined by its {{cssxref("anchor-name")}} property. This is sometimes called the **default anchor specifier**.
-
-    If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+  - : The name of the anchor element to associate the positioned element with, as defined by its {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
 
 - `implicit`
-  - : Associates the positioned element with its implicit anchor element. This is currently of limited use, but future specs may specify an implicit anchor element for a given positioned element under certain circumstances. For example, the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute creates an implicit anchor element.
+  - : Currently unsupported, this value will associate the positioned element with its implicit anchor element. For example, the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute creates an implicit anchor element, and future specs may also specify features that create an implicit anchor element for a given positioned element under certain circumstances.
 
-> **Note:** You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
+## Description
+
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location.  The `position-anchor` property provides the association.
+
+The positioned element is associated with the anchor element via an anchor name. The anchor element has a `<dashed-ident>` anchor name set on it via the {{cssxref("anchor-name")}} property. The same `<dashed-ident>` value is set as the value of the positioned element's `position-anchor` property.
+
+If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+
+The `position-anchor` property associates the two elements. To make it an anchor-positioned element, you have to set its {{cssxref("position")}} property to either `fixed` or `absolute`. The element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element. 
+
+To place the positioned element in a specific location relative to the anchor element, a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
+
+You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
+
+[Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) set on anchor-positioned elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
+
+For more information about anchor positioning, see the [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Formal definition
 
@@ -59,7 +69,7 @@ The following example associates a positioned element with an anchor, and tether
 
 #### HTML
 
-In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively.
+We specify two {{htmlelement("div")}} elements; an anchor element with a class of `anchor` and a positioned element with a class of `infobox`.
 
 We also include some filler text around the two `<div>`s to make the {{htmlelement("body")}} taller so that it will scroll.
 
@@ -94,7 +104,7 @@ We also include some filler text around the two `<div>`s to make the {{htmleleme
 
 #### CSS
 
-In the CSS, we first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
+We first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
 
 ```css hidden
 body {
@@ -120,7 +130,7 @@ body {
 }
 ```
 
-The positioned element is then associated with the anchor element by setting its anchor name as the value of the positioned element's `position-anchor` property.
+We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's `position-anchor` property.
 
 In addition, we set the `infobox`'s:
 
@@ -153,7 +163,7 @@ In addition, we set the `infobox`'s:
 
 #### Result
 
-The result looks like this. Try scrolling the page to demonstrate how the infobox is tethered to the anchor.
+Scroll the page to demonstrate how the infobox is tethered to the anchor.
 
 {{ EmbedLiveSample("Basic usage", "100%", "225") }}
 

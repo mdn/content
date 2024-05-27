@@ -56,7 +56,7 @@ The result is as follows.
 
 ## Specifications
 
-This property is not currently a part of any specification. See [https://github.com/whatwg/html/pull/9144](https://github.com/whatwg/html/pull/9144) for an ongoing discussion about it.
+This attribute is not currently part of the HTML specification. Read the discussion about adding the `anchorElement` property at [https://github.com/whatwg/html/pull/9144](https://github.com/whatwg/html/pull/9144).
 
 ## Browser compatibility
 
@@ -64,5 +64,6 @@ This property is not currently a part of any specification. See [https://github.
 
 ## See also
 
+- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
 - [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

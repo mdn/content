@@ -11,10 +11,6 @@ browser-compat: css.properties.anchor-name
 
 The **`anchor-name`** [CSS](/en-US/docs/Web/CSS) property enables you to define an element as an **anchor element** and give it one or more identifying **anchor names**, which can then be set as values of positioned elements' {{cssxref("position-anchor")}} property to associate them with the anchor.
 
-To tether the anchor element and positioned elements together, and position the latter relative to the position of the former, you need to use a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property.
-
-An element needs to have {{cssxref("position")}} `fixed` or `absolute` applied to it to be associated with an anchor, and it needs to be placed after the anchor element in the DOM, or be a descendant of it, for the association to work.
-
 ## Syntax
 
 ```css
@@ -41,9 +37,21 @@ anchor-name: unset;
 
   - : Defines the element as an anchor element and gives it one or more identifying anchor names, which can then be set as values of positioned elements' {{cssxref("position-anchor")}} properties to associate them with the anchor. The values need to be {{cssxref("dashed-ident")}} values; if multiple values are specified, they are separated with commas.
 
-    If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element with that name in the source order.
+## Description
 
-> **Note:** You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location.  The {{cssxref("position-anchor")}} property provides the association. The positioned element is associated with the anchor element via an anchor name. The anchor element has a `<dashed-ident>` anchor name set on it via the `anchor-name` property. The same `<dashed-ident>` value is set as the value of the positioned element's `position-anchor` property.
+
+The positioned element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element. 
+
+If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+
+To place the positioned element in a specific location relative to the anchor element, a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
+
+You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
+
+[Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) set on anchor-positioned elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
+
+For more information about anchor positioning, see the [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Formal definition
 
@@ -61,7 +69,7 @@ The following example associates a positioned element with an anchor, and tether
 
 #### HTML
 
-In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively.
+We specify two {{htmlelement("div")}} elements; an anchor element with a class of `anchor` and a positioned element with a class of `infobox`.
 
 We also include some filler text around the two `<div>`s to make the {{htmlelement("body")}} taller so that it will scroll.
 
@@ -96,7 +104,7 @@ We also include some filler text around the two `<div>`s to make the {{htmleleme
 
 #### CSS
 
-In the CSS, we first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the `anchor-name` property:
+We first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the `anchor-name` property:
 
 ```css hidden
 body {
@@ -122,7 +130,7 @@ body {
 }
 ```
 
-The positioned element is then associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property.
+We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property.
 
 In addition, we set the `infobox`'s:
 
@@ -155,7 +163,7 @@ In addition, we set the `infobox`'s:
 
 #### Result
 
-The result looks like this. Try scrolling the page to demonstrate how the infobox is tethered to the anchor.
+Try scrolling the page to demonstrate how the infobox is tethered to the anchor.
 
 {{ EmbedLiveSample("Basic usage", "100%", "225") }}
 
@@ -165,7 +173,7 @@ This example demonstrates how you can associate multiple positioned elements wit
 
 #### HTML
 
-The HTML is the same as for the previous example, except that this time we have multiple positioned element `<div>`s, with different [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s to identify them.
+The HTML is the same as for the previous example, except that this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s to identify them.
 
 ```html
 <p>
@@ -263,7 +271,7 @@ Each of the two positioned elements are associated with the anchor element by se
 
 #### Result
 
-The result looks like this. Try scrolling the page to demonstrate how both of the infoboxes are tethered to the anchor.
+Try scrolling the page to demonstrate how both of the infoboxes are tethered to the anchor.
 
 {{ EmbedLiveSample("Multiple positioned elements", "100%", "225") }}
 
@@ -273,7 +281,7 @@ This example demonstrates how you can move multiple positioned elements around, 
 
 #### HTML
 
-In the HTML, we have four different anchors and two different positioned elements, distinguished with different `id` values. The positioned elements contain {{htmlelement("select")}} boxes that allow you to chooose which anchor you want to associate them with.
+We have four different anchors and two different positioned elements, distinguished with different `id` values. The positioned elements contain {{htmlelement("select")}} boxes that allow you to chooose which anchor you want to associate them with.
 
 ```html
 <div id="anchor-container">
@@ -310,7 +318,7 @@ In the HTML, we have four different anchors and two different positioned element
 
 #### CSS
 
-In the CSS, we declare the first `anchor` `<div>` as an anchor using the `anchor-name` property, which is given two separate anchor names, one for each positioned element. This is the initial state of the demo — both positioned elements will be tethered to the first anchor.
+We declare the first `anchor` `<div>` as an anchor using the `anchor-name` property, which is given two separate anchor names, one for each positioned element. This is the initial state of the demo — both positioned elements will be tethered to the first anchor.
 
 ```css hidden
 body {
@@ -380,7 +388,7 @@ Each of the two positioned elements are given a {{cssxref("position-anchor")}} p
 
 #### JavaScript
 
-Finally, we provide some JavaScript to dynamically change the `anchor-name` values set on the anchor elements in response to different anchors being selected in the positioned elements' `<select>` menus. The key functionality here is the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler, `updateAnchorNames()`. It sets both anchor names on one anchor, if the anchors chosen in the two `<select>` menus are the same, or otherwise it sets a single anchor name on two separate anchors as appropriate.
+We dynamically change the `anchor-name` values set on the anchor elements in response to different anchors being selected in the positioned elements' `<select>` menus. The key functionality here is the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler, `updateAnchorNames()`. It sets both anchor names on one anchor, if the anchors chosen in the two `<select>` menus are the same, or otherwise it sets a single anchor name on two separate anchors as appropriate.
 
 ```js
 // Get references to the two select menus
@@ -419,7 +427,7 @@ function updateAnchorNames() {
 
 #### Result
 
-The result looks like this. Try choosing values from the drop-down menus to change the anchors that the elements are positioned relative to.
+Try choosing values from the drop-down menus to change the anchors that the elements are positioned relative to.
 
 {{ EmbedLiveSample("Multiple positioned elements and anchors", "100%", "400") }}
 

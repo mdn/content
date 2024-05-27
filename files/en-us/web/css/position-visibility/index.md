@@ -9,11 +9,7 @@ browser-compat: css.properties.position-visibility
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables you to conditionally hide an **anchor-positioned element** depending on, for example, whether it is overflowing its containing element or the viewport.
-
-For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
-
-> **Note:** In most cases, it makes more sense to attempt to change the position of anchor-positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and associated features. `position-visibility` is only for situations in which hiding the positioned element altogether is preferred.
+The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables conditionally hiding an **anchor-positioned element** depending on, for example, whether it is overflowing its containing element or the viewport.
 
 ## Syntax
 
@@ -40,9 +36,17 @@ position-visibility: unset;
 - `no-overflow`
   - : If the positioned element starts to overflow its containing element or the viewport, it will be strongly hidden.
 
-> **Note:** If an element is strongly hidden, this means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
-
 The specification also defines another value, `anchors-valid`, but this is not yet supported in any browser.
+
+## Description
+
+Use the `position-visibility` property to conditionally hide the anchor-positioned element on which it is set if the associated anchor element is completely hidden (`anchors-visible`) or if just partially hidden (`no-overflow`).
+
+When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
+
+`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the position of positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and associated features.
+
+For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
 
 ## Formal definition
 
@@ -56,13 +60,11 @@ The specification also defines another value, `anchors-valid`, but this is not y
 
 ### Basic usage
 
-The following example associates a positioned element with an anchor, and tethers the positioned element to the top of the anchor. It also provides radio buttons that allow you to set different values of `position-visibility` on the positioned element, so you can see what effect they have.
+This example associates a positioned element with an anchor and tethers the positioned element to the top of the anchor. It also provides radio buttons that set different `position-visibility` values on the positioned element to enable visualizing their effects.
 
 #### HTML
 
-In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively.
-
-We also include a {{htmlelement("form")}} containing the [radio inputs](/en-US/docs/Web/HTML/Element/input/radio) to allow you to choose different `position-visibility` values.
+We specify two {{htmlelement("div")}} elements; an anchor element with a class of `anchor` and a positioned element with a class of `infobox`.
 
 ```html hidden
 <p>
@@ -84,6 +86,23 @@ We also include a {{htmlelement("form")}} containing the [radio inputs](/en-US/d
 <div class="infobox">
   <p>This is an information box.</p>
 </div>
+```
+
+```html hidden
+<p>
+  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
+  cursus euismod quis viverra nibh cras pulvinar. Vulputate ut pharetra sit amet
+  aliquam.
+</p>
+
+<p>
+  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
+  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
+  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
+  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
+  accumsan.
+</p>
 
 <form>
   <fieldset>
@@ -117,26 +136,11 @@ We also include a {{htmlelement("form")}} containing the [radio inputs](/en-US/d
 </form>
 ```
 
-```html hidden
-<p>
-  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
-  cursus euismod quis viverra nibh cras pulvinar. Vulputate ut pharetra sit amet
-  aliquam.
-</p>
-
-<p>
-  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
-  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
-  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
-  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
-  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
-  accumsan.
-</p>
-```
+We also include a {{htmlelement("form")}} containing [radio inputs](/en-US/docs/Web/HTML/Element/input/radio) to allow you to choose different `position-visibility` values, and some filler text to make the content taller than the viewport so scrolling is required. These are not shown for the sake of brevity.
 
 #### CSS
 
-In the CSS, we first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
+We first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
 
 ```css hidden
 body {
@@ -169,7 +173,7 @@ form {
 }
 ```
 
-The positioned element is then associated with the anchor element by setting its anchor name as the value of the positioned element's `position-anchor` property.
+We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property.
 
 In addition, we set the `infobox`'s:
 
@@ -201,26 +205,24 @@ In addition, we set the `infobox`'s:
 
 #### JavaScript
 
-The JavaScript looks like this. Here we set a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler on the radio buttons so that, when a new value is selected, that value is applied to the infobox's `position-visibility` property.
+We include a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler on the radio buttons so that, when a new value is selected, we update the infobox's `position-visibility` property value.
 
 ```js
 const infobox = document.querySelector(".infobox");
-const form = document.forms[0];
-const radios = form.elements["position-visibility"];
+const radios = document.querySelectorAll('[name="position-visibility"]');
 
 for (const radio of radios) {
   radio.addEventListener("change", setPositionVisibility);
 }
 
 function setPositionVisibility(e) {
-  const posVis = e.target.value;
-  infobox.style.positionVisibility = posVis;
+  infobox.style.positionVisibility = e.target.value;
 }
 ```
 
 #### Result
 
-The result looks like this. Try selecting different `position-visibility` values and then scrolling the page to see the effect. When `always` is selected, the positioned element will not be hidden. When `anchors-visible` is selected, the positioned element will only be visible when the anchor is partially or fully on-screen. When `no-overflow` is selected, the positioned element will be hidden when it starts to overflow the viewport.
+Select a `position-visibility` value and then scroll the page to see the effect. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchors-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
 
 {{ EmbedLiveSample("Basic usage", "100%", "180") }}
 

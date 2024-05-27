@@ -9,11 +9,9 @@ browser-compat: html.global_attributes.anchor
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-The **`anchor`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to associate a positioned element with an anchor element. The anchor element is given an [`id`](/en-US/docs/Web/HTML/Global_attributes/id), and the positioned element is given an `anchor` attribute, the value of which is the anchor element's `id`.
+The **`anchor`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to associate a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 
-You can also associate a positioned element with an anchor element via CSS, using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
-
-For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
+> **Note:** Alternatively, you can associate a positioned element with an anchor element via CSS, using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. If both anchoring techniques are used on the same element, the CSS technique takes precedence over the HTML technique.
 
 ## Examples
 
@@ -23,7 +21,7 @@ The following example associates a positioned element with an anchor, and tether
 
 #### HTML
 
-In the HTML, we create a {{htmlelement("div")}} element with an `id` of `example-anchor`. This will be our anchor element. We then include another `<div>` with a class of `infobox` and an `anchor` attribute set to `example-anchor`. This designates the first `<div>` as the second `<div>`'s anchor, associating the two together.
+We create a {{htmlelement("div")}} element with an `id` of `example-anchor`. This is our anchor element. We then include another `<div>` with a class of `infobox` and an `anchor` attribute set to `example-anchor`. This designates the first `<div>` as the anchor for the second `<div>`, associating the two together.
 
 We also include some filler text around the two `<div>`s to make the {{htmlelement("body")}} taller so that it will scroll.
 
@@ -89,13 +87,12 @@ In the CSS, we set the `infobox`'s:
 
 - {{cssxref("position")}} property to `fixed`, so it can be positioned relative to the anchor's position in the page.
 - {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
-- {{cssxref("align-self")}} property to `anchor-center`. This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
+- {{cssxref("align-self")}} property to [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center). This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
 - {{cssxref("margin-left")}} to `10px` to create space between the infobox and its anchor.
 
 ```css
 .infobox {
   position: fixed;
-
   left: anchor(right);
   align-self: anchor-center;
   margin-left: 10px;
@@ -104,13 +101,13 @@ In the CSS, we set the `infobox`'s:
 
 #### Result
 
-The result is as follows. Try scrolling the page to demonstrate how the infobox is tethered to the anchor.
+Scroll the example to see how the infobox is tethered to the anchor. When supported, the infobox will be fixed to the right of the anchor. If not supported, the infobox will be fixed to the viewport.
 
 {{EmbedLiveSample("Basic `anchor` attribute usage", "100%", 225)}}
 
 ## Specifications
 
-This attribute is not currently a part of any specification. See [https://github.com/whatwg/html/pull/9144](https://github.com/whatwg/html/pull/9144) for an ongoing discussion about it.
+This attribute is not currently part of the HTML specification. Read the discussion about adding the `anchor` attribute at [https://github.com/whatwg/html/pull/9144](https://github.com/whatwg/html/pull/9144).
 
 ## Browser compatibility
 
@@ -118,5 +115,6 @@ This attribute is not currently a part of any specification. See [https://github
 
 ## See also
 
+- {{domxref("HTMLElement.anchorElement")}}
 - [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
