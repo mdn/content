@@ -129,6 +129,10 @@ It is NOT reasonable to start demanding things, like a quick reply.
 
 If someone is waiting for you to do something for them, you should be extended the same courtesy, but at the same time, try to respond as promptly as you can. If you really can't find the time, let them know, and ask the maintainers to help you find someone else to do the task.
 
+## Respecting Deadlines
+
+Some of our projects require contributions that happen within a certain deadline. We expect all contributors to be mindful of the deadlines for submitting pull requests, providing comments, and making other contributions. Adhering to these deadlines helps prevent delays in the process and keeps the project on track. If you foresee any issues meeting a deadline, please communicate this as early as possible so the team can make adjustments to the process and deliver on time. This proactive approach allows the team to make necessary adjustments and minimizes potential disruptions. Your consideration and commitment to respecting deadlines greatly contribute to the success of our collective efforts.
+
 ## See also
 
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
