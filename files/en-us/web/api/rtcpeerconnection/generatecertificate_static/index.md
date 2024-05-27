@@ -110,4 +110,4 @@ RTCPeerConnection.generateCertificate("ECDSA");
 - [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
 - [Web security](/en-US/docs/Web/Security)
 - {{Glossary("Symmetric-key cryptography")}}
-- [`crypto`](/en-US/docs/Web/API/Crypto)
+- {{DOMxRef("Crypto")}}

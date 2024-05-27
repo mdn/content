@@ -1,10 +1,10 @@
 ---
 title: "Blocked: Storage access requests from trackers"
-slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
+slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
 
 ## Message
 
