@@ -173,6 +173,7 @@ body {
 }
 img {
   margin: 0.5rem;
+}
 ```
 
 #### Result
