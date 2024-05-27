@@ -114,4 +114,4 @@ There is a [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-
 
 ## More CSS Shapes Features
 
-In this guide, we discussed wrapping text around floated shapes. See the [CSS shapes module](/en-US/docs/Web/CSS/CSS_shapes) for links to additional guides and all the features, including all the shape functions and additional properties, such as the {{cssxref("shape-inside")}} property which can be used to create shapes inside an element.
+In this guide, we discussed wrapping text around floated shapes. See the [CSS shapes module](/en-US/docs/Web/CSS/CSS_shapes) for links all the module and related features, including all the shape functions and additional guides.
