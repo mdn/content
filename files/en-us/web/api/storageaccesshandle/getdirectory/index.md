@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("FileSystemDirectoryHandle")}} object.
+A {{jsxref("Promise")}} that fulfills with an unpartitioned {{domxref("FileSystemDirectoryHandle")}} object.
 
 ### Exceptions
 
