@@ -37,7 +37,7 @@ position-anchor: unset;
 
 ## Description
 
-To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location.  The `position-anchor` property provides the association.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` property provides the association.
 
 The positioned element is associated with the anchor element via an anchor name. The anchor element has a `<dashed-ident>` anchor name set on it via the {{cssxref("anchor-name")}} property. The same `<dashed-ident>` value is set as the value of the positioned element's `position-anchor` property.
 
