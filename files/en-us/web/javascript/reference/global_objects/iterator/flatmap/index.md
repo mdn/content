@@ -20,7 +20,7 @@ flatMap(callbackFn)
 ### Parameters
 
 - `callbackFn`
-  - : A function to execute for each element produced by the iterator. It should return an iterator or iterable that yields elements to be yielded by `flatMap()`, or a single non-iterator/iterable value to be yielded. The function is called with the following arguments:
+  - : A function to execute for each element produced by the iterator. It should return an iterator or iterable that yields elements to be yielded by `flatMap()`. Note that unlike {{jsxref("Array.prototype.flatMap()")}}, you cannot return single non-iterator/iterable values. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`

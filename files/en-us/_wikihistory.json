@@ -11728,7 +11728,7 @@
       "nasifmdtanjim"
     ]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file": {
     "modified": "2019-10-01T06:57:46.015Z",
     "contributors": [
       "chrisdavidmills",
@@ -11744,7 +11744,7 @@
       "jryans"
     ]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars": {
     "modified": "2020-09-30T09:04:08.085Z",
     "contributors": [
       "chrisdavidmills",
@@ -30245,7 +30245,7 @@
       "JesseW"
     ]
   },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
+  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
     "modified": "2019-03-24T00:17:33.140Z",
     "contributors": [
       "SphinxKnight",
@@ -30264,7 +30264,7 @@
       "ericjung"
     ]
   },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2020-12-06T22:57:45.352Z",
     "contributors": [
       "jordan-git",
@@ -30282,7 +30282,7 @@
       "asadotzler"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
     "modified": "2020-12-09T01:05:18.504Z",
     "contributors": [
       "skkiennhtg2327",
@@ -30308,7 +30308,7 @@
       "Gor1"
     ]
   },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model/Example": {
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example": {
     "modified": "2019-03-23T23:40:45.010Z",
     "contributors": [
       "mk7087",
@@ -64969,7 +64969,7 @@
     "modified": "2019-06-17T09:14:48.783Z",
     "contributors": ["Sheppy", "beaulac", "now-raymond", "chrisdavidmills"]
   },
-  "Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call": {
+  "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call": {
     "modified": "2020-12-10T13:59:26.911Z",
     "contributors": ["lolaodelola"]
   },
@@ -66455,6 +66455,17 @@
     "modified": "2020-10-15T22:15:43.374Z",
     "contributors": ["wbamberg", "mfuji09"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2020-10-15T21:33:54.725Z",
+    "contributors": [
+      "mfluehr",
+      "fscholz",
+      "rifai",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone"
+    ]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2020-10-15T21:08:32.144Z",
     "contributors": [
@@ -66637,6 +66648,36 @@
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:25:16.295Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2020-12-11T05:31:22.254Z",
+    "contributors": [
+      "bershanskiy",
+      "williamwisdom",
+      "Sheppy",
+      "alattalatta",
+      "Delapouite",
+      "pinheadmz",
+      "connorshea",
+      "fscholz",
+      "joshuaptfan",
+      "xrtariq2594",
+      "libbymc",
+      "LPGhatguy",
+      "Sebastianz",
+      "teoli",
+      "acidburn0zzz",
+      "P0lip",
+      "ConorOB",
+      "mkato",
+      "kscarfone",
+      "evilpie",
+      "Mgjbot",
+      "Ptak82",
+      "Nickolay",
+      "Dria",
+      "JesseW"
+    ]
   },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T21:50:21.706Z",
@@ -70924,17 +70965,6 @@
       "alecananian"
     ]
   },
-  "Web/API/caches": {
-    "modified": "2020-10-15T21:33:54.725Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "rifai",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/clearInterval": {
     "modified": "2020-10-15T21:11:20.211Z",
     "contributors": [
@@ -71508,36 +71538,6 @@
       "adria"
     ]
   },
-  "Web/API/crypto_property": {
-    "modified": "2020-12-11T05:31:22.254Z",
-    "contributors": [
-      "bershanskiy",
-      "williamwisdom",
-      "Sheppy",
-      "alattalatta",
-      "Delapouite",
-      "pinheadmz",
-      "connorshea",
-      "fscholz",
-      "joshuaptfan",
-      "xrtariq2594",
-      "libbymc",
-      "LPGhatguy",
-      "Sebastianz",
-      "teoli",
-      "acidburn0zzz",
-      "P0lip",
-      "ConorOB",
-      "mkato",
-      "kscarfone",
-      "evilpie",
-      "Mgjbot",
-      "Ptak82",
-      "Nickolay",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/fetch": {
     "modified": "2020-10-15T21:33:25.494Z",
     "contributors": [
@@ -71762,7 +71762,7 @@
       "JesseW"
     ]
   },
-  "Web/API/window/getDefaultComputedStyle": {
+  "Web/API/Window/getDefaultComputedStyle": {
     "modified": "2020-10-15T21:20:40.098Z",
     "contributors": [
       "mfluehr",
@@ -71779,7 +71779,7 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/window/requestAnimationFrame": {
+  "Web/API/Window/requestAnimationFrame": {
     "modified": "2020-11-28T11:54:08.634Z",
     "contributors": [
       "bulk88",

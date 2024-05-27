@@ -7,7 +7,7 @@ browser-compat: api.Blob
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`Blob`** object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
+The **`Blob`** interface represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
 
 Blobs can represent data that isn't necessarily in a JavaScript-native format. The {{DOMxRef("File")}} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system.
 
