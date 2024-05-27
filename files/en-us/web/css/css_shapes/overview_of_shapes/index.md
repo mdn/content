@@ -8,9 +8,9 @@ page-type: guide
 
 The [CSS Shapes module](/en-US/docs/Web/CSS/CSS_shapes) describes geometric shapes in CSS. This article provides an overview of how you can use shapes to wrap text around floated elements that are not necessarily rectangular.
 
-When you float an item left, text will wrap around the right and bottom of the item in a rectangular fashion. With CSS shapes, you can apply a circle shape, and the text will wrap around the line of the circle.
+When you float an item left, text will wrap around the right and bottom of the item in a rectangular fashion. With CSS shapes you can, for example, apply a circle shape, and the text will wrap around the line of the circle.
 
-There are several ways to create this circle. In this guide, we will look at how CSS Shapes work, and consider ways to use them.
+There are several ways to create this circle. In this guide, we will look at how CSS Shapes work and how to use them.
 
 ## What does the specification define?
 
@@ -24,11 +24,11 @@ The specification defines a few properties, including:
 
 The `shape-outside` property allows us to define a shape. It takes a variety of values that define different shapes specified in the {{cssxref("&lt;basic-shape&gt;")}} data type.
 
-In the following example, an image is floated to the left. We applied the `shape-outside` property with a value of `circle(50%)`. The result is that the content now curves around the circular shape rather than following the rectangle created by the box of the image.
+In the following example, an image is floated to the left. We apply the `shape-outside` property with a `circle(50%)` value. The result is that the content now curves around the circular shape rather than following the rectangle created by the box of the image.
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
 
-Here we used a the {{cssxref("basic-shape/circle", "circle()")}} function. Because the image is floated, had we used a newer shape type that doesn't have full support, the user will see content flowing around the sides of a rectangular. Shapes are a visual display enhancement.
+Here we used the {{cssxref("basic-shape/circle", "circle()")}} function, which is supported across all modern browsers. If we used a newer shape type that doesn't have full support, users of non-supporting browsers would see the content flowing around the sides of a rectangular, due to the image being floated. Shapes are a visual progressive enhancement.
 
 ### Basic shapes
 
@@ -43,9 +43,9 @@ The value `circle(50%)` is an example of a basic shape. The specification define
 - {{cssxref("basic-shape/shape","shape()")}}
 - {{cssxref("basic-shape/xywh","xywh()")}}
 
-There are three functions that only define rectangles. With the `inset()` function, you define four offset values, thus pulling the line boxes of any wrapping content closer to the object than would otherwise happen. The `rect()` function defines a rectangle by specifying the distance from the top and left edges of the containing block. The `xywh()` function works by specifying distances from the top and left edges of the reference box and setting the width and height of the rectangle from that starting point.
+Three of these functions only define rectangles. With the `inset()` function, you define four offset values, thus pulling the line boxes of any wrapping content closer to the object than they otherwise would. The `rect()` function defines a rectangle by specifying the distance from the top and left edges of the containing block. The `xywh()` function works by specifying distances from the top and left edges of the reference box and setting the width and height of the rectangle from that starting point.
 
-We have already seen how `circle()` creates a circular shape. An `ellipse()` is essentially a squashed circle. If none of these simple shapes do the trick you can create a `polygon()` and make the shape more complex using a series of lines. The `path()` and `shape()` functions can be used to create ANY shape via a series of line, curve, and move commands.
+We have already seen how `circle()` creates a circular shape. An `ellipse()` is essentially a squashed circle. If none of these simple shapes do the trick you can create more complex shapes using the `polygon()` function, which allows the definition of a series of lines. The `path()` and `shape()` functions can be used to create ANY shape via a series of line, curve, and move commands.
 
 In our [Guide to Basic Shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) we explore each of the possible Basic Shapes and how to create them.
 
@@ -94,7 +94,7 @@ In the example below we have added a `shape-margin` to a basic shape. Change the
 
 ## Using Generated Content as the floated item
 
-In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to cause some text to flow along a non-rectangular invisible line. We can create a floated item and then make it invisible. While we could add an empty {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM, we can create a shape with only CSS using [generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) and keep things used for styling inside the CSS.
+In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to flow some text along a non-rectangular invisible line. We could, for example, add an empty floated {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM and make it invisible. However, we can create a shape with only CSS using [generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) and keep all our styling functionality inside the CSS.
 
 In this example, we use generated content to insert an element with a height and width of 150px. We can then use basic Sshapes, box values, or even the alpha channel of an image to create a shape for the text to wrap around.
 
@@ -114,4 +114,4 @@ There is a [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-
 
 ## More CSS Shapes Features
 
-In this guide, we discussed wrapping text around floated shapes. See the [CSS shapes module](/en-US/docs/Web/CSS/CSS_shapes) for links all the module and related features, including all the shape functions and additional guides.
+In this guide, we discussed wrapping text around floated shapes. See the [CSS shapes module](/en-US/docs/Web/CSS/CSS_shapes) for links to all the module features plus additional related features. This includes all the shape functions and relevant guides.
