@@ -73,13 +73,45 @@ A `try..catch` block could be used to catch any errors writing the data.
 
 ### Write canvas contents to the clipboard
 
-This example draws a blue rectangle to the canvas and writes the canvas to a blob in the clipboard when you click the canvas.
-An event listener is triggered on [`paste` events](/en-US/docs/Web/API/Element/paste_event) in an element where we want to display the clipboard contents as an image.
+This example draws a blue rectangle to the canvas.
+You can click the rectangle to copy the content of the canvas into the clipboard as an image, and then select another element and paste in the content from the clipboard.
 
-The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:
+#### HTML
+
+The HTML just defines our `<canvas>` element and the `<div>` element with id `target` where the canvas image will be pasted.
+
+```html
+<canvas id="canvas" width="100" height="100"></canvas>
+
+<div id="target">Paste here.</div>
+```
+
+#### JavaScript
+
+First we define an `async` function to copy a canvas to a blob.
+This wraps the old callback-style {{domxref("HTMLCanvasElement.toBlob()")}} method into the more intuitive `Promise` based function.
 
 ```js
-const target = document.getElementById("target");
+// Async/await method replacing toBlob() callback
+async function getBlobFromCanvas(canvas) {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (blob) {
+        resolve(blob);
+      } else {
+        reject(new Error("Canvas toBlob failed"));
+      }
+    });
+  });
+}
+```
+
+Next we set up our canvas and add an event listener for the `click` event.
+
+When you click the blue rectangle the code first checks if the clipboard supports data of type `"image/png"`.
+If so, the canvas displaying the rectangle is copied into a blob, and then the blob is added to a `ClipboardItem` and then written to the clipboard.
+
+```js
 const canvas = document.getElementById("canvas");
 
 // Set up canvas
@@ -88,24 +120,33 @@ ctx.fillStyle = "cornflowerblue";
 ctx.fillRect(0, 0, 100, 100);
 
 canvas.addEventListener("click", copyCanvasContentsToClipboard);
+const target = document.getElementById("target");
 
-function copyCanvasContentsToClipboard() {
-  return new Promise((resolve, reject) => {
+async function copyCanvasContentsToClipboard() {
+  if (ClipboardItem.supports("image/png")) {
     // Copy canvas to blob
-    canvas.toBlob(async (blob) => {
-      try {
-        // Create ClipboardItem with blob and its type, and add to an array
-        const data = [new ClipboardItem({ [blob.type]: blob })];
-        // Write the data to the clipboard
-        await navigator.clipboard.write(data);
-        resolve();
-      } catch (e) {
-        reject(e);
-      }
-    });
-  });
+    try {
+      const blob = await getBlobFromCanvas(canvas);
+      // Create ClipboardItem with blob and it's type, and add to an array
+      const data = [new ClipboardItem({ [blob.type]: blob })];
+      // Write the data to the clipboard
+      await navigator.clipboard.write(data);
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    console.log("image/png is not supported");
+  }
 }
+```
 
+Note that clipboard support for PNG files is a mandatory part of the specification, so we don't actually need the check using {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}} above (it always returns `true`).
+The check would be more useful in cases where we're fetching an optional file type, or a resource where we don't know the type in advance.
+
+We then define an event listener for [`paste` events](/en-US/docs/Web/API/Element/paste_event) on then element where we want to display the clipboard contents as an image.
+The [FileReader API](/en-US/docs/Web/API/FileReader) allows us to read the blob using the [`readAsDataUrl`](/en-US/docs/Web/API/FileReader/readAsDataURL) method and create an `<img>` element with the canvas contents:
+
+```js
 target.addEventListener("paste", (event) => {
   const items = (event.clipboardData || window.clipboardData).items;
   const blob = items[0].getAsFile();
@@ -132,14 +173,12 @@ body {
 }
 img {
   margin: 0.5rem;
-}
 ```
 
-```html
-<canvas id="canvas" width="100" height="100"></canvas>
+#### Result
 
-<div id="target">Paste here.</div>
-```
+The result is shown below.
+First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinatations to paste from the clipboard (such as `Ctrl+V` on Windows).
 
 {{embedlivesample("write_canvas_contents_to_the_clipboard", "", "300")}}
 
