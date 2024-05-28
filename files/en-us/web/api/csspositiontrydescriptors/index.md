@@ -28,30 +28,30 @@ There are 35 CSS properties that can be accessed as CSS property names or camel-
 
 The instance properties are listed below:
 
-| CSS&nbsp;property |  Camel-case | Property name | 
-| ---- | ---- | ------ |
-| {{cssxref("align-self")}} | `CSSPositionTryDescriptors.alignSelf` | `CSSPositionTryDescriptors["align-self"]` |
-| {{cssxref("block-size")}} | `CSSPositionTryDescriptors.blockSize` | `CSSPositionTryDescriptors["block-size"]` |
-| {{cssxref("bottom")}} | `CSSPositionTryDescriptors.bottom` | `CSSPositionTryDescriptors["bottom"]` |
-| {{cssxref("height")}} | `CSSPositionTryDescriptors.height` | `CSSPositionTryDescriptors["height"]` |
-| {{cssxref("inline-size")}} | `CSSPositionTryDescriptors.inlineSize` | `CSSPositionTryDescriptors["inline-size"]` |
-| {{cssxref("inset")}} | `CSSPositionTryDescriptors.inset` | `CSSPositionTryDescriptors["inset"]` |
-| {{cssxref("inset-area")}} | `CSSPositionTryDescriptors.insetArea` | `CSSPositionTryDescriptors["inset-area"]` |
-| {{cssxref("inset-block")}} | `CSSPositionTryDescriptors.insetBlock` | `CSSPositionTryDescriptors["inset-block"]` |
-| {{cssxref("inset-block-end")}} | `CSSPositionTryDescriptors.insetBlockEnd` | `CSSPositionTryDescriptors["inset-block-end"]` |
-| {{cssxref("inset-block-start")}} | `CSSPositionTryDescriptors.insetBlockStart` | `CSSPositionTryDescriptors["inset-block-start"]` |
-| {{cssxref("inset-inline")}} | `CSSPositionTryDescriptors.insetInline` | `CSSPositionTryDescriptors["inset-inline"]` |
-| {{cssxref("inset-inline-end")}} | `CSSPositionTryDescriptors.insetInlineEnd` | `CSSPositionTryDescriptors["inset-inline-end"]` |
-| {{cssxref("inset-inline-start")}} | `CSSPositionTryDescriptors.insetInlineStart` | `CSSPositionTryDescriptors["inset-inline-start"]` |
-| {{cssxref("justify-self")}} | `CSSPositionTryDescriptors.justifySelf` | `CSSPositionTryDescriptors["justify-self"]` |
-| {{cssxref("left")}} | `CSSPositionTryDescriptors.left` | `CSSPositionTryDescriptors["left"]` |
-| {{cssxref("margin")}} | `CSSPositionTryDescriptors.margin` | `CSSPositionTryDescriptors["margin"]` |
-| {{cssxref("margin-block")}} | `CSSPositionTryDescriptors.marginBlock` | `CSSPositionTryDescriptors["margin-block"]` |
-| {{cssxref("margin-block-end")}} | `CSSPositionTryDescriptors.marginBlockEnd` | `CSSPositionTryDescriptors["margin-block-end"]` |
-| {{cssxref("margin-block-start")}} | `CSSPositionTryDescriptors.marginBlockStart` | `CSSPositionTryDescriptors["margin-block-start"]` |
-| {{cssxref("margin-bottom")}} | `CSSPositionTryDescriptors.marginBottom` | `CSSPositionTryDescriptors["margin-bottom"]` |
-| {{cssxref("margin-inline")}} | `CSSPositionTryDescriptors.marginInline` | `CSSPositionTryDescriptors["margin-inline"]` |
-| {{cssxref("margin-inline-end")}} | `CSSPositionTryDescriptors.marginInlineEnd` | `CSSPositionTryDescriptors["margin-inline-end"]` |
+| CSS&nbsp;property                  | Camel-case                                    | Property name                                      |
+| ---------------------------------- | --------------------------------------------- | -------------------------------------------------- |
+| {{cssxref("align-self")}}          | `CSSPositionTryDescriptors.alignSelf`         | `CSSPositionTryDescriptors["align-self"]`          |
+| {{cssxref("block-size")}}          | `CSSPositionTryDescriptors.blockSize`         | `CSSPositionTryDescriptors["block-size"]`          |
+| {{cssxref("bottom")}}              | `CSSPositionTryDescriptors.bottom`            | `CSSPositionTryDescriptors["bottom"]`              |
+| {{cssxref("height")}}              | `CSSPositionTryDescriptors.height`            | `CSSPositionTryDescriptors["height"]`              |
+| {{cssxref("inline-size")}}         | `CSSPositionTryDescriptors.inlineSize`        | `CSSPositionTryDescriptors["inline-size"]`         |
+| {{cssxref("inset")}}               | `CSSPositionTryDescriptors.inset`             | `CSSPositionTryDescriptors["inset"]`               |
+| {{cssxref("inset-area")}}          | `CSSPositionTryDescriptors.insetArea`         | `CSSPositionTryDescriptors["inset-area"]`          |
+| {{cssxref("inset-block")}}         | `CSSPositionTryDescriptors.insetBlock`        | `CSSPositionTryDescriptors["inset-block"]`         |
+| {{cssxref("inset-block-end")}}     | `CSSPositionTryDescriptors.insetBlockEnd`     | `CSSPositionTryDescriptors["inset-block-end"]`     |
+| {{cssxref("inset-block-start")}}   | `CSSPositionTryDescriptors.insetBlockStart`   | `CSSPositionTryDescriptors["inset-block-start"]`   |
+| {{cssxref("inset-inline")}}        | `CSSPositionTryDescriptors.insetInline`       | `CSSPositionTryDescriptors["inset-inline"]`        |
+| {{cssxref("inset-inline-end")}}    | `CSSPositionTryDescriptors.insetInlineEnd`    | `CSSPositionTryDescriptors["inset-inline-end"]`    |
+| {{cssxref("inset-inline-start")}}  | `CSSPositionTryDescriptors.insetInlineStart`  | `CSSPositionTryDescriptors["inset-inline-start"]`  |
+| {{cssxref("justify-self")}}        | `CSSPositionTryDescriptors.justifySelf`       | `CSSPositionTryDescriptors["justify-self"]`        |
+| {{cssxref("left")}}                | `CSSPositionTryDescriptors.left`              | `CSSPositionTryDescriptors["left"]`                |
+| {{cssxref("margin")}}              | `CSSPositionTryDescriptors.margin`            | `CSSPositionTryDescriptors["margin"]`              |
+| {{cssxref("margin-block")}}        | `CSSPositionTryDescriptors.marginBlock`       | `CSSPositionTryDescriptors["margin-block"]`        |
+| {{cssxref("margin-block-end")}}    | `CSSPositionTryDescriptors.marginBlockEnd`    | `CSSPositionTryDescriptors["margin-block-end"]`    |
+| {{cssxref("margin-block-start")}}  | `CSSPositionTryDescriptors.marginBlockStart`  | `CSSPositionTryDescriptors["margin-block-start"]`  |
+| {{cssxref("margin-bottom")}}       | `CSSPositionTryDescriptors.marginBottom`      | `CSSPositionTryDescriptors["margin-bottom"]`       |
+| {{cssxref("margin-inline")}}       | `CSSPositionTryDescriptors.marginInline`      | `CSSPositionTryDescriptors["margin-inline"]`       |
+| {{cssxref("margin-inline-end")}}   | `CSSPositionTryDescriptors.marginInlineEnd`   | `CSSPositionTryDescriptors["margin-inline-end"]`   |
 | {{cssxref("margin-inline-start")}} | `CSSPositionTryDescriptors.marginInlineStart` | `CSSPositionTryDescriptors["margin-inline-start"]` |
 | {{cssxref("margin-left")}}         | `CSSPositionTryDescriptors.marginLeft`        | `CSSPositionTryDescriptors["margin-left"]`         |
 | {{cssxref("margin-right")}}        | `CSSPositionTryDescriptors.marginRight`       | `CSSPositionTryDescriptors["margin-right"]`        |
