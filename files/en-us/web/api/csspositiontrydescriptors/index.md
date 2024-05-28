@@ -24,7 +24,7 @@ There are 35 CSS properties that can be accessed as CSS property names or camel-
 - `CSSPositionTryDescriptors.propertyName`
     - : Represents the property value set in the `@position-try` at-rule using the camel-cased property name.
 - `CSSPositionTryDescriptors["property-name"]`
-   - : Represents the property value set in the `@position-try` at-rule using the CSS property name.
+  - : Represents the property value set in the `@position-try` at-rule using the CSS property name.
 
 The instance properties are listed below:
 
