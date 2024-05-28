@@ -75,7 +75,7 @@ console.log(formatted.join("; "));
 
 ### Using format with a string
 
-Using a string we can specify very numbers that are larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} without losing precision.
+Using a string we can specify numbers that are larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} without losing precision.
 
 ```js
 const numberFormat = new Intl.NumberFormat("en-US");
