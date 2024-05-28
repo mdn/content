@@ -1,13 +1,13 @@
 ---
 title: path()
-slug: Web/CSS/path
+slug: Web/CSS/basic-shape/path
 page-type: css-function
 browser-compat: css.types.basic-shape.path
 ---
 
 {{CSSRef}}
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes) and CSS Motion Path to enable a shape to be drawn.
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("&lt;basic-shape&gt;")}} data type value. It can be used in the CSS [`offset-path`](/en-US/docs/Web/CSS/offset-path) and [`clip-path`](/en-US/docs/Web/CSS/clip-path) properties and in the SVG [`d`](/en-US/docs/Web/SVG/Attribute/d) attribute.
 
 {{EmbedInteractiveExample("pages/css/function-path.html")}}
 
@@ -22,13 +22,16 @@ path(<string>)
 When used in {{cssxref("clip-path")}}:
 
 ```css
-path([<'fill-rule'>,]?<string>)
+path( [<fill-rule>,]? <string> )
 ```
 
 ### Parameters
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
-  - : An optional value of [`nonzero`](/en-US/docs/Web/SVG/Attribute/fill-rule#nonzero) (the default when omitted) or [`evenodd`](/en-US/docs/Web/SVG/Attribute/fill-rule#evenodd), which specifies the filling rule.
+
+  - : An optional value of [`nonzero`](/en-US/docs/Web/SVG/Attribute/fill-rule#nonzero) (the default when omitted) or [`evenodd`](/en-US/docs/Web/SVG/Attribute/fill-rule#evenodd), which defines how the inside of the shape to be filled is determined.
+    > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
+
 - {{cssxref("string")}}
   - : A [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path). The syntax for the contents of this `<string>` is identical to SVG.
 
