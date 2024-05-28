@@ -15,17 +15,9 @@ The Credential Management API enables a website to create, store, and retrieve {
 - **One-time password (OTP) credentials** ({{domxref("OTPCredential")}})
 - **Web Authentication assertions** ({{domxref("PublicKeyCredential")}})
 
-In this guide we'll introduce the different credential types and explain at a high level how they are used.
-
 ![Class diagram showing the five different credential subclasses.](credential-types.svg)
 
-The central interface of the Credential Management API is the {{domxref("CredentialsContainer")}}, which is accessed through the {{domxref("navigator.credentials")}} property, and which provides three main functions:
-
-- {{domxref("CredentialsContainer.create", "create()")}}: create a new credential.
-- {{domxref("CredentialsContainer.store", "store()")}}: store a new credential locally.
-- {{domxref("CredentialsContainer.get", "get()")}}: retrieve a credential, which can then be used to log a user in.
-
-Not all the `CredentialsContainer` functions are applicable to all the different types, and they operate in a different way for different types.
+In this guide we'll introduce the different credential types and explain at a high level how they are used.
 
 > **Note:** Although we're describing all the credential types together here, the different credential types are defined in various different specifications, which extend the main Credential Management API specification.
 >
