@@ -24,6 +24,10 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 - `<border-radius>`
   - : The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Basic inset example
