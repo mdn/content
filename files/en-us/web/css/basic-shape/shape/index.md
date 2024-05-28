@@ -169,7 +169,7 @@ body {
   position: absolute;
   text-align: center;
   line-height: 50px;
-  animation: move 5s infinite ease-in-out;
+  animation: move 6s infinite ease-in-out;
 }
 
 .shape1 {
