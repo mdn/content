@@ -236,7 +236,7 @@ div {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}},
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

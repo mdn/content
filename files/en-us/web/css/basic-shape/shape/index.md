@@ -171,6 +171,15 @@ body {
   border: 2px dotted green;
   margin: 20px;
 }
+
+@supports not (offset-path: shape(from 0 0, move to 0 0)) {
+  .container {
+    display: none;
+  }
+  body::after {
+    content: "Your browser doesn't support the `shape()` function yet.";
+  }
+}
 ```
 
 ```css
@@ -196,9 +205,9 @@ body {
 
 .shape2 {
   offset-path: shape(
-    from 20px 20px,
-    move to 50px 90px,
+    from 50px 90px,
     hline to 8em,
+    move to 50px 90px,
     vline by 20%,
     close
   );
@@ -246,6 +255,15 @@ body {
   height: 200px;
   margin: 20px;
   background-color: lightgray;
+}
+
+@supports not (offset-path: shape(from 0 0, move to 0 0)) {
+  .container {
+    display: none;
+  }
+  body::after {
+    content: "Your browser doesn't support the `shape()` function yet.";
+  }
 }
 ```
 
