@@ -8,19 +8,13 @@ browser-compat: api.HTMLInputElement.setSelectionRange
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLInputElement.setSelectionRange()`** method sets the
-start and end positions of the current text selection in an {{HTMLElement("input")}}
-or {{HTMLElement("textarea")}} element.
+The **`HTMLInputElement.setSelectionRange()`** method sets the start and end positions of the current text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
 Note that the element must be focused for the call to have any effect.
 
-Optionally, in newer browser versions, you can specify the direction in which selection
-should be considered to have occurred. This lets you indicate, for example, that the
-selection was set by the user clicking and dragging from the end of the selected text
-toward the beginning.
+Optionally, in newer browser versions, you can specify the direction in which selection should be considered to have occurred. This lets you indicate, for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning.
 
-This method updates the `HTMLInputElement.selectionStart`,
-`selectionEnd`, and `selectionDirection` properties in one call.
+This method updates the `HTMLInputElement.selectionStart`, `selectionEnd`, and `selectionDirection` properties in one call.
 
 Note that according to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart`, `selectionEnd` properties and
 `setSelectionRange` method apply only to inputs of types text, search, URL,
@@ -29,8 +23,7 @@ those properties and method on the rest of input types. For example, on input of
 number: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input
 element's type ('number') does not support selection".
 
-If you wish to select **all** text of an input element, you can use the [HTMLInputElement.select()](/en-US/docs/Web/API/HTMLInputElement/select)
-method instead.
+If you wish to select **all** text of an input element, you can use the [HTMLInputElement.select()](/en-US/docs/Web/API/HTMLInputElement/select) method instead.
 
 ## Syntax
 
