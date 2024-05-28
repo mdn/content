@@ -129,15 +129,18 @@ The default reference box is the [`margin-box`](/en-US/docs/Web/CSS/box-edge#mar
 
 ### Computed values of basic shapes
 
-The values in a `<basic-shape>` function are computed as specified, with these exceptions:
+The values in a `<basic-shape>` function are computed as specified, with the following additional considerations:
 
-- Omitted values are included and compute to their defaults.
-- A {{cssxref("&lt;position&gt;")}} value in `circle()` or `ellipse()` is computed as a pair of offsets (horizontal then vertical) from the top left origin, each given as a combination of an absolute length and a percentage.
-- A [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) value in `inset()` is computed as an expanded list of all eight {{cssxref("length")}} or percentage values.
+- For any omitted values, their defaults are used.
+- A {{cssxref("position_value", "&lt;position&gt;")}} value in `circle()` or `ellipse()` is computed as a pair of offsets from the top left corner of the reference box: the first offset is horizontal, and the second is vertical. Each offset is specified as a {{cssxref("length-percentage")}} value.
+- A [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) value in `inset()` is expanded into a list of eight values, each either a {{cssxref("length")}} or a {{cssxref("percentage")}}.
+- {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}} functions compute to the equivalent `inset()` function.
 
 ### Interpolation of basic shapes
 
-When animating from one `<basic-shape>` to another, the {{Glossary("interpolation")}} rules listed below are followed. For any interpolation to happen between two shapes, both must use the same reference box. The values between two `<basic-shape>` functions interpolate based on their computed values, forming a list. The values in the list are interpolated as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;angle&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`, those values also interpolate.
+When animating between two `<basic-shape>` functions, the {{Glossary("interpolation")}} rules listed below are followed. The parameter values of each `<basic-shape>` function form a list. For interpolation to occur between two shapes, both shapes must use the same reference box and the number and type of values in both `<basic-shape>` lists must match.
+
+Each value in the lists of the two `<basic-shape>` functions is interpolated based on its computed value as a {{cssxref("number")}}, {{cssxref("length")}}, {{cssxref("percentage")}}, {{cssxref("angle")}}, or {{cssxref("calc", "calc()")}} where possible. Interpolation can still occur if the values are not one of those data types but are identical between the two interpolating basic shape functions, such as `nonzero`.
 
 - **Both shapes are of type `ellipse()` or type `circle()`**: Interpolation is applied between each corresponding value if their radii are specified as either a {{cssxref("length")}} or a {{cssxref("percentage")}} (rather than keywords such as `closest-side` or `farthest-side`).
 
