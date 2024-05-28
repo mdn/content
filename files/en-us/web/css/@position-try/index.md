@@ -40,9 +40,9 @@ The different parts are as follows:
         - Shorthand inset properties: {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}}.
     - Margin property descriptors
       - : Specify the margin set on the anchor-positioned element. Margin property descriptors can be set that represent the following properties:
-          - Physical margin properties: {{cssxref("margin-top")}}, {{cssxref("margin-left")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-right")}}.
-          - Logical margin properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
-          - Shorthand margin properties: {{cssxref("margin")}}, {{cssxref("margin-block")}}, and {{cssxref("margin-inline")}}
+        - Physical margin properties: {{cssxref("margin-top")}}, {{cssxref("margin-left")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-right")}}.
+        - Logical margin properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
+        - Shorthand margin properties: {{cssxref("margin")}}, {{cssxref("margin-block")}}, and {{cssxref("margin-inline")}}
     - Sizing property descriptors
       - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
         - Physical sizing properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}}.
