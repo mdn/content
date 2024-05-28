@@ -88,7 +88,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and s
 
 ```js
 const myRules = document.styleSheets[0].cssRules;
-const tryOption = myRules[0];  // a CSSPositionTryRule
+const tryOption = myRules[0]; // a CSSPositionTryRule
 console.log(tryOption.style); // "[object CSSPositionTryDescriptors]"
 console.log(tryOption.style.margin); // "0 0 0 10px"
 console.log(tryOption.style["inset-area"]); // "right"
