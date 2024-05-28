@@ -17,7 +17,7 @@ The **`CSSPositionTryDescriptors`** interface describes an object representing a
 
 _Inherits properties from its ancestor {{domxref("CSSStyleDeclaration")}}._
 
-The `CSSPositionTryDescriptors` interface defines 70 properties that represent the [CSS properties that can be set inside a `@position-try` at rule](/en-US/docs/Web/CSS/@position-try#declaration-list). 
+The `CSSPositionTryDescriptors` interface defines 70 properties that represent the [CSS properties that can be set inside a `@position-try` at rule](/en-US/docs/Web/CSS/@position-try#declaration-list).
 
 There are 35 CSS properties that can be accessed as CSS property names or camel-case. For each one:
 
