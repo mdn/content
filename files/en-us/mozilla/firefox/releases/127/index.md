@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### HTML
 
+- `data:` and `javascript:` URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+
 #### Removals
 
 ### CSS
@@ -69,6 +71,9 @@ This article provides information about the changes in Firefox 127 that affect d
 #### Marionette
 
 ## Changes for add-on developers
+
+- {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
+- Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
 
 ### Removals
 
