@@ -32,5 +32,4 @@ Retry-After: 3600
 ## See also
 
 - {{HTTPHeader("Retry-After")}}
-- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.429)
 - Python solution: [How to avoid HTTP error 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)

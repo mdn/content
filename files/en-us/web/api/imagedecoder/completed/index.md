@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageDecoder.completed
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`completed`** read-only property of the {{domxref("ImageDecoder")}} interface returns a promise that resolves once encoded data has finished buffering.
 

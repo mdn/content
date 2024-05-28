@@ -17,13 +17,13 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("caches", "WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
-- {{domxref("crypto_property", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
@@ -35,12 +35,14 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("origin", "WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
-- {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
-- {{domxref("scheduler_property", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Performance")}} associated with the worker. Only a subset of the properties and methods of the `Performance` interface are available to workers.
+- {{domxref("WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+- {{domxref("WorkerGlobalScope.trustedTypes")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
 - {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
 

@@ -25,7 +25,7 @@ The `<image>` data type can be represented with any of the following:
 CSS can handle the following kinds of images:
 
 - Images with _intrinsic dimensions_ (a natural size), like a JPEG, PNG, or other [raster format](https://en.wikipedia.org/wiki/Raster_graphics).
-- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the aspect ratio most similar to the containing box.)
+- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the {{glossary("aspect ratio")}} most similar to the containing box.)
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 

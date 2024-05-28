@@ -3,7 +3,7 @@ title: "MediaTrackSupportedConstraints: groupId property"
 short-title: groupId
 slug: Web/API/MediaTrackSupportedConstraints/groupId
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.groupId
+browser-compat: api.MediaStreamTrack.applyConstraints.groupId_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

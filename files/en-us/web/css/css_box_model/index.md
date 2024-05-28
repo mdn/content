@@ -17,7 +17,7 @@ Each box has a rectangular content area, inside which any text, images, and othe
 
 ![The components of the CSS box model](boxmodel.png)
 
-The CSS box model module defines physical (or "page relative") properties such as `width` and `margin-top`. Flow-relative properties such as `inline-size` and `margin-block-start` (which relate to text direction) are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values). The box model module is extended by the [CSS box sizing module](/en-US/docs/Web/CSS/CSS_box_sizing), which introduces the {{glossary("intrinsic size")}} value and enables defining aspect ratios for elements that are auto-sized in at least one dimension.
+The CSS box model module defines physical (or "page relative") properties such as `width` and `margin-top`. Flow-relative properties such as `inline-size` and `margin-block-start` (which relate to text direction) are defined in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values). The box model module is extended by the [CSS box sizing module](/en-US/docs/Web/CSS/CSS_box_sizing), which introduces the {{glossary("intrinsic size")}} value and enables defining {{glossary("aspect ratio")}}s for elements that are auto-sized in at least one dimension.
 
 ## Reference
 
@@ -136,3 +136,4 @@ The CSS box model module defines physical (or "page relative") properties such a
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

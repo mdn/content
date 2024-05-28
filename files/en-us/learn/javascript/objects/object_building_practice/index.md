@@ -40,7 +40,7 @@ In this article we will write a classic "bouncing balls" demo, to show you how u
 
 ![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
+This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
 
 ## Getting started
 
@@ -311,7 +311,7 @@ That's it for object articles — all that remains now is for you to test your s
 ## See also
 
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) — a beginner's guide to using 2D canvas.
-- [requestAnimationFrame()](/en-US/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/en-US/docs/Web/API/Window/requestAnimationFrame)
 - [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection)
 - [2D breakout game using pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.

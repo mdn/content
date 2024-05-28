@@ -106,9 +106,9 @@ You can see what browsers and operating systems your users are using by selectin
 
 ### Other considerations
 
-You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our Handling common accessibility problems article).
+You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) article).
 
-Also, you should be aware of situation-specific needs. For example, if you are creating some kind of company intranet for delivering sales figures to managers, and all the managers have been provided with Windows phones, you will probably want to make mobile IE support a priority.
+Also, you should be aware of situation-specific needs. For example, if your product targets a market where mobile phones are the primary means of accessing the internet, you will probably want to make mobile browser support a priority.
 
 ### Final support chart
 
@@ -192,7 +192,6 @@ More often than not though, you'll have to install some kind of emulator. The mo
 You can often find simulators for other mobile device environments too, for example:
 
 - You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
-- There are emulators available for Windows Mobile OSes: see [Windows Phone Emulator for Windows Phone 8](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>) and [Test with the Microsoft Emulator for Windows 10 Mobile](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator) (these only run on Windows).
 
 > **Note:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 
@@ -224,7 +223,7 @@ Now the new virtual box should appear in the left-hand menu of the main Virtual 
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
-![Virtual box machine running on an windows operating system](virtualbox-running.png)
+![Screenshot of Windows XP, hosted in Virtual box, and running on macOS](virtualbox-running.png)
 
 You need to treat this virtual operating system installation just like you would any real installation — for example, as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
 

@@ -63,7 +63,7 @@ block content
         |,&nbsp;
 
   div(style='margin-left:20px;margin-top:20px')
-    h4 Copies
+    h2(style='font-size: 1.5rem;') Copies
 
     each val in book_instances
       hr
