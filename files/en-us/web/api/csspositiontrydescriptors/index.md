@@ -53,22 +53,22 @@ The instance properties are listed below:
 | {{cssxref("margin-inline")}} | `CSSPositionTryDescriptors.marginInline` | `CSSPositionTryDescriptors["margin-inline"]` |
 | {{cssxref("margin-inline-end")}} | `CSSPositionTryDescriptors.marginInlineEnd` | `CSSPositionTryDescriptors["margin-inline-end"]` |
 | {{cssxref("margin-inline-start")}} | `CSSPositionTryDescriptors.marginInlineStart` | `CSSPositionTryDescriptors["margin-inline-start"]` |
-| {{cssxref("margin-left")}} | `CSSPositionTryDescriptors.marginLeft` | `CSSPositionTryDescriptors["margin-left"]` |
-| {{cssxref("margin-right")}} | `CSSPositionTryDescriptors.marginRight` | `CSSPositionTryDescriptors["margin-right"]` |
-| {{cssxref("margin-top")}} | `CSSPositionTryDescriptors.marginTop` | `CSSPositionTryDescriptors["margin-top"]` |
-| {{cssxref("max-block-size")}} | `CSSPositionTryDescriptors.maxBlockSize` | `CSSPositionTryDescriptors["max-block-size"]` |
-| {{cssxref("max-height")}} | `CSSPositionTryDescriptors.maxHeight` | `CSSPositionTryDescriptors["max-height"]` |
-| {{cssxref("max-inline-size")}} | `CSSPositionTryDescriptors.maxInlineSize` | `CSSPositionTryDescriptors["max-inline-size"]` |
-| {{cssxref("max-width")}} | `CSSPositionTryDescriptors.maxWidth` | `CSSPositionTryDescriptors["max-width"]` |
-| {{cssxref("min-block-size")}} | `CSSPositionTryDescriptors.minBlockSize` | `CSSPositionTryDescriptors["min-block-size"]` |
-| {{cssxref("min-height")}} | `CSSPositionTryDescriptors.minHeight` | `CSSPositionTryDescriptors["min-height"]` |
-| {{cssxref("min-inline-size")}} | `CSSPositionTryDescriptors.minInlineSize` | `CSSPositionTryDescriptors["min-inline-size"]` |
-| {{cssxref("min-width")}} | `CSSPositionTryDescriptors.minWidth` | `CSSPositionTryDescriptors["min-width"]` |
-| {{cssxref("place-self")}} | `CSSPositionTryDescriptors.placeSelf` | `CSSPositionTryDescriptors["place-self"]` |
-| {{cssxref("position-anchor")}} | `CSSPositionTryDescriptors.positionAnchor` | `CSSPositionTryDescriptors["position-anchor"]` |
-| {{cssxref("right")}} | `CSSPositionTryDescriptors.right` | `CSSPositionTryDescriptors["right"]` |
-| {{cssxref("top")}} | `CSSPositionTryDescriptors.top` | `CSSPositionTryDescriptors["top"]` |
-| {{cssxref("width")}} | `CSSPositionTryDescriptors.width` | `CSSPositionTryDescriptors["width"]` |
+| {{cssxref("margin-left")}}         | `CSSPositionTryDescriptors.marginLeft`        | `CSSPositionTryDescriptors["margin-left"]`         |
+| {{cssxref("margin-right")}}        | `CSSPositionTryDescriptors.marginRight`       | `CSSPositionTryDescriptors["margin-right"]`        |
+| {{cssxref("margin-top")}}          | `CSSPositionTryDescriptors.marginTop`         | `CSSPositionTryDescriptors["margin-top"]`          |
+| {{cssxref("max-block-size")}}      | `CSSPositionTryDescriptors.maxBlockSize`      | `CSSPositionTryDescriptors["max-block-size"]`      |
+| {{cssxref("max-height")}}          | `CSSPositionTryDescriptors.maxHeight`         | `CSSPositionTryDescriptors["max-height"]`          |
+| {{cssxref("max-inline-size")}}     | `CSSPositionTryDescriptors.maxInlineSize`     | `CSSPositionTryDescriptors["max-inline-size"]`     |
+| {{cssxref("max-width")}}           | `CSSPositionTryDescriptors.maxWidth`          | `CSSPositionTryDescriptors["max-width"]`           |
+| {{cssxref("min-block-size")}}      | `CSSPositionTryDescriptors.minBlockSize`      | `CSSPositionTryDescriptors["min-block-size"]`      |
+| {{cssxref("min-height")}}          | `CSSPositionTryDescriptors.minHeight`         | `CSSPositionTryDescriptors["min-height"]`          |
+| {{cssxref("min-inline-size")}}     | `CSSPositionTryDescriptors.minInlineSize`     | `CSSPositionTryDescriptors["min-inline-size"]`     |
+| {{cssxref("min-width")}}           | `CSSPositionTryDescriptors.minWidth`          | `CSSPositionTryDescriptors["min-width"]`           |
+| {{cssxref("place-self")}}          | `CSSPositionTryDescriptors.placeSelf`         | `CSSPositionTryDescriptors["place-self"]`          |
+| {{cssxref("position-anchor")}}     | `CSSPositionTryDescriptors.positionAnchor`    | `CSSPositionTryDescriptors["position-anchor"]`     |
+| {{cssxref("right")}}               | `CSSPositionTryDescriptors.right`             | `CSSPositionTryDescriptors["right"]`               |
+| {{cssxref("top")}}                 | `CSSPositionTryDescriptors.top`               | `CSSPositionTryDescriptors["top"]`                 |
+| {{cssxref("width")}}               | `CSSPositionTryDescriptors.width`             | `CSSPositionTryDescriptors["width"]`               |
 
 ## Instance methods
 
