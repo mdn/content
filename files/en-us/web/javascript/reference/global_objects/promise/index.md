@@ -95,19 +95,11 @@ myPromise
 
 The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
 
-The promises of a chain are nested in one another, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
+The promises in a chain are like asynchronous tasks in a queue or waiting list. When a promise is created, it is added to the queue or waiting list. As each promise is resolved (either fulfilled or rejected), its respective handlers (the .then() and .catch() callbacks) are added to the job queue for asynchronous execution. This asynchronous execution order is determined by the event loop and the job queue, not by a stack-like structure.
 
-```plain
-(promise D, (promise C, (promise B, (promise A) ) ) )
-```
+When a `nextValue` is a promise, the effect is a dynamic replacement. The `return` causes a promise to be removed from the queue, but the `nextValue` promise is added to the queue. For the example above, suppose the `.then()` associated with "promise B" returns a `nextValue` of "promise X". The resulting queue would contain "promise X" instead of "promise B".
 
-When a `nextValue` is a promise, the effect is a dynamic replacement. The `return` causes a promise to be popped, but the `nextValue` promise is pushed into its place. For the nesting shown above, suppose the `.then()` associated with "promise B" returns a `nextValue` of "promise X". The resulting nesting would look like this:
-
-```plain
-(promise D, (promise C, (promise X) ) )
-```
-
-A promise can participate in more than one nesting. For the following code, the transition of `promiseA` into a "settled" state will cause both instances of `.then()` to be invoked.
+A promise can participate in more than one chain. For the following code, the transition of `promiseA` into a "settled" state will cause both instances of `.then()` to be invoked.
 
 ```js
 const promiseA = new Promise(myExecutorFunc);
