@@ -97,7 +97,7 @@ The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon us
 polygon( <`fill-rule`>?, [ <length-percentage> <length-percentage> ]# )
 ```
 
-The function takes a list of comma-separated coordinate pairs, each consisting of two space-separated `<length-percentage>` values as the _xi_ and _yi_ pair. These values represents the x and y axis coordinates of the vertex of the polygon at position _i_.
+The function takes a list of comma-separated coordinate pairs, each consisting of two space-separated `<length-percentage>` values as the _xi_ and _yi_ pair. These values represent the x and y axis coordinates of the polygon at position _i_ (the vertex point where two lines meet).
 
 ### Syntax for paths
 
@@ -107,7 +107,7 @@ The {{cssxref("basic-shape/path","path()")}} function defines a shape using an S
 path( <`fill-rule`>?, ]? <string> )
 ```
 
-The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string.
+The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ### Syntax for shapes {{Experimental_Inline}}
 
@@ -117,13 +117,13 @@ The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an
 shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 ```
 
-The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ## Description
 
 When creating a shape, the reference box is defined by the property that uses `<basic-shape>` values. The coordinate system for the shape has its origin at the top-left corner of the element's margin box by default, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the dimensions of the reference box.
 
-The default reference box is the [`margin-box`](/en-US/docs/Web/CSS/box-edge#margin-box), as demonstrated in the image below. The image shows a circle created using `shape-outside: circle(50%)` and inspected using a browser's Developer Tools, highlighting the different parts of the box model. The shape here is defined with reference to the margin-box.
+The default reference box is the [`margin-box`](/en-US/docs/Web/CSS/box-edge#margin-box), as demonstrated in the image below. The image shows a circle created using `shape-outside: circle(50%)`, highlighting the different parts of the box model as seen in a browser's Developer Tools. The shape here is defined with reference to the margin-box.
 
 ![An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted.](shapes-reference-box.png)
 
