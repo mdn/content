@@ -2,7 +2,7 @@
 title: inset-area()
 slug: Web/CSS/inset-area_function
 page-type: css-function
-browser-compat: css.types.inset-area
+browser-compat: css.properties.position-try-options.inset-area
 ---
 
 {{CSSRef}}
