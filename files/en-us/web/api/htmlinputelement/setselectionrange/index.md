@@ -10,7 +10,9 @@ browser-compat: api.HTMLInputElement.setSelectionRange
 
 The **`HTMLInputElement.setSelectionRange()`** method sets the
 start and end positions of the current text selection in an {{HTMLElement("input")}}
-or {{HTMLElement("textarea")}} element that is focused.
+or {{HTMLElement("textarea")}} element.
+
+Note that the element must be focused for the call to have any effect.
 
 Optionally, in newer browser versions, you can specify the direction in which selection
 should be considered to have occurred. This lets you indicate, for example, that the
