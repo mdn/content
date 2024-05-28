@@ -1,6 +1,6 @@
 ---
 title: Example
-slug: Web/API/Document_object_model/Using_the_Document_Object_Model/Example
+slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
 page-type: guide
 ---
 
