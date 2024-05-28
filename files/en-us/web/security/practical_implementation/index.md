@@ -1,6 +1,6 @@
 ---
-title: Securing your site
-slug: Web/Security/Securing_your_site
+title: Practical implementation guides
+slug: Web/Security/Practical_implementation
 page-type: guide
 ---
 
@@ -12,7 +12,7 @@ There are a number of things you can do to help secure your site. This article o
 
 ## User information security
 
-- [How to turn off form autocompletion](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
+- [How to turn off form autocompletion](/en-US/docs/Web/Security/Practical_implementation/Turning_off_form_autocompletion)
   - : Form fields support autocompletion in Gecko; that is, their values can be remembered and automatically brought back the next time the user visits your site. For certain types of data, you may wish to disable this feature.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : This article discusses changes made to the `getComputedStyle()` method that eliminates the ability for malicious sites to figure out the user's browsing history.
