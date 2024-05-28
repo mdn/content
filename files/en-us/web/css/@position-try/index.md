@@ -45,8 +45,8 @@ The different parts are as follows:
           - Shorthand margin properties: {{cssxref("margin")}}, {{cssxref("margin-block")}}, and {{cssxref("margin-inline")}}
     - Sizing property descriptors
       - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
-          - Physical sizing properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}}.
-          - Logical sizing properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-block-size")}}, {{cssxref("min-inline-size")}}, {{cssxref("max-block-size")}}, and {{cssxref("max-inline-size")}}.
+        - Physical sizing properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}}.
+        - Logical sizing properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-block-size")}}, {{cssxref("min-inline-size")}}, {{cssxref("max-block-size")}}, and {{cssxref("max-inline-size")}}.
     - Self-alignment property descriptors
       - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
 
