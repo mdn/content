@@ -23,15 +23,13 @@ let ruleIds = await browser.declarativeNetRequest.getDisabledRuleIds(
 
   - : An object containing details of the ruleset to return disabled rules for.
     - `rulesetId`
-      - : `string` The ID of the static ruleset to modify.
+      - : `string` The ID of the static ruleset to query.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of string containing static rules IDs. If no rules are disabled, the array is empty. If the request fails, the promise is rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of static [rules IDs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Rule#id ) or an empty array if there are no disabled rules. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

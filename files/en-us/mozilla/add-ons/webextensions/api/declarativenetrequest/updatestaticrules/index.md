@@ -35,9 +35,7 @@ let updatedStaticRules = browser.declarativeNetRequest.updateStaticRules(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) If the request is successful, the promise is fulfilled without arguments. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
