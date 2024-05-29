@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS shapes** module describes geometric shapes that can be used in CSS and defines properties that make use of shapes to control the geometry of an element's float area, to apply to exclusions, and to apply to an element's content area.
+The **CSS shapes** module describes geometric shapes. It also defines CSS properties that can use the shapes to control the geometry of an element's float area; this area can then be applied to exclusions, or specify an element's content area.
 
 The specification defines several ways to create shapes. Content can be wrapped around or within a shape rather than following the default rectangle shape of the element's box.
 
