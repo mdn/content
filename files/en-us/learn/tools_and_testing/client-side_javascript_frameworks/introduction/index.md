@@ -93,9 +93,9 @@ const state = {
   tasks: [
     {
       id: "todo-0",
-      name: "Learn some frameworks!"
-    }
-  ]
+      name: "Learn some frameworks!",
+    },
+  ],
 };
 ```
 
