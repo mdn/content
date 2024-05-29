@@ -54,49 +54,49 @@ The example below shows an image that has been floated left, and the `shape-outs
 
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 
-    - : Defining basic shapes with the `shape-margin` and  `clip-path` properties, and debugging basic shapes with 
+    - : Defining basic shapes with the `shape-margin` and  `clip-path` properties, and debugging basic shapes with
 Developer Tools
 
 - [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values)
 
-    - : Using `border-radius` curvatures and CSS box model values to create shapes
+    - : Using `border-radius` curvatures and CSS box model values to create shapes.
 
 - [Basic shapes with `shape-outside`](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
- 
+
     - : Creating rectangles, circles, ellipses and polygons with CSS shapes, the reference box, and the `shape-outside` property.
 
 - [Shapes from images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 
-    - : something
+    - :  Create shapes from images file with an alpha channel and CSS Gradients.
 
 ## Related concepts
 
 [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) module
 
-    - {{cssxref("offset")}}
-    - {{cssxref("offset-anchor")}}
-    - {{cssxref("offset-distance")}}
-    - {{cssxref("offset-path")}}
-    - {{cssxref("offset-position")}}
-    - {{cssxref("offset-rotate")}}
-    - {{cssxref("ray")}} function
+- {{cssxref("offset")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}
+- {{cssxref("ray")}} function
 
 [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 
-    - {{cssxref("clip")}}
-    - {{cssxref("clip-path")}}
-    - {{SVGAttr("clip-rule")}}
-    - {{cssxref("mask")}}
-    - {{cssxref("mask-origin")}}
-    - {{cssxref("mask-position")}}
+- {{cssxref("clip")}}
+- {{cssxref("clip-path")}}
+- {{SVGAttr("clip-rule")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-origin")}}
+- {{cssxref("mask-position")}}
 
 [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module
 
-    - {{cssxref("border-radius")}} shorthand
+- {{cssxref("border-radius")}} shorthand
 
 [CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model) module
 
-    - {{cssxref("box-edge")}} data type
+- {{cssxref("box-edge")}} data type
 
 ## Specifications
 
