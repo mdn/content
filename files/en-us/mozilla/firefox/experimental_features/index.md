@@ -184,6 +184,51 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
   </tbody>
 </table>
 
+### content: &lt;image&gt; alt text
+
+The [`content`](/en-US/docs/Web/CSS/content) CSS property now accepts [alternative text](/en-US/docs/Web/CSS/content#alternative_text) for values of type image. This exposes the alt text of images which are added with pseudo-elements, such as `::before` or `::after`, to the accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.content.alt-text.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+Note:
+
+- The alternative text is not exposed to the accessibility tree in versions prior to 128 due to [Firefox bug 1859852](https://bugzil.la/1859852).
+- Although, as the alternative text syntax is now parsed, the image added using `content` property is displayed.
+
 ### content-visibility: auto value
 
 The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user).
