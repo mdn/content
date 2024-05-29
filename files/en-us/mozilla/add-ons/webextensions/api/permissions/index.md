@@ -20,7 +20,7 @@ With the permissions API, an extension can ask for additional permissions at run
 
 - The extension can run with a smaller set of permissions, except when it actually needs them.
 - The extension can handle permission denial in a graceful manner, instead of presenting the user with a global "all or nothing" choice at install time. You can still get a lot out of that map extension, without giving it access to your location, for example.
-- The extension may need [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "\<all_urls>" at install time.
+- The extension may need [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or [optional_host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#optional_host_permissions), but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "\<all_urls>" at install time.
 
 To use the permissions API, decide which permissions your extension can request at runtime, and list them in [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions). After this, you can request any permissions that were included in `optional_permissions`. Requests may only be made in the handler for a user action (for example, a click handler).
 
