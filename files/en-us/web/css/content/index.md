@@ -325,7 +325,7 @@ a::before {
 
 {{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
 
-If the alternative text syntax is supported the value will be exposed to the browsers accessibility tree, different browsers have different ways of accessing this.
+> **Note:** If the alternative text syntax is supported the value will be exposed to the browsers accessibility tree, different browsers have different ways of accessing this.
 
 If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "alt text is not supported" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
 
