@@ -153,10 +153,10 @@ In this example the HTML contains:
 <button id="select-scope">Select with :scope</button>
 
 <div id="outer">
-  .outer
+  #outer
   <div id="subject">
-    .subject
-    <div id="inner">.inner</div>
+    #subject
+    <div id="inner">#inner</div>
   </div>
 </div>
 
