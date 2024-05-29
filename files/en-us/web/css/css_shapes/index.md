@@ -3,13 +3,13 @@ title: CSS shapes
 slug: Web/CSS/CSS_shapes
 page-type: css-module
 spec-urls:
- - https://drafts.csswg.org/css-shapes-1/
- - https://drafts.csswg.org/css-shapes-2/
+  - https://drafts.csswg.org/css-shapes-1/
+  - https://drafts.csswg.org/css-shapes-2/
 ---
 
 {{CSSRef}}
 
-The **CSS shapes** module describes geometric shapes that can be used in CSS and defines properties that make use of shapes to control the geometry of an element’s float area, to apply to exclusions, and to apply to an element’s content area. 
+The **CSS shapes** module describes geometric shapes that can be used in CSS and defines properties that make use of shapes to control the geometry of an element's float area, to apply to exclusions, and to apply to an element's content area.
 
 The specification defines several ways to define shapes. Shapes enable wrapping content around a shape rather than following the rectangle of the element's box. Shapes can also be used to wrap content within the element.
 
@@ -54,20 +54,20 @@ The example below shows an image that has been floated left, and the `shape-outs
 
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 
-    - : Defining basic shapes with the `shape-margin` and  `clip-path` properties, and debugging basic shapes with
-Developer Tools
+  - : Defining basic shapes with the `shape-margin` and `clip-path` properties, and debugging basic shapes with
+    Developer Tools
 
 - [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values)
 
-    - : Using `border-radius` curvatures and CSS box model values to create shapes.
+  - : Using `border-radius` curvatures and CSS box model values to create shapes.
 
 - [Basic shapes with `shape-outside`](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
 
-    - : Creating rectangles, circles, ellipses and polygons with CSS shapes, the reference box, and the `shape-outside` property.
+  - : Creating rectangles, circles, ellipses and polygons with CSS shapes, the reference box, and the `shape-outside` property.
 
 - [Shapes from images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 
-    - :  Create shapes from images file with an alpha channel and CSS Gradients.
+  - : Create shapes from images file with an alpha channel and CSS Gradients.
 
 ## Related concepts
 
