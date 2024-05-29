@@ -11,7 +11,7 @@ spec-urls:
 
 The **CSS shapes** module describes geometric shapes that can be used in CSS and defines properties that make use of shapes to control the geometry of an element's float area, to apply to exclusions, and to apply to an element's content area.
 
-The specification defines several ways to define shapes. Shapes enable wrapping content around a shape rather than following the rectangle of the element's box. Shapes can also be used to wrap content within the element.
+The specification defines several ways to create shapes. Content can be wrapped around or within a shape rather than following the default rectangle shape of the element's box.
 
 Shapes define geometries that can be used as CSS values. This module provides functions for creating ellipses, polygons, and arbitrary geometries. Other CSS modules can make use of shapes defined in this specification, including [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) and [CSS masking](/en-US/docs/Web/CSS/CSS_masking).
 
@@ -55,7 +55,7 @@ The example below shows an image that has been floated left, and the `shape-outs
 - [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 
   - : Defining basic shapes with the `shape-margin` and `clip-path` properties, and debugging basic shapes with
-    Developer Tools
+    Developer Tools.
 
 - [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values)
 
@@ -63,11 +63,11 @@ The example below shows an image that has been floated left, and the `shape-outs
 
 - [Basic shapes with `shape-outside`](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes)
 
-  - : Creating rectangles, circles, ellipses and polygons with CSS shapes, the reference box, and the `shape-outside` property.
+  - : Creating rectangles, circles, ellipses, and polygons with CSS shapes, the reference box, and the `shape-outside` property.
 
 - [Shapes from images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 
-  - : Create shapes from images file with an alpha channel and CSS Gradients.
+  - : Creating shapes from semi-transparent image files and CSS Gradients.
 
 ## Related concepts
 
