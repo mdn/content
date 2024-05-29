@@ -260,7 +260,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 
 | Framework | Browser support                     | Preferred DSL | Supported DSLs         | Citation                                                                        |
 | --------- | ----------------------------------- | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
-| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.io/guide/browser-support)                       |
+| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.dev/reference/versions#browser-support)         |
 | React     | Modern                              | JSX           | JSX; TypeScript        | [official docs](https://react.dev/reference/react-dom/client#browser-support)   |
 | Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [official docs](https://cli.vuejs.org/guide/browser-compatibility.html)         |
 | Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [official docs](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
