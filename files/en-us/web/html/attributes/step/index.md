@@ -111,7 +111,7 @@ Valid values include 1.2, 3.2, 5.2, 7.2, 9.2, 11.2, and so on. Only floats with 
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses.
 
-See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
+See [Client-side validation](/en-US/docs/Learn/Forms/Form_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
 
 ## Accessibility concerns
 
