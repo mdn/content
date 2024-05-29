@@ -49,7 +49,7 @@ No notable changes.
 
   ([Firefox bug 1823757](https://bugzil.la/1823757), [Firefox bug 1866993](https://bugzil.la/1866993)).
 
-- The {{domxref("RTCIceTransport")}} properties {{domxref("RTCIceTransport/state","state")}} and {{domxref("RTCIceTransport/gatheringState","gatheringState")}}, and their associated events {{domxref("RTCIceTransport/statechange_event","statechange")}} and {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange_event")}}, are now supported, along with the {{domxref("RTCDtlsTransport.iceTransport")}} property (which returns the underlying `RTCIceTransport` for a {{domxref("RTCDtlsTransport")}}).
+- The {{domxref("RTCIceTransport")}} properties {{domxref("RTCIceTransport/state","state")}} and {{domxref("RTCIceTransport/gatheringState","gatheringState")}}, and their associated events {{domxref("RTCIceTransport/statechange_event","statechange")}} and {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}}, are now supported, along with the {{domxref("RTCDtlsTransport.iceTransport")}} property (which returns the underlying `RTCIceTransport` for a {{domxref("RTCDtlsTransport")}}).
   These allow much finer-grained monitoring than provided by the {{domxref("RTCPeerConnection")}} properties {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} and {{domxref("RTCPeerConnection.connectionState","connectionState")}}.
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
@@ -64,6 +64,9 @@ No notable changes.
 - Added support for the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element, and the [`shadowRootClonable`](/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable) property of the `HTMLTemplateElement` interface that reflects it.
   These set the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that has been created declaratively using the [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
   ([Firefox bug 1880188](https://bugzil.la/1880188)).
+
+- The [`readText()`](/en-US/docs/Web/API/Clipboard/readText) method of the [`Clipboard`](/en-US/docs/Web/API/Clipboard) interface is now supported for asynchronously reading text from the system clipboard.
+  When reading clipboard data that is not provided by the same-origin page, a paste context menu will appear for the user to confirm. ([Firefox bug 1877400](https://bugzil.la/1877400)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -107,6 +110,7 @@ No notable changes.
 These features are shipping in Firefox 125 but only in developer releases or behind a preference. To try these out, you can search for the related preference on the `about:config` page to see if they're enabled or disabled. To learn more about these features, see the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - **CSS `transition-behavior`:** `layout.css.transition-behavior.enabled`.
+
   The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release.
   Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
 

@@ -331,7 +331,7 @@ In targetting the parts of the `<card-component>` from within the `<card-wrapper
 - {{HTMLElement("template")}} and {{HTMLElement("slot")}} HTML elements
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} pseudo-elements
 - {{CSSXref(":host")}} pseudo-class
-- [`ShadowRoot`]("/en-US/docs/Web/API/ShadowRoot) interface
+- [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - {{DOMxRef("Element.part")}} property
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
