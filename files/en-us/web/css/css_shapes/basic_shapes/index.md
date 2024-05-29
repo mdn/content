@@ -46,13 +46,13 @@ For your shape to use a different reference box, include a different {{cssxref("
 }
 ```
 
-The `margin-box` will clip the shape. This means that shapes created in reference to other shapes that extend past the margin box will have the shape clipped to the margin box. This is demonstrated following basic shapes examples.
+Shapes created that extend past the margin box will have the shape clipped to the margin box. The following basic shapes demonstrate this.
 
 For a more extensive explanation of reference boxes as they apply to CSS Shapes, see [Understanding reference boxes for CSS shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
 
 ## inset()
 
-The [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset) function defines a rectangle. This may not seem very useful as floating an item, without shapes, will give you a rectangular shape around it. However, the `inset()` type enables the definition of offsets, thus pulling the content in over the shape.
+The [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset) function defines a rectangle. This may not seem very useful as floating an item, without shapes, will give you a rectangular shape around it. However, the `inset()` type enables the definition of offsets, thus pulling the wrapping text around the reduced-size rectangle, over parts of the floated element.
 
 The `inset()` function takes up to four side offset values, plus an optional `round` keyword, followed by a {{cssxref("border-radius")}} value. The below CSS creates a rectangular shape inset from the reference box of the floated element 20 pixels from the top and bottom and 10 pixels from the left and right, with a `border-radius` value of 10 pixels.
 
@@ -82,7 +82,7 @@ In the example below we have an `inset()` shape used to pull content over the fl
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}
 
-You can also add a box value  as an alternative reference box. In the example below, try changing the reference box from `margin-box` to `border-box`, `padding-box`, or `content-box` to see how the reference box used as the starting point changes before offsets are calculated.
+You can also add a box value as an alternative reference box. In the example below, try changing the reference box from `margin-box` to `border-box`, `padding-box`, or `content-box` to see how the reference box used as the starting point changes before offsets are calculated.
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset-box.html", '100%', 800)}}
 
@@ -90,7 +90,7 @@ You can also create rectangles based on distances from the top and left edges of
 
 ## circle()
 
-The [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle) value for `shape-outside` can accept two possible arguments. The first is the `shape-radius`.
+The [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle) value for `shape-outside` can accept two possible arguments: a `<shape-radius>` defining the size and the `<position>` defining its location.
 
 The `circle()` and `ellipse()` `shape-outside` values both accept [`<shape-radius>`](/en-US/docs/Web/CSS/basic-shape#shape-radius) as an argument. This can be a {{cssxref("length")}}, a {{cssxref("percentage")}}, or one of the keywords `closest-side` or `farthest-side`.
 
