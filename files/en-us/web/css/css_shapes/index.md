@@ -90,11 +90,11 @@ The example below shows an image that has been floated left, and the `shape-outs
 - {{cssxref("mask-origin")}}
 - {{cssxref("mask-position")}}
 
-[CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module
+[CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
 
 - {{cssxref("border-radius")}} shorthand
 
-[CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model) module
+[CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 
 - {{cssxref("box-edge")}} data type
 
