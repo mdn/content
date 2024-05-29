@@ -129,13 +129,13 @@ The keyword values of `closest-side` and `farthest-side` are useful in creating 
 
 ## polygon()
 
-Another basic shape is more complex and enables the creation of multiple-sided polygon shape with the  [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon) function. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). Each space-separated pair of values, each pair separated with a comma, are coordinates drawn with reference to the reference box. Each pair of coordinates defines an edge of the polygon, with the final edge defined by the first and last set of coordinates.
+Another basic shape is more complex and enables the creation of multiple-sided polygon shape with the [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon) function. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). Each space-separated pair of values, each pair separated with a comma, are coordinates drawn with reference to the reference box. Each pair of coordinates defines an edge of the polygon, with the final edge defined by the first and last set of coordinates.
 
 The example below creates a shape for text to follow using the `polygon()`. Change any of the coordinate values to see how the shape is changed.
 
 {{EmbedGHLiveSample("css-examples/shapes/basic-shape/polygon.html", '100%', 800)}}
 
-To create even more complex shapes, you can define the outline of any shape with the [`path()`](/en-US/docs/Web/CSS/basic-shape/path) or  [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) functions.
+To create even more complex shapes, you can define the outline of any shape with the [`path()`](/en-US/docs/Web/CSS/basic-shape/path) or [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) functions.
 
 The `inset()`, `circle()`, `ellipse()`, and `polygon()` are inspectable and editable using the Firefox Developer Tools Shape Inspector. The screenshot below shows the shape highlighted in the tool.
 
