@@ -70,7 +70,9 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 Do the same, but with a `<meta>` element:
 
 ```html
-<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+<meta
+  http-equiv="Referrer-Policy"
+  content="no-referrer, strict-origin-when-cross-origin" />
 ```
 
 The `referrerpolicy` attribute doesn't support multiple values, so only set `no-referrer`:
