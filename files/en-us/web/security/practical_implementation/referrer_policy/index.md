@@ -78,9 +78,7 @@ Do the same, but with a `<meta>` element:
 The `referrerpolicy` attribute doesn't support multiple values, so only set `no-referrer`:
 
 ```html
-<a href="https://example.org/" referrerpolicy="no-referrer">
-  My link
-</a>
+<a href="https://example.org/" referrerpolicy="no-referrer"> My link </a>
 ```
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
