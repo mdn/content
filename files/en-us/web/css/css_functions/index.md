@@ -265,8 +265,10 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
-- {{CSSxRef("path", "path()")}}
+- {{CSSxRef("basic-shape/path", "path()")}}
   - : Accepts an SVG path string to enable a shape to be drawn.
+- {{CSSxRef("basic-shape/shape", "shape()")}}
+  - : Accepts an comma-separated list of commands defining the shape to be drawn.
 
 ## Reference functions
 
