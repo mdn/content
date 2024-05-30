@@ -141,7 +141,13 @@ However, `shape()` offers several advantages over using `path()`:
 
 ### Using `shape()` to define a path
 
-This example demonstrates how the `shape()` function can be used in the {{cssxref("offset-path")}} property to define the shape of the path an element can follow. We're creating a curved path in this example.
+This example demonstrates how the `shape()` function can be used in the {{cssxref("offset-path")}} property to define the shape of the path an element can follow.
+
+The first shape, `shape1`, follows a cubic Bézier curved path defined by the `curve to` command. Next, the `close` command draws a straight line from the curve's end point back to the initial point defined in the `from` command. Finally, `shape1` moves to its new position at `0px 150px` and then proceeds along a horizontal line.
+
+The second shape, `shape2`, initially follows a horizontal line, then moves back to its starting position at `50px 90px`. Next, it follows a vertical line before closing the path back to the initial point.
+
+Both shapes start with their original colors and gradually transition to `hotpink` by the end of the `move` animation, reverting to their initial color as the animation restarts. This cyclic color change provides you a visual cue about the animation's progression and restart.
 
 ```html hidden
 <div class="container">
@@ -219,6 +225,7 @@ body {
   }
   100% {
     offset-distance: 100%;
+    background-color: hotpink;
   }
 }
 ```
