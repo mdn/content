@@ -16,7 +16,7 @@ The Credential Management API enables a website to create, store, and retrieve {
 
 ## Concepts and usage
 
-The central interface is the {{domxref("CredentialsContainer")}}, which is accessed through the {{domxref("navigator.credentials")}} property, and which provides three main functions:
+The central interface is the {{domxref("CredentialsContainer")}}, which is accessed through the {{domxref("navigator.credentials")}} property and provides three main functions:
 
 - {{domxref("CredentialsContainer.create", "create()")}}: create a new credential.
 - {{domxref("CredentialsContainer.store", "store()")}}: store a new credential locally.

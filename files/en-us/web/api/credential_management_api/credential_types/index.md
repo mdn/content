@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Credential Management API")}}
 
-The Credential Management API enables a website to create, store, and retrieve {{glossary("credential", "credentials")}}, to help a user securely log into websites. Its supports four different types of credential, which are all represented as subclasses of the {{domxref("Credential")}} interface:
+The Credential Management API enables a website to create, store, and retrieve {{glossary("credential", "credentials")}}, to help a user securely log into websites. It supports four different types of credentials, which are all represented as subclasses of the {{domxref("Credential")}} interface:
 
 - **Passwords** ({{domxref("PasswordCredential")}})
 - **Federated identity credentials**, which include:
@@ -28,7 +28,7 @@ In this guide we'll introduce the different credential types and explain at a hi
 
 ## Passwords
 
-> **Note:** Most browsers do not support this credential type and it is not widely used on the web. Instead, browsers automatically offer to store passwords in the password manager, and can automatically retrieve stored passwords to autofill [password input elements](/en-US/docs/Web/HTML/Element/input/password).
+> **Note:** Most browsers do not support this credential type and it is not widely used on the web. Instead, browsers automatically offer to store passwords in a password manager, and can automatically retrieve stored passwords to autofill [password input elements](/en-US/docs/Web/HTML/Element/input/password).
 
 Modern browsers provide users with a password manager, which enables users to store the passwords they enter on websites, and later retrieve them when they need to log in again. Password managers can help with password security by remembering passwords for users and autofilling them, which allows users to choose stronger passwords.
 
@@ -42,15 +42,15 @@ When a user visits your site, you can call {{domxref("CredentialsContainer.get",
 
 ## Federated identity credentials
 
-In a {{glossary("federated identity")}} system, a separate entity acts as an intermediary between the user and the website which they are trying to sign into. This entity, called an {{glossary("identity provider")}} (IdP), manages the user's credentals and can authenticate users, and is trusted by the website to make assertions about a user's identity.
+In a {{glossary("federated identity")}} system, a separate entity acts as an intermediary between the user and the website they are trying to sign into. This entity, called an {{glossary("identity provider")}} (IdP), manages the user's credentials, can authenticate users, and is trusted by the website to make assertions about a user's identity.
 
-The user has an account with the IdP: when they need to sign into the website they authenticate with the IdP. The IdP then returns a token to the user's browser, which the browser delivers to the website. The website verifies the token and if verification succeeds, signs the user in.
+The user has an account with the IdP: when they need to sign into the website they authenticate with the IdP. The IdP then returns a token to the user's browser, which the browser delivers to the website. The website verifies the token and, if verification succeeds, signs the user in.
 
 Federated identity is often provided as a service by corporations: for example, users who have Google, Microsoft, or Facebook accounts can use them to sign into websites that support them.
 
-Support for federated identity in the Credential Management API was originally provided through the {{domxref("FederatedCredential")}} interface. However, this mechanism depends on technologies such as third-party cookies, which are intrinsically privacy-invasive, and as these technologies have been deprecated by browsers, new approaches are needed.
+Support for federated identity in the Credential Management API was originally provided through the {{domxref("FederatedCredential")}} interface. However, this mechanism depends on technologies such as [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies), which are intrinsically privacy-invasive. These technologies were [deprecated in browsers](/en-US/blog/goodbye-third-party-cookies/), therefore a new approach was needed.
 
-The [Federated Credential Management API](/en-US/docs/Web/API/FedCM_API) defines a privacy-preserving mechanism for federated identity on the web. In this mechanism, you call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to request a federated identity credential, and this triggers a protocol exchange between the browser and the IdP.
+The [Federated Credential Management API](/en-US/docs/Web/API/FedCM_API) defines a privacy-preserving mechanism for federated identity on the web. You start by calling {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to request a federated identity credential, and this triggers a protocol exchange between the browser and the IdP.
 
 If, in the course of this exchange, the user can be authenticated with the IdP, the browser returns an {{domxref("IdentityCredential")}} object in the fulfilment of the `Promise` returned from `get()`. The website front end code can send this to the server for verification.
 
@@ -60,7 +60,7 @@ Note that {{domxref("CredentialsContainer.create", "create()")}} and {{domxref("
 
 ## One-time passwords
 
-A one-time password (OTP) is an authentication technique in which the website has a means to send messages to a user (such as an email address or a phone number) and uses this to send a unique code to the user, who then must enter the code on the site to prove their control of the communications endpoint. Websites sometimes use this as a second authentication factor in addition to a password.
+A one-time password (OTP) is an authentication technique in which the website sends a unique code to the user via a messaging system such as email or SMS. The user must then enter the code on the site to prove their control of the communications endpoint. Websites sometimes use this as a second authentication factor in addition to a password.
 
 The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) defines the {{domxref("OTPCredential")}} interface, which solves a specific usability problem in this exchange: when a user receives the code, they have to open a different application, find the message, then copy the code into a form on the website. This is awkward, especially on a mobile device, and especially when the device receiving the message is the same as the device being used to sign into the site.
 
