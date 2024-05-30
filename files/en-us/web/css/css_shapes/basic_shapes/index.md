@@ -23,7 +23,7 @@ The arguments which are accepted vary depending on the shape that you are creati
 
 Understanding the reference box used by CSS Shapes is important when using basic shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values), which directly uses the reference box to create the shape.
 
-The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a basic shape, the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
+The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a basic shape, the reference box used by default is the `margin-box`. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
 
 ![An imaged clipped into a circle floated left, with a paragraph of text. The left edge of the text is circular abutting the clipped shape on the outside of the margin with the margin following the shape clipping.](shapes-reference-box.png)
 
