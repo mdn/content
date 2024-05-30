@@ -18,8 +18,8 @@ This can be done via sensible usage of the following directives of the [`Set-Coo
 
 - `Name`
   - : Cookie names should be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources.
-      - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`.
-      - Use `__Secure-` for all other cookies sent from secure origins (HTTPS).
+    - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`.
+    - Use `__Secure-` for all other cookies sent from secure origins (HTTPS).
 - `Secure`
   - : All cookies must be set with the `Secure` flag, indicating that they should only be sent over HTTPS.
 - `HttpOnly`
