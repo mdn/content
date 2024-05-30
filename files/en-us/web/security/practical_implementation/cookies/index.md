@@ -8,7 +8,7 @@ Access to cookies should limited as much as possible.
 
 ## Problem
 
-Cookies often contain session identifiers or other sensitive information. Unwanted access to cookies can therefore cause a whole of problems, including [Privacy](/en-US/docs/Web/Privacy) issues, Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks, and more. 
+Cookies often contain session identifiers or other sensitive information. Unwanted access to cookies can therefore cause a whole of problems, including [Privacy](/en-US/docs/Web/Privacy) issues, Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks, and more.
 
 ## Solution
 
