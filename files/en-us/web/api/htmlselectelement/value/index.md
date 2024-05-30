@@ -8,7 +8,9 @@ browser-compat: api.HTMLSelectElement.value
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLSelectElement.value`** property contains the value of the first selected option associated with this {{htmlelement("select")}} element.
+The **`HTMLSelectElement.value`** property contains the value of the first selected {{htmlelement("option")}} element associated with this {{htmlelement("select")}} element.
+
+This property can also be set directly, for example to set a default value based on some condition.
 
 ## Value
 
