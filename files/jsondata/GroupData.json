@@ -1223,9 +1223,7 @@
         "PresentationSessionConnectEvent"
       ],
       "methods": [],
-      "properties": [
-        "Navigator.presentation"
-      ],
+      "properties": ["Navigator.presentation"],
       "events": []
     },
     "Prioritized Task Scheduling API": {
