@@ -27,7 +27,8 @@ Note that CDNs must use [Cross-origin Resource Sharing (CORS)](/en-US/docs/Web/S
 Load jQuery 2.1.4 from their CDN:
 
 ```html
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"
+<script
+  src="https://code.jquery.com/jquery-2.1.4.min.js"
   integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
   crossorigin="anonymous"></script>
 ```
