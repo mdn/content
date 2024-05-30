@@ -49,7 +49,10 @@ Most application frameworks have built-in CSRF tokenization to ease implementati
 Include a secret anti-CSRF token in an account deletion form:
 
 ```html
-<input type="hidden" name="csrftoken" value="1df93e1eafa42012f9a8aff062eeb1db0380b">
+<input
+  type="hidden"
+  name="csrftoken"
+  value="1df93e1eafa42012f9a8aff062eeb1db0380b" />
 ```
 
 On the server-side, set an anti-CSRF cookie (JavaScript must send this an X header; it can't be done cross-origin):
