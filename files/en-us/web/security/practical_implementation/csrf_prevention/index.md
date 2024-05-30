@@ -12,7 +12,7 @@ Cross-site request forgeries are a class of attack where unauthorized commands a
 
 ```html
 <!-- Attempt to delete a user's account -->
-<img src="https://accounts.example.org/management/delete?confirm=true">
+<img src="https://accounts.example.org/management/delete?confirm=true" />
 ```
 
 When a user visits a page with containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
