@@ -3,10 +3,12 @@ title: "ClipboardItem: supports() static method"
 short-title: supports()
 slug: Web/API/ClipboardItem/supports_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.ClipboardItem.supports_static
 ---
 
-{{APIRef("Clipboard API")}} {{securecontext_header}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}{{SeeCompatTable}}
 
 The **`supports()`** static method of the {{domxref("ClipboardItem")}} interface returns `true` if the given {{Glossary("MIME type")}} is supported by the clipboard, and `false` otherwise.
 
