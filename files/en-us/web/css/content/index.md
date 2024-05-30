@@ -469,4 +469,4 @@ If inserted content is not decorative, check that the information is provided to
 
 - [Firefox Accessibility Panel](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)
 - [Chrome Accessibility Panel](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)
-- [Safari Accessibility Panel](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website’s%20accessibility%20tree%20in%20Safari)
+- [Safari Accessibility Panel](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
