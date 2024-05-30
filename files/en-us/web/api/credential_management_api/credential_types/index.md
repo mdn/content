@@ -8,12 +8,12 @@ page-type: guide
 
 The Credential Management API enables a website to create, store, and retrieve {{glossary("credential", "credentials")}}, to help a user securely log into websites. It supports four different types of credentials, which are all represented as subclasses of the {{domxref("Credential")}} interface:
 
-- **Passwords** ({{domxref("PasswordCredential")}})
+- **Passwords**, represented by {{domxref("PasswordCredential")}}
 - **Federated identity credentials**, which include:
-  - a legacy type ({{domxref("FederatedCredential")}})
-  - a replacement type ({{domxref("IdentityCredential")}})
-- **One-time password (OTP) credentials** ({{domxref("OTPCredential")}})
-- **Web Authentication assertions** ({{domxref("PublicKeyCredential")}})
+  - a legacy type, represented by {{domxref("FederatedCredential")}}
+  - a replacement type, represented by {{domxref("IdentityCredential")}}
+- **One-time password (OTP) credentials**, represented by {{domxref("OTPCredential")}}
+- **Web Authentication assertions**, represented by {{domxref("PublicKeyCredential")}}
 
 ![Class diagram showing the five different credential subclasses.](credential-types.svg)
 
