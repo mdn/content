@@ -30,7 +30,7 @@ There are a variety of CSRF mitigation strategies available. The most common and
 - `Lax`
   - : Similar to `Strict`, except the browser also sends the cookie when the user navigates to the cookie's origin site (even if the user is coming from a different site).
 - `None`
-  - : Specifies that cookies are sent on both originating and cross-site requests. 
+  - : Specifies that cookies are sent on both originating and cross-site requests.
 
 You should set the strongest `SameSite` level that you can for your site to still work. Ideally never set `None` unless you really need to. Bear in mind that `Lax` is the default value if the header is not specified.
 
