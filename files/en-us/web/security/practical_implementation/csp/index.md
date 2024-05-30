@@ -107,5 +107,4 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
 - [CSP evaluator](https://csp-evaluator.withgoogle.com/)
 
-
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
