@@ -55,5 +55,4 @@ Content-Security-Policy: frame-ancestors https://example.org
 X-Frame-Options: DENY
 ```
 
-
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
