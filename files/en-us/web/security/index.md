@@ -163,9 +163,9 @@ The following features can help guard against clickjacking:
 
 ## Practical implementation guides
 
-Our [Practical implementation guides](/en-US/docs/Web/Security/Practical_implementation) section provides opinionated guides detailing best practices for implementing security features on websites. 
+Our [Practical implementation guides](/en-US/docs/Web/Security/Practical_implementation) section provides opinionated guides detailing best practices for implementing security features on websites.
 
-Some of the content in this section has direct links to the [Mozilla Observatory](/en-US/observatory/) tool. Certain pages detail how to fix the issues highlighted by the Observatory tests, and as such, Observatory will link to appropriate sections in the test results to provide guidance. Mozilla's internal developer teams use this guidance when implementing websites. 
+Some of the content in this section has direct links to the [Mozilla Observatory](/en-US/observatory/) tool. Certain pages detail how to fix the issues highlighted by the Observatory tests, and as such, Observatory will link to appropriate sections in the test results to provide guidance. Mozilla's internal developer teams use this guidance when implementing websites.
 
 ## See also
 
