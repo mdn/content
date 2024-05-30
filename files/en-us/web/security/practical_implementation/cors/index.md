@@ -39,5 +39,4 @@ Access-Control-Allow-Origin: https://random-dashboard.example.org
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [CORS for Developers](https://w3c.github.io/webappsec-cors-for-developers/) from W3C (2016)
 
-
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
