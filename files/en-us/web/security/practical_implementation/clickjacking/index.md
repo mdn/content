@@ -23,11 +23,11 @@ You should deny all embedding attempts unless you really need to embed the site.
 
 Equivalent options for each are as follows:
 
-| CSP value       | `X-Frame-Options` value      | Description |
-| --------------- | ---------------------------- | ---------- |
-| `frame-ancestors 'none'`       | `DENY`     | Deny all embedding attempts.    |
-| `frame-ancestors 'self'`       | `SAMEORIGIN`     | Only allow same-origin embedding attempts.     |
-| `frame-ancestors https://example.org`       | `ALLOWFROM https://example.org`     | Allow embedding attempts from the specified domain.     |
+| CSP value                             | `X-Frame-Options` value         | Description                                         |
+| ------------------------------------- | ------------------------------- | --------------------------------------------------- |
+| `frame-ancestors 'none'`              | `DENY`                          | Deny all embedding attempts.                        |
+| `frame-ancestors 'self'`              | `SAMEORIGIN`                    | Only allow same-origin embedding attempts.          |
+| `frame-ancestors https://example.org` | `ALLOWFROM https://example.org` | Allow embedding attempts from the specified domain. |
 
 > **Note:** The `X-Frame-Options: ALLOWFROM https://example.org` syntax is deprecated, and most browsers ignore it. You are recommend to set `DENY` in such cases instead, and/or rely on the CSP equivalent.
 
