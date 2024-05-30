@@ -36,7 +36,8 @@ Load jQuery 2.1.4 from their CDN:
 Load AngularJS 1.4.8 from their CDN:
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
   integrity="sha384-r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp"
   crossorigin="anonymous"></script>
 ```
