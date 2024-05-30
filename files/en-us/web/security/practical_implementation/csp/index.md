@@ -8,7 +8,7 @@ The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Po
 
 ## Problem
 
-Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks are generally due to a lack of control over, and awareness of, where site resources are being loaded from. This gets more difficult to manage as sites become larger and more complex, and rely more on third-party resources such as JavaScript libraries. 
+Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks are generally due to a lack of control over, and awareness of, where site resources are being loaded from. This gets more difficult to manage as sites become larger and more complex, and rely more on third-party resources such as JavaScript libraries.
 
 ## Solution
 
