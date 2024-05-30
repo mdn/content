@@ -35,8 +35,8 @@ This can be done via sensible usage of the following directives of the [`Set-Coo
   - : Cookies should be set to the most restrictive `Path` possible; for most applications this will be set to the root directory.
 - `SameSite`
   - : Forbid sending the cookie via cross-origin requests (for example from {{htmlelement("img")}} element), as a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation/CSRF_prevention) measure.
-      - `SameSite=Strict`: Only send the cookie when your site is directly navigated to.
-      - `SameSite=Lax`: Additionally send the cookie when navigating to your site from another site.
+    - `SameSite=Strict`: Only send the cookie when your site is directly navigated to.
+    - `SameSite=Lax`: Additionally send the cookie when navigating to your site from another site.
 
 ## Examples
 
