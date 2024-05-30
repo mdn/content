@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### HTML
 
+- `data:` and `javascript:` URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+
 #### Removals
 
 ### CSS

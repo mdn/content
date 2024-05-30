@@ -86,6 +86,27 @@ The HTML just defines our `<canvas>` element and the `<div>` element with id `ta
 <div id="target">Paste here.</div>
 ```
 
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 60px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
 #### JavaScript
 
 First we define an `async` function to copy a canvas to a blob.
@@ -131,11 +152,12 @@ async function copyCanvasContentsToClipboard() {
       const data = [new ClipboardItem({ [blob.type]: blob })];
       // Write the data to the clipboard
       await navigator.clipboard.write(data);
+      log("Copied");
     } catch (error) {
-      console.log(error);
+      log(error);
     }
   } else {
-    console.log("image/png is not supported");
+    log("image/png is not supported");
   }
 }
 ```
@@ -173,6 +195,7 @@ body {
 }
 img {
   margin: 0.5rem;
+}
 ```
 
 #### Result
@@ -180,7 +203,7 @@ img {
 The result is shown below.
 First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinatations to paste from the clipboard (such as `Ctrl+V` on Windows).
 
-{{embedlivesample("write_canvas_contents_to_the_clipboard", "", "300")}}
+{{embedlivesample("write_canvas_contents_to_the_clipboard", "", "400")}}
 
 ## Specifications
 
