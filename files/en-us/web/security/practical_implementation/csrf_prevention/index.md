@@ -64,8 +64,8 @@ Set-Cookie: CSRFTOKEN=1df93e1eafa42012f9a8aff062eeb1db0380b; Path=/; Secure; Sam
 Back on the client-side, use JavaScript to add the CSRF token as an X header to an XMLHttpRequest:
 
 ```js
-const token = readCookie(CSRFTOKEN);                 // read the cookie
-httpRequest.setRequestHeader('X-CSRF-Token', token); // add it as an X-CSRF-Token header
+const token = readCookie(CSRFTOKEN); // read the cookie
+httpRequest.setRequestHeader("X-CSRF-Token", token); // add it as an X-CSRF-Token header
 ```
 
 ## See also
