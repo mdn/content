@@ -55,7 +55,7 @@ Content-Security-Policy: default-src https:
 Do the same thing, but with a `<meta>` element:
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+<meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
 Disable the use of unsafe inline/eval and allow everything else except plugin execution:
