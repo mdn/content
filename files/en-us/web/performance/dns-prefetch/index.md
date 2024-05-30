@@ -72,7 +72,7 @@ Some resources such as fonts are loaded in anonymous mode. In such cases you sho
 
 - [\<link>](/en-US/docs/Web/HTML/Element/link)
 - [HTML attribute: rel](/en-US/docs/Web/HTML/Attributes/rel)
-- [HTML rel attribute: preconnect](en-US/docs/Web/HTML/Attributes/rel/preconnect)
+- [HTML rel attribute: preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect)
 - [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin)
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
