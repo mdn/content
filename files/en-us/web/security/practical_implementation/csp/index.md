@@ -104,7 +104,7 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 
 ## See also
 
-- [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
 - [CSP evaluator](https://csp-evaluator.withgoogle.com/)
 
 
