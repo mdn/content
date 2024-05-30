@@ -801,7 +801,7 @@
 /en-US/docs/CSS/resolution	/en-US/docs/Web/CSS/resolution
 /en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/CSS/right	/en-US/docs/Web/CSS/right
-/en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
+/en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/animation-timeline/scroll
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
 /en-US/docs/CSS/shape-rendering	/en-US/docs/Web/SVG/Attribute/shape-rendering
 /en-US/docs/CSS/specified_value	/en-US/docs/Web/CSS/specified_value
@@ -1079,7 +1079,7 @@
 /en-US/docs/CSS:position	/en-US/docs/Web/CSS/position
 /en-US/docs/CSS:quotes	/en-US/docs/Web/CSS/quotes
 /en-US/docs/CSS:right	/en-US/docs/Web/CSS/right
-/en-US/docs/CSS:scroll	/en-US/docs/Web/CSS/overflow
+/en-US/docs/CSS:scroll	/en-US/docs/Web/CSS/animation-timeline/scroll
 /en-US/docs/CSS:shape	/en-US/docs/Web/CSS/shape
 /en-US/docs/CSS:static	/en-US/docs/Web/CSS/position
 /en-US/docs/CSS:string	/en-US/docs/Web/CSS/string
@@ -11695,7 +11695,7 @@
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
-/en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
+/en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/animation-timeline/scroll
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
 /en-US/docs/Web/CSS/shape-rendering	/en-US/docs/Web/SVG/Attribute/shape-rendering
