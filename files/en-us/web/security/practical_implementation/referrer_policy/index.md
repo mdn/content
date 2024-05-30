@@ -13,7 +13,7 @@ When a user navigates to a site via a hyperlink, or a website loads an external 
 For example, if a page at `https://example.com/page.html` contains the following HTML:
 
 ```html
-<img src="https://not.example.com/image.jpg">
+<img src="https://not.example.com/image.jpg" />
 ```
 
 The browser will send a request like this:
