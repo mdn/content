@@ -31,7 +31,7 @@ Secure (HTTPS) websites that attempt to load active resources such as JavaScript
 Attempts to load passive content such as images insecurely, although less risky, will still lead to degraded UIs and mixed content warnings, and can allow active attackers to deface websites or phish users. For example:
 
 ```html example-bad
-<img src="http://very.badssl.com/image.jpg">
+<img src="http://very.badssl.com/image.jpg" />
 ```
 
 Despite the fact that modern browsers make it evident that websites are loading resources insecurely, these errors still occur with significant frequency.
