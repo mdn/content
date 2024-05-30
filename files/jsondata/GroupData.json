@@ -1224,8 +1224,7 @@
       ],
       "methods": [],
       "properties": [
-        "Navigator.presentation",
-        "Navigator.mozPresentationDeviceInfo"
+        "Navigator.presentation"
       ],
       "events": []
     },
