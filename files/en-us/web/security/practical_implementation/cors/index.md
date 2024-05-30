@@ -8,7 +8,7 @@ Cross-origin Resource Sharing (CORS) is handled using [`Access-Control-Allow-Ori
 
 ## Problem
 
-By default, [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) blocks cross-origin HTTP requests initiated by scripts. There are several use cases that require cross-origin script access, for example Content delivery networks (CDNs) that provide hosting for JavaScript/CSS libraries and public API endpoints. However, cross-origin access presents a major security risk and must be carefully controlled.
+By default, [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) blocks cross-origin HTTP requests initiated by scripts. There are several use cases that require cross-origin script access, for example Content delivery networks (CDNs) that provide hosting for JavaScript/CSS libraries and public API endpoints. However, cross-origin access presents a major security risk and must be carefully controlled.
 
 ## Solution
 
