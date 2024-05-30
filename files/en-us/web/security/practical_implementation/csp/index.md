@@ -74,7 +74,7 @@ Disable unsafe inline/eval and plugins, only load scripts and stylesheets from s
 
 ```http
 Content-Security-Policy: default-src 'none'; font-src https://fonts.gstatic.com;
-			 img-src 'self' https://i.imgur.com; object-src 'none'; script-src 'self'; style-src 'self'
+       img-src 'self' https://i.imgur.com; object-src 'none'; script-src 'self'; style-src 'self'
 ```
 
 On pre-existing sites that use too much inline code to fix, ensure resources are loaded only over HTTP and disable plugins. Note that this does not provide any XSS protection:
