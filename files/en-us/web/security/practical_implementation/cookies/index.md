@@ -26,9 +26,9 @@ This can be done via sensible usage of the following directives of the [`Set-Coo
   - : Cookies that don't require access from JavaScript should be set with the `HttpOnly` flag.
 - `Expires` and `Max-Age`
   - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible. `Expires` is preferred unless you need to support IE < 8, in which case use `Max-Age`.
-      - `Expires`: Sets an absolute expiration date for a given cookie.
-      - `Max-Age`: Sets a relative expiration date for a given cookie. 
-      > **Note:** `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors. 
+    - `Expires`: Sets an absolute expiration date for a given cookie.
+    - `Max-Age`: Sets a relative expiration date for a given cookie.
+      > **Note:** `Expires` has been available for longer than `Max-Age`, however `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client the cookie is being set on. If the server is set to a different time, this could cause errors.
 - `Domain`
   - : Cookies should only have a `Domain` set if they need to be accessible on other domains; this should be set to the most restrictive domain possible.
 - `Path`
