@@ -190,7 +190,7 @@ body {
   position: absolute;
   text-align: center;
   line-height: 50px;
-  animation: move 6s infinite ease-in-out;
+  animation: move 6s infinite linear;
 }
 
 .shape1 {
@@ -198,8 +198,8 @@ body {
     from 30% 60px,
     curve to 180px 180px via 90px 190px,
     close,
-    move by 50px 30px,
-    hline by 30%
+    move by 0px 150px,
+    hline by 40%
   );
 }
 
@@ -257,7 +257,7 @@ body {
   background-color: lightgray;
 }
 
-@supports not (offset-path: shape(from 0 0, move to 0 0)) {
+@supports not (clip-path: shape(from 0 0, move to 0 0)) {
   .container {
     display: none;
   }
