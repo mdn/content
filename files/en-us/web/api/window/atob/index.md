@@ -15,7 +15,7 @@ data which may otherwise cause communication problems, then transmit it and use 
 `atob()` method to decode the data again. For example, you can encode,
 transmit, and decode control characters such as {{Glossary("ASCII")}} values 0 through 31.
 
-For use with arbitrary Unicode strings, see _The "Unicode Problem"_ section of the {{Glossary("Base64")}} glossary entry.
+For use with arbitrary Unicode strings, see _The "Unicode Problem"_ in the {{Glossary("Base64")}} glossary entry.
 
 ## Syntax
 
@@ -56,5 +56,5 @@ const decodedData = window.atob(encodedData); // decode the string
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
-- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.atob()")}}: the same method, but in worker scopes.
 - {{domxref("Window.btoa()")}}
