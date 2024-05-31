@@ -267,7 +267,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 ```css
 .infobox {
   position-anchor: --infobox;
-    position: fixed;
+  position: fixed;
 
   inset-block-start: anchor(end);
   inset-inline-start: anchor(self-end);
