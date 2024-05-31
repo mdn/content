@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-anchor-position-1/
 
 {{CSSRef}}
 
-The **CSS anchor positioning** module defines features that allow you to **tether** elements together. This module provides mechanisms for defining elements as **anchor elements** and positioning and sizing other elements relative to that anchor.
+The **CSS anchor positioning** module defines features that allow you to tether elements together. Certain elements are defined as **anchor elements**; **anchor-positioned** elements can then have their size and position set based on the size and location of the anchor elements to which they are bound.
 
 In addition, the specification provides CSS-only mechanisms to:
 
@@ -42,14 +42,13 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ### HTML attributes
 
-The non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute is supported in browsers. It provides an alternative mechanism for associating positioned elements with anchor elements.
+- [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
 
 ### Interfaces
 
 - {{domxref("CSSPositionTryDescriptors")}}
 - {{domxref("CSSPositionTryRule")}}
-
-> **Note:** The non-standard {{domxref("Element.anchorElement")}} property is supported in browsers. It returns a reference to a positioned element's anchor element.
+- {{domxref("Element.anchorElement")}} {{non-standard_inline}}
 
 ## Guides
 
