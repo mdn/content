@@ -92,9 +92,7 @@ The attributes syntax is designed to be extensible — although only `type` is s
 - Resolution: the attribute is part of the module specifier (the string in the `from` clause). Therefore, given the same string path, different attributes may lead to entirely different modules being loaded. For example, [TypeScript supports the `resolution-mode` attribute](https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/#stable-support-resolution-mode-in-import-types).
 
   ```ts
-  import type { TypeFromRequire } from "pkg" with {
-    "resolution-mode": "require"
-  };
+  import type { TypeFromRequire } from "pkg" with { "resolution-mode": "require" };
   ```
 
 - Fetching: for example, CSS modules are fetched with the [`destination`](/en-US/docs/Web/API/Request/destination) set to `"style"`, and JSON modules are fetched with `destination: "json"`. This means given the same destination URL, the server may still return different content.
@@ -117,7 +115,7 @@ In `data.json`:
 In `index.html`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
