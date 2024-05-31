@@ -36,7 +36,7 @@ max-block-size: fit-content(20em);
 
 /* anchor-size() function values */
 max-block-size: anchor-size(height);
-max-block-size: anchor-size(--my-anchor block);
+max-block-size: anchor-size(--myAnchor block);
 
 /* Global values */
 max-block-size: inherit;

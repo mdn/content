@@ -31,7 +31,7 @@ max-width: fit-content(20em);
 
 /* anchor-size() function values */
 max-width: anchor-size(width);
-max-width: anchor-size(--my-anchor inline);
+max-width: anchor-size(--myAnchor inline);
 
 /* Global values */
 max-width: inherit;

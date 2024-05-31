@@ -32,7 +32,7 @@ inline-size: auto;
 
 /* anchor-size() function values */
 inline-size: anchor-size(width);
-inline-size: anchor-size(--my-anchor inline);
+inline-size: anchor-size(--myAnchor inline);
 
 /* Global values */
 inline-size: inherit;

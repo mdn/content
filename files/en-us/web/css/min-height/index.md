@@ -30,7 +30,7 @@ min-height: fit-content(20em);
 
 /* anchor-size() function values */
 min-height: anchor-size(height);
-min-height: anchor-size(--my-anchor block);
+min-height: anchor-size(--myAnchor block);
 
 /* Global values */
 min-height: inherit;
