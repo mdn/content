@@ -19,12 +19,12 @@ width: anchor-size(width);
 block-size: anchor-size(block);
 
 /* property: anchor-size(anchor-element anchor-size) */
-width: anchor-size(--my-anchor width);
-block-size: anchor-size(--my-anchor block);
+width: anchor-size(--myAnchor width);
+block-size: anchor-size(--myAnchor block);
 
 /* property: anchor-size(anchor-element anchor-size, length-percentage) */
-width: anchor-size(--my-anchor width, 50%);
-block-size: anchor-size(--my-anchor block, 200px);
+width: anchor-size(--myAnchor width, 50%);
+block-size: anchor-size(--myAnchor block, 200px);
 ```
 
 ### Parameters
@@ -164,7 +164,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -184,7 +184,7 @@ The positioned elements are then associated with the anchor element by setting i
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   position: fixed;
 }
 ```

@@ -430,7 +430,7 @@ select,
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -453,7 +453,7 @@ The positioned element is associated with the anchor element by setting its anch
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   position: fixed;
   opacity: 0.8;
   inset-area: top left;
