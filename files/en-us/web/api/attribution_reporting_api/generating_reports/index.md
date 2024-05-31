@@ -165,6 +165,8 @@ Typical settings in the {{httpheader("Attribution-Reporting-Register-Source")}} 
 }
 ```
 
+The source `"trigger_data"` can have a maximum of 32 values. Increasing the number of values and `"event_report_windows"` increases the number of elements in the overall report set.
+
 A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could contain the following:
 
 ```json
