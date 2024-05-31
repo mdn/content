@@ -65,7 +65,7 @@ Failed to load module script: Expected a JavaScript module script but the server
 
 Instead, you must provide an attribute to tell the host that this file must contain JSON. To validate the module's type (via MIME type), you use the attribute key called `type`. To validate that the module is a JSON module, the value is `"json"`.
 
-> **Note:** The actual attribute value does not correspond directly to the MIME type. It's separately specified by the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed).
+> **Note:** The actual `type` attribute value does not correspond directly to the MIME type. It's separately specified by the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed).
 
 Therefore, the code above should be re-written as:
 
@@ -73,7 +73,7 @@ Therefore, the code above should be re-written as:
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-This particular attribute does _not_ change how the module is interpreted. The host already knows to parse the module as JSON given the MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail:
+This particular attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The host already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail:
 
 ```plain
 Failed to load module script: Expected a JSON module script but the server responded with a MIME type of "text/javascript". Strict MIME type checking is enforced for module scripts per HTML spec.

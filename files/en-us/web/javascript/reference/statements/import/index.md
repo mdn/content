@@ -40,9 +40,7 @@ import "module-name";
 - `aliasN`
   - : Names that will refer to the named imports. Must be a valid JavaScript identifier.
 
-The import statement may also be followed by a series of modifiers after the `"module-name"`. They include:
-
-- [Import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) using the `with` keyword
+The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), starting with the `with` keyword.
 
 ## Description
 
