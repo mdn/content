@@ -15,6 +15,8 @@ The above example shows typical `<select>` usage. It is given an `id` attribute 
 
 Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads.
 
+A `<select>` element is represented in JavaScript by an {{domxref("HTMLSelectElement")}} object, and this object has a {{domxref("HTMLSelectElement.value", "value")}} property which contains the value of the selected `<option>`.
+
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
 You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
