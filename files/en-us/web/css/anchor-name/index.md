@@ -32,20 +32,19 @@ anchor-name: unset;
 ### Values
 
 - `none`
-  - : The default value. Setting `anchor-name: none` on an element means that it is not identified as an anchor element, and the property therefore has no effect.
+  - : The default value. Setting `anchor-name: none` on an element means that it is not defined as an anchor element. If the element was previously defined as an anchor and associated with a positioned element, setting `anchor-name: none` disassociates the two.
 - {{cssxref("dashed-ident")}}
-
-  - : Defines the element as an anchor element and gives it one or more identifying anchor names, which can then be set as values of positioned elements' {{cssxref("position-anchor")}} properties to associate them with the anchor. The values need to be {{cssxref("dashed-ident")}} values; if multiple values are specified, they are separated with commas.
+  - : One or more comma-separated arbitrary custom identifiers defining the name or names of the anchor, which can then be referenced in a {{cssxref("position-anchor")}} property.
 
 ## Description
 
-To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The {{cssxref("position-anchor")}} property provides the association. The positioned element is associated with the anchor element via an anchor name. The anchor element has a `<dashed-ident>` anchor name set on it via the `anchor-name` property. The same `<dashed-ident>` value is set as the value of the positioned element's `position-anchor` property.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The {{cssxref("position-anchor")}} and `anchor-name` properties provide the association. The anchor element has a `<dashed-ident>` anchor name set on it via the `anchor-name` property; the same name is then set as the value of the positioned element's `position-anchor` property to associate the two.
 
-The positioned element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element.
+Anchor positioning changes the [containing block](/en-US/docs/Web/CSS/Containing_block) of anchor-positioned elements, making its `position` relative to its anchor rather than to the nearest positioned ancestor element.
 
-If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+If multiple anchor elements have the same anchor name set on them, and that name is referenced by the `position-anchor` property value of a positioned element, that positioned element will be associated with the last anchor element with that anchor name in the source order.
 
-To place the positioned element in a specific location relative to the anchor element, a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
+To tether and place a positioned element in a specific location relative to an anchor element, an anchor positioning feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
 
 You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 
@@ -65,7 +64,7 @@ For more information about anchor positioning, see the [using CSS anchor positio
 
 ### Basic usage
 
-The following example associates a positioned element with an anchor, and tethers the positioned element to the right of the anchor.
+This example tethers a positioned element to an anchor, positioning the element to the right of the anchor.
 
 #### HTML
 
@@ -126,7 +125,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -134,10 +133,10 @@ We associate the second `<div>` with the anchor element by setting its anchor na
 
 In addition, we set the `infobox`'s:
 
-- {{cssxref("position")}} property to `fixed`, so it can be positioned relative to the anchor's position in the page.
-- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
+- {{cssxref("position")}} property to `fixed`, converting it to a **positioned element** so it can be positioned relative to the anchor's position on the page.
+- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this tethers a positioned element to it's anchor and has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
 - {{cssxref("align-self")}} property to `anchor-center`. This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
-- {{cssxref("margin-left")}} to `10px` to create space between the infobox and its anchor.
+- {{cssxref("margin-left")}} to `10px` to create space between the anchor positioned element and its anchor.
 
 ```css hidden
 .infobox {
@@ -152,7 +151,7 @@ In addition, we set the `infobox`'s:
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   position: fixed;
   left: anchor(right);
@@ -232,7 +231,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -251,7 +250,7 @@ Each of the two positioned elements are associated with the anchor element by se
 
 ```css
 #infobox1 {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   position: fixed;
   left: anchor(right);
@@ -260,7 +259,7 @@ Each of the two positioned elements are associated with the anchor element by se
 }
 
 #infobox2 {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   position: fixed;
   bottom: anchor(top);
@@ -293,8 +292,8 @@ We have four different anchors and two different positioned elements, distinguis
 
 <div class="infobox" id="infobox1">
   <form>
-    <label for="infobox1-anchor-select">Place infobox on:</label>
-    <select id="infobox1-anchor-select">
+    <label for="myanchor1-anchor-select">Place infobox on:</label>
+    <select id="myanchor1-anchor-select">
       <option value="1">Anchor 1</option>
       <option value="2">Anchor 2</option>
       <option value="3">Anchor 3</option>
@@ -305,8 +304,8 @@ We have four different anchors and two different positioned elements, distinguis
 
 <div class="infobox" id="infobox2">
   <form>
-    <label for="infobox2-anchor-select">Place infobox on:</label>
-    <select id="infobox2-anchor-select">
+    <label for="myanchor2-anchor-select">Place infobox on:</label>
+    <select id="myanchor2-anchor-select">
       <option value="1">Anchor 1</option>
       <option value="2">Anchor 2</option>
       <option value="3">Anchor 3</option>
@@ -348,7 +347,7 @@ body {
 
 ```css
 #anchor1 {
-  anchor-name: --infobox1, --infobox2;
+  anchor-name: --myAnchor1, --myAnchor2;
 }
 ```
 
@@ -368,7 +367,7 @@ Each of the two positioned elements are given a {{cssxref("position-anchor")}} p
 
 ```css
 #infobox1 {
-  position-anchor: --infobox1;
+  position-anchor: --myAnchor1;
 
   position: fixed;
   left: anchor(right);
@@ -377,7 +376,7 @@ Each of the two positioned elements are given a {{cssxref("position-anchor")}} p
 }
 
 #infobox2 {
-  position-anchor: --infobox2;
+  position-anchor: --myAnchor2;
 
   position: fixed;
   bottom: anchor(top);
@@ -392,8 +391,8 @@ We dynamically change the `anchor-name` values set on the anchor elements in res
 
 ```js
 // Get references to the two select menus
-const select1 = document.querySelector("#infobox1-anchor-select");
-const select2 = document.querySelector("#infobox2-anchor-select");
+const select1 = document.querySelector("#myanchor1-anchor-select");
+const select2 = document.querySelector("#myanchor2-anchor-select");
 // Store references to all the anchors in a NodeList (array-like)
 const anchors = document.querySelectorAll("#anchor-container > div");
 
@@ -415,12 +414,12 @@ function updateAnchorNames() {
   if (value1 === value2) {
     // If the chosen anchors are both the same, set both anchor
     // names on the same anchor
-    anchors[value1].style.anchorName = "--infobox1, --infobox2";
+    anchors[value1].style.anchorName = "--myAnchor1, --myAnchor2";
   } else {
     // If they are not the same, set the anchor names separately
     // on each selected anchor
-    anchors[value1].style.anchorName = "--infobox1";
-    anchors[value2].style.anchorName = "--infobox2";
+    anchors[value1].style.anchorName = "--myAnchor1";
+    anchors[value2].style.anchorName = "--myAnchor2";
   }
 }
 ```
@@ -441,5 +440,5 @@ Try choosing values from the drop-down menus to change the anchors that the elem
 
 ## See also
 
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

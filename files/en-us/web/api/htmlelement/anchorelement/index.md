@@ -10,9 +10,9 @@ browser-compat: api.HTMLElement.anchorElement
 
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
-The **`anchorElement`** property of the {{domxref("HTMLElement")}} interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, not elements associated with their anchors via the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} CSS properties.
+The **`anchorElement`** property of the {{domxref("HTMLElement")}} interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, not elements associated with their anchors via the CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
-For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Value
 
@@ -24,7 +24,7 @@ An {{domxref("HTMLElement")}} instance representing the element's anchor element
 
 #### HTML
 
-In the HTML, we create a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `example-anchor`. This will be our anchor element. We then include another `<div>` with a class of `infobox` and an [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute set to `example-anchor`. This designates the first `<div>` as the second `<div>`'s anchor, associating the two together.
+In the HTML, we create a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `example-anchor`. This will be our anchor element. We then include another `<div>` with a class of `infobox` and an [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute set to `example-anchor`. This designates the first `<div>` as the anchor of the second `<div>`, associating the two together.
 
 We also include a {{htmlelement("p")}} element to output some results into.
 
@@ -45,7 +45,12 @@ In the JavaScript, we get references to the positioned element and the output el
 ```js
 const posElem = document.querySelector(".infobox");
 const outputElem = document.querySelector(".output");
-outputElem.textContent = `The positioned element's anchor element is the ${posElem.anchorElement.id}.`;
+
+try {
+  outputElem.textContent = `The positioned element's anchor element is the ${posElem.anchorElement.id}.`;
+} catch(e) {
+  outputElem.textContent = `Your browser doesn't support the anchorElement property.`;
+}
 ```
 
 #### Result
@@ -65,5 +70,5 @@ This attribute is not currently part of the HTML specification. Read the discuss
 ## See also
 
 - HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

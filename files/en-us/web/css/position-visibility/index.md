@@ -169,7 +169,7 @@ form {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -195,7 +195,7 @@ In addition, we set the `infobox`'s:
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   position: fixed;
   inset-area: top span-all;
   margin-bottom: 5px;
@@ -236,5 +236,5 @@ Select a `position-visibility` value and then scroll the page to see the effect.
 
 ## See also
 
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

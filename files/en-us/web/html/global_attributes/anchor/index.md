@@ -17,11 +17,11 @@ The **`anchor`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is u
 
 ### Basic `anchor` attribute usage
 
-The following example associates a positioned element with an anchor, and tethers the positioned element to the right of the anchor.
+The following example uses HTML to associate a positioned element with an anchor. CSS is then used to tether the positioned element to the right of the anchor.
 
 #### HTML
 
-We create a {{htmlelement("div")}} element with an `id` of `example-anchor`. This is our anchor element. We then include another `<div>` with a class of `infobox` and an `anchor` attribute set to `example-anchor`. This designates the first `<div>` as the anchor for the second `<div>`, associating the two together.
+We create a {{htmlelement("div")}} element with an `id` of `example-anchor`. This is our anchor element. We then include another `<div>` with the `anchor` attribute set to `example-anchor`. This designates the first `<div>` as the anchor for the second `<div>`, associating the two together.
 
 We also include some filler text around the two `<div>`s to make the {{htmlelement("body")}} taller so that it will scroll.
 
@@ -85,10 +85,10 @@ body {
 
 In the CSS, we set the `infobox`'s:
 
-- {{cssxref("position")}} property to `fixed`, so it can be positioned relative to the anchor's position in the page.
-- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
+- {{cssxref("position")}} property to `fixed`, converting it to a **positioned element** so it can be positioned relative to the anchor's position in the page.
+- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this tethers the positioned element to its anchor, positioning its left edge flush to the anchor's right edge.
 - {{cssxref("align-self")}} property to [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center). This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
-- {{cssxref("margin-left")}} to `10px` to create space between the infobox and its anchor.
+- {{cssxref("margin-left")}} to `10px` to create space between the anchor positioned element and its anchor.
 
 ```css
 .infobox {
@@ -116,5 +116,5 @@ This attribute is not currently part of the HTML specification. Read the discuss
 ## See also
 
 - {{domxref("HTMLElement.anchorElement")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

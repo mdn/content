@@ -37,15 +37,13 @@ position-anchor: unset;
 
 ## Description
 
-To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` property provides the association.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` and {{htmlelement("anchor-name")}} properties provide the association. The anchor element has a `<dashed-ident>` anchor name set on it via the `anchor-name` property; the same name is then set as the value of the positioned element's `position-anchor` property to associate the two.
 
-The positioned element is associated with the anchor element via an anchor name. The anchor element has a `<dashed-ident>` anchor name set on it via the {{cssxref("anchor-name")}} property. The same `<dashed-ident>` value is set as the value of the positioned element's `position-anchor` property.
+If multiple anchor elements have the same anchor name set on them, and that name is referenced by the `position-anchor` property value of a positioned element, that positioned element will be associated with the last anchor element with that anchor name in the source order.
 
-If multiple anchor elements have the same anchor name set on them, and that name is referenced by a positioned element in its `position-anchor` property, it will be associated with the last anchor element in the source order.
+To create an anchor-positioned element, you have to set its {{cssxref("position")}} property to either `fixed` or `absolute`. The element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element.
 
-The `position-anchor` property associates the two elements. To make it an anchor-positioned element, you have to set its {{cssxref("position")}} property to either `fixed` or `absolute`. The element needs to be placed after the anchor element in the DOM, or be a descendant of it, for this association to work. This `position` will be relative to the anchor rather than to the nearest ancestor positioned element.
-
-To place the positioned element in a specific location relative to the anchor element, a feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
+To tether and place a positioned element in a specific location relative to an anchor element, an anchor positioning feature such as the {{cssxref("anchor()")}} function or the {{cssxref("inset-area")}} property is needed.
 
 You cannot associate a positioned element with an anchor element if the anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 
@@ -126,7 +124,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -134,10 +132,10 @@ We associate the second `<div>` with the anchor element by setting its anchor na
 
 In addition, we set the `infobox`'s:
 
-- {{cssxref("position")}} property to `fixed`, so it can be positioned relative to the anchor's position in the page.
-- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
+- {{cssxref("position")}} property to `fixed`, converting it to a **positioned element** so it can be positioned relative to the anchor's position on the page.
+- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this tethers a positioned element to it's anchor and has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
 - {{cssxref("align-self")}} property to `anchor-center`. This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
-- {{cssxref("margin-left")}} to `10px` to create space between the infobox and its anchor.
+- {{cssxref("margin-left")}} to `10px` to create space between the anchor positioned element and its anchor.
 
 ```css hidden
 .infobox {
@@ -152,7 +150,7 @@ In addition, we set the `infobox`'s:
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   position: fixed;
   left: anchor(right);
@@ -177,5 +175,5 @@ Scroll the page to demonstrate how the infobox is tethered to the anchor.
 
 ## See also
 
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
