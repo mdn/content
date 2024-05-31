@@ -35,7 +35,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Capture an image of the active tab in the current window with default inage settings:
+Capture an image of the active tab in the current window with default image settings:
 
 ```js
 function onCaptured(imageUri) {
