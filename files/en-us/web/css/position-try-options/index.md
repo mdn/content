@@ -299,16 +299,17 @@ body {
 }
 ```
 
-```css
+```css-nolint
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
   inset-area: top left;
 
-  position-try-options: inset-area(top), inset-area(top right),
-                        inset-area(right), inset-area(bottom right),
-                        inset-area(bottom), inset-area(bottom left),
-                        inset-area(left);
+  position-try-options:
+    inset-area(top), inset-area(top right),
+    inset-area(right), inset-area(bottom right),
+    inset-area(bottom), inset-area(bottom left),
+    inset-area(left);
 }
 ```
 

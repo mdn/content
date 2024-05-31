@@ -148,15 +148,16 @@ Next, we use the `@position-try` at-rule to define four custom position try opti
 
 The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name`, to associate the two together, and it is tethered to the anchor's top edge using an {{cssxref("inset-area")}}. We also give it a fixed {{cssxref("width")}} and some bottom {{cssxref("margin")}}. The custom try options are then referenced in the {{cssxref("position-try-options")}} property to prevent the positioned element from overflowing, or being scrolled out of view, when the anchor gets near the edge of the viewport.
 
-```css
+```css-nolint
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
   inset-area: top;
   width: 200px;
   margin: 0 0 10px 0;
-  position-try-options: --custom-left, --custom-bottom,
-                        --custom-right, --custom-bottom-right;
+  position-try-options:
+    --custom-left, --custom-bottom,
+    --custom-right, --custom-bottom-right;
 }
 ```
 
