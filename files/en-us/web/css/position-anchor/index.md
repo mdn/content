@@ -49,7 +49,7 @@ You cannot associate a positioned element with an anchor element if the anchor i
 
 [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) set on anchor-positioned elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
 
-For more information about anchor positioning, see the [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Formal definition
 

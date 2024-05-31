@@ -46,7 +46,7 @@ When an element is hidden due to `position-visibility`, it is referred to as **s
 
 `position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the position of positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and associated features.
 
-For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Formal definition
 
