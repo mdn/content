@@ -66,19 +66,20 @@ When receiving the `"start"` message, the worker starts the animation, moving th
 ```js
 let ctx;
 let pos = 0;
+let handle;
 
 function draw(dt) {
   ctx.clearRect(0, 0, 100, 100);
   ctx.fillRect(pos, 0, 10, 10);
   pos += 10 * dt;
-  self.requestAnimationFrame(draw);
+  handle = self.requestAnimationFrame(draw);
 }
 
 self.addEventListener("message", (e) => {
   if (e.data.type === "start") {
     const transferredCanvas = e.data.canvas;
     ctx = transferredCanvas.getContext("2d");
-    self.requestAnimationFrame(draw);
+    handle = self.requestAnimationFrame(draw);
   }
   if (e.data.type === "stop") {
     self.cancelAnimationFrame(handle);
