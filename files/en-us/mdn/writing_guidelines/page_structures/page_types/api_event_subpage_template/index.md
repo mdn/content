@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > ```md
 > ---
 > title: "NameOfTheParentInterface: NameOfTheEvent event"
-> slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
+> slug: Web/API/NameOfTheParentInterface/NameOfTheEvent_event
 > page-type: web-api-event
 > status:
 >   - experimental
@@ -34,8 +34,8 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >     Format as "_NameOfTheParentInterface_**:** _NameOfTheEvent_ **event**".
 >     For example, the [animationcancel](/en-US/docs/Web/API/Element/animationcancel_event) event of the [Window](/en-US/docs/Web/API/Window) interface has a _title_ of `Window: animationcancel event`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
+>     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEvent_event`.
 > - **page-type**
 >   - : The `page-type` key for Web/API events is always `web-api-event`.
 > - **status**
@@ -68,7 +68,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
 >

@@ -131,7 +131,7 @@ JavaScript
 
 - [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/en-US/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/en-US/docs/Web/API/Window/requestAnimationFrame)
 
 APIs
 

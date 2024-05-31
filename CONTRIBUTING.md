@@ -3,7 +3,7 @@
 Thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)! :tada:
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
-Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+Everyone participating in this project is expected to follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
 
 ## Getting started
@@ -73,18 +73,19 @@ If you've found a typo on the [JavaScript landing page][], for example, you can 
 
 1. Sign in to [GitHub](https://github.com/)
 2. Navigate to [https://github.com/mdn/content](https://github.com/mdn/content)
-3. Find the source file `files/en-us/web/javascript/index.md`
+3. Find the source file, in this case `files/en-us/web/javascript/index.md`
 4. Click the edit (pencil) button
 
 From there, the GitHub UI will walk you through the rest by creating a [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and a branch to commit your changes to.
-After you have made changes to your branch, the goal is to open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for your changes to be incorporated.
+After you have made changes to your branch, open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) with your changes to be incorporated.
 
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
 
-If you're not certain of the changes that you want to make, [get in touch with us][]!
+If you're not certain of the changes that you want to make, [get in touch with us]!
 
-> **Note:** You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
+> [!NOTE]
+> You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
 
@@ -191,7 +192,8 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> **Note:** Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
+> [!NOTE]
+> Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
 
@@ -223,7 +225,9 @@ To ensure that all MDN documents follow the same formatting, we use both [Pretti
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
-> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
+> [!NOTE]
+> Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
+> This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
 
 ### Adding a new document
 
@@ -245,7 +249,7 @@ This command moves the file and fixes up redirects automatically. You can use th
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-> **Warning**
+> [!WARNING]
 > Don't edit the `_redirects.txt` file manually.
 > See the [Redirecting a document](#redirecting-a-document) section for more information.
 
@@ -293,7 +297,7 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
 
 Similar to moving files, you can delete documents or a tree of documents easily by using the `yarn content delete` command.
 
-> **Warning:**
+> [!WARNING]
 > Don't delete files or directories from the repository manually; the `yarn content delete` command handles the necessary changes such as updating the `_wikihistory.json` file.
 
 You can use this command as shown below:
@@ -330,7 +334,7 @@ Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect
    yarn content delete Learn/Accessibility --recursive --redirect Web/Accessibility
    ```
 
-   > **Warning:**
+   > [!WARNING]
    > You should always add a redirect when deleting documents. If there is no obvious alternative, redirect to the nearest "parent" of the deleted topic.
    > If you forget to redirect when deleting a file, you can do it afterwards. See the [Redirecting a document](#redirecting-a-document) section.
 

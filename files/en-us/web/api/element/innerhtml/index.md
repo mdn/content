@@ -8,36 +8,36 @@ browser-compat: api.Element.innerHTML
 
 {{APIRef("DOM")}}
 
-The {{domxref("Element")}} property
-**`innerHTML`** gets or sets the HTML or XML markup contained
-within the element.
+The {{domxref("Element")}} property **`innerHTML`** gets or sets the HTML or XML markup contained within the element.
 
-To insert the HTML into the document rather than replace the contents of an element,
-use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
+More precisely, `innerHTML` gets a serialization of the nested child DOM elements within the element, or sets HTML or XML that should be parsed to replace the DOM tree within the element.
+
+To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
+
+The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
+Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
+
+So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specfied
+In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
 ## Value
 
-A string containing the HTML serialization of the element's
-descendants. Setting the value of `innerHTML` removes all of the element's
-descendants and replaces them with nodes constructed by parsing the HTML given in the
-string _htmlString_.
+A string containing the HTML serialization of the element's descendants.
+Setting the value of `innerHTML` removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string _htmlString_.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if an attempt was made to set the value of `innerHTML` using a string which
-    is not properly-formed HTML.
+  - : Thrown if an attempt was made to set the value of `innerHTML` using a string which is not properly-formed HTML.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if an attempt was made to insert the HTML into a node whose parent is a
-    {{domxref("Document")}}.
+  - : Thrown if an attempt was made to insert the HTML into a node whose parent is a {{domxref("Document")}}.
 
 ## Usage notes
 
-The `innerHTML` property can be used to examine the current HTML source of the page, including any changes that have been made since the page was initially loaded.
-
 ### Reading the HTML contents of an element
 
-Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants. The resulting string is returned.
+Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants.
+The resulting string is returned.
 
 ```js
 let contents = myElement.innerHTML;
@@ -45,15 +45,14 @@ let contents = myElement.innerHTML;
 
 This lets you look at the HTML markup of the element's content nodes.
 
-> **Note:** The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment
-> is likely not to match the original page markup.
+> **Note:** The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
 
 ### Replacing the contents of an element
 
 Setting the value of `innerHTML` lets you easily replace the existing contents of an element with new content.
 
-> **Note:** This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
-> When inserting user-supplied data you should always consider using {{domxref("Element.setHTML()")}} instead, in order to sanitize the content before it is inserted.
+> **Warning:** This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
+> When inserting user-supplied data you should always consider using a sanitizer library, in order to sanitize the content before it is inserted.
 
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
 
@@ -78,10 +77,8 @@ document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.
 What exactly happens when you set value of `innerHTML`?
 Doing so causes the user agent to follow these steps:
 
-1. The specified value is parsed as HTML or XML (based on the document type),
-   resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
-2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element,
-   then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
+1. The specified value is parsed as HTML or XML (based on the document type), resulting in a {{domxref("DocumentFragment")}} object representing the new set of DOM nodes for the new elements.
+2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element, then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
 3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
 
 ### Appending HTML to an element
@@ -127,12 +124,9 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
-attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag
-inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
-However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements,
-so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
+However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
 For example:
 
 ```js
@@ -142,7 +136,6 @@ el.innerHTML = name; // shows the alert
 
 For that reason, it is recommended that instead of `innerHTML` you use:
 
-- {{domxref("Element.setHTML()")}} to sanitize the text before it is inserted into the DOM.
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
 
 > **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
@@ -168,12 +161,10 @@ function log(msg) {
 log("Logging mouse events inside this container…");
 ```
 
-The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using
-{{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
+The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
 Then the message is appended to the box with the class `"log"`.
 
-We add a second method that logs information about {{domxref("MouseEvent")}} based events
-(such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
+We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
 
 ```js
 function logEvent(event) {
@@ -248,6 +239,9 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("Node.textContent")}} and {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.outerHTML")}}
-- {{domxref("Element.setHTML")}}
 - Parsing HTML or XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into an XML string: {{domxref("XMLSerializer")}}
+- {{domxref("Element.getHTML()")}}
+- {{domxref("ShadowRoot.getHTML()")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}

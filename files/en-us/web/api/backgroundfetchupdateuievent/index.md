@@ -7,7 +7,7 @@ status:
 browser-compat: api.BackgroundFetchUpdateUIEvent
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is an event type for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} events, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch.
 
@@ -20,9 +20,11 @@ The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fe
 
 ## Instance properties
 
-_This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}._
+_Also inherits properties from its parent, {{domxref("BackgroundFetchEvent")}}._
 
 ## Instance methods
+
+_Also inherits methods from its parent, {{domxref("BackgroundFetchEvent")}}._
 
 - {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
   - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.

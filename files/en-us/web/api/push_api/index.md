@@ -7,7 +7,7 @@ browser-compat:
   - api.PushMessageData
 ---
 
-{{DefaultAPISidebar("Push API")}}
+{{DefaultAPISidebar("Push API")}}{{AvailableInWorkers}}
 
 The **Push API** gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.
 

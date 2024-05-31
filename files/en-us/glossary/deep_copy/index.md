@@ -27,7 +27,7 @@ Deep copies may or may not have their prototype chains copied (and often they do
 
 The copy of an object whose properties all have primitive values fits the definition of both a deep copy and a [shallow copy](/en-US/docs/Glossary/Shallow_copy). It is somewhat useless to talk about the depth of such a copy, though, because it has no nested properties and we usually talk about deep copying in the context of mutating nested properties.
 
-In JavaScript, standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), and [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)) do not create deep copies (instead, they create shallow copies).
+In JavaScript, standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), and [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)) do not create deep copies (instead, they create shallow copies).
 
 One way to make a deep copy of a JavaScript object, if it can be [serialized](/en-US/docs/Glossary/Serialization), is to use {{jsxref("JSON.stringify()")}} to convert the object to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a (completely new) JavaScript object:
 
@@ -52,5 +52,5 @@ The web API [`structuredClone()`](/en-US/docs/Web/API/structuredClone) also crea
 
 ## See also
 
-- [Shallow copy](/en-US/docs/Glossary/Shallow_copy)
+- {{glossary("Shallow copy")}}
 - [`window.structuredClone()`](/en-US/docs/Web/API/structuredClone)

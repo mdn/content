@@ -4,7 +4,10 @@ slug: Web/API/View_Transitions_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.Document.startViewTransition
+browser-compat:
+  - api.Document.startViewTransition
+  - api.ViewTransition
+spec-urls: https://drafts.csswg.org/css-view-transitions/
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
@@ -85,6 +88,9 @@ Let's walk through how this works:
 
 5. The old page view animates from {{cssxref("opacity")}} 1 to 0, while the new view animates from `opacity` 0 to 1, which is what creates the default cross-fade.
 6. When the transition animation has reached its end state, the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond.
+
+> **Note:**
+> If the document's [page visibility state](/en-US/docs/Web/API/Page_Visibility_API) is `hidden` (for example if the document is obscured by a window, the browser is minimized, or another browser tab is active) during a {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} call, the view transition is skipped entirely.
 
 ### Different transitions for different elements
 

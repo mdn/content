@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileReaderSync.readAsBinaryString
 ---
 
-{{APIRef("File API")}}{{deprecated_header}} {{AvailableInWorkers}}
+{{APIRef("File API")}}{{deprecated_header}} {{AvailableInWorkers("worker_except_service")}}
 
 > **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
 
@@ -17,8 +17,7 @@ The **`readAsBinaryString()`** method of the {{DOMxRef("FileReaderSync")}} inter
 ## Syntax
 
 ```js-nolint
-readAsBinaryString(File)
-readAsBinaryString(Blob)
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -30,7 +29,7 @@ readAsBinaryString(Blob)
 
 A string representing the input data.
 
-## Exceptions
+### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.

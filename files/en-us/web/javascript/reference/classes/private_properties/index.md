@@ -62,7 +62,7 @@ It is a syntax error to refer to `#` names from outside of the class. It is also
 class ClassWithPrivateField {
   #privateField;
 
-  constructor() {;
+  constructor() {
     delete this.#privateField; // Syntax error
     this.#undeclaredField = 42; // Syntax error
   }

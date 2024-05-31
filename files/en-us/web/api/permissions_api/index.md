@@ -9,7 +9,7 @@ browser-compat:
 spec-urls: https://w3c.github.io/permissions/
 ---
 
-{{DefaultAPISidebar("Permissions API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}
 
 The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied, or requires specific user permission.
 
@@ -32,6 +32,7 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
+- [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API): `compute-pressure`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
@@ -53,12 +54,15 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Interfaces
 
-- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
-  - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
 - {{domxref("Permissions")}}
   - : Provides the core Permission API functionality, such as methods for querying and revoking permissions.
 - {{domxref("PermissionStatus")}}
   - : Provides access to the current status of a permission, and an event handler to respond to changes in permission status.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
+  - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
 
 ## Specifications
 

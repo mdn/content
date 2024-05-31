@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.flush
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`flush()`** method of the {{domxref("VideoEncoder")}} interface forces all pending encodes to complete.
 
