@@ -26,7 +26,7 @@ inset-block-start: auto;
 
 /* anchor() function values */
 inset-block-start: anchor(end);
-inset-block-start: anchor(--my-anchor 50%);
+inset-block-start: anchor(--myAnchor 50%);
 
 /* Global values */
 inset-block-start: inherit;
@@ -94,4 +94,3 @@ div {
 - The properties which defines other insets: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
 - The mapped physical properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

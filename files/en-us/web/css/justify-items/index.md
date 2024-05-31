@@ -106,7 +106,7 @@ This property can take one of four different forms:
 - `legacy`
   - : Makes the value inherited by the box descendants. Note that if a descendant has a `justify-self: auto` value, the `legacy` keyword is not considered by the descend, only the `left`, `right`, or `center` value associated to it.
 - `anchor-center` {{experimental_inline}}
-  - : In the case of **anchor-positioned** elements (see [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the items to the center of the associated anchor element in the inline direction.
+  - : In the case of **anchor-positioned** elements (see [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the items to the center of the associated anchor element in the inline direction.
 
 ## Formal definition
 

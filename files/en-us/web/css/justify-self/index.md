@@ -107,7 +107,7 @@ This property can take one of three different forms:
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 - `anchor-center` {{experimental_inline}}
-  - : In the case of an **anchor-positioned** element (see [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the item to the center of the associated anchor element in the inline direction.
+  - : In the case of an **anchor-positioned** element (see [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the item to the center of the associated anchor element in the inline direction.
 
 ## Formal definition
 

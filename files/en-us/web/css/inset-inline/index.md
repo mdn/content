@@ -34,7 +34,7 @@ inset-inline: auto;
 
 /* anchor() function values */
 inset-inline: auto anchor(self-start);
-inset-inline: anchor(--my-anchor 50%) auto;
+inset-inline: anchor(--myAnchor 50%) auto;
 
 /* Global values */
 inset-inline: inherit;
@@ -105,4 +105,3 @@ div {
 - The mapped physical shortcut: {{cssxref("inset")}}
 - The mapped block shortcut: {{cssxref("inset-block")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

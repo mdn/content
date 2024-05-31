@@ -110,4 +110,3 @@ div {
 - The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
 - The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - The {{cssxref("margin")}} shorthand multi-value syntax.
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

@@ -26,7 +26,7 @@ left: auto;
 
 /* anchor() function values */
 left: anchor(right);
-left: anchor(--my-anchor 50%);
+left: anchor(--myAnchor 50%);
 
 /* Global values */
 left: inherit;
@@ -216,4 +216,3 @@ pre {
 - {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}
 - The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
