@@ -268,7 +268,7 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
 - {{CSSxRef("basic-shape/path", "path()")}}
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
-  - : Accepts an comma-separated list of commands defining the shape to be drawn.
+  - : Accepts a comma-separated list of commands defining the shape to be drawn.
 
 ## Reference functions
 
