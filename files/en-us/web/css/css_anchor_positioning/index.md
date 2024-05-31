@@ -13,6 +13,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 - Specify a set of alternative positions for an anchored element; when the default rendering position causes it to overflow its containing block and/or be rendered offscreen, the browser will try rendering the anchored element in the alternative positions instead.
 - Declare conditions under which anchor-positioned elements should be hidden, in situations where it is not appropriate to tether them to anchor elements.
+
 ## Reference
 
 ### Properties
