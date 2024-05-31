@@ -52,15 +52,15 @@ The resulting object has the following properties:
 - `numberingSystem`
   - : The numbering system.
     This is the value provided in the [`options.numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#numberingsystem) argument of the constructor, if present, or the value set using the Unicode extension key [`nu`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#nu), or filled in as a default.
+- `roundingIncrement`
+  - : The rounding-increment precision (the increment used when rounding numbers).
+    This is the value specified in the [`options.roundingIncrement`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingincrement) argument in the constructor.
 - `roundingMode`
   - : The rounding mode.
     This is the value provided for the [`options.roundingMode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode) argument in the constructor, or the default value: `halfExpand`.
 - `roundingPriority`
   - : The priority for resolving rounding conflicts if both "FractionDigits" and "SignificantDigits" are specified.
     This is the value provided for the [`options.roundingPriority`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingpriority) argument in the constructor, or the default value: `auto`.
-- `roundingIncrement`
-  - : The rounding-increment precision (the increment used when rounding numbers).
-    This is the value specified in the [`options.roundingIncrement`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingincrement) argument in the constructor.
 - `signDisplay`
   - : Whether or not to display the positive/negative sign.
     This is the value specified in the [`options.signDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#signdisplay) argument in the constructor, or the default value: `"auto"`.

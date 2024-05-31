@@ -70,12 +70,12 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
 - `preload`
 
-  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
+  - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
     - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
     - `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
-    - _empty string_: Synonym of the `auto` value.
+    - _empty string_: A synonym of the `auto` value.
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EventTarget.addEventListener
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
 sets up a function that will be called whenever the specified event is delivered to the target.
