@@ -98,43 +98,39 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 - Indirect `eval` does not inherit the strictness of the surrounding context, and is only in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the source string itself has a `"use strict"` directive.
 
   ```js
-  function useStrictIndirectEval() {
-    function nonStrictContext() {
-      eval?.(`with (Math) console.log(PI);`);
-    }
-    function strictContext() {
-      "use strict";
-      eval?.(`with (Math) console.log(PI);`);
-    }
-    function strictContextStrictEval() {
-      "use strict";
-      eval?.(`"use strict"; with (Math) console.log(PI);`);
-    }
-    nonStrictContext(); // Logs 3.141592653589793
-    strictContext(); // Logs 3.141592653589793
-    strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
+  function nonStrictContext() {
+    eval?.(`with (Math) console.log(PI);`);
   }
+  function strictContext() {
+    "use strict";
+    eval?.(`with (Math) console.log(PI);`);
+  }
+  function strictContextStrictEval() {
+    "use strict";
+    eval?.(`"use strict"; with (Math) console.log(PI);`);
+  }
+  nonStrictContext(); // Logs 3.141592653589793
+  strictContext(); // Logs 3.141592653589793
+  strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
   On the other hand, direct eval inherits the strictness of the invoking context.
 
   ```js
-  function useStrictDirectEval() {
-    function nonStrictContext() {
-      eval(`with (Math) console.log(PI);`);
-    }
-    function strictContext() {
-      "use strict";
-      eval(`with (Math) console.log(PI);`);
-    }
-    function strictContextStrictEval() {
-      "use strict";
-      eval(`"use strict"; with (Math) console.log(PI);`);
-    }
-    nonStrictContext(); // Logs 3.141592653589793
-    strictContext(); // Uncaught SyntaxError: Strict mode code may not include a with statement
-    strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
+  function nonStrictContext() {
+    eval(`with (Math) console.log(PI);`);
   }
+  function strictContext() {
+    "use strict";
+    eval(`with (Math) console.log(PI);`);
+  }
+  function strictContextStrictEval() {
+    "use strict";
+    eval(`"use strict"; with (Math) console.log(PI);`);
+  }
+  nonStrictContext(); // Logs 3.141592653589793
+  strictContext(); // Uncaught SyntaxError: Strict mode code may not include a with statement
+  strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
 - `var`-declared variables and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) would go into the surrounding scope if the source string is not interpreted in strict mode — for indirect eval, they become global variables. If it's a direct eval in a strict mode context, or if the `eval` source string itself is in strict mode, then `var` and function declarations do not "leak" into the surrounding scope.
