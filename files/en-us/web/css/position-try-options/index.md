@@ -135,7 +135,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -158,7 +158,7 @@ The infobox is given fixed positioning, a {{cssxref("position-anchor")}} propert
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   inset-area: top left;
 
   position-try-options: flip-block, flip-inline;
@@ -212,7 +212,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -231,7 +231,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   inset-area: top left;
 
   position-try-options:
@@ -283,7 +283,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -302,13 +302,13 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   inset-area: top left;
 
-  position-try-options: inset-area(top), inset-area(top right), inset-area(
-      right
-    ), inset-area(bottom right), inset-area(bottom), inset-area(bottom left),
-    inset-area(left);
+  position-try-options: inset-area(top), inset-area(top right),
+                        inset-area(right), inset-area(bottom right),
+                        inset-area(bottom), inset-area(bottom left),
+                        inset-area(left);
 }
 ```
 

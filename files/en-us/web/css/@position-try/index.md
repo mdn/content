@@ -102,7 +102,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -151,12 +151,12 @@ The infobox is given fixed positioning, a {{cssxref("position-anchor")}} propert
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   inset-area: top;
   width: 200px;
   margin: 0 0 10px 0;
-  position-try-options: --custom-left, --custom-bottom, --custom-right,
-    --custom-bottom-right;
+  position-try-options: --custom-left, --custom-bottom,
+                        --custom-right, --custom-bottom-right;
 }
 ```
 

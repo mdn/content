@@ -98,7 +98,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxre
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 45%;
@@ -138,7 +138,7 @@ We initially position the element above its anchor, and then set a `position-try
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   bottom: anchor(top);
   margin-bottom: 10px;
