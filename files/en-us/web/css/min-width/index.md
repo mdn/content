@@ -93,4 +93,3 @@ form {
 
 - {{Cssxref("width")}}, {{Cssxref("max-width")}}
 - The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

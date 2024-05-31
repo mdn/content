@@ -181,4 +181,3 @@ p.minblue {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

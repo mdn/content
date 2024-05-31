@@ -11,7 +11,7 @@ The **`inset-area`** [CSS](/en-US/docs/Web/CSS) property enables an **anchor-pos
 
 ![The inset-area grid, as described below](inset-area.png)
 
-For detailed information on anchor usage, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Syntax
 
@@ -535,5 +535,5 @@ The result is as follows. Try selecting new `inset-area` values from the `<selec
 
 ## See also
 
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

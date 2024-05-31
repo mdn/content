@@ -102,4 +102,3 @@ form {
 - [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{Cssxref("height")}}, {{Cssxref("min-height")}}
 - The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)

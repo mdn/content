@@ -93,4 +93,3 @@ form {
 
 - [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
