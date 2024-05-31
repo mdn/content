@@ -13,7 +13,7 @@ The **`position-try-options`** [CSS](/en-US/docs/Web/CSS) property enables you t
 
 > **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify {{cssxref("position-try-order")}} and `position-try-options` values in a single declaration.
 
-For detailed information on anchor positioning, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Syntax
 
@@ -331,5 +331,5 @@ Scroll the page and check out the effect of these position try options as the an
 
 - {{cssxref("position-try-order")}}, {{cssxref("position-try")}}
 - The {{cssxref("@position-try")}} at-rule
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

@@ -15,7 +15,7 @@ This has a slightly different focus to the rest of the position try functionalit
 
 > **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-options")}} values in a single declaration.
 
-For detailed information on anchor positioning, see the [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ## Syntax
 
@@ -205,5 +205,5 @@ Try selecting the `most-height` order option. This has the effect of applying th
 
 - {{cssxref("position-try-options")}}, {{cssxref("position-try")}}
 - The {{cssxref("@position-try")}} at-rule
-- [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
