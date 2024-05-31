@@ -7,7 +7,7 @@ browser-compat: css.types.anchor
 
 {{CSSRef}}
 
-The **`anchor()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used as a value for an **anchor-positioned** element's [inset properties](#properties_that_accept_anchor_function_values), to position it relative to the edges of its associated **anchor element**.
+The **`anchor()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used as a value for an **anchor-positioned** element's [inset properties](#properties_that_accept_anchor_function_values), to position it relative to the edges of its associated **anchor element**.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
@@ -59,7 +59,7 @@ The parameters are:
       The specification also defines `inside` and `outside` values, which are currently not supported by any browser.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
-  - : This is a fallback value that specifies what the function should return if the `anchor()` function is invalid.
+  - : Specifies a fallback value the function should resolve to if the `anchor()` function would otherwise be invalid.
 
 > **Note:** The anchor side you position the positioned element relative to has to be along the same axis as the inset value being set. For example, `top: anchor(left)` doesn't make sense and won't work.
 
@@ -69,15 +69,25 @@ Returns a {{cssxref("length")}} value.
 
 ## Description
 
-The `anchor()` function enables a positioned element's inset values to be expressed in terms of the position of an anchor element's sides.
+The `anchor()` function enables positioning an element relative to the edges of an anchor element. It is a valid value for each of the inset properties. When used, the function sets the inset position value as an absolute distance relative to the anchor element by defining the anchor element, the side of the anchor element the positioned element is being positioned relative to, and the distance from that side.
+
+If the positioned element does not have an anchor associated with it (i.e. via the {{cssxref("position-anchor")}} property) and it has inset properties with `anchor()` values set on it, the inset properties have no effect. The element is positioned as if no inset values are set.
 
 ### Properties that accept `anchor()` function values
 
-The properties that can take an `anchor()` function as a value are as follows:
+The CSS inset properties — that can take an `anchor()` function as a value — are as follows:
 
-- Physical inset properties: {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}.
-- Logical inset properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}.
-- Shorthand inset properties: {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}}.
+- {{cssxref("top")}}
+- {{cssxref("left")}}
+- {{cssxref("bottom")}}
+- {{cssxref("right")}}
+- {{cssxref("inset")}} shorthand
+- {{cssxref("inset-block-start")}}
+- {{cssxref("inset-block-end")}}
+- {{cssxref("inset-block")}} shorthand
+- {{cssxref("inset-inline-start")}}
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-inline")}} shorthand
 
 ### Using `anchor()` inside `calc()`
 

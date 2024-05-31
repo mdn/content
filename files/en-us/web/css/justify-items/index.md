@@ -27,7 +27,7 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Positional alignment */
-justify-items: anchor-center; /* Center items with respect to an associated anchor element */
+justify-items: anchor-center;
 justify-items: center; /* Pack items around the center */
 justify-items: start; /* Pack items from the start */
 justify-items: end; /* Pack items from the end */
@@ -106,7 +106,7 @@ This property can take one of four different forms:
 - `legacy`
   - : Makes the value inherited by the box descendants. Note that if a descendant has a `justify-self: auto` value, the `legacy` keyword is not considered by the descend, only the `left`, `right`, or `center` value associated to it.
 - `anchor-center` {{experimental_inline}}
-  - : In the case of **anchor-positioned** elements (see [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the items to the center of the associated anchor element in the inline direction.
+  - : In the case of **anchor-positioned** elements (see [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)), aligns the items to the center of the associated anchor element in the inline direction.
 
 ## Formal definition
 

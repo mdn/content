@@ -22,7 +22,7 @@ align-self: normal;
 
 /* Positional alignment */
 /* align-self does not take left and right values */
-align-self: anchor-center; /* Center item with respect to an associated anchor element */
+align-self: anchor-center;
 align-self: center; /* Put the item around the center */
 align-self: start; /* Put the item at the start */
 align-self: end; /* Put the item at the end */
@@ -83,7 +83,7 @@ align-self: unset;
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 - `anchor-center` {{experimental_inline}}
-  - : In the case of an **anchor-positioned** element (see [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)), the `anchor-center` value is used to align the item to the center of the associated anchor element in the block direction.
+  - : In the case of an **anchor-positioned** element (see [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)), aligns the item to the center of the associated anchor element in the block direction.
 
 ## Formal definition
 
