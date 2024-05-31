@@ -30,7 +30,7 @@ await browser.scripting.registerContentScripts(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments or rejected when there are errors. Errors can occur during script parsing and file validation or if the IDs specified do not exist. When an error occurs, no scripts are registered.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments or rejected when there are errors. Errors can occur during script parsing and file validation or if the IDs specified exist. When an error occurs, no scripts are registered.
 
 ## Examples
 
