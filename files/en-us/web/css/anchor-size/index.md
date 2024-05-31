@@ -53,7 +53,7 @@ The parameters are:
       - `self-inline`: The length of the anchor element in the inline direction.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
-  - : This is a fallback value that specifies what the function should return if the `anchor()` function is invalid.
+  - : Specifies a fallback value the function should resolve to if the `anchor-size()` function would otherwise be invalid.
 
 > **Note:** The anchor size you size the positioned element relative to does not have to be along the same axis as the sizing value being set. For example, `width: anchor-size(height)` is valid.
 
