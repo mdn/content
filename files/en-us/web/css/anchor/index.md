@@ -19,12 +19,12 @@ top: anchor(bottom);
 inset-block-end: anchor(start);
 
 /* property: anchor(anchor-element anchor-side) */
-top: anchor(--my-anchor bottom);
-inset-block-end: anchor(--my-anchor start);
+top: anchor(--myAnchor bottom);
+inset-block-end: anchor(--myAnchor start);
 
 /* property: anchor(anchor-element anchor-side, length-percentage) */
-top: anchor(--my-anchor bottom, 50%);
-inset-block-end: anchor(--my-anchor start, 200px);
+top: anchor(--myAnchor bottom, 50%);
+inset-block-end: anchor(--myAnchor start, 200px);
 ```
 
 ### Parameters
@@ -222,7 +222,7 @@ form div:last-child {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -247,7 +247,7 @@ In addition, we set the `infobox`'s:
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   position: fixed;
   top: anchor(bottom);
