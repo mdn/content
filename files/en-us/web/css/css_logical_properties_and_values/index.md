@@ -79,12 +79,12 @@ CSS was initially designed with only physical coordinates in its controls. The l
 
 ### Data types and values
 
-- [`block-start`]()
-- [`block-end`]()
-- [`inline-start`]()
-- [`inline-end`]()
-- [`start`]()
-- [`end`]()
+- [`block-start`](/)
+- [`block-end`](/)
+- [`inline-start`](/)
+- [`inline-end`](/)
+- [`start`](/)
+- [`end`](/)
 
 ### Glossary terms
 
