@@ -6,10 +6,10 @@ page-type: web-api-static-method
 browser-compat: api.URL.revokeObjectURL_static
 ---
 
-{{ApiRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **`URL.revokeObjectURL()`** static
-method releases an existing object URL which was previously created by calling
+The **`revokeObjectURL()`** static method of the {{domxref("URL")}} interface
+releases an existing object URL which was previously created by calling
 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 Call this method when you've finished

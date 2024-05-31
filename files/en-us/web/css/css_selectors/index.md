@@ -135,7 +135,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 
   - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 
