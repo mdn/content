@@ -21,7 +21,7 @@ Like other locale subtags, the region can be added to the {{jsxref("Intl.Locale"
 
 ### Adding a region via the locale string
 
-The region, if present, is the third part (if `script` is present, second part otherwise) of a valid Unicode language identifier string, and can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. Note that the script is not a required part of a locale identifier.
+The region, if present, is the third part (if `script` is present, second part otherwise) of a valid Unicode language identifier string, and can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. Note that the region is not a required part of a locale identifier.
 
 ```js
 const locale = new Intl.Locale("en-Latn-US");
