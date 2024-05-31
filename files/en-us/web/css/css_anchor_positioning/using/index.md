@@ -173,7 +173,7 @@ anchor(anchor-element anchor-side, length-percentage)
   - : The`<dashed-ident>` value set as the `anchor-name` of the anchor element you want to position an element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the `position-anchor` property, is used.
 - `anchor-side` 
   - : Specifies the physical (`top`, `left`, etc.) or logical (`start`, `end`, etc.) side of the anchor element that the positioned element will be positioned relative to.|
-- {{cssxref("length-percentage")}} 
+- {{cssxref("length-percentage")}}
   - : Specifies a fallback value the function should resolve to if the `anchor()` function would otherwise be invalid.
 
 The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often add a {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element. For example:
