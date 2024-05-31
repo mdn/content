@@ -3582,7 +3582,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
-/en-US/docs/Glossary/GZip	/en-US/docs/Glossary/GZip_compression
+/en-US/docs/Glossary/GZip	/en-US/docs/Glossary/gzip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -11615,7 +11615,7 @@
 /en-US/docs/Web/CSS/filter-function/hue-rotate()	/en-US/docs/Web/CSS/filter-function/hue-rotate
 /en-US/docs/Web/CSS/filter-function/invert()	/en-US/docs/Web/CSS/filter-function/invert
 /en-US/docs/Web/CSS/filter-function/opacity()	/en-US/docs/Web/CSS/filter-function/opacity
-/en-US/docs/Web/CSS/filter-function/path()	/en-US/docs/Web/CSS/path
+/en-US/docs/Web/CSS/filter-function/path()	/en-US/docs/Web/CSS/basic-shape/path
 /en-US/docs/Web/CSS/filter-function/saturate()	/en-US/docs/Web/CSS/filter-function/saturate
 /en-US/docs/Web/CSS/filter-function/sepia()	/en-US/docs/Web/CSS/filter-function/sepia
 /en-US/docs/Web/CSS/filter-function/url	/en-US/docs/Web/CSS/url
@@ -11681,7 +11681,8 @@
 /en-US/docs/Web/CSS/pad	/en-US/docs/Web/CSS/@counter-style/pad
 /en-US/docs/Web/CSS/paint	/en-US/docs/Web/CSS/image/paint
 /en-US/docs/Web/CSS/paint()	/en-US/docs/Web/CSS/image/paint
-/en-US/docs/Web/CSS/path()	/en-US/docs/Web/CSS/path
+/en-US/docs/Web/CSS/path	/en-US/docs/Web/CSS/basic-shape/path
+/en-US/docs/Web/CSS/path()	/en-US/docs/Web/CSS/basic-shape/path
 /en-US/docs/Web/CSS/prefix	/en-US/docs/Web/CSS/@counter-style/prefix
 /en-US/docs/Web/CSS/radial-gradient	/en-US/docs/Web/CSS/gradient/radial-gradient
 /en-US/docs/Web/CSS/radial-gradient()	/en-US/docs/Web/CSS/gradient/radial-gradient

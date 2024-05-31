@@ -24,7 +24,7 @@ const sym3 = Symbol("foo");
 The above code creates three new Symbols. Note that `Symbol("foo")` does not coerce the string `"foo"` into a Symbol. It creates a new Symbol each time:
 
 ```js
-Symbol("foo") === "foo"; // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a {{jsxref("TypeError")}}:
