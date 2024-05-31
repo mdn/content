@@ -141,7 +141,7 @@ We've associated the two elements, but they are not yet tethered. To tether them
 
 ## Positioning elements based on anchor position
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. You also need to specify the position of the element relative to the anchor. This is done either by setting a CSS [`anchor()`](/en-US/docs/Web/CSS/anchor) function value on an **inset property**, specifying an {{cssxref("inset-area")}}, or centering the positioned element with the  [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+As we saw above, associating a positioned element with an anchor is not really much use on its own. You also need to specify the position of the element relative to the anchor. This is done either by setting a CSS [`anchor()`](/en-US/docs/Web/CSS/anchor) function value on an **inset property**, specifying an {{cssxref("inset-area")}}, or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
 ### Using inset properties with `anchor()` function values
 
