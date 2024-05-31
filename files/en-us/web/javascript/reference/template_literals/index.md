@@ -279,38 +279,6 @@ Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
-Combining a `String.raw` template literal with the
-{{jsxref("RegExp/RegExp", "RegExp()")}} constructor allows you to
-create regular expressions with an alternative delimiter other than a
-forward slash (`/`) without requiring double-escaping (`\\`) of
-regular expression escape sequences. This is especially valuable in
-strings that contain a lot of slashes, such as file paths or URLs.
-
-```js
-// A String.raw template allows a fairly readable regular expression matching a URL:
-const re_raw_template = new RegExp(
-  String.raw`https://developer\.mozilla\.org/en-US/docs/Web/JavaScript/Reference/`,
-);
-
-// The same thing with a regexp literal looks like this, with \/ for
-// each forward slash:
-const re_regexp_literal =
-  /https:\/\/developer\.mozilla\.org\/en-US\/docs\/Web\/JavaScript\/Reference\//;
-
-// And the same thing written with the RegExp constructor and a
-// traditional string literal, with \\. for each period:
-const re_string_literal = new RegExp(
-  "https://developer\\.mozilla\\.org/en-US/docs/Web/JavaScript/Reference/",
-);
-
-console.log(re_raw_template.source == re_regexp_literal.source);
-// true
-console.log(re_raw_template.source == re_string_literal.source);
-// true
-console.log(re_raw_template.source);
-// https:\/\/developer\.mozilla\.org\/en-US\/docs\/Web\/JavaScript\/Reference\/
-```
-
 `String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js
@@ -350,24 +318,28 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates.
+Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for a simple example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
 
 ```js
-latex`\unicode`;
+const node = document.getElementById("formula");
+MathJax.typesetClear([node]);
 // Throws in older ECMAScript versions (ES2016 and earlier)
 // SyntaxError: malformed Unicode character escape sequence
+node.innerHTML = String.raw`$\underline{u}$`;
+MathJax.typesetPromise([node]);
 ```
 
 However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 
 ```js
-function latex(str) {
-  return { cooked: str[0], raw: str.raw[0] };
+function log(str) {
+  console.log("Cooked:", str[0]);
+  console.log("Raw:", str.raw[0]);
 }
 
-latex`\unicode`;
-
-// { cooked: undefined, raw: "\\unicode" }
+log`\unicode`;
+// Cooked: undefined
+// Raw: \unicode
 ```
 
 Note that the escape-sequence restriction is only dropped from _tagged_ templates, but not from _untagged_ template literals:
