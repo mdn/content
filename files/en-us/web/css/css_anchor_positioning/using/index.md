@@ -48,7 +48,7 @@ To declare an anchor element with CSS, you need to set an anchor name on it via 
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   width: fit-content;
 }
 ```
@@ -69,7 +69,7 @@ The positioned element is then associated with the anchor element by setting its
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 }
 ```
 
@@ -247,7 +247,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 ```
 
@@ -266,7 +266,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 
 ```css
 .infobox {
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   position: fixed;
 
   inset-block-start: anchor(end);
@@ -382,7 +382,7 @@ The anchor element and `<body>` element are given the same CSS as before. We hav
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 
 body {
@@ -426,7 +426,7 @@ The infobox is given fixed positioning and associated with the anchor in the sam
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   inset-area: top;
 }
@@ -513,7 +513,7 @@ The HTML is the same as in the previous example, as is the CSS for the `<body>` 
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 
 body {
@@ -538,7 +538,7 @@ The infobox is given fixed positioning and tethered to the anchor's bottom edge.
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   top: anchor(bottom);
   margin-top: 5px;
@@ -628,7 +628,7 @@ Let's look at an example. The HTML is the same as in the previous examples, and 
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 
 body {
@@ -653,7 +653,7 @@ The infobox is given fixed positioning and associated with the anchor in the sam
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   inset-area: right;
   margin-left: 5px;
@@ -745,7 +745,7 @@ The HTML is the same as in the previous example, except that it has a bit more c
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
 }
 
 body {
@@ -770,7 +770,7 @@ The infobox is given fixed positioning and tethered to the anchor's bottom edge.
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   margin-bottom: 5px;
   inset-area: top span-all;
@@ -847,7 +847,7 @@ The CSS for the anchor is largely the same as in previous examples, except that 
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -870,7 +870,7 @@ The infobox is given fixed positioning and tethered to the anchor's top-left cor
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   inset-area: top left;
 
@@ -925,7 +925,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -944,7 +944,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   inset-area: top left;
 
@@ -993,7 +993,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -1012,7 +1012,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   inset-area: top left;
 
@@ -1076,7 +1076,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -1121,7 +1121,7 @@ Now we can include those custom try options in the position list by referencing 
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
   inset-area: top;
   width: 200px;
   margin: 0 0 10px 0;
@@ -1209,7 +1209,7 @@ The CSS for the example is mostly the same as in previous ones. We do however in
 }
 
 .anchor {
-  anchor-name: --infobox;
+  anchor-name: --myAnchor;
   position: absolute;
   top: 100px;
   left: 250px;
@@ -1245,7 +1245,7 @@ We initially position the infobox at the top of the anchor, and then give it our
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --infobox;
+  position-anchor: --myAnchor;
 
   bottom: anchor(top);
   margin-bottom: 10px;
