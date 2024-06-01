@@ -90,7 +90,7 @@ CSS was initially designed with only physical coordinates in its controls. The l
 
 - {{glossary("directional keyword")}}
 - {{glossary("flow relative")}}
-- {{glossary("inset properties")}}
+- {{glossary("Inset properties")}}
 - {{glossary("Logical properties")}}
 - {{glossary("mapping logic")}}
 
