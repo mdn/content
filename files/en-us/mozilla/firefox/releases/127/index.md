@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### HTML
 
+- `data:` and `javascript:` URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+
 #### Removals
 
 ### CSS
@@ -70,6 +72,9 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
+- Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
+
 ### Removals
 
 ### Other
@@ -77,6 +82,10 @@ This article provides information about the changes in Firefox 127 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 127 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Symmetrical spacing with CSS `letter-spacing`:** `layout.css.letter-spacing.model`.
+
+  The CSS `letter-spacing` property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. [Firefox bug 1891446](https://bugzil.la/1891446).
 
 ## Older versions
 
