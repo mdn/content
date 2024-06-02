@@ -55,10 +55,6 @@ inputElement.addEventListener("compositionstart", (event) => {
 <div class="control">
   <label for="example">
     Focus the text-input control, then open your IME and begin typing.
-    <ul>
-      <li>on macOS type <kbd>Command ⌘</kbd> + <kbd>`</kbd></li>
-      <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
-    </ul>
   </label>
   <input type="text" id="example" name="example" />
 </div>
