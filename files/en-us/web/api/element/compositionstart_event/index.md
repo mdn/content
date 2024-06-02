@@ -54,7 +54,7 @@ inputElement.addEventListener("compositionstart", (event) => {
 ```html
 <div class="control">
   <label for="example">
-    First select textbox, then to open IME:
+    Focus the text-input control, then open your IME and begin typing.
     <ul>
       <li>on macOS type <kbd>Command ⌘</kbd> + <kbd>`</kbd></li>
       <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
