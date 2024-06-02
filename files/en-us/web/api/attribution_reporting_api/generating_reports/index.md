@@ -145,9 +145,10 @@ The properties are as follows:
 - `"trigger_debug_key"` {{optional_inline}}
   - : A 64 bit unsigned integer representing the debugging key for the attribution trigger. This mirrors the value set in the associated {{httpheader("Attribution-Reporting-Register-Trigger")}} header's `"debug_key"` field. See [Debug reports](#debug_reports) for more information.
 
-## How noise is added to reports
+## Adding noise to reports
 
-Noise is added to reports in order to obscure the output associated with a particular source, and thereby protect user privacy. The exact source data cannot be identified and attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning.
+<!--
+THIS INFORMATION IS NOT COMPLETE; WE HAVE PARKED IT FOR NOW SO THAT WE CAN GET THIS DOCUMENTATION PUBLISHED, AND WE WILL DO MORE WORK ON ARA NOISE ON A FUTURE DATE, IF/WHEN THE DEMAND IS THERE
 
 In the case of event-level reports, this is done using a randomized response algorithm, which works like so:
 
@@ -183,11 +184,13 @@ A matching {{httpheader("Attribution-Reporting-Register-Trigger")}} could contai
 ```
 
 It is however still possible that a match may not occur, based on the randomized response algorithm described above.
+-->
 
-For information on how noise works in summary reports, see [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
+Noise is added to reports in order to obscure the output associated with a particular source, and thereby protect user privacy. The exact source data cannot be identified and attributed back to individual users, but the overall patterns taken from the data will still provide the same meaning.
 
-For further information on noise, see:
+For information on how noise works in attribution reporting, see:
 
+- [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
 - [Data limits and noise](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
 - [Working with noise](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/working-with-noise/)
 
