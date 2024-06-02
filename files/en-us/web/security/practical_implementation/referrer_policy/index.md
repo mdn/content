@@ -39,7 +39,7 @@ The most useful directives available to `Referrer-Policy` are as follows, in dec
 - `strict-origin`: send the `Referrer` header to all origins, but only the URL without the path (e.g. `https://example.com/`)
 - `strict-origin-when-cross-origin`: send the full `Referrer` header on same-origin requests, and the URL without the path on cross-origin requests.
 
-If you are unable to use the `Referrer-Policy` header, you can also set page-wide policies using a `<meta http-equiv="Referrer-Policy" content="…">` element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}. You can also set policies on individual elements using the [`referrerpolicy`](/docs/Web/HTML/Element/a#referrerpolicy) HTML attribute.
+If you are unable to use the `Referrer-Policy` header, you can also set page-wide policies using a [`<meta http-equiv="Referrer-Policy" content="…">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}. You can also set policies on individual elements using the [`referrerpolicy`](/docs/Web/HTML/Element/a#referrerpolicy) HTML attribute and individual [fetch](/en-US/docs/Web/API/fetch) requests using the {{domxref("Request.referrerPolicy")}} property.
 
 Notes:
 

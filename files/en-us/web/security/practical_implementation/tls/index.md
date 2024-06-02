@@ -4,13 +4,13 @@ slug: Web/Security/Practical_implementation/TLS
 page-type: guide
 ---
 
-Transport Layer Security (TLS) provides assurances about the confidentiality, authentication, and integrity of all communications, and as such, should be used for all inbound and outbound website communications. This article explains the most important TLS-related configuration settings.
+[Transport Layer Security (TLS)](/en-US/docs/Glossary/TLS) provides assurances about the confidentiality, authentication, and integrity of all communications, and as such, should be used for all inbound and outbound website communications. This article explains the most important TLS-related configuration settings.
 
 ## TLS configuration
 
 ### Problem
 
-All requests and responses should be sent over HTTPS. The modern web practically enforces this — all browsers are moving towards requiring HTTPS by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+All requests and responses should be sent over HTTPS. The modern web practically enforces this — all browsers are moving towards requiring [HTTPS](/en-US/docs/Glossary/HTTPS) by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ### Solution
 

@@ -4,7 +4,7 @@ slug: Web/Security/Practical_implementation/Robots_txt
 page-type: guide
 ---
 
-`robots.txt` is a text file placed within the root directory of a site that tells robots (such as search engine indexers) how to behave, by instructing them not to crawl certain paths on the website.
+[`robots.txt`](/en-US/docs/Glossary/Robots.txt) is a text file placed within the root directory of a site that tells robots (such as search engine indexers) how to behave, by instructing them not to crawl certain paths on the website.
 
 ## Problem
 

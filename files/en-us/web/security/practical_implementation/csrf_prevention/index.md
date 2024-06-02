@@ -4,11 +4,11 @@ slug: Web/Security/Practical_implementation/CSRF_prevention
 page-type: guide
 ---
 
-Cross-site request forgeries can be protected against via `SameSite` cookies and anti-CSRF tokens.
+Cross-site request forgeries ([CSRF](/en-US/docs/Glossary/CSRF)) can be protected against via `SameSite` cookies and anti-CSRF tokens.
 
 ## Problem
 
-Cross-site request forgeries are a class of attack where unauthorized commands are transmitted to a website from a trusted user. Because they inherit the user's cookies (and hence session information), they appear to be valid commands. A CSRF attack might look like this:
+CSRF are a class of attack where unauthorized commands are transmitted to a website from a trusted user. Because they inherit the user's cookies (and hence session information), they appear to be valid commands. A CSRF attack might look like this:
 
 ```html
 <!-- Attempt to delete a user's account -->
@@ -70,6 +70,7 @@ httpRequest.setRequestHeader("X-CSRF-Token", token); // add it as an X-CSRF-Toke
 
 ## See also
 
+- [Types of attacks: Cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Types_of_attacks#cross-site_request_forgery_csrf)
 - [Wikipedia on CRSF Attacks and Prevention](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention)
 - [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 

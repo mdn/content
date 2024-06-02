@@ -54,6 +54,8 @@ r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp
 
 ## See also
 
+- {{htmlelement("link")}}
+- {{htmlelement("script")}}
 - [SRI Hash Generator](https://www.srihash.org/) — generates the required {{htmlelement("script")}} elements for you, and informs you if the CDN lacks CORS support.
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

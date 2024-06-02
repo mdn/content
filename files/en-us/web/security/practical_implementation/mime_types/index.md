@@ -29,6 +29,7 @@ X-Content-Type-Options: nosniff
 
 ## See also
 
+- [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)
 - [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
   - : There are several ways incorrect MIME types can cause potential security problems with your site. This article explains some of those and shows how to configure your server to serve files with the correct MIME types.
 

@@ -8,7 +8,7 @@ Access to cookies should limited as much as possible.
 
 ## Problem
 
-Cookies often contain session identifiers or other sensitive information. Unwanted access to cookies can therefore cause a whole of problems, including [Privacy](/en-US/docs/Web/Privacy) issues, Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks, and more.
+Cookies often contain session identifiers or other sensitive information. Unwanted access to cookies can therefore cause a whole of problems, including [Privacy](/en-US/docs/Web/Privacy) issues, Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks, Cross-Site Request Forgery ([CSRF](/en-US/docs/Glossary/CSRF)) attacks, and more.
 
 ## Solution
 
@@ -67,6 +67,8 @@ Set-Cookie: __Host-BMOSESSIONID=YnVnemlsbGE=; Max-Age=2592000; Path=/; Secure; H
 ## See also
 
 - [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies)
+- [`Document.cookie`: Security](/en-US/docs/Web/API/Document/cookie#security)
 - [RFC 6265 (HTTP Cookies)](https://datatracker.ietf.org/doc/html/rfc6265)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -20,7 +20,12 @@ Disabling inline JavaScript means that _all_ JavaScript must be loaded from exte
 
 Care must therefore be taken when designing sites so that CSP causes less problems and becomes easier to implement.
 
-CSP can also be used to provide granular control over loading other resources such as images, video, audio, [web workers](/en-US/docs/Web/API/Web_Workers_API), and embedded (i.e. {{htmlelement("iframe")}}) content.
+CSP can also be used to provide granular control over:
+
+- Loading other resources such as images, video, audio ([fetch directives](/en-US/docs/Glossary/Fetch_directive) control resource loading).
+- [Web workers](/en-US/docs/Web/API/Web_Workers_API) (via [document directives](/en-US/docs/Glossary/Document_directive)).
+- Embedded (i.e. {{htmlelement("iframe")}}) content.
+- Navigation / form submission destinations (via [navigation directives](/en-US/docs/Glossary/Navigation_directive)).
 
 Due to the difficulty in retrofitting CSP into existing websites, CSP is mandatory for all new websites and is strongly recommended for all existing high-risk sites.
 
@@ -28,7 +33,7 @@ Due to the difficulty in retrofitting CSP into existing websites, CSP is mandato
 
 > **Note:** Before implementing any actual CSP with the `Content-Security-Policy` header, it is recommended to test it out first with the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header, to see if any violations would have occurred with that policy. This requires usage of `report-to`/`report-uri`, as explained below.
 
-1. Begin by trying out a policy of `default-src https:`. This is a great first goal, as it disables inline code and requires HTTPS, and it will also allow you to start to pinpoint what resources are failing to load as a result of the policy.
+1. Begin by trying out a policy of `default-src https:`. This is a great first goal, as it disables inline code and requires HTTPS, and it will also allow you to start to pinpoint what resources are failing to load as a result of the policy. [`default-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) serves as a fallback for the other CSP fetch directives.
 2. Next, start to make the policy more specific, in an effort to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; script-src 'self'; style-src 'self';`.
 3. You can then go on to add in specific sources as highlighted during testing, for example `style-src 'self' https://example.com/`.
 4. API endpoints should use a policy that disables resource loading and embedding, for example `Content-Security-Policy: default-src 'none'; frame-ancestors 'none'`.
@@ -36,10 +41,10 @@ Due to the difficulty in retrofitting CSP into existing websites, CSP is mandato
 
 Notes:
 
-- If yo are unable to use the `Content-Security-Policy` header, pages can instead include a `<meta http-equiv="Content-Security-Policy" content="…">` element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
+- If you are unable to use the `Content-Security-Policy` header, pages can instead include a []`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
 - Care needs to be taken with `data:` URIs, as these are unsafe inside `script-src` and `object-src` (or `default-src`).
 - Similarly, the use of `script-src 'self'` can be unsafe for sites with JSONP endpoints. These sites should use a `script-src` that includes the path to their JavaScript source folder(s).
-- Sites should use the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) and [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directives, which [`POST`](/en-US/docs/Web/HTTP/Methods/POST)s JSON reports about CSP violations to specified endpoints. This allows CSP violations to be caught and repaired quickly.
+- Sites should use the [reporting directives](/en-US/docs/Glossary/Reporting_directive) — [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) and [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directives — these [`POST`](/en-US/docs/Web/HTTP/Methods/POST)s JSON reports about CSP violations to endpoints (specified in the [`Reporting-Endpoints`](/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints) header, in the case of `report-to`). This allows CSP violations to be caught and repaired quickly.
   > **Note:** `report-to` is preferred over the deprecated `report-uri`, however both are still needed because `report-to` does not yet have full cross-browser support.
 - Set the `form-action` directive to `'none'` or `'self'`, or to specific sources which are allowed to be used in forms. This directive does not fall back to `default-src`, therefore, not explicitly setting it allows forms to be submitted to any source.
 - Unless sites need the ability to execute plugins, their execution should be disabled with `object-src 'none'`.

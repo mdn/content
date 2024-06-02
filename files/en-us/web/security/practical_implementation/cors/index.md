@@ -36,6 +36,15 @@ Access-Control-Allow-Origin: https://random-dashboard.example.org
 
 ## See also
 
+- [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [`Access-Control-Allow-Credentials`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+- [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+- [`Access-Control-Allow-Methods`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+- [`Access-Control-Expose-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+- [`Access-Control-Max-Age`](/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
+- [`Access-Control-Request-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers)
+- [`Access-Control-Request-Method`](/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Method)
+- [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin)
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [CORS for Developers](https://w3c.github.io/webappsec-cors-for-developers/) from W3C (2016)
 
