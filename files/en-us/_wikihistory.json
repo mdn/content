@@ -2464,16 +2464,6 @@
     "modified": "2019-09-05T00:37:41.703Z",
     "contributors": ["ran", "vtkrishn", "Kongklakker", "coder206", "klez"]
   },
-  "Glossary/GZip_compression": {
-    "modified": "2019-03-18T20:37:25.635Z",
-    "contributors": [
-      "RainSlide",
-      "ezrinjaz",
-      "mfuji09",
-      "ramsunvtech",
-      "chrisdavidmills"
-    ]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-23T22:37:56.867Z",
     "contributors": ["klez", "teoli", "Sheppy"]
@@ -5584,6 +5574,16 @@
   "Glossary/gif": {
     "modified": "2019-01-16T20:56:47.872Z",
     "contributors": ["klez", "dsmatlak"]
+  },
+  "Glossary/gzip_compression": {
+    "modified": "2019-03-18T20:37:25.635Z",
+    "contributors": [
+      "RainSlide",
+      "ezrinjaz",
+      "mfuji09",
+      "ramsunvtech",
+      "chrisdavidmills"
+    ]
   },
   "Glossary/hash": {
     "modified": "2019-03-23T22:46:23.923Z",
