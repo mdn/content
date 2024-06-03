@@ -63,6 +63,11 @@ The Broadcast Channel API's self-contained interface allows cross-context commun
 
 The messaging protocol is not defined and the different browsing contexts need to implement it themselves; there is no negotiation nor requirement from the specification.
 
+## Interfaces
+
+- {{domxref("BroadcastChannel")}}
+  - : Represents a named channel that any {{glossary("browsing context")}} of a given {{glossary("origin")}} can subscribe to.
+
 ## Specifications
 
 {{Specifications}}
