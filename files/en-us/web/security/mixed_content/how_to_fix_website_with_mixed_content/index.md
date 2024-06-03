@@ -6,13 +6,15 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-Starting with [Firefox 23](/en-US/docs/Mozilla/Firefox/Releases/23), Firefox blocks [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) by default. This follows a practice adopted by [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
+Starting with [Firefox 23](/en-US/docs/Mozilla/Firefox/Releases/23), Firefox blocks [blockable mixed content](/en-US/docs/Web/Security/Mixed_content#blockable_content) by default. This follows a practice adopted by [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
 
 This page explains what you should be aware of as a web developer.
 
 ## Your website may break
 
-If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content, as well.
+If your website delivers HTTPS pages, all [blockable mixed content](/en-US/docs/Web/Security/Mixed_content#blockable_content) delivered via HTTP on these pages will be blocked by default.
+Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.).
+[Upgradable mixed content](/en-US/docs/Web/Security/Mixed_content#upgradable_content) is automatically upgraded from HTTP to HTTPS.
 
 Note that since mixed content blocking already happens in Chrome, it is very likely that if your website works in Chrome, it will work equally well in Firefox with mixed content blocking.
 

@@ -57,7 +57,9 @@ Related topics:
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
   - : An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-  - : If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content, as well. This page explains what you should be aware of as a web developer.
+  - : If your website delivers HTTPS pages, all [blockable mixed content](/en-US/docs/Web/Security/Mixed_content#blockable_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.).
+    [Upgradable mixed content](/en-US/docs/Web/Security/Mixed_content#upgradable_content) is automatically upgraded from HTTP to HTTPS.
+    This page explains what you should be aware of as a web developer.
 - [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
   - : The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("digital certificate")}} is a critical element of the security of the certificate. This article provides some information about signature algorithms known to be weak, so you can avoid them when appropriate.
 
