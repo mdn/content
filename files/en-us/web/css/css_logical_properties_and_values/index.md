@@ -79,10 +79,10 @@ CSS was initially designed with only physical coordinates in its controls. The l
 
 ### Data types and values
 
-- [`block-start`](/)
-- [`block-end`](/)
-- [`inline-start`](/)
-- [`inline-end`](/)
+- [`block-start`](/en-US/docs/Glossary/Logical_properties)
+- [`block-end`](/en-US/docs/Glossary/Logical_properties)
+- [`inline-start`](/en-US/docs/Glossary/Logical_properties)
+- [`inline-end`](/en-US/docs/Glossary/Logical_properties)
 - [`start`](/)
 - [`end`](/)
 
@@ -92,6 +92,7 @@ CSS was initially designed with only physical coordinates in its controls. The l
 - {{glossary("flow relative")}}
 - {{glossary("Inset properties")}}
 - {{glossary("Logical properties")}}
+- {{glossary("Physical properties")}}
 - {{glossary("mapping logic")}}
 
 ## Guides
