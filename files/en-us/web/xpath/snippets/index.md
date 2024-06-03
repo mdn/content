@@ -38,7 +38,7 @@ Note that `createNSResolver` should only be used if you are sure the namespace p
 
 #### Sample usage
 
-Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)):
+Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)):
 
 ##### Example: An XML document to use with the custom `evaluateXPath()` utility function
 
