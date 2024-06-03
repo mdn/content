@@ -12,7 +12,7 @@ Whereas {{glossary("physical properties")}} define positions based on physical d
 
 ## Block direction
 
-The **block axis** refers to the axis that defines the stacking order of elements in a block layout. It's essentially the direction along which blocks of content, or **block direction**, like paragraphs ({{htmlelement("p")}}), headings, and divs ({{htmlelement("div")}}), are laid out on a webpage. This is the vertical direction of the content flow, going from top to bottom, in left-to-right and left-to-right languages. 
+The **block axis** refers to the axis that defines the stacking order of elements in a block layout. It's essentially the direction along which blocks of content, or **block direction**, like paragraphs ({{htmlelement("p")}}), headings, and divs ({{htmlelement("div")}}), are laid out on a webpage. This is the vertical direction of the content flow, going from top to bottom, in left-to-right and left-to-right languages.
 
 The **block-start** and **block-end** directions represent the _start edge_ and _end edge_ of content along the block axis, or the "from" and "to" directions, respectively, with `block-start` being the equivalent of `top` and `block-end` being the equivalent of `bottom` in horizontal writing modes.
 
