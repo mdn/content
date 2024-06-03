@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 In CSS, **inset properties** control positioned elements' location by specifying offsets from the elements' default positions. There are physical, logical, and shorthand inset properties.
 
-The inset properties include the {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}  physical properties, their {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} flow-relative {{glossary("logical properties", "logical property")}} equivalents, and the {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}} shorthands.
+The inset properties include the {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}} physical properties, their {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} flow-relative {{glossary("logical properties", "logical property")}} equivalents, and the {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}} shorthands.
 
 **Physical properties** reference specific physical sides of an element. Logical properties use directional keywords relative to the block and inline axes. **Block axis** refers to the axis that defines the stacking order of elements in a block layout. The **inline axis** is perpendicular to the block axis, representing the direction along which inline content like text flows within a block. The mapping depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
