@@ -53,7 +53,7 @@ Events have three functions:
 
 ## Examples
 
-When the user clicks the icon, disable the browser aciton for the active tab, and log the tab's URL:
+When the user clicks the browser action icon this code turns it off for the active tab and logs the tab's URL:
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
