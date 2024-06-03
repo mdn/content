@@ -68,7 +68,7 @@ The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) defines the {{domxref("OTPCrede
 
 In browsers that support the `OTPCredential` type, the website's front end can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}, asking for an OTP credential, then ask the backend to generate a code and send the message containing it (only SMS is supported as a transport). The backend must send a specially formatted SMS message, which the browser can read.
 
-The browser then returns an `OTPCredential` object in the fulfilment of the `Promise` returned from `get()`, and this object contains the code. The website front end can then use the code to autofill an input element on the site, or submit the code to the server automatically.
+The browser then returns an `OTPCredential` object in the fulfilment of the `Promise` returned from `get()`, and this object contains the code. The website front end can use the code to autofill an input element on the site, or submit the code to the server automatically.
 
 ![Sequence diagram showing sign-in using an OTP credential.](otp-get.svg)
 
