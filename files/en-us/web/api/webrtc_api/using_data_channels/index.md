@@ -21,9 +21,7 @@ Let's look at each of these cases, starting with the first, which is the most co
 
 ### Automatic negotiation
 
-Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, call
-
-{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the `negotiated` property, or specifying the property with a value of `false`. This will automatically trigger the `RTCPeerConnection` to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.
+Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, call {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the `negotiated` property, or specifying the property with a value of `false`. This will automatically trigger the `RTCPeerConnection` to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.
 
 The `RTCDataChannel` object is returned immediately by `createDataChannel()`; you can tell when the connection has been made successfully by watching for the {{domxref("RTCDataChannel.open_event", "open")}} event to be sent to the `RTCDataChannel`.
 

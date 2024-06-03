@@ -83,6 +83,10 @@ This article provides information about the changes in Firefox 127 that affect d
 
 These features are newly shipped in Firefox 127 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Symmetrical spacing with CSS `letter-spacing`:** `layout.css.letter-spacing.model`.
+
+  The CSS `letter-spacing` property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. [Firefox bug 1891446](https://bugzil.la/1891446).
+
 ## Older versions
 
 {{Firefox_for_developers}}
