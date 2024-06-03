@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Credential Management API")}}
 
-The Credential Management API enables a website to create, store, and retrieve {{glossary("credential", "credentials")}}, to help a user securely log into websites. It supports four different types of credentials:
+The Credential Management API enables a website to create, store, and retrieve the {{glossary("credential", "credentials")}} that allow a user to securely log in. It supports four different types of credentials:
 
 | Type                    | Interface                                                                          |
 | ----------------------- | ---------------------------------------------------------------------------------- |
