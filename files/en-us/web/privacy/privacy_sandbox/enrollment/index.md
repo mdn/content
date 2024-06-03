@@ -14,10 +14,10 @@ The intention is for information about each company that completes enrollment to
 
 The following features require enrollment to be usable:
 
-- Attribution Reporting API
-- Fenced Frames API
+- [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)
+- [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - Protected Audience API
-- Shared Storage API
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
 - [Topics API](/en-US/docs/Web/API/Topics_API)
 
 The documentation of each feature includes more details on exactly which sub-features will fail if enrollment is not completed, and how.
