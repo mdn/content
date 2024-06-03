@@ -14,7 +14,7 @@ This article introduces custom elements, and walks through some examples.
 
 There are two types of custom element:
 
-- **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation customizes the behavior of the standard element. _Note: Please see browser support for the complementary [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute when considering usage._  
+- **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation customizes the behavior of the standard element. _Note: Please see browser support for the complementary [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute when considering usage._
 - **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
 
 ## Implementing a custom element
