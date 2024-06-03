@@ -1,5 +1,5 @@
 ---
-title: Practical implementation guides
+title: "Security: Practical implementation"
 slug: Web/Security/Practical_implementation
 page-type: guide
 ---

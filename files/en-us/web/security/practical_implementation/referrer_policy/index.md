@@ -30,9 +30,9 @@ See [Referer header: Privacy and security concerns](/en-US/docs/Web/Security/Ref
 
 ## Solution
 
-Use [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to limit the information available in the `Referer` header, or stop it being sent altogether. Choose the strictest possible directive that still allows your site to function.
+Use [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to limit the information available in the `Referer` header, or stop it being sent altogether.
 
-The most useful directives available to `Referrer-Policy` are as follows, in decreasing order of strictness:
+The most useful directives available to `Referrer-Policy` are as follows, in decreasing order of strictness. Choose the strictest one of these that still allows your site to function:
 
 - `no-referrer`: Never send the `Referer` header.
 - `same-origin`: send the `Referrer` header, but only on same-origin requests.
@@ -43,7 +43,7 @@ If you are unable to use the `Referrer-Policy` header, you can also set page-wid
 
 Notes:
 
-- There are other `Referrer-Policy` directives, but they do not protect user privacy and limit exposure in the same way as the options above.
+- There are other `Referrer-Policy` directives, but they do not protect user privacy and limit exposure in the same way as the options listed above.
 - `strict-origin-when-cross-origin` is the default value.
 - In recent versions of Firefox and Safari, "unsafe" directives (`no-referrer-when-downgrade`, `origin-when-cross-origin`, and `unsafe-url`) behave like `strict-origin-when-cross-origin`.
 

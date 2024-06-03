@@ -18,7 +18,7 @@ Use SRI to lock an external JavaScript resource to its known contents at a speci
 
 If the file has been modified at any point thereafter, the hast won't match, and supporting web browsers will refuse to load it.
 
-SRI should be used when loading all external JavaScript or stylesheet resources.
+SRI should be used when loading all external JavaScript or stylesheet resources. The resources should all be loaded over HTTPS, and ideally from a similar origin. Fewer origins means less potential for tampering.
 
 Note that CDNs must use [Cross-origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header.
 

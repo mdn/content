@@ -34,10 +34,11 @@ Due to the difficulty in retrofitting CSP into existing websites, CSP is mandato
 > **Note:** Before implementing any actual CSP with the `Content-Security-Policy` header, it is recommended to test it out first with the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header, to see if any violations would have occurred with that policy. This requires usage of `report-to`/`report-uri`, as explained below.
 
 1. Begin by trying out a policy of `default-src https:`. This is a great first goal, as it disables inline code and requires HTTPS, and it will also allow you to start to pinpoint what resources are failing to load as a result of the policy. [`default-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) serves as a fallback for the other CSP fetch directives.
-2. Next, start to make the policy more specific, in an effort to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; script-src 'self'; style-src 'self';`.
+2. Next, start to make the policy more specific, in an effort to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';`.
 3. You can then go on to add in specific sources as highlighted during testing, for example `style-src 'self' https://example.com/`.
 4. API endpoints should use a policy that disables resource loading and embedding, for example `Content-Security-Policy: default-src 'none'; frame-ancestors 'none'`.
-5. For existing websites with large codebases that would require too much work to disable inline scripts, you could fall back to `default-src https: 'unsafe-inline'`. This is still helpful as it keeps resources from being accidentally loaded over HTTP. However, it does not provide any XSS protection.
+5. Make sure you are not loading any resources over HTTP. Load them over HTTPs instead. Don't include any HTTP sources in your CSP allowlists.
+6. For existing websites with large codebases that would require too much work to disable inline scripts, you could fall back to `default-src https: 'unsafe-inline'`. This is still helpful as it keeps resources from being accidentally loaded over HTTP. However, it does not provide any XSS protection.
 
 Notes:
 
@@ -47,6 +48,7 @@ Notes:
 - Sites should use the [reporting directives](/en-US/docs/Glossary/Reporting_directive) — [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) and [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directives — these [`POST`](/en-US/docs/Web/HTTP/Methods/POST)s JSON reports about CSP violations to endpoints (specified in the [`Reporting-Endpoints`](/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints) header, in the case of `report-to`). This allows CSP violations to be caught and repaired quickly.
   > **Note:** `report-to` is preferred over the deprecated `report-uri`, however both are still needed because `report-to` does not yet have full cross-browser support.
 - Set the `form-action` directive to `'none'` or `'self'`, or to specific sources which are allowed to be used in forms. This directive does not fall back to `default-src`, therefore, not explicitly setting it allows forms to be submitted to any source.
+- Don't include any **unsafe** sources inside your CSP. Examples include `unsafe-inline` or `data:` URIs inside `script-src`, and overly broad sources or form submission targets.
 - Unless sites need the ability to execute plugins, their execution should be disabled with `object-src 'none'`.
 
 ## Examples

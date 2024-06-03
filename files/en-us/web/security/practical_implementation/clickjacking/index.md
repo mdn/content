@@ -19,7 +19,7 @@ Use the HTTP headers as required:
 
 The recommendation is to use both unless you know you don't need support for the older browser set.
 
-You should deny all embedding attempts unless you really need to embed the site. Provide the minimum embedding allowance necessary. Sites that require the ability to be `<iframed>` must employ JavaScript defenses and a robust {{HTTPHeader("Content-Security-Policy")}} to prevent clickjacking from malicious origins.
+You should deny all embedding attempts unless you really need to embed the site. Provide the minimum embedding allowance necessary. Sites that require the ability to be embedded in an `<iframe>` must employ JavaScript defenses and a robust {{HTTPHeader("Content-Security-Policy")}} to prevent clickjacking from malicious origins.
 
 Equivalent options for each are as follows:
 

@@ -69,7 +69,7 @@ To fix the "different hosts" problem:
 
 ### Examples
 
-Redirect all incoming http requests to the same site and URI on https, using NGINX:
+Redirect all incoming HTTP requests to the same site and URI on HTTPS, using NGINX:
 
 ```text
 server {
@@ -79,7 +79,7 @@ server {
 }
 ```
 
-Redirect site.example.org from http to https, using Apache:
+Redirect `site.example.org` from HTTP to HTTPS, using Apache:
 
 ```text
 <VirtualHost *:80>
@@ -105,13 +105,13 @@ HTTP [`Strict-Transport-Security`](/en-US/docs/Web/HTTP/Headers/Strict-Transport
 - `includeSubDomains` {{optional_inline}}
   - : Specifies whether user agents should upgrade requests on subdomains to HTTPS. For example, setting `includeSubDomains` on `domain.example.com` will cause requests on `host1.domain.example.com` and `host2.domain.example.com` to be upgraded.
 - `preload` {{optional_inline}}
-  - : Specifies whether the site should be included in the [HSTS preload list](https://hstspreload.org/).
+  - : Specifies whether the site should be preloaded. Including this directive means your site will be included in the [HSTS preload list](https://hstspreload.org/).
 
 #### Steps
 
-1. Set a `max-age` value of at least six months (15768000). Longer periods such as two years (63072000) are recommended. Once this value is set, the site must continue to support HTTPS until the expiry time has been reached.
+1. Set a `max-age` value of at least six months (`15768000`). Longer periods such as two years (`63072000`) are recommended. Once this value is set, the site must continue to support HTTPS until the expiry time has been reached.
 2. Set `includeSubDomains` if at all possible, to improve security on subdomains. Careful testing is needed when setting `includeSubDomains`, as it could disable sites on subdomains that don't yet have HTTPS enabled.
-3. Set `preload` to include the website in the [HSTS preload list](https://hstspreload.org/) if possible. Web browsers will do HTTPS upgrades sites in this list without ever having to receive the initial `Strict-Transport-Security` header. This prevents [downgrade attacks](https://en.wikipedia.org/wiki/Downgrade_attack) upon first use and is recommended for all high risk websites. Note that being included in the HSTS preload list requires `includeSubDomains` to also be set.
+3. Set `preload` to include the website in the [HSTS preload list](https://hstspreload.org/) if possible. Web browsers will do HTTPS upgrades to preloaded sites before receiving the initial `Strict-Transport-Security` header. This prevents [downgrade attacks](https://en.wikipedia.org/wiki/Downgrade_attack) upon first use and is recommended for all high-risk websites. Note that being included in the HSTS preload list also requires `includeSubDomains` to be set, and `max-age` to be set to a minimum of 1 year (`31536000`).
 
 ### Examples
 
