@@ -21,7 +21,7 @@ The credential types are all represented as subclasses of the {{domxref("Credent
 
 In this guide we'll introduce the different credential types and explain at a high level how they are used.
 
-> **Note:** Although we're describing all the credential types together here, the different credential types are defined in various different specifications, which extend the main Credential Management API specification.
+> **Note:** Although we're describing all the credential types together here, the different credential types are defined in several different specifications, which extend the main Credential Management API specification.
 >
 > - [Credential Management API](https://w3c.github.io/webappsec-credential-management/) defines passwords and legacy federated credentials.
 > - [Federated Credential Management API](https://fedidcg.github.io/FedCM/) defines the new federated credentials.
