@@ -66,7 +66,7 @@ A one-time password (OTP) is an authentication technique in which the website se
 
 The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) defines the {{domxref("OTPCredential")}} interface, which solves a specific usability problem in this exchange: when a user receives the code, they have to open a different application, find the message, then copy the code into a form on the website. This is awkward, especially on a mobile device, and especially when the device receiving the message is the same as the device being used to sign into the site.
 
-In browsers that support the `OTPCredential` type, a website can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}, asking for an OTP credential, then ask the server to send the message containing the code (only SMS is supported as a transport). The server must send a specially formatted SMS message, which the browser can read.
+In browsers that support the `OTPCredential` type, the website's front end can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}, asking for an OTP credential, then ask the backend to generate a code and send the message containing it (only SMS is supported as a transport). The backend must send a specially formatted SMS message, which the browser can read.
 
 The browser then returns an `OTPCredential` object in the fulfilment of the `Promise` returned from `get()`, and this object contains the code. The website front end can then use the code to autofill an input element on the site, or submit the code to the server automatically.
 
