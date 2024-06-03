@@ -25,9 +25,9 @@ The central interface is the {{domxref("CredentialsContainer")}}, which is acces
 The API supports four different types of credential, which are all represented as subclasses of {{domxref("Credential")}}:
 
 - **Passwords** ({{domxref("PasswordCredential")}})
-- **Federated identity credentials**, which include:
-  - a legacy type ({{domxref("FederatedCredential")}})
-  - a replacement type ({{domxref("IdentityCredential")}})
+- **Federated identity credentials**: {{domxref("IdentityCredential")}}
+
+  > **Note:** The {{domxref("FederatedCredential")}} credential has been superseded by {{domxref("IdentityCredential")}}, but is still part of the specification.
 - **One-time password (OTP) credentials** ({{domxref("OTPCredential")}})
 - **Web Authentication assertions** ({{domxref("PublicKeyCredential")}})
 
