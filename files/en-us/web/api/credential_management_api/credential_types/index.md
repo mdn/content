@@ -11,7 +11,7 @@ The Credential Management API enables a website to create, store, and retrieve {
 | Type                    | Interface                                                                          |
 | ----------------------- | ---------------------------------------------------------------------------------- |
 | Password                | {{domxref("PasswordCredential")}}                                                  |
-| Federated identity      | {{domxref("FederatedCredential")}} (deprecated), {{domxref("IdentityCredential")}} |
+| Federated identity      | {{domxref("IdentityCredential")}}, {{domxref("FederatedCredential")}} (deprecated) |
 | One-time password (OTP) | {{domxref("OTPCredential")}}                                                       |
 | Web Authentication      | {{domxref("PublicKeyCredential")}}                                                 |
 
