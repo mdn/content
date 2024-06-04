@@ -56,7 +56,7 @@ left: unset;
 
 - {{cssxref("anchor()")}} {{experimental_inline}}
 
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the left and/or right edges of an absolutely- or fixed-positioned element's associated **anchor element**.
+  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the left and/or right edges of an absolutely- or fixed-positioned element's associated **anchor element**. See [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 - `inherit`
   - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.

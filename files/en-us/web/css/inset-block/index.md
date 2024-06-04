@@ -48,8 +48,6 @@ inset-block: unset;
 
 The `inset-block` property takes the same values as the {{cssxref("left")}} property.
 
-Note that setting the same {{cssxref("anchor()")}} value for both constituent properties (for example, `inset-block: anchor(start)`) may produce strange or unexpected results, as the values will both be relative to a single line on an anchor element (e.g. one of its sides) rather than two separate sides of the viewport or a containing block.
-
 ## Formal definition
 
 {{cssinfo}}

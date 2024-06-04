@@ -22,7 +22,6 @@ align-items: stretch;
 
 /* Positional alignment */
 /* align-items does not take left and right values */
-align-items: anchor-center;
 align-items: center;
 align-items: start;
 align-items: end;
@@ -30,6 +29,7 @@ align-items: flex-start;
 align-items: flex-end;
 align-items: self-start;
 align-items: self-end;
+align-items: anchor-center;
 
 /* Baseline alignment */
 align-items: baseline;
@@ -76,12 +76,12 @@ align-items: unset;
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 - `stretch`
   - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of [**anchor-positioned**](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
-- `anchor-center` {{experimental_inline}}
-  - : In the case of **anchor-positioned** elements (see [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)), aligns the items to the center of the associated anchor element in the block direction.
 
 ## Formal definition
 

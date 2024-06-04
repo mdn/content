@@ -23,8 +23,8 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* Keyword values */
 place-items: center;
-place-items: anchor-center;
 place-items: normal start;
+place-items: anchor-center;
 
 /* Positional alignment */
 place-items: center normal;

@@ -22,7 +22,6 @@ align-self: normal;
 
 /* Positional alignment */
 /* align-self does not take left and right values */
-align-self: anchor-center;
 align-self: center; /* Put the item around the center */
 align-self: start; /* Put the item at the start */
 align-self: end; /* Put the item at the end */
@@ -30,6 +29,7 @@ align-self: self-start; /* Align the item flush at the start */
 align-self: self-end; /* Align the item flush at the end */
 align-self: flex-start; /* Put the flex item at the start */
 align-self: flex-end; /* Put the flex item at the end */
+align-self: anchor-center;
 
 /* Baseline alignment */
 align-self: baseline;
@@ -78,12 +78,12 @@ align-self: unset;
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of [**anchor-positioned**](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
-- `anchor-center` {{experimental_inline}}
-  - : In the case of an **anchor-positioned** element (see [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)), aligns the item to the center of the associated anchor element in the block direction.
 
 ## Formal definition
 
