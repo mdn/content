@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
+- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+
 #### Removals
 
 ### HTTP
@@ -82,6 +84,10 @@ This article provides information about the changes in Firefox 127 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 127 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Symmetrical spacing with CSS `letter-spacing`:** `layout.css.letter-spacing.model`.
+
+  The CSS `letter-spacing` property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. [Firefox bug 1891446](https://bugzil.la/1891446).
 
 ## Older versions
 

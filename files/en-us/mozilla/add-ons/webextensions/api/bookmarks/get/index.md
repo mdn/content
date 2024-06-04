@@ -22,7 +22,7 @@ let getBookmarks = browser.bookmarks.get(
 ### Parameters
 
 - `idOrIdList`
-  - : `string` A {{jsxref("string")}} or {{jsxref("array")}} of strings specifying the IDs of one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects to retrieve.
+  - : A {{jsxref("string")}} or {{jsxref("array")}} of strings specifying the IDs of one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects to retrieve.
 
 ### Return value
 
