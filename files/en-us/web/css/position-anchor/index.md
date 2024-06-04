@@ -72,5 +72,7 @@ See [`anchor-name`](/en-US/docs/Web/CSS/anchor-name#examples).
 
 ## See also
 
+- {{cssxref("anchor-name")}}
+- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
