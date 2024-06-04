@@ -40,6 +40,7 @@ The parameters are:
 - `anchor-element` {{optional_inline}}
   - : The {{cssxref("anchor-name")}} set on the anchor element you want to position an element relative to. If omitted, the positioned element is positioned relative to the anchor referenced by its {{cssxref("position-anchor")}} property, or its implicit anchor if it has one.
 - `anchor-side`
+
   - : Specifies the side of the anchor element that the side of the positioned element denoted by the inset property will be positioned relative to. Valid values include:
 
     - `top`
