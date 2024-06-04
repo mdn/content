@@ -17,35 +17,35 @@ The module details mappings for each logical value to a physical counterpart. Th
 If you were using a `horizontal-tb` writing mode with a right-to-left text direction then {{cssxref("margin-inline-start")}} would be the same as {{cssxref("margin-right")}}, and in a vertical writing mode it would be the same as using {{cssxref("margin-top")}}.
 
 | {{glossary("Logical properties","Logical property")}} | {{glossary("Physical properties", "Physical property")}} |
-| ---------------------------------------- | ----------------------------------------- |
-| {{cssxref("border-block-end")}}          | {{cssxref("border-bottom")}}              |
-| {{cssxref("border-block-end-color")}}    | {{cssxref("border-bottom-color")}}        |
-| {{cssxref("border-block-end-style")}}    | {{cssxref("border-bottom-style")}}        |
-| {{cssxref("border-block-end-width")}}    | {{cssxref("border-bottom-width")}}        |
-| {{cssxref("border-block-start")}}        | {{cssxref("border-top")}}                 |
-| {{cssxref("border-block-start-color")}}  | {{cssxref("border-top-color")}}           |
-| {{cssxref("border-block-start-style")}}  | {{cssxref("border-top-style")}}           |
-| {{cssxref("border-block-start-width")}}  | {{cssxref("border-top-width")}}           |
-| {{cssxref("border-inline-end")}}         | {{cssxref("border-right")}}               |
-| {{cssxref("border-inline-end-color")}}   | {{cssxref("border-right-color")}}         |
-| {{cssxref("border-inline-end-style")}}   | {{cssxref("border-right-style")}}         |
-| {{cssxref("border-inline-end-width")}}   | {{cssxref("border-right-width")}}         |
-| {{cssxref("border-inline-start")}}       | {{cssxref("border-left")}}                |
-| {{cssxref("border-inline-start-color")}} | {{cssxref("border-left-color")}}          |
-| {{cssxref("border-inline-start-style")}} | {{cssxref("border-left-style")}}          |
-| {{cssxref("border-inline-start-width")}} | {{cssxref("border-left-width")}}          |
-| {{cssxref("border-start-start-radius")}} | {{cssxref("border-top-left-radius")}}     |
-| {{cssxref("border-end-start-radius")}}   | {{cssxref("border-bottom-left-radius")}}  |
-| {{cssxref("border-start-end-radius")}}   | {{cssxref("border-top-right-radius")}}    |
-| {{cssxref("border-end-end-radius")}}     | {{cssxref("border-bottom-right-radius")}} |
-| {{cssxref("margin-block-end")}}          | {{cssxref("margin-bottom")}}              |
-| {{cssxref("margin-block-start")}}        | {{cssxref("margin-top")}}                 |
-| {{cssxref("margin-inline-end")}}         | {{cssxref("margin-right")}}               |
-| {{cssxref("margin-inline-start")}}       | {{cssxref("margin-left")}}                |
-| {{cssxref("padding-block-end")}}         | {{cssxref("padding-bottom")}}             |
-| {{cssxref("padding-block-start")}}       | {{cssxref("padding-top")}}                |
-| {{cssxref("padding-inline-end")}}        | {{cssxref("padding-right")}}              |
-| {{cssxref("padding-inline-start")}}      | {{cssxref("padding-left")}}               |
+| ----------------------------------------------------- | -------------------------------------------------------- |
+| {{cssxref("border-block-end")}}                       | {{cssxref("border-bottom")}}                             |
+| {{cssxref("border-block-end-color")}}                 | {{cssxref("border-bottom-color")}}                       |
+| {{cssxref("border-block-end-style")}}                 | {{cssxref("border-bottom-style")}}                       |
+| {{cssxref("border-block-end-width")}}                 | {{cssxref("border-bottom-width")}}                       |
+| {{cssxref("border-block-start")}}                     | {{cssxref("border-top")}}                                |
+| {{cssxref("border-block-start-color")}}               | {{cssxref("border-top-color")}}                          |
+| {{cssxref("border-block-start-style")}}               | {{cssxref("border-top-style")}}                          |
+| {{cssxref("border-block-start-width")}}               | {{cssxref("border-top-width")}}                          |
+| {{cssxref("border-inline-end")}}                      | {{cssxref("border-right")}}                              |
+| {{cssxref("border-inline-end-color")}}                | {{cssxref("border-right-color")}}                        |
+| {{cssxref("border-inline-end-style")}}                | {{cssxref("border-right-style")}}                        |
+| {{cssxref("border-inline-end-width")}}                | {{cssxref("border-right-width")}}                        |
+| {{cssxref("border-inline-start")}}                    | {{cssxref("border-left")}}                               |
+| {{cssxref("border-inline-start-color")}}              | {{cssxref("border-left-color")}}                         |
+| {{cssxref("border-inline-start-style")}}              | {{cssxref("border-left-style")}}                         |
+| {{cssxref("border-inline-start-width")}}              | {{cssxref("border-left-width")}}                         |
+| {{cssxref("border-start-start-radius")}}              | {{cssxref("border-top-left-radius")}}                    |
+| {{cssxref("border-end-start-radius")}}                | {{cssxref("border-bottom-left-radius")}}                 |
+| {{cssxref("border-start-end-radius")}}                | {{cssxref("border-top-right-radius")}}                   |
+| {{cssxref("border-end-end-radius")}}                  | {{cssxref("border-bottom-right-radius")}}                |
+| {{cssxref("margin-block-end")}}                       | {{cssxref("margin-bottom")}}                             |
+| {{cssxref("margin-block-start")}}                     | {{cssxref("margin-top")}}                                |
+| {{cssxref("margin-inline-end")}}                      | {{cssxref("margin-right")}}                              |
+| {{cssxref("margin-inline-start")}}                    | {{cssxref("margin-left")}}                               |
+| {{cssxref("padding-block-end")}}                      | {{cssxref("padding-bottom")}}                            |
+| {{cssxref("padding-block-start")}}                    | {{cssxref("padding-top")}}                               |
+| {{cssxref("padding-inline-end")}}                     | {{cssxref("padding-right")}}                             |
+| {{cssxref("padding-inline-start")}}                   | {{cssxref("padding-left")}}                              |
 
 There are also some additional shorthands, made possible because we can target both block or both inline edges of the box simultaneously. These shorthands have no physical equivalent.
 
