@@ -185,6 +185,7 @@ The HTML looks like so:
     <input type="date" id="bday" name="bday" />
     <span class="validity"></span>
   </div>
+</form>
 ```
 
 ### CSS
