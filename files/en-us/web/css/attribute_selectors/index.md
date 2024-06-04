@@ -61,12 +61,12 @@ a[class~="logo"] {
 ### Values
 
 - `<attr>`
-    - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute, including valid language-specific attributes (SVG, HTML, XML, etc), [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), or author-created attributes.
+  - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute, including valid language-specific attributes (SVG, HTML, XML, etc), [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), or author-created attributes.
 - `<value>`
-    - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quotes is it contains spaces or special characters.
+  - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quotes is it contains spaces or special characters.
 - `s` or `i`
-    - : Case sensitivity or insenstivity flag. If included before the closing bracket (`]`), makes the value case sensitive or insensitive, irrespective of the markup language.
- 
+  - : Case sensitivity or insenstivity flag. If included before the closing bracket (`]`), makes the value case sensitive or insensitive, irrespective of the markup language.
+
 ## Description
 
 The case sensitivity of attribute names and values depends on the document language. In HTML, attribute names are case-insensitive, as are spec-defined {{glossary("enumerated")}} values. The [case-insensitive HTML attribute values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) are listed in the HTML spec. For these attributes, the attribute value in the selector is case-insensitive, regardless of whether the value is invalid or the attribute for the element on which it is set is invalid.
