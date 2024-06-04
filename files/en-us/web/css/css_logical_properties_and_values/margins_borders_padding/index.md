@@ -12,7 +12,7 @@ If you look at the [logical properties and values](/en-US/docs/Web/CSS/CSS_logic
 
 ## Mappings for margins, borders, and padding
 
-The module details mappings for each logical value to a physical counterpart. The table below maps these values for when the {{cssxref("writing-mode")}} is`horizontal-tb` — with a left to right direction. The inline direction therefore runs horizontally — left to right — and {{cssxref("margin-inline-start")}} would be equivalent to {{cssxref("margin-left")}}.
+The module details mappings for each logical value to a physical counterpart. The table below maps these values for when the {{cssxref("writing-mode")}} is `horizontal-tb` — with a left to right direction. The inline direction therefore runs horizontally — left to right — and {{cssxref("margin-inline-start")}} would be equivalent to {{cssxref("margin-left")}}.
 
 If you were using a `horizontal-tb` writing mode with a right-to-left text direction then {{cssxref("margin-inline-start")}} would be the same as {{cssxref("margin-right")}}, and in a vertical writing mode it would be the same as using {{cssxref("margin-top")}}.
 
