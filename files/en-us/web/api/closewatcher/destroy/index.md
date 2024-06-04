@@ -5,6 +5,7 @@ slug: Web/API/CloseWatcher/destroy
 page-type: web-api-instance-method
 status:
   - experimental
+browser-compat: api.CloseWatcher.destroy
 ---
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
