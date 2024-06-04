@@ -29,6 +29,7 @@ position-anchor: unset;
 ### Values
 
 - `auto`
+
   - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute.
 
 - {{cssxref("dashed-ident")}}
