@@ -14,7 +14,7 @@ A `Permissions` object represents a collection of permissions.
 An {{jsxref("object")}} with the following properties:
 
 - `origins` {{optional_inline}}
-  - : An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), representing [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or [optional_host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#optional_host_permissions).
+  - : An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), representing [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
 - `permissions` {{optional_inline}}
   - : An array of named permissions, including [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and [clipboard permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboard_access).
 

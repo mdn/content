@@ -9,7 +9,7 @@ browser-compat: webextensions.api.permissions.contains
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 
-The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), [optional_host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#optional_host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both.
+The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions [pattern-match](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
 

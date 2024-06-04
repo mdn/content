@@ -39,7 +39,7 @@ The [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/perm
 
 For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime).
 
-Starting with Firefox 84, users can to manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions can listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
+Starting with Firefox 84, users can manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions can listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
 
 The key can contain two kinds of permissions: host permissions and API permissions.
 
