@@ -145,6 +145,8 @@ The best strategy to avoid issues with mixed content is to serve all the content
 There are a number of ways to verify that your site is free of mixed content including:
 
 - Navigate your site, and check your browser's [developer console](#developer_console) for mixed content warnings.
+- Disable all mixed content on your browser and test that pages work as expected.
+  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see compatibility data).
 - Use a desktop-based web crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect), to check your website recursively and find links to insecure content.
 - Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) (www.crawlcenter.com) to check your site.
 
