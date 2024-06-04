@@ -59,6 +59,7 @@ This article provides information about the changes in Firefox 128 that affect d
 ## Changes for add-on developers
 
 - The [optional_host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key has been added. This key enables runtime requests for access (access granted by the user after an extension has been installed) for the APIs in the extension that read or modify host data ([Firefox bug 1766026](https://bugzil.la/1766026)).
+- The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
 
 ### Removals
 
