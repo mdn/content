@@ -120,7 +120,9 @@ We include several `<details>` boxes, each with the same name so only one can be
 <details name="reqs">
   <summary>Job Requirements</summary>
   <p>
-    Requires knowledge of HTML, CSS, JavaScript, accessibility, web performance, privacy, security, and internationalization, as well as a dislike of broccoli.
+    Requires knowledge of HTML, CSS, JavaScript, accessibility, web performance,
+    privacy, security, and internationalization, as well as a dislike of
+    broccoli.
   </p>
 </details>
 ```
