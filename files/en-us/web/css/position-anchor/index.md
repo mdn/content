@@ -28,12 +28,11 @@ position-anchor: unset;
 
 ### Values
 
+- `auto`
+  - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute.
+
 - {{cssxref("dashed-ident")}}
-
-  - : The name of the anchor element to associate the positioned element with, as defined by its {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
-
-- `implicit`
-  - : Currently unsupported, this value will associate the positioned element with its implicit anchor element. For example, the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute creates an implicit anchor element, and future specs may also specify features that create an implicit anchor element for a given positioned element under certain circumstances.
+  - : The name of the anchor element to associate the positioned element with, as defined by the anchor element's {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
 
 ## Description
 
@@ -61,109 +60,7 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 
 ## Examples
 
-### Basic usage
-
-The following example associates a positioned element with an anchor, and tethers the positioned element to the right of the anchor.
-
-#### HTML
-
-We specify two {{htmlelement("div")}} elements; an anchor element with a class of `anchor` and a positioned element with a class of `infobox`.
-
-We also include some filler text around the two `<div>`s to make the {{htmlelement("body")}} taller so that it will scroll.
-
-```html
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus
-  elementum sagittis vitae et.
-</p>
-
-<div class="anchor">⚓︎</div>
-
-<div class="infobox">
-  <p>This is an information box.</p>
-</div>
-
-<p>
-  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
-  cursus euismod quis viverra nibh cras pulvinar. Vulputate ut pharetra sit amet
-  aliquam.
-</p>
-
-<p>
-  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
-  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
-  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
-  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
-  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
-  accumsan.
-</p>
-```
-
-#### CSS
-
-We first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
-
-```css hidden
-body {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.anchor {
-  font-size: 1.8rem;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  background-color: hsl(240 100% 75%);
-  width: fit-content;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 3px;
-}
-```
-
-```css
-.anchor {
-  anchor-name: --myAnchor;
-}
-```
-
-We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's `position-anchor` property.
-
-In addition, we set the `infobox`'s:
-
-- {{cssxref("position")}} property to `fixed`, converting it to a **positioned element** so it can be positioned relative to the anchor's position on the page.
-- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right` — this tethers a positioned element to it's anchor and has the effect of positioning the infobox's left edge flush to the right edge of its anchor.
-- {{cssxref("align-self")}} property to `anchor-center`. This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
-- {{cssxref("margin-left")}} to `10px` to create space between the anchor positioned element and its anchor.
-
-```css hidden
-.infobox {
-  color: darkblue;
-  background-color: azure;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-```
-
-```css
-.infobox {
-  position-anchor: --myAnchor;
-
-  position: fixed;
-  left: anchor(right);
-  align-self: anchor-center;
-  margin-left: 10px;
-}
-```
-
-#### Result
-
-Scroll the page to demonstrate how the infobox is tethered to the anchor.
-
-{{ EmbedLiveSample("Basic usage", "100%", "225") }}
+See [`anchor-name`](/en-US/docs/Web/CSS/anchor-name#examples).
 
 ## Specifications
 

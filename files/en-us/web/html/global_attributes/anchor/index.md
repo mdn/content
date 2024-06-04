@@ -101,7 +101,7 @@ In the CSS, we set the `infobox`'s:
 
 #### Result
 
-Scroll the example to see how the infobox is tethered to the anchor. When supported, the infobox will be fixed to the right of the anchor. If not supported, the infobox will be fixed to the viewport.
+Scroll the example to see how the infobox is tethered to the anchor. When the `anchor` attribute is supported, the infobox will be fixed to the right of the anchor. If not supported, the infobox will be fixed to the viewport.
 
 {{EmbedLiveSample("Basic `anchor` attribute usage", "100%", 225)}}
 
@@ -116,5 +116,7 @@ This attribute is not currently part of the HTML specification. Read the discuss
 ## See also
 
 - {{domxref("HTMLElement.anchorElement")}}
+- CSS {{cssxref("anchor-name")}} property
+- CSS {{cssxref("anchor-position")}} property
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

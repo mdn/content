@@ -9,7 +9,7 @@ browser-compat: css.properties.anchor-name
 
 {{CSSRef}}{{seecompattable}}
 
-The **`anchor-name`** [CSS](/en-US/docs/Web/CSS) property enables you to define an element as an **anchor element** and give it one or more identifying **anchor names**, which can then be set as values of positioned elements' {{cssxref("position-anchor")}} property to associate them with the anchor.
+The **`anchor-name`** [CSS](/en-US/docs/Web/CSS) property enables defining an element as an **anchor element** by giving it one or more identifying **anchor names**, which can then be set as values of positioned elements' {{cssxref("position-anchor")}} properties to associate them with the anchor.
 
 ## Syntax
 
@@ -33,6 +33,7 @@ anchor-name: unset;
 
 - `none`
   - : The default value. Setting `anchor-name: none` on an element means that it is not defined as an anchor element. If the element was previously defined as an anchor and associated with a positioned element, setting `anchor-name: none` disassociates the two.
+
 - {{cssxref("dashed-ident")}}
   - : One or more comma-separated arbitrary custom identifiers defining the name or names of the anchor, which can then be referenced in a {{cssxref("position-anchor")}} property.
 
@@ -162,7 +163,7 @@ In addition, we set the `infobox`'s:
 
 #### Result
 
-Try scrolling the page to demonstrate how the infobox is tethered to the anchor.
+Try scrolling the page to demonstrate how the infobox is positioned relative to the anchor. As the anchor scrolls upwards, the positioned element moves along with it.
 
 {{ EmbedLiveSample("Basic usage", "100%", "225") }}
 
@@ -317,7 +318,7 @@ We have four different anchors and two different positioned elements, distinguis
 
 #### CSS
 
-We declare the first `anchor` `<div>` as an anchor using the `anchor-name` property, which is given two separate anchor names, one for each positioned element. This is the initial state of the demo — both positioned elements will be tethered to the first anchor.
+We declare the first `anchor` `<div>` as an anchor using the `anchor-name` property, which is given two comma-separated anchor names, one for each positioned element. This is the initial state of the demo — both positioned elements will be tethered to the first anchor.
 
 ```css hidden
 body {
@@ -387,7 +388,7 @@ Each of the two positioned elements are given a {{cssxref("position-anchor")}} p
 
 #### JavaScript
 
-We dynamically change the `anchor-name` values set on the anchor elements in response to different anchors being selected in the positioned elements' `<select>` menus. The key functionality here is the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler, `updateAnchorNames()`. It sets both anchor names on one anchor, if the anchors chosen in the two `<select>` menus are the same, or otherwise it sets a single anchor name on two separate anchors as appropriate.
+We dynamically change the `anchor-name` values set on the anchor elements in response to different anchors being selected in the positioned elements' `<select>` menus. The key functionality here is the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler, `updateAnchorNames()`. It sets both anchor names on one anchor, if the anchors chosen in the two `<select>` menus are the same. Otherwise, it sets a single anchor name on two separate anchors as appropriate.
 
 ```js
 // Get references to the two select menus
@@ -440,5 +441,7 @@ Try choosing values from the drop-down menus to change the anchors that the elem
 
 ## See also
 
+- {{cssxref("position-anchor")}}
+- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

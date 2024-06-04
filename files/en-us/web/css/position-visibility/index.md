@@ -40,7 +40,9 @@ The specification also defines another value, `anchors-valid`, but this is not y
 
 ## Description
 
-Use the `position-visibility` property to conditionally hide the anchor-positioned element on which it is set if the associated anchor element is completely hidden (`anchors-visible`) or if just partially hidden (`no-overflow`).
+In some situations you might not want to display an anchor-positioned element. For example, if its associated anchor is offscreen it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
+
+Use the `position-visibility` property to conditionally hide the anchor-positioned element on which it is set if the associated anchor element is completely hidden (`anchors-visible`) or if the anchor-positioned element itself is partially hidden (`no-overflow`).
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
 
@@ -60,7 +62,7 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 
 ### Basic usage
 
-This example associates a positioned element with an anchor and tethers the positioned element to the top of the anchor. It also provides radio buttons that set different `position-visibility` values on the positioned element to enable visualizing their effects.
+This example associates a positioned element with an anchor and tethers the positioned element to the top of the anchor. It also provides radio buttons that set different `position-visibility` values on the anchor-positioned element to enable visualizing their effects.
 
 #### HTML
 
@@ -222,7 +224,7 @@ function setPositionVisibility(e) {
 
 #### Result
 
-Select a `position-visibility` value and then scroll the page to see the effect. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchors-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
+Scroll the page up and down with different `position-visibility` values selected to see their effects. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchors-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
 
 {{ EmbedLiveSample("Basic usage", "100%", "180") }}
 
@@ -238,3 +240,4 @@ Select a `position-visibility` value and then scroll the page to see the effect.
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
