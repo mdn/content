@@ -97,6 +97,39 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 
 {{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 
+### Multiple named disclosure boxes
+
+We include several `<details>` boxes, each with the same name so only one can be open at a time:
+
+```html
+<details name="reqs">
+  <summary>Graduation Requirements</summary>
+  <p>
+    Requires 40 creadits, including a passing grade in health, geography, history, economics, and wood shop.
+  </p>
+</details>
+<details name="reqs">
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+<details name="reqs">
+  <summary>Job Requirements</summary>
+  <p>
+    Requires knowledge of HTML, CSS, JavaScript, accessibility, web performance, privacy, security, and internationalization, as well as a dislike of broccoli.
+  </p>
+</details>
+```
+
+#### Result
+
+{{EmbedLiveSample("Multiple named disclosure boxes", 650, 150)}}
+
+Try opening all the disclosure widgets. When you open one, all the others automatically close.
+
 ### Customizing the appearance
 
 Now let's apply some CSS to customize the appearance of the disclosure box.
