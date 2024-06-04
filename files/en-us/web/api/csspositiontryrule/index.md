@@ -41,11 +41,11 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and s
 
 ```js
 const myRules = document.styleSheets[0].cssRules;
-const tryOption = myRules[0];  // a CSSPositionTryRule
+const tryOption = myRules[0]; // a CSSPositionTryRule
 console.log(tryOption); // "[object CSSPositionTryRule]"
-console.log(tryOption.name) // "--custom-left"
-console.log(tryOption.style) // "[object CSSPositionTryDescriptors]"
-console.log(tryOption.style.maxWidth) // "200px"
+console.log(tryOption.name); // "--custom-left"
+console.log(tryOption.style); // "[object CSSPositionTryDescriptors]"
+console.log(tryOption.style.maxWidth); // "200px"
 ```
 
 ## Specifications
