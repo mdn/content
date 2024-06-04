@@ -110,7 +110,7 @@ CSS was initially designed with only physical coordinates. The logical propertie
 
 - [Logical properties for sizing](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
 
-  - : Flow-relative mappings between physical dimension properties and logical properties used for sizing elements on the page
+  - : Flow-relative mappings between physical properties and logical properties used for sizing elements on the page.
 
 - [Logical properties for margins, borders, and padding](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
 
