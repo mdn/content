@@ -48,13 +48,20 @@ So `Professor` could be a **class** in our system. The definition of the class l
 In pseudocode, a `Professor` class could be written like this:
 
 ```plain
-class Professor
-    properties
-        name
-        teaches
-    methods
-        grade(paper)
-        introduceSelf()
+class Professor {
+  constructor(name, teaches) {
+    this.name = name;
+    this.teaches = teaches;
+  }
+
+  grade(paper) {
+    // grading logic here
+  }
+
+  introduceSelf() {
+    // self-introduction logic here
+  }
+}
 ```
 
 This defines a `Professor` class with:
@@ -67,15 +74,20 @@ On its own, a class doesn't do anything: it's a kind of template for creating co
 Generally, the constructor is written out as part of the class definition, and it usually has the same name as the class itself:
 
 ```plain
-class Professor
-    properties
-        name
-        teaches
-    constructor
-        Professor(name, teaches)
-    methods
-        grade(paper)
-        introduceSelf()
+class Professor {
+  constructor(name, teaches) {
+    this.name = name;
+    this.teaches = teaches;
+  }
+  
+  grade(paper) {
+    // grading logic here
+  }
+  
+  introduceSelf() {
+    // introduction logic here
+  }
+}
 ```
 
 This constructor takes two parameters, so we can initialize the `name` and `teaches` properties when we create a new concrete professor.
@@ -83,14 +95,14 @@ This constructor takes two parameters, so we can initialize the `name` and `teac
 Now that we have a constructor, we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
 ```js
-walsh = new Professor("Walsh", "Psychology");
-lillian = new Professor("Lillian", "Poetry");
+const shaon = new Professor("Shaon", "Psychology");
+const shamirul = new Professor("MD Shamirul Islam", "mathematician");
 
-walsh.teaches; // 'Psychology'
-walsh.introduceSelf(); // 'My name is Professor Walsh and I will be your Psychology professor.'
+shaon.subject; // 'Psychology'
+shaon.introduceSelf(); // 'My name is Professor Shaon and I will be your Psychology professor.'
 
-lillian.teaches; // 'Poetry'
-lillian.introduceSelf(); // 'My name is Professor Lillian and I will be your Poetry professor.'
+shamirul.subject; // 'mathematician'
+shamirul.introduceSelf(); // 'My name is Professor MD Shamirul Islam and I will be your mathematician professor.'
 ```
 
 This creates two objects, both instances of the `Professor` class.
@@ -102,14 +114,16 @@ Suppose in our school we also want to represent students. Unlike professors, stu
 However, students do have a name and may also want to introduce themselves, so we might write out the definition of a student class like this:
 
 ```plain
-class Student
-    properties
-        name
-        year
-    constructor
-        Student(name, year)
-    methods
-        introduceSelf()
+class Student {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+
+  introduceSelf() {
+    // write code here to introduce the student
+  }
+}
 ```
 
 It would be helpful if we could represent the fact that students and professors share some properties, or more accurately, the fact that on some level, they are the _same kind of thing_. **Inheritance** lets us do this.
@@ -117,30 +131,41 @@ It would be helpful if we could represent the fact that students and professors 
 We start by observing that students and professors are both people, and people have names and want to introduce themselves. We can model this by defining a new class `Person`, where we define all the common properties of people. Then, `Professor` and `Student` can both **derive** from `Person`, adding their extra properties:
 
 ```plain
-class Person
-    properties
-        name
-    constructor
-        Person(name)
-    methods
-        introduceSelf()
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
 
-class Professor : extends Person
-    properties
-        teaches
-    constructor
-        Professor(name, teaches)
-    methods
-        grade(paper)
-        introduceSelf()
+    introduceSelf() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+}
 
-class Student : extends Person
-    properties
-        year
-    constructor
-        Student(name, year)
-    methods
-        introduceSelf()
+class Professor extends Person {
+    constructor(name, teaches) {
+        super(name);
+        this.teaches = teaches;
+    }
+
+    grade(paper) {
+        console.log(`Grading the paper...`);
+    }
+
+    introduceSelf() {
+        console.log(`Hello, my name is ${this.name} and I teach ${this.teaches}.`);
+    }
+}
+
+class Student extends Person {
+    constructor(name, year) {
+        super(name);
+        this.year = year;
+    }
+
+    introduceSelf() {
+        console.log(`Hello, my name is ${this.name} and I'm a ${this.year} year student.`);
+    }
+}
 ```
 
 In this case, we would say that `Person` is the **superclass** or **parent class** of both `Professor` and `Student`. Conversely, `Professor` and `Student` are **subclasses** or **child classes** of `Person`.
@@ -148,17 +173,17 @@ In this case, we would say that `Person` is the **superclass** or **parent class
 You might notice that `introduceSelf()` is defined in all three classes. The reason for this is that while all people want to introduce themselves, the way they do so is different:
 
 ```js
-walsh = new Professor("Walsh", "Psychology");
+const walsh = new Professor("Walsh", "Psychology");
 walsh.introduceSelf(); // 'My name is Professor Walsh and I will be your Psychology professor.'
 
-summers = new Student("Summers", 1);
+const summers = new Student("Summers", 1);
 summers.introduceSelf(); // 'My name is Summers and I'm in the first year.'
 ```
 
 We might have a default implementation of `introduceSelf()` for people who aren't students _or_ professors:
 
 ```js
-pratt = new Person("Pratt");
+const pratt = new Person("Pratt");
 pratt.introduceSelf(); // 'My name is Pratt.'
 ```
 
@@ -181,14 +206,20 @@ if (student.year > 1) {
 The problem is, if we decide to change the criteria for allowing students to study archery - for example by also requiring the parent or guardian to give their permission - we'd need to update every place in our system that performs this test. It would be better to have a `canStudyArchery()` method on `Student` objects, that implements the logic in one place:
 
 ```plain
-class Student : extends Person
-    properties
-       year
-    constructor
-       Student(name, year)
-    methods
-       introduceSelf()
-       canStudyArchery() { return this.year > 1 }
+class Student extends Person {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+
+  introduceSelf() {
+    // Write code here to introduce the student
+  }
+
+  canStudyArchery() {
+    return this.year > 1;
+  }
+}
 ```
 
 ```js
@@ -202,17 +233,23 @@ That way, if we want to change the rules about studying archery, we only have to
 In many OOP languages, we can prevent other code from accessing an object's internal state by marking some properties as `private`. This will generate an error if code outside the object tries to access them:
 
 ```plain
-class Student : extends Person
-    properties
-       private year
-    constructor
-        Student(name, year)
-    methods
-       introduceSelf()
-       canStudyArchery() { return this.year > 1 }
+class Student extends Person {
+  constructor(name, year) {
+    super(name);
+    this.year = year;
+  }
 
-student = new Student('Weber', 1)
-student.year // error: 'year' is a private property of Student
+  introduceSelf() {
+    return `Hi, my name is ${this.name} and I am a student.`;
+  }
+
+  canStudyArchery() {
+    return this.year > 1;
+  }
+}
+
+const student = new Student('Weber', 1);
+student.year; // Error: 'year' is a private property of Student
 ```
 
 In languages that don't enforce access like this, programmers use naming conventions, such as starting the name with an underscore, to indicate that the property should be considered private.
