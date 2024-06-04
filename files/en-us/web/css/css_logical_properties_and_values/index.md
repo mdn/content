@@ -118,7 +118,7 @@ CSS was initially designed with only physical coordinates. The logical propertie
 
 - [Logical properties for floating and positioning](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
 
-  - : The logical mappings for the physical values for `float` and `clear`, for the positioning properties used with positioned layout, and for `resize`.
+  - : Details mappings between the physical and logical values for `float` and `clear`, [inset properties](/en-US/docs/Glossary/Inset_properties), and  `resize`.
 
 ## Related concepts
 
