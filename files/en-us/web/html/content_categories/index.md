@@ -272,7 +272,7 @@ There are some secondary classifications of elements that can be useful to be aw
 
 ### Script-supporting elements
 
-**Script-supporting elements** are elements which don't directly contribute to the rendered output of a document. Instead, they serve to support scripts, either by containing or specifying script code directly, or by specifying data that will be used by scripts.
+**Script-supporting elements** are elements that don't directly contribute to a document's rendered output. Instead, they serve to support scripts, either by containing or specifying script code directly or by specifying data that will be used by scripts.
 
 The script-supporting elements are:
 
@@ -281,7 +281,7 @@ The script-supporting elements are:
 
 ## Transparent content model
 
-If an element has a transparent content model, then its contents must be structured such that they would be valid HTML 5, even if the transparent element were removed and replaced by the child elements.
+If an element has a transparent content model, then its contents must be structured such that they would be valid HTML, even if the transparent element were removed and replaced by the child elements.
 
 For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are transparent:
 
