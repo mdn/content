@@ -33,7 +33,7 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 - `<rectangular-color-space>`
 
-  - : One of the keywords `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, or `xyz-d65`.
+  - : One of the keywords `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz`, `xyz-d50`, or `xyz-d65`.
 
 - `<polar-color-space>`
 

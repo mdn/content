@@ -11,7 +11,7 @@ The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that correspo
 
 {{EmbedInteractiveExample("pages/css/inset.html")}}
 
-While part of the _CSS Logical Properties_ specification, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
+While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
 ## Constituent properties
 
