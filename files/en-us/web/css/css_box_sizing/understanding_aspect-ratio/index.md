@@ -435,7 +435,7 @@ All content should be responsive, even when that content is third-party embeds, 
 
 While a {{htmlelement("video")}} element typically adopts the aspect ratio of its media file, `iframe` elements lack this capability. This poses the challenge of ensuring that the `<iframe>` is responsive while always maintaining the aspect ratio of the video it contains. One of the techniques we can use is to set the iframe's width to `100%` of its container or `100vw` to match the viewport width regardless of the viewport's size. However, setting a fixed height might stretch or squash the video. Instead, we set the `aspect-ratio` on the video's container, aligning it to be the same aspect ratio as the video. Problem solved!
 
-For context, the standard aspect ratio of YouTube videos is 16:9 when viewed on a desktop computer or laptop, while Tiktok and Instagram videos have a 9:16 aspect ratio.
+For context, the standard aspect ratio of YouTube videos is 16:9 when viewed on a desktop computer or laptop, while TikTok and Instagram videos have a 9:16 aspect ratio.
 
 ```css
 .youtube {

@@ -338,7 +338,7 @@ Yarn is often thought to be quicker than npm in terms of the installation proces
 
 Let's review the common actions you'll want to perform with package managers.
 
-### Initialise a new project
+### Initialize a new project
 
 ```bash
 npm init

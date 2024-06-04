@@ -41,6 +41,17 @@ fetch(resource, options)
   - : An object containing any custom settings you want to apply to the request.
     The possible options are:
 
+    - `attributionReporting` {{experimental_inline}}
+
+      - : Indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
+
+        - `eventSourceEligible`
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.
+        - `triggerEligible`
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution trigger. If set to `false`, it isn't.
+
+        > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
     - `body`
 
       - : Any body that you want to add to your request:
@@ -87,7 +98,6 @@ fetch(resource, options)
       - : The request method, e.g., `"GET"`, `"POST"`.
         The default is `"GET"`.
         Note that the {{HTTPHeader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
         Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
         If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
 
@@ -139,7 +149,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{HTTPHeader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
+  - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
 - {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
@@ -151,6 +161,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Blocked by a permissions policy</td>
+      <td>Use of the <a href="/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> is blocked by a <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}}, and a <code>fetch()</code> request was made with <code>attributionReporting</code> specified.</td>
+    </tr>
     <tr>
       <td>Invalid header name.</td>
       <td>

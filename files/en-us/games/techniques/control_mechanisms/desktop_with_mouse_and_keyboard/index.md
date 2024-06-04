@@ -71,7 +71,7 @@ function draw() {
 }
 ```
 
-The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame).
+The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/Window/requestAnimationFrame).
 
 We could write our own `KeyCode` object containing the key codes. For example:
 
