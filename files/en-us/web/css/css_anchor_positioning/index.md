@@ -51,10 +51,16 @@ In addition, the specification provides CSS-only mechanisms to:
 - {{domxref("CSSPositionTryRule")}}
 - {{domxref("Element.anchorElement")}} {{non-standard_inline}}
 
+## Glossary terms
+
+- [Inset properties](/en-US/docs/Glossary/Inset_properties)
+
 ## Guides
 
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-  - : A introductory guide to using all the features of the CSS Anchor Positioning specification.
+  - : A introductory guide that explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level.
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+  - : Explains how to use the mechanisms CSS anchor positioning provides to stop anchor-positioned elements overflowing their containing elements or the viewport — position try options and conditional hiding.
 
 ## Related concepts
 
