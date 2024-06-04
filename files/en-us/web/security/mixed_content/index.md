@@ -131,6 +131,23 @@ The screenshot below shows the icon and console warning for Firebox starting sup
 
 ![Screen shot of the web console displaying display warning for mixed content image.](mixed_content_console_displayed.png)
 
+## Fixing mixed content issues
+
+The best strategy to avoid issues with mixed content is to serve all the content as HTTPS:
+
+- Serve all content from your domain as HTTPS.
+- Make all references to resources hosted on your domain into relative links or HTTPS links, including for downloads.
+- If using resource on other sites use HTTPS versions, if available.
+
+  Most sites provide HTTPS versions of shared resources.
+  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [linkchecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+
+There are a number of ways to verify that your site is free of mixed content including:
+
+- Navigate your site, and check your browser's [developer console](#developer_console) for mixed content warnings.
+- Use a desktop-based web crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect), to check your website recursively and find links to insecure content.
+- Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) (www.crawlcenter.com) to check your site.
+
 ## Specifications
 
 {{Specifications}}
