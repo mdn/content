@@ -20,7 +20,7 @@ The **block-start** and **block-end** directions represent the _start edge_ and 
 
 ## Inline direction
 
-The **inline axis** is perpendicular to the block axis. The inline axis represents the direction along which inline content like text flows within a block. This is also known as the **inline direction**. In left-to-right writing modes, like English, the inline direction is horizontal, left-to-right. In right-to-left languages, like Arabic and Hebrew, the inline direction is horizontal, right-to-left. 
+The **inline axis** is perpendicular to the block axis. The inline axis represents the direction along which inline content like text flows within a block. This is also known as the **inline direction**. In left-to-right writing modes, like English, the inline direction is horizontal, left-to-right. In right-to-left languages, like Arabic and Hebrew, the inline direction is horizontal, right-to-left.
 
 **Inline-start** and **inline-end** represent the _start edge_ and _end edge_ of content along the inline axis, respectively, with the values and properties `inline-start` and `inline-end` being the equivalent of `left` and `right` properties and values in horizontal writing modes. Whether they are equivalent to `right` or `left` depends on the writing direction. For example, `inline-start` is equivalent to `left` in left-to-right languages and `right` in right-to-left languages.
 
