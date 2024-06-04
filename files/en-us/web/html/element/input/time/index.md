@@ -267,6 +267,7 @@ In this example, we create an interface element for choosing time using the nati
     required />
   <span class="validity"></span
 ```
+
 ### CSS
 
 ```css
