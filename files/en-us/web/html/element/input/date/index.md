@@ -186,6 +186,7 @@ The HTML looks like so:
     <span class="validity"></span>
   </div>
 ```
+
 ### CSS
 
 The CSS looks like so:
