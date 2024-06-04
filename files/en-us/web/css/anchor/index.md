@@ -41,27 +41,29 @@ The parameters are:
   - : The {{cssxref("anchor-name")}} set on the anchor element you want to position an element relative to. If omitted, the positioned element is positioned relative to the anchor referenced by its {{cssxref("position-anchor")}} property, or its implicit anchor if it has one.
 - `anchor-side`
   - : Specifies the side of the anchor element that the side of the positioned element denoted by the inset property will be positioned relative to. Valid values include:
-      - `top`
-        - : The top of the anchor element.
-      - `right`
-        - : The right of the anchor element.
-      - `bottom`
-        - : The bottom of the anchor element.
-      - `left`
-        - : The left of the anchor element
-      - `start`
-        - : The logical start of the anchor element's block axis.
-      - `end`
-        - : The logical end of the anchor element's block axis.
-      - `self-start`
-        - : The logical start of the anchor element's inline axis.
-      - `self-end`
-        - : The logical end of the anchor element's inline axis.
-      - `center`
-        - : The center of the axis of the inset property on which the `anchor()` function is set.
-      - {{cssxref("percentage")}}
-        - : Specifies the distance, as a percentage, from the start of the axis of the inset property on which the `anchor()` function is set.
-      For {{glossary("physical properties", "physical")}}, inset values, any physical anchor side value uses has to be along the same axis as the inset value being set.
+
+    - `top`
+      - : The top of the anchor element.
+    - `right`
+      - : The right of the anchor element.
+    - `bottom`
+      - : The bottom of the anchor element.
+    - `left`
+      - : The left of the anchor element
+    - `start`
+      - : The logical start of the anchor element's block axis.
+    - `end`
+      - : The logical end of the anchor element's block axis.
+    - `self-start`
+      - : The logical start of the anchor element's inline axis.
+    - `self-end`
+      - : The logical end of the anchor element's inline axis.
+    - `center`
+      - : The center of the axis of the inset property on which the `anchor()` function is set.
+    - {{cssxref("percentage")}}
+
+      - : Specifies the distance, as a percentage, from the start of the axis of the inset property on which the `anchor()` function is set.
+        For {{glossary("physical properties", "physical")}}, inset values, any physical anchor side value uses has to be along the same axis as the inset value being set.
 
       The specification also defines `inside` and `outside` values, which are currently not supported by any browser.
 
