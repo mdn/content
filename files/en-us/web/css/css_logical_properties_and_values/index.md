@@ -9,7 +9,14 @@ spec-urls: https://drafts.csswg.org/css-logical/
 
 The **CSS logical properties and values** module defines logical properties and values that can control layout through logical rather than physical direction and dimension mappings. Logical properties define direction‐relative equivalents to their corresponding physical properties.
 
-The start of a line is not always the left side of a line. There are several different writing systems written in different directions. English and Portuguese are written from left to right, with new lines added below the previous ones. Hebrew and Arabic are right to left languages, also from top to bottom. In some writing modes, the text lines are vertical, written from top to bottom. Traditionally, Chinese, Vietnamese, Korean, and Japanese are written vertically, from top to bottom, with each new vertical line on the left of the previous one. Traditional Mongolian is also top to bottom, but new lines are to the right of previous ones. The logical properties defined in this module enable defining properties relative to the content's writing directions, rather than a physical direction meaning content translated into languages with different writing modes will render as intended.
+The start of a line is not always the left side of a line. Different writing systems operate in various directions. For example:
+
+- English and Portuguese are written from left to right with new lines added below the previous ones.
+- Hebrew and Arabic are right-to-left languages with new lines again being added below the previous ones.
+- In some writing modes, the text lines are vertical, written from top to bottom. Chinese, Vietnamese, Korean, and Japanese are traditionally written vertically, from top to bottom, with each new vertical line added to the left of the previous one.
+- Traditional Mongolian is also a top-to-bottom language, but new lines are to the right of previous ones.
+
+The logical properties defined in this module enable defining properties relative to the content's writing direction, rather than a physical direction. This means content translated into languages with different writing modes will be rendered as intended.
 
 Logical properties and values use the abstract terms _block_ and _inline_ to describe the direction in which they flow. The physical meaning of these terms depends on the [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes).
 
