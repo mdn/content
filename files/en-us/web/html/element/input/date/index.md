@@ -200,6 +200,7 @@ input:valid + span::after {
   content: " ✓";
 }
 ```
+
 ### Results
 
 {{EmbedLiveSample('Examples', 600, 100)}}
