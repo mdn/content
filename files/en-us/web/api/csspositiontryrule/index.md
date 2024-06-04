@@ -46,6 +46,7 @@ console.log(tryOption); // "[object CSSPositionTryRule]"
 console.log(tryOption.name) // "--custom-left"
 console.log(tryOption.style) // "[object CSSPositionTryDescriptors]"
 console.log(tryOption.style.maxWidth) // "200px"
+```
 
 ## Specifications
 
