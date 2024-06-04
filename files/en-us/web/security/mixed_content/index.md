@@ -157,3 +157,7 @@ There are a number of ways to verify that your site is free of mixed content inc
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSP: `upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content
