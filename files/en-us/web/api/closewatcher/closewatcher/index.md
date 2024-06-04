@@ -3,9 +3,9 @@ title: "CloseWatcher: CloseWatcher() constructor"
 short-title: CloseWatcher()
 slug: Web/API/CloseWatcher/CloseWatcher
 page-type: web-api-constructor
-browser-compat: api.CloseWatcher.CloseWatcher
 status:
   - experimental
+browser-compat: api.CloseWatcher.CloseWatcher
 ---
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}

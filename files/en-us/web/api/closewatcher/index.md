@@ -2,9 +2,9 @@
 title: CloseWatcher
 slug: Web/API/CloseWatcher
 page-type: web-api-interface
-browser-compat: api.CloseWatcher
 status:
   - experimental
+browser-compat: api.CloseWatcher
 ---
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
@@ -47,7 +47,7 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 The following code example gives an overview how use use the `CloseWatcher` methods and events.
 
 ```js
-// Create a new close watcher 
+// Create a new close watcher
 const watcher = new CloseWatcher();
 
 // Listen for close requests

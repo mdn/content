@@ -3,7 +3,6 @@ title: "CloseWatcher: destroy() method"
 short-title: destroy()
 slug: Web/API/CloseWatcher/destroy
 page-type: web-api-instance-method
-browser-compat: api.CloseWatcher.destroy
 status:
   - experimental
 ---

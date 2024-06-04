@@ -3,9 +3,9 @@ title: "CloseWatcher: close event"
 short-title: close
 slug: Web/API/CloseWatcher/close_event
 page-type: web-api-event
-browser-compat: api.CloseWatcher.close_event
 status:
   - experimental
+browser-compat: api.CloseWatcher.close_event
 ---
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}

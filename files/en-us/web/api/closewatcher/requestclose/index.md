@@ -3,9 +3,9 @@ title: "CloseWatcher: requestClose() method"
 short-title: requestClose()
 slug: Web/API/CloseWatcher/requestClose
 page-type: web-api-instance-method
-browser-compat: api.CloseWatcher.requestClose
 status:
   - experimental
+browser-compat: api.CloseWatcher.requestClose
 ---
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
