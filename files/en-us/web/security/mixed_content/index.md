@@ -155,7 +155,3 @@ There are a number of ways to verify that your site is free of mixed content inc
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
