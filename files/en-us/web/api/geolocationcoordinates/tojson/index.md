@@ -33,7 +33,7 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Geolocat
 In this example, calling `position.coords.toJSON()` returns a JSON representation of the `GeolocationCoordinates` object.
 
 ```js
-navigator.geolocation.getCurrentPosition(position => {
+navigator.geolocation.getCurrentPosition((position) => {
   console.log(position.coords.toJSON());
 });
 ```
@@ -42,9 +42,9 @@ This would log a JSON object like so:
 
 ```json
 {
-  "accuracy": 12.000,
-  "latitude": 53.0000000,
-  "longitude": 8.0000000,
+  "accuracy": 12.0,
+  "latitude": 53.0,
+  "longitude": 8.0,
   "altitude": null,
   "altitudeAccuracy": null,
   "heading": null,
