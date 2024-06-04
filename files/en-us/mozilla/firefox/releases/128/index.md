@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ## Changes for add-on developers
 
+- The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
+
 ### Removals
 
 ### Other
