@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-logical/
 
 {{CSSRef}}
 
-The **CSS logical properties and values** module defines logical properties and values that provide the ability to control layout through logical, rather than physical, direction and dimension mappings Logical properties define direction‐relative equivalents of their corresponding physical properties.
+The **CSS logical properties and values** module defines logical properties and values that can control layout through logical rather than physical direction and dimension mappings. Logical properties define direction‐relative equivalents to their corresponding physical properties.
 
 The start of a line is not always the left side of a line. There are several different writing systems written in different directions. English and Portuguese are written from left to right, with new lines added below the previous ones. Hebrew and Arabic are right to left languages, also from top to bottom. In some writing modes, the text lines are vertical, written from top to bottom. Traditionally, Chinese, Vietnamese, Korean, and Japanese are written vertically, from top to bottom, with each new vertical line on the left of the previous one. Traditional Mongolian is also top to bottom, but new lines are to the right of previous ones. The logical properties defined in this module enable defining properties relative to the content's writing directions, rather than a physical direction meaning content translated into languages with different writing modes will render as intended.
 
