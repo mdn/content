@@ -7,7 +7,7 @@ browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
 
 {{AddonSidebar()}}
 
-Returns a `DirectoryEntry` object representing the package directory.
+Gets a `DirectoryEntry` object representing the package directory.
 
 This is an asynchronous function that takes a callback.
 
@@ -23,7 +23,7 @@ browser.runtime.getPackageDirectoryEntry(
 
 - `callback`
 
-  - : `function`. The function will be passed a [`FileSystemDirectoryEntry`](/en-US/docs/Web/API/FileSystemDirectoryEntry) object.
+  - : `function`. The function will be passed a `DirectoryEntry` object.
 
 
 ## Browser compatibility
