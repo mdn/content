@@ -51,7 +51,7 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td>1 (second)</td>
+      <td>60 (seconds)</td>
       <td>
         <code
           >&#x3C;input type="datetime-local" min="2019-12-25T19:30"
