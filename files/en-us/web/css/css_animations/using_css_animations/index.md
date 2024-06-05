@@ -118,22 +118,22 @@ p {
 
 @keyframes slidein {
   from {
-    translatex: 100vw;
-    scalex: 300%;
+    translate: 100vw;
+    scale: 300%;
   }
 
   to {
-    translatex: 0vw;
-    scalex: 100%;
+    translate: 0vw;
+    scale: 100%;
   }
 }
 ```
 
 In this example the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property, and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is named "slidein".
 
-The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this case, we have just two keyframes. The first occurs at 0% (using the alias `from`). Here, we configure the {{cssxref("translatex")}} property of the element to be at 100% (that is, at the far right edge of the containing element), and the {{cssxref("scalex")}} of the element to be 300% (or three times its default inline size). This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
+The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this case, we have just two keyframes. The first occurs at 0% (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at 100% (that is, at the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 300% (or three times its default inline size). This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
 
-The second (and final) keyframe occurs at 100% (using the alias `to`). The {{cssxref("translatex")}} is set to 0% and the {{cssxref("scalex")}} of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
+The second (and final) keyframe occurs at 100% (using the alias `to`). The {{cssxref("translate")}} is set to 0% and the {{cssxref("scale")}} of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
 
 ```html
 <p>
@@ -159,7 +159,7 @@ Let's add another keyframe to the previous example's animation. Let's say we wan
   }
 
   50% {
-    scalex: 200%;
+    scale: 200%;
   }
 }
 ```
@@ -178,13 +178,13 @@ p::first-line {
 
 @keyframes slidein {
   from {
-    translatex: 100vw;
-    scalex: 300%;
+    translate: 100vw;
+    scale: 300%;
   }
 
   to {
-    translatex: 0vw;
-    scalex: 100%;
+    translate: 0vw;
+    scale: 100%;
   }
 }
 
@@ -195,7 +195,7 @@ p::first-line {
   }
 
   50% {
-    scalex: 200%;
+    scale: 200%;
   }
 }
 ```
@@ -231,13 +231,13 @@ Adding it to the existing code:
 ```css
 @keyframes slidein {
   from {
-    translatex: 100vw;
-    scalex: 300%;
+    translate: 100vw;
+    scale: 300%;
   }
 
   to {
-    translatex: 0vw;
-    scalex: 100%;
+    translate: 0vw;
+    scale: 100%;
   }
 }
 ```
@@ -270,13 +270,13 @@ And the rest of the code:
 ```css
 @keyframes slidein {
   from {
-    translatex: 100vw;
-    scalex: 300%;
+    translate: 100vw;
+    scale: 300%;
   }
 
   to {
-    translatex: 0vw;
-    scalex: 100%;
+    translate: 0vw;
+    scale: 100%;
   }
 }
 ```
@@ -311,13 +311,13 @@ We start with creating the CSS for the animation. This animation will last for 3
 
 @keyframes slidein {
   from {
-    translatex: 100vw;
-    scalex: 300%;
+    translate: 100vw;
+    scale: 300%;
   }
 
   to {
-    translatex: 0vw;
-    scalex: 100%;
+    translate: 0vw;
+    scale: 100%;
   }
 }
 ```
