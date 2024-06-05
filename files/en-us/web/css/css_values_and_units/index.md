@@ -170,20 +170,20 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
 
-| Unit   | Relative to                                                                                                                        |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                                                         |
-| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                                                          |
-| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                                             |
-| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                                              |
-| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                                             |
-| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                                              |
-| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
-| `vh`   | 1% of viewport's height.                                                                                                           |
-| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline). |
-| `vmax` | 1% of viewport's larger dimension.                                                                                                 |
-| `vmin` | 1% of viewport's smaller dimension.                                                                                                |
-| `vw`   | 1% of viewport's width.                                                                                                            |
+| Unit   | Relative to                                                                                           |
+| ------ | ----------------------------------------------------------------------------------------------------- |
+| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                            |
+| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                             |
+| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                |
+| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                 |
+| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                |
+| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                 |
+| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Glossary/flow_relative_values).  |
+| `vh`   | 1% of viewport's height.                                                                              |
+| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Glossary/flow_relative_values). |
+| `vmax` | 1% of viewport's larger dimension.                                                                    |
+| `vmin` | 1% of viewport's smaller dimension.                                                                   |
+| `vw`   | 1% of viewport's width.                                                                               |
 
 ##### Container units
 
