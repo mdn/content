@@ -32,7 +32,7 @@ max-inline-size: fit-content(20em);
 
 /* anchor-size() function values */
 max-inline-size: anchor-size(width);
-max-inline-size: anchor-size(--myAnchor inline);
+max-inline-size: anchor-size(--myAnchor self-block, 200px);
 
 /* Global values */
 max-inline-size: inherit;

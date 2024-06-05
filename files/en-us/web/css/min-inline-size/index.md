@@ -29,7 +29,7 @@ min-inline-size: fit-content(20em);
 
 /* anchor-size() function values */
 min-inline-size: anchor-size(width);
-min-inline-size: anchor-size(--myAnchor inline);
+min-inline-size: anchor-size(--myAnchor inline, 300%);
 
 /* Global values */
 min-inline-size: inherit;

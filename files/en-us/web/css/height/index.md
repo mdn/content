@@ -33,7 +33,7 @@ height: auto;
 
 /* anchor-size() function values */
 height: anchor-size(height);
-height: anchor-size(--myAnchor block);
+height: anchor-size(--myAnchor self-block, 250px);
 
 /* Global values */
 height: inherit;

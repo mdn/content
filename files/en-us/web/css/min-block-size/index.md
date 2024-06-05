@@ -30,8 +30,8 @@ min-block-size: fit-content;
 min-block-size: fit-content(20em);
 
 /* anchor-size() function values */
-min-block-size: anchor-size(height);
-min-block-size: anchor-size(--myAnchor block);
+min-block-size: anchor-size(self-inline);
+min-block-size: anchor-size(--myAnchor block, 150px);
 
 /* Global values */
 min-block-size: inherit;

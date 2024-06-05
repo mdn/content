@@ -35,7 +35,7 @@ width: auto;
 
 /* anchor-size() function values */
 width: anchor-size(width);
-width: anchor-size(--myAnchor inline);
+width: anchor-size(--myAnchor inline, 120%);
 
 /* Global values */
 width: inherit;

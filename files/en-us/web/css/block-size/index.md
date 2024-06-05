@@ -32,7 +32,7 @@ block-size: auto;
 
 /* anchor-size() function values */
 block-size: anchor-size(height);
-block-size: anchor-size(--myAnchor block);
+block-size: calc(anchor-size(--myAnchor block) * 0.75);
 
 /* Global values */
 block-size: inherit;
