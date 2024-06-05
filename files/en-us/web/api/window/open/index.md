@@ -35,6 +35,16 @@ open(url, target, windowFeatures)
 
   - : A string containing a comma-separated list of window features in the form `name=value` — or for boolean features, just `name`. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
 
+    - `attributionsrc` {{experimental_inline}}
+
+      - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the `open()` call. This call must be made with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handle such as `click`), within five seconds of user interaction. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source.
+
+        In addition, the browser is also triggered to store the associated source data (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method completes.
+
+        See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
+        > **Note:** `open()` calls cannot be used to register an attribution trigger.
+
     - `popup`
 
       - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.

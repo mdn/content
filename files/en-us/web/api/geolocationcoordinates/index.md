@@ -31,7 +31,10 @@ _The `GeolocationCoordinates` interface doesn't inherit any properties._
 
 ## Instance methods
 
-_The `GeolocationCoordinates` interface neither implements, nor inherits any method._
+_The `GeolocationCoordinates` interface doesn't inherit any methods._
+
+- {{domxref("GeolocationCoordinates.toJSON()")}} {{experimental_inline}}
+  - : Returns a JSON representation of the `GeolocationCoordinates` object and enables serialization with {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

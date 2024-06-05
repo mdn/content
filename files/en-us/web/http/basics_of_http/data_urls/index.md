@@ -116,7 +116,7 @@ lots of text…
 
 - [Base64](/en-US/docs/Glossary/Base64)
 - [URL encoding](https://en.wikipedia.org/wiki/URL_encoding)
-- {{domxref("atob","atob()")}}
-- {{domxref("btoa","btoa()")}}
+- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - [CSS `url()`](/en-US/docs/Web/CSS/url)
 - [URI](/en-US/docs/Glossary/URI)
