@@ -9,7 +9,7 @@ browser-compat: html.elements.input.type_time
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 
-While control's user interface appearance is based on the browser and operating sysyem, the features are the same. The value is always a 24-hour `hh:mm` or `hh:mm:ss` formatted time, with leading zeros, regardless of the UI's input format.
+While the control's user interface appearance is based on the browser and operating system, the features are the same. The value is always a 24-hour `hh:mm` or `hh:mm:ss` formatted time, with leading zeros, regardless of the UI's input format.
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
@@ -105,7 +105,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 For `time` inputs, the value of `step` is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of `step` is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).
 
-When `any` is set as the value for `step`, the default 60 seconds is used, and the seconds feature of the UI are not displayed.
+When `any` is set as the value for `step`, the default 60 seconds is used, and the seconds value is not displayed in the UI.
 
 ## Using time inputs
 
@@ -130,7 +130,7 @@ The simplest use of `<input type="time">` involves a basic `<input>` and {{htmle
 
 You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
 
-It takes an integer value that equates to the number of seconds you want to increment by; the default value is 60 seconds, or one minute. With this as the default, most user agents' time UI includes hours and minutes, but not the seconds. Including the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
+It takes an integer value defining to the number of seconds you want to increment by; the default value is 60 seconds. With this as the default, most user agent time UIs display hours and minutes, but not seconds. Including the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute on any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
 
 ```html
 <form>
@@ -198,7 +198,7 @@ The result here is that:
 
 #### Making min and max cross midnight
 
-By setting a [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute greater than the [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types.
+By setting a [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute greater than the [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, the valid time range will wrap around midnight to produce a valid time range. This functionality is not supported by any other input types.
 
 ```js
 const input = document.createElement("input");
