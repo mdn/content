@@ -188,7 +188,8 @@ p::first-line {
 }
 
 @keyframes growshrink {
-  25%, 75% {
+  25%,
+  75% {
     scale: 100%;
   }
 
