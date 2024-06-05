@@ -23,7 +23,7 @@ browser.runtime.getPackageDirectoryEntry(
 
 - `callback`
 
-  - : `function`. The function that will be passed a [DirectoyEntry object](/en-US/docs/Web/API/FileSystemDirectoryEntry) object.
+  - : `function`. The function will be passed a [`FileSystemDirectoryEntry`](/en-US/docs/Web/API/FileSystemDirectoryEntry) object.
 
 
 ## Browser compatibility
