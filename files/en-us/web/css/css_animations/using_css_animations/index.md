@@ -133,7 +133,7 @@ In this example the style for the {{HTMLElement("p")}} element specifies that th
 
 The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this case, we have just two keyframes. The first occurs at 0% (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at 100% (that is, at the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 300% (or three times its default inline size). This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
 
-The second (and final) keyframe occurs at 100% (using the alias `to`). The {{cssxref("translate")}} is set to 0% and the {{cssxref("scale")}} of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
+The second (and final) keyframe occurs at 100% (using the alias `to`). The {{cssxref("translate")}} property is set to 0% and the {{cssxref("scale")}} of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
 
 ```html
 <p>
@@ -149,7 +149,7 @@ The second (and final) keyframe occurs at 100% (using the alias `to`). The {{css
 
 ### Adding another keyframe
 
-Let's add another keyframe to the previous example's animation. Let's say we want the header size to increase as it moves from right to left for a while, then to decrease back to its original size. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impact performance. Instead we scale the {{cssxref("::first-line")}} separately. That requires adding a second animation impacting only the header:
+Let's add another keyframe to the previous example's animation. Let's say we want the header size to grow and then shrink back to its original size as it moves from right to left. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impacts performance. Instead, we scale the {{cssxref("::first-line")}} separately. That requires adding a second animation impacting only the header:
 
 ```css
 @keyframes growshrink {
@@ -208,7 +208,7 @@ p::first-line {
 </p>
 ```
 
-This tells the browser that for the first and last 25% of the animation, the first line should be normal, but scale it up and back in the middle of the animation
+This tells the browser the paragraph should be normal for the first and last 25% of the animation, but scaled up and back down again in the middle.
 
 > **Note:** Reload page to see the animation.
 
@@ -299,7 +299,7 @@ We'll modify the sliding text example to output some information about each anim
 
 #### Adding the CSS
 
-We start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the x-axis scale and translation are manipulated to make the element slide across the screen.
+We start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
 
 ```css
 .slidein {
