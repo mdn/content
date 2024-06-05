@@ -13,8 +13,6 @@ The **`position-try-options`** [CSS](/en-US/docs/Web/CSS) property enables you t
 
 > **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify {{cssxref("position-try-order")}} and `position-try-options` values in a single declaration.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
-
 ## Syntax
 
 ```css
@@ -48,11 +46,14 @@ position-try-options: unset;
 
 - `none`
   - : The default value. There are no position try options set.
-- Predefined option
-  - : Referred to as a `try-tactic` in the specification, these predefined values move the positioned element by taking its computed position and transforming it across a particular axis of the anchor. Possible values are:
-    - `flip-block`: Flips the element's position along the block axis so that it appears the same distance away from the anchor but on the opposite side of it. To put it another way, it mirrors the element's position across an inline axis drawn through the center of the anchor. As an example, if the positioned element started to overflow at the top of the anchor, this value would flip it to the bottom.
-    - `flip-inline`: Flips the element's position along the inline axis so that it appears the same distance away from the anchor but on the opposite side of it. To put it another way, it mirrors the element's position across a block axis drawn through the center of the anchor. As an example, if the positioned element started to overflow at the left of the anchor, this value would flip it to the right.
-    - `flip-start`: Mirrors the element's position across an axis drawn diagonally through the center of the anchor, passing through the point at the intersection of the block axis start and the inline axis start, and the point at the intersection of the block axis end and the inline axis end. As an example, if the positioned element started to overflow at the left of the anchor, this value would flip it to the top.
+- `<try-tactic>`
+  - : Predefined options that move the positioned element by taking its computed position and transforming it across a particular axis of the anchor. Possible values are:
+    - `flip-block`
+      - : Flips the element's position along the block axis.
+    - `flip-inline`
+      - : Flips the element's position along the inline axis.
+    - `flip-start`
+      - : Flips both the inline and block axis values, swapping the `start` properties with each other, and the `end` properties with each other.
 - [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)
   - : An {{cssxref("inset-area")}} value passed into an `inset-area()` function. This has the effect of automatically creating a position try option based on that `inset-area` value behind the scenes. In effect, it is a shortcut for creating a custom {{cssxref("@position-try")}} option that contains only that `inset-area` property value.
 - {{cssxref("dashed-ident")}}
@@ -69,6 +70,19 @@ This is achieved by providing one or more position try options in the `position-
 If no option can be found that will place the positioned element completely on-screen, the browser will revert to displaying the positioned element at its default position before any try options were applied.
 
 > **Note:** In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
+
+For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
+
+### Predefined try tactics
+
+Referred to as a `try-tactic` in the specification, the predefined values move the positioned element by taking its computed position and transforming it across a particular axis of the anchor. Possible values are:
+
+- `flip-block`
+  - : Flips the element's position along the block axis so that it appears the same distance away from the anchor but on the opposite side of it. To put it another way, it mirrors the element's position across an inline axis drawn through the center of the anchor. As an example, if the positioned element started to overflow at the top of the anchor, this value would flip it to the bottom.
+- `flip-inline`
+  - : Flips the element's position along the inline axis so that it appears the same distance away from the anchor but on the opposite side of it. To put it another way, it mirrors the element's position across a block axis drawn through the center of the anchor. As an example, if the positioned element started to overflow at the left of the anchor, this value would flip it to the right.
+- `flip-start`
+  - : Mirrors the element's position across an axis drawn diagonally through the center of the anchor, passing through the point at the intersection of the block axis start and the inline axis start, and the point at the intersection of the block axis end and the inline axis end. As an example, if the positioned element started to overflow at the left of the anchor, this value would flip it to the top.
 
 ### Combination options
 
@@ -88,8 +102,6 @@ Multiple predefined or `dashed-ident` options can be combined together into a si
 {{csssyntax}}
 
 ## Examples
-
-> **Note:** See the {{cssxref("@position-try")}} reference page for custom try option examples.
 
 ### Basic usage
 
@@ -319,6 +331,10 @@ Scroll the page and check out the effect of these position try options as the an
 
 {{ EmbedLiveSample("`inset-area` try options", "100%", "250") }}
 
+### Custom try option examples
+
+See the {{cssxref("@position-try")}} reference page.
+
 ## Specifications
 
 {{Specifications}}
@@ -333,3 +349,4 @@ Scroll the page and check out the effect of these position try options as the an
 - The {{cssxref("@position-try")}} at-rule
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)

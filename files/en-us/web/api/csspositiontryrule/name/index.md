@@ -16,7 +16,7 @@ A string.
 
 ## Examples
 
-The CSS includes a `@position-try` at-rule with a name of `--custom-right` and several declarations in its body.
+The CSS includes a `@position-try` at-rule with a name of `--custom-bottom` and three descriptors.
 
 ```css
 @position-try --custom-bottom {
@@ -42,8 +42,9 @@ console.log(tryOption.name); // "--custom-bottom"
 
 ## See also
 
+- {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-options")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- {{DOMxRef("CSSPositionTryDescriptors")}}
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)

@@ -16,7 +16,7 @@ A {{domxref("CSSPositionTryDescriptors")}} object.
 
 ## Examples
 
-The CSS includes a `@position-try` at-rule with a name of `--custom-right` and several declarations in its body.
+The CSS includes a `@position-try` at-rule with a name of `--custom-right` and three descriptors.
 
 ```css
 @position-try --custom-bottom {
@@ -27,10 +27,11 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and s
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let tryOption = myRules[0]; // a CSSPositionTryRule
+const myRules = document.styleSheets[0].cssRules;
+const tryOption = myRules[0]; // a CSSPositionTryRule
 console.log(tryOption.style.top); // "anchor(bottom)"
 console.log(tryOption.style["min-width"]); // "100px"
+console.log(tryOption.style.insetArea); // ""; no inset-area specified
 ```
 
 ## Specifications
@@ -43,8 +44,9 @@ console.log(tryOption.style["min-width"]); // "100px"
 
 ## See also
 
+- {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-options")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- {{DOMxRef("CSSPositionTryDescriptors")}}
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)

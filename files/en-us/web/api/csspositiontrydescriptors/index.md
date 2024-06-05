@@ -17,7 +17,7 @@ The **`CSSPositionTryDescriptors`** interface describes an object representing a
 
 _Inherits properties from its ancestor {{domxref("CSSStyleDeclaration")}}._
 
-The `CSSPositionTryDescriptors` interface defines 70 properties that represent the [CSS properties that can be set inside a `@position-try` at rule](/en-US/docs/Web/CSS/@position-try#declaration-list).
+The `CSSPositionTryDescriptors` interface defines properties that represent the [CSS properties that can be set inside a `@position-try` at rule](/en-US/docs/Web/CSS/@position-try#declaration-list).
 
 There are 35 CSS properties that can be accessed as CSS property names or camel-case. For each one:
 
@@ -76,7 +76,7 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSStyleDecl
 
 ## Examples
 
-The CSS includes a `@position-try` at-rule with a name of `--custom-right` and several declarations in its body.
+The CSS includes a `@position-try` at-rule with a name of `--custom-right` and three descriptors.
 
 ```css
 @position-try --custom-right {
@@ -104,8 +104,9 @@ console.log(tryOption.style["inset-area"]); // "right"
 
 ## See also
 
+- {{DOMxRef("CSSPositionTryRule")}}
 - {{cssxref("@position-try")}}
 - {{cssxref("position-try-options")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- {{DOMxRef("CSSPositionTryRule")}}
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)

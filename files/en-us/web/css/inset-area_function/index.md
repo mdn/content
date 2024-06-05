@@ -53,7 +53,8 @@ See {{cssxref("position-try-options")}} for examples of `inset-area()` usage.
 
 ## See also
 
-- {{cssxref("inset-area")}}, {{cssxref("position-try-options")}}
-- The {{cssxref("@position-try")}} at-rule
+- {{cssxref("inset-area")}}
+- {{cssxref("position-try-options")}}
+- {{cssxref("@position-try")}} at-rule
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)

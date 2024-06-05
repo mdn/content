@@ -13,42 +13,68 @@ The **`@position-try`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS
 
 Each position try option is named with a {{cssxref("dashed-ident")}} and contains a descriptor list specifying declarations that define information such as inset position, margin, sizing, and self-alignment. The `<dashed-ident>` is used to reference the custom position try option in the {{cssxref("position-try-options")}} property.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
 ## Syntax
 
-```text
-@position-try <dashed-ident> {
+```css
+@position-try --try-option-name {
   descriptor-list
 }
 ```
 
-The different parts are as follows:
+> **Note:** The `--try-option-name` is a {{cssxref("dashed-ident")}} specifying an identifying name for the position try option, which can then be used to add that option to the {{cssxref("position-try-options")}} list.
 
-- {{cssxref("dashed-ident")}}
-  - : A developer-defined identifying name for the position try option, which can then be used to add that option to the {{cssxref("position-try-options")}} list.
-- `descriptor-list`
-  - : Descriptors specifying declarations that define the behavior of the custom try option, i.e., where it will result in the positioned element being placed. The following descriptors can be used inside a `@position-try` block:
-    - `position-anchor` descriptor
-      - : Specifies a {{cssxref("position-anchor")}} property value that defines the anchor element that the positioned element is tethered to, by specifying a {{cssxref("dashed-ident")}} value equal to the anchor element's {{cssxref("anchor-name")}} property value.
-    - `inset-area` descriptor
-      - : Specifies an {{cssxref("inset-area")}} property value that defines the position of the the anchor-positioned element relative to the anchor.
-    - Inset property descriptors
-      - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
-        - Physical inset properties: {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}.
-        - Logical inset properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}.
-        - Shorthand inset properties: {{cssxref("inset-block")}}, {{cssxref("inset-inline")}}, and {{cssxref("inset")}}.
-    - Margin property descriptors
-      - : Specify the margin set on the anchor-positioned element. Margin property descriptors can be set that represent the following properties:
-        - Physical margin properties: {{cssxref("margin-top")}}, {{cssxref("margin-left")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-right")}}.
-        - Logical margin properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
-        - Shorthand margin properties: {{cssxref("margin")}}, {{cssxref("margin-block")}}, and {{cssxref("margin-inline")}}
-    - Sizing property descriptors
-      - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
-        - Physical sizing properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}}.
-        - Logical sizing properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-block-size")}}, {{cssxref("min-inline-size")}}, {{cssxref("max-block-size")}}, and {{cssxref("max-inline-size")}}.
-    - Self-alignment property descriptors
-      - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
+### Descriptors
+
+The descriptors specify property values that define the behavior of the custom try option, i.e., where it will result in the positioned element being placed.
+
+- `position-anchor`
+  - : Specifies a {{cssxref("position-anchor")}} property value that defines the anchor element that the positioned element is tethered to, by specifying a {{cssxref("dashed-ident")}} value equal to the anchor element's {{cssxref("anchor-name")}} property value.
+- `inset-area`
+  - : Specifies an {{cssxref("inset-area")}} property value that defines the position of the the anchor-positioned element relative to the anchor.
+- [Inset property](/en-US/docs/Glossary/Inset_properties) descriptors
+  - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
+    - {{cssxref("top")}}
+    - {{cssxref("left")}}
+    - {{cssxref("bottom")}}
+    - {{cssxref("right")}}.
+    - {{cssxref("inset-block-start")}}
+    - {{cssxref("inset-block-end")}}
+    - {{cssxref("inset-inline-start")}}
+    - {{cssxref("inset-inline-end")}}
+    - {{cssxref("inset-block")}}
+    - {{cssxref("inset-inline")}}
+    - {{cssxref("inset")}}
+- Margin property descriptors
+  - : Specify the margin set on the anchor-positioned element. Margin property descriptors can be set that represent the following properties:
+    - {{cssxref("margin-top")}}
+    - {{cssxref("margin-left")}}
+    - {{cssxref("margin-bottom")}}
+    - {{cssxref("margin-right")}}
+    - {{cssxref("margin-block-start")}}
+    - {{cssxref("margin-block-end")}}
+    - {{cssxref("margin-inline-start")}}
+    - {{cssxref("margin-inline-end")}}
+    - {{cssxref("margin")}}
+    - {{cssxref("margin-block")}}
+    - {{cssxref("margin-inline")}}
+- Sizing property descriptors
+  - : Specify [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function values that define the size of the anchor-positioned element relative to the anchor element size. Sizing property descriptors can be set that represent the following properties:
+    - {{cssxref("width")}}
+    - {{cssxref("height")}}
+    - {{cssxref("min-width")}}
+    - {{cssxref("min-height")}}
+    - {{cssxref("max-width")}}
+    - {{cssxref("max-height")}}
+    - {{cssxref("block-size")}}
+    - {{cssxref("inline-size")}}
+    - {{cssxref("min-block-size")}}
+    - {{cssxref("min-inline-size")}}
+    - {{cssxref("max-block-size")}}
+    - {{cssxref("max-inline-size")}}
+- Self-alignment property descriptors
+  - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
 
 > **Note:** When a position option is applied to an element, the property values defined in the at-rule descriptors take precedence over the values set on the element via standard CSS properties.
 
@@ -187,6 +213,8 @@ When a position try option is applied, its values will override the default valu
 
 ## See also
 
-- {{cssxref("position-try-options")}}, {{cssxref("position-try")}}
+- {{cssxref("position-try-options")}}
+- {{cssxref("position-try")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)

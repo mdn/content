@@ -168,3 +168,4 @@ The element appears below its anchor, even though it is initially positioned abo
 - The {{cssxref("@position-try")}} at-rule
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
