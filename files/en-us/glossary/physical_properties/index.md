@@ -6,7 +6,10 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-CSS **physical properties** provide are CSS properties that define positions based on physical directions - such as {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}} - referring to the physical dimensions of the viewport, or reference specific sides of an element, and style features by that physical direction, such as {{cssxref("margin-top")}}, {{cssxref("border-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("border-bottom-left-radius")}}.
+CSS **physical properties** define positions based on physical directions or element sides. For example:
+
+- The [inset properties](/en-US/docs/Glossary/Inset_properties) {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}} refer to the physical dimensions of the viewport.
+- Features such as {{cssxref("margin-top")}}, {{cssxref("border-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("border-bottom-left-radius")}} reference specific sides of an element, and style features by that physical direction.
 
 This is opposed to {{glossary("logical properties")}}, which are relative to the content flow and use directional keywords that are relative to the block and inline axes.
 
