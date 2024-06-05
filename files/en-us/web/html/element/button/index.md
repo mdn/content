@@ -118,7 +118,7 @@ While `<button type="button">` has no default behavior, event handlers can be sc
 
 ### Icon buttons
 
-Buttons that only show an icon to represent do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
+Buttons that only display an icon do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
@@ -169,7 +169,9 @@ To describe the state of a button the correct ARIA attribute to use is [`aria-pr
 
 ### Button styles
 
-It is best to not override the default focus ring for elements that have focus. If the button styles are overridden, it is important to **ensure that the state change when a button has focus has enough contrast** so that people experiencing low vision conditions will be able to perceive it and people with cognitive differences will understand it. The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} that the User Agent determines via heuristics that the focus should be made evident on the element, such as when a `<button>` receives keyboard focus.
+It is best not to override the default focus ring for elements that have focus. If the button styles are overridden, it is important to **ensure that the focus state has enough contrast** so that people experiencing low vision conditions can perceive it and people with cognitive differences will understand it.
+
+The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} only when the User Agent's heuristics determine that the focus should be highlighted, such as when a `<button>` receives keyboard focus. See [[:focus vs :focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible)](/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) for more information.
 
 Color contrast ratio is determined by comparing the luminosity of the button text and background color values compared to the background the button is placed on. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 
