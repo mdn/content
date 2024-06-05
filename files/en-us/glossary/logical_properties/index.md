@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 CSS **logical properties** provide a way to lay out content based on the document's writing mode and direction rather than the physical dimensions of the viewport. This enables more flexible and maintainable designs, especially for websites supporting multiple languages.
 
-Whereas {{glossary("physical properties")}} define positions based on physical directions; with {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}} referring to the physical dimensions of the viewport and properties like {{cssxref("margin-top")}}, {{cssxref("border-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("border-bottom-left-radius")}}reference specific sides of an element, logical properties are relative to the content flow and use directional keywords that are relative to the block and inline axes.
+Whereas {{glossary("physical properties")}}, like {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("border-bottom-left-radius")}},  efine positions based on physical directions and reference specific sides of an element, logical properties logical properties such as {{cssxref("margin-block-start")}} and {{cssxref("padding-inline-end")}} use logical directional keywords that are relative to the content flow along the block and inline axes.
 
 ## Block direction
 
