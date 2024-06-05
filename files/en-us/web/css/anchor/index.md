@@ -83,7 +83,7 @@ If the positioned element does not have an anchor associated with it (i.e. via t
 
 For {{glossary("physical properties", "physical")}} inset values, the anchor side you position the positioned element relative to has to be along the same axis as the inset value being set. For example, `top: anchor(left)` is invalid.
 
-If `top: anchor(left 50px)` were specified, the fallback value would be used, so `top` would get a computed value of `50px`.
+If `top: anchor(left, 50px)` were specified, the fallback value would be used, so `top` would get a computed value of `50px`.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
