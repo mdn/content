@@ -167,13 +167,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("atob", "Window.atob()")}}
+- {{domxref("Window.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
   - : Displays an alert dialog.
 - {{domxref("Window.blur()")}} {{deprecated_inline}}
   - : Sets focus away from the window.
-- {{domxref("btoa", "Window.btoa()")}}
+- {{domxref("Window.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
 - {{domxref("Window.cancelAnimationFrame()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.

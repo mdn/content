@@ -1,7 +1,7 @@
 ---
 title: "Window: getDefaultComputedStyle() method"
 short-title: getDefaultComputedStyle()
-slug: Web/API/window/getDefaultComputedStyle
+slug: Web/API/Window/getDefaultComputedStyle
 page-type: web-api-instance-method
 status:
   - non-standard

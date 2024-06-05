@@ -134,7 +134,7 @@ Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
 setting the `this` keyword for the called function apply, and if you have not
 set `this` in the call or with `bind`, it will default to
-the `window` (or `global`) object. It will not be the same as the
+the `window` (or `global`) object, even in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). It will not be the same as the
 `this` value for the function that called `setTimeout`.
 
 See the following example:
