@@ -48,7 +48,7 @@ The key can contain three kinds of permissions:
 
 ## Host permissions
 
-> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and  [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest keys.
+> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
@@ -61,7 +61,7 @@ The extra privileges include:
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
 
-In Firefox, from version 56 onwards, extensions automatically get host permissions for their origin, which is of the form:
+In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
 
 ```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
