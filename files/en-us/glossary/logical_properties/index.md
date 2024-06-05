@@ -20,7 +20,7 @@ The **block-start** and **block-end** directions represent the _start edge_ and 
 
 The **inline axis** is perpendicular to the block axis. The inline axis represents the direction along which inline content, or **inline direction**, like text flows within a block. This is the horizontal direction of the content flow, going from left to right in left-to-right writing modes, like English, and right to left in right-to-left languages, like Arabic and Hebrew.
 
-**Inline-start** and **inline-end** represent the _start edge_ and _end edge_ of content along the inline axis, respectively, with the values and properties `inline-start` and `inline-end` being the equivalent of `left` and `right` properties and values in horizontal writing modes, but whether each means `right` or `left` depends on the writing direction (`inline-start` is `left` in left-to-right languages and `right` in right-to-left languages.)
+**Inline-start** and **inline-end** represent the _start edge_ and _end edge_ of content along the inline axis, respectively, with the values and properties `inline-start` and `inline-end` being equivalent to `left` and `right` properties and values in horizontal writing modes. Which ones are equivalent to `right` or `left` depends on the writing direction — for example `inline-start` is `left` in left-to-right languages and `right` in right-to-left languages.
 
 Therefore, logical properties, like {{cssxref("margin-block-start")}} and {{cssxref("padding-inline-end")}}, use logical keywords relative to the content flow.
 
