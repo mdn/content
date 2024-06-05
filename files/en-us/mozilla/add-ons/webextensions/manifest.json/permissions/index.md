@@ -48,7 +48,13 @@ The key can contain three kinds of permissions:
 
 ## Host permissions
 
-> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+> **Note:** How you request host permissions depends on whether you want them at install time or runtime and which manifest version your extension is using.
+> - Manifest V2:
+>   - install time request with this (`permissions`) manifest key.
+>   - runtime request with the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key.
+> - Manifest V3 or higher:
+>   - install time request with the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+>   - runtime request with the [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
