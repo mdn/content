@@ -61,7 +61,7 @@ a[class~="logo"] {
 ### Values
 
 - `<attr>`
-  - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute, including valid language-specific attributes (SVG, HTML, XML, etc), [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), or author-created attributes.
+  - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute. This can be any valid language-specific attribute (SVG, HTML, XML, etc), a [`data-*` attribute](/en-US/docs/Web/HTML/Global_attributes/data-*), or an author-created attribute.
 - `<value>`
   - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quotes is it contains spaces or special characters.
 - `s` or `i`
