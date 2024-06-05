@@ -22,8 +22,6 @@ The **inline axis** is perpendicular to the block axis. The inline axis represen
 
 **Inline-start** and **inline-end** represent the _start edge_ and _end edge_ of content along the inline axis, respectively, with the values and properties `inline-start` and `inline-end` being equivalent to `left` and `right` properties and values in horizontal writing modes. Which ones are equivalent to `right` or `left` depends on the writing direction — for example `inline-start` is `left` in left-to-right languages and `right` in right-to-left languages.
 
-Therefore, logical properties, like {{cssxref("margin-block-start")}} and {{cssxref("padding-inline-end")}}, use logical keywords relative to the content flow.
-
 ## See also
 
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
