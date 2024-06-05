@@ -108,9 +108,7 @@ If the mismatch in the number of animations and animation property values is inv
 
 ### Making text slide across the browser window
 
-This simple example styles the {{HTMLElement("p")}} element so that the text slides in from off the right edge of the browser window.
-
-Note that animations like this can cause the page to become wider than the browser window. To avoid this problem put the element to be animated in a container, and set {{cssxref("overflow")}}`:hidden` on the container.
+This basic example styles the {{HTMLElement("p")}} element using transitions so that the text slides in from off the right edge of the browser window.
 
 ```css
 p {
@@ -120,24 +118,22 @@ p {
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    translatex: 100%;
+    scalex: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    translatex: 0%;
+    scalex: 100%;
   }
 }
 ```
 
 In this example the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property, and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is named "slidein".
 
-If we wanted any custom styling on the {{HTMLElement("p")}} element to appear in browsers that don't support CSS animations, we would include it here as well; however, in this case we don't want any custom styling other than the animation effect.
+The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this case, we have just two keyframes. The first occurs at 0% (using the alias `from`). Here, we configure the {{cssxref("translatex")}} property of the element to be at 100% (that is, at the far right edge of the containing element), and the {{cssxref("scalex")}} of the element to be 300% (or three times its default inline size). This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
 
-The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this case, we have just two keyframes. The first occurs at 0% (using the alias `from`). Here, we configure the left margin of the element to be at 100% (that is, at the far right edge of the containing element), and the width of the element to be 300% (or three times the width of the containing element). This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
-
-The second (and final) keyframe occurs at 100% (using the alias `to`). The left margin is set to 0% and the width of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
+The second (and final) keyframe occurs at 100% (using the alias `to`). The {{cssxref("translatex")}} is set to 0% and the {{cssxref("scalex")}} of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
 
 ```html
 <p>
@@ -153,13 +149,17 @@ The second (and final) keyframe occurs at 100% (using the alias `to`). The left 
 
 ### Adding another keyframe
 
-Let's add another keyframe to the previous example's animation. Let's say we want the header's font size to increase as it moves from right to left for a while, then to decrease back to its original size. That's as simple as adding this keyframe:
+Let's add another keyframe to the previous example's animation. Let's say we want the header size to increase as it moves from right to left for a while, then to decrease back to its original size. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impact performance. Instead we scale the {{cssxref("::first-line")}} separately. That requires adding a second animation impacting only the header:
 
 ```css
-75% {
-  font-size: 300%;
-  margin-left: 25%;
-  width: 150%;
+@keyframes growshrink {
+  25%, 75% {
+    scale: 100%;
+  }
+
+  50% {
+    scalex: 200%;
+  }
 }
 ```
 
@@ -170,22 +170,30 @@ p {
   animation-duration: 3s;
   animation-name: slidein;
 }
+p::first-line {
+  animation-duration: 3s;
+  animation-name: growshrink;
+}
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  75% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
+    translatex: 100%;
+    scalex: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    translatex: 0%;
+    scalex: 100%;
+  }
+}
+
+@keyframes growshrink {
+  25%, 75% {
+    scale: 100%;
+  }
+
+  50% {
+    scalex: 200%;
   }
 }
 ```
@@ -198,7 +206,7 @@ p {
 </p>
 ```
 
-This tells the browser that 75% of the way through the animation sequence, the header should have its left margin at 25% and the width should be 150%.
+This tells the browser that for the first and last 25% of the animation, the first line should be normal, but scale it up and back in the middle of the animation
 
 > **Note:** Reload page to see the animation.
 
@@ -221,13 +229,13 @@ Adding it to the existing code:
 ```css
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    translatex: 100%;
+    scalex: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    translatex: 0%;
+    scalex: 100%;
   }
 }
 ```
@@ -260,13 +268,13 @@ And the rest of the code:
 ```css
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    translatex: 100%;
+    scalex: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    translatex: 0%;
+    scalex: 100%;
   }
 }
 ```
@@ -289,7 +297,7 @@ We'll modify the sliding text example to output some information about each anim
 
 #### Adding the CSS
 
-We start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the width and margin-left are manipulated to make the element slide across the screen.
+We start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the x-axis scale and translation are manipulated to make the element slide across the screen.
 
 ```css
 .slidein {
@@ -301,13 +309,13 @@ We start with creating the CSS for the animation. This animation will last for 3
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    translatex: 100%;
+    scalex: 300%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    translatex: 0%;
+    scalex: 100%;
   }
 }
 ```
