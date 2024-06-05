@@ -83,7 +83,6 @@ This article provides information about the changes in Firefox 127 that affect d
 - Fixed a bug in `WebDriver:SwitchToFrame` which could fail if the tab was in the middle of a navigation ([Firefox bug 1817820](https://bugzil.la/1817820)).
 - Fixed a bug where `WebDriver:GetElementText` failed to correctly capitalize text containing an underscore ([Firefox bug 1888004](https://bugzil.la/1888004)).
 
-
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
