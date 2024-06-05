@@ -153,7 +153,8 @@ Let's add another keyframe to the previous example's animation. Let's say we wan
 
 ```css
 @keyframes growshrink {
-  25%, 75% {
+  25%,
+  75% {
     scale: 100%;
   }
 
