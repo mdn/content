@@ -63,7 +63,7 @@ a[class~="logo"] {
 - `<attr>`
   - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute. This can be any valid language-specific attribute (SVG, HTML, XML, etc), a [`data-*` attribute](/en-US/docs/Web/HTML/Global_attributes/data-*), or an author-created attribute.
 - `<value>`
-  - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quotes is it contains spaces or special characters.
+  - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quoted if it contains spaces or special characters.
 - `s` or `i`
   - : Case sensitivity or insenstivity flag. If included before the closing bracket (`]`), makes the value case sensitive or insensitive, irrespective of the markup language.
 
