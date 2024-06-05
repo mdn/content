@@ -49,6 +49,7 @@ The key can contain three kinds of permissions:
 ## Host permissions
 
 > **Note:** How you request host permissions depends on whether you want them at install time or runtime and which manifest version your extension is using.
+>
 > - Manifest V2:
 >   - install time request with this (`permissions`) manifest key.
 >   - runtime request with the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key.
