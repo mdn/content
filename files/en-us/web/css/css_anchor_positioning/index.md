@@ -40,6 +40,7 @@ In addition, the specification provides CSS-only mechanisms to:
 ### Data types and values
 
 - [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
+- [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value)
 
 ### HTML attributes
 
