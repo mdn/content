@@ -11,7 +11,7 @@ CSS **physical properties** define positions based on physical directions or ele
 - The [inset properties](/en-US/docs/Glossary/Inset_properties) {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}} refer to the physical dimensions of the viewport.
 - Features such as {{cssxref("margin-top")}}, {{cssxref("border-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("border-bottom-left-radius")}} reference specific sides of an element, and style features by that physical direction.
 
-This is opposed to {{glossary("logical properties")}}, which are relative to the content flow and use directional keywords that are relative to the block and inline axes.
+This is opposed to {{glossary("logical properties")}}, which are relative to the content flow and use directional keywords relative to the block and inline axes.
 
 ## See also
 
