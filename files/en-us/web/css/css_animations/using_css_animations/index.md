@@ -205,9 +205,9 @@ p span {
 
 ```html
 <p>
-  The Caterpillar and <span>Alice</span> looked at each other for some time in silence: at
-  last the Caterpillar took the hookah out of its mouth, and addressed her in a
-  languid, sleepy voice.
+  The Caterpillar and <span>Alice</span> looked at each other for some time in
+  silence: at last the Caterpillar took the hookah out of its mouth, and
+  addressed her in a languid, sleepy voice.
 </p>
 ```
 
