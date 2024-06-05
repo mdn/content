@@ -66,7 +66,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving_selector_list).
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accepts a [forgiving selector list](#forgiving_selector_list) as its sole argument.
 
 ### Invalid selector list
 
@@ -120,7 +120,7 @@ h3 {
 }
 ```
 
-The difference between the two is that the specificity of `:is()` is its most specific argument, whereas the `:where()` selector and the forgiving selector list parameter do not add any specificity weight.
+The difference between the two is that the specificity of `:is()` is its most specific argument, whereas the specificity of `:where()` and its arguments is always zero.
 
 ### Relative selector list
 
