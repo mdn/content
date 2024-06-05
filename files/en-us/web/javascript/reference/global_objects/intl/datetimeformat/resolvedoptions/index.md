@@ -64,9 +64,9 @@ The resulting object has the following properties:
   - : The values provided for these properties in the `options` argument, if any.
 
 Although `dateStyle` and `timeStyle` are shortcuts for individual date and time component
-styles, the exact (locale dependent) component styles they resolve to are not 
-included in the resolved options. This ensures the result of `resolvedOptions()` can 
-be passed directly to the `Intl.DateTimeFormat()` constructor (because an `options` object 
+styles, the exact (locale dependent) component styles they resolve to are not
+included in the resolved options. This ensures the result of `resolvedOptions()` can
+be passed directly to the `Intl.DateTimeFormat()` constructor (because an `options` object
 with both `dateStyle` or `timeStyle` and individual date or time component styles is not valid).
 
 ## Examples
