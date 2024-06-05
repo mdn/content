@@ -211,7 +211,7 @@ p span {
 </p>
 ```
 
-This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back down again in the middle.
+This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back down again in the middle. We set the spans's {{cssxref("display")}} property to `inline-block` as the `transform` properties have no effect on non-replaced {{glossary("inline-level content")}}.
 
 > **Note:** Reload page to see the animation.
 
