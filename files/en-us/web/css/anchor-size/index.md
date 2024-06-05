@@ -42,18 +42,18 @@ The parameters are:
 - `anchor-size`
 
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. Valid values include:
-      - `width`
-        - : The width of the anchor element.
-      - `height`
-        - : The height of the anchor element.
-      - `block`
-        - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/Containing_block) in the block direction.
-      - `inline`
-        - : The length of the anchor element's containing block in the inline direction.
-      - `self-block`
-        - : The length of the anchor element in the block direction.
-      - `self-inline`
-        -: The length of the anchor element in the inline direction.
+    - `width`
+      - : The width of the anchor element.
+    - `height`
+      - : The height of the anchor element.
+    - `block`
+      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/Containing_block) in the block direction.
+    - `inline`
+      - : The length of the anchor element's containing block in the inline direction.
+    - `self-block`
+      - : The length of the anchor element in the block direction.
+    - `self-inline`
+      -: The length of the anchor element in the inline direction.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
   - : Specifies a fallback value the function should resolve to if the `anchor-size()` function would otherwise be invalid.
