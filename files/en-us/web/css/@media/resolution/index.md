@@ -24,44 +24,30 @@ The `resolution` feature is specified as a {{cssxref("&lt;resolution&gt;")}} val
 ### CSS
 
 ```css
-/* Exact resolution */
+/* Exact resolution with unit `dpi` */
 @media (resolution: 150dpi) {
   p {
     color: red;
   }
 }
 
-/* Minimum resolution */
-@media (min-resolution: 72dpi) {
+/* Minimum resolution unit `dppx`, `x` */
+@media (min-resolution: 2dppx) {
   p {
     text-decoration: underline;
   }
 }
 
-/* Maximum resolution */
-@media (max-resolution: 300dpi) {
+@media (min-resolution: 2x) {
+  p {
+    text-decoration: underline;
+  }
+}
+
+/* Maximum resolution with unit `dpcm` */
+@media (max-resolution: 2dpcm) {
   p {
     background: yellow;
-  }
-}
-
-/* Resolution unit `dppx`, `x`  */
-@media (resolution: 2dppx) {
-  p {
-    background: blue;
-  }
-}
-
-@media (resolution: 2x) {
-  p {
-    background: blue;
-  }
-}
-
-/* Resolution unit `dpcm`  */
-@media (resolution: 2dpcm) {
-  p {
-    background: green;
   }
 }
 ```
