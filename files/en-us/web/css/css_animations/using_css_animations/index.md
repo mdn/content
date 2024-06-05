@@ -118,12 +118,12 @@ p {
 
 @keyframes slidein {
   from {
-    translatex: 100%;
+    translatex: 100vw;
     scalex: 300%;
   }
 
   to {
-    translatex: 0%;
+    translatex: 0vw;
     scalex: 100%;
   }
 }
@@ -178,12 +178,12 @@ p::first-line {
 
 @keyframes slidein {
   from {
-    translatex: 100%;
+    translatex: 100vw;
     scalex: 300%;
   }
 
   to {
-    translatex: 0%;
+    translatex: 0vw;
     scalex: 100%;
   }
 }
@@ -231,12 +231,12 @@ Adding it to the existing code:
 ```css
 @keyframes slidein {
   from {
-    translatex: 100%;
+    translatex: 100vw;
     scalex: 300%;
   }
 
   to {
-    translatex: 0%;
+    translatex: 0vw;
     scalex: 100%;
   }
 }
@@ -270,12 +270,12 @@ And the rest of the code:
 ```css
 @keyframes slidein {
   from {
-    translatex: 100%;
+    translatex: 100vw;
     scalex: 300%;
   }
 
   to {
-    translatex: 0%;
+    translatex: 0vw;
     scalex: 100%;
   }
 }
@@ -311,12 +311,12 @@ We start with creating the CSS for the animation. This animation will last for 3
 
 @keyframes slidein {
   from {
-    translatex: 100%;
+    translatex: 100vw;
     scalex: 300%;
   }
 
   to {
-    translatex: 0%;
+    translatex: 0vw;
     scalex: 100%;
   }
 }
