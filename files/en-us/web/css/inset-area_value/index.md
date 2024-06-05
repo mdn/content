@@ -56,7 +56,7 @@ inset-area: unset;
 
 `inset-area` works on the concept of a 3x3 grid of tiles, with the anchor element inside the center tile:
 
-![The inset-area grid, as described below](../inset-area/inset-area.png)
+![The inset-area grid, as described below](inset-area.png)
 
 The grid tiles are broken up into rows and columns:
 
