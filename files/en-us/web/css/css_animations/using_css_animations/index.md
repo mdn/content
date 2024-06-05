@@ -147,9 +147,9 @@ The second (and final) keyframe occurs at 100% (using the alias `to`). The {{css
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
-### Adding another keyframe
+### Adding another keyframe animation
 
-Let's add another keyframe to the previous example's animation. Let's say we want the header size to grow and then shrink back to its original size as it moves from right to left. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impacts performance. Instead, we scale the {{cssxref("::first-line")}} separately. That requires adding a second animation impacting only the header:
+Let's add another keyframe to the previous example's animation. Let's say we want Alice's name to turn pink and grow and then shrink back to its original size and color as it moves from right to left. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impacts performance. Instead, we wrap her name in a {{htmlelement("span")}} and then scale an assign a color to that separately. That requires adding a second animation impacting only the span:
 
 ```css
 @keyframes growshrink {
@@ -160,6 +160,7 @@ Let's add another keyframe to the previous example's animation. Let's say we wan
 
   50% {
     scale: 200%;
+    color: magenta;
   }
 }
 ```
@@ -171,7 +172,8 @@ p {
   animation-duration: 3s;
   animation-name: slidein;
 }
-p::first-line {
+p span {
+  display: inline-block;
   animation-duration: 3s;
   animation-name: growshrink;
 }
@@ -196,19 +198,20 @@ p::first-line {
 
   50% {
     scale: 200%;
+    color: magenta;
   }
 }
 ```
 
 ```html
 <p>
-  The Caterpillar and Alice looked at each other for some time in silence: at
+  The Caterpillar and <span>Alice</span> looked at each other for some time in silence: at
   last the Caterpillar took the hookah out of its mouth, and addressed her in a
   languid, sleepy voice.
 </p>
 ```
 
-This tells the browser the paragraph should be normal for the first and last 25% of the animation, but scaled up and back down again in the middle.
+This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back down again in the middle.
 
 > **Note:** Reload page to see the animation.
 
