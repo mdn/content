@@ -20,7 +20,10 @@ _The `GeolocationPosition` interface doesn't inherit any properties._
 
 ## Instance methods
 
-_The `GeolocationPosition` interface neither implements, nor inherits any methods._
+_The `GeolocationPosition` interface doesn't inherit any methods._
+
+- {{domxref("GeolocationPosition.toJSON()")}} {{experimental_inline}}
+  - : Returns a JSON representation of the `GeolocationPosition` object and enables serialization with {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 
