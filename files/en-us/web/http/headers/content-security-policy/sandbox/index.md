@@ -45,8 +45,6 @@ where `<value>` can optionally be one of the following values:
 
 - `allow-downloads`
   - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
-- `allow-downloads-without-user-activation` {{experimental_inline}}
-  - : Allows for downloads to occur without a gesture from the user.
 - `allow-forms`
   - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
 - `allow-modals`

@@ -32,9 +32,7 @@ A new string containing the combined text of the strings provided.
 
 ## Description
 
-The `concat()` function concatenates the string arguments to the calling
-string and returns a new string. Changes to the original string or the returned string
-don't affect the other.
+The `concat()` function concatenates the string arguments to the calling string and returns a new string.
 
 If the arguments are not of the type string, they are converted to string values before
 concatenating.

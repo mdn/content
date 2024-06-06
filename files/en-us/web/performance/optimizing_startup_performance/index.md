@@ -62,7 +62,7 @@ In terms of responsiveness, users won't notice a delay of 50ms or less. Any dela
 There are other things beyond going asynchronous, which can help you improve your app's startup time. Here are a few of them:
 
 - Download time
-  - : Keep in mind how long it will take the user to download your application's data. If your application is very popular, or has to re-download content frequently, you should try to have as fast a hosting server as possible. Always [compress](/en-US/docs/Glossary/GZip_compression) your data to make it as small as you can.
+  - : Keep in mind how long it will take the user to download your application's data. If your application is very popular, or has to re-download content frequently, you should try to have as fast a hosting server as possible. Always [compress](/en-US/docs/Glossary/gzip_compression) your data to make it as small as you can.
 - Data size
   - : Do your best to optimize the size of your data; smaller level files will download and be processed faster than larger ones.
 - Subjective factors

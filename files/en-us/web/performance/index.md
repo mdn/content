@@ -160,7 +160,7 @@ Headers
 
 - [Content-encoding](/en-US/docs/Web/HTTP/Headers/Content-Encoding)
 - HTTP/2
-- [gZip](/en-US/docs/Glossary/GZip_compression)
+- [gZip](/en-US/docs/Glossary/gzip_compression)
 - Client Hints
 
 Tools
