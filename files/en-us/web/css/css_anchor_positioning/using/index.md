@@ -8,11 +8,9 @@ page-type: guide
 
 The **CSS anchor positioning** module defines features that allow you to tether elements together. Certain elements are defined as **anchor elements**; **anchor-positioned** elements can then have their size and position set based on the size and location of the anchor elements to which they are bound.
 
-CSS anchor positioning also provides CSS-only mechanisms for specifying alternative positions for an anchored element. For example, if a tooltip is anchored to a form field but the tip would be rendered offscreen in its default position settings, the browser can try rendering it in alternative positions so it is placed onscreen, or, alternatively, hide it altogether if desired.
+CSS anchor positioning also provides CSS-only mechanisms for specifying alternative positions for an anchor-positioned element. For example, if a tooltip is anchored to a form field but the tip would be rendered offscreen in its default position settings, the browser can try rendering it in alternative positions so it is placed onscreen, or, alternatively, hide it altogether if desired.
 
-This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below.
-
-> **Note:** For information on position try options and conditional hiding, see [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
+This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
 
 ## Fundamental concepts
 
@@ -21,16 +19,17 @@ It's very common to want to tether, or bind, one element to another. For example
 - Error messages that appear alongside form controls.
 - Tooltips or infoboxes that pop up next to a UI element to provide more information about it.
 - Settings or options dialogs that can be accessed to quickly configure UI elements.
+- Drop-down or popover menus that appear next to an associated navigation bar or button.
 
 Modern interfaces frequently call for some content — often reusable and dynamically-generated — to be situated relative to an anchor element. Creating such use cases would be fairly straightforward if the element to tether to (aka the **anchor element**) was always in the same place in the UI and the tethered element (aka the **anchor-positioned element**, or just **positioned element**) could always be placed immediately before or after it in the source order. However, things are rarely that simple. The location of positioned elements relative to their anchor element needs to be maintained and adjusted as the anchor element moves or otherwise changes configuration (e.g. by scrolling, changing the viewport size, drag and drop, etc.).
 
-For example, if an element such as a form field gets close to the edge of the viewport, its tooltip may end up offscreen. A method needs to be set to bind the tooltip to its form control and ensure the tooltip is kept fully visible on-screen as long as the form field is visible, automatically moving the tooltip if needed. You may have noticed this as the default behavior in your operating system when you right-click (<kbd>Ctrl</kbd> + click) context menus on your desktop or laptop.
+For example, if an element such as a form field gets close to the edge of the viewport, its tooltip may end up offscreen. Generally, you want to bind the tooltip to its form control and ensure the tooltip is kept fully visible on-screen as long as the form field is visible, automatically moving the tooltip if needed. You may have noticed this as the default behavior in your operating system when you right-click (<kbd>Ctrl</kbd> + click) context menus on your desktop or laptop.
 
-Historically, associating an element with another element and dynamically changing a positioned element's location and size based on an anchor's position required JavaScript, which added complexity and performance issues and wasn't guaranteed to work for all scenarios. The features defined in the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module enable implementing such use cases performantly and declaratively with CSS instead of JavaScript.
+Historically, associating an element with another element and dynamically changing a positioned element's location and size based on an anchor's position required JavaScript, which added complexity and performance issues. It also wasn't guaranteed to work in all situations. The features defined in the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module enable implementing such use cases performantly and declaratively with CSS instead of JavaScript.
 
 ## Associating anchor and positioned elements
 
-To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This can be done via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute. Elements need to be absolutely or fixed [positioned](/en-US/docs/Learn/CSS/CSS_layout/Positioning) to be associated with anchors.
+To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This can be done via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute.
 
 ### CSS-only method
 
@@ -75,6 +74,8 @@ The positioned element is then associated with the anchor element by setting its
 }
 ```
 
+> **Note:** Elements need to be absolutely or fixed [positioned](/en-US/docs/Learn/CSS/CSS_layout/Positioning) to be associated with anchors.
+
 We'll apply the above CSS to the following HTML:
 
 ```html
@@ -93,7 +94,9 @@ The anchor and infobox are now associated together, but for the moment you'll ha
 
 ### HTML method
 
-To associate a positioned element with an anchor in HTML, you need to give the anchor element an [`id`](/en-US/docs/Web/HTML/Global_attributes/id), and then reference that `id` in the positioned element's [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute:
+To associate a positioned element with an anchor in HTML, you can use the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute. You need to give the anchor element an [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `anchor` attribute is then set on the anchor-positioned element, with a value equal to the `id` of the anchor element you want to associate it with.
+
+We have done this in the HTML below:
 
 ```html
 <div class="anchor" id="example-anchor">⚓︎</div>
@@ -137,7 +140,7 @@ This gives us the same result that we achieved earlier with CSS. We associated t
 
 {{ EmbedLiveSample("HTML method", "100%", "120") }}
 
-> **Note:** The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute is currently non-standard and disabled by default in supporting browsers. See the compatibility data on its linked reference page for information on how to enable it for testing purposes.
+> **Note:** The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute currently has less support than the CSS equivalent. See the [`anchor` attribute compatibility table](/en-US/docs/Web/HTML/Global_attributes/anchor#browser_compatibility) for more information.
 
 We've associated the two elements, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor.
 
@@ -145,11 +148,13 @@ We've associated the two elements, but they are not yet tethered. To tether them
 
 As we saw above, associating a positioned element with an anchor is not really much use on its own. You also need to specify the position of the element relative to the anchor. This is done either by setting a CSS [`anchor()`](/en-US/docs/Web/CSS/anchor) function value on an [inset property](/en-US/docs/Glossary/Inset_properties), specifying an {{cssxref("inset-area")}}, or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
+> **Note:** The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditional_hiding_using_position-visibility).
+
 ### Using inset properties with `anchor()` function values
 
-Conventional absolutely and fixed positioned elements are explicitly positioned by setting {{cssxref("length")}} or {{cssxref("percentage")}} value on inset properties. With `position: absolute`, this inset position value is an absolute distance relative to the edges of nearest positioned ancestor. With `position: fixed`, the inset position value is an absolute distance relative to the viewport.
+Conventional absolutely and fixed positioned elements are explicitly positioned by setting {{cssxref("length")}} or {{cssxref("percentage")}} values on {{glossary("inset properties")}}. With `position: absolute`, this inset position value is an absolute distance relative to the edges of the nearest positioned ancestor. With `position: fixed`, the inset position value is an absolute distance relative to the viewport.
 
-The CSS anchor positioning module enables positioning an element relative to the edges of an anchor element. The module defines the [`anchor()`](/en-US/docs/Web/CSS/anchor) function, which is a valid value for each of the inset properties. When used, the function sets the inset position value as an absolute distance relative to the anchor element by defining the anchor element, the side of the anchor element the positioned element is being positioned relative to, and the distance from that side.
+CSS anchor positioning changes this paradigm, enabling anchor-positioned elements to be placed relative to the edges of their associated anchor(s). The module defines the [`anchor()`](/en-US/docs/Web/CSS/anchor) function, which is a valid value for each of the inset properties. When used, the function sets the inset position value as an absolute distance relative to the anchor element by defining the anchor element, the side of the anchor element the positioned element is being positioned relative to, and the distance from that side.
 
 The syntax looks like this:
 
@@ -158,26 +163,27 @@ anchor(anchor-element anchor-side, length-percentage)
 ```
 
 - `anchor-element`
-  - : The`<dashed-ident>` value set as the `anchor-name` of the anchor element you want to position an element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the `position-anchor` property, is used.
-- `anchor-side`
-  - : Specifies the physical (`top`, `left`, etc.) or logical (`start`, `end`, etc.) side of the anchor element that the positioned element will be positioned relative to.|
+  - : The`<dashed-ident>` name set as the value of the [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property of the anchor element you want to position the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, is used.
+- [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
+  - : Specifies the physical (`top`, `left`, etc.) or logical (`start`, `end`, etc.) side of the anchor element that the positioned element will be positioned relative to. If this is not on the same axis as the inset property on which it is set, the fallback value is used.
 - {{cssxref("length-percentage")}}
-  - : Specifies a fallback value the function should resolve to if the `anchor()` function would otherwise be invalid.
+  - : Specifies the distance to use as a fallback value if the element is not absolutely or fixed positioned, if the axis of the anchor side is not valid for the property on which the `anchor()` function is set, or the anchor element doesn't exist.
 
-The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often add a {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element. For example:
+The most common `anchor()` parameters you'll use will refer to a side of the default anchor. You will also often add {{cssxref("margin")}} to create spacing between the edge of the anchor and positioned element.
+
+For example, this rule positions the right edge of the positioned element flush to the anchor element's left edge, then adds some `margin-left` to make some space between the edges:
 
 ```css
 .positionedElement {
-  /* Position the right edge of the positioned element
-     flush to the anchor element's left edge then add
-     margin to make some space between the adges  */
   right: anchor(left);
   margin-left: 10px;
 }
+```
 
+The return value of an `anchor()` function is a length or percentage. This means you can use it within a {{cssxref("calc()")}} function. This rule positions the positioned element's logical block end edge 10px from the anchor element's logical block start edge, adding the spacing using the `calc()` function so we don't need to add a margin:
+
+```css
 .positionedElement {
-  /* Position the positioned element's logical block end edge
-     10px from the anchor element's logical block start edge  */
   inset-block-end: calc(anchor(start) + 10px);
 }
 ```
@@ -239,7 +245,7 @@ body {
 }
 ```
 
-The infobox is associated with the anchor via the anchor name and given fixed positioning. By including the {{cssxref("inset-block-start")}} and {{cssxref("inset-inline-start")}} properties (which are equivalent to {{cssxref("top")}} and {{cssxref("left")}} in horizontal writing modes) we have tethered it to the anchor. We add a `margin` to the infobox to add space between the positioned element and its anchor:
+The infobox is associated with the anchor via the anchor name and given fixed positioning. By including the {{cssxref("inset-block-start")}} and {{cssxref("inset-inline-start")}} properties (which are equivalent to {{cssxref("top")}} and {{cssxref("left")}} in horizontal left-to-right writing modes) we have tethered it to the anchor. We add a `margin` to the infobox to add space between the positioned element and its anchor:
 
 ```css hidden
 .infobox {
@@ -276,32 +282,39 @@ The positioned element is 5px below and 5px to the right of the anchor element. 
 
 ### Using an `inset-area`
 
-The {{cssxref("inset-area")}} property provides an alternative to the `anchor()` function for positioning elements relative to anchors. The `inset-area` property works on the concept of a 3x3 grid of tiles, with the anchor element inside the center tile:
+The {{cssxref("inset-area")}} property provides an alternative to the `anchor()` function for positioning elements relative to anchors. The `inset-area` property works on the concept of a 3x3 grid of tiles, with the anchor element inside the center tile. The anchor element is contained inside the center tile, and the `inset-area` property can be used to position the anchor positioned element in any of the 9 tiles, or have it span across one, two, or three tiles.
 
 ![The inset-area grid, as described below](inset-area.png)
 
 The grid tiles are broken up into rows and columns:
 
-- The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents — `start`, `center`, and `end`.
-- The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents — `start`, `center`, and `end`.
+- The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `start`, `center`, and `end`.
+- The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `start`, `center`, and `end`.
 
-The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block.
+The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the anchor element, while the distance between the center tile and the grid's outer edge is defined by the positioned element's containing block.
 
-`inset-area` property values are composed of one or two values based on the row and column values described above, with a feature extra options available, to define the region of the grid the positioned element should be placed inside.
+`inset-area` property values are composed of one or two values based on the row and column values described above, with some extra options available to define the region of the grid the positioned element should be placed inside.
 
 For example:
 
-- You can specify two of the above values to place the positioned element in that specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom center square.
-- You can specify a row or column value plus a `span-*` value. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the amount of that column to span. For example:
-  - `top span-left` causes the positioned element to be placed in the top row, and span across the center and left tiles of that row.
-  - `right span-bottom` causes the positioned element to be placed in the right column, and span across the center and bottom tiles of that column.
-  - `bottom span-all` causes the positioned element to be placed in the bottom row, and span across the left, center, and right tiles of that row.
-- If you only specify one value, the effect is different depending on which value is set:
-  - A physical side value (`top`, `bottom`, `left`, or `right`) acts as if the other value is `span-all`. So for example, `top` gives the same effect as `top span-all`.
-  - A logical side value (`start` or `end`) acts as if the other value is set to the same value; for example `start` gives the same effect as `start start`.
-  - A value of `center` acts as if both values are set to `center` (so, `center center`),
+You can specify two values to place the positioned element in a specific grid square. For example:
 
-> **Note:** See the {{cssxref("inset-area")}} property for a detailed description of all the available values.
+- `top left` (logical equivalent `start start`) will place the positioned element in the top-right square.
+- `bottom center` (logical equivalent `end center`) will place the positioned element in the bottom center square.
+
+You can specify a row or column value plus a `span-*` value. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the amount of that column to span. For example:
+
+- `top span-left` causes the positioned element to be placed in the top row, and span across the center and left tiles of that row.
+- `y-end span-x-end` causes the positioned element to be placed in the end of the y column, and span across the center and end tiles of that column.
+- `block-end span-all` causes the positioned element to be placed in the block end row, and span across the inline-start, center, and inline-end tiles of that row.
+
+If you only specify one value, the effect is different depending on which value is set:
+
+- A physical side value (`top`, `bottom`, `left`, or `right`) or axis value (y-start, y-end, x-start, x-end) acts as if the other value is `span-all`.  For example, `top` gives the same effect as `top span-all`.
+- A logical side value (`start` or `end`) acts as if the other value is set to the same value; for example `start` gives the same effect as `start start`.
+- A value of `center` acts as if both values are set to `center` (so, `center center`).
+
+> **Note:** See the {{cssxref("inset-area")}} property for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
 
 Let's demonstrate some of these values in action; this example uses exactly the same HTML as the previous example, except that we've included a {{htmlelement("select")}} element that allows you to change the `inset-area` value applied to the positioned element, changing its position relative to the anchor.
 
@@ -340,17 +353,20 @@ Let's demonstrate some of these values in action; this example uses exactly the 
     <option>bottom</option>
     <option>left</option>
     <option>right</option>
+    <option>start</option>
+    <option>end</option>
     <option>top left</option>
     <option>top right</option>
     <option>bottom left</option>
     <option>bottom right</option>
     <option>top span-left</option>
     <option>bottom span-right</option>
-    <option>left span-top</option>
-    <option>right span-bottom</option>
+    <option>start span-start</option>
+    <option>end span-end</option>
     <option>center</option>
+    <option>center span-all</option>
     <option>bottom center</option>
-    <option>bottom span-all</option>
+    <option>end span-all</option>
   </select>
 </form>
 ```
@@ -398,7 +414,7 @@ form {
 }
 ```
 
-The infobox is given fixed positioning and associated with the anchor in the same way as before. This time however, it is tethered to the anchor with `inset-area: top;`, which causes it to be positioned at the top of the inset-area grid. This will be overridden once you select different values from the `<select>` menu.
+The infobox is given fixed positioning and associated with the anchor in the same way as before. By default it is tethered to the anchor with `inset-area: top;`, which causes it to be positioned at the top of the inset-area grid. This will be overridden once you select different values from the `<select>` menu.
 
 ```css hidden
 .infobox {
@@ -441,23 +457,23 @@ The result is as follows. Try selecting new `inset-area` values from the `<selec
 
 {{ EmbedLiveSample("Using an `inset-area`", "100%", "250") }}
 
-### An aside on positioned element width
+### Positioned element width
 
-In this example, the positioned element has not had a specific size set on it, in either dimension. This is not normally what you'd do in production code, but we did it deliberately to allow you to observe the behavior this causes.
+In this example, we did not explicitly size the positioned element in either dimension. We deliberately omitted sizing to allow you to observe the behavior this causes.
 
-If the positioned element is placed into a corner or side grid square (say with `inset-area: top left`) or is set to span two or more grid squares (for example using `inset-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although you'll see it constrained by the edge of the `<body>` if you place it on the left of the grid.
+When a positioned element is placed into `inset-area` grid cells without explicit sizing, it aligns with the grid area specified and behaves as if {{cssxref("width")}} were set to {{cssxref("max-content")}}. It is sized according to its [containing block](/en-US/docs/Web/CSS/Containing_block) size, which is the width of its content. This size was imposed by setting `position: fixed`. Auto-sized absolutely and fixed-positioned elements are automatically sized so as to fit their contents, stretching as wide as needed to fit the text content, while constrained by the edge of the viewport. in this case, when placed on the left side of the grid with any `left` or `inline-start` value, the text wraps.
 
-If the positioned element is vertically aligned with the center tile (say with `inset-area: bottom center`), it will align with the specified grid square but adopt the same width as the anchor element — it is being sized according to the anchor element's containing block size. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
+If the positioned element is centered vertically, such as with `inset-area: bottom center`, it will align with the grid cell specified and the width will be the same as the anchor element. In this case, its minimum height is the anchor element's containing block size. It will not overflow, as the `min-width` is {{cssxref("min-content")}}, meaning it will be at least as wide as its longest word.
 
 ## Centering on the anchor using `anchor-center`
 
+While you can center the anchor-positioned element using `inset-area`'s `center` values, inset properties combined with the `anchor()` function provide more control over the exact position. CSS anchor positioning provides a way to center an anchor-positioned element relative to its anchor when inset properties, rather than `inset-area`, are used to tether.  
+
 The properties {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("align-items")}} (and their {{cssxref("place-items")}} and {{cssxref("place-self")}} shorthands) exist to allow developers to easily align elements in the inline or block direction inside various layout systems, for example along the main or cross axis in the case of flex children.
 
-CSS anchor positioning provides a new value for these properties, `anchor-center`, which will align a positioned element with the center of its default anchor.
+CSS anchor positioning provides an additional value for these properties, `anchor-center`, which aligns a positioned element with the center of its default anchor.
 
-Let's have a look at how this works.
-
-The HTML is the same as in the previous example, as is the CSS for the `<body>` and anchor elements.
+This example uses the same HTML as the previous example, and the same CSS for the `<body>` and anchor elements. The infobox is given fixed positioning and tethered to the anchor's bottom edge. `justify-self: anchor-center` is then used to make sure it is centered horizontally on the anchor's center:
 
 ```html hidden
 <p>
@@ -510,8 +526,6 @@ body {
 }
 ```
 
-The infobox is given fixed positioning and tethered to the anchor's bottom edge. `justify-self: anchor-center` is then used to make sure it is centered horizontally on the anchor's center:
-
 ```css hidden
 .infobox {
   color: darkblue;
@@ -534,16 +548,28 @@ The infobox is given fixed positioning and tethered to the anchor's bottom edge.
 }
 ```
 
-This gives us the following result:
+This centers the anchor-positioned element at the bottom of its anchor:
 
 {{ EmbedLiveSample("Centering on the anchor using `anchor-center`", "100%", "250") }}
 
 ## Sizing elements based on anchor size
 
-As well as positioning an element relative to its anchor's position, you can also size an element relative to its anchor's size. This is achieved using the the [`anchor-size()`](/en-US/docs/Web/CSS/anchor) function, which can be set as a value for the following sizing properties:
+As well as positioning an element relative to its anchor's position, you can also size an element relative to its anchor's size using the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function within a sizing property value. 
 
-- Physical sizing properties: {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, and {{cssxref("max-height")}}.
-- Logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-block-size")}}, {{cssxref("min-inline-size")}}, {{cssxref("max-block-size")}}, and {{cssxref("max-inline-size")}}.
+Sizing properties that can accept an `anchor-size()` value are:
+
+- {{cssxref("width")}}
+- {{cssxref("height")}}
+- {{cssxref("min-width")}}
+- {{cssxref("min-height")}}
+- {{cssxref("max-width")}}
+- {{cssxref("max-height")}}
+- {{cssxref("block-size")}}
+- {{cssxref("inline-size")}}
+- {{cssxref("min-block-size")}}
+- {{cssxref("min-inline-size")}}
+- {{cssxref("max-block-size")}}
+- {{cssxref("max-inline-size")}}
 
 `anchor-size()` functions resolve to {{cssxref("length")}} values. Their syntax looks like this:
 
@@ -551,23 +577,27 @@ As well as positioning an element relative to its anchor's position, you can als
 anchor-size(anchor-element anchor-size, length-percentage)
 ```
 
-- `anchor-element` is the `anchor-name` set on the anchor element you want to size the positioned element relative to. This is optional — if omitted, the element is sized relative to the anchor referenced by its `position-anchor` property (the element's **default anchor**).
-- `anchor-size` specifies the dimension of the anchor element that the positioned element will be sized relative to. This can be expressed using physical (`width` or `height`) or logical (`inline`, `block`, `self-inline`, or `self-block`) values.
-  > **Note:** The dimension of the positioned element does not need to match the anchor's dimension it is being sized relative to. For example, `width: anchor-size(height);` is valid.
-- The {{cssxref("length-percentage")}} is a fallback value that specifies what the function should resolve to if the `anchor-size()` function is invalid.
+- `anchor-element`
+  - : The`<dashed-ident>` name set as the value of the [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, is used.
+- [`<anchor-size>`](/en-US/docs/Web/CSS/anchor#anchor-size)
+  - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. This can be expressed using physical (`width` or `height`) or logical (`inline`, `block`, `self-inline`, or `self-block`) values.
+- {{cssxref("length-percentage")}}
+  - : Specifies the distance to use as a fallback value if the element is not absolutely or fixed positioned, or the anchor element doesn't exist.
 
-The most common `anchor-size()` functions you'll use will just refer to a dimension of the default anchor. You can also use them inside {{cssxref("calc")}} functions, to modify the size applied to the positioned element. For example:
+The most common `anchor-size()` functions you'll use will just refer to a dimension of the default anchor. You can also use them inside {{cssxref("calc")}} functions, to modify the size applied to the positioned element.
+
+For example, this rule sizes the positioned element's width equal to the anchor element's width:
 
 ```css
 .elem {
-  /* Size the positioned element's width
-     equal to the anchor element's width  */
   width: anchor-size(width);
 }
+```
 
+This rule size the positioned element's inline size equal to 4 times the anchor element's inline size, with the multiplication being done inside a `calc()` function:
+
+```css
 .elem {
-  /* Size the positioned element's inline size
-     equal to 4 times the anchor element's inline size  */
   inline-size: calc(anchor-size(self-inline) * 4);
 }
 ```
@@ -664,16 +694,14 @@ In addition, we increase the anchor element's {{cssxref("width")}} on {{cssxref(
 }
 ```
 
-This gives us the following result:
+Hover or focus the anchor element — the positioned element grows as the anchor grows, demonstrating that the anchor-positioned element's size is relative to its anchor:
 
 {{ EmbedLiveSample("Sizing elements based on anchor size", "100%", "250") }}
 
-Try hovering or focusing the anchor element — you'll see both the anchor and the positioned element grow in width, proving that the latter's size is relative to the former's size.
-
 ## See also
 
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
 - [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)

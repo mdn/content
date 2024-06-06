@@ -40,7 +40,10 @@ In addition, the specification provides CSS-only mechanisms to:
 ### Data types and values
 
 - [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
+- [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
+- [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
 - [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value)
+- [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-options#try-tactic)
 
 ### HTML attributes
 
@@ -52,16 +55,15 @@ In addition, the specification provides CSS-only mechanisms to:
 - {{domxref("CSSPositionTryRule")}}
 - {{domxref("Element.anchorElement")}} {{non-standard_inline}}
 
-## Glossary terms
-
-- [Inset properties](/en-US/docs/Glossary/Inset_properties)
-
 ## Guides
 
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-  - : A introductory guide that explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level.
+
+  - : An introductory guide to fundamental anchor positioning concepts, including associating, positioning, and sizing elements relative to their anchor.
+
 - [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
-  - : Explains how to use the mechanisms CSS anchor positioning provides to stop anchor-positioned elements overflowing their containing elements or the viewport — position try options and conditional hiding.
+
+  - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try options and conditionally hiding elements.
 
 ## Related concepts
 
@@ -98,6 +100,10 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("justify-self")}}
   - {{cssxref("place-items")}}
   - {{cssxref("place-self")}}
+
+### Glossary terms
+
+- [Inset properties](/en-US/docs/Glossary/Inset_properties)
 
 ## Specifications
 
