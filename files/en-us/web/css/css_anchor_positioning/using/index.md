@@ -554,7 +554,7 @@ This centers the anchor-positioned element at the bottom of its anchor:
 
 ## Sizing elements based on anchor size
 
-As well as positioning an element relative to its anchor's position, you can also size an element relative to its anchor's size using the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function within a sizing property value. 
+As well as positioning an element relative to its anchor's position, you can also size an element relative to its anchor's size using the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function within a sizing property value.
 
 Sizing properties that can accept an `anchor-size()` value are:
 
