@@ -260,11 +260,11 @@ To use try options that aren't available via the above mechanisms, you can creat
   - : The developer-defined name for the position try option. This name can then be specified within a comma-separated list of try options within the {{cssxref("position-try-options")}} property value.
 - `declaration-list`
   - : A list of descriptors defining the behavior of the custom try option, for example, how it will result in the positioned element being placed or sized. The limited list of property descriptors allowed includes:
-      - {{cssxref("position-anchor")}}
-      - {{cssxref("inset-area")}}
-      - [Inset properties](/en-US/docs/Glossary/Inset_properties)
-      - Sizing properties ({{cssxref("width")}}, {{cssxref("block-size")}}, etc.)
-      - Self-alignment properties ({{cssxref("align-self")}}, {{cssxref("justify-items")}}, etc.; see [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center))
+    - {{cssxref("position-anchor")}}
+    - {{cssxref("inset-area")}}
+    - [Inset properties](/en-US/docs/Glossary/Inset_properties)
+    - Sizing properties ({{cssxref("width")}}, {{cssxref("block-size")}}, etc.)
+    - Self-alignment properties ({{cssxref("align-self")}}, {{cssxref("justify-items")}}, etc.; see [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center))
 
 In this example, we set up and use several custom try options. We use the same base HTML and CSS code as in the previous examples.
 
