@@ -21,7 +21,7 @@ if (sender.dtmf.canInsertDTMF) {
   const duration = 500;
   sender.dtmf.insertDTMF("1234", duration);
 } else {
-  console.log('DTMF function not available');
+  console.log("DTMF function not available");
 }
 ```
 
