@@ -124,7 +124,7 @@ When using the deprecated callback-based version of `setRemoteDescription()`, th
 - `InvalidStateError` {{deprecated_inline}}
   - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
 - `InvalidSessionDescriptionError` {{deprecated_inline}}
-  - : The {{domxref("RTCSessionDescription")}} specified by the `sessionDescription` parameter is invalid.
+  - : The {{domxref("RTCSessionDescriptionInit")}} specified by the `sessionDescription` parameter is invalid.
 
 ## Examples
 
@@ -168,4 +168,5 @@ When our promise fulfillment handler is called, indicating that this has been do
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
-  {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+  {{domxref("RTCPeerConnection.currentRemoteDescription")}} 
+- {{domxref("RTCSessionDescriptionInit")}}

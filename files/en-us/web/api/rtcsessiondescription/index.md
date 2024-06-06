@@ -25,7 +25,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 _The `RTCSessionDescription` doesn't inherit any methods._
 
 - {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}
-  - : This constructor returns a new `RTCSessionDescription`. The parameter is a `RTCSessionDescriptionInit` dictionary containing the values to assign the two properties.
+  - : This constructor returns a new `RTCSessionDescription`. The parameter is a {{domxref("RTCSessionDescriptionInit")}} dictionary containing the values to assign the two properties.
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
@@ -57,6 +57,16 @@ signalingChannel.onmessage = (evt) => {
 };
 ```
 
+## RTCSessionDescription, RTCSessionDescriptionInit, and RTCLocalSessionDescriptionInit
+
+There are other similar interfaces that are used to provide the SDP values for `RTCSessionDescription` objects. These are:
+- {{domxref("RTCSessionDescriptionInit")}}
+- {{domxref("RTCLocalSessionDescriptionInit")}}
+
+These interfaces are used in several methods of the {{domxref("RTCPeerConnection")}} interface utilize these interfaces, including {{domxref("RTCPeerConnection.createOffer")}}, {{domxref("RTCPeerConnection.createAnswer")}}, {{domxref("RTCPeerConnection.setLocalDescription")}}, and {{domxref("RTCPeerConnection.setRemoteDescription")}}.
+
+In essence, `RTCSessionDescriptionInit` and `RTCLocalSessionDescriptionInit` are defined as dictionaries, enabling users to provide necessary values without creating a full `RTCSessionDescription` object. Also, `RTCPeerConnection.setLocalDescription()` accepts `RTCLocalSessionDescriptionInit` as an argument, allowing users to omit this argument altogether. This eliminates the need for separate calls to `RTCPeerConnection.createOffer()` and `RTCPeerConnection.setLocalDescription()`. (For more information, see [Implicit description in RTCPeerConnection.setLocalDescription()](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#implicit_description)).
+
 ## Specifications
 
 {{Specifications}}
@@ -69,3 +79,5 @@ signalingChannel.onmessage = (evt) => {
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}
+- {{domxref("RTCSessionDescriptionInit")}}
+- {{domxref("RTCLocalSessionDescriptionInit")}}
