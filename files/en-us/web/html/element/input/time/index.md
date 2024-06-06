@@ -130,7 +130,7 @@ The simplest use of `<input type="time">` involves a basic `<input>` and {{htmle
 
 You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
 
-It takes an integer value defining to the number of seconds you want to increment by; the default value is 60 seconds. With this as the default, most user agent time UIs display hours and minutes, but not seconds. Including the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute on any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
+It takes an integer value defining the the number of seconds you want to increment by; the default value is 60 seconds. With this as the default, most user agent time UIs display hours and minutes but not seconds. Including the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute with any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
 
 ```html
 <form>
