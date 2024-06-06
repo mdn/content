@@ -467,7 +467,7 @@ If the positioned element is centered vertically, such as with `inset-area: bott
 
 ## Centering on the anchor using `anchor-center`
 
-While you can center the anchor-positioned element using `inset-area`'s `center` values, inset properties combined with the `anchor()` function provide more control over the exact position. CSS anchor positioning provides a way to center an anchor-positioned element relative to its anchor when inset properties, rather than `inset-area`, are used to tether.  
+While you can center the anchor-positioned element using `inset-area`'s `center` values, inset properties combined with the `anchor()` function provide more control over the exact position. CSS anchor positioning provides a way to center an anchor-positioned element relative to its anchor when inset properties, rather than `inset-area`, are used to tether.
 
 The properties {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("align-items")}} (and their {{cssxref("place-items")}} and {{cssxref("place-self")}} shorthands) exist to allow developers to easily align elements in the inline or block direction inside various layout systems, for example along the main or cross axis in the case of flex children.
 
