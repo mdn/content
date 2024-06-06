@@ -19,7 +19,7 @@ A boolean value which is `true` if the `RTCDTMFSender` is capable of sending DTM
 ```js
 if (sender.dtmf.canInsertDTMF) {
   const duration = 500;
-  sender.dtmf.insertDTMF('1234', duration);
+  sender.dtmf.insertDTMF("1234", duration);
 } else {
   console.log('DTMF function not available');
 }
