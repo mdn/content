@@ -14,6 +14,7 @@ browser-compat: api.RTCPeerConnection.createDTMFSender
 The **`createDTMFSender()`** method of the {{domxref("RTCPeerConnection")}} interface creates a new {{domxref("RTCDTMFSender")}} object associated with the specified {{domxref("MediaStreamTrack")}}, which can be used to send DTMF tones over the connection.
 
 This method is deprecated and should not be used. Instead, use the {{domxref("RTCRtpSender.dtmf")}} property to access the DTMF sender associated with a specific sender.
+
 ## Syntax
 
 ```js
@@ -34,7 +35,7 @@ A new {{domxref("RTCDTMFSender")}} object.
 This example creates a new DTMF sender associated with the specified track.
 
 ```js
-navigator.getUserMedia({audio: true }, (stream) => {
+navigator.getUserMedia({ audio: true }, (stream) => {
   const pc = new RTCPeerConnection();
   const track = stream.getAudioTracks()[0];
   const dtmfSender = pc.createDTMFSender(track);
@@ -46,7 +47,7 @@ navigator.getUserMedia({audio: true }, (stream) => {
 Above example can be rewritten using the `RTCRtpSender.dtmf` property:
 
 ```js
-navigator.getUserMedia({audio: true }, (stream) => {
+navigator.getUserMedia({ audio: true }, (stream) => {
   const pc = new RTCPeerConnection();
   const track = stream.getAudioTracks()[0];
   const sender = pc.addTrack(track, stream);
