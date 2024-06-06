@@ -60,6 +60,7 @@ signalingChannel.onmessage = (evt) => {
 ## RTCSessionDescription, RTCSessionDescriptionInit, and RTCLocalSessionDescriptionInit
 
 There are other similar interfaces that are used to provide the SDP values for `RTCSessionDescription` objects. These are:
+
 - {{domxref("RTCSessionDescriptionInit")}}
 - {{domxref("RTCLocalSessionDescriptionInit")}}
 

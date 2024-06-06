@@ -16,7 +16,6 @@ The **`RTCLocalSessionDescriptionInit`** dictionary is used to provide {{Glossar
 - `sdp`
   - : A string containing the {{Glossary("SDP")}} describing the session. If `type` is `"rollback"`, this member is unused.
 
-
 ## Specifications
 
 https://w3c.github.io/webrtc-pc/#dom-rtclocalsessiondescriptioninit

@@ -168,5 +168,5 @@ When our promise fulfillment handler is called, indicating that this has been do
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
-  {{domxref("RTCPeerConnection.currentRemoteDescription")}} 
+  {{domxref("RTCPeerConnection.currentRemoteDescription")}}
 - {{domxref("RTCSessionDescriptionInit")}}
