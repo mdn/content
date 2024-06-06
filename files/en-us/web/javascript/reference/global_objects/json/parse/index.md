@@ -159,18 +159,24 @@ When `JSON.parse` receives a string that does not conform to the JSON grammar, i
 Arrays and objects cannot have [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in JSON:
 
 ```js example-bad
-JSON.parse("[1, 2, 3, 4, ]"); // SyntaxError: Unexpected token ] in JSON at position 13
-JSON.parse('{"foo": 1, }'); // SyntaxError: Unexpected token } in JSON at position 12
+JSON.parse("[1, 2, 3, 4, ]");
+// SyntaxError: Unexpected token ] in JSON at position 13
+
+JSON.parse('{"foo": 1, }');
+// SyntaxError: Unexpected token } in JSON at position 12
 ```
 
-String literals in JSON must be delimited by double (not single) quotes:
+JSON strings must be delimited by double (not single) quotes:
 
 ```js example-bad
-JSON.parse("{'foo': 1}"); // SyntaxError: Unexpected token ' in JSON at position 1
-JSON.parse("'string'"); // SyntaxError: Unexpected token ' in JSON at position 0
+JSON.parse("{'foo': 1}");
+// SyntaxError: Unexpected token ' in JSON at position 1
+
+JSON.parse("'string'");
+// SyntaxError: Unexpected token ' in JSON at position 0
 ```
 
-So, if you are writing JSON in a string literal, you should either use single quotes as the string literal's delimiters, or otherwise escape the double quotes in the JSON string:
+If you are writing JSON inside a JavaScript string literal, you should either use single quotes to delimit the JavaScript string literal, or escape the double quotes that delimit the JSON string:
 
 ```js-nolint example-good
 JSON.parse('{"foo": 1}'); // OK
