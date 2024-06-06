@@ -26,9 +26,9 @@ You'll notice that throughout this article, we ask you to name folders and files
 
 File names also map to URLs. For example, if you have a file called `my_file.html` at the root of your server-served directory, generally it will be accessible at `https://example.com/my_file.html` by most web servers' default behavior. Some servers will replace the spaces in your filenames with "%20" (the character code for spaces in URLs), which can create subtle bugs with some server-side logic if they assume that file names and URLs match perfectly.
 
-It's also advisable to separate words with hyphens, rather than underscores: `my-file.html` vs. `my_file.html`. The [Google search engine treats a hyphen as a word separator but does not regard an underscore that way](https://developers.google.com/search/docs/crawling-indexing/url-structure). This of course can be remedied by configuring your server to replace underscores with hyphens, but that's extra work and more bug-prone with diverging file names and URLs.
+It's also advisable to separate words with hyphens, rather than underscores: `my-file.html` vs. `my_file.html`. The [Google search engine treats a hyphen as a word separator but does not regard an underscore that way](https://developers.google.com/search/docs/crawling-indexing/url-structure). This can be remedied by configuring your server to replace underscores with hyphens, but that's extra work and more bug-prone with diverging file names and URLs.
 
-For these reasons, it is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer problems down the road.
+For these reasons, it is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way, you'll encounter fewer problems down the road.
 
 ## What structure should your website have?
 
