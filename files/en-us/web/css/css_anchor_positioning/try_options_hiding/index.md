@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-When using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), an important consideration is ensuring that anchor-positioned elements will always appear in a convenient place for the user to interact with them if at all possible, regardless of where the anchor is positioned. For example, when you scroll the page, anchors and their associated positioned elements will move towards the top of the viewport. When a positioned element starts to overflow the viewport, you will want to change its  position to put it back on the screen again, for example on the opposite side of the anchor.
+When using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), an important consideration is ensuring that anchor-positioned elements will always appear in a convenient place for the user to interact with them if at all possible, regardless of where the anchor is positioned. For example, when you scroll the page, anchors and their associated positioned elements will move towards the top of the viewport. When a positioned element starts to overflow the viewport, you will want to change its position to put it back on the screen again, for example on the opposite side of the anchor.
 
 Alternatively, in some situations it may be preferrable to just hide overflowing positioned elements — for example, if their anchors are offsceen their content might not make sense.
 
