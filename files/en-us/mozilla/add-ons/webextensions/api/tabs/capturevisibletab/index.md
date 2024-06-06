@@ -11,6 +11,8 @@ Creates a data URL encoding the image of an area of the active tab in the specif
 
 > **Note:** In Firefox 125 and earlier, this method was only available with the `<all_urls>` permission.
 
+In addition to sites that extensions can normally access, this method allows extensions to capture sensitive sites that are otherwise restricted, including browser UI pages and other extensions' pages. These sensitive sites can only be captured with the `activeTab` permission. Chrome also permits file URLs to be captured when the extension has been granted file access.
+
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
