@@ -182,7 +182,7 @@ Beyond accessibility, this is another good reason to properly set up `<label>` e
 
 ## Validation
 
-While radio buttons have no real value to be constrained, if any radio button in a same-name group of radio buttons has the `required` attribute set, and none of the radio buttons is checked, the [`valueMissing`](/en-US/docs/Web/API/ValidityState/valueMissing) property of a {{domxref("ValidityState")}} object will return true during validation.
+In the case of a radio button with the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute set or a same-named group of radio buttons in which at least one member has required set, a radio button needs to be selected for the control to be considered valid. If no radio button is checked, the [`valueMissing`](/en-US/docs/Web/API/ValidityState/valueMissing) property of a {{domxref("ValidityState")}} object will return true during validation, and the browser will ask the user to select an option.
 
 ## Styling radio inputs
 
