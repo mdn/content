@@ -376,9 +376,9 @@ You can also embed the module's script directly into the HTML file by placing th
 </script>
 ```
 
-The script into which you import the module features basically acts as the top-level module. If you omit it, Firefox for example gives you an error of "SyntaxError: import declarations may only appear at top level of a module".
+You can only use `import` and `export` statements inside modules, not regular scripts, so the place where you eventually connect your modules to the HTML page (adding event listeners, changing DOM, etc.) needs to be a module too (the "entry-point module"). If you omit the `type="module"`, Firefox for example gives you an error of "SyntaxError: import declarations may only appear at top level of a module".
 
-You can only use `import` and `export` statements inside modules, not regular scripts.
+You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
 
 > **Note:** Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
