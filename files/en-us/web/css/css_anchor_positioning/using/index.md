@@ -310,7 +310,7 @@ You can specify a row or column value plus a `span-*` value. The first value spe
 
 If you only specify one value, the effect is different depending on which value is set:
 
-- A physical side value (`top`, `bottom`, `left`, or `right`) or axis value (y-start, y-end, x-start, x-end) acts as if the other value is `span-all`. For example, `top` gives the same effect as `top span-all`.
+- A physical side value (`top`, `bottom`, `left`, or `right`) or coordinate value (`y-start`, `y-end`, `x-start`, `x-end`) acts as if the other value is `span-all`. For example, `top` gives the same effect as `top span-all`.
 - A logical side value (`start` or `end`) acts as if the other value is set to the same value; for example `start` gives the same effect as `start start`.
 - A value of `center` acts as if both values are set to `center` (so, `center center`).
 
