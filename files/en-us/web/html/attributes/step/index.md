@@ -11,7 +11,7 @@ The **`step`** attribute is a number that specifies the granularity that the val
 
 The `step` sets the _stepping interval_ when clicking up and down spinner buttons, moving a slider left and right on a range, and validating the different date types. If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (minute, week, month, day) for the date/time input types. The value must be a positive number - integer or float — or the special value `any`, which means no stepping is implied and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max)).
 
-The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 1 second, with 900 being equal to 15 minutes.
+The default stepping value for `number` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer. The default stepping value for `time` is 60 seconds, with 900 being equal to 15 minutes.
 
 ## Syntax
 
@@ -51,11 +51,11 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td>1 (second)</td>
+      <td>60 (seconds)</td>
       <td>
         <code
           >&#x3C;input type="datetime-local" min="2019-12-25T19:30"
-          step="7"></code
+          step="900"></code
         >
       </td>
     </tr>
@@ -89,7 +89,7 @@ If `step` is omitted, any integer is valid but floats like 4.2 are not valid as 
 
 ### `min` impact on step
 
-The value of `min` defines valid values, even if the `step` attribute is not included. This is because `step` defaults to 1.
+The value of `min` defines valid values, even if the `step` attribute is not included. This is because `step` defaults to `1` for the `number` input type.
 
 In this example, we add a big red border around invalid inputs:
 
