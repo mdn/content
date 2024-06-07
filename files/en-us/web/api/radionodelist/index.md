@@ -7,7 +7,7 @@ browser-compat: api.RadioNodeList
 
 {{APIRef("HTML DOM")}}
 
-The **`RadioNodeList`** interface represents a collection of elements in a {{HTMLElement("form")}} or a {{HTMLElement("fieldset")}} element, returned by a call to {{domxref("HTMLFormControlsCollection.namedItem()")}}.
+The **`RadioNodeList`** interface represents a collection of elements in a {{HTMLElement("form")}} or a {{HTMLElement("fieldset")}} element, returned by a call to {{domxref("HTMLFormControlsCollection.namedItem()")}}. It is not exposed as a global.
 
 {{InheritanceDiagram}}
 
@@ -21,6 +21,29 @@ _The `RadioNodeList` interface inherits the properties of_ {{domxref("NodeList")
 ## Instance methods
 
 _The `RadioNodeList` interface inherits the methods of_ {{domxref("NodeList")}}.
+
+## Examples
+
+### Acquiring an instance of RadioNodeList
+
+`RadioNodeList` is not an exposed global, but you can get an instance of it and then access the `RadioNodeList` constructor itself, by using {{domxref("HTMLFormControlsCollection.namedItem()")}}:
+
+```js
+const form = document.createElement("form");
+for (let i = 0; i < 3; i++) {
+  const input = document.createElement("input");
+  input.value = i;
+  input.type = "radio";
+  input.name = "radio";
+  form.appendChild(input);
+}
+const instance = form.elements.namedItem("radio");
+console.log(instance);
+
+const RadioNodeList = instance.constructor;
+```
+
+However, this is rarely useful. Usually, you only interact with a `RadioNodeList` instance through the {{domxref("RadioNodeList/value", "value")}} property, which allows you to get and set the value of the checked radio button in the collection.
 
 ## Specifications
 
