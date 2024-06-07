@@ -41,7 +41,7 @@ The sub-properties of the {{cssxref("animation")}} property are:
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
 
-## Defining animation sequence using keyframes
+## Defining an animation sequence using keyframes
 
 After you've configured the animation's timing, you need to define the appearance of the animation. This is done by establishing one or more keyframes using the {{cssxref("@keyframes")}} at-rule. Each keyframe describes how the animated element should render at a given time during the animation sequence.
 
@@ -108,7 +108,7 @@ If the mismatch in the number of animations and animation property values is inv
 
 ### Making text slide across the browser window
 
-This basic example styles the {{HTMLElement("p")}} element using transitions so that the text slides in from off the right edge of the browser window.
+This basic example styles the {{HTMLElement("p")}} element using the {{cssxref("translate")}} and  {{cssxref("scale")}} transition properties so that the text slides in from off the right edge of the browser window.
 
 ```css
 p {
@@ -118,22 +118,22 @@ p {
 
 @keyframes slidein {
   from {
-    translate: 100vw;
-    scale: 300%;
+    translate: 150vw 0;
+    scale: 200% 1;
   }
 
   to {
-    translate: 0vw;
-    scale: 100%;
+    translate: 0 0;
+    scale: 100% 1;
   }
 }
 ```
 
-In this example the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property, and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is named "slidein".
+In this example, the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is `slidein`.
 
-The keyframes are defined using the {{cssxref("@keyframes")}} at-rule. In this case, we have just two keyframes. The first occurs at 0% (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at 100% (that is, at the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 300% (or three times its default inline size). This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
+In this case, we have just two keyframes. The first occurs at `0%` (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at `150vw` (that is, beyond the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 200% (or two times its default inline size), causing the paragraph to be twice as wide as it's `<body>` containing block. This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
 
-The second (and final) keyframe occurs at 100% (using the alias `to`). The {{cssxref("translate")}} property is set to 0% and the {{cssxref("scale")}} of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.
+The second (and final) keyframe occurs at `100%` (using the alias `to`). The {{cssxref("translate")}} property is set to `0%` and the {{cssxref("scale")}} of the element is set to `1` which is `100%`. This causes the header to finish its animation in its default state, flush against the left edge of the content area.
 
 ```html
 <p>
@@ -149,7 +149,7 @@ The second (and final) keyframe occurs at 100% (using the alias `to`). The {{css
 
 ### Adding another keyframe animation
 
-Let's add another keyframe to the previous example's animation. Let's say we want Alice's name to turn pink and grow and then shrink back to its original size and color as it moves from right to left. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impacts performance. Instead, we wrap her name in a {{htmlelement("span")}} and then scale an assign a color to that separately. That requires adding a second animation impacting only the span:
+Let's add another keyframe to the previous example's animation. Let's say we want Alice's name to turn pink and grow and then shrink back to its original size and color as it moves from right to left. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impacts performance. Instead, we wrap her name in a {{htmlelement("span")}} and then scale and assign a color to that separately. That requires adding a second animation impacting only the `<span>`:
 
 ```css
 @keyframes growshrink {
@@ -180,13 +180,13 @@ p span {
 
 @keyframes slidein {
   from {
-    translate: 100vw;
-    scale: 300%;
+    translate: 150vw 0;
+    scale: 200% 1;
   }
 
   to {
-    translate: 0vw;
-    scale: 100%;
+    translate: 0 0;
+    scale: 100% 1;
   }
 }
 
@@ -229,23 +229,21 @@ p {
 }
 ```
 
-Adding it to the existing code:
-
-```css
+```css hidden
 @keyframes slidein {
   from {
-    translate: 100vw;
-    scale: 300%;
+    translate: 150vw 0;
+    scale: 200% 1;
   }
 
   to {
-    translate: 0vw;
-    scale: 100%;
+    translate: 0 0;
+    scale: 100% 1;
   }
 }
 ```
 
-```html
+```html hidden
 <p>
   The Caterpillar and Alice looked at each other for some time in silence: at
   last the Caterpillar took the hookah out of its mouth, and addressed her in a
@@ -268,23 +266,21 @@ p {
 }
 ```
 
-And the rest of the code:
-
-```css
+```css hidden
 @keyframes slidein {
   from {
-    translate: 100vw;
-    scale: 300%;
+    translate: 150vw 0;
+    scale: 200% 1;
   }
 
   to {
-    translate: 0vw;
-    scale: 100%;
+    translate: 0 0;
+    scale: 100% 1;
   }
 }
 ```
 
-```html
+```html hidden
 <p>
   The Caterpillar and Alice looked at each other for some time in silence: at
   last the Caterpillar took the hookah out of its mouth, and addressed her in a
@@ -314,13 +310,13 @@ We start with creating the CSS for the animation. This animation will last for 3
 
 @keyframes slidein {
   from {
-    translate: 100vw;
-    scale: 300%;
+    translate: 150vw 0;
+    scale: 200% 1;
   }
 
   to {
-    translate: 0vw;
-    scale: 100%;
+    translate: 0 0;
+    scale: 100% 1;
   }
 }
 ```
