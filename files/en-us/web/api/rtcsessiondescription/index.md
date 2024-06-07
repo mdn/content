@@ -77,15 +77,12 @@ signalingChannel.onmessage = (evt) => {
   const message = JSON.parse(evt.data);
   if (message.type && message.sdp) {
     // This line is changed not to use RTCSessionDescription constructor
-    pc.setRemoteDescription(message).then(
-      () => {
-        // if we received an offer, we need to answer
-        if (pc.remoteDescription.type === "offer") {
-          pc.createAnswer(localDescCreated, logError);
-        }
-      },
-      logError,
-    );
+    pc.setRemoteDescription(message).then(() => {
+      // if we received an offer, we need to answer
+      if (pc.remoteDescription.type === "offer") {
+        pc.createAnswer(localDescCreated, logError);
+      }
+    }, logError);
   } else {
     pc.addIceCandidate(
       new RTCIceCandidate(message.candidate),
