@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Color spaces** are named organizations of colors for underlying color models of coordinate-based color arrangements. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color) relate to a color space. Color spaces are mostly three-dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, and can be transformed from one color space to another, while still looking the same.
+**Color spaces** are named organizations of colors for underlying color models of coordinate-based color arrangements. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color) relate to a color space. Most color spaces are three- or four- dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, and can be transformed from one color space to another, while still looking the same.
 
 Color spaces categorize and define specific ranges of colors. Each color space is defined by a mathematical model and associated rule set. Each color space has a defined {{glossary("Gamut", "gamut")}}, which refers to the specific range of colors it can represent. These rules enable consistent and reproducible color representation across different devices and software.
 
@@ -26,7 +26,7 @@ There are several RGB color spaces, like the _Adobe RGB_ color space, that can r
 
 CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), and {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness). There are also the `srgb`, `srgb-linear`, `a98-rgb`, and `prophoto-rgb` color spaces for the [`color()`](/en-US/docs/Web/CSS/color_value/color) function.
 
-The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, not restricted to sRGB only.
+The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color — it is not restricted to sRGB.
 
 The `rgb()` color function is not the only color function that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/en-US/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/en-US/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
 
@@ -62,7 +62,7 @@ The CIELAB (or CIELab) color space, also referred to as L\*a\*b* (or Lab* for sh
 
 Lab is a rectangular coordinate system, with a central lightness `L` axis. Positive values along the `a` axis are a purplish red while negative values are the complement: green. Positive values along the `b` axis are yellow and negative are blue/violet. Desaturated colors have small values for `a` and `b` with greater absolute values being more saturated.
 
-CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` and `oklch` are polar, cylindrical coordinate systems using polar coordinates `C` (chroma) and `H` (hue) rather than axes.
+CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` and `oklch` are polar, cylindrical coordinate systems, that use polar coordinates `C` (chroma) and `H` (hue) rather than axes.
 
 > **Note:** The hue and lightness in `lch()` and `oklch` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
 
