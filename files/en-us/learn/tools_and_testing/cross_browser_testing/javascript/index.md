@@ -335,7 +335,7 @@ function main(err) {
 }
 ```
 
-So first we run a conditional that checks whether the function `browserSupportsAllFeatures()` returns true. If it does, we run the `main()` function, which will contain all our app's code. `browserSupportsAllFeatures()` looks like this:
+So first we run a conditional that checks whether the function `browserSupportsAllFeatures()` returns `true`. If it does, we run the `main()` function, which will contain all our app's code. `browserSupportsAllFeatures()` looks like this:
 
 ```js
 function browserSupportsAllFeatures() {
@@ -343,7 +343,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/en-US/docs/Web/API/fetch) function exist in the browser. If both do, the function returns true. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called loadScript(), which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
+Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/en-US/docs/Web/API/fetch) function exist in the browser. If both do, the function returns `true`. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called `loadScript()`, which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
 
 ```js
 function loadScript(src, done) {
