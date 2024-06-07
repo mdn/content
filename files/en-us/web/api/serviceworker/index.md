@@ -22,9 +22,8 @@ The `ServiceWorker` interface is dispatched a set of lifecycle events — `insta
 Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
 
-Currently the `ServiceWorker` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} for Chrome and Firefox.
-
-Service workers can currently only be registered in the Window scope, because the `ServiceWorker` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} in some or all browsers. Check [browser compatibility](#browser_compatibility) for information.
+Service workers can only be registered in the Window scope in some or all browsers, because the `ServiceWorker` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}.
+Check the [browser compatibility](#browser_compatibility) for information.
 
 {{InheritanceDiagram}}
 
