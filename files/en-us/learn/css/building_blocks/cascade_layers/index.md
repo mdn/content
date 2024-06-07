@@ -429,7 +429,7 @@ div {
 
 {{EmbedLiveSample("Precedence order of nested cascade layers", "100%", "250")}}
 
-Following properties have been used for the demo:
+Here's a summary of the properties that are used and why each declaration is applied:
 
 - `background-color`: Because unlayered normal styles have precedence over layered normal styles, `wheat` color wins.
 - `border`: Because within a layer non-nested styles have precedence over normal nested styles, `red` color wins.
