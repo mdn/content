@@ -298,7 +298,7 @@ You can get additional control over animations — as well as useful information
 
 We'll modify the sliding text example to output some information about each animation event when it occurs, so we can get a look at how they work.
 
-We've included the same keyframe animation,  start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
+We've included the same keyframe animation, start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
 
 ```css
 .slidein {
