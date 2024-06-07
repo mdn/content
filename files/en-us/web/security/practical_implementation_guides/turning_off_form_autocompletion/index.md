@@ -1,6 +1,6 @@
 ---
 title: How to turn off form autocompletion
-slug: Web/Security/Practical_implementation/Turning_off_form_autocompletion
+slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 page-type: guide
 ---
 

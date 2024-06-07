@@ -1,6 +1,6 @@
 ---
-title: Referrer policy
-slug: Web/Security/Practical_implementation/Referrer_policy
+title: Referrer policy configuration
+slug: Web/Security/Practical_implementation_guides/Referrer_policy
 page-type: guide
 ---
 

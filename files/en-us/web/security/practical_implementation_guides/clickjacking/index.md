@@ -1,6 +1,6 @@
 ---
 title: Clickjacking prevention
-slug: Web/Security/Practical_implementation/Clickjacking
+slug: Web/Security/Practical_implementation_guides/Clickjacking
 page-type: guide
 ---
 

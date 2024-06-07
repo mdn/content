@@ -1,6 +1,6 @@
 ---
-title: Cross-origin Resource Sharing (CORS)
-slug: Web/Security/Practical_implementation/CORS
+title: Cross-origin Resource Sharing (CORS) configuration
+slug: Web/Security/Practical_implementation_guides/CORS
 page-type: guide
 ---
 
@@ -16,7 +16,7 @@ Use `Access-Control-Allow-Origin` to define which foreign origins are allowed ma
 
 If present, `Access-Control-Allow-Origin` should specify the minimum possible number of origins and resources for your site to function. For example, if your server provides both a website and an API intended for remote `XMLHttpRequest` access, only the API resources should return the `Access-Control-Allow-Origin` header.
 
-Failure to set `Access-Control-Allow-Origin` appropriately will allow unauthorized origins to read the contents of any page on your site. This can be especially dangerous if those sites are able to send credentials: Your site could be vulnerable to [CSRF](/en-US/docs/Web/Security/Practical_implementation/CSRF_prevention) attacks.
+Failure to set `Access-Control-Allow-Origin` appropriately will allow unauthorized origins to read the contents of any page on your site. This can be especially dangerous if those sites are able to send credentials: Your site could be vulnerable to [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) attacks.
 
 If credentialed access is required from specific origins, ensure `Access-Control-Allow-Origin` is set only to those origins, rather than reflecting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) header. If public non-credentialed access is required, set `Access-Control-Allow-Origin` to `*` and omit the `Access-Control-Allow-Credentials` header. Otherwise, omit both headers.
 
@@ -28,7 +28,7 @@ Allow any site to read the contents of a JavaScript library:
 Access-Control-Allow-Origin: *
 ```
 
-> **Note:** Note that this would be required for [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation/SRI) to work.
+> **Note:** Note that this would be required for [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) to work.
 
 Allow `https://random-dashboard.example.org` to read the returned results of an API:
 

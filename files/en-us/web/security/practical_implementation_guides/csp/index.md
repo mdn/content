@@ -1,6 +1,6 @@
 ---
-title: Content Security Policy (CSP)
-slug: Web/Security/Practical_implementation/CSP
+title: Content Security Policy (CSP) implementation
+slug: Web/Security/Practical_implementation_guides/CSP
 page-type: guide
 ---
 

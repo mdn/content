@@ -1,16 +1,16 @@
 ---
-title: "Security: Practical implementation"
-slug: Web/Security/Practical_implementation
+title: "Practical security implementation guides"
+slug: Web/Security/Practical_implementation_guides
 page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-This section provides opinionated guides detailing best practices for implementing security features on websites. It does not cover all possible security eventualities and does not guarantee that your site is 100% secure, but following these guides will make your sites significantly more secure.
+There is plenty of sensitive information on the web — such as names, addresses, and banking information — and plenty of bad actors using a wide variety exploits to steal this information and use it for personal gain. The focus of [web security](/en-US/docs/Web/Security) is to protect against these exploits and secure your users' sensitive data. This page lists guides that detail the best practices for implementing security features on websites. While these guides do not cover all possible security scenarios and cannot guarantee complete security of your website, following the information and best practices in these guides will make your sites significantly more secure.
 
 ## Content security fundamentals
 
-Most of the content in this section has direct links to the [Mozilla Observatory](/en-US/observatory/) tool. The pages detail how to fix the issues highlighted by the Observatory tests, and as such, Observatory will link to appropriate sections in the test results to provide guidance. Mozilla's internal developer teams use this guidance when implementing websites.
+These guides are directly related to the [MDN Observatory](/en-US/observatory/) tool. Observatory performs security audits on a website and provides a grade and score along with recommendations for fixing the security issues it finds. These guides explain how to resolve issues surfaced by the MDN Observatory tests: the tool links to the relevant guide for each issue, helping guide you towards an effective resolution. Interestingly, Mozilla's internal developer teams use this guidance when implementing websites to ensure that security best practices are applied.
 
 The guides are listed in the order that we recommend they are implemented. This order is based on a combination of security impact and ease of implementation from an operational and developmental perspective.
 

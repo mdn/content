@@ -1,6 +1,6 @@
 ---
-title: Robots.txt
-slug: Web/Security/Practical_implementation/Robots_txt
+title: Robots.txt configuration
+slug: Web/Security/Practical_implementation_guides/Robots_txt
 page-type: guide
 ---
 

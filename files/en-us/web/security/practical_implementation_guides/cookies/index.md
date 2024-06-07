@@ -1,6 +1,6 @@
 ---
-title: Secure cookies
-slug: Web/Security/Practical_implementation/Cookies
+title: Secure cookie configuration
+slug: Web/Security/Practical_implementation_guides/Cookies
 page-type: guide
 ---
 
@@ -21,7 +21,7 @@ This can be done via sensible usage of the following directives of the [`Set-Coo
     - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`.
     - Use `__Secure-` for all other cookies sent from secure origins (HTTPS).
 - `Secure`
-  - : All cookies must be set with the `Secure` flag, indicating that they should only be sent over HTTPS. [HTTP Strict Transport Security](/en-US/docs/Web/Security/Practical_implementation/TLS#http_strict_transport_security) can also be used to prevent transmission over HTTP, but ideally `Secure` should be set on cookies as well.
+  - : All cookies must be set with the `Secure` flag, indicating that they should only be sent over HTTPS. [HTTP Strict Transport Security](/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_strict_transport_security) can also be used to prevent transmission over HTTP, but ideally `Secure` should be set on cookies as well.
 - `HttpOnly`
   - : Cookies that don't require access from JavaScript should be set with the `HttpOnly` flag. It is particularly important that session identifiers don't have JavaScript access, to help prevent attacks such as CSRF.
 - `Expires` and `Max-Age`
@@ -34,7 +34,7 @@ This can be done via sensible usage of the following directives of the [`Set-Coo
 - `Path`
   - : Cookies should be set to the most restrictive `Path` possible; for most applications this will be set to the root directory.
 - `SameSite`
-  - : Forbid sending the cookie via cross-origin requests (for example from {{htmlelement("img")}} element), as a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation/CSRF_prevention) measure. You should use one of the following two values:
+  - : Forbid sending the cookie via cross-origin requests (for example from {{htmlelement("img")}} element), as a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) measure. You should use one of the following two values:
     - `SameSite=Strict`: Only send the cookie when your site is directly navigated to.
     - `SameSite=Lax`: Additionally send the cookie when navigating to your site from another site. Note that this is the default behavior used in modern browsers if no `SameSite` directive is set.
 

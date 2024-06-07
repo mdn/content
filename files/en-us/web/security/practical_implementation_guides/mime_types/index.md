@@ -1,6 +1,6 @@
 ---
-title: Verifying MIME types
-slug: Web/Security/Practical_implementation/MIME_types
+title: MIME type verification
+slug: Web/Security/Practical_implementation_guides/MIME_types
 page-type: guide
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Subresource integrity
-slug: Web/Security/Practical_implementation/SRI
+title: Subresource integrity (SRI) implementation
+slug: Web/Security/Practical_implementation_guides/SRI
 page-type: guide
 ---
 
@@ -20,7 +20,7 @@ If the file has been modified at any point thereafter, the hast won't match, and
 
 SRI should be used when loading all external JavaScript or stylesheet resources. The resources should all be loaded over HTTPS, and ideally from a similar origin. Fewer origins means less potential for tampering.
 
-Note that CDNs must use [Cross-origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header.
+Note that CDNs must use [Cross-origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation_guides/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header.
 
 ## Examples
 

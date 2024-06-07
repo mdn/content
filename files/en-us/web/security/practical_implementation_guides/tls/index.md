@@ -1,6 +1,6 @@
 ---
-title: Transport Layer Security
-slug: Web/Security/Practical_implementation/TLS
+title: Transport Layer Security (TLS) configuration
+slug: Web/Security/Practical_implementation_guides/TLS
 page-type: guide
 ---
 
@@ -48,7 +48,7 @@ In this case HTTPS is being used to load a JavaScript library:
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 ```
 
-## HTTP redirections
+## HTTP redirection
 
 ### Problem
 
@@ -88,7 +88,7 @@ Redirect `site.example.org` from HTTP to HTTPS, using Apache:
 </VirtualHost>
 ```
 
-## HTTP Strict Transport Security
+## HTTP Strict Transport Security implementation
 
 ### Problem
 

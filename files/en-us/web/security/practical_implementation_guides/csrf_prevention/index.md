@@ -1,6 +1,6 @@
 ---
-title: Cross-site request forgery prevention
-slug: Web/Security/Practical_implementation/CSRF_prevention
+title: Cross-site request forgery (CSRF) prevention
+slug: Web/Security/Practical_implementation_guides/CSRF_prevention
 page-type: guide
 ---
 
