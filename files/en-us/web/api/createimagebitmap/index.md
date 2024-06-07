@@ -52,12 +52,14 @@ createImageBitmap(image, sx, sy, sw, sh, options)
   - : An object that sets options for the image's extraction. The available options are:
 
     - `imageOrientation`
+
       - : Specifies how the image should be emplaced.
 
         - `from-image`
           - : Default value. The image is presented as it is.
         - `flipY`
           - : The image is flipped vertically.
+
     - `premultiplyAlpha`
       - : Specifies whether the bitmap's color channels
         should be premultiplied by the alpha channel. One of `none`,
@@ -91,8 +93,8 @@ each of which you want to be able to render separately.
 
 ```html hidden
 Original image:
-<img src="50x50.jpg">
-<hr>
+<img src="50x50.jpg" />
+<hr />
 <canvas id="myCanvas"></canvas>
 ```
 
@@ -113,7 +115,7 @@ image.onload = () => {
     // Cut out two sprites from the sprite sheet
     createImageBitmap(image, 0, 0, 32, 32),
     createImageBitmap(image, 32, 0, 32, 32),
-    createImageBitmap(image, 0, 0, 50, 50, {imageOrientation: "flipY"}),
+    createImageBitmap(image, 0, 0, 50, 50, { imageOrientation: "flipY" }),
   ]).then((sprites) => {
     // Draw each sprite onto the canvas
     ctx.drawImage(sprites[0], 0, 0);
