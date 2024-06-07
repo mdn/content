@@ -11,7 +11,7 @@ The **`Proxy`** object enables you to create a proxy for another object, which c
 
 ## Description
 
-The `Proxy` object allows you to create an object that can be used in place of the original object, but which may redefine fundamental `Object` operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.
+The `Proxy` object allows you to create an object that can be used in place of the original object, but which may redefine fundamental `Object` operations like getting, setting, and defining properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on. They are similar to [descriptors in Python](https://docs.python.org/3/howto/descriptor.html).
 
 You create a `Proxy` with two parameters:
 
