@@ -107,7 +107,7 @@ Let's start exploring this by looking at a quick example.
    data.setUint32(0, 42, true);
    ```
 
-   You can then return the same value using:
+   Note the use of `true`, which enforces little-endian read and write, since WebAssembly memory is always little-endian. You can then return the same value using:
 
    ```js
    data.getUint32(0, true);
