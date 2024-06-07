@@ -108,7 +108,7 @@ If the mismatch in the number of animations and animation property values is inv
 
 ### Making text slide across the browser window
 
-This basic example styles the {{HTMLElement("p")}} element using the {{cssxref("translate")}} and  {{cssxref("scale")}} transition properties so that the text slides in from off the right edge of the browser window.
+This basic example styles the {{HTMLElement("p")}} element using the {{cssxref("translate")}} and {{cssxref("scale")}} transition properties so that the text slides in from off the right edge of the browser window.
 
 ```css
 p {
