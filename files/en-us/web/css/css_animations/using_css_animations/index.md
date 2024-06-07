@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**CSS animations** make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.
+**CSS animations** make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.
 
 There are three key advantages to CSS animations over traditional script-driven animation techniques:
 
@@ -203,6 +203,8 @@ p span {
 }
 ```
 
+We've added a {{htmlelement("span")}} around "Alice":
+
 ```html
 <p>
   The Caterpillar and <span>Alice</span> looked at each other for some time in
@@ -296,9 +298,7 @@ You can get additional control over animations — as well as useful information
 
 We'll modify the sliding text example to output some information about each animation event when it occurs, so we can get a look at how they work.
 
-#### Adding the CSS
-
-We start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
+We've included the same keyframe animation,  start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
 
 ```css
 .slidein {
@@ -307,7 +307,9 @@ We start with creating the CSS for the animation. This animation will last for 3
   animation-iteration-count: 3;
   animation-direction: alternate;
 }
+```
 
+```css hidden
 @keyframes slidein {
   from {
     translate: 150vw 0;
