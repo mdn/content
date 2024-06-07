@@ -42,6 +42,27 @@ The purpose of this element is purely for the convenience of the author and all 
 
 Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}.
 
+## Accessibility
+
+Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
+
+Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
+
+#### HTML
+
+```html
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
+  data-interchange format.
+</p>
+```
+
+#### Result
+
+{{EmbedLiveSample("Accessibility_concerns")}}
+
+This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
+
 ## Examples
 
 ### Marking up an abbreviation semantically
@@ -116,27 +137,6 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 #### Result
 
 {{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
-
-### Accessibility concerns
-
-Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
-
-Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
-
-#### HTML
-
-```html
-<p>
-  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
-  data-interchange format.
-</p>
-```
-
-#### Result
-
-{{EmbedLiveSample("Accessibility_concerns")}}
-
-This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
 
 ## Technical summary
 

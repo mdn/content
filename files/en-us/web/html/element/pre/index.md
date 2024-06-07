@@ -26,7 +26,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
 

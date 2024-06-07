@@ -181,6 +181,18 @@ As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, ali
 
 The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
+## Accessibility
+
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+
+```html
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+```
+
+Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
 ## Examples
 
 ### A simple \<iframe>
@@ -201,18 +213,6 @@ This example embeds the page at <https://example.org> in an iframe.
 #### Result
 
 {{ EmbedLiveSample('A_simple_iframe', 640,400)}}
-
-## Accessibility concerns
-
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
-
-```html
-<iframe
-  title="Wikipedia page for Avocados"
-  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
-```
-
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Technical summary
 
