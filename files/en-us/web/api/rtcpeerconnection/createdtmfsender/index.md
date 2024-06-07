@@ -30,7 +30,7 @@ const dtmfSender = pc.createDTMFSender(track);
 
 A new {{domxref("RTCDTMFSender")}} object.
 
-## Example
+## Examples
 
 This example creates a new DTMF sender associated with the specified track.
 
