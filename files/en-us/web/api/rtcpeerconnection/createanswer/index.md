@@ -52,7 +52,7 @@ The parameters for the older form of `createAnswer()` are described below, to ai
 
 ### Return value
 
-A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming to the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP answer to be delivered to the other peer.
+A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming to the [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) dictionary which contains the SDP answer to be delivered to the other peer.
 
 ## Examples
 

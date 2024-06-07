@@ -28,7 +28,7 @@ setRemoteDescription(sessionDescription)
 ### Parameters
 
 - `sessionDescription`
-  - : An {{domxref("RTCSessionDescriptionInit")}} or {{domxref("RTCSessionDescription")}} which specifies the remote peer's current offer or answer.
+  - : An [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) or {{domxref("RTCSessionDescription")}} which specifies the remote peer's current offer or answer.
     This value is an offer or answer received from the remote peer through your implementation of
 
 The `sessionDescription` parameter is technically of type `RTCSessionDescriptionInit`, but because {{domxref("RTCSessionDescription")}} serializes to be indistinguishable from `RTCSessionDescriptionInit`, you can also pass in an `RTCSessionDescription`.
@@ -124,7 +124,7 @@ When using the deprecated callback-based version of `setRemoteDescription()`, th
 - `InvalidStateError` {{deprecated_inline}}
   - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
 - `InvalidSessionDescriptionError` {{deprecated_inline}}
-  - : The {{domxref("RTCSessionDescriptionInit")}} specified by the `sessionDescription` parameter is invalid.
+  - : The [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) specified by the `sessionDescription` parameter is invalid.
 
 ## Examples
 
@@ -169,4 +169,4 @@ When our promise fulfillment handler is called, indicating that this has been do
 - {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- {{domxref("RTCSessionDescriptionInit")}}
+- {{domxref("RTCSessionDescription")}}

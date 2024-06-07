@@ -25,7 +25,7 @@ _The `RTCSessionDescription` interface doesn't inherit any properties._
 _The `RTCSessionDescription` doesn't inherit any methods._
 
 - {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}
-  - : This constructor returns a new `RTCSessionDescription`. The parameter is a {{domxref("RTCSessionDescriptionInit")}} dictionary containing the values to assign the two properties.
+  - : This constructor returns a new `RTCSessionDescription`. The parameter is a [`RTCSessionDescriptionInit`](#rtcsessiondescriptioninit) dictionary containing the values to assign the two properties.
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
@@ -36,7 +36,7 @@ signalingChannel.onmessage = (evt) => {
   if (!pc) start(false);
 
   const message = JSON.parse(evt.data);
-  if (message.sdp) {
+  if (message.type && message.sdp) {
     pc.setRemoteDescription(
       new RTCSessionDescription(message),
       () => {
@@ -57,16 +57,44 @@ signalingChannel.onmessage = (evt) => {
 };
 ```
 
-## RTCSessionDescription, RTCSessionDescriptionInit, and RTCLocalSessionDescriptionInit
+## RTCSessionDescriptionInit
 
-There are other similar interfaces that are used to provide the SDP values for `RTCSessionDescription` objects. These are:
+`RTCSessionDescriptionInit` is a dictionary that holds same properties to `RTCSessionDescription`. It's used as an argument for the {{domxref("RTCPeerConnection.setLocalDescription")}}, and {{domxref("RTCPeerConnection.setRemoteDescription")}} methods, and a return value from the {{domxref("RTCPeerConnection.createOffer")}}, and {{domxref("RTCPeerConnection.createAnswer")}} methods.
 
-- {{domxref("RTCSessionDescriptionInit")}}
-- {{domxref("RTCLocalSessionDescriptionInit")}}
+The `RTCSessionDescriptionInit` dictionary has the following properties:
 
-These interfaces are used in several methods of the {{domxref("RTCPeerConnection")}} interface utilize these interfaces, including {{domxref("RTCPeerConnection.createOffer")}}, {{domxref("RTCPeerConnection.createAnswer")}}, {{domxref("RTCPeerConnection.setLocalDescription")}}, and {{domxref("RTCPeerConnection.setRemoteDescription")}}.
+- `type` (required): A string indicating the type of the session description.
+- `sdp`: A string containing the SDP describing the session. If sdp is not provided, it defaults to an empty string. If `type` is `"rollback"`, `sdp` must be null or an empty string.
 
-In essence, `RTCSessionDescriptionInit` and `RTCLocalSessionDescriptionInit` are defined as dictionaries, enabling users to provide necessary values without creating a full `RTCSessionDescription` object. Also, `RTCPeerConnection.setLocalDescription()` accepts `RTCLocalSessionDescriptionInit` as an argument, allowing users to omit this argument altogether. This eliminates the need for separate calls to `RTCPeerConnection.createOffer()` and `RTCPeerConnection.setLocalDescription()`. (For more information, see [Implicit description in RTCPeerConnection.setLocalDescription()](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#implicit_description)).
+For `setLocalDescription`, Web Specification uses `RTCLocalSessionDescriptionInit` dictionary, which is a subset of `RTCSessionDescriptionInit`. It has the same properties, but the `type` property is optional (explained in more detail in the [Implicit description in RTCPeerConnection.setLocalDescription()](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#implicit_description)).
+
+For using in `setLocalDescription` and `setRemoteDescription` methods, creating an `RTCSessionDescription` also works, but it's not necessary. Some older examples may use this method, but such usage has no advantage over passing a dictionary directly to the method.
+
+```js
+signalingChannel.onmessage = (evt) => {
+  if (!pc) start(false);
+
+  const message = JSON.parse(evt.data);
+  if (message.type && message.sdp) {
+    // This line is changed not to use RTCSessionDescription constructor
+    pc.setRemoteDescription(message).then(
+      () => {
+        // if we received an offer, we need to answer
+        if (pc.remoteDescription.type === "offer") {
+          pc.createAnswer(localDescCreated, logError);
+        }
+      },
+      logError,
+    );
+  } else {
+    pc.addIceCandidate(
+      new RTCIceCandidate(message.candidate),
+      () => {},
+      logError,
+    );
+  }
+};
+```
 
 ## Specifications
 
@@ -80,5 +108,3 @@ In essence, `RTCSessionDescriptionInit` and `RTCLocalSessionDescriptionInit` are
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}
-- {{domxref("RTCSessionDescriptionInit")}}
-- {{domxref("RTCLocalSessionDescriptionInit")}}

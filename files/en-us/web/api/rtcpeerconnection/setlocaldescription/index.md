@@ -28,7 +28,7 @@ setLocalDescription(sessionDescription, successCallback, errorCallback) // depre
 ### Parameters
 
 - `sessionDescription` {{optional_inline}}
-  - : An {{domxref("RTCLocalSessionDescriptionInit")}} or {{domxref("RTCSessionDescription")}} which specifies the configuration to be applied to the local end of the connection.
+  - : An [`RTCLocalSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) or {{domxref("RTCSessionDescription")}} which specifies the configuration to be applied to the local end of the connection.
     If the description is omitted, the WebRTC runtime tries to automatically do the right thing.
 
 ### Return value
@@ -90,7 +90,7 @@ When using the deprecated callback-based version of `setLocalDescription()`, the
 - `InvalidStateError` {{domxref("DOMException")}} {{deprecated_inline}}
   - : Thrown if the connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
 - `InvalidSessionDescriptionError` {{domxref("DOMException")}} {{deprecated_inline}}
-  - : Thrown if the {{domxref("RTCLocalSessionDescriptionInit")}} specified by the `sessionDescription` parameter is invalid.
+  - : Thrown if the [`RTCLocalSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) specified by the `sessionDescription` parameter is invalid.
 
 ## Examples
 
@@ -140,4 +140,4 @@ called `signalRemotePeer()`.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- {{domxref("RTCLocalSessionDescriptionInit")}}
+- {{domxref("RTCSessionDescription")}}

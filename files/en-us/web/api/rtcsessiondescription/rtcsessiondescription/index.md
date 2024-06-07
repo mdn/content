@@ -17,7 +17,7 @@ specified object.
 > **Note:** This constructor has been deprecated because
 > {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
 > SDP as input now directly accept an object conforming to the
-> {{domxref("RTCSessionDescriptionInit")}} dictionary, so you don't have to instantiate an
+> [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) dictionary, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
 
 ## Syntax
@@ -31,7 +31,7 @@ new RTCSessionDescription(options)
 - `options` {{optional_inline}}
 
   - : An object providing the default values for the session description; the object
-    conforms to the {{domxref("RTCSessionDescriptionInit")}} dictionary. That dictionary has
+    conforms to the [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) dictionary. That dictionary has
     the following properties:
 
     - `type`
@@ -45,7 +45,7 @@ This example uses the constructor to convert an SDP offer into an
 `RTCSessionDescription` object.
 
 > **Note:** This is no longer necessary, however;
-> {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
+> [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) and other methods which take
 > SDP as input now directly accept an object conforming to the
 > `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
