@@ -8,7 +8,7 @@ browser-compat: api.RTCDTMFSender.canInsertDTMF
 
 {{APIRef("WebRTC")}}
 
-The **`canInsertDTMF`** read-only property of the  {{domxref("RTCDTMFSender")}} interface returns a boolean value which indicates whether the `RTCDTMFSender` is capable of sending DTMF tones over the {{domxref("RTCPeerConnection")}}.
+The **`canInsertDTMF`** read-only property of the {{domxref("RTCDTMFSender")}} interface returns a boolean value which indicates whether the `RTCDTMFSender` is capable of sending DTMF tones over the {{domxref("RTCPeerConnection")}}.
 
 ## Value
 
