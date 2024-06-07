@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.getSelection
 ---
 
-{{ ApiRef() }}
+{{APIRef("Selection API")}}
 
 The **`Window.getSelection()`** method returns a
 {{domxref("Selection")}} object representing the range of text selected by the user or

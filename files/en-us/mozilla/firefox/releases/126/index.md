@@ -67,11 +67,11 @@ No notable changes.
 
 #### WebDriver BiDi
 
-- Added the `contexts` argument to the `network.addIntercept` command to limit the interception of network requests to particular top-level browsing contexts ([Firefox bug 1884935](https://bugzil.la/1882260)).
-- Both the commands `session.subscribe` and `session.unsubscribe` now raise an `invalid argument` error when the value of the arguments `events` or `contexts` are empty arrays ([Firefox bug 1884935](https://bugzil.la/1887871)).
-- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behaviour. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1884935](https://bugzil.la/1879503)).
-- Removed the `ownership` and `sandbox` arguments for the `browsingContext.locateNodes` command because they are no longer necessary ([Firefox bug 1884935](https://bugzil.la/1838152)).
-- Improved error message for the `session.new` command when no capabilities are specified ([Firefox bug 1885495](https://bugzil.la/1838152)).
+- Added the `contexts` argument to the `network.addIntercept` command to limit the interception of network requests to particular top-level browsing contexts ([Firefox bug 1882260](https://bugzil.la/1882260)).
+- Both the commands `session.subscribe` and `session.unsubscribe` now raise an `invalid argument` error when the value of the arguments `events` or `contexts` are empty arrays ([Firefox bug 1887871](https://bugzil.la/1887871)).
+- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behaviour. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1879503](https://bugzil.la/1879503)).
+- Removed the `ownership` and `sandbox` arguments for the `browsingContext.locateNodes` command because they are no longer necessary ([Firefox bug 1884935](https://bugzil.la/1884935)).
+- Improved error message for the `session.new` command when no capabilities are specified ([Firefox bug 1838152](https://bugzil.la/1838152)).
 
 ## Changes for add-on developers
 
@@ -79,7 +79,7 @@ No notable changes.
 - The {{WebExtAPIRef("runtime.MessageSender")}} type now includes the `origin` property. This enables message or connection requests to see the page or frame that opened the connection. This is useful for identifying if the origin can be trusted if it isn't apparent from the URL ([Firefox bug 1787379](https://bugzil.la/1787379)).
 - The `"webRequestAuthProvider"` permission is now supported. This provides compatibility with Chrome for requesting permission for {{WebExtAPIRef("webRequest.onAuthRequired")}} in Manifest V3 ([Firefox bug 1820569](https://bugzil.la/1820569)).
 - The [`options_page` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) is provided as an alias of the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key. This has been provided to offer extensions better compatibility with Chrome ([Firefox bug 1816960](https://bugzil.la/1816960)).
-
+- The {{WebExtAPIRef("tabs.captureVisibleTab")}} method is now also enabled by the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), providing compatibility with Chrome and Safari ([Firefox bug 1784920](https://bugzil.la/1784920)).
 ### Other
 
 ## Experimental web features
