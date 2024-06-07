@@ -25,7 +25,7 @@ let gettingContexts = browser.runtime.getContexts(
     - `contextIds` {{optional_inline}}
       - : Array of `string` ID of a context.
     - `contextTypes` {{optional_inline}}
-      - : Array of `string` The type of extension view. Takes the values `"BACKGROUND"``, `"POPUP"``, `"SIDE_PANEL"``, and `"TAB"``.
+      - : Array of `string` The type of extension view. Takes the values `"BACKGROUND"`, `"POPUP"``, `"SIDE_PANEL"``, and `"TAB"``.
     - `documentIds` {{optional_inline}}
       - : Array of `string` UUID of a document associated with the context or undefined to match all contexts not hosted in a document.
     - `documentOrigins` {{optional_inline}}
@@ -48,7 +48,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `contextId`
   - : `string` ID of the context.
 - `contextType`
-  - : `string` The type of extension view. Returned to one of `"BACKGROUND"``, `"POPUP"``, `"SIDE_PANEL"``, or `"TAB"``.
+  - : `string` The type of extension view. Returned to one of `"BACKGROUND"`, `"POPUP"``, `"SIDE_PANEL"``, or `"TAB"``.
 - `documentId` 
   - : `string` UUID of the document associated the context, or undefined if the context is not hosted in a document.
 - `documentOrigin`
