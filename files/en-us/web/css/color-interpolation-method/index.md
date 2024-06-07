@@ -66,49 +66,6 @@ The following example shows the effect of using different interpolation color sp
 
 #### CSS
 
-```css hidden
-/* Fallback styles */
-.srgb {
-  background-image: linear-gradient(
-    to right,
-    rgb(0% 0% 100%),
-    rgb(20% 0% 80%),
-    rgb(40% 0% 60%),
-    rgb(60% 0% 40%),
-    rgb(80% 0% 20%),
-    rgb(100% 0% 0%)
-  );
-}
-.oklab {
-  background-image: linear-gradient(
-    to right,
-    oklab(45.2% -0.032 -0.312),
-    oklab(48.7% 0.019 -0.224),
-    oklab(52.2% 0.07 -0.137),
-    oklab(55.8% 0.122 -0.049),
-    oklab(59.3% 0.173 0.038),
-    oklab(62.8% 0.225 0.126)
-  );
-}
-.oklch-longer {
-  background-image: linear-gradient(
-    to right,
-    oklch(45.2% 0.313 264),
-    oklch(46.8% 0.308 243),
-    oklch(48.4% 0.303 221),
-    oklch(50% 0.298 200),
-    oklch(51.6% 0.293 179),
-    oklch(53.2% 0.288 157),
-    oklch(54.8% 0.283 136),
-    oklch(56.4% 0.278 115),
-    oklch(58% 0.273 93),
-    oklch(59.6% 0.268 72),
-    oklch(61.2% 0.263 51),
-    oklch(62.8% 0.258 29)
-  );
-}
-```
-
 ```css
 .gradient {
   height: 50px;
@@ -128,6 +85,59 @@ The following example shows the effect of using different interpolation color sp
 #### Result
 
 {{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
+
+### Repeating gradients
+
+The following example shows the effect of interpolation in different color spaces with repeating gradients.
+
+#### HTML
+
+```html
+<div class="gradient conic">conic</div>
+<div class="gradient linear">linear</div>
+<div class="gradient radial">radial</div>
+```
+
+#### CSS
+
+```css hidden
+.gradient {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  font-family: monospace;
+  margin: 10px;
+  font-size: 16px;
+}
+```
+
+```css
+.conic {
+  background-image: repeating-conic-gradient(
+    in hsl,
+    aquamarine,
+    cornflowerblue 120deg
+  );
+}
+.linear {
+  background-image: repeating-linear-gradient(
+    in oklch decreasing hue,
+    burlywood,
+    blueviolet 75px
+  );
+}
+.radial {
+  background-image: repeating-radial-gradient(
+    in oklch longer hue,
+    cornflowerblue 50px,
+    burlywood 100px
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("repeating_gradients", "100%", 250)}}
 
 ## Specifications
 
