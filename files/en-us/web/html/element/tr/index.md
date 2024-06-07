@@ -41,7 +41,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## Usage notes
 
-- Must be child of a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element. The `<tr>` may be placed as a direct child of its parent {{HTMLElement("table")}} element, but only if the `<table>` has no child {{HTMLElement("tbody")}} elements, and only after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and {{HTMLElement("thead")}} elements. In this case, the `<tbody>` parent is implied.
+- The `<tr>` may be placed as a direct child of its parent {{HTMLElement("table")}} element, but only if the `<table>` has no child {{HTMLElement("tbody")}} elements, and only after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and {{HTMLElement("thead")}} elements. Otherwise, the parent must be a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element.
 - The CSS pseudo-classes {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, and {{cssxref(":last-of-type")}} are often useful for selecting the desired set of rows and their data and header cells ({{HTMLElement("td")}} and {{HTMLElement("th")}} elements).
 
 ## Examples
