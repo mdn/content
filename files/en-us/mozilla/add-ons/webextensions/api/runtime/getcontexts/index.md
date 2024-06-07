@@ -73,7 +73,7 @@ Get the context for all context associated with the extension in private browsin
 ```js
 function gotContextInfo(contexts) {
   for (const context of contexts) {
-    if (context.tabId = -1) {
+    if ((context.tabId = -1)) {
       console.log("Not hosted in a tab");
     } else {
       console.log(`Hosted in tab: ${context.tabId}`);
@@ -81,9 +81,7 @@ function gotContextInfo(contexts) {
   }
 }
 
-let gettingContextInfo = browser.runtime.getContext(
-  [incognito = true]
-  );
+let gettingContextInfo = browser.runtime.getContext([(incognito = true)]);
 gettingContextInfo.then(gotContextInfo);
 ```
 
