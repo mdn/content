@@ -365,7 +365,7 @@ For this article, we will install Prettier locally, as suggested in the [Prettie
 Once you've installed node, open up the terminal and run the following command to install Prettier:
 
 ```bash
-npm install --save-dev --save-exact prettier
+npm install --save-dev prettier
 ```
 
 You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.

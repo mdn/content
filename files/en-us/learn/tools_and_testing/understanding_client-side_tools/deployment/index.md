@@ -134,7 +134,7 @@ Now we have three tasks ahead of us:
 
 > **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
-This final command instructs git to push the code (aka publish) to the "remote" location that we called `origin` (that's the repository hosted on github.com — we could have called it anything we like) using the branch `main`. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. It's also the default branch that Netlify will look for, which is convenient.
+This final command instructs git to push the code to the "remote" location that we called `origin` (that's the repository hosted on github.com — we could have called it anything we like) using the branch `main`. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. When we define the action triggered to build the website, we'll also let it watch for changes on the "main" branch.
 
 > **Note:** Until October 2020 the default branch on GitHub was `master`, which for various social reasons was switched to `main`. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using `main` for your own projects.
 
@@ -159,72 +159,85 @@ When approaching tests there are a good deal of ways to approach the problem:
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
-However, for this project we're going to create a small test that will check the third-party NASA data feed and ensure it's in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
+However, for this project we're going to create a small test that will check the GitHub API data is in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
 
-Although the test for this project does not include a test framework, as with all things in the front-end development world, there are a slew of [framework options](https://www.npmjs.com/search?q=keywords%3Atesting).
+The test itself isn't what is important. What is important is how the failure or success is handled. Because we are writing a custom build action already, we can just add a step before the build that runs the test. If the test fails, the build will fail, and the deployment will not happen.
 
-The test itself isn't what is important. What is important is how the failure or success is handled. Some deployment platforms will include a specific method for testing as part of their pipeline. Products like GitHub, GitLab, etc., all support running tests against individual commits.
-
-As this project is deploying to Netlify, and Netlify only asks about the build command, we will have to make the tests part of the build. If the test fails, the build fails, and Netlify won't deploy.
+The good news is: because we are using Vite, Vite already offers a good integrated tool for testing: [Vitest](https://vitest.dev/guide/).
 
 Let's get started.
 
-1. Go to your `package.json` file and open it up.
-2. Find your `scripts` member, and update it so that it contains the following test and build commands:
+1. Install Vitest:
+
+   ```bash
+   npm install --save-dev vitest
+   ```
+
+2. In your package.json, find your `scripts` member, and update it so that it contains the following test and build commands:
 
    ```json
    "scripts": {
-     …
-     "test": "node tests/*.js",
-     "build": "npm run test && parcel build src/index.html"
+     // …
+     "test": "vitest"
    }
    ```
 
-3. Now of course we need to add the test to our codebase; create a new directory in your root directory called tests:
+   > **Note:** Here's the good part of using Vite alongside Vitest: if you use other testing frameworks, you need to add another configuration that describes how the test files need to be transformed, but Vitest will automatically use the Vite configuration.
 
-   ```bash
-   mkdir tests
-   ```
+3. Now of course we need to add the test to our codebase. Normally, if you are testing the functionality of a file, say `App.jsx`, you would add a file called `App.test.jsx` next to it. In this case, we are just testing the data, so let's create another directory to hold our tests. You can open the example repository you downloaded in the previous chapter, and copy the `tests` folder over.
 
-4. Inside the new directory, create a test file:
-
-   ```bash
-   cd tests
-   touch nasa-feed.test.js
-   ```
-
-5. Open this file, and add the contents of [nasa-feed.test.js](https://raw.githubusercontent.com/remy/mdn-will-it-miss/master/tests/nasa-feed.test.js) to it:
-6. This test uses the axios package to fetch the data feed we want to test; to install this dependency, run the following command:
-
-   ```bash
-   npm install --save-dev axios
-   ```
-
-   We need to manually install axios because Parcel won't help us with this dependency. Our tests are outside of Parcel's view of our system — since Parcel never sees nor runs any of the test code, we're left to install the dependency ourselves.
-
-7. Now to manually run the test, from the command line we can run:
+4. Now to manually run the test, from the command line we can run:
 
    ```bash
    npm run test
    ```
 
-   The result, if successful, is … nothing. This is considered a success. In general, we only want tests to be noisy if there's something wrong. The test also exited with a special signal that tells the command line that it was successful — an exit signal of 0. If there's a failure the test fails with an exit code of 1 — this is a system-level value that says "something failed".
+   You should see output like this:
 
-   The `npm run test` command will use node to run all the files that are in the tests directory that end with `.js`.
+   ```plain
+   > client-toolchain-example@1.0.0 test
+   > vitest
 
-   In our build script, `npm run test` is called, then you see the string `&&` — this means "if the thing on the left succeeded (exited with zero), then do this thing on the right". So this translates into: if the tests pass, then build the code.
 
-8. You'll have to upload your new code to GitHub, using similar commands to what you used before:
+   DEV  v1.6.0 /Users/joshcena/Desktop/work/Tech/projects/mdn/client-toolchain-example
+
+   ✓ tests/api.test.js (1) 896ms
+     ✓ GitHub API returns the right response 896ms
+
+   Test Files  1 passed (1)
+        Tests  1 passed (1)
+     Start at  23:12:25
+     Duration  1.03s (transform 15ms, setup 0ms, collect 5ms, tests 896ms, environment 0ms, prepare 38ms)
+
+
+   PASS  Waiting for file changes...
+         press h to show help, press q to quit
+   ```
+
+   This means the test passed. Like Vite, it will watch for changes and re-run the tests when you save a file. We can just quit by pressing `q`.
+
+5. We still need to wire the test to our build action, so it blocks the build if the test fails. Open the `.github/workflows/deploy.yml` file and add the following step:
+
+   TODO: where?
+
+   ```yaml
+   - name: Run tests
+     run: npm run test
+   ```
+
+   This will run the test before the build step. If the test fails, the build will fail, and the deployment will not happen.
+
+6. Now let's upload the new code to GitHub, using similar commands to what you used before:
 
    ```bash
    git add .
    git commit -m 'adding test'
-   git push github main
+   git push origin main
    ```
 
    In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
 
-Now, finally, a minute or so after pushing, Netlify will deploy the project update. But only if it passes the test that was introduced.
+Finally, a minute or so after pushing, GitHub Pages will deploy the project update. But only if it passes the test that was introduced.
 
 ## Summary
 
@@ -232,15 +245,16 @@ That's it for our sample case study, and for the module! We hope you found it us
 
 Let's summarize all the parts of the toolchain:
 
-- Code quality and maintenance are performed by ESLint and Prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react` (the ESLint plugin is needed because this particular project uses React).
-- There are two configuration files that the code quality tools read: `.eslintrc` and `.prettierrc`.
-- During development, we use Parcel to handle our dependencies. `parcel src/index.html` is running in the background to watch for changes and to automatically build our source.
-- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is [near-misses.netlify.com](https://near-misses.netlify.app/); you will have your own unique URL.
-- We also have a simple test that blocks the building and deployment of the site if the NASA API feed isn't giving us the correct data format.
+- Code quality and maintenance are performed by ESLint and Prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react ...` (the ESLint plugin is needed because this particular project uses React).
+- There are two configuration files that the code quality tools read: `eslint.config.js` and `.prettierrc`.
+- During development, we continue to add dependencies using npm. The Vite development server is running in the background to watch for changes and to automatically build our source.
+- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment using GitHub Actions to publish the project. For our instance this URL is <https://mdn.github.io/client-toolchain-example>; you will have your own unique URL.
+- We also have a simple test that blocks the building and deployment of the site if the GitHub API feed isn't giving us the correct data format.
 
 For those of you wanting a challenge, consider whether you can optimize some part of this toolchain. Some questions to ask yourself:
 
-- Can [images be compressed](https://github.com/ralscha/parcel-plugin-compress) during the build step?
+- Can we extract only the features of plotly.js that we need? This will reduce the JavaScript bundle size.
+- Maybe you want to add other tools, such as TypeScript for type checking, or stylelint for CSS linting?
 - Could React be swapped out for [something smaller](https://preactjs.com/)?
 - Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://developer.chrome.com/docs/lighthouse/performance/)?
 - Could you set up a notification to let you know when a new deploy succeeded or failed?
