@@ -190,6 +190,28 @@ Early versions of the specification called this property `grid-gap`, and to main
 
 {{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
 
+## Percentage gap values
+
+Gap acts like an empty item/track. In other words instead of gap you could simply use an empty item/track in the container. The item/track's size would be the size set in `gap` property value. Percentage values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element.
+
+### Explicit container size
+
+If the container has fixed size set then percentage value calculations are simple. Percentages are simply calculated from the sizes set on the container. Thus gap behaviour is consistant across all layouts. In the following screenshot there are two containers one with grid layout and other with flex layout. The containers have five red 20x20px children. Both the containers have height explicitly set to 200px using `height: 200px`. And the gap is set using `gap: 10% 0`.
+
+![Screenshot demoing gap sizes in grid and flex layouts with fixed 200px height set.](fixed_height.jpg)
+
+From the above screenshot it is clear that the gap is same in both cases which is 20px.
+
+### Implicit container size
+
+If size is not explicitly set on the container, then the percentage gap behaves different in case of grid and flex layouts. In following screenshot the conteners don't have height explicitly set.
+
+![Screenshot demoing gap sizes in grid and flex layouts with no explicit height set.](no_size_set.jpg)
+
+In case of the grid layout, percentage gap doesn't contribute to actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 100px (20px x5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `10px` (100px x 10%). The gap is applied just before rendering. Thus the grid remains 100px high but it overflows due to the percentage gap added later just befor rendering.
+
+In case of the flex layout, percentage gap always results in zero value.
+
 ## Specifications
 
 {{Specifications}}
