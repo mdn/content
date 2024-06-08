@@ -373,7 +373,7 @@ Another option that is becoming popular for people who want to use modern JavaSc
 
 A common transpiler is [Babel.js](https://babeljs.io/) but there are others.
 
-### Don't browser sniff
+### Using bad browser sniffing code
 
 Historically developers used _browser sniffing code_ to detect which browser the user was using, and give them appropriate code to work on that browser.
 
