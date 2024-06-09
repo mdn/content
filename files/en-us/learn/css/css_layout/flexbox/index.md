@@ -6,7 +6,9 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
-[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is a one-dimensional layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is a one-dimensional layout method for arranging items in rows or columns, allowing items to dynamically adjust their sizes based on available space. This makes it easier to create responsive designs that adapt to various screen sizes and content lengths. 
+
+The size of a flex item is first set by the `flex-basis` property, which will be rendered as is if there are available space. If the size of all flex items is larger than the flex container, items shrink to fit according to property `flex-shrink`. If the size of all flex items is smaller than the flex container, items grow to fit according to property `flex-grow`. In short, the initial size of a flex item is defined by `flex-basis`. Then the actual size of all flex items is calculated by browser engine according to flex properties: `flex-basis`, `flex-shrink`, `flex-grow`, `flex-wrap`. This article explains all the fundamentals.
 
 <table>
   <tbody>
