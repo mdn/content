@@ -75,17 +75,13 @@ object.
 The examples described here should be taken together to get a better understanding of
 how service workers scope applies to a page.
 
-The following example uses the default value of `scope` (by omitting it).
-The service worker code in this case, if
-included in `example.com/index.html`, will
-control `example.com/index.html`, as well as pages underneath it, like
-`example.com/product/description.html`.
+The following example uses the default value of `scope` (by omitting it). Suppose the service worker code is at `example.com/sw.js`, and the registration code at `example.com/index.html`. The service worker code will control `example.com/index.html`, as well as pages underneath it, like `example.com/product/description.html`.
 
 ```js
 if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register("/sw.js").then(
+  navigator.serviceWorker.register("./sw.js").then(
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
@@ -98,12 +94,12 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-The following code, if included in `example.com/index.html`, at the root of a site, would apply to exactly the same pages as the example above. Alternatively, if this code were included in a page at `example.com/product/description.html`, then the service worker would only apply to resources under `example.com/product`. Remember the scope, when included, uses the page's location as its base.
+The following code, with all code in the same place, would apply to exactly the same pages as the example above. Alternatively, if the service worker code is at `example.com/product/sw.js`, and the registration code at `example.com/product/description.html`. then the service worker would only apply to resources under `example.com/product`. Remember the scope, when included, uses the page's location as its base.
 
 ```js
 if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register("/sw.js", { scope: "./" }).then(
+  navigator.serviceWorker.register("./sw.js", { scope: "./" }).then(
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
@@ -123,7 +119,7 @@ The following code, if included in `example.com/index.html`, at the root of a si
 ```js
 if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register("/sw.js", { scope: "/product/" }).then(
+  navigator.serviceWorker.register("./sw.js", { scope: "/product/" }).then(
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
@@ -143,7 +139,7 @@ The following code, if included in `example.com/product/index.html`, would apply
 ```js
 if ("serviceWorker" in navigator) {
   // Declaring a broadened scope
-  navigator.serviceWorker.register("/sw.js", { scope: "/" }).then(
+  navigator.serviceWorker.register("./sw.js", { scope: "/" }).then(
     (registration) => {
       // The registration succeeded because the Service-Worker-Allowed header
       // had set a broadened maximum scope for the service worker script
