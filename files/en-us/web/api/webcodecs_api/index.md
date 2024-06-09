@@ -4,7 +4,7 @@ slug: Web/API/WebCodecs_API
 page-type: web-api-overview
 ---
 
-{{DefaultAPISidebar("WebCodecs API")}}
+{{DefaultAPISidebar("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **WebCodecs API** gives web developers low-level access to the individual frames of a video stream and chunks of audio.
 It is useful for web applications that require full control over the way media is processed.

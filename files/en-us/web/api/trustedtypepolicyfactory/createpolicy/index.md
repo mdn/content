@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.createPolicy
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`createPolicy()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.
 

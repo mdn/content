@@ -40,7 +40,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 ## Using Performance APIs
 
 - [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
-  - : [Resource loading and timing](/en-US/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with CORS
+  - : [Resource loading and timing](/en-US/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with [CORS](/en-US/docs/Web/HTTP/CORS).
 - [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)
   - : Create application specific timestamps using the [user timing API](/en-US/docs/Web/API/Performance_API/User_timing)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
@@ -131,7 +131,7 @@ JavaScript
 
 - [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/en-US/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/en-US/docs/Web/API/Window/requestAnimationFrame)
 
 APIs
 
@@ -160,7 +160,7 @@ Headers
 
 - [Content-encoding](/en-US/docs/Web/HTTP/Headers/Content-Encoding)
 - HTTP/2
-- [gZip](/en-US/docs/Glossary/GZip_compression)
+- [gZip](/en-US/docs/Glossary/gzip_compression)
 - Client Hints
 
 Tools

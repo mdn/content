@@ -45,7 +45,8 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
         105deg,
         rgb(255 255 255 / 20%) 39%,
         rgb(51 56 57 / 100%) 96%
-      ) center center / 400px 200px no-repeat,
+      )
+      center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;
 }
@@ -65,7 +66,7 @@ In the example below, we have used various color values to add a background colo
 
 ### Background images
 
-The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image which is larger than the box ([balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)), the other has a small image of a single star ([star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)).
+The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image that is larger than the box ([balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)). The other has a small image of a single star ([star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)).
 
 This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box.
 
@@ -90,7 +91,7 @@ The {{cssxref("background-repeat")}} property is used to control the tiling beha
 
 #### Sizing the background image
 
-The _balloons.jpg_ image used in the initial background images example, is a large image that was cropped due to being larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take {{cssxref("length")}} or {{cssxref("percentage")}} values, to size the image to fit inside the background.
+The _balloons.jpg_ image used in the initial background image example is a large image that was cropped due to being larger than the element it is a background of. In this case, we could use the {{cssxref("background-size")}} property, which can take {{cssxref("length")}} or {{cssxref("percentage")}} values, to size the image to fit inside the background.
 
 You can also use keywords:
 
@@ -145,7 +146,7 @@ You can also mix keyword values with lengths or percentages, in which case the f
 }
 ```
 
-Finally, you can also use a 4-value syntax in order to indicate a distance from certain edges of the box — the length unit, in this case, is an offset from the value that precedes it. So in the CSS below we are positioning the background 20px from the top and 10px from the right:
+Finally, you can also use a 4-value syntax to indicate a distance from certain edges of the box — the length unit, in this case, is an offset from the value that precedes it. So in the CSS below we are positioning the background 20px from the top and 10px from the right:
 
 ```css
 .box {
@@ -165,7 +166,7 @@ Finally, you can also use a 4-value syntax in order to indicate a distance from 
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
-You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [CSSGradient.io](https://cssgradient.io/). You can create a gradient then copy and paste out the source code that generates it.
+You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [CSSGradient.io](https://cssgradient.io/). You can create a gradient and copy and paste the source code that generates it.
 
 Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
 
@@ -229,7 +230,7 @@ Screen readers cannot parse background images; therefore, they should be purely 
 
 ## Borders
 
-When learning about the Box Model, we discovered how borders affect the size of our box. In this lesson we will look at how to use borders creatively. Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and [style](/en-US/docs/Web/CSS/line-style) of the border in one line of CSS.
+When learning about the Box Model, we discovered how borders affect the size of our box. In this lesson, we will look at how to use borders creatively. Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and [style](/en-US/docs/Web/CSS/line-style) of the border in one line of CSS.
 
 We can set a border for all four sides of a box with {{cssxref("border")}}:
 
@@ -267,7 +268,7 @@ There are longhand properities for width, style, and color for each of the four 
 }
 ```
 
-> **Note:** These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties_for_borders) that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers [handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> **Note:** These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers [handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 There are a variety of styles that you can use for borders. In the example below, we have used two different border styles for the box and two different border styles for the heading. Play with the border style, width, and color to see how borders work.
 
@@ -275,7 +276,7 @@ There are a variety of styles that you can use for borders. In the example below
 
 ### Rounded corners
 
-Rounding corners on a box is achieved by using the {{cssxref("border-radius")}} property and associated longhands which relate to each corner of the box. Two lengths or percentages may be used as a value, the first value defining the horizontal radius, and the second the vertical radius. In a lot of cases, you will only pass in one value, which will be used for both.
+Rounding corners on a box is achieved by using the {{cssxref("border-radius")}} property and associated longhands that relate to each corner of the box. Two lengths or percentages may be used as a value, the first value defining the horizontal radius, and the second the vertical radius. In a lot of cases, you will only pass in one value, which will be used for both.
 
 For example, to make all four corners of a box have a 10px radius:
 
@@ -285,7 +286,7 @@ For example, to make all four corners of a box have a 10px radius:
 }
 ```
 
-Or to make the top right corner have a horizontal radius of 1em, and a vertical radius of 10%:
+Or to make the top right corner have a horizontal radius of `1em`, and a vertical radius of 10%:
 
 ```css
 .box {
@@ -293,7 +294,7 @@ Or to make the top right corner have a horizontal radius of 1em, and a vertical 
 }
 ```
 
-> **Note:** Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties]/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties_for_border_radius).
+> **Note:** Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties).
 
 We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 
@@ -305,8 +306,8 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-We have covered quite a lot here, and you can see that there is quite a lot to adding a background or a border to a box. Do explore the different property pages if you want to find out more about any of the features we have discussed. Each page on MDN has more examples of usage for you to play with and enhance your knowledge.
+We have covered quite a lot here, and you can see that there is quite a lot to adding a background or a border to a box. Do explore the different property pages if you want to find out more about any of the features discussed here. Almost every page on MDN has examples for you to play with to enhance your knowledge.
 
-In the next article, we'll find out how the Writing Mode of your document interacts with your CSS. What happens when the text does not flow from left to right?
+In the next article, we'll find out how the writing mode of your document interacts with your CSS. What happens when the text does not flow from left to right?
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}

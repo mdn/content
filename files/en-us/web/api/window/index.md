@@ -25,7 +25,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
-- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+- {{domxref("Window.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : An alias for {{domxref("Window.navigator")}}.
@@ -39,8 +39,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 - {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
-- {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
-  - : Returns the browser crypto object.
+- {{domxref("Window.crypto")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
@@ -109,7 +109,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
-- {{domxref("scheduler_property", "Window.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
@@ -141,6 +141,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the toolbar object.
 - {{domxref("Window.top")}} {{ReadOnlyInline}}
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
+- {{domxref("Window.trustedTypes")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
@@ -165,13 +167,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("atob", "Window.atob()")}}
+- {{domxref("Window.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
   - : Displays an alert dialog.
 - {{domxref("Window.blur()")}} {{deprecated_inline}}
   - : Sets focus away from the window.
-- {{domxref("btoa", "Window.btoa()")}}
+- {{domxref("Window.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
 - {{domxref("Window.cancelAnimationFrame()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.

@@ -233,6 +233,48 @@ Note:
 - The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
   (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
+### `from` keyword for relative colors
+
+The `from` keyword is now parsed as valid CSS syntax when the `layout.css.relative-color-syntax.enabled` preference is set to `true`.
+Although this keyword currently has no effect, it will not produce syntax errors when used in valid places in CSS color functions, thereby supporting the ongoing work on [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.relative-color-syntax.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Single numbers as aspect ratio in media queries
 
 Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/CSS_media_queries). (See [Firefox bug 1565562](https://bugzil.la/1565562) for more details.)
@@ -484,7 +526,7 @@ See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
   </tbody>
 </table>
 
-### font-variant-emoji
+### font-variant-emoji property
 
 The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
 See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
@@ -525,7 +567,7 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
-### page-orientation
+### page-orientation descriptor
 
 The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
 See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
@@ -958,6 +1000,87 @@ The `<h1>` heading doesn't decrease in font size now when nested within [section
       <td colspan="2">
         <code>layout.css.h1-in-section-ua-styles.enabled</code>
       </td>
+    </tr>
+  </tbody>
+</table>
+
+### `shape()` function
+
+The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is similar in some respects to the `{{cssxref("path","path()")}}` function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
+For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.basic-shape-shape.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Symmetrical `letter-spacing`
+
+The CSS `letter-spacing` property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>127</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.letter-spacing.model</code></td>
     </tr>
   </tbody>
 </table>
@@ -1574,21 +1697,51 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 ### HTML DOM API
 
-#### Shadow DOM
+#### Selections crossing shadow DOM boundary
 
-Firefox now supports the `clonable` option and property for shadow DOM.
+The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
+Unlike {{domxref("Selection.getRangeAt()")}}, this method can return ranges with anchor or focus nodes inside a shadow DOM, but only if it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
+Otherwise, it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
+The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
 
-- The {{domxref("Element.attachShadow()")}} method's `clonable` boolean option specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
-- The {{domxref("ShadowRoot")}} interface's {{domxref("ShadowRoot.clonable", "clonable")}} read-only property returns `true` if the shadow root is clonable, and `false` otherwise.
+User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.
+([Firefox bug 1867058](https://bugzil.la/1867058)).
 
-When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1868428](https://bugzil.la/1868428))
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 122           | Yes                 |
-| Developer Edition | NA            | No                  |
-| Beta              | NA            | No                  |
-| Release           | NA            | No                  |
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.shadowdom.selection_across_boundary.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 #### HTMLMediaElement method: setSinkId()
 
@@ -1670,91 +1823,10 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
   </tbody>
 </table>
 
-#### ClipboardItem
-
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported. It is available in nightly or early beta builds.
-(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.clipboardItem</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### Clipboard read and write
-
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText), and [Clipboard.write()](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface are now available in nightly and early beta builds
-(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.readText</code> and <code>dom.events.asyncClipboard.clipboardItem</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration.
+Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
 
 <table>
   <thead>
