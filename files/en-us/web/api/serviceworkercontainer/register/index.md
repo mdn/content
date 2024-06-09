@@ -138,7 +138,7 @@ if ("serviceWorker" in navigator) {
 
 As noted above, servers can change the default maximum scope by setting the `Service-Worker-Allowed` header on the service worker script. In this case, the `scope` option should specify a scope narrower than the header value, but potentially larger than the service worker's location.
 
-The following code, if included in `example.com/product/index.html`, would apply to all resources under `example.com` if the server set the `Service-Worker-Allowed` header to `/` or `https://example.com/`. If the server doesn't set the header, the service worker registration will fail, as the requested `scope` is too broad.
+The following code, if included in `example.com/product/index.html`, would apply to all resources under `example.com` if the server set the `Service-Worker-Allowed` header to `/` or `https://example.com/` when serving `sw.js`. If the server doesn't set the header, the service worker registration will fail, as the requested `scope` is too broad.
 
 ```js
 if ("serviceWorker" in navigator) {
