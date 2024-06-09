@@ -508,7 +508,7 @@ draw();
 
 The resulting image looks like this:
 
-{{EmbedLiveSample("Making_combinations", "", "160")}}
+{{EmbedLiveSample("Making_combinations", "", "200")}}
 
 We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
