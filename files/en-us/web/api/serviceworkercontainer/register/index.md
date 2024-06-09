@@ -17,10 +17,6 @@ _scope_, which is subsequently used for navigation matching. You can call this
 method unconditionally from the controlled page. I.e., you don't need to first check
 whether there's an active registration.
 
-There is frequent confusion surrounding the meaning and use of _scope_. Since a
-service worker can't have a scope broader than its own location, only use the
-`scope` option when you need a scope that is narrower than the default.
-
 ## Syntax
 
 ```js-nolint
