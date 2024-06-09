@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_data-channel.bytesReceived
 
 The **`bytesReceived`** property of the {{domxref("RTCDataChannelStats")}} dictionary returns the total number of payload bytes received on the associated {{domxref("RTCDataChannel")}}.
 
-Note that non-payload bytes, such as those for framing and in headers are not included.
+Note that non-payload bytes, such as those for framing and in headers, are not included.
 
 ## Value
 
