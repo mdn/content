@@ -424,7 +424,7 @@ However, before you compose promises sequentially, consider if it's really neces
 
 ## Cancellation
 
-There's no way to cancel any given {{jsxref("Promise")}}, but asyncronous operations can implement "cooperative cancellation", typically using [AbortController](docs/Web/API/AbortController).
+`Promise` itself has no first-class protocol for cancellation, but you may be able to directly cancel the underlying asynchronous operation, typically using [`AbortController`](/en-US/docs/Web/API/AbortController).
 
 ## Creating a Promise around an old callback API
 
