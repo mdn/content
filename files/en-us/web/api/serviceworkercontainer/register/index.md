@@ -38,7 +38,7 @@ register(scriptURL, options)
         service worker's registration scope; that is, what range of URLs a service worker
         can control. This is usually a relative URL. It is relative to the base URL of the
         application. By default, the `scope` value for a service worker
-        registration is set to the directory where the service worker script is located.
+        registration is set to the directory where the service worker script is located (by resolving `./` against `scriptURL`).
         See the [Examples](#examples) section for more information on how it
         works.
     - `type`
@@ -98,14 +98,7 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-The following code, if included in `example.com/index.html`, at the root of
-a site, would apply to exactly the same pages as the example above. Remember the scope,
-when included, uses the page's location as its base.
-
-Alternatively, if this code were included in a page at
-`example.com/product/description.html`, with the JavaScript file residing
-at `example.com/product/sw.js`, then the service worker would only apply to
-resources under `example.com/product`.
+The following code, if included in `example.com/index.html`, at the root of a site, would apply to exactly the same pages as the example above. Alternatively, if this code were included in a page at `example.com/product/description.html`, then the service worker would only apply to resources under `example.com/product`. Remember the scope, when included, uses the page's location as its base.
 
 ```js
 if ("serviceWorker" in navigator) {
@@ -150,7 +143,7 @@ The following code, if included in `example.com/product/index.html`, would apply
 ```js
 if ("serviceWorker" in navigator) {
   // Declaring a broadened scope
-  navigator.serviceWorker.register("/js/sw.js", { scope: "/" }).then(
+  navigator.serviceWorker.register("/sw.js", { scope: "/" }).then(
     (registration) => {
       // The registration succeeded because the Service-Worker-Allowed header
       // had set a broadened maximum scope for the service worker script
