@@ -44,6 +44,8 @@ This promise is already _resolved_ at the time when it's created (because the `r
 
 > **Note:** Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
 
+`Promise` itself has no first-class protocol for cancellation, but you may be able to directly cancel the underlying asynchronous operation, typically using [`AbortController`](/en-US/docs/Web/API/AbortController).
+
 ### Chained Promises
 
 The methods {{jsxref("Promise.prototype.then()")}}, {{jsxref("Promise.prototype.catch()")}}, and {{jsxref("Promise.prototype.finally()")}} are used to associate further action with a promise that becomes settled. As these methods return promises, they can be chained.
@@ -456,4 +458,3 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [JavaScript Promises: an introduction](https://web.dev/articles/promises) on web.dev (2013)
 - [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) slide show by Domenic Denicola (2011)
-- [`AbortController`](/en-US/docs/Web/API/AbortController)
