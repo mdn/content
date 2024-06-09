@@ -127,14 +127,9 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-There is frequent confusion surrounding the meaning and use of _scope_.
-A service worker can't have a scope broader than its own location,
-unless the server specifies a broader maximum scope in a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed)
-header on the service worker script. Therefore you should use the scope option
-when you need a narrower `scope` than the default.
+There is frequent confusion surrounding the meaning and use of _scope_. A service worker can't have a scope broader than its own location, unless the server specifies a broader maximum scope in a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service worker script. Therefore you should use the scope option when you need a narrower `scope` than the default.
 
-The following code, if included in `example.com/index.html`, at the root of
-a site, would only apply to resources under `example.com/product`.
+The following code, if included in `example.com/index.html`, at the root of a site, would only apply to resources under `example.com/product`.
 
 ```js
 if ("serviceWorker" in navigator) {
@@ -152,14 +147,9 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-As noted above, servers can remove the restriction on scope by setting the `Service-Worker-Allowed`
-header on the service worker script, specifying a maximum scope for that service worker above the
-service worker's location.
+As noted above, servers can remove the restriction on scope by setting the `Service-Worker-Allowed` header on the service worker script, specifying a maximum scope for that service worker above the service worker's location.
 
-The following code, if included in `example.com/index.html`, would apply to all
-resources under `example.com` if the server set the `Service-Worker-Allowed` header
-to `/` or `https://example.com/`. If the server doesn't set the header,
-the service worker registration will fail, as the requested `scope` is too broad.
+The following code, if included in `example.com/index.html`, would apply to all resources under `example.com` if the server set the `Service-Worker-Allowed` header to `/` or `https://example.com/`. If the server doesn't set the header, the service worker registration will fail, as the requested `scope` is too broad.
 
 ```js
 if ("serviceWorker" in navigator) {
