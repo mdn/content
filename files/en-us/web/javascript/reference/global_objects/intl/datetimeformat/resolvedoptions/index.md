@@ -63,9 +63,7 @@ usedOptions.month; // "numeric"
 
 ### Getting the user's time zone and locale preferences
 
-The `Intl.DateTimeFormat` constructor without any options uses the current
-system settings. You can use `resolvedOptions()` to get the user's current
-time zone and locale's preferred calendar and numbering system:
+The `Intl.DateTimeFormat` constructor without any options uses the current system settings. You can use `resolvedOptions()` to get the user's current time zone and locale's preferred calendar and numbering system:
 
 ```js
 const systemOptions = new Intl.DateTimeFormat().resolvedOptions();
