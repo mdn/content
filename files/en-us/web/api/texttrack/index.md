@@ -7,7 +7,9 @@ browser-compat: api.TextTrack
 
 {{APIRef("WebVTT")}}
 
-The `TextTrack` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
+The `TextTrack` interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) represents a text track associated with a media element.
+
+The object owns the list of {{domxref("VTTCue")}} objects that will be displayed over the video at various points.
 
 {{InheritanceDiagram}}
 
