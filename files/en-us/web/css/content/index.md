@@ -465,8 +465,4 @@ If inserted content is not decorative, check that the information is provided to
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
-### Browser Accessibility Panels
-
-- [Firefox Accessibility Panel](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)
-- [Chrome Accessibility Panel](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)
-- [Safari Accessibility Panel](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
+- Browser accessibility panels: [Firefox Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Chrome Accessibility pane](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), and [Safari Accessibility tree](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
