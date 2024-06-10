@@ -53,7 +53,7 @@ This article provides information about the changes in Firefox 127 that affect d
 ### APIs
 
 - The async {{domxref('Clipboard API')}} is now fully supported. The {{domxref('ClipboardItem')}} interface, along with the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface, have been enabled. ([Firefox bug 1887845](https://bugzil.la/1887845),[Firefox bug 1858788](https://bugzil.la/1858788)).
-- All {{glossary("Entity","HTML character entities")}} are now supported in [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API) cues, title text, comments, annotations, and so on. ([Firefox bug 1395924](https://bugzil.la/1395924)).
+- All {{glossary("character reference","HTML character references")}} are now supported in [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API) cues, title text, comments, annotations, and so on. ([Firefox bug 1395924](https://bugzil.la/1395924)).
 
 #### DOM
 
