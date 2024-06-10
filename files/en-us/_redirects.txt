@@ -2081,10 +2081,10 @@
 /en-US/docs/DOM/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/DOM/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/DOM/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM/window.atob	/en-US/docs/Web/API/atob
+/en-US/docs/DOM/window.atob	/en-US/docs/Web/API/Window/atob
 /en-US/docs/DOM/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM/window.blur	/en-US/docs/Web/API/Window/blur
-/en-US/docs/DOM/window.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/DOM/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
 /en-US/docs/DOM/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/DOM/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
@@ -2543,10 +2543,10 @@
 /en-US/docs/DOM:treeWalker.whatToShow	/en-US/docs/Web/API/TreeWalker/whatToShow
 /en-US/docs/DOM:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM:window.atob	/en-US/docs/Web/API/atob
+/en-US/docs/DOM:window.atob	/en-US/docs/Web/API/Window/atob
 /en-US/docs/DOM:window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM:window.blur	/en-US/docs/Web/API/Window/blur
-/en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM:window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/DOM:window.clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/DOM:window.clearTimeout	/en-US/docs/Web/API/clearTimeout
@@ -2691,7 +2691,6 @@
 /en-US/docs/DOM_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /en-US/docs/DataTypeSet	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 /en-US/docs/Deer_Park	/en-US/docs/Mozilla/Firefox/Releases/1.5
-/en-US/docs/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Detecting_device_orientation	/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /en-US/docs/Determining_the_dimensions_of_elements	/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /en-US/docs/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -6382,7 +6381,6 @@
 /en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/OpenWebApps	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos
 /en-US/docs/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Overview_of_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
@@ -10144,8 +10142,6 @@
 /en-US/docs/Web/API/Window/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/Window/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
-/en-US/docs/Web/API/Window/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/Window/btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/Window/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
@@ -10223,11 +10219,11 @@
 /en-US/docs/Web/API/Window/vrdisplayfocus_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event	/en-US/docs/Web/API/Window
-/en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
-/en-US/docs/Web/API/WindowBase64/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WindowBase64/btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowBase64/atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/WindowBase64/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -10249,8 +10245,8 @@
 /en-US/docs/Web/API/WindowEventHandlers/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowLocalStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/WindowLocalStorage.localStorage	/en-US/docs/Web/API/Window/localStorage
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
@@ -10303,8 +10299,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
-/en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
@@ -10400,6 +10394,8 @@
 /en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/XSLTProcessor/Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Web/API/atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert_static
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir_static
@@ -10774,10 +10770,10 @@
 /en-US/docs/Web/API/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/Web/API/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/atob
+/en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/Window/atob
 /en-US/docs/Web/API/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/Web/API/window.blur	/en-US/docs/Web/API/Window/blur
-/en-US/docs/Web/API/window.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
 /en-US/docs/Web/API/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/Web/API/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
@@ -11753,7 +11749,6 @@
 /en-US/docs/Web/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_OM_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Typed_OM_API
-/en-US/docs/Web/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Web/Events/Activate	/en-US/docs/Web/API/Element/DOMActivate_event
 /en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
@@ -12235,6 +12230,7 @@
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/html/manifest	/en-US/docs/Web/Manifest
 /en-US/docs/Web/HTML/Element/image	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
