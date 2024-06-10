@@ -12,9 +12,9 @@ The **`origin`** read-only property of the {{domxref("URL")}} interface returns 
 
 The exact structure varies depending on the type of URL:
 
-- For `http` or `https` URLs, the scheme followed by `'://'`, followed by the domain, followed by `':'`, followed by the port (if explicitly specified, unless it is the default port - `80` and `443` respectively).
-- For `file:` URLs, the value is browser dependent.
-- For `blob:` URLs, the origin of the URL following `blob:` will be used. For example, `"blob:https://mozilla.org"` will be returned as `"https://mozilla.org"`.
+- For URL using the `http:` or `https:` schemes, the scheme followed by `//`, followed by the domain, followed by `:`, followed by the port (the default port, `80` and `443` respectively, if explicitly specified).
+- For URL using `file:` scheme, the value is browser dependent.
+- For URL using the `blob:` scheme, the origin of the URL following `blob:`. For example, `blob:https://mozilla.org` will have `https://mozilla.org`.
 
 ## Value
 
