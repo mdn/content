@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### CSS
 
+- Using a [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method) is now supported in gradients created with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient), [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient), and [`radial-gradient()`](/en-US/docs/Web/CSS/gradient/radial-gradient) functions and the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions for repeating gradients ([Firefox bug 1861363](https://bugzil.la/1861363)).
+
 #### Removals
 
 ### JavaScript
