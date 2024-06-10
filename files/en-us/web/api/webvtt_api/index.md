@@ -109,7 +109,7 @@ It is important to not use "extra" blank lines within a cue, for example between
 
 Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.
 
-A comment cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). If you wish to use such characters, you need to escape them using for example `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
+A comment cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). If you wish to use these characters, you need to instead use a {{glossary("character reference")}} such as `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
 
 A comment consists of three parts:
 
@@ -431,9 +431,11 @@ The first line demonstrates no settings. The second line might be used to overla
 
 The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
-A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). Instead use the escape sequence `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
+A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`).
+Instead use a {{glossary("character reference")}} such as the named character reference `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
 
-In addition to the three escape sequences mentioned above, there are four others. They are listed in the table below.
+Note that all major browsers allow any {{glossary("character reference")}} in cues, notes, or other text.
+Older browser versions may support only the following subset of named character references:
 
 | Name               | Character | Escape sequence |
 | ------------------ | --------- | --------------- |
@@ -595,14 +597,6 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 ## Browser compatibility
 
 {{Compat}}
-
-### Notes
-
-Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
-
-WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
-
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs [Firefox bug 1338030](https://bugzil.la/1338030) and [Firefox bug 1415805](https://bugzil.la/1415805)).
 
 ## See also
 
