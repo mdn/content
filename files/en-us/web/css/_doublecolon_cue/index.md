@@ -13,7 +13,7 @@ The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/
 
 The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its longhand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 
-The `::cue(u)` selector selects all the [`<u>`](/en-US/docs/Web/HTML/Element/u) elements inside [the cue text](https://raw.githubusercontent.com/mdn/interactive-examples/main/live-examples/media/examples/friday.vtt).
+In the example above, the `::cue(u)` selector selects all the [`<u>`](/en-US/docs/Web/HTML/Element/u) elements inside [the cue text](https://raw.githubusercontent.com/mdn/interactive-examples/main/live-examples/media/examples/friday.vtt).
 
 ## Syntax
 
@@ -76,15 +76,15 @@ The following CSS sets the cue style so that the text is white and the backgroun
 
 ### Styling WebVTT internal node objects
 
-Cue text can be decorated using tags `c`, `i`, `b`, `u`, `ruby`, `rt`, `v`, and `lang`. Styling of such tags could be customzed using `::cue()` selector.
-Consider following cue text that uses `<u>` tag to underline some text:
+Cue text can include _internal node objects_ as the tags (similar to HTML elements) `<c>`, `<i>`, `<b>`, `<u>`, `<ruby>`, `<rt>`, `<v>`, and `<lang>`. The `::cue()` selector can be used to apply styles to content inside these tags to customize how the WebVTT track is displayed.
+Consider the following cue text that uses the `<u>` tag to underline some text:
 
 ```plain
 00:00:01.500 --> 00:00:02.999 line:80%
 Tell me, is the <u>lord of the universe</u> in?
 ```
 
-Following CSS rule customizes the text decoration inside the `<u>` tag:
+The following CSS rule customizes the text inside the `<u>` tag with a color and a [text-decoration](/en-US/docs/Web/CSS/text-decoration):
 
 ```css
 ::cue(u) {
