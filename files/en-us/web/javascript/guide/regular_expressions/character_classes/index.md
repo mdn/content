@@ -328,7 +328,7 @@ See more examples in the [character class escape](/en-US/docs/Web/JavaScript/Ref
 
 ### Looking for a word (from the latin alphabet) starting with A
 
-In this example, we match a word starting with the letter A. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e. do not start matching in the middle of a word). `[aA]` indicates the letter a or A. `\w+` indicates any character _from the latin alphabet_, multiple times (`+` is a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)). Note that because we already match until there are no more word characters, an end `\b` boundary is not necessary.
+In this example, we match a word starting with the letter A. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e. do not start matching in the middle of a word). `[aA]` indicates the letter "a" or "A". `\w+` indicates any character _from the Latin alphabet_, multiple times (`+` is a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)). Note that because we already match until there are no more word characters, an end `\b` boundary is not necessary.
 
 ```js
 const aliceExcerpt =

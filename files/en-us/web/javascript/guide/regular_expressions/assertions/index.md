@@ -244,7 +244,7 @@ See more examples in the [input boundary assertion](/en-US/docs/Web/JavaScript/R
 
 ### Matching a word boundary
 
-In this example, we get fruit names that has a word that ends with "en" or "ed".
+In this example, we match fruit names containing a word that ends in "en" or "ed".
 
 ```js
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
