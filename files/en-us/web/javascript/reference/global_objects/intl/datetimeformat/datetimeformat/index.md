@@ -148,9 +148,9 @@ The default value for each date-time component option is {{jsxref("undefined")}}
 #### Style shortcuts
 
 - `dateStyle`
-  - : The date formatting style to use when calling `format()`. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`.
+  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It resolves to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale.
 - `timeStyle`
-  - : The time formatting style to use when calling `format()`. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`.
+  - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It resolves to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
 > **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g. `weekday`, `hour`, `month`, etc.).
 
@@ -206,6 +206,8 @@ console.log(new Intl.DateTimeFormat().format(date));
 
 ### Using timeStyle and dateStyle
 
+`dateStyle` and `timeStyle` provide a shortcut for setting multiple date-time component options at once. For example, for `en-US`, `dateStyle: "short"` is equivalent to setting `year: "2-digit", month: "numeric", day: "numeric"`, and `timeStyle: "short"` is equivalent to setting `hour: "numeric", minute: "numeric"`.
+
 ```js
 const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short",
@@ -215,13 +217,19 @@ console.log(shortTime.format(Date.now())); // "1:31 PM"
 const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short",
 });
-console.log(shortDate.format(Date.now())); // "07/07/20"
+console.log(shortDate.format(Date.now())); // "7/7/20"
 
 const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short",
 });
-console.log(mediumTime.format(Date.now())); // "07/07/20, 1:31:55 PM"
+console.log(mediumTime.format(Date.now())); // "7/7/20, 1:31:55 PM"
+```
+
+However, the exact (locale dependent) component styles they resolve to are not included in the [resolved options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions). This ensures the result of `resolvedOptions()` can be passed directly to the `Intl.DateTimeFormat()` constructor (because an `options` object with both `dateStyle` or `timeStyle` and individual date or time component styles is not valid).
+
+```js
+console.log(shortDate.resolvedOptions().year); // undefined
 ```
 
 ### Using dayPeriod
