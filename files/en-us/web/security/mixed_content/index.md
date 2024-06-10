@@ -47,7 +47,7 @@ The remote server will either respond with the resource, or a status code indica
 The resource types in this category are those where the blocking the request would risk of breaking significant portions of the web.
 These currently correspond to the mixed content types that were previously "optionally blockable", as these are still used on some websites.
 
-The following elements are upgradable (except in CORS requests — see the following section):
+The following elements are upgradable (except where the URL host is specified as an IP address — see the following section):
 
 - {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `picture`).
 - CSS image elements such as: `background-image`, `border-image`, etc.
@@ -72,8 +72,8 @@ This includes HTTP requests resulting from the following elements (this list is 
 - {{HTMLElement("img")}} where origin is set via `srcset` or `picture`.
 - Web fonts
 
-All CORS-enabled mixed-content requests are blocked, whether or not the request would be upgradable if not using CORS.
-For example, `<img crossorigin src=...>` will be blocked, while `<img src=...>` is not.
+Mixed content requests that would otherwise be upgraded are blocked if the URL's host is an IP address rather than a domain name.
+So `<img src="http://example.com/image.png">` will be upgraded, but `<img src="http://93.184.215.14/image.png">` is blocked.
 
 ## Examples of mixed content requests
 
