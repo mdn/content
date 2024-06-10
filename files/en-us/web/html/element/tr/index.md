@@ -42,8 +42,8 @@ The following attributes are deprecated and should not be used. They are documen
 ## Usage notes
 
 - The `<tr>` element is valid as a child of a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element only.
-- If the `<tr>` is placed as a direct child of its parent {{HTMLElement("table")}} element, the `<tbody>` parent is implied and browsers will actually add the `<tbody>` to the markup.
-- This implied `<tbody>` parent is only supported if the `<table>` otherwise has no child {{HTMLElement("tbody")}} elements, and only if the `<tr>` is included after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and {{HTMLElement("thead")}} elements.
+- If the `<tr>` is placed as a direct child of its parent {{HTMLElement("table")}} element, the `<tbody>` parent is implied and browsers will add the `<tbody>` to the markup.
+- The implied `<tbody>` parent is only supported if the `<table>` otherwise has no child `<tbody>` elements, and only if the `<tr>` is included after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and `<thead>` elements.
 - The CSS pseudo-classes {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, and {{cssxref(":last-of-type")}} are often useful for selecting the desired set of rows and their data and header cells ({{HTMLElement("td")}} and {{HTMLElement("th")}} elements).
 - When a `<tr>` is included as a direct child of the `<table>`, as the browser adds a `<tbody>` to the markup, CSS selectors such as `table > tr` may not work as expected or at all.
 
