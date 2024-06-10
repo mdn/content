@@ -14,8 +14,14 @@ The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ## Syntax
 
 ```css
-/* property: calc(expression) */
-width: calc(100% - 80px);
+/* calc(expression) */
+calc(100% - 80px)
+
+/* Expression with color channel */
+calc(l * 0.8)
+calc(h + 180)
+calc(b / 2)
+calc(r * .3 + g * .59 + b * .11)
 ```
 
 The `calc()` function takes a single expression as its parameter, and the expression's result is used as the value for a CSS property. In this expression, the {{Glossary("operand", "operands")}} can be combined using the {{Glossary("operator", "operators")}} listed below. When the expression contains multiple operands,`calc()` uses the standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
@@ -31,12 +37,12 @@ The `calc()` function takes a single expression as its parameter, and the expres
 
 All operands, except those of type {{cssxref("&lt;number&gt;")}}, must be suffixed with an appropriate unit string, such as `px`, `em`, or `%`. You can use a different unit with each operand in your expression. You may also use parentheses to establish computation order when needed.
 
-### Notes
+## Description
 
-Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
+Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math, which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
 For more details on how constants are serialized, see the [`calc-constant`](/en-US/docs/Web/CSS/calc-constant) page.
 
-In addition, the following notes apply:
+Keep the following points in mind while using `calc()`:
 
 - The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as "a percentage followed by a negative length" — which is an invalid expression — while `calc(50% - 8px)` is "a percentage followed by a subtraction operator and a length". Likewise, `calc(8px + -50%)` is treated as "a length followed by an addition operator and a negative percentage".
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
@@ -45,8 +51,9 @@ In addition, the following notes apply:
 - For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
 - The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
 - Current implementations require that for the `*` and `/` operators, one of the operands has to be unitless. For `/`, the right operand must be unitless. For example `font-size: calc(1.25rem / 1.25)` is valid but `font-size: calc(1.25rem / 125%)` is invalid.
+- When `calc()` is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example, `z-index: calc(3 / 2);` will result in a `z-index` value of `2`.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 
@@ -64,18 +71,6 @@ This ensures that text size will scale if the page is zoomed.
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
-
-## Usage with integers
-
-When **`calc()`** is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:
-
-```css
-.modal {
-  z-index: calc(3 / 2);
-}
-```
-
-This will give `.modal` a final `z-index` value of 2.
 
 ## Examples
 
@@ -136,9 +131,9 @@ Here, the form itself is established to use 1/6 of the available window width. T
 
 {{EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '700', '80')}}
 
-### Nested `calc()` with CSS Variables
+### Nesting with CSS variables
 
-You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables). Consider the following code:
+You can use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables). Consider the following code:
 
 ```css
 .foo {
@@ -149,7 +144,58 @@ You can also use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading
 }
 ```
 
-After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`, then when it's assigned to `.foo`'s width property, all inner `calc()`s (no matter how deeply nested) will be flattened to just parentheses, so the `width` property's value will be eventually `calc((100px / 2) / 2)`, i.e. `25px`. In short: a `calc()` inside of a `calc()` is identical to just parentheses.
+After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`. When it's assigned to `.foo`'s width property, all inner `calc()` functions (no matter how deeply nested) will be flattened to just parentheses. Therefore, the `width` property's value will eventually be `calc((100px / 2) / 2)`, which equals `25px`. In short, a `calc()` inside of a `calc()` is identical to using parentheses.
+
+### Adjusting colors dynamically
+
+The `calc()` function can be used with colors to dynamically adjust individual color channels. In the example below, CSS variables are defined for the `red`, `green`, and `blue` color channels. The `calc()` function is used to dynamically decrease the `red` channel by `50` units.
+
+```html hidden
+<p class="original">This text color is the original color.</p>
+<p class="plus">
+  This text color is adjusted to increase the blue channel by 100.
+</p>
+<p class="minus">
+  This text color is adjusted to decrease the red channel by 200.
+</p>
+<p class="double">This text color is adjusted to double the green channel.</p>
+<p class="half">
+  This text color is dynamically adjusted to halve the alpha channel.
+</p>
+```
+
+```css
+:root {
+  --r: 255;
+  --g: 100;
+  --b: 100;
+  --a: 1;
+}
+
+.original {
+  color: rgb(var(--r) var(--g) var(--b));
+}
+
+.plus {
+  color: rgb(var(--r) var(--g) calc(var(--b) + 100));
+}
+
+.minus {
+  color: rgb(calc(var(--r) - 200) var(--g) var(--b));
+}
+
+.double {
+  color: rgb(var(--r) calc(var(--g) * 2) var(--b));
+}
+
+.half {
+  color: rgb(var(--r) var(--g) var(--b) / calc(var(--a) / 2));
+}
+```
+
+{{EmbedLiveSample('Adjusting_colors_dynamically', '700', '200')}}
+
+Refer to the [Using math functions](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) section to see how the `calc()` function is used with relative colors.
 
 ## Specifications
 
