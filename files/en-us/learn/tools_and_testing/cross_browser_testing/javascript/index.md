@@ -260,7 +260,7 @@ For example, to check whether the browser supports CSS container queries, you co
 }
 ```
 
-As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
+As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [don't browser sniff](#dont_browser_sniff), later on, for more details.
 
 > **Note:** Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.
 
