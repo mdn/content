@@ -12,7 +12,7 @@ The **`origin`** read-only property of the {{domxref("Location")}} interface is 
 
 The exact structure varies depending on the type of URL:
 
-- For URL using the `http` or `https`, the scheme followed by `'://'`, followed by the domain, followed by `':'`, followed by the port (the default port, `80` and `443` respectively, if explicitly specified).
+- For URL using the `http` or `https`, the scheme followed by `://`, followed by the domain, followed by `':'`, followed by the port (the default port, `80` and `443` respectively, if explicitly specified).
 - For URL using `file:` scheme, the value is browser dependent.
 - For URL using the `blob:` scheme, the origin of the URL following `blob:`. For example, `"blob:https://mozilla.org"` will have `"https://mozilla.org"`.
 
