@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Event
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`Event`** interface represents an event which takes place on an [`EventTarget`](/en-US/docs/Web/API/EventTarget).
 

@@ -69,7 +69,7 @@ write(message, options)
 
 A {{JSxRef("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered.
 
-## Exceptions
+### Exceptions
 
 This method doesn't throw exceptions; instead, it rejects the returned promise,
 passing a {{domxref("DOMException")}} whose `name` is one of the

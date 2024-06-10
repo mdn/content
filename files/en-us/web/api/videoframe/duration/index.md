@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoFrame.duration
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`duration`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the duration of the video in microseconds.
 
