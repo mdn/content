@@ -18,7 +18,7 @@ Most symmetric-key algorithms currently in use are block {{Glossary("Cipher", "c
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto supported algorithms](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+- Glossary
 
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Cryptography")}}

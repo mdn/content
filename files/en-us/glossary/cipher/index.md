@@ -9,7 +9,8 @@ page-type: glossary-definition
 In {{glossary("cryptography")}}, a **cipher** is an algorithm that can {{glossary("encryption", "encrypt")}} {{glossary("Plaintext")}} to make it unreadable, and to {{glossary("decryption", "decrypt")}} the encoded data back to plaintext again.
 
 Ciphers were common long before the information age (e.g., [substitution ciphers](https://en.wikipedia.org/wiki/Substitution_cipher), [transposition ciphers](https://en.wikipedia.org/wiki/Transposition_cipher), and [permutation ciphers](https://en.wikipedia.org/wiki/Permutation_cipher)), but none of them were cryptographically secure except for the [one-time pad](https://en.wikipedia.org/wiki/One-time_pad).
-[AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard), [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) and [Blowfish](<https://en.wikipedia.org/wiki/Blowfish_(cipher)>) are examples of ciphers that are part of modern encryption standards and systems.
+
+In the modern age, ciphers have evloved dramatically. [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard), [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) and [Blowfish](<https://en.wikipedia.org/wiki/Blowfish_(cipher)>) are examples of ciphers that are integral part of contemporary encryption standards and systems.
 
 Modern ciphers are designed to withstand attacks discovered through {{glossary("cryptanalysis")}}. There is no guarantee that all attack methods have been discovered, so each algorithm is [recommended for different purposes](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms) based on known classes of attacks.
 
@@ -24,7 +25,7 @@ Ciphers are also classified according to how their {{glossary("key", "keys")}} a
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto supported algorithms](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+- Glossary
 
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Ciphertext")}}
