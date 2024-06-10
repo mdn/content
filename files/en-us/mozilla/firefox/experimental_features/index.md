@@ -1085,9 +1085,9 @@ The CSS {{cssxref("letter-spacing")}} property now splits the specified letter s
   </tbody>
 </table>
 
-### `calc()` color component support
+### `calc()` color support
 
-The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color components, allowing you to dynamically create or adjust colors. This enhancement is part of the [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which allows a CSS `<color>` value to be defined relative to another color. [Firefox bug 1889561](https://bugzil.la/1889561).
+The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels, allowing you to dynamically create or adjust colors. [Firefox bug 1889561](https://bugzil.la/1889561).
 
 <table>
   <thead>
