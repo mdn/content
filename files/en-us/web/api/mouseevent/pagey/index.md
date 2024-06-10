@@ -11,7 +11,7 @@ browser-compat: api.MouseEvent.pageY
 The **`pageY`** read-only property of the {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate (in pixels) at which the mouse was clicked, relative to the top edge of the entire document.
 This includes any portion of the document not currently visible.
 
-See {{domxref("MoseEvent.pageX")}} for more information.
+See {{domxref("MouseEvent.pageX")}} for more information.
 
 ## Value
 
