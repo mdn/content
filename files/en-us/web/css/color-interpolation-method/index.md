@@ -15,7 +15,7 @@ spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 
 {{CSSRef}}
 
-The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the color space used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
 
 When interpolating `<color>` values, the interpolation color space defaults to Oklab.
 
@@ -86,9 +86,10 @@ The following example shows the effect of using different interpolation color sp
 
 {{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
 
-### Hue interpolation in repeating gradients
+### Color interpolation in repeating gradients
 
-The following example shows the effect of interpolation in different color spaces with repeating gradients, using [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functional notation.
+The following example shows how to specify a color space when interpolating colors in repeating gradients.
+Three boxes show different types of repeating gradients using the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions.
 
 #### HTML
 
@@ -119,6 +120,7 @@ The following example shows the effect of interpolation in different color space
     cornflowerblue 120deg
   );
 }
+
 .linear {
   background-image: repeating-linear-gradient(
     in oklch decreasing hue,
@@ -126,6 +128,7 @@ The following example shows the effect of interpolation in different color space
     blueviolet 75px
   );
 }
+
 .radial {
   background-image: repeating-radial-gradient(
     in oklch longer hue,
