@@ -104,9 +104,11 @@ const b = 2;
 
 // Arrow function (no parameters)
 () => a + b + 100;
-```
+Here's the revised version of the Markdown content:
 
-The braces can only be omitted if the function directly returns an expression. If the body has additional lines of processing, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
+---
+
+The braces can only be omitted if the function directly returns an expression. If the body contains statements, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
 
 ```js
 // Traditional anonymous function
@@ -134,7 +136,7 @@ function bob(a) {
 const bob2 = (a) => a + 100;
 ```
 
-### Function body
+### Function Body
 
 Arrow functions can have either an _expression body_ or the usual _block body_.
 
@@ -152,7 +154,7 @@ const func2 = (x, y) => {
 
 Returning object literals using the expression body syntax `(params) => { object: literal }` does not work as expected.
 
-```js-nolint example-bad
+```js
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
@@ -163,11 +165,11 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-This is because JavaScript only sees the arrow function as having an expression body if the token following the arrow is not a left brace, so the code inside braces ({}) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal.
+This is because JavaScript only sees the arrow function as having an expression body if the token following the arrow is not a left brace, so the code inside braces (`{}`) is parsed as a sequence of statements, where `foo` is a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label), not a key in an object literal.
 
 To fix this, wrap the object literal in parentheses:
 
-```js example-good
+```js
 const func = () => ({ foo: 1 });
 ```
 
