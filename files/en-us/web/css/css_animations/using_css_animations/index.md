@@ -108,7 +108,7 @@ If the mismatch in the number of animations and animation property values is inv
 
 ### Making text slide across the browser window
 
-This basic example styles the {{HTMLElement("p")}} element using the {{cssxref("translate")}} and {{cssxref("scale")}} transition properties so that the text slides in from off the right edge of the browser window.
+This basic example styles a {{HTMLElement("p")}} element using the {{cssxref("translate")}} and {{cssxref("scale")}} transition properties so that the text slides in from off the right edge of the browser window.
 
 ```css
 p {
@@ -131,9 +131,9 @@ p {
 
 In this example, the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is `slidein`.
 
-In this case, we have just two keyframes. The first occurs at `0%` (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at `150vw` (that is, beyond the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 200% (or two times its default inline size), causing the paragraph to be twice as wide as it's `<body>` containing block. This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
+In this case, we have just two keyframes. The first occurs at `0%` (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at `150vw` (that is, beyond the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 200% (or two times its default inline size), causing the paragraph to be twice as wide as its `<body>` containing block. This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
 
-The second (and final) keyframe occurs at `100%` (using the alias `to`). The {{cssxref("translate")}} property is set to `0%` and the {{cssxref("scale")}} of the element is set to `1` which is `100%`. This causes the header to finish its animation in its default state, flush against the left edge of the content area.
+The second keyframe occurs at `100%` (using the alias `to`). The {{cssxref("translate")}} property is set to `0%` and the {{cssxref("scale")}} of the element is set to `1`, which is `100%`. This causes the header to finish its animation in its default state, flush against the left edge of the content area.
 
 ```html
 <p>
@@ -213,7 +213,7 @@ We've added a {{htmlelement("span")}} around "Alice":
 </p>
 ```
 
-This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back down again in the middle. We set the spans's {{cssxref("display")}} property to `inline-block` as the `transform` properties have no effect on non-replaced {{glossary("inline-level content")}}.
+This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back again in the middle. We set the spans's {{cssxref("display")}} property to `inline-block` as the `transform` properties do not affect non-replaced {{glossary("inline-level content")}}.
 
 > **Note:** Reload page to see the animation.
 
@@ -298,7 +298,7 @@ You can get additional control over animations — as well as useful information
 
 We'll modify the sliding text example to output some information about each animation event when it occurs, so we can get a look at how they work.
 
-We've included the same keyframe animation, start with creating the CSS for the animation. This animation will last for 3 seconds, be called "slidein", repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
+We've included the same keyframe animation as the previous example. This animation will last 3 seconds, be called "slidein", repeat 3 times, and travel in an alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
 
 ```css
 .slidein {
