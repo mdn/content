@@ -22,9 +22,10 @@ A WebVTT file (`.vtt`) contains cues, which can be either a single line or multi
 WEBVTT
 
 00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
+Never drink liquid nitrogen.
 
 00:05.000 --> 00:09.000
+Because:
 - It will perforate your stomach.
 - You could die.
 ```
@@ -87,23 +88,25 @@ Let's re-examine one of our previous examples, and look at the cue structure in 
 WEBVTT
 
 00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
+Never drink liquid nitrogen.
 
 00:05.000 --> 00:09.000
+Because:
 - It will perforate your stomach.
 - You could die.
 ```
 
 In the case of each cue:
 
-- The first line is started with a time, which is the starting time for showing the text that appears underneath.
-- On the same line, we then have a string of "`-->`".
-- We finish the first line with a second time, which is the ending time for showing the associated text.
-- We can then have one or more lines that start with a hyphen (-), each containing part of the text track to be shown.
+- The first line specifies the cue's display start and end times, separated using the string `-->`".
+- We then have one or more lines, each containing part of the text track to be shown.
+
+Note that while the output will respect line breaks in the source text, so you can create bullet-like list usings hyphen (`-`) characters as shown, it may include additional line breaks when wrapping the text.
+
+It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload, or within the payload.
+WebVTT is line based; a blank line will end the cue.
 
 We can also place comments in our `.vtt` file, to help us remember important information about the parts of our file. These should be on separate lines, starting with the string `NOTE`. You'll find more about these in the below section.
-
-It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload. WebVTT is line based; a blank line will close the cue.
 
 ## WebVTT comments
 
