@@ -25,4 +25,5 @@ Popular elliptic-curve algorithms include [Elliptic-curve Diffie–Hellman](http
 - Glossary
 
   - {{Glossary("Symmetric-key cryptography")}}
+
 - [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) on Wikipedia
