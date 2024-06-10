@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerContainer.messageerror_event
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`messageerror`** event is fired to the {{domxref("ServiceWorkerContainer")}} when an incoming message sent to the associated worker can't be deserialized.
 

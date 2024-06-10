@@ -53,7 +53,8 @@ div {
       to right,
       black 0px 1px,
       transparent 1px 20px
-    ), repeating-linear-gradient(black 0px 1px, transparent 1px 20px);
+    ),
+    repeating-linear-gradient(black 0px 1px, transparent 1px 20px);
   background-size:
     181px 5px,
     5px 121px;
