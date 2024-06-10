@@ -36,19 +36,19 @@ position-visibility: unset;
 - `no-overflow`
   - : If the positioned element starts to overflow its containing element or the viewport, it will be strongly hidden.
 
-The specification also defines another value, `anchors-valid`, but this is not yet supported in any browser.
+The specification also defines the `anchors-valid` value, which has not yet been implemented in any browser.
 
 ## Description
 
-In some situations you might not want to display an anchor-positioned element. For example, if its associated anchor is offscreen it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
+In some situations you might not want to display an anchor-positioned element. For example, if its associated anchor has been scrolled offscreen but the anchor positioned element would otherwise still be partially or fully visible, it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
 
-Use the `position-visibility` property to conditionally hide the anchor-positioned element on which it is set if the associated anchor element is completely hidden (`anchors-visible`) or if the anchor-positioned element itself is partially hidden (`no-overflow`).
+The `position-visibility` property can be used to `always` show the anchor-positioned element, or conditionally hide it if the associated anchor element is completely hidden (`anchors-visible`) or if the anchor-positioned element itself is partially hidden (`no-overflow`).
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
 
-`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the position of positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and associated features.
+`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the position of positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and associated features, which enable changing the position or flipping where the anchor position element is placed relative to the anchor when the anchor positioned element would otherwise overflow.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page, the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide, and [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
 
 ## Formal definition
 
@@ -62,7 +62,7 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 
 ### Basic usage
 
-This example associates a positioned element with an anchor and tethers the positioned element to the top of the anchor. It also provides radio buttons that set different `position-visibility` values on the anchor-positioned element to enable visualizing their effects.
+This example enables changing the value of an anchor positioned element's `position-visibility` property to demonstrate the effects of each value.
 
 #### HTML
 
@@ -138,11 +138,11 @@ We specify two {{htmlelement("div")}} elements; an anchor element with a class o
 </form>
 ```
 
-We also include a {{htmlelement("form")}} containing [radio inputs](/en-US/docs/Web/HTML/Element/input/radio) to allow you to choose different `position-visibility` values, and some filler text to make the content taller than the viewport so scrolling is required. These are not shown for the sake of brevity.
+The HTML also includes filler text to make the content taller than the viewport so scrolling is required. We've also included a {{htmlelement("fieldset")}} with a group of [radio inputs](/en-US/docs/Web/HTML/Element/input/radio) with different `position-visibility` values. The markup for these is not shown for the sake of brevity.
 
 #### CSS
 
-We first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
+We style an `anchor` `<div>` as an anchor element and tether the `infobox` `<div>` to it. The relevant CSS is as follows:
 
 ```css hidden
 body {
@@ -167,24 +167,7 @@ form {
   bottom: 2px;
   right: 2px;
 }
-```
 
-```css
-.anchor {
-  anchor-name: --myAnchor;
-}
-```
-
-We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property.
-
-In addition, we set the `infobox`'s:
-
-- {{cssxref("position")}} property to `fixed`, so it can be positioned relative to the anchor's position in the page.
-- {{cssxref("inset-area")}} property to `top span-all` — this has the effect of centering the infobox over the top of the anchor.
-- {{cssxref("margin-bottom")}} to `5px` to create space between the infobox and its anchor.
-- `position-visibility` to `always`, as a default value when the page first loads.
-
-```css hidden
 .infobox {
   color: darkblue;
   background-color: azure;
@@ -196,6 +179,10 @@ In addition, we set the `infobox`'s:
 ```
 
 ```css
+.anchor {
+  anchor-name: --myAnchor;
+}
+
 .infobox {
   position-anchor: --myAnchor;
   position: fixed;
@@ -224,7 +211,7 @@ function setPositionVisibility(e) {
 
 #### Result
 
-Scroll the page up and down with different `position-visibility` values selected to see their effects. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchors-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
+Select different `position-visibility` values and then scroll the page up and down to see their effects. With `position-visibility: always` set, the positioned element will not be hidden. With `position-visibility: anchors-visible` set, the positioned element will only be visible when the anchor is partially or fully on-screen. With `position-visibility: no-overflow` set, the positioned element will be hidden as soon as it starts to overflow the viewport.
 
 {{ EmbedLiveSample("Basic usage", "100%", "180") }}
 
@@ -238,6 +225,9 @@ Scroll the page up and down with different `position-visibility` values selected
 
 ## See also
 
+- {{cssxref("position-anchor")}}
+- {{cssxref("position")}}
+- {{cssxref("inset-area")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
 - [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
