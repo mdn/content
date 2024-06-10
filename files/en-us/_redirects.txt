@@ -3992,7 +3992,7 @@
 /en-US/docs/HTTP_Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/HTTP_Transaction_Model	/en-US/docs/Web/HTTP
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
-/en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Practical_implementation/Turning_off_form_autocompletion
+/en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Community/Contributing/Getting_started
@@ -6795,7 +6795,7 @@
 /en-US/docs/Security/MixedContent/fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /en-US/docs/Security/Mixed_content	/en-US/docs/Web/Security/Mixed_content
 /en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
-/en-US/docs/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation
+/en-US/docs/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Security/Weak_Signature_Algorithm	/en-US/docs/Web/Security/Weak_Signature_Algorithm
 /en-US/docs/Security_changes_in_Firefox_3.1	/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes
 /en-US/docs/Security_changes_in_Firefox_3.5	/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes
@@ -13024,9 +13024,9 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
 /en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
-/en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation
+/en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types
-/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation/Turning_off_form_autocompletion
+/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /en-US/docs/Web/WebGL/Animating_objects_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
