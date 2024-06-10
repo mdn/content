@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompleti
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 This article explains how a website can disable autocomplete for form fields.
 
 ## Background
@@ -65,5 +67,3 @@ For this reason, many modern browsers do not support `autocomplete="off"` for lo
 If you are defining a user management page where a user can specify a new password for another person, and therefore you want to prevent autofilling of password fields, you can use `autocomplete="new-password"`.
 
 This is a hint, which browsers are not required to comply with.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

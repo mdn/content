@@ -53,7 +53,7 @@ Related topics:
 - [HTTP Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : The `Strict-Transport-Security` [HTTP](/en-US/docs/Web/HTTP) header lets a website specify that it may only be accessed using HTTPS.
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
-  - : Certificate Transparency is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs. These provide append-only, cryptographically assured records of issued TLS certificates.
+  - : Certificate Transparency (CT) is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs. These provide append-only, cryptographically assured records of issued TLS certificates.
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
   - : An HTTPS page that includes content fetched using [cleartext](/en-US/docs/Glossary/Plaintext) HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
@@ -163,7 +163,7 @@ The following features can help guard against clickjacking:
 
 ## Practical security implementation guides
 
-Our set of [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides) offer comprehensive instructions for implementing security features effectively on websites.
+To get comprehensive instructions for implementing security features effectively on websites and to ensure you're following best practices, see our set of [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation).
 
 Some of these guides are directly related to the [MDN Observatory](/en-US/observatory/) tool. Observatory performs security audits on a website and provides a grade and score along with recommendations for fixing the security issues it finds. These guides explain how to resolve issues surfaced by the MDN Observatory tests: the tool links to the relevant guide for each issue, helping guide you towards an effective resolution. Interestingly, Mozilla's internal developer teams use this guidance when implementing websites to ensure that security best practices are applied.
 

@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/CORS
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 Cross-origin Resource Sharing (CORS) is handled using [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) and related headers. `Access-Control-Allow-Origin` defines which non-same origins are allowed to make requests to pages on your domain (i.e. via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [`fetch()`](/en-US/docs/Web/API/fetch)).
 
 ## Problem
@@ -49,5 +51,3 @@ Access-Control-Allow-Origin: https://random-dashboard.example.org
 - [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin)
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [CORS for Developers](https://w3c.github.io/webappsec-cors-for-developers/) from W3C (2016)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

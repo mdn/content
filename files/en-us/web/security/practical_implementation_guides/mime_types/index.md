@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/MIME_types
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 The [`X-Content-Type-Options`](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) header informs browsers not to load scripts and stylesheets unless the server indicates the correct MIME type.
 
 ## Problem
@@ -32,5 +34,3 @@ X-Content-Type-Options: nosniff
 - [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)
 - [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
   - : There are several ways incorrect MIME types can cause potential security problems with your site. This article explains some of those and shows how to configure your server to serve files with the correct MIME types.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/SRI
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 [Subresource Integrity (SRI)](/en-US/docs/Web/Security/Subresource_Integrity) enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
 ## Problem
@@ -57,5 +59,3 @@ r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp
 - {{htmlelement("link")}}
 - {{htmlelement("script")}}
 - [SRI Hash Generator](https://www.srihash.org/) — generates the required {{htmlelement("script")}} elements for you, and informs you if the CDN lacks CORS support.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

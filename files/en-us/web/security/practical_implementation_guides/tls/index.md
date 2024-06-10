@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/TLS
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 [Transport Layer Security (TLS)](/en-US/docs/Glossary/TLS) provides assurances about the confidentiality, authentication, and integrity of all communications, and as such, should be used for all inbound and outbound website communications. This article explains the most important TLS-related configuration settings.
 
 ## TLS configuration
@@ -137,5 +139,3 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   - : If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if {{htmlelement("iframe")}}s don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content as well. This page explains what you should be aware of as a web developer.
 - [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
   - : The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("digital certificate")}} is a critical element of the security of the certificate. This article provides some information about signature algorithms known to be weak, so you can avoid them when appropriate.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

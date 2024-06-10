@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/Referrer_policy
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 The [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) header provides fine-grained control over how and when browsers transmit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header.
 
 ## Problem
@@ -80,5 +82,3 @@ The `referrerpolicy` attribute doesn't support multiple values, so only set `no-
 ```html
 <a href="https://example.org/" referrerpolicy="no-referrer"> My link </a>
 ```
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

@@ -4,6 +4,8 @@ slug: Web/Security/Practical_implementation_guides/CSP
 page-type: guide
 ---
 
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header provides fine-grained control over where resources on their site can be loaded from.
 
 ## Problem
@@ -113,5 +115,3 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
 - [CSP evaluator](https://csp-evaluator.withgoogle.com/)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
