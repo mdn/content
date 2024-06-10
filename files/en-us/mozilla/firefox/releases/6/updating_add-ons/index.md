@@ -42,7 +42,7 @@ The {{ domxref("window.top") }} property is now read only. This will affect your
 
 `javascript:` and `data:` URLs entered into the location bar no longer inherit the principal of the currently loaded page. This probably won't affect many add-ons but if you run code that uses these URLs you may want to double check that everything is working as expected.
 
-[Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data Ls which may break CSS stylesheets which contain such symbol if it is not escaped.
+[Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such symbol if it is not escaped.
 
 ## Interfaces
 

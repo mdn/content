@@ -167,7 +167,7 @@ Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 You need to set up a server to receive reports at the given URL (`https://example.com/csp-reports` in this case) that accepts a JSON object sent with an `application/csp-report` {{HTTPHeader("Content-Type")}}.
 The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
 
-If you want to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contains a comma-separated list of endpoints:
+If you want to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contain a comma-separated list of endpoints:
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
