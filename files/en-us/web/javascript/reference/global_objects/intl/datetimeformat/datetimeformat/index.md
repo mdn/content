@@ -148,9 +148,9 @@ The default value for each date-time component option is {{jsxref("undefined")}}
 #### Style shortcuts
 
 - `dateStyle`
-  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It resolves to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale.
+  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale.
 - `timeStyle`
-  - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It resolves to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
+  - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
 > **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g. `weekday`, `hour`, `month`, etc.).
 
@@ -209,17 +209,17 @@ console.log(new Intl.DateTimeFormat().format(date));
 `dateStyle` and `timeStyle` provide a shortcut for setting multiple date-time component options at once. For example, for `en-US`, `dateStyle: "short"` is equivalent to setting `year: "2-digit", month: "numeric", day: "numeric"`, and `timeStyle: "short"` is equivalent to setting `hour: "numeric", minute: "numeric"`.
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en", {
+const shortTime = new Intl.DateTimeFormat("en-US", {
   timeStyle: "short",
 });
 console.log(shortTime.format(Date.now())); // "1:31 PM"
 
-const shortDate = new Intl.DateTimeFormat("en", {
+const shortDate = new Intl.DateTimeFormat("en-US", {
   dateStyle: "short",
 });
 console.log(shortDate.format(Date.now())); // "7/7/20"
 
-const mediumTime = new Intl.DateTimeFormat("en", {
+const mediumTime = new Intl.DateTimeFormat("en-US", {
   timeStyle: "medium",
   dateStyle: "short",
 });
