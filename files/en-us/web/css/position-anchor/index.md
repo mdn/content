@@ -9,7 +9,7 @@ browser-compat: css.properties.position-anchor
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifices the anchor name of the **anchor element** (i.e. an element that has had an **anchor name** set on it via the {{cssxref("anchor-name")}} property) it is associated with.
+The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifices the anchor name of the **anchor element** (i.e. an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) it is associated with.
 
 ## Syntax
 
