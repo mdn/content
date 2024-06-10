@@ -50,6 +50,11 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### Security
 
+- Firefox will now automatically upgrade requests for audio, video, and image subresources from HTTP to HTTPS in secure content, and block HTTP requests for other kinds of media. If an upgraded request fails because the media's host doesn't support HTTPS, the media is not found.
+  This ensures that if content is served securely over HTTPS, then all its subresources are also served securely or not served at all.
+  As pages no longer display [mixed content](/en-US/docs/Web/Security/Mixed_content), Firefox has also removed the icon to indicate when a page contains mixed-content, and the mixed-content console warning has been replaced with one that indicates when requests are upgraded.
+  ([Firefox bug 1779757](https://bugzil.la/1779757)).
+
 #### Removals
 
 ### APIs
