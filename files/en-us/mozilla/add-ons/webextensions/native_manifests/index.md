@@ -104,7 +104,7 @@ The native messaging manifest is a file with a name that matches the string pass
       <td>
         <p>Describes the method used to connect the extension with the app.</p>
         <p>
-          Takes <code>"stdio"</code>,
+          Takes the value <code>"stdio"</code> only,
           which indicates that messages are received by the app using standard
           input (<code>stdin</code>) and sent using standard output
           (<code>stdout</code>).
