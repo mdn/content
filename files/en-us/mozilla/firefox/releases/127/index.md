@@ -110,7 +110,7 @@ These features are newly shipped in Firefox 127 but are disabled by default. To 
 
 - **Color component support in CSS `calc()` function:** `layout.css.relative-color-syntax.enabled`.
 
-  The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color component values, allowing you to dynamically create or adjust colors. This enhancement is part of the [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) [Firefox bug 1889561](https://bugzil.la/1889561).
+  The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color components, allowing you to dynamically create or adjust colors. This enhancement is part of the [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) [Firefox bug 1889561](https://bugzil.la/1889561).
 
 ## Older versions
 
