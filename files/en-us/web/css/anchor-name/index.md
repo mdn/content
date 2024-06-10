@@ -131,7 +131,7 @@ body {
 }
 ```
 
-We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. 
+We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property.
 
 We include CSS to convert the `infobox` element into an **anchor-positioned element** and position it relative to its anchor by setting the following on the `infobox`:
 
