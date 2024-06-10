@@ -86,9 +86,9 @@ The following example shows the effect of using different interpolation color sp
 
 {{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
 
-### Repeating gradients
+### Hue interpolation in repeating gradients
 
-The following example shows the effect of interpolation in different color spaces with repeating gradients.
+The following example shows the effect of interpolation in different color spaces with repeating gradients, using [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functional notation.
 
 #### HTML
 
@@ -137,7 +137,7 @@ The following example shows the effect of interpolation in different color space
 
 #### Result
 
-{{EmbedLiveSample("repeating_gradients", "100%", 250)}}
+{{EmbedLiveSample("hue_interpolation_in_repeating_gradients", "100%", 250)}}
 
 ## Specifications
 
