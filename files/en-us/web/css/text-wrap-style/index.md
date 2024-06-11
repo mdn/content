@@ -33,7 +33,7 @@ When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-sty
 ### Values
 
 - `auto`
-  - : Text is wrapped in the same way that `{{CSSXRef("text-wrap-mode")}}: wrap;` does. It does so in the most performant way for the browser and does not take into account the number of characters.
+  - : Text is wrapped in the most performant way for the browser and does not take into account the number of characters.
 - `balance`
   - : Text is wrapped in the same way that `text-wrap-mode: wrap;` does. The text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six or less for Chromium and ten or less for Firefox).
 - `pretty`
