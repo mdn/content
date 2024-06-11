@@ -99,7 +99,7 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 
 ### Multiple named disclosure boxes
 
-We include several `<details>` boxes, each with the same name so only one can be open at a time:
+We include several `<details>` boxes, all with the same name so only one can be open at a time:
 
 ```html
 <details name="reqs">
