@@ -302,9 +302,11 @@ Where npm is shown in the examples below, pnpm can be swapped in and the command
 
 Yarn is often thought to be quicker than npm in terms of the installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).
 
-> **Note:** The npm package manager is **not** required to install packages from the npm registry, even though they share the same name. pnpm and Yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
+However, worth noting that the npm package manager is **not** required to install packages from the npm registry. pnpm and Yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
 
 Let's review the common actions you'll want to perform with package managers.
+
+> **Note:** We will demonstrate both npm and Yarn commands. They are not meant to be run in the same project. You should set up your project with either npm or Yarn and use commands from that package manager consistently.
 
 ### Initialize a new project
 
