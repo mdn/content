@@ -105,7 +105,7 @@ We include several `<details>` boxes, all with the same name so only one can be 
 <details name="reqs">
   <summary>Graduation Requirements</summary>
   <p>
-    Requires 40 creadits, including a passing grade in health, geography,
+    Requires 40 credits, including a passing grade in health, geography,
     history, economics, and wood shop.
   </p>
 </details>
