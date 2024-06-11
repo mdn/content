@@ -83,7 +83,7 @@ Vite provides some [init templates](https://vitejs.dev/guide/#scaffolding-your-f
 
 ### Setting up the app as an npm package
 
-First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it npm-experiment, but you can call it whatever you like:
+First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it `npm-experiment`, but you can call it whatever you like:
 
 ```bash
 mkdir npm-experiment
@@ -128,7 +128,7 @@ Go into your `npm-experiment` directory and you should now find you've got a pac
 
 We will add two more lines to package.json:
 
-- `"type": "module"`, which causes Node to interpret all .js files as [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) rather than the old CommonJS modules. It's a generally good habit to get into.
+- `"type": "module"`, which causes Node to interpret all `.js` files as [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) rather than the old CommonJS modules. It's a generally good habit to get into.
 - `"private": true`, which prevents you from accidentally publishing your package to the npm registry.
 
 Add these lines right below the `"name"`:

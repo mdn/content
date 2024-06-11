@@ -360,9 +360,9 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
-For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
+For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html).
 
-Once you've installed node, open up the terminal and run the following command to install Prettier:
+Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
 
 ```bash
 npm install --save-dev prettier

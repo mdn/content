@@ -58,7 +58,7 @@ However, we do have to set these steps up, and we'll look at that now.
 
 ## The build process
 
-Again, because we're using Vite for development, the build option is extremely simple to add. As we saw earlier, we already have a custom script `npm run build` that will let Vite build everything ready for production instead of just running it for development and testing purposes. This includes doing minification and tree-shaking of code, and cache-busting on filenames.
+Again, because we're using Vite for development, the build option is extremely simple to add. As we saw earlier, we already have a custom script `npm run build` that will let Vite build everything ready for production instead of just running it for development and testing purposes. This includes doing [minification](/en-US/docs/Glossary/Minification) and [tree-shaking](/en-US/docs/Glossary/Tree_shaking) of code, and cache-busting on filenames.
 
 It is a good best practice to always define a `build` script in your project, so we can then rely on `npm run build` to always do the complete build step, without needing to remember the specific build command arguments for each project.
 
@@ -159,9 +159,9 @@ When approaching tests there are a good deal of ways to approach the problem:
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
-However, for this project we're going to create a small test that will check the GitHub API data is in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
+However, for this project we're going to create a small test that will check if the GitHub API data is in the correct format. If not, the test will fail and will prevent the project from going live. To do anything else would be beyond the scope of this module — testing is a huge subject that really requires its own separate module. We are hoping that this section will at least make you aware of the need for testing, and will plant the seed that inspires you to go and learn more.
 
-The test itself isn't what is important. What is important is how the failure or success is handled. Because we are writing a custom build action already, we can just add a step before the build that runs the test. If the test fails, the build will fail, and the deployment will not happen.
+The test itself isn't what is important. What is important is how the failure or success is handled. Because we are writing a custom build action already, we can add a step before the build that runs the test. If the test fails, the build will fail, and the deployment will not happen.
 
 The good news is: because we are using Vite, Vite already offers a good integrated tool for testing: [Vitest](https://vitest.dev/guide/).
 
@@ -214,7 +214,7 @@ Let's get started.
          press h to show help, press q to quit
    ```
 
-   This means the test passed. Like Vite, it will watch for changes and re-run the tests when you save a file. We can just quit by pressing `q`.
+   This means the test passed. Like Vite, it will watch for changes and re-run the tests when you save a file. We can quit by pressing <kbd>q</kbd>.
 
 5. We still need to wire the test to our build action, so it blocks the build if the test fails. Open the `.github/workflows/deploy.yml` file and add the following step:
 
