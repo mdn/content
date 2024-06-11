@@ -39,7 +39,7 @@ When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-sty
 - `pretty`
   - : Text is wrapped in the same way that `text-wrap-mode: wrap;` does, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
 - `stable`
-  - : Text is wrapped in the same way that `text-wrap-mode: wrap;` does, except that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
+  - : Text is wrapped such that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
 
 ## Description
 
