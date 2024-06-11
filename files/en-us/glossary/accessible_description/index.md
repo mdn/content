@@ -48,3 +48,7 @@ You can inspect the accessible description for any element on your page: look at
 - [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [WAI-ARIA](https://www.w3.org/TR/wai-aria-implementation/)
+- [Accessible Name Description](https://www.w3.org/TR/accname-1.2/#mapping_additional_nd_description)
+- [HTML-AAM Accessible Description](https://www.w3.org/TR/html-aam-1.0/#accdesc-computation)
+- [SVG-AAM Accessible Description](https://www.w3.org/TR/svg-aam-1.0/#mapping_additional_nd)
