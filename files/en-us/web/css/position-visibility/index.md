@@ -46,7 +46,7 @@ The `position-visibility` property can be used to `always` show the anchor-posit
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
 
-`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the position of positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and associated features, which enable changing the position or flipping where the anchor position element is placed relative to the anchor when the anchor positioned element would otherwise overflow.
+`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the placement of positioned elements when they start to overflow, to keep them on-screen and usable. This can be be done with the {{cssxref("position-try-options")}} property and {{cssxref("@position-try")}} at-rule.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page, the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide, and [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
 
