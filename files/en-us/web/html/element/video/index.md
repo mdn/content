@@ -373,7 +373,7 @@ It's… it's a…
 [Dishes clattering]
 ```
 
-Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
+Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format#cue_settings).
 
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
