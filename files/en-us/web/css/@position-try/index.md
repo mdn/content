@@ -212,7 +212,7 @@ Let's talk through how these position options work:
 
 When a position try option is applied, its values will override the initial values set on the positioned element. For example, the `width` initially set on the positioned element is `200px`, but when the `--custom-right` position try option is applied, its width is set to `100px`.
 
-In some cases, we need to set values inside the position try options to turn off the initial values.  The `--custom-bottom` and `--custom-right` options use inset property and `*-self: anchor-center` values to place the positioned element, therefore we remove the previously-set `inset-area` value in each case by setting `inset-area: none`. If we didn't do this, the initially set `inset-area: top` value would still take effect and interfere with the other positioning information.
+In some cases, we need to set values inside the position try options to turn off the initial values. The `--custom-bottom` and `--custom-right` options use inset property and `*-self: anchor-center` values to place the positioned element, therefore we remove the previously-set `inset-area` value in each case by setting `inset-area: none`. If we didn't do this, the initially set `inset-area: top` value would still take effect and interfere with the other positioning information.
 
 ## Specifications
 
