@@ -76,7 +76,7 @@ We include an input of type range, and an output that will include the value of 
 
 ```html
 <label for="slider">Change the value:</label>
-<input type="range" min="0" max="100" value="25" id="slider"/>
+<input type="range" min="0" max="100" value="25" id="slider" />
 <output>25</output>
 ```
 
