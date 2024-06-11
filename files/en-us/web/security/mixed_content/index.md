@@ -49,7 +49,7 @@ These currently correspond to the mixed content types that were previously "opti
 
 The following elements are upgradable (except where the URL host is specified as an IP address — see the following section):
 
-- {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `picture`).
+- {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `<picture>`).
 - CSS image elements such as: `background-image`, `border-image`, etc.
 - {{HTMLElement("audio")}} where origin is set with `src` attribute.
 - {{HTMLElement("video")}} where origin is set with `src` attribute
@@ -62,14 +62,14 @@ Blockable content is defined as "all mixed content that is not upgradable".
 This includes HTTP requests resulting from the following elements (this list is not exhaustive):
 
 - {{HTMLElement("script")}} where origin is set via `src` attribute
-- {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes CSS stylesheets
+- {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
 - {{HTMLElement("iframe")}} where origin is set via `src` attribute
 - {{domxref("fetch()")}} requests
 - {{domxref("XMLHttpRequest")}} requests
 - All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
 - {{domxref("Navigator.sendBeacon")}} (`url` attribute)
-- {{HTMLElement("img")}} where origin is set via `srcset` or `picture`.
+- {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
 - Web fonts
 
 Mixed content requests that would otherwise be upgraded are blocked if the URL's host is an IP address rather than a domain name.
@@ -146,9 +146,9 @@ There are a number of ways to verify that your site is free of mixed content inc
 
 - Navigate your site, and check your browser's [developer console](#developer_console) for mixed content warnings.
 - Disable all mixed content on your browser and test that pages work as expected.
-  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see compatibility data).
+  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see [compatibility data](#browser-compatibility)).
 - Use a desktop-based web crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect), to check your website recursively and find links to insecure content.
-- Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) (www.crawlcenter.com) to check your site.
+- Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) to check your site.
 
 ## Specifications
 
