@@ -82,7 +82,7 @@ We include an input of type range, and an output that will include the value of 
 
 #### CSS
 
-We give the thumb, a pseudo-element, an anchor name of `thumb`. We then reference that name as the value of the `<output>` element's `position-anchor` property, which is positioned `fixed` to the range, with 
+We give the thumb, a pseudo-element, an anchor name of `thumb`. We then reference that name as the value of the `<output>` element's `position-anchor` property, which is positioned `fixed` to the range, with
 
 ```css hidden
 body {
