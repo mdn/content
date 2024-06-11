@@ -102,7 +102,7 @@ grid-template-areas: unset;
 }
 ```
 
-In above code a null token (`.`) has been used to keep an empty space at bottom left corner of the grid.
+In the above code, a null token (`.`) was used to create an unnamed area in the grid container, which we used to create an empty space at the bottom left corner of the grid.
 
 #### Result
 
