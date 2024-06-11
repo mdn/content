@@ -142,7 +142,7 @@ So with our project committed in git and pushed to our GitHub repository, the ne
 
 ## Using GitHub Actions for deployment
 
-GitHub Actions, like ESLint configuration, is another deep rabbit hole to dive into. It's not easy to get right on your first try, but for popular tasks like "build a static website and deploy it to GitHub Pages", there are many examples to copy and paste from. You can follow the instructions in [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+GitHub Actions, like ESLint configuration, is another deep rabbit hole to dive into. It's not easy to get right on your first try, but for popular tasks like "build a static website and deploy it to GitHub Pages", there are many examples to copy and paste from. You can follow the instructions in [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). You can check [our GitHub Action file](https://github.com/mdn/client-toolchain-example/tree/main/.github/workflows/github-pages.yml) for a working example. (The name of the file doesn't matter.)
 
 Now for one final link in our toolchain: a test to ensure our code works.
 
@@ -216,13 +216,18 @@ Let's get started.
 
    This means the test passed. Like Vite, it will watch for changes and re-run the tests when you save a file. We can quit by pressing <kbd>q</kbd>.
 
-5. We still need to wire the test to our build action, so it blocks the build if the test fails. Open the `.github/workflows/deploy.yml` file and add the following step:
-
-   TODO: where?
+5. We still need to wire the test to our build action, so it blocks the build if the test fails. Open the `.github/workflows/github-pages.yml` file (or whatever file name you gave to your build action) and add the following step, right before the step that runs `npm run build`:
 
    ```yaml
+   - name: Install deps
+     run: npm ci
+
+   # Add this
    - name: Run tests
      run: npm run test
+
+   - name: Build
+     run: npm run build
    ```
 
    This will run the test before the build step. If the test fails, the build will fail, and the deployment will not happen.
