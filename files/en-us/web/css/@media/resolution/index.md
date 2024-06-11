@@ -31,7 +31,7 @@ The `resolution` feature is specified as a {{cssxref("&lt;resolution&gt;")}} val
   }
 }
 
-/* Minimum resolution unit `dppx`, `x` */
+/* Minimum resolution synonym units: `dppx` and `x` */
 @media (min-resolution: 2dppx) {
   p {
     text-decoration: underline;
