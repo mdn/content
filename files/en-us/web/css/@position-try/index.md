@@ -146,7 +146,13 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 }
 ```
 
-Next, we use the `@position-try` at-rule to define four custom position try options, with descriptive {{cssxref("dashed-ident")}} names to identify them and describe their purpose. Each one places the positioned element in a specific {{cssxref("inset-area")}} and gives it an appropriate 10px {{cssxref("margin")}} to create some space between the positioned element and the anchor. The left and right position try options are given a narrower {{cssxref("width")}}.
+Next, we use the `@position-try` at-rule to define four custom position try options, with descriptive {{cssxref("dashed-ident")}} names to identify them and describe their purpose. Each one places the positioned element in a specific position around the anchor element and gives it an appropriate 10px margin between positioned element and anchor. The positioning is handled in a variety of ways, to demonstrate the different techniques available:
+
+- The first and last options use an {{cssxref("inset-area")}}.
+- The second option uses {{cssxref("top")}} with an {{cssxref("anchor()")}} value and {{cssxref("justify-self", "justify-self: anchor-center")}} to center the positioned element on the anchor in the inline direction.
+- The third option uses {{cssxref("left")}} with an {{cssxref("anchor()")}} value, wrapped inside a {{cssxref("calc()")}} function that adds 10px of spacing (rather than creating the spacing with {{cssxref("margin")}} like the other options do). It then uses {{cssxref("align-self", "align-self: anchor-center")}} to center the positioned element on the anchor in the block direction.
+
+Finally, the left and right position try options are given a narrower {{cssxref("width")}}.
 
 ```css
 @position-try --custom-left {
@@ -156,14 +162,17 @@ Next, we use the `@position-try` at-rule to define four custom position try opti
 }
 
 @position-try --custom-bottom {
-  inset-area: bottom;
+  top: anchor(bottom);
+  justify-self: anchor-center;
   margin: 10px 0 0 0;
+  inset-area: none;
 }
 
 @position-try --custom-right {
-  inset-area: right;
+  left: calc(anchor(right) + 10px);
+  align-self: anchor-center;
   width: 100px;
-  margin: 0 0 0 10px;
+  inset-area: none;
 }
 
 @position-try --custom-bottom-right {
@@ -196,12 +205,14 @@ Scroll the page and notice the change in the positioned element's placement as t
 Let's talk through how these position options work:
 
 - First of all, note that our default position is defined by `inset-area: top`. When the infobox isn't overflowing the page in any direction, the infobox sits above the anchor, and the position try options set in the `position-try-options` property are ignored. Also note that the infobox has a fixed width and bottom margin set. These values will change as different position try options are applied.
-- If the infobox starts to overflow, the browser first tries the `--custom-left` position. This moves the infobox to the left of the anchor, adjusts the margin to suit, and also gives the infobox a different width.
-- Next, the browser tries the `--custom-bottom` position. This moves the infobox to the bottom of the anchor, and sets an appropriate margin. It doesn't include a `width` descriptor, so the infobox returns to its default width of `200px` set by the `width` property.
-- The browser next tries the `--custom-right` position. This works much the same as the `--custom-left` position, with the same `width` descriptor value applied, but the `inset-area` and `margin` values are mirrored to place the infobox appropriately to the right.
-- If none of the other try options succeed in stopping the postitioned element from overflowing, the browser tries the `--custom-bottom-right` position as a last resort. This works in much the same way as the other options, but it places the positioned element to the bottom-right of the anchor.
+- If the infobox starts to overflow, the browser first tries the `--custom-left` position. This moves the infobox to the left of the anchor using `inset-area: left`, adjusts the margin to suit, and also gives the infobox a different width.
+- Next, the browser tries the `--custom-bottom` position. This moves the infobox to the bottom of the anchor using `top` and `justify-self` instead of an `inset-area`, and sets an appropriate margin. It doesn't include a `width` descriptor, so the infobox returns to its default width of `200px` set by the `width` property.
+- The browser next tries the `--custom-right` position. This works much the same as the `--custom-left` position, with the same `width` descriptor value applied. However, we are using `left` and `align-self` to place the positioned element instead of an `inset-area`. And we are wrapping the `left` value in a `calc()` function inside which we are adding 10px to create spacing, instead of using `margin`.
+- If none of the other try options succeed in stopping the postitioned element from overflowing, the browser tries the `--custom-bottom-right` position as a last resort. This places the positioned element to the bottom-right of the anchor using `inset-area: bottom right`.
 
-When a position try option is applied, its values will override the default values set on the positioned element. For example, the default `width` set on the positioned element is `200px`, but when the `--custom-right` position try option is applied, its width is set to `100px`.
+When a position try option is applied, its values will override the initial values set on the positioned element. For example, the `width` initially set on the positioned element is `200px`, but when the `--custom-right` position try option is applied, its width is set to `100px`.
+
+In some cases, we need to set values inside the position try options to turn off the initial values.  The `--custom-bottom` and `--custom-right` options use inset property and `*-self: anchor-center` values to place the positioned element, therefore we remove the previously-set `inset-area` value in each case by setting `inset-area: none`. If we didn't do this, the initially set `inset-area: top` value would still take effect and interfere with the other positioning information.
 
 ## Specifications
 
