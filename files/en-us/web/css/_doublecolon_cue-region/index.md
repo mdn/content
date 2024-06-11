@@ -8,7 +8,7 @@ spec-urls: https://w3c.github.io/webvtt/#the-cue-region-pseudo-element
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_cues) in media with VTT tracks.
+The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format#styling_webvtt_cues) in media with VTT tracks.
 
 ```css
 ::cue-region {

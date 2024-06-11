@@ -19,7 +19,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
 - `kind`
 
-  - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute contains an invalid value, it will use `metadata` (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`). The following keywords are allowed:
+  - : How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute contains an invalid value, it will use `metadata`.
+    The following keywords are allowed:
 
     - `subtitles`
 
@@ -101,9 +102,7 @@ textTrackElem.addEventListener("cuechange", (event) => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>None</td>
     </tr>
@@ -119,17 +118,14 @@ textTrackElem.addEventListener("cuechange", (event) => {
       <th scope="row">Permitted parents</th>
       <td>
         <p>
-          A media element, {{HTMLElement("audio")}} or
-          {{HTMLElement("video")}}.
+          A media element, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
         </p>
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
