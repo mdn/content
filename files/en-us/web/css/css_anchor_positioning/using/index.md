@@ -288,8 +288,8 @@ The {{cssxref("inset-area")}} property provides an alternative to the `anchor()`
 
 The grid tiles are broken up into rows and columns:
 
-- The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `start`, `center`, and `end`.
-- The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `start`, `center`, and `end`.
+- The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `start`, `center`, and `end`, and coordinate equivalents such as `y-start`, `center`, and `y-end`.
+- The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `start`, `center`, and `end`, and coordinate equivalents such as `x-start`, `center`, and `x-end`.
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the anchor element, while the distance between the center tile and the grid's outer edge is defined by the positioned element's containing block.
 
@@ -314,7 +314,7 @@ If you only specify one value, the effect is different depending on which value 
 - A logical side value (`start` or `end`) acts as if the other value is set to the same value; for example `start` gives the same effect as `start start`.
 - A value of `center` acts as if both values are set to `center` (so, `center center`).
 
-> **Note:** See the {{cssxref("inset-area")}} property for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
+> **Note:** See the [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
 
 Let's demonstrate some of these values in action; this example uses exactly the same HTML as the previous example, except that we've included a {{htmlelement("select")}} element that allows you to change the `inset-area` value applied to the positioned element, changing its position relative to the anchor.
 
