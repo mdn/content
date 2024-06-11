@@ -19,7 +19,7 @@ A string.
 Executed from inside window scope, the following snippet will log the document's global scope's origin to the console.
 
 ```js
-console.log(window.origin);
+console.log(window.origin); // On this page returns 'https://developer.mozilla.org'
 ```
 
 If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via `file://` URL), `origin` will return the string `"null"`.
@@ -31,3 +31,8 @@ If the origin is not a scheme/host/port tuple (say you are trying to run it loca
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`WorkerGlobalScope.origin`](/en-US/docs/Web/API/WorkerGlobalScope/origin)
+- {{Glossary("origin")}} glossary term
