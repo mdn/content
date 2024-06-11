@@ -27,10 +27,10 @@ For HTML elements, the description needs to be programmatically associated with 
 
 3. HTML-specific features can participate in the description computation if they are not already used for the {{glossary("accessible name")}}. For example:
 
-  * A {{htmlelement("summary")}} is described by the content of {{htmlelement("details")}} it is nested in.
-  * {{htmlelement("input")}} buttons (with type attribute `button`, `submit` or `reset`) are described by their `value` attribute's value.
+- A {{htmlelement("summary")}} is described by the content of {{htmlelement("details")}} it is nested in.
+- {{htmlelement("input")}} buttons (with type attribute `button`, `submit` or `reset`) are described by their `value` attribute's value.
 
-4.  If none of the above provide a description, the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is used, if the `title` is not the {{glossary("accessible name")}} for that element.
+4. If none of the above provide a description, the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is used, if the `title` is not the {{glossary("accessible name")}} for that element.
 
 ### SVG
 
@@ -38,7 +38,7 @@ Like the computation of the HTML elements, SVG elements also have their accessib
 
 1. [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute
 
-2. The content of its [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element (the SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) provides the accessible name). 
+2. The content of its [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element (the SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) provides the accessible name).
 
 3. From the text contained in descendant text container elements (i.e. [`<text>`](/en-US/docs/Web/SVG/Element/text)), if they are not already used for the {{glossary("accessible name")}}
 
