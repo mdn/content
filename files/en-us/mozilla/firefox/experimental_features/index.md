@@ -277,7 +277,7 @@ See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.
 
 ### Relative color syntax
 
-The [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default in Nightly and when the `layout,css.relative-color-syntax.enabled` preference is set to `true` in other versions. This allows the creation of colors from other colors using the [`color()`](/en-US/docs/Web/CSS/color_value/color) functional notation and other [color spaces](/en-US/docs/Glossary/Color_space) such as [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), etc. [Firefox bug 1701488](https://bugzil.la/1701488).
+[Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default in the Nightly release and via the `layout.css.relative-color-syntax.enabled` preference set to `true` in other release versions. Relative color syntax allows you to create a color value relative to an origin color, and can allow you to change a color in a different [color space](/en-US/docs/Glossary/Color_space) using [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) ([Firefox bug 1701488](https://bugzil.la/1701488)).
 
 <table>
   <thead>
