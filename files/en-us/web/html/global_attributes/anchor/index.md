@@ -83,12 +83,12 @@ body {
 }
 ```
 
-We use CSS to convert the `infobox` element into an **anchor-positioned element** and position it relative to its anchor. We set the following on the `infobox`:
+We use CSS to convert the `infobox` element into an **anchor-positioned element** and position it relative to its anchor. We set its:
 
 - {{cssxref("position")}} property to `fixed`, converting it to a positioned element so it can be positioned relative to the anchor's position.
 - {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right`. This tethers the positioned element to its anchor, positioning its left edge flush to the anchor's right edge.
 - {{cssxref("align-self")}} property to [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center). This causes the infobox to be aligned centrally to the center of the anchor in the inline direction.
-- {{cssxref("margin-left")}} to `10px` . This creates space between the anchor-positioned element and its anchor.
+- {{cssxref("margin-left")}} to `10px`, creating space between the anchor-positioned element and its anchor.
 
 ```css
 .infobox {
@@ -117,6 +117,6 @@ This attribute is not currently part of the HTML specification. Read the discuss
 
 - {{domxref("HTMLElement.anchorElement")}}
 - CSS {{cssxref("anchor-name")}} property
-- CSS {{cssxref("position anchor")}} property
+- CSS {{cssxref("position-anchor")}} property
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
