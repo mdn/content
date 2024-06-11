@@ -113,7 +113,7 @@ Now we have three tasks ahead of us:
 5. This remote location needs to be added to our local git repository before we can push it up there, otherwise it won't be able to find it. You'll need to run a command with the following structure (use the provided HTTPS option for now — especially if you are new to GitHub — not the SSH option):
 
    ```bash
-   git remote add origin https://github.com/yourname/repo-name.git
+   git remote add origin https://github.com/your-name/repo-name.git
    ```
 
    So if your remote URL was `https://github.com/remy/super-website.git`, as in the screenshot above, your command would be
@@ -143,6 +143,14 @@ So with our project committed in git and pushed to our GitHub repository, the ne
 ## Using GitHub Actions for deployment
 
 GitHub Actions, like ESLint configuration, is another deep rabbit hole to dive into. It's not easy to get right on your first try, but for popular tasks like "build a static website and deploy it to GitHub Pages", there are many examples to copy and paste from. You can follow the instructions in [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). You can check [our GitHub Action file](https://github.com/mdn/client-toolchain-example/tree/main/.github/workflows/github-pages.yml) for a working example. (The name of the file doesn't matter.)
+
+After you commit this file to the main branch, you should see a little green tick next to the commit title:
+
+![GitHub screenshot showing a green tick next to a commit title](build-action-pass.png)
+
+If you see a yellow dot, it means the action is running, and if you see a red cross, it means the action failed. Click on the icon and you can see the status and the logs of your own build action (named "Deploy build" in our case).
+
+After waiting for a few more minutes, you can visit your GitHub Pages URL to see your website live on the web. The link looks like `https://<your-name>.github.io/<repo-name>`. For our example, it's at <https://mdn.github.io/client-toolchain-example>.
 
 Now for one final link in our toolchain: a test to ensure our code works.
 
