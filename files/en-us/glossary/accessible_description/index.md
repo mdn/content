@@ -23,12 +23,13 @@ You can inspect the accessible description for any element on your page: look at
 For HTML elements, the description needs to be programmatically associated with the related element. If an element doesn't have an accessible description, the description needs to be programmatically associated with the related element. The accessible description is computed in the following order of precendence (defined by [HTML-AAM Accessible Description](https://www.w3.org/TR/html-aam-1.0/#accdesc-computation)):
 
 1. [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute.
+
 2. [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute.
 
 3. HTML-specific features can participate in the description computation if they are not already used for the {{glossary("accessible name")}}. For example:
 
-- A {{htmlelement("summary")}} is described by the content of {{htmlelement("details")}} it is nested in.
-- {{htmlelement("input")}} buttons (with type attribute `button`, `submit` or `reset`) are described by their `value` attribute's value.
+   - A {{htmlelement("summary")}} is described by the content of {{htmlelement("details")}} it is nested in.
+   - {{htmlelement("input")}} buttons (with type attribute `button`, `submit` or `reset`) are described by their `value` attribute's value.
 
 4. If none of the above provide a description, the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is used, if the `title` is not the {{glossary("accessible name")}} for that element.
 
