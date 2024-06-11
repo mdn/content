@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### CSS
 
+- Using a [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method) is now supported in gradients created with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient), [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient), and [`radial-gradient()`](/en-US/docs/Web/CSS/gradient/radial-gradient) functions and the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions for repeating gradients ([Firefox bug 1861363](https://bugzil.la/1861363)).
+
 #### Removals
 
 ### JavaScript
@@ -48,11 +50,18 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### Security
 
+- Firefox will now automatically upgrade requests for audio, video, and image subresources from HTTP to HTTPS in secure content, and block HTTP requests for other kinds of media. If an upgraded request fails because the media's host doesn't support HTTPS, the media is not found.
+  This ensures that if content is served securely over HTTPS, then all its subresources are also served securely or not served at all.
+  As pages no longer display [mixed content](/en-US/docs/Web/Security/Mixed_content), Firefox has also removed the icon to indicate when a page contains mixed-content, and the mixed-content console warning has been replaced with one that indicates when requests are upgraded.
+  ([Firefox bug 1779757](https://bugzil.la/1779757)).
+
 #### Removals
 
 ### APIs
 
 - The async {{domxref('Clipboard API')}} is now fully supported. The {{domxref('ClipboardItem')}} interface, along with the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface, have been enabled. ([Firefox bug 1887845](https://bugzil.la/1887845),[Firefox bug 1858788](https://bugzil.la/1858788)).
+- All {{glossary("character reference","HTML character references")}} are now supported in [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API) cues, title text, comments, annotations, and so on. ([Firefox bug 1395924](https://bugzil.la/1395924)).
+- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) are now supported. ([Firefox bug 1885491](https://bugzil.la/1885491)).
 
 #### DOM
 

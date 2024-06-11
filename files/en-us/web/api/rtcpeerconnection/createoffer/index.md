@@ -12,7 +12,7 @@ The **`createOffer()`** method of the {{domxref("RTCPeerConnection")}} interface
 
 The SDP offer includes information about any {{domxref("MediaStreamTrack")}} objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the {{Glossary("ICE")}} agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.
 
-The return value is a {{jsxref("Promise")}} which, when the offer has been created, is resolved with a {{domxref("RTCSessionDescription")}} object containing the newly-created offer.
+The return value is a {{jsxref("Promise")}} which, when the offer has been created, is resolved with a [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#options) dictionary containing the newly-created offer.
 
 ## Syntax
 
@@ -57,7 +57,7 @@ The parameters for the older form of `createOffer()` are described below, to aid
 
 ### Return value
 
-A {{jsxref("Promise")}} whose fulfillment handler will receive an object conforming to the [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#rtcsessiondescriptioninit) dictionary which contains the SDP describing the generated offer.
+A {{jsxref("Promise")}} whose fulfillment handler will receive an object conforming to the [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#options) dictionary which contains the SDP describing the generated offer.
 That received offer should be delivered through the signaling server to a remote peer.
 
 ### Exceptions
