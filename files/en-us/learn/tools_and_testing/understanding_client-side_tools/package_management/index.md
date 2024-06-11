@@ -205,7 +205,7 @@ npx vite
 
 You should see something like this printed in your terminal:
 
-```bash
+```plain
 VITE v5.2.13  ready in 326 ms
 
 ➜  Local:   http://localhost:5173/
