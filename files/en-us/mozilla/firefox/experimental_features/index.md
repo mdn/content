@@ -275,6 +275,46 @@ See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.
   </tbody>
 </table>
 
+### Relative colors syntax
+
+The [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default in Nightly and when the `layout,css.relative-color-syntax.enabled` preference is set to `true` in other versions. This allows the creation of colors from other colors using the [`color()`](/en-US/docs/Web/CSS/color_value/color) functional notation and other [color spaces](/en-US/docs/Glossary/Color_space) such as [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), etc. [Firefox bug 1701488](https://bugzil.la/1701488).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.relative-color-syntax.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Single numbers as aspect ratio in media queries
 
 Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when specifying the aspect ratio for a [media query](/en-US/docs/Web/CSS/CSS_media_queries). (See [Firefox bug 1565562](https://bugzil.la/1565562) for more details.)
