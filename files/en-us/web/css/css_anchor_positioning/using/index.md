@@ -678,7 +678,8 @@ In addition, we increase the anchor element's {{cssxref("width")}} on {{cssxref(
   transition: 1s width;
 }
 
-.anchor:hover, .anchor:focus {
+.anchor:hover,
+.anchor:focus {
   width: 50px;
 }
 ```
