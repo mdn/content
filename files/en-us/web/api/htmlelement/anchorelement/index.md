@@ -22,6 +22,8 @@ An {{domxref("HTMLElement")}} instance representing the element's anchor element
 
 ### Basic usage
 
+This example associates an element with an anchor in HTML, and uses JavaScript to retrieve a reference to the anchor element.
+
 #### HTML
 
 In the HTML, we create a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `example-anchor`. This will be our anchor element. We then include another `<div>` with a class of `infobox` and an [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute set to `example-anchor`. This designates the first `<div>` as the anchor of the second `<div>`, associating the two together.
@@ -40,7 +42,7 @@ We also include a {{htmlelement("p")}} element to output some results into.
 
 #### JavaScript
 
-In the JavaScript, we get references to the positioned element and the output element, and then print the value of the positioned element's `anchorElement` property's associated `id` to the output, showing that the anchor element is the positioned element's `anchorElement`.
+We use JavaScript to get references to the positioned element and the output element, and then print the value of the positioned element's `anchorElement` property's associated `id` to the output, showing that the anchor element is the positioned element's `anchorElement`.
 
 ```js
 const posElem = document.querySelector(".infobox");
@@ -70,5 +72,6 @@ This attribute is not currently part of the HTML specification. Read the discuss
 ## See also
 
 - HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
