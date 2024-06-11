@@ -43,6 +43,7 @@ In addition, the specification provides CSS-only mechanisms to:
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 - [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
 - [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value)
+- [`<try-side>`](/en-US/docs/Web/CSS/position-try-order#try-side)
 - [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-options#try-tactic)
 
 ### HTML attributes
@@ -67,19 +68,6 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ## Related concepts
 
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
-  - {{cssxref("top")}}
-  - {{cssxref("left")}}
-  - {{cssxref("bottom")}}
-  - {{cssxref("right")}}
-- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module:
-  - {{cssxref("width")}}
-  - {{cssxref("height")}}
-  - {{cssxref("min-width")}}
-  - {{cssxref("min-height")}}
-  - {{cssxref("max-width")}}
-  - {{cssxref("max-height")}}
-  - {{cssxref("block-size")}}
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module:
   - {{cssxref("inset-block-start")}}
   - {{cssxref("inset-block-end")}}
@@ -93,6 +81,20 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("min-inline-size")}}
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
+  - [Inset properties](/en-US/docs/Glossary/Inset_properties) glossary term
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
+  - {{cssxref("top")}}
+  - {{cssxref("left")}}
+  - {{cssxref("bottom")}}
+  - {{cssxref("right")}}
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module:
+  - {{cssxref("width")}}
+  - {{cssxref("height")}}
+  - {{cssxref("min-width")}}
+  - {{cssxref("min-height")}}
+  - {{cssxref("max-width")}}
+  - {{cssxref("max-height")}}
+  - {{cssxref("block-size")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module:
   - {{cssxref("align-items")}}
   - {{cssxref("align-self")}}
@@ -100,10 +102,6 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("justify-self")}}
   - {{cssxref("place-items")}}
   - {{cssxref("place-self")}}
-
-### Glossary terms
-
-- [Inset properties](/en-US/docs/Glossary/Inset_properties)
 
 ## Specifications
 
