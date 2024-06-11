@@ -7,7 +7,7 @@ browser-compat: css.types.calc
 
 {{CSSRef}}
 
-The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} values.
+The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
 
 {{EmbedInteractiveExample("pages/css/function-calc.html")}}
 
@@ -17,11 +17,14 @@ The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 /* calc(expression) */
 calc(100% - 80px)
 
-/* Expression with color channel */
-calc(l * 0.8)
-calc(h + 180)
-calc(b / 2)
-calc(r * .3 + g * .59 + b * .11)
+/* Expression with a CSS function */
+calc(100px * sin(pi / 2))
+
+/* Expression containing a variable */
+calc(var(--hue) + 180)
+
+/* Expression with color channels in relative colors */
+rgb(from blue calc(r * .3) calc(g * .59) calc(b * .11))
 ```
 
 The `calc()` function takes a single expression as its parameter, and the expression's result is used as the value for a CSS property. In this expression, the {{Glossary("operand", "operands")}} can be combined using the {{Glossary("operator", "operators")}} listed below. When the expression contains multiple operands,`calc()` uses the standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
@@ -39,19 +42,30 @@ All operands, except those of type {{cssxref("&lt;number&gt;")}}, must be suffix
 
 ## Description
 
-Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math, which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
-For more details on how constants are serialized, see the [`calc-constant`](/en-US/docs/Web/CSS/calc-constant) page.
+There's a few points to keep in mind about `calc()`:
 
-Keep the following points in mind while using `calc()`:
+- Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math, which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
+  For more details on how constants are serialized, see the [`calc-constant`](/en-US/docs/Web/CSS/calc-constant) page.
+
+- Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` is specified.
+
+- The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
+
+- When `calc()` is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. So, `calc(1.4)` will result in a value of `1`. If the fractional part of the value is exactly `0.5`, the value will be rounded up. For example, `calc(1.5)` will result in a value of `2`, while `calc(-1.5)` will round to `-1`.
+
+### Rules and best practices while using `calc()`
 
 - The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. For instance, `calc(50% -8px)` will be parsed as "a percentage followed by a negative length" — which is an invalid expression — while `calc(50% - 8px)` is "a percentage followed by a subtraction operator and a length". Likewise, `calc(8px + -50%)` is treated as "a length followed by an addition operator and a negative percentage".
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
-- Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
-- It is permitted to nest `calc()` functions, in which case the inner ones are treated as simple parentheses.
+- It is permitted to nest `calc()` functions, in which case, the inner ones are treated as simple parentheses.
 - For lengths, you can't use `0` to mean `0px` (or another length unit); instead, you must use the version with the unit: `margin-top: calc(0px + 20px);` is valid, while `margin-top: calc(0 + 20px);` is invalid.
-- The `calc()` function cannot directly substitute the numeric value for percentage types; for instance `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
 - Current implementations require that for the `*` and `/` operators, one of the operands has to be unitless. For `/`, the right operand must be unitless. For example `font-size: calc(1.25rem / 1.25)` is valid but `font-size: calc(1.25rem / 125%)` is invalid.
-- When `calc()` is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example, `z-index: calc(3 / 2);` will result in a `z-index` value of `2`.
+
+### Support for computing color channels in relative colors
+
+The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors). This allows for dynamic adjustments of color channels in color models such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), and [`lch()`](/en-US/docs/Web/CSS/color_value/lch).
+
+The relative color syntax defines a number of color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
 
 ## Formal syntax
 
@@ -146,56 +160,60 @@ You can use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_vari
 
 After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`. When it's assigned to `.foo`'s width property, all inner `calc()` functions (no matter how deeply nested) will be flattened to just parentheses. Therefore, the `width` property's value will eventually be `calc((100px / 2) / 2)`, which equals `25px`. In short, a `calc()` inside of a `calc()` is identical to using parentheses.
 
-### Adjusting colors dynamically
+### Adjusting color channels in relative colors
 
-The `calc()` function can be used with colors to dynamically adjust individual color channels. In the example below, CSS variables are defined for the `red`, `green`, and `blue` color channels. The `calc()` function is used to dynamically decrease the `red` channel by `50` units.
+The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) without the need for storing color channel values as variables.
 
-```html hidden
-<p class="original">This text color is the original color.</p>
-<p class="plus">
-  This text color is adjusted to increase the blue channel by 100.
+In the example below, the first paragraph uses a [named color](/en-US/docs/Web/CSS/named-color).
+In the paragraphs that follow, `calc()` is used with the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) functions to adjust the values of each color channel relative to the original named color.
+
+```html
+<p class="original">Original text color in <code>rebeccapurple</code></p>
+<p class="same-original">
+  Same as original color, but using <code>calc()</code>
 </p>
-<p class="minus">
-  This text color is adjusted to decrease the red channel by 200.
-</p>
-<p class="double">This text color is adjusted to double the green channel.</p>
-<p class="half">
-  This text color is dynamically adjusted to halve the alpha channel.
-</p>
+<p class="increase-green">Green channel increased by 180</p>
+<p class="reduce-alpha">Alpha channel (transparency) reduced by half</p>
+<p class="reduce-saturation">Saturation reduced by 60</p>
+<p class="invert-hue">Hue angle increased by 180 degrees</p>
+```
+
+```css hidden
+p {
+  font-family: monospace;
+  font-size: 16px;
+}
 ```
 
 ```css
-:root {
-  --r: 255;
-  --g: 100;
-  --b: 100;
-  --a: 1;
-}
-
 .original {
-  color: rgb(var(--r) var(--g) var(--b));
+  color: rebeccapurple;
 }
 
-.plus {
-  color: rgb(var(--r) var(--g) calc(var(--b) + 100));
+.same-original {
+  color: rgb(from rebeccapurple calc(r) calc(g) calc(b));
 }
 
-.minus {
-  color: rgb(calc(var(--r) - 200) var(--g) var(--b));
+.increase-green {
+  color: rgb(from rebeccapurple r calc(g + 180) b);
 }
 
-.double {
-  color: rgb(var(--r) calc(var(--g) * 2) var(--b));
+.reduce-alpha {
+  color: rgb(from rebeccapurple r g b / calc(alpha / 2));
 }
 
-.half {
-  color: rgb(var(--r) var(--g) var(--b) / calc(var(--a) / 2));
+.reduce-saturation {
+  color: hsl(from rebeccapurple h calc(s - 60) l);
+}
+
+.invert-hue {
+  color: hsl(from cornflowerblue calc(h + 180) s l);
 }
 ```
 
-{{EmbedLiveSample('Adjusting_colors_dynamically', '700', '200')}}
+{{EmbedLiveSample('Adjusting color channels in relative colors', '700', '300')}}
 
-Refer to the [Using math functions](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) section to see how the `calc()` function is used with relative colors.
+For another example of using the `calc()` function to derive relative colors, see the [Using math functions](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) section on the _Using relative colors_ page.
 
 ## Specifications
 
