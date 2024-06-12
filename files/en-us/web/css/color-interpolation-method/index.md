@@ -2,14 +2,7 @@
 title: <color-interpolation-method>
 slug: Web/CSS/color-interpolation-method
 page-type: css-type
-browser-compat:
-  - css.types.color.color-mix
-  - css.types.image.gradient.conic-gradient.interpolation_color_space
-  - css.types.image.gradient.linear-gradient.interpolation_color_space
-  - css.types.image.gradient.radial-gradient.interpolation_color_space
-  - css.types.image.gradient.repeating-conic-gradient.interpolation_color_space
-  - css.types.image.gradient.repeating-linear-gradient.interpolation_color_space
-  - css.types.image.gradient.repeating-radial-gradient.interpolation_color_space
+browser-compat: css.types.color.color-mix
 spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 ---
 
@@ -90,7 +83,7 @@ The following example shows the effect of using different interpolation color sp
 
 The following example shows how to specify a color space when interpolating colors in repeating gradients.
 Three boxes show different types of repeating gradients using the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions.
-The first box uses the HSL color space to interpolate between two color values.
+The first box uses the Lab color space to interpolate between two color values.
 The second and third boxes use Oklch and additionally provide a [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method) to specify how to interpolate between hue values.
 
 #### HTML
@@ -119,7 +112,7 @@ We used the same two colors in each gradient to demonstrate the different effect
 ```css
 .conic {
   background-image: repeating-conic-gradient(
-    in hsl,
+    in lab,
     burlywood,
     blueviolet 120deg
   );
@@ -127,7 +120,7 @@ We used the same two colors in each gradient to demonstrate the different effect
 
 .linear {
   background-image: repeating-linear-gradient(
-    in oklch decreasing hue,
+    in oklch,
     burlywood,
     blueviolet 75px
   );
@@ -145,6 +138,9 @@ We used the same two colors in each gradient to demonstrate the different effect
 #### Result
 
 {{EmbedLiveSample("hue_interpolation_in_repeating_gradients", "100%", 250)}}
+
+Comparing the first and second boxes demonstrates the difference of interpolating between two colors in differing color spaces.
+Comparing the second and third boxes shows the difference between [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)s, with the linear gradient using the shorter method (default) and the radial gradient using the longer method.
 
 ## Specifications
 
