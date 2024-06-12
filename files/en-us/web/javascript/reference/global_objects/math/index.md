@@ -43,51 +43,53 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
 ## Static methods
 
 - {{jsxref("Math.abs()")}}
-  - : Returns the absolute value of `x`.
+  - : Returns the absolute value of the input.
 - {{jsxref("Math.acos()")}}
-  - : Returns the arccosine of `x`.
+  - : Returns the arccosine of the input.
 - {{jsxref("Math.acosh()")}}
-  - : Returns the hyperbolic arccosine of `x`.
+  - : Returns the hyperbolic arccosine of the input.
 - {{jsxref("Math.asin()")}}
-  - : Returns the arcsine of `x`.
+  - : Returns the arcsine of the input.
 - {{jsxref("Math.asinh()")}}
   - : Returns the hyperbolic arcsine of a number.
 - {{jsxref("Math.atan()")}}
-  - : Returns the arctangent of `x`.
+  - : Returns the arctangent of the input.
 - {{jsxref("Math.atan2()")}}
   - : Returns the arctangent of the quotient of its arguments.
 - {{jsxref("Math.atanh()")}}
-  - : Returns the hyperbolic arctangent of `x`.
+  - : Returns the hyperbolic arctangent of the input.
 - {{jsxref("Math.cbrt()")}}
-  - : Returns the cube root of `x`.
+  - : Returns the cube root of the input.
 - {{jsxref("Math.ceil()")}}
-  - : Returns the smallest integer greater than or equal to `x`.
+  - : Returns the smallest integer greater than or equal to the input.
 - {{jsxref("Math.clz32()")}}
-  - : Returns the number of leading zero bits of the 32-bit integer `x`.
+  - : Returns the number of leading zero bits of the 32-bit integer input.
 - {{jsxref("Math.cos()")}}
-  - : Returns the cosine of `x`.
+  - : Returns the cosine of the input.
 - {{jsxref("Math.cosh()")}}
-  - : Returns the hyperbolic cosine of `x`.
+  - : Returns the hyperbolic cosine of the input.
 - {{jsxref("Math.exp()")}}
   - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's number (`2.718`…, the base of the natural logarithm).
 - {{jsxref("Math.expm1()")}}
   - : Returns subtracting `1` from `exp(x)`.
 - {{jsxref("Math.floor()")}}
-  - : Returns the largest integer less than or equal to `x`.
+  - : Returns the largest integer less than or equal to the input.
+- {{jsxref("Math.f16round()")}}
+  - : Returns the nearest [half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of the input.
 - {{jsxref("Math.fround()")}}
-  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `x`.
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of the input.
 - {{jsxref("Math.hypot()")}}
   - : Returns the square root of the sum of squares of its arguments.
 - {{jsxref("Math.imul()")}}
-  - : Returns the result of the 32-bit integer multiplication of `x` and `y`.
+  - : Returns the result of the 32-bit integer multiplication of the inputs.
 - {{jsxref("Math.log()")}}
-  - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of `x`.
+  - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of the input.
 - {{jsxref("Math.log10()")}}
-  - : Returns the base-10 logarithm of `x`.
+  - : Returns the base-10 logarithm of the input.
 - {{jsxref("Math.log1p()")}}
   - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
 - {{jsxref("Math.log2()")}}
-  - : Returns the base-2 logarithm of `x`.
+  - : Returns the base-2 logarithm of the input.
 - {{jsxref("Math.max()")}}
   - : Returns the largest of zero or more numbers.
 - {{jsxref("Math.min()")}}
@@ -97,21 +99,21 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
 - {{jsxref("Math.random()")}}
   - : Returns a pseudo-random number between `0` and `1`.
 - {{jsxref("Math.round()")}}
-  - : Returns the value of the number `x` rounded to the nearest integer.
+  - : Returns the value of the input rounded to the nearest integer.
 - {{jsxref("Math.sign()")}}
-  - : Returns the sign of the `x`, indicating whether `x` is positive, negative, or zero.
+  - : Returns the sign of the input, indicating whether it is positive, negative, or zero.
 - {{jsxref("Math.sin()")}}
-  - : Returns the sine of `x`.
+  - : Returns the sine of the input.
 - {{jsxref("Math.sinh()")}}
-  - : Returns the hyperbolic sine of `x`.
+  - : Returns the hyperbolic sine of the input.
 - {{jsxref("Math.sqrt()")}}
-  - : Returns the positive square root of `x`.
+  - : Returns the positive square root of the input.
 - {{jsxref("Math.tan()")}}
-  - : Returns the tangent of `x`.
+  - : Returns the tangent of the input.
 - {{jsxref("Math.tanh()")}}
-  - : Returns the hyperbolic tangent of `x`.
+  - : Returns the hyperbolic tangent of the input.
 - {{jsxref("Math.trunc()")}}
-  - : Returns the integer portion of `x`, removing any fractional digits.
+  - : Returns the integer portion of the input, removing any fractional digits.
 
 ## Examples
 

@@ -37,7 +37,7 @@ Next we turn our attention to accessibility, providing information on common pro
 
 When we say accessibility in the context of web technology, most people immediately think of making sure websites/apps are usable by people with disabilities, for example:
 
-- Visually impaired people using screen readers or magnification/zoom to access text
+- Visually impaired people using screen readers or magnification/zoom to access text.
 - People with motor function impairments using the keyboard (or other non-mouse features) to activate website functionality.
 - People with hearing impairments relying on captions/subtitles or other text alternatives for audio/video content.
 

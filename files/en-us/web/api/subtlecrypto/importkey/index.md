@@ -128,10 +128,8 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 To get this into a format you can give to `importKey()` you need to do two
 things:
 
-- base64-decode the part between header and footer, using
-  [`window.atob()`](/en-US/docs/Web/API/atob).
-- convert the resulting string into an
-  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+- base64-decode the part between header and footer, using {{domxref("Window.atob()")}}.
+- convert the resulting string into an {{jsxref("ArrayBuffer")}}.
 
 See the [Examples](#examples) section for more concrete guidance.
 
@@ -172,10 +170,8 @@ gQIDAQAB
 Just as with [PKCS #8](#pkcs_8), to get this into a format you can give to
 `importKey()` you need to do two things:
 
-- base64-decode the part between header and footer, using
-  [`window.atob()`](/en-US/docs/Web/API/atob).
-- convert the resulting string into an
-  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+- base64-decode the part between header and footer, using {{domxref("Window.atob()")}}.
+- convert the resulting string into an {{jsxref("ArrayBuffer")}}.
 
 See the [Examples](#examples) section for more concrete guidance.
 

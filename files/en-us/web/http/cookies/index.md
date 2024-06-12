@@ -226,7 +226,7 @@ Earlier on we talked about how the `SameSite` attribute can be used to control w
 
 Third-party cookies can be set by third-party content embedded in sites via {{htmlelement("iframe")}}s. They have many legitimate uses include sharing user profile information, counting ad impressions, or collecting analytics across different related domains.
 
-However, third-party cookies can also be used to create creepy, invasive user experiences. A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. The classic example is when you when search for product information on one site and are then chased around the web by adverts for similar products wherever you go.
+However, third-party cookies can also be used to create creepy, invasive user experiences. A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. The classic example is when you search for product information on one site and are then chased around the web by adverts for similar products wherever you go.
 
 Browser vendors know that users don't like this behavior, and as a result have all started to block third-party cookies by default, or at least made plans to go in that direction. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
 

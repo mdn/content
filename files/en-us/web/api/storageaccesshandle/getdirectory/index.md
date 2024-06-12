@@ -22,13 +22,14 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("FileSystemDirectoryHandle")}} object.
+A {{jsxref("Promise")}} that fulfills with an unpartitioned {{domxref("FileSystemDirectoryHandle")}} object.
 
 ### Exceptions
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("StorageManager.getDirectory()")}}
+
+See {{domxref("StorageManager.getDirectory()")}}
 
 ## Examples
 

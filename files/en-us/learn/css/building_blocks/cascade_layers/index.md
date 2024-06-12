@@ -39,7 +39,7 @@ To understand cascade layers, you must understand the CSS cascade well. The sect
 
 ## Review of the cascade concept
 
-The C in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent runs through several clearly defined steps to determine the values assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, **Cascade layers**, which is what you came here to learn:
+The 'C' in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent runs through several clearly defined steps to determine the values assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, **Cascade layers**, which is what you came here to learn:
 
 1. **Relevance:** Find all the declaration blocks with a selector match for each element.
 2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
@@ -378,35 +378,63 @@ To summarize:
 
 The cascade precedence order for nested layers is similar to that of regular layers, but contained within the layer. The precedence order is based on the order of nested layer creation. Non-nested styles in a layer have precedence over nested normal styles, with the precedence order reversed for important styles. Specificity weight between nested layers does not matter, though it does matter for conflicting styles within a nested layer.
 
-The following creates and adds styles to the `components` layer and `components.narrow` nested layer and creates and appends styles to a new `components.wide` layer:
+The following creates and adds styles to the `components` layer, `components.narrow` nested layer, and `components.wide` nested layer:
+
+```html hidden
+<div>Text</div>
+```
+
+```css hidden
+div {
+  height: 150px;
+  width: 150px;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+```
 
 ```css
-@import url("components-lib.css") layer(components);
-@import url("narrowtheme.css") layer(components.narrow);
+div {
+  background-color: wheat;
+  color: pink !important;
+}
 
 @layer components {
-  :root {
-    --theme: red;
-    font-family: serif !important;
+  div {
+    background-color: yellow;
+    border: 1rem dashed red;
+    color: orange !important;
   }
 }
+
 @layer components.narrow {
-  :root {
-    --theme: blue;
-    font-family: sans-serif !important;
+  div {
+    background-color: skyblue;
+    border: 1rem dashed blue;
+    color: purple !important;
+    border-radius: 50%;
   }
 }
+
 @layer components.wide {
-  :root {
-    --theme: purple;
-    font-family: cursive !important;
+  div {
+    background-color: limegreen;
+    border: 1rem dashed green;
+    color: seagreen !important;
+    border-radius: 20%;
   }
 }
 ```
 
-Because unlayered normal styles have precedence over layered normal styles, and within a layer, non-nested styles have precedence over normal nested styles, `red` wins over the other `theme` colors.
+{{EmbedLiveSample("Precedence order of nested cascade layers", "100%", "250")}}
 
-With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `sans-serif` wins.
+Here's a summary of the properties that are used and why each declaration is applied:
+
+- `background-color`: Because unlayered normal styles have precedence over layered normal styles, `wheat` color wins.
+- `border`: Because within a layer non-nested styles have precedence over normal nested styles, `red` color wins.
+- `color`: With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `purple` color wins.
+- `border-radius`: The property has been set only in the nested layers so by declaration order `20%` radius wins.
 
 ## Test your skills!
 
