@@ -9,7 +9,7 @@ browser-compat: css.types.global_keywords.revert-layer
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`revert-layer`** CSS keyword rolls back the value of a property in a {{cssxref("@layer", "cascade layer")}} to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
+The **`revert-layer`** [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords) rolls back the value of a property in a {{cssxref("@layer", "cascade layer")}} to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
 If there is no other cascade layer to revert to for the matching CSS rule, the property value rolls back to the {{cssxref("computed_value", "computed value")}} derived from the current layer. Furthermore, if there is no matching CSS rule in the current layer, the property value for the element rolls back to the style defined in a previous [style origin](/en-US/docs/Glossary/Style_origin).
 
@@ -19,7 +19,7 @@ This keyword can be applied to any CSS property, including the CSS shorthand pro
 
 The `revert-layer` keyword lets you rollback styles to the ones specified in previous cascade layers. All cascade layers exist in the [author origin](/en-US/docs/Glossary/Style_origin). The {{cssxref("revert")}} keyword, in comparison, lets you remove styles applied in the author origin and roll back to styles in user origin or user-agent origin.
 
-The `revert-layer` keyword is ideally meant for applying on properties inside a layer. However, if the `revert-layer` keyword is set on a property outside a layer, the value of the property will roll back to the default value established by the user agent's stylesheet (or by user styles, if any exist). So in this scenario, the `revert-layer` keyword behaves like the {{cssxref("revert")}} keyword.
+The `revert-layer` keyword is ideally meant for applying on properties inside a layer. However, if the `revert-layer` keyword is set on a property outside a layer, the value of the property will roll back to any value set by presentational hints (e.g. the `width` or `height` attributes in HTML), defaulting to the value established by the user agent's stylesheet (or by user styles, if any exist). So in this scenario, the `revert-layer` keyword behaves very similarly to the The `revert-layer` keyword is ideally meant for applying on properties inside a layer. However, if the `revert-layer` keyword is set on a property outside a layer, the value of the property will roll back to the default value established by the user agent's stylesheet (or by user styles, if any exist). So in this scenario, the `revert-layer` keyword behaves like the {{cssxref("revert")}} keyword, with the exception that `revert` considers presentational hints to be part of the author origin, so it reverts them too.
 
 ## Examples
 
@@ -154,8 +154,9 @@ The style for all `<li>` elements rolls back to the defaults in the user-agent o
 
 ## See also
 
-- {{cssxref("initial")}}: Sets a property to its initial value
-- {{cssxref("inherit")}}: Sets an element's property the same as its parent
-- {{cssxref("revert")}}: Resets a property to the value established by the user-agent stylesheet (or user styles if any exist)
-- {{cssxref("unset")}}: Sets a property to its inherited value if the property inherits or to its initial value if the property does not inherit
-- {{cssxref("all")}}: Resets all properties to their initial, inherited, reverted, or unset state at once
+- {{cssxref("initial")}}
+- {{cssxref("inherit")}}
+- {{cssxref("revert")}}
+- {{cssxref("unset")}}
+- {{cssxref("all")}}
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
