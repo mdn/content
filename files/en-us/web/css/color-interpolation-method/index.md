@@ -118,8 +118,8 @@ The second and third boxes use Oklch and additionally provide a [`<hue-interpola
 .conic {
   background-image: repeating-conic-gradient(
     in hsl,
-    aquamarine,
-    cornflowerblue 120deg
+    burlywood,
+    blueviolet 120deg
   );
 }
 
@@ -134,7 +134,7 @@ The second and third boxes use Oklch and additionally provide a [`<hue-interpola
 .radial {
   background-image: repeating-radial-gradient(
     in oklch longer hue,
-    cornflowerblue 50px,
+    blueviolet 50px,
     burlywood 100px
   );
 }
