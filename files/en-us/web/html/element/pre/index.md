@@ -66,11 +66,11 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ```html
 <p>Using CSS to change the font color is easy.</p>
-<pre>
+<pre><code>
 body {
   color: red;
 }
-</pre>
+</code></pre>
 ```
 
 #### Result
@@ -82,12 +82,12 @@ body {
 #### HTML
 
 ```html
-<pre>
+<pre><code>
 let i = 5;
 
 if (i &lt; 10 &amp;&amp; i &gt; 0)
   return &quot;Single Digit Number&quot;
-</pre>
+</code></pre>
 ```
 
 #### Result
