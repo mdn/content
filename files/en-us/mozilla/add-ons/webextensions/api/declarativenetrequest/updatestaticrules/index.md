@@ -9,7 +9,7 @@ browser-compat: webextensions.api.declarativeNetRequest.updateStaticRules
 
 Modifies the enabled state of rules in a static ruleset.
 
-Rules belonging to a ruleset can be modified while it is disabled but don't become effective until the ruleset is enabled.
+Rules can be enabled and disabled while the ruleset containing them is disabled. Any changes become effective when the ruleset is enabled.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ let updatedStaticRules = browser.declarativeNetRequest.updateStaticRules(
 
 - `options`
 
-  - : An object containing details of the ruleset and which of its rules are to be enabled or disabled.
+  - : An object specifying a static ruleset and the rules to enable or disable in that ruleset.
     - `rulesetId` rulesetId
       - : `string` The ID of the static ruleset to modify.
     - `disableRuleIds` {{optional_inline}}
