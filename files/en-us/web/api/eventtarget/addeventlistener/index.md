@@ -346,7 +346,7 @@ myObject.register();
 ### Getting data into and out of an event listener
 
 Event listeners only take one argument,
-the [Event Object](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects),
+an {{domxref("Event")}} or a subclass of `Event`,
 which is automatically passed to the listener, and the return value is ignored.
 Therefore, to get data into and out of an event listener, instead of passing the data through parameters and return values, you need to create [closures](/en-US/docs/Web/JavaScript/Closures) instead.
 
