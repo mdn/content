@@ -47,7 +47,7 @@ Returns "file:////C:/Windows/Desktop/example.css"
 ## Notes
 
 If the style sheet is a linked style sheet, the value of its attribute is its location.
-For inline style sheets, the value of this attribute is `NULL`.
+For inline style sheets, the value of this attribute is `null`.
 
 ## Specifications
 

@@ -310,8 +310,10 @@ Content-Range: bytes 300-400/1270
 
 ## Importance of setting the correct MIME type
 
+Some server configurations may use the associated MIME type to perform optimizations, such as file concatenation, compression, or caching. See [h5bp/server-configs-apache](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/web_performance/compression.conf) for an example of an Apache configuration that compresses files of certain MIME types.
+
 Most web servers send unrecognized resources as the `application/octet-stream` MIME type.
-For security reasons, most browsers do not allow setting a custom default action for such resources, forcing the user to save it to disk to use it.
+For security reasons, most browsers do not allow setting a custom default action (like "Open in Word") for such resources, forcing the user to save it to disk to use it.
 
 Some common incorrect server configurations:
 
@@ -322,7 +324,6 @@ Some common incorrect server configurations:
   Only resources with the correct MIME Type will be played in {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements.
   Be sure to specify the correct [media type for audio and video](/en-US/docs/Web/Media/Formats).
 - Proprietary file types.
-  Avoid using `application/octet-stream` as most browsers do not allow defining a default behavior (like "Open in Word") for this generic MIME type.
   A specific type like `application/vnd.mspowerpoint` lets users open such files automatically in the presentation software of their choice.
 
 ## MIME sniffing
