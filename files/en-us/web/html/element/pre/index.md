@@ -166,4 +166,4 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
 - [HTML Entity](/en-US/docs/Glossary/Entity)
-- Related element: {{HTMLElement("code")}}
+- Related element: {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}
