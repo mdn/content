@@ -13,7 +13,7 @@ To learn about the way promises work and how you can use them, we advise you to 
 
 ## Description
 
-A **`Promise`** is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a _promise_ to supply the value at some point in the future.
+A `Promise` is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a _promise_ to supply the value at some point in the future.
 
 A `Promise` is in one of these states:
 
@@ -44,11 +44,11 @@ This promise is already _resolved_ at the time when it's created (because the `r
 
 > **Note:** Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
 
+`Promise` itself has no first-class protocol for cancellation, but you may be able to directly cancel the underlying asynchronous operation, typically using [`AbortController`](/en-US/docs/Web/API/AbortController).
+
 ### Chained Promises
 
-The methods {{jsxref("Promise.prototype.then()")}}, {{jsxref("Promise.prototype.catch()")}}, and {{jsxref("Promise.prototype.finally()")}} are used to associate further action with a promise that becomes settled. As these methods return promises, they can be chained.
-
-The `.then()` method takes up to two arguments; the first argument is a callback function for the fulfilled case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining; for example:
+The promise methods {{jsxref("Promise/then", "then()")}}, {{jsxref("Promise/catch", "catch()")}}, and {{jsxref("Promise/finally", "finally()")}} are used to associate further action with a promise that becomes settled. The `then()` method takes up to two arguments; the first argument is a callback function for the fulfilled case of the promise, and the second argument is a callback function for the rejected case. The `catch()` and `finally()` methods call `then()` internally and make error handling less verbose. For example, a `catch()` is really just a `then()` without passing the fulfillment handler. As these methods return promises, they can be chained. For example:
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -63,9 +63,21 @@ myPromise
   .then(handleFulfilledC, handleRejectedC);
 ```
 
-Processing continues to the next link of the chain even when a `.then()` lacks a callback function. Therefore, a chain can safely omit every _rejection_ callback function until the final `.catch()`.
+We will use the following terminology: _initial promise_ is the promise on which `then` is called; _new promise_ is the promise returned by `then`. The two callbacks passed to `then` are called _fulfillment handler_ and _rejection handler_, respectively.
 
-Handling a rejected promise in each `.then()` has consequences further down the promise chain. Sometimes there is no choice, because an error must be handled immediately. In such cases we must throw an error of some type to maintain error state down the chain. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until a final `.catch()` statement. A `.catch()` is really just a `.then()` without a slot for a callback function for the case when the promise is fulfilled.
+The settled state of the initial promise determines which handler to execute.
+
+- If the initial promise is fulfilled, the fulfillment handler is called with the fulfillment value.
+- If the initial promise is rejected, the rejection handler is called with the rejection reason.
+
+The completion of the handler function determines the settled state of the new promise.
+
+- If the handler function returns a [thenable](#thenables) value, the new promise settles in the same state as the returned promise.
+- If the handler function returns a non-thenable value, the new promise is fulfilled with the returned value.
+- If the handler function throws an error, the new promise is rejected with the thrown error.
+- If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
+
+For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until the final `catch()` handler.
 
 ```js
 myPromise
@@ -93,21 +105,9 @@ myPromise
 
 > **Note:** For faster execution, all synchronous actions should preferably be done within one handler, otherwise it would take several ticks to execute all handlers in sequence.
 
-The termination condition of a promise determines the "settled" state of the next promise in the chain. A "fulfilled" state indicates a successful completion of the promise, while a "rejected" state indicates a lack of success. The return value of each fulfilled promise in the chain is passed along to the next `.then()`, while the reason for rejection is passed along to the next rejection-handler function in the chain.
+JavaScript maintains a [job queue](/en-US/docs/Web/JavaScript/Event_loop). Each time, JavaScript picks a job from the queue and executes it to completion. The jobs are defined by the executor of the `Promise()` constructor, the handlers passed to `then`, or any platform API that returns a promise. The promises in a chain represent the dependency relationship between these jobs. When a promise settles, the respective handlers associated with it are added to the back of the job queue.
 
-The promises of a chain are nested in one another, but get popped like the top of a stack. The first promise in the chain is most deeply nested and is the first to pop.
-
-```plain
-(promise D, (promise C, (promise B, (promise A) ) ) )
-```
-
-When a `nextValue` is a promise, the effect is a dynamic replacement. The `return` causes a promise to be popped, but the `nextValue` promise is pushed into its place. For the nesting shown above, suppose the `.then()` associated with "promise B" returns a `nextValue` of "promise X". The resulting nesting would look like this:
-
-```plain
-(promise D, (promise C, (promise X) ) )
-```
-
-A promise can participate in more than one nesting. For the following code, the transition of `promiseA` into a "settled" state will cause both instances of `.then()` to be invoked.
+A promise can participate in more than one chain. For the following code, the fulfillment of `promiseA` will cause both `handleFulfilled1` and `handleFulfilled2` to be added to the job queue. Because `handleFulfilled1` is registered first, it will be invoked first.
 
 ```js
 const promiseA = new Promise(myExecutorFunc);
@@ -115,7 +115,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-An action can be assigned to an already "settled" promise. In that case, the action (if appropriate) will be performed at the first asynchronous opportunity. Note that promises are guaranteed to be asynchronous. Therefore, an action for an already "settled" promise will occur only after the stack has cleared and a clock-tick has passed. The effect is much like that of `setTimeout(action, 0)`.
+An action can be assigned to an already settled promise. In this case, the action is added immediately to the back of the job queue and will be performed when all existing jobs are completed. Therefore, an action for an already "settled" promise will occur only after the current synchronous code completes and at least one loop-tick has passed. This guarantees that promise actions are asynchronous.
 
 ```js
 const promiseA = new Promise((resolve, reject) => {

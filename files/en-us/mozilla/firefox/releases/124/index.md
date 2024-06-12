@@ -16,7 +16,6 @@ No notable changes.
 
 ### CSS
 
-- The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
 - The {{cssxref("text-wrap")}} property has now been converted to a shorthand property and covers the constituent properties {{cssxref("text-wrap-mode")}} and {{cssxref("text-wrap-style")}}. ([Firefox bug 1758391](https://bugzil.la/1758391)).
 
 ### JavaScript

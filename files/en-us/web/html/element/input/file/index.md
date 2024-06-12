@@ -388,15 +388,17 @@ The `returnFileSize()` function takes a number (of bytes, taken from the current
 
 ```js
 function returnFileSize(number) {
-  if (number < 1024) {
+  if (number < 1e3) {
     return `${number} bytes`;
-  } else if (number >= 1024 && number < 1048576) {
-    return `${(number / 1024).toFixed(1)} KB`;
-  } else if (number >= 1048576) {
-    return `${(number / 1048576).toFixed(1)} MB`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
+  } else {
+    return `${(number / 1e6).toFixed(1)} MB`;
   }
 }
 ```
+
+> **Note:** The "KB" and "MB" units here use the [SI prefix](https://en.wikipedia.org/wiki/Binary_prefix) convention of 1KB = 1000B, similar to macOS. Different systems represent file sizes differently—for example, Ubuntu uses IEC prefixes where 1KiB = 1024B, while RAM specifications often use SI prefixes to represent powers of two (1KB = 1024B). For this reason, we used `1e3` (`1000`) and `ie6` (`100000`) instead of `1024` and `1048576`. In your application, you should communicate the unit system clearly to your users if the exact size is important.
 
 ```js hidden
 const button = document.querySelector("form button");
