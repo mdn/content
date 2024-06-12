@@ -15,7 +15,7 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
 
 If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
 
-Can be used to wrap {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}.
+`<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
 ## Attributes
 
