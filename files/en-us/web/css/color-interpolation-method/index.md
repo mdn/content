@@ -102,7 +102,7 @@ The second and third boxes use Oklch and additionally provide a [`<hue-interpola
 ```
 
 #### CSS
-
+We used the same two colors in each gradient to demonstrate the different effects of [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method) and {{glossary("color space")}} on color interpolation in gradients.
 ```css hidden
 .gradient {
   height: 200px;
