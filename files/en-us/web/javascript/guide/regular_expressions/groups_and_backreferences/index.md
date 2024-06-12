@@ -24,7 +24,8 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>Capturing group: </strong>Matches <code><em>x</em></code> and
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group"><strong>Capturing group:</strong></a>
+          Matches <code><em>x</em></code> and
           remembers the match. For example, <code>/(foo)/</code> matches and
           remembers "foo" in "foo bar".
         </p>
@@ -67,7 +68,8 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
       <td><code>(?&#x3C;Name>x)</code></td>
       <td>
         <p>
-          <strong>Named capturing group: </strong>Matches "x" and stores it on
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group"><strong>Named capturing group:</strong></a>
+          Matches "x" and stores it on
           the groups property of the returned matches under the name specified
           by <code>&#x3C;Name></code>. The angle brackets (<code>&#x3C;</code>
           and <code>></code>) are required for group name.
@@ -82,10 +84,13 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
     <tr>
       <td><code>(?:<em>x</em>)</code></td>
       <td>
-        <strong>Non-capturing group: </strong>Matches "x" but does not remember
-        the match. The matched substring cannot be recalled from the resulting
-        array's elements (<code>[1], …, [n]</code>) or from the predefined
-        <code>RegExp</code> object's properties (<code>$1, …, $9</code>).
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group"><strong>Non-capturing group:</strong></a>
+          Matches "x" but does not remember
+          the match. The matched substring cannot be recalled from the resulting
+          array's elements (<code>[1], …, [n]</code>) or from the predefined
+          <code>RegExp</code> object's properties (<code>$1, …, $9</code>).
+        </p>
       </td>
     </tr>
     <tr>
@@ -94,8 +99,9 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
       </td>
       <td>
         <p>
-          Where "n" is a positive integer. A back reference to the last
-          substring matching the n parenthetical in the regular expression
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference"><strong>Backreference:</strong></a>
+          Where "n" is a positive integer. Matches the same substring matched by
+          the nth capturing group in the regular expression
           (counting left parentheses). For example,
           <code>/apple(,)\sorange\1/</code> matches "apple, orange," in "apple,
           orange, cherry, peach".
@@ -106,6 +112,7 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
       <td><code>\k&#x3C;Name></code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference"><strong>Named backreference:</strong></a>
           A back reference to the last substring matching the
           <strong>Named capture group</strong> specified by
           <code>&#x3C;Name></code>.
@@ -130,30 +137,40 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
 
 ### Using groups
 
+In this example, we match two words in a structured format by using capturing groups to remember them. `\w+` matches one or more word characters, and the parentheses `()` create a capturing group. The `g` flag is used to match all occurrences.
+
 ```js
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
+const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/g;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match[1]} ${match[2]}`);
 }
 ```
 
+See more examples in the [capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) reference.
+
 ### Using named groups
+
+This example is the same as above, but we use named capturing groups to remember the matched words instead. This way, we can access the matched words by their meanings.
 
 ```js
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
 const regexpNames =
-  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/gm;
+  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/g;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
 }
 ```
 
+See more examples in the [named capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) reference.
+
 ### Using groups and back references
+
+In this example, we first match a single or double quote character with `['"]`, remember it, match an arbitrary number of characters wih `.*?` (`*?` is a [non-greedy quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)), until we match the remembered quote character again with `\1`. The `\1` is a backreference to the first capturing group, which matches the same type of quote. The result will therefore be two strings: `"'"` and `'"'`.
 
 ```js
 const quote = `Single quote "'" and double quote '"'`;
@@ -162,6 +179,8 @@ for (const match of quote.matchAll(regexpQuotes)) {
   console.log(match[0]);
 }
 ```
+
+See more examples in the [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) reference.
 
 ### Using groups and match indices
 
@@ -195,3 +214,9 @@ console.log(lines.join("\n"));
 - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
 - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
 - [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) reference
+- [Backreference: `\1`, `\2`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+- [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+- [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
+- [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)

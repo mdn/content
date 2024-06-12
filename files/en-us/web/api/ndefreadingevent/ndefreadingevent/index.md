@@ -8,7 +8,7 @@ status:
 browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
 ---
 
-{{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`NDEFReadingEvent()`** constructor creates a new {{domxref("NDEFReadingEvent")}} object which represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 

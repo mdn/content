@@ -1,5 +1,24 @@
 [
   {
+    "Attribution Reporting API": {
+      "overview": ["Attribution Reporting API"],
+      "guides": [
+        "/docs/Web/API/Attribution_Reporting_API/Registering_sources",
+        "/docs/Web/API/Attribution_Reporting_API/Registering_triggers",
+        "/docs/Web/API/Attribution_Reporting_API/Generating_reports"
+      ],
+      "methods": [
+        "fetch()",
+        "XMLHttpRequest.setAttributionReporting()",
+        "Window.open()"
+      ],
+      "properties": [
+        "HTMLAnchorElement.attributionSrc",
+        "HTMLImageElement.attributionSrc",
+        "HTMLScriptElement.attributionSrc"
+      ],
+      "events": []
+    },
     "Audio Output Devices API": {
       "overview": ["Audio Output Devices API"],
       "methods": [
@@ -218,6 +237,7 @@
     },
     "Credential Management API": {
       "overview": ["Credential Management API"],
+      "guides": ["/docs/Web/API/Credential_Management_API/Credential_types"],
       "interfaces": [
         "Credential",
         "CredentialsContainer",
@@ -1223,10 +1243,7 @@
         "PresentationSessionConnectEvent"
       ],
       "methods": [],
-      "properties": [
-        "Navigator.presentation",
-        "Navigator.mozPresentationDeviceInfo"
-      ],
+      "properties": ["Navigator.presentation"],
       "events": []
     },
     "Prioritized Task Scheduling API": {
@@ -2157,6 +2174,7 @@
         "RTCAudioSourceStats",
         "RTCVideoSourceStats",
         "RTCCodecStats",
+        "RTCDataChannelStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"
