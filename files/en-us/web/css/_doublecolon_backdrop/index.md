@@ -48,7 +48,7 @@ In this example, we style a video backdrop, so when the video is shifted to full
 
 #### HTML
 
-We include a video, so we have an element that we can make full screen without JavaScript:
+We include a video, so we have an element that we can make full screen:
 
 ```html
 <video
@@ -60,7 +60,7 @@ We include a video, so we have an element that we can make full screen without J
 </video>
 ```
 
-### CSS
+#### CSS
 
 We style the `::backdrop`, setting the {{cssxref("background-color")}} to a shade of blue:
 
@@ -70,7 +70,38 @@ video::backdrop {
 }
 ```
 
-### Results
+#### JavaScript
+
+```js
+document.addEventListener("keypress", handleKeypress, false);
+
+function handleKeypress(event) {
+  if (event.keyCode === 13) {
+    toggleFullscreen();
+  }
+}
+
+function toggleFullscreen() {
+  let elem = document.querySelector("video");
+
+  if (!document.fullscreenElement) {
+    elem
+      .requestFullscreen()
+      .then(() => {})
+      .catch((err) => {
+        alert(
+          `Error attempting to enable full-screen mode: ${err.message} (${err.name})`,
+        );
+      });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+```
+
+#### Results
 
 {{EmbedLiveSample(' Styling the backdrop for fullscreen video', 600, 400)}}
 
