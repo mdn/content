@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### CSS
 
+- [Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default. Relative color syntax allows you to create a color value relative to an origin color, and can allow you to change a color in a different [color space](/en-US/docs/Glossary/Color_space) using [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) ([Firefox bug 1900251](https://bugzil.la/1900251)).
+
 #### Removals
 
 ### JavaScript
