@@ -32,7 +32,7 @@ This might trigger, for example, pausing or unpausing playback.
 
 ## Interfaces
 
-### Extensions to interfaces
+### Extensions to other interfaces
 
 The Audio Output Devices API extends the following APIs, adding the listed features:
 
@@ -69,7 +69,7 @@ Access to the API is subject to the following constraints:
     - User permission to set the output device is also implicitly granted if the user has already granted permission to use a media input device in the same group with {{domxref("MediaDevices.getUserMedia()")}}.
 
 <!-- The line below is "true" but this is not implemented in any browser -->
-<!-- The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `speaker-selection` permission. -->
+<!-- The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method {{domxref("Permissions.query", "navigator.permissions.query()")}}, passing a permission descriptor with the `speaker-selection` permission. -->
 
 ## Examples
 

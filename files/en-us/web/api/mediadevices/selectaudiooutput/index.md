@@ -10,7 +10,7 @@ browser-compat: api.MediaDevices.selectAudioOutput
 
 {{APIRef("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **`MediaDevices.selectAudioOutput()`** method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
+The **`selectAudioOutput()`** method of the {{domxref("MediaDevices")}} interface prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
 
 Following selection, if the device is available it can be enumerated using {{domxref("MediaDevices.enumerateDevices()")}} and set as the audio output sink using {{domxref("HTMLMediaElement.setSinkId()")}}.
 
@@ -63,7 +63,8 @@ Access to the API is subject to the following constraints:
   The user has to interact with the page or a UI element for this feature to work.
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
-The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method {{domxref("Permissions.query", "navigator.permissions.query()")}}, passing a permission descriptor with the `speaker-selection` permission.
+<!-- The line below is "true" but this is not implemented in any browser -->
+<!-- The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method {{domxref("Permissions.query", "navigator.permissions.query()")}}, passing a permission descriptor with the `speaker-selection` permission. -->
 
 ## Examples
 
