@@ -44,7 +44,24 @@ Elements are placed in a last-in/first out (LIFO) stack in the top layer. The `:
 
 ### Styling the backdrop for fullscreen video
 
-In this example, the backdrop style used when a video is shifted to fullscreen mode is configured to be a grey-blue color rather than the black it defaults to in most browsers.
+In this example, we style a video backdrop, so when the video is shifted to fullscreen mode, the background is a grey-blue color rather than the black it defaults to in most browsers.
+
+#### HTML
+
+We include a video, so we have an element that we can make full screen without JavaScript:
+
+```html
+<video controls
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+Sorry, your browser doesn't support embedded videos.  Time to upgrade!
+</video>
+```
+
+### CSS
+
+We style the `::backdrop`, setting the {{cssxref("background-color")}} to a shade of blue:
 
 ```css
 video::backdrop {
@@ -52,11 +69,11 @@ video::backdrop {
 }
 ```
 
-The resulting screen looks like this:
+### Results
 
-![An almost full-screen video player with purple above and below the player as the video player doesn't completely fill the screen.](bbb-backdrop.png)
+{{EmbedLiveSample(' Styling the backdrop for fullscreen video', 600, 400)}}
 
-[See this example in action](https://mdn.github.io/css-examples/backdrop/index.html), after changing the color of the background cause the video to go fullscreen to see the change to the backdrop color.
+Try making the video go to fullscreen to see the change to the backdrop color.
 
 ## Specifications
 
