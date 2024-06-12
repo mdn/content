@@ -96,6 +96,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 - {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
 - Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
+- For Manifest V3 extensions, user-defined shortcuts for the special shortcut [`_execute_browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) are used to specify the shortcuts to the browser action if there are no user-defined shortcuts for `_execute_action`. This enables extensions migrating to Manifest V3 to preserve any user defined shortcuts for the browser action ([Firefox bug 1797811](https://bugzil.la/1797811)).
 
 ### Removals
 
