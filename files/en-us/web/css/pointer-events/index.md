@@ -42,9 +42,9 @@ The `pointer-events` property is specified as a single keyword chosen from the l
   - : The element behaves as it would if the `pointer-events` property were not specified. In SVG content, this value and the value `visiblePainted` have the same effect.
 - `none`
 
-  - : The element on its own is never the [target](/en-US/docs/Web/API/Event/target) of pointer events. However its subtree could be kept targettable by setting `pointer-events` to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to/from the descendant during the event capture/[bubble](/en-US/docs/Web/API/Event/bubbles) phases.
+  - : The element on its own is never the [target](/en-US/docs/Web/API/Event/target) of pointer events. However its subtree could be kept targettable by setting `pointer-events` to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to or from the descendant during the event capture and [bubble](/en-US/docs/Web/API/Event/bubbles) phases.
 
-    > **Note:** The `pointerenter` and `pointerleave` events are fired when a pointing device is moved into an element or one of its descendants. So, even if `pointer-events: none` is set on the parent and not set on children, the events are triggered on the parent after pointer is moved in/out of a decendent.
+    > **Note:** The `pointerenter` and `pointerleave` events are fired when a pointing device is moved into an element or one of its descendants. So, even if `pointer-events: none` is set on the parent and not set on children, the events are triggered on the parent after the pointer is moved in or out of a descendant.
 
 #### SVG only (experimental for HTML)
 
