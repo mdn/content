@@ -88,7 +88,7 @@ We add a background to the backdrop, creating a colorful donut using [CSS gradie
 
 #### JavaScript
 
-The dialog is opened modally using the .showModal() method and closed using the .close() method.
+The dialog is opened modally using the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method and closed using the [`.close()`](/en-US/docs/Web/API/HTMLDialogElement/close) method.
 
 ```js
 const dialog = document.querySelector("dialog");
