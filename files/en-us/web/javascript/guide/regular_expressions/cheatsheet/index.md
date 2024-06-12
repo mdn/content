@@ -26,7 +26,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          A character class. Matches any one of the enclosed characters. You can
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class"><strong>Character class:</strong></a>
+          Matches any one of the enclosed characters. You can
           specify a range of characters by using a hyphen, but if the hyphen
           appears as the first or last character enclosed in the square brackets,
           it is taken as a literal hyphen to be included in the character class
@@ -34,18 +35,17 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         </p>
         <p>
           For example, <code>[abcd]</code> is the same as <code>[a-d]</code>.
-          They match the "b" in "brisket", and the "a" or the "c" in "arch",
-          but not the "-" (hyphen) in "non-profit".
+          They match the "b" in "brisket", and the "c" in "chop".
         </p>
         <p>
           For example, <code>[abcd-]</code> and <code>[-abcd]</code> match the
-          "b" in "brisket", the "a" or the "c" in "arch", and the "-" (hyphen)
-          in "non-profit".
+          "b" in "brisket", the "c" in "chop", and the "-" (hyphen) in
+          "non-profit".
         </p>
         <p>
           For example, <code>[\w-]</code> is the same as
-          <code>[A-Za-z0-9_-]</code>. They both match any of the characters in
-          "no_reply@example-server.com" except for the "@" and the ".".
+          <code>[A-Za-z0-9_-]</code>. They both match the "b" in "brisket", the
+          "c" in "chop", and the "n" in "non-profit".
         </p>
       </td>
     </tr>
@@ -57,10 +57,10 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          A negated or complemented character class. That is, it matches
-          anything that is not enclosed in the square brackets. You can specify a range
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class"><strong>Negated character class:</strong></a>
+          Matches anything that is not enclosed in the square brackets. You can specify a range
           of characters by using a hyphen, but if the hyphen appears as the
-          first or last character enclosed in the square brackets, it is taken as
+          first character after the <code>^</code> or the last character enclosed in the square brackets, it is taken as
           a literal hyphen to be included in the character class as a normal
           character. For example, <code>[^abc]</code> is the same as
           <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in
@@ -80,28 +80,14 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     <tr>
       <td><code>.</code></td>
       <td>
-        <p>Has one of the following meanings:</p>
-        <ul>
-          <li>
-            Matches any single character <em>except</em> line terminators:
-            <code>\n</code>, <code>\r</code>, <code>\u2028</code> or
-            <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
-            "ay", but not "yes", in "yes make my day".
-          </li>
-          <li>
-            Inside a character class, the dot loses its special meaning and
-            matches a literal dot.
-          </li>
-        </ul>
         <p>
-          Note that the <code>m</code> multiline flag doesn't change the dot
-          behavior. So to match a pattern across multiple lines, the character
-          class <code>[^]</code> can be used — it will match any character
-          including newlines.
-        </p>
-        <p>
-          The <code>s</code> "dotAll" flag allows the dot to
-          also match line terminators.
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard"><strong>Wildcard:</strong></a>
+          Matches any single character <em>except</em> line terminators:
+          <code>\n</code>, <code>\r</code>, <code>\u2028</code> or
+          <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and
+          "ay", but not "yes", in "yes make my day", as there is no character before "y" in "yes". If the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll"><code>dotAll</code></a> (s) flag is enabled, also matches line terminators.
+          Inside a character class, the dot loses its special meaning and
+          matches a literal dot.
         </p>
       </td>
     </tr>
@@ -109,6 +95,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\d</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>Digit character class escape:</strong></a>
           Matches any digit (Arabic numeral). Equivalent to <code>[0-9]</code>.
           For example, <code>/\d/</code> or <code>/[0-9]/</code> matches "2" in
           "B2 is the suite number".
@@ -119,6 +106,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\D</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>Non-digit character class escape:</strong></a>
           Matches any character that is not a digit (Arabic numeral). Equivalent
           to <code>[^0-9]</code>. For example, <code>/\D/</code> or
           <code>/[^0-9]/</code> matches "B" in "B2 is the suite number".
@@ -129,10 +117,11 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\w</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>Word character class escape:</strong></a>
           Matches any alphanumeric character from the basic Latin alphabet,
           including the underscore. Equivalent to <code>[A-Za-z0-9_]</code>. For
-          example, <code>/\w/</code> matches "a" in "apple", "5" in "$5.28", and
-          "3" in "3D".
+          example, <code>/\w/</code> matches "a" in "apple", "5" in "$5.28", "3"
+          in "3D" and "m" in "Émanuel".
         </p>
       </td>
     </tr>
@@ -140,10 +129,11 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\W</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>Non-word character class escape:</strong></a>
           Matches any character that is not a word character from the basic
           Latin alphabet. Equivalent to <code>[^A-Za-z0-9_]</code>. For example,
-          <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> matches "%" in
-          "50%".
+          <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> matches "%" in "50%"
+          and "É" in "Émanuel".
         </p>
       </td>
     </tr>
@@ -151,12 +141,10 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\s</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>White space character class escape:</strong></a>
           Matches a single white space character, including space, tab, form
           feed, line feed, and other Unicode spaces. Equivalent to
-          <code
-            >[
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
-          >. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".
+          <code>[\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\s\w*/</code> matches " bar" in "foo bar".
         </p>
       </td>
     </tr>
@@ -164,11 +152,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\S</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape"><strong>Non-white space character class escape:</strong></a>
           Matches a single character other than white space. Equivalent to
-          <code
-            >[^
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
-          >. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".
+          <code>[^\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. For example, <code>/\S\w*/</code> matches "foo" in "foo bar".
         </p>
       </td>
     </tr>
@@ -195,11 +181,11 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     <tr>
       <td><code>[\b]</code></td>
       <td>
-        Matches a backspace. If you're looking for the word-boundary character
+        Matches a backspace. If you're looking for the word-boundary assertion
         (<code>\b</code>), see
         <a
           href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
-          >Boundaries</a
+          >Assertions</a
         >.
       </td>
     </tr>
@@ -217,8 +203,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
           >, where "X" is a letter from A–Z (corresponding to code points
-          <code>U+0001</code><em>–</em><code>U+001F</code>). For example,
-          <code>/\cM/</code> matches "\r" in "\r\n".
+          <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
+          <code>/\cM\cJ/</code> matches "\r\n".
         </p>
       </td>
     </tr>
@@ -253,6 +239,20 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
     </tr>
     <tr>
+      <td>
+        <code>\p{<em>UnicodeProperty</em>}</code>,
+        <code>\P{<em>UnicodeProperty</em>}</code>
+      </td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape"><strong>Unicode character class escape:</strong></a>
+          Matches a character based on its Unicode character properties: for example, emoji characters, or Japanese
+          <em>katakana</em> characters, or Chinese/Japanese Han/Kanji characters,
+          etc.).
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td><code>\</code></td>
       <td>
         <p>
@@ -277,20 +277,6 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
             <code>/a\*/</code> matches "a*".
           </li>
         </ul>
-        <p>
-          Note that some characters like <code>:</code>, <code>-</code>,
-          <code>@</code>, etc. neither have a special meaning when escaped nor
-          when unescaped. Escape sequences like <code>\:</code>,
-          <code>\-</code>, <code>\@</code> will be equivalent to their literal,
-          unescaped character equivalents in regular expressions. However, in
-          regular expressions with the
-          <a
-            href="/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags"
-            >unicode flag</a
-          >, these will cause an <em>invalid identity escape</em> error. This is
-          done to ensure backward compatibility with existing code that uses new
-          escape sequences like <code>\p</code> or <code>\k</code>.
-        </p>
         <div class="notecard note">
           <p>
             <strong>Note:</strong> To match this character literally, escape it
@@ -306,7 +292,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          <strong>Disjunction: </strong>Matches either "x" or "y". Each component, separated by a pipe (<code>|</code>), is called an <em>alternative</em>. For example,
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction"><strong>Disjunction:</strong></a>
+          Matches either "x" or "y". Each component, separated by a pipe (<code>|</code>), is called an <em>alternative</em>. For example,
           <code>/green|red/</code> matches "green" in "green apple" and "red" in
           "red apple".
         </p>
@@ -338,7 +325,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>^</code></td>
       <td>
         <p>
-          Matches the beginning of input. If the multiline flag is set to true,
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>Input boundary beginning assertion:</strong></a>
+          Matches the beginning of input. If the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a> (m) flag is enabled,
           also matches immediately after a line break character. For example,
           <code>/^A/</code> does not match the "A" in "an A", but does match the
           first "A" in "An A".
@@ -359,7 +347,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>$</code></td>
       <td>
         <p>
-          Matches the end of input. If the multiline flag is set to true, also
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>Input boundary end assertion:</strong></a>
+          Matches the end of input. If the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a> (m) flag is enabled, also
           matches immediately before a line break character. For example,
           <code>/t$/</code> does not match the "t" in "eater", but does match it
           in "eat".
@@ -370,6 +359,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\b</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>Word boundary assertion:</strong></a>
           Matches a word boundary. This is the position where a word character
           is not followed or preceded by another word-character, such as between
           a letter and a space. Note that a matched word boundary is not
@@ -406,6 +396,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>\B</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>Non-word-boundary assertion:</strong></a>
           Matches a non-word boundary. This is a position where the previous and
           next character are of the same type: Either both must be words, or
           both must be non-words, for example between two letters or between two
@@ -436,8 +427,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>x(?=y)</code></td>
       <td>
         <p>
-          <strong>Lookahead assertion: </strong>Matches "x" only if "x" is
-          followed by "y". For example, /<code>Jack(?=Sprat)/</code> matches
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion"><strong>Lookahead assertion:</strong></a>
+          Matches "x" only if "x" is
+          followed by "y". For example, <code>/Jack(?=Sprat)/</code> matches
           "Jack" only if it is followed by "Sprat".<br /><code
             >/Jack(?=Sprat|Frost)/</code
           >
@@ -450,7 +442,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>x(?!y)</code></td>
       <td>
         <p>
-          <strong>Negative lookahead assertion: </strong>Matches "x" only if "x"
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion"><strong>Negative lookahead assertion:</strong></a>
+          Matches "x" only if "x"
           is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches
           a number only if it is not followed by a decimal point. <code
             >/\d+(?!\.)/.exec('3.141')</code
@@ -463,7 +456,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>(?&#x3C;=y)x</code></td>
       <td>
         <p>
-          <strong>Lookbehind assertion: </strong>Matches "x" only if "x" is
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion"><strong>Lookbehind assertion:</strong></a>
+          Matches "x" only if "x" is
           preceded by "y". For example,
           <code>/(?&#x3C;=Jack)Sprat/</code> matches "Sprat" only if it is
           preceded by "Jack". <code>/(?&#x3C;=Jack|Tom)Sprat/</code> matches
@@ -476,7 +470,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>(?&#x3C;!y)x</code></td>
       <td>
         <p>
-          <strong>Negative lookbehind assertion: </strong>Matches "x" only if
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion"><strong>Negative lookbehind assertion:</strong></a>
+          Matches "x" only if
           "x" is not preceded by "y". For example,
           <code>/(?&#x3C;!-)\d+/</code> matches a number only if it is not
           preceded by a minus sign. <code>/(?&#x3C;!-)\d+/.exec('3')</code>
@@ -504,7 +499,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>(<em>x</em>)</code></td>
       <td>
         <p>
-          <strong>Capturing group: </strong>Matches <code><em>x</em></code> and
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group"><strong>Capturing group:</strong></a>
+          Matches <code><em>x</em></code> and
           remembers the match. For example, <code>/(foo)/</code> matches and
           remembers "foo" in "foo bar".
         </p>
@@ -547,7 +543,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td><code>(?&#x3C;Name>x)</code></td>
       <td>
         <p>
-          <strong>Named capturing group: </strong>Matches "x" and stores it on
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group"><strong>Named capturing group:</strong></a>
+          Matches "x" and stores it on
           the groups property of the returned matches under the name specified
           by <code>&#x3C;Name></code>. The angle brackets (<code>&#x3C;</code>
           and <code>></code>) are required for group name.
@@ -562,10 +559,13 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
     <tr>
       <td><code>(?:<em>x</em>)</code></td>
       <td>
-        <strong>Non-capturing group: </strong>Matches "x" but does not remember
-        the match. The matched substring cannot be recalled from the resulting
-        array's elements (<code>[1], …, [n]</code>) or from the predefined
-        <code>RegExp</code> object's properties (<code>$1, …, $9</code>).
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group"><strong>Non-capturing group:</strong></a>
+          Matches "x" but does not remember
+          the match. The matched substring cannot be recalled from the resulting
+          array's elements (<code>[1], …, [n]</code>) or from the predefined
+          <code>RegExp</code> object's properties (<code>$1, …, $9</code>).
+        </p>
       </td>
     </tr>
     <tr>
@@ -574,8 +574,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          Where "n" is a positive integer. A back reference to the last
-          substring matching the n parenthetical in the regular expression
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference"><strong>Backreference:</strong></a>
+          Where "n" is a positive integer. Matches the same substring matched by
+          the nth capturing group in the regular expression
           (counting left parentheses). For example,
           <code>/apple(,)\sorange\1/</code> matches "apple, orange," in "apple,
           orange, cherry, peach".
@@ -583,16 +584,18 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
     </tr>
     <tr>
-      <td>\k&#x3C;Name></td>
+      <td><code>\k&#x3C;Name></code></td>
       <td>
         <p>
-          A back reference to the last substring matching the <strong
-            >Named capture group </strong
-          >specified by <code>&#x3C;Name></code>.
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference"><strong>Named backreference:</strong></a>
+          A back reference to the last substring matching the
+          <strong>Named capture group</strong> specified by
+          <code>&#x3C;Name></code>.
         </p>
         <p>
-          For example, <code>/(?&#x3C;title>\w+), yes \k&#x3C;title>/</code
-          > matches "Sir, yes Sir" in "Do you copy? Sir, yes Sir!".
+          For example,
+          <code>/(?&#x3C;title>\w+), yes \k&#x3C;title>/</code> matches "Sir,
+          yes Sir" in "Do you copy? Sir, yes Sir!".
         </p>
         <div class="notecard note">
           <p>
@@ -668,7 +671,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          Where "n" is a positive integer, matches exactly "n" occurrences of
+          Where "n" is a non-negative integer, matches exactly "n" occurrences of
           the preceding item "x". For example, <code>/a{2}/</code> doesn't match
           the "a" in "candy", but it matches all of the "a"'s in "caandy", and
           the first two "a"'s in "caaandy".
@@ -681,7 +684,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          Where "n" is a positive integer, matches at least "n" occurrences of
+          Where "n" is a non-negative integer, matches at least "n" occurrences of
           the preceding item "x". For example, <code>/a{2,}/</code> doesn't
           match the "a" in "candy", but matches all of the a's in "caandy" and
           in "caaaaaaandy".
@@ -694,9 +697,8 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
       <td>
         <p>
-          Where "n" is 0 or a positive integer, "m" is a positive integer, and
-          <code><em>m</em> > <em>n</em></code
-          >, matches at least "n" and at most "m" occurrences of the preceding
+          Where "n" and "m" are non-negative integers and <code>m >= n</code>,
+          matches at least "n" and at most "m" occurrences of the preceding
           item "x". For example, <code>/a{1,3}/</code> matches nothing in
           "cndy", the "a" in "candy", the two "a"'s in "caandy", and the first
           three "a"'s in "caaaaaaandy". Notice that when matching "caaaaaaandy",
