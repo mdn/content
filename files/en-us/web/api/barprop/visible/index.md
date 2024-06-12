@@ -13,7 +13,7 @@ The **`visible`** read-only property of the {{domxref("BarProp")}} interface ret
 ## Value
 
 A {{jsxref("Boolean")}}, which is true if the top-level window is opened by
-{{domxref("window.open")}} with the {{domxref("window.open", "requesting a popup window", "popup_feature", 1)}}.
+{{domxref("window.open")}} with the {{domxref("window.open", "requesting a popup window", "popup", 1)}}.
 
 > **Note:** Historically this represented whether the interface element used is visible
 > or not. But for privacy reasons, this no longer represents the actual visibility of each

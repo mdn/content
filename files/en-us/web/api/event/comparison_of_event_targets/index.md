@@ -59,7 +59,7 @@ There are six targets to consider:
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-         If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes, and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
+        If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes, and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
         Unlike <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> will never contain anonymous content.
       </td>
     </tr>
