@@ -64,22 +64,24 @@ We add a background to the backdrop, creating a colorful donut using [CSS gradie
 
 ```css
 ::backdrop {
-  background-image:
-    radial-gradient(
-      circle, white 0 5vw,
+  background-image: radial-gradient(
+      circle,
+      white 0 5vw,
       transparent 5vw 20vw,
-      white 20vw),
+      white 20vw
+    ),
     conic-gradient(
-      #272b66 0 50grad, 
-      #2d559f 50grad 100grad,   
-      #9ac147 100grad 150grad, 
-      #639b47 150grad 200grad, 
-      #e1e23b 200grad 250grad, 
-      #f7941e 250grad 300grad, 
-      #662a6c 300grad 350grad, 
-      #9a1d34 350grad 400grad, 
-      #43a1cd 100grad 150grad, 
-      #ba3e2e);
+      #272b66 0 50grad,
+      #2d559f 50grad 100grad,
+      #9ac147 100grad 150grad,
+      #639b47 150grad 200grad,
+      #e1e23b 200grad 250grad,
+      #f7941e 250grad 300grad,
+      #662a6c 300grad 350grad,
+      #9a1d34 350grad 400grad,
+      #43a1cd 100grad 150grad,
+      #ba3e2e
+    );
 }
 ```
 
