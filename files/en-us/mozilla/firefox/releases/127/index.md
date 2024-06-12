@@ -6,23 +6,17 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 127 that affect developers. Firefox 127 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [June 11, 2024](https://whattrainisitnow.com/release/?version=127).
+This article provides information about the changes in Firefox 127 that affect developers. Firefox 127 was released on on [June 11, 2024](https://whattrainisitnow.com/release/?version=127).
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
 - `data:` and `javascript:` URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
 
-#### Removals
-
 ### CSS
 
 - Using a [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method) is now supported in gradients created with [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient), [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient), and [`radial-gradient()`](/en-US/docs/Web/CSS/gradient/radial-gradient) functions and the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions for repeating gradients ([Firefox bug 1861363](https://bugzil.la/1861363)).
-
-#### Removals
 
 ### JavaScript
 
@@ -36,17 +30,9 @@ This article provides information about the changes in Firefox 127 that affect d
   - [`Set.prototype.isSupersetOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf) — Returns a boolean indicating if all elements of the given set are in this set.
   - [`Set.prototype.isDisjointFrom()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom) — Returns a boolean indicating if this set has no elements in common with the given set.
 
-#### Removals
-
 ### SVG
 
 - The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
-
-#### Removals
-
-### HTTP
-
-#### Removals
 
 ### Security
 
@@ -55,23 +41,11 @@ This article provides information about the changes in Firefox 127 that affect d
   As pages no longer display [mixed content](/en-US/docs/Web/Security/Mixed_content), Firefox has also removed the icon to indicate when a page contains mixed-content, and the mixed-content console warning has been replaced with one that indicates when requests are upgraded.
   ([Firefox bug 1779757](https://bugzil.la/1779757)).
 
-#### Removals
-
 ### APIs
 
 - The async {{domxref('Clipboard API')}} is now fully supported. The {{domxref('ClipboardItem')}} interface, along with the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface, have been enabled. ([Firefox bug 1887845](https://bugzil.la/1887845),[Firefox bug 1858788](https://bugzil.la/1858788)).
 - All {{glossary("character reference","HTML character references")}} are now supported in [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API) cues, title text, comments, annotations, and so on. ([Firefox bug 1395924](https://bugzil.la/1395924)).
 - {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) are now supported. ([Firefox bug 1885491](https://bugzil.la/1885491)).
-
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -96,10 +70,6 @@ This article provides information about the changes in Firefox 127 that affect d
 
 - {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
 - Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
