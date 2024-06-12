@@ -6,7 +6,7 @@ status:
   - experimental
 browser-compat:
   - api.Document.startViewTransition
-  - api.ViewTransition
+  - css.at-rules.view-transition
 spec-urls: https://drafts.csswg.org/css-view-transitions/
 ---
 

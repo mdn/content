@@ -49,14 +49,14 @@ To handle creating the outbound and inbound transition animations, the API const
       └─ ::view-transition-new(root)
 ```
 
-> **Note:** a {{cssxref("::view-transition-group")}} is created for every view-transition-name that was captured?
+> **Note:** a {{cssxref("::view-transition-group")}} subtree is created for every captured `view-transition-name`.
 
 In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
 
 The most interesting parts of the tree structure are as follows:
 
 - {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
-- A {{cssxref("::view-transition-group")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the `:root` element and all elements nested within it.
+- A {{cssxref("::view-transition-group")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`.
   > **Note:** It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
 - {{cssxref("::view-transition-old")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
@@ -367,22 +367,22 @@ window.addEventListener("pageswap", async (e) => {
       : null;
     const targetUrl = new URL(e.activation.entry.url);
 
-    // Only transition to same basePath
-    // ~> SKIP!
-    if (!targetUrl.pathname.startsWith(basePath)) {
-      e.viewTransition.skipTransition();
-    }
-
     // Going from profile page to homepage
     // ~> The big img and title are the ones!
     if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#detail main h1`), "name"],
-          [document.querySelector(`#detail main img`), "avatar"],
-        ],
-        e.viewTransition.finished,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "none";
     }
 
     // Going to profile page
@@ -390,13 +390,19 @@ window.addEventListener("pageswap", async (e) => {
     if (isProfilePage(targetUrl)) {
       const profile = extractProfileNameFromUrl(targetUrl);
 
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#${profile} span`), "name"],
-          [document.querySelector(`#${profile} img`), "avatar"],
-        ],
-        e.viewTransition.finished,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "none";
     }
   }
 });
@@ -414,58 +420,45 @@ window.addEventListener("pagereveal", async (e) => {
     const fromUrl = new URL(navigation.activation.from.url);
     const currentUrl = new URL(navigation.activation.entry.url);
 
-    // Only transition to/from same basePath
-    // ~> SKIP!
-    if (!fromUrl.pathname.startsWith(basePath)) {
-      e.viewTransition.skipTransition();
-    }
-
     // Went from profile page to homepage
     // ~> Set VT names on the relevant list item
     if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
       const profile = extractProfileNameFromUrl(fromUrl);
 
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#${profile} span`), "name"],
-          [document.querySelector(`#${profile} img`), "avatar"],
-        ],
-        e.viewTransition.ready,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "none";
     }
 
     // Went to profile page
     // ~> Set VT names on the main title and image
     if (isProfilePage(currentUrl)) {
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#detail main h1`), "name"],
-          [document.querySelector(`#detail main img`), "avatar"],
-        ],
-        e.viewTransition.ready,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "none";
     }
   }
 });
-```
-
-The `setTemporaryViewTransitionNames()` user-defined function is used repeatedly in this code. This looks like so:
-
-```js
-const setTemporaryViewTransitionNames = async (entries, vtPromise) => {
-  // Apply a custom view transition to each element passed into the function
-  for (const [$el, name] of entries) {
-    $el.style.viewTransitionName = name;
-  }
-
-  // Await the view transition promise passed into the function, e.g. ready or finished
-  await vtPromise;
-
-  // Remove the custom view transition from each element passed into the function
-  for (const [$el, name] of entries) {
-    $el.style.viewTransitionName = "";
-  }
-};
 ```
 
 ## Stabilizing page state to make cross-document transitions consistent

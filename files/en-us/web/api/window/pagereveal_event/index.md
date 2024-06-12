@@ -46,36 +46,42 @@ window.addEventListener("pagereveal", async (e) => {
     const fromUrl = new URL(navigation.activation.from.url);
     const currentUrl = new URL(navigation.activation.entry.url);
 
-    // Only transition to/from same basePath
-    // ~> SKIP!
-    if (!fromUrl.pathname.startsWith(basePath)) {
-      e.viewTransition.skipTransition();
-    }
-
     // Went from profile page to homepage
     // ~> Set VT names on the relevant list item
     if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
       const profile = extractProfileNameFromUrl(fromUrl);
 
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#${profile} span`), "name"],
-          [document.querySelector(`#${profile} img`), "avatar"],
-        ],
-        e.viewTransition.ready,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "none";
     }
 
     // Went to profile page
     // ~> Set VT names on the main title and image
     if (isProfilePage(currentUrl)) {
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#detail main h1`), "name"],
-          [document.querySelector(`#detail main img`), "avatar"],
-        ],
-        e.viewTransition.ready,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "none";
     }
   }
 });

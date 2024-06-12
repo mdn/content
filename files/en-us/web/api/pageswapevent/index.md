@@ -36,22 +36,22 @@ window.addEventListener("pageswap", async (e) => {
       : null;
     const targetUrl = new URL(e.activation.entry.url);
 
-    // Only transition to same basePath
-    // ~> SKIP!
-    if (!targetUrl.pathname.startsWith(basePath)) {
-      e.viewTransition.skipTransition();
-    }
-
     // Going from profile page to homepage
     // ~> The big img and title are the ones!
     if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#detail main h1`), "name"],
-          [document.querySelector(`#detail main img`), "avatar"],
-        ],
-        e.viewTransition.finished,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#detail main h1`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#detail main img`).style.viewTransitionName =
+        "none";
     }
 
     // Going to profile page
@@ -59,13 +59,19 @@ window.addEventListener("pageswap", async (e) => {
     if (isProfilePage(targetUrl)) {
       const profile = extractProfileNameFromUrl(targetUrl);
 
-      setTemporaryViewTransitionNames(
-        [
-          [document.querySelector(`#${profile} span`), "name"],
-          [document.querySelector(`#${profile} img`), "avatar"],
-        ],
-        e.viewTransition.finished,
-      );
+      // Set view-transition-name values on the elements to animate
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "name";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "avatar";
+
+      // Remove names after snapshots have been taken
+      // so that we're ready for the next navigation
+      await e.viewTransition.ready;
+      document.querySelector(`#${profile} span`).style.viewTransitionName =
+        "none";
+      document.querySelector(`#${profile} img`).style.viewTransitionName =
+        "none";
     }
   }
 });

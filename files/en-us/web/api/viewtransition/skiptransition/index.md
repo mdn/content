@@ -44,12 +44,12 @@ transition.skipTransition();
 ```js
 // Fired on the current (outgoing) page
 document.addEventListener("pageswap", (event) => {
-  event.viewTransition.skipTransition();
+  event.viewTransition?.skipTransition();
 });
 
 // Fired on the destination (inbound) page
 document.addEventListener("pagereveal", (event) => {
-  event.viewTransition.skipTransition();
+  event.viewTransition?.skipTransition();
 });
 ```
 
