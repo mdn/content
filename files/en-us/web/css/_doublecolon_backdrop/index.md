@@ -107,7 +107,7 @@ closeButton.addEventListener("click", () => {
 
 #### Results
 
-{{EmbedLiveSample('Styling a modal dialog's backdrop', 450, 120)}}
+{{EmbedLiveSample("Styling a modal dialog's backdrop", 450, 120)}}
 
 ## Specifications
 
