@@ -66,9 +66,10 @@ We add a background to the backdrop, creating a colorful donut using [CSS gradie
 ::backdrop {
   background-image: radial-gradient(
       circle,
-      white 0 5vw,
+      #fff 0 5vw,
       transparent 5vw 20vw,
-      white 20vw
+      #fff 20vw 22.5vw,
+      #eee 22.5w
     ),
     conic-gradient(
       #272b66 0 50grad,
@@ -107,7 +108,7 @@ closeButton.addEventListener("click", () => {
 
 #### Results
 
-{{EmbedLiveSample("Styling a modal dialog's backdrop", 450, 120)}}
+{{EmbedLiveSample("Styling a modal dialog's backdrop", 450, 300)}}
 
 ## Specifications
 
