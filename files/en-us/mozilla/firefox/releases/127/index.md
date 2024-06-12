@@ -107,7 +107,11 @@ These features are newly shipped in Firefox 127 but are disabled by default. To 
 
 - **Symmetrical spacing with CSS `letter-spacing`:** `layout.css.letter-spacing.model`.
 
-  The CSS `letter-spacing` property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. [Firefox bug 1891446](https://bugzil.la/1891446).
+  The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side [Firefox bug 1891446](https://bugzil.la/1891446).
+
+- **`calc()` color channel support in relative colors:** `layout.css.relative-color-syntax.enabled`.
+
+  The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) [Firefox bug 1889561](https://bugzil.la/1889561).
 
 ## Older versions
 
