@@ -415,7 +415,7 @@ So far, each example on this page has used only one type of path function per sh
 ```html hidden
 <html lang="en">
   <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
+    <canvas id="canvas" width="200" height="185"></canvas>
   </body>
 </html>
 ```
@@ -426,8 +426,8 @@ function draw() {
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
 
-    roundedRect(ctx, 12, 12, 150, 150, 15);
-    roundedRect(ctx, 19, 19, 150, 150, 9);
+    roundedRect(ctx, 12, 12, 184, 168, 15);
+    roundedRect(ctx, 19, 19, 170, 154, 9);
     roundedRect(ctx, 53, 53, 49, 33, 10);
     roundedRect(ctx, 53, 119, 49, 16, 6);
     roundedRect(ctx, 135, 53, 49, 33, 10);
@@ -508,7 +508,7 @@ draw();
 
 The resulting image looks like this:
 
-{{EmbedLiveSample("Making_combinations", "", "160")}}
+{{EmbedLiveSample("Making_combinations", "", "200")}}
 
 We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
@@ -555,7 +555,7 @@ draw();
 
 {{EmbedLiveSample("Shapes_with_holes", "", "160")}}
 
-In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the right-left corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
+In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 

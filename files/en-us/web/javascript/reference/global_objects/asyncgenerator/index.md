@@ -74,7 +74,7 @@ function delayedValue(time, value) {
 
 async function* generate() {
   yield delayedValue(2000, 1);
-  yield delayedValue(100, 2);
+  yield delayedValue(1000, 2);
   yield delayedValue(500, 3);
   yield delayedValue(250, 4);
   yield delayedValue(125, 5);

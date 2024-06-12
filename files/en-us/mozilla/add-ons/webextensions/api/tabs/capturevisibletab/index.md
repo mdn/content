@@ -7,7 +7,11 @@ browser-compat: webextensions.api.tabs.captureVisibleTab
 
 {{AddonSidebar}}
 
-Creates a data URL encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).
+Creates a data URL encoding the image of an area of the active tab in the specified window. You must have the `<all_urls>` or `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+
+> **Note:** In Firefox 125 and earlier, this method was only available with the `<all_urls>` permission.
+
+In addition to sites that extensions can normally access, this method allows extensions to capture sensitive sites that are otherwise restricted, including browser UI pages and other extensions' pages. These sensitive sites can only be captured with the `activeTab` permission. Chrome also permits file URLs to be captured when the extension has been granted file access.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -29,11 +33,11 @@ let capturing = browser.tabs.captureVisibleTab(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a data URL which encodes the captured image. May be assigned to the 'src' property of an HTML Image element for display. If any error occurs the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a data URL that encodes the captured image. It can be assigned to the 'src' property of an HTML image element for display. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
-Capture an image of the active tab in the current window, with default settings:
+Capture an image of the active tab in the current window with default image settings:
 
 ```js
 function onCaptured(imageUri) {
