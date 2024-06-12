@@ -51,11 +51,12 @@ In this example, we style a video backdrop, so when the video is shifted to full
 We include a video, so we have an element that we can make full screen without JavaScript:
 
 ```html
-<video controls
+<video
+  controls
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
-Sorry, your browser doesn't support embedded videos.  Time to upgrade!
+  Sorry, your browser doesn't support embedded videos. Time to upgrade!
 </video>
 ```
 
