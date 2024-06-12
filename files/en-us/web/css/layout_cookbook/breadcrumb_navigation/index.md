@@ -40,7 +40,7 @@ To display list items inline, we use [flexbox layout](/en-US/docs/Learn/CSS/CSS_
 
 We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
-Be aware that the arrows `→` added via `content` are exposed to screen readers and braille displays.
+Be aware that the arrows `→` added via {{cssxref("content")}} in the example above are exposed to assitive technology (AT), including screen readers and braille displays. A quieter solution would be to include decorative images, either in the HTML with an empty `alt` attribute or an ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation), or silently using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) by including an empty {{cssxref("string")}} as alternative text, preceded by a slash (`/`) (ex: `content: url("arrow.png") / "";`. If including generated dividers that will be exposed to AT, opt for creating the content using the {{cssxref("::after")}} pseudo-element selector instead so the divider content is announced after the HTML content instead of before it.
 
 ## See also
 
