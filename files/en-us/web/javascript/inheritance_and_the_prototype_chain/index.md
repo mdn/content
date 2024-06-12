@@ -498,7 +498,7 @@ const g = new Graph();
 // g.[[Prototype]] is the value of Graph.prototype when new Graph() is executed.
 ```
 
-Constructor functions are available since very early JavaScript. Therefore, it is very fast, very standard, and very JIT-optimizable. However, it's also hard to "do properly" because methods added this way are enumerable by default, which is inconsistent with the class syntax or how built-in methods behave. Doing longer inheritance chains is also error-prone, as previously demonstrated.
+Constructor functions have been available since very early JavaScript. Therefore, it is very fast, very standard, and very JIT-optimizable. However, it's also hard to "do properly" because methods added this way are enumerable by default, which is inconsistent with the class syntax or how built-in methods behave. Doing longer inheritance chains is also error-prone, as previously demonstrated.
 
 ### With Object.create()
 
@@ -521,10 +521,10 @@ console.log(d.hasOwnProperty);
 // undefined, because d doesn't inherit from Object.prototype
 ```
 
-Similar to the `__proto__` key in object initializers, `Object.create()` allows directly setting the prototype of an object at creation time, which permits the runtime to further optimize the object. It also allows the creation of objects with `null` prototype, using `Object.create(null)`. The second parameter of `Object.create()` allows you to specify precisely the attributes of each property in the new object, which can be a double-edged sword:
+Similar to the `__proto__` key in object initializers, `Object.create()` allows directly setting the prototype of an object at creation time, which permits the runtime to further optimize the object. It also allows the creation of objects with `null` prototype, using `Object.create(null)`. The second parameter of `Object.create()` allows you to precisely specify the attributes of each property in the new object, which can be a double-edged sword:
 
 - It allows you to create non-enumerable properties, etc., during object creation, which is not possible with object literals.
-- It is a lot more verbose and error prone than object literals.
+- It is much more verbose and error-prone than object literals.
 - It may be slower than object literals, especially when creating many properties.
 
 ### With classes
@@ -550,11 +550,11 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-Classes offer the highest readability and maintainability when definition complex inheritance structures. [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions, and not supported in older environments.
+Classes offer the highest readability and maintainability when defining complex inheritance structures. [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions and are not supported in older environments.
 
 ### With Object.setPrototypeOf()
 
-While all methods above will set the prototype chain at object creation time, [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) allows mutating the `[[Prototype]]` internal property of an existing object. It can even force a prototype on a prototype-less object created with `Object.create(null)`, or remove the prototype of an object by setting it to `null`.
+While all methods above will set the prototype chain at object creation time, [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) allows mutating the `[[Prototype]]` internal property of an existing object. It can even force a prototype on a prototype-less object created with `Object.create(null)` or remove the prototype of an object by setting it to `null`.
 
 ```js
 const obj = { a: 1 };
@@ -580,7 +580,7 @@ console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
 
-Compared to `Object.setPrototypeOf`, setting `__proto__` to something that is not an object only fails silently without throwing an exception. It also has slightly better browser support. However, it is non-standard and deprecated, and you should almost always use `Object.setPrototypeOf` instead.
+Compared to `Object.setPrototypeOf`, setting `__proto__` to something that is not an object fails silently without throwing an exception. It also has slightly better browser support. However, it is non-standard and deprecated. You should almost always use `Object.setPrototypeOf` instead.
 
 ## Performance
 
