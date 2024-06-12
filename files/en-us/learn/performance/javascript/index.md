@@ -52,7 +52,7 @@ The most performant, least blocking JavaScript you can use is JavaScript that yo
 
 You should also split your JavaScript into multiple files representing critical and non-critical parts. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) allow you to do this more efficiently than just using separate external JavaScript files.
 
-Then you can optimize these smaller files. [Minification](/en-US/docs/Glossary/Minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/GZip_compression) compresses the file further and should be used even if you don't minify your code. [Brotli](/en-US/docs/Glossary/Brotli_compression) is similar to Gzip, but generally outperforms Gzip compression.
+Then you can optimize these smaller files. [Minification](/en-US/docs/Glossary/Minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/gzip_compression) compresses the file further and should be used even if you don't minify your code. [Brotli](/en-US/docs/Glossary/Brotli_compression) is similar to Gzip, but generally outperforms Gzip compression.
 
 You can split and optimize your code manually, but often a module bundler like [Webpack](https://webpack.js.org/) will do a better job of this.
 

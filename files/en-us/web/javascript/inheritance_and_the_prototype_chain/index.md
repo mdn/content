@@ -479,35 +479,7 @@ const p = { b: 2, __proto__: o };
 // p ---> o ---> Object.prototype ---> null
 ```
 
-<table class="standard-table">
-  <caption>
-    Pros and cons of using the <code>__proto__</code> key in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializers</a>
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
-      <td>
-        Supported in all modern engines. Pointing the <code>__proto__</code>
-        key to something that is not an object only fails silently without
-        throwing an exception. Contrary to the
-        {{jsxref("Object/proto", "Object.prototype.__proto__")}} setter,
-        <code>__proto__</code> in object literal initializers is standardized
-        and optimized, and can even be more performant than
-        {{jsxref("Object.create")}}. Declaring extra own properties on the
-        object at creation is more ergonomic than
-        {{jsxref("Object.create")}}.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
-      <td>
-        Not supported in IE10 and below. Likely to be confused with
-        {{jsxref("Object/proto", "Object.prototype.__proto__")}} accessors for
-        people unaware of the difference.
-      </td>
-    </tr>
-  </tbody>
-</table>
+When using the `__proto__` key in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), pointing the `__proto__` key to something that is not an object only fails silently without throwing an exception. Contrary to the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter, `__proto__` in object literal initializers is standardized and optimized, and can even be more performant than {{jsxref("Object.create")}}. Declaring extra own properties on the object at creation is more ergonomic than {{jsxref("Object.create")}}.
 
 ### With constructor functions
 
@@ -526,35 +498,7 @@ const g = new Graph();
 // g.[[Prototype]] is the value of Graph.prototype when new Graph() is executed.
 ```
 
-<table class="standard-table">
-  <caption>
-    Pros and cons of using constructor functions
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
-      <td>
-        Supported in all engines — going all the way back to IE 5.5. Also, it
-        is very fast, very standard, and very JIT-optimizable.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
-      <td>
-        <ul>
-          <li>In order to use this method, the function in question must be
-          initialized. During this initialization, the constructor may store
-          unique information that must be generated per-object. This unique
-          information would only be generated once, potentially leading to
-          problems.</li>
-          <li>The initialization of the constructor may put unwanted methods onto
-          the object.</li>
-        </ul>
-        <p>Both of those are generally not problems in practice.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+Constructor functions have been available since very early JavaScript. Therefore, it is very fast, very standard, and very JIT-optimizable. However, it's also hard to "do properly" because methods added this way are enumerable by default, which is inconsistent with the class syntax or how built-in methods behave. Doing longer inheritance chains is also error-prone, as previously demonstrated.
 
 ### With Object.create()
 
@@ -577,35 +521,11 @@ console.log(d.hasOwnProperty);
 // undefined, because d doesn't inherit from Object.prototype
 ```
 
-<table class="standard-table">
-  <caption>
-    Pros and cons of {{jsxref("Object.create")}}
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
-      <td>
-        Supported in all modern engines. Allows directly setting
-        <code>[[Prototype]]</code> of an object at creation time, which permits
-        the runtime to further optimize the object. Also allows the creation of
-        objects without a prototype, using <code>Object.create(null)</code>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
-      <td>
-        Not supported in IE8 and below. However, as Microsoft has discontinued
-        extended support for systems running IE8 and below, that should not be a
-        concern for most applications. Additionally, the slow object
-        initialization can be a performance black hole if using the second
-        argument, because each object-descriptor property has its own separate
-        descriptor object. When dealing with hundreds of thousands of object
-        descriptors in the form of objects, that lag time might become a serious
-        issue.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Similar to the `__proto__` key in object initializers, `Object.create()` allows directly setting the prototype of an object at creation time, which permits the runtime to further optimize the object. It also allows the creation of objects with `null` prototype, using `Object.create(null)`. The second parameter of `Object.create()` allows you to precisely specify the attributes of each property in the new object, which can be a double-edged sword:
+
+- It allows you to create non-enumerable properties, etc., during object creation, which is not possible with object literals.
+- It is much more verbose and error-prone than object literals.
+- It may be slower than object literals, especially when creating many properties.
 
 ### With classes
 
@@ -630,34 +550,11 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-<table class="standard-table">
-  <caption>
-    Pros and cons of classes
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
-      <td>
-        Supported in all modern engines. Very high readability and maintainability.
-        <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties">Private properties</a>
-        are a feature with no trivial replacement in prototypal inheritance.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
-      <td>
-        Classes, especially with private properties, are less optimized than
-        traditional ones (although engine implementors are working to improve
-        this). Not supported in older environments and transpilers are usually
-        needed to use classes in production.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Classes offer the highest readability and maintainability when defining complex inheritance structures. [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are a feature with no trivial replacement in prototypal inheritance. However, classes are less optimized than traditional constructor functions and are not supported in older environments.
 
 ### With Object.setPrototypeOf()
 
-While all methods above will set the prototype chain at object creation time, [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) allows mutating the `[[Prototype]]` internal property of an existing object.
+While all methods above will set the prototype chain at object creation time, [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) allows mutating the `[[Prototype]]` internal property of an existing object. It can even force a prototype on a prototype-less object created with `Object.create(null)` or remove the prototype of an object by setting it to `null`.
 
 ```js
 const obj = { a: 1 };
@@ -666,33 +563,7 @@ Object.setPrototypeOf(obj, anotherObj);
 // obj ---> anotherObj ---> Object.prototype ---> null
 ```
 
-<table class="standard-table">
-  <caption>
-    Pros and cons of {{jsxref("Object.setPrototypeOf")}}
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
-      <td>
-        Supported in all modern engines. Allows the dynamic manipulation of an
-        object's prototype and can even force a prototype on a prototype-less
-        object created with <code>Object.create(null)</code>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
-      <td>
-        Ill-performing. Should be avoided if it's possible to set the prototype
-        at object creation time. Many engines optimize the prototype and try to
-        guess the location of the method in memory when calling an instance in
-        advance; but setting the prototype dynamically disrupts all those
-        optimizations. It might cause some engines to recompile your code for
-        de-optimization, to make it work according to the specs. Not supported
-        in IE8 and below.
-      </td>
-    </tr>
-  </tbody>
-</table>
+However, you should set the prototype during creation if possible, because setting the prototype dynamically disrupts all optimizations that engines have made to the prototype chain. It might cause some engines to recompile your code for de-optimization, to make it work according to the specs.
 
 ### With the \_\_proto\_\_ accessor
 
@@ -709,36 +580,7 @@ console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
 
-<table class="standard-table">
-  <caption>
-    Pros and cons of setting the
-    {{jsxref("Object/proto","__proto__")}} property
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">Pro(s)</th>
-      <td>
-        Supported in all modern engines. Setting
-        {{jsxref("Object/proto","__proto__")}} to something that
-        is not an object only fails silently. It does not throw an exception.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Con(s)</th>
-      <td>
-        Non-performant and deprecated. Many engines optimize the prototype and
-        try to guess the location of the method in the memory when calling an
-        instance in advance; but setting the prototype dynamically disrupts all
-        those optimizations and can even force some engines to recompile for
-        de-optimization of your code, to make it work according to the specs.
-        Not supported in IE10 and below. The {{jsxref("Object/proto","__proto__")}}
-        setter is normative optional, so it may not work across all platforms.
-        You should almost always use {{jsxref("Object.setPrototypeOf")}}
-        instead.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Compared to `Object.setPrototypeOf`, setting `__proto__` to something that is not an object fails silently without throwing an exception. It also has slightly better browser support. However, it is non-standard and deprecated. You should almost always use `Object.setPrototypeOf` instead.
 
 ## Performance
 

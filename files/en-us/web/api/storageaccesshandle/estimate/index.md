@@ -22,13 +22,14 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fufills with an unpartitioned {{domxref("StorageManager.estimate()", "StorageEstimate")}} object.
+A {{jsxref("Promise")}} that fulfills with an unpartitioned {{domxref("StorageManager.estimate()", "StorageEstimate")}} object.
 
 ### Exceptions
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("StorageManager.estimate()")}}
+
+See {{domxref("StorageManager.estimate()")}}
 
 ## Examples
 
