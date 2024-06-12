@@ -72,6 +72,10 @@ You can specify
 
   - : Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.
 
+- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
+
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a `NotAllowedError` {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
@@ -91,6 +95,10 @@ You can specify
 - {{httpheader('Permissions-Policy/camera', 'camera')}}
 
   - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
+
+- {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
+
+  - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}}
 

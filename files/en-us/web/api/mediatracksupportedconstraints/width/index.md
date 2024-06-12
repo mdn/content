@@ -3,7 +3,7 @@ title: "MediaTrackSupportedConstraints: width property"
 short-title: width
 slug: Web/API/MediaTrackSupportedConstraints/width
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.width
+browser-compat: api.MediaStreamTrack.applyConstraints.width_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

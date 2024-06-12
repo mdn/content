@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebRTC")}}
 
-{{PreviousMenuNext("Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html")}}
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html")}}
 
 After you've created the peer, you'll want to get the browser's permission to access the microphone. We'll be using the [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) method on the [`navigator.mediaDevices`](/en-US/docs/Web/API/Navigator/mediaDevices) object.
 The `getUserMedia()` endpoint takes a `constraints` object that specifies which permissions are needed. `getUserMedia()` is a promise which, when successfully resolved, returns a [`MediaStream`](/en-US/docs/Web/API/MediaStream) object. In our case this is going to contain the audio from our stream. If the promise isn't successfully resolved, you'll want to catch and display the error.

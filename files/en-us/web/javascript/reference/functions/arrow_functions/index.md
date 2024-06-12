@@ -106,7 +106,7 @@ const b = 2;
 () => a + b + 100;
 ```
 
-The braces can only be omitted if the function directly returns an expression. If the body has additional lines of processing, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
+The braces can only be omitted if the function directly returns an expression. If the body has statements, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
 
 ```js
 // Traditional anonymous function

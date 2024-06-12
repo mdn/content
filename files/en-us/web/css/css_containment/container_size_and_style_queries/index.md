@@ -431,5 +431,6 @@ These features are not yet supported in any browser.
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
+- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [Getting Started with Style Queries](https://developer.chrome.com/docs/css-ui/style-queries) (2022)
 - [Style queries](https://una.im/style-queries/) via una.im (2022)
