@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Accessibility** (**A11Y**) refers to best practices for keeping a website usable despite physical and technical restrictions. Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} through the {{Glossary("WAI", "Web Accessibility Initiative (WAI)")}}.
+**Accessibility** (often abbreviated to **A11y** — as in, "a", then 11 characters, and then "y") in web development means enabling as many people as possible to use websites, even when those people's abilities are limited in some way. Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} through the {{Glossary("WAI", "Web Accessibility Initiative (WAI)")}}.
 
 ## See also
 
