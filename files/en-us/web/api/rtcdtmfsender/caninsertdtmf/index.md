@@ -1,7 +1,7 @@
 ---
 title: "RTCDTMFSender: canInsertDTMF property"
 short-title: canInsertDTMF
-slug: Web/API/RTCDTMFSender/caninsertdtmf
+slug: Web/API/RTCDTMFSender/canInsertDTMF
 page-type: web-api-instance-property
 browser-compat: api.RTCDTMFSender.canInsertDTMF
 ---
