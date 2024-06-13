@@ -20,4 +20,4 @@ For example, you could add the attribute `role="alert"` to a {{HTMLElement("p")}
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
 - [Glossary](/en-US/docs/Glossary)
   - {{Glossary("HTML")}}
-  - {{Glossary("Accessibility)}}
+  - {{Glossary("Accessibility")}}
