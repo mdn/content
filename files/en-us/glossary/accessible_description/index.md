@@ -16,36 +16,25 @@ Descriptions are reduced to text strings. In our password example, if the inputs
 
 You can inspect the accessible description for any element on your page: look at your browser's developer tools' accessibility tab, which provides the accessibility information for the currently selected element.
 
-## Computation
+## Accessible description computation
 
-### HTML
-
-For HTML elements, the description needs to be programmatically associated with the related element. If an element doesn't have an accessible description, the description needs to be programmatically associated with the related element. The accessible description is computed in the following order of precendence (defined by [HTML-AAM Accessible Description](https://www.w3.org/TR/html-aam-1.0/#accdesc-computation)):
+For HTML elements, if an element doesn't have an accessible description, the description needs to be programmatically associated with the related element. The accessibility object model (AOM) computes the accessible description by checking this features, in order, until it is defined:
 
 1. [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute.
 
 2. [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute.
 
-3. HTML-specific features can participate in the description computation if they are not already used for the {{glossary("accessible name")}}. For example:
+3. Language-specific features that participate in the description computation if the feature is not already being used to define the {{glossary("accessible name")}}. For example:
 
    - A {{htmlelement("summary")}} is described by the content of {{htmlelement("details")}} it is nested in.
    - {{htmlelement("input")}} buttons (with type attribute `button`, `submit` or `reset`) are described by their `value` attribute's value.
+   - In SVG, the content of the [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element, if present, otherwise, the text contained in descendant text container elements (i.e. [`<text>`](/en-US/docs/Web/SVG/Element/text)), if they are not already used for the {{glossary("accessible name")}}
 
 4. If none of the above provide a description, the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is used, if the `title` is not the {{glossary("accessible name")}} for that element.
 
-### SVG
+5. If none of the above defines an accessible description, the accessible description is empty.
 
-Like the computation of the HTML elements, SVG elements also have their accessible description computed (defined by [SVG-AAM Accessible Description](https://www.w3.org/TR/svg-aam-1.0/#mapping_additional_nd)), in the following order of precedence:
-
-1. [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute
-
-2. The content of its [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element (the SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) provides the accessible name).
-
-3. From the text contained in descendant text container elements (i.e. [`<text>`](/en-US/docs/Web/SVG/Element/text)), if they are not already used for the {{glossary("accessible name")}}
-
-4. The SVG [`<title>`](/en-US/docs/Web/SVG/Element/title) element that provides a tooltip, when the accessible name is provided by ARIA label attributes instead of the `<title>`
-
-5. The [`xlink:title`](/en-US/docs/Web/SVG/Attribute/xlink:title) attribute on a link, if not used to provide the accessible name
+The steps for defining accessible description in HTML are defined in the [HTML-AAM Accessible Description](https://www.w3.org/TR/html-aam-1.0/#accdesc-computation)). Accessible description for SVG elements follow the same steps with small differences that are enumerated at [SVG-AAM Accessible Description](https://www.w3.org/TR/svg-aam-1.0/#mapping_additional_nd)).
 
 ## See also
 
