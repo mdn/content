@@ -28,7 +28,7 @@ outline-offset: unset;
 
 ### Values
 
-- `{{cssxref("&lt;length&gt;")}}`
+- {{cssxref("&lt;length&gt;")}}
   - : The width of the space between the element and its outline. A negative value places the outline inside the element. A value of `0` places the outline so that there is no space between it and the element.
 
 ## Description

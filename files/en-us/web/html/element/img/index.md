@@ -73,6 +73,33 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
+- `attributionsrc` {{experimental_inline}}
+
+  - : specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
+
+    On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
+
+    The corresponding source or trigger event is set off once the browser receives the response containing the image file.
+
+    > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
+    There are two versions of this attribute that you can set:
+
+    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and a boolean value will be used if it is omitted.
+    - Value containing one or more URLs, for example:
+
+    ```html
+    <img
+      src="image-file.png"
+      alt="My image file description"
+      attributionsrc="https://a.example/register-source
+                         https://b.example/register-source" />
+    ```
+
+    This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
+
+    > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+
 - `crossorigin`
 
   - : Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a [CORS-enabled image](/en-US/docs/Web/HTML/CORS_enabled_image) returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".

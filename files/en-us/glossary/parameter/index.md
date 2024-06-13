@@ -6,18 +6,20 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A parameter is a named variable passed into a {{Glossary("function")}}. Parameter variables are used to import {{Glossary("argument","arguments")}} into functions.
+**Parameters** are named variables declared as part of a {{Glossary("function")}}. They are used to reference the {{Glossary("argument", "arguments")}} passed into the function.
 
 For example:
 
 ```js
-function example(parameter) {
-  console.log(parameter); // Output = foo
+const argument1 = "Web";
+const argument2 = "Development";
+example(argument1, argument2); // passing two arguments
+
+// This function takes two values
+function example(parameter1, parameter2) {
+  console.log(parameter1); // Output = "Web"
+  console.log(parameter2); // Output = "Development"
 }
-
-const argument = "foo";
-
-example(argument);
 ```
 
 There are two kinds of parameters:
@@ -37,6 +39,9 @@ Note the difference between _parameters_ and _arguments_:
 
 ## See also
 
-- [Difference between _parameter_ and _argument_](https://en.wikipedia.org/wiki/Parameter_%28computer_programming%29#Parameters_and_arguments) on Wikipedia
+- [Difference between _parameters_ and _arguments_](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)#Parameters_and_arguments>)
 - [Function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [Function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- Glossary
+  - {{Glossary("Function")}}
+  - {{Glossary("Argument")}}

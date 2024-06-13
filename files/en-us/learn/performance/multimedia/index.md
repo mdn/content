@@ -80,7 +80,7 @@ Other formats improve on JPEG's capabilities regarding compression, but are not 
 
   > **Note:** Despite Apple [announcing support for WebP in Safari 14](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174), Safari versions earlier than 16.0 don't display `.webp` images successfully on macOS desktop versions earlier than 11/Big Sur. Safari for iOS 14 _does_ display `.webp` images successfully.
 
-- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
+- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. [Squoosh](https://squoosh.app) is a good online tool for converting previous image formats to AVIF.
 - **JPEG2000** — once to be the successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
 Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
@@ -126,7 +126,7 @@ Browsers begin rendering content as HTML is parsed, often before all assets, inc
 
 Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
 
-The [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls) metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without an size or {{cssxref("aspect-ratio")}} and web fonts.
+The {{glossary("CLS")}} metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without an size or {{cssxref("aspect-ratio")}} and web fonts.
 
 In responsive designs, when a container is narrower than an image, the following CSS is generally used to keep images from breaking out of their containers:
 

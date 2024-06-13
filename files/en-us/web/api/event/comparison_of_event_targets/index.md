@@ -70,7 +70,7 @@ There are five targets to consider:
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} The original target of the event, before any retargetings. See <a href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> for details.
+        {{ Non-standard_inline() }} The original target of the event, before any retargetings.
       </td>
     </tr>
     <tr>
@@ -193,8 +193,8 @@ The `relatedTarget` property for the `mouseover` event holds the node that the m
 ```xml
 <hbox id="outer">
   <hbox id="inner"
-        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
+        onmouseover="console.log('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
+        onmouseout="console.log('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
         style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
 </hbox>
 ```

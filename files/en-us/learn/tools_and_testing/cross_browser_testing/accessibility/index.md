@@ -37,7 +37,7 @@ Next we turn our attention to accessibility, providing information on common pro
 
 When we say accessibility in the context of web technology, most people immediately think of making sure websites/apps are usable by people with disabilities, for example:
 
-- Visually impaired people using screen readers or magnification/zoom to access text
+- Visually impaired people using screen readers or magnification/zoom to access text.
 - People with motor function impairments using the keyboard (or other non-mouse features) to activate website functionality.
 - People with hearing impairments relying on captions/subtitles or other text alternatives for audio/video content.
 
@@ -131,8 +131,7 @@ You can then press Enter/Return to follow a focused link or press a button (we'v
 
 Note that different browsers may have different keyboard control options available. Most modern browsers follow the tab pattern described above (you can also do Shift + Tab to move backwards through the focusable elements), but some browsers have their own idiosyncrasies:
 
-- Firefox for the Mac doesn't do tabbing by default. To turn it on, you have to go to _Preferences > Advanced > General_, then uncheck "Always use the cursor keys to navigate within pages". Next, you have to open your Mac's System Preferences app, then go to _Keyboard > Shortcuts_, then select the _All Controls_ radio button.
-- Safari doesn't allow you to tab through links by default; to enable this, you need to open Safari's _Preferences_, go to Advanced, and check the _Press Tab to highlight each item on a webpage_ checkbox.
+- Safari on Mac doesn't allow you to tab through links by default; to enable this, open _System Settings_, scroll down to _Keyboard_, and enable _Keyboard navigation_. If you're using an older version of macOS, see [Use your keyboard like a mouse with Mac](https://support.apple.com/en-is/guide/mac-help/mchlp1399/mac) on Apple's macOS User Guide.
 
 > **Warning:** You should perform this kind of test/review on any new page you write — make sure that functionality can be accessed by the keyboard, and that the tab order provides a sensible navigation path through the document.
 

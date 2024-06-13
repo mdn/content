@@ -1,7 +1,7 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-page-type: guide
+page-type: web-api-overview
 browser-compat: api.console
 ---
 
