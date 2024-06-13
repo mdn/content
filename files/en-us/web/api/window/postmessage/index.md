@@ -10,12 +10,9 @@ browser-compat: api.Window.postMessage
 
 The **`window.postMessage()`** method safely enables cross-origin communication between {{domxref("Window")}} objects; _e.g.,_ between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
 
-Normally, scripts on different pages are allowed to access each other if and only if the pages they originate from share the same protocol, port number, and host (also known as the "[same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)").
-`window.postMessage()` provides a controlled mechanism to securely circumvent this restriction (if used properly).
+Normally, scripts on different pages are allowed to access each other if and only if the pages they originate from share the same protocol, port number, and host (also known as the "[same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)"). `window.postMessage()` provides a controlled mechanism to securely circumvent this restriction (if used properly).
 
-Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow = window.opener`), and then dispatch a {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`.
-The receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed.
-The arguments passed to `window.postMessage()` (_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
+Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow = window.opener`), and then dispatch a {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed. The arguments passed to `window.postMessage()` (_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
 
 ## Syntax
 
@@ -35,7 +32,7 @@ postMessage(message, targetOrigin, transfer)
 - `options` {{optional_Inline}}
   - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of, and a optional `targetOrigin` field with a string which restricts the message to the limited targets only.
 - `targetOrigin` {{optional_Inline}}
-  - : Specifies what the origin of this window must be for the event to be dispatched, either as the literal string `"*"` (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of this window's document does not match that provided in `targetOrigin`, the event will not be dispatched; only if all three match will the event be dispatched.
+  - : Specifies what the origin of the intended recipient window must be for the event to be dispatched. either as the literal string `"*"` (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of this window's document does not match that provided in `targetOrigin`, the event will not be dispatched; only if all three match will the event be dispatched.
     This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party.
     **Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target could disclose the data you send to a malicious site.**
 - `transfer` {{optional_Inline}}
@@ -79,7 +76,7 @@ The properties of the dispatched message are:
 **If you do not expect to receive messages from other sites, _do not_ add any event listeners for `message` events.**
 This is a completely foolproof way to avoid security problems.
 
-If you do expect to receive messages from other sites, **always verify the sender's identity** using the `origin` and possibly `source` properties. Any window (including, for example, `http://evil.example.com`) can send a message to any other window, and you have no guarantees that an unknown sender will not send malicious messages.
+If you do expect to receive messages from other sites, **always verify the sender's identity** using the `origin` and possibly `source` properties. Any window (including, for example, http://evil.example.com) can send a message to any other contentWindow within the iframe hierarchy from top to every iframe below of the current document.
 Having verified identity, however, you still should **always verify the syntax of the received message**. Otherwise, a security hole in the site you trusted to send only trusted messages could then open a cross-site scripting hole in your site.
 
 **Always specify an exact target origin, not `*`, when you use `postMessage` to send data to other windows.** A malicious site can change the location of the window without your knowledge, and therefore it can intercept the data sent using `postMessage`.
