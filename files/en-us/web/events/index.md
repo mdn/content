@@ -11,8 +11,6 @@ Each event is represented by an object that is based on the {{domxref("Event")}}
 
 This topic provides an index to the main _sorts_ of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events.
 
-> **Note:** This page lists many of the most common events you'll come across on the web. If you are searching for an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.
-
 ## Event index
 
 <table class="standard-table">
