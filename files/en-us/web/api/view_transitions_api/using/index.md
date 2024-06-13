@@ -292,7 +292,7 @@ The `ViewTransition` can be accessed like so:
 
 - A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
   > **Note:** If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.
-- A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](https://web.dev/articles/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
+- A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](/en-US/docs/Glossary/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
 
 Let's have a look at some example code to show how these features could be used.
 
@@ -364,7 +364,7 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ### A JavaScript-powered custom cross-document (MPA) transition
 
-The [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) demo provides a basic set of team profile pages, and demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
+The [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) demo provides a basic set of team profile pages, and demonstrates how to use the {{domxref("Window.pageswap_event", "pageswap")}} and {{domxref("Window.pagereveal_event", "pagereveal")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
 The {{domxref("Window.pageswap_event", "pageswap")}} event listener looks as follows. This sets view transition names on the elements on the outbound page that link to the profile pages. When navigating from the home page to a profile page, custom animations are provided _only_ for the linked element that is clicked in each case.
 
@@ -387,7 +387,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // (this is to deal with BFCache)
+      // Stops naming conflicts resulting from the page state persisting in BFCache
       await e.viewTransition.finished;
       document.querySelector(`#detail main h1`).style.viewTransitionName =
         "none";
@@ -407,7 +407,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // (this is to deal with BFCache)
+      // Stops naming conflicts resulting from the page state persisting in BFCache
       await e.viewTransition.finished;
       document.querySelector(`#${profile} span`).style.viewTransitionName =
         "none";
@@ -417,6 +417,8 @@ window.addEventListener("pageswap", async (e) => {
   }
 });
 ```
+
+> **Note:** We remove the `view-transition-name` values after snapshots have been taken in each case. If we left them set, they would persist in the page state saved in the [bfcache](/en-US/docs/Glossary/bfcache) upon navigation. If the back button was then pressed, the `pagereveal` event handler of the page being navigated back to would then attempt to set the same `view-transition-name` values on different elements. If multiple elements have the same `view-transition-name` set, the view transition is skipped.
 
 The {{domxref("Window.pagereveal_event", "pagereveal")}} event listener looks as follows. This works in a similar way to the `pageswap` event listener, although bear in mind that here we are customizing the "to" animation, for page elements on the new page.
 

@@ -59,7 +59,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // (this is to deal with BFCache)
+      // Stops naming conflicts resulting from the page state persisting in BFCache
       await e.viewTransition.finished;
       document.querySelector(`#detail main h1`).style.viewTransitionName =
         "none";
@@ -79,7 +79,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // (this is to deal with BFCache)
+      // Stops naming conflicts resulting from the page state persisting in BFCache
       await e.viewTransition.finished;
       document.querySelector(`#${profile} span`).style.viewTransitionName =
         "none";
