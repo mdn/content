@@ -56,9 +56,19 @@ In the case of same-document transitions (SPAs), the pseudo-element tree is made
 The most interesting parts of the tree structure are as follows:
 
 - {{cssxref("::view-transition")}} is the root of view transitions overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
-- A {{cssxref("::view-transition-group")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`.
-  > **Note:** It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
+- A {{cssxref("::view-transition-group")}} acts as a container for each view transition snapshot group. The `root` argument specifies the default snapshot group — the view transition animation will apply to the snapshot whose `view-transition-name` is `root`. By default, this is the {{cssxref(":root")}} element, because the default browser styles define this:
+
+  ```css
+  :root {
+    view-transition-name: root;
+  }
+  ```
+
+  Be aware however that page authors can change this by unsetting the above, and setting `view-transition-name: root` on a different element.
+
 - {{cssxref("::view-transition-old")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with handy properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
+
+> **Note:** It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
 
 > **Note:** As you'll see later, to customize the outbound and inbound animations you need to target the {{cssxref("::view-transition-old")}} and {{cssxref("::view-transition-new")}} pseudo-elements with your animations, respectively.
 
@@ -377,7 +387,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // (this to deal with BFCache)
+      // (this is to deal with BFCache)
       await e.viewTransition.finished;
       document.querySelector(`#detail main h1`).style.viewTransitionName =
         "none";
@@ -397,7 +407,7 @@ window.addEventListener("pageswap", async (e) => {
         "avatar";
 
       // Remove view-transition-names after snapshots have been taken
-      // (this to deal with BFCache)
+      // (this is to deal with BFCache)
       await e.viewTransition.finished;
       document.querySelector(`#${profile} span`).style.viewTransitionName =
         "none";
