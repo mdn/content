@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An **argument** is a {{glossary("value")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}.
+**Arguments** are {{glossary("value", "values")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}. Do not confuse arguments with {{Glossary("parameter","parameters")}}, which are the names used in the function definition to refer to the arguments.
 
 For example:
 
@@ -22,7 +22,7 @@ function example(parameter1, parameter2) {
 }
 ```
 
-The argument order within the function call should be the same as the {{Glossary("parameter","parameters")}} order in the function definition.
+The argument order within the function call should be the same as the parameters order in the function definition.
 
 ```js
 const argument1 = "foo";
@@ -38,4 +38,7 @@ function example(parameter) {
 ## See also
 
 - [Difference between parameter and argument](/en-US/docs/Glossary/Parameter#parameters_versus_arguments)
-- The {{jsxref("Functions/arguments","arguments")}} object in {{glossary("JavaScript")}}
+- The {{jsxref("Functions/arguments", "arguments")}} object in {{glossary("JavaScript")}}
+- Glossary
+  - {{Glossary("Function")}}
+  - {{Glossary("Parameter")}}
