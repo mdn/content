@@ -61,16 +61,15 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
   - : Is the width of the gutter separating the grid lines.
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Is the width of the gutter separating the grid lines, relative to the dimension of the element.
- 
 ## Description
 
 This property defines gaps between columns in CSS multi-column layout, flex items and flex lines in flexible box layout, and both rows and columns in CSS grid layout.
 
-The generated gaps create empty tracks the width or height of the gap’s size. In multi-column containers, the first value is the gap is between CSS columns. In grid layout, the first value defines the gutter between rows and the second value sets the siz of the gutter between the column. If only one value is included, that value is used for both dimensions, in both grid and flex layouts.
+The generated gaps create empty tracks the width or height of the gap's size. In multi-column containers, the first value is the gap is between CSS columns. In grid layout, the first value defines the gutter between rows and the second value sets the siz of the gutter between the column. If only one value is included, that value is used for both dimensions, in both grid and flex layouts.
 
-With flex containers, whether the first value is the the gap between flex items or between flex line depends on the direction. Flex items are laid out in either rows or columns depending on the value of the {{cssxref("flex-direction")}} property. With rows (`row` (the default) or `row-reverse`), the first value defines the gap between flex lines and the second value defines the gap between items within each line. With columns, (when `flex-direction` is set to `column` or `column-reverse`) the first value defines the gap between flex items within a flex line and the second value defines the gaps between each flex line. 
+With flex containers, whether the first value is the the gap between flex items or between flex line depends on the direction. Flex items are laid out in either rows or columns depending on the value of the {{cssxref("flex-direction")}} property. With rows (`row` (the default) or `row-reverse`), the first value defines the gap between flex lines and the second value defines the gap between items within each line. With columns, (when `flex-direction` is set to `column` or `column-reverse`) the first value defines the gap between flex items within a flex line and the second value defines the gaps between each flex line.
 
-The property resolves percentages against the size of the content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes treat cyclic percentage sizes differently, `gap` does as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the box’s content box when laying out the box’s contents. In flex layout, cyclic percentage sizes always resolve against zero.
+The property resolves percentages against the size of the content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes treat cyclic percentage sizes differently, `gap` does as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the box's content box when laying out the box's contents. In flex layout, cyclic percentage sizes always resolve against zero.
 
 The visible space between elements may differ from the value of the `gap` property, as the margins, padding, and distributed alignment may increase the visible separation between boxes beyond what is specified in `gap`.
 
