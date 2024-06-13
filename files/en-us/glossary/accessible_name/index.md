@@ -26,10 +26,12 @@ Assistive technologies will provide the user with the accessibility name propert
 
 ## See also
 
+- [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - [Glossary](/en-US/docs/Glossary)

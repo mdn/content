@@ -12,11 +12,11 @@ page-type: glossary-definition
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
-- [Web Accessibility In Mind](https://webaim.org/)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Accessibility tree")}}
