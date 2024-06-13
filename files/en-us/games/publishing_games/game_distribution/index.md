@@ -66,7 +66,8 @@ You can also upload and publish your game directly to different types of stores,
 
 Let's see what the available options are regarding the marketplaces/stores available for different platforms and operating systems.
 
-> **Note:** These are the most popular distribution platforms, but this is not to say these are the only options. Instead of trying to add your game to the thousands of others in the iOS store say, you can also try to find a niche and promote directly to the audience who would be interested in your games. Your creativity is critical here.
+> [!NOTE]
+> These are the most popular distribution platforms, but this is not to say these are the only options. Instead of trying to add your game to the thousands of others in the iOS store say, you can also try to find a niche and promote directly to the audience who would be interested in your games. Your creativity is critical here.
 
 ### Web stores
 
