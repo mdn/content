@@ -44,7 +44,7 @@ Elements are placed in a last-in/first out (LIFO) stack in the top layer. The `:
 
 ### Styling a modal dialog's backdrop
 
-In this example, we style the backdrop used when a modal {{htmlelement("dialog")}} is opened using the `::backdrop` pseudo-element
+In this example, we use the `::backdrop` pseudo-element to style the backdrop that is used when a modal {{htmlelement("dialog")}} is open.
 
 #### HTML
 
