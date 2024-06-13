@@ -1,18 +1,18 @@
 ---
-title: "HTMLElement: attributeStyleMap property"
+title: "MathMLElement: attributeStyleMap property"
 short-title: attributeStyleMap
-slug: Web/API/HTMLElement/attributeStyleMap
+slug: Web/API/MathMLElement/attributeStyleMap
 page-type: web-api-instance-property
-browser-compat: api.HTMLElement.attributeStyleMap
+browser-compat: api.MathMLElement.attributeStyleMap
 ---
 
 {{APIRef("CSSOM")}}
 
-The **`attributeStyleMap`** read-only property of the {{domxref("HTMLElement")}} interface returns a live {{domxref("StylePropertyMap")}} object that contains a list of style properties of the element that are defined in the element's inline `style` attribute, or assigned using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLElement")}} interface via script.
+The **`attributeStyleMap`** read-only property of the {{domxref("MathMLElement")}} interface returns a live {{domxref("StylePropertyMap")}} object that contains a list of style properties of the element that are defined in the element's inline `style` attribute, or assigned using the {{domxref("MathMLElement.style", "style")}} property of the {{domxref("MathMLElement")}} interface via script.
 
 Shorthand properties are expanded. If you set `border-top: 1px solid black`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
-The main difference between {{domxref("HTMLElement.style", "style")}} property and `attributeStyleMap` property is that, the `style` property will return a {{domxref("CSSStyleDeclaration")}} object, while the `attributeStyleMap` property will return a {{domxref("StylePropertyMap")}} object.
+The main difference between {{domxref("MathMLElement.style", "style")}} property and `attributeStyleMap` property is that, the `style` property will return a {{domxref("CSSStyleDeclaration")}} object, while the `attributeStyleMap` property will return a {{domxref("StylePropertyMap")}} object.
 
 Though the property itself is not writable, you could read and write inline styles through the {{domxref("StylePropertyMap")}} object that it returns, just like through the {{domxref("CSSStyleDeclaration")}} object that returns via the `style` property.
 
@@ -26,9 +26,16 @@ The following code snippet shows the relationship between the `style` attribute 
 
 ```html
 <div style="white-space: pre-line;">
-  <div id="el" style="border-top: 1px solid blue; color: red;">
-    An example element
-  </div>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi id="el" style="border-top: 1px solid blue; color: red;">x</mi>
+      <mo stretchy="false">)</mo>
+      <mo>=</mo>
+      <mi>x</mi>
+    </mrow>
+  </math>
   <div id="output"></div>
 </div>
 ```
@@ -60,6 +67,6 @@ for (const property of element.attributeStyleMap) {
 
 ## See also
 
-- {{domxref("HTMLElement.style")}}
+- {{domxref("MathMLElement.style")}}
+- {{domxref("HTMLElement.attributeStyleMap")}}
 - {{domxref("SVGElement.attributeStyleMap")}}
-- {{domxref("MathMLElement.attributeStyleMap")}}
