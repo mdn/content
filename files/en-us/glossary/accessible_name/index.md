@@ -26,7 +26,15 @@ Assistive technologies will provide the user with the accessibility name propert
 
 ## See also
 
-- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
+- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Accessibility")}}
+  - {{Glossary("Accessibility tree")}}
+  - {{Glossary("Accessibility description")}}
+  - {{Glossary("ARIA")}}
