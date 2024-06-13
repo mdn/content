@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-[**Flash**](https://en.wikipedia.org/wiki/Adobe_Flash) is an *obsolete* technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media. It can be used in a web {{glossary("browser")}} using the Flash Player {{glossary("plugin")}}, which was available for most desktop and mobile platforms till 2021 the end of life of it.
+[**Flash**](https://en.wikipedia.org/wiki/Adobe_Flash) is an _obsolete_ technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media. It can be used in a web {{glossary("browser")}} using the Flash Player {{glossary("plugin")}}, which was available for most desktop and mobile platforms till 2021 the end of life of it.
 
 ## See also
 
