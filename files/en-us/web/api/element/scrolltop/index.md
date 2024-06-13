@@ -8,11 +8,11 @@ browser-compat: api.Element.scrollTop
 
 {{APIRef("DOM")}}
 
-The **`Element.scrollTop`** property gets or sets the number of pixels that an element's content is scrolled from its top edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
+The **`Element.scrollTop`** property gets or sets the number of pixels by which an element's content is scrolled from its top edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
 
 ## Value
 
-A double-precision floating-point value indicating the number of pixels the element is currently scrolled vertically from the origin, where a positive value means the element is scrolled down (to reveal more content to the bottom). If the element isn't scrolled at all up or down, then `scrollTop` is 0. If the document is not the active document, the returned value is 0. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component.
+A double-precision floating-point value indicating the number of pixels by which the element is currently scrolled vertically from the origin, where a positive value means the element is scrolled down (to reveal more content to the bottom). If the element isn't scrolled at all up or down, then `scrollTop` is 0. If the document is not the active document, the returned value is 0. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component.
 
 It's possible for `scrollTop` to be negative if the element can be scrolled up from the initial containing block. For example, if the element's {{cssxref("flex-direction")}} is `column-reverse` and content grows upwards, then `scrollTop` is `0` when the scrollbar is at its bottommost position (at the start of the scrolled content), and then increasingly negative as you scroll towards the end of the content.
 

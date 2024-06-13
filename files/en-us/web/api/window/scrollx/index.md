@@ -8,11 +8,11 @@ browser-compat: api.Window.scrollX
 
 {{ APIRef("CSSOM View") }}
 
-The read-only **`scrollX`** property of the {{domxref("Window")}} interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}} property.
+The read-only **`scrollX`** property of the {{domxref("Window")}} interface returns the number of pixels by which the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}} property.
 
 ## Value
 
-A double-precision floating-point value indicating the number of pixels the document is currently scrolled horizontally from the origin, where a positive value means the content is scrolled to the right (to reveal more content to the right). In more technical terms, `scrollX` returns the X coordinate of the left edge of the current {{Glossary("viewport")}}. If the document isn't scrolled at all left or right, then `scrollX` is 0. If there is no viewport, the returned value is 0. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component.
+A double-precision floating-point value indicating the number of pixels by which the document is currently scrolled horizontally from the origin, where a positive value means the content is scrolled to the right (to reveal more content to the right). In more technical terms, `scrollX` returns the X coordinate of the left edge of the current {{Glossary("viewport")}}. If the document isn't scrolled at all left or right, then `scrollX` is 0. If there is no viewport, the returned value is 0. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component.
 
 > **Note:** If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
 
