@@ -29,9 +29,16 @@ There are two kinds of parameters:
 - output/return parameters
   - : primarily return multiple values from a function, but are not recommended since they cause confusion
 
+### Parameters versus arguments
+
+Note the difference between _parameters_ and _arguments_:
+
+- Function parameters are the names listed in the function's definition.
+- Function {{Glossary("argument","arguments")}} are the real values passed to the function.
+- Parameters are initialized to the values of the arguments supplied.
+
 ## See also
 
-- [Difference between parameter and argument](/en-US/docs/Glossary/Parameter#parameters_versus_arguments)
 - [Function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [Function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - Glossary
