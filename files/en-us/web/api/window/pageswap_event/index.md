@@ -58,9 +58,9 @@ window.addEventListener("pageswap", async (e) => {
       document.querySelector(`#detail main img`).style.viewTransitionName =
         "avatar";
 
-      // Remove names after snapshots have been taken
-      // so that we're ready for the next navigation
-      await e.viewTransition.ready;
+      // Remove view-transition-names after snapshots have been taken
+      // (this to deal with BFCache)
+      await e.viewTransition.finished;
       document.querySelector(`#detail main h1`).style.viewTransitionName =
         "none";
       document.querySelector(`#detail main img`).style.viewTransitionName =
