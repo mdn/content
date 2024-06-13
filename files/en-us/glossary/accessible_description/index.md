@@ -49,9 +49,17 @@ Like the computation of the HTML elements, SVG elements also have their accessib
 
 ## See also
 
-- {{glossary("accessible name")}} glossary term
-- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
-- [Accessible description computation 1.2](https://w3c.github.io/accname/#mapping_additional_nd_description) via w3.github.io/accname
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
+- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
+- [Glossary](/en-US/docs/Glossary)
+
+  - {{Glossary("Accessibility")}}
+  - {{Glossary("Accessibility tree")}}
+  - {{Glossary("Accessible name")}}
+  - {{Glossary("ARIA")}}
