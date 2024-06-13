@@ -117,7 +117,7 @@ We have successfully declared our constants; a unique identifier, the list of of
 
 ### Saving the cache on PWA installation
 
-When a user installs a PWA or simply visits a website with a service worker, an `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
+When a user installs or simply visits a website with a service worker, an `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
 
 The `install` event happens when the app is used for the first time, or when a new version of the service worker is detected by the browser. When an older service worker is being replaced by a new one, the old service worker is used as the PWA's service worker until the new service work is activated.
 

@@ -70,10 +70,6 @@ For a full description of every member, see the [web app manifest reference docu
 
 For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
 
-### Service worker
-
-For a web app to be installable, it must include a [service worker](/en-US/docs/Web/API/Service_Worker_API) with a [`fetch` event handler](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) that provides a basic offline experience.
-
 ## Installation from an app store
 
 Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple App Store.
