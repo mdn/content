@@ -328,11 +328,11 @@ class SomeClass {
 
   someMethod(e) {
     console.log(this.name);
-    switch (e.keyCode) {
-      case 5:
+    switch (e.code) {
+      case "ArrowUp":
         // some code here…
         break;
-      case 6:
+      case "ArrowDown":
         // some code here…
         break;
     }
