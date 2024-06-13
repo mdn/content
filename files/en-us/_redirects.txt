@@ -6789,10 +6789,10 @@
 /en-US/docs/Security/InsecurePasswords	/en-US/docs/Web/Security/Insecure_passwords
 /en-US/docs/Security/Insecure_passwords	/en-US/docs/Web/Security/Insecure_passwords
 /en-US/docs/Security/MixedContent	/en-US/docs/Web/Security/Mixed_content
-/en-US/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
-/en-US/docs/Security/MixedContent/fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+/en-US/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
+/en-US/docs/Security/MixedContent/fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/Mixed_content	/en-US/docs/Web/Security/Mixed_content
-/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/Securing_your_site	/en-US/docs/Web/Security/Securing_your_site
 /en-US/docs/Security/Weak_Signature_Algorithm	/en-US/docs/Web/Security/Weak_Signature_Algorithm
 /en-US/docs/Security_changes_in_Firefox_3.1	/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes
@@ -13019,6 +13019,7 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/3_Collecting_aggregate_data_based_on_DNT	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
