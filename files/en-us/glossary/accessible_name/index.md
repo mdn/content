@@ -36,5 +36,5 @@ Assistive technologies will provide the user with the accessibility name propert
 
   - {{Glossary("Accessibility")}}
   - {{Glossary("Accessibility tree")}}
-  - {{Glossary("Accessibility description")}}
+  - {{Glossary("Accessible description")}}
   - {{Glossary("ARIA")}}

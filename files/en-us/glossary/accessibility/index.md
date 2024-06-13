@@ -20,6 +20,6 @@ page-type: glossary-definition
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Accessibility tree")}}
-  - {{Glossary("Accessibility description")}}
-  - {{Glossary("Accessibility name")}}
+  - {{Glossary("Accessible description")}}
+  - {{Glossary("Accessible name")}}
   - {{Glossary("ARIA")}}

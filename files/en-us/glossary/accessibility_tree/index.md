@@ -36,6 +36,6 @@ While still in draft form within the Web Incubator Community Group as of April 2
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Accessibility")}}
-  - {{Glossary("Accessibility description")}}
-  - {{Glossary("Accessibility name")}}
+  - {{Glossary("Accessible description")}}
+  - {{Glossary("Accessible name")}}
   - {{Glossary("ARIA")}}
