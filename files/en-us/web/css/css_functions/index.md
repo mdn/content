@@ -333,11 +333,10 @@ The following functions are used as a value of different `animation-timeline` pr
 
 ## Anchor positioning functions
 
-
 The anchor positioning functions are used when positioning and sizing **anchor-positioned elements** relative to the location and size of their associated **anchor elements**.
 
 - {{cssxref("anchor", "anchor()")}}
-  - : Returns a length relative to the position of the edges of a anchor-positioned element's associated anchor element.
+  - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size dimensions of an anchor-positioned element's associated anchor element.
 - {{cssxref("inset-area_function", "inset-area()")}}
