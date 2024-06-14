@@ -1,6 +1,6 @@
 ---
 title: Asynchronous (Programming)
-slug: Glossary/Programming/Asynchronous
+slug: Glossary/Asynchronous/Programming
 page-type: glossary-definition
 ---
 
