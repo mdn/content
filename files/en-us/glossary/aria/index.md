@@ -19,5 +19,5 @@ The specification, for example, allows you to add the attribute `role="alert"` t
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
 - [Glossary](/en-US/docs/Glossary)
-  - {{Glossary("Accessibility)}}
+  - {{Glossary("Accessibility")}}
   - {{Glossary("WAI")}}
