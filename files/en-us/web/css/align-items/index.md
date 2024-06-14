@@ -58,30 +58,39 @@ align-items: unset;
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `center`
+
   - : The flex items' margin boxes are centered within the line on the cross-axis. If the cross-size of an item is larger than the flex container, it will overflow equally in both directions.
 
 - `start`
+
   - : The items are packed flush to each other toward the start edge of the alignment container in the appropriate axis.
 
 - `end`
+
   - : The items are packed flush to each other toward the end edge of the alignment container in the appropriate axis.
 
 - `self-start`
+
   - : The items are packed flush to the edge of the alignment container's start side of the item, in the appropriate axis.
 
 - `self-end`
+
   - : The items are packed flush to the edge of the alignment container's end side of the item, in the appropriate axis.
 
 - `baseline`, `first baseline`, `last baseline`
+
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 
 - `stretch`
+
   - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
 
 - `safe`
+
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 
 - `unsafe`
+
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
     There are also two values that are only used with Flexbox:
 
@@ -91,7 +100,6 @@ align-items: unset;
 
 - `flex-end`
   - : Used in flex layout only, aligns the flex items flush against the flex container's main-end or cross-end side.
-
 
 ## Formal definition
 
