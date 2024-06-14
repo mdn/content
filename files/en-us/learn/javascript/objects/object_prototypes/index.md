@@ -120,7 +120,7 @@ This code creates a `Date` object, then walks up the prototype chain, logging th
 
 ![Prototype chain for myDate](mydate-prototype-chain.svg)
 
-In fact, when you call familiar methods, like `myDate2.getMonth()`,
+In fact, when you call familiar methods, like `myDate2.getTime()`,
 you are calling a method that's defined on `Date.prototype`.
 
 ## Shadowing properties
@@ -130,16 +130,16 @@ What happens if you define a property in an object, when a property with the sam
 ```js
 const myDate = new Date(1995, 11, 17);
 
-console.log(myDate.getYear()); // 95
+console.log(myDate.getTime()); // 819129600000
 
-myDate.getYear = function () {
+myDate.getTime = function () {
   console.log("something else!");
 };
 
-myDate.getYear(); // 'something else!'
+myDate.getTime(); // 'something else!'
 ```
 
-This should be predictable, given the description of the prototype chain. When we call `getYear()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getYear()` to `myDate`, then the version in `myDate` is called.
+This should be predictable, given the description of the prototype chain. When we call `getTime()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getTime()` to `myDate`, then the version in `myDate` is called.
 
 This is called "shadowing" the property.
 

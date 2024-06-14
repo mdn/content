@@ -237,6 +237,7 @@
     },
     "Credential Management API": {
       "overview": ["Credential Management API"],
+      "guides": ["/docs/Web/API/Credential_Management_API/Credential_types"],
       "interfaces": [
         "Credential",
         "CredentialsContainer",
@@ -2173,6 +2174,7 @@
         "RTCAudioSourceStats",
         "RTCVideoSourceStats",
         "RTCCodecStats",
+        "RTCDataChannelStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"

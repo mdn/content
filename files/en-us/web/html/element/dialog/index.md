@@ -166,11 +166,6 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
-});
-
 // "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
 favDialog.addEventListener("close", (e) => {
   outputBox.value =

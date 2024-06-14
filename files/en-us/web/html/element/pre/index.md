@@ -15,6 +15,8 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
 
 If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
 
+`<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
+
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -66,11 +68,11 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ```html
 <p>Using CSS to change the font color is easy.</p>
-<pre>
+<pre><code>
 body {
   color: red;
 }
-</pre>
+</code></pre>
 ```
 
 #### Result
@@ -82,12 +84,12 @@ body {
 #### HTML
 
 ```html
-<pre>
+<pre><code>
 let i = 5;
 
 if (i &lt; 10 &amp;&amp; i &gt; 0)
   return &quot;Single Digit Number&quot;
-</pre>
+</code></pre>
 ```
 
 #### Result
@@ -164,4 +166,4 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
 - [HTML Entity](/en-US/docs/Glossary/Entity)
-- Related element: {{HTMLElement("code")}}
+- Related element: {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}
