@@ -48,7 +48,8 @@ This contains some basic information like the document `charset` and {{htmleleme
 
 A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In A-Frame, the scene is represented by a [Scene entity](https://aframe.io/docs/core/scene.html).
 
-> **Note:** An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
+> [!NOTE]
+> An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
 
 Let's create the scene by adding an `<a-scene>` element inside the `<body>` element:
 
@@ -66,7 +67,8 @@ Adding the cube to the scene is done by adding a simple [`<a-box>`](https://afra
 
 It contains a few parameters already defined: `color`, `position` and `rotation` — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.
 
-> **Note:** The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+> [!NOTE]
+> The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
 ### Adding a background: Sky box
 
@@ -260,7 +262,8 @@ Everything is rendered properly and animating — congratulations on building yo
 
 If you have a VR device available, now is a good time to try out your scene with it too.
 
-> **Note:** You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html).
+> [!NOTE]
+> You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html).
 
 That was easier than you thought, right? A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences and suchlike. The community is growing, just like the number of supported VR devices — it's a great time to start experimenting with such frameworks.
 

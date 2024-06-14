@@ -20,7 +20,8 @@ Let's start by creating a JavaScript variable to represent our ball. Add the fol
 let ball;
 ```
 
-> **Note:** For the sake of this tutorial, we will use global variables. The purpose of the tutorial is to teach Phaser-specific approaches to game development rather than dwelling on subjective best approaches.
+> [!NOTE]
+> For the sake of this tutorial, we will use global variables. The purpose of the tutorial is to teach Phaser-specific approaches to game development rather than dwelling on subjective best approaches.
 
 ## Loading the ball sprite
 

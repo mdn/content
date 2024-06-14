@@ -12,7 +12,8 @@ Now, when we have our mobile controls in place and the game is playable on touch
 
 It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
-> **Note:** the [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
+> [!NOTE]
+> the [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
 
 ## Pure JavaScript approach
 
@@ -85,7 +86,8 @@ That way instead of using the codes to compare the input in the handler function
 leftPressed = event.keyCode === KeyboardHelper.left;
 ```
 
-> **Note:** You can also find a list of the different keycodes and what keys they relate to in the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) reference page.
+> [!NOTE]
+> You can also find a list of the different keycodes and what keys they relate to in the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) reference page.
 
 ![Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse.](controls-purejsgame.png)
 
