@@ -1,3 +1,4 @@
+---
 title: "Window: postMessage() method"
 short-title: postMessage()
 slug: Web/API/Window/postMessage
