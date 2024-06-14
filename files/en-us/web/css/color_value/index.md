@@ -243,7 +243,7 @@ inputElem.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("color_value_tester", "100%", 300)}}
+{{EmbedLiveSample("testing_color_values", "100%", 300)}}
 
 ### Displaying fully saturated sRGB colors
 
@@ -321,7 +321,7 @@ div:nth-child(12) {
 
 #### Result
 
-{{EmbedLiveSample("fully_saturated_srgb_colors", "100%", 200)}}
+{{EmbedLiveSample("displaying_fully_saturated_sRGB_colors", "100%", 200)}}
 
 ### Showing different shades of red
 
@@ -377,7 +377,7 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("reds_of_different_shades", "100%", 150)}}
+{{EmbedLiveSample("showing_different_shades_of_red", "100%", 150)}}
 
 ### Displaying reds of different saturations
 
