@@ -32,14 +32,14 @@ block-size: anchor-size(--myAnchor block, 200px);
 The `anchor-size()` function's syntax is as follows:
 
 ```text
-anchor-size(anchor-element anchor-size, length-percentage)
+anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 ```
 
 The parameters are:
 
-- `anchor-element` {{optional_inline}}
-  - : The {{cssxref("anchor-name")}} set on the anchor element you want to size an element relative to. If omitted, the positioned element is sized relative to the anchor referenced by its {{cssxref("position-anchor")}} property, or its implicit anchor if it has one.
-- `anchor-size`
+- `<anchor-element>` {{optional_inline}}
+  - : The `<dashed-ident>` name set as the value of the {{cssxref("anchor-name")}} property of the anchor element you want to size the element relative to. If omitted, the element's default anchor, which is the anchor referenced in the {{cssxref("position-anchor")}} property, is used.
+- `<anchor-size>`
 
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. Valid values include:
     - `width`
@@ -56,7 +56,7 @@ The parameters are:
       -: The length of the anchor element in the inline direction.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
-  - : Specifies a fallback value the function should resolve to if the `anchor-size()` function would otherwise be invalid.
+  - : Specifies the size to use as a fallback value if the element is not absolutely or fixed positioned, or the anchor element doesn't exist.
 
 > **Note:** The anchor size you size the positioned element relative to does not have to be along the same axis as the sizing value being set. For example, `width: anchor-size(height)` is valid.
 
@@ -95,18 +95,18 @@ The sizing properties that accept an `anchor-size()` function as a value include
 
 The most common `anchor-size()` functions you'll use will just refer to a dimension of the default anchor. Alternative, include the `anchor-size()` function inside a {{cssxref("calc")}} functions to modify the size applied to the positioned element.
 
+For example, this rule sizes the positioned element's width equal to the default anchor element's width:
+
 ```css
 .positionedElem {
-  /* Size the positioned element's width
-     equal to the anchor element's width  */
   width: anchor-size(width);
 }
 ```
 
+This rule sizes the positioned element's inline size to 4 times the anchor element's inline size, with the multiplication being done inside a {{cssxref("calc()")}} function:
+
 ```css
 .positionedElem {
-  /* Size the positioned element's inline size
-     equal to 4 times the anchor element's inline size  */
   inline-size: calc(anchor-size(self-inline) * 4);
 }
 ```
@@ -119,7 +119,7 @@ The most common `anchor-size()` functions you'll use will just refer to a dimens
 
 ### Basic `anchor-size()` usage
 
-This example shows two elements positioned relative to an anchor, which are sized using `anchor-size()` functions.
+This example shows two elements positioned relative to an anchor and sized using `anchor-size()` functions.
 
 #### HTML
 
