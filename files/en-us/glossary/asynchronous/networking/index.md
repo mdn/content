@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In networking and other communications, **asynchronous communication** refers to the transmission of data in which each character or unit of data is sent separately, and the timing between these characters or data units does *not* need to be {{glossary("synchronous", "synchronized")}}. This means that the sender and receiver do not need to be perfectly aligned in time, allowing data to be sent intermittently rather than in a continuous stream. Each data unit is typically framed with start and stop bits to signify the beginning and end of transmission, ensuring that the receiving end can correctly identify and process the data.
+In networking and other communications, **asynchronous communication** refers to the transmission of data in which each character or unit of data is sent separately, and the timing between these characters or data units does _not_ need to be {{glossary("synchronous", "synchronized")}}. This means that the sender and receiver do not need to be perfectly aligned in time, allowing data to be sent intermittently rather than in a continuous stream. Each data unit is typically framed with start and stop bits to signify the beginning and end of transmission, ensuring that the receiving end can correctly identify and process the data.
 
 Examples include asynchronous human communication like Email and SMS, where participants send or post messages at different times than they read them. In contrast, synchronous communication, such as a phone call or face-to-face conversation, requires all participants to be present and engaged at the same time.
 
