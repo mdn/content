@@ -195,7 +195,7 @@ There's a special [`animation`](https://aframe.io/docs/1.6.0/components/animatio
   color="#0095DD"
   rotation="20 40 0"
   position="0 1 0"
-  animation="property: rotation;from:20 0 0 to: 20 360 0;dir: alternate; loop: true; dur: 4000; easing: easeInOutQuad;">
+  animation="property: rotation; from: 20 0 0; to: 20 360 0; dir: alternate; loop: true; dur: 4000; easing: easeInOutQuad;">
 </a-box>
 ```
 
