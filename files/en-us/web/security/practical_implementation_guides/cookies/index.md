@@ -23,7 +23,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 - `Secure`
   - : All cookies must be set with the `Secure` directive, indicating that they should only be sent over HTTPS. [HTTP Strict Transport Security](/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_strict_transport_security) (HSTS) can also be used to prevent transmission over HTTP, but ideally `Secure` should be set on cookies as well.
 - `HttpOnly`
-  - : Cookies that don't require access from JavaScript should have the `HttpOnly` directive set, to block access (for example, from {{domxref("Document.cookie")}}). It is particularly important that session identifiers don't have JavaScript access, to help prevent attacks such as CSRF.
+  - : Cookies that don't require access from JavaScript should have the `HttpOnly` directive set to block access, such as from {{domxref("Document.cookie")}}. It is particularly important that session identifiers don't have JavaScript access, to help prevent attacks such as CSRF.
 - `Expires` and `Max-Age`
   - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible. `Expires` is preferred unless you need to support IE < 8, in which case use `Max-Age`.
     - `Expires`: Sets an absolute expiration date for a given cookie.
@@ -34,7 +34,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 - `Path`
   - : Cookies should be set to the most restrictive `Path` possible; for most applications, this will be set to the root directory.
 - `SameSite`
-  - : Forbid sending the cookie via cross-origin requests (for example from {{htmlelement("img")}} element), as a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) measure. You should use one of the following two values:
+  - : Forbid sending the cookie via cross-origin requests (for example from {{htmlelement("img")}} element), as a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) measure. `SameSite` is also useful in protecting against [Clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, in cases that rely on the user being authenticated. You should use one of the following two values:
     - `SameSite=Strict`: Only send the cookie when your site is directly navigated to.
     - `SameSite=Lax`: Additionally send the cookie when navigating to your site from another site. Note that this is the default behavior used in modern browsers if no `SameSite` directive is set.
 
@@ -46,7 +46,7 @@ Set a session identifier cookie that is only accessible on the current host and 
 Set-Cookie: MOZSESSIONID=980e5da39d4b472b9f504cac9; Path=/; Secure; HttpOnly
 ```
 
-Set a session identifier for all `example.org` sites that expires after 30 days, using the `__Secure-` prefix. This cookie is not sent cross-origin, but is sent when navigating to any site from another site:
+Use the `__Secure-` prefix to set a session identifier for all `example.org` sites, set to expire after 30 days. This cookie is not sent cross-origin, but is sent when navigating to any site from another site:
 
 ```http
 Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=example.org; Path=/; Secure; HttpOnly; SameSite=Lax

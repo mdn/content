@@ -17,11 +17,13 @@ CSRF are a class of attack where unauthorized commands are transmitted to a webs
 <img src="https://accounts.example.org/management/delete?confirm=true" />
 ```
 
-When a user visits a page with containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
+When a user visits a page containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
 
 ## Solution
 
 There are a variety of CSRF mitigation strategies available. The most common and transparent methods of CSRF mitigation are [`SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) cookies and anti-CSRF tokens.
+
+> **Note:** A Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) vulnerability could overcome any CSRF mitigation techniques you put in place. Make sure to harden your site against both types of attack in tandem. XSS can be guarded against using features such as [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) (SRI). 
 
 ### `SameSite` cookies
 
@@ -42,7 +44,7 @@ Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, un
 
 You are advised to use both strategies for websites that allow destructive changes such as account deletion. Anti-CRSF tokens are arguably unnecessary for other sites, although it is still advised to have `SameSite` set to a non-`None` value to help protect the user's [Privacy](/en-US/docs/Web/Privacy).
 
-Most application frameworks have built-in CSRF tokenization to ease implementation.
+Most application frameworks have built-in CSRF tokenization to ease implementation. Make sure to choose one that does, and don't try to reinvent the wheel.
 
 ## Examples
 
