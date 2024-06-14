@@ -184,31 +184,26 @@ It is impressive to be able to create such a scene with just a few lines of HTML
 
 ## Animation
 
-We've already used `rotation` and `position` to move the shapes on the scene, and we can also scale them. These attributes can be manipulated to create the illusion of [animation](https://aframe.io/docs/core/animation.html).
+We've already used `rotation` and `position` to move the shapes on the scene, and we can also scale them. These attributes can be manipulated to create the illusion of [animation](https://aframe.io/docs/1.6.0/components/animation.html).
 
 ### Rotation
 
-There's a special [`<a-animation>`](https://aframe.io/docs/core/animation.html) entity that can help us animate elements. Add the `<a-animation>` element seen below to the `<a-box>` element as a child, as shown:
+There's a special [`animation`](https://aframe.io/docs/1.6.0/components/animation.html) component that can help us animate elements. Add the `animation` component seen below to the `<a-box>` element as a property, as shown:
 
 ```html
-<a-box color="#0095DD" rotation="20 40 0" position="0 1 0">
-  <a-animation
-    attribute="rotation"
-    from="20 0 0"
-    to="20 360 0"
-    direction="alternate"
-    dur="4000"
-    repeat="indefinite"
-    easing="ease">
-  </a-animation>
+<a-box
+  color="#0095DD"
+  rotation="20 40 0"
+  position="0 1 0"
+  animation="property: rotation;from:20 0 0 to: 20 360 0;dir: alternate; loop: true; dur: 4000; easing: easeInOutQuad;">
 </a-box>
 ```
 
-As with any other entities, you can define key properties for the animation. We'll be animating the `rotation` attribute from `20 0 0` to `20 360 0`, so it will do a full spin. The animation direction is set to alternate so the animation will be played forward, and then back. The duration is set to 4 seconds, and it will be repeated indefinitely. The animation uses `ease` for easing, with [tween.js](https://github.com/tweenjs/tween.js/) being implemented internally.
+As with any other entities, you can define key properties for the animation. We'll be animating the `rotation` attribute from `20 0 0` to `20 360 0`, so it will do a full spin. The animation direction is set to alternate so the animation will be played forward, and then back. The duration is set to 4 seconds, and it will be repeated indefinitely. The animation uses `easing` for easing, with [tween.js](https://github.com/tweenjs/tween.js/) being implemented internally.
 
 ### Scaling
 
-We can also add animation to entities with custom geometry like the torus, in much the same way. Add the following `<a-animation>` element to your torus:
+We can also add animation to entities with custom geometry like the torus, in much the same way. Add the following `animation` component to your torus:
 
 ```html
 <a-entity
@@ -222,15 +217,9 @@ We can also add animation to entities with custom geometry like the torus, in mu
     roughness: 0.1;
     metalness: 0.5;"
   rotation="10 0 0"
-  position="-3 1 0">
-  <a-animation
-    attribute="scale"
-    to="1 0.5 1"
-    direction="alternate"
-    dur="2000"
-    repeat="indefinite"
-    easing="linear">
-  </a-animation>
+  position="-3 1 0"
+  animation="property: scale; to: 1 0.5 1; direction: alternate; dur: 2000; loop: true; easing: linear;">
+  
 </a-entity>
 ```
 
@@ -238,7 +227,7 @@ The attribute we want to animate for the torus is `scale`. The initial, default 
 
 ### Moving
 
-We could use the `<a-animation>` to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the `<script>` tag:
+We could use the `animation` to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the `<script>` tag:
 
 ```js
 let t = 0;
