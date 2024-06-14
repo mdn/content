@@ -24,7 +24,7 @@ calc(100px * sin(pi / 2))
 calc(var(--hue) + 180)
 
 /* Expression with color channels in relative colors */
-rgb(from blue calc(r * .3) calc(g * .59) calc(b * .11))
+lch(from aquamarine l c calc(h + 180))
 ```
 
 The `calc()` function takes a single expression as its parameter, and the expression's result is used as the value for a CSS property. In this expression, the {{Glossary("operand", "operands")}} can be combined using the {{Glossary("operator", "operators")}} listed below. When the expression contains multiple operands,`calc()` uses the standard [operator precedence rules](/en-US/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
@@ -207,7 +207,7 @@ p {
 }
 
 .invert-hue {
-  color: hsl(from cornflowerblue calc(h + 180) s l);
+  color: lch(from aquamarine l c calc(h + 180));
 }
 ```
 
