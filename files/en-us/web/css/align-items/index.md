@@ -191,7 +191,7 @@ We include a container {{htmlelement("div")}} with six nested `<div>` children. 
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
-  <div id="item4">4<br/>4</div>
+  <div id="item4">4<br />4</div>
   <div id="item5">5</div>
   <div id="item6">6</div>
 </div>
