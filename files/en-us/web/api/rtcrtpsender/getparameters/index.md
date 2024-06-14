@@ -72,19 +72,14 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
     <!-- spec defines following in RTCRtpParameters -->
 - `codecs`
 
-  - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender or receiver will choose.
-    This parameter cannot be changed once initially set.
-
-  - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) that the sender is ready to use.
-    <!---This is the subset of codecs that the receiver has indicted it is and that the remote endpoint has indicated it is prepared to send.-->
-
+  - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) that the sender has set as enabled, and is prepared to use.
     This parameter cannot be changed once initially set.
 
     Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
 
     - `channels` {{optional_inline}}
 
-      - : An positive integer indicating the number of channels supported by the codec.
+      - : A positive integer indicating the number of channels supported by the codec.
         For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
 
     - `clockRate`
@@ -107,7 +102,6 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
 
     - `sdpFmtpLine` {{optional_inline}}
       - : A string giving the format specific parameters provided by the local description.
-        Note that on the receiver this information comes from the format specific parameters field specified in the `a=fmtp` line in the codec's {{Glossary("SDP")}}.
 
 - `headerExtensions`
   - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver. Header extensions are described in {{RFC(3550, "", "5.3.1")}}.
