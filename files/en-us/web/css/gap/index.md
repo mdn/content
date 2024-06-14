@@ -61,6 +61,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
   - : Is the width of the gutter separating the grid lines.
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Is the width of the gutter separating the grid lines, relative to the dimension of the element.
+
 ## Description
 
 This property defines gaps between columns in CSS multi-column layout, flex items and flex lines in flexible box layout, and both rows and columns in CSS grid layout.
