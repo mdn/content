@@ -71,8 +71,44 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
     This parameter cannot be changed by the caller.
     <!-- spec defines following in RTCRtpParameters -->
 - `codecs`
+
   - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender or receiver will choose.
     This parameter cannot be changed once initially set.
+
+  - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) that the sender is ready to use.
+    <!---This is the subset of codecs that the receiver has indicted it is and that the remote endpoint has indicated it is prepared to send.-->
+
+    This parameter cannot be changed once initially set.
+
+    Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
+
+    - `channels` {{optional_inline}}
+
+      - : An positive integer indicating the number of channels supported by the codec.
+        For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
+
+    - `clockRate`
+
+      - : A positive integer specifying the codec's clock rate in Hertz (Hz).
+        The clock rate is the rate at which the codec's RTP timestamp advances.
+        Most codecs have specific values or ranges of values they permit.
+        The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+
+    - `mimeType`
+
+      - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
+        The MIME type strings used by RTP differ from those used elsewhere.
+        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+
+    - `payloadType`
+
+      - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
+
+    - `sdpFmtpLine` {{optional_inline}}
+      - : A string giving the format specific parameters provided by the local description.
+        Note that on the receiver this information comes from the format specific parameters field specified in the `a=fmtp` line in the codec's {{Glossary("SDP")}}.
+
 - `headerExtensions`
   - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver. Header extensions are described in {{RFC(3550, "", "5.3.1")}}.
     This parameter cannot be changed once initially set.
@@ -96,7 +132,7 @@ function getSenderTransactionID(sender) {
 }
 ```
 
-In the same, way, this code gets the canonical name (CNAME) being used for {{Glossary("RTCP")}} on an {{domxref("RTCRtpSender")}}.
+In the same way, this code gets the canonical name (CNAME) being used for {{Glossary("RTCP")}} on an {{domxref("RTCRtpSender")}}.
 
 ```js
 function getRtpCNAME(sender) {
