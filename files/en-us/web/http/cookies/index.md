@@ -110,7 +110,7 @@ document.cookie = "yummy_cookie=choco";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
-You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e. in the `Set-Cookie` header than created it):
+You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e. in the `Set-Cookie` header that created it):
 
 ```js
 console.log(document.cookie);
