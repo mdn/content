@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-flexbox/
 
 The **CSS flexible box layout** module defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can "flex" their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.
 
-## Basic example
+## Flexible box layout in action
 
 In the following example a container has been set to `display: flex`, which means that the three child items become flex items. The value of `justify-content` has been set to `space-between` in order to space the items out evenly on the main axis. An equal amount of space is placed between each item with the left and right items being flush with the edges of the flex container. You can also see that the items are stretching on the cross axis, due to the default value of `align-items` being `stretch`. The items stretch to the height of the flex container, making them each appear as tall as the tallest item.
 
@@ -30,10 +30,6 @@ In the following example a container has been set to `display: flex`, which mean
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}
-- {{cssxref("order")}}
-- {{cssxref("place-content")}}
-- {{cssxref("place-items")}}
-- {{cssxref("row-gap")}}
 
 ### Glossary terms
 
@@ -76,21 +72,30 @@ In the following example a container has been set to `display: flex`, which mean
 
 ## Related concepts
 
-[CSS box alignment]() module
+[CSS display module](/en-US/docs/Web/CSS/CSS_display)
 
-- {{cssxref("justify-self")}}
-- {{cssxref("place-content")}}
-- {{cssxref("place-items")}}
-- {{cssxref("place-self")}}
+- {{cssxref("display")}}
+- {{cssxref("order")}}
+
+[CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
-- {{cssxref("display")}}
-- {{cssxref("max-content")}}
-- {{cssxref("min-content")}}
-- {{cssxref("fit-content")}}
-- {{cssxref("aspect-ratio")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("place-content")}}
+- {{cssxref("place-items")}}
+- {{cssxref("row-gap")}}
 
-- {{glossary("intrinsic size")}}
+[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+
+- {{cssxref("aspect-ratio")}}
+- {{cssxref("max-content")}} value
+- {{cssxref("min-content")}} value
+- {{cssxref("fit-content")}} value
+- {{glossary("intrinsic size")}} glossary term
 
 ## Specifications
 
@@ -98,5 +103,5 @@ In the following example a container has been set to `display: flex`, which mean
 
 ## See also
 
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
 - [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
