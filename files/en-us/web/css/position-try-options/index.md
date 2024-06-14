@@ -345,8 +345,12 @@ See the {{cssxref("@position-try")}} reference page.
 
 ## See also
 
-- {{cssxref("position-try-order")}}, {{cssxref("position-try")}}
+- {{cssxref("inset-area")}}
+- {{cssxref("position-try")}}
+- {{cssxref("position-try-order")}}
 - The {{cssxref("@position-try")}} at-rule
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
+- The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

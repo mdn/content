@@ -224,8 +224,12 @@ In some cases, we need to set values inside the position try options to turn off
 
 ## See also
 
+- {{cssxref("inset-area")}}
+- {{cssxref("position-anchor")}}
 - {{cssxref("position-try-options")}}
 - {{cssxref("position-try")}}
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- The {{cssxref("anchor()")}} function
+- The {{cssxref("anchor-size()")}} function
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

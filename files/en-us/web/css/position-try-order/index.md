@@ -209,7 +209,9 @@ Try selecting the `most-height` order option. This has the effect of applying th
 
 ## See also
 
-- {{cssxref("position-try-options")}}, {{cssxref("position-try")}}
+- {{cssxref("position-try")}}
+- {{cssxref("position-try-options")}}
 - The {{cssxref("@position-try")}} at-rule
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

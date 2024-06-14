@@ -54,7 +54,10 @@ See {{cssxref("position-try-options")}} for examples of `inset-area()` usage.
 ## See also
 
 - {{cssxref("inset-area")}}
+- {{cssxref("position-try")}}
 - {{cssxref("position-try-options")}}
 - {{cssxref("@position-try")}} at-rule
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
