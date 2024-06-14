@@ -93,14 +93,14 @@ align-items: unset;
 
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
-There are also two values that are only used with flexbox, as they are base on [flex model axes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) concepts:
+There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
 
 - `flex-start`
 
-  - : Used in flex layout only, aligns the flex items flush against the flex container's main-start or cross-start side.
+  - : Used in flex layout only, aligns the flex items flush against the flex container's main-start or cross-start side. When used outside of a flex formatting context, this value behaves as `start`.
 
 - `flex-end`
-  - : Used in flex layout only, aligns the flex items flush against the flex container's main-end or cross-end side.
+  - : Used in flex layout only, aligns the flex items flush against the flex container's main-end or cross-end side. When used outside of a flex formatting context, this value behaves as `end`.
 
 ## Formal definition
 
@@ -116,7 +116,7 @@ In this example we have a container with six children. A {{htmlelement("select")
 
 ### CSS
 
-We style a the conainer and items in a manner that ensures we have two lines or rows or items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
+We style a the container and items in a manner that ensures we have two lines or rows or items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
 
 ```css
 .flex,
