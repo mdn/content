@@ -164,14 +164,14 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
    ```js
    document.onkeydown = (e) => {
-     if (e.keyCode === 13) {
+     if (e.code === "Enter") {
        // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };
    ```
 
-   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
+   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`code`](/en-US/docs/Web/API/KeyboardEvent/code) property; if it is the code that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
 > **Note:** This technique will only work if you set your original event handlers via event handler properties (e.g. `onclick`). `addEventListener` won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.
 

@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### APIs
 
+- {{domxref('RTCRtpReceiver.getParameters()')}} and {{domxref('RTCRtpSender.getParameters()')}} are now supported, returning an object that describes the current codecs used for the encoding and transmission of media on the receiver and sender tracks, respectively. ([Firefox bug 1534687](https://bugzil.la/1534687)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
