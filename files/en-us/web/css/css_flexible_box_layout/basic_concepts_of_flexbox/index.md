@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module, usually referred to as flexbox, is a one-dimensional layout model,distributing space between items in an interface with powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.
+The [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module (usually referred to as flexbox) is a one-dimensional layout model for distributing space between items and includes numerous alignment capabilities. This article gives an outline of the main features of flexbox, which we will explore in more detail in the rest of these guides.
 
 When we describe flexbox as being one-dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout), which controls columns and rows together.
 
@@ -69,10 +69,10 @@ As with all properties in CSS, some initial values are defined, so the contents 
 
 - Items display in a row (the {{cssxref("flex-direction")}} property's default value is `row`).
 - The items start from the start edge of the main axis.
-- The items do not stretch on the main dimension but can shrink (The flex-item's {{cssxref("flex-grow")}} property's default value is `0` and its {{cssxref("flex-shrink")}} property's default value is `1).
-- The items will stretch to fill the size of the cross-axis. (The {{cssxref("align-items")}} property's default value is `stretch`)
+- The items do not stretch on the main dimension but can shrink (a flex-item's {{cssxref("flex-grow")}} property's default value is `0` and its {{cssxref("flex-shrink")}} property's default value is `1`).
+- The items will stretch to fill the size of the cross-axis (the {{cssxref("align-items")}} property's default value is `stretch`).
 - The flex-item's {{cssxref("flex-basis")}} property's default value is `auto`. This means that, in each case, it will be equal to the flex item {{cssxref("width")}} in horizontal writing mode, and the flex item {{cssxref("height")}} in vertical writing mode. If the corresponding `width`/`height` is also set to `auto`, the `flex-basis` content value is used instead.
-- All the items will be in a single row (the {{cssxref("flex-wrap")}} property's default value is `nowrap`),overflowing their container if their combined `width`/`height` exceeds the containing element `width`/`height`.
+- All the items will be in a single row (the {{cssxref("flex-wrap")}} property's default value is `nowrap`), overflowing their container if their combined `width`/`height` exceeds the containing element `width`/`height`.
 
 The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the full length of the cross-axis.
 
@@ -92,9 +92,9 @@ The live example below has `flex-direction` set to `row-reverse`. Try the other 
 
 ## Multi-line flex containers with flex-wrap
 
-While flexbox is a one dimensional model, it is possible to cause our flex items to wrap onto multiple lines. In doing so, you should consider each line as a new flex container. Any space distribution will happen across that line, without reference to the previous or subsequent lines.
+While flexbox is a one dimensional model, it is possible to make flex items wrap across multiple lines. If you do this, you should consider each line as a new flex container. Any space distribution will happen across each line, without reference to the previous or subsequent lines.
 
-To cause wrapping behavior add the property {{cssxref("flex-wrap")}} with a value of `wrap`. Now, if your items are too large to all display in one line, they will wrap onto another line. The live sample below contains items that have been given a `width`. The total width of the items is too wide for the flex container. As `flex-wrap` is set to `wrap`, the items wrap. Set it to `nowrap`, which is the initial value, and they will shrink to fit the container. They shrink because they are using initial flexbox values, including `flex-shrink: 1`, that allows items to shrink. Using `nowrap` would cause an overflow if the items were not able to shrink, or could not shrink small enough to fit.
+To cause wrapping behavior add the property {{cssxref("flex-wrap")}} with a value of `wrap`. Now, if your items are too large to all display in one line, they will wrap onto another line. The live sample below contains items that have been given a `width`. The total width of the items is too wide for the flex container. As `flex-wrap` is set to `wrap`, the items wrap across multiple lines. If you set it to `nowrap`, which is the initial value, and they will shrink to fit the container. They shrink because they are using initial flexbox values, including `flex-shrink: 1`, that allows items to shrink. Using `nowrap` would cause an [overflow](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) if the items were not able to shrink, or could not shrink small enough to fit.
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
 
@@ -110,13 +110,13 @@ In the live example below, try changing the first value to one of the allowable 
 
 ## Properties applied to flex items
 
-To control the inline-size of each flex item, we target them directl via three properties:
+To control the inline-size of each flex item, we target them directly via three properties:
 
 - {{cssxref("flex-grow")}}
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-We will take a brief look at these properties in this overview, and you can gain a fuller understanding in the guide [Controlling ratios of flex items on the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis).
+We will take a brief look at these properties below, but if you want more comprehensive information, take a look at the [Controlling ratios of flex items on the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis) guide.
 
 Before we can make sense of these properties we need to consider the concept of **available space**. What we are doing when we change the value of these flex properties is to change the way that available space is distributed amongst our items. This concept of available space is also important when we come to look at aligning items.
 
@@ -163,11 +163,11 @@ There are also some predefined shorthand values which cover most of the use case
 
 The `initial` value is a [CSS-wide value](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values) that represents the initial value for a property. Setting `flex: initial` resets the item to the [initial values](#initial-values) of for the three longhand properties, which is the same as `flex: 0 1 auto`. The initial value of `flex-grow` is `0`, so items will not grow larger than their `flex-basis` size. The initial value of `flex-shrink` is `1`, so items can shrink if they need to rather than overflowing. The initial value of `flex-basis` is `auto`. Items will either use any size set on the item in the main dimension, or they will get their size from the content size.
 
-Using `flex: auto` is the same as using `flex: 1 1 auto`; everything is as with `flex: initial` but in this case the items can grow and fill the container as well as shrink if needed.
+Using `flex: auto` is the same as using `flex: 1 1 auto`; this is similar to `flex: initial`, except that the items can grow and fill the container as well as shrink if needed.
 
 Using `flex: none` will create fully inflexible flex items. It is as if you wrote `flex: 0 0 auto`. The items cannot grow or shrink and will be laid out using flexbox with a `flex-basis` of `auto`.
 
-The shorthand you often see in tutorials is `flex: 1` or `flex: 2` and so on. This is as if you used `flex: 1 1 0` or `flex: 2 1 0` and so on, respectively. The items can grow and shrink from a `flex-basis` of `0`.
+The shorthand you often see in tutorials is `flex: 1` or `flex: 2` and so on. This is the same as writing `flex: 1 1 0` or `flex: 2 1 0` and so on, respectively. The items can grow and shrink from a `flex-basis` of `0`.
 
 Try these shorthand values in the live example below.
 
