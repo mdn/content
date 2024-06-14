@@ -1,6 +1,6 @@
 ---
 title: Asynchronous (Networking)
-slug: Glossary/Networking/Asynchronous
+slug: Glossary/Asynchronous/Networking
 page-type: glossary-definition
 ---
 
