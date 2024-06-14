@@ -196,7 +196,7 @@ Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/We
 
 ## Examples
 
-### Testing color values
+### Exploring color values
 
 In this example, we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
 
@@ -243,9 +243,9 @@ inputElem.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("testing_color_values", "100%", 300)}}
+{{EmbedLiveSample("exploring_color_values", "100%", 300)}}
 
-### Displaying fully saturated sRGB colors
+### Generating fully saturated sRGB colors
 
 This example shows fully saturated sRGB colors in the sRGB color space.
 
@@ -321,9 +321,9 @@ div:nth-child(12) {
 
 #### Result
 
-{{EmbedLiveSample("displaying_fully_saturated_sRGB_colors", "100%", 200)}}
+{{EmbedLiveSample("generating_fully_saturated_sRGB_colors", "100%", 200)}}
 
-### Showing different shades of red
+### Creating different shades of red
 
 This example shows reds of different shades in the sRGB color space.
 
@@ -377,9 +377,9 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("showing_different_shades_of_red", "100%", 150)}}
+{{EmbedLiveSample("creating_different_shades_of_red", "100%", 150)}}
 
-### Displaying reds of different saturations
+### Creating reds of different saturation
 
 This example shows reds of different saturations in the sRGB color space.
 
@@ -431,7 +431,7 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("displaying_reds_of_different_saturations", "100%", 150)}}
+{{EmbedLiveSample("creating_reds_of_different_saturation", "100%", 150)}}
 
 ## Specifications
 
