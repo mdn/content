@@ -60,6 +60,7 @@ This article provides information about the changes in Firefox 128 that affect d
 
 - Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762))
 - The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
+- Support is now provided for {{WebExtAPIRef("webRequest.onAuthRequired")}} to handle authentication requests asynchronously by specifying `"asyncBlocking"` in the `addListener` parameter `extraInfoSpec` ([Firefox bug 1889897](https://bugzil.la/1889897)).
 
 ### Removals
 
