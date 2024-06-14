@@ -7,11 +7,11 @@ browser-compat: css.properties.align-items
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In Flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In Grid Layout, it controls the alignment of items on the block axis within their {{glossary("grid area")}}.
-
-The interactive example below demonstrates some of the values for `align-items` using grid layout.
+The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In Grid Layout, it controls the alignment of items on the block axis within their {{glossary("grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/align-items.html")}}
+
+The interactive example below demonstrates some of the values for `align-items` using grid and flex layout.
 
 ## Syntax
 
@@ -92,7 +92,8 @@ align-items: unset;
 - `unsafe`
 
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
-    There are also two values that are only used with Flexbox:
+
+There are also two values that are only used with flexbox, as they are base on [flex model axes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) concepts:
 
 - `flex-start`
 
@@ -111,16 +112,17 @@ align-items: unset;
 
 ## Examples
 
-In this example we have a container with six children. A {{htmlelement("select")}} drop down menu enables toggling the {{cssxref("display")}} of the container between `grid` and `flex`. A second menu enables changing the value of the container's `align-items` property.
+In this example we have a container with six children. A {{htmlelement("select")}} dropdown menu enables toggling the {{cssxref("display")}} of the container between `grid` and `flex`. A second menu enables changing the value of the container's `align-items` property.
 
 ### CSS
 
 We style a the conainer and items in a manner that ensures we have two lines or rows or items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
 
 ```css
-:where(#container) {
+.flex,
+.grid {
   height: 200px;
-  width: 240px;
+  width: 500px;
   align-items: initial; /* Change the value in the live sample */
   border: solid 5px transparent;
   gap: 3px;
@@ -184,7 +186,7 @@ select {
 div > div {
   box-sizing: border-box;
   border: 2px solid #fff;
-  width: 50px;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,7 +202,7 @@ We include a container {{htmlelement("div")}} with six nested `<div>` children. 
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
-  <div id="item4">4<br />4</div>
+  <div id="item4">4<br />line 2</div>
   <div id="item5">5</div>
   <div id="item6">6</div>
 </div>
@@ -279,7 +281,7 @@ display.addEventListener("change", (evt) => {
 - {{cssxref("align-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("place-items")}} shorthand
-- [Basic concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
