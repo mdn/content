@@ -16,7 +16,7 @@ When working with flexbox you need to think in terms of two axes — the _main a
 
 ### The main axis
 
-The {{cssxref("main axis")}} is defined by `flex-direction`, which has four possible values:
+The {{glossary("main axis")}} is defined by `flex-direction`, which has four possible values:
 
 - `row`
 - `row-reverse`
@@ -33,7 +33,7 @@ Choose `column` or `column-reverse` and your main axis will run in the **block d
 
 ### The cross axis
 
-The {{cssxref("cross axis")}} runs perpendicular to the main axis. Therefore, if your `flex-direction` (main axis) is set to `row` or `row-reverse` the cross axis runs down the columns.
+The {{glossary("cross axis")}} runs perpendicular to the main axis. Therefore, if your `flex-direction` (main axis) is set to `row` or `row-reverse` the cross axis runs down the columns.
 
 ![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
@@ -61,7 +61,7 @@ After a while, thinking about start and end rather than left and right becomes n
 
 ## The flex container
 
-An area of a document that is laid out using flexbox is called a **flex container**. To create a {{cssxref("flex container")}}, set the area's {{cssxref("display")}} property to `flex`. When we do this, the direct children of that container become **flex items**. You can explicitly control whether the container itself is displayed inline or in block formatting context using `inline flex` or `inline-flex` for inline flex containers or `block flex` or `flex` for block level flex containers.
+An area of a document that is laid out using flexbox is called a **flex container**. To create a {{glossary("flex container")}}, set the area's {{cssxref("display")}} property to `flex`. When we do this, the direct children of that container become **flex items**. You can explicitly control whether the container itself is displayed inline or in block formatting context using `inline flex` or `inline-flex` for inline flex containers or `block flex` or `flex` for block level flex containers.
 
 ### Initial values
 
@@ -70,7 +70,7 @@ As with all properties in CSS, some initial values are defined, so the contents 
 - Items display in a row (the {{cssxref("flex-direction")}} property's default value is `row`).
 - The items start from the start edge of the main axis.
 - The items do not stretch on the main dimension but can shrink (The flex-item's {{cssxref("flex-grow")}} property's default value is `0` and its {{cssxref("flex-shrink")}} property's default value is `1).
-- The items will stretch to fill the size of the cross-axis. (The {{cssxref("align")}} property's default value is `stretch`)
+- The items will stretch to fill the size of the cross-axis. (The {{cssxref("align-items")}} property's default value is `stretch`)
 - The flex-item's {{cssxref("flex-basis")}} property's default value is `auto`. This means that, in each case, it will be equal to the flex item {{cssxref("width")}} in horizontal writing mode, and the flex item {{cssxref("height")}} in vertical writing mode. If the corresponding `width`/`height` is also set to `auto`, the `flex-basis` content value is used instead.
 - All the items will be in a single row (the {{cssxref("flex-wrap")}} property's default value is `nowrap`),overflowing their container if their combined `width`/`height` exceeds the containing element `width`/`height`.
 
@@ -231,7 +231,7 @@ The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in 
 
 The [`[place-items`](/en-US/docs/Web/CSS/place-items) property is a shorthand property for `align-items` and `justify-items`. If set on a flex container, it will set the alignment but not the justification, and `justify-items` is ignored in flexbox.
 
-There is another shorthand property, [`[place-content`](/en-US/docs/Web/CSS/place-contet), that defines the {{cssxref("align-content")}} and `justify-content` properties. The `align-content` property only effects flex containers that wrap, and is discussed in [Aligning items in a flex container](/en-US/docs/Web/CCSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container).
+There is another shorthand property, [`place-content`](/en-US/docs/Web/CSS/place-content), that defines the {{cssxref("align-content")}} and `justify-content` properties. The `align-content` property only effects flex containers that wrap, and is discussed in [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container).
 
 ## Next steps
 
