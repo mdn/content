@@ -218,7 +218,7 @@ We can also add animation to entities with custom geometry like the torus, in mu
     metalness: 0.5;"
   rotation="10 0 0"
   position="-3 1 0"
-  animation="property: scale; to: 1 0.5 1; direction: alternate; dur: 2000; loop: true; easing: linear;">
+  animation="property: scale; to: 1 0.5 1; dir: alternate; dur: 2000; loop: true; easing: linear;">
 </a-entity>
 ```
 
