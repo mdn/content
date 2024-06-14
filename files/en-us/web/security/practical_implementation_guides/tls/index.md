@@ -71,7 +71,6 @@ To fix the "different hosts" problem:
 1. First, redirect from http://example.com/ to https://example.com/.
 2. Next, redirect from https://example.com/ to https://example.org/.
 
-
 ### Examples
 
 Redirect all incoming HTTP requests to the same site and URI on HTTPS, using NGINX:
