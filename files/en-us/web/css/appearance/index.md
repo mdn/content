@@ -7,7 +7,7 @@ browser-compat: css.properties.appearance
 
 {{CSSRef}}
 
-The **`appearance`** CSS property is used to display UI elements with platform-specific styling, based on the operating system's theme.
+The **`appearance`** [CSS](/en-US/docs/Web/CSS) property is used to display UI elements with platform-specific styling, based on the operating system's theme.
 
 {{EmbedInteractiveExample("pages/css/appearance.html")}}
 
