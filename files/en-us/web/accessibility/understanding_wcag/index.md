@@ -6,8 +6,7 @@ page-type: guide
 
 {{AccessibilitySidebar}}
 
-This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the 
-{{glossary("WCAG", "Web Content Accessibility Guidelines")}} (WCAG) 2.2.
+This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the {{glossary("WCAG", "Web Content Accessibility Guidelines")}} (WCAG) 2.2.
 
 The WCAG guidelines are a set of recommendations for making web content more accessible developed by W3C's {{Glossary("WAI")}}, primarily for people with disabilities — but also for all user agents, including highly limited devices, such as mobile phones.
 
