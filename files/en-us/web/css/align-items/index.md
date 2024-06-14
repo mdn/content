@@ -83,7 +83,7 @@ align-items: unset;
 
 - `unsafe`
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
-There are also two values that are only used with Flexbox:
+    There are also two values that are only used with Flexbox:
 
 - `flex-start`
 
