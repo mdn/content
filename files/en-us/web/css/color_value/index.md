@@ -69,15 +69,15 @@ A `<color>` value can be specified using one of the methods listed below:
 - By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
 - By hexadecimal notations: {{CSSXref("&lt;hex-color&gt;")}} (such as `#ff0000`).
 - By `<color-function>`, with parameters in a {{glossary("color space")}} using functional notations:
-  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
-  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
-  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
+  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
+  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}.
+  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}.
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
 - By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
-- By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
+- By specifying two colors, using the first for light color-schemes and the second for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
-### currentcolor keyword
+### `currentcolor` keyword
 
 The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
@@ -115,9 +115,7 @@ Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [tra
 
 When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 
-### Interpolation with missing components
-
-#### Interpolating colors in the same space
+### Interpolating colors in the same space
 
 When interpolating colors that are exactly in the interpolation color space, missing components from one color are replaced with existing values of the same components from the other color.
 For example, the following two expressions are equivalent:
@@ -129,7 +127,7 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 
 > **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
 
-#### Interpolating colors from different spaces: analogous components
+### Interpolating colors from different spaces: analogous components
 
 If any color to be interpolated is not in the interpolation color space, its missing components are transferred into the converted color based on **analogous components** of the same category as described in the following table:
 
@@ -156,7 +154,7 @@ lch(80% 30 none)
 color(display-p3 0.7 0.5 none)
 ```
 
-the preprocessing procedure is:
+The preprocessing procedure is:
 
 1. Replace the missing components in both colors with a zero value:
 
@@ -196,9 +194,9 @@ Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/We
 
 ## Examples
 
-### Color value tester
+### Testing color values
 
-In this example we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
+In this example, we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
 
 #### HTML
 
@@ -245,7 +243,7 @@ inputElem.addEventListener("input", () => {
 
 {{EmbedLiveSample("color_value_tester", "100%", 300)}}
 
-### Fully saturated sRGB colors
+### Displaying fully saturated sRGB colors
 
 This example shows fully saturated sRGB colors in the sRGB color space.
 
@@ -323,7 +321,7 @@ div:nth-child(12) {
 
 {{EmbedLiveSample("fully_saturated_srgb_colors", "100%", 200)}}
 
-### Reds of different shades
+### Showing different shades of red
 
 This example shows reds of different shades in the sRGB color space.
 
@@ -379,7 +377,7 @@ div:nth-child(6) {
 
 {{EmbedLiveSample("reds_of_different_shades", "100%", 150)}}
 
-### Reds of different saturations
+### Displaying reds of different saturations
 
 This example shows reds of different saturations in the sRGB color space.
 
