@@ -115,7 +115,9 @@ Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [tra
 
 When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 
-### Interpolating colors in the same space
+### Interpolation with missing components 
+
+#### Interpolating colors in the same space
 
 When interpolating colors that are exactly in the interpolation color space, missing components from one color are replaced with existing values of the same components from the other color.
 For example, the following two expressions are equivalent:
@@ -127,7 +129,7 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 
 > **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
 
-### Interpolating colors from different spaces: analogous components
+#### Interpolating colors from different spaces: analogous components
 
 If any color to be interpolated is not in the interpolation color space, its missing components are transferred into the converted color based on **analogous components** of the same category as described in the following table:
 
