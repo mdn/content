@@ -299,6 +299,8 @@ Using a `display` value of `none` on an element will remove it from the [accessi
 
 If you want to visually hide the element, a more accessible alternative is to use [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen but keep it parsable by assistive technology such as screen readers.
 
+> **Note:** While `display: none` hides content from the accessibility tree, this behavior can be overridden using ARIA attributes. For example, elements that are hidden but still need to be referenced for accessibility purposes can be addressed using `aria-describedby` or `aria-labelledby`.
+
 ### display: contents
 
 Current implementations in some browsers will remove from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) any element with a `display` value of `contents` (but descendants will remain). This will cause the element itself to no longer be announced by screen reading technology. This is incorrect behavior according to the [CSS specification](https://drafts.csswg.org/css-display/#valdef-display-contents).
