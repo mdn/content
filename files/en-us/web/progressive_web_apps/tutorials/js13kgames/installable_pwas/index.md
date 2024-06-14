@@ -21,7 +21,8 @@ To make our example application installable, the following things are needed:
 - A web application manifest, with the [correct members filled in](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest).
 - The website to be served from a secure (HTTPS) domain.
 - An icon to represent the app on the device.
-- A [service worker](/en-US/docs/Web/API/Service_Worker_API) registered, to allow the app to work offline.
+
+> **Note:** Previously, a service worker was required for installability in Chromium-based browsers, but this requirement has been removed. Safari and Firefox have never required a service worker for a PWA to be installable. You can find the current list of requirements [here](https://web.dev/articles/install-criteria).
 
 ### The web app manifest file
 
