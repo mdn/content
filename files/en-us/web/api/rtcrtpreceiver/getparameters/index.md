@@ -29,7 +29,7 @@ An object indicating the current configuration of the receiver.
 - `codecs`
 
   - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) that the receiver is ready to use.
-    This is the subset of codecs that the receiver has indicted it is and that the remote endpoint has indicated it is prepared to send.
+    This is the subset of codecs that the receiver has indicated it prefers and that the remote endpoint has indicated it is prepared to send.
     This parameter cannot be changed once initially set.
 
     Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
