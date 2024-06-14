@@ -23,13 +23,13 @@ position-try-options: inset-area(block-end), inset-area(block-end inline-end);
 The `inset-area()` function's syntax is as follows:
 
 ```text
-inset-area(inset-area-value)
+inset-area(<inset-area-value>)
 ```
 
 The parameters are:
 
-- `inset-area-value`
-  - : The {{cssxref("inset-area")}} property that you want to base the position try option on.
+- `<inset-area-value>`
+  - : The {{cssxref("inset-area")}} property value that you want to base the position try option on.
 
 ### Return value
 
