@@ -107,7 +107,7 @@ The {{cssxref("basic-shape/path","path()")}} function defines a shape using an S
 path( <`fill-rule`>?, ]? <string> )
 ```
 
-The required `<string>` is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
+The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ### Syntax for shapes {{Experimental_Inline}}
 
