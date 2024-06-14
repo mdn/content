@@ -272,11 +272,7 @@ select,
 }
 ```
 
-The positioned element is associated with the anchor element by setting its anchor name as the value of the positioned element's `position-anchor` property. We also set the positioned element's:
-
-- {{cssxref("position")}} property to `fixed`, so it can be positioned relative to the anchor's position on the page.
-- {{cssxref("opacity")}} property to `0.8`, so that when the positioned element is given an `inset-area` value that places it over the top of the anchor, you can still see what position it is in.
-- `inset-area` to `top-left`; this acts as a default value that will be overridden when new values are selected from the `<select>` menu.
+The positioned element is associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We also give it an initial position with `inset-area: top left`; this will be overridden when new values are selected from the `<select>` menu. Finally, we set {{cssxref("opacity")}} to `0.8`, so that when the positioned element is given an `inset-area` value that places it over the top of the anchor, you can still see what position it is in.
 
 ```css hidden
 .infobox {
