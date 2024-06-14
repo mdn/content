@@ -333,16 +333,17 @@ The following functions are used as a value of different `animation-timeline` pr
 
 ## Anchor positioning functions
 
-The following functions are used when positioning and sizing **anchor-positioned elements** relative to the location and size of their associated **anchor elements**, and defining **position try options**.
+
+The anchor positioning functions are used when positioning and sizing **anchor-positioned elements** relative to the location and size of their associated **anchor elements**.
 
 - {{cssxref("anchor", "anchor()")}}
-  - : Used as a value for an anchor-positioned element's inset properties, to position it relative to the edges of its associated anchor element.
+  - : Returns a length relative to the position of the edges of a anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
-  - : Used as a value for an anchor-positioned element's sizing properties, to size it relative to the dimensions of its associated anchor element.
+  - : Returns a length relative to the size dimensions of an anchor-positioned element's associated anchor element.
 - {{cssxref("inset-area_function", "inset-area()")}}
-  - : Used as a value for the {{cssxref("position-try-options")}} property. It accepts an {{cssxref("inset-area")}} property value as a parameter, and returns a custom position try option based on that `inset-area`.
+  - : Returns a custom position try option based on the {{cssxref("inset-area")}} property value passed as a parameter.
 
-For more details and usage information, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+Each linked page details the function's syntax. For an introduction to [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), see [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) and [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guides.
 
 ## See also
 
