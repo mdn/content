@@ -389,4 +389,4 @@ Scroll the page to see how both of the infoboxes are tethered to the anchor.
 - {{cssxref("position-anchor")}}
 - HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
