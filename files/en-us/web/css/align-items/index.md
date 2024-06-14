@@ -110,11 +110,12 @@ In this example we have a container with six children. A {{htmlelement("select")
 We style a the conainer and items in a manner that ensures we have two lines or rows or items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
 
 ```css
-#container {
+:where(#container) {
   height: 200px;
   width: 240px;
   align-items: initial; /* Change the value in the live sample */
-  border: 5px solid transparent;
+  border: solid 5px transparent;
+  gap: 3px;
 }
 
 .flex {
@@ -129,15 +130,6 @@ We style a the conainer and items in a manner that ensures we have two lines or 
   grid-template-columns: repeat(auto-fill, 50px);
   background-color: #9f8c8c;
   border-color: slateblue;
-}
-
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #fff;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #item1 {
@@ -179,6 +171,15 @@ select {
 
 .row {
   margin-top: 10px;
+}
+
+div > div {
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ```
 
