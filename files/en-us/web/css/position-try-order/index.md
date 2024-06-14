@@ -35,14 +35,16 @@ position-try-order: unset;
 
 - `normal`
   - : The default. No position try options will be tried when the element is first displayed.
-- `most-height`
-  - : The position try option will be applied that gives the element's containing block the most height.
-- `most-width`
-  - : The position try option will be applied that gives the element's containing block the most width.
-- `most-block-size`
-  - : The position try option will be applied that gives the element's containing block the most size in the block direction.
-- `most-inline-size`
-  - : The position try option will be applied that gives the element's containing block the most size in the inline direction.
+- `<try-size>`
+  - : Defines the different try size options, which specify criteria that determine what try option should be applied to the anchor-positioned element when it initially renders. Available values are:
+    - `most-height`
+      - : The position try option will be applied that gives the element's containing block the most height.
+    - `most-width`
+      - : The position try option will be applied that gives the element's containing block the most width.
+    - `most-block-size`
+      - : The position try option will be applied that gives the element's containing block the most size in the block direction.
+    - `most-inline-size`
+      - : The position try option will be applied that gives the element's containing block the most size in the inline direction.
 
 ## Description
 
