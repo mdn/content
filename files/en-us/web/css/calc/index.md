@@ -164,18 +164,14 @@ After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2)
 
 The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) without the need for storing color channel values as variables.
 
-In the example below, the first paragraph uses a [named color](/en-US/docs/Web/CSS/named-color).
+In the example below, the first paragraph uses a [`<named-color>`](/en-US/docs/Web/CSS/named-color).
 In the paragraphs that follow, `calc()` is used with the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) functions to adjust the values of each color channel relative to the original named color.
 
 ```html
-<p class="original">Original text color in <code>rebeccapurple</code></p>
-<p class="same-original">
-  Same as original color, but using <code>calc()</code>
-</p>
-<p class="increase-green">Green channel increased by 180</p>
-<p class="reduce-alpha">Alpha channel (transparency) reduced by half</p>
-<p class="reduce-saturation">Saturation reduced by 60</p>
-<p class="invert-hue">Hue angle increased by 180 degrees</p>
+<p class="original">Original text color in rebeccapurple</p>
+<p class="increase-hue">Hue increased by 80</p>
+<p class="increase-lightness">Lightness increased by 20</p>
+<p class="decrease-lightness">Lightness decreased by 10</p>
 ```
 
 ```css hidden
@@ -190,24 +186,16 @@ p {
   color: rebeccapurple;
 }
 
-.same-original {
-  color: rgb(from rebeccapurple calc(r) calc(g) calc(b));
+.increase-hue {
+  color: lch(from rebeccapurple l c calc(h + 80));
 }
 
-.increase-green {
-  color: rgb(from rebeccapurple r calc(g + 180) b);
+.increase-lightness {
+  color: lch(from rebeccapurple calc(l + 20) c h);
 }
 
-.reduce-alpha {
-  color: rgb(from rebeccapurple r g b / calc(alpha / 2));
-}
-
-.reduce-saturation {
-  color: hsl(from rebeccapurple h calc(s - 60) l);
-}
-
-.invert-hue {
-  color: lch(from aquamarine l c calc(h + 180));
+.decrease-lightness {
+  color: lch(from rebeccapurple calc(l - 10) c h);
 }
 ```
 
