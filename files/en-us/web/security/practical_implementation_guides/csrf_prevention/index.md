@@ -23,7 +23,7 @@ When a user visits a page containing the above HTML, the browser will attempt to
 
 There are a variety of CSRF mitigation strategies available. The most common and transparent methods of CSRF mitigation are [`SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) cookies and anti-CSRF tokens.
 
-> **Note:** A Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) vulnerability could overcome any CSRF mitigation techniques you put in place. Make sure to harden your site against both types of attack in tandem. XSS can be guarded against using features such as [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) (SRI). 
+> **Note:** A Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) vulnerability could overcome any CSRF mitigation techniques you put in place. Make sure to harden your site against both types of attack in tandem. XSS can be guarded against using features such as [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) (SRI).
 
 ### `SameSite` cookies
 
