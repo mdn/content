@@ -431,7 +431,7 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("reds_of_different_saturations", "100%", 150)}}
+{{EmbedLiveSample("displaying_reds_of_different_saturations", "100%", 150)}}
 
 ## Specifications
 
