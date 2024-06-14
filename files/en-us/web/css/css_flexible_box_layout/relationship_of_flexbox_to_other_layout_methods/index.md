@@ -12,13 +12,13 @@ In this article we will take a look at how flexbox fits in with all the other CS
 
 Many people first look at flexbox when they want to properly align flex items inside a flex container. Flexbox provides access to properties that allow the alignment of items on their cross axis and justification of items on the main axis.
 
-Flexbox was originally defined in its own [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module, but the properties and values that are common to other layout methods are defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module. This module details how alignment, justification, gaps and gutters works in all layout — not just flexbox. When a feature is defined in both specifications, note that the box alignment module supersedes the flexible box layout module.
+Flexbox was originally defined in its own [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module, but the properties and values that are common to other layout methods are defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module. This module details how alignment, justification, gaps, and gutters work in all layout systems — not just Flexbox. When a feature is defined in both specifications, note that the box alignment module supersedes the flexible box layout module.
 
 ## Writing Modes
 
-In the [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) article, it is noted that flexbox is **writing mode aware**. Writing modes are fully detailed in the [CSS writing modes module](/en-US/docs/Web/CSS/CSS_writing_modes), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
+In the [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) article, it is noted that flexbox is **writing mode aware**. Writing modes are fully detailed in the [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module, which details how CSS supports the different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as the writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
 
-It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. The CSS writing modes defines how text can be written horizontally, left to write and right to left, and vertically, top to bottom. This is important for internationalization and translations, but these feature can also be used for creative designs.
+It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. The CSS writing modes module defines how text can be written horizontally, left-to-right and right-to-left, and vertically, top-to-bottom. This is important for internationalization and translations, but these feature can also be used for creative designs.
 
 ### The writing modes
 
@@ -38,7 +38,7 @@ Note that you would not normally use CSS and the `writing-mode` property to chan
 
 ## Flexbox and other layout methods
 
-Some properties that were designed with the assumption of block layout don't apply in the context of flex layout. An element set to `display: flex` behaves in most ways like any other block level container that establishes a containing block. Floats will not intrude, and the containers' margins will not collapse.
+Some properties were designed assuming that content is laid out using the standard block layout system, and don't apply in the context of flex layout. An element set to `display: flex` behaves in most ways like any other block-level container that establishes a containing block. Floats will not intrude, and the containers' margins will not collapse.
 
 With regard to flex items, if an item was floated or cleared and then becomes a flex item due to the parent having `display: flex` applied, the floating and clearing will no longer happen, and the item will not be taken out of normal flow in the way that floats are. If you have used the {{cssxref("vertical-align")}} property, as used with `inline-block` or table layout for alignment, this will no longer affect the item and you can use the alignment properties of flexbox instead.
 
@@ -48,7 +48,7 @@ In this next live example the child elements have been floated, and then their c
 
 ## Flexbox and grid layout
 
-[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and flexbox share many properties and values. For divergent properties, if a flex item becomes a grid item, then the `flex` values that may have been assigned to the child elements, such as `flex-end`, will be ignored. As noted above, the values defined in the box alignment module that work across both layout methods, supercede those defined in flexbox only.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and flexbox share many properties and values. For divergent properties, if a flex item becomes a grid item, any `flex` values assigned to the child elements, such as `flex-end`, will be ignored. As noted above, values defined in the box alignment module that work across both layout methods supersede those defined in flexbox only.
 
 ### Flex and grid — what's the difference?
 
@@ -66,11 +66,11 @@ These examples point to another key difference between these layout methods. In 
 
 In some cases, you could use either layout method. As you become confident with both, you will find each one is better suited to specific layout needs, and you'll end up with both methods in your CSS. There is rarely a right or wrong answer.
 
-As a ground rule, if you are setting widths to flex items to make items in one row of a wrapped flex container line up with the items above them, you should opt for a two-dimensional grid layout.
+As a general rule, if you are setting widths on flex items to make items in one row of a wrapped flex container line up with the items above them, you should instead opt for a two-dimensional grid layout.
 
 There are no set rules like "you should use flexbox for small components and grid layout for larger ones." A tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — you have a choice of layout methods, so take advantage of it.
 
-For more comparisons of grid and flexbox see the article [Relationship of grid layout to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods). This article details many of the ways that grid layout differs from flex layout, and demonstrates some of the extra functionality you get when using grid layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
+For more comparisons of grid and flexbox see the article [Relationship of grid layout to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods). This article details many of the ways that grid layout differs from flex layout and demonstrates some of the extra functionality you get when using grid layout such as layering of items on the grid. This may also help you decide which layout method to use.
 
 ## Flexbox and display: contents
 
@@ -90,4 +90,4 @@ As the box is removed, you cannot then use it to — for example — add a backg
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}
 
-> **Warning:** Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing the semantics of that element while maininting the content of the children. This means the element itself may not be announced by screen reading technology. See [`display: contents`](/en-US/docs/Web/CSS/display#display_contents) and [`display: contents` considered harmful`](https://ericwbailey.design/published/display-contents-considered-harmful/).
+> **Warning:** Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/display#display_contents) and [`display: contents` considered harmful`](https://ericwbailey.design/published/display-contents-considered-harmful/).
