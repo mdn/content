@@ -2159,7 +2159,7 @@
       "fscholz"
     ]
   },
-  "Glossary/Engine": {
+  "Glossary/Engine/JavaScript": {
     "modified": "2019-05-09T03:04:25.699Z",
     "contributors": [
       "SphinxKnight",
@@ -2170,6 +2170,18 @@
       "klez",
       "kscarfone",
       "panaggio"
+    ]
+  },
+  "Glossary/Engine/Rendering": {
+    "modified": "2020-09-28T13:38:28.076Z",
+    "contributors": [
+      "myakura",
+      "ramsunvtech",
+      "hbloomer",
+      "Andrew_Pfeiffer",
+      "klez",
+      "kscarfone",
+      "ChrisL"
     ]
   },
   "Glossary/Entity": {
@@ -4211,18 +4223,6 @@
       "Andrew_Pfeiffer",
       "klez",
       "teainthegarden"
-    ]
-  },
-  "Glossary/Rendering_engine": {
-    "modified": "2020-09-28T13:38:28.076Z",
-    "contributors": [
-      "myakura",
-      "ramsunvtech",
-      "hbloomer",
-      "Andrew_Pfeiffer",
-      "klez",
-      "kscarfone",
-      "ChrisL"
     ]
   },
   "Glossary/Repo": {

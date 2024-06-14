@@ -1,6 +1,6 @@
 ---
 title: Rendering engine
-slug: Glossary/Rendering_engine
+slug: Glossary/Engine/Rendering
 page-type: glossary-definition
 ---
 
