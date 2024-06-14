@@ -36,7 +36,7 @@ An object indicating the current configuration of the receiver.
 
     - `channels` {{optional_inline}}
 
-      - : An positive integer indicating the number of channels supported by the codec.
+      - : A positive integer indicating the number of channels supported by the codec.
         For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
 
     - `clockRate`
@@ -58,7 +58,7 @@ An object indicating the current configuration of the receiver.
       - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
 
     - `sdpFmtpLine` {{optional_inline}}
-      - : A string giving the format specific parameters field from the `a=fmtp` line in the codec's {{Glossary("SDP")}} from the remote peer, if the field is present.
+      - : A string giving the format specific parameters field from the `a=fmtp` line in the {{Glossary("SDP")}} which corresponds to the codec {{Glossary("SDP")}} from the remote peer, if the field is present.
         If there is no parameters field, this property is left out.
         See [section 5.8 of the IETF specification for JSEP](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-jsep-24#section-5.8) for more information.
 
