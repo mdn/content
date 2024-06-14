@@ -244,7 +244,7 @@ We're using the `render()` function to update the cylinder's position on every f
 
 Everything is rendered properly and animating — congratulations on building your first A-Frame scene! Here's how the final version looks and works:
 
-{{JSFiddleEmbed("//jsfiddle.net/lowperry/xmo62ku0/5/embed/","","350")}}
+{{JSFiddleEmbed("https//jsfiddle.net/lowperry/xmo62ku0/5/embed/","","350")}}
 
 If you have a VR device available, now is a good time to try out your scene with it too.
 
