@@ -238,6 +238,11 @@ See the {{cssxref("inset-area")}} property page.
 
 ## See also
 
-- The {{cssxref("inset-area")}} value
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- {{cssxref("anchor-name")}}
+- {{cssxref("position-anchor")}}
+- {{cssxref("inset-area")}}
+- The [`anchor()`](/en-US/docs/Web/CSS/anchor) function
+- The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

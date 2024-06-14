@@ -242,5 +242,8 @@ The result is as follows.
 
 ## See also
 
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- {{cssxref("anchor-name")}}
+- {{cssxref("position-anchor")}}
+- {{cssxref("anchor()")}} function
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

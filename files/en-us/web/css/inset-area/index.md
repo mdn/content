@@ -369,6 +369,12 @@ The result is as follows. Try selecting new `inset-area` values from the `<selec
 
 ## See also
 
+- {{cssxref("anchor-name")}}
+- {{cssxref("position-anchor")}}
+- {{cssxref("position-try-options")}}
+- The [`anchor()`](/en-US/docs/Web/CSS/anchor) function
+- The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
+- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
