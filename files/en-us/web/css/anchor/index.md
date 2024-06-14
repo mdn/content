@@ -212,8 +212,7 @@ We also include some filler text around the two `<div>` elements to make the {{h
 
 #### CSS
 
-We declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property. The `anchor(--myAnchor bottom)` both associates the positioned element with the anchor element and positions it's top edge flush to the bottom edge of its anchor; an initial position which will be overwritten when different values are selected from the first drop-down.
-The `left: anchor(right)` positions the infobox's left edge flush to the right edge of its anchor.
+We declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property. `top: anchor(--myAnchor bottom)` positions the infobox's top edge flush to the bottom edge of its anchor, while `left: anchor(right)` positions the infobox's left edge flush to the right edge of its anchor. This provides an initial position that will be overwritten when different values are selected from the drop-down menus.
 
 ```css hidden
 .anchor {
