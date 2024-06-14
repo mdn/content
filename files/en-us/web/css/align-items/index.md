@@ -137,7 +137,7 @@ We style a the conainer and items in a manner that ensures we have two lines or 
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
+  grid-template-columns: repeat(auto-fill, 100px);
   background-color: #9f8c8c;
   border-color: slateblue;
 }
