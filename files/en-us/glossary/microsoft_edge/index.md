@@ -16,8 +16,8 @@ Edge is bundled with Windows 10 and Windows 11, and is also available for macOS,
 - [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge) on Wikipedia
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)
 - Glossary
-  - {{Glossary("browser")}}
-  - {{Glossary("rendering engine")}}
+  - {{Glossary("Browser")}}
+  - {{Glossary("Rendering engine")}}
   - {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}}
   - {{Glossary("Blink")}}
   - {{Glossary("Trident")}}
