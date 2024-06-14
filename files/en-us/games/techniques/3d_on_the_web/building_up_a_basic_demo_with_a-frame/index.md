@@ -10,7 +10,7 @@ The [WebXR](/en-US/docs/Games/Techniques/3D_on_the_web/WebXR) and [WebGL](/en-US
 
 ## High level overview
 
-The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
+The current version of A-Frame is 1.6.0, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
 
 A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides pre-built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the [entity component system](https://en.wikipedia.org/wiki/Entity_component_system), which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.
 
@@ -244,7 +244,7 @@ We're using the `render()` function to update the cylinder's position on every f
 
 Everything is rendered properly and animating — congratulations on building your first A-Frame scene! Here's how the final version looks and works:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/sq94qd6e/","","350")}}
+{{JSFiddleEmbed("//jsfiddle.net/lowperry/xmo62ku0/5/embed/","","350")}}
 
 If you have a VR device available, now is a good time to try out your scene with it too.
 
