@@ -15,7 +15,7 @@ Authoring tools are software applications that people use to create web content.
 
 ## See also
 
-- [ATAG as part of the Web Accessibility Initiative (WAI)](https://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)) on Wikipedia
+- [ATAG as part of the Web Accessibility Initiative (WAI)](<https://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)>) on Wikipedia
 - [Authoring Tool Accessibility Guidelines (ATAG) Overview](https://www.w3.org/WAI/standards-guidelines/atag/)
 - [Authoring Tool Accessibility Guidelines (ATAG) Recommendation 2.0](https://www.w3.org/TR/ATAG20/)
 - Glossary
