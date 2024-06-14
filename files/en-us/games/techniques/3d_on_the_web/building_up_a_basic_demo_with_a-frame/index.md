@@ -219,7 +219,7 @@ We can also add animation to entities with custom geometry like the torus, in mu
   rotation="10 0 0"
   position="-3 1 0"
   animation="property: scale; to: 1 0.5 1; direction: alternate; dur: 2000; loop: true; easing: linear;">
-  </a-entity>
+</a-entity>
 ```
 
 The attribute we want to animate for the torus is `scale`. The initial, default scale is `1 1 1`, and we're going to animate it to `1 0.5 1`, so the `y` axis will be scaled from `1` to `0.5`. The easing we're going to use is `linear`. By setting the direction to `alternate` the scale will be animated to `0.5`, and then animated back to `1` during 2 seconds. Again, the animation is being repeated indefinitely.
