@@ -163,7 +163,7 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 - `<anchor-element>`
 
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor**, which is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, is used.
- If included, it supersedes the anchor named in `position-anchor`
+    If included, it supersedes the anchor named in `position-anchor`
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 
