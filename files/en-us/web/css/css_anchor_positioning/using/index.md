@@ -144,7 +144,7 @@ We've associated the two elements, but they are not yet tethered. To tether them
 
 ## Positioning elements relative to their anchor
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using-inset-properties-with-anchor-function-values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying an `inset-area`](#using-an-inset-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using-inset-properties-with-anchor-function-values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying an `inset-area`](#setting_an_inset-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
 > **Note:** The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditional_hiding_using_position-visibility).
 
@@ -201,7 +201,9 @@ The return value of an `anchor()` function is a length or percentage. This means
 }
 ```
 
-Let's look at an example of this in action. We've used the same HTML as in the previous examples, but with some filler text placed below and above it to cause the content to overflow its container and scroll. We'll also give the anchor element the same `anchor-name` as in the previous examples:
+#### `anchor()` example
+
+Let's look at an example of `anchor()` in action. We've used the same HTML as in the previous examples, but with some filler text placed below and above it to cause the content to overflow its container and scroll. We'll also give the anchor element the same `anchor-name` as in the previous examples:
 
 ```html hidden
 <p>
@@ -286,7 +288,7 @@ Let's look at the inset property positioning declarations in more detail:
 
 This gives us the following result:
 
-{{ EmbedLiveSample("Using individual inset values, via `anchor()`", "100%", "250") }}
+{{ EmbedLiveSample("`anchor()` example", "100%", "250") }}
 
 The positioned element is `5px` below and `5px` to the right of the anchor element. If you scroll the document up and down, the positioned element maintains its position relative to the anchor element — it is fixed to the anchor element, not the viewport.
 
@@ -450,9 +452,6 @@ const selectElem = document.querySelector("select");
 selectElem.addEventListener("change", () => {
   const area = selectElem.value;
 
-  // clear all the previous inline styles out to begin with
-  infobox.style = "";
-
   // Set the inset-area to the value chosen in the select box
   infobox.style.insetArea = area;
 });
@@ -460,7 +459,7 @@ selectElem.addEventListener("change", () => {
 
 Try selecting new `inset-area` values from the `<select>` menu to see the effect they have on the position of the infobox:
 
-{{ EmbedLiveSample("Using an `inset-area`", "100%", "250") }}
+{{ EmbedLiveSample("Setting an `inset-area`", "100%", "250") }}
 
 ### Positioned element width
 
