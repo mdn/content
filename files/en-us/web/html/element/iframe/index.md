@@ -132,9 +132,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** When redirecting the user, opening a popup window, or opening a new tab from an embedded page within an `<iframe>` with the `sandbox` attribute, the new browsing context is subject to the same `sandbox` restrictions. This can create issues — for example, if a page embedded within an `<iframe>` without a `sandbox="allow-forms"` or `sandbox="allow-popups-to-escape-sandbox"` attribute set on it opens a new site in a separate tab, form submission in that new browsing context will silently fail.
 
 - `src`
+
   - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+
+    > **Note:** The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+
 - `srcdoc`
-  - : Inline HTML to embed, overriding the `src` attribute. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
+
+  - : Inline HTML to embed, overriding the `src` attribute. Its content should follow the syntax of a full HTML document, which includes the doctype directive, `<html>`, `<body>` tags, etc., although most of them can be omitted, leaving only the body content. This doc will have `about:srcdoc` as its location. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
+
+    > **Note:** The `about:srcdoc` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+
 - `width`
   - : The width of the frame in CSS pixels. Default is `300`.
 
@@ -197,7 +205,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ### A simple \<iframe>
 
-This example embeds the page at <https://example.org> in an iframe.
+This example embeds the page at <https://example.org> in an iframe. This is a common use case of iframes: to embed content from another site. For example, the live sample itself, and the [try it](#try_it) example at the top, are both `<iframe>` embeds of content from another MDN site.
 
 #### HTML
 
@@ -213,6 +221,46 @@ This example embeds the page at <https://example.org> in an iframe.
 #### Result
 
 {{ EmbedLiveSample('A_simple_iframe', 640,400)}}
+
+### Embedding source code in an \<iframe>
+
+This example directly renders source code in an iframe. This can be used as a technique to prevent script injection when displaying user-generated content, when combined with the `sandbox` attribute.
+
+Note that when using `srcdoc`, any relative URLs in the embedded content will be resolved relative to the URL of the embedding page. If you want to use anchor links that point to places in the embedded content, you need to explicitly specify `about:srcdoc` as the base URL.
+
+#### HTML
+
+```html-nolint
+<article>
+  <footer>Nine minutes ago, <i>jc</i> wrote:</footer>
+  <iframe
+    sandbox
+    srcdoc="<p>There are two ways to use the <code>iframe</code> element:</p>
+<ol>
+<li><a href=&quot;about:srcdoc#embed_another&quot;>To embed content from another page</a></li>
+<li><a href=&quot;about:srcdoc#embed_user&quot;>To embed user-generated content</a></li>
+</ol>
+<h2 id=&quot;embed_another&quot;>Embedding content from another page</h2>
+<p>Use the <code>src</code> attribute to specify the URL of the page to embed:</p>
+<pre><code>&amp;lt;iframe src=&quot;https://example.org&quot;&amp;gt;&amp;lt;/iframe&amp;gt;</code></pre>
+<h2 id=&quot;embed_user&quot;>Embedding user-generated content</h2>
+<p>Use the <code>srcdoc</code> attribute to specify the content to embed. This post is already an example!</p>
+"
+    width="500"
+    height="250"
+></iframe>
+</article>
+```
+
+Here's how to write escape sequences when using `srcdoc`:
+
+- First, write the HTML out, escaping anything you would escape in a normal HTML document (such as `<`, `>`, `&`, etc.).
+- `&lt;` and `<` represent the exact same character in the `srcdoc` attribute. Therefore, to make it an actual escape sequence in the HTML document, replace any ampersands (`&`) with `&amp;`. For example, `&lt;` becomes `&amp;lt;`, and `&amp;` becomes `&amp;amp;`.
+- Replace any double quotes (`"`) with `&quot;` to prevent the `srcdoc` attribute from being prematurely terminated (if you use `'` instead, then you should replace `'` with `&apos;` instead). This step happens after the previous one, so `&quot;` generated in this step doesn't become `&amp;quot;`.
+
+#### Result
+
+{{ EmbedLiveSample('Embedding_source_code_in_an_iframe', 640, 300)}}
 
 ## Technical summary
 
