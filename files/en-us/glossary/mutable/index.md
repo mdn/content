@@ -8,13 +8,8 @@ page-type: glossary-definition
 
 A **mutable** value is one that can be changed without creating an entirely new value, in comparison with {{Glossary("immutable", "immutable values")}}.
 
-In {{glossary("JavaScript")}}, {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable by default — their properties and elements can be changed without reassigning a new value.
+In {{glossary("JavaScript")}}, {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable by default — their properties and elements can be changed without creating a new object or array.
 By contrast, {{Glossary("primitive", "primitive values")}} are immutable — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned another value.
-
-It can be beneficial to use mutable objects for several reasons:
-
-- To allow for dynamic changes to the object's properties
-- Performance and memory (no need to create a new object)
 
 ## See also
 
