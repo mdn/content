@@ -112,3 +112,13 @@ The card is our flex container, with `flex-direction` set to `colum`n. The date 
 {{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}
 
 These small tweaks are the sort of cases where the `order` property makes sense. Keep the logical order as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use `order` for purely visual design tweaks. Don't reorder items that receive keyboard focus. Ensure you always test your content using only a keyboard, rather than a mouse or a touchscreen; it will be apparent if your development choices make getting around the content difficult.
+
+## See also
+
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
