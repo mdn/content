@@ -16,8 +16,6 @@ It can be beneficial to use mutable objects for several reasons:
 - To allow for dynamic changes to the object's properties
 - Performance and memory (no need to create a new object)
 
-Note that you can easily prove mutability: an object is mutable as long as it offers one way to change its properties. On the other hand, _immutability_ is hard to prove if there are no language semantics to secure it — it is a matter of developer contract. For example, {{jsxref("Object.freeze()")}} is a language-level method to make an object immutable in JavaScript.
-
 ## See also
 
 - [Immutable object](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia
