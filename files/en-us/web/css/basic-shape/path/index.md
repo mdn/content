@@ -29,8 +29,13 @@ path( [<fill-rule>,]? <string> )
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
 
-  - : An optional value of [`nonzero`](/en-US/docs/Web/SVG/Attribute/fill-rule#nonzero) (the default when omitted) or [`evenodd`](/en-US/docs/Web/SVG/Attribute/fill-rule#evenodd), which defines how the inside of the shape to be filled is determined.
-    > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
+  - : Defines how the inside of the shape created by the path is to be filled. The possible values include:
+
+    - `nonzero`: A point is considered inside the shape if a ray drawn from the point crosses more left-to-right than right-to-left path segments, resulting in a non-zero count. This is the default value when `<fill-rule>` is omitted.
+
+    - `evenodd`: A point is considered to be inside the shape if a ray drawn from the point crosses an odd number of path segments. This means that for each time the ray enters the shape, it has not exited an equal number of times, indicating an odd count of entries without corresponding exits.
+
+    > **Warning:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - {{cssxref("string")}}
   - : A [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path). The syntax for the contents of this `<string>` is identical to SVG.

@@ -135,6 +135,10 @@ For more useful information on styling `<select>`, see:
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
 - The {{cssxref("field-sizing")}} property, which controls how `<select>` elements are sized in relation to their contained options.
 
+## Accessibility
+
+The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
+
 ## Examples
 
 ### Basic select
@@ -228,10 +232,6 @@ You'll see that:
 - The `size` attribute causes only 4 lines to display at a time; you can scroll to view all the options.
 - We've included {{htmlelement("optgroup")}} elements to divide the options up into different groups. This is a purely visual grouping, its visualization generally consists of the group name being bolded, and the options being indented.
 - The "Hamster" option includes a `disabled` attribute and therefore can't be selected at all.
-
-## Accessibility concerns
-
-The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
 
 ## Technical summary
 
