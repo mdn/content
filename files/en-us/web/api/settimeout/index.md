@@ -387,7 +387,7 @@ Browsers store the delay as a 32-bit signed integer internally. This causes an i
 overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So for example,
 
 ```js
-setTimeout(() => console.log("hi!"),  2**32 - 5000);
+setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
 ```
 
 results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while
