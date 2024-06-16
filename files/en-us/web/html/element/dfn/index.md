@@ -7,7 +7,7 @@ browser-compat: html.elements.dfn
 
 {{HTMLSidebar}}
 
-The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the ancestor paragraph such as the {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest [section](/en-US/docs/Web/HTML/Content_categories#sectioning_content) ancestor of the `<dfn>` element, is considered to be the full definition of the term.
+The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the ancestor paragraph (a block of text, sometimes marked by a {{HTMLElement("p")}} element), the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest [section](/en-US/docs/Web/HTML/Content_categories#sectioning_content) ancestor of the `<dfn>` element, is considered to be the full definition of the term.
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
