@@ -31,13 +31,17 @@ Instead of allowing the ball to bounce off all four walls, let's only allow thre
 First, replace where you initially called `setInterval()`
 
 ```js
-setInterval(draw, 10);
+const interval = setInterval(draw, 10);
 ```
 
 with:
 
 ```js
-const interval = setInterval(draw, 10);
+let interval = 0;
+```
+
+```js
+interval = setInterval(draw, 10);
 ```
 
 Then replace the second if statement with the following:
@@ -107,6 +111,8 @@ let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
 
+let interval = 0;
+
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
@@ -172,7 +178,7 @@ function draw() {
 }
 
 function startGame() {
-  let interval = setInterval(draw, 10);
+  interval = setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {
