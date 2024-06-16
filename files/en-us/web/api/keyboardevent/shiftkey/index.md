@@ -12,6 +12,8 @@ The **`KeyboardEvent.shiftKey`** read-only property is a
 boolean value that indicates if the <kbd>shift</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred.
 
+The pressing of the shift key may change the {{domxref("KeyboardEvent/key", "key")}} of the event too. For example, pressing <kbd>B</kbd> generates `key: "b"`, while simultaneously pressing <kbd>Shift</kbd> generates `key: "B"`.
+
 ## Value
 
 A boolean value.

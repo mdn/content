@@ -7,7 +7,7 @@ browser-compat: css.properties.outline-color
 
 {{CSSRef}}
 
-The **`outline-color`** CSS property sets the color of an element's outline.
+The **`outline-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's outline.
 
 {{EmbedInteractiveExample("pages/css/outline-color.html")}}
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-template-areas
 
 {{CSSRef}}
 
-The **`grid-template-areas`** CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
+The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 
 {{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}
 
@@ -22,7 +22,7 @@ grid-template-areas: none;
 /* <string> values */
 grid-template-areas: "a b";
 grid-template-areas:
-  "a b b"
+  "a b ."
   "a c d";
 
 /* Global values */
@@ -38,7 +38,10 @@ grid-template-areas: unset;
 - `none`
   - : The grid container doesn't define any named grid areas.
 - `{{cssxref("&lt;string&gt;")}}+`
+
   - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple cell tokens with the same name within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
+
+    All the remaining unnamed areas in a grid can be referred using _null cell tokens_. A null cell token is a sequence of one or more `.` (U+002E FULL STOP) characters, e.g. `.`, `...`, or `.....` etc. A null cell token can be used to create empty spaces in the grid.
 
 ## Formal definition
 
@@ -73,7 +76,7 @@ grid-template-areas: unset;
   grid-template-areas:
     "head head"
     "nav  main"
-    "nav  foot";
+    ".  foot";
   grid-template-rows: 50px 1fr 30px;
   grid-template-columns: 150px 1fr;
 }
@@ -98,6 +101,8 @@ grid-template-areas: unset;
   background-color: #8cffa0;
 }
 ```
+
+In the above code, a null token (`.`) was used to create an unnamed area in the grid container, which we used to create an empty space at the bottom left corner of the grid.
 
 #### Result
 

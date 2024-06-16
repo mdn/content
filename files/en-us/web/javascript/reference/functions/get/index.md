@@ -31,7 +31,7 @@ There are some additional syntax restrictions:
 
 ## Description
 
-Sometimes it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a _getter_.
+Sometimes, it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a _getter_.
 
 An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The getter syntax allows you to specify the getter function in an object initializer.
 
@@ -57,8 +57,7 @@ which will return the last array item in `log`.
 const obj = {
   log: ["example", "test"],
   get latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
+    return this.log.at(-1);
   },
 };
 console.log(obj.latest); // "test"
@@ -155,19 +154,19 @@ the cost.
 
 An additional optimization technique to lazify or delay the calculation of a property
 value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters.
-The value is calculated the first time the getter is called, and is then cached so
+The value is calculated the first time the getter is called and is then cached so
 subsequent accesses return the cached value without recalculating it. This is useful in
 the following situations:
 
 - If the calculation of a property value is expensive (takes much RAM or CPU time,
   spawns worker threads, retrieves remote file, etc.).
-- If the value isn't needed just now. It will be used later, or in some case it's not
+- If the value isn't needed just now. It will be used later, or in some cases, it's not
   used at all.
 - If it's used, it will be accessed several times, and there is no need to
   re-calculate that value will never be changed or shouldn't be re-calculated.
 
 > **Note:** This means that you shouldn't write a lazy getter for a property whose value you
-> expect to change, because if the getter is lazy then it will not recalculate the
+> expect to change, because if the getter is lazy, then it will not recalculate the
 > value.
 >
 > Note that getters are not "lazy" or "memoized" by nature; you must implement this

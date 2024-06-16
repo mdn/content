@@ -20,7 +20,7 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* Keyword values */
-contain-intrinsic-width: none;
+contain-intrinsic-size: none;
 
 /* <length> values */
 contain-intrinsic-size: 1000px;
