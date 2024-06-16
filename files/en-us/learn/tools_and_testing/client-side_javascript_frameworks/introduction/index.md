@@ -88,12 +88,15 @@ We can examine the difficulty of this problem by looking at just _one_ feature o
 Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is an array of objects structured like this:
 
 ```js
-const state = [
-  {
-    id: "todo-0",
-    name: "Learn some frameworks!",
-  },
-];
+const state = {
+  taskName: "",
+  tasks: [
+    {
+      id: "todo-0",
+      name: "Learn some frameworks!",
+    },
+  ],
+};
 ```
 
 How do we show one of those tasks to our users? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Element/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Element/ul)). How do we make it? That could look something like this:
@@ -127,7 +130,7 @@ function buildDeleteButtonEl(id) {
 }
 ```
 
-This button doesn't do anything yet, but it will later once we decide to implement our delete feature. The code that will render our items on the page might read something like this:
+This button doesn't do anything yet, but it will later once we decide to implement our delete feature. The code that will render our items on the page might look something like this:
 
 ```js
 function renderTodoList() {
@@ -257,7 +260,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 
 | Framework | Browser support                     | Preferred DSL | Supported DSLs         | Citation                                                                        |
 | --------- | ----------------------------------- | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
-| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.io/guide/browser-support)                       |
+| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.dev/reference/versions#browser-support)         |
 | React     | Modern                              | JSX           | JSX; TypeScript        | [official docs](https://react.dev/reference/react-dom/client#browser-support)   |
 | Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [official docs](https://cli.vuejs.org/guide/browser-compatibility.html)         |
 | Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [official docs](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
