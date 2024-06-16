@@ -375,7 +375,7 @@ Many of the elements used to define form controls have some of their own specifi
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#form">form</a></code>
       </td>
       <td></td>
       <td>
