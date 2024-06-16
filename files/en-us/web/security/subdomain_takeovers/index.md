@@ -34,6 +34,14 @@ You take down your virtual host, but an attacker sets up a new virtual host usin
 
 You (or your company) decide that you no longer want to maintain a blog, so you remove the virtual host from the hosting provider. However, if you don't remove the DNS entry that points to the hosting provider, an attacker can now create their own virtual host with that provider, claim your subdomain, and host their own content under that subdomain.
 
+## How can I detect them?
+
+Detecting subdomain takeovers involves regular monitoring and auditing of your DNS records. Here are some steps you can take:
+
+- **Regular Audits**: Conduct regular audits of all your DNS records and associated virtual hosts to ensure that all subdomains are correctly configured and pointing to valid hosts.
+- **Automated Tools**: Use automated tools and services that can scan for subdomain takeovers and alert you if any vulnerabilities are found. Some popular tools include [Subdominator](https://github.com/Stratus-Security/Subdominator) and [Nuclei](https://github.com/projectdiscovery/nuclei).
+- **Internal Policies**: Develop internal policies and guidelines for the management of DNS records and virtual hosts, ensuring proper procedures are followed for provisioning and deprovisioning.
+
 ## How can I prevent them?
 
 Preventing subdomain takeovers is a matter of order of operations in lifecycle management for virtual hosts and DNS. Depending on the size of the organization, this may require communication and coordination across multiple departments, which can only increase the likelihood for a vulnerable misconfiguration.
@@ -52,5 +60,6 @@ If you discover that a subdomain of your domain has been taken over, the first s
 
 ## Learn more
 
+- [Subdomain Takeover Guide](https://www.stratussecurity.com/post/subdomain-takeover-guide)
 - ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](https://claudijd.github.io/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
 - [Subdomain Takeover: Basics](https://0xpatrik.com/subdomain-takeover-basics/)
