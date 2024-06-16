@@ -393,7 +393,7 @@ setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
 results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while
 
 ```js
-setTimeout(() => console.log("hi!"),  2**32 + 5000);
+setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
 ```
 
 results in the timeout being executed after approximately 5 seconds.
