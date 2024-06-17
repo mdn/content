@@ -49,8 +49,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 If no rules match, the `matchedRules` array is empty. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility

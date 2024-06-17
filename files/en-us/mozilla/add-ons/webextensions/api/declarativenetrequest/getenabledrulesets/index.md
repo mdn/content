@@ -23,8 +23,6 @@ This function takes no parameters.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of string containing static rulesets IDs. If no rules are active, the array is empty. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility

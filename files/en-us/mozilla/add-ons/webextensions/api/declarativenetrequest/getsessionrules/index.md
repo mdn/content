@@ -27,8 +27,6 @@ let sessionRules = await browser.declarativeNetRequest.getSessionRules();
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of {{WebExtAPIRef("declarativeNetRequest.Rule")}} objects. If no rules are active, the object is empty. If the request fails, the promise is rejected with an error message
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility

@@ -27,8 +27,6 @@ let gettingDynamicRules = browser.declarativeNetRequest.getDynamicRules();
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is fulfilled with an array of {{WebExtAPIRef("declarativeNetRequest.Rule")}} objects. Each of these represents a rule that belongs to the extension. If no rules are active, the array is empty. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility

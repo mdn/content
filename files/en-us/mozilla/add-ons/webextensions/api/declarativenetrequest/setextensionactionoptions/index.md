@@ -40,8 +40,6 @@ let count = browser.declarativeNetRequest.setExtensionActionOptions(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with no arguments. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility

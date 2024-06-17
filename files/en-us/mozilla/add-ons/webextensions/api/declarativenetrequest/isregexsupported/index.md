@@ -40,8 +40,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 If the request fails, the promise is rejected with an error message.
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility

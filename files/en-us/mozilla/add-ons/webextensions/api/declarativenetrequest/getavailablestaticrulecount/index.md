@@ -23,8 +23,6 @@ This function takes no parameters.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a number that indicates how many static rules can enable before the global static rule limit is reached. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
 {{WebExtExamples}}
 
 ## Browser compatibility
