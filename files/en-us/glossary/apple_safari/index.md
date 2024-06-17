@@ -8,7 +8,6 @@ page-type: glossary-definition
 
 [**Safari**](https://www.apple.com/safari/) is a {{Glossary("Browser","web browser")}} developed by Apple and is built into Apple's operating systems, including macOS (for Mac computers), iPadOS (for iPad tablets), iOS (for iPhones), and visionOS (for augmented reality devices like the Apple Vision Pro).
 
-
 ## See also
 
 - [Safari](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) on Wikipedia
