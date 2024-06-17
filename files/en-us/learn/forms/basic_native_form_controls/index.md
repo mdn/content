@@ -352,9 +352,8 @@ Many of the elements used to define form controls have some of their own specifi
       </td>
       <td>false</td>
       <td>
-        This Boolean attribute lets you specify that the element should
-        automatically have input focus when the page loads. Only one
-        form-associated element in a document can have this attribute specified.
+        This Boolean attribute lets you specify that the element should automatically have input focus when the page loads.
+        Only one form-associated element in a document can have this attribute specified.
       </td>
     </tr>
     <tr>
@@ -365,26 +364,20 @@ Many of the elements used to define form controls have some of their own specifi
       </td>
       <td>false</td>
       <td>
-        This Boolean attribute indicates that the user cannot interact with the
-        element. If this attribute is not specified, the element inherits its
-        setting from the containing element, for example,
-        {{HTMLElement("fieldset")}}; if there is no containing element
-        with the <code>disabled</code> attribute set, then the element is
-        enabled.
+        This Boolean attribute indicates that the user cannot interact with the element.
+        If this attribute is not specified, the element inherits its setting from the containing element, for example, {{HTMLElement("fieldset")}};
+        if there is no containing element with the <code>disabled</code> attribute set, then the element is enabled.
       </td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#form">form</a></code>
       </td>
       <td></td>
       <td>
-        The <code>&#x3C;form></code> element that the widget is associated with,
-        used if it is not nested within that form. The value of the attribute
-        must be the <code>id</code> attribute of a
-        {{HTMLElement("form")}} element in the same document. This lets
-        you associate a form control with a form it is outside of, even if it is
-        inside a different form element.
+        The <code>&#x3C;form></code> element that the widget is associated with, used if it is not nested within that form.
+        The value of the attribute must be the <code>id</code> attribute of a {{HTMLElement("form")}} element in the same document.
+        This lets you associate a form control with a form it is outside of, even if it is inside a different form element.
       </td>
     </tr>
     <tr>
