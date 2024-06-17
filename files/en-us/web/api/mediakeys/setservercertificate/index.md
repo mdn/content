@@ -8,7 +8,7 @@ browser-compat: api.MediaKeys.setServerCertificate
 
 {{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The **`MediaKeys.setServerCertificate()`** method provides a server certificate to be used to encrypt messages to the license server.
+The **`setServerCertificate()`** method of the {{domxref("MediaKeys")}} interface provides a server certificate to be used to encrypt messages to the license server.
 
 ## Syntax
 

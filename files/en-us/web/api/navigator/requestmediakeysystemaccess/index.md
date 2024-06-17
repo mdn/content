@@ -8,7 +8,7 @@ browser-compat: api.Navigator.requestMediaKeySystemAccess
 
 {{DefaultAPISidebar("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The **`Navigator.requestMediaKeySystemAccess()`** method returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream.
+The **`requestMediaKeySystemAccess()`** method of the {{domxref("Navigator")}} interface returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream.
 
 This method is part of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), which brings support for encrypted media and DRM-protected video to the web.
 
