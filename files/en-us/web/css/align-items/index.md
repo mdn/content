@@ -7,7 +7,7 @@ browser-compat: css.properties.align-items
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In Grid Layout, it controls the alignment of items on the block axis within their {{glossary("grid area")}}.
+The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In grid layout, it controls the alignment of items on the block axis within their {{glossary("grid areas")}}.
 
 {{EmbedInteractiveExample("pages/css/align-items.html")}}
 
