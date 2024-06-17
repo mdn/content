@@ -14,8 +14,6 @@ Our example video player displays a clip from an open source movie called [Tears
 
 ![a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots.](video-player-example.png)
 
-> **Note:** You can see the [example running live](https://iandevlin.github.io/mdn/video-player/), or check out the [source code on GitHub](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player).
-
 ## HTML Markup
 
 To start off with, let's take a look at the HTML that makes up the player.
@@ -50,8 +48,6 @@ Even though this player will define its own custom control set, the `controls` a
 
 A poster image is defined for the video, and the `preload` attribute is set to `metadata`, which informs the browser that it should initially only attempt to load the metadata from the video file rather than the entire video file. This provides the player with data such as video duration and format.
 
-> **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
-
 Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
 
 The code above would allow playback of the video in most browsers, using the browser's default control set. The next step is to define a custom control set, also in HTML, which will be used to control the video.
@@ -76,8 +72,7 @@ Once again the HTML is quite straightforward, using an unordered list with `list
   <li><button id="playpause" type="button">Play/Pause</button></li>
   <li><button id="stop" type="button">Stop</button></li>
   <li class="progress">
-    <progress id="progress" value="0" min="0">
-    </progress>
+    <progress id="progress" value="0" min="0"></progress>
   </li>
   <li><button id="mute" type="button">Mute/Unmute</button></li>
   <li><button id="volinc" type="button">Vol+</button></li>
@@ -90,7 +85,7 @@ Each button is given an `id` so it can be easily accessed with JavaScript.
 
 The controls are initially hidden with a CSS `display:none` and will be enabled with JavaScript. Again if a user has JavaScript disabled, the custom control set will not appear and they can use the browser's default control set unhindered.
 
-Of course this custom control set is currently useless and doesn't do a thing: Let's improve the situation with JavaScript.
+Of course, this custom control set is currently useless and doesn't do a thing: Let's improve the situation with JavaScript.
 
 ## Using the Media API
 
@@ -100,7 +95,7 @@ HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) t
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](/en-US/docs/Web/API/HTMLMediaElement/canPlayType), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
 const supportsVideo = !!document.createElement("video").canPlayType;
@@ -110,7 +105,7 @@ if (supportsVideo) {
 }
 ```
 
-Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
+Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. Variables pointing to HTML elements are required:
 
 ```js
 const videoContainer = document.getElementById("videoContainer");
@@ -189,7 +184,7 @@ voldec.addEventListener("click", (e) => {
 });
 ```
 
-Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user defined function, `alterVolume(direction)` has been created that deals with this:
+Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user-defined function, `alterVolume(direction)` has been created that deals with this:
 
 ```js
 function alterVolume(dir) {
@@ -266,7 +261,7 @@ if (!document?.fullscreenEnabled) {
 }
 ```
 
-Naturally the fullscreen button needs to actually do something, so, like the other buttons, a `click` event handler is attached in which we call a user defined function `handleFullscreen`:
+The fullscreen button needs to actually do something. Like the other buttons, a `click` event handler is attached that calls a user-defined function `handleFullscreen`:
 
 ```js
 fullscreen.addEventListener("click", (e) => {
@@ -313,4 +308,3 @@ document.addEventListener("fullscreenchange", (e) => {
 - {{ htmlelement("video") }} for reference material
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)
-- [Video for Everybody](https://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.
