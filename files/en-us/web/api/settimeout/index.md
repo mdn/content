@@ -390,7 +390,7 @@ overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So fo
 setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
 ```
 
-…results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while the following example:
+…results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while the following code:
 
 ```js
 setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
