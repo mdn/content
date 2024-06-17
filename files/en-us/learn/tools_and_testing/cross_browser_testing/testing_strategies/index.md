@@ -140,7 +140,7 @@ A-grade:
 - The information box should animate smoothly as it appears/disappears.
 - The gradient and text shadow should appear to enhance the look of the box.
 
-You might also notice that the button isn't usable using only the keyboard — this also needs to be remedied. Maybe we could use some JavaScript to implement a keyboard control for the toggle, or use some other method entirely?
+You might notice that the button isn't usable with only the keyboard. We could remedy this using JavaScript to implement a keyboard control for the toggle, or use some other approach.
 
 These test criteria are useful, because:
 
