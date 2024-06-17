@@ -26,4 +26,5 @@ A string indicating the code MIME type/subtype.
 
 ## See also
 
-- [`RTCRtpCodecParameters.mimeType`](/en-US/docs/Web/API/RTCRtpCodecParameters#mimetype)
+- `codecs.mimeType` option in parameter passed to [`RTCRtpTransceiver.setCodecPreferences()`](/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#mimeType) and [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#mimeType).
+- `codecs.mimeType` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#mimeType) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#mimeType).
