@@ -8,7 +8,6 @@ page-type: glossary-definition
 
 [**Safari**](https://www.apple.com/safari/) is a {{Glossary("Browser","web browser")}} developed by Apple and is built into Apple's operating systems, including macOS (for Mac computers), iPadOS (for iPad tablets), iOS (for iPhones), and visionOS (for augmented reality devices like the Apple Vision Pro).
 
-Safari was first introduced in 2003 on Mac OS X Panther and later on iOS in 2007, using the open source {{glossary("WebKit")}} engine, which was derived from [KHTML](https://en.wikipedia.org/wiki/KHTML). Apple used to offer a version of Safari for Windows, but it was discontinued in 2012.
 
 ## See also
 
