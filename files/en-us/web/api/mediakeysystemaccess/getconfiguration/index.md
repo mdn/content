@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The `MediaKeySystemAccess.getConfiguration()` method returns an object with the supported combination of
 the following configuration options:

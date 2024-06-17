@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.encrypted_event
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("Encrypted Media Extensions")}}
 
 The `encrypted` event is fired when the media encounters some initialization data indicating it is encrypted.
 

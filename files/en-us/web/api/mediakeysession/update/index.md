@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.update
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The `MediaKeySession.update()` method loads messages and licenses to the
 CDM, and then returns a {{jsxref('Promise')}} .
