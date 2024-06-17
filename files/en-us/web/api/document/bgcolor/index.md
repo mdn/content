@@ -34,6 +34,10 @@ hexadecimal).
 `document.body.bgColor`, although this is also deprecated in HTML 4.01 in
 favor of the CSS alternative.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

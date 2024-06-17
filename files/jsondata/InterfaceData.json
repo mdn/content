@@ -864,6 +864,10 @@
       "inh": "ReportBody",
       "impl": []
     },
+    "DeviceChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "DeviceMotionEvent": {
       "inh": "Event",
       "impl": []
@@ -2860,6 +2864,10 @@
       "inh": "",
       "impl": []
     },
+    "RTCIceCandidatePair": {
+      "inh": "",
+      "impl": []
+    },
     "RTCIceTransport": {
       "inh": "EventTarget",
       "impl": []
@@ -3121,6 +3129,10 @@
       "impl": []
     },
     "Storage": {
+      "inh": "",
+      "impl": []
+    },
+    "StorageAccessHandle": {
       "inh": "",
       "impl": []
     },

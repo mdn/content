@@ -80,7 +80,7 @@ Other formats improve on JPEG's capabilities regarding compression, but are not 
 
   > **Note:** Despite Apple [announcing support for WebP in Safari 14](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174), Safari versions earlier than 16.0 don't display `.webp` images successfully on macOS desktop versions earlier than 11/Big Sur. Safari for iOS 14 _does_ display `.webp` images successfully.
 
-- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. See also [an online tool to convert previous image formats to AVIF](https://avif.io/).
+- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. [Squoosh](https://squoosh.app) is a good online tool for converting previous image formats to AVIF.
 - **JPEG2000** — once to be the successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
 Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
@@ -116,15 +116,17 @@ Secondly, with the adoption of Priority Hints, you can control the priority furt
 
 ### Rendering strategy: preventing jank when loading images
 
-As images are loaded asynchronously and continue to load after the first paint, if their dimensions aren't defined before load, they can cause reflows to the page content. For example, when text gets pushed down the page by images loading. For this reason, it's critical that you set `width` and `height` attributes so that the browser can reserve space for them in the layout.
+As images are loaded asynchronously and continue to load after the first paint, if their dimensions aren't defined before load, they can cause reflows to the page content. For example, when text gets pushed down the page by images loading. For this reason, it's important to set `width` and `height` attributes so that the browser can reserve space for them in the layout.
 
-When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the aspect ratio of the image can be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+When the `width` and `height` attributes of an image are included on an HTML {{htmlelement("img")}} element, the [aspect ratio of the image](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio#adjusting_aspect_ratios_of_replaced_elements) can be calculated by the browser prior to the image being loaded. This {{glossary("aspect ratio")}} is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 Browsers begin rendering content as HTML is parsed, often before all assets, including images, are downloaded. Including dimensions enable browsers to reserve a correctly-sized placeholder box for each image to appear in when the images are loaded when first rendering the page.
 
 ![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
 Without the `width` and `height` attributes, no placeholder space is created, creating a noticeable {{glossary('jank')}}, or layout shift, in the page when the image loads after the page is rendered. Page reflow and repaints are performance and usability issues.
+
+The {{glossary("CLS")}} metric measures jank on page load, or how much visible content shifts in the viewport and by how much. The main culprits of bad CLS are replaced elements without declared dimensions that reflow when the asset loads, including images, ad, embeds, and iframes without an size or {{cssxref("aspect-ratio")}} and web fonts.
 
 In responsive designs, when a container is narrower than an image, the following CSS is generally used to keep images from breaking out of their containers:
 
@@ -135,13 +137,13 @@ img {
 }
 ```
 
-While useful for responsive layouts, this causes jank when width and height information are not included, as if no height information is present when the `<img>` element is parsed but before the image has loaded, this CSS effectively has set the height to 0. When the image loads after the page has been initially rendered to the screen, the page reflows and repaints creating a layout shift as it creates space for the newly determined height.
+While useful for responsive layouts, this causes jank and poor CLS when width and height information are not included, as if no height information is present when the `<img>` element is parsed but before the image has loaded, this CSS effectively has set the height to 0. When the image loads after the page has been initially rendered to the screen, the page reflows and repaints creating a layout shift as it creates space for the newly determined height.
 
 Browsers have a mechanism for sizing images before the actual image is loaded. When an `<img>`, `<video>`, or `<input type="button">` element has `width` and `height` attributes set on it, its aspect ratio is calculated before load time, and is available to the browser, using the dimensions provided.
 
-The aspect ratio is then used to calculate the height and therefore the correct size is applied to the `<img>` element, meaning that the aforementioned jank will not occur, or be minimal if the listed dimensions are not fully accurate, when the image loads.
+The aspect ratio is then used to calculate the height, and therefore, the correct size is applied to the `<img>` element, meaning that the aforementioned jank will not occur or be minimal if the listed dimensions are not fully accurate when the image loads.
 
-The aspect ratio is used to reserve space only on the image load. Once the image has loaded, the intrinsic aspect ratio of the loaded image, rather than the aspect ratio from the attributes, is used. This ensures that it displays at the correct aspect ratio even if the attribute dimensions are not accurate.
+The aspect ratio is used to reserve space only on the image load. Once the image has loaded, the intrinsic aspect ratio of the loaded image or the value of the `aspect-ratio` property is used rather than the aspect ratio from the attributes. This ensures that it displays at the correct aspect ratio even if the attribute dimensions are not accurate.
 
 While developer best practices from the last decade may have recommended omitting the `width` and `height` attributes of an image on an HTML {{htmlelement("img")}}, due to aspect ratio mapping, including these two attributes is considered a developer best practice.
 

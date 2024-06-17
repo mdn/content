@@ -29,6 +29,8 @@ format(number)
 
 A string representing the given `number` formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
+> **Note:** Most of the time, the formatting returned by `format()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `format()` to hardcoded constants.
+
 ## Description
 
 {{jsxref("Number")}} values in JavaScript suffer from loss of precision if they are too big or too small, making the text representation inaccurate.
@@ -75,7 +77,7 @@ console.log(formatted.join("; "));
 
 ### Using format with a string
 
-Using a string we can specify very numbers that are larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} without losing precision.
+Using a string we can specify numbers that are larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} without losing precision.
 
 ```js
 const numberFormat = new Intl.NumberFormat("en-US");

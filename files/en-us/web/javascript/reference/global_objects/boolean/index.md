@@ -91,7 +91,7 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 ## Constructor
 
 - {{jsxref("Boolean/Boolean", "Boolean()")}}
-  - : Creates a new `Boolean` object.
+  - : Creates `Boolean` objects. When called as a function, it returns primitive values of type Boolean.
 
 ## Instance properties
 

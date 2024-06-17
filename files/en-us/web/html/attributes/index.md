@@ -1,5 +1,6 @@
 ---
 title: HTML attribute reference
+short-title: Attributes
 slug: Web/HTML/Attributes
 page-type: landing-page
 ---
@@ -803,23 +804,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the upper bound of the lower range.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/html#manifest">manifest</a></code>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("html") }}</td>
-      <td>
-        Specifies the URL of the document's cache manifest.
-        <div class="note">
-          <p>
-            <strong>Note:</strong> This attribute is obsolete, use
-            <a href="/en-US/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a>
-            instead.
-          </p>
-        </div>
-      </td>
     </tr>
     <tr>
       <td>

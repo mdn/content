@@ -70,7 +70,7 @@ drawLives();
 Now let's work on something that is not connected to the game mechanics, but to the way it is being rendered. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} helps the browser render the game better than the fixed frame rate we currently have implemented using {{domxref("setInterval()")}}. Replace the following line:
 
 ```js
-const interval = setInterval(draw, 10);
+interval = setInterval(draw, 10);
 ```
 
 with:

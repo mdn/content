@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ExtendableMessageEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 

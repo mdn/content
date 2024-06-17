@@ -95,7 +95,7 @@ This is a common problem, especially when you need to support old browsers or yo
 
 Once you've identified a list of technologies you will be using that are not universally supported, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
 
-#### HTML fallback behavior
+### HTML fallback behavior
 
 Some problems can be solved by just taking advantage of the natural way in which HTML/CSS work.
 
@@ -147,7 +147,7 @@ The output of this code is as follows:
 
 If you view the example, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
-#### CSS fallback behavior
+### CSS fallback behavior
 
 CSS is arguably better at fallbacks than HTML. If a browser encounters a declaration or rule it doesn't understand, it just skips it completely without applying it or throwing an error. This might be frustrating for you and your users if such a mistake slips through to production code, but at least it means the whole site doesn't come crashing down because of one error, and if used cleverly you can use it to your advantage.
 
@@ -189,7 +189,7 @@ To sort this out, we have added a second `background-color` declaration, which j
 
 > **Note:** The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
-#### Selector support
+### Selector support
 
 Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style!
 
@@ -209,7 +209,7 @@ form > #date
 
 (The `date` form input isn't a direct child of the `<form>`; you'd be better off using a general descendant selector instead of a child selector).
 
-#### Handling CSS prefixes
+### Handling CSS prefixes
 
 Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations.
 
@@ -249,7 +249,7 @@ As you start to type the property name representation after the second dot (note
 
 If you do need to include modern features, test for feature support using [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
 
-#### Responsive design problems
+### Responsive design problems
 
 Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/CSS_media_queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [our guide to responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design).
 

@@ -40,7 +40,7 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     > **Note:** The domain _must_ match the domain of the JavaScript origin.
     > Setting cookies to foreign domains will be silently ignored.
 
-  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
+  - `;expires=date-in-UTCString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
     > **Warning:** When user privacy is a concern, it's important that any web app implementation invalidate cookie data after a certain timeout instead of relying on the browser to do it.
     > Many browsers let users specify that cookies should never expire, which is not necessarily safe.
@@ -51,10 +51,9 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
 
   - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more details.
 
-  - `;path=path`: The value of the cookie's [`Path` attribute](/en-US/docs/Web/HTTP/Cookies#path_attribute).
+  - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Cookies#define_where_cookies_are_sent) for more information).
 
-  - `;samesite`: [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site
-    requests. Possible values are `lax`, `strict` or `none`.
+  - `;samesite`: The `SameSite` attribute of a {{httpheader("Set-Cookie")}} header can be set by a server to specify when the cookie will be sent. Possible values are `lax`, `strict` or `none` (see also [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)).
 
     - The `lax` value will send the cookie for all same-site requests and top-level navigation GET requests.
       This is sufficient for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks.
@@ -318,7 +317,7 @@ Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12
 - Keep in mind that the more cookies you have, the more data will be transferred between the server and the client for each request.
   This will make each request slower.
   It is highly recommended for you to use [WHATWG DOM Storage](/en-US/docs/Web/API/Web_Storage_API) if you are going to keep "client-only" data.
-- [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**.
+- [RFC 2965](https://datatracker.ietf.org/doc/html/rfc2965) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**.
   Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.
 
 The reason for the [syntax](#syntax) of the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):

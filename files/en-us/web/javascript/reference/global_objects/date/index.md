@@ -180,11 +180,11 @@ See the [Formats of `toString` method return values](#formats_of_tostring_method
 ## Static methods
 
 - {{jsxref("Date.now()")}}
-  - : Returns the numeric value corresponding to the current time—the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
+  - : Returns the numeric value corresponding to the current time—the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 - {{jsxref("Date.parse()")}}
-  - : Parses a string representation of a date and returns the number of milliseconds since 1 January, 1970, 00:00:00 UTC, with leap seconds ignored.
+  - : Parses a string representation of a date and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 - {{jsxref("Date.UTC()")}}
-  - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.
+  - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 
 ## Instance properties
 
@@ -212,7 +212,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.getSeconds()")}}
   - : Returns the seconds (`0` – `59`) in the specified date according to local time.
 - {{jsxref("Date.prototype.getTime()")}}
-  - : Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC. (Negative values are returned for prior times.)
+  - : Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970 00:00:00 UTC. (Negative values are returned for prior times.)
 - {{jsxref("Date.prototype.getTimezoneOffset()")}}
   - : Returns the time-zone offset in minutes for the current locale.
 - {{jsxref("Date.prototype.getUTCDate()")}}
@@ -248,7 +248,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setSeconds()")}}
   - : Sets the seconds for a specified date according to local time.
 - {{jsxref("Date.prototype.setTime()")}}
-  - : Sets the {{jsxref("Date")}} object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC. Use negative numbers for times prior.
+  - : Sets the {{jsxref("Date")}} object to the time represented by the number of milliseconds since January 1, 1970 00:00:00 UTC. Use negative numbers for times prior.
 - {{jsxref("Date.prototype.setUTCDate()")}}
   - : Sets the day of the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCFullYear()")}}
@@ -409,7 +409,7 @@ function printElapsedTime(testFn) {
 const yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
-> **Note:** In browsers that support the {{domxref("performance_property", "Web Performance API", "", 1)}}'s high-resolution time feature, {{domxref("Performance.now()")}} can provide more reliable and precise measurements of elapsed time than {{jsxref("Date.now()")}}.
+> **Note:** In browsers that support the {{domxref("Performance API", "", "", "nocode")}}'s high-resolution time feature, {{domxref("Performance.now()")}} can provide more reliable and precise measurements of elapsed time than {{jsxref("Date.now()")}}.
 
 ### Get the number of seconds since the ECMAScript Epoch
 

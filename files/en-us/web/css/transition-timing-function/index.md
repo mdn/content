@@ -7,7 +7,7 @@ browser-compat: css.properties.transition-timing-function
 
 {{CSSRef}}
 
-The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 

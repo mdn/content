@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.eventPhase
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`eventPhase`** read-only property of the
 {{domxref("Event")}} interface indicates which phase of the event flow is currently

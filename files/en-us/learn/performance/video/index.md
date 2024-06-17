@@ -43,7 +43,6 @@ The sections below describe the following optimization techniques:
 
 - [compress all video](#compress_all_videos)
 - [optimize `<source>` order](#optimize_source_order)
-- [set autoplay](#video_autoplay)
 - [remove audio from muted video](#remove_audio_from_muted_hero_videos)
 - [optimize video preload](#video_preload)
 - [consider streaming](#consider_streaming)
@@ -70,25 +69,6 @@ Order video source from smallest to largest. For example, given video compressio
 ```
 
 The browser downloads the first format it understands. The goal is to offer smaller versions ahead of larger versions. With the smallest version, make sure that the most compressed video still looks good. There are some compression algorithms that can make video look (bad) like an animated GIF. While a 128 Kb video may seem like it could provide a better user experience than a 10 MB download, a grainy GIF-like video may reflect poorly on the brand or project.
-
-See [CanIUse.com](https://caniuse.com/#search=video) for current browser support of video and other media types.
-
-### Video autoplay
-
-To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline`.
-
-```html
-<video
-  autoplay=""
-  loop=""
-  muted
-  playsinline=""
-  src="backgroundvideo.mp4"></video>
-```
-
-While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
-
-`Playsinline` is required for mobile Safari, allowing videos to play without forcing fullscreen mode.
 
 ### Remove audio from muted hero videos
 

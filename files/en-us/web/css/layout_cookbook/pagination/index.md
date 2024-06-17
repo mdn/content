@@ -48,10 +48,6 @@ We have also added some additional content that would be read by a screen reader
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
-## Specifications
-
-{{Specifications}}
-
 ## See also
 
 - {{Cssxref("justify-content")}}, {{Cssxref("gap")}}

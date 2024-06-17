@@ -93,7 +93,7 @@ In this section we'll go through the different ways in which you can add SVG vec
 
 ### The quick way: `img` element
 
-To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent {{glossary("aspect ratio")}}). If you have not already done so, please read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
 ```html
 <img
@@ -278,12 +278,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };

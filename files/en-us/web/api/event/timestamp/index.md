@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.timeStamp
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`timeStamp`** read-only property of the {{domxref("Event")}} interface returns the time (in milliseconds) at which the event was created.
 

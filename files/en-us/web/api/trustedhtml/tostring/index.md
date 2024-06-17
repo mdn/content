@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedHTML.toString
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`toString()`** method of the {{domxref("TrustedHTML")}} interface returns a string which may safely inserted into an injection sink.
 

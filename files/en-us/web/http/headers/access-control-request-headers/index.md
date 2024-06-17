@@ -25,18 +25,18 @@ The **`Access-Control-Request-Headers`** request header is used by browsers when
 ## Syntax
 
 ```http
-Access-Control-Request-Headers: <header-name>, <header-name>, …
+Access-Control-Request-Headers: <header-name>,<header-name>,…
 ```
 
 ## Directives
 
 - \<header-name>
-  - : A comma-delimited list of [HTTP headers](/en-US/docs/Web/HTTP/Headers) that are included in the request.
+  - : A sorted list of unique, comma-separated, lowercase [HTTP headers](/en-US/docs/Web/HTTP/Headers) that are included in the request.
 
 ## Examples
 
 ```http
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 ## Specifications

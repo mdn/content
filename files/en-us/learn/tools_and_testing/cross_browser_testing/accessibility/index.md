@@ -37,7 +37,7 @@ Next we turn our attention to accessibility, providing information on common pro
 
 When we say accessibility in the context of web technology, most people immediately think of making sure websites/apps are usable by people with disabilities, for example:
 
-- Visually impaired people using screen readers or magnification/zoom to access text
+- Visually impaired people using screen readers or magnification/zoom to access text.
 - People with motor function impairments using the keyboard (or other non-mouse features) to activate website functionality.
 - People with hearing impairments relying on captions/subtitles or other text alternatives for audio/video content.
 
@@ -131,8 +131,7 @@ You can then press Enter/Return to follow a focused link or press a button (we'v
 
 Note that different browsers may have different keyboard control options available. Most modern browsers follow the tab pattern described above (you can also do Shift + Tab to move backwards through the focusable elements), but some browsers have their own idiosyncrasies:
 
-- Firefox for the Mac doesn't do tabbing by default. To turn it on, you have to go to _Preferences > Advanced > General_, then uncheck "Always use the cursor keys to navigate within pages". Next, you have to open your Mac's System Preferences app, then go to _Keyboard > Shortcuts_, then select the _All Controls_ radio button.
-- Safari doesn't allow you to tab through links by default; to enable this, you need to open Safari's _Preferences_, go to Advanced, and check the _Press Tab to highlight each item on a webpage_ checkbox.
+- Safari on Mac doesn't allow you to tab through links by default; to enable this, open _System Settings_, scroll down to _Keyboard_, and enable _Keyboard navigation_. If you're using an older version of macOS, see [Use your keyboard like a mouse with Mac](https://support.apple.com/en-is/guide/mac-help/mchlp1399/mac) on Apple's macOS User Guide.
 
 > **Warning:** You should perform this kind of test/review on any new page you write — make sure that functionality can be accessed by the keyboard, and that the tab order provides a sensible navigation path through the document.
 
@@ -165,14 +164,14 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
    ```js
    document.onkeydown = (e) => {
-     if (e.keyCode === 13) {
+     if (e.code === "Enter") {
        // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };
    ```
 
-   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
+   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`code`](/en-US/docs/Web/API/KeyboardEvent/code) property; if it is the code that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
 > **Note:** This technique will only work if you set your original event handlers via event handler properties (e.g. `onclick`). `addEventListener` won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.
 

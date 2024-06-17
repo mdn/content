@@ -100,7 +100,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
 
 VP8, which we [describe in general](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs), has some specific requirements that must be followed when using it to encode or decode a video track on a WebRTC connection.
 
-Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an aspect ratio of 1:1).
+Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an {{glossary("aspect ratio")}} of 1:1).
 
 #### Other notes
 
@@ -315,7 +315,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 
 The event handler for `icegatheringstatechange` is established; in it, we look to see if the ICE gathering state is `complete`, indicating that no further candidates will be collected. The method {{domxref("RTCPeerConnection.getSenders()")}} is called to get a list of all the {{domxref("RTCRtpSender")}} objects used by the connection.
 
-With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
+With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that its {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
 We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and set `codecList` to the `codecs` property in the returned object, and then return to the caller.
 
 If no video track is found, we set `codecList` to `null`.

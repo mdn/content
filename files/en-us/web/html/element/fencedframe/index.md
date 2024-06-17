@@ -22,15 +22,15 @@ The `<fencedframe>` element is a type of `<iframe>` with more native privacy fea
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `allow`
+- `allow` {{experimental_inline}}
 
   - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details of which features can be controlled via a policy set on a fenced frame.
 
-- `height`
+- `height` {{experimental_inline}}
 
   - : A unitless integer representing the height of the fenced frame in CSS pixels. The default is `150`.
 
-- `width`
+- `width` {{experimental_inline}}
   - : A unitless integer representing the width of the fenced frame in CSS pixels. The default is `300`.
 
 ## Permissions policies available to fenced frames
@@ -64,6 +64,19 @@ As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, ali
 
 The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
 
+## Accessibility
+
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
+
+```html
+<fencedframe
+  title="Advertisement for new Log. From Blammo!"
+  width="640"
+  height="320"></fencedframe>
+```
+
+Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
 ## Examples
 
 To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/) or [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
@@ -85,19 +98,6 @@ frame.config = frameConfig;
 ```
 
 > **Note:** `resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If it is not set, the resulting {{jsxref("Promise")}} will resolve to a URN that can only be used in an {{htmlelement("iframe")}}.
-
-## Accessibility concerns
-
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
-
-```html
-<fencedframe
-  title="Advertisement for new Log. From Blammo!"
-  width="640"
-  height="320"></fencedframe>
-```
-
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Technical summary
 

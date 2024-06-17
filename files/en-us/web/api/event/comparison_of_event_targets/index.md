@@ -4,7 +4,7 @@ slug: Web/API/Event/Comparison_of_Event_Targets
 page-type: guide
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
 It's easy to get confused about which event target to examine when writing an event handler. This article should clarify the use of the target properties.
 
@@ -24,110 +24,62 @@ There are five targets to consider:
         <code><a href="/en-US/docs/Web/API/Event/target">event.target</a></code>
       </td>
       <td>
-        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
-        >
+        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a>
       </td>
       <td>
-        The DOM element on the left-hand side of the call that triggered this
-        event.
+        The DOM element on the left-hand side of the call that triggered this event.
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/API/Event/currentTarget"
-            >event.currentTarget</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/API/Event/currentTarget">event.currentTarget</a></code>
       </td>
       <td>
-        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
-        >
+        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a>
       </td>
       <td>
-        The
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
-          ><code>EventTarget</code></a
-        >
-        whose
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
-          ><code>EventListeners</code></a
-        >
-        are currently being processed. As the event capturing and bubbling
-        occurs, this value changes.
+        The <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"><code>EventTarget</code></a> whose <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"><code>EventListeners</code></a> are currently being processed. As the event capturing and bubbling occurs, this value changes.
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/API/MouseEvent/relatedTarget"
-            >event.relatedTarget</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">event.relatedTarget</a></code>
       </td>
       <td>
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
-          >DOM MouseEvent Interface</a
-        >
+        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent">DOM MouseEvent Interface</a>
       </td>
       <td>Identifies a secondary target for the event.</td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/API/Event/explicitOriginalTarget"
-            >event.explicitOriginalTarget</a
-          ></code
-        >
-      </td>
-      <td><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <code><a href="/en-US/docs/Web/API/Event/explicitOriginalTarget">event.explicitOriginalTarget</a></code>
       </td>
       <td>
-        {{ Non-standard_inline() }} If the event was retargeted for
-        some reason other than an anonymous boundary crossing, this will be set
-        to the target before the retargeting occurs. For example, mouse events
-        are retargeted to their parent node when they happen over text nodes
-        ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will
-        show the parent and <code>.explicitOriginalTarget</code> will show the
-        text node.<br />Unlike <code>.originalTarget</code>,
-        <code>.explicitOriginalTarget</code> will never contain anonymous
-        content.
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+      </td>
+      <td>
+        {{ Non-standard_inline() }} If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br />
+        Unlike <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> will never contain anonymous content.
       </td>
     </tr>
     <tr>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/API/Event/originalTarget"
-            >event.originalTarget</a
-          ></code
-        >
+        <code><a href="/en-US/docs/Web/API/Event/originalTarget">event.originalTarget</a></code>
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} The original target of the event,
-        before any retargetings. See
-        <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          >Anonymous Content#Event_Flow_and_Targeting</a
-        >
-        for details.
+        {{ Non-standard_inline() }} The original target of the event, before any retargetings.
       </td>
     </tr>
     <tr>
       <td>event.composedTarget</td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} The original non-native target of
-        the event before composition from Shadow DOM.
+        {{ Non-standard_inline() }} The original non-native target of the event before composition from Shadow DOM.
       </td>
     </tr>
   </tbody>
@@ -183,12 +135,12 @@ There are five targets to consider:
           </td>
           <td class="non-standard">
             If there was a retargeting of the event for some reason
-            <small> event.explicitOriginalTarget</small> contains the target
+            <small>event.explicitOriginalTarget</small> contains the target
             before retargeting (never contains anonymous targets)
           </td>
           <td class="non-standard">
             If there was a retargeting of the event for some reason
-            <small> event.originalTarget</small> contains the target before
+            <small>event.originalTarget</small> contains the target before
             retargeting (may contain anonymous targets)
           </td>
         </tr>
@@ -241,8 +193,8 @@ The `relatedTarget` property for the `mouseover` event holds the node that the m
 ```xml
 <hbox id="outer">
   <hbox id="inner"
-        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
+        onmouseover="console.log('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
+        onmouseout="console.log('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
         style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
 </hbox>
 ```

@@ -10,7 +10,7 @@ browser-compat: api.AudioListener.positionZ
 
 The `positionZ` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the z position of the listener in 3D cartesian space.
 
-> **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "PannerNode")}} is set to equalpower, or _k-rate_ otherwise.
+> **Note:** The parameter is [_a-rate_](/en-US/docs/Web/API/AudioParam#a-rate) when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "PannerNode")}} is set to equalpower, or [_k-rate_](/en-US/docs/Web/API/AudioParam#k-rate) otherwise.
 
 ## Value
 
