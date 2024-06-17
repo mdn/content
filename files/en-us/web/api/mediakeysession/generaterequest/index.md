@@ -6,10 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.generateRequest
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `MediaKeySession.generateRequest()` method returns a
-{{jsxref('Promise')}} after generating a media request based on initialization data.
+The `generateRequest()` method of the {{domxref('MediaKeySession')}} interface returns a {{jsxref('Promise')}} after generating a media request based on initialization data.
 
 ## Syntax
 
