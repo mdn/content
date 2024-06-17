@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Float16Array.Float16Array
 
 {{JSRef}}
 
-The **`Float16Array()`** constructor creates {{jsxref("Float16Array")}} objects. The contents are initialized to `0`.
+The **`Float16Array()`** constructor creates {{jsxref("Float16Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 

@@ -207,7 +207,7 @@ There are a number of other basic utility commands that you'll probably end up u
 Have a play with them in a test directory you've created somewhere so that you don't accidentally delete anything important, using the example commands below for guidance:
 
 - `mkdir` — this creates a new directory inside the current directory you are in, with the name you provide after the command name. For example, `mkdir my-awesome-website` will make a new directory called `my-awesome-website`.
-- `rmdir` — removes the named directory, but only if it's empty. For example, `rmdir my-awesome-website` will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use the `-r` option (recursive), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.
+- `rmdir` — removes the named directory, but only if it's empty. For example, `rmdir my-awesome-website` will remove the directory we created above. If you want to remove a directory that is not empty (and also remove everything it contains), then you can use `rm -r` instead (see below), but this is dangerous. Make sure there is nothing you might need inside the directory later on, as it will be gone forever.
 - `touch` — creates a new empty file, inside the current directory. For example, `touch mdn-example.md` creates a new empty file called `mdn-example.md`.
 - `mv` — moves a file from the first specified file location to the second specified file location, for example `mv mdn-example.md mdn-example.txt` (the locations are written as file paths). This command moves a file called `mdn-example.md` in the current directory to a file called `mdn-example.txt` in the current directory. Technically the file is being moved, but from a practical perspective, this command is actually renaming the file.
 - `cp` — similar in usage to `mv`, `cp` creates a copy of the file in the first location specified, in the second location specified. For example, `cp mdn-example.txt mdn-example.txt.bak` creates a copy of `mdn-example.txt` called `mdn-example.txt.bak` (you can of course call it something else if you wish).
@@ -360,12 +360,12 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
-For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html)
+For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html).
 
-Once you've installed node, open up the terminal and run the following command to install Prettier:
+Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
 
 ```bash
-npm install prettier
+npm install --save-dev prettier
 ```
 
 You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.

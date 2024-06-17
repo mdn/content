@@ -30091,25 +30091,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-24T00:17:33.140Z",
-    "contributors": [
-      "SphinxKnight",
-      "ajhsu",
-      "teoli",
-      "Jeremie",
-      "Jameshfisher",
-      "Sheppy",
-      "ziyunfei",
-      "fusionchess",
-      "kmaglione",
-      "Mgjbot",
-      "Carrie zhxj",
-      "electrolysis",
-      "Nickolay",
-      "ericjung"
-    ]
-  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2020-09-22T15:08:09.001Z",
     "contributors": [
@@ -30279,17 +30260,6 @@
       "BenoitL",
       "NickolayBot",
       "Andreas Wuest",
-      "Gor1"
-    ]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example": {
-    "modified": "2019-03-23T23:40:45.010Z",
-    "contributors": [
-      "mk7087",
-      "teoli",
-      "NickolayBot",
-      "Andreas Wuest",
-      "Nickolay",
       "Gor1"
     ]
   },
@@ -54851,10 +54821,6 @@
   },
   "Web/API/RTCRtcpParameters": {
     "modified": "2020-10-15T22:33:11.245Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCRtpCodecParameters": {
-    "modified": "2019-05-20T18:28:16.993Z",
     "contributors": ["Sheppy"]
   },
   "Web/API/RTCRtpContributingSource": {
@@ -91474,38 +91440,6 @@
       "jackarmley"
     ]
   },
-  "Web/Demos": {
-    "modified": "2020-06-23T09:20:53.721Z",
-    "contributors": [
-      "mrmowji",
-      "anirudhganwal06",
-      "chrisdavidmills",
-      "AryanzyRaj",
-      "moritzploss",
-      "dmytsv",
-      "zlatnaspirala",
-      "mfluehr",
-      "equinusocio",
-      "Kissaki",
-      "SoftwareRVG",
-      "MdAshrafMalik",
-      "palerdot",
-      "Dmytro.Omelyan",
-      "elfoxero",
-      "ondras",
-      "eng-mnabil",
-      "openjck",
-      "Vilius.L",
-      "carlosrafaelgn",
-      "jswisher",
-      "teoli",
-      "Sheppy",
-      "Paul",
-      "Sonnyp",
-      "MarkFinkle",
-      "Roc"
-    ]
-  },
   "Web/EXSLT": {
     "modified": "2019-06-06T12:36:57.244Z",
     "contributors": [
@@ -94608,10 +94542,6 @@
       "Ptak82",
       "alecananian"
     ]
-  },
-  "Web/HTML/Element/html/manifest": {
-    "modified": "2020-12-08T02:28:18.313Z",
-    "contributors": ["sideshowbarker", "bershanskiy"]
   },
   "Web/HTML/Element/i": {
     "modified": "2020-10-15T21:11:43.020Z",
@@ -126912,39 +126842,6 @@
       "gizmo_jaco",
       "ethertank",
       "evilpie"
-    ]
-  },
-  "Web/Security/Mixed_content/How_to_fix_website_with_mixed_content": {
-    "modified": "2019-11-19T10:27:43.925Z",
-    "contributors": [
-      "leela52452",
-      "stilliard",
-      "sanmao7912",
-      "ashucg",
-      "kcjoon",
-      "chrisatnws",
-      "alejaz",
-      "edtheman74",
-      "mfuji09",
-      "PushpitaPikuDey",
-      "tsaddique389",
-      "Alialwadie35",
-      "ChrisP1118",
-      "renzokuken",
-      "Sheppy",
-      "JazzMaster",
-      "fscholz",
-      "fweb",
-      "SphinxKnight",
-      "A5hleyRich",
-      "scarp1134",
-      "konklone",
-      "jswisher",
-      "satanica29",
-      "jazbit",
-      "bgrawi",
-      "TanviVyas",
-      "dbruant"
     ]
   },
   "Web/Security/Referer_header:_privacy_and_security_concerns": {

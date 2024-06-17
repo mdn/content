@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.menubar
 ---
 
-{{ APIRef() }}
+{{APIRef}}
 
 Returns the `menubar` object.
 

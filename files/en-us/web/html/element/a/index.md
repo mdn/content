@@ -130,6 +130,152 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
+## Accessibility
+
+### Strong link text
+
+**The content inside a link should indicate where the link goes**, even out of context.
+
+#### Inaccessible, weak link text
+
+A sadly common mistake is to only link the words "click here" or "here":
+
+```html example-bad
+<p>Learn more about our products <a href="/products">here</a>.</p>
+```
+
+##### Result
+
+{{EmbedLiveSample('Inaccessible, weak link text')}}
+
+#### Strong link text
+
+Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
+
+```html example-good
+<p>Learn more <a href="/products">about our products</a>.</p>
+```
+
+##### Result
+
+{{EmbedLiveSample('Strong link text')}}
+
+Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
+
+### onclick events
+
+Anchor elements are often abused as fake buttons by setting their `href` to `#` or `javascript:void(0)` to prevent the page from refreshing, then listening for their `click` events .
+
+These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
+
+Use a {{HTMLElement("button")}} instead. In general, **you should only use a hyperlink for navigation to a real URL**.
+
+### External links and linking to non-HTML resources
+
+Links that open in a new tab/window via `target="_blank"`, or links that point to a download file should indicate what will happen when the link is followed.
+
+People experiencing low vision conditions, navigating with the aid of screen reading technology, or with cognitive concerns may be confused when a new tab, window, or application opens unexpectedly. Older screen-reading software may not even announce the behavior.
+
+#### Link that opens a new tab/window
+
+```html
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia (opens in new tab)
+</a>
+```
+
+##### Result
+
+{{EmbedLiveSample('Link that opens a new tab/window')}}
+
+#### Link to a non-HTML resource
+
+```html
+<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
+```
+
+If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
+
+```html
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia
+  <img alt="(opens in new tab)" src="newtab.svg" />
+</a>
+
+<a href="2017-annual-report.ppt">
+  2017 Annual Report
+  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
+</a>
+```
+
+##### Result
+
+{{EmbedLiveSample('Link to a non-HTML resource')}}
+
+- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
+- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+
+### Skip links
+
+A **skip link** is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.
+
+```html
+<body>
+  <a href="#content" class="skip-link">Skip to main content</a>
+
+  <header>…</header>
+
+  <!-- The skip link jumps to here -->
+  <main id="content"></main>
+</body>
+```
+
+```css
+.skip-link {
+  position: absolute;
+  top: -3em;
+  background: #fff;
+}
+.skip-link:focus {
+  top: 0;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Skip links')}}
+
+Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.
+
+Skip links are especially useful for people who navigate with the aid of assistive technology such as switch control, voice command, or mouth sticks/head wands, where the act of moving through repetitive links can be laborious.
+
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+- [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
+- [MDN / Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+
+### Size and proximity
+
+#### Size
+
+Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+
+Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
+
+- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
+
+#### Proximity
+
+Interactive elements, like links, placed in close visual proximity should have space separating them. Spacing helps people with motor control issues, who may otherwise accidentally activate the wrong interactive content.
+
+Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
+
+- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
+
 ## Examples
 
 ### Linking to an absolute URL
@@ -290,152 +436,6 @@ document
 `<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
-
-## Accessibility concerns
-
-### Strong link text
-
-**The content inside a link should indicate where the link goes**, even out of context.
-
-#### Inaccessible, weak link text
-
-A sadly common mistake is to only link the words "click here" or "here":
-
-```html example-bad
-<p>Learn more about our products <a href="/products">here</a>.</p>
-```
-
-##### Result
-
-{{EmbedLiveSample('Inaccessible, weak link text')}}
-
-#### Strong link text
-
-Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
-
-```html example-good
-<p>Learn more <a href="/products">about our products</a>.</p>
-```
-
-##### Result
-
-{{EmbedLiveSample('Strong link text')}}
-
-Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
-
-### onclick events
-
-Anchor elements are often abused as fake buttons by setting their `href` to `#` or `javascript:void(0)` to prevent the page from refreshing, then listening for their `click` events .
-
-These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
-
-Use a {{HTMLElement("button")}} instead. In general, **you should only use a hyperlink for navigation to a real URL**.
-
-### External links and linking to non-HTML resources
-
-Links that open in a new tab/window via `target="_blank"`, or links that point to a download file should indicate what will happen when the link is followed.
-
-People experiencing low vision conditions, navigating with the aid of screen reading technology, or with cognitive concerns may be confused when a new tab, window, or application opens unexpectedly. Older screen-reading software may not even announce the behavior.
-
-#### Link that opens a new tab/window
-
-```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia (opens in new tab)
-</a>
-```
-
-##### Result
-
-{{EmbedLiveSample('Link that opens a new tab/window')}}
-
-#### Link to a non-HTML resource
-
-```html
-<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
-```
-
-If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
-
-```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg" />
-</a>
-
-<a href="2017-annual-report.ppt">
-  2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
-</a>
-```
-
-##### Result
-
-{{EmbedLiveSample('Link to a non-HTML resource')}}
-
-- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
-
-### Skip links
-
-A **skip link** is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.
-
-```html
-<body>
-  <a href="#content" class="skip-link">Skip to main content</a>
-
-  <header>…</header>
-
-  <!-- The skip link jumps to here -->
-  <main id="content"></main>
-</body>
-```
-
-```css
-.skip-link {
-  position: absolute;
-  top: -3em;
-  background: #fff;
-}
-.skip-link:focus {
-  top: 0;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Skip links')}}
-
-Skip links let keyboard users bypass content repeated throughout multiple pages, such as header navigation.
-
-Skip links are especially useful for people who navigate with the aid of assistive technology such as switch control, voice command, or mouth sticks/head wands, where the act of moving through repetitive links can be laborious.
-
-- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-- [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-
-### Size and proximity
-
-#### Size
-
-Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
-
-Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
-
-- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
-
-#### Proximity
-
-Interactive elements, like links, placed in close visual proximity should have space separating them. Spacing helps people with motor control issues, who may otherwise accidentally activate the wrong interactive content.
-
-Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
-
-- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
 ## Technical summary
 
