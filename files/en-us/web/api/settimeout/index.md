@@ -398,7 +398,7 @@ setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
 
 …results in the timeout being executed after approximately 5 seconds.
 
-**Note**: this doesn't match `setTimeout` behavior in Node.js, where any timeout larger than 2,147,483,647 ms
+**Note**: That doesn't match `setTimeout` behavior in Node.js, where any timeout larger than 2,147,483,647 ms
 results in an immediate execution.
 
 ## Examples
