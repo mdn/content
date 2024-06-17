@@ -6,12 +6,12 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-[**Safari**](https://www.apple.com/safari/) is a {{Glossary("Browser","Web browser")}} developed by Apple and bundled with macOS, iPadOS, and iOS. It's based on the open-source [WebKit](https://webkit.org/) engine.
+[**Safari**](https://www.apple.com/safari/) is a {{Glossary("Browser","web browser")}} developed by Apple and is built into Apple's operating systems, including macOS (for Mac computers), iPadOS (for iPad tablets), iOS (for iPhones), and visionOS (for augmented reality devices like the Apple Vision Pro).
 
 ## See also
 
 - [Safari](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) on Wikipedia
-- [Safari on apple.com](https://www.apple.com/safari/)
+- [Safari](https://www.apple.com/safari/) on apple.com
 - [The WebKit project](https://webkit.org/)
 - [WebKit Build Archives](https://webkit.org/build-archives/)
 - [Reporting a bug for Safari](https://bugs.webkit.org/)
