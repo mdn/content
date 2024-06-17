@@ -7,7 +7,11 @@ browser-compat: html.elements.dfn
 
 {{HTMLSidebar}}
 
-The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the ancestor {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest {{HTMLElement("section")}} ancestor of the `<dfn>` element, is considered to be the full definition of the term.
+The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the full definition of the term can be one of the following:
+
+- The ancestor paragraph (a block of text, sometimes marked by a {{HTMLElement("p")}} element)
+- The {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing
+- The nearest [section](/en-US/docs/Web/HTML/Content_categories#sectioning_content) ancestor of the `<dfn>` element,
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
@@ -130,7 +134,8 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
       </th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>

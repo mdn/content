@@ -7,7 +7,7 @@ browser-compat: css.properties.z-index
 
 {{CSSRef}}
 
-The **`z-index`** CSS property sets the z-order of a [positioned](/en-US/docs/Web/CSS/position) element and its descendants or flex and grid items. Overlapping elements with a larger z-index cover those with a smaller one.
+The **`z-index`** [CSS](/en-US/docs/Web/CSS) property sets the z-order of a [positioned](/en-US/docs/Web/CSS/position) element and its descendants or flex and grid items. Overlapping elements with a larger z-index cover those with a smaller one.
 
 {{EmbedInteractiveExample("pages/css/z-index.html")}}
 

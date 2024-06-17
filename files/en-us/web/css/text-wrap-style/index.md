@@ -7,7 +7,7 @@ browser-compat: css.properties.text-wrap-style
 
 {{CSSRef}}
 
-The **`text-wrap-style`** CSS property controls how text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
+The **`text-wrap-style`** [CSS](/en-US/docs/Web/CSS) property controls how text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
 
 {{EmbedInteractiveExample("pages/css/text-wrap-style.html")}}
 
