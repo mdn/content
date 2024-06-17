@@ -29,46 +29,7 @@ While using multiple `<h1>` elements on one page is allowed by the HTML standard
 
 Prefer using only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
 
-## Examples
-
-### All headings
-
-The following code shows all the heading levels, in use.
-
-```html
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-<h5>Heading level 5</h5>
-<h6>Heading level 6</h6>
-```
-
-{{EmbedLiveSample('All_headings', '280', '300')}}
-
-### Example page
-
-The following code shows a few headings with some content under them.
-
-```html
-<h1>Heading elements</h1>
-<h2>Summary</h2>
-<p>Some text here…</p>
-
-<h2>Examples</h2>
-<h3>Example 1</h3>
-<p>Some text here…</p>
-
-<h3>Example 2</h3>
-<p>Some text here…</p>
-
-<h2>See also</h2>
-<p>Some text here…</p>
-```
-
-{{EmbedLiveSample('Example_page', '280', '480')}}
-
-## Accessibility concerns
+## Accessibility
 
 ### Navigation
 
@@ -162,6 +123,45 @@ In this example, screen reading technology would announce that there are two {{H
 
 - [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+
+## Examples
+
+### All headings
+
+The following code shows all the heading levels, in use.
+
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
+
+{{EmbedLiveSample('All_headings', '280', '300')}}
+
+### Example page
+
+The following code shows a few headings with some content under them.
+
+```html
+<h1>Heading elements</h1>
+<h2>Summary</h2>
+<p>Some text here…</p>
+
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>Some text here…</p>
+
+<h3>Example 2</h3>
+<p>Some text here…</p>
+
+<h2>See also</h2>
+<p>Some text here…</p>
+```
+
+{{EmbedLiveSample('Example_page', '280', '480')}}
 
 ## Technical summary
 

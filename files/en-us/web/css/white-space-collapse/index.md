@@ -7,7 +7,7 @@ browser-compat: css.properties.white-space-collapse
 
 {{CSSRef}}
 
-The **`white-space-collapse`** CSS property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
+The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
 > **Note:** The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 

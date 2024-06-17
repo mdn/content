@@ -22,7 +22,7 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
   - : Makes the hardware pulse at a certain intensity for a specified duration.
 
-- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}}
   - : Makes the hardware play a specific vibration pattern.
 
 ## Examples
