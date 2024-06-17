@@ -384,7 +384,7 @@ API instead.
 ### Maximum delay value
 
 Browsers store the delay as a 32-bit signed integer internally. This causes an integer
-overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So for example,
+overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So for example, this code:
 
 ```js
 setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
