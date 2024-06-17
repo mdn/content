@@ -14,7 +14,7 @@ attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. Wh
 attribute is not specified, or if it is set to an invalid value, like a negative, the
 default value of `150` is used.
 
-When the `height` property is set, even when set to the same value as current, the drawing buffer is always reset to blank, for all context types. If you need to restore the previous content, you can save it via {{domxref("CanvasRenderingContext2D.getImageData")}} and restore it via {{domxref("CanvasRenderingContext2D.putImageData")}}.
+When the `height` property is set the drawing buffer is always reset to blank — this is true for all context types, and even when the height is set to the same value. If you need to restore the previous content, you can save it via {{domxref("CanvasRenderingContext2D.getImageData()")}} and restore it via {{domxref("CanvasRenderingContext2D.putImageData()")}}.
 
 This is one of the two properties, the other being
 {{domxref("HTMLCanvasElement.width")}}, that controls the size of the canvas.
