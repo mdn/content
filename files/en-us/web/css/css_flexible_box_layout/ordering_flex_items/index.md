@@ -107,11 +107,11 @@ You might have a design, perhaps a card that will display a news item. The headi
 
 Visually, the date appears above the heading, in the source. However, if the card was read out by a screen reader I would prefer that the title was announced first and then the publication date. We can accomplish this with the `order` property.
 
-The card is our flex container, with `flex-direction` set to `colum`n. The date is given an `order` of `-1`. This places it up above the heading.
+The card is our flex container, with `flex-direction` set to `column`. We give the date an `order` of `-1`, placing it above the heading.
 
 {{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}
 
-These small tweaks are the sort of cases where the `order` property makes sense. Keep the logical order as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use `order` for purely visual design tweaks. Don't reorder items that receive keyboard focus. Ensure you always test your content using only a keyboard, rather than a mouse or a touchscreen; it will be apparent if your development choices make getting around the content difficult.
+These small tweaks are the sort of cases where the `order` property makes sense. Keep the logical order the same as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use `order` for purely visual design tweaks. Don't reorder items that receive keyboard focus. Ensure you always test your content using only a keyboard rather than a mouse or a touchscreen; this will reveal if your development choices make it more complex to navigate the content.
 
 ## See also
 
