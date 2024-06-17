@@ -48,7 +48,7 @@ In the following example a container has been set to `display: flex`, which mean
 
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
 
-  - : How Flexbox relates to other layout methods, and other CSS specifications
+  - : How Flexbox relates to other layout methods and other CSS specifications.
 
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 
