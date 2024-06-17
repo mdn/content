@@ -24,4 +24,5 @@ A positive number indicating the media sampling rate.
 
 ## See also
 
-- [`RTCRtpCodecParameters.clockRate`](/en-US/docs/Web/API/RTCRtpCodecParameters#clockrate)
+- `codecs.clockRate` option in parameter passed to [`RTCRtpTransceiver.setCodecPreferences()`](/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#clockRate) and [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#clockRate).
+- `codecs.clockRate` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#clockRate) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#clockRate).
