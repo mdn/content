@@ -55,7 +55,7 @@ configure(config)
             - `voip`
               - : Process signal for improved speech intelligibility.
         - `complexity` {{optional_inline}}
-          - : A number that defines the encoder's computational complexity, based on the aspects described in section [RFC6716, 2.1.5. — Complexity](https://www.rfc-editor.org/rfc/rfc6716#section-2.1.5). The valid range is 0 to 10, with 10 representing the highest complexity. If no value is specified, the default value is platform-specific, with with specification recommending 5 for mobile platforms, and 9 for all other platforms.
+          - : A number that defines the encoder's computational complexity, based on the aspects described in section [RFC6716, 2.1.5. — Complexity](https://www.rfc-editor.org/rfc/rfc6716#section-2.1.5). The valid range is 0 to 10, with 10 representing the highest complexity. If no value is specified, the default value is platform-specific, with the specification recommending 5 for mobile platforms, and 9 for all other platforms.
         - `format` {{optional_inline}}
           - : An enumerated value that specifies the format in which the encoder should output {{domxref("EncodedAudioChunk")}}s. Possible values are:
             - `opus` (default)
