@@ -422,8 +422,14 @@ In this example, we set different styles for each of the column.
 
 ```html-nolint
 <table>
+<caption>Student roster</caption>
+<colgroup>
+  <col/>
+  <col/>
+  <col/>
+</colgroup>
   <thead>
-    <tr><th>Column 1</th><th>Column 2</th><th>Column3</th></tr>
+    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
   </thead>
   <tbody>
     <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
@@ -442,7 +448,7 @@ td {
   border: 1px solid black;
 }
 
-tbody > tr > td:nth-child(1) {
+tr :nth-child(1) {
   text-align: left;
   vertical-align: bottom;
   background-color: silver;
