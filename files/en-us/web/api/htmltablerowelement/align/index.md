@@ -22,6 +22,10 @@ The possible values are:
   - : Align the text to the right. Use `text-align: right` instead.
 - `center`
   - : Center the text in the cell. Use `text-align: center` instead.
+- `justify`
+  - : Spread the text across the cell. Use `text-align: justify` instead.
+- `char`
+  - : Never fully supported, align text to a specified character. Use `text-align: <string>,` where the string is a single character, when supported.
 
 ## Examples
 
