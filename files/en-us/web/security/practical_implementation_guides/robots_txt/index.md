@@ -10,7 +10,7 @@ page-type: guide
 
 ## Problem
 
-Many factors increase the load on your website. You may wish to reduce website load by disabling the crawling of automatically generated content. As an added benefit, this prevents the pollution of search results with resources that don't benefit from being searchable.
+Many factors can increase the load on your website; this includes web crawlers. In addition, if allowed to crawl the entirety of a site, web crawlers can cause pollution of search results with resources that don't benefit from being searchable.
 
 ## Solution
 

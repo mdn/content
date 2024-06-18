@@ -36,7 +36,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Indicates whether input elements can by default have their values automatically completed by the browser. `autocomplete` attributes on form elements override it on `<form>`. Possible values:
 
-    - `off`: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see [The autocomplete attribute and login fields](/en-US/docs/Web/Security/Practical_implementation/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).)
+    - `off`: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).)
     - `on`: The browser may automatically complete entries.
 
 - `name`

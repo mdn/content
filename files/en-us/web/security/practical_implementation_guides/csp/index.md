@@ -42,7 +42,7 @@ Due to the difficulty in retrofitting CSP into existing websites, CSP is mandato
 5. Make sure you are not loading any resources over HTTP. Load them over HTTPS instead. Don't include any HTTP sources in your CSP allowlists.
 6. For existing websites with large codebases that would require too much work to disable inline scripts, you could fall back to `default-src https: 'unsafe-inline'`. This is still helpful because it keeps resources from being accidentally loaded over HTTP. However, it does not provide any XSS protection.
 
-Notes:
+Keep the following points in mind:
 
 - If you are unable to use the `Content-Security-Policy` header, pages can instead include a [`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
 - Care needs to be taken with `data:` URIs because these are unsafe inside `script-src` and `object-src` (or `default-src`).

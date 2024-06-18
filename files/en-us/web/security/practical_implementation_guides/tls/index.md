@@ -14,7 +14,7 @@ page-type: guide
 
 If data is sent over the web unencrypted, it can be intercepted and read by third parties, who can modify and/or steal the data — this is often known as a [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attack. MiTM attacks have severe consequences for the security of your system.
 
-All requests and responses should therefore be sent over HTTPS. The modern web practically enforces this — all browsers are moving towards requiring [HTTPS](/en-US/docs/Glossary/HTTPS) by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+All requests and responses should, therefore, be sent over HTTPS. The modern web practically enforces this — all browsers are moving towards requiring [HTTPS](/en-US/docs/Glossary/HTTPS) by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ### Solution
 
