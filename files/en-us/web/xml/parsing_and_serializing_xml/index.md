@@ -42,7 +42,7 @@ if (errorNode) {
 
 ### Parsing URL-addressable resources into DOM trees
 
-#### Using XMLHttpRequest
+#### Using fetch
 
 Here is sample code that reads and parses a URL-addressable XML file into a DOM tree:
 
