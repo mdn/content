@@ -454,12 +454,12 @@ tr :nth-child(1) {
   background-color: silver;
 }
 
-tbody tr td:nth-child(2) {
+tbody tr :nth-child(2) {
   text-align: center;
   vertical-align: middle;
 }
 
-tbody tr td:nth-child(3) {
+tbody tr :nth-child(3) {
   text-align: right;
   vertical-align: top;
   background-color: tomato;
