@@ -7,7 +7,7 @@ browser-compat: css.properties.flex
 
 {{CSSRef}}
 
-The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets how a flex _item_ will grow or shrink to fit the space available in its flex container.
+The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
 
 {{EmbedInteractiveExample("pages/css/flex.html")}}
 
@@ -79,17 +79,17 @@ The `flex` property may be specified using one, two, or three values.
 ### Values
 
 - `initial`
-  - : The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting "`flex: 0 1 auto`".
+  - : The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting `flex: 0 1 auto`.
 - `auto`
-  - : The item is sized according to its `width` and `height` properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting "`flex: 1 1 auto`".
+  - : The item is sized according to its `width` and `height` properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting `flex: 1 1 auto`.
 - `none`
-  - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "`flex: 0 0 auto`".
+  - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
 - `<'flex-grow'>`
   - : Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `0`)
 - `<'flex-shrink'>`
   - : Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `1`)
 - `<'flex-basis'>`
-  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted. (initial is `auto`)
+  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted. Initial is `auto`.
 
 ## Description
 
@@ -178,7 +178,7 @@ For most purposes, authors should set `flex` to one of the following values: `au
 
 {{EmbedLiveSample("Description", 1200, 400)}}
 
-By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.
+By default flex items don't shrink below their {{cssxref("min-content")}} size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.
 
 ## Formal definition
 
@@ -240,12 +240,12 @@ flexAuto.addEventListener("click", () => {
 
 The flex container contains two flex items:
 
-- "flex: auto" has a `flex` value of [`auto`](auto)
-- "flex: initial" has a `flex` value of [`initial`](#initial)
+- `flex: auto` has a `flex` value of [`auto`](auto)
+- `flex: initial` has a `flex` value of [`initial`](#initial)
 
-The "flex: initial" item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by "flex: auto".
+The `flex: initial` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by `flex: auto`.
 
-When you click "flex: auto", we set "flex: initial"'s {{cssxref("display")}} property to `none`, removing it from the layout. The "flex: auto" item then expands to occupy all the available space in the container.
+When you click `flex: auto`, we set `flex: initial`'s {{cssxref("display")}} property to `none`, removing it from the layout. The `flex: auto` item then expands to occupy all the available space in the container.
 
 {{EmbedLiveSample('Setting_flex_auto','100%','100')}}
 
@@ -259,5 +259,6 @@ When you click "flex: auto", we set "flex: initial"'s {{cssxref("display")}} pro
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
