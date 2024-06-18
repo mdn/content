@@ -16,6 +16,9 @@ Other values indicate reasons why the keys cannot be used for presenting the con
 
 The policy restrictions currently only include a restriction on the minimum supported HDCP version.
 
+Note that the method checks a "hypothetical key" against the restrictions.
+The application does not need to first create a real key and fetch a real license using {{domxref("MediaKeySession")}}, and the {{domxref("MediaKeys")}} doesn't even have to be attached to audio or video elements.
+
 ## Syntax
 
 ```js-nolint
