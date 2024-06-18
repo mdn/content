@@ -1,6 +1,6 @@
 ---
 title: CSS Layout
-slug: Web/Guide/CSS/CSS_Layout
+slug: Web/CSS/CSS_Layout
 page-type: guide
 ---
 

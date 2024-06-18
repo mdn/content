@@ -49,4 +49,3 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains 
 ## See also
 
 - [WAI Interest Group](https://www.w3.org/WAI/about/groups/waiig/)
-- [Developer guides](/en-US/docs/Web/Guide)

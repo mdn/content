@@ -38,10 +38,6 @@ Content:Glossary:
   - changed-files:
       - any-glob-to-any-file:
           - files/en-us/glossary/**
-Content:Guide:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/web/guide/**
 Content:HTML:
   - changed-files:
       - any-glob-to-any-file:
