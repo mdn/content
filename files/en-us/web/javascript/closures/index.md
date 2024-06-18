@@ -26,7 +26,9 @@ init();
 
 `init()` creates a local variable called `name` and a function called `displayName()`. The `displayName()` function is an inner function that is defined inside `init()` and is available only within the body of the `init()` function. Note that the `displayName()` function has no local variables of its own. However, since inner functions have access to the variables of outer functions, `displayName()` can access the variable `name` declared in the parent function, `init()`.
 
-Run the code using [this JSFiddle link](https://jsfiddle.net/3dxck52m/) and notice that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
+{{EmbedLiveSample("lexical_scoping")}}
+
+Notice that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
 
 In this particular example, the scope is called a _function scope_, because the variable is accessible and only accessible within the function body where it's declared.
 
@@ -158,7 +160,7 @@ document.getElementById("size-16").onclick = size16;
 <button id="size-16">16</button>
 ```
 
-Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
+{{EmbedLiveSample("practical_closures")}}
 
 ## Emulating private methods with closures
 
@@ -366,14 +368,14 @@ console.log(getX()); // 2
 
 Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
 
-```html
+```html live-sample___closure-problem
 <p id="help">Helpful notes will appear here</p>
 <p>Email: <input type="text" id="email" name="email" /></p>
 <p>Name: <input type="text" id="name" name="name" /></p>
 <p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
-```js
+```js live-sample___closure-problem
 function showHelp(help) {
   document.getElementById("help").textContent = help;
 }
@@ -397,7 +399,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-Try running the code in [JSFiddle](https://jsfiddle.net/v7gjv/8164/).
+{{EmbedLiveSample("closure-problem")}}
 
 The `helpText` array defines three helpful hints, each associated with the ID of an input field in the document. The loop cycles through these definitions, hooking up an `onfocus` event to each one that shows the associated help method.
 
@@ -433,8 +435,6 @@ function setupHelp() {
 
 setupHelp();
 ```
-
-Run the code using [this JSFiddle link](https://jsfiddle.net/v7gjv/9573/).
 
 This works as expected. Rather than the callbacks all sharing a single lexical environment, the `makeHelpCallback` function creates _a new lexical environment_ for each callback, in which `help` refers to the corresponding string from the `helpText` array.
 

@@ -12552,7 +12552,6 @@
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function.displayName	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/constructor	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
-/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
