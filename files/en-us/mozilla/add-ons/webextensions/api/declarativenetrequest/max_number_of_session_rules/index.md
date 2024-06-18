@@ -11,7 +11,7 @@ The maximum number of session scoped rules an extension can add.
 
 This limit is:
 
-- in Chrome: `1000`
+- in Chrome: `5000`
 - in Firefox: `5000`
 
 {{WebExtExamples("h2")}}
