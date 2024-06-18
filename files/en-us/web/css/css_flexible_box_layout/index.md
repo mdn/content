@@ -69,6 +69,7 @@ In the following example a container has been set to `display: flex`, which mean
 - [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
   - : Common design patterns that are typical Flexbox use cases.
+
 - [CSS layout: flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 
   - : Learn how to use flexbox layout to create web layouts.
