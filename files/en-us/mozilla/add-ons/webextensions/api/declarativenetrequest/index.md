@@ -109,9 +109,8 @@ An extension can:
 
 The number of dynamic and session-scoped rules an extension can add is limited to:
 
-- Up to Chrome 119 and Firefox 127, the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
-- From Chrome 120 and Firefox 128, the values of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","
-  MAX_NUMBER_OF_DYNAMIC_RULES")}} and {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}}
+- In Safari and up to Chrome 119 and Firefox 127, the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
+- From Chrome 120 and Firefox 128, the values of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}} and {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}}
 
 ## Matching precedents
 
@@ -193,7 +192,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}}
   - : The number of times {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} can be called within a period of {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} {{deprecated_inline}}
-  - : The maximum number of combined dynamic and session scoped rules an extension can add.
+  - : The maximum number of combined dynamic and session-scoped rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES")}}
   - : The maximum number of dynamic rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}
@@ -201,7 +200,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES")}}
   - : The maximum number of regular expression rules that an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES")}}
-  - : The maximum number of session scoped rules an extension can add.
+  - : The maximum number of session-scoped rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS")}}
   - : The maximum number of static rulesets an extension can specify as part of the [`declarative_net_request.rule_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key.
 - {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}
@@ -220,7 +219,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.getMatchedRules()")}}
   - : Returns all the rules matched for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.getSessionRules()")}}
-  - : Returns the set of session scoped rules for the extension.
+  - : Returns the set of session-scoped rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.isRegexSupported()")}}
   - : Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
 - {{WebExtAPIRef("declarativeNetRequest.setExtensionActionOptions()")}}
@@ -232,7 +231,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets()")}}
   - : Updates the set of active static rulesets for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.updateSessionRules()")}}
-  - : Modifies the set of session scoped rules for the extension.
+  - : Modifies the set of session-scoped rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.updateStaticRules()")}}
   - : Modifies the enabled state of rules in a static ruleset.
 

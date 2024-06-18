@@ -7,12 +7,12 @@ browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_SESSION_RU
 
 {{AddonSidebar}}
 
-The maximum number of session scoped rules an extension can add.
+The maximum number of session-scoped rules an extension can add.
 
 This limit is:
 
-- in Chrome: `5000`
 - in Firefox: `5000`
+- in Chrome: `5000`
 
 {{WebExtExamples("h2")}}
 

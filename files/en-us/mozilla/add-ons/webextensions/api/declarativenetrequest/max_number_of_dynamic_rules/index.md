@@ -11,8 +11,8 @@ The maximum number of dynamic rules an extension can add.
 
 This limit is:
 
-- in Chrome: `30000`
 - in Firefox: `5000`
+- in Chrome: `30000`
 
 {{WebExtExamples("h2")}}
 

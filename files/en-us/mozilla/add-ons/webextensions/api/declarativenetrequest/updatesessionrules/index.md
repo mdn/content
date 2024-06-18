@@ -11,8 +11,9 @@ Modifies the set of scoped rules for the extension. The rules with IDs listed in
 
 - This update happens as an atomic operation: either all specified rules are added and removed, or an error is returned.
 - These rules are not persisted across browser sessions.
-- Up to Chrome 119 and Firefox 127, the maximum number of dynamic and session rules an extension can add is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
-- From Chrome 120 and Firefox 128, the maximum number of session rules an extension can add is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}}.
+- The number of rules that can be added is limited:
+  - In Safari and up to Chrome 119 and Firefox 127, to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} for the combined total of dynamic and session-scoped rules.
+  - From Chrome 120 and Firefox 128, to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}} for session-scoped rules alone.
 
 ## Syntax
 
