@@ -23,6 +23,38 @@ The content of a `<main>` element should be unique to the document. Content that
 
 `<main>` doesn't contribute to the document's outline; that is, unlike elements such as {{HTMLElement("body")}}, headings such as {{HTMLElement("Heading_Elements", "h2")}}, and such, `<main>` doesn't affect the {{glossary("DOM", "DOM's")}} concept of the structure of the page. It's strictly informative.
 
+## Accessibility
+
+### Landmark
+
+The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
+
+### Skip navigation
+
+Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.
+
+Adding an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the `<main>` element lets it be a target of a skip navigation link.
+
+```html
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <!-- navigation and header content -->
+
+  <main id="main-content">
+    <!-- main page content -->
+  </main>
+</body>
+```
+
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+
+### Reader mode
+
+Browser reader mode functionality looks for the presence of the `<main>` element, as well as [heading](/en-US/docs/Web/HTML/Element/Heading_Elements) and [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) when converting content into a specialized reader view.
+
+- [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
+
 ## Examples
 
 ```html
@@ -55,38 +87,6 @@ The content of a `<main>` element should be unique to the document. Content that
 ### Result
 
 {{EmbedLiveSample('Examples')}}
-
-## Accessibility concerns
-
-### Landmark
-
-The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
-
-### Skip navigation
-
-Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.
-
-Adding an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the `<main>` element lets it be a target of a skip navigation link.
-
-```html
-<body>
-  <a href="#main-content">Skip to main content</a>
-
-  <!-- navigation and header content -->
-
-  <main id="main-content">
-    <!-- main page content -->
-  </main>
-</body>
-```
-
-- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
-
-### Reader mode
-
-Browser reader mode functionality looks for the presence of the `<main>` element, as well as [heading](/en-US/docs/Web/HTML/Element/Heading_Elements) and [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) when converting content into a specialized reader view.
-
-- [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 
 ## Technical summary
 

@@ -160,7 +160,7 @@ Associates media types with one or more extensions to make sure the resources wi
 Servers should use `text/javascript` for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
 ```apacheconf
-<IfModule mod_expires.c>
+<IfModule mod_mime.c>
   # Data interchange
     AddType application/atom+xml      atom
     AddType application/json          json map topojson

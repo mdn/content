@@ -14,8 +14,7 @@ When the term "Base64" is used on its own to refer to a specific {{glossary("alg
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in
-{{glossary("URL")}} path segments or query parameters.
+A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in {{glossary("URL")}} path segments or query parameters. You don't need this encoding if you are not putting the data in a path segment or query parameter — for example, [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) have neither and can use the standard Base64 encoding.
 
 Base64 encoding schemes are commonly used to encode binary data for storage or transfer over media that can only deal with ASCII text (or some superset of ASCII that still falls short of accepting arbitrary binary data). This ensures that the data remains intact without modification during transport. Common applications of Base64 include:
 
@@ -33,8 +32,8 @@ This means that the Base64 version of a string or file is typically roughly a th
 
 Browsers natively provide two JavaScript functions for decoding and encoding Base64 strings:
 
-- [`btoa`](/en-US/docs/Web/API/btoa): creates a Base64-encoded ASCII string from a string of binary data ("btoa" should be read as "binary to ASCII").
-- [`atob`](/en-US/docs/Web/API/atob): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
+- {{domxref("Window.btoa()")}} (also {{domxref("WorkerGlobalScope.btoa()", "available in workers", "", "nocode")}}): creates a Base64-encoded ASCII string from a string of binary data ("btoa" should be read as "binary to ASCII").
+- {{domxref("Window.atob()")}} (also {{domxref("WorkerGlobalScope.atob()", "available in workers", "", "nocode")}}): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
 
 > **Note:** Base64 is a binary encoding rather than a text encoding, but `btoa` and `atob` were added to the web platform before it supported binary data types. As a result, the two functions use strings to represent binary data, with the {{glossary("code point")}} of each character representing the value of each byte. This has led to a common misconception that `btoa` can be used to encode arbitrary text data — for example, creating a Base64 `data:` URL of a text or HTML document.
 >
@@ -94,8 +93,8 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 ## See Also
 
 - JavaScript APIs:
-  - [btoa() global function](/en-US/docs/Web/API/btoa)
-  - [atob() global function](/en-US/docs/Web/API/atob)
+  - {{domxref("Window.atob()")}} (also {{domxref("WorkerGlobalScope.atob()", "available in workers", "", "nocode")}})
+  - {{domxref("Window.btoa()")}} (also {{domxref("WorkerGlobalScope.btoa()", "available in workers", "", "nocode")}})
 - [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - [Base64](https://en.wikipedia.org/wiki/Base64) on Wikipedia
 - Base64 Algorithm described in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)

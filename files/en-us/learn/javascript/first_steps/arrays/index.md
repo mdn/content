@@ -392,15 +392,12 @@ window.addEventListener("load", updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-const KEY_TAB = 9;
-const KEY_ESC = 27;
-
 textarea.onkeydown = (event) => {
-  if (event.keyCode === KEY_TAB) {
+  if (event.code === "Tab") {
     event.preventDefault();
     insertAtCaret("\t");
   }
-  if (event.keyCode === KEY_ESC) {
+  if (event.code === "Escape") {
     textarea.blur();
   }
 };
@@ -626,15 +623,12 @@ window.addEventListener("load", updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-const KEY_TAB = 9;
-const KEY_ESC = 27;
-
 textarea.onkeydown = (event) => {
-  if (event.keyCode === KEY_TAB) {
+  if (event.code === "Tab") {
     event.preventDefault();
     insertAtCaret("\t");
   }
-  if (event.keyCode === KEY_ESC) {
+  if (event.code === "Escape") {
     textarea.blur();
   }
 };

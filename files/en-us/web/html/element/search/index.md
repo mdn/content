@@ -17,7 +17,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<search>` element is not for presenting search results. Rather, search or filtered results should be presented as part of the main content of that web page. That said, suggestions and links that are part of "quick search" functionality within the search or filtering functionality are appropriately nested within the contents of the `<search>` element as they are search features.
 
-## Accessibility concerns
+## Accessibility
 
 The `<search>` element defines a [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role) landmark. This removes the need for adding `role=search` to a {{HTMLElement('form')}} element.
 

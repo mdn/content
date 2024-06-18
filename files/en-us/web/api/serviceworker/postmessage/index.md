@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorker.postMessage
 ---
 
-{{APIRef("Service Workers API")}}{{securecontext_header}}
+{{APIRef("Service Workers API")}}{{securecontext_header}}{{AvailableInWorkers}}
 
 The **`postMessage()`** method of the {{domxref("ServiceWorker")}} interface sends a message to the worker. The first parameter is the data to send to the worker. The data may be any JavaScript object which can be handled by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.text-rendering
 
 {{CSSRef}}
 
-The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
+The **`text-rendering`** [CSS](/en-US/docs/Web/CSS) property provides information to the rendering engine about what to optimize for when rendering text.
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
 

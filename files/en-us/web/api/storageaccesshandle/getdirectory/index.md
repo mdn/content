@@ -28,7 +28,8 @@ A {{jsxref("Promise")}} that fulfills with an unpartitioned {{domxref("FileSyste
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("StorageManager.getDirectory()")}}
+
+See {{domxref("StorageManager.getDirectory()")}}
 
 ## Examples
 

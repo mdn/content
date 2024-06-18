@@ -2081,10 +2081,10 @@
 /en-US/docs/DOM/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/DOM/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/DOM/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM/window.atob	/en-US/docs/Web/API/atob
+/en-US/docs/DOM/window.atob	/en-US/docs/Web/API/Window/atob
 /en-US/docs/DOM/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM/window.blur	/en-US/docs/Web/API/Window/blur
-/en-US/docs/DOM/window.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/DOM/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
 /en-US/docs/DOM/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/DOM/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
@@ -2543,10 +2543,10 @@
 /en-US/docs/DOM:treeWalker.whatToShow	/en-US/docs/Web/API/TreeWalker/whatToShow
 /en-US/docs/DOM:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/DOM:window.atob	/en-US/docs/Web/API/atob
+/en-US/docs/DOM:window.atob	/en-US/docs/Web/API/Window/atob
 /en-US/docs/DOM:window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/DOM:window.blur	/en-US/docs/Web/API/Window/blur
-/en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM:window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/DOM:window.clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/DOM:window.clearTimeout	/en-US/docs/Web/API/clearTimeout
@@ -2691,7 +2691,6 @@
 /en-US/docs/DOM_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /en-US/docs/DataTypeSet	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 /en-US/docs/Deer_Park	/en-US/docs/Mozilla/Firefox/Releases/1.5
-/en-US/docs/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Detecting_device_orientation	/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /en-US/docs/Determining_the_dimensions_of_elements	/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /en-US/docs/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
@@ -3994,7 +3993,7 @@
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
-/en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+/en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Community/Contributing/Getting_started
 /en-US/docs/ICC_color_correction_in_Firefox	/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
@@ -6382,7 +6381,6 @@
 /en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/OpenWebApps	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos
 /en-US/docs/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Overview_of_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
@@ -6791,10 +6789,10 @@
 /en-US/docs/Security/InsecurePasswords	/en-US/docs/Web/Security/Insecure_passwords
 /en-US/docs/Security/Insecure_passwords	/en-US/docs/Web/Security/Insecure_passwords
 /en-US/docs/Security/MixedContent	/en-US/docs/Web/Security/Mixed_content
-/en-US/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
-/en-US/docs/Security/MixedContent/fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+/en-US/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
+/en-US/docs/Security/MixedContent/fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/Mixed_content	/en-US/docs/Web/Security/Mixed_content
-/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Security/Weak_Signature_Algorithm	/en-US/docs/Web/Security/Weak_Signature_Algorithm
 /en-US/docs/Security_changes_in_Firefox_3.1	/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes
@@ -7362,8 +7360,8 @@
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
-/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/en-US/docs/Using_the_W3C_DOM_Level_1_Core:Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /en-US/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /en-US/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -8044,9 +8042,11 @@
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
+/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
+/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example
+/en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
@@ -9543,6 +9543,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpCodecCapability	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpCodecParameters	/en-US/docs/Web/API/RTCCodecStats
 /en-US/docs/Web/API/RTCRtpContributingSource	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
 /en-US/docs/Web/API/RTCRtpContributingSource/audioLevel	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
 /en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp	/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources
@@ -10144,8 +10145,6 @@
 /en-US/docs/Web/API/Window/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/Window/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
-/en-US/docs/Web/API/Window/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/Window/btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/Window/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
@@ -10223,11 +10222,11 @@
 /en-US/docs/Web/API/Window/vrdisplayfocus_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event	/en-US/docs/Web/API/Window
-/en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
-/en-US/docs/Web/API/WindowBase64/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WindowBase64/btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowBase64/atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/WindowBase64/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/Web/API/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/Web/API/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -10249,8 +10248,8 @@
 /en-US/docs/Web/API/WindowEventHandlers/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowLocalStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/WindowLocalStorage.localStorage	/en-US/docs/Web/API/Window/localStorage
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
@@ -10303,8 +10302,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
-/en-US/docs/Web/API/WorkerGlobalScope/atob	/en-US/docs/Web/API/atob
-/en-US/docs/Web/API/WorkerGlobalScope/btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
@@ -10400,6 +10397,8 @@
 /en-US/docs/Web/API/XRWebGLSubImage/textureWidth	/en-US/docs/Web/API/XRWebGLSubImage/colorTextureWidth
 /en-US/docs/Web/API/XSLTProcessor/Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Web/API/atob	/en-US/docs/Web/API/Window/atob
+/en-US/docs/Web/API/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert_static
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir_static
@@ -10774,10 +10773,10 @@
 /en-US/docs/Web/API/window.URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/Web/API/window.alert	/en-US/docs/Web/API/Window/alert
-/en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/atob
+/en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/Window/atob
 /en-US/docs/Web/API/window.back	/en-US/docs/Web/API/Window/back
 /en-US/docs/Web/API/window.blur	/en-US/docs/Web/API/Window/blur
-/en-US/docs/Web/API/window.btoa	/en-US/docs/Web/API/btoa
+/en-US/docs/Web/API/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
 /en-US/docs/Web/API/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/Web/API/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
@@ -11753,7 +11752,6 @@
 /en-US/docs/Web/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_OM_API	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Typed_OM_API
-/en-US/docs/Web/Demos_of_open_web_technologies	/en-US/docs/Web/Demos
 /en-US/docs/Web/Events/Activate	/en-US/docs/Web/API/Element/DOMActivate_event
 /en-US/docs/Web/Events/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
@@ -12235,6 +12233,7 @@
 /en-US/docs/Web/HTML/Element/h4	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h5	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/HTML/Element/h6	/en-US/docs/Web/HTML/Element/Heading_Elements
+/en-US/docs/Web/HTML/Element/html/manifest	/en-US/docs/Web/Manifest
 /en-US/docs/Web/HTML/Element/image	/en-US/docs/Web/HTML/Element/img
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
@@ -13023,6 +13022,7 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/3_Collecting_aggregate_data_based_on_DNT	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
 /en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn/Server-side/Configuring_server_MIME_types

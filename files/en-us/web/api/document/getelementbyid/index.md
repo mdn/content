@@ -115,4 +115,4 @@ In non-HTML documents, the DOM implementation must have information on which att
 
 - {{domxref("Document")}} reference for other methods and properties you can use to get references to elements in the document.
 - {{domxref("Document.querySelector()")}} for selectors via queries like `'div.myclass'`
-- [xml:id](https://www.w3.org/TR/xml-id/) - has a utility method for allowing `getElementById()` to obtain 'xml:id' in {{glossary("XML")}} documents
+- {{domxref("Document.evaluate()")}} - has a utility method for selecting by `xml:id` in {{glossary("XML")}} documents
