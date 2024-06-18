@@ -22,7 +22,7 @@ The listener can respond in one of four ways:
 
 - Provide credentials synchronously
 
-  - : If credentials are available synchronously, the extension can supply them synchronously. However, synchronous handling is only appropriate for the simplest of extensions. If the extension does this, the browser attempts to log in with the credentials. The listener can provide credentials synchronously as follows:
+  - : If credentials are available synchronously, the extension can supply them synchronously. If the extension does this, the browser attempts to log in with the credentials. The listener can provide credentials synchronously as follows:
 
     - in addListener, pass `"blocking"` in the `extraInfoSpec` parameter
     - in the listener, return an object with an `authCredentials` property set to the credentials to supply
@@ -82,6 +82,10 @@ Events have three functions:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
+    - `asyncCallback` {{optional_inline}}
+      - : A function to call, at most once, to asynchronously modify the request object.
+      
+        This parameter is only present if the event listener was registered with `"asyncBlocking"` in the `extraInfoSpec` array. `asyncCallback` will be undefined if `extraInfoSpec` is not provided or contains `"blocking"`.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}} depending on the settings in `extraInfoSpec`.
 
@@ -93,10 +97,13 @@ Events have three functions:
 
     - `"blocking"`: make the request block so you can cancel the request or supply authentication credentials. Return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
 
-    - `"asyncBlocking"`: handle the request asynchronously.
-
-      - in Firefox up to version 127, `"blocking"` is used instead, and the event handler function can return a Promise that resolves to a `BlockingResponse` object, with its `cancel` or `authCredentials` properties set. This is basically the same as handling the event synchronously.
-      - in Firefox 128 and Chrome, `"asyncBlocking"` is used. The event handler function is passed a function as a second parameter (called `asyncCallback`) that should be invoked with the `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
+      - In Chrome, the event listener must respond synchronously.
+      
+      - In Firefox, the event listener may return a Promise that resolves to a `BlockingResponse` object to respond to the event asynchronously. 
+    - `"asyncBlocking"`: handle the request asynchronously. The return value of the event listener is ignored. To resolve the event, pass the `asyncCallback` parameter a `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
+      - Supported in Chrome 120 and later.
+      - Supported in Firefox 128 and later.
+      - Not supported in Safari.
 
     - `"responseHeaders"`: include `responseHeaders` in the `details` object passed to the listener
 
