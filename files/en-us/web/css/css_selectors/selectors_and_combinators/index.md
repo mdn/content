@@ -101,7 +101,7 @@ h2 + p + p {
 #myId > .myClass {
   outline: 3px dashed red;
 }
-> p {
+p {
   font-size: 1.1rem;
 }
 ```
@@ -157,7 +157,7 @@ h2 {
     outline: 3px dashed red;
   }
 }
-> p {
+p {
   font-size: 1.1rem;
 }
 ```
