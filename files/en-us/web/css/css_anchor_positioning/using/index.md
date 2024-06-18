@@ -162,8 +162,8 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 
 - `<anchor-element>`
 
-  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor**, which is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, is used.
-    If included, it supersedes the anchor named in `position-anchor`
+  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute.
+    > **Note:** Specifying an `<anchor-element>` inside an `anchor()` function cannot be used to associate an element with an anchor, only to position an element relative to an anchor. The `position-anchor` CSS property or the `anchor` HTML attribute is still needed to create the association. You can position an element relative to multiple anchors by specifying different `<anchor-element>` values inside different `anchor()` functions on the same element (see the [`anchor()`](/en-US/docs/Web/CSS/anchor) function reference page for more details and a demo). However, a positioned element needs to be associated with a single anchor, which for example is the anchor the element will scroll with when the page scrolls.
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 
