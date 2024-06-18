@@ -412,6 +412,64 @@ In the second table the _of syntax_ is used to target only the `tr`s that are **
 
 {{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
 
+### Styling a table column
+
+To style a table column, you can't set the style on the {{HTMLElement("col")}} element as table cells are not children of it (as you can with the row element, {{HTMLElement("tr")}}). Pseudo-classes like `:nth-child()` are handy to select the column cells.
+
+In this example, we set different styles for each of the column.
+
+#### HTML
+
+```html-nolint
+<table>
+<caption>Student roster</caption>
+<colgroup>
+  <col/>
+  <col/>
+  <col/>
+</colgroup>
+  <thead>
+    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
+    <tr><td>Yuki</td><td>48</td><td>Japan</td></tr>
+  </tbody>
+</table>
+
+```
+
+#### CSS
+
+```css
+td {
+  padding: 0.125rem 0.5rem;
+  height: 3rem;
+  border: 1px solid black;
+}
+
+tr :nth-child(1) {
+  text-align: left;
+  vertical-align: bottom;
+  background-color: silver;
+}
+
+tbody tr :nth-child(2) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody tr :nth-child(3) {
+  text-align: right;
+  vertical-align: top;
+  background-color: tomato;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Styling_a_table_column', 100, 200)}}
+
 ## Specifications
 
 {{Specifications}}
