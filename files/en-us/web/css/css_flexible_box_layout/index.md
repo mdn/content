@@ -70,6 +70,14 @@ In the following example a container has been set to `display: flex`, which mean
 
   - : Common design patterns that are typical Flexbox use cases.
 
+- [CSS layout: flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+
+  - : Learn how to use flexbox layout to create web layouts.
+
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+
+  - : Details features of [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) which are specific to flexbox.
+
 ## Related concepts
 
 [CSS display module](/en-US/docs/Web/CSS/CSS_display)
