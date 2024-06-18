@@ -30,7 +30,7 @@ Most of the time the user-agent is a Web browser, but it can be anything, for ex
 Each individual request is sent to a server, which handles it and provides an answer called the _response_.
 Between the client and the server there are numerous entities, collectively called {{Glossary("Proxy_server", "proxies")}}, which perform different operations and act as gateways or {{Glossary("Cache", "caches")}}, for example.
 
-![Client server chain](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
+![A HTTP request from a client forwarded by several proxies to a server and a response taking the same route back to the client.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 In reality, there are more computers between a browser and the server handling the request: there are routers, modems, and more.
 Thanks to the layered design of the Web, these are hidden in the network and transport layers.
@@ -193,7 +193,7 @@ There are two types of HTTP messages, requests and responses, each with its own 
 
 An example HTTP request:
 
-![A basic HTTP request](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
+![Overview of a HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Requests consist of the following elements:
 
@@ -208,7 +208,7 @@ Requests consist of the following elements:
 
 An example response:
 
-![HTTP Response image](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
+![Overview of a '200 OK' HTTP response to a GET request including response headers.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 Responses consist of the following elements:
 
