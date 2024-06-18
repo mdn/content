@@ -70,6 +70,10 @@ For a full description of every member, see the [web app manifest reference docu
 
 For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
 
+### See Also
+
+While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline expereince. See the [CycleTracker: Service workers](en-us/web/progressive_web_apps/tutorials/cycletracker/service_workers/index.md) guide for more info on doing this.
+
 ## Installation from an app store
 
 Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple App Store.
