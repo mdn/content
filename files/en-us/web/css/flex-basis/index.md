@@ -13,6 +13,9 @@ The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main s
 
 In this example, the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
+> [!NOTE]
+> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-grow`, `flex-shrink`, and `flex-basis` declarations. We have separated them here as this document is about one of the shorthand components: the `flex-basis` property.
+
 The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at `200px` but then shrink to fit the space available with the other items being at least `min-content` sized.
 
 In `flex-basis` is set to a value other than `auto` and there is a `width` (or `height` in case of `flex-direction: column`) set for that same flex item, the `flex-basis` value takes precedence.
