@@ -72,7 +72,7 @@ For a web app to be installable, it must be served in a [secure context](/en-US/
 
 ### See Also
 
-While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline expereince. See the [CycleTracker: Service workers](en-us/web/progressive_web_apps/tutorials/cycletracker/service_workers/index.md) guide for more info on doing this.
+While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline expereince. See the [CycleTracker: Service workers](en-us/web/progressive_web_apps/tutorials/cycletracker/service_workers/index.md) tutorial for more info on doing this.
 
 ## Installation from an app store
 
