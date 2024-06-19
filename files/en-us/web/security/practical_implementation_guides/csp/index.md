@@ -10,7 +10,12 @@ The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Po
 
 ## Problem
 
-Cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks are generally due to a lack of control and awareness of the sources from which site resources are loaded. This problem gets more difficult to manage as sites become larger and more complex and increasingly rely on third-party resources such as JavaScript libraries.
+The main problem this article focuses on is Cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These are generally due to a lack of control and awareness of the sources from which site resources are loaded. This problem gets more difficult to manage as sites become larger and more complex and increasingly rely on third-party resources such as JavaScript libraries.
+
+CSP can also help to fix other problems, which are covered in other articles:
+
+- [Preventing clickjacking](/en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking) by stopping your site being embedded into {{htmlelement("iframe")}} elements. This is done using the CSP [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive.
+- Preventing [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive. See [HSTS implementation](/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_strict_transport_security_implementation) for more details.
 
 ## Solution
 
@@ -29,8 +34,6 @@ CSP can also be used to provide granular control over:
 - Embedded (i.e., {{htmlelement("iframe")}}) content.
 - Navigation / form submission destinations (via [navigation directives](/en-US/docs/Glossary/Navigation_directive)).
 
-Due to the difficulty in retrofitting CSP into existing websites, CSP is mandatory for all new websites and is strongly recommended for all existing high-risk sites.
-
 ### Steps for implementing CSP
 
 > **Note:** Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header. This allows you to see if any violations would have occurred with that policy. This test requires the use of `report-to`/`report-uri`, as explained below.
@@ -39,8 +42,7 @@ Due to the difficulty in retrofitting CSP into existing websites, CSP is mandato
 2. Next, start to make the policy more specific, in an effort to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked-down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';`.
 3. You can then go on to add in specific sources as highlighted during testing; for example, `style-src 'self' https://example.com/`.
 4. API endpoints should use a policy that disables resource loading and embedding; for example, `Content-Security-Policy: default-src 'none'; frame-ancestors 'none'`.
-5. Make sure you are not loading any resources over HTTP. Load them over HTTPS instead. Don't include any HTTP sources in your CSP allowlists.
-6. For existing websites with large codebases that would require too much work to disable inline scripts, you could fall back to `default-src https: 'unsafe-inline'`. This is still helpful because it keeps resources from being accidentally loaded over HTTP. However, it does not provide any XSS protection.
+5. For existing websites with large codebases that would require too much work to disable inline scripts, you can use some of the CSP features designed to ease adoption on legacy sites. For example, the [`nonce-*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#nonce-) directive requires that a `<script>` specifies the same nonce in its [`nonce`](/en-US/docs/Web/HTML/Element/script#nonce) attribute for loading to succeed, whereas the [`script-dynamic`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#strict-dynamic) directive extends the trust due to an accompanying nonce to other scripts that the top-level script loads.
 
 Keep the following points in mind:
 
@@ -49,7 +51,6 @@ Keep the following points in mind:
 - Similarly, the use of `script-src 'self'` can be unsafe for sites with JSONP endpoints. These sites should use a `script-src` that includes the path to their JavaScript source folder(s).
 - Sites should use the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) and [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) [reporting directives](/en-US/docs/Glossary/Reporting_directive). These cause the browser to [`POST`](/en-US/docs/Web/HTTP/Methods/POST) JSON reports about CSP violations to endpoints (specified in the [`Reporting-Endpoints`](/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints) header in the case of `report-to`). This allows CSP violations to be caught and repaired quickly.
   > **Note:** `report-to` is preferred over the deprecated `report-uri`; however, both are still needed because `report-to` does not yet have full cross-browser support.
-- Set the `form-action` directive to `'none'` or `'self'` or to specific sources allowed in forms. This directive does not fall back to `default-src`; therefore, not setting it explicitly allows forms to be submitted to any source.
 - Don't include any unsafe sources inside your CSP. Examples include `unsafe-inline` or `data:` URIs inside `script-src` and overly broad sources or form submission targets.
 - Unless sites need the ability to execute plugins, their execution should be disabled with `object-src 'none'`.
 
@@ -75,27 +76,38 @@ Content-Security-Policy: default-src *; object-src 'none'
 
 Disable unsafe inline/eval and only load resources from same-origin with the exception of images, which can be loaded from `https://i.imgur.com`. This also disables the execution of plugins:
 
-```http
-Content-Security-Policy: default-src 'self'; img-src 'self' https://i.imgur.com; object-src 'none'
+```http-nolint
+Content-Security-Policy: default-src 'self'; img-src 'self' https://i.imgur.com;
+  object-src 'none'
 ```
 
 Disable unsafe inline/eval scripts and plugins, load only scripts and stylesheets from same-origin, allow fonts to be loaded from `https://fonts.gstatic.com`, and allow image loading from same-origin and `https://i.imgur.com`. Sites should aim for policies like this:
 
-```http
+```http-nolint
 Content-Security-Policy: default-src 'none'; font-src https://fonts.gstatic.com;
-       img-src 'self' https://i.imgur.com; object-src 'none'; script-src 'self'; style-src 'self'
+  img-src 'self' https://i.imgur.com; object-src 'none'; script-src 'self';
+  style-src 'self'
 ```
 
-On pre-existing sites that use too much inline code to fix easily, ensure resources are loaded only over HTTPS and disable plugins. Note that this approach does not provide any XSS protection:
+Allow legacy sites to load scripts safely, with an increase level of trust provided by a nonce:
+
+```html
+<script nonce="2726c7f26c">
+  const inline = 1;
+  // …
+</script>
+```
 
 ```http
-Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+Content-Security-Policy: script-src 'strict-dynamic' 'nonce-2726c7f26c'
 ```
 
 Don't implement the policy yet; only report the violations that would have occurred:
 
-```http
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/; report-to csp-endpoint;
+```http-nolint
+Content-Security-Policy-Report-Only: default-src https:;
+  report-uri /csp-violation-report-endpoint/;
+  report-to csp-endpoint;
 
 Report-To: { "group": "csp-endpoint",
               "max_age": 10886400,
