@@ -3,12 +3,10 @@ title: "Document: startViewTransition() method"
 short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Document.startViewTransition
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}
 
 The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
 
