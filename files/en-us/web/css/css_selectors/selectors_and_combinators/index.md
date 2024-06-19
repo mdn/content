@@ -54,7 +54,7 @@ p.myClass#myId {
 
 #### Result
 
-{{EmbedLiveSample("Basic selectors", "100%", 100)}}
+{{EmbedLiveSample("Basic selectors", "100%", 120)}}
 
 ## Combinators
 
@@ -126,7 +126,7 @@ h2 + p + p {
 
 #### Result
 
-{{EmbedLiveSample("Combinators", "100%", 300)}}
+{{EmbedLiveSample("Combinators", "100%", 500)}}
 
 ### Creating complex selectors with CSS nesting
 
