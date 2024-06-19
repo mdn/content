@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-Users frequently input sensitive data on websites, such as names, addresses, and banking details. As a web developer, it's crucial to protect this information from bad actors who use a wide range of exploits to steal such information and use it for personal gain. The focus of [web security](/en-US/docs/Web/Security) is to help you protect your website against these exploits and secure your users' sensitive data.
+Users frequently input sensitive data on websites, such as names, addresses, passwords, and banking details. As a web developer, it's crucial to protect this information from bad actors who use a wide range of exploits to steal such information and use it for personal gain. The focus of [web security](/en-US/docs/Web/Security) is to help you protect your website against these exploits and secure your users' sensitive data.
 
 This page lists guides that detail the best practices for implementing security features on websites. While these guides do not cover all possible security scenarios and cannot guarantee complete security of your website, following the information and best practices in these guides will make your sites significantly more secure.
 

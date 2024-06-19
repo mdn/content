@@ -10,7 +10,7 @@ Limit access to cookies as much as possible.
 
 ## Problem
 
-Cookies often contain session identifiers or other sensitive information. Unwanted access to cookies, therefore, can cause a host of problems, including [privacy](/en-US/docs/Web/Privacy) issues, ({{Glossary("Cross-site_scripting", "Cross-site scripting (XSS)")}}) attacks, Cross-site request forgery ([CSRF](/en-US/docs/Glossary/CSRF)) attacks, and more.
+Cookies often contain session identifiers or other sensitive information. Unauthorized access to cookies, therefore, can cause a host of problems, including [privacy](/en-US/docs/Web/Privacy) issues, ({{Glossary("Cross-site_scripting", "Cross-site scripting (XSS)")}}) attacks, Cross-site request forgery ([CSRF](/en-US/docs/Glossary/CSRF)) attacks, and more.
 
 ## Solution
 
@@ -32,9 +32,9 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 - `Domain`
   - : Cookies should only have a `Domain` set if they need to be accessible on other domains; this should be set to the most restrictive domain possible.
 - `Path`
-  - : Cookies should be set to the most restrictive `Path` possible; for most applications, this will be set to the root directory.
+  - : Cookies should be set to the most restrictive `Path` possible.
 - `SameSite`
-  - : Forbid sending the cookie via cross-origin requests (for example from {{htmlelement("img")}} element), as a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) measure. `SameSite` is also useful in protecting against [Clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, in cases that rely on the user being authenticated. You should use one of the following two values:
+  - : Forbid sending cookies via cross-origin requests (for example from {{htmlelement("img")}} elements) using `SameSite`. This is a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) measure. `SameSite` is also useful in protecting against [Clickjacking](/en-US/docs/Glossary/Clickjacking) attacks in cases that rely on the user being authenticated. You should use one of the following two values:
     - `SameSite=Strict`: Only send the cookie when your site is directly navigated to.
     - `SameSite=Lax`: Additionally send the cookie when navigating to your site from another site. Note that this is the default behavior used in modern browsers if no `SameSite` directive is set.
 

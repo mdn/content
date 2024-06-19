@@ -10,9 +10,9 @@ page-type: guide
 
 ## Problem
 
-Attackers can modify the contents of JavaScript libraries hosted on content delivery networks (CDNs), creating vulnerabilities in all websites that use these libraries.
+If an attacker exploited a content delivery network (CDN) and modified the contents of JavaScript libraries hosted on that CDN, it would create vulnerabilities in all websites that use those libraries.
 
-For example, JavaScript code hosted on `library.org` that is loaded from `example.org` can access the entire contents of `example.org`. If an attacker modifies this resource to include malicious code, it could alter download links, deface the site, steal credentials, cause denial-of-service (DoS) attacks, and so on.
+For example, JavaScript hosted on `library.org` that is loaded from `example.org` can access the entire contents of `example.org`. If an attacker modifies that hosted JavaScript to include malicious code, it could alter download links, deface the site, steal credentials, cause denial-of-service (DoS) attacks, and so on.
 
 ## Solution
 

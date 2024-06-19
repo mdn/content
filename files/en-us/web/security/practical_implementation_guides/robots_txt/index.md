@@ -16,7 +16,9 @@ Many factors can increase the load on your website; this includes web crawlers. 
 
 Use `robots.txt` to reduce website load and stop unsuitable content appearing in search results.
 
-Using `robots.txt` is optional and sites should use it only for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. While using this file can prevent these sites from appearing in search engine results, it does not secure websites against attackers who can still determine such details because `robots.txt` is publicly accessible.
+Using `robots.txt` is optional and sites should use it only for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. While using this file can prevent pages from appearing in search engine results, it does not secure websites against attackers. In fact, it can help them: `robots.txt` is publicly accessible, and by adding your sensitive page paths to it, you are showing attackers exactly where they are.
+
+Also be aware that some robots will ignore your `robots.txt` file, for example, malware robots and email address harvesters.
 
 ## Examples
 
@@ -36,4 +38,4 @@ Disallow: /secret/admin-interface
 
 ## See also
 
-- [About /robots.txt](https://www.robotstxt.org/robotstxt.html) on `robotstxt.org`.
+- [About /robots.txt](https://www.robotstxt.org/robotstxt.html) on `robotstxt.org`
