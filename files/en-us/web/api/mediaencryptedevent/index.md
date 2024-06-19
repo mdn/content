@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MediaEncryptedEvent
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("Encrypted Media Extensions")}}
 
 The **`MediaEncryptedEvent`** interface of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) contains the information associated with an {{domxref("HTMLMediaElement/encrypted_event", "encrypted")}} event sent to a {{domxref("HTMLMediaElement")}} when some initialization data is encountered in the media.
 

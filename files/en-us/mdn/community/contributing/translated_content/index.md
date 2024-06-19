@@ -40,8 +40,8 @@ If you need help or have any questions, feel free to get in touch with one of th
 
 ### Korean (`ko`)
 
-- Discussions: [Discord (`#korean`)](/discord), [Google Group (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
-- Current maintainers: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- Discussions: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- Current maintainers: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Russian (`ru`)
 

@@ -6,10 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeys.setServerCertificate
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The **`MediaKeys.setServerCertificate()`** method provides a
-server certificate to be used to encrypt messages to the license server.
+The **`setServerCertificate()`** method of the {{domxref("MediaKeys")}} interface provides a server certificate to be used to encrypt messages to the license server.
 
 ## Syntax
 
@@ -20,7 +19,8 @@ setServerCertificate(serverCertificate)
 ### Parameters
 
 - `serverCertificate`
-  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the server certificate. The contents are Key System-specific. It MUST NOT contain executable code.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} object containing the server certificate.
+    The contents are Key System-specific. It MUST NOT contain executable code.
 
 ### Return value
 
