@@ -12,7 +12,7 @@ This intro-level tutorial walks through all the steps of building a basic progre
 
 We will walk through the steps of building a fully functional web app, then progressively enhance CycleTracker to [make it installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) and to work even when the user is offline using a service worker.
 
-By default, PWAs are regular websites, built with the same technologies. Just like a regular websites, PWAs are linkable, discoverable via search engines, and visible in a browser. By including a manifest file, and serving the website over TLS, any website can become a PWA.
+By default, PWAs are regular websites, built with the same technologies. Just like regular websites, PWAs are linkable, discoverable via search engines, and visible in a browser. By including a manifest file, and serving the website over TLS, any website can become a PWA.
 
 ## PWA benefits
 
