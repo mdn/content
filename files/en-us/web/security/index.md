@@ -56,8 +56,6 @@ Related topics:
   - : Certificate Transparency (CT) is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs. These provide append-only, cryptographically assured records of issued TLS certificates.
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
   - : An HTTPS page that includes content fetched using [cleartext](/en-US/docs/Glossary/Plaintext) HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
-- [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-  - : If your website delivers HTTPS pages, all [mixed active content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (that is, {{htmlelement("iframe")}}s won't load, and so on). [Mixed passive content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content as well.
 - [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
   - : The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("digital certificate")}} is a critical element of the security of the certificate. Some signature algorithms are known to be weak, and should be avoided when appropriate.
 

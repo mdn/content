@@ -135,5 +135,5 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 - [Transport layer security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
-- [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
 - [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
