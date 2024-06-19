@@ -157,8 +157,10 @@ h2 {
     outline: 3px dashed red;
   }
 }
-* > p {
-  font-size: 1.1rem;
+* {
+  & > p {
+    font-size: 1.1rem;
+  }
 }
 ```
 
