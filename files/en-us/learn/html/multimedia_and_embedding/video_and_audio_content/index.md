@@ -251,7 +251,7 @@ This is the second.
 
 To get this displayed along with the HTML media playback, you need to:
 
-1. Save it as a `.vtt` file in a sensible place.
+1. Save it as a `.vtt` file in the same directory where the `.html` file is.
 2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in. Finally, add [`label`](/en-US/docs/Web/HTML/Element/track#label) to help readers identify the language they are searching for.
 
 Here's an example:
@@ -264,7 +264,13 @@ Here's an example:
 </video>
 ```
 
-This will result in a video that has subtitles displayed, kind of like this:
+In order to try this you need to host the html file on a local server. You can use [`http-server`](https://www.npmjs.com/package/http-server) package by running following command in the same directory where the html file is:
+
+```bash
+npx http-server -o
+```
+
+This will open the page in a web browser and show a video that has subtitles displayed, kind of like this:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
