@@ -12977,7 +12977,7 @@
 /en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
-/en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/SVGElement/dataset
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
