@@ -38,7 +38,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
-- {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is serializable.
     A serializable shadow root inside an element will be serialized by {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} when its [`options.serializableShadowRoots`](/en-US/docs/Web/API/Element/getHTML#serializableshadowroots) parameter is set `true`.
     This is set when the shadow root is created.

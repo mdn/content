@@ -262,7 +262,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
 - {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
-- {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
+- {{domxref("Document.startViewTransition()")}}
   - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
 
 The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:
