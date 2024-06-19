@@ -238,6 +238,8 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
 
 View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/) on GitHub.
 
+With a manifest file and a secure context, [most browsers](/en-US/Web/Progressive_web_apps/Guides/Making_pwas_installable#Browser_support) will recognise your site as a PWA and some will prompt to install it. To make our PWA to work offline, we'll still need to add a service worker.
+
 ## Debugging manifest files
 
 Some browser developer tools provide insight into the app manifest. In Edge, Firefox, and Chrome developer tools, the manifest members and their values are visible under the "Application" panel.
