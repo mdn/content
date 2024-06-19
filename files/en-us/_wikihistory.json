@@ -98669,48 +98669,6 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/MIME_types/Common_types": {
-    "modified": "2020-05-01T18:32:40.232Z",
-    "contributors": [
-      "broofa",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "charj",
-      "SphinxKnight",
-      "mathiasbynens",
-      "Dorward",
-      "igorskyflyer",
-      "rctgamer3",
-      "mfuji09",
-      "Coder-Arjun",
-      "joeyparrish",
-      "devex23",
-      "ignaloidas",
-      "aadityataparia",
-      "dunglas",
-      "gabriele.bernuzzi",
-      "evilpie",
-      "xiaopanke",
-      "Loadmaster",
-      "iamakidilam",
-      "snuggs",
-      "Sheppy",
-      "Thw0rted",
-      "Krenair",
-      "Vikaash",
-      "Naesten",
-      "dave.shaheen",
-      "alettieri",
-      "NaveenDA",
-      "AbsoluteZERO",
-      "BrienA",
-      "kyrylkov",
-      "choury",
-      "david_ross",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Basics_of_HTTP/Resource_URLs": {
     "modified": "2019-03-23T22:04:02.489Z",
     "contributors": ["ExE-Boss", "gmierz", "David_B", "chrisdavidmills"]
