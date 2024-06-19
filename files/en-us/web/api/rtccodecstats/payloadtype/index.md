@@ -28,5 +28,5 @@ The mappings of values to formats is defined in RFC3550, and more specifically i
 
 - `payloadType` returned by [`RTCEncodedAudioFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/getMetadata#payloadtype)
 - `payloadType` returned by [`RTCEncodedVideoFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/getMetadata#payloadtype)
-- `codecs.payloadType` option in parameter passed to [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#payloadType).
-- `codecs.payloadType` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#payloadType) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#payloadType).
+- `codecs.payloadType` option in parameter passed to [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#payloadtype).
+- `codecs.payloadType` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#payloadtype) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#payloadtype).
