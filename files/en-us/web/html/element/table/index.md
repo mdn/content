@@ -302,7 +302,7 @@ Since the first row ({{HTMLElement("tr")}} element) contains only column header 
 </table>
 ```
 
-Once again, the CSS and visual result are unchanged—specifying such table section groups provides valuable contextual information for assistive technologies, including screen readers and search engines, as well as for styling in the CSS, which will be shown ion a later example.
+Once again, the CSS and visual result are unchanged—specifying such table section groups provides valuable contextual information for assistive technologies, including screen readers and search engines, as well as for styling in the CSS, which will be shown in a later example.
 
 ### Column and row spanning
 
