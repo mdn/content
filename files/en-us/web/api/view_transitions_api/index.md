@@ -2,15 +2,13 @@
 title: View Transitions API
 slug: Web/API/View_Transitions_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - api.Document.startViewTransition
   - css.at-rules.view-transition
 spec-urls: https://drafts.csswg.org/css-view-transitions/
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transitions API")}}
 
 The **View Transitions API** provides a mechanism for easily creating animated transitions between different website views. This includes animating between DOM states in a single-page app (SPA), and animating the navigation between documents in a multi-page app (MPA).
 

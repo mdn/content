@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-template-columns
 
 {{CSSRef}}
 
-The **`grid-template-columns`** CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
+The **`grid-template-columns`** [CSS](/en-US/docs/Web/CSS) property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
 

@@ -9,7 +9,7 @@ browser-compat: css.properties.justify-tracks
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`justify-tracks`** CSS property sets the alignment in the masonry axis for grid containers that have [masonry](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in their inline axis.
+The **`justify-tracks`** [CSS](/en-US/docs/Web/CSS) property sets the alignment in the masonry axis for grid containers that have [masonry](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in their inline axis.
 
 ## Syntax
 

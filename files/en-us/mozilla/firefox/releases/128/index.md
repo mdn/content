@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### CSS
 
+- The [`content`](/en-US/docs/Web/CSS/content) property now supports [alternative text](/en-US/docs/Web/CSS/content#alternative_text) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
+
 #### Removals
 
 ### JavaScript
@@ -37,6 +39,8 @@ This article provides information about the changes in Firefox 128 that affect d
 #### Removals
 
 ### APIs
+
+- {{domxref('RTCRtpReceiver.getParameters()')}} and {{domxref('RTCRtpSender.getParameters()')}} are now supported, returning an object that describes the current codecs used for the encoding and transmission of media on the receiver and sender tracks, respectively. ([Firefox bug 1534687](https://bugzil.la/1534687)).
 
 #### DOM
 

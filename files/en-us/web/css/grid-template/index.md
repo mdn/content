@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-template
 
 {{CSSRef}}
 
-The **`grid-template`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid_row", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
+The **`grid-template`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid_row", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template.html")}}
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-auto-columns
 
 {{CSSRef}}
 
-The **`grid-auto-columns`** CSS property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.
+The **`grid-auto-columns`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
 
