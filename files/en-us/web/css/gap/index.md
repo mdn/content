@@ -55,26 +55,26 @@ gap: unset;
 
 ### Values
 
-This property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. If `<'column-gap'>` is omitted, it is set to the same value as `<'row-gap'>`. Both `<'row-gap'>` and `<'column-gap'>` can be each specified as a `<length>` or a `<percentage>`.
+This property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. If `<'column-gap'>` is omitted, it is set to the same value as `<'row-gap'>`. Both `<'row-gap'>` and `<'column-gap'>` can each be specified as a `<length>` or a `<percentage>`.
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : Specifies the width of the gutter separating the columns, {{glossary("flex item","flex items")}}, flex lines, and {{glossary("grid lines")}},.
+  - : Specifies the width of the gutter separating columns, {{glossary("flex item","flex items")}}, flex lines, and {{glossary("grid lines")}}.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : Specifies the width of the gutter separating the columns, flex items, flex lines, and grid lines relative to the dimension of the element.
+  - : Specifies the width of the gutter separating columns, flex items, flex lines, and grid lines relative to the dimension of the element.
 
 ## Description
 
-This property defines gaps between columns in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multi-column_layout), flex items and flex lines in [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and both rows and columns in [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+This property defines gaps between columns in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), between flex items and flex lines in [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and between rows and columns in [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
-The generated gaps create empty space the width or height of the gap's size.
+The generated gaps create empty spaces that have the width or height of the gap's specified size.
 
-In grid layout, the first value defines the gutter between rows and the second value sets the siz of the gutter between the column. In both grid and flex layouts, if only one value is included, that value is used for both dimensions.
+In grid layout, the first value defines the gutter between rows, and the second value defines the gutter between columns. In both grid and flex layouts, if only one value is included, that value is used for both dimensions.
 
-With flex containers, whether the first value is the gap between flex items or between flex line depends on the direction. Flex items are laid out in either rows or columns depending on the value of the {{cssxref("flex-direction")}} property. With rows (`row` (the default) or `row-reverse`), the first value defines the gap between flex lines and the second value defines the gap between items within each line. With columns, (when `flex-direction` is set to `column` or `column-reverse`) the first value defines the gap between flex items within a flex line and the second value defines the gaps between each flex line.
+With flex containers, whether the first value is the gap between flex items or between flex line depends on the direction. Flex items are laid out in either rows or columns depending on the value of the {{cssxref("flex-direction")}} property. For rows (`row` (the default) or `row-reverse`), the first value defines the gap between flex lines, and the second value defines the gap between items within each line. For columns (`column` or `column-reverse`), the first value defines the gap between flex items within a flex line, and the second value defines the gaps between each flex line.
 
-In multi-column containers, the first value is the gap in between CSS columns. A dividing line can be added to the otherwise "empty space" via the {{cssxref("column-rule-style")}} property or {{cssxref("column-rule")}} shorthand.
+In multi-column containers, the first value defines the gap between columns. A dividing line can be added to the otherwise "empty space" by using the {{cssxref("column-rule-style")}} property or {{cssxref("column-rule")}} shorthand.
 
-If the value is specified as a percentage, the property resolves the value relative to the size of the element's content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` does so as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the box's content box when laying out the box's contents. In flex layout, cyclic percentage sizes always resolve against zero.
+If the value is specified as a percentage, the property resolves the value relative to the size of the element's content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` does so as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the element's content box when laying out the contents. In flex layout, cyclic percentage sizes always resolve against zero.
 
 The visible space between elements may differ from the specified `gap` value because margins, padding, and distributed alignment may increase the separation between elements beyond what is specified by `gap`.
 
