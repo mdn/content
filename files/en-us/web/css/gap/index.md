@@ -74,7 +74,7 @@ With flex containers, whether the first value is the gap between flex items or b
 
 In multi-column containers, the first value defines the gap between columns. A dividing line can be added to the otherwise "empty space" by using the {{cssxref("column-rule-style")}} property or {{cssxref("column-rule")}} shorthand.
 
-If the value is specified as a percentage, the property resolves the value relative to the size of the element's content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` does so as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the element's content box when laying out the contents. In flex layout, cyclic percentage sizes always resolve against zero.
+If the value is specified as a percentage, the property resolves the value relative to the size of the element's content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` does so as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the element's content box when laying out the contents.
 
 The visible space between elements may differ from the specified `gap` value because margins, padding, and distributed alignment may increase the separation between elements beyond what is specified by `gap`.
 
