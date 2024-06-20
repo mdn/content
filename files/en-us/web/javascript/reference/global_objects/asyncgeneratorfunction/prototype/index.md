@@ -2,7 +2,9 @@
 title: AsyncGeneratorFunction.prototype.prototype
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/prototype
 page-type: javascript-instance-data-property
-browser-compat: javascript.builtins.AsyncGeneratorFunction.prototype
+spec-urls:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-prototype-prototype
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-instances-prototype
 ---
 
 {{JSRef}}
@@ -46,10 +48,6 @@ The following diagram illustrates the prototype chain of an async generator func
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

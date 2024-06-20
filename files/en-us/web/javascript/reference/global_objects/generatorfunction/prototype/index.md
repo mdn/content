@@ -2,7 +2,9 @@
 title: GeneratorFunction.prototype.prototype
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype
 page-type: javascript-instance-data-property
-browser-compat: javascript.builtins.GeneratorFunction.prototype
+spec-urls:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-generatorfunction.prototype.prototype
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-generatorfunction-instances-prototype
 ---
 
 {{JSRef}}
@@ -46,10 +48,6 @@ The following diagram illustrates the prototype chain of a generator function an
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
