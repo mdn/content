@@ -128,8 +128,7 @@ A website administrator of a web mail site wants to allow HTML in email, as well
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
-Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
-this site uses the setting specified by the {{CSP("default-src")}} directive.
+Note that this example doesn't specify a {{CSP("script-src")}}, so the {{CSP("default-src")}} directive will be used for JavaScript sources as a fallback.
 
 ## Testing your policy
 
