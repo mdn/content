@@ -8,11 +8,11 @@ page-type: tutorial
 
 {{PWASidebar}}
 
-This intro-level tutorial walks through all the steps of building a basic progressive web app, or PWA. We will be using web technologies — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
-
-We will walk through the steps of building a fully functional web app, then progressively enhance CycleTracker to [make it installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) and to work even when the user is offline using a service worker.
+This intro-level tutorial walks through all the steps of building a basic progressive web app, or PWA. We will be using web technologies — HTML, CSS, and JavaScript — to build a menstruation cycle tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
 
 By default, PWAs are regular websites, built with the same technologies. Just like regular websites, PWAs are linkable, discoverable via search engines, and visible in a browser. By including a manifest file, and serving the website over TLS, any website can become a PWA.
+
+We will first cover the steps of building a fully functional web app, then progressively enhance CycleTracker to [make it installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable), and to work even when the user is offline.
 
 ## PWA benefits
 
