@@ -76,12 +76,14 @@ function gotContextInfo(contexts) {
     if (context.tabId == -1) {
       console.log("Not hosted in a tab");
     } else {
-      console.log(`Hosted in tab: ${context.tabId} and frame ${context.frameId} with URL ${context.documentUrl}`);
+      console.log(
+        `Hosted in tab: ${context.tabId} and frame ${context.frameId} with URL ${context.documentUrl}`,
+      );
     }
   }
 }
 
-let gettingContextInfo = browser.runtime.getContext({incognito: true});
+let gettingContextInfo = browser.runtime.getContext({ incognito: true });
 gettingContextInfo.then(gotContextInfo);
 ```
 
