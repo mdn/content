@@ -10,7 +10,7 @@ Cross-Origin Resource Policy (CORP) is set by the {{httpheader("Cross-Origin-Res
 
 ## Problem
 
-Side-channel hardware vulnerabilities, such as [Meltdown](<https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)>) and [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), exploit a race condition arising as part of speculative execution functionality of modern processors. This functionality is designed to improve performance but can be manipulated to disclose sensitive data.
+Some side-channel hardware vulnerabilities (also known as Cross-site leaks, or XS-Leaks), such as [Meltdown](<https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)>) and [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), exploit a race condition arising as part of speculative execution functionality of modern processors. This functionality is designed to improve performance but can be manipulated to disclose sensitive data.
 
 ## Solution
 
@@ -49,6 +49,7 @@ This also permits such resources to be embedded.
 ## See also
 
 - [Consider deploying Cross-Origin Resource Policy](resourcepolicy.fyi)
+- [XS-Leaks Wiki](https://xsleaks.dev/)
 - [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
 - [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
 - [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
