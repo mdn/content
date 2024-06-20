@@ -13,33 +13,33 @@ Returns information about the contexts associated with the extension.
 
 ```js-nolint
 let gettingContexts = browser.runtime.getContexts(
-    ContextFilter           // object
+    filter           // object
 );
 ```
 
 ### Parameters
 
-- `ContextFilter`
+- `filter`
 
   - : An object containing criteria to match returned contexts against. Matching contexts must match all specified filters. If the object is empty, all contexts are returned.
     - `contextIds` {{optional_inline}}
-      - : Array of `string` ID of a context.
+      - : Array of `string`. ID of contexts to return.
     - `contextTypes` {{optional_inline}}
       - : Array of `string` The type of extension view. Takes the values `"BACKGROUND"`, `"POPUP"`, `"SIDE_PANEL"`, and `"TAB"`.
     - `documentIds` {{optional_inline}}
-      - : Array of `string` UUID of a document associated with the context or undefined to match all contexts not hosted in a document.
+      - : Array of `string` UUID of a document associated with the context.
     - `documentOrigins` {{optional_inline}}
       - : Array of `string` The origin of a document associated with the context or undefined for contexts not hosted in a document.
     - `documentUrls` {{optional_inline}}
       - : Array of `string` The URL of a document associated with the context or undefined for contexts not hosted in a document.
     - `frameIds` {{optional_inline}}
-      - : Array of `string` The frame ID for the context or `-1` for contexts not hosted in a frame.
+      - : Array of `integer` The frame ID for the context or `-1` for contexts not hosted in a frame.
     - `incognito` {{optional_inline}}
       - : `boolean` Whether to return only contexts hosted in a private browsing tab.
     - `tabIds` {{optional_inline}}
-      - : Array of `string` The tab ID for the context or `-1` for contexts not hosted in a tab.
+      - : Array of `integer` The tab ID for the context or `-1` for contexts not hosted in a tab.
     - `windowIds` {{optional_inline}}
-      - : Array of `string` The window ID for the context or `-1` for contexts not hosted in a window.
+      - : Array of `integer` The window ID for the context or `-1` for contexts not hosted in a window.
 
 ### Return value
 
@@ -49,22 +49,22 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
   - : `string` ID of the context.
 - `contextType`
   - : `string` The type of extension view. Returned to one of `"BACKGROUND"`, `"POPUP"`, `"SIDE_PANEL"`, or `"TAB"`.
-- `documentId` 
+- `documentId`
   - : `string` UUID of the document associated the context, or undefined if the context is not hosted in a document.
 - `documentOrigin`
   - : string` The origin of the document associated with the context or undefined if the context is not hosted in a document.
 - `documentUrl`
   - : `string` The URL of the document associated with the context or undefined if the context not hosted in a document.
 - `frameId`
-  - : `string` The frame ID for the context or `-1` if the context is not hosted in a frame.
+  - : `integer` The frame ID for the context or `-1` if the context is not hosted in a frame.
 - `incognito`
   - : `boolean` Whether the context is hosted in a private browsing tab.
 - `tabId`
-  - : `string` The tab ID for the context or `-1` if the context not hosted in a tab.
+  - : `integer` The tab ID for the context or `-1` if the context not hosted in a tab.
 - `windowId`
-  - : `string` The window ID for the context or `-1` if the context not hosted in a window.
+  - : `integer` The window ID for the context or `-1` if the context not hosted in a window.
 
-If there are no matching context, fulfilled with an empty array.
+If there are no matching contexts, fulfilled with an empty array.
 
 ## Examples
 
@@ -73,15 +73,15 @@ Get the context for all context associated with the extension in private browsin
 ```js
 function gotContextInfo(contexts) {
   for (const context of contexts) {
-    if ((context.tabId = -1)) {
+    if (context.tabId == -1) {
       console.log("Not hosted in a tab");
     } else {
-      console.log(`Hosted in tab: ${context.tabId}`);
+      console.log(`Hosted in tab: ${context.tabId} and frame ${context.frameId} with URL ${context.documentUrl}`);
     }
   }
 }
 
-let gettingContextInfo = browser.runtime.getContext([(incognito = true)]);
+let gettingContextInfo = browser.runtime.getContext({incognito: true});
 gettingContextInfo.then(gotContextInfo);
 ```
 
