@@ -6,9 +6,11 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Accessibility** (**A11y**) means enabling as many people as possible to use websites, even when those people's abilities are limited in some way. The most common way to achieve this is to make sure assistive technologies works properly to access the content. This includes {{glossary("screen reader", "screen readers")}}, screen magnifiers, speech recognition tools, alternative input devices, and other assistive technologies. Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} through the {{Glossary("WAI", "Web Accessibility Initiative (WAI)")}}.
+**Accessibility** (**A11y**) means enabling as many people as possible to use websites, even when those people's abilities are limited in some way. The most common way to achieve this is by ensuring that assistive technologies work properly to access the content. These technologies include {{glossary("screen reader", "screen readers")}}, screen magnifiers, speech recognition tools, and alternative input devices.
 
-Accessibility can be inspected or measured by tools like [Lighthouse Accessibility score](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) and [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html).
+You can measure the accessibility of your website by using tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) and the [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html).
+
+Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} through the {{Glossary("WAI", "Web Accessibility Initiative (WAI)")}}.
 
 ## See also
 
