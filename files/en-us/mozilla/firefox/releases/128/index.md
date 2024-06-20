@@ -23,7 +23,7 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### Removals
 
-- The masonry layout properties `align-tracks` and `justify-tracks` and the associated preference `layout.css.grid-template-masonry-value.enabled` have been removed. This is due to the [W3 direction for masonry layout](https://github.com/w3c/csswg-drafts/issues/8208) has changed ([Firefox bug 1900195](https://bugzil.la/1900195)).
+- The masonry layout properties `align-tracks` and `justify-tracks` have been removed. This is due to the [W3 direction for masonry layout](https://github.com/w3c/csswg-drafts/issues/8208) has changed ([Firefox bug 1900195](https://bugzil.la/1900195)).
 
 ### JavaScript
 
