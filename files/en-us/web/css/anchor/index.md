@@ -43,7 +43,7 @@ The parameters are:
 
 - `<anchor-side>`
 
-  - : Specifies the position relative to a side, or sides, of the anchor. If a physical or logical value is used that is not on the same axis as the inset property on which `anchor()` is set, the fallback value is used. Valid values include:
+  - : Specifies the position relative to a side, or sides, of the anchor. If a physical or logical value is used that is not [compatible](#compatibility_of_inset_properties_and_anchor-side_values) with the inset property on which `anchor()` is set, the fallback value is used. Valid values include:
 
     - `top`
       - : The top of the anchor element.
@@ -109,18 +109,18 @@ The CSS {{glossary("inset properties")}} that accept an `anchor()` function as a
 
 ### Compatibility of inset properties and `<anchor-side>` values
 
-When using an `anchor()` function inside an inset property value, the `<anchor-side>` parameter specified inside the `anchor()` function has to compatible with the axis on which the inset property being set.
+When using an `anchor()` function inside an inset property value, the `<anchor-side>` parameter specified inside the `anchor()` function has to be compatible with the axis on which the inset property being set.
 
 In the case of physical inset properties and `<anchor-side>` values, this is relatively simple. `top: anchor(bottom)` is fine, but `top: anchor(left)` is invalid. If `top: anchor(left, 50px)` were specified, the fallback value would be used, so `top` would get a computed value of `50px`. If no fallback is present, the inset property has no effect, as if it were set to `auto`.
 
-You can also use the logical `<anchor-side>` values with physical inset values. `top: anchor(start)` and `top: anchor(self-end)` work fine, as those `<anchor-side>` values are relative to the inset property's relevant axis.
+You can also use physical inset values with logical `<anchor-side>` values. `top: anchor(start)` and `top: anchor(self-end)` work fine, for example, as those `<anchor-side>` values are relative to the inset property's relevant axis.
 
 When using logical inset properties and `<anchor-side>` values, the story is slightly more complicated. The logical `<anchor-side>` values are compatible with all logical inset properties — again, these `<anchor-side>` values are relative to the inset property's relevant axis. So `inset-block-start: anchor(start)` and `inset-inline-end: anchor(self-end)` are fine, for example. These combinations work in horizontal and vertical writing modes.
 
 However, when using logical inset properties with physical `<anchor-side>` values, the `<anchor-side>` value has to match the axis the inset property is relevant to in that particular writing mode. For example:
 
-- In a horizontal writing mode, the block direction is top-to-bottom, therefore `inset-block-end: anchor(bottom)` will work, but `inset-block-end: anchor(left)` is invalid. If `inset-block-end: anchor(left, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (bottom) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
-- In a vertical writing mode, the block direction is right-to-left or left-to-right, therefore `inset-block-end: anchor(left)` will work, but `inset-block-end: anchor(top)` is invalid. If `inset-block-end: anchor(top, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (left or right depending on writing mode) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
+- In a horizontal writing mode, the block direction is top-to-bottom, therefore `inset-block-end: anchor(bottom)` will work for example, but `inset-block-end: anchor(left)` is invalid. If `inset-block-end: anchor(left, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (bottom) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
+- In a vertical writing mode, the block direction is right-to-left or left-to-right, therefore `inset-block-end: anchor(left)` will work for example, but `inset-block-end: anchor(top)` is invalid. If `inset-block-end: anchor(top, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (left or right depending on the writing mode) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
 
 To mitigate the potential for confusion with these values, you are advised to use physical inset properties with physical `<anchor-side>` values, and logical inset properties with logical `<anchor-side>` values.
 
