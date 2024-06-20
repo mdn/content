@@ -54,13 +54,13 @@ The parameters are:
     - `left`
       - : The left of the anchor element
     - `start`
-      - : The logical start of the anchor element's [block axis](/en-US/docs/Glossary/Logical_properties#block_direction).
+      - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
     - `end`
-      - : The logical end of the anchor element's block axis.
+      - : The logical end of the anchor element's containing block along the axis of the inset property on which the `anchor()` function is set.
     - `self-start`
-      - : The logical start of the anchor element's [inline axis](/en-US/docs/Glossary/Logical_properties#inline_direction).
+      - : The logical start of the anchor element's content along the axis of the inset property on which the `anchor()` function is set.
     - `self-end`
-      - : The logical end of the anchor element's inline axis.
+      - : The logical end of the anchor element's content along the axis of the inset property on which the `anchor()` function is set.
     - `center`
       - : The center of the axis of the inset property on which the `anchor()` function is set.
     - {{cssxref("percentage")}}
@@ -89,13 +89,11 @@ If the `<anchor-element>` specified in an `anchor()` function within an inline d
 
 If the positioned element does not have an anchor associated with it (i.e. via the {{cssxref("position-anchor")}} property) and it has inset properties containing `anchor()` functions within the value, the fallback `<length-perecentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`. If no fallback is available, the inset property has no effect, but it is still valid (it is not considered [invalid CSS](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) and is therefore not ignored).
 
-For {{glossary("physical properties", "physical")}} inset values, the `<anchor-side>` has to be along the same axis as the inset value being set. For example, `top: anchor(left)` is invalid. If `top: anchor(left, 50px)` were specified, the fallback value would be used, so `top` would get a computed value of `50px`. If no fallback is present, the inset property has no effect, as if it were set to `auto`.
-
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
 ### Properties that accept `anchor()` function values
 
-The CSS {{glossary("inset properties")}} that accept an `anchor()` function as a value include:
+The CSS {{glossary("inset properties")}} that accept an `anchor()` function as a value component include:
 
 - {{cssxref("top")}}
 - {{cssxref("left")}}
@@ -108,6 +106,34 @@ The CSS {{glossary("inset properties")}} that accept an `anchor()` function as a
 - {{cssxref("inset-inline-start")}}
 - {{cssxref("inset-inline-end")}}
 - {{cssxref("inset-inline")}} shorthand
+
+### Compatibility of inset properties and `<anchor-side>` values
+
+When using an `anchor()` function inside an inset property value, the `<anchor-side>` parameter specified inside the `anchor()` function has to compatible with the axis on which the inset property being set.
+
+In the case of physical inset properties and `<anchor-side>` values, this is relatively simple. `top: anchor(bottom)` is fine, but `top: anchor(left)` is invalid. If `top: anchor(left, 50px)` were specified, the fallback value would be used, so `top` would get a computed value of `50px`. If no fallback is present, the inset property has no effect, as if it were set to `auto`.
+
+You can also use the logical `<anchor-side>` values with physical inset values. `top: anchor(start)` and `top: anchor(self-end)` work fine, as those `<anchor-side>` values are relative to the inset property's relevant axis.
+
+When using logical inset properties and `<anchor-side>` values, the story is slightly more complicated. The logical `<anchor-side>` values are compatible with all logical inset properties — again, these `<anchor-side>` values are relative to the inset property's relevant axis. So `inset-block-start: anchor(start)` and `inset-inline-end: anchor(self-end)` are fine, for example. These combinations work in horizontal and vertical writing modes.
+
+However, when using logical inset properties with physical `<anchor-side>` values, the `<anchor-side>` value has to match the axis the inset property is relevant to in that particular writing mode. For example:
+
+- In a horizontal writing mode, the block direction is top-to-bottom, therefore `inset-block-end: anchor(bottom)` will work, but `inset-block-end: anchor(left)` is invalid. If `inset-block-end: anchor(left, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (bottom) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
+- In a vertical writing mode, the block direction is right-to-left or left-to-right, therefore `inset-block-end: anchor(left)` will work, but `inset-block-end: anchor(top)` is invalid. If `inset-block-end: anchor(top, 50px)` were set, the computed value would be `50px`, and the positioned element would be positioned `50px` from the block end (left or right depending on writing mode) of its nearest positioned ancestor or the viewport, depending on the `position` value set.
+
+To mitigate the potential for confusion with these values, you are advised to use physical inset properties with physical `<anchor-side>` values, and logical inset properties with logical `<anchor-side>` values.
+
+The below table lists the inset properties, and the `<anchor-side>` parameter values that are compatible with them. We have only listed the longhand inset properties; these comprise the shorthand inset property values.
+
+| Inset property                              | Compatible `<anchor-side>` value                                                                                                               |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| All                                         | `center`                                                                                                                                       |
+| All                                         | `<percentage>`                                                                                                                                 |
+| `top` and `bottom`                          | `top`, `bottom`, `start`, `end`, `self-start`, `self-end`                                                                                      |
+| `left` and `right`                          | `left`, `right`, `start`, `end`, `self-start`, `self-end`                                                                                      |
+| `inset-block-start` and `inset-block-end`   | `start`, `end`, `self-start`, and `self-end`<br>`top` and `bottom` in horizontal writing modes<br>`left` and `right` in vertical writing modes |
+| `inset-inline-start` and `inset-inline-end` | `start`, `end`, `self-start`, and `self-end`<br>`left` and `right` in horizontal writing modes<br>`top` and `bottom` in vertical writing modes |
 
 ### Using `anchor()` inside `calc()`
 

@@ -7,13 +7,13 @@ browser-compat: css.properties.top
 
 {{CSSRef}}
 
-The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It does not effect non-positioned elements.
+The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/top.html")}}
 
 The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block.
+- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block. If the positioned element has an associated **anchor element**, an {{cssxref("anchor()")}} function can be used in the value. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the anchor element's top or bottom edges. The returned value depends on the [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) parameter used inside the function. See [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning) for more information.
 - When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
 - When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `top` property has _no effect_.
@@ -30,16 +30,14 @@ When both `top` and {{cssxref("bottom")}} values are specified, there are three 
 /* <length> values */
 top: 3px;
 top: 2.4em;
+top: anchor(bottom);
+top: calc(anchor(--myAnchor 50%) + 10px);
 
 /* <percentage>s of the height of the containing block */
 top: 10%;
 
 /* Keyword value */
 top: auto;
-
-/* anchor() function values */
-top: anchor(bottom);
-top: anchor(--myAnchor 50%);
 
 /* Global values */
 top: inherit;
@@ -58,6 +56,8 @@ top: unset;
     - for _absolutely positioned elements_, the distance to the top edge of the containing block.
     - for _relatively positioned elements_, the distance that the element is moved below its normal position.
 
+    In the case of **anchor-positioned** elements, an {{cssxref("anchor()")}} function can be used. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated **anchor element**'s top or bottom edges.
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's height.
 - `auto`
@@ -66,10 +66,6 @@ top: unset;
 
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("bottom")}} property, while `height: auto` is treated as a height based on the content; or if `bottom` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("bottom")}} property; or if `bottom` is also `auto`, the element is not moved vertically at all.
-
-- {{cssxref("anchor()")}} {{experimental_inline}}
-
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the top and/or bottom edges of an absolutely- or fixed-positioned element's associated **anchor element**. See [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 - `inherit`
   - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.

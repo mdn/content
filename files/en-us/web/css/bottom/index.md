@@ -7,13 +7,13 @@ browser-compat: css.properties.bottom
 
 {{CSSRef}}
 
-The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
+The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/bottom.html")}}
 
 The effect of `bottom` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `bottom` property specifies the distance between the outer edge of the element's [bottom margin](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and the outer edge of the containing block's bottom padding.
+- When `position` is set to `absolute` or `fixed`, the `bottom` property specifies the distance between the outer edge of the element's [bottom margin](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and the outer edge of the containing block's bottom padding. If the positioned element has an associated **anchor element**, an {{cssxref("anchor()")}} function can be used in the value. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the anchor element's top or bottom edges. The returned value depends on the [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) parameter used inside the function. See [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning) for more information.
 - When `position` is set to `relative`, the `bottom` property specifies the distance the element's bottom edge is moved above its normal position.
 - When `position` is set to `sticky`, the `bottom` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `bottom` property has _no effect_.
@@ -26,16 +26,14 @@ When both {{cssxref("top")}} and `bottom` are specified, `position` is set to `a
 /* <length> values */
 bottom: 3px;
 bottom: 2.4em;
+bottom: anchor(top);
+bottom: calc(anchor(--myAnchor 50%) + 5px);
 
 /* <percentage>s of the height of the containing block */
 bottom: 10%;
 
 /* Keyword value */
 bottom: auto;
-
-/* anchor() function values */
-bottom: anchor(top);
-bottom: anchor(--myAnchor 50%);
 
 /* Global values */
 bottom: inherit;
@@ -54,6 +52,8 @@ bottom: unset;
     - for _absolutely positioned elements_, the distance to the bottom edge of the containing block.
     - for _relatively positioned elements_, the distance that the element is moved above its normal position.
 
+    In the case of **anchor-positioned** elements, an {{cssxref("anchor()")}} function can be used. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated **anchor element**'s top or bottom edges.
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's height.
 - `auto`
@@ -62,10 +62,6 @@ bottom: unset;
 
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("top")}} property, while `height: auto` is treated as a height based on the content; or if `top` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("top")}} property; or if `top` is also `auto`, the element is not moved vertically at all.
-
-- {{cssxref("anchor()")}} {{experimental_inline}}
-
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the top and/or bottom edges of an absolutely- or fixed-positioned element's associated **anchor element**. See [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 - `inherit`
   - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
