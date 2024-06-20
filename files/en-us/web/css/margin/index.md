@@ -70,7 +70,7 @@ The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Web/CSS
 
 You can horizontally center an element within its parent by setting `margin: 0 auto;`.
 
-More commonly, though, people horizontally center element by setting {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;` on a container, which [centers its flex item](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) children.
+A more common method to center an element horizontally is by setting `display: flex;` and [`justify-content: center;`](/en-US/docs/Web/CSS/justify-content) on a container, which [centers its flex item](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) children.
 
 ### Margin collapsing
 
