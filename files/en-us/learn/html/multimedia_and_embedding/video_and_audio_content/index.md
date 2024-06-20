@@ -251,7 +251,7 @@ This is the second.
 
 To get this displayed along with the HTML media playback, you need to:
 
-1. Save it as a `.vtt` file near the HTML file.
+1. Save it as a `.vtt` file somewhere the server can serve (see below), such as in the same directory as the HTML file.
 2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in. Finally, add [`label`](/en-US/docs/Web/HTML/Element/track#label) to help readers identify the language they are searching for.
 
 Here's an example:
