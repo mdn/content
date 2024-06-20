@@ -192,6 +192,8 @@ To control whether or not the browser sends credentials, set the `credentials` o
 - `same-origin` (the default): only send and include credentials for same-origin requests.
 - `include`: always include credentials, even cross-origin.
 
+Note that if a cookie's [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute is set to `Strict` or `Lax`, then the cookie will not be sent cross-site, even if `credentials` is set to `include`.
+
 Including credentials in cross-origin requests can make a site vulnerable to {{glossary("CSRF")}} attacks, so even if `credentials` is set to `include`, the server must also agree to their inclusion by including the {{httpheader("Access-Control-Allow-Credentials")}} in its response. Additionally, in this situation the server must explicitly specify the client's origin in the {{httpheader("Access-Control-Allow-Origin")}} response header (that is, `*` is not allowed).
 
 This means that if `credentials` is set to `include` and the request is cross-origin, then:
