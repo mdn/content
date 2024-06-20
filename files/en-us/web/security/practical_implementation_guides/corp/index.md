@@ -14,9 +14,20 @@ Side-channel hardware vulnerabilities, such as [Meltdown](<https://en.wikipedia.
 
 ## Solution
 
-Use `Cross-Origin-Resource-Policy` to block [`no-cors`](/en-US/docs/Web/API/fetch#mode) cross-origin and/or cross-site requests to the given resource. Use the most restrictive value possible for your site; `same-origin` or `same-site` is recommended.
+Use `Cross-Origin-Resource-Policy` to block [`no-cors`](/en-US/docs/Web/API/fetch#mode) cross-origin requests to given resources. As this policy is expressed via a response header, the actual request is not prevented. Instead, the browser prevents the result from being leaked by stripping the response body.
 
-As this policy is expressed via a response header, the actual request is not prevented. Instead, the browser prevents the result from being leaked by stripping the response body.
+The possible values are:
+
+- `same-origin`
+  - : Limits resource access to requests coming from the same origin. This is recommended for requests for sensitive user information, or requests to private APIs.
+- `same-site`
+  - : Limits resource access to requests coming from the same site. This is recommended for requests to origins whose functionality is shared across several other same-site origins. Examples include a company CDN that serves static resources, and a single sign-on (SSO) app that handles authentication.
+- `cross-origin`
+  - : Allows resources to be accessed by cross-origin requests. This is recommended only for requests to widely-used origins, such as public CDNs or widgets. This is the default value if `Cross-Origin-Resource-Policy` is not set.
+
+Set the most restrictive value possible for your site.
+
+If your use case requires `cross-origin` access, opt into a better default by sending a {{httpheader("Cross-Origin-Embedder-Policy")}} header. This will prevent loading of cross-origin resources that don't also explicitly send a `Cross-Origin-Resource-Policy: cross-origin` header.
 
 ## Examples
 
@@ -26,8 +37,19 @@ Instruct browsers to disallow cross-origin requests made in `no-cors` mode:
 Cross-Origin-Resource-Policy: same-origin
 ```
 
+Instruct browsers to allow cross-origin resource access, including access to features with unthrottled timers (such as {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}}):
+
+```http
+Cross-Origin-Resource-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+This also permits such resources to be embedded.
+
 ## See also
 
+- [Consider deploying Cross-Origin Resource Policy](resourcepolicy.fyi)
 - [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
 - [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
+- [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
