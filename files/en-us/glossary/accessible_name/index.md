@@ -26,6 +26,8 @@ Assistive technologies will provide the user with the accessibility name propert
 
 ## See also
 
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
