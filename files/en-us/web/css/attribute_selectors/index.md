@@ -65,7 +65,7 @@ a[class~="logo"] {
 - `<value>`
   - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quoted if it contains spaces or special characters.
 - `s` or `i`
-  - : Case sensitivity or insenstivity flag. If included before the closing bracket (`]`), makes the value case sensitive or insensitive, irrespective of the markup language.
+  - : Case sensitivity or insensitivity flag. If included before the closing bracket (`]`), makes the value case sensitive or insensitive, irrespective of the markup language.
 
 ## Description
 

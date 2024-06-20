@@ -9,11 +9,13 @@ browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
 
 {{HTTPSidebar}}{{deprecated_header}}
 
-> **Warning:** This directive is marked as obsolete in the specification: all mixed content is now blocked if it can't be autoupgraded.
+> **Warning:** This directive is marked as obsolete in the specification.
+> This directive was previously used to prevent "optionally blockable" mixed content from being fetched insecurely and displayed.
+> Content that isn't blocked is now always upgraded to a secure connection, so this directive is not needed.
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** directive prevents loading any assets over HTTP when the page uses HTTPS.
 
-All [mixed content](/en-US/docs/Web/Security/Mixed_content) resource requests are blocked, including both active and passive mixed content.
+All [mixed content](/en-US/docs/Web/Security/Mixed_content) resource requests are blocked, including both blockable and upgradable mixed content.
 This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.
 
 > **Note:** The {{CSP("upgrade-insecure-requests")}} directive is evaluated before `block-all-mixed-content`.
