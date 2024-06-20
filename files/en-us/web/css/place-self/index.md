@@ -21,12 +21,9 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Positional alignment */
 place-self: auto center;
 place-self: normal start;
-place-self: anchor-center;
-
-/* Positional alignment */
 place-self: center normal;
 place-self: start auto;
 place-self: end normal;
@@ -34,6 +31,7 @@ place-self: self-start auto;
 place-self: self-end normal;
 place-self: flex-start auto;
 place-self: flex-end normal;
+place-self: anchor-center;
 
 /* Baseline alignment */
 place-self: baseline normal;
