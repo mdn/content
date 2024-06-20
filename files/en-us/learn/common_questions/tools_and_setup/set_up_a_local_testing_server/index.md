@@ -56,6 +56,30 @@ For VSCode, you can check the following free extension:
 
 - `vscode-preview-server`. You can check it on its [home page](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server).
 
+### Using Node.js
+
+The Node.js [`http-server`](https://www.npmjs.com/package/http-server) module is an easiest way to host HTML files in any directory.
+
+To use the module:
+
+1. Run the following commands to check if Node.js is already installed:
+
+   ```bash
+   node -v
+   npm -v
+   npx -v
+   ```
+
+2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download/) in the Node.js docs, then run the above commands again to check if the installation is successful.
+
+3. Let's assume the directory is `/path/to/project`. Run the following command to start the server:
+
+   ```bash
+   npx http-server /path/to/project -o -p 9999
+   ```
+
+   This hosts all files in the `/path/to/project` directory on `localhost:9999`. The option `-o` will open the `index.html` page in a web browser. If `index.html` doesn't exist, then the directory is displayed instead.
+
 ### Using Python
 
 Another way to achieve this is to use Python's `http.server` module.
