@@ -81,7 +81,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     > **Note:**
     >
-    > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
+    > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is set to `true`, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
 
 - `src`
