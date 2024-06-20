@@ -184,7 +184,7 @@ Whether a request can be made cross-origin or not is determined by the value of 
 
 Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password.
 
-To control whether or not the browser sends credentials (cookies, TLS client certificates, and [HTTP authentication entries](/en-US/docs/Web/HTTP/Authentication)), set the `credentials` option, which can take one of the following three values:
+To control whether or not the browser sends credentials, set the `credentials` option, which can take one of the following three values:
 
 - `omit`: never send credentials or include credentials in the response.
 - `same-origin` (the default): only send and include credentials for same-origin requests.
