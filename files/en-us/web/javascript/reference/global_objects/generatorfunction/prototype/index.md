@@ -41,7 +41,7 @@ console.log(proto(proto(gen)) === GeneratorFunctionPrototype.prototype); // true
 
 The following diagram illustrates the prototype chain of a generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e. a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
 
-![The inheritance diagram of generators and generator functions](diagram.svg)
+![The inheritance diagram of generators and generator functions](https://mdn.github.io/shared-assets/images/diagrams/javascript/generatorfunction/prototype-chain.svg)
 
 ## Specifications
 
