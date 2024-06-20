@@ -57,7 +57,7 @@ async function readDirectory(directory) {
 }
 ```
 
-This works by calling {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}} repetitively to get all the entries in the directory, concatenating each batch to the array. When it returns an empty array, the end of the directory has been reached, and the loop ends.
+This works by calling {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}} repetitively to get all the entries in the directory, concatenating each batch to the array. When it returns an empty array, all entries have been read, and the loop ends.
 
 ## Specifications
 
