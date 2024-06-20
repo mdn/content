@@ -53,7 +53,7 @@ In this section we'll look at some of the most commonly-used options. To read ab
 
 ### Setting the method
 
-By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the `method` option to make a different [request method](/en-US/docs/Web/HTTP/Methods):
+By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the `method` option to use a different [request method](/en-US/docs/Web/HTTP/Methods):
 
 ```js
 const response = await fetch("https://example.org/post", {
