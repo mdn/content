@@ -14,11 +14,11 @@ Many factors can increase the load on your website; this includes web crawlers. 
 
 ## Solution
 
-Use `robots.txt` to reduce website load and stop unsuitable content appearing in search results.
+Use `robots.txt` to reduce website load and stop unsuitable content appearing in search results. Using this file is optional and should only be used for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website.
 
-Using `robots.txt` is optional and sites should use it only for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. While using this file can prevent pages from appearing in search engine results, it does not secure websites against attackers. In fact, it can help them: `robots.txt` is publicly accessible, and by adding your sensitive page paths to it, you are showing attackers exactly where they are.
+While using this file can prevent pages from appearing in search engine results, it does not secure websites against attackers. On the contrary, it can unintentionally help them: `robots.txt` is publicly accessible, and by adding your sensitive page paths to it, you are showing their locations to potential attackers.
 
-Also be aware that some robots will ignore your `robots.txt` file, for example, malware robots and email address harvesters.
+Also be aware that some robots, such as malware robots and email address harvesters, will ignore your `robots.txt` file.
 
 ## Examples
 
