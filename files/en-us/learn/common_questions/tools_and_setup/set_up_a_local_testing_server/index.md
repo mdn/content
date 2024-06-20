@@ -78,7 +78,7 @@ To use the module:
    npx http-server /path/to/project -o -p 9999
    ```
 
-   This hosts all the files in `/path/to/project` directory on `localhost:9999`. The option `-o` will open the `index.html` page in a web browser. If `index.html` doesn't exit, then it opens the directory in a browser.
+   This hosts all files in the `/path/to/project` directory on `localhost:9999`. The option `-o` will open the `index.html` page in a web browser. If `index.html` doesn't exist, then the directory is displayed instead.
 
 ### Using Python
 
