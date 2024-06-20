@@ -7,7 +7,7 @@ browser-compat: webextensions.api.runtime.getPlatformInfo
 
 {{AddonSidebar}}
 
-Returns information about the current platform. This can be called in the background script context as well as in popups and options pages.
+Returns information about the current platform. 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
