@@ -179,7 +179,7 @@ The availability of these special shortcuts varies between manifest versions and
 </tbody>
 </table>
 
-> **Note:** Users can define custom shortcuts for the browser action, which are saved against `_execute_browser_action` or `_execute_action`. When an extension is migrated to Manifest V3 to use {{WebExtAPIRef("action")}} API or the [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key, the user-defined shortcuts stored against `_execute_browser_action` are not migrated to `_execute_action`. From Firefox 127, to prevent the loss of user-defined shortcuts, when there are no user shortcuts for `_execute_action`, but there are for `_execute_browser_action`, the user shortcuts defined in `_execute_browser_action` are used.
+> **Note:** If the user changes the shortcut of the `_execute_browser_action` command, it is automatically carried over to the `_execute_action` command when the extension migrates from Manifest V2 to V3. This was implemented in Chrome 111 and Firefox 127.
 
 For example, this JSON defines a key combination that clicks the extension's browser action:
 
