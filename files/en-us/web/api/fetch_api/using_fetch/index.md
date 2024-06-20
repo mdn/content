@@ -66,6 +66,8 @@ If the `mode` option is set to `no-cors`, then `method` must be one of `GET`, `P
 
 ### Setting a body
 
+The request body is the payload of the request: it's the thing the client is sending to the server. You won't include a body with `GET` requests, but you will include it in requests that send content to the server, such as {{httpmethod("POST")}} or {{httpmethod("PUT")}} requests. For example, if you want to upload a file to the server, you might make a `POST` request and include the file as the request body.
+
 To set a request body, pass it as the `body` option:
 
 ```js
@@ -123,6 +125,8 @@ See [Locked and disturbed streams](#locked_and_disturbed_streams) for more infor
 
 ### Setting headers
 
+Request headers give the server information about the request: for example, the {{httpheader("Content-Type")}} header tells the server the format of the request's body. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}.
+
 To set request headers, assign them to the `headers` option.
 
 You can pass an object literal here containing `header-name: header-value` properties:
@@ -147,8 +151,6 @@ const response = await fetch("https://example.org/post", {
   // .,.
 });
 ```
-
-You can't set any header which has a {{glossary("Forbidden header name")}}.
 
 If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
 
