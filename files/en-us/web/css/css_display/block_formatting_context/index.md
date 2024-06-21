@@ -217,7 +217,7 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 }
 
 .outer {
-  overflow: hidden; 
+  overflow: hidden;
   background: transparent;
 }
 ```
