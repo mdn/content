@@ -73,6 +73,10 @@ For a full description of every member, see the [web app manifest reference docu
 
 For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
 
+### User engagement
+
+Chromium-based browsers such as Chrome and Edge can actively prompt the user to install a PWA if a user engagement criteria has been met. Specifically, having clicked or tapped on the website at least once, and having spent at least 30 seconds viewing the page (at any points in time). See [this guide](https://web.dev/articles/install-criteria) for more information.
+
 ## Installation from an app store
 
 Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple App Store.
