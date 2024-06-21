@@ -22,7 +22,7 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
 We are viewing our page using the `file://` protocol. This works for the current state of our codebase but not suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality).
-The reason for this is that PWAs and some of their commonly used APIs, such as the Service Worker API, require a secure connection. 
+The reason for this is that PWAs and some of their commonly used APIs, such as the Service Worker API, require a secure connection.
 For this reason PWAs must be served using the `https` protocol, or from a local development environment using `localhost` or `127.0.0.1` — with or without a port number. If we view our finished app using the `file://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) we add will fail.
 
 > **Note:** Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
