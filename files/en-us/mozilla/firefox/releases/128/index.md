@@ -44,6 +44,7 @@ This article provides information about the changes in Firefox 128 that affect d
 ### APIs
 
 - {{domxref('RTCRtpReceiver.getParameters()')}} and {{domxref('RTCRtpSender.getParameters()')}} are now supported, returning an object that describes the current codecs used for the encoding and transmission of media on the receiver and sender tracks, respectively. ([Firefox bug 1534687](https://bugzil.la/1534687)).
+- {{domxref('Blob.bytes()')}} is supported for returning the data from a {{domxref('Blob')}} as an array of bytes in a {{domxref("Uint8Array")}} object. ([Firefox bug 1896509](https://bugzil.la/1896509)).
 
 #### DOM
 
