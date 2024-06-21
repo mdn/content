@@ -10,12 +10,14 @@ This article documents the default values for the HTTP [`Accept`](/en-US/docs/We
 
 ## Default values
 
-These are the values sent when the context doesn't give better information. Note that all browsers add the `*/*` MIME Type to cover all cases. This is typically used for requests initiated via the address bar of a browser, or via an HTML {{HTMLElement("a")}} element.
+These are the values sent when the context doesn't give better information.
+Note that all browsers add the `*/*` MIME Type to cover all cases.
+This is typically used for requests initiated via the address bar of a browser, or via an HTML {{HTMLElement("a")}} element.
 
 | User Agent                 | Value                                                                                                                               |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Firefox 128 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                     |
-| Firefox 92 to 127 [2]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
+| Firefox 92 to 127 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
 | Firefox 72 to 91 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
 | Firefox 66 to 71 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
 | Firefox 65 [2]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
@@ -25,9 +27,9 @@ These are the values sent when the context doesn't give better information. Note
 | Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                  |
 | Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |
 
-\[1] The [`image.avif.enabled`](https://searchfox.org/mozilla-central/search?q=image.avif.enabled&path=modules%2Flibpref%2Finit%2FStaticPrefList.yaml&case=false&regexp=false) and [`image.jxl.enabled`](https://searchfox.org/mozilla-central/search?q=image.jxl.enabled&path=modules%2Flibpref%2Finit%2FStaticPrefList.yaml&case=false&regexp=false) preferences can be enabled/disabled in `about:config` to add/remove `image/avif` and `image/jxl` in the accept header, respectively. `image.avif.enabled` is currently enabled by default. If both are enabled, they appear in the order: `image/avif`, `image/jxl`(, `image/webp`, ...).
+\[1] The value can be set to an arbitrary string using the `network.http.accept` preference (`about:config`).
 
-\[2] This value can be modified using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) parameter.
+\[2] The value can be set to an arbitrary string using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) preference (`about:config`).
 
 \[3] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
 
@@ -37,7 +39,7 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 
 | User Agent                     | Value                                                                      |
 | ------------------------------ | -------------------------------------------------------------------------- |
-| Firefox 128 and later [1] [2]  | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`    |
+| Firefox 128 and later [1]      | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`    |
 | Firefox 92 to 127 [1]          | `image/avif,image/webp,*/*`                                                |
 | Firefox 65 to 91 [1]           | `image/webp,*/*`                                                           |
 | Firefox 47 to 63 [1]           | `*/*`                                                                      |
@@ -46,9 +48,7 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 | Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
 | Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
 
-\[1] This value can be set to an arbitrary string using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_). This overrides specific settings as per \[2].
-
-\[2] The [`image.avif.enabled`](https://searchfox.org/mozilla-central/search?q=image.avif.enabled&path=modules%2Flibpref%2Finit%2FStaticPrefList.yaml&case=false&regexp=false) and [`image.jxl.enabled`](https://searchfox.org/mozilla-central/search?q=image.jxl.enabled&path=modules%2Flibpref%2Finit%2FStaticPrefList.yaml&case=false&regexp=false) preferences can be enabled/disabled in `about:config` to add/remove `image/avif` and `image/jxl` in the accept header, respectively. `image.avif.enabled` is currently enabled by default. If both are enabled, they appear in the order: `image/avif`, `image/jxl`(, `image/webp`, ...).
+\[1] The value can be set to an arbitrary string using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
 
 ## Values for a video
 
