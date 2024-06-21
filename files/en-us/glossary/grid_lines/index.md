@@ -174,7 +174,7 @@ The lines created in the _explicit grid_ can be named, by adding the name in squ
 
 ### Further reading
 
-- CSS grid layout Guide:
+- CSS grid layout guides:
   - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
   - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
   - [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
