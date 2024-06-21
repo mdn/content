@@ -26,7 +26,7 @@ width: calc(100px * tan(pi / 3));
 width: calc(100px * tan(e));
 ```
 
-### Parameter
+### Parameters
 
 The `tan(angle)` function accepts only one value as its parameter.
 
