@@ -7,15 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`202 Accepted`**
-response status code indicates that the request has been accepted for processing, but
-the processing has not been completed; in fact, processing may not have started yet. The
-request might or might not eventually be acted upon, as it might be disallowed when
-processing actually takes place.
+The HTTP **`202 Accepted`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and indicates that a request has been accepted for processing, but processing has not been completed or may even not have started yet.
+The request may or may not eventually be acted upon, as it may be disallowed when processing begins.
 
-202 is non-committal, meaning that there is no way for the HTTP to later send an
-asynchronous response indicating the outcome of processing the request. It is intended
-for cases where another process or server handles the request, or for batch processing.
+202 is non-committal, meaning that there is no way to later send an asynchronous HTTP response indicating the outcome of processing the request.
+It is intended for cases where another process or server handles the request, or for batch processing.
 
 ## Status
 
@@ -23,10 +19,20 @@ for cases where another process or server handles the request, or for batch proc
 202 Accepted
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{HTTPHeader("Accept")}}
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

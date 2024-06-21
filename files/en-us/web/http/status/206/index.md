@@ -7,16 +7,11 @@ browser-compat: http.status.206
 
 {{HTTPSidebar}}
 
-The HTTP **`206 Partial Content`** success status response code
-indicates that the request has succeeded and the body contains the requested ranges
-of data, as described in the {{HTTPHeader("Range")}} header of the request.
+The HTTP **`206 Partial Content`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and is sent in response to a [range request](/en-US/docs/Web/HTTP/Range_requests).
+The response body contains the requested ranges of data as described in the {{HTTPHeader("Range")}} header of the request.
 
-If there is only one range, the {{HTTPHeader("Content-Type")}} of the whole response is
-set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.
-
-If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
-`multipart/byteranges` and each fragment covers one range, with
-{{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} describing it.
+If there is only one range, the {{HTTPHeader("Content-Type")}} of the whole response is set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.
+If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to `multipart/byteranges` and each fragment covers one range, with {{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} headers describing it.
 
 ## Status
 
@@ -25,6 +20,8 @@ If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
 ```
 
 ## Examples
+
+### 206 response with a single range
 
 A response containing one single range:
 
@@ -38,6 +35,8 @@ Content-Type: image/gif
 
 # 26012 bytes of partial image data…
 ```
+
+### 206 response with several ranges
 
 A response containing several ranges:
 
@@ -75,3 +74,5 @@ Content-Range: bytes 4590-7999/8000
 - {{HTTPHeader("Range")}}
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Content-Type")}}
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
