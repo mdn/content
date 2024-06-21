@@ -66,7 +66,7 @@ If the `mode` option is set to `no-cors`, then `method` must be one of `GET`, `P
 
 ### Setting a body
 
-The request body is the payload of the request: it's the thing the client is sending to the server. You won't include a body with `GET` requests, but you will include it in requests that send content to the server, such as {{httpmethod("POST")}} or {{httpmethod("PUT")}} requests. For example, if you want to upload a file to the server, you might make a `POST` request and include the file as the request body.
+The request body is the payload of the request: it's the thing the client is sending to the server. You cannot include a body with `GET` requests, but it's useful for requests that send content to the server, such as {{httpmethod("POST")}} or {{httpmethod("PUT")}} requests. For example, if you want to upload a file to the server, you might make a `POST` request and include the file as the request body.
 
 To set a request body, pass it as the `body` option:
 
