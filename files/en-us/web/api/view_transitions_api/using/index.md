@@ -290,9 +290,9 @@ The `ViewTransition` can be accessed like so:
 1. In the case of same-document (SPA) transitions, the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns the `ViewTransition` associated with the transition.
 2. In the case of cross-document (MPA) transitions:
 
-- A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
-  > **Note:** If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.
-- A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
+   - A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
+     > **Note:** If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.
+   - A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
 
 Let's have a look at some example code to show how these features could be used.
 
@@ -364,7 +364,7 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ### A JavaScript-powered custom cross-document (MPA) transition
 
-The [List of Chrome Dev Rel team members](https://view-transitions.netlify.app/profiles/mpa/) demo provides a basic set of team profile pages, and demonstrates how to use the {{domxref("Window.pageswap_event", "pageswap")}} and {{domxref("Window.pagereveal_event", "pagereveal")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
+The [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) demo provides a basic set of team profile pages, and demonstrates how to use the {{domxref("Window.pageswap_event", "pageswap")}} and {{domxref("Window.pagereveal_event", "pagereveal")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
 The {{domxref("Window.pageswap_event", "pageswap")}} event listener looks as follows. This sets view transition names on the elements on the outbound page that link to the profile pages. When navigating from the home page to a profile page, custom animations are provided _only_ for the linked element that is clicked in each case.
 
@@ -491,7 +491,7 @@ To ensure that your initial HTML has been parsed and will always render consiste
 
 Let's explore what this looks like with a simple example HTML document:
 
-```html
+```html-nolint
 <!doctype html>
 <html lang="en">
 <head>
@@ -499,12 +499,12 @@ Let's explore what this looks like with a simple example HTML document:
   <link rel="stylesheet" href="style.css" />
 
   <!-- Marking critical scripts as render blocking will
-         ensure they're run before the view transition is activated -->
+       ensure they're run before the view transition is activated -->
   <script async href="layout.js" blocking="render"></script>
 
   <!-- Use rel="expect" and blocking="render" to ensure the
-         #lead-content element is visible and fully parsed before
-         activating the transition -->
+       #lead-content element is visible and fully parsed before
+       activating the transition -->
   <link rel="expect" href="#lead-content" blocking="render" />
 </head>
 <body>
