@@ -49,4 +49,3 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts)
