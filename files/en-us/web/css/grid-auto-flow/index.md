@@ -147,4 +147,4 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 - Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
 - Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- Video tutorial: _[Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

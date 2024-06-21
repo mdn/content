@@ -16,7 +16,7 @@ The effect of this property is dependent of the layout mode we are in:
 - In block-level layouts, it aligns the items inside their containing block on the inline axis.
 - For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
 - In table cell layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables) about alignment in block, absolute positioned and table layout)
-- In flexbox layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox) about alignment in Flexbox)
+- In flexbox layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox) about alignment in flexbox)
 - In grid layouts, it aligns the items inside their grid areas on the inline axis ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout) about alignment in grid layouts)
 
 ## Syntax
@@ -30,8 +30,8 @@ justify-items: stretch;
 justify-items: center; /* Pack items around the center */
 justify-items: start; /* Pack items from the start */
 justify-items: end; /* Pack items from the end */
-justify-items: flex-start; /* Equivalent to 'start'. Note that justify-items is ignored in Flexbox layouts. */
-justify-items: flex-end; /* Equivalent to 'end'. Note that justify-items is ignored in Flexbox layouts. */
+justify-items: flex-start; /* Equivalent to 'start'. Note that justify-items is ignored in flexbox layouts. */
+justify-items: flex-end; /* Equivalent to 'end'. Note that justify-items is ignored in flexbox layouts. */
 justify-items: self-start;
 justify-items: self-end;
 justify-items: left; /* Pack items from the left */
@@ -184,7 +184,7 @@ span {
 
 ## See also
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- CSS grid guide: _[Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
 - The {{CSSxRef("place-items")}} shorthand property
 - The {{CSSxRef("justify-self")}} property
