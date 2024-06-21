@@ -82,14 +82,9 @@ The updated properties have not yet been implemented in all browsers. Therefore,
 
 ### Glossary Entries
 
-- [Cross Axis](/en-US/docs/Glossary/Cross_Axis)
-- [Main Axis](/en-US/docs/Glossary/Main_Axis)
+- [Cross axis](/en-US/docs/Glossary/Cross_Axis)
+- [Main axis](/en-US/docs/Glossary/Main_Axis)
 
 ## Guides
 
 - [Alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-
-## External Resources
-
-- [CSS grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

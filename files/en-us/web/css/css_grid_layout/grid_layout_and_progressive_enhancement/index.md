@@ -384,8 +384,3 @@ The alignment property {{cssxref("vertical-align")}} has no effect on a grid ite
 ### Multiple-column layout
 
 You can also use multiple column layout as your legacy browser plan, as the `column-*` properties do not apply when applied to a grid container.
-
-## Further reading
-
-- For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS (2016)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
-- [CSS grid and the New Autoprefixer (2018)](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/)

@@ -86,8 +86,3 @@ On the cross axis the `row-gap` property creates spacing between adjacent flex l
 ## Guides
 
 - [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-
-## External Resources
-
-- [CSS grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)
