@@ -2,7 +2,7 @@
 title: Mixed content
 slug: Web/Security/Mixed_content
 page-type: guide
-browser-compat: http.mixed_content
+browser-compat: http.mixed-content
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

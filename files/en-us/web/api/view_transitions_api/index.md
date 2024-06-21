@@ -2,15 +2,13 @@
 title: View Transitions API
 slug: Web/API/View_Transitions_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat:
   - api.Document.startViewTransition
   - api.ViewTransition
 spec-urls: https://drafts.csswg.org/css-view-transitions/
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transitions API")}}
 
 The **View Transitions API** provides a mechanism for easily creating animated transitions between different DOM states while also updating the DOM contents in a single step.
 
