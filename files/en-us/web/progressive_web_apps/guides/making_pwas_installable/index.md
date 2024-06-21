@@ -110,8 +110,8 @@ Support for PWA installation promotion from the web varies by browser and by pla
 
 On desktop:
 
-- Firefox and Safari do not support installing PWAs on any desktop operating systems. See [Installing sites as apps](#installing_sites_as_apps), below.
-- Chrome and Edge support installing PWAs on Linux, Windows, macOS, and Chromebooks.
+- Chrome, Edge & Safari support installing PWAs on all supported desktop operating systems.
+- Firefox only supports installing PWAs on desktop with an [unofficial extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
 
 On mobile:
 
