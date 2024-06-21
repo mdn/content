@@ -493,6 +493,7 @@ Let's explore what this looks like with a simple example HTML document:
 
 ```html
 <!doctype html>
+<html lang="en">
 <head>
   <!-- This will be render-blocking by default -->
   <link rel="stylesheet" href="style.css" />
@@ -505,15 +506,16 @@ Let's explore what this looks like with a simple example HTML document:
          #lead-content element is visible and fully parsed before
          activating the transition -->
   <link rel="expect" href="#lead-content" blocking="render" />
-  <body>
-    <h1>Page title</h1>
-    <nav>...</nav>
-    <div id="lead-content">
-      <section id="first-section">The first section</section>
-      <section>The second section</section>
-    </div>
-  </body>
 </head>
+<body>
+  <h1>Page title</h1>
+  <nav>...</nav>
+  <div id="lead-content">
+    <section id="first-section">The first section</section>
+    <section>The second section</section>
+  </div>
+</body>
+</html>
 ```
 
 The result is that document rendering is blocked until the lead content `<div>` has been parsed, ensuring a consistent view transition.
