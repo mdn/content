@@ -23,7 +23,7 @@ A Promise.
 
 ### Different transitions for different navigations
 
-Sometimes certain navigations will require specifically tailored transitions, for example, a 'back' navigation may want a different transition to a 'forward' navigation. The best way to handle such cases is to set a class name on the `<html>` element, handle the transition — applying the correct animation using a tailored selector — and then remove the class name once the transition is finished.
+Sometimes certain navigations will require specifically tailored transitions, for example, a "back" navigation may want a different transition to a "forward" navigation. The best way to handle such cases is to set a class name on the `<html>` element, handle the transition — applying the correct animation using a tailored selector — and then remove the class name once the transition is finished.
 
 ```js
 async function handleTransition() {
