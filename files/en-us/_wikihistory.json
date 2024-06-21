@@ -2625,10 +2625,6 @@
     "modified": "2020-03-26T14:30:59.270Z",
     "contributors": ["mfuji09", "j9t", "teoli", "rachelandrew"]
   },
-  "Glossary/Guard": {
-    "modified": "2019-01-16T20:19:28.335Z",
-    "contributors": ["chrisdavidmills", "klez", "Andrew_Pfeiffer", "kscarfone"]
-  },
   "Glossary/Gutters": {
     "modified": "2019-03-23T22:16:42.903Z",
     "contributors": ["Verger", "teoli", "rachelandrew"]
@@ -34997,21 +34993,6 @@
       "teoli",
       "DavidWalsh",
       "kscarfone"
-    ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-02-18T19:55:22.051Z",
-    "contributors": [
-      "jswisher",
-      "Sheppy",
-      "sideshowbarker",
-      "LurN",
-      "parambirs",
-      "chrisdavidmills",
-      "gapple",
-      "lawrencekgrant",
-      "gbharatwaj",
-      "smarvin"
     ]
   },
   "Web/API/Fetch_API/Cross-global_fetch_usage": {
