@@ -349,7 +349,7 @@ You can then step up a gear, using an API to access functionality programmatical
 1. Let's get started by [signing up on LambdaTest](https://accounts.lambdatest.com/register) for free.
 2. Sign in. This should happen automatically after you verify your email address.
 
-> **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium grid, LambdaTest offers 60 minutes per month of free testing.
+> **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
 
 #### The basics: Manual tests
 
