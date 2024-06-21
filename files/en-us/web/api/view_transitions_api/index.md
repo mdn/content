@@ -46,7 +46,7 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 - {{domxref("PageSwapEvent")}}
   - : The event object for the {{domxref("Window.pageswap_event", "pageswap")}} event. During a cross-document navigation, it allows you to manipulate the related view transition (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _from_, if a view transition was triggered by the navigation. It also provides access to information on the navigation type and current and destination document history entries.
 - The {{domxref("Window")}} {{domxref("Window.pagereveal_event", "pagereveal")}} event
-  - : Fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](https://web.dev/articles/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
+  - : Fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
 - The {{domxref("Window")}} {{domxref("Window.pageswap_event", "pageswap")}} event
   - : Fired when a document is about to be unloaded due to a navigation.
 
