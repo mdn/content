@@ -23,4 +23,4 @@ When an element becomes a grid container it establishes a **grid formatting cont
 
 ### Further reading
 
-- CSS grid layout guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
