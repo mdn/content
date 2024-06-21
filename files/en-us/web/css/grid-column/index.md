@@ -151,8 +151,6 @@ Each `<grid-line>` value can be specified as:
 
 ## See also
 
-Related CSS properties:
-
 - {{cssxref("grid-row")}}
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
