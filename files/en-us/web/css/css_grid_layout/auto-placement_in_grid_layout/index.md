@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.
+In addition to the ability to place items accurately onto a created grid, the CSS grid layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.
 
 ## Default placement
 
@@ -390,7 +390,7 @@ So far, other than items we have specifically placed, grid is always progressing
 
 To do this, add the property {{cssxref("grid-auto-flow")}} with a value of `dense` to the container. This is the same property you use to change the flow order to `column`, so if you were working in columns you would add both values `grid-auto-flow: column dense`.
 
-Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in the [Grid layout and accessibility guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility), but you should take care when creating this disconnect between the visual order and display order.
+Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of grid layout in the [Grid layout and accessibility guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility), but you should take care when creating this disconnect between the visual order and display order.
 
 ```css hidden
 * {
