@@ -276,6 +276,17 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 ## Experimental headers
 
+### Attribution reporting headers
+
+The [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies, instead relying on various headers to register **sources** and **triggers** that are matched to indicate a conversion.
+
+- {{httpheader("Attribution-Reporting-Eligible")}}
+  - : Used to indicate that the response corresponding to the current request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
+- {{httpheader("Attribution-Reporting-Register-Source")}}
+  - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution source.
+- {{httpheader("Attribution-Reporting-Register-Trigger")}}
+  - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution trigger.
+
 ### Client hints
 
 HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.

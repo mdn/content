@@ -17,7 +17,7 @@ This means they can only be read within the context of the top-level site they w
 
 ## How does CHIPS work?
 
-To understand how CHIPs works, let's look at a brief example. Historically when a site embeds content via an {{htmlelement("iframe")}}, the embedded content has been able to set a cookie on the user's device in response to the cross-site request. If the user visits other sites that embed the same content, the embedded content can access the same cookie originally set by the first instance of the embedded content. This enables the content owner to track user activity across these sites, and any other sites that embed the same content.
+To understand how CHIPS works, let's look at a brief example. Historically when a site embeds content via an {{htmlelement("iframe")}}, the embedded content has been able to set a cookie on the user's device in response to the cross-site request. If the user visits other sites that embed the same content, the embedded content can access the same cookie originally set by the first instance of the embedded content. This enables the content owner to track user activity across these sites, and any other sites that embed the same content.
 
 For example:
 
@@ -26,7 +26,7 @@ For example:
 
 This works because historically cookies have been stored with a key based on the host or domain name of the site that set them, aka the **host key**. In the above case the cookie would be stored with a key of `("3rd-party.example")`.
 
-Browsers with CHIPs support provide a new attribute for the {{httpheader("Set-Cookie")}} HTTP header — `Partitioned` — which when set allows site owners to opt-in to using CHIPs:
+Browsers with CHIPS support provide a new attribute for the {{httpheader("Set-Cookie")}} HTTP header — `Partitioned` — which when set allows site owners to opt-in to using CHIPS:
 
 ```http
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
@@ -44,9 +44,9 @@ Revisiting our example:
 
 > **Note:** CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third-party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
 
-## CHIPs and subdomains
+## CHIPS and subdomains
 
-CHIPs still allows third-party content embedded across different subdomains of a site to access third-party cookies set by that content. Let's look at a retail site example that uses a third-party chat service:
+CHIPS still allows third-party content embedded across different subdomains of a site to access third-party cookies set by that content. Let's look at a retail site example that uses a third-party chat service:
 
 1. A user visits `https://shoppy.example`, which embeds a third-party chat service from `https://3rd-party.example/chat` to provide support for users that need help. `https://3rd-party.example/chat` sets a cookie on the user's device using `Partitioned`, to persist the state of the chat across different site subdomains.
 2. The storage key for the cookie would be `{("https://shoppy.example"), ("3rd-party.example/chat")}`.

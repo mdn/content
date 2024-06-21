@@ -56,7 +56,7 @@ requestStorageAccess(types)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-party cookies was granted and no `types` parameter was provided, fufills with {{domxref("StorageAccessHandle")}} if the access to unpartitioned state requested by the `types` parameter was provided, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-party cookies was granted and no `types` parameter was provided, fulfills with {{domxref("StorageAccessHandle")}} if the access to unpartitioned state requested by the `types` parameter was provided, and rejects if access was denied.
 
 `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they need to be run inside a user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 

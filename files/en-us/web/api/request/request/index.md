@@ -39,6 +39,17 @@ new Request(input, options)
   - : An object containing any custom settings that you want to apply to the
     request. The possible options are:
 
+    - `attributionReporting` {{experimental_inline}}
+
+      - : Indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
+
+        - `eventSourceEligible`
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.
+        - `triggerEligible`
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution trigger. If set to `false`, it isn't.
+
+        > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
     - `body`
       - : Any body that you want to add to your request: this can be a
         {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}},

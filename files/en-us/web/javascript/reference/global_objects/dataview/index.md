@@ -13,7 +13,7 @@ The **`DataView`** view provides a low-level interface for reading and writing m
 
 ### Endianness
 
-Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness.
+Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness. For example, [WebAssembly](/en-US/docs/WebAssembly) memory is always little-endian, so you should use `DataView` instead of typed arrays to read and write multi-byte values. See [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) for an example.
 
 ```js
 const littleEndian = (() => {
@@ -24,6 +24,8 @@ const littleEndian = (() => {
 })();
 console.log(littleEndian); // true or false
 ```
+
+> **Note:** `DataView` defaults to big-endian read and write, but most platforms use little-endian.
 
 ### 64-bit Integer Values
 
@@ -93,6 +95,8 @@ These properties are defined on `DataView.prototype` and shared by all `DataView
   - : Reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit signed integer.
 - {{jsxref("DataView.prototype.getBigUint64()")}}
   - : Reads 8 bytes starting at the specified byte offset of this `DataView` and interprets them as a 64-bit unsigned integer.
+- {{jsxref("DataView.prototype.getFloat16()")}}
+  - : Reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit floating point number.
 - {{jsxref("DataView.prototype.getFloat32()")}}
   - : Reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit floating point number.
 - {{jsxref("DataView.prototype.getFloat64()")}}
@@ -113,6 +117,8 @@ These properties are defined on `DataView.prototype` and shared by all `DataView
   - : Takes a BigInt and stores it as a 64-bit signed integer in the 8 bytes starting at the specified byte offset of this `DataView`.
 - {{jsxref("DataView.prototype.setBigUint64()")}}
   - : Takes a BigInt and stores it as a 64-bit unsigned integer in the 8 bytes starting at the specified byte offset of this `DataView`.
+- {{jsxref("DataView.prototype.setFloat16()")}}
+  - : Takes a number and stores it as a 16-bit float in the 2 bytes starting at the specified byte offset of this `DataView`.
 - {{jsxref("DataView.prototype.setFloat32()")}}
   - : Takes a number and stores it as a 32-bit float in the 4 bytes starting at the specified byte offset of this `DataView`.
 - {{jsxref("DataView.prototype.setFloat64()")}}

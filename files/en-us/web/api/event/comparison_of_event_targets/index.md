@@ -70,7 +70,7 @@ There are five targets to consider:
         <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} The original target of the event, before any retargetings. See <a href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> for details.
+        {{ Non-standard_inline() }} The original target of the event, before any retargetings.
       </td>
     </tr>
     <tr>

@@ -370,7 +370,7 @@ promise
   .then((data) => {
     console.log(data[0].name);
   })
-  .catch(() => {
+  .catch((error) => {
     console.error(`Could not get products: ${error}`);
   });
 ```

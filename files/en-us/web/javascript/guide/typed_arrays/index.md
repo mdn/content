@@ -57,6 +57,7 @@ Typed array views have self-descriptive names and provide views for all the usua
 | {{jsxref("Uint16Array")}}       | 0 to 65535                            | 2             | `unsigned short`      |
 | {{jsxref("Int32Array")}}        | -2147483648 to 2147483647             | 4             | `long`                |
 | {{jsxref("Uint32Array")}}       | 0 to 4294967295                       | 4             | `unsigned long`       |
+| {{jsxref("Float16Array")}}      | `-65504` to `65504`                   | 2             | N/A                   |
 | {{jsxref("Float32Array")}}      | `-3.4e38` to `3.4e38`                 | 4             | `unrestricted float`  |
 | {{jsxref("Float64Array")}}      | `-1.8e308` to `1.8e308`               | 8             | `unrestricted double` |
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1 | 8             | `bigint`              |

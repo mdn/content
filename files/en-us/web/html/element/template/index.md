@@ -43,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
-- `shadowrootserializable`
+- `shadowrootserializable` {{experimental_inline}}
 
   - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
