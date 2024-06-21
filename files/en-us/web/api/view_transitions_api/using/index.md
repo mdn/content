@@ -499,12 +499,12 @@ Let's explore what this looks like with a simple example HTML document:
     <link rel="stylesheet" href="style.css" />
 
     <!-- Marking critical scripts as render blocking will
-        ensure they're run before the view transition is activated -->
+         ensure they're run before the view transition is activated -->
     <script async href="layout.js" blocking="render"></script>
 
     <!-- Use rel="expect" and blocking="render" to ensure the
-        #lead-content element is visible and fully parsed before
-        activating the transition -->
+         #lead-content element is visible and fully parsed before
+         activating the transition -->
     <link rel="expect" href="#lead-content" blocking="render" />
   </head>
   <body>
