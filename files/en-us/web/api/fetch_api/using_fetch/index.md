@@ -190,7 +190,7 @@ Credentials are cookies, {{glossary("TLS")}} client certificates, or authenticat
 
 To control whether or not the browser sends credentials, set the `credentials` option, which can take one of the following three values:
 
-- `omit`: never send credentials or include credentials in the response.
+- `omit`: never send credentials in the request or include credentials in the response.
 - `same-origin` (the default): only send and include credentials for same-origin requests.
 - `include`: always include credentials, even cross-origin.
 
