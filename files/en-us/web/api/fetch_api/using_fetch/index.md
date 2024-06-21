@@ -397,17 +397,67 @@ The method will throw an exception if the response body is not in the appropriat
 
 Request and response bodies are actually {{domxref("ReadableStream")}} objects, and whenever you read them, you're streaming the content. This is good for memory efficiency, because the browser doesn't have to buffer the entire response in memory before the caller retrieves it using a method like `json()`.
 
-This also means that the caller can create a reader for the stream using {{domxref("ReadableStream.getReader()")}}, and then process the content as it arrives, without having to wait for the entire response body to arrive.
+This also means that the caller can process the content incrementally as it is received.
 
-In the example below, we fetch a text resource and process it line by line:
+For example, consider a `GET` request that fetches a large text file and processes it in some way, or displays it to the user:
+
+```js
+const url = "https://www.example.org/a-large-file.txt";
+
+async function fetchText(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const text = await response.text();
+    console.log(text);
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+If we use {{domxref("Response.text()")}}, as above, we must wait until the whole file has been received before we can process any of it.
+
+If we stream the response instead, we can process chunks of the body as they are received from the network:
+
+```js
+const url = "https://www.example.org/a-large-file.txt";
+
+async function fetchTextAsStream(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const stream = response.body.pipeThrough(new TextDecoderStream());
+    for await (const value of stream) {
+      console.log(value);
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+In this example, we {{jsxref("Statements/for-await...of", "iterate asynchronously", "", "nocode")}} over the stream, processing each chunk as it arrives.
+
+Note that when you access the body directly like this, you get the raw bytes of the response and must transform it yourself. In this case we call {{domxref("ReadableStream.pipeThrough()")}} to pipe the response through a {{domxref("TextDecoderStream")}}, which decodes the UTF-8-encoded body data as text.
+
+### Processing a text file line by line
+
+In the example below, we fetch a text resource and process it line by line, using a regular expression to look for line endings. For simplicity, we assume the text is UTF-8, and don't handle fetch errors:
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder("utf-8");
   const response = await fetch(fileURL);
-  const reader = response.body.getReader();
+  const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+  chunk = chunk || "";
 
   const newline = /\r?\n/gm;
   let startIndex = 0;
@@ -419,7 +469,7 @@ async function* makeTextFileLineIterator(fileURL) {
       if (readerDone) break;
       const remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;
       continue;
     }
@@ -433,13 +483,17 @@ async function* makeTextFileLineIterator(fileURL) {
   }
 }
 
-async function run() {
+async function run(urlOfFile) {
   for await (const line of makeTextFileLineIterator(urlOfFile)) {
     processLine(line);
   }
 }
 
-run();
+function processLine(line) {
+  console.log(line);
+}
+
+run("https://www.example.org/a-large-file.txt");
 ```
 
 ### Locked and disturbed streams
@@ -519,6 +573,7 @@ self.addEventListener("fetch", (event) => {
 ## See also
 
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Streams API](/en-US/docs/Web/API/Streams_API)
 - [CORS](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)
