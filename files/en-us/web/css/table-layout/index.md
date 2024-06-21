@@ -7,7 +7,7 @@ browser-compat: css.properties.table-layout
 
 {{CSSRef}}
 
-The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
+The **`table-layout`** [CSS](/en-US/docs/Web/CSS) property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
 
 {{EmbedInteractiveExample("pages/css/table-layout.html")}}
 

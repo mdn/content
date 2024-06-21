@@ -42,7 +42,7 @@ if (errorNode) {
 
 ### Parsing URL-addressable resources into DOM trees
 
-#### Using XMLHttpRequest
+#### Using fetch
 
 Here is sample code that reads and parses a URL-addressable XML file into a DOM tree:
 
@@ -70,7 +70,7 @@ Use the following approaches to serialize the contents of the XML document you c
 
 ### Serializing DOM trees to strings
 
-First, create a DOM tree as described in [How to Create a DOM tree](/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("fetch()") }}.
+First, create a DOM tree as described in [Using the Document Object Model](/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Alternatively, use a DOM tree obtained from {{ domxref("fetch()") }}.
 
 To serialize the DOM tree `doc` into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:
 

@@ -7,13 +7,11 @@ browser-compat: html.elements.input.type_date
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface.
+{{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date. The appearance of the date picker input UI varies based on the browser and operating system. The value is normalized to the format `yyyy-mm-dd`.
 
 The resulting value includes the year, month, and day, but _not_ the time. The {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} input types support time and date+time input.
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
-
-The input UI generally varies from browser to browser; see [Browser compatibility](#browser_compatibility) for further details. In unsupported browsers, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
 ## Value
 
@@ -110,7 +108,7 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in the picker widget.
 
-> **Note:** You _should_ be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable). However, this does not seem to be in any implementation at the time of writing.
+You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable).
 
 ### Controlling input size
 
@@ -118,11 +116,11 @@ The result is that only days in April 2017 can be selected — the month and yea
 
 ## Validation
 
-By default, `<input type="date">` doesn't validate the entered value beyond its format. The interfaces generally don't let you enter anything that isn't a date — which is helpful — but you can leave the field empty or enter an invalid date in browsers where the input falls back to type `text` (like the 32nd of April).
+By default, `<input type="date">` doesn't validate the entered value beyond its format. The interfaces generally don't let you enter anything that isn't a date — which is helpful.
 
-If you use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), supporting browsers will display an error if you try to submit a date that is out of bounds. However, you'll need to double-check the submitted results to ensure the value is within these dates, if the date picker isn't fully supported on the user's device.
+If you use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), the form control disables invalid dates, and will display an error if you try to submit a date that is out of bounds.
 
-You can also use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory — an error will be displayed if you try to submit an empty date field. This should work in most browsers, even if they fall back to a text input.
+You can also use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory — an error will be displayed if you try to submit an empty date field.
 
 Let's look at an example of minimum and maximum dates, and also made a field required:
 
@@ -170,66 +168,11 @@ input:valid + span::after {
 }
 ```
 
-> **Warning:** Client-side form validation _is no substitute_ for validating on the server. It's easy for someone to modify the HTML, or bypass your HTML entirely and submit the data directly to your server. If your server fails to validate the received data, disaster could strike with data that is badly-formatted, too large, of the wrong type, etc.
-
-## Handling browser support
-
-Browsers that don't support this input type gracefully degrade to a text input, but this creates problems in consistency of user interface (the presented controls are different) and data handling.
-
-The second problem is the more serious one; with date input supported, the value is normalized to the format `yyyy-mm-dd`. But with a text input, the browser has no recognition of what format the date should be in, and there are many formats in which people write dates. For example:
-
-- `ddmmyyyy`
-- `dd/mm/yyyy`
-- `mm/dd/yyyy`
-- `dd-mm-yyyy`
-- `mm-dd-yyyy`
-- `Month dd, yyyy`
-
-One way around this is the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in an unsupporting browser:
-
-```html
-<form>
-  <label>
-    Enter your birthday:
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
-    <span class="validity"></span>
-  </label>
-  <p>
-    <button>Submit</button>
-  </p>
-</form>
-```
-
-{{EmbedLiveSample('Handling_browser_support', 600, 100)}}
-
-If you submit it, you'll see that the browser displays an error and highlights the input as invalid if your entry doesn't match the pattern `####-##-##` (where `#` is a digit from 0 to 9). Of course, this doesn't stop people from entering invalid dates, or incorrect formats. So we still have a problem.
-
-```css hidden
-span {
-  position: relative;
-}
-
-span::after {
-  right: -18px;
-  position: absolute;
-}
-
-input:invalid + span::after {
-  content: "✖";
-}
-
-input:valid + span::after {
-  content: "✓";
-}
-```
-
-At the moment, the best way to deal with dates in forms in a cross-browser way is to have the user enter the day, month, and year in separate controls, or to use a JavaScript library such as [jQuery date picker](https://jqueryui.com/datepicker/).
+> **Warning:** Client-side form validation _is not a substitute_ for validating on the server. It's easy for someone to modify the HTML, or bypass your HTML entirely and submit the data directly to your server. If your server fails to validate the received data, disaster could strike with data that is badly-formatted, too large, of the wrong type, etc.
 
 ## Examples
 
-In this example, we create 2 sets of UI elements for choosing dates: a native `<input type="date">` picker and a set of 3 {{htmlelement("select")}} elements for older browsers that don't support the native date input.
-
-{{EmbedLiveSample('Examples', 600, 100)}}
+In this example, we create a date picker using the native `<input type="date">` picker.
 
 ### HTML
 
@@ -242,192 +185,26 @@ The HTML looks like so:
     <input type="date" id="bday" name="bday" />
     <span class="validity"></span>
   </div>
-  <p class="fallbackLabel">Enter your birthday:</p>
-  <div class="fallbackDatePicker">
-    <span>
-      <label for="day">Day:</label>
-      <select id="day" name="day"></select>
-    </span>
-    <span>
-      <label for="month">Month:</label>
-      <select id="month" name="month">
-        <option selected>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
-      </select>
-    </span>
-    <span>
-      <label for="year">Year:</label>
-      <select id="year" name="year"></select>
-    </span>
-  </div>
 </form>
 ```
 
-The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)
+### CSS
 
-```css hidden
-span {
-  padding-left: 5px;
-}
+The CSS looks like so:
 
+```css
 input:invalid + span::after {
-  content: "✖";
+  content: " ✖";
 }
 
 input:valid + span::after {
-  content: "✓";
+  content: " ✓";
 }
 ```
 
-### JavaScript
+### Results
 
-The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="date">`.
-
-We create a new {{htmlelement("input")}} element, try setting its `type` to `date`, then immediately check what its type is — unsupporting browsers will return `text`, because the `date` type falls back to type `text`. If `<input type="date">` isn't supported, we hide the native picker and show the fallback ({{htmlelement("select")}}) instead.
-
-```js
-// Obtain UI widgets
-const nativePicker = document.querySelector(".nativeDatePicker");
-const fallbackPicker = document.querySelector(".fallbackDatePicker");
-const fallbackLabel = document.querySelector(".fallbackLabel");
-
-const yearSelect = document.querySelector("#year");
-const monthSelect = document.querySelector("#month");
-const daySelect = document.querySelector("#day");
-
-// hide fallback initially
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
-
-// test whether a new date input falls back to a text input or not
-const test = document.createElement("input");
-
-try {
-  test.type = "date";
-} catch (e) {
-  console.log(e.message);
-}
-
-// if it does, run the code inside the if () {} block
-if (test.type === "text") {
-  // hide the native picker and show the fallback
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
-
-  // populate the days and years dynamically
-  // (the months are always the same, therefore hardcoded)
-  populateDays(monthSelect.value);
-  populateYears();
-}
-
-function populateDays(month) {
-  // delete the current set of <option> elements out of the
-  // day <select>, ready for the next set to be injected
-  while (daySelect.firstChild) {
-    daySelect.removeChild(daySelect.firstChild);
-  }
-
-  // Create variable to hold new number of days to inject
-  let dayNum;
-
-  // 31 or 30 days?
-  if (
-    [
-      "January",
-      "March",
-      "May",
-      "July",
-      "August",
-      "October",
-      "December",
-    ].includes(month)
-  ) {
-    dayNum = 31;
-  } else if (["April", "June", "September", "November"].includes(month)) {
-    dayNum = 30;
-  } else {
-    // If month is February, calculate whether it is a leap year or not
-    const year = yearSelect.value;
-    const isLeap = new Date(year, 1, 29).getMonth() === 1;
-    dayNum = isLeap ? 29 : 28;
-  }
-
-  // inject the right number of new <option> elements into the day <select>
-  for (let i = 1; i <= dayNum; i++) {
-    const option = document.createElement("option");
-    option.textContent = i;
-    daySelect.appendChild(option);
-  }
-
-  // if previous day has already been set, set daySelect's value
-  // to that day, to avoid the day jumping back to 1 when you
-  // change the year
-  if (previousDay) {
-    daySelect.value = previousDay;
-
-    // If the previous day was set to a high number, say 31, and then
-    // you chose a month with less total days in it (e.g. February),
-    // this part of the code ensures that the highest day available
-    // is selected, rather than showing a blank daySelect
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 1;
-    }
-
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 2;
-    }
-
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 3;
-    }
-  }
-}
-
-function populateYears() {
-  // get this year as a number
-  const date = new Date();
-  const year = date.getFullYear();
-
-  // Make this year, and the 100 years before it available in the year <select>
-  for (let i = 0; i <= 100; i++) {
-    const option = document.createElement("option");
-    option.textContent = year - i;
-    yearSelect.appendChild(option);
-  }
-}
-
-// when the month or year <select> values are changed, rerun populateDays()
-// in case the change affected the number of available days
-yearSelect.onchange = () => {
-  populateDays(monthSelect.value);
-};
-
-monthSelect.onchange = () => {
-  populateDays(monthSelect.value);
-};
-
-//preserve day selection
-let previousDay;
-
-// update what day has been set to previously
-// see end of populateDays() for usage
-daySelect.onchange = () => {
-  previousDay = daySelect.value;
-};
-```
-
-> **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+{{EmbedLiveSample('Examples', 600, 100)}}
 
 ## Technical summary
 

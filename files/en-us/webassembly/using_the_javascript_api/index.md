@@ -103,13 +103,14 @@ Let's start exploring this by looking at a quick example.
    WebAssembly memory exposes its bytes by providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
 
    ```js
-   new Uint32Array(memory.buffer)[0] = 42;
+   const data = new DataView(memory.buffer);
+   data.setUint32(0, 42, true);
    ```
 
-   You can then return the same value using:
+   Note the use of `true`, which enforces little-endian read and write, since WebAssembly memory is always little-endian. You can then return the same value using:
 
    ```js
-   new Uint32Array(memory.buffer)[0];
+   data.getUint32(0, true);
    ```
 
 3. Try this now in your demo — save what you've added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
@@ -149,17 +150,15 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance's linear memory (`mem`). Add the following into your code, where indicated:
 
    ```js
-   const i32 = new Uint32Array(memory.buffer);
-
+   const summands = new DataView(memory.buffer);
    for (let i = 0; i < 10; i++) {
-     i32[i] = i;
+     summands.setUint32(i * 4, i, true);
    }
-
    const sum = results.instance.exports.accumulate(0, 10);
    console.log(sum);
    ```
 
-Note how we create the {{jsxref("Uint32Array")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer)), not on the Memory itself.
+Note how we create the {{jsxref("DataView")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer)), not on the Memory itself.
 
 Memory imports work just like function imports, only Memory objects are passed as values instead of JavaScript functions. Memory imports are useful for two reasons:
 

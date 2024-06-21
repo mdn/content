@@ -33,3 +33,8 @@ If the origin is not a scheme/host/port tuple (say you are trying to run it loca
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`Window.origin`](/en-US/docs/Web/API/Window/origin)
+- {{Glossary("origin")}} glossary term

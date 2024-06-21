@@ -91,7 +91,7 @@ Other common web-development tasks are not directly supported by Node itself. If
 
 ## Introducing Express
 
-[Express](https://expressjs.com/) is the most popular _Node_ web framework, and is the underlying library for a number of other popular [Node web frameworks](https://expressjs.com/en/resources/frameworks.html). It provides mechanisms to:
+[Express](https://expressjs.com/) is the most popular Node.js web framework, and is the underlying library for a number of other popular Node.js frameworks. It provides mechanisms to:
 
 - Write handlers for requests with different HTTP verbs at different URL paths (routes).
 - Integrate with "view" rendering engines in order to generate responses by inserting data into templates.
@@ -114,7 +114,7 @@ The popularity of a web framework is important because it is an indicator of whe
 
 There isn't any readily-available and definitive measure of the popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Express?
 
-Based on the number of [high profile companies](https://expressjs.com/en/resources/companies-using-express.html) that use Express, the number of people contributing to the codebase, and the number of people providing both free and paid for support, then yes, _Express_ is a popular framework!
+Based on the number of high profile companies that use Express, the number of people contributing to the codebase, and the number of people providing both free and paid for support, then yes, _Express_ is a popular framework!
 
 ## Is Express opinionated?
 
