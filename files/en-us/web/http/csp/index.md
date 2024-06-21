@@ -122,14 +122,13 @@ The server permits access only to documents being loaded specifically over HTTPS
 
 ### Example 5
 
-A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
+A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but JavaScript or other potentially dangerous content can only come from the same origin as the mail server.
 
 ```http
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
-Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
-this site uses the setting specified by the {{CSP("default-src")}} directive, which means that scripts can be loaded only from the originating server.
+Note that this example doesn't specify a {{CSP("script-src")}}, so the {{CSP("default-src")}} directive will be used for JavaScript sources as a fallback.
 
 ## Testing your policy
 
