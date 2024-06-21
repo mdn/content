@@ -107,8 +107,6 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
 - {{CSSxRef("masonry-auto-flow")}}
-- {{CSSxRef("align-tracks")}}
-- {{CSSxRef("justify-tracks")}}
 
 ### Functions
 
