@@ -290,7 +290,7 @@ would have occurred:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#examples-3) for more examples.
 
 ## Specifications
 

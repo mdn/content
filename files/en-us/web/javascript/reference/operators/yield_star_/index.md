@@ -32,7 +32,9 @@ The `yield*` expression iterates over the operand and yields each value returned
 
 The `yield*` operator forwards the current generator's {{jsxref("Generator/throw", "throw()")}} and {{jsxref("Generator/return", "return()")}} methods to the underlying iterator as well. If the current generator is prematurely closed through one of these methods, the underlying iterator will be notified. If the generator's `throw()`/`return()` method is called, the `throw()`/`return()` method of the underlying iterator is called with the same argument. The return value of `throw()`/`return()` is handled like the `next()` method's result, and if the method throws, the exception is propagated from the `yield*` expression.
 
-If the underlying iterator doesn't have a `throw()` method, this causes `yield*` to throw a {{jsxref("TypeError")}} – but before throwing the error, the underlying iterator's `return()` method is called if one exists. If the underlying iterator doesn't have a `return()` method, the `yield*` expression turns into a {{jsxref("Statements/return", "return")}} statement, just like calling `return()` on a suspended {{jsxref("Operators/yield", "yield")}} expression.
+If the underlying iterator doesn't have a `return()` method, the `yield*` expression turns into a {{jsxref("Statements/return", "return")}} statement, just like calling `return()` on a suspended {{jsxref("Operators/yield", "yield")}} expression.
+
+If the underlying iterator doesn't have a `throw()` method, this causes `yield*` to throw a {{jsxref("TypeError")}} – but before throwing the error, the underlying iterator's `return()` method is called if one exists.
 
 ## Examples
 

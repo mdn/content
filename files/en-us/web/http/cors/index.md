@@ -256,7 +256,7 @@ Content-Type: text/plain
 
 Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after such a request, some browsers currently will report an error message such as the following:
 
-> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight.
+> The request was redirected to `https://example.com/foo`, which is disallowed for cross-origin requests that require preflight.
 > Request requires preflight, which is disallowed to follow cross-origin redirects.
 
 The CORS protocol originally required that behavior but [was subsequently changed to no longer require it](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). However, not all browsers have implemented the change, and thus still exhibit the originally required behavior.

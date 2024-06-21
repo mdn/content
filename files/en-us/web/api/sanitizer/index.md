@@ -3,11 +3,11 @@ title: Sanitizer
 slug: Web/API/Sanitizer
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Sanitizer
 ---
 
-{{APIRef("Sanitizer")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Sanitizer")}}{{SecureContext_Header}}{{deprecated_header}}
 
 The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} is used to sanitize untrusted strings of HTML, {{domxref("Document")}} and {{domxref("DocumentFragment")}} objects.
 After sanitization, unwanted elements or attributes are removed, and the returned objects can safely be inserted into a document's DOM.
@@ -19,12 +19,12 @@ This configuration may be customized using constructor options.
 
 ## Constructors
 
-- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{Experimental_Inline}}
+- {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} {{deprecated_inline}}
   - : Creates and returns a `Sanitizer` object, optionally with custom sanitization behavior.
 
 ## Instance methods
 
-- {{domxref('Sanitizer.sanitize()')}} {{Experimental_Inline}}
+- {{domxref('Sanitizer.sanitize()')}} {{deprecated_inline}}
 
   - : Returns a sanitized {{domxref('DocumentFragment')}} from an input {{domxref('Document')}} or {{domxref('DocumentFragment')}}
 

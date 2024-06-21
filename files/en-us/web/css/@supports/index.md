@@ -42,7 +42,7 @@ The following sections describe the use of each type of supports condition.
 
 The declaration syntax checks if a browser supports the specified `<property>: <value>` declaration.
 The declaration must be surrounded by parentheses.
-The following example returns true and applies the CSS style if the browser supports the expression `transform-origin: 5% 5%`:
+The following example returns true if the browser supports the expression `transform-origin: 5% 5%`:
 
 ```css
 @supports (transform-origin: 5% 5%) {
@@ -260,7 +260,8 @@ If a browser doesn't support the font technology, a fallback font (`Bungee-fallb
 @font-face {
   font-family: "Bungee Spice";
   src:
-    url("https://fonts.googleapis.com/css2?family=Bungee+Spice") tech(color-COLRv1),
+    url("https://fonts.googleapis.com/css2?family=Bungee+Spice")
+      tech(color-COLRv1),
     url("Bungee-fallback.otf") format("opentype");
 }
 ```

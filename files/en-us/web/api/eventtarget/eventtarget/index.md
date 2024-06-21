@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EventTarget.EventTarget
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`EventTarget()`** constructor creates a new {{domxref("EventTarget")}} object instance.
 

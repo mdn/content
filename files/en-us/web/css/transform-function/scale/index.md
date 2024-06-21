@@ -217,6 +217,7 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("scale")}}
+- {{cssxref("zoom")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
 - Other individual transform properties {{cssxref("translate")}} and {{cssxref("rotate")}}

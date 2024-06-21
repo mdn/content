@@ -119,7 +119,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 ## Using d as a CSS property
 
 `d` is a presentation attribute, and hence can be also be modified using CSS.
-The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
+The property takes either [path()](/en-US/docs/Web/CSS/basic-shape/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -161,12 +161,12 @@ Path commands are instructions that define a path to be drawn. Each command is c
 
 SVG defines 6 types of path commands, for a total of 20 commands:
 
-- MoveTo: `M`, `m`
-- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-- Cubic Bézier Curve: `C`, `c`, `S`, `s`
-- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-- Elliptical Arc Curve: `A`, `a`
-- ClosePath: `Z`, `z`
+- [MoveTo](#moveto_path_commands): `M`, `m`
+- [LineTo](#lineto_path_commands): `L`, `l`, `H`, `h`, `V`, `v`
+- [Cubic Bézier curve](#cubic_bézier_curve): `C`, `c`, `S`, `s`
+- [Quadratic Bézier curve](#quadratic_bézier_curve): `Q`, `q`, `T`, `t`
+- [Elliptical arc curve](#elliptical_arc_curve): `A`, `a`
+- [ClosePath](#closepath): `Z`, `z`
 
 > **Note:** Commands are _case-sensitive_. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
@@ -456,7 +456,7 @@ svg {
 
 {{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}
 
-### Cubic Bézier Curve
+### Cubic Bézier curve
 
 _Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using four points:
 
@@ -684,7 +684,7 @@ svg {
 
 {{EmbedLiveSample('Cubic_Bézier_Curve', '100%', 200)}}
 
-### Quadratic Bézier Curve
+### Quadratic Bézier curve
 
 _Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using three points:
 
@@ -909,7 +909,7 @@ svg {
 
 {{EmbedLiveSample('Quadratic_Bézier_Curve', '100%', 200)}}
 
-### Elliptical Arc Curve
+### Elliptical arc curve
 
 _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is sometimes easier to draw highly regular curves with an elliptical arc than with a Bézier curve.
 

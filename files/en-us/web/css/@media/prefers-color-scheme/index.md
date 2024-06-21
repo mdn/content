@@ -126,7 +126,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
     img.alt = "circle";
     img.src =
       "data:image/svg+xml;base64," +
-      btoa(`
+      window.btoa(`
       <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <style>
           :root { color: blue }

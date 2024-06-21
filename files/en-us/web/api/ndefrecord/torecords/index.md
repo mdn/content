@@ -31,7 +31,7 @@ None.
 
 A list of {{DOMxRef("NDEFRecord")}}s.
 
-## Exceptions
+### Exceptions
 
 - `NotSupported` {{domxref("DOMException")}}
   - : Indicates that the {{Glossary("User Agent")}} does not know how to parse this combination of

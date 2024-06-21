@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioData.numberOfChannels
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`numberOfChannels`** read-only property of the {{domxref("AudioData")}} interface returns the number of channels in the `AudioData` object.
 

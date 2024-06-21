@@ -24,12 +24,10 @@ than `text/html`. Make sure to set both headers correctly.
 
 Site security testers usually expect this header to be set.
 
-> **Note:** `X-Content-Type-Options` only apply
-> [request-blocking due to `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?)
-> for [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) of "`script`"
-> and "`style`". However, it also
-> [enables Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected)
-> protection for HTML, TXT, JSON and XML files (excluding SVG `image/svg+xml`).
+> **Note:**
+>
+> `X-Content-Type-Options` only apply request-blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) of "`script`" and "`style`".
+> However, it also [enables Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected) protection for HTML, TXT, JSON and XML files (excluding SVG `image/svg+xml`).
 
 <table class="properties">
   <tbody>

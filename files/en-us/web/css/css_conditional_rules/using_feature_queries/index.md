@@ -111,7 +111,8 @@ For example, the `selector()` function can be used to import a stylesheet for br
 
 ```css
 /* A `selector()` query within a `supports()` function */
-@import `/css/webkitShadowStyles.css` supports(selector(::-webkit-inner-spin-button));
+@import `/css/webkitShadowStyles.css`
+  supports(selector(::-webkit-inner-spin-button));
 ```
 
 ## Examples

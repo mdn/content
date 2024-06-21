@@ -61,7 +61,7 @@ Tracking data can be used to build a profile of a user and their interests and p
 
 ### Fingerprinting
 
-A process very closely related to tracking is **fingerprinting**: this specifically refers to _identifying_ users by building up a store of data points about them that diffferentiate them from other users. This could be anything from cookie contents to what browser they are using and what fonts they have installed locally.
+A process very closely related to tracking is **fingerprinting**: this specifically refers to _identifying_ users by building up a store of data points about them that differentiate them from other users. This could be anything from cookie contents to what browser they are using and what fonts they have installed locally.
 
 Modern browsers take steps to help prevent fingerprinting-based attacks by either not allowing information to be accessed or, where the information must be made available, by introducing variations or "noise" that prevent it from being used for identification purposes.
 

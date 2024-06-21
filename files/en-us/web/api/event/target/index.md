@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.target
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The read-only **`target`** property of the
 {{domxref("Event")}} interface is a reference to the object onto which the event was

@@ -19,6 +19,20 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 > **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
 
+## Accessibility
+
+Breaking up content into paragraphs helps make a page more accessible. Screen-readers and other assistive technology provide shortcuts to let their users skip to the next or previous paragraph, letting them skim content like how white space lets visual users skip around.
+
+Using empty `<p>` elements to add space between paragraphs is problematic for people who navigate with screen-reading technology. Screen readers may announce the paragraph's presence, but not any content contained within it — because there is none. This can confuse and frustrate the person using the screen reader.
+
+If extra space is desired, use {{glossary("CSS")}} properties like {{cssxref("margin")}} to create the effect:
+
+```css
+p {
+  margin-bottom: 2em; /* increase white space after a paragraph */
+}
+```
+
 ## Examples
 
 ### HTML
@@ -106,20 +120,6 @@ document.querySelector("button").addEventListener("click", (event) => {
 ### Result
 
 {{EmbedLiveSample('Styling_paragraphs')}}
-
-## Accessibility concerns
-
-Breaking up content into paragraphs helps make a page more accessible. Screen-readers and other assistive technology provide shortcuts to let their users skip to the next or previous paragraph, letting them skim content like how white space lets visual users skip around.
-
-Using empty `<p>` elements to add space between paragraphs is problematic for people who navigate with screen-reading technology. Screen readers may announce the paragraph's presence, but not any content contained within it — because there is none. This can confuse and frustrate the person using the screen reader.
-
-If extra space is desired, use {{glossary("CSS")}} properties like {{cssxref("margin")}} to create the effect:
-
-```css
-p {
-  margin-bottom: 2em; /* increase white space after a paragraph */
-}
-```
 
 ## Technical summary
 

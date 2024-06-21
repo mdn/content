@@ -14,7 +14,7 @@ The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface 
 
 ## Value
 
-A `double` floating point value.
+A `double` floating point value in pixels.
 
 Early versions of the spec defined this as an integer referring to the number of pixels.
 

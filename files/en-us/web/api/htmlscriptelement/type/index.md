@@ -14,7 +14,7 @@ It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 
 ## Value
 
-A string. The value of this property cam be one of the following:
+A string. The value of this property can be one of the following:
 
 - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
   - : Indicates that the script is a "classic script", containing JavaScript code.
