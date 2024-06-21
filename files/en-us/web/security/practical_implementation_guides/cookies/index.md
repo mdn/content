@@ -37,8 +37,8 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 
   - : Forbid sending cookies via cross-origin requests (for example from {{htmlelement("img")}} elements) using `SameSite`. You should use one of the following two values:
 
-    - `SameSite=Strict`: Only send the cookie when your site is directly navigated to. This is a strong [anti-CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) measure, so use this value if possible.
-    - `SameSite=Lax`: Additionally send the cookie when navigating to your site from another site. This is the default behavior used in modern browsers if no `SameSite` directive is set, and should only be used if `Strict` is too restrictive.
+    - `SameSite=Strict`: Only send the cookie on same-site navigations. Cookies are omitted on same-origin navigations (e.g. `a.example.com` to `b.example.com`). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) protection, so use this value if possible.
+    - `SameSite=Lax`: Send the cookie on same-site and same-origin navigations, and when navigating _to_ your site from another site. This is the default behavior used in modern browsers if no `SameSite` directive is set, and should be used if `Strict` is too restrictive.
 
     Both of the above values are useful in protecting against [Clickjacking](/en-US/docs/Glossary/Clickjacking) attacks in cases that rely on the user being authenticated.
 
