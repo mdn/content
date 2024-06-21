@@ -292,7 +292,7 @@ The `ViewTransition` can be accessed like so:
 
 - A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
   > **Note:** If the navigation has a cross-origin URL anywhere in the redirect chain, the `activation` property returns `null`.
-- A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [bfcache](/en-US/docs/Glossary/bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
+- A {{domxref("Window.pagereveal_event", "pagereveal")}} event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)). Its event object ({{domxref("PageRevealEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageRevealEvent.viewTransition")}} property.
 
 Let's have a look at some example code to show how these features could be used.
 
