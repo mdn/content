@@ -494,27 +494,27 @@ Let's explore what this looks like with a simple example HTML document:
 ```html-nolint
 <!doctype html>
 <html lang="en">
-<head>
-  <!-- This will be render-blocking by default -->
-  <link rel="stylesheet" href="style.css" />
+  <head>
+    <!-- This will be render-blocking by default -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Marking critical scripts as render blocking will
-       ensure they're run before the view transition is activated -->
-  <script async href="layout.js" blocking="render"></script>
+    <!-- Marking critical scripts as render blocking will
+        ensure they're run before the view transition is activated -->
+    <script async href="layout.js" blocking="render"></script>
 
-  <!-- Use rel="expect" and blocking="render" to ensure the
-       #lead-content element is visible and fully parsed before
-       activating the transition -->
-  <link rel="expect" href="#lead-content" blocking="render" />
-</head>
-<body>
-  <h1>Page title</h1>
-  <nav>...</nav>
-  <div id="lead-content">
-    <section id="first-section">The first section</section>
-    <section>The second section</section>
-  </div>
-</body>
+    <!-- Use rel="expect" and blocking="render" to ensure the
+        #lead-content element is visible and fully parsed before
+        activating the transition -->
+    <link rel="expect" href="#lead-content" blocking="render" />
+  </head>
+  <body>
+    <h1>Page title</h1>
+    <nav>...</nav>
+    <div id="lead-content">
+      <section id="first-section">The first section</section>
+      <section>The second section</section>
+    </div>
+  </body>
 </html>
 ```
 
