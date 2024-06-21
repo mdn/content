@@ -136,7 +136,3 @@ selectElem.addEventListener("change", changeMasonryFlow);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- Related CSS properties: {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}

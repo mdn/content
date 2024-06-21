@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working web app! But it isn't yet a PWA. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
+Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working PWA! But it doesn't yet work offline. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
 
 If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `style.css`, `app.js`, and `cycletracker.json`, respectively.
 
@@ -117,7 +117,7 @@ We have successfully declared our constants; a unique identifier, the list of of
 
 ### Saving the cache on PWA installation
 
-When a user installs a PWA or simply visits a website with a service worker, an `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
+When a user installs or simply visits a website with a service worker, an `install` event is fired in the service worker scope. We want to listen for this event, filling the cache with the PWA's static resources upon installation. Every time the service worker version is updated, the browser installs the new service worker and the install event occurs.
 
 The `install` event happens when the app is used for the first time, or when a new version of the service worker is detected by the browser. When an older service worker is being replaced by a new one, the old service worker is used as the PWA's service worker until the new service work is activated.
 
@@ -388,7 +388,7 @@ In some developer tools, you can manually unregister a service worker, or you ca
 
 The service worker window within the DevTools' application panel, provides a link to access to pop up window containing a list of all the registered service workers for the browser; not just the service worker for the application opened in the current tab. Each service worker list of workers has buttons to stop, start, or unregister that individual service worker.
 
-![Two service workers exist at localhost:8080. The can be unregistered from the list of service workers](edge_sw_list.jpg)
+![Two service workers exist at localhost:8080. They can be unregistered from the list of service workers](edge_sw_list.jpg)
 
 In other words, as you are working on your PWA, you don't have to update the version number for every app view. But remember, when you are done with all your changes, update the service worker VERSION value before distributing the updated version of your PWA. If you forget, no one who has already installed your app or even visited your online PWA without installing it will ever get to see your changes!
 

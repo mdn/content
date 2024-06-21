@@ -23,6 +23,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### Removals
 
+- The masonry layout properties `align-tracks` and `justify-tracks` have been removed. These properties were only implemented in Firefox and were recently [dropped from the spec](https://github.com/w3c/csswg-drafts/issues/8208) ([Firefox bug 1900195](https://bugzil.la/1900195)).
+
 ### JavaScript
 
 #### Removals
