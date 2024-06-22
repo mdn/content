@@ -75,7 +75,9 @@ For a web app to be installable, it must be served in a [secure context](/en-US/
 
 ### User engagement
 
-Chromium-based browsers such as Chrome and Edge can actively prompt the user to install a PWA if a user engagement criteria has been met. Specifically, having clicked or tapped on the website at least once, and having spent at least 30 seconds viewing the page (at any points in time). See [this guide](https://web.dev/articles/install-criteria) for more information.
+Chromium-based browsers such as Chrome and Edge can will only display an install prompt if the user has clicked or tapped on the website at least once, and has spent at least 30 seconds viewing the page (at any points in time).
+
+See [What does it take to be installable?](https://web.dev/articles/install-criteria) on [web.dev](https://web.dev) for more information.
 
 ## Installation from an app store
 
