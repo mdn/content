@@ -71,8 +71,8 @@ Instead, perhaps you would like to add scrollbars when content overflows? Using 
 **Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling.**
 
 > [!NOTE]
-> The scrollbar visibility also depends on the operating system.
-> You may have to change browser setting to always show scroll bars in order for following examples to work.
+> Scrollbar visibility depends on the operating system.
+> You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 700)}}
 
