@@ -75,7 +75,7 @@ For a web app to be installable, it must be served in a [secure context](/en-US/
 
 ### User engagement
 
-Chromium-based browsers such as Chrome and Edge can will only display an install prompt if the user has clicked or tapped on the website at least once, and has spent at least 30 seconds viewing the page (at any points in time).
+Chromium-based browsers such as Chrome and Edge can display an install prompt if the user has clicked or tapped on the website at least once, and has spent at least 30 seconds viewing the page (at any points in time).
 
 See [What does it take to be installable?](https://web.dev/articles/install-criteria) on [web.dev](https://web.dev) for more information.
 
