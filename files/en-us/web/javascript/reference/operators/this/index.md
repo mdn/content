@@ -7,9 +7,11 @@ browser-compat: javascript.operators.this
 
 {{jsSidebar("Operators")}}
 
-A function's **`this`** keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and non-strict mode.
+The **`this`** keyword refers to the context where a piece of code, such as a function's body, is supposed to run. Most typically, it is used in object methods, where `this` refers to the object that the method is attached to, thus allowing the same method to be reused on different objects.
 
-In most cases, the value of `this` is determined by how a function is called (runtime {{Glossary("binding")}}). It can't be set by assignment during execution, and it may be different each time the function is called. The {{jsxref("Function.prototype.bind()")}} method can [set the value of a function's `this` regardless of how it's called](#the_bind_method), and [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) don't provide their own `this` binding (it retains the `this` value of the enclosing lexical context).
+The value of `this` in JavaScript depends on how a function is invoked (runtime {{glossary("binding")}}), not how it is defined. When a regular function is invoked as a method of an object (`obj.method()`), `this` points to that object. When invoked as a standalone function (not attached to an object: `func()`), `this` typically refers to the [global object](/en-US/docs/Glossary/Global_object) (in non-strict mode) or `undefined` (in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)). The {{jsxref("Function.prototype.bind()")}} method can create a function whose `this` binding doesn't change, and methods `apply()` and `call()` can also set the `this` value for a particular call.
+
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) differ in their handling of `this`: they inherit `this` from the parent scope at the time they are defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However, arrow functions do not have their own `this` binding. Therefore, their `this` value cannot be set by `bind()`, `apply()` or `call()` methods, nor does it point to the current object in object methods.
 
 {{EmbedInteractiveExample("pages/js/expressions-this.html")}}
 
@@ -31,7 +33,7 @@ The value of `this` depends on in which context it appears: function, class, or 
 
 Inside a function, the value of `this` depends on how the function is called. Think about `this` as a hidden parameter of a function — just like the parameters declared in the function definition, `this` is a binding that the language creates for you when the function body is evaluated.
 
-For a typical function, the value of `this` is the object that the function is accessed on. In other words, if the function call is in the form `obj.f()`, then `this` refers to `obj`. For example:
+For a regular function (not an arrow function, bound function, etc.), the value of `this` is the object that the function is accessed on. In other words, if the function call is in the form `obj.f()`, then `this` refers to `obj`. For example:
 
 ```js
 function getThis() {

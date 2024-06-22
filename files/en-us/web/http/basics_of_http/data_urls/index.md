@@ -38,7 +38,7 @@ A few examples:
 
 ## Encoding data into base64 format
 
-Base64 is a group of binary-to-text encoding schemes that represent binary data in an {{Glossary("ASCII")}} string format by translating it into a radix-64 representation. By consisting only of ASCII characters, base64 strings are generally url-safe, and that's why they can be used to encode data in Data URLs.
+Base64 is a group of binary-to-text encoding schemes that represent binary data in an {{Glossary("ASCII")}} string format by translating it into a radix-64 representation. By consisting only of characters permitted by the URL syntax ("URL safe"), we can safely encode binary data in data URLs. Base64 uses the characters `+` and `/`, which may have special meanings in URLs. Because Data URLs have no URL path segments or query parameters, this encoding is safe in this context.
 
 ### Encoding in JavaScript
 
@@ -116,7 +116,7 @@ lots of text…
 
 - [Base64](/en-US/docs/Glossary/Base64)
 - [URL encoding](https://en.wikipedia.org/wiki/URL_encoding)
-- {{domxref("atob","atob()")}}
-- {{domxref("btoa","btoa()")}}
+- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - [CSS `url()`](/en-US/docs/Web/CSS/url)
 - [URI](/en-US/docs/Glossary/URI)

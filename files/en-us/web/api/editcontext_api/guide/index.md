@@ -82,7 +82,7 @@ To render the syntax-highlighted HTML code in the editor when the user enters te
 
 One of the first things the `render()` function does is tokenize the HTML text content. Tokenizing the HTML text content is needed to highlight the HTML syntax, and involves reading the HTML code string, and determining where each opening tag, closing tag, attribute, comment node, and text node starts and ends.
 
-The demo app uses the `tokenizeHTML()` function to achieve this, which iterates over the string character by character while maintaining a state machine. You can see the source code for the `tokenizeHTML()` function in [tokenizer.js](https://github.com/mdn/dom-examples/blob/main/editcontext-api/html-editor/tokenizer.js), on GitHub.
+The demo app uses the `tokenizeHTML()` function to achieve this, which iterates over the string character by character while maintaining a state machine. You can see the source code for the `tokenizeHTML()` function in [tokenizer.js](https://github.com/mdn/dom-examples/blob/main/edit-context/html-editor/tokenizer.js), on GitHub.
 
 The function is imported into the demo app HTML file like this:
 

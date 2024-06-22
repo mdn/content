@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.negative
 ---
 
-{{DefaultAPISidebar("CSS Counter Styles")}}
+{{APIRef("CSS Counter Styles")}}
 
 The **`negative`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/negative","negative")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 

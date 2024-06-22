@@ -8,14 +8,14 @@ page-type: xpath-function
 
 The `substring` function returns a part of a given string.
 
-### Syntax
+## Syntax
 
 ```plain
 substring(string, start)
 substring(string, start, length)
 ```
 
-### Arguments
+### Parameters
 
 - `string`
   - : The string to evaluate.
@@ -25,18 +25,18 @@ substring(string, start, length)
   - : The length of the substring.
     If omitted, the returned string will contain every character from the `start` position to the end of `string`.
 
-### Returns
+### Return value
 
 A string.
 
-### Notes
+## Description
 
 As in other XPath functions, the position is not zero-based. The first character in the string has a position of 1, not 0.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-substring)
 
-### Gecko support
+## Gecko support
 
 Supported.

@@ -17,7 +17,7 @@ The demo then changes the `flex-basis` on the first item. It will then grow and 
 
 The image below shows how the Firefox [Flexbox Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) helps you understand the size items become:
 
-![The Firefox Flexbox Inspector showing the size of the item once it has shrunk.](firefox-flex-basis.png)
+![The Firefox flexbox inspector showing the size of the item once it has shrunk.](firefox-flex-basis.png)
 
 > **Note:** In case both `flex-basis` (other than `auto`) and `width` (or `height` in case of `flex-direction: column`) are set for an element, `flex-basis` has priority.
 
@@ -187,6 +187,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - {{cssxref("width")}}

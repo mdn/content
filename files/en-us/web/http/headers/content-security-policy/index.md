@@ -262,7 +262,7 @@ Content-Security-Policy: connect-src http://example.com/;
 ## Examples
 
 Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over https:
+scripts, etc.) over http:
 
 ### Using the HTTP header
 
@@ -290,7 +290,7 @@ would have occurred:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#examples-3) for more examples.
 
 ## Specifications
 

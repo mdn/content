@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasGradient.addColorStop
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`CanvasGradient.addColorStop()`** method adds a new color stop,
 defined by an `offset` and a `color`, to a given canvas gradient.

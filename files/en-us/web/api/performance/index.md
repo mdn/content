@@ -9,7 +9,7 @@ browser-compat: api.Performance
 
 The **`Performance`** interface provides access to performance-related information for the current page.
 
-An object of this type can be obtained by calling `window.performance` or `self.performance` in workers. Note that Performance entries are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa. See [`self.performance`](/en-US/docs/Web/API/performance_property) for which APIs are available in window and worker contexts.
+Performance entries are specific to each execution context. You can access performance information for code running in a window via {{domxref("Window.performance")}}, and for code running in a worker via {{domxref("WorkerGlobalScope.performance")}}.
 
 {{InheritanceDiagram}}
 

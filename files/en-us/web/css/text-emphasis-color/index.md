@@ -82,4 +82,3 @@ em {
 - The {{cssxref("&lt;color&gt;")}} data type
 - The other emphasis mark related properties: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, and {{cssxref("text-emphasis-position")}}.
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

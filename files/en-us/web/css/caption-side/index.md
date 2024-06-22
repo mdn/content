@@ -19,8 +19,6 @@ caption-side: top;
 caption-side: bottom;
 
 /* Logical values */
-caption-side: block-start;
-caption-side: block-end;
 caption-side: inline-start;
 caption-side: inline-end;
 
@@ -37,13 +35,9 @@ The `caption-side` property is specified as one of the keyword values listed bel
 ### Values
 
 - `top`
-  - : The caption box should be positioned above the table.
+  - : The caption box should be positioned at the block start side of the table.
 - `bottom`
-  - : The caption box should be positioned below the table.
-- `block-start`
-  - : The caption box should be positioned at the block start edge of the table.
-- `block-end`
-  - : The caption box should be positioned at the block end edge of the table.
+  - : The caption box should be positioned at the block end side of the table.
 - `inline-start`
   - : The caption box should be positioned at the inline start edge of the table.
 - `inline-end`
@@ -118,3 +112,8 @@ td {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module

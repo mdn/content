@@ -48,7 +48,7 @@ Sec-Fetch-Site: none
 - `same-origin`
   - : The request initiator and the server hosting the resource have the same {{Glossary("origin")}} (same scheme, host and port).
 - `same-site`
-  - : The request initiator and the server hosting the resource have the same scheme, domain and/or subdomain, but not necessarily the same port.
+  - : The request initiator and the server hosting the resource have the same {{glossary("site")}}, including the scheme.
 - `none`
   - : This request is a user-originated operation. For example: entering a URL into the address bar, opening a bookmark, or dragging-and-dropping a file into the browser window.
 

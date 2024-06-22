@@ -101,7 +101,7 @@ Examples:
   On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods).
   Usually only instance methods exist, in which case you can put these under the title "Methods".
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
-- We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
+- We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
 - Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
 - Named constructors (like `Image()` for {{domxref("HTMLImageElement")}}) are also listed, if relevant.
 
@@ -339,4 +339,4 @@ The following are exemplary examples of method pages:
 
 ## Sidebars
 
-Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide explains how.
+Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide explains how.

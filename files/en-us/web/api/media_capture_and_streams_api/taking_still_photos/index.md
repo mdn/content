@@ -66,7 +66,7 @@ Those variables are:
 - `width`
   - : Whatever size the incoming video is, we're going to scale the resulting image to be 320 pixels wide.
 - `height`
-  - : The output height of the image will be computed given the `width` and the aspect ratio of the stream.
+  - : The output height of the image will be computed given the `width` and the {{glossary("aspect ratio")}} of the stream.
 - `streaming`
   - : Indicates whether or not there is currently an active stream of video running.
 - `video`

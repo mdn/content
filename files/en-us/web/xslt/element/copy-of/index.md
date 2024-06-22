@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:copy-of>` element makes a deep copy (including descendant nodes) of whatever the select attribute specifies to the output document.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:copy-of select=EXPRESSION />
@@ -27,10 +27,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 11.3.
 
-### Gecko support
+## Gecko support
 
 Supported.

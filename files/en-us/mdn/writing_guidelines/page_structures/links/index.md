@@ -62,7 +62,7 @@ Each macro is different!
 
 To prevent HTML code semantics and CSS code styling, some cross-reference macros include a parameter with the `"nocode"` to disable this styling.
 
-For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `{{domxref("CSS.supports_static", "check support", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "nocode")}}".
+For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `\{{domxref("CSS.supports_static", "check support", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "nocode")}}".
 
 Make sure to look at the source code to understand how the macro you are using works and to understand the various parameters; while the parameters are generally well documented, exceptions like "don't render as code if the second parameter includes a space" that we saw in the `\{{HTMLElement("")}}` macro is in the code but not otherwise documented.
 

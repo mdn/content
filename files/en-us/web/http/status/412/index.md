@@ -58,8 +58,6 @@ If the hashes don't match, it means that the document has been edited in-between
 
 ## Browser compatibility
 
-The information below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
-
 {{Compat}}
 
 ## See also

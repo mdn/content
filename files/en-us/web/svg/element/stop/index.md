@@ -50,7 +50,7 @@ svg {
   - : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
     _Value type_: [**\<opacity>**](/en-US/docs/Web/SVG/Content_type#opacity_value); _Default value_: `1`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

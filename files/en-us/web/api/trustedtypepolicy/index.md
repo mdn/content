@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.TrustedTypePolicy
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`TrustedTypePolicy`** interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.
+The **`TrustedTypePolicy`** interface of the {{domxref("Trusted Types API", "", "", "nocode")}} defines a group of functions which create `TrustedType` objects.
 
 A `TrustedTypePolicy` object is created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}} to define a policy for enforcing security rules on input. Therefore, `TrustedTypePolicy` has no constructor.
 

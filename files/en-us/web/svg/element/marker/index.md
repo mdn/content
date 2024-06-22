@@ -179,7 +179,7 @@ svg {
   - : This attribute defines the orientation of the marker relative to the shape it is attached to.
     _Value type_: `auto`|`auto-start-reverse`|**[\<angle>](/en-US/docs/Web/SVG/Content_type#angle)** ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
-  - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different aspect ratio.
+  - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("refX")}}
   - : This attribute defines the x coordinate for the reference point of the marker.
@@ -191,7 +191,7 @@ svg {
   - : This attribute defines the bound of the SVG viewport for the current SVG fragment.
     _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

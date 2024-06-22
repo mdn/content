@@ -67,7 +67,7 @@ svg {
   - : A width that the text should be scaled to fit.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

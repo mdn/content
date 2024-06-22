@@ -96,10 +96,10 @@ Link: </style.css>; rel=preload; as=style
 ```
 
 The early response restricts preloading to the same origin as the request.
-The stylesheet will preload if the origin matches.
+The stylesheet will be preloaded if the origin matches.
 
 The final response might set the CSP to `none`, as shown below.
-The stylesheet has already preloaded, but will not be used when rendering the page.
+The stylesheet has already been preloaded, but will not be used when rendering the page.
 
 ```http
 200 OK

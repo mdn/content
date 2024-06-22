@@ -15,7 +15,14 @@ It is available on {{HTMLElement("input")}} elements that take a text or numeric
 
 ## Description
 
-The `autocomplete` attribute provides a hint to the user agent specifying how to, or indeed whether to, prefill a form control. The attribute value is either the keyword `off` or `on`, or a space-separated list of tokens.
+The `autocomplete` attribute provides a hint to the user agent specifying how to, or indeed whether to, prefill a form control. The attribute value is either the keyword `off` or `on`, or an ordered list of space-separated tokens.
+
+```html
+<input autocomplete="off" />
+<input autocomplete="on" />
+<input autocomplete="shipping street-address" />
+<input autocomplete="section-user1 billing postal-code" />
+```
 
 If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Element/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 

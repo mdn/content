@@ -16,7 +16,7 @@ CT logs are built upon the foundation of the _Merkle tree_ data structure. Nodes
 
 In the context of certificate transparency, the data hashed by the leaf nodes are the certificates that have been issued by the various different CAs operating today. Certificate inclusion can be verified via an _audit proof_ which can be generated and verified efficiently, in logarithmic O(log n) time.
 
-Certificate transparency initially came about in 2013 against a backdrop of CA compromises (DigiNotar breach in 2011), questionable decisions (Trustwave subordinate root incident in 2012) and technical issuance issues (weak, 512-bit certificate issuance by Digicert Sdn Bhd of Malaysia).
+Certificate transparency initially came about in 2013 against a backdrop of CA compromises (DigiNotar breach in 2011), questionable decisions (Trustwave subordinate root incident in 2012) and technical issuance issues (weak, 512-bit certificate issuance by DigiCert Sdn Bhd of Malaysia).
 
 ## Implementation
 

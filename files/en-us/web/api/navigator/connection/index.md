@@ -3,12 +3,10 @@ title: "Navigator: connection property"
 short-title: connection
 slug: Web/API/Navigator/connection
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Navigator.connection
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{APIRef("Network Information API")}}
 
 The **`connection`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NetworkInformation")}} object containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered.
 

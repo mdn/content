@@ -14,7 +14,6 @@ Code splitting is a feature supported by bundlers like [Webpack](https://webpack
 
 ## See also
 
-- Bundling
 - [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading)
 - [HTTP/2](/en-US/docs/Glossary/HTTP_2)
 - [Tree shaking](/en-US/docs/Glossary/Tree_shaking)

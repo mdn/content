@@ -66,7 +66,7 @@ Possible types are the following:
     calendar's representation would be a yearName instead of a year, for example `"2019"`.
 - `second`
   - : The string used for the second, for example `"07"` or `"42"`.
-- `timeZone`
+- `timeZoneName`
   - : The string used for the name of the time zone, for example `"UTC"`. Default is the timezone of the current environment.
 - `weekday`
   - : The string used for the weekday, for example `"M"`, `"Monday"`, or `"Montag"`.

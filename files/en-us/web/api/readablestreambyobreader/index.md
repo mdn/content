@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ReadableStreamBYOBReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source.
 It is used for efficient copying from underlying sources where the data is delivered as an "anonymous" sequence of bytes, such as files.
@@ -17,7 +17,7 @@ Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request 
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
 Note that the methods and properties are similar to those for the default reader ({{domxref("ReadableStreamDefaultReader")}}).
-The `read()` method differs in that it provide a view into which data should be written.
+The `read()` method differs in that it provides a view into which data should be written.
 
 ## Constructor
 

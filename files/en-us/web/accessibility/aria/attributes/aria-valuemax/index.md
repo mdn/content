@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemax
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-valuemax` attribute defines the maximum allowed value for a range widget.
 
 ## Description
@@ -72,8 +74,3 @@ Inherited into roles:
 - [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Element/input/range#max)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

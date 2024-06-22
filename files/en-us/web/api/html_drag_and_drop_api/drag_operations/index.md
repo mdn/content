@@ -171,8 +171,8 @@ You can combine the values in various ways:
   - : `link` or `move` only
 - `all`
   - : `copy`, `move`, or `link`
-- uninitialized
-  - : The default value is `all`.
+- `uninitialized`
+  - : the default value when the effect has not been set, equivalent to `all`
 
 Note that these values must be used exactly as listed above. For example, setting the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `copyMove` allows a copy or move operation but prevents the user from performing a link operation. If you don't change the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property, then any operation is allowed, just like with the '`all`' value. So you don't need to adjust this property unless you want to exclude specific types.
 
@@ -214,7 +214,7 @@ dropElement.addEventListener("dragover", (event) => {
 });
 ```
 
-Calling the {{domxref("Event.preventDefault","preventDefault()")}} method during both a {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} event will indicate that a drop is allowed at that location. However, you will commonly wish to call the {{domxref("Event.preventDefault","preventDefault()")}} method only in certain situations (for example, only if a link is being dragged).
+Calling the {{domxref("Event.preventDefault","preventDefault()")}} method during both the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} event will indicate that a drop is allowed at that location. However, you will commonly wish to call the {{domxref("Event.preventDefault","preventDefault()")}} method only in certain situations (for example, only if a link is being dragged).
 
 To do this, call a function which checks a condition and only cancels the event when the condition is met. If the condition is not met, don't cancel the event, and a drop will not occur there if the user releases the mouse button.
 

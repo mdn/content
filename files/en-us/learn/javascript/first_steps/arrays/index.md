@@ -84,7 +84,7 @@ Items in an array are numbered, starting from zero. This number is called the it
    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **Note:** We've said it before, but just as a reminder — computers start counting from 0!
+   > **Note:** We've said it before, but just as a reminder — Javascript starts indexing arrays at zero!
 
 3. Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
@@ -392,15 +392,12 @@ window.addEventListener("load", updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-const KEY_TAB = 9;
-const KEY_ESC = 27;
-
 textarea.onkeydown = (event) => {
-  if (event.keyCode === KEY_TAB) {
+  if (event.code === "Tab") {
     event.preventDefault();
     insertAtCaret("\t");
   }
-  if (event.keyCode === KEY_ESC) {
+  if (event.code === "Escape") {
     textarea.blur();
   }
 };
@@ -626,15 +623,12 @@ window.addEventListener("load", updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-const KEY_TAB = 9;
-const KEY_ESC = 27;
-
 textarea.onkeydown = (event) => {
-  if (event.keyCode === KEY_TAB) {
+  if (event.code === "Tab") {
     event.preventDefault();
     insertAtCaret("\t");
   }
-  if (event.keyCode === KEY_ESC) {
+  if (event.code === "Escape") {
     textarea.blur();
   }
 };

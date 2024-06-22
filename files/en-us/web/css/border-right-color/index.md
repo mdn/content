@@ -7,7 +7,7 @@ browser-compat: css.properties.border-right-color
 
 {{CSSRef}}
 
-The **`border-right-color`** CSS property sets the color of an element's right [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-right")}}.
+The **`border-right-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's right [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-right")}}.
 
 {{EmbedInteractiveExample("pages/css/border-right-color.html")}}
 

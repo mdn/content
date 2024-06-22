@@ -20,7 +20,7 @@ persisted()
 
 None.
 
-### Returns
+### Return value
 
 A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
 

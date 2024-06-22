@@ -16,7 +16,7 @@ This interface inherits all of the properties and methods described in the {{dom
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLMetaElement.charset")}}
+- {{HTMLElement("meta#charset")}}
   - : The character encoding for a HTML document.
 - {{domxref("HTMLMetaElement.content")}}
   - : The 'value' part of the name-value pairs of the document metadata.

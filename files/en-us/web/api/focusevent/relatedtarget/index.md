@@ -6,10 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.FocusEvent.relatedTarget
 ---
 
-{{ apiref("DOM Events") }}
+{{APIRef("UI Events")}}
 
-The **`FocusEvent.relatedTarget`** read-only property is the
-secondary target, depending on the type of event:
+The **`relatedTarget`** read-only property of the {{domxref("FocusEvent")}} interface is the secondary target, depending on the type of event:
 
 <table class="no-markdown">
   <thead>
@@ -23,9 +22,7 @@ secondary target, depending on the type of event:
     <tr>
       <td>{{domxref("Element/blur_event", "blur")}}</td>
       <td>The {{domxref("EventTarget")}} losing focus</td>
-      <td>
-        The {{domxref("EventTarget")}} receiving focus (if any).
-      </td>
+      <td>The {{domxref("EventTarget")}} receiving focus (if any).</td>
     </tr>
     <tr>
       <td>{{domxref("Element/focus_event", "focus")}}</td>
@@ -45,9 +42,7 @@ secondary target, depending on the type of event:
   </tbody>
 </table>
 
-Note that [many elements can't have focus](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495), which is a common reason for `relatedTarget` to be
-`null`. `relatedTarget` may also be set to `null` for
-security reasons, like when tabbing in or out of a page.
+Note that [many elements can't have focus](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495), which is a common reason for `relatedTarget` to be `null`. `relatedTarget` may also be set to `null` for security reasons, like when tabbing in or out of a page.
 
 {{domxref("MouseEvent.relatedTarget")}} is a similar property for mouse events.
 
@@ -65,4 +60,5 @@ An instance of {{domxref("EventTarget")}}.
 
 ## See also
 
-- The {{domxref("FocusEvent")}} interface it belongs to.
+- {{ domxref("FocusEvent") }}
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

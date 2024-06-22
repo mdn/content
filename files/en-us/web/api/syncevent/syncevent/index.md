@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.SyncEvent.SyncEvent
 ---
 
-{{APIRef("Background Sync")}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
 The **`SyncEvent()`** constructor creates a new {{domxref("SyncEvent")}} object.
 

@@ -68,6 +68,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when the `HTMLVideoElement` enters picture-in-picture mode successfully.
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
   - : Fired when the `HTMLVideoElement` leaves picture-in-picture mode successfully.
+- {{DOMxRef("HTMLVideoElement.resize_event", "resize")}}
+  - : Fires when one or both of the {{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} properties have just been updated.
 
 ## Specifications
 

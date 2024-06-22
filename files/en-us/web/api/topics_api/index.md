@@ -14,13 +14,13 @@ browser-compat: api.Document.browsingTopics
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](#enrollment) section for details of what sub-features are gated by enrollment.
 
-The **Topics API** provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with third-party cookies.
+The **Topics API** provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
 ## Concepts and usage
 
 A typical mechanism for advertising on the web involves a user visiting **publisher** sites that use an advertising technology (ad tech) platform to publish ads for an **advertiser**'s products or services. The publisher is paid to display the ads, which helps to fund their content, and more business is driven to advertiser sites.
 
-The above process can be made more effective using interest-based advertising (IBA). The idea is that when users visit the publisher sites, they are served a **personalized** selection of ads based on their interests. Their interests are inferred from sites they have previously visited. In the past, [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) have been used to collect information on user interests, but all browsers are phasing out the use of third-party cookies. The Topics API provides part of the path towards this goal — a mechanism to implement IBA that does not depend on third-party cookies.
+The above process can be made more effective using interest-based advertising (IBA). The idea is that when users visit the publisher sites, they are served a **personalized** selection of ads based on their interests. Their interests are inferred from sites they have previously visited. In the past, third-party cookies have been used to collect information on user interests, but all browsers are phasing out the use of third-party cookies. The Topics API provides part of the path towards this goal — a mechanism to implement IBA that does not depend on third-party cookies.
 
 First of all, the browser infers a user's interests from the URLs of sites they visit that have ad tech `<iframe>`s embedded. These interests are mapped to specific **topics of interest**, and the browser calculates and records the users' top topic (i.e. the topic that their interests mapped to most often) at the end of each **epoch**. An epoch is a week by default. The top topic is updated each week so that interests are kept current and users don't start to see ads for topics that they are no longer interested in.
 

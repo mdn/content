@@ -65,7 +65,7 @@ Media feature expressions test for their presence or value, and are entirely opt
   - : Is any available input mechanism a pointing device, and if so, how accurate is it?
     Added in Media Queries Level 4.
 - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - : Width-to-height aspect ratio of the viewport
+  - : Width-to-height {{glossary("aspect ratio")}} of the viewport
 - {{cssxref("@media/color", "color")}}
   - : Number of bits per color component of the output device, or zero if the device isn't color
 - {{cssxref("@media/color-gamut", "color-gamut")}}

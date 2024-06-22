@@ -2,31 +2,27 @@
 title: ViewTransition
 slug: Web/API/ViewTransition
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.ViewTransition
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}
 
 The **`ViewTransition`** interface of the {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
 
 This object type is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method. When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). This also explains when the different promises fulfill.
 
-{{InheritanceDiagram}}
-
 ## Instance properties
 
-- {{domxref("ViewTransition.finished")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.finished")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
-- {{domxref("ViewTransition.ready")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
-- {{domxref("ViewTransition.updateCallbackDone")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}}'s callback fulfills.
 
 ## Instance methods
 
-- {{domxref("ViewTransition.skipTransition", "skipTransition()")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.skipTransition", "skipTransition()")}}
   - : Skips the animation part of the view transition, but doesn't skip running the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} callback that updates the DOM.
 
 ## Examples

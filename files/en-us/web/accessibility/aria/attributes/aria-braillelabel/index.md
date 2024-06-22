@@ -5,7 +5,9 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-braillelabel
 ---
 
-The global `aria-braillelabel` property defines a string value that labels the current element, which is intended to be converted into braille.
+{{AccessibilitySidebar}}
+
+The global `aria-braillelabel` property defines a string value that labels the current element, which is intended to be converted into Braille.
 
 ## Description
 
@@ -52,11 +54,3 @@ Used in **ALL** roles.
 - {{domxref("Element.ariaBrailleLabel")}}
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

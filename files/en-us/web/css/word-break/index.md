@@ -155,6 +155,7 @@ The specification also lists an additional value, `manual`, which is not current
 ## See also
 
 - {{cssxref("overflow-wrap")}}
+- {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

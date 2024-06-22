@@ -47,7 +47,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 To be a contributor, you must follow:
 
-- [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
+- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
 - Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
 
 **Privileges:**
@@ -202,7 +202,7 @@ Community managers have a distinct role in many respects.
 Community managers share many of the same responsibilities as a [maintainer](#maintainer).
 In addition, community managers have the following responsibilities:
 
-- Addressing reports of violation of [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) and deciding on the appropriate action.
+- Addressing reports of violation of our [code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) which is [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) and deciding on the appropriate action.
 - Organizing and running community events.
 - Organizing community-related project meetings.
 - Determining media strategies to promote the MDN project.

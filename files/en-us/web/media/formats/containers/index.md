@@ -659,6 +659,9 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_p
   </tbody>
 </table>
 
+> **Warning:**
+> Ogg Opus audio files longer than 12h 35m 39s are truncated and exhibit seeking issues when played on Firefox Linux 64 bit ([Firefox bug 1810378](https://bugzilla.mozilla.org/show_bug.cgi?id=1810378)).
+
 ### QuickTime
 
 The **QuickTime** file format (**QTFF**, **QT**, or **MOV**) was created by Apple for use by its media framework of the same name.

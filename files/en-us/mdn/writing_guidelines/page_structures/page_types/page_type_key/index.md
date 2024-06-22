@@ -137,7 +137,7 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 
 - `web-api-overview`: gives an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 - `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/fetch).
-- `web-api-global-property`: a global property, like [`origin`](/en-US/docs/Web/API/origin).
+- `web-api-global-property`: a global property.
 - `web-api-interface`: a Web API interface, like [`Request`](/en-US/docs/Web/API/Request).
 - `web-api-constructor`: a constructor, like [`Request()`](/en-US/docs/Web/API/Request/Request).
 - `web-api-instance-method`: an instance method, like [`cache.add()`](/en-US/docs/Web/API/Cache/add).

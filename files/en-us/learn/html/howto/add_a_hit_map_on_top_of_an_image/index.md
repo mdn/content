@@ -119,8 +119,6 @@ You aren't done until you test image maps rigorously on many browsers and device
 
 If your image map is wider than about 240px, you'll need to make further adjustments to make your website responsive. It's not enough to resize the image for small screens, because the coordinates stay the same and no longer match the image.
 
-If you must use image maps, you may want to look into [Matt Stow's jQuery plugin.](https://github.com/stowball/jQuery-rwdImageMaps) Alternatively, Dudley Storey demonstrates a way to [use SVG for an image map effect,](https://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps) along with a subsequent [combined SVG-raster hack](https://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG) for bitmap images.
-
 ## Learn more
 
 - {{htmlelement("img")}}

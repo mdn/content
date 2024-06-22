@@ -18,8 +18,8 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
 
 > **Note:**
 >
-> - An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
-> - Two other content encodings, namely `bzip` and `bzip2`, are sometimes used, These non-standard encodings implement the algorithm that these two UNIX programs use. Note that `bzip` was discontinued due to patent licensing issues.
+> - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.
 
 <table class="properties">
   <tbody>
@@ -45,7 +45,7 @@ Accept-Encoding: zstd
 Accept-Encoding: identity
 Accept-Encoding: *
 
-// Multiple algorithms, weighted with the {{Glossary("Quality Values", "quality value")}} syntax:
+// Multiple algorithms, weighted with the quality value syntax:
 Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ```
 

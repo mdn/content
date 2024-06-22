@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/TR/wai-aria-1.2/#alertdialog
 ---
 
+{{AccessibilitySidebar}}
+
 The **alertdialog** role is to be used on modal alert dialogs that interrupt a user's workflow to communicate an important message and require a response.
 
 ## Description
@@ -103,11 +105,3 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 - [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
 - [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
 - [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

@@ -17,47 +17,42 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
-### Standard properties
-
-- {{domxref("caches", "WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("crossOriginIsolated", "WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
+- {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
+  - : Returns the {{domxref("console")}} associated with the worker.
+- {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
-- {{domxref("crypto_property", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
-- {{domxref("indexedDB", "WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
-  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("isSecureContext", "WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
+  - : Provides a mechanism for workers to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
+- {{domxref("WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
-- {{domxref("origin", "WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
-- {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
-- {{domxref("scheduler_property", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Performance")}} associated with the worker. Only a subset of the properties and methods of the `Performance` interface are available to workers.
+- {{domxref("WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+- {{domxref("WorkerGlobalScope.trustedTypes")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
 - {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
-
-### Non-standard properties
-
-- {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
-  - : Returns the {{domxref("console")}} associated with the worker.
 
 ## Instance methods
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-### Standard methods
-
-- {{domxref("atob()", "WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("btoa()", "WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
   - : Creates a base-64 encoded {{Glossary("ASCII")}} string from a string of binary data.
 - {{domxref("clearInterval()", "WorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
@@ -65,6 +60,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
 - {{domxref("createImageBitmap()", "WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
+- {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("fetch()", "WorkerGlobalScope.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
@@ -79,11 +76,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - {{domxref("reportError()", "WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
-
-### Non-standard methods
-
-- {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 
 ## Events
 

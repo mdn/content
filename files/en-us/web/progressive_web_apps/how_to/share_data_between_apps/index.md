@@ -279,7 +279,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an {{domxref("IndexedDB")}} database which can be accessed both by your service worker and app's main JavaScript code.
+In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an [Indexed DB](/en-US/docs/Web/API/IndexedDB_API) database which can be accessed both by your service worker and app's main JavaScript code.
 
 For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
 

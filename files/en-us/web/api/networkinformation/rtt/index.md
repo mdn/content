@@ -3,12 +3,10 @@ title: "NetworkInformation: rtt property"
 short-title: rtt
 slug: Web/API/NetworkInformation/rtt
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NetworkInformation.rtt
 ---
 
-{{apiref("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{apiref("Network Information API")}} {{AvailableInWorkers}}
 
 The **`rtt`** read-only property of the {{domxref("NetworkInformation")}} interface returns the estimated effective round-trip time of the current connection, rounded to the nearest multiple of 25 milliseconds.
 This value is based on recently observed application-layer RTT measurements across recently active connections.

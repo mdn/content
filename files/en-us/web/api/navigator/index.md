@@ -21,7 +21,7 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
-- {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
