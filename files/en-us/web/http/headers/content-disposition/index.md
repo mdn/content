@@ -40,9 +40,16 @@ The first parameter in the HTTP context is either `inline` (default value, indic
 Content-Disposition: inline
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"
+Content-Disposition: attachment; filename*="filename.jpg"
 ```
 
-> **Note:** Chrome, and Firefox 82 and later, prioritize the HTML [\<a> element's](/en-US/docs/Web/HTML/Element/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
+The quotes around the filename are optional, but are necessary if you use special characters in the filename, such as spaces.
+
+The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in [RFC 5987](https://datatracker.ietf.org/doc/html/rfc5987). When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood. It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`). You may want to avoid percent escape sequences in `filename`, because they are handled inconsistently across browsers. (Firefox and Chrome decode them, while Safari does not.)
+
+Browsers may apply transformations to conform to the file system requirements, such as converting path separators (`/` and `\`) to underscores (`_`).
+
+> **Note:** Chrome, and Firefox 82 and later, prioritize the HTML [`<a>` element's](/en-US/docs/Web/HTML/Element/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
 
 ### As a header for a multipart body
 
@@ -57,23 +64,21 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `name`
 
-  - : Is followed by a string
-    containing the name of the HTML field in the form
-    that the content of this subpart refers to.
-    When dealing with multiple files in the same field
-    (for example, the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute of an `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` element),
-    there can be several subparts with the same name.
+  - : Is followed by a string containing the name of the HTML field in the form that the content of this subpart refers to. When dealing with multiple files in the same field (for example, the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute of an `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` element), there can be several subparts with the same name.
 
-    A `name` with a value of `'_charset_'` indicates
-    that the part is not an HTML field,
-    but the default charset to use for parts without explicit charset information.
+    A `name` with a value of `'_charset_'` indicates that the part is not an HTML field, but the default charset to use for parts without explicit charset information.
 
 - `filename`
-  - : Is followed by a string containing the original name of the file transmitted. The filename is always optional and must not be used blindly by the application: path information should be stripped, and conversion to the server file system rules should be done. This parameter provides mostly indicative information. When used in combination with `Content-Disposition: attachment`, it is used as the default filename for an eventual "Save As" dialog presented to the user.
-- `filename*`
-  - : The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in [RFC 5987](https://datatracker.ietf.org/doc/html/rfc5987). When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood.
 
-> **Warning:** The string following `filename` should always be put into quotes; but, for compatibility reasons, many browsers try to parse unquoted names that contain spaces.
+  - : Is followed by a string containing the original name of the file transmitted. This parameter provides mostly indicative information. The suggestions in [RFC2183](https://www.rfc-editor.org/rfc/rfc2183#section-2.3) apply:
+
+    - Prefer ASCII characters if possible (the client may percent-encode it, as long as the server implementation decodes it).
+    - Any path information should be stripped, such as by replacing `/` with `_`.
+    - When writing to disk, it should not overwrite an existing file.
+    - Avoid creating special files with security implications, such as creating a file on the command search path.
+    - Satisfy other file system requirements, such as restricted characters and length limits.
+
+Note that the request header does not have the `filename*` parameter and does not allow RFC 5987 encoding.
 
 ## Examples
 
@@ -115,11 +120,6 @@ value2
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-- Firefox 5 handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See [Firefox bug 588781](https://bugzil.la/588781).
-- Firefox 82 (and later) and Chrome prioritize the HTML [\<a> element's](/en-US/docs/Web/HTML/Element/a) `download` attribute over the `Content-Disposition: inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
 
 ## See also
 

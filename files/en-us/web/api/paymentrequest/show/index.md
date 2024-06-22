@@ -42,17 +42,16 @@ to wait asynchronously while results are validated and so forth.
 
 ```js-nolint
 show()
-show(detailsPromise)
+show(details)
 ```
 
 ### Parameters
 
-- `detailsPromise` {{optional_inline}}
+- `details` {{optional_inline}}
 
-  - : An optional {{jsxref("Promise")}} that you can provide if your architecture requires
+  - : Either an object or a {{jsxref("Promise")}} that resolves to an object. Provide this if your architecture requires
     that the payment request's details need to be updated between instantiating the
-    payment interface and the user beginning to interact with it. The promise should
-    resolve with an object containing the updated information:
+    payment interface and the user beginning to interact with it. The object should contain the updated information:
 
     - `displayItems` {{optional_inline}}
 
