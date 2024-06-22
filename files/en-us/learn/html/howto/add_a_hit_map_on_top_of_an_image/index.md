@@ -76,6 +76,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 `<area>` elements are {{glossary("void element", "void elements")}}, but do require four attributes:
 
 - [`shape`](/en-US/docs/Web/HTML/Element/area#shape)
+
   - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined. If there is any overlap between the defined areas, the source order determines which area takes preference. The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
   [`coords`](/en-US/docs/Web/HTML/Element/area#coords)
