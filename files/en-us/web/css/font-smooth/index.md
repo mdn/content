@@ -41,6 +41,8 @@ font-smooth: unset;
 >
 > - `auto` - Allow the browser to select an optimization for font smoothing, typically `grayscale`.
 > - `grayscale` - Render text with grayscale anti-aliasing, as opposed to the subpixel. Switching from subpixel rendering to anti-aliasing for light text on dark backgrounds makes it look lighter.
+> - `inherit` - Inherits value of this property from its parent element.
+> - `unset` - Resets the property to its inherited value.
 
 ## Formal definition
 
