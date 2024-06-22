@@ -62,7 +62,7 @@ This wouldn't work if we just appended it to the standard DOM.
 So for example:
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <style>
     p {
       color: white;
