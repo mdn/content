@@ -481,7 +481,7 @@ async function* makeTextFileLineIterator(fileURL) {
 
   if (startIndex < chunk.length) {
     // Last line didn't end in a newline char
-    yield chunk.substr(startIndex);
+    yield chunk.substring(startIndex);
   }
 }
 
