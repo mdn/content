@@ -66,4 +66,4 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 
 ## See also
 
-- [Native CSS Masonry Layout In CSS Grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)

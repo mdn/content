@@ -21,7 +21,7 @@ str:split(string, pattern)
 - `pattern`
   - : The pattern indicating where to split the string.
 
-### Returns
+### Return value
 
 A node-set of `token` elements, each containing one token from the `string`.
 
