@@ -73,12 +73,6 @@ For a full description of every member, see the [web app manifest reference docu
 
 For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
 
-### User engagement
-
-Chromium-based browsers such as Chrome and Edge can display an install prompt if the user has clicked or tapped on the website at least once, and has spent at least 30 seconds viewing the page (at any points in time).
-
-See [What does it take to be installable?](https://web.dev/articles/install-criteria) on [web.dev](https://web.dev) for more information.
-
 ## Installation from an app store
 
 Users expect to find apps in the app store for their platform, like the Google Play Store or the Apple App Store.
@@ -95,7 +89,7 @@ If you have added your app to the app store, users can install it from there, ju
 
 ## Installation from the web
 
-When a supporting browser determines that a web app meets the installability criteria described earlier, it will promote the app to the user for installation. The user will be offered the chance to install the app. This means you can distribute your PWA as a website, making it discoverable through web search, and also distribute it in app stores, so users can find it there.
+When a supporting browser determines that a web app meets the installability criteria described earlier, it will promote the app to the user for installation by displaying an install button somewhere in the browser UI. Chromium-based browsers such as Chrome and Edge can also display an install prompt if the user has clicked or tapped on the website at least once, and has spent at least 30 seconds viewing the page (at any points in time). See [What does it take to be installable?](https://web.dev/articles/install-criteria) on [web.dev](https://web.dev) for more information. This means you can distribute your PWA as a website, making it discoverable through web search, and also distribute it in app stores, so users can find it there.
 
 This is a great example of the way PWAs can offer you the best of both worlds. It's also a good example of how progressive enhancement works with PWAs: if a user encounters your PWA on the web, using a browser that can't install it, they can use it just like a normal website.
 
