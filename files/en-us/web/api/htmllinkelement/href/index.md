@@ -10,7 +10,7 @@ browser-compat: api.HTMLLinkElement.href
 
 The **`href`** property of the {{domxref("HTMLLinkElement")}} interface contains a string that is the URL associated with the link.
 
-It reflects the `href` attribute of the {{HTMLElement("link")}} element and is the empty string (`""`) if there are none.
+It reflects the `href` attribute of the {{HTMLElement("link")}} element. If the element does not have an `href` attribute, then this property's value is the empty string (`""`).
 
 **Note:** Either this property or {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} must not be empty.
 
