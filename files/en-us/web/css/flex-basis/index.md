@@ -182,8 +182,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 - {{cssxref("flex")}} shorthand
 - {{cssxref("inline-size")}}
-- {{cssxref("min-content")}}
-- {{cssxref("max-content")}}
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
