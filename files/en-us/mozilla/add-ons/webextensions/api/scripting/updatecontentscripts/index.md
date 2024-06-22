@@ -15,7 +15,7 @@ To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-### Syntax
+## Syntax
 
 ```js-nolint
 await browser.scripting.updateContentScripts(

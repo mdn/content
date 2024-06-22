@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:output>` element controls the characteristics of the output document. To function correctly in Netscape, this element, with the method attribute, must be used. As of 7.0, `method="text"` works as expected.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:output
@@ -55,10 +55,10 @@ None.
 
 Top-level, must be the child `<xsl:stylesheet>` or `<xsl:transform>`.
 
-### Defined
+## Specifications
 
 XSLT, section 16.
 
-### Gecko support
+## Gecko support
 
 Partial support. See comments above.
