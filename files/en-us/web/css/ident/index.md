@@ -13,7 +13,7 @@ The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 A CSS identifier consists of one or more characters, where characters can be any of the following:
 
-- any ASCII character `A-Z` and `a-z`
+- any ASCII character in the ranges `A-Z` and `a-z`
 - any decimal digit (`0` to `9`)
 - a hyphen (`-`)
 - an underscore (`_`)
