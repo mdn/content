@@ -62,10 +62,11 @@ The manifest contains a single JSON object containing a collection of members, e
 
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 
-- [`name`](/en-US/docs/Web/Manifest/name)
-- [`icons`](/en-US/docs/Web/Manifest/icons)
+- [`name`](/en-US/docs/Web/Manifest/name) or [`short_name`](/en-US/docs/Web/Manifest/short_name)
+- [`icons`](/en-US/docs/Web/Manifest/icons) - must contain a 192px and a 512px icon
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
 - [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
+- [`prefer-related-application`](/en-US/docs/Web/Manifest/prefer_related_applications) must be false or not present
 
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
