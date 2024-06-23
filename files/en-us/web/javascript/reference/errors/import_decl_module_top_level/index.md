@@ -31,7 +31,7 @@ If the `import` is already at the top level of the code, it may be because the f
 - If the file is run as a [worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), make sure you call the `Worker()` constructor with the `type: "module"` option.
 - Import this file from another module.
 
-One other cause might be when you are writing `import` with a compiler (such as TypeScript) and you accidentally ran the source file. Since `import` declarations usually appears at the very start of the program, they are the first thing the parser sees and then complains about. Make sure to compile the source file and execute the compiled file instead.
+One other cause might be when you are writing `import` with a compiler (such as TypeScript) and you accidentally ran the source file. Since `import` declarations usually appear at the very start of the program, they are the first thing the parser sees and then complains about. Make sure to compile the source file and execute the compiled file instead.
 
 ## Examples
 
