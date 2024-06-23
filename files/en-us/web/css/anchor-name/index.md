@@ -133,13 +133,10 @@ body {
 }
 ```
 
-We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property.
+We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We then set the positioned element's:
 
-We include CSS to convert the `infobox` element into an **anchor-positioned element** and position it relative to its anchor. We set its:
-
-- {{cssxref("position")}} property to `fixed`, converting it to a **positioned element** so it can be positioned relative to the anchor's position on the page.
-- {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right`, tethering the positioned element to it's anchor. This positions the infobox's left edge flush to the right edge of its anchor.
-- {{cssxref("align-self")}} property to `anchor-center`, centrally aligning the infobox to the center of the anchor in the inline direction.
+- {{cssxref("position")}} property to `fixed`, converting it to an **anchor-positioned element** so it can be positioned relative to the anchor's position on the page.
+- {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions with values of `right` and `top` respectively. This positions the infobox's left edge flush to the right edge of its anchor, and its top edge relative to the top edge of its anchor.
 - {{cssxref("margin-left")}} to `10px`, creating space between the anchor positioned element and its anchor.
 
 ```css hidden
@@ -158,7 +155,7 @@ We include CSS to convert the `infobox` element into an **anchor-positioned elem
   position-anchor: --myAnchor;
   position: fixed;
   left: anchor(right);
-  align-self: anchor-center;
+  top: anchor(top);
   margin-left: 10px;
 }
 ```
@@ -238,7 +235,7 @@ body {
 }
 ```
 
-Each of the two positioned elements are associated with the anchor element by setting its anchor name as the positioned element's {{cssxref("position-anchor")}} property value. Both are also given `fixed` positioning, making them **anchor positioned elements**. The positioned elements are then positioned in different places relative to the anchor using a combination of inset, alignment, and margin properties.
+Each of the two positioned elements are associated with the anchor element by setting its anchor name as the positioned element's {{cssxref("position-anchor")}} property value. Both are also given `fixed` positioning, making them **anchor positioned elements**. The positioned elements are then positioned in different places relative to the anchor using a combination of inset properties as seen above and {{cssxref("align-self")}} / {{cssxref("justify-self")}} properties with a value of `anchor-center`, centrally aligning the infobox to the center of the anchor in the inline/block directions respectively.
 
 ```css hidden
 .infobox {
