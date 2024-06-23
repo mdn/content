@@ -11558,6 +11558,7 @@
 /en-US/docs/Web/CSS/_image	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/abs()	/en-US/docs/Web/CSS/abs
 /en-US/docs/Web/CSS/additive-symbols	/en-US/docs/Web/CSS/@counter-style/additive-symbols
+/en-US/docs/Web/CSS/align-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /en-US/docs/Web/CSS/attr()	/en-US/docs/Web/CSS/attr
 /en-US/docs/Web/CSS/auto	/en-US/docs/Web/CSS/width
 /en-US/docs/Web/CSS/basic-shape/circle()	/en-US/docs/Web/CSS/basic-shape/circle
@@ -11645,6 +11646,7 @@
 /en-US/docs/Web/CSS/image/paint()	/en-US/docs/Web/CSS/image/paint
 /en-US/docs/Web/CSS/imagefunction	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/Inheritance
+/en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /en-US/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color
 /en-US/docs/Web/CSS/linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
@@ -12977,7 +12979,7 @@
 /en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
-/en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/SVGElement/dataset
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
