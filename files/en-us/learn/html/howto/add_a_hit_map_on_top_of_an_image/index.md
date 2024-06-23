@@ -14,22 +14,13 @@ Here we go over how to set up an image map, and some downsides to consider first
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        You should already know how to
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
-          >create a basic HTML document</a
-        >
-        and how to
-        <a
-          href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage"
-          >add accessible images to a webpage.</a
-        >
+        You should already know how to <a href="/en-US/docs/Learn/Getting_started_with_the_web">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        Learn how to make different regions of one image link to different
-        pages.
+        Learn how to make different regions of one image link to different pages.
       </td>
     </tr>
   </tbody>
@@ -76,9 +67,12 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 `<area>` elements are {{glossary("void element", "void elements")}}, but do require four attributes:
 
 - [`shape`](/en-US/docs/Web/HTML/Element/area#shape)
-  - : The `shape` attribute takes one of four values: `circle`, `rect`, `poly`, and `default`. An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined. If there is any overlap between the defined areas, the source order determines which area takes preference. The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
-  [`coords`](/en-US/docs/Web/HTML/Element/area#coords)
+  - : The `shape` attribute takes one of four values: `circle`, `rect`, `poly`, and `default`. An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.
+    If there is any overlap between the defined areas, the source order determines which area takes preference.
+    The shape you choose determines the coordinate information you'll need to provide in `coords`.
+
+- [`coords`](/en-US/docs/Web/HTML/Element/area#coords)
 
   - : Coordinates are given in CSS pixels, and its value is dependent on the `shape` selected.
 
@@ -87,6 +81,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
     - For a polygon, to provide the x and y coordinates of each corner (so, at least six values).
 
 - [`href`](/en-US/docs/Web/HTML/Element/area#href)
+
   - : The URL of the resource you're linking to. You may leave this attribute blank if you _don't_ want the current area to link anywhere (say, if you're making a hollow circle.)
 
 - [`alt`](/en-US/docs/Web/HTML/Element/area#alt)
