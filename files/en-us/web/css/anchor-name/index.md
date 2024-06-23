@@ -209,7 +209,7 @@ The HTML is the same as for the previous example, except this time we have multi
 
 #### CSS
 
-The CSS is mostly the same as the previous example too. We declare the `anchor` `<div>` as an anchor element using the `anchor-name` property, giving it an anchor name as before.
+We declare the `anchor` `<div>` as an anchor element using the `anchor-name` property, giving it an anchor name as before.
 
 ```css hidden
 body {
