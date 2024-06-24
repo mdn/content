@@ -44,12 +44,6 @@ scrollable container.
 
 {{Specifications}}
 
-### Notes
-
-`offsetHeight` is a property of the DHTML object model which was first
-introduced by MSIE. It is sometimes referred to as an element's physical/graphical
-dimensions, or an element's border-box height.
-
 ## Browser compatibility
 
 {{Compat}}

@@ -70,7 +70,7 @@ And then pass `document.evaluate`, the `nsResolver` variable as the `namespaceRe
 
 Note: XPath defines QNames without a prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., `p[@id='_myid']` for `xmlns='http://www.w3.org/1999/xhtml'`). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']` ([this approach](#using_xpath_functions_to_reference_elements_with_a_default_namespace) works well for dynamic XPath's where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on [how to create a user-defined namespace resolver](#implementing_a_user_defined_namespace_resolver), if you wish to take the latter approach.
 
-### Notes
+## Description
 
 Adapts any DOM node to resolve namespaces so that an [XPath](/en-US/docs/Web/XPath) expression can be easily evaluated relative to the context of the node where it appeared within the document. This adapter works like the DOM Level 3 method `lookupNamespaceURI` on nodes in resolving the `namespaceURI` from a given prefix using the current information available in the node's hierarchy at the time `lookupNamespaceURI` is called. Also correctly resolves the implicit `xml` prefix.
 
