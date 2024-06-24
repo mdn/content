@@ -304,7 +304,6 @@ In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.intro
 
 This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
 
-````
 
 ## Introducing constructors
 
