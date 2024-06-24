@@ -74,6 +74,8 @@ The `gecko_android` subkey supports these properties:
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
+To support android browser without any strict version range the `gecko_android` subkey must be an empty object `"gecko_android": {}`, otherwise it will only be available on desktop firefox.
+
 #### Extension ID format
 
 The extension ID must be one of the following:
