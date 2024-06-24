@@ -770,6 +770,8 @@
         "MessageEvent",
         "MessagePort",
         "Navigator",
+        "PageRevealEvent",
+        "PageSwapEvent",
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
@@ -1039,6 +1041,7 @@
       "interfaces": [
         "NavigateEvent",
         "Navigation",
+        "NavigationActivation",
         "NavigationCurrentEntryChangeEvent",
         "NavigationDestination",
         "NavigationHistoryEntry",
@@ -1739,10 +1742,11 @@
     },
     "View Transitions API": {
       "overview": ["View Transitions API"],
+      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
-      "events": []
+      "events": ["Window: pagereveal", "Window: pageswap"]
     },
     "VirtualKeyboard API": {
       "overview": ["VirtualKeyboard API"],

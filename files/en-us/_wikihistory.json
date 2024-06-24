@@ -99428,10 +99428,6 @@
     "modified": "2020-10-15T22:23:14.705Z",
     "contributors": ["j9t", "Malvoz", "bershanskiy"]
   },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:23:15.388Z",
-    "contributors": ["bershanskiy"]
-  },
   "Web/HTTP/Headers/Accept-Charset": {
     "modified": "2020-10-15T21:48:48.975Z",
     "contributors": [
