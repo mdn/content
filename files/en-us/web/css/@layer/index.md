@@ -35,7 +35,7 @@ The following diagram shows layer priorities where layers are declared in 1, 2, 
 
 ![Diagram showing cascade layer priorities](layer_cascade.png)
 
-Here declaration order matters. First delcared layer gets lowest priority and the last layer gets highets priority. But priority is reversed when [`!important`](/en-US/docs/Web/CSS/important) flag is used.
+The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/important) flag is used.
 
 The `@layer` at-rule is used to create a cascade layer in one of three ways.
 
