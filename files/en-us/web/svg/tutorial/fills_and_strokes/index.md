@@ -103,7 +103,7 @@ There are additional `stroke` and `fill` properties available, including `fill-r
 
 ### Paint order
 
-Order in which fill and stroke are painted can be controlled using [`paint-order`](/en-US/docs/Web/SVG/Attribute/paint-order) attribute.
+The order in which fill and stroke are painted can be controlled using the [`paint-order`](/en-US/docs/Web/SVG/Attribute/paint-order) attribute.
 
 ```html
 <?xml version="1.0" standalone="no"?>
@@ -126,7 +126,8 @@ Order in which fill and stroke are painted can be controlled using [`paint-order
 
 {{EmbedLiveSample("Paint order", "100%", 180)}}
 
-In case of the first shape, fill has been rendered before stroke. So the black stroke apears above fill. In case of second shape, stroke has been rendered before fill.
+In case of the first shape, fill has been rendered before stroke, so the black stroke appears above fill.
+In case of second shape, stroke has been rendered before fill.
 
 ## Using CSS
 
