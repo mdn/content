@@ -12,21 +12,38 @@ The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}}
 ## Syntax
 
 ```css
-color-mix(in lch, plum, pink);
-color-mix(in lch, plum 40%, pink);
-color-mix(in srgb, #34c9eb 20%, white);
-color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
+/* color-mix(in <color-interpolation-method>, <color>, <color>) */
+/* color-mix(in <polar-color-space> <hue-interpolation-method>, <color>, <color>) */
+color-mix(in hsl longer hue, hsl(357deg 70% 41%), coral)
+
+/* color-mix(in <color-space>, <color> <percentage, <color> <percentage> */
+color-mix(in lch, plum 20%, pink 60%)
+
+/* color-mix(in <custom-color-space>, <color>, <color>) */
+color-mix(in --swop5c, red, blue)
+
+color-mix(in srgb, #34c9eb 20%, white)
+color-mix(in oklab, teal, peru 40%)
 ```
 
 ### Values
 
-Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
+Functional notation: `color-mix(color-interpolation-method, color1[ p1], color2[ p2])`
 
-- `method`
+- `color-interpolation-method`
 
-  - : The method is the {{CSSXref("&lt;color-interpolation-method&gt;")}}, including the {{glossary("color space")}} preceded by `in`, optionally followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+  - : The {{CSSXref("&lt;color-interpolation-method&gt;")}}, consists of `in` word followed by {{glossary("color space")}} name, and optionally followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
 
-> **Note:** When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
+    - `color-space`
+
+      - : Color space name. There are three types of colorspaces that could be used:
+
+        - rectangular-color-space: [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
+        - polar-color-space: [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch).
+        - custom-color-space: [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/@color-profile)
+
+    > [!NOTE]
+    > When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
 
 - `color1`, `color2`
 
@@ -91,33 +108,33 @@ li {
 
 ```css
 li:nth-child(1) {
-  background-color: color-mix(in srgb, #34c9eb 0%, white);
+  background-color: color-mix(in oklab, #34c9eb 0%, white);
 }
 
 li:nth-child(2) {
-  background-color: color-mix(in srgb, #34c9eb 25%, white);
+  background-color: color-mix(in oklab, #34c9eb 25%, white);
 }
 
 li:nth-child(3) {
-  background-color: color-mix(in srgb, #34c9eb 50%, white);
+  background-color: color-mix(in oklab, #34c9eb 50%, white);
 }
 
 li:nth-child(4) {
-  background-color: color-mix(in srgb, #34c9eb 75%, white);
+  background-color: color-mix(in oklab, #34c9eb 75%, white);
 }
 
 li:nth-child(5) {
-  background-color: color-mix(in srgb, #34c9eb 100%, white);
+  background-color: color-mix(in oklab, #34c9eb 100%, white);
 }
 
 li:nth-child(6) {
-  background-color: color-mix(in srgb, #34c9eb, white);
+  background-color: color-mix(in oklab, #34c9eb, white);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
+{{EmbedLiveSample("mixing_two_colors", "100%", 120)}}
 
 The total value of both colors in a `color-mix()` function is 100%, even if the values set by the developer don't total 100%. In this example, as only one color has a percentage assigned, the other color is implicitly given a percentage value so that the combined total equals 100%. In the last {{htmlelement("li")}}, where neither color is assigned a percentage, both default to 50%.
 
@@ -170,8 +187,8 @@ li {
 ul {
   background: repeating-linear-gradient(
     45deg,
-    palegoldenrod 0px 2px,
-    white 2px 4px
+    chocolate 0px 2px,
+    white 2px 12px
   );
 }
 
@@ -202,7 +219,7 @@ li:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("adding transparency", "100%", 150)}}
+{{EmbedLiveSample("adding transparency", "100%", 120)}}
 
 In this way, the `color-mix()` function can be used to add transparency to any color, even if the color is already non-opaque (with an alpha channel value < 1). However, `color-mix()` can't be used to make a semi-transparent color fully opaque. For this, use a [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) with a CSS [color function](/en-US/docs/Web/CSS/CSS_colors#functions). Relative colors can alter the value of any color channel, including increasing a color's alpha channel to render the color fully opaque.
 
