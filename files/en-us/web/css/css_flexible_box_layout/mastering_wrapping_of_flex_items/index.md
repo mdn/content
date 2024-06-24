@@ -6,11 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. That doesn't mean we can't wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. This guide explains flexbox wrapping, what it is designed for and what situations really require [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) rather than flexbox.
+Flexbox was designed as a single-dimensional layout tool — it deals with laying out items as a row or column — but not both at once. It is, however, possible to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. This guide explains flexbox wrapping, what it is designed for, and what situations require [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) rather than flexbox.
 
 ## Making things wrap
 
-The initial value of the {{cssxref("flex-wrap")}} property is `nowrap`. This means if a set of flex items are too wide for their container, they will overflow it. To them wrap once they are too wide, add the `flex-wrap` property with a value of `wrap`, or use the shorthand {{cssxref("flex-flow")}} with values of `row wrap` or `column wrap`. Items will then wrap in the container.
+The initial value of the {{cssxref("flex-wrap")}} property is `nowrap`. This means if a set of flex items is too wide for their flex container, they will overflow it. To make them wrap once they are too wide, add the `flex-wrap` property with a value of `wrap`, or use the shorthand {{cssxref("flex-flow")}} with values of `row wrap` or `column wrap`. Items will then wrap onto new lines when they overflow their container.
 
 In this example, there are ten flex items with a `flex-basis` of `160px` that can grow and shrink. Once there is not enough space to place another 160 pixel item in a row, a new flex line is created. New lines are created as needed until all of the items are placed. As the items can grow, they will expand to fill each row completely. If there is only one item on the final line it will stretch to fill the entire line.
 
@@ -34,27 +34,27 @@ As we have seen from the above examples if our items are allowed to grow and shr
 
 There are no flexbox features to tell items in one row to line up with items in the row above — each flex line acts like a new flex container. It deals with space distribution across the main axis. If there is only one item, and that item is allowed to grow, it will fill the axis just as if you had a single item flex container. If you want layout in two dimensions then you probably want grid layout.
 
-This example demonstrates to the difference, using CSS grid layout to create a layout that has as many columns of at least `160px` as will fit, distributing the extra space between all columns. We use the same HTML as the [flexbox wrapped row example](#making_things_wrap) above, but set `display: grid` set. Instead of the {{cssxref("flex")}} shorthand, which has no effect outside of flexbox, we set the item's minimum width and ability to grow directly on the container with {{cssxref("grid-template-columns")}}. With grid, the last item stays in its grid cell; grid items don't stretch out when there are fewer of them in the last row.
+This example demonstrates the difference, using CSS grid layout to create a layout with as many columns of at least `160px` as will fit, distributing the extra space between all columns. We use the same HTML as the [flexbox wrapped row example](#making_things_wrap) above but set `display: grid` on it. Instead of the {{cssxref("flex")}} shorthand, which has no effect outside of flexbox, we set the item's minimum width and ability to grow directly on the container with {{cssxref("grid-template-columns")}}. With CSS grid, the last item stays in its grid cell; grid items don't stretch when there are fewer of them in the last row.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}
 
-This is the difference between one and two-dimensional layout. In a one dimensional method like flexbox, we only control the row or column. In two dimensional layout like grid, we control both at the same time. If you want the space distribution row by row, use flexbox. If you don't, use grid.
+This is the difference between one and two-dimensional layouts. In a one-dimensional layout method like flexbox, we only control the row or column. In a two-dimensional grid layout, we control both at the same time. If you want the space distribution row by row, use Flexbox. If you don't, use CSS grid.
 
 ## How do flexbox-based grid systems work?
 
-Flexbox-based layouts can be forced to line up as grid systems, but that is not the intended purpose of flexible box layout. If you assign percentage widths to flex items — either as `flex-basis` or by adding a width to the item itself leaving the value of `flex-basis` as `auto` — you can get the impression of a two dimensional layout.
+Flexbox-based layouts can be forced to line up as grid systems, but that is not the intended purpose of flexbox. If you assign percentage widths to flex items — either using `flex-basis` or by adding a width to the item itself and leaving the value of `flex-basis` as `auto` — you can give the impression of a two-dimensional layout.
 
 In this example, `flex-grow` and `flex-shrink` have been set to `0` to make inflexible flex items. The flexibility is controlled via percentages.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
 
-If you need flex items to line up in the cross axis, controlling the width in this way will achieve that. When you catch yourself adding widths to flex items in this way, or adding several empty flex items to take up space, it a good indication you may want to switch to grid layout for that component.
+This technique allows you to line up flex items on the cross-axis. However, when you catch yourself adding widths to flex items in this way or adding empty flex items to take up space, it is a good indication you may want to switch to CSS grid layout for that component.
 
 ## Creating gutters between items
 
-To create gaps or gutters between flex items, use the {{CSSXref("gap")}} property directly on the flex container to create a fixed space between adjacent flex items. The gap property in CSS is a shorthand for `row-gap` and `column-gap`, specifying the size of gutters, which is the space between rows and columns within grid, flex, and multi-column layouts.
+To create gaps or gutters between flex items, use the {{CSSXref("gap")}} property directly on the flex container to create a fixed space between adjacent flex items. The `gap` property is a shorthand for `row-gap` and `column-gap`. These properties specify the size of the gutters between rows and columns within grid, flex, and multi-column layouts.
 
-The `gap` property is not the only thing that can put space between items. Margins, paddings, `justify-content`, and `align-content` can also increase the size of the gutter, affecting the actual size of the gap.
+The `gap` property is not the only thing that can add space between items. Margins, padding, `justify-content`, and `align-content` can also increase the size of the gutter, affecting the actual size of the gap.
 
 To see how the `gap` property differs from `margin` in both axes, try changing the `gap` value in the container `.box` and adding a `margin` value to the `.box > *` rule in the stylesheet below. Click the "Reset" button to revert to the previous values.
 
