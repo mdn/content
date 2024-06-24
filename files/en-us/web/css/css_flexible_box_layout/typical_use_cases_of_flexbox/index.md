@@ -10,7 +10,7 @@ In this guide, we will take a look at some of the common use cases for flexbox �
 
 ## Why choose flexbox?
 
-Flexbox is generally the right CSS layout solution when you want to lay a collection of items out in one direction or another and want to control the dimensions of the items in that one dimension, or control the spacing between items. In this guide we'll look at some of the typical things you might use flexbox for.
+Flexbox is generally the right CSS layout solution when you want to lay out a collection of items in one dimension or control the spacing between items. In this guide, we'll look at some of the typical use cases of Flexbox.
 
 ## Navigation
 
@@ -22,7 +22,7 @@ When we have a set of items that we want to display horizontally, we may well en
 
 To distribute the space between or around the items, we use the alignment properties in flexbox, and the {{cssxref("justify-content")}} property. You can read more about this property in [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container), which deals with aligning items on the main axis.
 
-In this example, we display the items at their natural size and by using `justify-content: space-between` make equal amounts of space between the items. You can change how the space is distributed using the `space-around` or `space-evenly` values. You could also use `start` to place the space at the end of the items, `end` to place it before them, or `center` to center the navigation items.
+In this example, we display the items at their natural size and use `justify-content: space-between` to space the items equally. You can change how the space is distributed using the `space-around` or `space-evenly` values. You could also use `start` to put the space at the end of the items, `end` to place it before them, or `center` to center the navigation items.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation.html", '100%', 550)}}
 
@@ -40,19 +40,19 @@ In the live example below try changing `flex: auto` to `flex: 1`. This shorthand
 
 Another way to align items on the main axis is to use auto margins. This enables the design pattern of a navigation bar where one group of items are aligned left and another group aligned right. Here we are using the auto margins technique described in [Using auto margins for main axis alignment](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#using_auto_margins_for_main_axis_alignment).
 
-The items are aligned on the main axis with `normal`, which behaves as `start`, as this is the initial behavior of flexbox. The [`gap`](/en-US/docs/Web/CSS/gap) property has been used to create gaps between items. And we are aligning the last item to the right by giving it a left margin of auto. You can move the class from one item to another to change where the split happens.
+The items are aligned on the main axis with `normal`, which behaves as `start`, as this is the initial behavior of flexbox. The [`gap`](/en-US/docs/Web/CSS/gap) property creates gaps between items. And we are aligning the last item to the right by giving it a `margin-left` value of `auto`. You can move the class from one item to another to change where the split happens.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/split-navigation.html", '100%', 550)}}
 
 ## Center item
 
-A long standing joke among developers is that the hardest problem in web design os vertical centering. Vertically centering content is very straightforward with flexbox alignment properties, as the following live example shows.
+A long-standing joke among developers is that the hardest problem in web design is vertical centering. Vertically centering content is very straightforward with flexbox alignment properties, as the following live example shows.
 
 You can play with the alignment, aligning the item to the start with `start` or end with `end`.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/center.html", '100%', 700)}}
 
-With [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) properties, you can vertically center an element inside another without flexbox. In the example above, try removing the flex properties from the box and add `align-content: center`. Then add `margin: auto` to the element you want to horizontally center.
+With [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) properties, you can vertically center an element inside another without flexbox. In the example above, try removing the flex properties from the box and adding `align-content: center`. Then add `margin: auto` to the element you want to horizontally center.
 
 ## Card layout pushing footer down
 
@@ -66,11 +66,11 @@ Flexbox solves this. We make the card a flex container, with {{cssxref("flex-dir
 
 ## Media objects
 
-The media object — an image or other element to one side and text on the other side — is a common pattern in web design. Media object should be able to be flipped — moving the image from one side to the other.
+The media object — an image or other media element with some descriptive text side-by-side — is a common pattern in web design. Media objects should be able to be flipped — moving the image from one side to the other.
 
-We see this pattern used for comments and many other places where images are placed next to their descriptions. We can use flexbox to allow the part of the media object containing the image to take its sizing information from the image with the body of the media object flexing to take up the remaining space.
+This pattern is used for comments and other places where images are placed next to their descriptions. We can use flexbox to allow the part of the media object containing the image to take its sizing information from the image with the content of the media object flexing to take up the remaining space.
 
-In this example, the media object is aligned to `flex-start` and the `.content` is set to grow, with the grow factor set to `1`, as with our column layout card pattern above.
+In this example, the media object is aligned to `flex-start` and the `.content` is set to grow, with the grow factor set to `1`. These properties are the same as those used for our column layout card pattern above.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}
 
@@ -120,9 +120,9 @@ In this example, we added a `flipped` class next to the `media` class. Remove th
 
 ## Form controls
 
-Flexbox is particularly useful when it comes to styling form controls. Forms have lots of markup and lots of small elements that we typically want to align with each other. A common pattern is to have a {{htmlelement("label")}}, {{htmlelement("input")}} element paired with a {{htmlelement("button")}}, perhaps for a search form or where you want your visitor to enter an email address.
+Flexbox is particularly useful when it comes to styling form controls. Forms have several small elements that we typically want to align with each other. A common pattern is to have a {{htmlelement("label")}} and {{htmlelement("input")}} pair combined with a {{htmlelement("button")}}, perhaps for a search form or a newsletter sign-up form where you want your visitor to enter their email address.
 
-Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and `<button>` are contained in a wrapper, that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. This means the text input field will grow and shrink depending on the space available.
+Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and `<button>` are contained in a wrapper that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. The text input field will grow and shrink depending on the space available.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/label-input-button.html", '100%', 550)}}
 
