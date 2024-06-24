@@ -9,16 +9,16 @@ browser-compat: css.properties.flex-basis
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a {{glossary("flex item")}}. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
+> [!NOTE]
+> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-grow`, `flex-shrink`, and `flex-basis` declarations. We have separated them here as this document is about one of the shorthand components: the `flex-basis` property.
+
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
 In this example, the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
-> [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-grow`, `flex-shrink`, and `flex-basis` declarations. We have separated them here as this document is about one of the shorthand components: the `flex-basis` property.
+The demo changes the `flex-basis` value set on the first flex item, causing it to grow or shrink to fill the available space. The other flex items will also change size; they will be at least `min-content`-sized. For example, when the `flex-basis` of the first item is set to `200px`, it will start at `200px` but then shrink to fit the space available.
 
-The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at `200px` but then shrink to fit the space available with the other items being at least `min-content` sized.
-
-In `flex-basis` is set to a value other than `auto` and there is a `width` (or `height` in case of `flex-direction: column`) set for that same flex item, the `flex-basis` value takes precedence.
+If `flex-basis` is set to a value other than `auto` and there is a `width` (or `height` in case of `flex-direction: column`) set for that same flex item, the `flex-basis` value takes precedence.
 
 ## Syntax
 
@@ -52,12 +52,12 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 - `<'width'>`
 
   - : Any of the following units:
-    - {{cssxref("&lt;length&gt;")}} sets an absolute value
-    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of the containing block's content area
-    - `auto` uses the value of the {{cssxref("width")}} in horizontal writing mode, and the value of the {{cssxref("height")}} in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead
-    - {{cssxref("max-content")}} sets the intrinsic preferred width
-    - {{cssxref("min-content")}} sets the intrinsic minimum width
-    - {{cssxref("fit-content")}} sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element
+    - {{cssxref("&lt;length&gt;")}} sets an absolute value.
+    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of the containing block's content area.
+    - `auto` uses the value of the {{cssxref("width")}} in horizontal writing mode, and the value of the {{cssxref("height")}} in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead.
+    - {{cssxref("max-content")}} sets the intrinsic preferred width.
+    - {{cssxref("min-content")}} sets the intrinsic minimum width.
+    - {{cssxref("fit-content")}} sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element.
 
 - `content`
 
