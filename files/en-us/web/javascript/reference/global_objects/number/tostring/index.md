@@ -52,7 +52,7 @@ console.log((10 ** 21.5).toString()); // "3.1622776601683794e+21"
 console.log((10 ** 21.5).toString(8)); // "526665530627250154000000"
 ```
 
-Floating point numbers are represented underlyingly in base-2 scientific notation (see [number encoding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)). However, the `toString()` method doesn't directly use this most precise representation of the number value. Rather, the algorithm uses the least number of significant figures necessary to distinguish the output from adjacent number values. For example, if the number is large, there will be many equivalent string representations of the same floating point number, and `toString()` will choose the one with the most 0s to the right (for any given radix).
+The underlying representation for floating point numbers is base-2 scientific notation (see [number encoding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)). However, the `toString()` method doesn't directly use this most precise representation of the number value. Rather, the algorithm uses the least number of significant figures necessary to distinguish the output from adjacent number values. For example, if the number is large, there will be many equivalent string representations of the same floating point number, and `toString()` will choose the one with the most 0s to the right (for any given radix).
 
 ```js
 console.log((1000000000000000128).toString()); // "1000000000000000100"
