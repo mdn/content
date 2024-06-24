@@ -75,8 +75,6 @@ This article provides information about the changes in Firefox 128 that affect d
 
 These features are newly shipped in Firefox 128 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-Symmetrical spacing with CSS letter-spacing: layout.css.letter-spacing.model. The CSS letter-spacing property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side (Firefox bug 1891446).
-
 - **`image/jxl` MIME type in Accept header for default and image requests:** `image.jxl.enabled`.
 
   The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured to indicate support for the `image/jxl` MIME type. ([Firefox bug 1711622](https://bugzil.la/1711622)).
