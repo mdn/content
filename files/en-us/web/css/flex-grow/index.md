@@ -67,7 +67,10 @@ In this example, there is a total of eight growth factors distributed among the 
 
 ```html
 <h1>This is a <code>flex-grow</code> example</h1>
-<p>A, B, C, and F have <code>flex-grow: 1</code> set . D and E have <code>flex-grow: 2</code> set.</p>
+<p>
+  A, B, C, and F have <code>flex-grow: 1</code> set. D and E have
+  <code>flex-grow: 2</code> set.
+</p>
 <div id="content">
   <div class="small" style="background-color:red;">A</div>
   <div class="small" style="background-color:lightblue;">B</div>
