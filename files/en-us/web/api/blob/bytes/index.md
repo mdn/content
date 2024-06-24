@@ -8,7 +8,7 @@ browser-compat: api.Blob.bytes
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`bytes()`** method of the {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Uint8Array")}} containing the contents of the blob as an array of bytes.
+The **`bytes()`** method of the {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a {{jsxref("Uint8Array")}} containing the contents of the blob as an array of bytes.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with a {{domxref("Uint8Array")}} object containing the blob data.
+A {{jsxref("Promise")}} that fulfills with a {{jsxref("Uint8Array")}} object containing the blob data.
 
 ### Exceptions
 
