@@ -24,7 +24,7 @@ None.
 - {{domxref("PushMessageData.blob()")}}
   - : Extracts the data as a {{domxref("Blob")}} object.
 - {{domxref("PushMessageData.bytes()")}}
-  - : Extracts the data as a {{domxref("Uint8Array")}} object.
+  - : Extracts the data as a {{jsxref("Uint8Array")}} object.
 - {{domxref("PushMessageData.json()")}}
   - : Extracts the data as a [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 - {{domxref("PushMessageData.text()")}}
