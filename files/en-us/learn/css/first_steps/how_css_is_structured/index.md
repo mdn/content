@@ -411,7 +411,7 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 
 ```css
 /* Handle basic element styling */
-/* ------------------------------------------------------------------------------------------- */
+/* ---------------------------- */
 body {
   font:
     1em/150% Helvetica,
