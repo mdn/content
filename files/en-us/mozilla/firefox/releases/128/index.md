@@ -35,6 +35,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### HTTP
 
+- The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) now includes the `image/svg+xml` MIME type ([Firefox bug 1711622](https://bugzil.la/1711622)).
+
 #### Removals
 
 ### Security
@@ -79,6 +81,10 @@ This article provides information about the changes in Firefox 128 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 128 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`image/jxl` MIME type in Accept header for default and image requests:** `image.jxl.enabled`.
+
+  The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured to indicate support for the `image/jxl` MIME type. ([Firefox bug 1711622](https://bugzil.la/1711622)).
 
 ## Older versions
 
