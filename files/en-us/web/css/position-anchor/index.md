@@ -110,6 +110,7 @@ output {
 input::-webkit-slider-thumb {
   anchor-name: --thumb;
 }
+
 output {
   position-anchor: --thumb;
   position: absolute;
@@ -231,7 +232,6 @@ Each of the positioned elements is given a {{cssxref("position-anchor")}} proper
 ```css
 #infobox1 {
   position-anchor: --myAnchor1;
-
   position: fixed;
   left: anchor(right);
   align-self: anchor-center;
@@ -240,7 +240,6 @@ Each of the positioned elements is given a {{cssxref("position-anchor")}} proper
 
 #infobox2 {
   position-anchor: --myAnchor2;
-
   position: fixed;
   bottom: anchor(top);
   justify-self: anchor-center;
@@ -250,7 +249,7 @@ Each of the positioned elements is given a {{cssxref("position-anchor")}} proper
 
 #### JavaScript
 
-We dynamically change the `anchor-name` values set on the anchor elements in response to different anchors being selected in the positioned elements' `<select>` menus. The key functionality here is the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler, `updateAnchorNames()`. It sets both anchor names on one anchor, if the anchors chosen in the two `<select>` menus are the same. Otherwise, it sets a single anchor name on two separate anchors as appropriate.
+We dynamically change which anchor elements the `anchor-name` values are set on in response to different anchors being selected in the positioned elements' `<select>` menus. The key functionality here is the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler, `updateAnchorNames()`. It sets both anchor names on one anchor, if the anchors chosen in the two `<select>` menus are the same. Otherwise, it sets a single anchor name on two separate anchors as appropriate.
 
 ```js
 // Get references to the two select menus
