@@ -833,7 +833,6 @@ In order to test the models (and to create some example books and other items th
 
    Make sure to replace `<username>`, `<password>`, and `cluster0.mongodb.net` with your actual MongoDB credentials and cluster information.
 
-3. Verify that your Mongoose connection code in `app.js` or another configuration file is correctly set up:
 
    ```javascript
    const mongoose = require("mongoose");
