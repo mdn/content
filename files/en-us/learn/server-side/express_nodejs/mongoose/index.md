@@ -861,7 +861,7 @@ In order to test the models (and to create some example books and other items th
 
 4. The script should run through to completion, displaying items as it creates them in the terminal. If you encounter any errors, such as "Invalid namespace specified", double-check your MongoDB URL and ensure there are no leading or trailing spaces or incorrect characters.
 
-6. Go to your database on MongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres, and BookInstances, and check out individual documents.
+5. Go to your database on MongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres, and BookInstances, and check out individual documents.
 
 ## Summary
 
