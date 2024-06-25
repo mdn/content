@@ -181,7 +181,7 @@ The next and final step in this module about Django is to complete the [assessme
 ## See also
 
 - [Security in Django](https://docs.djangoproject.com/en/5.0/topics/security/) (Django docs)
-- [Server side website security](/en-US/docs/Web/Security) (MDN)
-- [Securing your site](/en-US/docs/Web/Security/Securing_your_site) (MDN)
+- [Security on the web](/en-US/docs/Web/Security) (MDN)
+- [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}

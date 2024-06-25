@@ -28,7 +28,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     - `https://example.com/subdirectory`: Matches all attempts to load the exact path `https://example.com/subdirectory`.
     - `https://example.com/subdirectory/`: Matches all attempts to load files under `subdirectory` directory. For example, `https://example.com/subdirectory/path/to/file.js`. It does not match `https://example.com/path/to/file.js`.
 
-  For more details about how path matching is done refer the [parts matching algorithms](https://w3c.github.io/webappsec-csp/#match-schemes) in the specification.
+    For more details about how path matching is done refer the [parts matching algorithms](https://w3c.github.io/webappsec-csp/#match-schemes) in the specification.
 
 - `<scheme-source>`
 

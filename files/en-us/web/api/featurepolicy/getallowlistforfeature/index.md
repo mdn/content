@@ -19,7 +19,7 @@ method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the all
 getAllowlistForFeature(feature)
 ```
 
-### Parameter
+### Parameters
 
 - `feature`
   - : The specific feature name to get its allowlist.
