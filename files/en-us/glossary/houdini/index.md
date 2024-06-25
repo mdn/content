@@ -2,6 +2,7 @@
 title: Houdini
 slug: Glossary/Houdini
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

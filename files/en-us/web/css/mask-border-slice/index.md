@@ -3,6 +3,7 @@ title: mask-border-slice
 slug: Web/CSS/mask-border-slice
 page-type: css-property
 browser-compat: css.properties.mask-border-slice
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: display-mode
 slug: Web/CSS/@media/display-mode
 page-type: css-media-feature
 browser-compat: css.at-rules.media.display-mode
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: line-break
 slug: Web/CSS/line-break
 page-type: css-property
 browser-compat: css.properties.line-break
+sidebar: cssref
 ---
 
 {{CSSRef}}

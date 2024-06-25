@@ -2,6 +2,7 @@
 title: Stylesheet
 slug: Glossary/Stylesheet
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

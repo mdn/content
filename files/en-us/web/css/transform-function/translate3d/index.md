@@ -3,6 +3,7 @@ title: translate3d()
 slug: Web/CSS/transform-function/translate3d
 page-type: css-function
 browser-compat: css.types.transform-function.translate3d
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transforms/
   - https://drafts.csswg.org/css-transforms-2/
+sidebar: cssref
 ---
 
 {{CSSRef}}

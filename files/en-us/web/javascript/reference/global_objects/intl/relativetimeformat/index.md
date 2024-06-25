@@ -3,6 +3,7 @@ title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: CRUD
 slug: Glossary/CRUD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

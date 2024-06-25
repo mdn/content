@@ -3,6 +3,7 @@ title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.get
+sidebar: jsref
 ---
 
 {{JSRef}}

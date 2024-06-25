@@ -2,6 +2,7 @@
 title: Hash
 slug: Glossary/Hash
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

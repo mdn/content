@@ -2,6 +2,7 @@
 title: DSL (Digital Subscriber Line)
 slug: Glossary/DSL/Digital_subscriber_line
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

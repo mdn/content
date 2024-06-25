@@ -3,6 +3,7 @@ title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 page-type: css-property
 browser-compat: css.properties.aspect-ratio
+sidebar: cssref
 ---
 
 {{CSSRef}}

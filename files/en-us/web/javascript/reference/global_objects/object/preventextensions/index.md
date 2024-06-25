@@ -3,6 +3,7 @@ title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.preventExtensions
+sidebar: jsref
 ---
 
 {{JSRef}}

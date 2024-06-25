@@ -2,6 +2,7 @@
 title: eTLD
 slug: Glossary/eTLD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

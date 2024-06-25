@@ -3,6 +3,7 @@ title: position
 slug: Web/CSS/position
 page-type: css-property
 browser-compat: css.properties.position
+sidebar: cssref
 ---
 
 {{CSSRef}}

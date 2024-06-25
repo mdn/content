@@ -3,6 +3,7 @@ title: CSS transitions
 slug: Web/CSS/CSS_transitions
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-transitions/
+sidebar: cssref
 ---
 
 {{CSSRef}}

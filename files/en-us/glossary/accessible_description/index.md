@@ -2,6 +2,7 @@
 title: Accessible description
 slug: Glossary/Accessible_description
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: URI
 slug: Glossary/URI
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

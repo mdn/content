@@ -7,6 +7,7 @@ spec-urls:
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
   - https://drafts.csswg.org/css-counter-styles/#typedef-counter-style-name
   - https://drafts.csswg.org/css-lists/#counter-properties
+sidebar: cssref
 ---
 
 {{CSSRef}}

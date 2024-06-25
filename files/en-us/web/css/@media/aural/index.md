@@ -5,6 +5,7 @@ page-type: css-media-feature
 status:
   - deprecated
 spec-urls: https://www.w3.org/TR/CSS22/aural.html
+sidebar: cssref
 ---
 
 {{CSSRef}} {{deprecated_header}}

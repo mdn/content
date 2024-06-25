@@ -3,6 +3,7 @@ title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.line-gap-override
+sidebar: cssref
 ---
 
 {{CSSRef}}

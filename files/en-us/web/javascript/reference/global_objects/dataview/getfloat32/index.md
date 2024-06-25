@@ -3,6 +3,7 @@ title: DataView.prototype.getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getFloat32
+sidebar: jsref
 ---
 
 {{JSRef}}

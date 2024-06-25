@@ -2,6 +2,7 @@
 title: Mobile First
 slug: Glossary/Mobile_First
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

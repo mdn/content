@@ -2,6 +2,7 @@
 title: Web server
 slug: Glossary/Web_server
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

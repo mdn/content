@@ -3,6 +3,7 @@ title: block-size
 slug: Web/CSS/block-size
 page-type: css-property
 browser-compat: css.properties.block-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

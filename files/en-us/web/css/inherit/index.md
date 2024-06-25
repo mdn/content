@@ -3,6 +3,7 @@ title: inherit
 slug: Web/CSS/inherit
 page-type: css-keyword
 browser-compat: css.types.global_keywords.inherit
+sidebar: cssref
 ---
 
 {{CSSRef}}

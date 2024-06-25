@@ -3,6 +3,7 @@ title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
 page-type: css-property
 browser-compat: css.properties.grid-auto-columns
+sidebar: cssref
 ---
 
 {{CSSRef}}

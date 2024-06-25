@@ -2,6 +2,7 @@
 title: CRLF
 slug: Glossary/CRLF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

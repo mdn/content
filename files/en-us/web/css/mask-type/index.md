@@ -3,6 +3,7 @@ title: mask-type
 slug: Web/CSS/mask-type
 page-type: css-property
 browser-compat: css.properties.mask-type
+sidebar: cssref
 ---
 
 {{CSSRef}}

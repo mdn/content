@@ -2,6 +2,7 @@
 title: CSS error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

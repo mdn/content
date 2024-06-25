@@ -3,6 +3,7 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduceRight
+sidebar: jsref
 ---
 
 {{JSRef}}

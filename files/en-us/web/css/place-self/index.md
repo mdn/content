@@ -3,6 +3,7 @@ title: place-self
 slug: Web/CSS/place-self
 page-type: css-shorthand-property
 browser-compat: css.properties.place-self
+sidebar: cssref
 ---
 
 {{CSSRef}}

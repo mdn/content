@@ -6,6 +6,7 @@ spec-urls:
   - https://drafts.csswg.org/css-logical/
   - https://drafts.csswg.org/css-text/
   - https://drafts.csswg.org/css-text-4/
+sidebar: cssref
 ---
 
 {{CSSRef}}

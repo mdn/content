@@ -3,6 +3,7 @@ title: min-height
 slug: Web/CSS/min-height
 page-type: css-property
 browser-compat: css.properties.min-height
+sidebar: cssref
 ---
 
 {{CSSRef}}

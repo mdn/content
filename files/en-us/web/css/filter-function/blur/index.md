@@ -3,6 +3,7 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 page-type: css-function
 browser-compat: css.types.filter-function.blur
+sidebar: cssref
 ---
 
 {{CSSRef}}

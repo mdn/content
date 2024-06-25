@@ -2,6 +2,7 @@
 title: XHTML
 slug: Glossary/XHTML
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

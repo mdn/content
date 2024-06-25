@@ -3,6 +3,7 @@ title: opacity
 slug: Web/CSS/opacity
 page-type: css-property
 browser-compat: css.properties.opacity
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: <display-outside>
 slug: Web/CSS/display-outside
 page-type: css-type
 browser-compat: css.properties.display.display-outside
+sidebar: cssref
 ---
 
 {{CSSRef}}

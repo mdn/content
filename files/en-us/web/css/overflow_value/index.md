@@ -3,6 +3,7 @@ title: <overflow>
 slug: Web/CSS/overflow_value
 page-type: css-type
 browser-compat: css.types.overflow
+sidebar: cssref
 ---
 
 {{CSSRef}}

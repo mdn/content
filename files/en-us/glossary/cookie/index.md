@@ -2,6 +2,7 @@
 title: Cookie
 slug: Glossary/Cookie
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

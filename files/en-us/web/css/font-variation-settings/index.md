@@ -3,6 +3,7 @@ title: font-variation-settings
 slug: Web/CSS/font-variation-settings
 page-type: css-property
 browser-compat: css.properties.font-variation-settings
+sidebar: cssref
 ---
 
 {{CSSRef}}

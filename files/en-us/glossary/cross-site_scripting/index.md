@@ -2,6 +2,7 @@
 title: Cross-site scripting (XSS)
 slug: Glossary/Cross-site_scripting
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

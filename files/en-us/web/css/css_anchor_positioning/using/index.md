@@ -2,6 +2,7 @@
 title: Using CSS anchor positioning
 slug: Web/CSS/CSS_anchor_positioning/Using
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

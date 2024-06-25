@@ -3,6 +3,7 @@ title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.E
+sidebar: jsref
 ---
 
 {{JSRef}}

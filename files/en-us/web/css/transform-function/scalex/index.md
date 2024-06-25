@@ -3,6 +3,7 @@ title: scaleX()
 slug: Web/CSS/transform-function/scaleX
 page-type: css-function
 browser-compat: css.types.transform-function.scaleX
+sidebar: cssref
 ---
 
 {{CSSRef}}

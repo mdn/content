@@ -2,6 +2,7 @@
 title: Latency
 slug: Glossary/Latency
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

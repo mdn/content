@@ -3,6 +3,7 @@ title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.byteOffset
+sidebar: jsref
 ---
 
 {{JSRef}}

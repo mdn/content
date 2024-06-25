@@ -3,6 +3,7 @@ title: inset-block
 slug: Web/CSS/inset-block
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-block
+sidebar: cssref
 ---
 
 {{CSSRef}}

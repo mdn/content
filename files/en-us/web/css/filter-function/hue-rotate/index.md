@@ -3,6 +3,7 @@ title: hue-rotate()
 slug: Web/CSS/filter-function/hue-rotate
 page-type: css-function
 browser-compat: css.types.filter-function.hue-rotate
+sidebar: cssref
 ---
 
 {{CSSRef}}

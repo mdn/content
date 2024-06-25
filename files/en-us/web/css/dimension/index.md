@@ -3,6 +3,7 @@ title: <dimension>
 slug: Web/CSS/dimension
 page-type: css-type
 browser-compat: css.types.dimension
+sidebar: cssref
 ---
 
 {{CSSRef}}

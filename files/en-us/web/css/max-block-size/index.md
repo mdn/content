@@ -3,6 +3,7 @@ title: max-block-size
 slug: Web/CSS/max-block-size
 page-type: css-property
 browser-compat: css.properties.max-block-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

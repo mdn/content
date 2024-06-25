@@ -3,6 +3,7 @@ title: overflow-x
 slug: Web/CSS/overflow-x
 page-type: css-property
 browser-compat: css.properties.overflow-x
+sidebar: cssref
 ---
 
 {{CSSRef}}

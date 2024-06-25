@@ -3,6 +3,7 @@ title: <angle>
 slug: Web/CSS/angle
 page-type: css-type
 browser-compat: css.types.angle
+sidebar: cssref
 ---
 
 {{CSSRef}}

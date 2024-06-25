@@ -3,6 +3,7 @@ title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.entries
+sidebar: jsref
 ---
 
 {{JSRef}}

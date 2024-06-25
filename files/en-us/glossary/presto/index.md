@@ -2,6 +2,7 @@
 title: Presto
 slug: Glossary/Presto
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

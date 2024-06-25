@@ -2,6 +2,7 @@
 title: First-class Function
 slug: Glossary/First-class_Function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

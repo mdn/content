@@ -3,6 +3,7 @@ title: CSS pseudo-elements
 slug: Web/CSS/CSS_pseudo-elements
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-pseudo/
+sidebar: cssref
 ---
 
 {{CSSRef}}

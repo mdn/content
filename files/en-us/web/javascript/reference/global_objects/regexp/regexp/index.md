@@ -3,6 +3,7 @@ title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 page-type: javascript-constructor
 browser-compat: javascript.builtins.RegExp.RegExp
+sidebar: jsref
 ---
 
 {{JSRef}}

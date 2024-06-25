@@ -2,6 +2,7 @@
 title: Block cipher mode of operation
 slug: Glossary/Block_cipher_mode_of_operation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

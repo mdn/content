@@ -3,6 +3,7 @@ title: columns
 slug: Web/CSS/columns
 page-type: css-shorthand-property
 browser-compat: css.properties.columns
+sidebar: cssref
 ---
 
 {{CSSRef}}

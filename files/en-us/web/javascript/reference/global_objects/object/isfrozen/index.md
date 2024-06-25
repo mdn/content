@@ -3,6 +3,7 @@ title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isFrozen
+sidebar: jsref
 ---
 
 {{JSRef}}

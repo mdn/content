@@ -3,6 +3,7 @@ title: CSS data types
 slug: Web/CSS/CSS_Types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: break-before
 slug: Web/CSS/break-before
 page-type: css-property
 browser-compat: css.properties.break-before
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: scaleY()
 slug: Web/CSS/transform-function/scaleY
 page-type: css-function
 browser-compat: css.types.transform-function.scaleY
+sidebar: cssref
 ---
 
 {{CSSRef}}

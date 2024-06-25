@@ -3,6 +3,7 @@ title: box-shadow
 slug: Web/CSS/box-shadow
 page-type: css-property
 browser-compat: css.properties.box-shadow
+sidebar: cssref
 ---
 
 {{CSSRef}}

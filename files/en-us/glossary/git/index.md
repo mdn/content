@@ -2,6 +2,7 @@
 title: Git
 slug: Glossary/Git
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

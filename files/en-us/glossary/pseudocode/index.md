@@ -2,6 +2,7 @@
 title: Pseudocode
 slug: Glossary/Pseudocode
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

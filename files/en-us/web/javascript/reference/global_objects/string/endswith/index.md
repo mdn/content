@@ -3,6 +3,7 @@ title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.endsWith
+sidebar: jsref
 ---
 
 {{JSRef}}

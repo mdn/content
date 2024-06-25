@@ -3,6 +3,7 @@ title: ":playing"
 slug: Web/CSS/:playing
 page-type: css-pseudo-class
 browser-compat: css.selectors.playing
+sidebar: cssref
 ---
 
 {{CSSRef}}

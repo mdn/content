@@ -2,6 +2,7 @@
 title: Public-key cryptography
 slug: Glossary/Public-key_cryptography
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

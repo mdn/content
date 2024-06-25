@@ -2,6 +2,7 @@
 title: Web performance
 slug: Glossary/Web_performance
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

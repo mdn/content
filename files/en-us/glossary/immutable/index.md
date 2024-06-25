@@ -2,6 +2,7 @@
 title: Immutable
 slug: Glossary/Immutable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakRef.deref
+sidebar: jsref
 ---
 
 {{JSRef}}

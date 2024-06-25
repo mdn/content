@@ -2,6 +2,7 @@
 title: Syntax
 slug: Glossary/Syntax
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

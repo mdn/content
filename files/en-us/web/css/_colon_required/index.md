@@ -3,6 +3,7 @@ title: ":required"
 slug: Web/CSS/:required
 page-type: css-pseudo-class
 browser-compat: css.selectors.required
+sidebar: cssref
 ---
 
 {{CSSRef}}

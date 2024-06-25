@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.initial-letter-align
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -3,6 +3,7 @@ title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.forEach
+sidebar: jsref
 ---
 
 {{JSRef}}

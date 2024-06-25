@@ -4,6 +4,7 @@ slug: Web/CSS/@color-profile
 page-type: css-at-rule
 browser-compat: css.at-rules.color-profile
 spec-urls: https://www.w3.org/TR/css-color-5/#at-profile
+sidebar: cssref
 ---
 
 {{CSSRef}}

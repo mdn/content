@@ -3,6 +3,7 @@ title: left
 slug: Web/CSS/left
 page-type: css-property
 browser-compat: css.properties.left
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -5,6 +5,7 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.image.element
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -3,6 +3,7 @@ title: Initial value
 slug: Web/CSS/initial_value
 page-type: guide
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replaceAll
+sidebar: jsref
 ---
 
 {{JSRef}}

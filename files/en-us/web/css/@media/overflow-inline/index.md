@@ -3,6 +3,7 @@ title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
 page-type: css-media-feature
 browser-compat: css.at-rules.media.overflow-inline
+sidebar: cssref
 ---
 
 {{CSSRef}}

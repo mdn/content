@@ -3,6 +3,7 @@ title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-x
+sidebar: cssref
 ---
 
 {{CSSRef}}

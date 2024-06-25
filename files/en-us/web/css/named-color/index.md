@@ -3,6 +3,7 @@ title: <named-color>
 slug: Web/CSS/named-color
 page-type: css-type
 browser-compat: css.types.color.named-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

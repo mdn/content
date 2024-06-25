@@ -3,6 +3,7 @@ title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.charAt
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: IDE
 slug: Glossary/IDE
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

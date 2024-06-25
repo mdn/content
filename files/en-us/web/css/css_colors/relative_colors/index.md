@@ -2,6 +2,7 @@
 title: Using relative colors
 slug: Web/CSS/CSS_colors/Relative_colors
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

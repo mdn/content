@@ -3,6 +3,7 @@ title: scrollbar-gutter
 slug: Web/CSS/scrollbar-gutter
 page-type: css-property
 browser-compat: css.properties.scrollbar-gutter
+sidebar: cssref
 ---
 
 {{CSSRef}}

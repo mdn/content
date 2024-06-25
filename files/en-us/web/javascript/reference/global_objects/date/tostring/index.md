@@ -3,6 +3,7 @@ title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toString
+sidebar: jsref
 ---
 
 {{JSRef}}

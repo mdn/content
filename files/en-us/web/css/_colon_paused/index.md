@@ -3,6 +3,7 @@ title: ":paused"
 slug: Web/CSS/:paused
 page-type: css-pseudo-class
 browser-compat: css.selectors.paused
+sidebar: cssref
 ---
 
 {{CSSRef}}

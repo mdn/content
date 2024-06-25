@@ -3,6 +3,7 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findIndex
+sidebar: jsref
 ---
 
 {{JSRef}}

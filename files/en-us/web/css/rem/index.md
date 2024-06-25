@@ -3,6 +3,7 @@ title: rem()
 slug: Web/CSS/rem
 page-type: css-function
 browser-compat: css.types.rem
+sidebar: cssref
 ---
 
 {{CSSRef}}

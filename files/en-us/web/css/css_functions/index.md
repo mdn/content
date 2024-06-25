@@ -2,6 +2,7 @@
 title: CSS value functions
 slug: Web/CSS/CSS_Functions
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

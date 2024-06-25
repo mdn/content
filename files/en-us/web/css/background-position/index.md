@@ -3,6 +3,7 @@ title: background-position
 slug: Web/CSS/background-position
 page-type: css-property
 browser-compat: css.properties.background-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

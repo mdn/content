@@ -2,6 +2,7 @@
 title: Variable
 slug: Glossary/Variable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

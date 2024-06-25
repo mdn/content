@@ -4,6 +4,7 @@ slug: Web/CSS/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
 status:
   - non-standard
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}

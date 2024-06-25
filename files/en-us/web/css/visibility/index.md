@@ -3,6 +3,7 @@ title: visibility
 slug: Web/CSS/visibility
 page-type: css-property
 browser-compat: css.properties.visibility
+sidebar: cssref
 ---
 
 {{CSSRef}}

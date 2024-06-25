@@ -3,6 +3,7 @@ title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
 page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
+sidebar: cssref
 ---
 
 {{CSSRef}}

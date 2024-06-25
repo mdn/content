@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.view-transition-new
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

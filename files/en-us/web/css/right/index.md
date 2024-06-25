@@ -3,6 +3,7 @@ title: right
 slug: Web/CSS/right
 page-type: css-property
 browser-compat: css.properties.right
+sidebar: cssref
 ---
 
 {{CSSRef}}

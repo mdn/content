@@ -3,6 +3,7 @@ title: ArrayBuffer.prototype.transfer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transfer
+sidebar: jsref
 ---
 
 {{JSRef}}

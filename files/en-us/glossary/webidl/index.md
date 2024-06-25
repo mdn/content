@@ -2,6 +2,7 @@
 title: WebIDL
 slug: Glossary/WebIDL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

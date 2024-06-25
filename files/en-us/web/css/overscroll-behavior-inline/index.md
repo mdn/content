@@ -3,6 +3,7 @@ title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-inline
+sidebar: cssref
 ---
 
 {{CSSRef}}

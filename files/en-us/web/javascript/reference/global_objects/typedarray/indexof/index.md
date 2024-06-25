@@ -3,6 +3,7 @@ title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.indexOf
+sidebar: jsref
 ---
 
 {{JSRef}}

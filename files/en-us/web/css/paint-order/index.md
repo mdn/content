@@ -3,6 +3,7 @@ title: paint-order
 slug: Web/CSS/paint-order
 page-type: css-property
 browser-compat: css.properties.paint-order
+sidebar: cssref
 ---
 
 {{CSSRef}}

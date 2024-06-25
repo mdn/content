@@ -3,6 +3,7 @@ title: Computed value
 slug: Web/CSS/computed_value
 page-type: guide
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#computed-value
+sidebar: cssref
 ---
 
 {{CSSRef}}

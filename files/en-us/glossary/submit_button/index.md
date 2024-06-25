@@ -2,6 +2,7 @@
 title: Submit button
 slug: Glossary/Submit_button
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

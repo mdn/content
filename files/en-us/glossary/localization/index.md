@@ -2,6 +2,7 @@
 title: Localization
 slug: Glossary/Localization
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

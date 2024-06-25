@@ -3,6 +3,7 @@ title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.forEach
+sidebar: jsref
 ---
 
 {{JSRef}}

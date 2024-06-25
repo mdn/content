@@ -2,6 +2,7 @@
 title: Time to interactive
 slug: Glossary/Time_to_interactive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

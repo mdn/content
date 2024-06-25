@@ -5,6 +5,7 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.properties.font-palette.palette-mix_function
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

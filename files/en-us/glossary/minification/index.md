@@ -2,6 +2,7 @@
 title: Minification
 slug: Glossary/Minification
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

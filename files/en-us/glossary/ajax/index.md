@@ -2,6 +2,7 @@
 title: Ajax
 slug: Glossary/AJAX
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

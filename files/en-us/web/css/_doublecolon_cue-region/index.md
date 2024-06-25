@@ -4,6 +4,7 @@ slug: Web/CSS/::cue-region
 page-type: css-pseudo-element
 browser-compat: css.selectors.cue-region
 spec-urls: https://w3c.github.io/webvtt/#the-cue-region-pseudo-element
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

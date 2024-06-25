@@ -2,6 +2,7 @@
 title: Navigation directive
 slug: Glossary/Navigation_directive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

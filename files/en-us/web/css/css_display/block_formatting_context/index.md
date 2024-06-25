@@ -3,6 +3,7 @@ title: Block formatting context
 slug: Web/CSS/CSS_display/Block_formatting_context
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: XMLHttpRequest (XHR)
 slug: Glossary/XMLHttpRequest
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

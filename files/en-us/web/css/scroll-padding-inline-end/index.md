@@ -3,6 +3,7 @@ title: scroll-padding-inline-end
 slug: Web/CSS/scroll-padding-inline-end
 page-type: css-property
 browser-compat: css.properties.scroll-padding-inline-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

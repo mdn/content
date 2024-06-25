@@ -2,6 +2,7 @@
 title: SMTP
 slug: Glossary/SMTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Bézier curve
 slug: Glossary/Bezier_curve
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

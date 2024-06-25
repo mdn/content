@@ -3,6 +3,7 @@ title: forced-colors
 slug: Web/CSS/@media/forced-colors
 page-type: css-media-feature
 browser-compat: css.at-rules.media.forced-colors
+sidebar: cssref
 ---
 
 {{CSSRef}}

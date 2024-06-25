@@ -2,6 +2,7 @@
 title: RTL (Right to Left)
 slug: Glossary/RTL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

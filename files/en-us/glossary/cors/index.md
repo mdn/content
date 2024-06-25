@@ -2,6 +2,7 @@
 title: CORS
 slug: Glossary/CORS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

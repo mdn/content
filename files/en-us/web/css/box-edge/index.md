@@ -3,6 +3,7 @@ title: <box-edge>
 slug: Web/CSS/box-edge
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-box-4/#keywords
+sidebar: cssref
 ---
 
 {{CSSRef}}

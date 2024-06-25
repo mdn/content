@@ -3,6 +3,7 @@ title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getSeconds
+sidebar: jsref
 ---
 
 {{JSRef}}

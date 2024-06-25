@@ -5,6 +5,7 @@ page-type: javascript-static-accessor-property
 status:
   - deprecated
 browser-compat: javascript.builtins.RegExp.lastMatch
+sidebar: jsref
 ---
 
 {{JSRef}} {{Deprecated_Header}}

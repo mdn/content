@@ -3,6 +3,7 @@ title: border-width
 slug: Web/CSS/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

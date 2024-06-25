@@ -3,6 +3,7 @@ title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.substring
+sidebar: jsref
 ---
 
 {{JSRef}}

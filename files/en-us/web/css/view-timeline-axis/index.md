@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.view-timeline-axis
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -3,6 +3,7 @@ title: orphans
 slug: Web/CSS/orphans
 page-type: css-property
 browser-compat: css.properties.orphans
+sidebar: cssref
 ---
 
 {{CSSRef}}

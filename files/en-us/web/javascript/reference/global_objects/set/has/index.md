@@ -3,6 +3,7 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.has
+sidebar: jsref
 ---
 
 {{JSRef}}

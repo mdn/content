@@ -2,6 +2,7 @@
 title: Variable fonts guide
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

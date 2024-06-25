@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.numberingSystem
+sidebar: jsref
 ---
 
 {{JSRef}}

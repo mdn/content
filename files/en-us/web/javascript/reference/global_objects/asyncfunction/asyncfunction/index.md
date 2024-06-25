@@ -3,6 +3,7 @@ title: AsyncFunction() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 page-type: javascript-constructor
 browser-compat: javascript.builtins.AsyncFunction.AsyncFunction
+sidebar: jsref
 ---
 
 {{JSRef}}

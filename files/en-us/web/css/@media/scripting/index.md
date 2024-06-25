@@ -3,6 +3,7 @@ title: scripting
 slug: Web/CSS/@media/scripting
 page-type: css-media-feature
 browser-compat: css.at-rules.media.scripting
+sidebar: cssref
 ---
 
 {{CSSRef}}

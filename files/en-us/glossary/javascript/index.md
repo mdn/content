@@ -2,6 +2,7 @@
 title: JavaScript
 slug: Glossary/JavaScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

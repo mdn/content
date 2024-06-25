@@ -3,6 +3,7 @@ title: padding-top
 slug: Web/CSS/padding-top
 page-type: css-property
 browser-compat: css.properties.padding-top
+sidebar: cssref
 ---
 
 {{CSSRef}}

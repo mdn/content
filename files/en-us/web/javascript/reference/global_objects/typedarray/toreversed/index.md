@@ -3,6 +3,7 @@ title: TypedArray.prototype.toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toReversed
+sidebar: jsref
 ---
 
 {{JSRef}}

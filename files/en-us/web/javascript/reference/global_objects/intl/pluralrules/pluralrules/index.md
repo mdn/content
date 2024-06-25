@@ -3,6 +3,7 @@ title: Intl.PluralRules() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
+sidebar: jsref
 ---
 
 {{JSRef}}

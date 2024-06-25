@@ -3,6 +3,7 @@ title: mod()
 slug: Web/CSS/mod
 page-type: css-function
 browser-compat: css.types.mod
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Basic concepts of multi-column layout
 slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: offset-position
 slug: Web/CSS/offset-position
 page-type: css-property
 browser-compat: css.properties.offset-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

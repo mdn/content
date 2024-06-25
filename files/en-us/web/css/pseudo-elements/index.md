@@ -7,6 +7,7 @@ spec-urls:
   - https://drafts.csswg.org/css-position-4/
   - https://drafts.csswg.org/css-shadow-parts/
   - https://w3c.github.io/webvtt/
+sidebar: cssref
 ---
 
 {{CSSRef}}

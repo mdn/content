@@ -3,6 +3,7 @@ title: offset
 slug: Web/CSS/offset
 page-type: css-shorthand-property
 browser-compat: css.properties.offset
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -4,6 +4,7 @@ slug: Web/CSS/line-style
 page-type: css-type
 browser-compat: css.types.line-style
 spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

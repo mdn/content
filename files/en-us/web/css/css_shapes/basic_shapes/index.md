@@ -2,6 +2,7 @@
 title: Basic shapes with shape-outside
 slug: Web/CSS/CSS_shapes/Basic_shapes
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

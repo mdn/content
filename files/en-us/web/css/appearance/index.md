@@ -3,6 +3,7 @@ title: appearance
 slug: Web/CSS/appearance
 page-type: css-property
 browser-compat: css.properties.appearance
+sidebar: cssref
 ---
 
 {{CSSRef}}

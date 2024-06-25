@@ -3,6 +3,7 @@ title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 page-type: javascript-static-method
 browser-compat: javascript.builtins.ArrayBuffer.isView
+sidebar: jsref
 ---
 
 {{JSRef}}

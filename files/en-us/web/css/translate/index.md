@@ -3,6 +3,7 @@ title: translate
 slug: Web/CSS/translate
 page-type: css-property
 browser-compat: css.properties.translate
+sidebar: cssref
 ---
 
 {{CSSRef}}

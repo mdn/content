@@ -3,6 +3,7 @@ title: revert
 slug: Web/CSS/revert
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert
+sidebar: cssref
 ---
 
 {{CSSRef}}

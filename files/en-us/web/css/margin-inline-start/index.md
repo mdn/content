@@ -3,6 +3,7 @@ title: margin-inline-start
 slug: Web/CSS/margin-inline-start
 page-type: css-property
 browser-compat: css.properties.margin-inline-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

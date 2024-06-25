@@ -5,6 +5,7 @@ page-type: javascript-instance-data-property
 spec-urls:
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-prototype-prototype
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-instances-prototype
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: XLink
 slug: Glossary/XLink
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

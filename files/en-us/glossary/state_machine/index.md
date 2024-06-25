@@ -2,6 +2,7 @@
 title: State machine
 slug: Glossary/State_machine
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

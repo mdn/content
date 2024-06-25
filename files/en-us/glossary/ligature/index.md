@@ -2,6 +2,7 @@
 title: Ligature
 slug: Glossary/Ligature
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: WebP
 slug: Glossary/WebP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

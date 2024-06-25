@@ -3,6 +3,7 @@ title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
 page-type: css-property
 browser-compat: css.properties.text-decoration-skip-ink
+sidebar: cssref
 ---
 
 {{CSSRef}}

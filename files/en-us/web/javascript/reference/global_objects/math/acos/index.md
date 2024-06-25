@@ -3,6 +3,7 @@ title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.acos
+sidebar: jsref
 ---
 
 {{JSRef}}

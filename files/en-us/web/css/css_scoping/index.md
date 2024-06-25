@@ -3,6 +3,7 @@ title: CSS scoping
 slug: Web/CSS/CSS_scoping
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scoping/
+sidebar: cssref
 ---
 
 {{CSSRef}}

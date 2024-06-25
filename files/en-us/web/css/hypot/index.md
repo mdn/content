@@ -3,6 +3,7 @@ title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
 browser-compat: css.types.hypot
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: ":only-of-type"
 slug: Web/CSS/:only-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.only-of-type
+sidebar: cssref
 ---
 
 {{CSSRef}}

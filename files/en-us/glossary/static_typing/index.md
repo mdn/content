@@ -2,6 +2,7 @@
 title: Static typing
 slug: Glossary/Static_typing
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

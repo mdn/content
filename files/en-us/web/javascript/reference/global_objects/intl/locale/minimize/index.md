@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.minimize
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: Viewport concepts
 slug: Web/CSS/Viewport_concepts
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

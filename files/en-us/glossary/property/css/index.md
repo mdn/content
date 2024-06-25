@@ -2,6 +2,7 @@
 title: Property (CSS)
 slug: Glossary/Property/CSS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

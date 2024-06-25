@@ -3,6 +3,7 @@ title: z-index
 slug: Web/CSS/z-index
 page-type: css-property
 browser-compat: css.properties.z-index
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Modem
 slug: Glossary/Modem
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

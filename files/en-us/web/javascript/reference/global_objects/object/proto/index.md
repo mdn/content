@@ -5,6 +5,7 @@ page-type: javascript-instance-accessor-property
 status:
   - deprecated
 browser-compat: javascript.builtins.Object.proto
+sidebar: jsref
 ---
 
 {{JSRef}}{{Deprecated_Header}}

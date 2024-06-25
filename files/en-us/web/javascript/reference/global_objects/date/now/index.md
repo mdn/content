@@ -3,6 +3,7 @@ title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.now
+sidebar: jsref
 ---
 
 {{JSRef}}

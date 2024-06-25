@@ -3,6 +3,7 @@ title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.fromCodePoint
+sidebar: jsref
 ---
 
 {{JSRef}}

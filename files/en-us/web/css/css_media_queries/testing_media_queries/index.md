@@ -3,6 +3,7 @@ title: Testing media queries programmatically
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
 page-type: guide
 browser-compat: api.MediaQueryList
+sidebar: cssref
 ---
 
 {{CSSRef}}

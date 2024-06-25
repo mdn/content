@@ -3,6 +3,7 @@ title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
 page-type: css-property
 browser-compat: css.properties.shape-image-threshold
+sidebar: cssref
 ---
 
 {{CSSRef}}

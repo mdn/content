@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-sizing-4/
   - https://drafts.csswg.org/css-sizing-3/
+sidebar: cssref
 ---
 
 {{CSSRef}}

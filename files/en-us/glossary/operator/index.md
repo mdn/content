@@ -2,6 +2,7 @@
 title: Operator
 slug: Glossary/Operator
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

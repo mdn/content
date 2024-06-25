@@ -2,6 +2,7 @@
 title: MVC
 slug: Glossary/MVC
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

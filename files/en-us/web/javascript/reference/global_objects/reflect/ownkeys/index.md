@@ -3,6 +3,7 @@ title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.ownKeys
+sidebar: jsref
 ---
 
 {{JSRef}}

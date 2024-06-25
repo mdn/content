@@ -3,6 +3,7 @@ title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 page-type: css-property
 browser-compat: css.properties.backdrop-filter
+sidebar: cssref
 ---
 
 {{CSSRef}}

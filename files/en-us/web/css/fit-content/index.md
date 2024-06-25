@@ -3,6 +3,7 @@ title: fit-content
 slug: Web/CSS/fit-content
 page-type: css-keyword
 browser-compat: css.properties.width.fit-content
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: CSS text decoration
 slug: Web/CSS/CSS_text_decoration
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-text-decor/
+sidebar: cssref
 ---
 
 {{CSSRef}}

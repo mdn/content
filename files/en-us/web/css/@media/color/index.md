@@ -3,6 +3,7 @@ title: color
 slug: Web/CSS/@media/color
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color
+sidebar: cssref
 ---
 
 {{CSSRef}}

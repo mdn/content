@@ -3,6 +3,7 @@ title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Uint32Array
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: Float16Array
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Float16Array
+sidebar: jsref
 ---
 
 {{JSRef}}

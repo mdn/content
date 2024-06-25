@@ -3,6 +3,7 @@ title: mask-clip
 slug: Web/CSS/mask-clip
 page-type: css-property
 browser-compat: css.properties.mask-clip
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: ATAG
 slug: Glossary/ATAG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

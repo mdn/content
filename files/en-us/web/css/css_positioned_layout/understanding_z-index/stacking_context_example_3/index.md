@@ -2,6 +2,7 @@
 title: Stacking context example 3
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

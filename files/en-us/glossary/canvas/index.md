@@ -2,6 +2,7 @@
 title: Canvas
 slug: Glossary/Canvas
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

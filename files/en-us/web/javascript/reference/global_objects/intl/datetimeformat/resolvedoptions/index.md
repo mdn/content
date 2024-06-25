@@ -3,6 +3,7 @@ title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
+sidebar: jsref
 ---
 
 {{JSRef}}

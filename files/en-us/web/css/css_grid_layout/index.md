@@ -3,6 +3,7 @@ title: CSS grid layout
 slug: Web/CSS/CSS_grid_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-grid/
+sidebar: cssref
 ---
 
 {{CSSRef}}

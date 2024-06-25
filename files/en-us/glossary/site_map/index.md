@@ -2,6 +2,7 @@
 title: Site map
 slug: Glossary/Site_map
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

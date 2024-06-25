@@ -2,6 +2,7 @@
 title: Top layer
 slug: Glossary/Top_layer
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

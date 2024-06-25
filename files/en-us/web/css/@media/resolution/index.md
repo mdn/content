@@ -3,6 +3,7 @@ title: resolution
 slug: Web/CSS/@media/resolution
 page-type: css-media-feature
 browser-compat: css.at-rules.media.resolution
+sidebar: cssref
 ---
 
 {{CSSRef}}

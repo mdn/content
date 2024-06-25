@@ -2,6 +2,7 @@
 title: Replaced elements
 slug: Web/CSS/Replaced_element
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

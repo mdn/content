@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.timeline-scope
+sidebar: cssref
 ---
 
 {{CSSRef}}{{seecompattable}}

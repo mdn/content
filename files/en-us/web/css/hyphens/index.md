@@ -3,6 +3,7 @@ title: hyphens
 slug: Web/CSS/hyphens
 page-type: css-property
 browser-compat: css.properties.hyphens
+sidebar: cssref
 ---
 
 {{CSSRef}}

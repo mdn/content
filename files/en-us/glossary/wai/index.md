@@ -2,6 +2,7 @@
 title: WAI
 slug: Glossary/WAI
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

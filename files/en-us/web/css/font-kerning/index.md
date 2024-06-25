@@ -3,6 +3,7 @@ title: font-kerning
 slug: Web/CSS/font-kerning
 page-type: css-property
 browser-compat: css.properties.font-kerning
+sidebar: cssref
 ---
 
 {{CSSRef}}

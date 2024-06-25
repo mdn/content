@@ -6,6 +6,7 @@ spec-urls:
   - https://www.w3.org/TR/css-conditional-5/
   - https://www.w3.org/TR/css-conditional-4/
   - https://www.w3.org/TR/css-conditional-3/
+sidebar: cssref
 ---
 
 {{CSSRef}}

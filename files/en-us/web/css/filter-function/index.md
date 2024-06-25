@@ -3,6 +3,7 @@ title: <filter-function>
 slug: Web/CSS/filter-function
 page-type: css-type
 browser-compat: css.types.filter-function
+sidebar: cssref
 ---
 
 {{CSSRef}}

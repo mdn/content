@@ -3,6 +3,7 @@ title: CSS nesting
 slug: Web/CSS/CSS_nesting
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-nesting-1/
+sidebar: cssref
 ---
 
 {{CSSRef}}

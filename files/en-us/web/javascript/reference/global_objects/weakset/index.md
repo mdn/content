@@ -3,6 +3,7 @@ title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakSet
+sidebar: jsref
 ---
 
 {{JSRef}}

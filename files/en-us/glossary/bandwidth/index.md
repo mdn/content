@@ -2,6 +2,7 @@
 title: Bandwidth
 slug: Glossary/Bandwidth
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

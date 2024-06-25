@@ -3,6 +3,7 @@ title: accent-color
 slug: Web/CSS/accent-color
 page-type: css-property
 browser-compat: css.properties.accent-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

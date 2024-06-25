@@ -3,6 +3,7 @@ title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
 page-type: css-type
 browser-compat: css.types.frequency-percentage
+sidebar: cssref
 ---
 
 {{CSSRef}}

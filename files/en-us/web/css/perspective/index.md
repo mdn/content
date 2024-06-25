@@ -3,6 +3,7 @@ title: perspective
 slug: Web/CSS/perspective
 page-type: css-property
 browser-compat: css.properties.perspective
+sidebar: cssref
 ---
 
 {{CSSRef}}

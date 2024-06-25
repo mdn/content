@@ -3,6 +3,7 @@ title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLast
+sidebar: jsref
 ---
 
 {{JSRef}}

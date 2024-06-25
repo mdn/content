@@ -2,6 +2,7 @@
 title: Fingerprinting
 slug: Glossary/Fingerprinting
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

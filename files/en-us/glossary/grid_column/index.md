@@ -2,6 +2,7 @@
 title: Grid Column
 slug: Glossary/Grid_Column
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
 page-type: css-property
 browser-compat: css.properties.scroll-snap-align
+sidebar: cssref
 ---
 
 {{CSSRef}}

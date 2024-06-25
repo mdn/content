@@ -2,6 +2,7 @@
 title: Transient activation
 slug: Glossary/Transient_activation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

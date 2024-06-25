@@ -2,6 +2,7 @@
 title: Using feature queries
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: ARIA
 slug: Glossary/ARIA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

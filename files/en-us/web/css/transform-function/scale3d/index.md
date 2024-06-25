@@ -3,6 +3,7 @@ title: scale3d()
 slug: Web/CSS/transform-function/scale3d
 page-type: css-function
 browser-compat: css.types.transform-function.scale3d
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: UDP (User Datagram Protocol)
 slug: Glossary/UDP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

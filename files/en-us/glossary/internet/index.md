@@ -2,6 +2,7 @@
 title: Internet
 slug: Glossary/Internet
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: BigInt
 slug: Glossary/BigInt
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

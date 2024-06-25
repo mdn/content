@@ -2,6 +2,7 @@
 title: CORS-safelisted response header
 slug: Glossary/CORS-safelisted_response_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

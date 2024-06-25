@@ -2,6 +2,7 @@
 title: SQL
 slug: Glossary/SQL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

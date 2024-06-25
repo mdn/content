@@ -2,6 +2,7 @@
 title: UUID
 slug: Glossary/UUID
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

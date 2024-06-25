@@ -3,6 +3,7 @@ title: CSS selector structure
 slug: Web/CSS/CSS_selectors/Selector_structure
 page-type: guide
 spec-urls: https://drafts.csswg.org/selectors/
+sidebar: cssref
 ---
 
 {{CSSRef}}

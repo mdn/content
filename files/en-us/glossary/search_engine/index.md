@@ -2,6 +2,7 @@
 title: Search engine
 slug: Glossary/Search_engine
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

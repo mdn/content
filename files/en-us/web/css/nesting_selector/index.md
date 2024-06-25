@@ -3,6 +3,7 @@ title: "& nesting selector"
 slug: Web/CSS/Nesting_selector
 page-type: css-selector
 browser-compat: css.selectors.nesting
+sidebar: cssref
 ---
 
 {{CSSRef}}

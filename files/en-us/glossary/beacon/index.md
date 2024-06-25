@@ -2,6 +2,7 @@
 title: Beacon
 slug: Glossary/Beacon
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

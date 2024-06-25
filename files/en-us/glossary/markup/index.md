@@ -2,6 +2,7 @@
 title: Markup
 slug: Glossary/Markup
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

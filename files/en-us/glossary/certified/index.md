@@ -2,6 +2,7 @@
 title: Certified
 slug: Glossary/Certified
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

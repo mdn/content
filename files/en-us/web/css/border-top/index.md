@@ -3,6 +3,7 @@ title: border-top
 slug: Web/CSS/border-top
 page-type: css-shorthand-property
 browser-compat: css.properties.border-top
+sidebar: cssref
 ---
 
 {{CSSRef}}

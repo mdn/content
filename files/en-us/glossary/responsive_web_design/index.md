@@ -2,6 +2,7 @@
 title: Responsive web design
 slug: Glossary/Responsive_web_design
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

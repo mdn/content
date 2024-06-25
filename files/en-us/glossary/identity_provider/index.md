@@ -2,6 +2,7 @@
 title: Identity provider (IdP)
 slug: Glossary/Identity_provider
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.isConcatSpreadable
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
 browser-compat: css.types.image.gradient
+sidebar: cssref
 ---
 
 {{CSSRef}}

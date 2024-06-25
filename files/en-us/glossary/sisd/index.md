@@ -2,6 +2,7 @@
 title: SISD
 slug: Glossary/SISD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

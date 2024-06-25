@@ -3,6 +3,7 @@ title: pad
 slug: Web/CSS/@counter-style/pad
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.pad
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Validator
 slug: Glossary/Validator
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

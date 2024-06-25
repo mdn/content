@@ -2,6 +2,7 @@
 title: RTF
 slug: Glossary/RTF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

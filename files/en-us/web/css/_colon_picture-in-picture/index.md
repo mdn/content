@@ -3,6 +3,7 @@ title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
 page-type: css-pseudo-class
 browser-compat: css.selectors.picture-in-picture
+sidebar: cssref
 ---
 
 {{CSSRef}}

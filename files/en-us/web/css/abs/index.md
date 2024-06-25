@@ -3,6 +3,7 @@ title: abs()
 slug: Web/CSS/abs
 page-type: css-function
 browser-compat: css.types.abs
+sidebar: cssref
 ---
 
 {{CSSRef}}

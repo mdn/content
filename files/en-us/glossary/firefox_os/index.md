@@ -2,6 +2,7 @@
 title: Firefox OS
 slug: Glossary/Firefox_OS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

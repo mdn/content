@@ -2,6 +2,7 @@
 title: Gamut
 slug: Glossary/Gamut
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

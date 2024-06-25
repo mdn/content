@@ -2,6 +2,7 @@
 title: High-level programming language
 slug: Glossary/High-level_programming_language
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Mastering margin collapsing
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toUTCString
+sidebar: jsref
 ---
 
 {{JSRef}}

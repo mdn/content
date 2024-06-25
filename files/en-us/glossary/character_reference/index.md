@@ -2,6 +2,7 @@
 title: Character reference
 slug: Glossary/Character_reference
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

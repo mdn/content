@@ -2,6 +2,7 @@
 title: Undefined
 slug: Glossary/Undefined
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

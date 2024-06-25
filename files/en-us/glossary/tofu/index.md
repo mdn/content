@@ -2,6 +2,7 @@
 title: TOFU
 slug: Glossary/TOFU
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

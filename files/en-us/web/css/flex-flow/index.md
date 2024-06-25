@@ -3,6 +3,7 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 page-type: css-shorthand-property
 browser-compat: css.properties.flex-flow
+sidebar: cssref
 ---
 
 {{CSSRef}}

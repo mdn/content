@@ -3,6 +3,7 @@ title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.join
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.at
+sidebar: jsref
 ---
 
 {{JSRef}}

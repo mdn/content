@@ -2,6 +2,7 @@
 title: Scroll boundary
 slug: Glossary/Scroll_boundary
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

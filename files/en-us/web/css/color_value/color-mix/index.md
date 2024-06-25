@@ -3,6 +3,7 @@ title: color-mix()
 slug: Web/CSS/color_value/color-mix
 page-type: css-function
 browser-compat: css.types.color.color-mix
+sidebar: cssref
 ---
 
 {{CSSRef}}

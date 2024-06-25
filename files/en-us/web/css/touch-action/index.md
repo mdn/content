@@ -3,6 +3,7 @@ title: touch-action
 slug: Web/CSS/touch-action
 page-type: css-property
 browser-compat: css.properties.touch-action
+sidebar: cssref
 ---
 
 {{CSSRef}}

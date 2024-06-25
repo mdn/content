@@ -6,6 +6,7 @@ browser-compat: css.types.color.lab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Lab
   - https://drafts.csswg.org/css-color/#lab-colors
+sidebar: cssref
 ---
 
 {{CSSRef}}

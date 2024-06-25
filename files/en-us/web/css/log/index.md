@@ -3,6 +3,7 @@ title: log()
 slug: Web/CSS/log
 page-type: css-function
 browser-compat: css.types.log
+sidebar: cssref
 ---
 
 {{CSSRef}}

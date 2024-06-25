@@ -3,6 +3,7 @@ title: CSS display
 slug: Web/CSS/CSS_display
 page-type: css-module
 browser-compat: css.properties.display
+sidebar: cssref
 ---
 
 {{CSSRef}}

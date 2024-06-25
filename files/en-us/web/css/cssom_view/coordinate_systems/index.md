@@ -2,6 +2,7 @@
 title: Coordinate systems
 slug: Web/CSS/CSSOM_view/Coordinate_systems
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Symmetric-key cryptography
 slug: Glossary/Symmetric-key_cryptography
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: base-palette
 slug: Web/CSS/@font-palette-values/base-palette
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.base-palette
+sidebar: cssref
 ---
 
 {{CSSRef}}

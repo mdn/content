@@ -2,6 +2,7 @@
 title: Auto-placement in grid layout
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

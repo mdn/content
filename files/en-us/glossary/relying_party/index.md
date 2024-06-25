@@ -2,6 +2,7 @@
 title: Relying party
 slug: Glossary/Relying_party
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

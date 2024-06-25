@@ -2,6 +2,7 @@
 title: Largest contentful paint
 slug: Glossary/Largest_contentful_paint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

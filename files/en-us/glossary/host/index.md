@@ -2,6 +2,7 @@
 title: Host
 slug: Glossary/Host
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

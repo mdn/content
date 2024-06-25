@@ -3,6 +3,7 @@ title: asin()
 slug: Web/CSS/asin
 page-type: css-function
 browser-compat: css.types.asin
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 page-type: css-property
 browser-compat: css.properties.border-image-source
+sidebar: cssref
 ---
 
 {{CSSRef}}

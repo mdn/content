@@ -2,6 +2,7 @@
 title: Zstandard compression
 slug: Glossary/Zstandard_compression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

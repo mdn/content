@@ -3,6 +3,7 @@ title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
 page-type: css-property
 browser-compat: css.properties.font-variant-numeric
+sidebar: cssref
 ---
 
 {{CSSRef}}

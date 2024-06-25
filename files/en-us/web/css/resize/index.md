@@ -3,6 +3,7 @@ title: resize
 slug: Web/CSS/resize
 page-type: css-property
 browser-compat: css.properties.resize
+sidebar: cssref
 ---
 
 {{CSSRef}}

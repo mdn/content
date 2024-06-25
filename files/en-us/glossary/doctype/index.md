@@ -2,6 +2,7 @@
 title: Doctype
 slug: Glossary/Doctype
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

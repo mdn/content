@@ -3,6 +3,7 @@ title: mask-position
 slug: Web/CSS/mask-position
 page-type: css-property
 browser-compat: css.properties.mask-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 page-type: css-property
 browser-compat: css.properties.animation-timing-function
+sidebar: cssref
 ---
 
 {{CSSRef}}

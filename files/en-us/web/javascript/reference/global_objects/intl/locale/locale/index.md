@@ -3,6 +3,7 @@ title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale
+sidebar: jsref
 ---
 
 {{JSRef}}

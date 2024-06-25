@@ -3,6 +3,7 @@ title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
 page-type: css-function
 browser-compat: css.types.transform-function.rotate3d
+sidebar: cssref
 ---
 
 {{CSSRef}}

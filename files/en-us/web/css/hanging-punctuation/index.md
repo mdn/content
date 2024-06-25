@@ -3,6 +3,7 @@ title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
 page-type: css-property
 browser-compat: css.properties.hanging-punctuation
+sidebar: cssref
 ---
 
 {{CSSRef}}

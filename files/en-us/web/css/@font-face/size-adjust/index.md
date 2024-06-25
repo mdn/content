@@ -3,6 +3,7 @@ title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.size-adjust
+sidebar: cssref
 ---
 
 {{CSSRef}}

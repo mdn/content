@@ -2,6 +2,7 @@
 title: Lossy compression
 slug: Glossary/Lossy_compression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

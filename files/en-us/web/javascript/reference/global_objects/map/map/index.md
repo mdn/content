@@ -3,6 +3,7 @@ title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Map.Map
+sidebar: jsref
 ---
 
 {{JSRef}}

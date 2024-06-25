@@ -5,6 +5,7 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.fontsize
+sidebar: jsref
 ---
 
 {{JSRef}} {{Deprecated_Header}}

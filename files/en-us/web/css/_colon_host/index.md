@@ -3,6 +3,7 @@ title: ":host"
 slug: Web/CSS/:host
 page-type: css-pseudo-class
 browser-compat: css.selectors.host
+sidebar: cssref
 ---
 
 {{CSSRef}}

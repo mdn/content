@@ -2,6 +2,7 @@
 title: Engine
 slug: Glossary/Engine
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

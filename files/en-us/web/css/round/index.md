@@ -3,6 +3,7 @@ title: round()
 slug: Web/CSS/round
 page-type: css-function
 browser-compat: css.types.round
+sidebar: cssref
 ---
 
 {{CSSRef}}

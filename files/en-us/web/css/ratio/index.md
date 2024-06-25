@@ -4,6 +4,7 @@ slug: Web/CSS/ratio
 page-type: css-type
 browser-compat: css.types.ratio
 spec-urls: https://drafts.csswg.org/css-values-4/#ratio-value
+sidebar: cssref
 ---
 
 {{CSSRef}}

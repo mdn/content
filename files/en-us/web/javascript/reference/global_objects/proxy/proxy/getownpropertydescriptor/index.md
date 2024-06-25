@@ -3,6 +3,7 @@ title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
+sidebar: jsref
 ---
 
 {{JSRef}}

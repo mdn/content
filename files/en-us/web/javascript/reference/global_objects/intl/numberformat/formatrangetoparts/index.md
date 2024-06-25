@@ -3,6 +3,7 @@ title: Intl.NumberFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: String
 slug: Glossary/String
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
+sidebar: cssref
 ---
 
 {{CSSRef}}

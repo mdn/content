@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.fxtf.org/filter-effects-2/
   - https://drafts.fxtf.org/filter-effects-1/
+sidebar: cssref
 ---
 
 {{CSSRef}}

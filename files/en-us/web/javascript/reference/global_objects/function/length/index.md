@@ -3,6 +3,7 @@ title: "Function: length"
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.length
+sidebar: jsref
 ---
 
 {{JSRef}}

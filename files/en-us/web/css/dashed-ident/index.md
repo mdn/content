@@ -3,6 +3,7 @@ title: <dashed-ident>
 slug: Web/CSS/dashed-ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
+sidebar: cssref
 ---
 
 {{CSSRef}}

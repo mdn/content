@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.-moz-float-edge
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}

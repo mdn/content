@@ -3,6 +3,7 @@ title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.flags
+sidebar: jsref
 ---
 
 {{JSRef}}

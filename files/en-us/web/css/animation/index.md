@@ -3,6 +3,7 @@ title: animation
 slug: Web/CSS/animation
 page-type: css-shorthand-property
 browser-compat: css.properties.animation
+sidebar: cssref
 ---
 
 {{CSSRef}}

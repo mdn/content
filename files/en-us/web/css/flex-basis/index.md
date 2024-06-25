@@ -3,6 +3,7 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 page-type: css-property
 browser-compat: css.properties.flex-basis
+sidebar: cssref
 ---
 
 {{CSSRef}}

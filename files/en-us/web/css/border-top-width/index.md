@@ -3,6 +3,7 @@ title: border-top-width
 slug: Web/CSS/border-top-width
 page-type: css-property
 browser-compat: css.properties.border-top-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

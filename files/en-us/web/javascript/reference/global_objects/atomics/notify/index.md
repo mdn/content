@@ -3,6 +3,7 @@ title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.notify
+sidebar: jsref
 ---
 
 {{JSRef}}

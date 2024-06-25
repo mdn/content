@@ -3,6 +3,7 @@ title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Collator.Collator
+sidebar: jsref
 ---
 
 {{JSRef}}

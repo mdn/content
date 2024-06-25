@@ -3,6 +3,7 @@ title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.has
+sidebar: jsref
 ---
 
 {{JSRef}}

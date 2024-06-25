@@ -12,6 +12,7 @@ browser-compat:
   - css.selectors.-webkit-scrollbar-track-piece
   - css.selectors.-webkit-scrollbar-corner
   - css.selectors.-webkit-resizer
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_Header}}

@@ -3,6 +3,7 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 page-type: javascript-class
 browser-compat: javascript.builtins.ReferenceError
+sidebar: jsref
 ---
 
 {{JSRef}}

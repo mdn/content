@@ -3,6 +3,7 @@ title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
 page-type: css-function
 browser-compat: css.types.transform-function.rotateZ
+sidebar: cssref
 ---
 
 {{CSSRef}}

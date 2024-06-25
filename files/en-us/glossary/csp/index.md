@@ -2,6 +2,7 @@
 title: CSP
 slug: Glossary/CSP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

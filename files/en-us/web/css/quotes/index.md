@@ -3,6 +3,7 @@ title: quotes
 slug: Web/CSS/quotes
 page-type: css-property
 browser-compat: css.properties.quotes
+sidebar: cssref
 ---
 
 {{CSSRef}}

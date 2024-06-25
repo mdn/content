@@ -3,6 +3,7 @@ title: scale()
 slug: Web/CSS/transform-function/scale
 page-type: css-function
 browser-compat: css.types.transform-function.scale
+sidebar: cssref
 ---
 
 {{CSSRef}}

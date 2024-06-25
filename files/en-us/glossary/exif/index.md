@@ -2,6 +2,7 @@
 title: EXIF
 slug: Glossary/EXIF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

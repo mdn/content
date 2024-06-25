@@ -3,6 +3,7 @@ title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
 page-type: css-property
 browser-compat: css.properties.scroll-padding-right
+sidebar: cssref
 ---
 
 {{CSSRef}}

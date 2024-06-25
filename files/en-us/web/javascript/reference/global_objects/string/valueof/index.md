@@ -3,6 +3,7 @@ title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.valueOf
+sidebar: jsref
 ---
 
 {{JSRef}}

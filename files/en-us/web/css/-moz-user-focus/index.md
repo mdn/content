@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.-moz-user-focus
+sidebar: cssref
 ---
 
 {{CSSRef}} {{deprecated_header}}{{non-standard_header}}

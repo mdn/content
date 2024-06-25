@@ -3,6 +3,7 @@ title: direction
 slug: Web/CSS/direction
 page-type: css-property
 browser-compat: css.properties.direction
+sidebar: cssref
 ---
 
 {{CSSRef}}

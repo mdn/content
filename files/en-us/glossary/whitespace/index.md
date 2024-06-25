@@ -2,6 +2,7 @@
 title: Whitespace
 slug: Glossary/Whitespace
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

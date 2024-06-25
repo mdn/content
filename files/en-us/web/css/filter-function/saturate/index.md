@@ -3,6 +3,7 @@ title: saturate()
 slug: Web/CSS/filter-function/saturate
 page-type: css-function
 browser-compat: css.types.filter-function.saturate
+sidebar: cssref
 ---
 
 {{CSSRef}}

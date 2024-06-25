@@ -3,6 +3,7 @@ title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-stretch
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Call stack
 slug: Glossary/Call_stack
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

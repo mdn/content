@@ -2,6 +2,7 @@
 title: Java
 slug: Glossary/Java
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

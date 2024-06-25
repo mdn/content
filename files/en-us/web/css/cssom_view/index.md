@@ -3,6 +3,7 @@ title: CSSOM view
 slug: Web/CSS/CSSOM_view
 page-type: css-module
 browser-compat: css.properties.scroll-behavior
+sidebar: cssref
 ---
 
 {{CSSRef}}

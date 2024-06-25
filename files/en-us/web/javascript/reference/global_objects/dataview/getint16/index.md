@@ -3,6 +3,7 @@ title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt16
+sidebar: jsref
 ---
 
 {{JSRef}}

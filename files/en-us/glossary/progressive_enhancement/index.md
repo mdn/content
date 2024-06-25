@@ -2,6 +2,7 @@
 title: Progressive Enhancement
 slug: Glossary/Progressive_Enhancement
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

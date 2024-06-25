@@ -3,6 +3,7 @@ title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 page-type: css-property
 browser-compat: css.properties.box-decoration-break
+sidebar: cssref
 ---
 
 {{CSSRef}}

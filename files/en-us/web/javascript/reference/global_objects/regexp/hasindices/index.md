@@ -3,6 +3,7 @@ title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.hasIndices
+sidebar: jsref
 ---
 
 {{JSRef}}

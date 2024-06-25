@@ -3,6 +3,7 @@ title: text-combine-upright
 slug: Web/CSS/text-combine-upright
 page-type: css-property
 browser-compat: css.properties.text-combine-upright
+sidebar: cssref
 ---
 
 {{CSSRef}}

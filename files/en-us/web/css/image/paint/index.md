@@ -3,6 +3,7 @@ title: paint()
 slug: Web/CSS/image/paint
 page-type: css-function
 browser-compat: css.types.image.paint
+sidebar: cssref
 ---
 
 {{CSSRef}}

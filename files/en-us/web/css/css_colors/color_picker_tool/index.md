@@ -2,6 +2,7 @@
 title: Color picker tool
 slug: Web/CSS/CSS_colors/Color_picker_tool
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

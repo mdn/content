@@ -3,10 +3,10 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 page-type: css-property
 browser-compat: css.properties.animation-play-state
+sidebar: cssref
 ---
 
 {{CSSRef}}
-
 The **`animation-play-state`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation is running or paused.
 
 {{EmbedInteractiveExample("pages/css/animation-play-state.html")}}

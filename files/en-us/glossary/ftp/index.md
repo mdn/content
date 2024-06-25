@@ -2,6 +2,7 @@
 title: FTP
 slug: Glossary/FTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: TypedArray.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLast
+sidebar: jsref
 ---
 
 {{JSRef}}

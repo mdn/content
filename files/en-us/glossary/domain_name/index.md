@@ -2,6 +2,7 @@
 title: Domain name
 slug: Glossary/Domain_name
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: rotateY()
 slug: Web/CSS/transform-function/rotateY
 page-type: css-function
 browser-compat: css.types.transform-function.rotateY
+sidebar: cssref
 ---
 
 {{CSSRef}}

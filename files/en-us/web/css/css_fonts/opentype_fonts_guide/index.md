@@ -2,6 +2,7 @@
 title: OpenType font features guide
 slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

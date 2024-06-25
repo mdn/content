@@ -3,6 +3,7 @@ title: background-image
 slug: Web/CSS/background-image
 page-type: css-property
 browser-compat: css.properties.background-image
+sidebar: cssref
 ---
 
 {{CSSRef}}

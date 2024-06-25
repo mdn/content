@@ -3,6 +3,7 @@ title: CSS fonts
 slug: Web/CSS/CSS_fonts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-fonts/
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: CDN
 slug: Glossary/CDN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Intl.Segmenter.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: SVG
 slug: Glossary/SVG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

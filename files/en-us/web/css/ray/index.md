@@ -3,6 +3,7 @@ title: ray()
 slug: Web/CSS/ray
 page-type: css-function
 browser-compat: css.types.ray
+sidebar: cssref
 ---
 
 {{CSSRef}}

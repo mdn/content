@@ -3,6 +3,7 @@ title: <system-color>
 slug: Web/CSS/system-color
 page-type: css-type
 browser-compat: css.types.color.system-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.every
+sidebar: jsref
 ---
 
 {{JSRef}}

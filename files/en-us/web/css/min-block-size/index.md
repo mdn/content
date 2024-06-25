@@ -3,6 +3,7 @@ title: min-block-size
 slug: Web/CSS/min-block-size
 page-type: css-property
 browser-compat: css.properties.min-block-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

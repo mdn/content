@@ -3,6 +3,7 @@ title: Namespace separator
 slug: Web/CSS/Namespace_separator
 page-type: css-combinator
 browser-compat: css.selectors.namespace
+sidebar: cssref
 ---
 
 {{CSSRef}}

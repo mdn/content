@@ -3,6 +3,7 @@ title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
 page-type: css-property
 browser-compat: css.properties.text-decoration-thickness
+sidebar: cssref
 ---
 
 {{CSSRef}}

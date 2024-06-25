@@ -3,6 +3,7 @@ title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
 page-type: css-pseudo-class
 browser-compat: css.selectors.placeholder-shown
+sidebar: cssref
 ---
 
 {{CSSRef}}

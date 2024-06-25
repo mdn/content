@@ -2,6 +2,7 @@
 title: Inheritance
 slug: Web/CSS/Inheritance
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

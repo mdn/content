@@ -3,6 +3,7 @@ title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.includes
+sidebar: jsref
 ---
 
 {{JSRef}}

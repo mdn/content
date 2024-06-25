@@ -3,6 +3,7 @@ title: transition-property
 slug: Web/CSS/transition-property
 page-type: css-property
 browser-compat: css.properties.transition-property
+sidebar: cssref
 ---
 
 {{CSSRef}}

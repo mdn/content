@@ -3,6 +3,7 @@ title: ArrayBuffer.prototype.resizable
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.resizable
+sidebar: jsref
 ---
 
 {{JSRef}}

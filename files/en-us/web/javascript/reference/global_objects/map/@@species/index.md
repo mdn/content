@@ -3,6 +3,7 @@ title: Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Map.@@species
+sidebar: jsref
 ---
 
 {{JSRef}}

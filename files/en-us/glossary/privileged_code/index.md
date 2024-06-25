@@ -2,6 +2,7 @@
 title: Privileged code
 slug: Glossary/Privileged_code
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

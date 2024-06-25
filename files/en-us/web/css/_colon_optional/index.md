@@ -3,6 +3,7 @@ title: ":optional"
 slug: Web/CSS/:optional
 page-type: css-pseudo-class
 browser-compat: css.selectors.optional
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: font-synthesis-small-caps
 slug: Web/CSS/font-synthesis-small-caps
 page-type: css-property
 browser-compat: css.properties.font-synthesis-small-caps
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Layout using named grid lines
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Robots.txt
 slug: Glossary/Robots.txt
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

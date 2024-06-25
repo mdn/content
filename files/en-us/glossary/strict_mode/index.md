@@ -2,6 +2,7 @@
 title: Strict mode
 slug: Glossary/Strict_mode
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

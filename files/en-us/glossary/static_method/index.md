@@ -2,6 +2,7 @@
 title: Static method
 slug: Glossary/Static_method
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

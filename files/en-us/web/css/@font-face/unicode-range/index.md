@@ -3,6 +3,7 @@ title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.unicode-range
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Box alignment in multi-column layout
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

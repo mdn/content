@@ -2,6 +2,7 @@
 title: Block-level content
 slug: Glossary/Block-level_content
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

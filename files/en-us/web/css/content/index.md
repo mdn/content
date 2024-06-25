@@ -3,6 +3,7 @@ title: content
 slug: Web/CSS/content
 page-type: css-property
 browser-compat: css.properties.content
+sidebar: cssref
 ---
 
 {{CSSRef}}

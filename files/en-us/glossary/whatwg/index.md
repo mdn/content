@@ -2,6 +2,7 @@
 title: WHATWG
 slug: Glossary/WHATWG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

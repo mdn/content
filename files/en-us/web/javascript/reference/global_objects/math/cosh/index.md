@@ -3,6 +3,7 @@ title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cosh
+sidebar: jsref
 ---
 
 {{JSRef}}

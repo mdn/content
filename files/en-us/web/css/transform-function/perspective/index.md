@@ -3,6 +3,7 @@ title: perspective()
 slug: Web/CSS/transform-function/perspective
 page-type: css-function
 browser-compat: css.types.transform-function.perspective
+sidebar: cssref
 ---
 
 {{CSSRef}}

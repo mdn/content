@@ -3,6 +3,7 @@ title: empty-cells
 slug: Web/CSS/empty-cells
 page-type: css-property
 browser-compat: css.properties.empty-cells
+sidebar: cssref
 ---
 
 {{CSSRef}}

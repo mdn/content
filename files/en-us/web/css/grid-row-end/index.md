@@ -3,6 +3,7 @@ title: grid-row-end
 slug: Web/CSS/grid-row-end
 page-type: css-property
 browser-compat: css.properties.grid-row-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

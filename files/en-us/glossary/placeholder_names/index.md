@@ -2,6 +2,7 @@
 title: Placeholder names
 slug: Glossary/Placeholder_names
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

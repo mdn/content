@@ -2,6 +2,7 @@
 title: Syntax
 slug: Web/CSS/Syntax
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

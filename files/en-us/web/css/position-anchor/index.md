@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.position-anchor
+sidebar: cssref
 ---
 
 {{CSSRef}}{{seecompattable}}

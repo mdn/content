@@ -2,6 +2,7 @@
 title: DOM (Document Object Model)
 slug: Glossary/DOM
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

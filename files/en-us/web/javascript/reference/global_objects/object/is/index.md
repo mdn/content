@@ -3,6 +3,7 @@ title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.is
+sidebar: jsref
 ---
 
 {{JSRef}}

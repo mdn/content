@@ -3,6 +3,7 @@ title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.subarray
+sidebar: jsref
 ---
 
 {{JSRef}}

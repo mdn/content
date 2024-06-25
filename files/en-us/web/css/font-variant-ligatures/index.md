@@ -3,6 +3,7 @@ title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 page-type: css-property
 browser-compat: css.properties.font-variant-ligatures
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: CSS Object Model (CSSOM)
 slug: Glossary/CSSOM
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

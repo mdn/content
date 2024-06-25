@@ -2,6 +2,7 @@
 title: Metadata
 slug: Glossary/Metadata
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

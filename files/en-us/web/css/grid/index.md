@@ -3,6 +3,7 @@ title: grid
 slug: Web/CSS/grid
 page-type: css-shorthand-property
 browser-compat: css.properties.grid
+sidebar: cssref
 ---
 
 {{CSSRef}}

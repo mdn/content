@@ -2,6 +2,7 @@
 title: LGPL
 slug: Glossary/LGPL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

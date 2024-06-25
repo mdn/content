@@ -5,6 +5,7 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Iterator.filter
+sidebar: jsref
 ---
 
 {{JSRef}}{{SeeCompatTable}}

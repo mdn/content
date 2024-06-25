@@ -3,6 +3,7 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 page-type: css-property
 browser-compat: css.properties.grid-auto-rows
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-moz-image-region
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_Header}}

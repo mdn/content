@@ -546,6 +546,7 @@
     "page-type",
     "status",
     "browser-compat",
-    "spec-urls"
+    "spec-urls",
+    "sidebar"
   ]
 }

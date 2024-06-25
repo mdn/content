@@ -3,6 +3,7 @@ title: width
 slug: Web/CSS/width
 page-type: css-property
 browser-compat: css.properties.width
+sidebar: cssref
 ---
 
 {{CSSRef}}

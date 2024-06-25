@@ -2,6 +2,7 @@
 title: Sticky activation
 slug: Glossary/Sticky_activation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

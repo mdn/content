@@ -3,6 +3,7 @@ title: <relative-size>
 slug: Web/CSS/relative-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-relative-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

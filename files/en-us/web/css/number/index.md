@@ -3,6 +3,7 @@ title: <number>
 slug: Web/CSS/number
 page-type: css-type
 browser-compat: css.types.number
+sidebar: cssref
 ---
 
 {{CSSRef}}

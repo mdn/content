@@ -3,6 +3,7 @@ title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.floor
+sidebar: jsref
 ---
 
 {{JSRef}}

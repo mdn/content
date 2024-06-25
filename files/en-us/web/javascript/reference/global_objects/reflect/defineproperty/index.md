@@ -3,6 +3,7 @@ title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.defineProperty
+sidebar: jsref
 ---
 
 {{JSRef}}

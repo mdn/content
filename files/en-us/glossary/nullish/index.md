@@ -2,6 +2,7 @@
 title: Nullish value
 slug: Glossary/Nullish
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

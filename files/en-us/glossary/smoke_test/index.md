@@ -2,6 +2,7 @@
 title: Smoke Test
 slug: Glossary/Smoke_Test
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reverse
+sidebar: jsref
 ---
 
 {{JSRef}}

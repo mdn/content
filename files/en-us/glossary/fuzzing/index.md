@@ -2,6 +2,7 @@
 title: Fuzz testing
 slug: Glossary/Fuzzing
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

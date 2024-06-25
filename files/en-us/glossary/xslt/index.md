@@ -2,6 +2,7 @@
 title: XSLT
 slug: Glossary/XSLT
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

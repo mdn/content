@@ -2,6 +2,7 @@
 title: Grid Row
 slug: Glossary/Grid_Row
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

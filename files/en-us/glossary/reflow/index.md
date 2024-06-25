@@ -2,6 +2,7 @@
 title: Reflow
 slug: Glossary/Reflow
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

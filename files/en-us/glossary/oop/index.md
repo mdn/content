@@ -2,6 +2,7 @@
 title: OOP
 slug: Glossary/OOP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

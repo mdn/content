@@ -2,6 +2,7 @@
 title: Safe
 slug: Glossary/Safe
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

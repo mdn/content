@@ -3,6 +3,7 @@ title: width
 slug: Web/CSS/@media/width
 page-type: css-media-feature
 browser-compat: css.at-rules.media.width
+sidebar: cssref
 ---
 
 {{CSSRef}}

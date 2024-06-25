@@ -3,6 +3,7 @@ title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseInt
+sidebar: jsref
 ---
 
 {{JSRef}}

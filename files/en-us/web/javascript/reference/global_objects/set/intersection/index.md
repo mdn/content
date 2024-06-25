@@ -3,6 +3,7 @@ title: Set.prototype.intersection()
 slug: Web/JavaScript/Reference/Global_Objects/Set/intersection
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.intersection
+sidebar: jsref
 ---
 
 {{JSRef}}

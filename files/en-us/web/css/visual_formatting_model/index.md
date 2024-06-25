@@ -2,6 +2,7 @@
 title: Visual formatting model
 slug: Web/CSS/Visual_formatting_model
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

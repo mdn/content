@@ -2,6 +2,7 @@
 title: Aspect ratio
 slug: Glossary/Aspect_ratio
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

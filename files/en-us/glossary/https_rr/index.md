@@ -2,6 +2,7 @@
 title: HTTPS RR
 slug: Glossary/HTTPS_RR
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

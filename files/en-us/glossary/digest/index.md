@@ -2,6 +2,7 @@
 title: Digest
 slug: Glossary/Digest
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

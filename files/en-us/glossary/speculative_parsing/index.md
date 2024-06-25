@@ -2,6 +2,7 @@
 title: Speculative parsing
 slug: Glossary/Speculative_parsing
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

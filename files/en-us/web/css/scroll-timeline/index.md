@@ -5,6 +5,7 @@ page-type: css-shorthand-property
 status:
   - experimental
 browser-compat: css.properties.scroll-timeline
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

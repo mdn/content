@@ -3,6 +3,7 @@ title: ":not()"
 slug: Web/CSS/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not
+sidebar: cssref
 ---
 
 {{CSSRef}}

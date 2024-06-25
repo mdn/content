@@ -3,6 +3,7 @@ title: "@charset"
 slug: Web/CSS/@charset
 page-type: css-at-rule
 browser-compat: css.at-rules.charset
+sidebar: cssref
 ---
 
 {{CSSRef}}

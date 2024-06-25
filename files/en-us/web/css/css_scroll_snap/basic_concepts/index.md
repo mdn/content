@@ -2,6 +2,7 @@
 title: Basic concepts of scroll snap
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

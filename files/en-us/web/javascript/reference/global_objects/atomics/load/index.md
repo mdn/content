@@ -3,6 +3,7 @@ title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.load
+sidebar: jsref
 ---
 
 {{JSRef}}

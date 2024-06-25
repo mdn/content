@@ -2,6 +2,7 @@
 title: Polyfill
 slug: Glossary/Polyfill
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

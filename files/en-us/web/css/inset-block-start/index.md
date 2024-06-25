@@ -3,6 +3,7 @@ title: inset-block-start
 slug: Web/CSS/inset-block-start
 page-type: css-property
 browser-compat: css.properties.inset-block-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

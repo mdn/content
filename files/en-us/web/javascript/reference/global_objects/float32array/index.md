@@ -3,6 +3,7 @@ title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Float32Array
+sidebar: jsref
 ---
 
 {{JSRef}}

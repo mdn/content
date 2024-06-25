@@ -2,6 +2,7 @@
 title: WebM
 slug: Glossary/WebM
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

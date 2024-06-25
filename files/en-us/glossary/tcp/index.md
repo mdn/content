@@ -2,6 +2,7 @@
 title: TCP
 slug: Glossary/TCP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

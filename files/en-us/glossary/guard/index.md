@@ -2,6 +2,7 @@
 title: Guard
 slug: Glossary/Guard
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

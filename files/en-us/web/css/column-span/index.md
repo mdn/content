@@ -3,6 +3,7 @@ title: column-span
 slug: Web/CSS/column-span
 page-type: css-property
 browser-compat: css.properties.column-span
+sidebar: cssref
 ---
 
 {{CSSRef}}

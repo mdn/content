@@ -3,6 +3,7 @@ title: Used value
 slug: Web/CSS/used_value
 page-type: guide
 spec-urls: https://www.w3.org/TR/CSS22/cascade.html#used-value
+sidebar: cssref
 ---
 
 {{CSSRef}}

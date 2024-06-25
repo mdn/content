@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-shapes-1/
   - https://drafts.csswg.org/css-shapes-2/
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Logical properties for floating and positioning
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

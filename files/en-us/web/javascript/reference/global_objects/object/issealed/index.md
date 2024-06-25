@@ -3,6 +3,7 @@ title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isSealed
+sidebar: jsref
 ---
 
 {{JSRef}}

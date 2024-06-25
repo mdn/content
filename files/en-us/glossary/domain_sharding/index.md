@@ -2,6 +2,7 @@
 title: Domain sharding
 slug: Glossary/Domain_sharding
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

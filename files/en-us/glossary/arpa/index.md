@@ -2,6 +2,7 @@
 title: ARPA
 slug: Glossary/ARPA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

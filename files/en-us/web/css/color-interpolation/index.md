@@ -3,6 +3,7 @@ title: color-interpolation
 slug: Web/CSS/color-interpolation
 page-type: css-property
 browser-compat: css.properties.color-interpolation
+sidebar: cssref
 ---
 
 {{CSSRef}}

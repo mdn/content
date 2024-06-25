@@ -2,6 +2,7 @@
 title: Network throttling
 slug: Glossary/Network_throttling
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

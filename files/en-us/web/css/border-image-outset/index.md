@@ -3,6 +3,7 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 page-type: css-property
 browser-compat: css.properties.border-image-outset
+sidebar: cssref
 ---
 
 {{CSSRef}}

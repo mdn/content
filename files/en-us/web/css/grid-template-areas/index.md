@@ -3,6 +3,7 @@ title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 page-type: css-property
 browser-compat: css.properties.grid-template-areas
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMonth
+sidebar: jsref
 ---
 
 {{JSRef}}

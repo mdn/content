@@ -2,6 +2,7 @@
 title: Statement
 slug: Glossary/Statement
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

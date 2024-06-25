@@ -3,6 +3,7 @@ title: <length-percentage>
 slug: Web/CSS/length-percentage
 page-type: css-type
 browser-compat: css.types.length-percentage
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 page-type: css-property
 browser-compat: css.properties.transition-timing-function
+sidebar: cssref
 ---
 
 {{CSSRef}}

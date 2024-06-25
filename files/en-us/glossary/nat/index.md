@@ -2,6 +2,7 @@
 title: NAT
 slug: Glossary/NAT
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

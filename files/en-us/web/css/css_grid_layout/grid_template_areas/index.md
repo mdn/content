@@ -2,6 +2,7 @@
 title: Grid template areas
 slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

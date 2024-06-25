@@ -2,6 +2,7 @@
 title: Sloppy mode
 slug: Glossary/Sloppy_mode
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

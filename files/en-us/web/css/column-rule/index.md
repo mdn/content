@@ -3,6 +3,7 @@ title: column-rule
 slug: Web/CSS/column-rule
 page-type: css-shorthand-property
 browser-compat: css.properties.column-rule
+sidebar: cssref
 ---
 
 {{CSSRef}}

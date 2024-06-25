@@ -3,6 +3,7 @@ title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.of
+sidebar: jsref
 ---
 
 {{JSRef}}

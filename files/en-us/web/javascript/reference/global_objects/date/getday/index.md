@@ -3,6 +3,7 @@ title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDay
+sidebar: jsref
 ---
 
 {{JSRef}}

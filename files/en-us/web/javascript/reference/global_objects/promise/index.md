@@ -3,6 +3,7 @@ title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 page-type: javascript-class
 browser-compat: javascript.builtins.Promise
+sidebar: jsref
 ---
 
 {{JSRef}}

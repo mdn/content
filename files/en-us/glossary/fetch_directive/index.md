@@ -2,6 +2,7 @@
 title: Fetch directive
 slug: Glossary/Fetch_directive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.entries
+sidebar: jsref
 ---
 
 {{JSRef}}

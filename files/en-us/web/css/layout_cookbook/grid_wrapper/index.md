@@ -2,6 +2,7 @@
 title: Grid wrapper
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

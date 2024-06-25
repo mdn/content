@@ -3,6 +3,7 @@ title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.at
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 page-type: css-property
 browser-compat: css.properties.backface-visibility
+sidebar: cssref
 ---
 
 {{CSSRef}}

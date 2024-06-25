@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - deprecated
 browser-compat: css.properties.clip
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Deprecated_Header}}

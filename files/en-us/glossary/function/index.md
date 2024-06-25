@@ -2,6 +2,7 @@
 title: Function
 slug: Glossary/Function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

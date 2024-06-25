@@ -3,6 +3,7 @@ title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.buffer
+sidebar: jsref
 ---
 
 {{JSRef}}

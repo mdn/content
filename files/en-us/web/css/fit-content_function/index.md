@@ -5,6 +5,7 @@ page-type: css-function
 browser-compat:
   - css.properties.grid-template-columns.fit-content
   - css.properties.width.fit-content_function
+sidebar: cssref
 ---
 
 {{CSSRef}}

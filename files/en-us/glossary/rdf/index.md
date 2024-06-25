@@ -2,6 +2,7 @@
 title: RDF
 slug: Glossary/RDF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

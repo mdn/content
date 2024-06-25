@@ -2,6 +2,7 @@
 title: URN
 slug: Glossary/URN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

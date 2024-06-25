@@ -2,6 +2,7 @@
 title: Non-normative
 slug: Glossary/Non-normative
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

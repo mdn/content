@@ -3,6 +3,7 @@ title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.fromCharCode
+sidebar: jsref
 ---
 
 {{JSRef}}

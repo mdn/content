@@ -3,6 +3,7 @@ title: <time-percentage>
 slug: Web/CSS/time-percentage
 page-type: css-type
 browser-compat: css.types.time-percentage
+sidebar: cssref
 ---
 
 {{CSSRef}}

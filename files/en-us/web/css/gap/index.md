@@ -3,6 +3,7 @@ title: gap
 slug: Web/CSS/gap
 page-type: css-shorthand-property
 browser-compat: css.properties.gap
+sidebar: cssref
 ---
 
 {{CSSRef}}

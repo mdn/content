@@ -5,6 +5,7 @@ page-type: css-pseudo-class
 status:
   - non-standard
 browser-compat: css.selectors.-moz-drag-over
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}

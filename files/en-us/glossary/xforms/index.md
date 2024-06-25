@@ -4,6 +4,7 @@ slug: Glossary/XForms
 page-type: glossary-definition
 status:
   - deprecated
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: ITU
 slug: Glossary/ITU
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

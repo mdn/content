@@ -3,6 +3,7 @@ title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.includes
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.splice
+sidebar: jsref
 ---
 
 {{JSRef}}

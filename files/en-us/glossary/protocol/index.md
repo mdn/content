@@ -2,6 +2,7 @@
 title: Protocol
 slug: Glossary/Protocol
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

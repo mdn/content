@@ -2,6 +2,7 @@
 title: Keyword
 slug: Glossary/Keyword
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

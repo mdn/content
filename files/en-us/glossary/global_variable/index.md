@@ -2,6 +2,7 @@
 title: Global variable
 slug: Glossary/Global_variable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

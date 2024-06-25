@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.getTextInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getTextInfo
+sidebar: jsref
 ---
 
 {{JSRef}}

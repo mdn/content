@@ -3,6 +3,7 @@ title: CSS ruby layout
 slug: Web/CSS/CSS_ruby_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ruby/
+sidebar: cssref
 ---
 
 {{CSSRef}}

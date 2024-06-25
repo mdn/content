@@ -3,6 +3,7 @@ title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
 page-type: css-function
 browser-compat: css.types.image.gradient.repeating-conic-gradient
+sidebar: cssref
 ---
 
 {{CSSRef}}

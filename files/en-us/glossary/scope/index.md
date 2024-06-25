@@ -2,6 +2,7 @@
 title: Scope
 slug: Glossary/Scope
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

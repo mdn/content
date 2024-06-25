@@ -2,6 +2,7 @@
 title: Rendering engine
 slug: Glossary/Rendering_engine
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

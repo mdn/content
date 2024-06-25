@@ -3,6 +3,7 @@ title: offset-distance
 slug: Web/CSS/offset-distance
 page-type: css-property
 browser-compat: css.properties.offset-distance
+sidebar: cssref
 ---
 
 {{CSSRef}}

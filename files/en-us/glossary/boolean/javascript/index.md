@@ -2,6 +2,7 @@
 title: Boolean (JavaScript)
 slug: Glossary/Boolean/JavaScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

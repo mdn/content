@@ -2,6 +2,7 @@
 title: Block and inline layout in normal flow
 slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

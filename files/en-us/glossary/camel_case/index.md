@@ -2,6 +2,7 @@
 title: Camel case
 slug: Glossary/Camel_case
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

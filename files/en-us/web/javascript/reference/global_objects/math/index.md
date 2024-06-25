@@ -3,6 +3,7 @@ title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Math
+sidebar: jsref
 ---
 
 {{JSRef}}

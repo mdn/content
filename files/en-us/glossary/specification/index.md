@@ -2,6 +2,7 @@
 title: Specification
 slug: Glossary/Specification
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

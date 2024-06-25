@@ -2,6 +2,7 @@
 title: Flex
 slug: Glossary/Flex
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Secure Sockets Layer (SSL)
 slug: Glossary/SSL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

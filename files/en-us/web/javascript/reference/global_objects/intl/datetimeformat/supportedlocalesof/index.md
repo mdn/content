@@ -3,6 +3,7 @@ title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
+sidebar: jsref
 ---
 
 {{JSRef}}

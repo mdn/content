@@ -2,6 +2,7 @@
 title: Origin
 slug: Glossary/Origin
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

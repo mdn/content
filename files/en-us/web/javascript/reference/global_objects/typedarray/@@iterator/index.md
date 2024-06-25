@@ -3,6 +3,7 @@ title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.@@iterator
+sidebar: jsref
 ---
 
 {{JSRef}}

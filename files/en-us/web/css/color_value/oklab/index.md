@@ -6,6 +6,7 @@ browser-compat: css.types.color.oklab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Oklab
   - https://drafts.csswg.org/css-color/#ok-lab
+sidebar: cssref
 ---
 
 {{CSSRef}}

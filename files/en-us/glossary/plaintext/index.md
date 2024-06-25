@@ -2,6 +2,7 @@
 title: Plaintext
 slug: Glossary/Plaintext
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

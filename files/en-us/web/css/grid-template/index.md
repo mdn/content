@@ -3,6 +3,7 @@ title: grid-template
 slug: Web/CSS/grid-template
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-template
+sidebar: cssref
 ---
 
 {{CSSRef}}

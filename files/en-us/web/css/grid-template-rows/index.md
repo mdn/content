@@ -3,6 +3,7 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 page-type: css-property
 browser-compat: css.properties.grid-template-rows
+sidebar: cssref
 ---
 
 {{CSSRef}}

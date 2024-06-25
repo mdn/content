@@ -3,6 +3,7 @@ title: CSS syntax
 slug: Web/CSS/CSS_syntax
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-syntax
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: CSS shadow parts
 slug: Web/CSS/CSS_shadow_parts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-shadow-parts/
+sidebar: cssref
 ---
 
 {{CSSRef}}

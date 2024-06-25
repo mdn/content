@@ -3,6 +3,7 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.hasOwnProperty
+sidebar: jsref
 ---
 
 {{JSRef}}

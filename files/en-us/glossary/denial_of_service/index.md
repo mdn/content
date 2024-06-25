@@ -2,6 +2,7 @@
 title: Denial of Service
 slug: Glossary/Denial_of_Service
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

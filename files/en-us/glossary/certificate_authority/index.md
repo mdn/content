@@ -2,6 +2,7 @@
 title: Certificate authority
 slug: Glossary/Certificate_authority
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

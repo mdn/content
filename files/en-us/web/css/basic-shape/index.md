@@ -3,6 +3,7 @@ title: <basic-shape>
 slug: Web/CSS/basic-shape
 page-type: css-type
 browser-compat: css.types.basic-shape
+sidebar: cssref
 ---
 
 {{CSSRef}}

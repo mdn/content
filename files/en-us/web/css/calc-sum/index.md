@@ -3,6 +3,7 @@ title: <calc-sum>
 slug: Web/CSS/calc-sum
 page-type: css-type
 browser-compat: css.types.calc-sum
+sidebar: cssref
 ---
 
 {{CSSRef}}

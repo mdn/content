@@ -3,6 +3,7 @@ title: border-block-start-color
 slug: Web/CSS/border-block-start-color
 page-type: css-property
 browser-compat: css.properties.border-block-start-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

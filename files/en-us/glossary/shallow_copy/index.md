@@ -2,6 +2,7 @@
 title: Shallow copy
 slug: Glossary/Shallow_copy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

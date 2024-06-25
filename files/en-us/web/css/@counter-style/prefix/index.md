@@ -3,6 +3,7 @@ title: prefix
 slug: Web/CSS/@counter-style/prefix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.prefix
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: font-variant-caps
 slug: Web/CSS/font-variant-caps
 page-type: css-property
 browser-compat: css.properties.font-variant-caps
+sidebar: cssref
 ---
 
 {{CSSRef}}

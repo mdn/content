@@ -2,6 +2,7 @@
 title: "Handling overflow: try options and conditional hiding"
 slug: Web/CSS/CSS_anchor_positioning/Try_options_hiding
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

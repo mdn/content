@@ -3,6 +3,7 @@ title: <string>
 slug: Web/CSS/string
 page-type: css-type
 browser-compat: css.types.string
+sidebar: cssref
 ---
 
 {{CSSRef}}

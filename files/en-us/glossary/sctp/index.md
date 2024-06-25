@@ -2,6 +2,7 @@
 title: SCTP
 slug: Glossary/SCTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

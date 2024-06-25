@@ -3,6 +3,7 @@ title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toExponential
+sidebar: jsref
 ---
 
 {{JSRef}}

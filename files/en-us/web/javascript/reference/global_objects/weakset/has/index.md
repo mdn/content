@@ -3,6 +3,7 @@ title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.has
+sidebar: jsref
 ---
 
 {{JSRef}}

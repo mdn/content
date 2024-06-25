@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-contain-2/
   - https://drafts.csswg.org/css-contain-3/
+sidebar: cssref
 ---
 
 {{CSSRef}}

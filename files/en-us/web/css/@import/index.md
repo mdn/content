@@ -3,6 +3,7 @@ title: "@import"
 slug: Web/CSS/@import
 page-type: css-at-rule
 browser-compat: css.at-rules.import
+sidebar: cssref
 ---
 
 {{CSSRef}}

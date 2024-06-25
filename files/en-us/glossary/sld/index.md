@@ -2,6 +2,7 @@
 title: SLD
 slug: Glossary/SLD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

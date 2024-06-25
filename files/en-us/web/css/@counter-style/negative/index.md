@@ -3,6 +3,7 @@ title: negative
 slug: Web/CSS/@counter-style/negative
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.negative
+sidebar: cssref
 ---
 
 {{CSSRef}}

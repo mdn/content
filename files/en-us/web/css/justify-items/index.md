@@ -3,6 +3,7 @@ title: justify-items
 slug: Web/CSS/justify-items
 page-type: css-property
 browser-compat: css.properties.justify-items
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.-moz-focus-inner
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

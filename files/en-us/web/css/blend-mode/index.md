@@ -3,6 +3,7 @@ title: <blend-mode>
 slug: Web/CSS/blend-mode
 page-type: css-type
 browser-compat: css.types.blend-mode
+sidebar: cssref
 ---
 
 {{CSSRef}}

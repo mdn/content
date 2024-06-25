@@ -2,6 +2,7 @@
 title: In flow and out of flow
 slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

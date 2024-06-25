@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-moz-scrolled-page-sequence
+sidebar: cssref
 ---
 
 {{CSSRef}}{{non-standard_header}}

@@ -3,6 +3,7 @@ title: tab-size
 slug: Web/CSS/tab-size
 page-type: css-property
 browser-compat: css.properties.tab-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

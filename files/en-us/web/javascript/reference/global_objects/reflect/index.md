@@ -3,6 +3,7 @@ title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Reflect
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: ASCII
 slug: Glossary/ASCII
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

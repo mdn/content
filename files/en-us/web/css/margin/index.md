@@ -3,6 +3,7 @@ title: margin
 slug: Web/CSS/margin
 page-type: css-shorthand-property
 browser-compat: css.properties.margin
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: "RegExp: lastIndex"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.RegExp.lastIndex
+sidebar: jsref
 ---
 
 {{JSRef}}

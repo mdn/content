@@ -2,6 +2,7 @@
 title: ARPANET
 slug: Glossary/Arpanet
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

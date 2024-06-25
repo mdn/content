@@ -3,6 +3,7 @@ title: flex-grow
 slug: Web/CSS/flex-grow
 page-type: css-property
 browser-compat: css.properties.flex-grow
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: grid-row-start
 slug: Web/CSS/grid-row-start
 page-type: css-property
 browser-compat: css.properties.grid-row-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.some
+sidebar: jsref
 ---
 
 {{JSRef}}

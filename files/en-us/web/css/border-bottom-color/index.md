@@ -3,6 +3,7 @@ title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 page-type: css-property
 browser-compat: css.properties.border-bottom-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

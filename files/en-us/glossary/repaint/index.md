@@ -2,6 +2,7 @@
 title: Repaint
 slug: Glossary/Repaint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

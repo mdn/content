@@ -2,6 +2,7 @@
 title: Lazy load
 slug: Glossary/Lazy_load
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

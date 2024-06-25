@@ -3,6 +3,7 @@ title: font-feature-settings
 slug: Web/CSS/@font-face/font-feature-settings
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-feature-settings
+sidebar: cssref
 ---
 
 {{CSSRef}}

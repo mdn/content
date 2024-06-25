@@ -2,6 +2,7 @@
 title: Accent
 slug: Glossary/Accent
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 page-type: css-property
 browser-compat: css.properties.flex-direction
+sidebar: cssref
 ---
 
 {{CSSRef}}

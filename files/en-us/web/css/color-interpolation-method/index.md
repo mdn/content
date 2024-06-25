@@ -4,6 +4,7 @@ slug: Web/CSS/color-interpolation-method
 page-type: css-type
 browser-compat: css.types.color.color-mix
 spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
+sidebar: cssref
 ---
 
 {{CSSRef}}

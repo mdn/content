@@ -2,6 +2,7 @@
 title: Raster image
 slug: Glossary/Raster_image
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

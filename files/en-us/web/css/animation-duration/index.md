@@ -3,6 +3,7 @@ title: animation-duration
 slug: Web/CSS/animation-duration
 page-type: css-property
 browser-compat: css.properties.animation-duration
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: OTA
 slug: Glossary/OTA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

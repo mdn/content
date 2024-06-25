@@ -3,6 +3,7 @@ title: min-inline-size
 slug: Web/CSS/min-inline-size
 page-type: css-property
 browser-compat: css.properties.min-inline-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

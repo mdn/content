@@ -2,6 +2,7 @@
 title: Signature (functions)
 slug: Glossary/Signature/Function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

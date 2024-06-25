@@ -3,6 +3,7 @@ title: Map.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.keys
+sidebar: jsref
 ---
 
 {{JSRef}}

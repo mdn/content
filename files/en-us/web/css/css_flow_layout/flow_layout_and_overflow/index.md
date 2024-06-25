@@ -2,6 +2,7 @@
 title: Flow layout and overflow
 slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

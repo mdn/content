@@ -2,6 +2,7 @@
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

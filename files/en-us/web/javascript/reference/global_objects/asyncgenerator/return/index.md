@@ -3,6 +3,7 @@ title: AsyncGenerator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.return
+sidebar: jsref
 ---
 
 {{JSRef}}

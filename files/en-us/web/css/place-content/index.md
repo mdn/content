@@ -3,6 +3,7 @@ title: place-content
 slug: Web/CSS/place-content
 page-type: css-shorthand-property
 browser-compat: css.properties.place-content
+sidebar: cssref
 ---
 
 {{CSSRef}}

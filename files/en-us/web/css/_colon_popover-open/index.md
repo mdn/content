@@ -3,6 +3,7 @@ title: ":popover-open"
 slug: Web/CSS/:popover-open
 page-type: css-pseudo-class
 browser-compat: css.selectors.popover-open
+sidebar: cssref
 ---
 
 {{CSSRef}}

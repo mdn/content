@@ -3,6 +3,7 @@ title: ":last-of-type"
 slug: Web/CSS/:last-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.last-of-type
+sidebar: cssref
 ---
 
 {{CSSRef}}

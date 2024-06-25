@@ -2,6 +2,7 @@
 title: Spanning and balancing columns
 slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

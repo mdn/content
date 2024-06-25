@@ -2,6 +2,7 @@
 title: Constant
 slug: Glossary/Constant
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

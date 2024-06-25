@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.types.-moz-image-rect
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}

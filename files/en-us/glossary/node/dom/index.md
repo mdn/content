@@ -2,6 +2,7 @@
 title: Node (DOM)
 slug: Glossary/Node/DOM
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

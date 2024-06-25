@@ -3,6 +3,7 @@ title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.construct
+sidebar: jsref
 ---
 
 {{JSRef}}

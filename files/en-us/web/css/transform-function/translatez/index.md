@@ -3,6 +3,7 @@ title: translateZ()
 slug: Web/CSS/transform-function/translateZ
 page-type: css-function
 browser-compat: css.types.transform-function.translateZ
+sidebar: cssref
 ---
 
 {{CSSRef}}

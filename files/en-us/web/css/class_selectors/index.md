@@ -3,6 +3,7 @@ title: Class selectors
 slug: Web/CSS/Class_selectors
 page-type: css-selector
 browser-compat: css.selectors.class
+sidebar: cssref
 ---
 
 {{CSSRef}}

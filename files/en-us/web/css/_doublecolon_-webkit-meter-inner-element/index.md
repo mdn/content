@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-meter-inner-element
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}

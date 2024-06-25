@@ -3,6 +3,7 @@ title: max-width
 slug: Web/CSS/max-width
 page-type: css-property
 browser-compat: css.properties.max-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: <percentage>
 slug: Web/CSS/percentage
 page-type: css-type
 browser-compat: css.types.percentage
+sidebar: cssref
 ---
 
 {{CSSRef}}

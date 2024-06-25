@@ -3,6 +3,7 @@ title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.keys
+sidebar: jsref
 ---
 
 {{JSRef}}

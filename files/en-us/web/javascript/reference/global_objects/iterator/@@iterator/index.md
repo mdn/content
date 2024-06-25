@@ -3,6 +3,7 @@ title: Iterator.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.@@iterator
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: animation-delay
 slug: Web/CSS/animation-delay
 page-type: css-property
 browser-compat: css.properties.animation-delay
+sidebar: cssref
 ---
 
 {{CSSRef}}

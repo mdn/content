@@ -2,6 +2,7 @@
 title: OWASP
 slug: Glossary/OWASP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

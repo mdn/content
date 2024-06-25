@@ -3,6 +3,7 @@ title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
+sidebar: jsref
 ---
 
 {{JSRef}}

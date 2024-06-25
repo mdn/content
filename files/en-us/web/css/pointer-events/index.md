@@ -3,6 +3,7 @@ title: pointer-events
 slug: Web/CSS/pointer-events
 page-type: css-property
 browser-compat: css.properties.pointer-events
+sidebar: cssref
 ---
 
 {{CSSRef}}

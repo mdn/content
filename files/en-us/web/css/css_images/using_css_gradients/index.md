@@ -2,6 +2,7 @@
 title: Using CSS gradients
 slug: Web/CSS/CSS_images/Using_CSS_gradients
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

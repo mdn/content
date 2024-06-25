@@ -3,6 +3,7 @@ title: DataView.prototype.setInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setInt16
+sidebar: jsref
 ---
 
 {{JSRef}}

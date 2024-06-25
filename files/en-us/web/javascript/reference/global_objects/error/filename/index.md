@@ -5,6 +5,7 @@ page-type: javascript-instance-data-property
 status:
   - non-standard
 browser-compat: javascript.builtins.Error.fileName
+sidebar: jsref
 ---
 
 {{JSRef}} {{Non-standard_Header}}

@@ -2,6 +2,7 @@
 title: OpenGL
 slug: Glossary/OpenGL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: tan()
 slug: Web/CSS/tan
 page-type: css-function
 browser-compat: css.types.tan
+sidebar: cssref
 ---
 
 {{CSSRef}}

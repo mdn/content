@@ -3,6 +3,7 @@ title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTime
+sidebar: jsref
 ---
 
 {{JSRef}}

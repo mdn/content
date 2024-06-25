@@ -3,6 +3,7 @@ title: calc()
 slug: Web/CSS/calc
 page-type: css-function
 browser-compat: css.types.calc
+sidebar: cssref
 ---
 
 {{CSSRef}}

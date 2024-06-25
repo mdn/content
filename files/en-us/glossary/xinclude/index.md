@@ -2,6 +2,7 @@
 title: XInclude
 slug: Glossary/XInclude
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

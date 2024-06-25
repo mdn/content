@@ -3,6 +3,7 @@ title: border-image-width
 slug: Web/CSS/border-image-width
 page-type: css-property
 browser-compat: css.properties.border-image-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

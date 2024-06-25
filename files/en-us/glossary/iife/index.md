@@ -2,6 +2,7 @@
 title: IIFE
 slug: Glossary/IIFE
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

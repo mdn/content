@@ -2,6 +2,7 @@
 title: Normative
 slug: Glossary/Normative
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

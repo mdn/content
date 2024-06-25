@@ -3,6 +3,7 @@ title: page-break-inside
 slug: Web/CSS/page-break-inside
 page-type: css-property
 browser-compat: css.properties.page-break-inside
+sidebar: cssref
 ---
 
 {{CSSRef}}

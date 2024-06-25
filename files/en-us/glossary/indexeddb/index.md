@@ -2,6 +2,7 @@
 title: IndexedDB
 slug: Glossary/IndexedDB
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

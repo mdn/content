@@ -3,6 +3,7 @@ title: margin-top
 slug: Web/CSS/margin-top
 page-type: css-property
 browser-compat: css.properties.margin-top
+sidebar: cssref
 ---
 
 {{CSSRef}}

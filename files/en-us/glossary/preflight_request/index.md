@@ -2,6 +2,7 @@
 title: Preflight request
 slug: Glossary/Preflight_request
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

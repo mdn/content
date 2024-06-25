@@ -5,6 +5,7 @@ page-type: css-type
 browser-compat:
   - css.properties.display.table_values
   - css.properties.display.ruby_values
+sidebar: cssref
 ---
 
 {{CSSRef}}

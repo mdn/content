@@ -2,6 +2,7 @@
 title: Serializable object
 slug: Glossary/Serializable_object
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: "::before"
 slug: Web/CSS/::before
 page-type: css-pseudo-element
 browser-compat: css.selectors.before
+sidebar: cssref
 ---
 
 {{CSSRef}}

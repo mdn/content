@@ -2,6 +2,7 @@
 title: SEO
 slug: Glossary/SEO
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

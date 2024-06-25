@@ -3,6 +3,7 @@ title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sign
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: Character encoding
 slug: Glossary/Character_encoding
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

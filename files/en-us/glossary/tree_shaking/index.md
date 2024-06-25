@@ -2,6 +2,7 @@
 title: Tree shaking
 slug: Glossary/Tree_shaking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

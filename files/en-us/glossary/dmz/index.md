@@ -2,6 +2,7 @@
 title: DMZ
 slug: Glossary/DMZ
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

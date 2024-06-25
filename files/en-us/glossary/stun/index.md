@@ -2,6 +2,7 @@
 title: STUN
 slug: Glossary/STUN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

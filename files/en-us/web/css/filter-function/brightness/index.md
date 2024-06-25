@@ -3,6 +3,7 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 page-type: css-function
 browser-compat: css.types.filter-function.brightness
+sidebar: cssref
 ---
 
 {{CSSRef}}

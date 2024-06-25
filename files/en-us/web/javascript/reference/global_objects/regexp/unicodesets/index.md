@@ -3,6 +3,7 @@ title: RegExp.prototype.unicodeSets
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicodeSets
+sidebar: jsref
 ---
 
 {{JSRef}}

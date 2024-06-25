@@ -3,6 +3,7 @@ title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cbrt
+sidebar: jsref
 ---
 
 {{JSRef}}

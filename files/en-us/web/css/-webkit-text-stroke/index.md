@@ -3,6 +3,7 @@ title: "-webkit-text-stroke"
 slug: Web/CSS/-webkit-text-stroke
 page-type: css-shorthand-property
 browser-compat: css.properties.-webkit-text-stroke
+sidebar: cssref
 ---
 
 {{CSSRef}}

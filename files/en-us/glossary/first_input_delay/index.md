@@ -2,6 +2,7 @@
 title: First input delay
 slug: Glossary/First_input_delay
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

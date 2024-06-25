@@ -3,6 +3,7 @@ title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.@@iterator
+sidebar: jsref
 ---
 
 {{JSRef}}

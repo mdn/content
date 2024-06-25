@@ -3,6 +3,7 @@ title: xywh()
 slug: Web/CSS/basic-shape/xywh
 page-type: css-function
 browser-compat: css.types.basic-shape.xywh
+sidebar: cssref
 ---
 
 {{CSSRef}}

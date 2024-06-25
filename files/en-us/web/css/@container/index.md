@@ -3,6 +3,7 @@ title: "@container"
 slug: Web/CSS/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
+sidebar: cssref
 ---
 
 {{CSSRef}}

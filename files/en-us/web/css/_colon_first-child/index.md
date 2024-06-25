@@ -3,10 +3,10 @@ title: ":first-child"
 slug: Web/CSS/:first-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.first-child
+sidebar: cssref
 ---
 
 {{CSSRef}}
-
 The **`:first-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element among a group of sibling elements.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-child.html", "tabbed-shorter")}}

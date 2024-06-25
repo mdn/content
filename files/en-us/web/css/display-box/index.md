@@ -3,6 +3,7 @@ title: <display-box>
 slug: Web/CSS/display-box
 page-type: css-type
 browser-compat: css.properties.display.contents
+sidebar: cssref
 ---
 
 {{CSSRef}}

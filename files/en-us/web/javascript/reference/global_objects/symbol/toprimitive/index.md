@@ -3,6 +3,7 @@ title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.toPrimitive
+sidebar: jsref
 ---
 
 {{JSRef}}

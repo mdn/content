@@ -2,6 +2,7 @@
 title: Snake case
 slug: Glossary/Snake_case
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

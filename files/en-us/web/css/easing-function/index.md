@@ -3,6 +3,7 @@ title: <easing-function>
 slug: Web/CSS/easing-function
 page-type: css-type
 browser-compat: css.types.easing-function
+sidebar: cssref
 ---
 
 {{CSSRef}}

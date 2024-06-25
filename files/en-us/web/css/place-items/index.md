@@ -3,6 +3,7 @@ title: place-items
 slug: Web/CSS/place-items
 page-type: css-shorthand-property
 browser-compat: css.properties.place-items
+sidebar: cssref
 ---
 
 {{CSSRef}}

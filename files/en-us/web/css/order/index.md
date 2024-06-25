@@ -3,6 +3,7 @@ title: order
 slug: Web/CSS/order
 page-type: css-property
 browser-compat: css.properties.order
+sidebar: cssref
 ---
 
 {{CSSRef}}

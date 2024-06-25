@@ -2,6 +2,7 @@
 title: Polymorphism
 slug: Glossary/Polymorphism
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

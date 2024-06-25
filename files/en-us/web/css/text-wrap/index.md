@@ -3,6 +3,7 @@ title: text-wrap
 slug: Web/CSS/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
+sidebar: cssref
 ---
 
 {{CSSRef}}

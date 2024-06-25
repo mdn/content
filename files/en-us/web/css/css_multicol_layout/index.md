@@ -3,6 +3,7 @@ title: CSS multi-column layout
 slug: Web/CSS/CSS_multicol_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-multicol/
+sidebar: cssref
 ---
 
 {{CSSRef}}

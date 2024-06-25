@@ -3,6 +3,7 @@ title: "@view-transition"
 slug: Web/CSS/@view-transition
 page-type: css-at-rule
 browser-compat: css.at-rules.view-transition
+sidebar: cssref
 ---
 
 {{CSSRef}}

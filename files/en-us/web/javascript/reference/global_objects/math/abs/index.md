@@ -3,6 +3,7 @@ title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.abs
+sidebar: jsref
 ---
 
 {{JSRef}}

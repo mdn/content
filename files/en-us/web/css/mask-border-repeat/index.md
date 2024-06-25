@@ -3,6 +3,7 @@ title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
 page-type: css-property
 browser-compat: css.properties.mask-border-repeat
+sidebar: cssref
 ---
 
 {{CSSRef}}

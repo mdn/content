@@ -3,6 +3,7 @@ title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.name
+sidebar: jsref
 ---
 
 {{JSRef}}

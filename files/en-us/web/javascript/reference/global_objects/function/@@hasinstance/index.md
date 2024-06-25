@@ -3,6 +3,7 @@ title: Function.prototype[@@hasInstance]()
 slug: Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.@@hasInstance
+sidebar: jsref
 ---
 
 {{JSRef}}

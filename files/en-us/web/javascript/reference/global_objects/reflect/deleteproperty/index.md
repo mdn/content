@@ -3,6 +3,7 @@ title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.deleteProperty
+sidebar: jsref
 ---
 
 {{JSRef}}

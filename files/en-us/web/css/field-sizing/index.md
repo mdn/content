@@ -3,6 +3,7 @@ title: field-sizing
 slug: Web/CSS/field-sizing
 page-type: css-property
 browser-compat: css.properties.field-sizing
+sidebar: cssref
 ---
 
 {{CSSRef}}{{seecompattable}}

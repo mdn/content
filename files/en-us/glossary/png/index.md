@@ -2,6 +2,7 @@
 title: PNG
 slug: Glossary/PNG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

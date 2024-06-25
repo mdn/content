@@ -3,6 +3,7 @@ title: path()
 slug: Web/CSS/basic-shape/path
 page-type: css-function
 browser-compat: css.types.basic-shape.path
+sidebar: cssref
 ---
 
 {{CSSRef}}

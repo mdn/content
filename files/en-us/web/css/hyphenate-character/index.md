@@ -3,6 +3,7 @@ title: hyphenate-character
 slug: Web/CSS/hyphenate-character
 page-type: css-property
 browser-compat: css.properties.hyphenate-character
+sidebar: cssref
 ---
 
 {{CSSRef}}

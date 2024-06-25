@@ -2,6 +2,7 @@
 title: Snap positions
 slug: Glossary/Snap_positions
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 page-type: javascript-class
 browser-compat: javascript.builtins.Boolean
+sidebar: jsref
 ---
 
 {{JSRef}}

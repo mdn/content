@@ -2,6 +2,7 @@
 title: Texel
 slug: Glossary/Texel
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

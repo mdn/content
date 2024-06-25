@@ -3,6 +3,7 @@ title: pointer
 slug: Web/CSS/@media/pointer
 page-type: css-media-feature
 browser-compat: css.at-rules.media.pointer
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Consistent list indentation
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

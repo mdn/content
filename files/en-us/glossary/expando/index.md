@@ -2,6 +2,7 @@
 title: Expando
 slug: Glossary/Expando
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

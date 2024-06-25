@@ -2,6 +2,7 @@
 title: Pseudo-element
 slug: Glossary/Pseudo-element
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

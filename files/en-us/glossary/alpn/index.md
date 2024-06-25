@@ -2,6 +2,7 @@
 title: ALPN
 slug: Glossary/ALPN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

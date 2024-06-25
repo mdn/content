@@ -3,6 +3,7 @@ title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@split
+sidebar: jsref
 ---
 
 {{JSRef}}

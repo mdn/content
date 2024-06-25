@@ -3,6 +3,7 @@ title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
+sidebar: jsref
 ---
 
 {{JSRef}}

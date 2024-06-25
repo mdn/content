@@ -2,6 +2,7 @@
 title: Using CSS animations
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

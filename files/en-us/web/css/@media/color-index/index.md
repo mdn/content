@@ -3,6 +3,7 @@ title: color-index
 slug: Web/CSS/@media/color-index
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color-index
+sidebar: cssref
 ---
 
 {{CSSRef}}

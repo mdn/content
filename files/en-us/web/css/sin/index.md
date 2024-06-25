@@ -3,6 +3,7 @@ title: sin()
 slug: Web/CSS/sin
 page-type: css-function
 browser-compat: css.types.sin
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: border-block-end-width
 slug: Web/CSS/border-block-end-width
 page-type: css-property
 browser-compat: css.properties.border-block-end-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

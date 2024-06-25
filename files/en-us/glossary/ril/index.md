@@ -2,6 +2,7 @@
 title: RIL
 slug: Glossary/RIL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log10
+sidebar: jsref
 ---
 
 {{JSRef}}

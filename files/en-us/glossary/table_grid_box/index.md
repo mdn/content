@@ -2,6 +2,7 @@
 title: Table grid box
 slug: Glossary/Table_Grid_Box
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

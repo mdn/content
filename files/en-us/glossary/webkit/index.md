@@ -2,6 +2,7 @@
 title: WebKit
 slug: Glossary/WebKit
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: IRC
 slug: Glossary/IRC
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

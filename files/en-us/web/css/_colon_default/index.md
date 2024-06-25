@@ -3,6 +3,7 @@ title: ":default"
 slug: Web/CSS/:default
 page-type: css-pseudo-class
 browser-compat: css.selectors.default
+sidebar: cssref
 ---
 
 {{CSSRef}}

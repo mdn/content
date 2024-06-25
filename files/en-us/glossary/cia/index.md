@@ -2,6 +2,7 @@
 title: CIA
 slug: Glossary/CIA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

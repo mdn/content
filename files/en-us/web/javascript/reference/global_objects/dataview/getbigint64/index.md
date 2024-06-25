@@ -3,6 +3,7 @@ title: DataView.prototype.getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getBigInt64
+sidebar: jsref
 ---
 
 {{JSRef}}

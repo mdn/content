@@ -2,6 +2,7 @@
 title: Cache
 slug: Glossary/Cache
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

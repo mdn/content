@@ -2,6 +2,7 @@
 title: Ciphertext
 slug: Glossary/Ciphertext
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

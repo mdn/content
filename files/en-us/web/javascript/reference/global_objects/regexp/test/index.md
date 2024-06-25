@@ -3,6 +3,7 @@ title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.test
+sidebar: jsref
 ---
 
 {{JSRef}}

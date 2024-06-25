@@ -2,6 +2,7 @@
 title: Render-blocking
 slug: Glossary/Render_blocking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

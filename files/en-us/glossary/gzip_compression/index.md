@@ -2,6 +2,7 @@
 title: gzip compression
 slug: Glossary/gzip_compression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

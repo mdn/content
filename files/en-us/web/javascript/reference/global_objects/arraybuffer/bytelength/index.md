@@ -3,6 +3,7 @@ title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.byteLength
+sidebar: jsref
 ---
 
 {{JSRef}}

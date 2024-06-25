@@ -5,6 +5,7 @@ page-type: css-media-feature
 status:
   - deprecated
 browser-compat: css.at-rules.media.device-height
+sidebar: cssref
 ---
 
 {{CSSRef}} {{deprecated_header}}

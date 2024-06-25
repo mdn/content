@@ -3,6 +3,7 @@ title: CSS namespaces
 slug: Web/CSS/CSS_namespaces
 page-type: css-module
 browser-compat: css.at-rules.namespace
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Object
 slug: Glossary/Object
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

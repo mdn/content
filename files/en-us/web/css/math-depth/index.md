@@ -3,6 +3,7 @@ title: math-depth
 slug: Web/CSS/math-depth
 page-type: css-property
 browser-compat: css.properties.math-depth
+sidebar: cssref
 ---
 
 {{CSSRef}}

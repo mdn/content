@@ -2,6 +2,7 @@
 title: Hoisting
 slug: Glossary/Hoisting
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

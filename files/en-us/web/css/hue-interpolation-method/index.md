@@ -11,6 +11,7 @@ browser-compat:
   - css.types.image.gradient.repeating-linear-gradient.hue_interpolation_method
   - css.types.image.gradient.repeating-radial-gradient.hue_interpolation_method
 spec-urls: https://drafts.csswg.org/css-color/#hue-interpolation
+sidebar: cssref
 ---
 
 {{CSSRef}}

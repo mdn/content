@@ -2,6 +2,7 @@
 title: CardDAV
 slug: Glossary/CardDAV
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

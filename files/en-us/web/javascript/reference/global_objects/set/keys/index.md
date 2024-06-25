@@ -3,6 +3,7 @@ title: Set.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.keys
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: Reporting directive
 slug: Glossary/Reporting_directive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

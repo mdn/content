@@ -3,6 +3,7 @@ title: update
 slug: Web/CSS/@media/update
 page-type: css-media-feature
 browser-compat: css.at-rules.media.update
+sidebar: cssref
 ---
 
 {{CSSRef}}

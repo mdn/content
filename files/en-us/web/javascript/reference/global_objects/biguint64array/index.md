@@ -3,6 +3,7 @@ title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 page-type: javascript-class
 browser-compat: javascript.builtins.BigUint64Array
+sidebar: jsref
 ---
 
 {{JSRef}}

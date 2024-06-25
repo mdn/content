@@ -3,6 +3,7 @@ title: user-select
 slug: Web/CSS/user-select
 page-type: css-property
 browser-compat: css.properties.user-select
+sidebar: cssref
 ---
 
 {{CSSRef}}

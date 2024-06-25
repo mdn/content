@@ -3,6 +3,7 @@ title: initial-value
 slug: Web/CSS/@property/initial-value
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.initial-value
+sidebar: cssref
 ---
 
 {{CSSRef}}

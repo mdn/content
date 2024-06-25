@@ -6,6 +6,7 @@ spec-urls:
   - https://html.spec.whatwg.org/multipage/#pseudo-classes
   - https://drafts.csswg.org/selectors/
   - https://drafts.csswg.org/css-ui/
+sidebar: cssref
 ---
 
 {{CSSRef}}

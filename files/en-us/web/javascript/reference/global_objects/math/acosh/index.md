@@ -3,6 +3,7 @@ title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.acosh
+sidebar: jsref
 ---
 
 {{JSRef}}

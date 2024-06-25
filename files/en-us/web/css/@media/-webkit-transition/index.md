@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.at-rules.media.-webkit-transition
+sidebar: cssref
 ---
 
 {{CSSRef}} {{deprecated_header}} {{ Non-standard_header }}

@@ -2,6 +2,7 @@
 title: Serialization
 slug: Glossary/Serialization
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

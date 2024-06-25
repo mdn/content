@@ -2,6 +2,7 @@
 title: CSS miscellaneous
 slug: Web/CSS/CSS_miscellaneous
 page-type: css-module
+sidebar: cssref
 ---
 
 {{CSSRef}}

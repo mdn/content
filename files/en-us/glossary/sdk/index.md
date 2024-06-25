@@ -2,6 +2,7 @@
 title: SDK (Software Development Kit)
 slug: Glossary/SDK
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

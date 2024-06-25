@@ -3,6 +3,7 @@ title: sepia()
 slug: Web/CSS/filter-function/sepia
 page-type: css-function
 browser-compat: css.types.filter-function.sepia
+sidebar: cssref
 ---
 
 {{CSSRef}}

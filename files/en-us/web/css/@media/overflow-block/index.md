@@ -3,6 +3,7 @@ title: overflow-block
 slug: Web/CSS/@media/overflow-block
 page-type: css-media-feature
 browser-compat: css.at-rules.media.overflow-block
+sidebar: cssref
 ---
 
 {{CSSRef}}

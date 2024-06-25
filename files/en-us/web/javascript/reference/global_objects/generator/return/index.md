@@ -3,6 +3,7 @@ title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.return
+sidebar: jsref
 ---
 
 {{JSRef}}

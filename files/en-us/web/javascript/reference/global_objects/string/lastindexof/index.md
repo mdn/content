@@ -3,6 +3,7 @@ title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.lastIndexOf
+sidebar: jsref
 ---
 
 {{JSRef}}

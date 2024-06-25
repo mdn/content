@@ -3,6 +3,7 @@ title: border-right-style
 slug: Web/CSS/border-right-style
 page-type: css-property
 browser-compat: css.properties.border-right-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

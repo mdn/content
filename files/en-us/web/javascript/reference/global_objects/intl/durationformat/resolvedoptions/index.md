@@ -5,6 +5,7 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
+sidebar: jsref
 ---
 
 {{JSRef}} {{SeeCompatTable}}

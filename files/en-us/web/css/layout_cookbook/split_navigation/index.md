@@ -2,6 +2,7 @@
 title: Split navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

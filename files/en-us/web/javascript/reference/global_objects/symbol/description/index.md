@@ -3,6 +3,7 @@ title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Symbol.description
+sidebar: jsref
 ---
 
 {{JSRef}}

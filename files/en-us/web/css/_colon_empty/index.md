@@ -3,6 +3,7 @@ title: ":empty"
 slug: Web/CSS/:empty
 page-type: css-pseudo-class
 browser-compat: css.selectors.empty
+sidebar: cssref
 ---
 
 {{CSSRef}}

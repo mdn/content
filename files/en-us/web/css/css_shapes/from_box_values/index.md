@@ -2,6 +2,7 @@
 title: Shapes from box values
 slug: Web/CSS/CSS_shapes/From_box_values
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

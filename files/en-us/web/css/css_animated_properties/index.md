@@ -2,6 +2,7 @@
 title: Animatable CSS properties
 slug: Web/CSS/CSS_animated_properties
 page-type: landing-page
+sidebar: cssref
 ---
 
 {{CSSRef}}

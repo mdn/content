@@ -2,6 +2,7 @@
 title: Pixel
 slug: Glossary/Pixel
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

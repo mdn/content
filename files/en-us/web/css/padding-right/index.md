@@ -3,6 +3,7 @@ title: padding-right
 slug: Web/CSS/padding-right
 page-type: css-property
 browser-compat: css.properties.padding-right
+sidebar: cssref
 ---
 
 {{CSSRef}}

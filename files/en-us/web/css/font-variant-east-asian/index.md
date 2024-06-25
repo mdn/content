@@ -3,6 +3,7 @@ title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
 page-type: css-property
 browser-compat: css.properties.font-variant-east-asian
+sidebar: cssref
 ---
 
 {{CSSRef}}

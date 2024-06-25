@@ -2,6 +2,7 @@
 title: CSS at-rule functions
 slug: Web/CSS/At-rule-functions
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

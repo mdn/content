@@ -3,6 +3,7 @@ title: color
 slug: Web/CSS/color
 page-type: css-property
 browser-compat: css.properties.color
+sidebar: cssref
 ---
 
 {{CSSRef}}

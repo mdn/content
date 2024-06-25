@@ -3,6 +3,7 @@ title: padding-inline
 slug: Web/CSS/padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.padding-inline
+sidebar: cssref
 ---
 
 {{CSSRef}}

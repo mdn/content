@@ -3,6 +3,7 @@ title: animation-composition
 slug: Web/CSS/animation-composition
 page-type: css-property
 browser-compat: css.properties.animation-composition
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Distributed Denial of Service
 slug: Glossary/Distributed_Denial_of_Service
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

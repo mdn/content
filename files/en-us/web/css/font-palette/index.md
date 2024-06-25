@@ -3,6 +3,7 @@ title: font-palette
 slug: Web/CSS/font-palette
 page-type: css-property
 browser-compat: css.properties.font-palette
+sidebar: cssref
 ---
 
 {{CSSRef}}

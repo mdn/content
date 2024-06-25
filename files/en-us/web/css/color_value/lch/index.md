@@ -6,6 +6,7 @@ browser-compat: css.types.color.lch
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-LCH
   - https://drafts.csswg.org/css-color/#lab-colors
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: max()
 slug: Web/CSS/max
 page-type: css-function
 browser-compat: css.types.max
+sidebar: cssref
 ---
 
 {{CSSRef}}

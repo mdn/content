@@ -3,6 +3,7 @@ title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMonth
+sidebar: jsref
 ---
 
 {{JSRef}}

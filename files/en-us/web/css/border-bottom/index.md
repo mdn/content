@@ -3,6 +3,7 @@ title: border-bottom
 slug: Web/CSS/border-bottom
 page-type: css-shorthand-property
 browser-compat: css.properties.border-bottom
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Trident
 slug: Glossary/Trident
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

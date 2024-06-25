@@ -2,6 +2,7 @@
 title: API
 slug: Glossary/API
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: RGB
 slug: Glossary/RGB
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

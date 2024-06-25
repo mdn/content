@@ -3,6 +3,7 @@ title: height
 slug: Web/CSS/@media/height
 page-type: css-media-feature
 browser-compat: css.at-rules.media.height
+sidebar: cssref
 ---
 
 {{CSSRef}}

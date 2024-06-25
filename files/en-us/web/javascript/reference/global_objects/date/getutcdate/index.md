@@ -3,6 +3,7 @@ title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCDate
+sidebar: jsref
 ---
 
 {{JSRef}}

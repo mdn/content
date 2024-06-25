@@ -3,6 +3,7 @@ title: justify-self
 slug: Web/CSS/justify-self
 page-type: css-property
 browser-compat: css.properties.justify-self
+sidebar: cssref
 ---
 
 {{CSSRef}}

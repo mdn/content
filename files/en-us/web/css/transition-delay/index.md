@@ -3,6 +3,7 @@ title: transition-delay
 slug: Web/CSS/transition-delay
 page-type: css-property
 browser-compat: css.properties.transition-delay
+sidebar: cssref
 ---
 
 {{CSSRef}}

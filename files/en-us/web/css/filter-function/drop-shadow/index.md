@@ -3,6 +3,7 @@ title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
 page-type: css-function
 browser-compat: css.types.filter-function.drop-shadow
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Internationalization (i18n)
 slug: Glossary/Internationalization
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

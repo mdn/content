@@ -2,6 +2,7 @@
 title: Repo
 slug: Glossary/Repo
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

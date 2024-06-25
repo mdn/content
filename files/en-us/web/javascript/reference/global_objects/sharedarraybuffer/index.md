@@ -3,6 +3,7 @@ title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 page-type: javascript-class
 browser-compat: javascript.builtins.SharedArrayBuffer
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: WebVTT
 slug: Glossary/WebVTT
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

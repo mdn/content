@@ -3,6 +3,7 @@ title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.TypedArray.from
+sidebar: jsref
 ---
 
 {{JSRef}}

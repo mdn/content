@@ -2,6 +2,7 @@
 title: JPEG
 slug: Glossary/JPEG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

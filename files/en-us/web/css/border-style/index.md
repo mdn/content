@@ -3,6 +3,7 @@ title: border-style
 slug: Web/CSS/border-style
 page-type: css-shorthand-property
 browser-compat: css.properties.border-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

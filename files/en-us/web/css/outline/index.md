@@ -3,6 +3,7 @@ title: outline
 slug: Web/CSS/outline
 page-type: css-shorthand-property
 browser-compat: css.properties.outline
+sidebar: cssref
 ---
 
 {{CSSRef}}

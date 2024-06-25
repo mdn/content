@@ -3,6 +3,7 @@ title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint32
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: Signature
 slug: Glossary/Signature
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

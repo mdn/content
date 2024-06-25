@@ -2,6 +2,7 @@
 title: Stacking floating elements
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

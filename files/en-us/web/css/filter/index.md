@@ -3,6 +3,7 @@ title: filter
 slug: Web/CSS/filter
 page-type: css-property
 browser-compat: css.properties.filter
+sidebar: cssref
 ---
 
 {{CSSRef}}

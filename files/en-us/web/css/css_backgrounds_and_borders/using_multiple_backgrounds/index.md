@@ -2,6 +2,7 @@
 title: Using multiple backgrounds
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

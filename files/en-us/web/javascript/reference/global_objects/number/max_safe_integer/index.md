@@ -3,6 +3,7 @@ title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: Array.prototype.toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toSpliced
+sidebar: jsref
 ---
 
 {{JSRef}}

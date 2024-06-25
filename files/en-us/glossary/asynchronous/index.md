@@ -2,6 +2,7 @@
 title: Asynchronous
 slug: Glossary/Asynchronous
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

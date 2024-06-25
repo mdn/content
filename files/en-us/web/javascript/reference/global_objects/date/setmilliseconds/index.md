@@ -3,6 +3,7 @@ title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMilliseconds
+sidebar: jsref
 ---
 
 {{JSRef}}

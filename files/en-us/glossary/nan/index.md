@@ -2,6 +2,7 @@
 title: NaN
 slug: Glossary/NaN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

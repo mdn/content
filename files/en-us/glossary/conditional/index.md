@@ -2,6 +2,7 @@
 title: Conditional
 slug: Glossary/Conditional
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

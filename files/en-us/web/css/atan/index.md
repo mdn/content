@@ -3,6 +3,7 @@ title: atan()
 slug: Web/CSS/atan
 page-type: css-function
 browser-compat: css.types.atan
+sidebar: cssref
 ---
 
 {{CSSRef}}

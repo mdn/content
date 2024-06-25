@@ -3,6 +3,7 @@ title: DataView.prototype.setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setFloat64
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: HPKP
 slug: Glossary/HPKP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Head
 slug: Glossary/Head
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

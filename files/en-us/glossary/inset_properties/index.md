@@ -2,6 +2,7 @@
 title: Inset properties
 slug: Glossary/Inset_properties
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

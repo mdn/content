@@ -3,6 +3,7 @@ title: line-height
 slug: Web/CSS/line-height
 page-type: css-property
 browser-compat: css.properties.line-height
+sidebar: cssref
 ---
 
 {{CSSRef}}

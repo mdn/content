@@ -2,6 +2,7 @@
 title: Replay attack
 slug: Glossary/Replay_attack
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

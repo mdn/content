@@ -3,6 +3,7 @@ title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 page-type: javascript-namespace
 browser-compat: javascript.builtins.JSON
+sidebar: jsref
 ---
 
 {{JSRef}}

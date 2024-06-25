@@ -3,6 +3,7 @@ title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
+sidebar: jsref
 ---
 
 {{JSRef}}

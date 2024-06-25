@@ -3,6 +3,7 @@ title: font-variant-position
 slug: Web/CSS/font-variant-position
 page-type: css-property
 browser-compat: css.properties.font-variant-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

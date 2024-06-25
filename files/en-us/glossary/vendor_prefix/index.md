@@ -2,6 +2,7 @@
 title: Vendor Prefix
 slug: Glossary/Vendor_Prefix
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 page-type: javascript-class
 browser-compat: javascript.builtins.Set
+sidebar: jsref
 ---
 
 {{JSRef}}

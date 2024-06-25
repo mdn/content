@@ -3,6 +3,7 @@ title: transform-box
 slug: Web/CSS/transform-box
 page-type: css-property
 browser-compat: css.properties.transform-box
+sidebar: cssref
 ---
 
 {{CSSRef}}

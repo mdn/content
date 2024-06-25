@@ -4,6 +4,7 @@ slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:
   - non-standard
+sidebar: cssref
 ---
 
 {{CSSRef}}

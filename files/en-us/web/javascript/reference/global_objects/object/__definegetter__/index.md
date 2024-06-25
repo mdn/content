@@ -5,6 +5,7 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.Object.defineGetter
+sidebar: jsref
 ---
 
 {{JSRef}}{{Deprecated_Header}}

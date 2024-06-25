@@ -3,6 +3,7 @@ title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
 page-type: guide
 browser-compat: css.properties.custom-property
+sidebar: cssref
 ---
 
 {{CSSRef}}

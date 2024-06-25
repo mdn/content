@@ -3,6 +3,7 @@ title: column-fill
 slug: Web/CSS/column-fill
 page-type: css-property
 browser-compat: css.properties.column-fill
+sidebar: cssref
 ---
 
 {{CSSRef}}

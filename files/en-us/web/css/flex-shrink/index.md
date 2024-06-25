@@ -3,6 +3,7 @@ title: flex-shrink
 slug: Web/CSS/flex-shrink
 page-type: css-property
 browser-compat: css.properties.flex-shrink
+sidebar: cssref
 ---
 
 {{CSSRef}}

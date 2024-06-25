@@ -2,6 +2,7 @@
 title: WebSockets
 slug: Glossary/WebSockets
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

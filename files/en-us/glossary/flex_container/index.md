@@ -2,6 +2,7 @@
 title: Flex Container
 slug: Glossary/Flex_Container
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

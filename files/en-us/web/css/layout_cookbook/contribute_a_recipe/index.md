@@ -2,6 +2,7 @@
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

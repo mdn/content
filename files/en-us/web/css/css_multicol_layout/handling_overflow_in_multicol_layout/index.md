@@ -2,6 +2,7 @@
 title: Handling overflow in multi-column layout
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

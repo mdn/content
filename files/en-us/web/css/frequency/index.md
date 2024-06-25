@@ -3,6 +3,7 @@ title: <frequency>
 slug: Web/CSS/frequency
 page-type: css-type
 browser-compat: css.types.frequency
+sidebar: cssref
 ---
 
 {{CSSRef}}

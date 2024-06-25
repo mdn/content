@@ -3,6 +3,7 @@ title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.@@iterator
+sidebar: jsref
 ---
 
 {{JSRef}}

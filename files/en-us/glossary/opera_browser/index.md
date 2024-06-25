@@ -2,6 +2,7 @@
 title: Opera Browser
 slug: Glossary/Opera_Browser
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

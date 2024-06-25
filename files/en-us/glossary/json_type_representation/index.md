@@ -2,6 +2,7 @@
 title: JSON type representation
 slug: Glossary/JSON_type_representation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

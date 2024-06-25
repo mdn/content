@@ -3,6 +3,7 @@ title: ":scope"
 slug: Web/CSS/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: text-shadow
 slug: Web/CSS/text-shadow
 page-type: css-property
 browser-compat: css.properties.text-shadow
+sidebar: cssref
 ---
 
 {{CSSRef}}

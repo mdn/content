@@ -2,6 +2,7 @@
 title: Border-image generator
 slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

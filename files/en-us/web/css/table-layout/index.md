@@ -3,6 +3,7 @@ title: table-layout
 slug: Web/CSS/table-layout
 page-type: css-property
 browser-compat: css.properties.table-layout
+sidebar: cssref
 ---
 
 {{CSSRef}}

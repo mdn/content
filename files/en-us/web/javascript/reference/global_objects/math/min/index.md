@@ -3,6 +3,7 @@ title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.min
+sidebar: jsref
 ---
 
 {{JSRef}}

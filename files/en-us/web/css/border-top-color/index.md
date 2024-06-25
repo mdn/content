@@ -3,6 +3,7 @@ title: border-top-color
 slug: Web/CSS/border-top-color
 page-type: css-property
 browser-compat: css.properties.border-top-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

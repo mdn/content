@@ -2,6 +2,7 @@
 title: Node (networking)
 slug: Glossary/Node/networking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

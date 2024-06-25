@@ -3,6 +3,7 @@ title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
+sidebar: jsref
 ---
 
 {{JSRef}}

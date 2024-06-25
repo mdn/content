@@ -3,6 +3,7 @@ title: list-style-image
 slug: Web/CSS/list-style-image
 page-type: css-property
 browser-compat: css.properties.list-style-image
+sidebar: cssref
 ---
 
 {{CSSRef}}

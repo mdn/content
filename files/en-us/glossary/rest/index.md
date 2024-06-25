@@ -2,6 +2,7 @@
 title: REST
 slug: Glossary/REST
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

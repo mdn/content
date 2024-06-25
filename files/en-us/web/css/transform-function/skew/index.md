@@ -3,6 +3,7 @@ title: skew()
 slug: Web/CSS/transform-function/skew
 page-type: css-function
 browser-compat: css.types.transform-function.skew
+sidebar: cssref
 ---
 
 {{CSSRef}}

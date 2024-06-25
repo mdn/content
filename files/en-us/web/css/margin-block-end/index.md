@@ -3,6 +3,7 @@ title: margin-block-end
 slug: Web/CSS/margin-block-end
 page-type: css-property
 browser-compat: css.properties.margin-block-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

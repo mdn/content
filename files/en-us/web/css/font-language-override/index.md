@@ -3,6 +3,7 @@ title: font-language-override
 slug: Web/CSS/font-language-override
 page-type: css-property
 browser-compat: css.properties.font-language-override
+sidebar: cssref
 ---
 
 {{CSSRef}}

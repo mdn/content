@@ -5,6 +5,7 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.properties.animation-timeline.view
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

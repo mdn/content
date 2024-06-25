@@ -3,6 +3,7 @@ title: <position>
 slug: Web/CSS/position_value
 page-type: css-type
 browser-compat: css.types.position
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Privileged
 slug: Glossary/Privileged
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

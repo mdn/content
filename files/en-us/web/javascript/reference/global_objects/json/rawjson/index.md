@@ -5,6 +5,7 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.JSON.rawJSON
+sidebar: jsref
 ---
 
 {{JSRef}}{{SeeCompatTable}}

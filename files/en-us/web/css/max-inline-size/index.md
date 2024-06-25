@@ -3,6 +3,7 @@ title: max-inline-size
 slug: Web/CSS/max-inline-size
 page-type: css-property
 browser-compat: css.properties.max-inline-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

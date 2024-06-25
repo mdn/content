@@ -2,6 +2,7 @@
 title: IPv4
 slug: Glossary/IPv4
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

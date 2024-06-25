@@ -8,6 +8,7 @@ browser-compat:
   - css.properties.display.inline-flex
   - css.properties.display.inline-grid
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-legacy
+sidebar: cssref
 ---
 
 {{CSSRef}}

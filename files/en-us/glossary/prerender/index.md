@@ -2,6 +2,7 @@
 title: Prerender
 slug: Glossary/Prerender
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

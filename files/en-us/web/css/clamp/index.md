@@ -3,6 +3,7 @@ title: clamp()
 slug: Web/CSS/clamp
 page-type: css-function
 browser-compat: css.types.clamp
+sidebar: cssref
 ---
 
 {{CSSRef}}

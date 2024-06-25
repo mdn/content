@@ -3,6 +3,7 @@ title: offset-anchor
 slug: Web/CSS/offset-anchor
 page-type: css-property
 browser-compat: css.properties.offset-anchor
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: <calc-constant>
 slug: Web/CSS/calc-constant
 page-type: css-type
 browser-compat: css.types.calc-constant
+sidebar: cssref
 ---
 
 {{CSSRef}}

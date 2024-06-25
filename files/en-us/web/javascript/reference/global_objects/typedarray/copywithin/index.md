@@ -3,6 +3,7 @@ title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.copyWithin
+sidebar: jsref
 ---
 
 {{JSRef}}

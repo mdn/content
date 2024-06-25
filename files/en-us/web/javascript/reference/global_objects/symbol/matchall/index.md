@@ -3,6 +3,7 @@ title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.matchAll
+sidebar: jsref
 ---
 
 {{JSRef}}

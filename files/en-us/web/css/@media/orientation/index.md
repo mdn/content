@@ -3,6 +3,7 @@ title: orientation
 slug: Web/CSS/@media/orientation
 page-type: css-media-feature
 browser-compat: css.at-rules.media.orientation
+sidebar: cssref
 ---
 
 {{CSSRef}}

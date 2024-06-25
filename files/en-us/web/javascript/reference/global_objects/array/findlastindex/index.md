@@ -3,6 +3,7 @@ title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLastIndex
+sidebar: jsref
 ---
 
 {{JSRef}}

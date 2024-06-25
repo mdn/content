@@ -2,6 +2,7 @@
 title: CSS grid layout and progressive enhancement
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Request header
 slug: Glossary/Request_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

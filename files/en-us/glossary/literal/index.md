@@ -2,6 +2,7 @@
 title: Literal
 slug: Glossary/Literal
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

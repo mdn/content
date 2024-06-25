@@ -2,6 +2,7 @@
 title: Truthy
 slug: Glossary/Truthy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

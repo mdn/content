@@ -2,6 +2,7 @@
 title: Cryptography
 slug: Glossary/Cryptography
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

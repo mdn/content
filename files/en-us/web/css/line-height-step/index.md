@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.line-height-step
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

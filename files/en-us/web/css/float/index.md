@@ -3,6 +3,7 @@ title: float
 slug: Web/CSS/float
 page-type: css-property
 browser-compat: css.properties.float
+sidebar: cssref
 ---
 
 {{CSSRef}}

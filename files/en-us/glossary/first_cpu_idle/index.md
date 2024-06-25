@@ -2,6 +2,7 @@
 title: First CPU idle
 slug: Glossary/First_CPU_idle
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

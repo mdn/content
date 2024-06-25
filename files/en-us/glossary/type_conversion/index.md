@@ -2,6 +2,7 @@
 title: Type conversion
 slug: Glossary/Type_Conversion
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

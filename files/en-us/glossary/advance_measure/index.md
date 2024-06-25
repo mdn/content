@@ -2,6 +2,7 @@
 title: Advance measure
 slug: Glossary/Advance_measure
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

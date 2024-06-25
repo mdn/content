@@ -3,6 +3,7 @@ title: initial
 slug: Web/CSS/initial
 page-type: css-keyword
 browser-compat: css.types.global_keywords.initial
+sidebar: cssref
 ---
 
 {{CSSRef}}

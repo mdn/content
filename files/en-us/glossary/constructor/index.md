@@ -2,6 +2,7 @@
 title: Constructor
 slug: Glossary/Constructor
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: ":disabled"
 slug: Web/CSS/:disabled
 page-type: css-pseudo-class
 browser-compat: css.selectors.disabled
+sidebar: cssref
 ---
 
 {{CSSRef}}

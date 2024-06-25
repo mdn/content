@@ -3,6 +3,7 @@ title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.exchange
+sidebar: jsref
 ---
 
 {{JSRef}}

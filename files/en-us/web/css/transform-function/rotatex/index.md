@@ -3,6 +3,7 @@ title: rotateX()
 slug: Web/CSS/transform-function/rotateX
 page-type: css-function
 browser-compat: css.types.transform-function.rotateX
+sidebar: cssref
 ---
 
 {{CSSRef}}

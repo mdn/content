@@ -2,6 +2,7 @@
 title: WindowProxy
 slug: Glossary/WindowProxy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

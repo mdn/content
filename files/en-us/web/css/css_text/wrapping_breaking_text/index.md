@@ -2,6 +2,7 @@
 title: Wrapping and breaking text
 slug: Web/CSS/CSS_text/Wrapping_breaking_text
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

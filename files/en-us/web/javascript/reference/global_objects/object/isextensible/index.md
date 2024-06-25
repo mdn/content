@@ -3,6 +3,7 @@ title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isExtensible
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.includes
+sidebar: jsref
 ---
 
 {{JSRef}}

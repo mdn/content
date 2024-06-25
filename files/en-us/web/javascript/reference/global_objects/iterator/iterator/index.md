@@ -5,6 +5,7 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Iterator.Iterator
+sidebar: jsref
 ---
 
 {{JSRef}}{{SeeCompatTable}}

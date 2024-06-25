@@ -2,6 +2,7 @@
 title: MIME
 slug: Glossary/MIME
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

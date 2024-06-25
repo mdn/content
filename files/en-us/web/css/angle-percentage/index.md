@@ -3,6 +3,7 @@ title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 page-type: css-type
 browser-compat: css.types.angle-percentage
+sidebar: cssref
 ---
 
 {{CSSRef}}

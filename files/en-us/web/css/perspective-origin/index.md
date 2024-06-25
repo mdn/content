@@ -3,6 +3,7 @@ title: perspective-origin
 slug: Web/CSS/perspective-origin
 page-type: css-property
 browser-compat: css.properties.perspective-origin
+sidebar: cssref
 ---
 
 {{CSSRef}}

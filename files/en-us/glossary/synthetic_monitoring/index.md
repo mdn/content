@@ -2,6 +2,7 @@
 title: Synthetic monitoring
 slug: Glossary/Synthetic_monitoring
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

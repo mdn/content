@@ -3,6 +3,7 @@ title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.NaN
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: ":volume-locked"
 slug: Web/CSS/:volume-locked
 page-type: css-pseudo-class
 browser-compat: css.selectors.volume-locked
+sidebar: cssref
 ---
 
 {{CSSRef}}

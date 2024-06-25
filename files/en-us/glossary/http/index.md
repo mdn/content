@@ -2,6 +2,7 @@
 title: HTTP
 slug: Glossary/HTTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

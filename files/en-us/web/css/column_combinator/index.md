@@ -5,6 +5,7 @@ page-type: css-combinator
 status:
   - experimental
 browser-compat: css.selectors.column
+sidebar: cssref
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

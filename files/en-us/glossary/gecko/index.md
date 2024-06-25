@@ -2,6 +2,7 @@
 title: Gecko
 slug: Glossary/Gecko
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

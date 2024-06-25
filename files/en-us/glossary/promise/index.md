@@ -2,6 +2,7 @@
 title: Promise
 slug: Glossary/Promise
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

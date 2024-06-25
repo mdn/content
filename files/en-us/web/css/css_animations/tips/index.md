@@ -2,6 +2,7 @@
 title: CSS animation tips and tricks
 slug: Web/CSS/CSS_animations/Tips
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

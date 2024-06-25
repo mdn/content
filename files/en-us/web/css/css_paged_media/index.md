@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-page/
   - https://drafts.csswg.org/css-break/
+sidebar: cssref
 ---
 
 {{CSSRef}}

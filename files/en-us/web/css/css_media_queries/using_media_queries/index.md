@@ -2,6 +2,7 @@
 title: Using media queries
 slug: Web/CSS/CSS_media_queries/Using_media_queries
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: String() constructor
 slug: Web/JavaScript/Reference/Global_Objects/String/String
 page-type: javascript-constructor
 browser-compat: javascript.builtins.String.String
+sidebar: jsref
 ---
 
 {{JSRef}}

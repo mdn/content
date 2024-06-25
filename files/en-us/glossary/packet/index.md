@@ -2,6 +2,7 @@
 title: Packet
 slug: Glossary/Packet
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

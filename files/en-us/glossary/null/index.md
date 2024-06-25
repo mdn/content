@@ -2,6 +2,7 @@
 title: "Null"
 slug: Glossary/Null
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

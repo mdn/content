@@ -3,6 +3,7 @@ title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.get
+sidebar: jsref
 ---
 
 {{JSRef}}

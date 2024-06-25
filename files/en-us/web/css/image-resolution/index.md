@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

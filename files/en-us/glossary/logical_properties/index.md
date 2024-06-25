@@ -2,6 +2,7 @@
 title: Logical properties
 slug: Glossary/Logical_properties
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

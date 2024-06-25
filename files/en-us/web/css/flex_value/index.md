@@ -3,6 +3,7 @@ title: <flex>
 slug: Web/CSS/flex_value
 page-type: css-type
 browser-compat: css.types.flex
+sidebar: cssref
 ---
 
 {{CSSRef}}

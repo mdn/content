@@ -3,6 +3,7 @@ title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.split
+sidebar: jsref
 ---
 
 {{JSRef}}

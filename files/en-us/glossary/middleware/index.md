@@ -2,6 +2,7 @@
 title: Middleware
 slug: Glossary/Middleware
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

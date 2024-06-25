@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.getCollations()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getCollations
+sidebar: jsref
 ---
 
 {{JSRef}}

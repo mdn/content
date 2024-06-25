@@ -2,6 +2,7 @@
 title: Printing
 slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

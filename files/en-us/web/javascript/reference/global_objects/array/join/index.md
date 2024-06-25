@@ -3,6 +3,7 @@ title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.join
+sidebar: jsref
 ---
 
 {{JSRef}}

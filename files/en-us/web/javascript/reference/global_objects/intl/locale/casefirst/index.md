@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.caseFirst
+sidebar: jsref
 ---
 
 {{JSRef}}

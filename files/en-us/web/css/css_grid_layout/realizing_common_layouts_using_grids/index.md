@@ -2,6 +2,7 @@
 title: Realizing common layouts using grids
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

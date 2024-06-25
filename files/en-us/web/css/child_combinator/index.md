@@ -3,6 +3,7 @@ title: Child combinator
 slug: Web/CSS/Child_combinator
 page-type: css-combinator
 browser-compat: css.selectors.child
+sidebar: cssref
 ---
 
 {{CSSRef}}

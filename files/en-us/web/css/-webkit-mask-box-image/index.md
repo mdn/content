@@ -5,10 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-box-image
+sidebar: cssref
 ---
 
-{{CSSRef}} {{ Non-standard_header() }}
-
+{{CSSRef}}
 The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) property sets the mask image for an element's border box.
 
 > **Note:** This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.

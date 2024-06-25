@@ -2,6 +2,7 @@
 title: Glyph
 slug: Glossary/Glyph
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

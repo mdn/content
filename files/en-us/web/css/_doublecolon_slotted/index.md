@@ -3,6 +3,7 @@ title: "::slotted()"
 slug: Web/CSS/::slotted
 page-type: css-pseudo-element
 browser-compat: css.selectors.slotted
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: inset-block-end
 slug: Web/CSS/inset-block-end
 page-type: css-property
 browser-compat: css.properties.inset-block-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

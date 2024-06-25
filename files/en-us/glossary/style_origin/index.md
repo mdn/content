@@ -2,6 +2,7 @@
 title: Style origin
 slug: Glossary/Style_origin
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

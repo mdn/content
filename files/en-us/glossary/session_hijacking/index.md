@@ -2,6 +2,7 @@
 title: Session Hijacking
 slug: Glossary/Session_Hijacking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

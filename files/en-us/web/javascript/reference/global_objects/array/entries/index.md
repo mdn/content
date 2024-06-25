@@ -3,6 +3,7 @@ title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.entries
+sidebar: jsref
 ---
 
 {{JSRef}}

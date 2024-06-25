@@ -2,6 +2,7 @@
 title: Bounding Box
 slug: Glossary/Bounding_box
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Alignment subject
 slug: Glossary/Alignment_Subject
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

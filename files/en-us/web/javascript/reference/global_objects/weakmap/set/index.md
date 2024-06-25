@@ -3,6 +3,7 @@ title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.set
+sidebar: jsref
 ---
 
 {{JSRef}}

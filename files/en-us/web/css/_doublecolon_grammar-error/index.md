@@ -3,6 +3,7 @@ title: "::grammar-error"
 slug: Web/CSS/::grammar-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.grammar-error
+sidebar: cssref
 ---
 
 {{CSSRef}}

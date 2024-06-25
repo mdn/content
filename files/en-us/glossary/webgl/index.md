@@ -2,6 +2,7 @@
 title: WebGL
 slug: Glossary/WebGL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

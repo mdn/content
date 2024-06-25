@@ -3,6 +3,7 @@ title: ":valid"
 slug: Web/CSS/:valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.valid
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.replace
+sidebar: jsref
 ---
 
 {{JSRef}}

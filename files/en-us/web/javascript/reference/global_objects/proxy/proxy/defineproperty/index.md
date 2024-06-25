@@ -3,6 +3,7 @@ title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
 page-type: css-property
 browser-compat: css.properties.border-bottom-left-radius
+sidebar: cssref
 ---
 
 {{CSSRef}}

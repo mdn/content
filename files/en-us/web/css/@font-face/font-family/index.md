@@ -3,6 +3,7 @@ title: font-family
 slug: Web/CSS/@font-face/font-family
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-family
+sidebar: cssref
 ---
 
 {{CSSRef}}

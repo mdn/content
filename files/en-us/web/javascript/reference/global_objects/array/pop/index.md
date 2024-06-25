@@ -3,6 +3,7 @@ title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.pop
+sidebar: jsref
 ---
 
 {{JSRef}}

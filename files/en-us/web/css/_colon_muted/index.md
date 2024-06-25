@@ -3,6 +3,7 @@ title: ":muted"
 slug: Web/CSS/:muted
 page-type: css-pseudo-class
 browser-compat: css.selectors.muted
+sidebar: cssref
 ---
 
 {{CSSRef}}

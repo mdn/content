@@ -2,6 +2,7 @@
 title: Ordering flex items
 slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

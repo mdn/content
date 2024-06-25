@@ -3,6 +3,7 @@ title: align-content
 slug: Web/CSS/align-content
 page-type: css-property
 browser-compat: css.properties.align-content
+sidebar: cssref
 ---
 
 {{CSSRef}}

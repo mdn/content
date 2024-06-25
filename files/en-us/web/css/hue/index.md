@@ -8,6 +8,7 @@ browser-compat:
   - css.types.color.lch
   - css.types.color.oklch
 spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
+sidebar: cssref
 ---
 
 {{CSSRef}}

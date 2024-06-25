@@ -3,6 +3,7 @@ title: margin-right
 slug: Web/CSS/margin-right
 page-type: css-property
 browser-compat: css.properties.margin-right
+sidebar: cssref
 ---
 
 {{CSSRef}}

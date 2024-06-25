@@ -3,6 +3,7 @@ title: column-count
 slug: Web/CSS/column-count
 page-type: css-property
 browser-compat: css.properties.column-count
+sidebar: cssref
 ---
 
 {{CSSRef}}

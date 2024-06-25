@@ -2,6 +2,7 @@
 title: SPA (Single-page application)
 slug: Glossary/SPA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Exception
 slug: Glossary/Exception
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

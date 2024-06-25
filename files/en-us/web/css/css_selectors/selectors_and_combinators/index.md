@@ -5,6 +5,7 @@ page-type: guide
 spec-urls:
   - https://drafts.csswg.org/selectors/
   - https://drafts.csswg.org/css-pseudo/
+sidebar: cssref
 ---
 
 {{CSSRef}}

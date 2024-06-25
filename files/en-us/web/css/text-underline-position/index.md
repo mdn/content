@@ -3,6 +3,7 @@ title: text-underline-position
 slug: Web/CSS/text-underline-position
 page-type: css-property
 browser-compat: css.properties.text-underline-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

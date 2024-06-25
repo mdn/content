@@ -3,6 +3,7 @@ title: <display-listitem>
 slug: Web/CSS/display-listitem
 page-type: css-type
 browser-compat: css.properties.display.list-item
+sidebar: cssref
 ---
 
 {{CSSRef}}

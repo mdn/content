@@ -3,6 +3,7 @@ title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 page-type: css-property
 spec-urls: https://drafts.fxtf.org/css-masking-1/#the-mask-border-mode
+sidebar: cssref
 ---
 
 {{CSSRef}}

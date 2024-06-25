@@ -3,6 +3,7 @@ title: unset
 slug: Web/CSS/unset
 page-type: css-keyword
 browser-compat: css.types.global_keywords.unset
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: String.prototype.isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.isWellFormed
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: Frame rate (FPS)
 slug: Glossary/FPS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

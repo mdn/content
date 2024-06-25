@@ -3,6 +3,7 @@ title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.additive-symbols
+sidebar: cssref
 ---
 
 {{CSSRef}}

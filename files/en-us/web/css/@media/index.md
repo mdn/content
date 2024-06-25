@@ -3,6 +3,7 @@ title: "@media"
 slug: Web/CSS/@media
 page-type: css-at-rule
 browser-compat: css.at-rules.media
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -6,6 +6,7 @@ spec-urls:
   - https://drafts.csswg.org/scroll-animations-1/
   - https://drafts.csswg.org/css-animations-2/
   - https://drafts.csswg.org/web-animations-2/
+sidebar: cssref
 ---
 
 {{CSSRef}}

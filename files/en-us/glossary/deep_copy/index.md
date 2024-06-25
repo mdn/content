@@ -2,6 +2,7 @@
 title: Deep copy
 slug: Glossary/Deep_copy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

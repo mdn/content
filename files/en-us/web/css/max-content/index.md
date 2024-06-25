@@ -3,6 +3,7 @@ title: max-content
 slug: Web/CSS/max-content
 page-type: css-keyword
 browser-compat: css.properties.width.max-content
+sidebar: cssref
 ---
 
 {{CSSRef}}

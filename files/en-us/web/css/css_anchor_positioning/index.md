@@ -3,6 +3,7 @@ title: CSS anchor positioning
 slug: Web/CSS/CSS_anchor_positioning
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-anchor-position-1/
+sidebar: cssref
 ---
 
 {{CSSRef}}

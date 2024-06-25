@@ -3,6 +3,7 @@ title: "@keyframes"
 slug: Web/CSS/@keyframes
 page-type: css-at-rule
 browser-compat: css.at-rules.keyframes
+sidebar: cssref
 ---
 
 {{CSSRef}}

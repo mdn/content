@@ -3,6 +3,7 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 page-type: javascript-class
 browser-compat: javascript.builtins.RangeError
+sidebar: jsref
 ---
 
 {{JSRef}}

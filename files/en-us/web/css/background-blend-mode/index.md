@@ -3,6 +3,7 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 page-type: css-property
 browser-compat: css.properties.background-blend-mode
+sidebar: cssref
 ---
 
 {{CSSRef}}

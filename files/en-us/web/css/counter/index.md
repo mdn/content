@@ -3,6 +3,7 @@ title: counter()
 slug: Web/CSS/counter
 page-type: css-function
 browser-compat: css.types.counter
+sidebar: cssref
 ---
 
 {{CSSRef}}

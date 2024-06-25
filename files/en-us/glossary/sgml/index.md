@@ -2,6 +2,7 @@
 title: SGML
 slug: Glossary/SGML
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

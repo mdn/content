@@ -3,6 +3,7 @@ title: animation-direction
 slug: Web/CSS/animation-direction
 page-type: css-property
 browser-compat: css.properties.animation-direction
+sidebar: cssref
 ---
 
 {{CSSRef}}

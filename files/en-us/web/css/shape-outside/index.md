@@ -3,6 +3,7 @@ title: shape-outside
 slug: Web/CSS/shape-outside
 page-type: css-property
 browser-compat: css.properties.shape-outside
+sidebar: cssref
 ---
 
 {{CSSRef}}

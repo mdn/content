@@ -3,6 +3,7 @@ title: list-style
 slug: Web/CSS/list-style
 page-type: css-shorthand-property
 browser-compat: css.properties.list-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

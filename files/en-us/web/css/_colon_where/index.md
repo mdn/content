@@ -3,6 +3,7 @@ title: ":where()"
 slug: Web/CSS/:where
 page-type: css-pseudo-class
 browser-compat: css.selectors.where
+sidebar: cssref
 ---
 
 {{CSSRef}}

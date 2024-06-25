@@ -3,6 +3,7 @@ title: mask-border-width
 slug: Web/CSS/mask-border-width
 page-type: css-property
 browser-compat: css.properties.mask-border-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

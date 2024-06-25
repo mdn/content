@@ -3,6 +3,7 @@ title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 page-type: css-property
 browser-compat: css.properties.scroll-behavior
+sidebar: cssref
 ---
 
 {{CSSRef}}

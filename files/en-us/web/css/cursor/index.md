@@ -3,6 +3,7 @@ title: cursor
 slug: Web/CSS/cursor
 page-type: css-property
 browser-compat: css.properties.cursor
+sidebar: cssref
 ---
 
 {{CSSRef}}

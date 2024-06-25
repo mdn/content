@@ -3,6 +3,7 @@ title: scale
 slug: Web/CSS/scale
 page-type: css-property
 browser-compat: css.properties.scale
+sidebar: cssref
 ---
 
 {{CSSRef}}

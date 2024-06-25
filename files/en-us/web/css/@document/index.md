@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.at-rules.document
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Deprecated_header}}{{Non-standard_header}}

@@ -3,6 +3,7 @@ title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
 page-type: css-property
 browser-compat: css.properties.scroll-snap-type
+sidebar: cssref
 ---
 
 {{CSSRef}}

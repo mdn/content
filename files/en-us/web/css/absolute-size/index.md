@@ -3,6 +3,7 @@ title: <absolute-size>
 slug: Web/CSS/absolute-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-absolute-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

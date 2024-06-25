@@ -3,6 +3,7 @@ title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toLocaleString
+sidebar: jsref
 ---
 
 {{JSRef}}

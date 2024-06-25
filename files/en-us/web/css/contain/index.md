@@ -3,6 +3,7 @@ title: contain
 slug: Web/CSS/contain
 page-type: css-property
 browser-compat: css.properties.contain
+sidebar: cssref
 ---
 
 {{CSSRef}}

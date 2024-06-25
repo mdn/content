@@ -3,6 +3,7 @@ title: background-clip
 slug: Web/CSS/background-clip
 page-type: css-property
 browser-compat: css.properties.background-clip
+sidebar: cssref
 ---
 
 {{CSSRef}}

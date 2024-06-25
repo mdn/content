@@ -3,6 +3,7 @@ title: cos()
 slug: Web/CSS/cos
 page-type: css-function
 browser-compat: css.types.cos
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.fround
+sidebar: jsref
 ---
 
 {{JSRef}}

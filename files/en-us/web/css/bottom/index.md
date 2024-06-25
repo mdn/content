@@ -3,6 +3,7 @@ title: bottom
 slug: Web/CSS/bottom
 page-type: css-property
 browser-compat: css.properties.bottom
+sidebar: cssref
 ---
 
 {{CSSRef}}

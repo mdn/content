@@ -3,6 +3,7 @@ title: background-size
 slug: Web/CSS/background-size
 page-type: css-property
 browser-compat: css.properties.background-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

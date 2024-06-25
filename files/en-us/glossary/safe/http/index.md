@@ -2,6 +2,7 @@
 title: Safe (HTTP Methods)
 slug: Glossary/Safe/HTTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

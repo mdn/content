@@ -2,6 +2,7 @@
 title: WebRTC
 slug: Glossary/WebRTC
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Using CSS math functions
 slug: Web/CSS/CSS_Functions/Using_CSS_math_functions
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

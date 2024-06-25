@@ -3,6 +3,7 @@ title: text-rendering
 slug: Web/CSS/text-rendering
 page-type: css-property
 browser-compat: css.properties.text-rendering
+sidebar: cssref
 ---
 
 {{CSSRef}}

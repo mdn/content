@@ -2,6 +2,7 @@
 title: Code unit
 slug: Glossary/Code_unit
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

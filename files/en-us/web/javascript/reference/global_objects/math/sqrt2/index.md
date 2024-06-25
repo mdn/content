@@ -3,6 +3,7 @@ title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.SQRT2
+sidebar: jsref
 ---
 
 {{JSRef}}

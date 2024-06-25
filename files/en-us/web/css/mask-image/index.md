@@ -3,6 +3,7 @@ title: mask-image
 slug: Web/CSS/mask-image
 page-type: css-property
 browser-compat: css.properties.mask-image
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.indexOf
+sidebar: jsref
 ---
 
 {{JSRef}}

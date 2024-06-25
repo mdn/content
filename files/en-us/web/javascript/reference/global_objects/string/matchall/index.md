@@ -3,6 +3,7 @@ title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.matchAll
+sidebar: jsref
 ---
 
 {{JSRef}}

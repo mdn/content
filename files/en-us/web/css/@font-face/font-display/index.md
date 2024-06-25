@@ -3,6 +3,7 @@ title: font-display
 slug: Web/CSS/@font-face/font-display
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-display
+sidebar: cssref
 ---
 
 {{CSSRef}}

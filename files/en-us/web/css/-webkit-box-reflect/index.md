@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-box-reflect
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_Header}}

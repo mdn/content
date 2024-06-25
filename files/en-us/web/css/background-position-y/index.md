@@ -3,6 +3,7 @@ title: background-position-y
 slug: Web/CSS/background-position-y
 page-type: css-property
 browser-compat: css.properties.background-position-y
+sidebar: cssref
 ---
 
 {{CSSRef}}

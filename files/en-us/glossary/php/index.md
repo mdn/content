@@ -2,6 +2,7 @@
 title: PHP
 slug: Glossary/PHP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

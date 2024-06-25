@@ -3,6 +3,7 @@ title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTimezoneOffset
+sidebar: jsref
 ---
 
 {{JSRef}}

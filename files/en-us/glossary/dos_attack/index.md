@@ -2,6 +2,7 @@
 title: DoS attack
 slug: Glossary/DOS_attack
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

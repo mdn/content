@@ -3,6 +3,7 @@ title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.split
+sidebar: jsref
 ---
 
 {{JSRef}}

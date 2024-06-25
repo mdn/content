@@ -2,6 +2,7 @@
 title: RSS
 slug: Glossary/RSS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: "@page"
 slug: Web/CSS/@page
 page-type: css-at-rule
 browser-compat: css.at-rules.page
+sidebar: cssref
 ---
 
 {{CSSRef}}

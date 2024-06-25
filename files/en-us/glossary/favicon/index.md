@@ -2,6 +2,7 @@
 title: Favicon
 slug: Glossary/Favicon
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

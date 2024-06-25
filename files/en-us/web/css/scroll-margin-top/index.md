@@ -3,6 +3,7 @@ title: scroll-margin-top
 slug: Web/CSS/scroll-margin-top
 page-type: css-property
 browser-compat: css.properties.scroll-margin-top
+sidebar: cssref
 ---
 
 {{CSSRef}}

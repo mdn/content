@@ -3,6 +3,7 @@ title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isSafeInteger
+sidebar: jsref
 ---
 
 {{JSRef}}

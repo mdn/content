@@ -3,6 +3,7 @@ title: white-space-collapse
 slug: Web/CSS/white-space-collapse
 page-type: css-property
 browser-compat: css.properties.white-space-collapse
+sidebar: cssref
 ---
 
 {{CSSRef}}

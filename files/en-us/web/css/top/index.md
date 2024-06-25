@@ -3,6 +3,7 @@ title: top
 slug: Web/CSS/top
 page-type: css-property
 browser-compat: css.properties.top
+sidebar: cssref
 ---
 
 {{CSSRef}}

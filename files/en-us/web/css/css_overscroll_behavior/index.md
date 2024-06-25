@@ -3,6 +3,7 @@ title: CSS overscroll behavior
 slug: Web/CSS/CSS_overscroll_behavior
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-overscroll/
+sidebar: cssref
 ---
 
 {{CSSRef}}

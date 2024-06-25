@@ -2,6 +2,7 @@
 title: Fragmentainer
 slug: Glossary/Fragmentainer
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

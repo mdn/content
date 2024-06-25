@@ -2,6 +2,7 @@
 title: Encryption
 slug: Glossary/Encryption
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Syntax error
 slug: Glossary/Syntax_error
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

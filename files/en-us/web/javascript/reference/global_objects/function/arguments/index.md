@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: javascript.builtins.Function.arguments
+sidebar: jsref
 ---
 
 {{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}

@@ -2,6 +2,7 @@
 title: Lossless compression
 slug: Glossary/Lossless_compression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

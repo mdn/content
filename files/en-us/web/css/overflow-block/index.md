@@ -3,6 +3,7 @@ title: overflow-block
 slug: Web/CSS/overflow-block
 page-type: css-property
 browser-compat: css.properties.overflow-block
+sidebar: cssref
 ---
 
 {{CSSRef}}

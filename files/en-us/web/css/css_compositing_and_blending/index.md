@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.fxtf.org/compositing/
   - https://www.w3.org/TR/compositing-1/
+sidebar: cssref
 ---
 
 {{CSSRef}}

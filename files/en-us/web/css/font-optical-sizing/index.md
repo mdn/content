@@ -3,6 +3,7 @@ title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
 page-type: css-property
 browser-compat: css.properties.font-optical-sizing
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Intl.DisplayNames() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: WebExtensions
 slug: Glossary/WebExtensions
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

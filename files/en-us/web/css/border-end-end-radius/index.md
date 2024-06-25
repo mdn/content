@@ -3,6 +3,7 @@ title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
 page-type: css-property
 browser-compat: css.properties.border-end-end-radius
+sidebar: cssref
 ---
 
 {{CSSRef}}

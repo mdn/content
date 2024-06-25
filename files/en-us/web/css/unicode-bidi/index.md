@@ -3,6 +3,7 @@ title: unicode-bidi
 slug: Web/CSS/unicode-bidi
 page-type: css-property
 browser-compat: css.properties.unicode-bidi
+sidebar: cssref
 ---
 
 {{CSSRef}}

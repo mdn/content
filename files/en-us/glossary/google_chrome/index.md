@@ -2,6 +2,7 @@
 title: Google Chrome
 slug: Glossary/Google_Chrome
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

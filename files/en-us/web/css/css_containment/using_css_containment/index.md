@@ -2,6 +2,7 @@
 title: Using CSS containment
 slug: Web/CSS/CSS_containment/Using_CSS_containment
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

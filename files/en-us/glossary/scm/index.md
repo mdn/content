@@ -2,6 +2,7 @@
 title: SCM
 slug: Glossary/SCM
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -6,6 +6,7 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries-3/
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/mediaqueries-5/
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: "::part()"
 slug: Web/CSS/::part
 page-type: css-pseudo-element
 browser-compat: css.selectors.part
+sidebar: cssref
 ---
 
 {{CSSRef}}

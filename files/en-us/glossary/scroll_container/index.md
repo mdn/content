@@ -2,6 +2,7 @@
 title: Scroll container
 slug: Glossary/Scroll_container
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

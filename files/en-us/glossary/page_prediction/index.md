@@ -2,6 +2,7 @@
 title: Page prediction
 slug: Glossary/Page_prediction
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

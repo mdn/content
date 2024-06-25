@@ -5,6 +5,7 @@ page-type: css-media-feature
 status:
   - non-standard
 browser-compat: css.at-rules.media.-webkit-transform-2d
+sidebar: cssref
 ---
 
 {{CSSRef}} {{ Non-standard_header }}

@@ -2,6 +2,7 @@
 title: Pseudo-class
 slug: Glossary/Pseudo-class
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

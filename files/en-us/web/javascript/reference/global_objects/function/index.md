@@ -3,6 +3,7 @@ title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 page-type: javascript-class
 browser-compat: javascript.builtins.Function
+sidebar: jsref
 ---
 
 {{JSRef}}

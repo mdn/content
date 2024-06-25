@@ -3,6 +3,7 @@ title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
+sidebar: jsref
 ---
 
 {{JSRef}}

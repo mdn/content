@@ -3,6 +3,7 @@ title: rotate
 slug: Web/CSS/rotate
 page-type: css-property
 browser-compat: css.properties.rotate
+sidebar: cssref
 ---
 
 {{CSSRef}}

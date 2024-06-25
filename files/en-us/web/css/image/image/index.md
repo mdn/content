@@ -3,6 +3,7 @@ title: image()
 slug: Web/CSS/image/image
 page-type: css-function
 browser-compat: css.types.image.image
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: JSON
 slug: Glossary/JSON
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

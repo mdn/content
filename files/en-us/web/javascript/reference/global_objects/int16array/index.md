@@ -3,6 +3,7 @@ title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Int16Array
+sidebar: jsref
 ---
 
 {{JSRef}}

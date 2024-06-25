@@ -2,6 +2,7 @@
 title: Parse
 slug: Glossary/Parse
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

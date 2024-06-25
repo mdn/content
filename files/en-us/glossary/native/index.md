@@ -2,6 +2,7 @@
 title: Native
 slug: Glossary/Native
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

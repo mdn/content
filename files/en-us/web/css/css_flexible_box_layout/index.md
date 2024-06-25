@@ -3,6 +3,7 @@ title: CSS flexible box layout
 slug: Web/CSS/CSS_flexible_box_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-flexbox/
+sidebar: cssref
 ---
 
 {{CSSRef}}

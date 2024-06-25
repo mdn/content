@@ -2,6 +2,7 @@
 title: Property
 slug: Glossary/Property
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

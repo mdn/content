@@ -3,6 +3,7 @@ title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.round
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt8
+sidebar: jsref
 ---
 
 {{JSRef}}

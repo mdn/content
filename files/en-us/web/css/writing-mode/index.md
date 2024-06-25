@@ -3,6 +3,7 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 page-type: css-property
 browser-compat: css.properties.writing-mode
+sidebar: cssref
 ---
 
 {{CSSRef}}

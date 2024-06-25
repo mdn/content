@@ -2,6 +2,7 @@
 title: Script-supporting element
 slug: Glossary/Script-supporting_element
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

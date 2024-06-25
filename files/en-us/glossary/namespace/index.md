@@ -2,6 +2,7 @@
 title: Namespace
 slug: Glossary/Namespace
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

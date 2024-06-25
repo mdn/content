@@ -2,6 +2,7 @@
 title: Comments
 slug: Web/CSS/Comments
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

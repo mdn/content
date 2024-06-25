@@ -2,6 +2,7 @@
 title: Document directive
 slug: Glossary/Document_directive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

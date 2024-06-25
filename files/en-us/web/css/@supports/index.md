@@ -3,6 +3,7 @@ title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports
+sidebar: cssref
 ---
 
 {{CSSRef}}

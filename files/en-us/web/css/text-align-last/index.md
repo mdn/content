@@ -3,6 +3,7 @@ title: text-align-last
 slug: Web/CSS/text-align-last
 page-type: css-property
 browser-compat: css.properties.text-align-last
+sidebar: cssref
 ---
 
 {{CSSRef}}

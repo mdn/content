@@ -3,6 +3,7 @@ title: scroll-padding-left
 slug: Web/CSS/scroll-padding-left
 page-type: css-property
 browser-compat: css.properties.scroll-padding-left
+sidebar: cssref
 ---
 
 {{CSSRef}}

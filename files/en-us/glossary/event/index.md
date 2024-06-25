@@ -2,6 +2,7 @@
 title: Event
 slug: Glossary/Event
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

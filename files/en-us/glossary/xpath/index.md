@@ -2,6 +2,7 @@
 title: XPath
 slug: Glossary/XPath
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

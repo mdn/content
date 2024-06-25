@@ -2,6 +2,7 @@
 title: Hotlink
 slug: Glossary/Hotlink
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

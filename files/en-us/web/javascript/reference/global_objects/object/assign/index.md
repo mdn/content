@@ -3,6 +3,7 @@ title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.assign
+sidebar: jsref
 ---
 
 {{JSRef}}

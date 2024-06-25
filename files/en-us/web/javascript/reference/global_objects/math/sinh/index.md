@@ -3,6 +3,7 @@ title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sinh
+sidebar: jsref
 ---
 
 {{JSRef}}

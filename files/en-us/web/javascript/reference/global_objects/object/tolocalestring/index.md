@@ -3,6 +3,7 @@ title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.toLocaleString
+sidebar: jsref
 ---
 
 {{JSRef}}

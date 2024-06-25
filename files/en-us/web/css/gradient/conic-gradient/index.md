@@ -3,6 +3,7 @@ title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
 page-type: css-function
 browser-compat: css.types.image.gradient.conic-gradient
+sidebar: cssref
 ---
 
 {{CSSRef}}

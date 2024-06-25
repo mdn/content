@@ -3,6 +3,7 @@ title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCDay
+sidebar: jsref
 ---
 
 {{JSRef}}

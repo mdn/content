@@ -2,6 +2,7 @@
 title: Algorithm
 slug: Glossary/Algorithm
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

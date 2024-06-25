@@ -3,6 +3,7 @@ title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMinutes
+sidebar: jsref
 ---
 
 {{JSRef}}

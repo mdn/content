@@ -2,6 +2,7 @@
 title: GPU
 slug: Glossary/GPU
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

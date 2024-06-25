@@ -3,6 +3,7 @@ title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.set
+sidebar: jsref
 ---
 
 {{JSRef}}

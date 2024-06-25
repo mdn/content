@@ -3,6 +3,7 @@ title: "@font-face"
 slug: Web/CSS/@font-face
 page-type: css-at-rule
 browser-compat: css.at-rules.font-face
+sidebar: cssref
 ---
 
 {{CSSRef}}

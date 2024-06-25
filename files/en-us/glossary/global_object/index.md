@@ -2,6 +2,7 @@
 title: Global object
 slug: Glossary/Global_object
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

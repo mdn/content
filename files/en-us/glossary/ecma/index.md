@@ -2,6 +2,7 @@
 title: ECMA
 slug: Glossary/ECMA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

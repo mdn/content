@@ -3,6 +3,7 @@ title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 page-type: css-property
 browser-compat: css.properties.border-bottom-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

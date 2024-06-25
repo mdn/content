@@ -3,6 +3,7 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 page-type: css-property
 browser-compat: css.properties.flex-wrap
+sidebar: cssref
 ---
 
 {{CSSRef}}

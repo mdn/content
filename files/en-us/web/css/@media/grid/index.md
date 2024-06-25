@@ -3,6 +3,7 @@ title: grid
 slug: Web/CSS/@media/grid
 page-type: css-media-feature
 browser-compat: css.at-rules.media.grid
+sidebar: cssref
 ---
 
 {{CSSRef}}

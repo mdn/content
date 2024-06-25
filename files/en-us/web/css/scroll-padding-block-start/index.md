@@ -3,6 +3,7 @@ title: scroll-padding-block-start
 slug: Web/CSS/scroll-padding-block-start
 page-type: css-property
 browser-compat: css.properties.scroll-padding-block-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

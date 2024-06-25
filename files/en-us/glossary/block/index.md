@@ -2,6 +2,7 @@
 title: Block
 slug: Glossary/Block
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

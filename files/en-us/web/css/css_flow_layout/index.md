@@ -2,6 +2,7 @@
 title: CSS flow layout
 slug: Web/CSS/CSS_flow_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -5,6 +5,7 @@ page-type: guide
 spec-urls:
   - https://drafts.csswg.org/css-conditional-3/
   - https://compat.spec.whatwg.org/#css-at-rules
+sidebar: cssref
 ---
 
 {{CSSRef}}

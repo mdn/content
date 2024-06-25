@@ -5,6 +5,7 @@ page-type: javascript-class
 status:
   - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat
+sidebar: jsref
 ---
 
 {{JSRef}} {{SeeCompatTable}}

@@ -2,6 +2,7 @@
 title: Browser
 slug: Glossary/Browser
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

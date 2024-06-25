@@ -2,6 +2,7 @@
 title: Accessibility tree
 slug: Glossary/Accessibility_tree
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

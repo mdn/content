@@ -5,6 +5,7 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Iterator.from
+sidebar: jsref
 ---
 
 {{JSRef}}{{SeeCompatTable}}

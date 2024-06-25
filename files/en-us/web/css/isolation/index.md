@@ -3,6 +3,7 @@ title: isolation
 slug: Web/CSS/isolation
 page-type: css-property
 browser-compat: css.properties.isolation
+sidebar: cssref
 ---
 
 {{CSSRef}}

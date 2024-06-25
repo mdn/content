@@ -5,6 +5,7 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.Date.getYear
+sidebar: jsref
 ---
 
 {{JSRef}} {{Deprecated_Header}}

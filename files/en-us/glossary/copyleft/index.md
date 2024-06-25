@@ -2,6 +2,7 @@
 title: Copyleft
 slug: Glossary/Copyleft
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

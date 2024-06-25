@@ -3,6 +3,7 @@ title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
 page-type: javascript-class
 browser-compat: javascript.builtins.Generator
+sidebar: jsref
 ---
 
 {{JSRef}}

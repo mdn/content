@@ -3,6 +3,7 @@ title: TypedArray.prototype.toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.toSorted
+sidebar: jsref
 ---
 
 {{JSRef}}

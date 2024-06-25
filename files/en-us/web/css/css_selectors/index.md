@@ -3,6 +3,7 @@ title: CSS selectors
 slug: Web/CSS/CSS_selectors
 page-type: css-module
 spec-urls: https://drafts.csswg.org/selectors/
+sidebar: cssref
 ---
 
 {{CSSRef}}

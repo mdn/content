@@ -3,6 +3,7 @@ title: "::placeholder"
 slug: Web/CSS/::placeholder
 page-type: css-pseudo-element
 browser-compat: css.selectors.placeholder
+sidebar: cssref
 ---
 
 {{CSSRef}}

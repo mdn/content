@@ -3,6 +3,7 @@ title: fallback
 slug: Web/CSS/@counter-style/fallback
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.fallback
+sidebar: cssref
 ---
 
 {{CSSRef}}

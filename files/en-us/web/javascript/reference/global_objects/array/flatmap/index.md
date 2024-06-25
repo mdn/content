@@ -3,6 +3,7 @@ title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flatMap
+sidebar: jsref
 ---
 
 {{JSRef}}

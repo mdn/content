@@ -3,6 +3,7 @@ title: Promise.any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.any
+sidebar: jsref
 ---
 
 {{JSRef}}

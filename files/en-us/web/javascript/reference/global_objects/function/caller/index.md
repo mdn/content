@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: javascript.builtins.Function.caller
+sidebar: jsref
 ---
 
 {{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}

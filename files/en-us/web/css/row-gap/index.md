@@ -3,6 +3,7 @@ title: row-gap
 slug: Web/CSS/row-gap
 page-type: css-property
 browser-compat: css.properties.row-gap
+sidebar: cssref
 ---
 
 {{CSSRef}}

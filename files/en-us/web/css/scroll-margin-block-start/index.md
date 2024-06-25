@@ -3,6 +3,7 @@ title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
 page-type: css-property
 browser-compat: css.properties.scroll-margin-block-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

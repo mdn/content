@@ -2,6 +2,7 @@
 title: Mutable
 slug: Glossary/Mutable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

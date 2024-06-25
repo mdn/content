@@ -3,6 +3,7 @@ title: Intl.PluralRules.prototype.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.PluralRules.select
+sidebar: jsref
 ---
 
 {{JSRef}}

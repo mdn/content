@@ -3,6 +3,7 @@ title: border-collapse
 slug: Web/CSS/border-collapse
 page-type: css-property
 browser-compat: css.properties.border-collapse
+sidebar: cssref
 ---
 
 {{CSSRef}}

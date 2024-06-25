@@ -3,6 +3,7 @@ title: overflow-anchor
 slug: Web/CSS/overflow-anchor
 page-type: css-property
 browser-compat: css.properties.overflow-anchor
+sidebar: cssref
 ---
 
 {{CSSRef}}

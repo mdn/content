@@ -2,6 +2,7 @@
 title: Unicode
 slug: Glossary/Unicode
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

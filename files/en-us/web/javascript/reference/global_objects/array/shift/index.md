@@ -3,6 +3,7 @@ title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.shift
+sidebar: jsref
 ---
 
 {{JSRef}}

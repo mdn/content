@@ -2,6 +2,7 @@
 title: QUIC
 slug: Glossary/QUIC
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

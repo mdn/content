@@ -2,6 +2,7 @@
 title: SVN
 slug: Glossary/SVN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

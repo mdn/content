@@ -3,6 +3,7 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.create
+sidebar: jsref
 ---
 
 {{JSRef}}

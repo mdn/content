@@ -3,6 +3,7 @@ title: padding-left
 slug: Web/CSS/padding-left
 page-type: css-property
 browser-compat: css.properties.padding-left
+sidebar: cssref
 ---
 
 {{CSSRef}}

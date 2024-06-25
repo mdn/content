@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-animations-2/
   - https://drafts.csswg.org/css-animations/
+sidebar: cssref
 ---
 
 {{CSSRef}}

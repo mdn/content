@@ -2,6 +2,7 @@
 title: Modularity
 slug: Glossary/Modularity
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

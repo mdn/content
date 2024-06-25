@@ -3,6 +3,7 @@ title: sqrt()
 slug: Web/CSS/sqrt
 page-type: css-function
 browser-compat: css.types.sqrt
+sidebar: cssref
 ---
 
 {{CSSRef}}

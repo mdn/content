@@ -2,6 +2,7 @@
 title: Primitive
 slug: Glossary/Primitive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

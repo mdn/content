@@ -2,6 +2,7 @@
 title: CSRF
 slug: Glossary/CSRF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

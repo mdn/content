@@ -2,6 +2,7 @@
 title: HTML
 slug: Glossary/HTML
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

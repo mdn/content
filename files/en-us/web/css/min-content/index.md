@@ -3,6 +3,7 @@ title: min-content
 slug: Web/CSS/min-content
 page-type: css-keyword
 browser-compat: css.properties.width.min-content
+sidebar: cssref
 ---
 
 {{CSSRef}}

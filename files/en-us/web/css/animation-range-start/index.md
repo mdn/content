@@ -5,6 +5,7 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.animation-range-start
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

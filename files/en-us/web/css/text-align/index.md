@@ -3,6 +3,7 @@ title: text-align
 slug: Web/CSS/text-align
 page-type: css-property
 browser-compat: css.properties.text-align
+sidebar: cssref
 ---
 
 {{CSSRef}}

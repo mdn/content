@@ -3,6 +3,7 @@ title: text-overflow
 slug: Web/CSS/text-overflow
 page-type: css-property
 browser-compat: css.properties.text-overflow
+sidebar: cssref
 ---
 
 {{CSSRef}}

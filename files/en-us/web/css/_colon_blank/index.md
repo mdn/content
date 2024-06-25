@@ -5,6 +5,7 @@ page-type: css-pseudo-class
 status:
   - experimental
 browser-compat: css.selectors.blank
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

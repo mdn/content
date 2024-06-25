@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.-webkit-slider-runnable-track
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

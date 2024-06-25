@@ -2,6 +2,7 @@
 title: CalDAV
 slug: Glossary/CalDAV
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

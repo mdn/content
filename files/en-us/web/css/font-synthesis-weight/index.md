@@ -3,6 +3,7 @@ title: font-synthesis-weight
 slug: Web/CSS/font-synthesis-weight
 page-type: css-property
 browser-compat: css.properties.font-synthesis-weight
+sidebar: cssref
 ---
 
 {{CSSRef}}

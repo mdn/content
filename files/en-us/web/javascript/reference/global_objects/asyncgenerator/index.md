@@ -3,6 +3,7 @@ title: AsyncGenerator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGenerator
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: border-inline-start
 slug: Web/CSS/border-inline-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-inline-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

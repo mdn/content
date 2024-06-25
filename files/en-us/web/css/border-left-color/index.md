@@ -3,6 +3,7 @@ title: border-left-color
 slug: Web/CSS/border-left-color
 page-type: css-property
 browser-compat: css.properties.border-left-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

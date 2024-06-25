@@ -3,6 +3,7 @@ title: "MDN Web Docs Glossary: Definitions of Web-related terms"
 short-title: Glossary
 slug: Glossary
 page-type: landing-page
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

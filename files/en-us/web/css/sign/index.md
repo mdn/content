@@ -3,6 +3,7 @@ title: sign()
 slug: Web/CSS/sign
 page-type: css-function
 browser-compat: css.types.sign
+sidebar: cssref
 ---
 
 {{CSSRef}}

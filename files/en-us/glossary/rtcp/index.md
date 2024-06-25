@@ -2,6 +2,7 @@
 title: RTCP (RTP Control Protocol)
 slug: Glossary/RTCP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Attribute
 slug: Glossary/Attribute
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

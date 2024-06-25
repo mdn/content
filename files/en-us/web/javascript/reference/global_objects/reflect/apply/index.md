@@ -3,6 +3,7 @@ title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.apply
+sidebar: jsref
 ---
 
 {{JSRef}}

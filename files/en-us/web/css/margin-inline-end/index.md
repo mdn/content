@@ -3,6 +3,7 @@ title: margin-inline-end
 slug: Web/CSS/margin-inline-end
 page-type: css-property
 browser-compat: css.properties.margin-inline-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Alpha (alpha channel)
 slug: Glossary/Alpha
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

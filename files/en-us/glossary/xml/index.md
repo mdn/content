@@ -2,6 +2,7 @@
 title: XML
 slug: Glossary/XML
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -5,6 +5,7 @@ page-type: css-type
 status:
   - deprecated
 browser-compat: css.types.shape
+sidebar: cssref
 ---
 
 {{CSSRef}}{{deprecated_header}}

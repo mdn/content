@@ -3,6 +3,7 @@ title: hyphenate-limit-chars
 slug: Web/CSS/hyphenate-limit-chars
 page-type: css-property
 browser-compat: css.properties.hyphenate-limit-chars
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: DSL (Domain-Specific Language)
 slug: Glossary/DSL/Domain_specific_language
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

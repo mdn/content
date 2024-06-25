@@ -2,6 +2,7 @@
 title: Secure Context
 slug: Glossary/Secure_Context
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.ascent-override
+sidebar: cssref
 ---
 
 {{CSSRef}}

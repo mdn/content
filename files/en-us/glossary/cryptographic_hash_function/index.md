@@ -2,6 +2,7 @@
 title: Cryptographic hash function
 slug: Glossary/Cryptographic_hash_function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

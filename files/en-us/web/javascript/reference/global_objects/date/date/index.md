@@ -3,6 +3,7 @@ title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
+sidebar: jsref
 ---
 
 {{JSRef}}

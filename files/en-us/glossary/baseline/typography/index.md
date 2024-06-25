@@ -2,6 +2,7 @@
 title: Baseline (typography)
 slug: Glossary/Baseline/Typography
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

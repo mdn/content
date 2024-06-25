@@ -3,6 +3,7 @@ title: pow()
 slug: Web/CSS/pow
 page-type: css-function
 browser-compat: css.types.pow
+sidebar: cssref
 ---
 
 {{CSSRef}}

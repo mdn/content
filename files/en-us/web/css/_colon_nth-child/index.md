@@ -3,6 +3,7 @@ title: ":nth-child()"
 slug: Web/CSS/:nth-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-child
+sidebar: cssref
 ---
 
 {{CSSRef}}

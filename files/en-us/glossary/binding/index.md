@@ -2,6 +2,7 @@
 title: Binding
 slug: Glossary/Binding
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

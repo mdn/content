@@ -3,6 +3,7 @@ title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
 page-type: css-property
 browser-compat: css.properties.text-emphasis-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

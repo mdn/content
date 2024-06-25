@@ -3,6 +3,7 @@ title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.@@iterator
+sidebar: jsref
 ---
 
 {{JSRef}}

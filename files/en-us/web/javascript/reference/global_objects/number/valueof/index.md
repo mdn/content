@@ -3,6 +3,7 @@ title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.valueOf
+sidebar: jsref
 ---
 
 {{JSRef}}

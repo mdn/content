@@ -2,6 +2,7 @@
 title: Media query
 slug: Glossary/Media_query
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

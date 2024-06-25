@@ -2,6 +2,7 @@
 title: Identifier
 slug: Glossary/Identifier
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

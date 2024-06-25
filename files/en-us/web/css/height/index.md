@@ -3,6 +3,7 @@ title: height
 slug: Web/CSS/height
 page-type: css-property
 browser-compat: css.properties.height
+sidebar: cssref
 ---
 
 {{CSSRef}}

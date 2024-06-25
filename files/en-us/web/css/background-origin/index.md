@@ -3,6 +3,7 @@ title: background-origin
 slug: Web/CSS/background-origin
 page-type: css-property
 browser-compat: css.properties.background-origin
+sidebar: cssref
 ---
 
 {{CSSRef}}

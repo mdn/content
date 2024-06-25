@@ -2,6 +2,7 @@
 title: Intrinsic size
 slug: Glossary/Intrinsic_Size
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

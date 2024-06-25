@@ -3,6 +3,7 @@ title: Resolved value
 slug: Web/CSS/resolved_value
 page-type: guide
 spec-urls: https://drafts.csswg.org/cssom/#resolved-values
+sidebar: cssref
 ---
 
 {{CSSRef}}

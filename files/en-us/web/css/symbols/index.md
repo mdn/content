@@ -3,6 +3,7 @@ title: symbols()
 slug: Web/CSS/symbols
 page-type: css-function
 browser-compat: css.properties.list-style-type.symbols
+sidebar: cssref
 ---
 
 {{CSSRef}}

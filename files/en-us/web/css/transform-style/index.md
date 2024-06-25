@@ -3,6 +3,7 @@ title: transform-style
 slug: Web/CSS/transform-style
 page-type: css-property
 browser-compat: css.properties.transform-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

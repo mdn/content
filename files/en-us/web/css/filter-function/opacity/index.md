@@ -3,6 +3,7 @@ title: opacity()
 slug: Web/CSS/filter-function/opacity
 page-type: css-function
 browser-compat: css.types.filter-function.opacity
+sidebar: cssref
 ---
 
 {{CSSRef}}

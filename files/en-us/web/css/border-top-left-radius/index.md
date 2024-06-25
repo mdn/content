@@ -3,6 +3,7 @@ title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
 page-type: css-property
 browser-compat: css.properties.border-top-left-radius
+sidebar: cssref
 ---
 
 {{CSSRef}}

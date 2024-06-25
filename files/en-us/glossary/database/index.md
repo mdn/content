@@ -2,6 +2,7 @@
 title: Database
 slug: Glossary/Database
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: <time>
 slug: Web/CSS/time
 page-type: css-type
 browser-compat: css.types.time
+sidebar: cssref
 ---
 
 {{CSSRef}}

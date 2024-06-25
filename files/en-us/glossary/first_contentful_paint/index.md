@@ -2,6 +2,7 @@
 title: First contentful paint
 slug: Glossary/First_contentful_paint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

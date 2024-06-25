@@ -2,6 +2,7 @@
 title: Grid container
 slug: Glossary/Grid_Container
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

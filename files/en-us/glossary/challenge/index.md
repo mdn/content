@@ -2,6 +2,7 @@
 title: Challenge-response authentication
 slug: Glossary/Challenge
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

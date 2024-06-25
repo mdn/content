@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-search-cancel-button
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}

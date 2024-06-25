@@ -3,6 +3,7 @@ title: circle()
 slug: Web/CSS/basic-shape/circle
 page-type: css-function
 browser-compat: css.types.basic-shape.circle
+sidebar: cssref
 ---
 
 {{CSSRef}}

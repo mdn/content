@@ -7,6 +7,7 @@ status:
 browser-compat:
   - css.properties.grid-template-columns.masonry
   - css.properties.grid-template-rows.masonry
+sidebar: cssref
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

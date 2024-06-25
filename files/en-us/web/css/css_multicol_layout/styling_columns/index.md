@@ -2,6 +2,7 @@
 title: Styling columns
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

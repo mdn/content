@@ -3,6 +3,7 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 page-type: css-property
 browser-compat: css.properties.overflow-wrap
+sidebar: cssref
 ---
 
 {{CSSRef}}

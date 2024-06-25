@@ -3,6 +3,7 @@ title: text-transform
 slug: Web/CSS/text-transform
 page-type: css-property
 browser-compat: css.properties.text-transform
+sidebar: cssref
 ---
 
 {{CSSRef}}

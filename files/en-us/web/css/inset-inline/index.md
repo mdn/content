@@ -3,6 +3,7 @@ title: inset-inline
 slug: Web/CSS/inset-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-inline
+sidebar: cssref
 ---
 
 {{CSSRef}}

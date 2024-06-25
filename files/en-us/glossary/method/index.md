@@ -2,6 +2,7 @@
 title: Method
 slug: Glossary/Method
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

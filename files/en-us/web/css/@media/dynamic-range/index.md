@@ -3,6 +3,7 @@ title: dynamic-range
 slug: Web/CSS/@media/dynamic-range
 page-type: css-media-feature
 browser-compat: css.at-rules.media.dynamic-range
+sidebar: cssref
 ---
 
 {{CSSRef}}

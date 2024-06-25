@@ -2,6 +2,7 @@
 title: Quaternion
 slug: Glossary/Quaternion
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

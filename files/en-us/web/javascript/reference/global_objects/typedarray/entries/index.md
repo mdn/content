@@ -3,6 +3,7 @@ title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.entries
+sidebar: jsref
 ---
 
 {{JSRef}}

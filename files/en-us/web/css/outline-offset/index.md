@@ -3,6 +3,7 @@ title: outline-offset
 slug: Web/CSS/outline-offset
 page-type: css-property
 browser-compat: css.properties.outline-offset
+sidebar: cssref
 ---
 
 {{CSSRef}}

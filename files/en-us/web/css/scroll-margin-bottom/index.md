@@ -3,6 +3,7 @@ title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
 page-type: css-property
 browser-compat: css.properties.scroll-margin-bottom
+sidebar: cssref
 ---
 
 {{CSSRef}}

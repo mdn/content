@@ -3,6 +3,7 @@ title: Boolean attribute (HTML)
 slug: Glossary/Boolean/HTML
 page-type: glossary-definition
 spec-urls: https://html.spec.whatwg.org/#boolean-attributes
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

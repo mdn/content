@@ -3,6 +3,7 @@ title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.filter
+sidebar: jsref
 ---
 
 {{JSRef}}

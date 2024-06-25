@@ -3,6 +3,7 @@ title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.fill
+sidebar: jsref
 ---
 
 {{JSRef}}

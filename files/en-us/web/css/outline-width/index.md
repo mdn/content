@@ -3,6 +3,7 @@ title: outline-width
 slug: Web/CSS/outline-width
 page-type: css-property
 browser-compat: css.properties.outline-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

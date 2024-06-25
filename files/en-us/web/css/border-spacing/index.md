@@ -3,6 +3,7 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 page-type: css-property
 browser-compat: css.properties.border-spacing
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: scroll-padding-block-end
 slug: Web/CSS/scroll-padding-block-end
 page-type: css-property
 browser-compat: css.properties.scroll-padding-block-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

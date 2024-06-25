@@ -2,6 +2,7 @@
 title: Logical properties for sizing
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

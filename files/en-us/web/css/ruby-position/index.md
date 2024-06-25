@@ -3,6 +3,7 @@ title: ruby-position
 slug: Web/CSS/ruby-position
 page-type: css-property
 browser-compat: css.properties.ruby-position
+sidebar: cssref
 ---
 
 {{CSSRef}}

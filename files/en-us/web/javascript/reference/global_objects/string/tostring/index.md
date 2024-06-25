@@ -3,6 +3,7 @@ title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toString
+sidebar: jsref
 ---
 
 {{JSRef}}

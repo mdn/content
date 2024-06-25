@@ -3,6 +3,7 @@ title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
+sidebar: jsref
 ---
 
 {{JSRef}}

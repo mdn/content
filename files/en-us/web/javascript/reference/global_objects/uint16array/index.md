@@ -3,6 +3,7 @@ title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Uint16Array
+sidebar: jsref
 ---
 
 {{JSRef}}

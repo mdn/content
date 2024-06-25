@@ -3,6 +3,7 @@ title: vertical-align
 slug: Web/CSS/vertical-align
 page-type: css-property
 browser-compat: css.properties.vertical-align
+sidebar: cssref
 ---
 
 {{CSSRef}}

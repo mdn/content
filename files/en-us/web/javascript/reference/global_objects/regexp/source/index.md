@@ -3,6 +3,7 @@ title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.source
+sidebar: jsref
 ---
 
 {{JSRef}}

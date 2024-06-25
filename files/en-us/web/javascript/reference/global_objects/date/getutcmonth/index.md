@@ -3,6 +3,7 @@ title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMonth
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: "::file-selector-button"
 slug: Web/CSS/::file-selector-button
 page-type: css-pseudo-element
 browser-compat: css.selectors.file-selector-button
+sidebar: cssref
 ---
 
 {{CSSRef}}

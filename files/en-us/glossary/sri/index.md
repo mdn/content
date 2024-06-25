@@ -2,6 +2,7 @@
 title: SRI
 slug: Glossary/SRI
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

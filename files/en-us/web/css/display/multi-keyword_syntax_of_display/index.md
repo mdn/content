@@ -2,6 +2,7 @@
 title: Using the multi-keyword syntax with CSS display
 slug: Web/CSS/display/multi-keyword_syntax_of_display
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

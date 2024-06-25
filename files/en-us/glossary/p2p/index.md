@@ -2,6 +2,7 @@
 title: P2P
 slug: Glossary/P2P
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

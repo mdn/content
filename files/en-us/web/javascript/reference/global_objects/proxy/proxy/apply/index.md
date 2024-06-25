@@ -3,6 +3,7 @@ title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.apply
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: container-name
 slug: Web/CSS/container-name
 page-type: css-property
 browser-compat: css.properties.container-name
+sidebar: cssref
 ---
 
 {{CSSRef}}

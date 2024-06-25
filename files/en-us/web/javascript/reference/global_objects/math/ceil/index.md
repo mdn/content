@@ -3,6 +3,7 @@ title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.ceil
+sidebar: jsref
 ---
 
 {{JSRef}}

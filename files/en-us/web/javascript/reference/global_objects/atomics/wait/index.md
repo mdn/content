@@ -3,6 +3,7 @@ title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.wait
+sidebar: jsref
 ---
 
 {{JSRef}}

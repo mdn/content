@@ -2,6 +2,7 @@
 title: SMPTE (Society of Motion Picture and Television Engineers)
 slug: Glossary/SMPTE
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

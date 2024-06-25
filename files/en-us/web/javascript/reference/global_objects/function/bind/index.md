@@ -3,6 +3,7 @@ title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.bind
+sidebar: jsref
 ---
 
 {{JSRef}}

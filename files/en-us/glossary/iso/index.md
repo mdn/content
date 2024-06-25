@@ -2,6 +2,7 @@
 title: ISO
 slug: Glossary/ISO
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

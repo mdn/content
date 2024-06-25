@@ -2,6 +2,7 @@
 title: Stringifier
 slug: Glossary/Stringifier
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

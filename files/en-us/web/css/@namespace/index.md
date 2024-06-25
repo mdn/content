@@ -3,6 +3,7 @@ title: "@namespace"
 slug: Web/CSS/@namespace
 page-type: css-at-rule
 browser-compat: css.at-rules.namespace
+sidebar: cssref
 ---
 
 {{CSSRef}}

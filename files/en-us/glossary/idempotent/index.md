@@ -2,6 +2,7 @@
 title: Idempotent
 slug: Glossary/Idempotent
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

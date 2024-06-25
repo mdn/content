@@ -2,6 +2,7 @@
 title: CMS
 slug: Glossary/CMS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Void element
 slug: Glossary/Void_element
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

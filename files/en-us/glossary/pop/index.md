@@ -2,6 +2,7 @@
 title: POP3
 slug: Glossary/POP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

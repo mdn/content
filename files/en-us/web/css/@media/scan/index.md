@@ -3,6 +3,7 @@ title: scan
 slug: Web/CSS/@media/scan
 page-type: css-media-feature
 browser-compat: css.at-rules.media.scan
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: "-webkit-line-clamp"
 slug: Web/CSS/-webkit-line-clamp
 page-type: css-property
 browser-compat: css.properties.line-clamp
+sidebar: cssref
 ---
 
 {{CSSRef}}

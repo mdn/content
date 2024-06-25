@@ -3,6 +3,7 @@ title: Promise.withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.withResolvers
+sidebar: jsref
 ---
 
 {{JSRef}}

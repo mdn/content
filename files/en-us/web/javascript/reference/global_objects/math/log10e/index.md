@@ -3,6 +3,7 @@ title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.LOG10E
+sidebar: jsref
 ---
 
 {{JSRef}}

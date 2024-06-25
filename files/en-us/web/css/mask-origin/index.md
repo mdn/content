@@ -3,6 +3,7 @@ title: mask-origin
 slug: Web/CSS/mask-origin
 page-type: css-property
 browser-compat: css.properties.mask-origin
+sidebar: cssref
 ---
 
 {{CSSRef}}

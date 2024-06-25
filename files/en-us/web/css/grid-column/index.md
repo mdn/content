@@ -3,6 +3,7 @@ title: grid-column
 slug: Web/CSS/grid-column
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-column
+sidebar: cssref
 ---
 
 {{CSSRef}}

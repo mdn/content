@@ -2,6 +2,7 @@
 title: Box alignment in grid layout
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: color-scheme
 slug: Web/CSS/color-scheme
 page-type: css-property
 browser-compat: css.properties.color-scheme
+sidebar: cssref
 ---
 
 {{CSSRef}}

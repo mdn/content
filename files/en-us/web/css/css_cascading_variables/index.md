@@ -3,6 +3,7 @@ title: CSS custom properties for cascading variables
 slug: Web/CSS/CSS_cascading_variables
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-variables/
+sidebar: cssref
 ---
 
 {{CSSRef}}

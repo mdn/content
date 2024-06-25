@@ -2,6 +2,7 @@
 title: Hyperlink
 slug: Glossary/Hyperlink
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: "@property"
 slug: Web/CSS/@property
 page-type: css-at-rule
 browser-compat: css.at-rules.property
+sidebar: cssref
 ---
 
 {{CSSRef}}

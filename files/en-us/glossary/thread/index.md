@@ -2,6 +2,7 @@
 title: Thread
 slug: Glossary/Thread
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

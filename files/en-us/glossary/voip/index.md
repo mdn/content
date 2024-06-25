@@ -2,6 +2,7 @@
 title: VoIP
 slug: Glossary/VoIP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

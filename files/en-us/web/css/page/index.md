@@ -3,6 +3,7 @@ title: page
 slug: Web/CSS/page
 page-type: css-property
 browser-compat: css.properties.page
+sidebar: cssref
 ---
 
 {{CSSRef}}

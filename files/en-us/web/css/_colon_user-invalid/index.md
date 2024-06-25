@@ -3,6 +3,7 @@ title: ":user-invalid"
 slug: Web/CSS/:user-invalid
 page-type: css-pseudo-class
 browser-compat: css.selectors.user-invalid
+sidebar: cssref
 ---
 
 {{CSSRef}}

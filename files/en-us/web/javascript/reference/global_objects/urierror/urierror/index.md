@@ -3,6 +3,7 @@ title: URIError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.URIError.URIError
+sidebar: jsref
 ---
 
 {{JSRef}}

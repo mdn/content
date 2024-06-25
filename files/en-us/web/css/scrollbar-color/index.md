@@ -3,6 +3,7 @@ title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 page-type: css-property
 browser-compat: css.properties.scrollbar-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

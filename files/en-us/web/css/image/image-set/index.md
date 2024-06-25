@@ -3,6 +3,7 @@ title: image-set()
 slug: Web/CSS/image/image-set
 page-type: css-function
 browser-compat: css.types.image.image-set
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-contrast
+sidebar: cssref
 ---
 
 {{CSSRef}}

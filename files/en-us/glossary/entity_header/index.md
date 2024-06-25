@@ -2,6 +2,7 @@
 title: Entity header
 slug: Glossary/Entity_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

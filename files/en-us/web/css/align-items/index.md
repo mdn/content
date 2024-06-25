@@ -3,6 +3,7 @@ title: align-items
 slug: Web/CSS/align-items
 page-type: css-property
 browser-compat: css.properties.align-items
+sidebar: cssref
 ---
 
 {{CSSRef}}

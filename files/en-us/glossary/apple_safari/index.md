@@ -2,6 +2,7 @@
 title: Apple Safari
 slug: Glossary/Apple_Safari
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.store
+sidebar: jsref
 ---
 
 {{JSRef}}

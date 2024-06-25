@@ -2,6 +2,7 @@
 title: Representation header
 slug: Glossary/Representation_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

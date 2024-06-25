@@ -3,6 +3,7 @@ title: border-radius
 slug: Web/CSS/border-radius
 page-type: css-property
 browser-compat: css.properties.border-radius
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Python
 slug: Glossary/Python
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

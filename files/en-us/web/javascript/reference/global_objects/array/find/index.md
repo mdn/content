@@ -3,6 +3,7 @@ title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.find
+sidebar: jsref
 ---
 
 {{JSRef}}

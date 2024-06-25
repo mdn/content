@@ -5,6 +5,7 @@ page-type: css-media-feature
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/css-round-display/#shape-media-feature
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

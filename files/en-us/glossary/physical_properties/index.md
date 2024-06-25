@@ -2,6 +2,7 @@
 title: Physical properties
 slug: Glossary/Physical_properties
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

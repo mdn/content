@@ -3,10 +3,10 @@ title: ":target"
 slug: Web/CSS/:target
 page-type: css-pseudo-class
 browser-compat: css.selectors.target
+sidebar: cssref
 ---
 
 {{CSSRef}}
-
 The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) matching the URL's fragment.
 
 ```css

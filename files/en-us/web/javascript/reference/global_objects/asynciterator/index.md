@@ -3,6 +3,7 @@ title: AsyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncIterator
+sidebar: jsref
 ---
 
 {{JSRef}}

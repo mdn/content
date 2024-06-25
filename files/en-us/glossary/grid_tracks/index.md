@@ -2,6 +2,7 @@
 title: Grid Tracks
 slug: Glossary/Grid_Tracks
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

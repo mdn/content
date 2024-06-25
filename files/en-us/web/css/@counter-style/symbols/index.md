@@ -3,6 +3,7 @@ title: symbols
 slug: Web/CSS/@counter-style/symbols
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.symbols
+sidebar: cssref
 ---
 
 {{CSSRef}}

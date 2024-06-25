@@ -3,6 +3,7 @@ title: translate()
 slug: Web/CSS/transform-function/translate
 page-type: css-function
 browser-compat: css.types.transform-function.translate
+sidebar: cssref
 ---
 
 {{CSSRef}}

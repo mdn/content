@@ -2,6 +2,7 @@
 title: Using filter effects
 slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

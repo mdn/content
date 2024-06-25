@@ -3,6 +3,7 @@ title: max-height
 slug: Web/CSS/max-height
 page-type: css-property
 browser-compat: css.properties.max-height
+sidebar: cssref
 ---
 
 {{CSSRef}}

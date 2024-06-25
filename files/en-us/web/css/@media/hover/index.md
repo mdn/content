@@ -3,6 +3,7 @@ title: hover
 slug: Web/CSS/@media/hover
 page-type: css-media-feature
 browser-compat: css.at-rules.media.hover
+sidebar: cssref
 ---
 
 {{CSSRef}}

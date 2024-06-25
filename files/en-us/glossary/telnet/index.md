@@ -2,6 +2,7 @@
 title: Telnet
 slug: Glossary/Telnet
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

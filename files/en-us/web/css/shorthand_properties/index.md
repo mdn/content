@@ -2,6 +2,7 @@
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

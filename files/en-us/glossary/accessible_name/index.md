@@ -2,6 +2,7 @@
 title: Accessible name
 slug: Glossary/Accessible_name
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

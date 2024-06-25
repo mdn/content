@@ -3,6 +3,7 @@ title: CSS fragmentation
 slug: Web/CSS/CSS_fragmentation
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-break/
+sidebar: cssref
 ---
 
 {{CSSRef}}

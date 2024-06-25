@@ -2,6 +2,7 @@
 title: CSS preprocessor
 slug: Glossary/CSS_preprocessor
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

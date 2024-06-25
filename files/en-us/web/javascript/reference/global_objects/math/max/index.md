@@ -3,6 +3,7 @@ title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.max
+sidebar: jsref
 ---
 
 {{JSRef}}

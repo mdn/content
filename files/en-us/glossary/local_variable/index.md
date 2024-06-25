@@ -2,6 +2,7 @@
 title: Local variable
 slug: Glossary/Local_variable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

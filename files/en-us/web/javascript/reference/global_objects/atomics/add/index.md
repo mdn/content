@@ -3,6 +3,7 @@ title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.add
+sidebar: jsref
 ---
 
 {{JSRef}}

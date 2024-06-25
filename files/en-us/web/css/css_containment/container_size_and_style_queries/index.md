@@ -3,6 +3,7 @@ title: Using container size and style queries
 slug: Web/CSS/CSS_containment/Container_size_and_style_queries
 page-type: guide
 browser-compat: css.at-rules.container
+sidebar: cssref
 ---
 
 {{CSSRef}}

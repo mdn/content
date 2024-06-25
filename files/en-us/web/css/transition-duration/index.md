@@ -3,6 +3,7 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 page-type: css-property
 browser-compat: css.properties.transition-duration
+sidebar: cssref
 ---
 
 {{CSSRef}}

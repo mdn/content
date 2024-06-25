@@ -3,6 +3,7 @@ title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.exp
+sidebar: jsref
 ---
 
 {{JSRef}}

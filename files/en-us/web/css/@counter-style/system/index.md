@@ -3,6 +3,7 @@ title: system
 slug: Web/CSS/@counter-style/system
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.system
+sidebar: cssref
 ---
 
 {{CSSRef}}

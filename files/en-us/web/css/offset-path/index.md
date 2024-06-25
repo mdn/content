@@ -3,6 +3,7 @@ title: offset-path
 slug: Web/CSS/offset-path
 page-type: css-property
 browser-compat: css.properties.offset-path
+sidebar: cssref
 ---
 
 {{CSSRef}}

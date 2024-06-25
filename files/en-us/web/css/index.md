@@ -2,6 +2,7 @@
 title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 page-type: landing-page
+sidebar: cssref
 ---
 
 {{CSSRef}}

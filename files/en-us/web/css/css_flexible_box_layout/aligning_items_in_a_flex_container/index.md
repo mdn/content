@@ -2,6 +2,7 @@
 title: Aligning items in a flex container
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

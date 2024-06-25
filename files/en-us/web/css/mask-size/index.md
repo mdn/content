@@ -3,6 +3,7 @@ title: mask-size
 slug: Web/CSS/mask-size
 page-type: css-property
 browser-compat: css.properties.mask-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

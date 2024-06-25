@@ -3,6 +3,7 @@ title: rect()
 slug: Web/CSS/basic-shape/rect
 page-type: css-function
 browser-compat: css.types.basic-shape.rect
+sidebar: cssref
 ---
 
 {{CSSRef}}

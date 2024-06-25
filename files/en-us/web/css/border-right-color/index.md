@@ -3,6 +3,7 @@ title: border-right-color
 slug: Web/CSS/border-right-color
 page-type: css-property
 browser-compat: css.properties.border-right-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

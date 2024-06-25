@@ -2,6 +2,7 @@
 title: DNS
 slug: Glossary/DNS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Loop
 slug: Glossary/Loop
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

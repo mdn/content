@@ -3,6 +3,7 @@ title: mask-border-outset
 slug: Web/CSS/mask-border-outset
 page-type: css-property
 browser-compat: css.properties.mask-border-outset
+sidebar: cssref
 ---
 
 {{CSSRef}}

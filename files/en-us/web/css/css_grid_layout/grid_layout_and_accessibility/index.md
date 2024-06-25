@@ -2,6 +2,7 @@
 title: Grid layout and accessibility
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

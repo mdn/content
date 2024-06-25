@@ -3,6 +3,7 @@ title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setTime
+sidebar: jsref
 ---
 
 {{JSRef}}

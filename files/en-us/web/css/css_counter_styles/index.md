@@ -3,6 +3,7 @@ title: CSS counter styles
 slug: Web/CSS/CSS_counter_styles
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-counter-styles/
+sidebar: cssref
 ---
 
 {{CSSRef}}

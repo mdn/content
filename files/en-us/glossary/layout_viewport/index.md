@@ -2,6 +2,7 @@
 title: Layout viewport
 slug: Glossary/Layout_viewport
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

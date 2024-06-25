@@ -3,6 +3,7 @@ title: ":nth-last-of-type()"
 slug: Web/CSS/:nth-last-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-of-type
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: border-block-end
 slug: Web/CSS/border-block-end
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

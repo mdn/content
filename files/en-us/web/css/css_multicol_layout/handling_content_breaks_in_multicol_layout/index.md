@@ -2,6 +2,7 @@
 title: Handling content breaks in multi-column layout
 slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

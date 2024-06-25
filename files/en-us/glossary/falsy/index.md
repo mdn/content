@@ -2,6 +2,7 @@
 title: Falsy
 slug: Glossary/Falsy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

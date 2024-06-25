@@ -3,6 +3,7 @@ title: min()
 slug: Web/CSS/min
 page-type: css-function
 browser-compat: css.types.min
+sidebar: cssref
 ---
 
 {{CSSRef}}

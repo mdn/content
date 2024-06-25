@@ -2,6 +2,7 @@
 title: Speed index
 slug: Glossary/Speed_index
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

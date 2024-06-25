@@ -2,6 +2,7 @@
 title: Grid Cell
 slug: Glossary/Grid_Cell
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

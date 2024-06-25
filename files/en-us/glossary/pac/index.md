@@ -2,6 +2,7 @@
 title: PAC
 slug: Glossary/PAC
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

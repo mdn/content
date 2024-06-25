@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Houdini
 page-type: guide
 status:
   - experimental
+sidebar: cssref
 ---
 
 {{CSSRef}}

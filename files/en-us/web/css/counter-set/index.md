@@ -3,6 +3,7 @@ title: counter-set
 slug: Web/CSS/counter-set
 page-type: css-property
 browser-compat: css.properties.counter-set
+sidebar: cssref
 ---
 
 {{CSSRef}}

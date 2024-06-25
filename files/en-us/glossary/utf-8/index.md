@@ -2,6 +2,7 @@
 title: UTF-8
 slug: Glossary/UTF-8
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

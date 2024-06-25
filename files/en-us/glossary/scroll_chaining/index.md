@@ -2,6 +2,7 @@
 title: Scroll chaining
 slug: Glossary/Scroll_chaining
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

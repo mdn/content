@@ -3,6 +3,7 @@ title: font-synthesis-style
 slug: Web/CSS/font-synthesis-style
 page-type: css-property
 browser-compat: css.properties.font-synthesis-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

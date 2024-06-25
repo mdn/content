@@ -2,6 +2,7 @@
 title: Parameter
 slug: Glossary/Parameter
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

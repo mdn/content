@@ -2,6 +2,7 @@
 title: Instance
 slug: Glossary/Instance
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

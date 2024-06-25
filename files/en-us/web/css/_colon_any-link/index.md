@@ -3,6 +3,7 @@ title: ":any-link"
 slug: Web/CSS/:any-link
 page-type: css-pseudo-class
 browser-compat: css.selectors.any-link
+sidebar: cssref
 ---
 
 {{CSSRef}}

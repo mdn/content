@@ -3,6 +3,7 @@ title: grayscale()
 slug: Web/CSS/filter-function/grayscale
 page-type: css-function
 browser-compat: css.types.filter-function.grayscale
+sidebar: cssref
 ---
 
 {{CSSRef}}

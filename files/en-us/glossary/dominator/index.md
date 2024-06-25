@@ -2,6 +2,7 @@
 title: Dominator
 slug: Glossary/Dominator
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

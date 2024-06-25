@@ -3,6 +3,7 @@ title: text-orientation
 slug: Web/CSS/text-orientation
 page-type: css-property
 browser-compat: css.properties.text-orientation
+sidebar: cssref
 ---
 
 {{CSSRef}}

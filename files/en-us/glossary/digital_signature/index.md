@@ -2,6 +2,7 @@
 title: Digital signature
 slug: Glossary/Digital_signature
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

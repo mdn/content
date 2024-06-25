@@ -3,6 +3,7 @@ title: "@layer"
 slug: Web/CSS/@layer
 page-type: css-at-rule
 browser-compat: css.at-rules.layer
+sidebar: cssref
 ---
 
 {{CSSRef}}

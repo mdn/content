@@ -3,6 +3,7 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 page-type: css-property
 browser-compat: css.properties.background-attachment
+sidebar: cssref
 ---
 
 {{CSSRef}}

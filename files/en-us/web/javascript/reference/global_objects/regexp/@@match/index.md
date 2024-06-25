@@ -3,6 +3,7 @@ title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@match
+sidebar: jsref
 ---
 
 {{JSRef}}

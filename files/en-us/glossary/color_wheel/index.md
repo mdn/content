@@ -2,6 +2,7 @@
 title: Color wheel
 slug: Glossary/Color_wheel
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

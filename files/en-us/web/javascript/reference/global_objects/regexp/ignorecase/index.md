@@ -3,6 +3,7 @@ title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.ignoreCase
+sidebar: jsref
 ---
 
 {{JSRef}}

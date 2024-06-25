@@ -3,6 +3,7 @@ title: ID selectors
 slug: Web/CSS/ID_selectors
 page-type: css-selector
 browser-compat: css.selectors.id
+sidebar: cssref
 ---
 
 {{CSSRef}}

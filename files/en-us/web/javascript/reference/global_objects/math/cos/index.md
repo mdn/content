@@ -3,6 +3,7 @@ title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cos
+sidebar: jsref
 ---
 
 {{JSRef}}

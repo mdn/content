@@ -3,6 +3,7 @@ title: <integer>
 slug: Web/CSS/integer
 page-type: css-type
 browser-compat: css.types.integer
+sidebar: cssref
 ---
 
 {{CSSRef}}

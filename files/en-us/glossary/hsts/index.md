@@ -2,6 +2,7 @@
 title: HSTS
 slug: Glossary/HSTS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

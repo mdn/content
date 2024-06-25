@@ -3,6 +3,7 @@ title: Intl.ListFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
+sidebar: jsref
 ---
 
 {{JSRef}}

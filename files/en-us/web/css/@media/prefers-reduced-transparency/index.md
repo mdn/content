@@ -5,6 +5,7 @@ page-type: css-media-feature
 status:
   - experimental
 browser-compat: css.at-rules.media.prefers-reduced-transparency
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

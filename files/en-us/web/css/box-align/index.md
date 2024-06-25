@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.box-align
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}

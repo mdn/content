@@ -3,6 +3,7 @@ title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: text-indent
 slug: Web/CSS/text-indent
 page-type: css-property
 browser-compat: css.properties.text-indent
+sidebar: cssref
 ---
 
 {{CSSRef}}

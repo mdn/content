@@ -3,6 +3,7 @@ title: translateY()
 slug: Web/CSS/transform-function/translateY
 page-type: css-function
 browser-compat: css.types.transform-function.translateY
+sidebar: cssref
 ---
 
 {{CSSRef}}

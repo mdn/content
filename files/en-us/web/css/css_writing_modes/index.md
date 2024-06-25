@@ -3,6 +3,7 @@ title: CSS writing modes
 slug: Web/CSS/CSS_writing_modes
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-writing-modes/
+sidebar: cssref
 ---
 
 {{CSSRef}}

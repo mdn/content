@@ -2,6 +2,7 @@
 title: DSL
 slug: Glossary/DSL
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

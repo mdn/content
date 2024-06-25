@@ -2,6 +2,7 @@
 title: SQL Injection
 slug: Glossary/SQL_Injection
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

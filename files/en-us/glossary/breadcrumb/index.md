@@ -2,6 +2,7 @@
 title: Breadcrumb
 slug: Glossary/Breadcrumb
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

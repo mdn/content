@@ -2,6 +2,7 @@
 title: TTL
 slug: Glossary/TTL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: IDL
 slug: Glossary/IDL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

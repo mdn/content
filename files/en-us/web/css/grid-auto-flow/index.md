@@ -3,6 +3,7 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 page-type: css-property
 browser-compat: css.properties.grid-auto-flow
+sidebar: cssref
 ---
 
 {{CSSRef}}

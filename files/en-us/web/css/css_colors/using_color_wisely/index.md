@@ -2,6 +2,7 @@
 title: Using color wisely
 slug: Web/CSS/CSS_colors/Using_color_wisely
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

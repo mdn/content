@@ -3,6 +3,7 @@ title: contain-intrinsic-inline-size
 slug: Web/CSS/contain-intrinsic-inline-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-inline-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

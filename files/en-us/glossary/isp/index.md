@@ -2,6 +2,7 @@
 title: ISP
 slug: Glossary/ISP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

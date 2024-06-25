@@ -2,6 +2,7 @@
 title: LTR (Left To Right)
 slug: Glossary/LTR
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Intl.Collator.prototype.compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.compare
+sidebar: jsref
 ---
 
 {{JSRef}}

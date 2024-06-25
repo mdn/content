@@ -3,6 +3,7 @@ title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 page-type: javascript-class
 browser-compat: javascript.builtins.AggregateError
+sidebar: jsref
 ---
 
 {{JSRef}}

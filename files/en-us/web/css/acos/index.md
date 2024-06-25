@@ -3,6 +3,7 @@ title: acos()
 slug: Web/CSS/acos
 page-type: css-function
 browser-compat: css.types.acos
+sidebar: cssref
 ---
 
 {{CSSRef}}

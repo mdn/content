@@ -3,6 +3,7 @@ title: text-decoration-style
 slug: Web/CSS/text-decoration-style
 page-type: css-property
 browser-compat: css.properties.text-decoration-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

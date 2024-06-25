@@ -3,6 +3,7 @@ title: inherits
 slug: Web/CSS/@property/inherits
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.inherits
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Inline-level content
 slug: Glossary/Inline-level_content
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

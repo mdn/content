@@ -3,6 +3,7 @@ title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-inline
+sidebar: cssref
 ---
 
 {{CSSRef}}

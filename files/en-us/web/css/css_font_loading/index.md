@@ -3,6 +3,7 @@ title: CSS font loading
 slug: Web/CSS/CSS_font_loading
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-font-loading/
+sidebar: cssref
 ---
 
 {{CSSRef}}

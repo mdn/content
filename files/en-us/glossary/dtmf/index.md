@@ -2,6 +2,7 @@
 title: DTMF (Dual-Tone Multi-Frequency signaling)
 slug: Glossary/DTMF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

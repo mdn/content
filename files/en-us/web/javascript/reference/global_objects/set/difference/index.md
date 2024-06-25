@@ -3,6 +3,7 @@ title: Set.prototype.difference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/difference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.difference
+sidebar: jsref
 ---
 
 {{JSRef}}

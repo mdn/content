@@ -3,6 +3,7 @@ title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
 page-type: css-function
 browser-compat: css.types.transform-function.scaleZ
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: inset-inline-start
 slug: Web/CSS/inset-inline-start
 page-type: css-property
 browser-compat: css.properties.inset-inline-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

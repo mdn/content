@@ -2,6 +2,7 @@
 title: NNTP
 slug: Glossary/NNTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

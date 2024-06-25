@@ -3,6 +3,7 @@ title: image-rendering
 slug: Web/CSS/image-rendering
 page-type: css-property
 browser-compat: css.properties.image-rendering
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Array
+sidebar: jsref
 ---
 
 {{JSRef}}

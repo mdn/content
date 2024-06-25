@@ -3,6 +3,7 @@ title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.throw
+sidebar: jsref
 ---
 
 {{JSRef}}

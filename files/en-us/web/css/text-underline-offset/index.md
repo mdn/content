@@ -3,6 +3,7 @@ title: text-underline-offset
 slug: Web/CSS/text-underline-offset
 page-type: css-property
 browser-compat: css.properties.text-underline-offset
+sidebar: cssref
 ---
 
 {{CSSRef}}

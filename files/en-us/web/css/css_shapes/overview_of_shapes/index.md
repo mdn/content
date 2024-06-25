@@ -2,6 +2,7 @@
 title: Overview of shapes
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

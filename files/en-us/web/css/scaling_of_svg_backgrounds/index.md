@@ -2,6 +2,7 @@
 title: Scaling of SVG backgrounds
 slug: Web/CSS/Scaling_of_SVG_backgrounds
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

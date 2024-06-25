@@ -3,6 +3,7 @@ title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.unscopables
+sidebar: jsref
 ---
 
 {{JSRef}}

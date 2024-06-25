@@ -3,6 +3,7 @@ title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.codePointAt
+sidebar: jsref
 ---
 
 {{JSRef}}

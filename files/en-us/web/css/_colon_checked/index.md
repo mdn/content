@@ -3,6 +3,7 @@ title: ":checked"
 slug: Web/CSS/:checked
 page-type: css-pseudo-class
 browser-compat: css.selectors.checked
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
 page-type: css-property
 browser-compat: css.properties.scroll-snap-stop
+sidebar: cssref
 ---
 
 {{CSSRef}}

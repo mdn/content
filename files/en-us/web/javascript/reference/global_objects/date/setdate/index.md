@@ -3,6 +3,7 @@ title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setDate
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.has
+sidebar: jsref
 ---
 
 {{JSRef}}

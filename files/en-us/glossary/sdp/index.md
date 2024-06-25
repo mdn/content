@@ -2,6 +2,7 @@
 title: SDP
 slug: Glossary/SDP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

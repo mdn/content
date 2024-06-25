@@ -3,6 +3,7 @@ title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.clear
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: General header
 slug: Glossary/General_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

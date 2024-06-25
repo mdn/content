@@ -2,6 +2,7 @@
 title: Proxy server
 slug: Glossary/Proxy_server
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

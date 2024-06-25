@@ -3,6 +3,7 @@ title: Introducing the CSS Cascade
 slug: Web/CSS/Cascade
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade/
+sidebar: cssref
 ---
 
 {{CSSRef}}

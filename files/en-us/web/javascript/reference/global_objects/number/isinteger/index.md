@@ -3,6 +3,7 @@ title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isInteger
+sidebar: jsref
 ---
 
 {{JSRef}}

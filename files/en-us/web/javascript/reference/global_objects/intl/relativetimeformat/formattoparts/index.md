@@ -3,6 +3,7 @@ title: Intl.RelativeTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
+sidebar: jsref
 ---
 
 {{JSRef}}

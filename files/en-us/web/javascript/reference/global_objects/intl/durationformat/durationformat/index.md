@@ -5,6 +5,7 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
+sidebar: jsref
 ---
 
 {{JSRef}} {{SeeCompatTable}}

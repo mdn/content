@@ -2,6 +2,7 @@
 title: Object reference
 slug: Glossary/Object_reference
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

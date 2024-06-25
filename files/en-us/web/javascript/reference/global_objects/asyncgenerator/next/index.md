@@ -3,6 +3,7 @@ title: AsyncGenerator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/next
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.next
+sidebar: jsref
 ---
 
 {{JSRef}}

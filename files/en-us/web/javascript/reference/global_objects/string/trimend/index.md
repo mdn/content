@@ -3,6 +3,7 @@ title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trimEnd
+sidebar: jsref
 ---
 
 {{JSRef}}

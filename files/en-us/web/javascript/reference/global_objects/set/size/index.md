@@ -3,6 +3,7 @@ title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Set.size
+sidebar: jsref
 ---
 
 {{JSRef}}

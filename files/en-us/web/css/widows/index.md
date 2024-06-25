@@ -3,6 +3,7 @@ title: widows
 slug: Web/CSS/widows
 page-type: css-property
 browser-compat: css.properties.widows
+sidebar: cssref
 ---
 
 {{CSSRef}}

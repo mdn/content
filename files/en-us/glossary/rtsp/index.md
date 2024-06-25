@@ -2,6 +2,7 @@
 title: "RTSP: Real-time streaming protocol"
 slug: Glossary/RTSP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

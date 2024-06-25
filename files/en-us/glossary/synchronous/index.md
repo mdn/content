@@ -2,6 +2,7 @@
 title: Synchronous
 slug: Glossary/Synchronous
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: outline-color
 slug: Web/CSS/outline-color
 page-type: css-property
 browser-compat: css.properties.outline-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

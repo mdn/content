@@ -3,6 +3,7 @@ title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.push
+sidebar: jsref
 ---
 
 {{JSRef}}

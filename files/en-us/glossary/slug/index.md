@@ -2,6 +2,7 @@
 title: Slug
 slug: Glossary/Slug
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

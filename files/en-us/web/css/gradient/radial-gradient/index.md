@@ -3,6 +3,7 @@ title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 page-type: css-function
 browser-compat: css.types.image.gradient.radial-gradient
+sidebar: cssref
 ---
 
 {{CSSRef}}

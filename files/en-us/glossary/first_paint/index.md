@@ -2,6 +2,7 @@
 title: First paint
 slug: Glossary/First_paint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

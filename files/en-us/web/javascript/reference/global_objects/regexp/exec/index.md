@@ -3,6 +3,7 @@ title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.exec
+sidebar: jsref
 ---
 
 {{JSRef}}

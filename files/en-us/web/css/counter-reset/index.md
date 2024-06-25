@@ -3,6 +3,7 @@ title: counter-reset
 slug: Web/CSS/counter-reset
 page-type: css-property
 browser-compat: css.properties.counter-reset
+sidebar: cssref
 ---
 
 {{CSSRef}}

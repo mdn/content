@@ -2,6 +2,7 @@
 title: Percent-encoding
 slug: Glossary/Percent-encoding
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

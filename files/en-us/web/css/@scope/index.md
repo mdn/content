@@ -3,6 +3,7 @@ title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
 browser-compat: css.at-rules.scope
+sidebar: cssref
 ---
 
 {{CSSRef}}

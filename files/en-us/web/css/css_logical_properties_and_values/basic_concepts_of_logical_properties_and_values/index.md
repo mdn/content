@@ -2,6 +2,7 @@
 title: Basic concepts of logical properties and values
 slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

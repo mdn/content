@@ -3,6 +3,7 @@ title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toLocaleString
+sidebar: jsref
 ---
 
 {{JSRef}}

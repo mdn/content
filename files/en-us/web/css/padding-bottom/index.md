@@ -3,6 +3,7 @@ title: padding-bottom
 slug: Web/CSS/padding-bottom
 page-type: css-property
 browser-compat: css.properties.padding-bottom
+sidebar: cssref
 ---
 
 {{CSSRef}}

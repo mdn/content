@@ -2,6 +2,7 @@
 title: Decryption
 slug: Glossary/Decryption
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

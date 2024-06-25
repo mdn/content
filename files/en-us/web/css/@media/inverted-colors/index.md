@@ -3,6 +3,7 @@ title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
 page-type: css-media-feature
 browser-compat: css.at-rules.media.inverted-colors
+sidebar: cssref
 ---
 
 {{CSSRef}}

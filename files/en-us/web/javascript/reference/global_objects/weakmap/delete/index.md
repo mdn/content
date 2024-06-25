@@ -3,6 +3,7 @@ title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.delete
+sidebar: jsref
 ---
 
 {{JSRef}}

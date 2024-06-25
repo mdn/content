@@ -2,6 +2,7 @@
 title: SIMD
 slug: Glossary/SIMD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

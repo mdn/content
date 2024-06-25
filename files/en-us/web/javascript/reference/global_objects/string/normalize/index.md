@@ -3,6 +3,7 @@ title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.normalize
+sidebar: jsref
 ---
 
 {{JSRef}}

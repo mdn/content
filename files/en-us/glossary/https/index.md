@@ -2,6 +2,7 @@
 title: HTTPS
 slug: Glossary/HTTPS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

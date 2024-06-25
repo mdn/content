@@ -3,6 +3,7 @@ title: text-justify
 slug: Web/CSS/text-justify
 page-type: css-property
 browser-compat: css.properties.text-justify
+sidebar: cssref
 ---
 
 {{CSSRef}}

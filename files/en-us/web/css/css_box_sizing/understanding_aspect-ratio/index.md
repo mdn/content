@@ -3,6 +3,7 @@ title: Understanding and setting aspect ratios
 slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
+sidebar: cssref
 ---
 
 {{CSSRef}}

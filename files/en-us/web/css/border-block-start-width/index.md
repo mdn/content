@@ -3,6 +3,7 @@ title: border-block-start-width
 slug: Web/CSS/border-block-start-width
 page-type: css-property
 browser-compat: css.properties.border-block-start-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

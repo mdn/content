@@ -3,6 +3,7 @@ title: overflow
 slug: Web/CSS/overflow
 page-type: css-shorthand-property
 browser-compat: css.properties.overflow
+sidebar: cssref
 ---
 
 {{CSSRef}}

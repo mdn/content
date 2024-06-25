@@ -3,6 +3,7 @@ title: text-decoration-line
 slug: Web/CSS/text-decoration-line
 page-type: css-property
 browser-compat: css.properties.text-decoration-line
+sidebar: cssref
 ---
 
 {{CSSRef}}

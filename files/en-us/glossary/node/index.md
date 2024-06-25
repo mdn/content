@@ -2,6 +2,7 @@
 title: Node
 slug: Glossary/Node
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

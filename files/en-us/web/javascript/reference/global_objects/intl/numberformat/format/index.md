@@ -3,6 +3,7 @@ title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.format
+sidebar: jsref
 ---
 
 {{JSRef}}

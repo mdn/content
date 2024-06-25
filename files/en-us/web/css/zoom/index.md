@@ -3,6 +3,7 @@ title: zoom
 slug: Web/CSS/zoom
 page-type: css-property
 browser-compat: css.properties.zoom
+sidebar: cssref
 ---
 
 {{CSSRef}}

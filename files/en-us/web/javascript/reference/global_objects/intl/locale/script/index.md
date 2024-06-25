@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.script
+sidebar: jsref
 ---
 
 {{JSRef}}

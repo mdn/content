@@ -2,6 +2,7 @@
 title: TLD
 slug: Glossary/TLD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: font-style
 slug: Web/CSS/font-style
 page-type: css-property
 browser-compat: css.properties.font-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

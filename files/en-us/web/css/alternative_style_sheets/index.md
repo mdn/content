@@ -3,6 +3,7 @@ title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
 page-type: guide
 browser-compat: html.elements.link.rel.alternate_stylesheet
+sidebar: cssref
 ---
 
 {{CSSRef}}

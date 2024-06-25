@@ -3,6 +3,7 @@ title: monochrome
 slug: Web/CSS/@media/monochrome
 page-type: css-media-feature
 browser-compat: css.at-rules.media.monochrome
+sidebar: cssref
 ---
 
 {{CSSRef}}

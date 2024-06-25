@@ -2,6 +2,7 @@
 title: Computer Programming
 slug: Glossary/Computer_Programming
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

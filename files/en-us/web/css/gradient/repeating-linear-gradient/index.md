@@ -3,6 +3,7 @@ title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 page-type: css-function
 browser-compat: css.types.image.gradient.repeating-linear-gradient
+sidebar: cssref
 ---
 
 {{CSSRef}}

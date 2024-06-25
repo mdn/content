@@ -2,6 +2,7 @@
 title: Creating vertical form controls
 slug: Web/CSS/CSS_writing_modes/Vertical_controls
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

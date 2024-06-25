@@ -2,6 +2,7 @@
 title: Inheritance
 slug: Glossary/Inheritance
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Set.prototype.union()
 slug: Web/JavaScript/Reference/Global_Objects/Set/union
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.union
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -2,6 +2,7 @@
 title: Unix time
 slug: Glossary/Unix_time
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

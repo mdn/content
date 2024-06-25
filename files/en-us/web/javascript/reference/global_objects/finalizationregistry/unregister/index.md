@@ -3,6 +3,7 @@ title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
+sidebar: jsref
 ---
 
 {{JSRef}}

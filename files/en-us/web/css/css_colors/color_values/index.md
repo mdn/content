@@ -3,6 +3,7 @@ title: CSS color values
 short-title: Color values
 slug: Web/CSS/CSS_colors/Color_values
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

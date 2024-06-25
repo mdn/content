@@ -2,6 +2,7 @@
 title: TURN
 slug: Glossary/TURN
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: caret-color
 slug: Web/CSS/caret-color
 page-type: css-property
 browser-compat: css.properties.caret-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

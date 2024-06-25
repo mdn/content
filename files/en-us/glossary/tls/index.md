@@ -2,6 +2,7 @@
 title: Transport Layer Security (TLS)
 slug: Glossary/TLS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

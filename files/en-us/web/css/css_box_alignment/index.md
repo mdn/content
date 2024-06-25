@@ -2,6 +2,7 @@
 title: CSS box alignment
 slug: Web/CSS/CSS_box_alignment
 page-type: css-module
+sidebar: cssref
 ---
 
 {{CSSRef}}

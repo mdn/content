@@ -2,6 +2,7 @@
 title: Continuous Media
 slug: Glossary/Continuous_Media
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

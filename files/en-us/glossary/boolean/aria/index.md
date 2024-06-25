@@ -2,6 +2,7 @@
 title: Boolean attribute (ARIA)
 slug: Glossary/Boolean/ARIA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

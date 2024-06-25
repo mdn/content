@@ -3,6 +3,7 @@ title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakMap
+sidebar: jsref
 ---
 
 {{JSRef}}

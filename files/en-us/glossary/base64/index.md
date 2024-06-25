@@ -2,6 +2,7 @@
 title: Base64
 slug: Glossary/Base64
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -5,6 +5,7 @@ page-type: css-shorthand-property
 status:
   - experimental
 browser-compat: css.properties.animation-range
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

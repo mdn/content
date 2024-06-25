@@ -3,6 +3,7 @@ title: "::after"
 slug: Web/CSS/::after
 page-type: css-pseudo-element
 browser-compat: css.selectors.after
+sidebar: cssref
 ---
 
 {{CSSRef}}

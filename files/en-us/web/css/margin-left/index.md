@@ -3,6 +3,7 @@ title: margin-left
 slug: Web/CSS/margin-left
 page-type: css-property
 browser-compat: css.properties.margin-left
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: align-self
 slug: Web/CSS/align-self
 page-type: css-property
 browser-compat: css.properties.align-self
+sidebar: cssref
 ---
 
 {{CSSRef}}

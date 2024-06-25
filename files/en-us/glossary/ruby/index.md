@@ -2,6 +2,7 @@
 title: Ruby
 slug: Glossary/Ruby
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

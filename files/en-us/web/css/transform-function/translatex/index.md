@@ -3,6 +3,7 @@ title: translateX()
 slug: Web/CSS/transform-function/translateX
 page-type: css-function
 browser-compat: css.types.transform-function.translateX
+sidebar: cssref
 ---
 
 {{CSSRef}}

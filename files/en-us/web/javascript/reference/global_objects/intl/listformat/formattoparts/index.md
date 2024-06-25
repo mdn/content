@@ -3,6 +3,7 @@ title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
+sidebar: jsref
 ---
 
 {{JSRef}}

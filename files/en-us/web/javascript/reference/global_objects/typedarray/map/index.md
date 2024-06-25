@@ -3,6 +3,7 @@ title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.map
+sidebar: jsref
 ---
 
 {{JSRef}}

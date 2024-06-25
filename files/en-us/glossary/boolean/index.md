@@ -2,6 +2,7 @@
 title: Boolean
 slug: Glossary/Boolean
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

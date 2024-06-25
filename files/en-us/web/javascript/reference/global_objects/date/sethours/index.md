@@ -3,6 +3,7 @@ title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setHours
+sidebar: jsref
 ---
 
 {{JSRef}}

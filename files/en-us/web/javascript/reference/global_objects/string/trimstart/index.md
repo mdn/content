@@ -3,6 +3,7 @@ title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trimStart
+sidebar: jsref
 ---
 
 {{JSRef}}

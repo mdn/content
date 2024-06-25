@@ -2,6 +2,7 @@
 title: Type coercion
 slug: Glossary/Type_coercion
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

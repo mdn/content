@@ -3,6 +3,7 @@ title: object-fit
 slug: Web/CSS/object-fit
 page-type: css-property
 browser-compat: css.properties.object-fit
+sidebar: cssref
 ---
 
 {{CSSRef}}

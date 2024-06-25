@@ -3,6 +3,7 @@ title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Proxy.revocable
+sidebar: jsref
 ---
 
 {{JSRef}}

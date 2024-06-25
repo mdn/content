@@ -2,6 +2,7 @@
 title: Node.js
 slug: Glossary/Node.js
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

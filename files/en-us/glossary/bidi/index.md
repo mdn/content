@@ -2,6 +2,7 @@
 title: BiDi
 slug: Glossary/BiDi
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

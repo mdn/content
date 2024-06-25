@@ -3,6 +3,7 @@ title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 page-type: css-property
 browser-compat: css.properties.animation-iteration-count
+sidebar: cssref
 ---
 
 {{CSSRef}}

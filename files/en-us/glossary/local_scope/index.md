@@ -2,6 +2,7 @@
 title: Local scope
 slug: Glossary/Local_scope
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

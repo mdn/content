@@ -6,6 +6,7 @@ browser-compat:
   - css.properties.scrollbar-color
   - css.properties.scrollbar-width
 spec-urls: https://drafts.csswg.org/css-scrollbars/
+sidebar: cssref
 ---
 
 {{CSSRef}}

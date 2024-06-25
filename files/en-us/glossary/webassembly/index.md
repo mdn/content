@@ -2,6 +2,7 @@
 title: WebAssembly
 slug: Glossary/WebAssembly
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -5,6 +5,7 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.-webkit-slider-thumb
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

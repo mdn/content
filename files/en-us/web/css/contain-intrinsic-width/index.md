@@ -3,6 +3,7 @@ title: contain-intrinsic-width
 slug: Web/CSS/contain-intrinsic-width
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

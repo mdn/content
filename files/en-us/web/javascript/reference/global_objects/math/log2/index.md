@@ -3,6 +3,7 @@ title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log2
+sidebar: jsref
 ---
 
 {{JSRef}}

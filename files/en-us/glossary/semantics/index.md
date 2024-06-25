@@ -2,6 +2,7 @@
 title: Semantics
 slug: Glossary/Semantics
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

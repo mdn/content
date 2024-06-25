@@ -2,6 +2,7 @@
 title: Blink
 slug: Glossary/Blink
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

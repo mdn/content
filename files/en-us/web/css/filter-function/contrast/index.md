@@ -3,6 +3,7 @@ title: contrast()
 slug: Web/CSS/filter-function/contrast
 page-type: css-function
 browser-compat: css.types.filter-function.contrast
+sidebar: cssref
 ---
 
 {{CSSRef}}

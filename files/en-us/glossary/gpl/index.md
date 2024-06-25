@@ -2,6 +2,7 @@
 title: GPL
 slug: Glossary/GPL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

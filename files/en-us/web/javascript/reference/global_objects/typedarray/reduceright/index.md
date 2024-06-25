@@ -3,6 +3,7 @@ title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduceRight
+sidebar: jsref
 ---
 
 {{JSRef}}

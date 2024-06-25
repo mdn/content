@@ -2,6 +2,7 @@
 title: Argument
 slug: Glossary/Argument
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

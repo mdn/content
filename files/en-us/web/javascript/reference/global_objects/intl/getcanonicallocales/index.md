@@ -3,6 +3,7 @@ title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
+sidebar: jsref
 ---
 
 {{JSRef}}

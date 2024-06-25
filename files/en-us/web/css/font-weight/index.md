@@ -3,6 +3,7 @@ title: font-weight
 slug: Web/CSS/font-weight
 page-type: css-property
 browser-compat: css.properties.font-weight
+sidebar: cssref
 ---
 
 {{CSSRef}}

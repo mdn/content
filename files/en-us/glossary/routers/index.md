@@ -2,6 +2,7 @@
 title: Routers
 slug: Glossary/Routers
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

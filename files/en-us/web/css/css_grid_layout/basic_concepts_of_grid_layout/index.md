@@ -2,6 +2,7 @@
 title: Basic concepts of grid layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

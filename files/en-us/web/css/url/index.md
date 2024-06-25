@@ -3,6 +3,7 @@ title: url()
 slug: Web/CSS/url
 page-type: css-function
 browser-compat: css.types.url
+sidebar: cssref
 ---
 
 {{CSSRef}}

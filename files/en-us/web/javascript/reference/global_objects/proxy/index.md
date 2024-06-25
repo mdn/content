@@ -3,6 +3,7 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
 browser-compat: javascript.builtins.Proxy
+sidebar: jsref
 ---
 
 {{JSRef}}

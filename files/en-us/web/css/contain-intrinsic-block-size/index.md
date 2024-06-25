@@ -3,6 +3,7 @@ title: contain-intrinsic-block-size
 slug: Web/CSS/contain-intrinsic-block-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

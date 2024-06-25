@@ -2,6 +2,7 @@
 title: Screen reader
 slug: Glossary/Screen_reader
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

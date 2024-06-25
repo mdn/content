@@ -3,6 +3,7 @@ title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.iterator
+sidebar: jsref
 ---
 
 {{JSRef}}

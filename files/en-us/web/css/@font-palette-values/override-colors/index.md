@@ -3,6 +3,7 @@ title: override-colors
 slug: Web/CSS/@font-palette-values/override-colors
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.override-colors
+sidebar: cssref
 ---
 
 {{CSSRef}}

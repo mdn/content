@@ -3,6 +3,7 @@ title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
 page-type: css-property
 browser-compat: css.properties.scroll-padding-top
+sidebar: cssref
 ---
 
 {{CSSRef}}

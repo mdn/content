@@ -3,6 +3,7 @@ title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 page-type: css-property
 browser-compat: css.properties.forced-color-adjust
+sidebar: cssref
 ---
 
 {{CSSRef}}

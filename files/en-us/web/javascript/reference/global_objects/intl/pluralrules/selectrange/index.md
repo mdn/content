@@ -3,6 +3,7 @@ title: Intl.PluralRules.prototype.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.PluralRules.selectRange
+sidebar: jsref
 ---
 
 {{JSRef}}

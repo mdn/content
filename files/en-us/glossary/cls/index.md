@@ -2,6 +2,7 @@
 title: Cumulative Layout Shift (CLS)
 slug: Glossary/CLS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

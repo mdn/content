@@ -2,6 +2,7 @@
 title: Stacking without the z-index property
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

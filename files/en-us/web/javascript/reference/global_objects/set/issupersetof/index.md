@@ -3,6 +3,7 @@ title: Set.prototype.isSupersetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSupersetOf
+sidebar: jsref
 ---
 
 {{JSRef}}

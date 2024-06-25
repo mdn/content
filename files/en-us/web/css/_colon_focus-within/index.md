@@ -3,6 +3,7 @@ title: ":focus-within"
 slug: Web/CSS/:focus-within
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-within
+sidebar: cssref
 ---
 
 {{CSSRef}}

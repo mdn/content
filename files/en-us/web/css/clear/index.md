@@ -3,6 +3,7 @@ title: clear
 slug: Web/CSS/clear
 page-type: css-property
 browser-compat: css.properties.clear
+sidebar: cssref
 ---
 
 {{CSSRef}}

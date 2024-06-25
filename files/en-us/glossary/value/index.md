@@ -2,6 +2,7 @@
 title: Value
 slug: Glossary/Value
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

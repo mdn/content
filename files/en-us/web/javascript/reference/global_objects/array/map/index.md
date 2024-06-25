@@ -3,6 +3,7 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.map
+sidebar: jsref
 ---
 
 {{JSRef}}

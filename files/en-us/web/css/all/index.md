@@ -3,6 +3,7 @@ title: all
 slug: Web/CSS/all
 page-type: css-shorthand-property
 browser-compat: css.properties.all
+sidebar: cssref
 ---
 
 {{CSSRef}}

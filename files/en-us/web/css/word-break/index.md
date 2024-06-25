@@ -3,6 +3,7 @@ title: word-break
 slug: Web/CSS/word-break
 page-type: css-property
 browser-compat: css.properties.word-break
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -5,6 +5,7 @@ page-type: css-keyword
 status:
   - experimental
 browser-compat: css.types.global_keywords.revert-layer
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

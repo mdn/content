@@ -3,6 +3,7 @@ title: border-color
 slug: Web/CSS/border-color
 page-type: css-shorthand-property
 browser-compat: css.properties.border-color
+sidebar: cssref
 ---
 
 {{CSSRef}}

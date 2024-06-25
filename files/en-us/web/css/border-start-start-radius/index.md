@@ -3,6 +3,7 @@ title: border-start-start-radius
 slug: Web/CSS/border-start-start-radius
 page-type: css-property
 browser-compat: css.properties.border-start-start-radius
+sidebar: cssref
 ---
 
 {{CSSRef}}

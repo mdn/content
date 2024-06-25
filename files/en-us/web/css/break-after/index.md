@@ -3,6 +3,7 @@ title: break-after
 slug: Web/CSS/break-after
 page-type: css-property
 browser-compat: css.properties.break-after
+sidebar: cssref
 ---
 
 {{CSSRef}}

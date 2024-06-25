@@ -2,6 +2,7 @@
 title: CSS container queries
 slug: Web/CSS/CSS_containment/Container_queries
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

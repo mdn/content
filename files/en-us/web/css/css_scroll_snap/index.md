@@ -3,6 +3,7 @@ title: CSS scroll snap
 slug: Web/CSS/CSS_scroll_snap
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scroll-snap/
+sidebar: cssref
 ---
 
 {{CSSRef}}

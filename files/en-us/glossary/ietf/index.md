@@ -2,6 +2,7 @@
 title: IETF
 slug: Glossary/IETF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

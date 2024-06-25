@@ -10,6 +10,7 @@ browser-compat:
   - css.properties.display.flex
   - css.properties.display.ruby_values
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
+sidebar: cssref
 ---
 
 {{CSSRef}}

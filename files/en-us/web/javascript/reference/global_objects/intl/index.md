@@ -3,6 +3,7 @@ title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Intl
+sidebar: jsref
 ---
 
 {{JSRef}}

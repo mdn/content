@@ -3,6 +3,7 @@ title: repeat()
 slug: Web/CSS/repeat
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.repeat
+sidebar: cssref
 ---
 
 {{CSSRef}}

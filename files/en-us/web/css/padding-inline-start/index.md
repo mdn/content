@@ -3,6 +3,7 @@ title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 page-type: css-property
 browser-compat: css.properties.padding-inline-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

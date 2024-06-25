@@ -2,6 +2,7 @@
 title: Perceived performance
 slug: Glossary/Perceived_performance
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

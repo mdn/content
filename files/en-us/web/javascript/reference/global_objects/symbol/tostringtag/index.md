@@ -3,6 +3,7 @@ title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.toStringTag
+sidebar: jsref
 ---
 
 {{JSRef}}

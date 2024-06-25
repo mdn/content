@@ -3,6 +3,7 @@ title: counter-increment
 slug: Web/CSS/counter-increment
 page-type: css-property
 browser-compat: css.properties.counter-increment
+sidebar: cssref
 ---
 
 {{CSSRef}}

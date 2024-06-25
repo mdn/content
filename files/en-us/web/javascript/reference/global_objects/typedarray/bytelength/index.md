@@ -3,6 +3,7 @@ title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.byteLength
+sidebar: jsref
 ---
 
 {{JSRef}}

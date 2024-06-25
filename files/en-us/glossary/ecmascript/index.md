@@ -2,6 +2,7 @@
 title: ECMAScript
 slug: Glossary/ECMAScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

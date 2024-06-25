@@ -2,6 +2,7 @@
 title: Symbol
 slug: Glossary/Symbol
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

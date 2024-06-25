@@ -2,6 +2,7 @@
 title: SOAP
 slug: Glossary/SOAP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Shadow tree
 slug: Glossary/Shadow_tree
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: ":has()"
 slug: Web/CSS/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
+sidebar: cssref
 ---
 
 {{CSSRef}}

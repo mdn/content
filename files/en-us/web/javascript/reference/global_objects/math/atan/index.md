@@ -3,6 +3,7 @@ title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atan
+sidebar: jsref
 ---
 
 {{JSRef}}

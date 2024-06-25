@@ -2,6 +2,7 @@
 title: Grid Axis
 slug: Glossary/Grid_Axis
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

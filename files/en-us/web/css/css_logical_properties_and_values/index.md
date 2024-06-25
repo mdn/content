@@ -3,6 +3,7 @@ title: CSS logical properties and values
 slug: Web/CSS/CSS_logical_properties_and_values
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-logical/
+sidebar: cssref
 ---
 
 {{CSSRef}}

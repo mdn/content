@@ -2,6 +2,7 @@
 title: Browsing context
 slug: Glossary/Browsing_context
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

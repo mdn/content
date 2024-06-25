@@ -2,6 +2,7 @@
 title: Deno
 slug: Glossary/Deno
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

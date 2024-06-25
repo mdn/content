@@ -3,6 +3,7 @@ title: cross-fade()
 slug: Web/CSS/cross-fade
 page-type: css-function
 browser-compat: css.types.image.cross-fade
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.baseName
+sidebar: jsref
 ---
 
 {{JSRef}}

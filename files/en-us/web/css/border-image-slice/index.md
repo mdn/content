@@ -3,6 +3,7 @@ title: border-image-slice
 slug: Web/CSS/border-image-slice
 page-type: css-property
 browser-compat: css.properties.border-image-slice
+sidebar: cssref
 ---
 
 {{CSSRef}}

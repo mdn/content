@@ -3,6 +3,7 @@ title: padding-inline-end
 slug: Web/CSS/padding-inline-end
 page-type: css-property
 browser-compat: css.properties.padding-inline-end
+sidebar: cssref
 ---
 
 {{CSSRef}}

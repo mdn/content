@@ -2,6 +2,7 @@
 title: RAIL
 slug: Glossary/RAIL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

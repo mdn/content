@@ -3,6 +3,7 @@ title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
 browser-compat: css.properties.background
+sidebar: cssref
 ---
 
 {{CSSRef}}

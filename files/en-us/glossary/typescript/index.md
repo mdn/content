@@ -2,6 +2,7 @@
 title: TypeScript
 slug: Glossary/TypeScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

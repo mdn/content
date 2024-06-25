@@ -3,6 +3,7 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 page-type: css-property
 browser-compat: css.properties.margin-bottom
+sidebar: cssref
 ---
 
 {{CSSRef}}

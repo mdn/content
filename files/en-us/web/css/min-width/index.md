@@ -3,6 +3,7 @@ title: min-width
 slug: Web/CSS/min-width
 page-type: css-property
 browser-compat: css.properties.min-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

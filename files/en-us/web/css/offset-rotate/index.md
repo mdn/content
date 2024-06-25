@@ -3,6 +3,7 @@ title: offset-rotate
 slug: Web/CSS/offset-rotate
 page-type: css-property
 browser-compat: css.properties.offset-rotate
+sidebar: cssref
 ---
 
 {{CSSRef}}

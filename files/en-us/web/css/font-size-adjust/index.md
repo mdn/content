@@ -3,6 +3,7 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 page-type: css-property
 browser-compat: css.properties.font-size-adjust
+sidebar: cssref
 ---
 
 {{CSSRef}}

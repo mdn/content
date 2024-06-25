@@ -2,6 +2,7 @@
 title: Same-origin policy
 slug: Glossary/Same-origin_policy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Crawler
 slug: Glossary/Crawler
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

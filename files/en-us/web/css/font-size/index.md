@@ -3,6 +3,7 @@ title: font-size
 slug: Web/CSS/font-size
 page-type: css-property
 browser-compat: css.properties.font-size
+sidebar: cssref
 ---
 
 {{CSSRef}}

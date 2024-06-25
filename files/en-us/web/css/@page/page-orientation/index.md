@@ -3,6 +3,7 @@ title: page-orientation
 slug: Web/CSS/@page/page-orientation
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.page.page-orientation
+sidebar: cssref
 ---
 
 {{CSSRef}}

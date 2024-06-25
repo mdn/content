@@ -2,6 +2,7 @@
 title: Operand
 slug: Glossary/Operand
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

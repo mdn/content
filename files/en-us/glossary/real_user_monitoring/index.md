@@ -2,6 +2,7 @@
 title: Real User Monitoring (RUM)
 slug: Glossary/Real_User_Monitoring
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

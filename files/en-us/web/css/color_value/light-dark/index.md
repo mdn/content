@@ -3,6 +3,7 @@ title: light-dark()
 slug: Web/CSS/color_value/light-dark
 page-type: css-function
 browser-compat: css.types.color.light-dark
+sidebar: cssref
 ---
 
 {{CSSRef}}

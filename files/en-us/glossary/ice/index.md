@@ -2,6 +2,7 @@
 title: ICE
 slug: Glossary/ICE
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

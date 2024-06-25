@@ -3,6 +3,7 @@ title: env()
 slug: Web/CSS/env
 page-type: css-function
 browser-compat: css.properties.custom-property.env
+sidebar: cssref
 ---
 
 {{CSSRef}}

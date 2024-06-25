@@ -3,6 +3,7 @@ title: ":nth-last-child()"
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-child
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.values
+sidebar: jsref
 ---
 
 {{JSRef}}

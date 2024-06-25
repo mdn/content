@@ -3,6 +3,7 @@ title: overflow-y
 slug: Web/CSS/overflow-y
 page-type: css-property
 browser-compat: css.properties.overflow-y
+sidebar: cssref
 ---
 
 {{CSSRef}}

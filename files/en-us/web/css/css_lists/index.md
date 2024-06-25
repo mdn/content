@@ -3,6 +3,7 @@ title: CSS lists and counters
 slug: Web/CSS/CSS_lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
+sidebar: cssref
 ---
 
 {{CSSRef}}

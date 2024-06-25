@@ -3,6 +3,7 @@ title: DataView.prototype.setFloat16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setFloat16
+sidebar: jsref
 ---
 
 {{JSRef}}

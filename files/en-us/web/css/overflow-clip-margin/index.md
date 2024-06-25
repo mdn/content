@@ -3,6 +3,7 @@ title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
 page-type: css-property
 browser-compat: css.properties.overflow-clip-margin
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -6,6 +6,7 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.at-rules.media.-webkit-animation
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}

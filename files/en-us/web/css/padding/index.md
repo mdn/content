@@ -3,6 +3,7 @@ title: padding
 slug: Web/CSS/padding
 page-type: css-shorthand-property
 browser-compat: css.properties.padding
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: <transform-function>
 slug: Web/CSS/transform-function
 page-type: css-type
 browser-compat: css.types.transform-function
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: Using CSS custom properties (variables)
 slug: Web/CSS/Using_CSS_custom_properties
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asin
+sidebar: jsref
 ---
 
 {{JSRef}}

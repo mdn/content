@@ -3,6 +3,7 @@ title: grid-column-start
 slug: Web/CSS/grid-column-start
 page-type: css-property
 browser-compat: css.properties.grid-column-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

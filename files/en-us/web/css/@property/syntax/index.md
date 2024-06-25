@@ -3,6 +3,7 @@ title: syntax
 slug: Web/CSS/@property/syntax
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.syntax
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: PDF
 slug: Glossary/PDF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

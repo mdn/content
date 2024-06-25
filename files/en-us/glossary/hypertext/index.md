@@ -2,6 +2,7 @@
 title: Hypertext
 slug: Glossary/Hypertext
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

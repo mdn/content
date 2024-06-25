@@ -3,6 +3,7 @@ title: attr()
 slug: Web/CSS/attr
 page-type: css-function
 browser-compat: css.types.attr
+sidebar: cssref
 ---
 
 {{CSSRef}}

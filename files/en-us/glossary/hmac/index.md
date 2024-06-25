@@ -2,6 +2,7 @@
 title: HMAC
 slug: Glossary/HMAC
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

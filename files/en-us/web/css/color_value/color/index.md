@@ -7,6 +7,7 @@ spec-urls:
   - https://drafts.csswg.org/css-color-5/#color-function
   - https://drafts.csswg.org/css-color-5/#relative-color-function
   - https://drafts.csswg.org/css-color/#color-function
+sidebar: cssref
 ---
 
 {{CSSRef}}

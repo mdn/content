@@ -3,6 +3,7 @@ title: skewX()
 slug: Web/CSS/transform-function/skewX
 page-type: css-function
 browser-compat: css.types.transform-function.skewX
+sidebar: cssref
 ---
 
 {{CSSRef}}

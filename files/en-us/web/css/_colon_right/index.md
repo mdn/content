@@ -3,6 +3,7 @@ title: ":right"
 slug: Web/CSS/:right
 page-type: css-pseudo-class
 browser-compat: css.selectors.right
+sidebar: cssref
 ---
 
 {{CSSRef}}

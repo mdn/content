@@ -3,6 +3,7 @@ title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 page-type: javascript-class
 browser-compat: javascript.builtins.Error
+sidebar: jsref
 ---
 
 {{JSRef}}

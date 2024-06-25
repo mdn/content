@@ -3,6 +3,7 @@ title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sin
+sidebar: jsref
 ---
 
 {{JSRef}}

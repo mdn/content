@@ -2,6 +2,7 @@
 title: Jank
 slug: Glossary/Jank
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

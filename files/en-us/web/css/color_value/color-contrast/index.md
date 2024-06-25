@@ -5,6 +5,7 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.color.color-contrast
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

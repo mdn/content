@@ -2,6 +2,7 @@
 title: Parent object
 slug: Glossary/Parent_object
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

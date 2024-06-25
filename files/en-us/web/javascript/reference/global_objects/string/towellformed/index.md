@@ -3,6 +3,7 @@ title: String.prototype.toWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/toWellFormed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toWellFormed
+sidebar: jsref
 ---
 
 {{JSRef}}

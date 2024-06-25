@@ -2,6 +2,7 @@
 title: Global scope
 slug: Glossary/Global_scope
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

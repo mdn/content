@@ -2,6 +2,7 @@
 title: Codec
 slug: Glossary/Codec
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

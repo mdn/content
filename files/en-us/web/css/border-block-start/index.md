@@ -3,6 +3,7 @@ title: border-block-start
 slug: Web/CSS/border-block-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-start
+sidebar: cssref
 ---
 
 {{CSSRef}}

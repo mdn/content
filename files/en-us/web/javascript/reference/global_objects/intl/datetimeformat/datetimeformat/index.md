@@ -3,6 +3,7 @@ title: Intl.DateTimeFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isNaN
+sidebar: jsref
 ---
 
 {{JSRef}}

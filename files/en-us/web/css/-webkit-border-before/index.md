@@ -5,6 +5,7 @@ page-type: css-shorthand-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-border-before
+sidebar: cssref
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -3,6 +3,7 @@ title: CSS motion path
 slug: Web/CSS/CSS_motion_path
 page-type: css-module
 browser-compat: css.properties.offset-path
+sidebar: cssref
 ---
 
 {{CSSRef}}

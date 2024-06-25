@@ -3,6 +3,7 @@ title: WeakRef() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakRef.WeakRef
+sidebar: jsref
 ---
 
 {{JSRef}}

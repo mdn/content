@@ -2,6 +2,7 @@
 title: Shim
 slug: Glossary/Shim
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: FTU
 slug: Glossary/FTU
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

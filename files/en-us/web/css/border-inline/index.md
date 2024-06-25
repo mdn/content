@@ -3,6 +3,7 @@ title: border-inline
 slug: Web/CSS/border-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.border-inline
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -3,6 +3,7 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 page-type: javascript-class
 browser-compat: javascript.builtins.Map
+sidebar: jsref
 ---
 
 {{JSRef}}

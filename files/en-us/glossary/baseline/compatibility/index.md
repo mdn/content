@@ -2,6 +2,7 @@
 title: Baseline (compatibility)
 slug: Glossary/Baseline/Compatibility
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isFinite
+sidebar: jsref
 ---
 
 {{JSRef}}

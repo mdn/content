@@ -2,6 +2,7 @@
 title: Using multi-column layouts
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: User agent
 slug: Glossary/User_agent
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -2,6 +2,7 @@
 title: Baseline
 slug: Glossary/Baseline
 page-type: glossary-disambiguation
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

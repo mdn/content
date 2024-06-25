@@ -3,6 +3,7 @@ title: minmax()
 slug: Web/CSS/minmax
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.minmax
+sidebar: cssref
 ---
 
 {{CSSRef}}

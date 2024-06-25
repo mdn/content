@@ -2,6 +2,7 @@
 title: GIF
 slug: Glossary/GIF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

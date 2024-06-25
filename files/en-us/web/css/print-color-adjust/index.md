@@ -3,6 +3,7 @@ title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 page-type: css-property
 browser-compat: css.properties.print-color-adjust
+sidebar: cssref
 ---
 
 {{CSSRef}}

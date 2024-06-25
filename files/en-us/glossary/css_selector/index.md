@@ -2,6 +2,7 @@
 title: Selector (CSS)
 slug: Glossary/CSS_Selector
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

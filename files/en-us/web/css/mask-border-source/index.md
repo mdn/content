@@ -3,6 +3,7 @@ title: mask-border-source
 slug: Web/CSS/mask-border-source
 page-type: css-property
 browser-compat: css.properties.mask-border-source
+sidebar: cssref
 ---
 
 {{CSSRef}}

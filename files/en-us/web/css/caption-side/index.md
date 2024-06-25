@@ -3,6 +3,7 @@ title: caption-side
 slug: Web/CSS/caption-side
 page-type: css-property
 browser-compat: css.properties.caption-side
+sidebar: cssref
 ---
 
 {{CSSRef}}

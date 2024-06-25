@@ -5,6 +5,7 @@ page-type: css-at-rule
 status:
   - experimental
 browser-compat: css.at-rules.starting-style
+sidebar: cssref
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

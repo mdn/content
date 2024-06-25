@@ -2,6 +2,7 @@
 title: Regular expression
 slug: Glossary/Regular_expression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

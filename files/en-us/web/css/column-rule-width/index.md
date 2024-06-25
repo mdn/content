@@ -3,6 +3,7 @@ title: column-rule-width
 slug: Web/CSS/column-rule-width
 page-type: css-property
 browser-compat: css.properties.column-rule-width
+sidebar: cssref
 ---
 
 {{CSSRef}}

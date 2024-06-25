@@ -3,6 +3,7 @@ title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Error.toString
+sidebar: jsref
 ---
 
 {{JSRef}}

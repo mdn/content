@@ -3,6 +3,7 @@ title: border-inline-end-style
 slug: Web/CSS/border-inline-end-style
 page-type: css-property
 browser-compat: css.properties.border-inline-end-style
+sidebar: cssref
 ---
 
 {{CSSRef}}

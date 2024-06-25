@@ -3,6 +3,7 @@ title: <length>
 slug: Web/CSS/length
 page-type: css-type
 browser-compat: css.types.length
+sidebar: cssref
 ---
 
 {{CSSRef}}

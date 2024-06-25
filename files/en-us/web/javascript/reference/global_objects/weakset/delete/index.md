@@ -3,6 +3,7 @@ title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.delete
+sidebar: jsref
 ---
 
 {{JSRef}}

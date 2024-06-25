@@ -3,6 +3,7 @@ title: range
 slug: Web/CSS/@counter-style/range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.range
+sidebar: cssref
 ---
 
 {{CSSRef}}

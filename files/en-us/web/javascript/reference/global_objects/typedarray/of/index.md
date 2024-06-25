@@ -3,6 +3,7 @@ title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 page-type: javascript-static-method
 browser-compat: javascript.builtins.TypedArray.of
+sidebar: jsref
 ---
 
 {{JSRef}}

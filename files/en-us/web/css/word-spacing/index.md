@@ -3,6 +3,7 @@ title: word-spacing
 slug: Web/CSS/word-spacing
 page-type: css-property
 browser-compat: css.properties.word-spacing
+sidebar: cssref
 ---
 
 {{CSSRef}}

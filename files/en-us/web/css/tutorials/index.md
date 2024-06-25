@@ -2,6 +2,7 @@
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
 page-type: landing-page
+sidebar: cssref
 ---
 
 {{CSSRef}}

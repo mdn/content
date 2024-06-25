@@ -2,6 +2,7 @@
 title: Ink overflow
 slug: Glossary/Ink_overflow
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

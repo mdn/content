@@ -2,6 +2,7 @@
 title: Flow relative values
 slug: Glossary/Flow_relative_values
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

@@ -3,6 +3,7 @@ title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
 page-type: css-at-rule
 browser-compat: css.at-rules.font-feature-values
+sidebar: cssref
 ---
 
 {{CSSRef}}

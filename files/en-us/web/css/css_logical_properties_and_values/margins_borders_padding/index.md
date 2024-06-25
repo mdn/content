@@ -2,6 +2,7 @@
 title: Logical properties for margins, borders, and padding
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 page-type: guide
+sidebar: cssref
 ---
 
 {{CSSRef}}

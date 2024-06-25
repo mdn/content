@@ -3,6 +3,7 @@ title: Next-sibling combinator
 slug: Web/CSS/Next-sibling_combinator
 page-type: css-combinator
 browser-compat: css.selectors.next-sibling
+sidebar: cssref
 ---
 
 {{CSSRef}}

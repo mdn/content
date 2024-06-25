@@ -2,6 +2,7 @@
 title: Array
 slug: Glossary/Array
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

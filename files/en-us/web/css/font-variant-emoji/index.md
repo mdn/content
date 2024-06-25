@@ -3,6 +3,7 @@ title: font-variant-emoji
 slug: Web/CSS/font-variant-emoji
 page-type: css-property
 browser-compat: css.properties.font-variant-emoji
+sidebar: cssref
 ---
 
 {{CSSRef}}

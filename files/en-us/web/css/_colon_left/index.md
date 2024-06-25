@@ -3,6 +3,7 @@ title: ":left"
 slug: Web/CSS/:left
 page-type: css-pseudo-class
 browser-compat: css.selectors.left
+sidebar: cssref
 ---
 
 {{CSSRef}}

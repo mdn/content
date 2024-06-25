@@ -2,6 +2,7 @@
 title: Salt
 slug: Glossary/Salt
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

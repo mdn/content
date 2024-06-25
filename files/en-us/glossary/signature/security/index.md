@@ -2,6 +2,7 @@
 title: Signature (security)
 slug: Glossary/Signature/Security
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

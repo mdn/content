@@ -3,6 +3,7 @@ title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.clz32
+sidebar: jsref
 ---
 
 {{JSRef}}

@@ -3,6 +3,7 @@ title: will-change
 slug: Web/CSS/will-change
 page-type: css-property
 browser-compat: css.properties.will-change
+sidebar: cssref
 ---
 
 {{CSSRef}}

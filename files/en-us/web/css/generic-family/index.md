@@ -3,6 +3,7 @@ title: <generic-family>
 slug: Web/CSS/generic-family
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#generic-font-families
+sidebar: cssref
 ---
 
 {{CSSRef}}

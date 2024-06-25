@@ -3,6 +3,7 @@ title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.padEnd
+sidebar: jsref
 ---
 
 {{JSRef}}

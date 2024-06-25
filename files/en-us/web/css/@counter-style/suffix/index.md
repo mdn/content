@@ -3,6 +3,7 @@ title: suffix
 slug: Web/CSS/@counter-style/suffix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.suffix
+sidebar: cssref
 ---
 
 {{CSSRef}}
