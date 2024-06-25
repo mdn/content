@@ -45,8 +45,6 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### APIs
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - {{domxref('RTCRtpReceiver.getParameters()')}} and {{domxref('RTCRtpSender.getParameters()')}} are now supported, returning an object that describes the current codecs used for the encoding and transmission of media on the receiver and sender tracks, respectively. ([Firefox bug 1534687](https://bugzil.la/1534687)).
 - {{domxref("Request.bytes()")}} and {{domxref("Response.bytes()")}} are now supported as a convenient way to get a {{jsxref("Uint8Array")}} from a {{domxref("Request")}} and {{domxref("Response")}}, respectively. ([Firefox bug 1896475](https://bugzil.la/1896475)).
 - {{domxref("PushMessageData.bytes()")}} is now supported for returning the data from a push message as an array of bytes in a {{jsxref("Uint8Array")}} object. ([Firefox bug 1897871](https://bugzil.la/1897871)).
