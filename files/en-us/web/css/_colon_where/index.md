@@ -15,7 +15,7 @@ The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:wher
 
 ## Syntax
 
-The `:where()` pseudo-class requires a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed. See [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) for more information.
+The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ```css-nolint
 :where(<complex-selector-list>) {
