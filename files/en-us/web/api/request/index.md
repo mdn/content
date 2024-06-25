@@ -53,6 +53,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.
 - {{domxref("Request.blob()")}}
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.
+- {{domxref("Request.bytes()")}}
+  - : Returns a promise that resolves with a {{jsxref("Uint8Array")}} representation of the request body.
 - {{domxref("Request.clone()")}}
   - : Creates a copy of the current `Request` object.
 - {{domxref("Request.formData()")}}
