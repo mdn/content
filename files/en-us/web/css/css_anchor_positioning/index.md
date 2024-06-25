@@ -54,7 +54,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 - {{domxref("CSSPositionTryDescriptors")}}
 - {{domxref("CSSPositionTryRule")}}
-- {{domxref("Element.anchorElement")}} {{non-standard_inline}}
+- {{domxref("HTMLElement.anchorElement")}} {{non-standard_inline}}
 
 ## Guides
 
