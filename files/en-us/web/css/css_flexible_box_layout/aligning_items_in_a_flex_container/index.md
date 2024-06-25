@@ -16,7 +16,7 @@ Change the size of the container or nested element in the code example below. Th
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-## Properties that control alignment
+## Properties for controlling alignment in flexbox
 
 The properties we will look at in this guide are as follows.
 
