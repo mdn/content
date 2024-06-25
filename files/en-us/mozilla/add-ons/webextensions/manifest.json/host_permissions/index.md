@@ -43,7 +43,7 @@ Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/k
 
 On installation, when you request permissions using this key:
 
-- Until Firefox 126, requested host permissions weren't displayed in the install prompt. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt. However, if an extension update requests new host permissions, these are not shown to the user. See ([Firefox bug 1893232](https://bugzil.la/1893232)).
+- Until Firefox 126, a Manifest V3 extension's requested host permissions weren't displayed in the install prompt. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt. However, if an extension update requests new host permissions, these are not shown to the user. See ([Firefox bug 1893232](https://bugzil.la/1893232)).
 - Chrome displays the permissions in the install prompt.
 - Safari doesn't display requested host permissions in the install prompt.
 
