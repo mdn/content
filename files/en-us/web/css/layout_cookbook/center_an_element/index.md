@@ -93,5 +93,5 @@ Instead of applying `place-items: center;` on the container, you can achieve the
 
 ## Resources on MDN
 
-- [Box Alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS Box alignment guide](/en-US/docs/Web/CSS/CSS_box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [CSS box alignment guide](/en-US/docs/Web/CSS/CSS_box_alignment)

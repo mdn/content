@@ -68,8 +68,10 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ## Changes for add-on developers
 
+- Firefox now installs extensions that specify the `"split"` value of the manifest.json [`"incognito"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) key. However, as Firefox doesn't support split mode and to preserve the integrity of incognito browsing `"split"` is treated as an alias of the `"not_allowed"` value ([Firefox bug 1876924](https://bugzil.la/1876924)).
 - {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
 - Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
+- Addition of the {{WebExtAPIRef("runtime.getContexts")}} function that returns information about the contexts associated with the extension ([Firefox bug 1875480](https://bugzil.la/1875480)).
 
 ## Experimental web features
 

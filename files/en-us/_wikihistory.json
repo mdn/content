@@ -79531,10 +79531,6 @@
       "scottrowe"
     ]
   },
-  "Web/CSS/align-tracks": {
-    "modified": "2020-11-12T04:51:22.504Z",
-    "contributors": ["rachelandrew", "chrisdavidmills"]
-  },
   "Web/CSS/all": {
     "modified": "2020-10-15T21:25:07.229Z",
     "contributors": [
@@ -86192,10 +86188,6 @@
       "TylerH",
       "teoli"
     ]
-  },
-  "Web/CSS/justify-tracks": {
-    "modified": "2020-11-12T04:51:57.763Z",
-    "contributors": ["rachelandrew", "chrisdavidmills"]
   },
   "Web/CSS/left": {
     "modified": "2020-10-15T21:06:18.645Z",
@@ -99435,10 +99427,6 @@
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:23:14.705Z",
     "contributors": ["j9t", "Malvoz", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Accept-CH-Lifetime": {
-    "modified": "2020-10-15T22:23:15.388Z",
-    "contributors": ["bershanskiy"]
   },
   "Web/HTTP/Headers/Accept-Charset": {
     "modified": "2020-10-15T21:48:48.975Z",
@@ -126844,6 +126832,72 @@
       "evilpie"
     ]
   },
+  "Web/Security/Practical_implementation": {
+    "modified": "2020-06-03T13:43:23.202Z",
+    "contributors": [
+      "jswisher",
+      "mfuji09",
+      "germain",
+      "sideshowbarker",
+      "patizenyapetshop",
+      "larsonreever",
+      "SebastienParis",
+      "tlubitz",
+      "david_ross",
+      "mbm",
+      "chrisdavidmills",
+      "JazibZaman",
+      "hashedhyphen",
+      "marumari",
+      "evilpie",
+      "Sheppy",
+      "teoli"
+    ]
+  },
+  "Web/Security/Practical_implementation/Turning_off_form_autocompletion": {
+    "modified": "2020-07-10T21:28:54.938Z",
+    "contributors": [
+      "patrickhlauke",
+      "mfuji09",
+      "mnoorenberghe",
+      "leela52452",
+      "jswisher",
+      "sruthiveeragandham",
+      "Nomeh_Uchenna_Gabriel",
+      "mfluehr",
+      "WilliamC07",
+      "hjuhlin",
+      "chrisdavidmills",
+      "LouisLazaris",
+      "devinea2",
+      "steduardo",
+      "terrylinooo",
+      "kbagot",
+      "stutrek",
+      "Didglee",
+      "rottina",
+      "Delapouite",
+      "wbamberg",
+      "John99",
+      "Manishearth",
+      "Sheppy",
+      "ConcreteGannet",
+      "teoli",
+      "contrebis",
+      "dhodder",
+      "David-Sarah Hopwood",
+      "George3",
+      "LonelyPixel",
+      "Brianegge",
+      "NickolayBot",
+      "Andreas Wuest",
+      "Brycenesbitt",
+      "Callek",
+      "VicMan",
+      "Pmsyyz",
+      "Mathieu Deaudelin"
+    ]
+  },
   "Web/Security/Referer_header:_privacy_and_security_concerns": {
     "modified": "2020-07-22T14:05:46.803Z",
     "contributors": [
@@ -126946,72 +127000,6 @@
       "jonathanKingston",
       "erikadoyle",
       "Annevk"
-    ]
-  },
-  "Web/Security/Securing_your_site": {
-    "modified": "2020-06-03T13:43:23.202Z",
-    "contributors": [
-      "jswisher",
-      "mfuji09",
-      "germain",
-      "sideshowbarker",
-      "patizenyapetshop",
-      "larsonreever",
-      "SebastienParis",
-      "tlubitz",
-      "david_ross",
-      "mbm",
-      "chrisdavidmills",
-      "JazibZaman",
-      "hashedhyphen",
-      "marumari",
-      "evilpie",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/Security/Securing_your_site/Turning_off_form_autocompletion": {
-    "modified": "2020-07-10T21:28:54.938Z",
-    "contributors": [
-      "patrickhlauke",
-      "mfuji09",
-      "mnoorenberghe",
-      "leela52452",
-      "jswisher",
-      "sruthiveeragandham",
-      "Nomeh_Uchenna_Gabriel",
-      "mfluehr",
-      "WilliamC07",
-      "hjuhlin",
-      "chrisdavidmills",
-      "LouisLazaris",
-      "devinea2",
-      "steduardo",
-      "terrylinooo",
-      "kbagot",
-      "stutrek",
-      "Didglee",
-      "rottina",
-      "Delapouite",
-      "wbamberg",
-      "John99",
-      "Manishearth",
-      "Sheppy",
-      "ConcreteGannet",
-      "teoli",
-      "contrebis",
-      "dhodder",
-      "David-Sarah Hopwood",
-      "George3",
-      "LonelyPixel",
-      "Brianegge",
-      "NickolayBot",
-      "Andreas Wuest",
-      "Brycenesbitt",
-      "Callek",
-      "VicMan",
-      "Pmsyyz",
-      "Mathieu Deaudelin"
     ]
   },
   "Web/Security/Subdomain_takeovers": {

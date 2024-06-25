@@ -8,7 +8,7 @@ page-type: guide
 
 When using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), an important consideration is ensuring that anchor-positioned elements always appear in a convenient place for the user to interact with them, if at all possible, regardless of where the anchor is positioned. For example, when you scroll the page, anchors and their associated positioned elements will move toward the edge of the viewport. When a positioned element starts to overflow the viewport, you will want to change its position to put it back on the screen again, for example on the opposite side of the anchor.
 
-Alternatively, in some situations it may be preferrable to just hide overflowing positioned elements — for example, if their anchors are offsceen their content might not make sense.
+Alternatively, in some situations it may be preferrable to just hide overflowing positioned elements — for example, if their anchors are off-screen their content might not make sense.
 
 This guide explains how to use CSS anchor positioning mechanisms to manage these issues — **position try options** and **conditional hiding**. Position try options provide alternative positions for the browser to try placing positioned elements in as they start to overflow, to keep them on-screen. Conditional hiding allows conditions to be specified under which the anchor or a positioned element will be hidden.
 
