@@ -44,7 +44,7 @@ To position an element relative to an anchor element, the positioned element req
 
 The anchor element accepts one or more `<dashed-ident>` anchor names set on it via the `anchor-name` property. When one of those names is then set as the value of the positioned element's `position-anchor` property, the two elements are associated.
 
-If there are multiple anchor elements with the anchor name listed in the the `position-anchor` propert, the positioned element will be associated with the last anchor element in the source order with that anchor name.
+If there are multiple anchor elements with the anchor name listed in the `position-anchor` property, the positioned element will be associated with the last anchor element in the source order with that anchor name.
 
 To tether and place a positioned element in a specific location relative to an anchor element, an anchor positioning feature is needed, such as the {{cssxref("anchor()")}} function (set as a value on {{glossary("inset properties")}}) or the {{cssxref("inset-area")}} property.
 
