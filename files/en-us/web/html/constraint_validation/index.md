@@ -10,7 +10,13 @@ The creation of web forms has always been a complex task. While marking up the f
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent such as by bad people trying to trick your web application. Therefore, you need to always also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
+> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent in many ways:
+>
+> - By modifying HTML through the inspector
+> - By hand-crafting a request without using the form
+> - By programmatically writing content to the form (certain constraint validations are _only run_ for user input and not if you set the value of an input in JavaScript)
+>
+> Therefore, you need to always also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
 
 ## Intrinsic and basic constraints
 
@@ -276,6 +282,7 @@ Calling `checkValidity()` is called _statically_ validating the constraints, whi
 >
 > - If the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
 > - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if it doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
+> - The `minlength` and `maxlength` constraints are only checked when the input comes from the user. They are not checked even when explicitly calling `checkValidity()` or `reportValidity()` if the value is set programmatically.
 
 ## Complex constraints using the Constraint Validation API
 
