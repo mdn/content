@@ -28,11 +28,11 @@ where `<hash-algo>` may be any of: `sha256`, `sha384`, or `sha512`, and `<hash-s
 
 This format is not checked when the request is constructed, but only when the resource is fetched and checked.
 
-If the `integrity` has not been set, the property returns `''`.
+If `integrity` has not been set, the property returns `''`.
 
 ## Examples
 
-In the following snippet, we create a new request using the {{domxref("Request/Request", "Request()")}} constructor, passing the `integrity` option:
+In the following example, we create a new request using the {{domxref("Request/Request", "Request()")}} constructor, passing the `integrity` option:
 
 ```js
 const url = "https://example.org/get";
@@ -49,7 +49,7 @@ async function get(request) {
 }
 ```
 
-When the request is made, the browser computes the SHA-384 {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource, and if the result does not match the value specified in `integrity`, the browser rejects the fetch request.
+When the request is made, the browser computes the SHA-384 {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource, and if the result does not match the value specified in `integrity`, the browser will reject the fetch request.
 
 ## Specifications
 
