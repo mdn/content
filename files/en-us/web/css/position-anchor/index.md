@@ -214,7 +214,7 @@ body {
 }
 ```
 
-Each of the two positioned elements are given a {{cssxref("position-anchor")}} property with a value matching one of the anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
+Each of the positioned elements is given a {{cssxref("position-anchor")}} property with a value matching one of the two anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
 
 ```css hidden
 .infobox {
