@@ -859,7 +859,7 @@ In order to test the models (and to create some example books and other items th
    > **Note:** On Windows you need to wrap the database URL inside double (").
    > On other operating systems you may need single (') quotation marks.
 
-5. The script should run through to completion, displaying items as it creates them in the terminal. If you encounter any errors, such as "Invalid namespace specified", double-check your MongoDB URL and ensure there are no leading or trailing spaces or incorrect characters.
+4. The script should run through to completion, displaying items as it creates them in the terminal. If you encounter any errors, such as "Invalid namespace specified", double-check your MongoDB URL and ensure there are no leading or trailing spaces or incorrect characters.
 
 6. Go to your database on MongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres, and BookInstances, and check out individual documents.
 
