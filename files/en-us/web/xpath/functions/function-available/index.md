@@ -8,25 +8,25 @@ page-type: xpath-function
 
 The `function-available` function determines if a given function is available and returns boolean true or false.
 
-### Syntax
+## Syntax
 
 ```plain
 function-available( name )
 ```
 
-### Arguments
+### Parameters
 
 - `name`
   - : The name of the function to test.
 
-### Returns
+### Return value
 
 Boolean `true` or `false`.
 
-### Defined
+## Specifications
 
 [XSLT 1.0 15](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-function-available)
 
-### Gecko support
+## Gecko support
 
 Supported.

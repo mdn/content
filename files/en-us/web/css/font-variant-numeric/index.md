@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variant-numeric
 
 {{CSSRef}}
 
-The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
+The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
 {{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 

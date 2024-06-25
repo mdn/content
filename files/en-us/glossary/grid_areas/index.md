@@ -75,7 +75,7 @@ In the example below I have a grid container with two grid items. I have named t
 
 ### Further reading
 
-- CSS Grid Layout Guide:
+- CSS grid layout Guide:
   - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
   - [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)
+- [Definition of grid areas in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)

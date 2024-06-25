@@ -3,16 +3,14 @@ title: "Document: startViewTransition() method"
 short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Document.startViewTransition
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}
 
-The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new view transition and returns a {{domxref("ViewTransition")}} object to represent it.
+The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new same-document (SPA) [view transition](/en-US/docs/Web/API/View_Transitions_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 
-When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process).
+When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_process).
 
 ## Syntax
 
@@ -24,7 +22,7 @@ startViewTransition(updateCallback)
 ### Parameters
 
 - `updateCallback` {{optional_inline}}
-  - : An optional callback function typically invoked to update the DOM during the view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a screenshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
+  - : An optional callback function typically invoked to update the DOM during the SPA view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a snapshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
 
 ### Return value
 
@@ -34,7 +32,7 @@ A {{domxref("ViewTransition")}} object instance.
 
 ### Basic usage
 
-In our [Basic View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/), the `updateView()` function handles both browsers that do and don't support the View Transitions API. In supporting browsers, we invoke `startViewTransition()` to set off the view transition process without worrying about the return value.
+In our [Basic SPA View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/spa/), the `updateView()` function handles both browsers that do and don't support the View Transitions API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
 
 ```js
 function updateView(event) {
