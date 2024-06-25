@@ -1,0 +1,305 @@
+- type: section
+  link: /Web/CSS
+  title: CSS
+- type: section
+  link: /Learn/CSS
+  title: Tutorials
+- /Learn/Getting_started_with_the_web/CSS_basics
+- type: details
+  title: CSS first steps
+  children:
+    - link: /Learn/CSS/First_steps
+      title: CSS first steps overview
+    - /Learn/CSS/First_steps/What_is_CSS
+    - /Learn/CSS/First_steps/Getting_started
+    - /Learn/CSS/First_steps/How_CSS_is_structured
+    - /Learn/CSS/First_steps/How_CSS_works
+    - link: /Learn/CSS/First_steps/styling_a_biography_page
+      title: "Assessment: Styling a biography page"
+- type: details
+  title: CSS building blocks
+  children:
+    - link: /Learn/CSS/Building_blocks
+      title: CSS building blocks overview
+    - /Learn/CSS/Building_blocks/Selectors
+    - /Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
+    - /Learn/CSS/Building_blocks/Selectors/Attribute_selectors
+    - /Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
+    - /Learn/CSS/Building_blocks/Selectors/Combinators
+    - /Learn/CSS/Building_blocks/Cascade_and_inheritance
+    - /Learn/CSS/Building_blocks/Cascade_layers
+    - /Learn/CSS/Building_blocks/The_box_model
+    - /Learn/CSS/Building_blocks/Backgrounds_and_borders
+    - /Learn/CSS/Building_blocks/Handling_different_text_directions
+    - /Learn/CSS/Building_blocks/Overflowing_content
+    - /Learn/CSS/Building_blocks/Values_and_units
+    - /Learn/CSS/Building_blocks/Sizing_items_in_CSS
+    - /Learn/CSS/Building_blocks/Images_media_form_elements
+    - /Learn/CSS/Building_blocks/Styling_tables
+    - /Learn/CSS/Building_blocks/Debugging_CSS
+    - /Learn/CSS/Building_blocks/Organizing
+    - link: /Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
+      title: "Assessment: Fundamental CSS comprehension"
+    - link: /Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
+      title: "Assessment: Creating fancy letterheaded paper"
+    - link: /Learn/CSS/Building_blocks/A_cool_looking_box
+      title: "Assessment: A cool-looking box"
+- type: details
+  title: Styling text
+  children:
+    - /Learn/CSS/Styling_text
+    - /Learn/CSS/Styling_text/Fundamentals
+    - /Learn/CSS/Styling_text/Styling_lists
+    - /Learn/CSS/Styling_text/Styling_links
+    - /Learn/CSS/Styling_text/Web_fonts
+    - link: /Learn/CSS/Styling_text/Typesetting_a_homepage
+      title: "Assessment: Typesetting a community school homepage"
+- type: details
+  title: CSS layout
+  children:
+    - link: /Learn/CSS/CSS_layout
+      title: CSS layout overview
+    - /Learn/CSS/CSS_layout/Introduction
+    - /Learn/CSS/CSS_layout/Normal_Flow
+    - /Learn/CSS/CSS_layout/Flexbox
+    - /Learn/CSS/CSS_layout/Grids
+    - /Learn/CSS/CSS_layout/Floats
+    - /Learn/CSS/CSS_layout/Positioning
+    - /Learn/CSS/CSS_layout/Multiple-column_Layout
+    - /Learn/CSS/CSS_layout/Responsive_Design
+    - /Learn/CSS/CSS_layout/Media_queries
+    - /Learn/CSS/CSS_layout/Legacy_Layout_Methods
+    - /Learn/CSS/CSS_layout/Supporting_Older_Browsers
+    - link: /Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
+      title: "Assessment: Fundamental layout comprehension"
+- type: section
+  link: /Web/CSS/Reference
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Modules
+  tags: css-module
+  details: true
+- type: listSubPagesGrouped
+  path: /en-US/docs/Web/CSS
+  title: Properties
+  tags:
+    - css-property
+    - css-shorthand-property
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Selectors
+  tags: css-selector
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Combinators
+  tags: css-combinator
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Pseudo-classes
+  tags: css-pseudo-class
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Pseudo-elements
+  tags: css-pseudo-element
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: At-rules
+  tags: css-at-rule
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Functions
+  tags: css-function
+  details: true
+- type: listSubPages
+  path: /en-US/docs/Web/CSS
+  title: Types
+  tags: css-type
+  details: true
+- type: section
+  title: Guides
+- type: details
+  title: Animations
+  children:
+    - /Web/CSS/CSS_Animations/Using_CSS_animations
+- type: details
+  title: Backgrounds and Borders
+  children:
+    - /Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+    - link: /Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+      title: Resizing background images
+- type: details
+  title: Box alignment
+  children:
+    - link: /Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
+      title: Box alignment in block layout
+    - /Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
+    - /Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+    - /Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
+- type: details
+  title: Box model
+  children:
+    - /Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+    - /Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+- type: details
+  title: Colors
+  children:
+    - link: /Web/CSS/CSS_colors/Applying_color
+      title: Applying color to HTML elements
+    - /Web/CSS/CSS_colors/Color_values
+    - /Web/CSS/CSS_colors/Relative_colors
+    - /Web/CSS/CSS_colors/Using_color_wisely
+    - link: /Web/Accessibility/Understanding_Colors_and_Luminance
+      title: "Accessibility: Understanding colors and luminance"
+    - link: /Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+      title: "Accessibility: Color contrast"
+- type: details
+  title: Columns
+  children:
+    - /Web/CSS/CSS_Multicol_Layout/Basic_concepts
+    - /Web/CSS/CSS_Multicol_Layout/Styling_columns
+    - /Web/CSS/CSS_Multicol_Layout/Spanning_balancing_columns
+    - /Web/CSS/CSS_Multicol_Layout/Handling_overflow_in_multicol_layout
+    - /Web/CSS/CSS_Multicol_Layout/Handling_content_breaks_in_multicol_layout
+- type: details
+  title: Conditional rules
+  children:
+    - /Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+- type: details
+  title: Containment
+  children:
+    - /Web/CSS/CSS_Containment/Using_CSS_containment
+    - /Web/CSS/CSS_Containment/Container_queries
+    - /Web/CSS/CSS_Containment/Container_size_and_style_queries
+- type: details
+  title: CSSOM view
+  children:
+    - /Web/CSS/CSSOM_View/Coordinate_systems
+- type: details
+  title: Flexbox
+  children:
+    - /Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+    - >-
+      /Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+    - /Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+    - /Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
+    - >-
+      /Web/CSS/CSS_Flexible_Box_Layout/Controlling_ratios_of_flex_items_along_the_main_axis
+    - /Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+    - /Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
+- type: details
+  title: Flow layout
+  children:
+    - /Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+    - /Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
+    - /Web/CSS/CSS_Flow_Layout/Introduction_to_formatting_contexts
+    - /Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+    - /Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
+- type: details
+  title: Fonts
+  children:
+    - /Web/CSS/CSS_Fonts/OpenType_fonts_guide
+    - /Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+- type: details
+  title: Grid
+  children:
+    - /Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+    - >-
+      /Web/CSS/CSS_Grid_Layout/Relationship_of_grid_layout_with_other_layout_methods
+    - /Web/CSS/CSS_Grid_Layout/Grid_layout_using_line-based_placement
+    - /Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+    - /Web/CSS/CSS_Grid_Layout/Grid_layout_using_named_grid_lines
+    - /Web/CSS/CSS_Grid_Layout/Auto-placement_in_grid_layout
+    - /Web/CSS/CSS_Grid_Layout/Box_alignment_in_grid_layout
+    - /Web/CSS/CSS_Grid_Layout/Grids_logical_values_and_writing_modes
+    - /Web/CSS/CSS_Grid_Layout/Grid_layout_and_accessibility
+    - /Web/CSS/CSS_Grid_Layout/Grid_layout_and_progressive_enhancement
+    - /Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_grids
+    - /Web/CSS/CSS_Grid_Layout/Subgrid
+    - /Web/CSS/CSS_Grid_Layout/Masonry_Layout
+- type: details
+  title: Images
+  children:
+    - /Web/CSS/CSS_Images/Using_CSS_gradients
+- type: details
+  title: Lists and counters
+  children:
+    - /Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+    - /Web/CSS/CSS_Lists/Consistent_list_indentation
+- type: details
+  title: Logical properties
+  children:
+    - >-
+      /Web/CSS/CSS_Logical_Properties_and_Values/Basic_concepts_of_logical_properties_and_values
+    - /Web/CSS/CSS_Logical_Properties_and_Values/Floating_and_positioning
+    - /Web/CSS/CSS_Logical_Properties_and_Values/Margins_borders_padding
+    - /Web/CSS/CSS_Logical_Properties_and_Values/Sizing
+- type: details
+  title: Math functions
+  children:
+    - /Web/CSS/CSS_Functions/Using_CSS_math_functions
+- type: details
+  title: Media queries
+  children:
+    - /Web/CSS/CSS_Media_Queries/Using_media_queries
+    - /Web/CSS/CSS_Media_Queries/Using_Media_Queries_for_Accessibility
+    - /Web/CSS/CSS_Media_Queries/Testing_media_queries
+    - /Web/CSS/CSS_Media_Queries/Printing
+- type: details
+  title: Nesting
+  children:
+    - /Web/CSS/CSS_Nesting/Using_CSS_nesting
+    - /Web/CSS/CSS_Nesting/Nesting_at-rules
+    - /Web/CSS/CSS_Nesting/Nesting_and_specificity
+- type: details
+  title: Positioning
+  children:
+    - /Web/CSS/CSS_Positioned_Layout/Understanding_z-index
+- type: details
+  title: Scroll snap
+  children:
+    - /Web/CSS/CSS_Scroll_Snap/Basic_concepts
+- type: details
+  title: Shapes
+  children:
+    - /Web/CSS/CSS_Shapes/Overview_of_Shapes
+    - /Web/CSS/CSS_Shapes/From_box_values
+    - /Web/CSS/CSS_Shapes/Basic_Shapes
+    - /Web/CSS/CSS_Shapes/Shapes_From_Images
+- type: details
+  title: Text
+  children:
+    - /Web/CSS/CSS_Text/Wrapping_Breaking_Text
+- type: details
+  title: Transforms
+  children:
+    - /Web/CSS/CSS_Transforms/Using_CSS_transforms
+- type: details
+  title: Transitions
+  children:
+    - /Web/CSS/CSS_Transitions/Using_CSS_transitions
+- type: section
+  link: /Web/CSS/Layout_cookbook
+- children:
+    - /Web/CSS/Layout_cookbook/Media_objects
+    - /Web/CSS/Layout_cookbook/Column_layouts
+    - /Web/CSS/Layout_cookbook/Center_an_element
+    - /Web/CSS/Layout_cookbook/Sticky_footers
+    - /Web/CSS/Layout_cookbook/Split_Navigation
+    - /Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+    - /Web/CSS/Layout_cookbook/List_group_with_badges
+    - /Web/CSS/Layout_cookbook/Pagination
+    - /Web/CSS/Layout_cookbook/Card
+    - /Web/CSS/Layout_cookbook/Grid_wrapper
+- type: section
+  title: Tools
+- children:
+    - /Web/CSS/CSS_Colors/Color_picker_tool
+    - /Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+    - /Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+    - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator

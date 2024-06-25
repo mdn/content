@@ -52,6 +52,11 @@
           "type": "string",
           "format": "uri"
         }
+      },
+      "sidebar": {
+        "title": "Sidebars to use",
+        "description": "Sidebars from sidebars directory to use",
+        "type": ["array", "string"]
       }
     },
     "anyOf": [
