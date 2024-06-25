@@ -261,11 +261,11 @@ CSS properties and values are case-insensitive. The property and value in a prop
 
 Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:
 
-- **{{cssxref("font-size")}}**
-- **{{cssxref("width")}}**
-- **{{cssxref("background-color")}}**
-- **{{cssxref("color")}}**
-- **{{cssxref("border")}}**
+- {{cssxref("font-size")}}
+- {{cssxref("width")}}
+- {{cssxref("background-color")}}
+- {{cssxref("color")}}
+- {{cssxref("border")}}
 
 > **Warning:** If a property is unknown, or if a value is not valid for a given property, the declaration is processed as _invalid_. It is completely ignored by the browser's CSS engine.
 
@@ -326,9 +326,9 @@ The output from the above code looks like this:
 
 Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:
 
-- **{{cssxref("transform")}}**
-- **{{cssxref("background-image")}}**, in particular gradient values
-- **{{cssxref("color")}}**, in particular rgb and hsl values
+- {{cssxref("transform")}}
+- {{cssxref("background-image")}}, in particular gradient values
+- {{cssxref("color")}}, in particular rgb and hsl values
 
 ## @rules
 
@@ -360,7 +360,7 @@ See if you can add a media query that changes styles based on the viewport width
 
 ## Shorthands
 
-Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called **shorthand properties.** This is because shorthand properties set several values in a single line.
+Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called **shorthand properties**. This is because shorthand properties set several values in a single line.
 
 For example, this one line of code:
 
