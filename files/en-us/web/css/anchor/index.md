@@ -205,7 +205,7 @@ We set the anchor element's `anchor-name` value as the value of the positioned e
 
 #### Results
 
-{{EmbedLiveSample("Basic_anchor_function_usage", "100%", '240')}}
+{{EmbedLiveSample("common_usage", "100%", '240')}}
 
 ### Comparison of different anchor-side values
 
