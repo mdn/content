@@ -10,29 +10,46 @@ browser-compat: api.Request.integrity
 
 The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
 
+If this property has been set and is formatted correctly, then it will be checked when the resource is fetched, just as it would be when the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute is set on a {{htmlelement("script")}} element, and the fetch request will reject with a network error.
+
+If the property is set but not formatted correctly, it will be ignored.
+
 ## Value
 
 The value that was passed as the `options.integrity` argument when constructing the `Request`.
 
-If an integrity has not been specified, the property returns `''`.
+It uses the same format as for the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute of the {{htmlelement("script")}} element, that is:
+
+```plain
+<hash-algo>-<hash-source>
+```
+
+where `<hash-algo>` may be any of: `sha256`, `sha384`, or `sha512`, and `<hash-source>` is the {{glossary("base64", "Base64-encoding")}} of the result of hashing the resource with the specified hash algorithm.
+
+This format is not checked when the request is constructed, but only when the resource is fetched and checked.
+
+If the `integrity` has not been set, the property returns `''`.
 
 ## Examples
 
-In the following snippet, we create a new request using the {{domxref("Request/Request", "Request()")}} constructor (for an image file in the same directory as the script), then reads the request's integrity. Because the request was created without a specific integrity, the property returns an empty string.
+In the following snippet, we create a new request using the {{domxref("Request/Request", "Request()")}} constructor, passing the `integrity` option:
 
 ```js
-const myRequest = new Request("flowers.jpg");
-console.log(myRequest.integrity); // ""
-```
+const url = "https://example.org/get";
 
-In the example below, the request was created with a specific integrity value, so the property returns that value. Note that there's no validation of the integrity value; the property returns exactly what was passed in.
-
-```js
-const myRequest = new Request("flowers.jpg", {
-  integrity: "sha256-abc123",
+const request = new Request(url, {
+  integrity:
+    "sha384-S7LbAN3xH4xlzxftfaRs9wN4rIKBEddDxLjOykiX+iUI9G3eXBy2rGBRHi5xMuOR",
 });
-console.log(myRequest.integrity); // "sha256-abc123"
+
+async function get(request) {
+  const response = await fetch(request);
+  console.log(response.status);
+  // ...
+}
 ```
+
+When the request is made, the browser computes the SHA-384 {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource, and if the result does not match the value specified in `integrity`, the browser rejects the fetch request.
 
 ## Specifications
 
@@ -44,6 +61,4 @@ console.log(myRequest.integrity); // "sha256-abc123"
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
