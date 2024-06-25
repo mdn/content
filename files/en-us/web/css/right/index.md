@@ -41,9 +41,8 @@ right: unset;
   - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
 
     - for _absolutely positioned elements_, the distance to the right edge of the containing block.
+    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge.
     - for _relatively positioned elements_, the distance that the element is moved to the left of its normal position.
-
-    In the case of **anchor-positioned** elements, an {{cssxref("anchor()")}} function can be used. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated **anchor element**'s left or right edges.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
@@ -61,7 +60,7 @@ right: unset;
 
 The effect of `right` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `right` property specifies the distance between the element's outer margin of right edge and the inner border of the right edge of its containing block. If the positioned element has an associated **anchor element**, an {{cssxref("anchor()")}} function can be used in the value. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the anchor element's left or right edges. The returned value depends on the [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) parameter used inside the function; the `right` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `left`, `right`, `start`, `end`, `self-start`, and `self-end` `<anchor-side>` values. See also [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning) for basic usage information.
+- When `position` is set to `absolute` or `fixed`, the `right` property specifies the distance between the element's outer margin of right edge and the inner border of the right edge of its containing block. If the positioned element has an associated [_anchor element_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using), and the property value includes an {{cssxref("anchor()")}} function, position the right edge of the positioned element relative to anchor element's[`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) parameter edge used inside the function; the `right` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `left`, `right`, `start`, `end`, `self-start`, `self-end`, `center` and `<percentage>` values.
 - When `position` is set to `relative`, the `right` property specifies the distance the element's right edge is moved to the left from its normal position.
 - When `position` is set to `sticky`, the `right` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `right` property has _no effect_.

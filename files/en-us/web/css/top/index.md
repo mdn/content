@@ -13,7 +13,7 @@ The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of 
 
 The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block. If the positioned element has an associated **anchor element**, an {{cssxref("anchor()")}} function can be used in the value. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the anchor element's top or bottom edges. The returned value depends on the [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) parameter used inside the function; the `top` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, and `self-end` `<anchor-side>` values. See also [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning) for basic usage information.
+- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of the top edge and the inner border of the top edge of its containing block, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the position of the anchor element's [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) parameter edge used inside the function; the `top` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center` and `<percentage>` values.
 - When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
 - When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `top` property has _no effect_.
@@ -54,9 +54,8 @@ top: unset;
   - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
 
     - for _absolutely positioned elements_, the distance to the top edge of the containing block.
+    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s top or bottom edge.
     - for _relatively positioned elements_, the distance that the element is moved below its normal position.
-
-    In the case of **anchor-positioned** elements, an {{cssxref("anchor()")}} function can be used. This resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated **anchor element**'s top or bottom edges.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's height.
