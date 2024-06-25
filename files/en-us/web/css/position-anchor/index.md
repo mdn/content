@@ -139,7 +139,7 @@ The output is anchored to the thumb. Change the value. If anchor positioning is 
 
 ### Multiple positioned elements and anchors
 
-This example demonstrates how you can move multiple positioned elements around, associating them with different anchors.
+In this example, you can move multiple positioned elements around, associating them with different anchors. This example demonstrates how an anchor can be associated with multiple positioned elements, but an anchor-positioned element can only be associated with a single anchor at a time, the anchor defined by the `anchor-position` property.
 
 #### HTML
 
