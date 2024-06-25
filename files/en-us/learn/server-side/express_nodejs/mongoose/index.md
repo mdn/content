@@ -828,25 +828,58 @@ In order to test the models (and to create some example books and other items th
 
    > **Note:** The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
 
-2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+2. Ensure your MongoDB URL is correctly formatted. A typical MongoDB URL looks like this:
+   mongodb+srv://<username>:<password>@cluster0.mongodb.net/local_library?retryWrites=true&w=majority
+   ```
+
+   Make sure to replace `<username>`, `<password>`, and `cluster0.mongodb.net` with your actual MongoDB credentials and cluster information.
+
+3. Verify that your Mongoose connection code in `app.js` or another configuration file is correctly set up:
+
+   ```javascript
+   const mongoose = require("mongoose");
+   const mongoDB = process.env.MONGODB_URI || "<your MongoDB URL>";
+   mongoose.connect(mongoDB, {
+     useNewUrlParser: true,
+     useUnifiedTopology: true,
+   });
+   const db = mongoose.connection;
+   db.on("error", console.error.bind(console, "MongoDB connection error:"));
+   ```
+
+4. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database:
 
    ```bash
    node populatedb <your MongoDB url>
    ```
 
+   Ensure the URL is correctly formatted. For example:
+
+   ```bash
+   node populatedb "mongodb+srv://<username>:<password>@cluster0.mongodb.net/local_library?retryWrites=true&w=majority"
+   ```
+
    > **Note:** On Windows you need to wrap the database URL inside double (").
    > On other operating systems you may need single (') quotation marks.
 
-3. The script should run through to completion, displaying items as it creates them in the terminal.
+5. The script should run through to completion, displaying items as it creates them in the terminal. If you encounter any errors, such as "Invalid namespace specified", double-check your MongoDB URL and ensure there are no leading or trailing spaces or incorrect characters.
 
-> **Note:** Go to your database on MongoDB Atlas (in the _Collections_ tab).
-> You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+6. Go to your database on MongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres, and BookInstances, and check out individual documents.
 
 ## Summary
 
-In this article, we've learned a bit about databases and ORMs on Node/Express, and a lot about how Mongoose schema and models are defined. We then used this information to design and implement `Book`, `BookInstance`, `Author` and `Genre` models for the _LocalLibrary_ website.
+In this article, we've learned a bit about databases and ORMs on Node/Express, and a lot about how Mongoose schema and models are defined. We then used this information to design and implement `Book`, `BookInstance`, `Author`, and `Genre` models for the _LocalLibrary_ website.
 
 Last of all, we tested our models by creating a number of instances (using a standalone script). In the next article we'll look at creating some pages to display these objects.
+
+---
+
+### Additional Troubleshooting Tips
+
+- Ensure your MongoDB cluster is set up correctly in MongoDB Atlas.
+- Make sure the database name `local_library` is correctly specified and does not contain any invalid characters.
+- Verify that your internet connection is stable and that you have access to MongoDB Atlas from your location.
+- If the error persists, consult the MongoDB documentation or seek assistance from the MongoDB community.
 
 ## See also
 
