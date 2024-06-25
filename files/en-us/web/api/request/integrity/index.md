@@ -10,7 +10,7 @@ browser-compat: api.Request.integrity
 
 The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
 
-If this property has been set and is formatted correctly, then it will be checked when the resource is fetched, just as it would be when the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute is set on a {{htmlelement("script")}} element, and the fetch request will reject with a network error.
+If this property has been set and is formatted correctly, then it will be checked when the resource is fetched, just as it would be when the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute is set on a {{htmlelement("script")}} element. The browser will compute the {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource using the specified algorithm, and if the result does not match the value specified in `integrity`, the browser will reject the fetch request with a network error.
 
 If the property is set but not formatted correctly, it will be ignored.
 
