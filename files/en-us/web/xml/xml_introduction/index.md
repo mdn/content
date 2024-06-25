@@ -83,7 +83,7 @@ Like HTML, XML offers methods (called {{glossary("character reference", "charact
 | &amp;quot; | "         | One double-quotation mark                 |
 | &amp;apos; | '         | One apostrophe (or single-quotation mark) |
 
-Even though there are only 5 declared references, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
+Even though there are only 5 declared character references, or entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
