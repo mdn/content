@@ -10,7 +10,7 @@ browser-compat: api.CloseWatcher.destroy
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-The **`destroy()`** method of the {{domxref("CloseWatcher")}} interface deactivates the close watcher so that it will no longer receive `close` events.
+The **`destroy()`** method of the {{domxref("CloseWatcher")}} interface deactivates the close watcher so that it will no longer receive `cancel` or `close` events. This method is useful when a close watcher is associated with a component that gets removed from the DOM before being closed. Similar to how you clean up event listeners with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}.
 
 ## Syntax
 
@@ -30,16 +30,10 @@ None ({{jsxref("undefined")}}).
 
 ### Using the `destroy()` method
 
-Use the `destory()` method to dispose the watcher instance
+Use the `destroy()` method to dispose of the watcher instance for cleanup.
 
 ```js
-// Listen for close requests
-watcher.addEventListener("close", () => {
-  // Close your UI component
-  sidebar.hide();
-  // Dispose the watcher instance
-  watcher.destroy();
-};
+watcher.destroy();
 ```
 
 ## Specifications

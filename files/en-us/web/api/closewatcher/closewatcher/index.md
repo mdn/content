@@ -24,25 +24,27 @@ new CloseWatcher(options)
 - `options` {{optional_inline}}
   - : An object that has the following properties:
     - `signal`
-      - : An {{domxref("AbortSignal")}} that, if provided, the watcher can be destroyed by.
+      - : If a `signal`, is provided then the watcher can be destroyed (as if by `watcher.destroy()`) by aborting the given {{domxref("AbortSignal")}}.
 
 ## Return value
 
-A new {{domxref("CloseEvent")}} object.
+A new {{domxref("CloseWatcher")}} object.
 
 ## Examples
 
 ### Creating new `CloseWatcher` instances
 
-Optionally, the `CloseWatcher` constructor accepts a `signal` option which is an {{domxref("AbortSignal")}}.
+Create a new close watcher.
 
 ```js
-// Create a new close watcher
-let watcher = new CloseWatcher();
+const watcher = new CloseWatcher();
+```
 
-// Create a new CloseWatcher with an AbortSignal that controls destroying the watcher
-let controller = new AbortController();
-let signalWatcher = new CloseWatcher({ signal: controller.signal };
+Create a new `CloseWatcher` with an {{domxref("AbortSignal")}} that controls destroying the watcher.
+
+```js
+const controller = new AbortController();
+const signalWatcher = new CloseWatcher({ signal: controller.signal };
 ```
 
 ## Specifications
@@ -52,7 +54,3 @@ let signalWatcher = new CloseWatcher({ signal: controller.signal };
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("CloseWatcher")}}, the interface of the objects it constructs.

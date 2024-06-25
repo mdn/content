@@ -10,7 +10,7 @@ browser-compat: api.CloseWatcher.cancel_event
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-A `cancel` event is fired at a {{domxref("CloseWatcher")}} object before the `close` event, so that `close` can be prevented from firing, if necessary.
+A `cancel` event is fired at a {{domxref("CloseWatcher")}} object before the `close` event, so that `close` can be prevented from firing, if necessary. It is triggered by all close signals (e.g. the <kbd>Esc</kbd> key) as well as {{domxref("CloseWatcher.requestClose()")}}.
 
 ## Syntax
 
@@ -30,15 +30,15 @@ An {{domxref("Event")}}.
 
 ### Using the `cancel` event
 
-The `cancel` event can be used to interrupt the close request. The `cancel` event is triggered by the `requestClose()` method.
+The `cancel` event can be used to catch close request. The `cancel` event is triggered by all close signals and the {{domxref("CloseWatcher.requestClose()")}} method.
 
 ```js
-// Use the cancel event to interrupt the close request
 watcher.addEventListener("cancel", (e) => {
-  e.preventDefault();
-  // Close if some condition is met
-  if (condition) {
-    watcher.close();
+  if (e.cancelable && hasUnsavedData) {
+    const userReallyWantsToClose = confirm("Are you sure you want to close?");
+    if (!userReallyWantsToClose) {
+      e.preventDefault();
+    }
   }
 };
 

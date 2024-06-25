@@ -10,7 +10,7 @@ browser-compat: api.CloseWatcher.close_event
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-A `close` event is fired at a {{domxref("CloseWatcher")}} object when a close request was received.
+A `close` event is fired at a {{domxref("CloseWatcher")}} object when a close request was received and only fired if the {{domxref("CloseWatcher.cancel_event", "cancel")}} event that preceded the `close` one was not canceled.
 
 ## Syntax
 
@@ -36,8 +36,6 @@ Use the `close` to listen for close requests.
 watcher.addEventListener("close", () => {
   // Close your UI component
   sidebar.hide();
-  // Dispose the watcher instance
-  watcher.destroy();
 };
 ```
 

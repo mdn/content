@@ -30,20 +30,21 @@ None ({{jsxref("undefined")}}).
 
 ### Using the `requestClose()` method
 
-Use the `requestClose()` method to go through the `cancel` event handler first if there is one.
+In this example, you have your own UI component (a picker) and you want to support both, the platform's default close method (e.g. the <kbd>Esc</kbd> key) and your custom close method (a close button).
+
+The `onclick` handler of your UI component can call `requestClose` to request a close and to route your close request through the same `onclose` handler the platform close method uses.
 
 ```js
-// Use the cancel event to interrupt the close request
-watcher.addEventListener("cancel", (e) => {
-  e.preventDefault();
-  // Close if some condition is met
-  if (condition) {
-    watcher.close();
-  }
+const watcher = new CloseWatcher();
+const picker = setUpAndShowPickerDOMElement();
+let chosenValue = null;
+
+watcher.onclose = () => {
+  chosenValue = picker.querySelector("input").value;
+  picker.remove();
 };
 
-// Trigger a close request manually
-watcher.requestClose();
+picker.querySelector(".close-button").onclick = () => watcher.requestClose();
 ```
 
 ## Specifications

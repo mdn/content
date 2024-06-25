@@ -9,9 +9,7 @@ browser-compat: api.CloseWatcher
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-The `CloseWatcher` API listens and responds to close requests. A close request can be for anything that the user wants to close, like a [popover](/en-US/docs/Web/API/Popover_API), a sidebar, a [dialog](/en-US/docs/Web/HTML/Element/dialog), or any UI that has an open/close interaction.
-
-The user usually sends close requests using the <kbd>Esc</kbd> key, the back button on Android, the "z" gesture on iOS VoiceOver, and similar actions on other platforms.
+The `CloseWatcher` interface listens and responds to close requests. The user usually sends close requests using the <kbd>Esc</kbd> key, the back button on Android, the "z" gesture on iOS VoiceOver, and similar actions on other platforms. Custom UI components don't respond to these close requests like built-in components ([popover](/en-US/docs/Web/API/Popover_API) or [dialog](/en-US/docs/Web/HTML/Element/dialog)) do. The `CloseWatcher` API abstracts device-specific close methods and delivers a `close` event that custom UI components can use to deliver a device-integrated close behaviour.
 
 {{InheritanceDiagram}}
 
@@ -29,7 +27,7 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 - {{domxref("CloseWatcher.requestClose()")}} {{Experimental_Inline}}
   - : Fires a `cancel` event and if that event is not canceled with {{domxref("Event.preventDefault()")}}, proceeds to fire a `close` event, and then finally deactivates the close watcher as if `destroy()` was called.
 - {{domxref("CloseWatcher.close()")}} {{Experimental_Inline}}
-  - : Immediately fires the `close` event and deactivates the close watcher as if `destroy()` was called. Skips any logic in the `cancel` event handler.
+  - : Immediately fires the `close` event, without firing `cancel` first, and deactivates the close watcher as if `destroy()` was called.
 - {{domxref("CloseWatcher.destroy()")}} {{Experimental_Inline}}
   - : Deactivates the close watcher so that it will no longer receive `close` events.
 
@@ -42,36 +40,25 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 
 ## Examples
 
-### Using the `CloseWatcher` API
+### Processing close requests
 
-The following code example gives an overview how use use the `CloseWatcher` methods and events.
+In this example, you have your own UI component (a picker) and you want to support both, the platform's default close method (e.g. the <kbd>Esc</kbd> key) and your custom close method (a close button).
+
+You create a `CloseWatcher` to handle all `close` events.
+
+The `onclick` handler of your UI component can call `requestClose` to request a close and to route your close request through the same `onclose` handler the platform close method uses.
 
 ```js
-// Create a new close watcher
 const watcher = new CloseWatcher();
+const picker = setUpAndShowPickerDOMElement();
+let chosenValue = null;
 
-// Listen for close requests
-watcher.addEventListener("close", () => {
-  // Close your UI component
-  sidebar.hide();
-  // Dispose the watcher instance
-  watcher.destroy();
+watcher.onclose = () => {
+  chosenValue = picker.querySelector("input").value;
+  picker.remove();
 };
 
-// Use the cancel event to interrupt the close request
-watcher.addEventListener("cancel", (e) => {
-  e.preventDefault();
-  // Close if some condition is met
-  if (condition) {
-    watcher.close();
-  }
-};
-
-// Trigger a close request manually
-watcher.requestClose();
-
-// Trigger the close handler, bypassing the cancel handler
-watcher.close();
+picker.querySelector(".close-button").onclick = () => watcher.requestClose();
 ```
 
 ## Specifications

@@ -10,7 +10,7 @@ browser-compat: api.CloseWatcher.close
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-The **`close()`** method of the {{domxref("CloseWatcher")}} interface immediately fires the `close` event and deactivates the close watcher as if `destroy()` was called. It skips any logic in the `cancel` event handler.
+The **`close()`** method of the {{domxref("CloseWatcher")}} interface lets you skip any logic in the `cancel` event handler and immediately fire the `close` event. It then deactivates the close watcher as if `destroy()` was called.
 
 ## Syntax
 
@@ -33,14 +33,7 @@ None ({{jsxref("undefined")}}).
 Use the `close()` method to deactivate the close watcher and destroy it.
 
 ```js
-watcher.addEventListener("cancel", (e) => {
-  e.preventDefault();
-  // Decide to close if some condition is met
-  if (condition) {
-    watcher.close();
-  }
-};
-watcher.requestClose();
+watcher.close();
 ```
 
 ## Specifications
