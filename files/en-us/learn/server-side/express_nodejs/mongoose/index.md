@@ -844,7 +844,7 @@ In order to test the models (and to create some example books and other items th
    db.on("error", console.error.bind(console, "MongoDB connection error:"));
    ```
 
-4. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database:
+3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database:
 
    ```bash
    node populatedb <your MongoDB url>
