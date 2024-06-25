@@ -178,9 +178,9 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                 |
 | `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                |
 | `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                 |
-| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Glossary/flow_relative_values).  |
+| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Glossary/Flow_relative_values).  |
 | `vh`   | 1% of viewport's height.                                                                              |
-| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Glossary/flow_relative_values). |
+| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Glossary/Flow_relative_values). |
 | `vmax` | 1% of viewport's larger dimension.                                                                    |
 | `vmin` | 1% of viewport's smaller dimension.                                                                   |
 | `vw`   | 1% of viewport's width.                                                                               |

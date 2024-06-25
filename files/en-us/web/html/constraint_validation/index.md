@@ -392,6 +392,7 @@ function checkFileSize() {
     if (files[0].size > 75 * 1024) {
       // Check the constraint
       FS.setCustomValidity("The selected file must not be larger than 75 kB");
+      FS.reportValidity();
       return;
     }
   }

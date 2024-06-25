@@ -8,7 +8,7 @@ page-type: xpath-function
 
 The `format-number` function evaluates a number and returns a string representing the number in a given format.
 
-### Syntax
+## Syntax
 
 ```plain
 format-number(number, pattern)
@@ -28,14 +28,14 @@ format-number(number, pattern, decimalFormat)
 
 A string representing the number in the new format.
 
-### Notes
+## Description
 
 This function is an XSLT-specific addition to XPath. It is not a part of the core XPath function library.
 
-### Defined
+## Specifications
 
 [XSLT 1.0 12.3](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-format-number)
 
-### Gecko support
+## Gecko support
 
 Supported.
