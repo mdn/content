@@ -307,17 +307,12 @@ You can find the version of node that was used for development by entering the c
 v16.17.1
 ```
 
-Open **package.json**, and add this information as an **engines > node** section as shown (using the version number for your system).
+Open **package.json**, and add this information as an **engines > node** as shown (using the version number for your system).
 
 ```json
-{
-  "name": "express-locallibrary-tutorial",
-  "version": "0.0.0",
   "engines": {
     "node": ">=16.17.1"
   },
-  "private": true,
-  // …
 ```
 
 The hosting service might not support the specific indicated version of node, but this change should ensure that it attempts to use a version with the same major version number, or a more recent version.
