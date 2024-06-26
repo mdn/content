@@ -91,7 +91,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     - `omit`
       - : Never send credentials in the request or include credentials in the response.
-    - `same-origin`:
+    - `same-origin`
       - : Only send and include credentials for same-origin requests.
     - `include`
       - : Always include credentials, even for cross-origin requests.
