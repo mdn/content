@@ -67,7 +67,7 @@ In this example, there are five flex items with a `flex-shrink` value greater th
   <div class="box" style="background-color:red;">A</div>
   <div class="box" style="background-color:lightblue;">B</div>
   <div class="box" style="background-color:yellow;">C</div>
-  <div class="box4" style="background-color:brown;">D</div>
+  <div class="box4" style="background-color:slateblue;">D</div>
   <div class="box5" style="background-color:lightgreen;">E</div>
 </div>
 ```
@@ -84,6 +84,9 @@ We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex
 
 #content div {
   width: 200px;
+}
+
+.box {
   flex-shrink: 1;
 }
 
