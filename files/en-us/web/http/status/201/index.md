@@ -20,6 +20,8 @@ This status code is commonly sent as the result of a {{HTTPMethod("POST")}} requ
 
 ## Examples
 
+### Response indicating new user created
+
 Assuming a REST API exists with an endpoint to manage users at `http://example.com/users` and a `POST` request with the following body will create a user:
 
 ```http
