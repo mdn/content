@@ -7,7 +7,7 @@ browser-compat: http.status.410
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`410 Gone`** client error response code indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.
+The HTTP **`410 Gone`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.
 
 If you don't know whether this condition is temporary or permanent, a {{HTTPStatus(404)}} status code should be used instead.
 
@@ -23,11 +23,8 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus(404)}}
 - [410 gone](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#410)

@@ -7,15 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.411
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP)
-**`411 Length Required`** client error response code indicates
-that the server refuses to accept the request without a defined
-{{HTTPHeader("Content-Length")}} header.
+The HTTP **`411 Length Required`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server refuses to accept the request without a defined {{HTTPHeader("Content-Length")}} header.
 
-> **Note:** by specification, when sending data in a series of chunks, the
-> `Content-Length` header is omitted and at the beginning of each chunk you
-> need to add the length of the current chunk in hexadecimal format. See
-> {{HTTPHeader("Transfer-Encoding")}} for more details.
+> **Note:**
+> When sending data in a series of chunks, the `Content-Length` header is omitted and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format.
+> See {{HTTPHeader("Transfer-Encoding")}} for more details.
 
 ## Status
 
@@ -29,5 +25,6 @@ that the server refuses to accept the request without a defined
 
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Transfer-Encoding")}}

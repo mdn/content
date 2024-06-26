@@ -7,14 +7,9 @@ browser-compat: http.status.412
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP)
-**`412 Precondition Failed`** client error response code
-indicates that access to the target resource has been denied. This happens with
-conditional requests on methods other than {{HTTPMethod("GET")}} or
-{{HTTPMethod("HEAD")}} when the condition defined by the
-{{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-None-Match")}} headers is not
-fulfilled. In that case, the request, usually an upload or a modification of a resource,
-cannot be made and this error response is sent back.
+The HTTP **`412 Precondition Failed`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that access to the target resource has been denied.
+This happens with conditional requests on methods other than {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} when the condition defined by the {{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-None-Match")}} headers is notfulfilled.
+In that case, the request, usually an upload or a modification of a resource, cannot be made and this error response is sent back.
 
 ## Status
 
@@ -56,12 +51,9 @@ If the hashes don't match, it means that the document has been edited in-between
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("304")}}
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-None-Match")}}

@@ -7,7 +7,7 @@ browser-compat: http.status.451
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** client error response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
+The HTTP **`451 Unavailable For Legal Reasons`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
 
 ## Status
 
@@ -15,7 +15,9 @@ The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** c
 451 Unavailable For Legal Reasons
 ```
 
-## Example
+## Examples
+
+### Response with Link header
 
 This example response is taken from the IETF RFC (see below) and contains a reference to [Monty Python's Life of Brian](https://en.wikipedia.org/wiki/Monty_Python's_Life_of_Brian).
 
@@ -44,11 +46,8 @@ Content-Type: text/html
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - [Wikipedia: HTTP 451](https://en.wikipedia.org/wiki/HTTP_451)
 - [Wikipedia: Fahrenheit 451](https://en.wikipedia.org/wiki/Fahrenheit_451) (which gave this status code its number)

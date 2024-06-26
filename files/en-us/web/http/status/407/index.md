@@ -7,13 +7,9 @@ browser-compat: http.status.407
 
 {{HTTPSidebar}}
 
-The HTTP **`407 Proxy Authentication Required`** client error
-status response code indicates that the request has not been applied because it lacks
-valid authentication credentials for a {{Glossary("proxy server")}} that is between the
-browser and the server that can access the requested resource.
+The HTTP **`407 Proxy Authentication Required`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the request has not been applied because it lacks valid authentication credentials for a {{Glossary("proxy server")}} that is between the browser and the server that can access the requested resource.
 
-This status is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that contains
-information on how to authorize correctly.
+This status is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that contains information on how to authorize correctly.
 
 ## Status
 
@@ -33,12 +29,9 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}

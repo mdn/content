@@ -9,7 +9,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
 
 > **Note:** The ability to _lock_ a resource is specific to some {{Glossary("WebDAV")}} servers. Browsers accessing web pages will never encounter this status code; in the erroneous cases it happens, they will handle it as a generic `400` status code.
 
-The HTTP **`423 Locked`** error response code indicates that either the resources tentatively targeted by is _locked_, meaning it can't be accessed. Its content should contain some information in WebDAV's XML format.
+The HTTP **`423 Locked`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that either the resources tentatively targeted by is _locked_, meaning it can't be accessed.
+Its content should contain some information in WebDAV's XML format.
 
 ## Status
 
@@ -35,3 +36,7 @@ Content-Length: xxxx
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

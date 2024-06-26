@@ -7,10 +7,7 @@ browser-compat: http.status.406
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`406 Not Acceptable`**
-client error response code indicates that the server cannot produce a response matching
-the list of acceptable values defined in the request's proactive [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, and
-that the server is unwilling to supply a default representation.
+The HTTP **`406 Not Acceptable`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server cannot produce a response matching the list of acceptable values defined in the request's proactive [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, and that the server is unwilling to supply a default representation.
 
 Proactive content negotiation headers include:
 
@@ -18,9 +15,7 @@ Proactive content negotiation headers include:
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
 
-If a server returns such an error status, the body of the message should contain the
-list of the available representations of the resources, allowing the user to choose
-among them.
+If a server returns such an error status, the body of the message should contain the list of the available representations of the resources, allowing the user to choose among them.
 
 ## Status
 
@@ -32,12 +27,9 @@ among them.
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}

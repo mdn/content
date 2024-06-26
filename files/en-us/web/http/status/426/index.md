@@ -7,12 +7,9 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.426
 
 {{HTTPSidebar}}
 
-The HTTP **`426 Upgrade Required`** client error response code
-indicates that the server refuses to perform the request using the current protocol but
-might be willing to do so after the client upgrades to a different protocol.
+The HTTP **`426 Upgrade Required`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.
 
-The server sends an {{HTTPHeader("Upgrade")}} header with this response to indicate the
-required protocol(s).
+The server sends an {{HTTPHeader("Upgrade")}} header with this response to indicate the required protocol(s).
 
 ## Status
 
@@ -38,5 +35,6 @@ This service requires use of the HTTP/2.0 protocol
 
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("101")}} `Switching Protocols`

@@ -7,9 +7,7 @@ browser-compat: http.status.425
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`425 Too Early`**
-response status code indicates that the server is unwilling to risk processing a request
-that might be replayed, which creates the potential for a replay attack.
+The HTTP **`425 Too Early`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server is unwilling to risk processing a request that might be replayed, which creates the potential for a replay attack.
 
 ## Status
 
@@ -21,6 +19,6 @@ that might be replayed, which creates the potential for a replay attack.
 
 {{Specifications}}
 
-## Browser compatibility
+## See also
 
-{{Compat}}
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

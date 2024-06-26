@@ -7,9 +7,10 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.400
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (for example, malformed request syntax, invalid request message framing, or deceptive request routing).
+The HTTP **`400 Bad Request`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server cannot or will not process the request due to something that is perceived to be a client error.
+This is typically due to a malformed request syntax, invalid request message framing, or deceptive request routing.
 
-> **Warning:** The client should not repeat this request without modification.
+Clients that receive a `400` response should expect that repeating the request without modification will fail with the same error.
 
 ## Status
 
@@ -23,4 +24,5 @@ The HyperText Transfer Protocol (HTTP) **`400 Bad Request`** response status cod
 
 ## See also
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)
