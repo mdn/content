@@ -52,7 +52,7 @@ async function getCompressedTextureIfAvailable(gl) {
       0, // border, always 0
       new DataView(dataArrayBuffer),
     );
-    gl.generateMipMap(); // create mipmap levels, like we would for a standard image
+    gl.generateMipMap(gl.TEXTURE_2D); // create mipmap levels, like we would for a standard image
     return texture;
   }
 }
