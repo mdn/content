@@ -53,12 +53,12 @@ The totals can be used to determine the average audio level over the lifetime of
 You can calculate a root mean square (RMS) value in the same units as `audioLevel` using the following formula:
 
 <math display="block">
-<msqrt>
-  <mfrac>
-    <mi>totalAudioEnergy</mi>
-    <mi>totalSamplesDuration</mi>
-  </mfrac>
-</msqrt>
+  <msqrt>
+    <mfrac>
+      <mi>totalAudioEnergy</mi>
+      <mi>totalSamplesDuration</mi>
+    </mfrac>
+  </msqrt>
 </math>
 
 You can also use the accumulated totals to calculate the average audio level over an arbitrary time period.
@@ -67,52 +67,52 @@ The total audio energy of the stats object is accumulated by adding the energy o
 The energy of each sample is determined using the following formula, where `sample_level` is the level of the sample, `max_level` is the highest-intensity encodable value, and `duration` is the duration of the sample in seconds:
 
 <math display="block">
-<mrow>
-  <mi>duration</mi>
-  <mo>&#x2062;</mo>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <mfrac>
-        <mi>sample_level</mi>
-        <mi>max_level</mi>
-      </mfrac>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</mrow>
+  <mrow>
+    <mi>duration</mi>
+    <mo>&#x2062;</mo>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mi>sample_level</mi>
+          <mi>max_level</mi>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+  </mrow>
 </math>
 
 The average audio level between any two different `getStats()` calls, over any duration, can be calculated using the following equation:
 
 <math display="block">
-<msqrt>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>totalAudioEnergy</mi>
-        <mn>2</mn>
-      </msub>
-      <mo>-</mo>
-      <msub>
-        <mi>totalAudioEnergy</mi>
-        <mn>1</mn>
-      </msub>
-    </mrow>
-    <mrow>
-      <msub>
-        <mi>totalSamplesDuration</mi>
-        <mn>2</mn>
-      </msub>
-      <mo>-</mo>
-      <msub>
-        <mi>totalSamplesDuration</mi>
-        <mn>1</mn>
-      </msub>
-    </mrow>
-  </mfrac>
-</msqrt>
+  <msqrt>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>totalAudioEnergy</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>-</mo>
+        <msub>
+          <mi>totalAudioEnergy</mi>
+          <mn>1</mn>
+        </msub>
+      </mrow>
+      <mrow>
+        <msub>
+          <mi>totalSamplesDuration</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>-</mo>
+        <msub>
+          <mi>totalSamplesDuration</mi>
+          <mn>1</mn>
+        </msub>
+      </mrow>
+    </mfrac>
+  </msqrt>
 </math>
 
 ## Examples

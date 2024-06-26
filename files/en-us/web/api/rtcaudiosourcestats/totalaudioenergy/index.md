@@ -24,21 +24,21 @@ The energy of each sample is calculated by dividing the sample's value by the hi
 This is shown as an equation below:
 
 <math display="block">
-<mrow>
-  <mi>duration</mi>
-  <mo>&#x2062;</mo>
-  <msup>
-    <mrow>
-      <mo>(</mo>
-      <mfrac>
-        <mi>sample_level</mi>
-        <mi>max_level</mi>
-      </mfrac>
-      <mo>)</mo>
-    </mrow>
-    <mn>2</mn>
-  </msup>
-</mrow>
+  <mrow>
+    <mi>duration</mi>
+    <mo>&#x2062;</mo>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mi>sample_level</mi>
+          <mi>max_level</mi>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+  </mrow>
 </math>
 
 Note that if multiple audio channels are used, the audio energy of a sample refers to the highest energy of any channel.

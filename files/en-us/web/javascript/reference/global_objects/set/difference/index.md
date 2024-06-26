@@ -28,7 +28,26 @@ A new {{jsxref("Set")}} object containing elements in this set but not in the `o
 
 In mathematical notation, _difference_ is defined as:
 
-<math display="block"><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi><mo>=</mo><mo stretchy="false">{</mo><mi>x</mi><mo>∊</mo><mi>A</mi><mo>∣</mo><mi>x</mi><mo>∉</mo><mi>B</mi><mo stretchy="false">}</mo></mrow><annotation encoding="TeX">A\setminus B = \{x\in A\mid x\notin B\}</annotation></semantics></math>
+<math display="block">
+  <semantics>
+    <mrow>
+      <mi>A</mi>
+      <mo>∖</mo>
+      <mi>B</mi>
+      <mo>=</mo>
+      <mo stretchy="false">{</mo>
+      <mi>x</mi>
+      <mo>∊</mo>
+      <mi>A</mi>
+      <mo>∣</mo>
+      <mi>x</mi>
+      <mo>∉</mo>
+      <mi>B</mi>
+      <mo stretchy="false">}</mo>
+    </mrow>
+    <annotation encoding="TeX">A\setminus B = \{x\in A\mid x\notin B\}</annotation>
+  </semantics>
+</math>
 
 And using Venn diagram:
 

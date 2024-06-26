@@ -28,7 +28,28 @@ A new {{jsxref("Set")}} object containing elements which are in either this set 
 
 In mathematical notation, _symmetric difference_ is defined as:
 
-<math display="block"><semantics><mrow><mi>A</mi><mo>⊖</mo><mi>B</mi><mo>=</mo><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">A\ominus B = (A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
+<math display="block">
+  <semantics>
+    <mrow>
+      <mi>A</mi>
+      <mo>⊖</mo>
+      <mi>B</mi>
+      <mo>=</mo>
+      <mo stretchy="false">(</mo>
+      <mi>A</mi>
+      <mo>∖</mo>
+      <mi>B</mi>
+      <mo stretchy="false">)</mo>
+      <mo>∪</mo>
+      <mo stretchy="false">(</mo>
+      <mi>B</mi>
+      <mo>∖</mo>
+      <mi>A</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <annotation encoding="TeX">A\ominus B = (A\setminus B)\cup(B\setminus A)</annotation>
+  </semantics>
+</math>
 
 And using Venn diagram:
 

@@ -52,25 +52,70 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
         translations are not linear transformations.
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
-                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
-                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
-                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
-                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math>
+          <mrow>
+            <mo>(</mo>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mi>a1</mi>
+                </mtd>
+                <mtd>
+                  <mi>a2</mi>
+                </mtd>
+                <mtd>
+                  <mi>a3</mi>
+                </mtd>
+                <mtd>
+                  <mi>a4</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>b1</mi>
+                </mtd>
+                <mtd>
+                  <mi>b2</mi>
+                </mtd>
+                <mtd>
+                  <mi>b3</mi>
+                </mtd>
+                <mtd>
+                  <mi>b4</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>c1</mi>
+                </mtd>
+                <mtd>
+                  <mi>c2</mi>
+                </mtd>
+                <mtd>
+                  <mi>c3</mi>
+                </mtd>
+                <mtd>
+                  <mi>c4</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>d1</mi>
+                </mtd>
+                <mtd>
+                  <mi>d2</mi>
+                </mtd>
+                <mtd>
+                  <mi>d3</mi>
+                </mtd>
+                <mtd>
+                  <mi>d4</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>)</mo>
+          </mrow>
+        </math>
       </td>
     </tr>
   </tbody>
@@ -110,8 +155,24 @@ a `matrix3d()` transform to it.
 
 #example-element:hover,
 #example-element:focus {
-  transform: rotate3d(1, 1, 1, 30deg)
-    matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+  transform: rotate3d(1, 1, 1, 30deg) matrix3d(
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      6,
+      0,
+      0,
+      0,
+      1,
+      0,
+      50,
+      100,
+      0,
+      1.1
+    );
 }
 
 .face {

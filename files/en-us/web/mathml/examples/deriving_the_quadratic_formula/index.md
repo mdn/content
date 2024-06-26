@@ -10,7 +10,7 @@ This page outlines the derivation of the [Quadratic Formula](https://en.wikipedi
 
 We take a quadratic equation in its general form, and solve for x:
 
-<math>
+<math display="block">
   <mtable>
     <mtr>
       <mtd>
