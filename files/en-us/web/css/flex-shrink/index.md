@@ -74,7 +74,7 @@ In this example, there are five flex items with a `flex-shrink` value greater th
 
 #### CSS
 
-We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex-basis")}} property defaults to `auto`, each item's flex basis is `200px`, for a total of `1000px`; twice the size of the container. We set all flex items to be shrinkable, with `flex-shrink` values greater than `0`. The last two items have a greater `flex-shrink` values set, so they will shrink more. We set the {{cssxref("font-family")}} to `monospace`, ensuring the content of each flex item is the same size.
+We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex-basis")}} property defaults to `auto`, each item's flex basis is `200px`, for a total of `1000px`; twice the size of the container. We set all flex items to be shrinkable, with `flex-shrink` values greater than `0`. The last two items have a greater `flex-shrink` values set, so they will shrink more.
 
 ```css
 #content {
@@ -84,9 +84,7 @@ We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex
 
 #content div {
   width: 200px;
-  outline: 1px solid;
   flex-shrink: 1;
-  font-family: monospace;
 }
 
 .box4 {
@@ -98,9 +96,17 @@ We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex
 }
 ```
 
+```css hidden
+div {
+  font-family: monospace;
+  outline: 1px solid;
+  line-height: 4em;
+}
+```
+
 #### Result
 
-{{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 300)}}
+{{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 100)}}
 
 The `1000px` worth of flex items don't overflow their `500px` container because the items were able to shrink, distributing the `500px` of negative free space among the five items based on . The first three items have `flex-shrink: 1` set. D has `flex-shrink: 1.5` and E has `flex-shrink: 2` set. The final width of D and E is less than the others, with E smaller than D.
 
