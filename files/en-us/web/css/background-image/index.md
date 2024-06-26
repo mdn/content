@@ -22,12 +22,14 @@ If a specified image cannot be drawn (for example, when the file denoted by the 
 ## Syntax
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgb(255 255 0 / 50%),
-    rgb(0 0 255 / 50%)
-  ),
-  url("catfront.png");
+/* single image */
+background-image: linear-gradient(black, white);
+background-image: url("catfront.png");
+
+/* multiple images */
+background-image:
+  radial-gradient(circle, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 1) 48%),
+  radial-gradient(ellipse farthest-corner, #FC1C14 20%, #CF15CF 80%);
 
 /* Global values */
 background-image: inherit;
@@ -124,11 +126,9 @@ div {
 
 ## See also
 
-- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
 - {{HTMLElement("img")}}
 - Image-related data types: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
 - Image-related functions:
-
   - {{cssxref("cross-fade", "cross-fade()")}}
   - {{cssxref("element", "element()")}}
   - {{cssxref("image/image", "image()")}}
@@ -141,3 +141,5 @@ div {
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("image/paint", "paint()")}}
   - {{cssxref("url", "url()")}}
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
