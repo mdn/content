@@ -74,7 +74,7 @@ The most interesting parts of the tree structure are as follows:
 
 ## Creating a basic view transition
 
-This section illustates how to create a basic view transition, in both the SPA and MPA case.
+This section illustrates how to create a basic view transition, in both the SPA and MPA case.
 
 ### Basic SPA view transition
 
