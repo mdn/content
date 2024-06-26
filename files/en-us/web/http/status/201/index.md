@@ -26,10 +26,6 @@ request.
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
