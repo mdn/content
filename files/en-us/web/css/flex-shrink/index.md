@@ -67,7 +67,7 @@ In this example, there are five flex items with a `flex-shrink` value greater th
   <div class="box" style="background-color:red;">A</div>
   <div class="box" style="background-color:lightblue;">B</div>
   <div class="box" style="background-color:yellow;">C</div>
-  <div class="box4" style="background-color:slateblue;">D</div>
+  <div class="box4" style="background-color:lightsalmon;">D</div>
   <div class="box5" style="background-color:lightgreen;">E</div>
 </div>
 ```
