@@ -62,7 +62,7 @@ height: unset;
 - {{cssxref("clamp", "clamp()")}}
   - : Enables selecting a middle value within a range of values between a defined minimum and maximum.
 - {{cssxref("anchor-size()")}} {{experimental_inline}}
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated **anchor element**.
+  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated anchor element.
 
 ## Accessibility concerns
 

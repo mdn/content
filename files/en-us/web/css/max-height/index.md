@@ -58,7 +58,7 @@ max-height: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 - {{cssxref("anchor-size()")}} {{experimental_inline}}
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated **anchor element**.
+  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated anchor element.
 
 ## Accessibility concerns
 

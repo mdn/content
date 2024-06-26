@@ -7,7 +7,7 @@ browser-compat: css.types.anchor-size
 
 {{CSSRef}}
 
-The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used as a value for an **anchor-positioned** element's [sizing properties](#properties_that_accept_anchor-size_function_values), to size it relative to the dimensions of its associated **anchor element**.
+The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used as a value for an anchor-positioned element's [sizing properties](#properties_that_accept_anchor-size_function_values), to size it relative to the dimensions of its associated anchor element.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 

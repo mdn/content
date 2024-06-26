@@ -7,7 +7,7 @@ browser-compat: css.properties.inset-area
 
 {{CSSRef}}
 
-The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) specifies an area of the implicit 3x3 grid known as the **inset-area grid**. It can be set as the value of the {{cssxref("inset-area")}} property to place an **anchor-positioned element** in a specific location relative to its associated **anchor element**.
+The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) specifies an area of the implicit 3x3 grid known as the **inset-area grid**. It can be set as the value of the {{cssxref("inset-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
