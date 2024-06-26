@@ -42,7 +42,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ```html
 <p>
-  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+  Heat the oven to <meter min="200" max="500" value="350"></meter> 350 degrees.
 </p>
 ```
 
