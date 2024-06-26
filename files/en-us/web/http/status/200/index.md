@@ -27,9 +27,9 @@ The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} i
 
 ## Examples
 
-### Requesting a website
+### GET response
 
-Making a successful GET request to `https://example.com` returns the following response:
+Making a successful GET request to `https://example.com` returns the following response with the HTML contained in the message body:
 
 ```http
 HTTP/1.1 200 OK
@@ -46,6 +46,37 @@ X-Cache: HIT
 Content-Length: 1256
 
 <!doctype html>
+```
+
+### POST response in form submission
+
+Assuming a form exists to send data to an endpoint for managing subscriptions at `http://example.com/subscribe`.
+A `POST` request to subscribe a user may look like the following:
+
+```http
+POST /subscribe HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 50
+
+name=Brian%20Smith&email=brian.smith%40example.com
+```
+
+An example response could look like this:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "message": "User subscription pending. A confirmation email has been sent.",
+  "subscription": {
+    "name": "Brian Smith",
+    "email": "brian.smith@example.com",
+    "id": 123,
+    "feedNumber": "default"
+  }
+}
 ```
 
 ## Specifications

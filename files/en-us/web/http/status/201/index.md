@@ -20,7 +20,35 @@ This status code is commonly sent as the result of a {{HTTPMethod("POST")}} requ
 
 ## Examples
 
-TODO
+Assuming a REST API exists with an endpoint to manage users at `http://example.com/users` and a `POST` request with the following body will create a user:
+
+```http
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "firstName": "Brian",
+  "lastName": "Smith",
+  "email": "brian.smith@example.com"
+}
+```
+
+A generic 201 response may look like this:
+
+```http
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+
+{
+  "message": "New user created",
+  "user": {
+    "id": 123,
+    "firstName": "Brian",
+    "lastName": "Smith",
+    "email": "brian.smith@example.com"
+  }
+}
 
 ## Specifications
 
@@ -34,3 +62,4 @@ TODO
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+```

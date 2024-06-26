@@ -22,7 +22,24 @@ A 204 response is cacheable by default and an {{HTTPHeader("ETag")}} header is i
 
 ## Examples
 
-TODO
+### Deleting an image
+
+In this example, the client is requesting that an image is deleted using the `DELETE` method.
+An {{HTTPHeader("Authorization")}} header includes a token to authenticate the request:
+
+```http
+DELETE /image/123 HTTP/1.1
+Host: example.com
+Authorization: Bearer 1234abcd
+```
+
+The server responds with a `204` response with no body in the message:
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+```
 
 ## Specifications
 
