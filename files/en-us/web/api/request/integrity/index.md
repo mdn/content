@@ -49,7 +49,7 @@ async function get(request) {
 }
 ```
 
-When the request is made, the browser computes the SHA-384 {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource, and if the result does not match the value specified in `integrity`, the browser will reject the fetch request.
+When the request is made, the browser computes the SHA-384 {{glossary("Cryptographic_hash_function", "hash")}} of the fetched resource. If the result does not match the value specified in `integrity`, the browser will reject the fetch request.
 
 ## Specifications
 
