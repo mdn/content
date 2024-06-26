@@ -97,6 +97,9 @@ We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex
 ```
 
 ```css hidden
+#content {
+  margin: 5px;
+}
 div {
   font-family: monospace;
   outline: 1px solid;
