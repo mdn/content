@@ -36,6 +36,7 @@ justify-items: self-start;
 justify-items: self-end;
 justify-items: left; /* Pack items from the left */
 justify-items: right; /* Pack items from the right */
+justify-items: anchor-center;
 
 /* Baseline alignment */
 justify-items: baseline;
@@ -98,6 +99,8 @@ This property can take one of four different forms:
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
@@ -117,7 +120,7 @@ This property can take one of four different forms:
 
 ### Simple demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
+In the following example, we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
 
 If you hover or tab onto the grid container however, it is given a `justify-items` value of `center`, which causes the grid items to span only as wide as their content width, and align in the center of their cells.
 
