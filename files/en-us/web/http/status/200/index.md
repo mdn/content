@@ -74,7 +74,7 @@ Content-Type: application/json
     "name": "Brian Smith",
     "email": "brian.smith@example.com",
     "id": 123,
-    "feedNumber": "default"
+    "feed": "default"
   }
 }
 ```

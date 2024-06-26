@@ -21,7 +21,7 @@ It is intended for cases where another process or server handles the request, or
 
 ## Examples
 
-### Begin processing job
+### Begin automated task
 
 In the following example, we want to kick off an automation process that performs a common task in the system:
 
