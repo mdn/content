@@ -240,7 +240,7 @@ The example includes the bare essentials needed to use an `<iframe>`:
 - [`border: none`](/en-US/docs/Web/CSS/border)
   - : If used, the `<iframe>` is displayed without a surrounding border. Otherwise, by default, browsers display the `<iframe>` with a surrounding border (which is generally undesirable).
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
-  - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article.)
+  - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article).
 - [`src`](/en-US/docs/Web/HTML/Element/iframe#src)
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
