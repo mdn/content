@@ -101,6 +101,7 @@ div {
   font-family: monospace;
   outline: 1px solid;
   line-height: 4em;
+  text-align: center;
 }
 ```
 
