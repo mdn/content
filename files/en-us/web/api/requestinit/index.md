@@ -10,7 +10,7 @@ spec-urls: https://fetch.spec.whatwg.org/#requestinit
 
 The **`RequestInit`** dictionary of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the set of options that can be used to configure a Fetch request.
 
-You can pass an instance of `RequestInit` into the {{domxref("Request.Request()", "Request()")}} constructor, or directly into the [`fetch()`](/en-US/docs/Web/API/fetch) function call.
+You can pass a `RequestInit` object into the {{domxref("Request.Request()", "Request()")}} constructor, or directly into the [`fetch()`](/en-US/docs/Web/API/fetch) function call.
 
 You can also construct a `Request` with a `RequestInit`, and pass the `Request` to a `fetch()` call along with another `RequestInit`. If you do this, and the same option is set in both places, then the value passed directly into `fetch()` is used.
 
