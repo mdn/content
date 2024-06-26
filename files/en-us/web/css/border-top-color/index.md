@@ -7,7 +7,7 @@ browser-compat: css.properties.border-top-color
 
 {{CSSRef}}
 
-The **`border-top-color`** CSS property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.
+The **`border-top-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.
 
 {{EmbedInteractiveExample("pages/css/border-top-color.html")}}
 

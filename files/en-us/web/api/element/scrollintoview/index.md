@@ -60,6 +60,8 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Using scrollIntoView()
+
 ```js
 const element = document.getElementById("box");
 
@@ -69,10 +71,68 @@ element.scrollIntoView({ block: "end" });
 element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 ```
 
-## Notes
+### Controlling top/bottom alignment
 
-The element may not be scrolled completely to the top or bottom depending on the layout
-of other elements.
+By default, the element is aligned to the top (or bottom) edge of the scrollable ancestor. To define a custom spacing, use {{cssxref("scroll-margin-top")}} or {{cssxref("scroll-margin-bottom")}}. This is often useful when there's a fixed header on the page.
+
+#### HTML
+
+```html
+<body>
+  <header class="navbar">Navbar</header>
+  <main class="content">
+    <button id="go-to-bottom">Go to bottom</button>
+    <button id="go-to-top">Go to top</button>
+  </main>
+</body>
+```
+
+#### CSS
+
+```css
+.navbar {
+  height: 50px;
+  position: sticky;
+  top: 0;
+  border-bottom: 1.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  height: 2000px;
+  position: relative;
+}
+#go-to-bottom {
+  position: absolute;
+  top: 10px;
+  /* Without this, the button will be aligned to the top of the page
+  instead of bottom of navbar when scrolled */
+  scroll-margin-top: 60px;
+}
+#go-to-top {
+  position: absolute;
+  bottom: 10px;
+  scroll-margin-bottom: 0;
+}
+```
+
+#### JavaScript
+
+```js
+const goToTop = document.getElementById("go-to-top");
+const goToBottom = document.getElementById("go-to-bottom");
+goToBottom.addEventListener("click", () => {
+  goToTop.scrollIntoView({ behavior: "instant", block: "end" });
+});
+goToTop.addEventListener("click", () => {
+  goToBottom.scrollIntoView({ behavior: "instant", block: "start" });
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("scroll-with-padding", "700", "300")}}
 
 ## Specifications
 

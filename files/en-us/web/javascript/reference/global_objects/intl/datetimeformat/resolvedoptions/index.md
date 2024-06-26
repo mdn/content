@@ -32,7 +32,7 @@ A new object with properties reflecting the options computed during the initiali
 - `numberingSystem`
   - : One of the [supported numbering system types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types), reflecting the value provided for this property in the `options` argument or the `nu` Unicode extension key. The default is locale dependent.
 - `timeZone`
-  - : One of the [IANA time zone names](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZoneNames), reflecting the value provided for this property in the `options` argument. The default is the runtime's default time zone; should never be `undefined`.
+  - : One of the [IANA time zone names](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones), reflecting the value provided for this property in the `options` argument. The default is the runtime's default time zone; should never be `undefined`.
 - `hourCycle`
   - : The value provided for this property in the `options` argument, or provided in the Unicode extension key `"hc"`, with default filled in as needed. Only present if the `options` argument included `hour` or `timeStyle`.
 - `hour12`

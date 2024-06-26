@@ -227,19 +227,19 @@ let handleClick = function (event) {
 
 // handle key presses
 let handleKeydown = function (event) {
-  switch (event.keyCode) {
-    case 32: // space
-    case 12: // return
+  switch (event.code) {
+    case "Space":
+    case "Enter":
       currentChecked();
       break;
 
-    case 38: // up
-    case 37: // left
+    case "ArrowUp":
+    case "ArrowLeft":
       previousRadioChecked();
       break;
 
-    case 40: // down
-    case 39: // right
+    case "ArrowDown":
+    case "ArrowRight":
       nextItemChecked();
       break;
 

@@ -169,7 +169,7 @@ The availability of these special shortcuts varies between manifest versions and
   <tr>
     <td><code>_execute_page_action</code></td>
     <td>Yes</td>
-    <td>Not available in Chromium-based browsers</td>
+    <td>Firefox only</td>
   </tr>
   <tr>
     <td><code>_execute_sidebar_action</code></td>
