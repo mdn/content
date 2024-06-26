@@ -218,8 +218,7 @@ You must be careful which level of characters you are iterating on. For example,
 ## Constructor
 
 - {{jsxref("String/String", "String()")}}
-  - : Creates a new `String` object. It performs type conversion when called as
-    a function, rather than as a constructor, which is usually more useful.
+  - : Creates `String` objects. When called as a function, it returns primitive values of type String.
 
 ## Static methods
 

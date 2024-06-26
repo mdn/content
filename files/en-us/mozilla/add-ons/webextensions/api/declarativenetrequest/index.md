@@ -203,6 +203,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 
 - {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount()")}}
   - : Returns the number of static rules an extension can enable before the global static rule limit is reached.
+- {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds()")}}
+  - : Returns the IDs of the disabled rules in a static ruleset.
 - {{WebExtAPIRef("declarativeNetRequest.getDynamicRules()")}}
   - : Returns the set of dynamic rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.getEnabledRulesets()")}}
@@ -223,6 +225,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
   - : Updates the set of active static rulesets for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.updateSessionRules()")}}
   - : Modifies the set of session scoped rules for the extension.
+- {{WebExtAPIRef("declarativeNetRequest.updateStaticRules()")}}
+  - : Modifies the enabled state of rules in a static ruleset.
 
 ## Events
 

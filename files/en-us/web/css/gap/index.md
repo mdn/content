@@ -7,9 +7,7 @@ browser-compat: css.properties.gap
 
 {{CSSRef}}
 
-The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the gaps ({{glossary("gutters")}}) between rows and columns.
-
-Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-gap` as an alias for `gap`.
+The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
@@ -55,16 +53,32 @@ gap: revert-layer;
 gap: unset;
 ```
 
-This property is specified as a value for `<'row-gap'>` followed optionally by a value for `<'column-gap'>`. If `<'column-gap'>` is omitted, it's set to the same value as `<'row-gap'>`.
-
-`<'row-gap'>` and `<'column-gap'>` are each specified as a `<length>` or a `<percentage>`.
-
 ### Values
 
+This property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. If `<'column-gap'>` is omitted, it is set to the same value as `<'row-gap'>`. Both `<'row-gap'>` and `<'column-gap'>` can each be specified as a `<length>` or a `<percentage>`.
+
 - {{CSSxRef("&lt;length&gt;")}}
-  - : Is the width of the gutter separating the grid lines.
+  - : Specifies the width of the gutter separating columns, {{glossary("flex item","flex items")}}, flex lines, and {{glossary("grid lines")}}.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : Is the width of the gutter separating the grid lines, relative to the dimension of the element.
+  - : Specifies the width of the gutter separating columns, flex items, flex lines, and grid lines relative to the dimension of the element.
+
+## Description
+
+This property defines gaps between columns in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), between flex items and flex lines in [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and between rows and columns in [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+
+The generated gaps create empty spaces that have the width or height of the gap's specified size.
+
+In grid layout, the first value defines the gutter between rows, and the second value defines the gutter between columns. In both grid and flex layouts, if only one value is included, that value is used for both dimensions.
+
+With flex containers, whether the first value is the gap between flex items or between flex line depends on the direction. Flex items are laid out in either rows or columns depending on the value of the {{cssxref("flex-direction")}} property. For rows (`row` (the default) or `row-reverse`), the first value defines the gap between flex lines, and the second value defines the gap between items within each line. For columns (`column` or `column-reverse`), the first value defines the gap between flex items within a flex line, and the second value defines the gaps between each flex line.
+
+In multi-column containers, the first value defines the gap between columns. A dividing line can be added to the otherwise "empty space" by using the {{cssxref("column-rule-style")}} property or {{cssxref("column-rule")}} shorthand.
+
+If the value is specified as a percentage, the property resolves the value relative to the size of the element's content box. When this size is definite, the behavior is well-defined and consistent across layout modes. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` does so as well. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions, but resolve against the element's content box when laying out the contents.
+
+The visible space between elements may differ from the specified `gap` value because margins, padding, and distributed alignment may increase the separation between elements beyond what is specified by `gap`.
+
+Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers still accept `grid-gap` as an alias for `gap`.
 
 ## Formal definition
 
@@ -186,5 +200,10 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## See also
 
-- Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- {{CSSxRef("row-gap")}}
+- {{CSSxRef("column-gap")}}
+- [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module

@@ -25,7 +25,8 @@ view-transition-name: none;
 ### Values
 
 - {{cssxref("custom-ident")}}
-  - : A distinct identifying name that causes the selected element to participate in a separate [view transition](/en-US/docs/Web/API/View_Transitions_API) from the root view transition. The identifier must be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+  - : An identifying name that causes the selected element to participate in a separate [view transition](/en-US/docs/Web/API/View_Transitions_API) from the root view transition. The identifier must be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+    > **Note:** The `<custom-ident>` cannot be `auto`.
 - `none`
   - : The selected element will not participate in a view transition.
 

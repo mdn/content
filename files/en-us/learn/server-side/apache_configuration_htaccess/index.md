@@ -160,7 +160,7 @@ Associates media types with one or more extensions to make sure the resources wi
 Servers should use `text/javascript` for JavaScript resources as indicated in the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages)
 
 ```apacheconf
-<IfModule mod_expires.c>
+<IfModule mod_mime.c>
   # Data interchange
     AddType application/atom+xml      atom
     AddType application/json          json map topojson
@@ -494,8 +494,8 @@ To prevent referrer leakage entirely, specify the `no-referrer` value instead. N
 
 Use services like the ones below to check your `Referrer-Policy`:
 
+- [HTTP Observatory](/en-US/observatory/)
 - [securityheaders.com](https://securityheaders.com/)
-- [Mozilla Observatory](https://observatory.mozilla.org/)
 
 ```apacheconf
 <IfModule mod_headers.c>

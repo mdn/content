@@ -29,7 +29,7 @@ handlers are called and return before `dispatchEvent()` returns.
 dispatchEvent(event)
 ```
 
-### Parameter
+### Parameters
 
 - `event`
   - : The {{domxref("Event")}} object to dispatch. Its {{domxref("Event.target")}} property will be set to the current {{domxref("EventTarget")}}.

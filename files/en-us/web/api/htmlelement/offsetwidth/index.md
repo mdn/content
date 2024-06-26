@@ -35,12 +35,6 @@ An integer corresponding to the `offsetWidth` pixel value of the element. The `o
 
 {{Specifications}}
 
-### Notes
-
-`offsetWidth` is a property of the DHTML object model which was first
-introduced by MSIE. It is sometimes referred to as an element's physical/graphical
-dimensions, or an element's border-box width.
-
 ## Browser compatibility
 
 {{Compat}}
