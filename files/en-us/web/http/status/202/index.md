@@ -54,10 +54,6 @@ Content-Type: application/json
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - {{HTTPHeader("Accept")}}

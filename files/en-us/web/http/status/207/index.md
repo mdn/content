@@ -63,10 +63,6 @@ Content-Length: 1241
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - {{HTTPStatus("204")}}

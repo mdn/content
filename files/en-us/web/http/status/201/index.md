@@ -49,6 +49,7 @@ Content-Type: application/json
     "email": "brian.smith@example.com"
   }
 }
+```
 
 ## Specifications
 
@@ -62,4 +63,3 @@ Content-Type: application/json
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-```

@@ -49,10 +49,6 @@ Content-Length: 123
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - {{HTTPStatus("200")}}
