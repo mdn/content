@@ -521,7 +521,7 @@
         "/docs/Web/API/Fetch_API/Basic_concepts",
         "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
       ],
-      "interfaces": ["Headers", "Request", "Response"],
+      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["fetch()"],
       "properties": [],
       "events": []
