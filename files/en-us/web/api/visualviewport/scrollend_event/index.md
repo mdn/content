@@ -1,9 +1,9 @@
 ---
 title: "VisualViewport: scrollend event"
 short-title: scrollend
-slug: Web/API/VisualViewport/scroll_event
+slug: Web/API/VisualViewport/scrollend_event
 page-type: web-api-event
-browser-compat: api.VisualViewport.scroll_event
+browser-compat: api.VisualViewport.scrollend_event
 ---
 
 {{APIRef("Visual Viewport")}}
