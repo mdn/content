@@ -27,9 +27,12 @@ background-image: linear-gradient(black, white);
 background-image: url("catfront.png");
 
 /* multiple images */
-background-image:
-  radial-gradient(circle, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 1) 48%),
-  radial-gradient(ellipse farthest-corner, #FC1C14 20%, #CF15CF 80%);
+background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 1) 48%
+  ),
+  radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
 
 /* Global values */
 background-image: inherit;
