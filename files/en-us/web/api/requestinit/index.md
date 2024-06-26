@@ -12,7 +12,7 @@ The **`RequestInit`** dictionary of the [Fetch API](/en-US/docs/Web/API/Fetch_AP
 
 You can pass an instance of `RequestInit` into the {{domxref("Request.Request()", "Request()")}} constructor, or directly into the [`fetch()`](/en-US/docs/Web/API/fetch) function call.
 
-You can also pass a `RequestInit` into the `Request()` constructor and also into the `fetch()` call. If you do this, and the same option is set in both places, then the value passed directly into `fetch()` is used.
+You can also construct a `Request` with a `RequestInit`, and pass the `Request` to a `fetch()` call along with another `RequestInit`. If you do this, and the same option is set in both places, then the value passed directly into `fetch()` is used.
 
 ## Instance properties
 
