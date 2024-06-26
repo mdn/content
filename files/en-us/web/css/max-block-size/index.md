@@ -23,6 +23,8 @@ Any time you would normally use `max-height` or `max-width`, you should instead 
 /* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
+max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: calc(anchor-size(inset-inline-size) / 2);
 
 /* <percentage> values */
 max-block-size: 75%;
@@ -33,10 +35,6 @@ max-block-size: max-content;
 max-block-size: min-content;
 max-block-size: fit-content;
 max-block-size: fit-content(20em);
-
-/* anchor-size() function values */
-max-block-size: anchor-size(self-inline);
-max-block-size: anchor-size(--myAnchor block, 120%);
 
 /* Global values */
 max-block-size: inherit;
@@ -64,8 +62,6 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
-- {{cssxref("anchor-size()")}} {{experimental_inline}}
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated anchor element.
 
 ### How writing-mode affects directionality
 

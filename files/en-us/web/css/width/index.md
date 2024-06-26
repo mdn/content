@@ -22,6 +22,8 @@ The specified value of `width` applies to the content area so long as its value 
 /* <length> values */
 width: 300px;
 width: 25em;
+width: anchor-size(--myAnchor inline, 120%);
+width: minmax(100px, anchor-size(width));
 
 /* <percentage> value */
 width: 75%;
@@ -32,10 +34,6 @@ width: min-content;
 width: fit-content;
 width: fit-content(20em);
 width: auto;
-
-/* anchor-size() function values */
-width: anchor-size(width);
-width: anchor-size(--myAnchor inline, 120%);
 
 /* Global values */
 width: inherit;
@@ -61,8 +59,6 @@ width: unset;
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
-- {{cssxref("anchor-size()")}} {{experimental_inline}}
-  - : Resolves to a {{cssxref("&lt;length&gt;")}} value relative to a dimension of an element's associated anchor element.
 
 ## Accessibility concerns
 
@@ -90,7 +86,7 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">The Mozilla community produces a lot of great software.</p>
+<p class="goldie">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -146,7 +142,7 @@ p.maxgreen {
 ```
 
 ```html
-<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+<p class="maxgreen">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
@@ -161,7 +157,7 @@ p.minblue {
 ```
 
 ```html
-<p class="minblue">The Mozilla community produces a lot of great software.</p>
+<p class="minblue">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
@@ -181,3 +177,4 @@ p.minblue {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("anchor-size()")}}
