@@ -10,7 +10,7 @@ browser-compat: css.properties.flex-shrink
 The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, [flex items can shrink](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#the_flex-shrink_property) to fit according to their `flex-shrink` value, with each flex line's [negative free space](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#positive_and_negative_free_space) being distributed between the line's flex items that have a `flex-shrink` value greater than `0`.
 
 > ![Note]
-It is recommended to use the {{cssxref("flex")}} shorthand shorthand instead of separate `flex-shrink`, {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}} declarations. We have separated them here as this document is about one of the `flaex` shorthand components: the `flex-shrink` property.
+> It is recommended to use the {{cssxref("flex")}} shorthand shorthand instead of separate `flex-shrink`, {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}} declarations. We have separated them here as this document is about one of the `flaex` shorthand components: the `flex-shrink` property.
 
 {{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
 
@@ -28,6 +28,7 @@ flex-shrink: revert;
 flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
+
 ## Description
 
 The `flex-shrink` property specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
@@ -57,10 +58,9 @@ The `flex-shrink` property is specified as a single `<number>`.
 
 ### Setting flex item shrink factor
 
-In this example, there are five flex items with a `flex-shrink` value greater than 0, that have combined width that is wider than their parent flex container, demonstrating how negative free space is distributed based on the item's shrink factor. 
+In this example, there are five flex items with a `flex-shrink` value greater than 0, that have combined width that is wider than their parent flex container, demonstrating how negative free space is distributed based on the item's shrink factor.
 
 #### HTML
-
 
 ```html
 <div id="content">
@@ -74,7 +74,7 @@ In this example, there are five flex items with a `flex-shrink` value greater th
 
 #### CSS
 
-We give each flex item a {{cssxref("width")}} of `200px`.  As the {{cssxref("flex-basis")}} property defaults to `auto`, each item's flex basis is `200px`, for a total of `1000px`; twice the size of the container. We set all flex items to be shrinkable, with `flex-shrink` values greater than `0`. The last two items have a greater `flex-shrink` values set, so they will shrink more. We set the {{cssxref("font-family")}} to `monospace`, ensuring the content of each flex item is the same size.
+We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex-basis")}} property defaults to `auto`, each item's flex basis is `200px`, for a total of `1000px`; twice the size of the container. We set all flex items to be shrinkable, with `flex-shrink` values greater than `0`. The last two items have a greater `flex-shrink` values set, so they will shrink more. We set the {{cssxref("font-family")}} to `monospace`, ensuring the content of each flex item is the same size.
 
 ```css
 #content {
