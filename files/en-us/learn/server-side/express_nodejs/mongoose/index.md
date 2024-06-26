@@ -397,7 +397,7 @@ await awesome_instance.save();
 
 #### Searching for records
 
-You can search for records using query methods, specifying the query conditions as a JSON document. The code fragment below shows how you might find all athletes in a database that play tennis, returning just the fields for athlete _name_ and _age_. Here we just specify one matching field (sport) but you can add more criteria, specify regular expression criteria, or remove the conditions altogether to return all athletes.
+You can search for records using query methods, specifying the query conditions as a JSON document. The code fragment below shows how you might find in a database all athletes who play tennis, returning just the fields for athlete _name_ and _age_. Here we just specify one matching field (sport) but you can add more criteria, specify regular expression criteria, or remove the conditions altogether to return all athletes.
 
 ```js
 const Athlete = mongoose.model("Athlete", yourSchema);
