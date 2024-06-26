@@ -87,3 +87,9 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke-opacity")}}

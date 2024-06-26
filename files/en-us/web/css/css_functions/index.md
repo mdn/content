@@ -265,8 +265,10 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
-- {{CSSxRef("path", "path()")}}
+- {{CSSxRef("basic-shape/path", "path()")}}
   - : Accepts an SVG path string to enable a shape to be drawn.
+- {{CSSxRef("basic-shape/shape", "shape()")}}
+  - : Accepts a comma-separated list of commands defining the shape to be drawn.
 
 ## Reference functions
 
@@ -283,7 +285,7 @@ The following functions are used as a value of properties to reference a value d
 
 ## Grid functions
 
-The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout).
+The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 - {{CSSxRef("fit-content", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
@@ -317,7 +319,7 @@ The following functions are used as a value in transition and animation properti
   - : Easing function that interpolates linearly between its points.
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
-- {{cssxref("easing-function#step_easing_function", "steps()")}}
+- {{cssxref("easing-function#steps_easing_function", "steps()")}}
   - : Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
 
 ## Animation functions
@@ -328,6 +330,17 @@ The following functions are used as a value of different `animation-timeline` pr
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.
 - {{cssxref("animation-timeline/view", "view()")}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
+
+## Anchor positioning functions
+
+The anchor positioning functions are used when positioning and sizing anchor-positioned elements relative to the location and size of their associated anchor elements.
+
+- {{cssxref("anchor", "anchor()")}}
+  - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
+- {{cssxref("anchor-size", "anchor-size()")}}
+  - : Returns a length relative to the size of the associated anchor element.
+- {{cssxref("inset-area_function", "inset-area()")}}
+  - : Defines the anchor element side of a position try option.
 
 ## See also
 

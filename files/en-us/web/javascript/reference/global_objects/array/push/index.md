@@ -58,7 +58,7 @@ console.log(total); // 4
 
 ### Merging two arrays
 
-This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}} to push all elements from a
+This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", 1)}} to push all elements from a
 second array into the first one.
 
 ```js

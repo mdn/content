@@ -811,7 +811,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
   <tbody>
     <tr>
       <th scope="row">Supported bit rates</th>
-      <td>Unrestricted, but typically below 64 Kbps</td>
+      <td>Unrestricted, but typically below 64 kbps</td>
     </tr>
     <tr>
       <th scope="row">Supported frame rates</th>
@@ -930,7 +930,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
   <tbody>
     <tr>
       <th scope="row">Supported bit rates</th>
-      <td>Up to 800,000 Kbps</td>
+      <td>Up to 800,000 kbps</td>
     </tr>
     <tr>
       <th scope="row">Supported frame rates</th>
@@ -1113,7 +1113,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
   <tbody>
     <tr>
       <th scope="row">Supported bit rates</th>
-      <td>5 Kbps to 1 Gbps and more</td>
+      <td>5 kbps to 1 Gbps and more</td>
     </tr>
     <tr>
       <th scope="row">Supported frame rates</th>

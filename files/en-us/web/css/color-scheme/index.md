@@ -129,7 +129,7 @@ Alternatively, use the experimental [`light-dark()`](/en-US/docs/Web/CSS/color_v
 
 - [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query to detect user preferences for color schemes.
 - {{CSSXref("color_value/light-dark", "light-dark()")}} color function to set colors for both light and dark color schemes.
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)

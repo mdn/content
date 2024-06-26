@@ -24,17 +24,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Note:** The {{cssxref(":indeterminate")}} pseudo-class can be used to match against indeterminate progress bars. To change the progress bar to indeterminate after giving it a value you must remove the value attribute with {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}}.
 
-## Examples
-
-```html
-<progress value="70" max="100">70 %</progress>
-```
-
-### Result
-
-{{ EmbedLiveSample("Examples", 200, 50) }}
-
-## Accessibility concerns
+## Accessibility
 
 ### Labelling
 
@@ -79,6 +69,16 @@ If the `<progress>` element is describing the loading progress of a section of a
 ##### Result
 
 {{EmbedLiveSample('Describing a particular region')}}
+
+## Examples
+
+```html
+<progress value="70" max="100">70 %</progress>
+```
+
+### Result
+
+{{ EmbedLiveSample("Examples", 200, 50) }}
 
 ## Technical summary
 

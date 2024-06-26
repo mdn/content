@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioData.duration
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`duration`** read-only property of the {{domxref("AudioData")}} interface returns the duration in microseconds of this `AudioData` object.
 

@@ -109,13 +109,15 @@ Beyond accessibility, this is another good reason to properly set up `<label>` e
 
 ### Indeterminate state checkboxes
 
-In addition to the checked and unchecked states, there is a third state a checkbox can be in: **indeterminate**. This is a state in which it's impossible to say whether the item is toggled on or off. This is set using the {{domxref("HTMLInputElement")}} object's `indeterminate` property via JavaScript (it cannot be set using an HTML attribute):
+A checkbox can be in an **indeterminate** state. This is set using the {{domxref("HTMLInputElement")}} object's `indeterminate` property via JavaScript (it cannot be set using an HTML attribute):
 
 ```js
 inputInstance.indeterminate = true;
 ```
 
-A checkbox in the indeterminate state has a horizontal line in the box (it looks somewhat like a hyphen or minus sign) instead of a check/tick in most browsers.
+When `indeterminate` is `true`, the checkbox has a horizontal line in the box (it looks somewhat like a hyphen or minus sign) instead of a check/tick in most browsers.
+
+> **Note:** This is purely a visual change. It has no impact on whether the checkbox's `value` is used in a form submission. That is decided by the `checked` state, regardless of the `indeterminate` state.
 
 There are not many use cases for this property. The most common is when a checkbox is available that "owns" a number of sub-options (which are also checkboxes). If all of the sub-options are checked, the owning checkbox is also checked, and if they're all unchecked, the owning checkbox is unchecked. If any one or more of the sub-options have a different state than the others, the owning checkbox is in the indeterminate state.
 
@@ -161,8 +163,6 @@ function updateDisplay() {
 ```
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
-
-> **Note:** If you submit a form with an indeterminate checkbox, the same thing happens as if the checkbox were unchecked — no data is submitted to represent the checkbox.
 
 ## Validation
 

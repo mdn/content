@@ -72,6 +72,8 @@ let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
 
+let interval = 0;
+
 const brickRowCount = 5;
 const brickColumnCount = 3;
 const brickWidth = 75;
@@ -212,7 +214,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  interval = setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {

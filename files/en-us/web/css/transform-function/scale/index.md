@@ -41,7 +41,7 @@ scale(sx, sy)
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa (horizontal, x-component) of the scaling vector.
 - `sy`
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate (vertical, y-component) of the scaling vector.
-    If not defined, its default value is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
+    If not defined, its default value is `sx`, resulting in a uniform scaling that preserves the element's {{glossary("aspect ratio")}}.
 
 <table class="standard-table">
   <thead>
@@ -217,6 +217,7 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("scale")}}
+- {{cssxref("zoom")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-function/scale3d", "scale3d()")}}
 - Other individual transform properties {{cssxref("translate")}} and {{cssxref("rotate")}}

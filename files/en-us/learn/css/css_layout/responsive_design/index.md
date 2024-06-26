@@ -121,7 +121,7 @@ You can use the {{cssxref('columns')}} shorthand to provide a maximum number of 
 
 ### Flexbox
 
-In Flexbox, flex items shrink or grow, distributing space between the items according to the space in their container. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them.
+In flexbox, flex items shrink or grow, distributing space between the items according to the space in their container. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them.
 
 In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic [Flexbox: Flexible sizing of flex items](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
 
@@ -139,7 +139,7 @@ In the example below the flex items will each take an equal amount of space in t
 
 ### CSS grid
 
-In CSS Grid Layout the `fr` unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at `1fr`. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under [Flexible grids with the fr unit](/en-US/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
+In CSS grid layout the `fr` unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at `1fr`. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout grids topic, under [Flexible grids with the fr unit](/en-US/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
 
 ```css
 .container {
@@ -166,7 +166,7 @@ This scales media to ensure they never overflow their containers. Using a single
 
 Responsive Images, using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes enables serving images targeted to the user's viewport and the device's resolution. For example, you can include a square image for mobile, but show the same scene as a landscape image on desktop.
 
-The `<picture>` element enables providing multiple sizes along with "hints" (metadata that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using. Using `<picture>` along with `max-width` removes the need for sizing images with media queries. It enables targeting images with different aspect ratios to different viewport sizes.
+The `<picture>` element enables providing multiple sizes along with "hints" (metadata that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using. Using `<picture>` along with `max-width` removes the need for sizing images with media queries. It enables targeting images with different {{glossary("aspect ratio", "aspect ratios")}} to different viewport sizes.
 
 You can also _art direct_ images used at different sizes, thus providing a different crop or completely different image to different screen sizes.
 
@@ -269,6 +269,6 @@ It has also become much easier to achieve responsive designs with the help of th
 - Working with touchscreen devices:
   - [Touch events](/en-US/docs/Web/API/Touch_events) provide the ability to interpret finger (or stylus) activity on touch screens or trackpads, enabling quality support for complex touch-based user interfaces.
   - Use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
-- [CSS-Tricks Guide to Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+- [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}

@@ -97,7 +97,7 @@ Note that for users whose browsers have both `image/avif` and `image/webp` suppo
 
 Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That's why the code in the example above doesn't specify preloading for the `image/webp` image.
 
-However, the lack of preloading doesn't prevent the `image/webp` image from actually being used by those who need it: for users whose browsers don't have `image/avif` support but do have `image/webp` support, the code in the example above does still cause the `image/avif` image to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
+However, the lack of preloading doesn't prevent the `image/webp` image from actually being used by those who need it: for users whose browsers don't have `image/avif` support but do have `image/webp` support, the code in the example above does still cause the `image/webp` image to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
 
 ## CORS-enabled fetches
 

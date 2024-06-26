@@ -71,8 +71,9 @@ The {{Glossary("PHP")}} code for the example we're using here follows:
 
 ```php
 date_default_timezone_set("America/New_York");
-header("Cache-Control: no-store");
+header("X-Accel-Buffering: no");
 header("Content-Type: text/event-stream");
+header("Cache-Control: no-cache");
 
 $counter = rand(1, 10);
 while (true) {
@@ -92,7 +93,9 @@ while (true) {
     $counter = rand(1, 10);
   }
 
-  ob_end_flush();
+  if (ob_get_contents()) {
+      ob_end_flush();
+  }
   flush();
 
   // Break the loop if the client aborted the connection (closed the page)

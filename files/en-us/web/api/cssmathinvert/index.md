@@ -7,7 +7,7 @@ browser-compat: api.CSSMathInvert
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathInvert`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents a CSS {{CSSXref('calc','calc()')}} used as `calc(1 / <value>).` It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathInvert`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSXref('calc','calc()')}} used as `calc(1 / <value>).` It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.isScript
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScript")}} object.
 

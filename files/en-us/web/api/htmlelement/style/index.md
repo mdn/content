@@ -83,3 +83,5 @@ Note `font-weight` is not listed as a value for `elementStyle` as it is not defi
 
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("SVGElement.style")}}
+- {{domxref("MathMLElement.style")}}
+- {{domxref("HTMLElement.attributeStyleMap")}}

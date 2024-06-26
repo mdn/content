@@ -26,6 +26,4 @@ More commonly, you receive the delta and use it to update a saved previous condi
 let newX = oldX + deltaX;
 ```
 
-## See also
-
-- Mouse wheel events ({{domxref("WheelEvent")}} offer the amount the wheel moved since the last event in its {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, and {{domxref("WheelEvent.deltaZ", "deltaZ")}} properties, for example.
+For example, mouse wheel events {{domxref("WheelEvent")}} offer the amount the wheel moved since the last event in its {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, and {{domxref("WheelEvent.deltaZ", "deltaZ")}} properties.

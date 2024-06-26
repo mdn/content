@@ -40,7 +40,7 @@ Note that the total `blockingDuration` in the first two options is the same (55m
 
 Option 3, however, has a much longer `blockingDuration` because the browser is completely blocked and unable to interrupt the long task at all. This highlights the importance of optimizing long tasks by yielding — regardless of how the browser decides to handle the tasks, the blocking duration will still be less than if you don't yield at all.
 
-The difference between `duration` and `blockingDuration` of LoAFs can be summarised as follows:
+The difference between `duration` and `blockingDuration` of LoAFs can be summarized as follows:
 
 - `duration` is a measure of the LoAF's total response time, which is useful for understanding whether the frame's layout, painting, etc. took a long time.
 - `blockingDuration` is a measure of the total time the LoAF blocked the main thread from responding to high priority tasks, such as user interactions, which can cause the UI to feel [janky](/en-US/docs/Glossary/Jank). To put it another way, it is a measure of the effect the LoAF will have on responsiveness.

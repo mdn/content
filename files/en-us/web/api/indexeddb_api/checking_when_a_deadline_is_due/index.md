@@ -186,7 +186,7 @@ The `notified === "no"` check is designed to make sure you will only get one not
     // first open up a transaction as usual
     const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-    // get the to-do list object that has this title as it's title
+    // get the to-do list object that has this title as its title
     const request = objectStore.get(title);
 
     request.onsuccess = () => {

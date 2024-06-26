@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.AbortController.AbortController
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`AbortController()`** constructor creates a new {{domxref("AbortController")}} object instance.
 

@@ -219,7 +219,7 @@ Cache-Control: public, max-age=604800, immutable
 A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That's called the **cache-busting** pattern.
 
 ```html
-<script src=https://example.com/react.0.0.0.js></script>
+<script src="https://example.com/react.0.0.0.js"></script>
 ```
 
 When a user reloads the browser, the browser will send conditional requests for validating to the origin server. But it's not necessary to revalidate those kinds of static resources even when a user reloads the browser, because they're never modified.
@@ -294,7 +294,7 @@ Cache-Control: max-age=0
 
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
-If the `max-age` value isn't non-negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) section of the HTTP specification states:
+If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) section of the HTTP specification states:
 
 > Caches are encouraged to consider responses that have invalid freshness information to be stale.
 
@@ -303,12 +303,13 @@ In other words, for any `max-age` value that isn't an integer or isn't non-negat
 #### `max-stale`
 
 The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
+If no _N_ value is specified, the client will accept a stale response of any age.
 
 ```http
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
+For example, a request with the header above indicates that the browser will accept a stale response from the cache that has expired within the last hour.
 
 Clients can use this header when the origin server is down or too slow and can accept cached responses from caches even if they are a bit old.
 

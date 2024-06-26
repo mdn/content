@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FetchEvent.handled
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`handled`** property of the {{DOMxRef("FetchEvent")}} interface returns a promise indicating if the event has been handled by the fetch algorithm or not. This property allows executing code after the browser has consumed a response, and is usually used together with the {{DOMxRef("ExtendableEvent.waitUntil", "waitUntil()")}} method.
 

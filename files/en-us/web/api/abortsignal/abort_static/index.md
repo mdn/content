@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.AbortSignal.abort_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`AbortSignal.abort()`** static method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an {{domxref("AbortSignal/abort_event","abort")}} event).
 

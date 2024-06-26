@@ -60,7 +60,7 @@ The specification (Level 2) requires that `performance.now()` should tick during
 - Firefox ([bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
 - Safari/WebKit ([bug](https://bugs.webkit.org/show_bug.cgi?id=225610))
 
-More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115).
+More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115#issuecomment-1172985601).
 
 ## Examples
 

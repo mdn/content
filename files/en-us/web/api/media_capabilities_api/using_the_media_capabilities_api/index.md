@@ -40,7 +40,7 @@ The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter 
 In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
 
 - The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Formats/Video_codecs).
-- The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the aspect ratio.
+- The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the {{glossary("aspect ratio")}}.
 - The `bitrate` is the number of bits used to encode one second of video.
 - The `framerate` is the number of frames which are played per second of time when playing the video.
 

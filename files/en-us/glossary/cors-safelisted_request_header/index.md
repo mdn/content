@@ -6,13 +6,13 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A [CORS-safelisted request header](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) is one of the following [HTTP headers](/en-US/docs/Web/HTTP/Headers):
+A [**CORS-safelisted request header**](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) (also known as "simple header") is one of the following [HTTP headers](/en-US/docs/Web/HTTP/Headers):
 
-- {{HTTPHeader("Accept")}},
-- {{HTTPHeader("Accept-Language")}},
-- {{HTTPHeader("Content-Language")}},
-- {{HTTPHeader("Content-Type")}},
-- {{HTTPHeader("Range")}}.
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Language")}}
+- {{HTTPHeader("Content-Language")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Range")}}
 
 When containing only these headers (and values that meet the additional requirements laid out below), a request doesn't need to send a {{glossary("preflight request")}} in the context of [CORS](/en-US/docs/Glossary/CORS).
 

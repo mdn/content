@@ -26,7 +26,8 @@ background-image: linear-gradient(
     to bottom,
     rgb(255 255 0 / 50%),
     rgb(0 0 255 / 50%)
-  ), url("catfront.png");
+  ),
+  url("catfront.png");
 
 /* Global values */
 background-image: inherit;
@@ -53,6 +54,14 @@ Browsers do not provide any special information on background images to assistiv
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+
+Additionally, it is important to ensure that the contrast ratio between the background image and the foreground text is high enough that people with low vision can read the page content.
+
+Color contrast ratio is determined by comparing the luminance of the text and background color values. To meet [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for body text content and 3:1 for larger text such as headings. Large text is defined as 24px or larger, or [bolded](/en-US/docs/Web/CSS/font-weight) 18.66px or larger.
+
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [Understanding WCAG, Guideline 1.4 explanation](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html), W3C (2023)
 
 ## Formal definition
 
@@ -83,8 +92,10 @@ Note that the star image is partially transparent and is layered over the cat im
 
 ```css
 p {
+  font-weight: bold;
   font-size: 1.5em;
-  color: #fe7f88;
+  color: white;
+  text-shadow: 0.07em 0.07em 0.05em black;
   background-image: none;
   background-color: transparent;
 }

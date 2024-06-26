@@ -121,7 +121,7 @@ In addition to developer tools, many tools can convert RGB to HSL for you and pr
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
-As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) and `oklab()`](/en-US/docs/Web/CSS/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
+As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) includes adding additional colorspaces, including [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional color notation and the [`lab()`](/en-US/docs/Web/CSS/color_value/lab) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab) color coordinate systems, which can specify any visible color. That said, sRGB is still the default and preferred colorspace for accessibility because of its ubiquity.
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
@@ -129,7 +129,7 @@ Where accessibility is concerned, however, standards and guidelines are currentl
 
 ### Querying color values
 
-The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: #2550000` set on it returns the computed background color as `rgb(255 0 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
+The {{domxref('Window.getComputedStyle()')}} method returns values using the RGB Decimal Reference scale or via `color(srgb...)`. For example, calling `Window.getComputedStyle()` on a `<div>` with `background-color: #ff0000` set on it returns the computed background color as `rgb(255 0 0)` — the RGB Decimal reference. However, when [using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (for example `background-color: rgb(from blue 255 0 0)`), calling `Window.getComputedStyle()` returns the computed background color as `color(srgb 1 0 0)`. Being tied to computer hardware,`Window.getComputedStyle()` measures color in terms of RGB, not how the human eye perceives color.
 
 ### Red / green color blindness
 
@@ -228,7 +228,7 @@ Saturation is sometimes described as the "purity" or "intensity" of a color. Alt
 
 When it comes to color on a monitor, saturated colors are of a particular wavelength. While the definition of saturation for each color space may differ, saturation is readily measured. The key is to know which color space you are working in and be ready to convert it if necessary.
 
-The color spaces most frequently considered when discussing photosensitivity are the RGB, HSL, and HSV, also known as HSB, color spaces. The HSV color space, which stands for _hue_, _saturation_, and _value_, and the synonym HSB, which stands for _hue_, _saturation_, and _brightness_), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) for _hue_, _whiteness_, and _blackness_.
+The color spaces most frequently considered when discussing photosensitivity are the RGB, HSL, and HSV, also known as HSB, color spaces. The HSV color space, which stands for _hue_, _saturation_, and _value_, and the synonym HSB, which stands for _hue_, _saturation_, and _brightness_, are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) for _hue_, _whiteness_, and _blackness_.
 
 It's important to know what color space you're working with. For example, saturated colors have a lightness of `0.5` in HSL, while in HWB, they have a value `1`. Saturation in the RGB color space is usually indicated by an RGB value of `255` or `100%` for the color in question. For example, a saturated red of hex value `#ff0000` has an RGB value of `rgb(255 0 0)` and an HSL value of `hsl(0 100% 50%)`. A different saturated red with a hex value of `#ff3300` has an RGB value of `rgb(255 51 0)` and an HSL value of `hsl(12 100% 50%)`. Both are "saturated" reds. They are two different "hues" but are both considered to be a saturated color.
 

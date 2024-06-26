@@ -150,7 +150,9 @@ The main basic differences come in the way browsers handle them. The first thing
 
 In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:
 
-![An input in error state with a red focus ring. The user has entered the letter 'h'. A pop-up selection list is open directly under the input box with two options: hello and hermansje.](firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
+![An input in error state with a red focus ring. The user has entered the letter 'h'. A pop-up selection list is open directly under the input box with two options: hello and hermansje.](firefox-auto-complete.png)
+
+At this point, let's look at some useful techniques you can apply to your search forms.
 
 ### Setting placeholders
 

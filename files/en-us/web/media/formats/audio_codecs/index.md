@@ -546,7 +546,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
       <th rowspan="2" scope="row">Supported bit rates</th>
       <td>
         <strong>Half Rate (HR) and Full Rate (FR):</strong> 1.8 kbps, 4.75 kbps,
-        5.15 kbpz, 5.9 kbps, 6.7 kbps, 7.4 kbps, 7.95 kbps
+        5.15 kbps, 5.9 kbps, 6.7 kbps, 7.4 kbps, 7.95 kbps
       </td>
     </tr>
     <tr>

@@ -355,7 +355,8 @@ div {
       217deg,
       rgb(255 0 0 / 80%),
       rgb(255 0 0 / 0%) 70.71%
-    ), linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
+    ),
+    linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
     linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
 }
 ```
@@ -385,7 +386,8 @@ div {
 
 ```css
 div {
-  background: linear-gradient(to top, red, blue), linear-gradient(to right, #5500ff, #00ff55);
+  background: linear-gradient(to top, red, blue),
+    linear-gradient(to right, #5500ff, #00ff55);
 }
 
 .screen {
@@ -409,7 +411,7 @@ Radial gradients are similar to linear gradients, except that they radiate out f
 
 ### A basic radial gradient
 
-As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of its box:
+As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the {{glossary("aspect ratio")}} of its box:
 
 ```html hidden
 <div class="simple-radial"></div>
@@ -651,7 +653,8 @@ div {
         circle at 93.3% 75%,
         rgb(0 255 0 / 50%),
         rgb(0 255 0 / 0%) 70.71%
-      ) beige;
+      )
+      beige;
   border-radius: 50%;
 }
 ```
@@ -799,7 +802,8 @@ div {
       rgb(75 0 130 / 50%) 240px,
       rgb(238 130 238 / 50%) 280px,
       rgb(255 0 0 / 50%) 300px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -190deg,
       rgb(255 0 0 / 50%) 30px,
       rgb(255 153 0 / 50%) 60px,
@@ -809,8 +813,18 @@ div {
       rgb(75 0 130 / 50%) 180px,
       rgb(238 130 238 / 50%) 210px,
       rgb(255 0 0 / 50%) 230px
-    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
-        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
 }
 ```
 
@@ -847,7 +861,8 @@ div {
       transparent 116px,
       rgb(255 206 0 / 25%) 116px,
       rgb(255 206 0 / 25%) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
@@ -861,15 +876,21 @@ div {
       transparent 116px,
       rgb(255 206 0 / 25%) 116px,
       rgb(255 206 0 / 25%) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 5px,
       rgb(143 77 63 / 25%) 5px,
       rgb(143 77 63 / 25%) 10px
-    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgb(
-          143 77 63 / 25%
-        ) 5px, rgb(143 77 63 / 25%) 10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgb(143 77 63 / 25%) 5px,
+      rgb(143 77 63 / 25%) 10px
+    );
 
   background: repeating-linear-gradient(
       90deg,
@@ -879,7 +900,8 @@ div {
       rgb(255 127 0 / 25%) 63px 69px,
       transparent 69px 116px,
       rgb(255 206 0 / 25%) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent 0 50px,
       rgb(255 127 0 / 25%) 50px 56px,
@@ -887,12 +909,17 @@ div {
       rgb(255 127 0 / 25%) 63px 69px,
       transparent 69px 116px,
       rgb(255 206 0 / 25%) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent 0 5px,
       rgb(143 77 63 / 25%) 5px 10px
-    ), repeating-linear-gradient(45deg, transparent 0 5px, rgb(143 77 63 / 25%) 5px
-        10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 5px,
+      rgb(143 77 63 / 25%) 5px 10px
+    );
 }
 ```
 
@@ -948,14 +975,16 @@ div {
         rgb(0 0 0 / 50%) 15px,
         rgb(255 255 255 / 50%) 15px,
         rgb(255 255 255 / 50%) 30px
-      ) top left no-repeat,
+      )
+      top left no-repeat,
     repeating-radial-gradient(
         ellipse at 20% 50%,
         rgb(0 0 0 / 50%),
         rgb(0 0 0 / 50%) 10px,
         rgb(255 255 255 / 50%) 10px,
         rgb(255 255 255 / 50%) 20px
-      ) top left no-repeat yellow;
+      )
+      top left no-repeat yellow;
   background-size:
     200px 200px,
     150px 150px;
@@ -1013,13 +1042,19 @@ div {
       #5691f580 0% 8.25%,
       #b338ff80 8.25% 16.5%,
       #f8305880 16.5% 25%
-    ), repeating-conic-gradient(
+    ),
+    repeating-conic-gradient(
       from 15deg at 50% 50%,
       #e856f580 0% 8.25%,
       #ff384c80 8.25% 16.5%,
       #e7f83080 16.5% 25%
-    ), repeating-conic-gradient(from 0deg at 20% 50%, #f58356ff 0% 8.25%, #caff38ff
-        8.25% 16.5%, #30f88aff 16.5% 25%);
+    ),
+    repeating-conic-gradient(
+      from 0deg at 20% 50%,
+      #f58356ff 0% 8.25%,
+      #caff38ff 8.25% 16.5%,
+      #30f88aff 16.5% 25%
+    );
 }
 ```
 

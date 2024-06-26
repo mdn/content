@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **color wheel**, or _color circle_, is a chart representing a palette of colors in a circle. A color wheel can display colors identified by two polar coordinates, the _angle_ and the _distance_ from the origin, the circle's center.
+A **color wheel**, or a _color circle_, represents a palette of colors in chart form, arranged in a circle. A color wheel can display colors identified by two polar coordinates, the _angle_ and the _distance_ from the origin, the circle's center.
 
 Color wheels are convenient for comparing colors expressed in polar or cylindrical coordinates, like [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), or [`lch()`](/en-US/docs/Web/CSS/color_value/lch).
 
@@ -15,12 +15,13 @@ In such cases, _complementary colors_ are often found opposite on the same diame
 Color wheels are used in real life when we want to choose between different hues. For example, when selecting wall paint or the color for a piece of furniture.
 
 In the digital world, color wheels are used in _color pickers_, like the default one on macOS:
-[![The default color picker on macOS Monterey](color_wheel_macos.png)](/en-US/docs/Glossary/Color_wheel/color_wheel_macos.png)
+
+[![The default color picker on macOS](color_wheel_macos.png)](/en-US/docs/Glossary/Color_wheel/color_wheel_macos.png)
 
 ## See also
 
-- {{glossary("color space")}}
-- [`<color>`](/en-US/docs/Web/CSS/color_value) CSS data type
-- [_Color theory and the color wheel_](https://www.canva.com/colors/color-wheel/)
-- [_How to Use the Color Wheel to Pick Your Perfect Color Palette_](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) in _Better Homes & Gardens_
-- [_Color wheel_](https://en.wikipedia.org/wiki/Color_wheel) in _Wikipedia_
+- {{glossary("color_space", "Color space")}}
+- [`<color>`](/en-US/docs/Web/CSS/color_value) the CSS data type
+- [Color theory and the color wheel](https://www.canva.com/colors/color-wheel/)
+- [How to Use the Color Wheel to Pick Your Perfect Color Palette](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) on Better Homes & Gardens
+- [Color wheel](https://en.wikipedia.org/wiki/Color_wheel) on Wikipedia

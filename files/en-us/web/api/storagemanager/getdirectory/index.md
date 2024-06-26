@@ -83,5 +83,6 @@ onmessage = async (e) => {
 ## See also
 
 - {{domxref("StorageManager")}}
-- {{domxref("navigator.storage")}}
+- {{domxref("Navigator.storage")}}
+- {{domxref("WorkerNavigator.storage")}}
 - {{domxref("FileSystemDirectoryHandle")}}

@@ -235,6 +235,8 @@ The History API interfaces let you access information about the browser's histor
 - {{DOMxRef("HashChangeEvent")}}
 - {{DOMxRef("History")}}
 - {{DOMxRef("Location")}}
+- {{DOMxRef("PageRevealEvent")}}
+- {{DOMxRef("PageSwapEvent")}}
 - {{DOMxRef("PageTransitionEvent")}}
 - {{DOMxRef("PopStateEvent")}}
 
@@ -342,7 +344,7 @@ The HTML for the form looks like this:
     <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="email">Email:</label>
+    <label for="userEmail">Email:</label>
     <input type="email" id="userEmail" />
   </p>
   <input type="submit" value="Send" id="sendButton" />
