@@ -23,12 +23,12 @@ Possible values are:
   - : This direction causes the cursor to be opened at the start of the source.
 - `nextunique`
   - : This direction causes the cursor to be opened at the start of the source.
-    For every key with duplicate values, only the first record is yielded.
+    For every key with duplicate values, only the first-visited record (closest to the start) is yielded.
 - `prev`
   - : This direction causes the cursor to be opened at the end of the source.
 - `prevunique`
   - : This direction causes the cursor to be opened at the end of the source.
-    For every key with duplicate values, only the first record is yielded.
+    For every key with duplicate values, only the first-visited record (closest to the end) is yielded.
 
 ## Examples
 
