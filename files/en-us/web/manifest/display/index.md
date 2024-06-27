@@ -7,7 +7,7 @@ browser-compat: html.manifest.display
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `display` manifest member is a string used to specify your preferred display mode for the web application. The display mode determines how much of the browser UI is shown to the user when the app is launched within the context of an operating system. You can choose to show the full browser interface or hide it to provide a more app-like experience.
+The `display` manifest member is used to specify your preferred display mode for the web application. The display mode determines how much of the browser UI is shown to the user when the app is launched within the context of an operating system. You can choose to show the full browser interface or hide it to provide a more app-like experience.
 
 ## Syntax
 
@@ -17,7 +17,7 @@ The `display` manifest member is a string used to specify your preferred display
 
 ### Values
 
-The possible values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`. If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`. If `display` is not specified, the default value `browser` is used.
+The values of the `display` member is a string. The possible values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`. If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`. If `display` is not specified, the default value `browser` is used.
 
 - `fullscreen`
 
