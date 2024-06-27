@@ -1,14 +1,13 @@
 ---
-title: scripting.ExecutionWorld
-slug: Mozilla/Add-ons/WebExtensions/API/scripting/ExecutionWorld
+title: contentScripts.ExecutionWorld
+slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/ExecutionWorld
 page-type: webextension-api-type
-browser-compat: webextensions.api.scripting.ExecutionWorld
+browser-compat: webextensions.api.contentScripts.ExecutionWorld
 ---
 
 {{AddonSidebar}}
 
-Specifies the execution environment of a script injected with {{WebExtAPIRef("scripting.executeScript()")}}
-or registered with {{WebExtAPIRef("scripting.registerContentScripts()")}}.
+Specifies the execution environment of a script registered with {{WebExtAPIRef("contentScripts.register()")}}.
 
 ## Type
 
