@@ -3,12 +3,10 @@ title: "URL: parse() static method"
 short-title: parse()
 slug: Web/API/URL/parse_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.URL.parse_static
 ---
 
-{{ApiRef("URL API")}}{{SeeCompatTable}}
+{{ApiRef("URL API")}}
 
 The **`URL.parse()`** static method of the {{domxref("URL")}} interface returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 

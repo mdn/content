@@ -64,7 +64,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
-  - : Sent when playback of the track ends (when the value {{domxref("MediaStreamTrack.readyState", "readyState")}} changes to `ended`).
+  - : Sent when playback of the track ends (when the value {{domxref("MediaStreamTrack.readyState", "readyState")}} changes to `ended`), except when the track is ended by calling {{domxref("MediaStreamTrack.stop")}}.
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
   - : Sent to the `MediaStreamTrack` when the value of the {{domxref("MediaStreamTrack.muted", "muted")}} property is changed to `true`, indicating that the track is unable to provide data temporarily (such as when the network is experiencing a service malfunction).
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
