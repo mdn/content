@@ -102,4 +102,4 @@ Also, having removed the box you cannot then use it to — for example — add a
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}
 
-Browser support for `display:contents` is limited and required for this demo to work. Firefox supports `display: contents` already, and the value is being implemented in Chrome. Once there is better browser support this feature will be very useful in circumstances where you need the markup for semantic reasons but do not want to display the box that it would generate by default.
+All major browser have support for `display:contents`. The feature is useful in circumstances where you need the markup for semantic reasons but do not want to display the box that it would generate by default.
