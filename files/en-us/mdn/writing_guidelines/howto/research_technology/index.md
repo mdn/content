@@ -39,7 +39,7 @@ This can feel a little alien to start, but the more you do it the more you get u
 - [How to read web specs part I – or: WebVR, how do you work?](https://surma.dev/things/reading-specs/) talks through reading the WebVR spec specifically, but is a great introduction to reading Web API specs.
 - [How to read web specs part IIa – or: ECMAScript Symbols](https://surma.dev/things/reading-specs-2/) the second part to the link above contains information on understanding the ECMAScript specification which outlines the JavaScript language
 
-In addition, we have the [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file) guide, which can really help when reading Web API specs.
+In addition, we have the [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file) guide, which can really help when reading Web API specs.
 
 ## Exploring the feature
 
@@ -54,7 +54,7 @@ The different pages that you need to write from scratch or update varies dependi
 
 ### Sidebars
 
-It's possible that the sidebar of the pages you write will also need to be defined or updated. To find out if this is needed and how to do it, check out the [sidebar guide](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars).
+It's possible that the sidebar of the pages you write will also need to be defined or updated. To find out if this is needed and how to do it, check out the [sidebar guide](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars).
 
 ### Code examples
 

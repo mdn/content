@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.FetchEvent.FetchEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`FetchEvent()`** constructor creates a new {{domxref("FetchEvent")}} object.
 

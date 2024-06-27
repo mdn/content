@@ -168,7 +168,7 @@ let data = new Uint8Array(12345);
 // crypto functions are wrapped in promises so we have to use await and make sure the function that
 // contains this code is an async function
 // encrypt function wants a cryptokey object
-const key_encoded = await crypto.subtle.importKey(
+const key_encoded = await window.crypto.subtle.importKey(
   "raw",
   key.buffer,
   "AES-CTR",

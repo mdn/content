@@ -10,7 +10,7 @@ browser-compat: http.headers.Sec-Browsing-Topics
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
 
-> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 

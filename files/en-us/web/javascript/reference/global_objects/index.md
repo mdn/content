@@ -96,6 +96,7 @@ These objects represent collections of data which are ordered by an index value.
 - {{jsxref("Uint32Array")}}
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("BigUint64Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 

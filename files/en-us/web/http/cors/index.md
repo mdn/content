@@ -94,7 +94,7 @@ fetchPromise
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![Diagram of simple CORS GET request](simple-req.png)
+![Diagram of simple CORS GET request](https://mdn.github.io/shared-assets/images/diagrams/http/cors/simple-request.svg)
 
 Let's look at what the browser will send to the server in this case:
 
@@ -164,7 +164,7 @@ fetchPromise.then((response) => {
 
 The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
 
-![Diagram of a request that is preflighted](preflight_correct.png)
+![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
 > **Note:** As described below, the actual `POST` request does not include the `Access-Control-Request-*` headers; they are needed only for the `OPTIONS` request.
 
@@ -256,7 +256,7 @@ Content-Type: text/plain
 
 Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after such a request, some browsers currently will report an error message such as the following:
 
-> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight.
+> The request was redirected to `https://example.com/foo`, which is disallowed for cross-origin requests that require preflight.
 > Request requires preflight, which is disallowed to follow cross-origin redirects.
 
 The CORS protocol originally required that behavior but [was subsequently changed to no longer require it](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). However, not all browsers have implemented the change, and thus still exhibit the originally required behavior.
@@ -296,7 +296,7 @@ fetchPromise.then((response) => console.log(response));
 
 This code creates a {{domxref("Request")}} object, setting the `credentials` option to `"include"` in the constructor, then passes this request into `fetch()`. Since this is a simple `GET` request, it is not preflighted but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` header, and **not** make the response available to the invoking web content.
 
-![Diagram of a simple GET request with Access-Control-Allow-Credentials](cred-req-updated.png)
+![Diagram of a simple GET request with Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
 Here is a sample exchange between client and server:
 

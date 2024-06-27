@@ -16,15 +16,15 @@ The **`<mstyle>`** [MathML](/en-US/docs/Web/MathML) element is used to change th
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
 - `background` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> instead.
+  - : Use {{cssxref("background-color")}} instead.
 - `color` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use <a href="/en-US/docs/Web/CSS/color"><code>color</code></a> instead.
+  - : Use {{cssxref("color")}} instead.
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> instead.
+  - : Use {{cssxref("font-size")}} instead.
 - `fontstyle` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use <a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a> instead.
+  - : Use {{cssxref("font-style")}} instead.
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> instead.
+  - : Use {{cssxref("font-weight")}} instead.
 - `scriptminsize` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is `8pt`.
 - `scriptsizemultiplier` {{deprecated_inline}} {{Non-standard_Inline}}

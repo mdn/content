@@ -34,7 +34,7 @@ The primary uses for the `WebAssembly` object are:
 - [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module)
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError/RuntimeError)
-  - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/spec/core/exec/index.html).
+  - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/overview.html#trap).
 - [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/Table)
   - : An array-like structure representing a WebAssembly Table, which stores [references](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), such as function references.
 - [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/JavaScript_interface/Tag/Tag)

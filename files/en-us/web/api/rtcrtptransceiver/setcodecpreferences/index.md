@@ -35,17 +35,27 @@ setCodecPreferences(codecs)
     Each codec object in the array has the following properties:
 
     - `channels` {{optional_inline}}
-      - : A positive integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
+
+      - : A positive integer indicating the number of channels supported by the codec.
+        For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
+
     - `clockRate`
+
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
+        The clock rate is the rate at which the codec's RTP timestamp advances.
+        Most codecs have specific values or ranges of values they permit.
         The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+
     - `mimeType`
-      - : A string indicating the codec's MIME media type and subtype.
+
+      - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
-        See {{RFC(3555, "", 4)}} for the complete IANA registry of these types.
+        IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+
     - `sdpFmtpLine` {{optional_inline}}
-      - : A string giving the format specific parameters field from the `a=fmtp` line in the SDP which corresponds to the codec, if such a line exists.
+
+      - : A string giving the format specific parameters field from the `a=fmtp` line in the {{Glossary("SDP")}} which corresponds to the codec, if the field is present.
         If there is no parameters field, this property is left out.
 
 ### Return value
@@ -56,6 +66,9 @@ None ({{jsxref("undefined")}}).
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : The `codecs` list includes one or more codecs which are not supported by the transceiver.
+- `InvalidModificationError` {{domxref("DOMException")}}
+  - : The `codecs` list only contains entries for RTX, RED, FEC or Comfort Noise, or is an empty set.
+    The codecs must always contain a codec for the media.
 
 ## Usage notes
 
