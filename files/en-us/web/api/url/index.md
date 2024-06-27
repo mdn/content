@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.URL
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URL`** interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.
 
@@ -13,12 +13,11 @@ You normally create a new `URL` object by specifying the URL as a string when ca
 
 If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.
 
-{{AvailableInWorkers}}
-
 ## Constructor
 
 - {{domxref("URL.URL", "URL()")}}
-  - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
+  - : Creates and returns a `URL` object from a URL string and optional base URL string.
+    Throws if the passed arguments don't define a valid URL.
 
 ## Instance properties
 
@@ -53,6 +52,8 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
   - : Returns a boolean indicating whether or not a URL defined from a URL string and optional base URL string is parsable and valid.
 - {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
+- {{domxref("URL.parse_static", "parse()")}}
+  - : Creates and returns a `URL` object from a URL string and optional base URL string, or returns `null` if the passed parameters define an invalid `URL`.
 - {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
   - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 

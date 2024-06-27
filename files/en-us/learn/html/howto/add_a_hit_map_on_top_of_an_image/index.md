@@ -14,22 +14,13 @@ Here we go over how to set up an image map, and some downsides to consider first
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        You should already know how to
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
-          >create a basic HTML document</a
-        >
-        and how to
-        <a
-          href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage"
-          >add accessible images to a webpage.</a
-        >
+        You should already know how to <a href="/en-US/docs/Learn/Getting_started_with_the_web">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        Learn how to make different regions of one image link to different
-        pages.
+        Learn how to make different regions of one image link to different pages.
       </td>
     </tr>
   </tbody>
@@ -77,20 +68,22 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 - [`shape`](/en-US/docs/Web/HTML/Element/area#shape)
 
-  [`coords`](/en-US/docs/Web/HTML/Element/area#coords)
+  - : The `shape` attribute takes one of four values: `circle`, `rect`, `poly`, and `default`. An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.
+    If there is any overlap between the defined areas, the source order determines which area takes preference.
+    The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
-  - : `shape` takes one of four values: `circle`, `rect`, `poly`, and `default`. (An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.) The shape you choose determines the coordinate information you'll need to provide in `coords`.
+- [`coords`](/en-US/docs/Web/HTML/Element/area#coords)
+
+  - : Coordinates are given in CSS pixels, and its value is dependent on the `shape` selected.
 
     - For a circle, provide the center's x and y coordinates, followed by the length of the radius.
-    - For a rectangle, provide the x/y coordinates of the upper-left and bottom-right corners.
-    - For a polygon, to provide the x/y coordinates of each corner (so, at least six values).
-
-    Coordinates are given in CSS pixels.
-
-    In case of overlap, source order carries the day.
+    - For a rectangle, provide the x and y coordinates of the upper-left and bottom-right corners.
+    - For a polygon, to provide the x and y coordinates of each corner (so, at least six values).
 
 - [`href`](/en-US/docs/Web/HTML/Element/area#href)
+
   - : The URL of the resource you're linking to. You may leave this attribute blank if you _don't_ want the current area to link anywhere (say, if you're making a hollow circle.)
+
 - [`alt`](/en-US/docs/Web/HTML/Element/area#alt)
 
   - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#writing_accessible_link_text)
@@ -118,8 +111,6 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 You aren't done until you test image maps rigorously on many browsers and devices. Try following links with your keyboard alone. Try turning images off.
 
 If your image map is wider than about 240px, you'll need to make further adjustments to make your website responsive. It's not enough to resize the image for small screens, because the coordinates stay the same and no longer match the image.
-
-If you must use image maps, you may want to look into [Matt Stow's jQuery plugin.](https://github.com/stowball/jQuery-rwdImageMaps) Alternatively, Dudley Storey demonstrates a way to [use SVG for an image map effect,](https://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps) along with a subsequent [combined SVG-raster hack](https://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG) for bitmap images.
 
 ## Learn more
 

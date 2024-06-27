@@ -80,7 +80,7 @@ The keywords and data types mentioned above are described in more detail below:
 
   - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
 
-- `contents` {{Experimental_Inline}}
+- `contents`
 
   - : Adds the contents of the element itself to the generated content value.
 
@@ -108,11 +108,11 @@ The keywords and data types mentioned above are described in more detail below:
     - `no-open-quote` and `no-close-quote`
       - : Introduces no content, but increments (decrements) the level of nesting for quotes.
 
-- `<target>` {{Experimental_Inline}}
+- `<target>`
 
   - : The `<target>` data type includes three target functions, `<target-counter()>`, `<target-counters()>`, and `<target-text()>` that create cross-references obtained from the target end of a link. See [Formal syntax](#formal_syntax).
 
-- `<leader()>` {{Experimental_Inline}}
+- `<leader()>`
 
   - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
 
@@ -133,7 +133,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 ## Examples
 
-The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element-replacement-with-url).
+The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element_replacement_with_url).
 
 ### Appending strings based on an element's class
 
@@ -304,7 +304,7 @@ This example inserts an image before all links. Two `content` values are provide
 
 The CSS to show the image and set the alternative text is shown below.
 This also sets the font and color for the content.
-This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the the fallback `content` value.
+This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the fallback `content` value.
 
 ```css
 a::before {
@@ -324,6 +324,8 @@ a::before {
 #### Result
 
 {{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
+
+> **Note:** If the alternative text syntax is supported, the value will be exposed in the browser's accessibility tree. Refer to the [See also](#see_also) section for browser-specific accessibility panels.
 
 If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "alt text is not supported" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
 
@@ -396,7 +398,7 @@ div {
 
 {{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
 
-Check the [browser compatibility chart](#browser-compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
+Check the [browser compatibility chart](#browser_compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
 
 ### Element replacement with `image-set()`
 
@@ -462,3 +464,5 @@ If inserted content is not decorative, check that the information is provided to
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+
+- Browser accessibility panels: [Firefox Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Chrome Accessibility pane](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), and [Safari Accessibility tree](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

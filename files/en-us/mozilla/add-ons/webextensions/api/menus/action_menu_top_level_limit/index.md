@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.menus.ACTION_MENU_TOP_LEVEL_LIMIT
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The maximum number of top level extension items that can be added to a menu item whose {{WebExtAPIRef("contextMenus.ContextType", "ContextType")}} is "browser_action" or "page_action". Any items beyond this limit will be ignored.
 

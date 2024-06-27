@@ -21,7 +21,7 @@ const AsyncIteratorPrototype = Object.getPrototypeOf(
 
 Currently, the only built-in JavaScript async iterator is the {{jsxref("AsyncGenerator")}} object returned by [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*). There are some other built-in async iterators in web API, such as the one of a {{domxref("ReadableStream")}}.
 
-Each of these async iterators have a distinct prototype object, which defines the `next()` method used by the particular async iterator. All of these prototype objects inherit from `AsyncIterator.prototype`, which provides am [`@@asyncIterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) method that returns the async iterator object itself, making the async iterator also [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
+Each of these async iterators have a distinct prototype object, which defines the `next()` method used by the particular async iterator. All of these prototype objects inherit from `AsyncIterator.prototype`, which provides an [`@@asyncIterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) method that returns the async iterator object itself, making the async iterator also [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 > **Note:** `AsyncIterator.prototype` does not implement [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator), so async iterators are not [sync iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) by default.
 

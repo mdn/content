@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.updateRenderState
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The `updateRenderState()` method of the {{DOMxRef("XRSession")}} interface of the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) schedules changes to be applied to the active render state ({{domxref("XRRenderState")}}) prior to rendering of the next frame.
 
@@ -26,7 +26,7 @@ updateRenderState(state)
     - `baseLayer` {{Optional_Inline}}: An {{domxref("XRWebGLLayer")}} object from which the WebXR compositor will obtain imagery. This is `null` by default. To specify other (or multiple) layers, see the `layers` option.
     - `depthFar` {{Optional_Inline}}: A floating-point value specifying the distance in meters from the viewer to the far clip plane, which is a plane parallel to the display surface beyond which no further rendering will occur. All rendering will take place between the distances specified by `depthNear` and `depthFar`. This is 1000 meters (1 kilometer) by default.
     - `depthNear` {{Optional_Inline}}: A floating-point value indicating the distance in meters from the viewer to a plane parallel to the display surface to be the **near clip plane**. No part of the scene on the viewer's side of this plane will be rendered. This is 0.1 meters (10 centimeters) by default.
-    - `inlineVerticalFieldOfView` {{Optional_Inline}}: A floating-point value indicating the default field of view, in radians, to be used when computing the projection matrix for an `inline` {{domxref("XRSession")}}. The projection matrix calculation also takes into account the output canvas's aspect ratio. This property _must not_ be specified for immersive sessions, so the value is `null` by default for immersive sessions. The default value is otherwise π \* 0.5 (half of the value of pi).
+    - `inlineVerticalFieldOfView` {{Optional_Inline}}: A floating-point value indicating the default field of view, in radians, to be used when computing the projection matrix for an `inline` {{domxref("XRSession")}}. The projection matrix calculation also takes into account the output canvas's {{glossary("aspect ratio")}}. This property _must not_ be specified for immersive sessions, so the value is `null` by default for immersive sessions. The default value is otherwise π \* 0.5 (half of the value of pi).
     - `layers` {{Optional_Inline}}: An ordered array of {{domxref("XRLayer")}} objects specifying the layers that should be presented to the XR device. Setting `layers` will override the `baseLayer` if one is present, with `baseLayer` reporting `null`. The order of the layers given is "back-to-front". For alpha blending of layers, see the {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}} property.
 
 ### Return value

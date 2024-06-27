@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document_structure_roles
 ---
 
+{{AccessibilitySidebar}}
+
 ARIA document-structure roles are used to provide a structural description for a section of content.
 
 Structural ARIA roles were originally created as a bridge to inform assistive technologies of HTML5 elements that were not yet fully supported in browsers. Some roles, like `presentation`, `toolbar` and `tooltip`, provide information on the document structure to assistive technologies in cases where equivalent native HTML elements don't exist. Other roles, including those listed in the table below, are not needed, as there are semantic HTML elements with the same meanings. In many cases, these equivalent HTML elements have always been supported.
@@ -55,12 +57,4 @@ Do not use structural roles. Opt for HTML semantic elements instead.
 
 {{Specifications}}
 
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>
+## See also

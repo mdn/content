@@ -7,7 +7,7 @@ browser-compat: javascript.operators.exponentiation_assignment
 
 {{jsSidebar("Operators")}}
 
-The **exponentiation assignment (`**=`)\*\* operator performs [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) on the two operands and assigns the result to the left operand.
+The **exponentiation assignment (`**=`)** operator performs [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) on the two operands and assigns the result to the left operand.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
@@ -23,16 +23,26 @@ x **= y
 
 ## Examples
 
-### Using exponentiation assignment
+### Exponentiation assignment using numbers
 
 ```js
 let bar = 5;
-
 bar **= 2; // 25
-bar **= "foo"; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+let baz = 5;
+baz **= "foo"; // NaN
+```
+
+### Exponentiation assignment using BigInts
+
+```js
 let foo = 3n;
 foo **= 2n; // 9n
+foo **= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

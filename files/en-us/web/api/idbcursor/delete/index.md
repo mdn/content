@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBCursor.delete
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`delete()`** method of the {{domxref("IDBCursor")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
@@ -17,8 +17,6 @@ Be aware that you can't call `delete()` (or
 {{domxref("IDBCursor.update()")}}) on cursors obtained from
 {{domxref("IDBIndex.openKeyCursor()")}}. For such needs, you have to use
 {{domxref("IDBIndex.openCursor()")}} instead.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

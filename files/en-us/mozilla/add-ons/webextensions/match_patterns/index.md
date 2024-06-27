@@ -91,7 +91,7 @@ The _path_ component must begin with a `/`.
 
 After that, it may subsequently contain any combination of the `*` wildcard and any of the characters that are allowed in URL paths or query strings. Unlike _host_, the _path_ component may contain the `*` wildcard in the middle or at the end, and the `*` wildcard may appear more than once.
 
-The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `['*://*/*foo.bar', '*://*/*foo.bar?*']`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
+The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
 
 Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
 

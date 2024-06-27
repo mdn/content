@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.RemovalOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
 
@@ -23,7 +23,7 @@ Values of this type are objects. They contain the following properties:
 
   - : `Array` of `string`. This property applies to cookie, indexedDB, local storage, and service worker registration items. Remove only cookie, indexedDB, local storage, and service worker registration items associated with these hostnames.
 
-    You must pass in just a hostname here, without protocol (for example, "google.com" not "https\://google.com"). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve the hostname. Items associated with subdomains of a given hostname are _not_ removed: you must explicitly list subdomains.
+    You must pass in just a hostname here, without protocol (for example, `"google.com"` not `"https://google.com"`). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve the hostname. Items associated with subdomains of a given hostname are _not_ removed: you must explicitly list subdomains.
 
 - `originTypes` {{optional_inline}}
 

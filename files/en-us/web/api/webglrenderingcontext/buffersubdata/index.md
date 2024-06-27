@@ -15,14 +15,8 @@ object's data store.
 ## Syntax
 
 ```js-nolint
-// WebGL1
 bufferSubData(target, offset)
 bufferSubData(target, offset, srcData)
-
-// WebGL2
-bufferSubData(target, dstByteOffset, srcOffset)
-bufferSubData(target, dstByteOffset, srcData, srcOffset)
-bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 ```
 
 ### Parameters
@@ -100,6 +94,7 @@ gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
 
 ## See also
 
+- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

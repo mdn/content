@@ -47,7 +47,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 To be a contributor, you must follow:
 
-- [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
+- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
 - Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
 
 **Privileges:**
@@ -110,7 +110,7 @@ To be eligible to be a maintainer, you must meet one or more of the following re
 - Consented to commit spending at least 16 hours per month working on the project.
 - Attended the community meeting that takes place once every two months.
 
-> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating-a-maintainer).
+> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
 
 **Privileges:**
 
@@ -202,7 +202,7 @@ Community managers have a distinct role in many respects.
 Community managers share many of the same responsibilities as a [maintainer](#maintainer).
 In addition, community managers have the following responsibilities:
 
-- Addressing reports of violation of [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) and deciding on the appropriate action.
+- Addressing reports of violation of our [code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) which is [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) and deciding on the appropriate action.
 - Organizing and running community events.
 - Organizing community-related project meetings.
 - Determining media strategies to promote the MDN project.
@@ -276,7 +276,7 @@ Life happens and your commitment levels as a contributor could change over time.
 - Downgrade to a less-demanding role.
 - Step away from the project completely (apply for an emeritus status).
 
-In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact-the-mdn-team).
+In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact_the_mdn_team).
 
 ### Demoting or removing inactive contributors
 

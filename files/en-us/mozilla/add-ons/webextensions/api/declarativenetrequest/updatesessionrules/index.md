@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateSessionRules
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Modifies the set of scoped rules for the extension. The rules with IDs listed in `options.removeRuleIds` are first removed, and then the rules given in `options.addRules` are added. Note that:
 

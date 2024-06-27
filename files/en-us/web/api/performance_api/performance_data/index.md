@@ -22,7 +22,7 @@ For some metrics you do have to tell the browser what to measure:
 
 ## Performance data structure
 
-The Performance API collects performance data for each global object (`window.performance` or `self.performance` in workers). See [`self.performance`](/en-US/docs/Web/API/performance_property) for which APIs are available in window and worker contexts. If you are collecting performance metrics for multiple contexts, also take a look at [`performance.timeOrigin`](/en-US/docs/Web/API/Performance/timeOrigin) to synchronize time origins between contexts.
+With the Performance API you can collect performance data in both {{domxref("Window.performance", "Window")}} and {{domxref("WorkerGlobalScope.performance", "Worker")}} global contexts. If you are collecting performance metrics for multiple contexts, take a look at {{domxref("performance.timeOrigin")}} to synchronize time origins between contexts.
 
 Within these contexts, individual performance data is represented by performance entries.
 

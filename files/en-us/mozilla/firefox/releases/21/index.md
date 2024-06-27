@@ -114,4 +114,4 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Older versions
 
-{{Firefox_for_developers('20')}}
+{{Firefox_for_developers}}

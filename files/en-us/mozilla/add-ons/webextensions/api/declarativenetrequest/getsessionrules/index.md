@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the active set of session scoped rules for the extension.
 
@@ -17,7 +17,11 @@ let sessionRules = await browser.declarativeNetRequest.getSessionRules();
 
 ### Parameters
 
-This function takes no parameters.
+- `filter` {{optional_inline}}
+
+  - : An object to filter the list of returned rules.
+    - `ruleIds` {{optional_inline}}
+      - : An array of `integer`. The IDs of the rules to return.
 
 ### Return value
 

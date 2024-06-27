@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.history.deleteUrl
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes all visits to the given URL from the browser history.
 

@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.index
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`index()`** method of the {{domxref("IDBObjectStore")}}
 interface opens a named index in the current object store, after which it can be used
 to, for example, return a series of records sorted by that index using a cursor.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

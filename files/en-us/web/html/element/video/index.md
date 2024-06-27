@@ -31,7 +31,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-- `controlslist` {{experimental_inline}}{{non-standard_inline}}
+- `controlslist`
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `video` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
@@ -50,7 +50,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disablepictureinpicture` {{experimental_inline}}
+- `disablepictureinpicture`
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
 - `disableremoteplayback`
 
@@ -70,12 +70,12 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
 - `preload`
 
-  - : This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
+  - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
     - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
     - `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
-    - _empty string_: Synonym of the `auto` value.
+    - _empty string_: A synonym of the `auto` value.
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
@@ -282,7 +282,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
   <source src="myVideo.mp4" type="video/mp4" />
   <p>
     Your browser doesn't support HTML video. Here is a
-    <a href="myVideo.mp4">link to the video</a> instead.
+    <a href="myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
   </p>
 </video>
 ```
@@ -355,6 +355,42 @@ AddType video/webm .webm
 
 Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.
 
+## Accessibility
+
+Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
+
+It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element, since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
+
+If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source video.
+
+In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone:
+
+```plain
+14
+00:03:14 --> 00:03:18
+[Dramatic rock music]
+
+15
+00:03:19 --> 00:03:21
+[whispering] What's that off in the distance?
+
+16
+00:03:22 --> 00:03:24
+It's… it's a…
+
+16 00:03:25 --> 00:03:32
+[Loud thumping]
+[Dishes clattering]
+```
+
+Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
+
+- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
+- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+
 ## Examples
 
 ### Single source
@@ -409,7 +445,9 @@ This example builds on the last one, offering three different sources for the me
     type="video/mp4" />
 
   Sorry, your browser doesn't support embedded videos, but don't worry, you can
-  <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">
+  <a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    download="ed_1024_512kb.mp4">
     download the MP4
   </a>
   and watch it with your favorite video player!
@@ -423,42 +461,6 @@ This example builds on the last one, offering three different sources for the me
 First [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. If that can't be played, then AVI is tried. Finally, [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
-
-## Accessibility concerns
-
-Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
-
-It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element, since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
-
-If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source video.
-
-In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone:
-
-```plain
-14
-00:03:14 --> 00:03:18
-[Dramatic rock music]
-
-15
-00:03:19 --> 00:03:21
-[whispering] What's that off in the distance?
-
-16
-00:03:22 --> 00:03:24
-It's… it's a…
-
-16 00:03:25 --> 00:03:32
-[Loud thumping]
-[Dishes clattering]
-```
-
-Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
-
-- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
-- [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
-- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
-- [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
 ## Technical summary
 
@@ -474,7 +476,7 @@ Captions should not obstruct the main subject of the video. They can be position
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, phrasing content, embedded content. If it has a
-        <a href="/en-US/docs/Web/HTML/Element/video#controls"><code>controls</code></a> attribute: interactive
+        <a href="#controls"><code>controls</code></a> attribute: interactive
         content and palpable content.
       </td>
     </tr>
@@ -482,7 +484,7 @@ Captions should not obstruct the main subject of the video. They can be position
       <th scope="row">Permitted content</th>
       <td>
         <p>
-          If the element has a <a href="/en-US/docs/Web/HTML/Element/video#src"><code>src</code></a>
+          If the element has a <a href="#src"><code>src</code></a>
           attribute: zero or more {{HTMLElement("track")}} elements,
           followed by transparent content that contains no media elements–that
           is no {{HTMLElement("audio")}} or
@@ -498,7 +500,7 @@ Captions should not obstruct the main subject of the video. They can be position
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

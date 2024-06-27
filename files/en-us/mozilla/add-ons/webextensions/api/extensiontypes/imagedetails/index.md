@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.ImageDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details about the format, quality, area and scale of a captured image.
 

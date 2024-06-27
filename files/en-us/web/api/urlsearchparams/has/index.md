@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.has
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`has()`** method of the {{domxref("URLSearchParams")}} interface returns a boolean value that indicates whether the specified parameter is in the search parameters.
 
 A parameter name and optional value are used to match parameters.
 If only a parameter name is specified, then the method will return `true` if any parameters in the query string match the name, and `false` otherwise.
 If both a parameter name and value are specified, then the method will return `true` if a parameter matches both the name and value.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

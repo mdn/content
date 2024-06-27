@@ -18,7 +18,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}
   - : A string representing the alignment relative to the form set.
 - {{domxref("HTMLLegendElement.form")}} {{ReadOnlyInline}}
-  - : A {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the **form** attribute on the parent fieldset element. Otherwise, it returns null.
+  - : A {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the **form** attribute on the parent fieldset element. Otherwise, it returns `null`.
 
 ## Instance methods
 

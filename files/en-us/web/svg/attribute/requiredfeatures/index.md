@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/requiredFeatures
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.conditional_processing.requiredFeatures
+browser-compat: svg.global_attributes.requiredFeatures
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

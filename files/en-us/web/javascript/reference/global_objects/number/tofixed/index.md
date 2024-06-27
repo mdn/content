@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Number.toFixed
 
 {{JSRef}}
 
-The **`toFixed()`** method of {{jsxref("Number")}} values formats this number using [fixed-point notation](https://en.wikipedia.org/wiki/Fixed-point_arithmetic).
+The **`toFixed()`** method of {{jsxref("Number")}} values returns a string representing this number using [fixed-point notation](https://en.wikipedia.org/wiki/Fixed-point_arithmetic) with the specified number of decimal places.
 
 {{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
 
@@ -25,7 +25,7 @@ toFixed(digits)
 
 ### Return value
 
-A string representing the given number using fixed-point notation.
+A string representing the given number using fixed-point notation. Scientific notation is used if the number's magnitude (ignoring sign) is greater than or equal to 10<sup>21</sup> (same return value as {{jsxref("Number.prototype.toString()")}}).
 
 ### Exceptions
 

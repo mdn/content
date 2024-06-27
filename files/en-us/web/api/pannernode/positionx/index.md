@@ -8,13 +8,12 @@ browser-compat: api.PannerNode.positionX
 
 {{ APIRef("Web Audio API") }}
 
-The **`positionX`** property of the {{ domxref("PannerNode")
-    }} interface specifies the X coordinate of the audio source's position in 3D Cartesian
+The **`positionX`** property of the {{ domxref("PannerNode")}} interface specifies the X coordinate of the audio source's position in 3D Cartesian
 coordinates, corresponding to the _horizontal_ axis (left-right).
 
 The complete vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY", "positionY")}},
+{{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},

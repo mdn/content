@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XRSessionEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent`** interface describes an event which indicates the change of the state of an {{domxref("XRSession")}}. These events occur, for example, when the session ends or the visibility of its context changes.
 
@@ -31,9 +31,9 @@ _While `XRSessionEvent` defines no methods, it inherits methods from its parent 
 
 _The following events are represented using the `XRSessionEvent` interface, and are permitted values for its `type` property._
 
-- {{domxref("XRSession.end_event", "end")}}
+- {{domxref("XRSession.end_event", "end")}} {{SecureContext_Inline}}
   - : Fired at the session when it has ended, after being terminated by the application or the {{Glossary("user agent")}}.
-- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}}
+- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{SecureContext_Inline}}
   - : Fired at the session whenever its visibility state changes.
 
 ## Examples

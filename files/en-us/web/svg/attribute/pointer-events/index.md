@@ -2,7 +2,7 @@
 title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.pointer-events
+browser-compat: svg.global_attributes.pointer-events
 ---
 
 {{SVGRef}}

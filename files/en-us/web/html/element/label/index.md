@@ -57,26 +57,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 There are no special styling considerations for `<label>` elements — structurally they are simple inline elements, and so can be styled in much the same way as a {{htmlelement("span")}} or {{htmlelement("a")}} element. You can apply styling to them in any way you want, as long as you don't cause the text to become difficult to read.
 
-## Examples
-
-### Defining an implicit label
-
-```html
-<label>Click me <input type="text" /></label>
-```
-
-{{EmbedLiveSample('Simple_label_example', '200', '50')}}
-
-### Defining an explicit label with the "for" attribute
-
-```html
-<label for="username">Click me to focus on the input field</label>
-<input type="text" id="username" />
-```
-
-{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
-
-## Accessibility concerns
+## Accessibility
 
 ### Interactive content
 
@@ -131,6 +112,25 @@ If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a t
 
 An {{HTMLElement("input")}} element with a `type="button"` declaration and a valid `value` attribute does not need a label associated with it. Doing so may actually interfere with how assistive technology parses the button input. The same applies for the {{HTMLElement("button")}} element.
 
+## Examples
+
+### Defining an implicit label
+
+```html
+<label>Click me <input type="text" /></label>
+```
+
+{{EmbedLiveSample('Simple_label_example', '200', '50')}}
+
+### Defining an explicit label with the "for" attribute
+
+```html
+<label for="username">Click me to focus on the input field</label>
+<input type="text" id="username" />
+```
+
+{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
+
 ## Technical summary
 
 <table class="properties">
@@ -172,7 +172,7 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.history.onTitleChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the title of a page visited by the user is recorded. To listen for visits to a page you use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent. Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The `history.onTitleChanged` event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
 

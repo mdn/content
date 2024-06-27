@@ -83,7 +83,7 @@ function random(number) {
 }
 
 btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -106,7 +106,7 @@ function random(number) {
 }
 
 btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -126,7 +126,7 @@ function random(number) {
 }
 
 function changeBackground() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -163,7 +163,7 @@ const controller = new AbortController();
 
 btn.addEventListener("click",
   () => {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
   },
   { signal: controller.signal } // pass an AbortSignal to this handler
@@ -215,7 +215,7 @@ function random(number) {
 }
 
 btn.onclick = () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 };
 ```
@@ -230,7 +230,7 @@ function random(number) {
 }
 
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -261,7 +261,7 @@ You might also see a pattern like this in your code:
 
 ```js
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -310,7 +310,7 @@ function random(number) {
 }
 
 function bgChange(e) {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
@@ -736,7 +736,7 @@ function random(number) {
 }
 
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   return rndCol;
 }
 

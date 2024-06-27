@@ -2,7 +2,7 @@
 title: color
 slug: Web/SVG/Attribute/color
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.color
+browser-compat: svg.global_attributes.color
 ---
 
 {{SVGRef}}

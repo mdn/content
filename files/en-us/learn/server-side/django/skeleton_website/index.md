@@ -58,38 +58,26 @@ At the end of this article, we discuss other site-wide configuration you might a
 To create the project:
 
 1. Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
-2. Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your _Documents_ folder), and create a folder for your new website (in this case: _django_projects_). Then change into your newly-created directory:
-
-   ```bash
-   mkdir django_projects
-   cd django_projects
-   ```
-
-3. Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
+2. Navigate to the folder where you want to create your local library application (later on we'll move it to the "django_local_library" that you [created as a local GitHub repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment).
+3. Create the new project using the `django-admin startproject` command as shown, and then navigate into the project folder:
 
    ```bash
    django-admin startproject locallibrary
    cd locallibrary
    ```
 
-The `django-admin` tool creates a folder/file structure as follows:
+   The `django-admin` tool creates a folder/file structure as follows:
 
-```bash
-locallibrary/
-    manage.py
-    locallibrary/
-        __init__.py
-        settings.py
-        urls.py
-        wsgi.py
-        asgi.py
-```
-
-Our current working directory should look something like this:
-
-```python
-../django_projects/locallibrary/
-```
+   ```bash
+   locallibrary/
+       manage.py
+       locallibrary/
+           __init__.py
+           settings.py
+           urls.py
+           wsgi.py
+           asgi.py
+   ```
 
 The _locallibrary_ project sub-folder is the entry point for the website:
 
@@ -146,7 +134,7 @@ In addition we now have:
 
 Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the `INSTALLED_APPS` list in the project settings.
 
-Open the project settings file, **django_projects/locallibrary/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
+Open the project settings file, **django-locallibrary-tutorial/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
 
 ```bash
 INSTALLED_APPS = [
@@ -157,19 +145,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Add our new application
-    'catalog.apps.CatalogConfig', #This object was created for us in /catalog/apps.py
+    'catalog.apps.CatalogConfig', # This object was created for us in /catalog/apps.py
 ]
 ```
 
-The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/locallibrary/catalog/apps.py** when you created the application.
+The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application.
 
 > **Note:** You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
 
 ## Specifying the database
 
-This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior. You can find out about the different options in [Databases](https://docs.djangoproject.com/en/4.2/ref/settings/#databases) (Django docs).
+This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior. You can find out about the different options in [Databases](https://docs.djangoproject.com/en/5.0/ref/settings/#databases) (Django docs).
 
-We'll use the default SQLite database for this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in **settings.py**:
+We'll use the default SQLite database for most of this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in **settings.py**:
 
 ```python
 DATABASES = {
@@ -180,11 +168,11 @@ DATABASES = {
 }
 ```
 
-Because we are using SQLite, we don't need to do any further setup here. Let's move on!
+Later on in the [Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment#database_configuration) we'll also show you how to configure a Postgres database, which might be more suitable for larger sites.
 
 ## Other project settings
 
-The **settings.py** file is also used for configuring a number of other settings, but at this point, you probably only want to change the [TIME_ZONE](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-TIME_ZONE) — this should be made equal to a string from the standard [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (the TZ column in the table contains the values you want). Change your `TIME_ZONE` value to one of these strings appropriate for your time zone, for example:
+The **settings.py** file is also used for configuring a number of other settings, but at this point, you probably only want to change the [TIME_ZONE](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-TIME_ZONE) — this should be made equal to a string from the standard [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (the TZ column in the table contains the values you want). Change your `TIME_ZONE` value to one of these strings appropriate for your time zone, for example:
 
 ```python
 TIME_ZONE = 'Europe/London'
@@ -199,14 +187,14 @@ There are two other settings you won't change now, but that you should be aware 
 
 The website is created with a URL mapper file (**urls.py**) in the project folder. While you can use this file to manage all your URL mappings, it is more usual to defer mappings to the associated application.
 
-Open **locallibrary/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
+Open **django-locallibrary-tutorial/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
 
 ```python
 """
 URL configuration for locallibrary project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -248,7 +236,7 @@ Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `
 Add the following lines to the bottom of the file:
 
 ```python
-#Add URL maps to redirect the base URL to our application
+# Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
@@ -288,7 +276,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ```
 
-As a final step, create a file inside your catalog folder called **urls.py**, and add the following text to define the (empty) imported `urlpatterns`. This is where we'll add our patterns as we build the application.
+As a final step, create a file inside your _catalog_ folder called **urls.py**, and add the following text to define the (empty) imported `urlpatterns`. This is where we'll add our patterns as we build the application.
 
 ```python
 from django.urls import path
@@ -307,7 +295,7 @@ Before we do that, we should first run a _database migration_. This updates our 
 
 ### Running database migrations
 
-Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/locallibrary/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
+Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/django-locallibrary-tutorial/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
 
 When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains **manage.py**):
 
@@ -322,13 +310,15 @@ The `makemigrations` command _creates_ (but does not apply) the migrations for a
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 
-> **Note:** See [Migrations](https://docs.djangoproject.com/en/4.2/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
+> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+>
+> See [Migrations](https://docs.djangoproject.com/en/5.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
 ### Running the website
 
 During development, you can serve the website first using the _development web server_, and then viewing it on your local web browser.
 
-> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/4.2/ref/django-admin/#runserver) (Django docs).
+> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/5.0/ref/django-admin/#runserver) (Django docs).
 
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
@@ -342,11 +332,45 @@ Once the server is running, you can view the site by navigating to `http://127.0
 
 Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalog.urls` module (which we're redirected to when we get a URL to the root of the site).
 
-> **Note:** The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
-
 At this point, we know that Django is working!
 
-> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+> **Note:** The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
+
+## Don't forget to backup to GitHub
+
+We've just done some significant work, so now is a good time to backup the project using GitHub.
+
+First move the _content_ of the top level **locallibrary** folder into the **django_local_library** folder that you [created as a local GitHub repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
+This will include **manage.py**, the **locallibrary** subfolder, the **catalog** subfolder, and anything else inside the top level folder.
+
+Then add and commit the changes in the **django_local_library** folder and push them to GitHub.
+From the root of that folder, you can use a similar set of commands to those in the [Modify and sync changes](/en-US/docs/Learn/Server-side/Django/development_environment#modify_and_sync_changes) section of the _Development environment_ topic:
+
+```bash
+# Get the current source from GitHub on the main branch
+git checkout main
+git pull origin main
+
+# Create a branch and add/commit your newly created app skeleton
+git checkout -b skeleton_website # Create and activate a new branch "skeleton_website"
+git add -A # Add all changed files to the staging area
+git commit -m "Create Skeleton framework for LocalLibrary" # Commit the changed files
+
+# Push the branch to GitHub
+git push origin skeleton_website
+```
+
+Then create and merge a PR from your GitHub repo.
+After merging you can switch back to the `main` branch and pull your changes from GitHub:
+
+```bash
+git checkout main
+git pull origin main
+```
+
+> **Note:** If you don't delete the `skeleton_website` branch you can always switch back to it at some later point.
+
+We won't necessarily mention this again in future, but you may find it useful to update GitHub with your changes at the end of each section in this tutorial.
 
 ## Challenge yourself
 
@@ -362,8 +386,8 @@ Now that the skeleton for the [Local Library website](/en-US/docs/Learn/Server-s
 
 ## See also
 
-- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/4.2/intro/tutorial01/) (Django docs)
-- [Applications](https://docs.djangoproject.com/en/4.2/ref/applications/#configuring-applications) (Django Docs).
+- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/5.0/intro/tutorial01/) (Django docs)
+- [Applications](https://docs.djangoproject.com/en/5.0/ref/applications/#configuring-applications) (Django Docs).
   Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}

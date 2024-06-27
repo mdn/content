@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTDescriptor.uuid
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTDescriptor.uuid`** read-only property returns the {{Glossary("UUID")}} of the characteristic descriptor.
 For example '`00002902-0000-1000-8000-00805f9b34fb`' for theClient Characteristic Configuration descriptor.

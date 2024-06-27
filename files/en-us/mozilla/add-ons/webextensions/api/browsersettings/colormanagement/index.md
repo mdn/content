@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.colorManagement
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to query and set the browser's color management features.
 

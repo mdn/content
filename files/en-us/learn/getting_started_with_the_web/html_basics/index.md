@@ -210,7 +210,7 @@ Links are very important — they are what makes the web a web! To add a link, w
    <a href="">Mozilla Manifesto</a>
    ```
 
-4. Fill in the value of this attribute with the web address that you want the link to:
+4. Fill in the value of this attribute with the web address that you want the link to point to:
 
    ```html
    <a href="https://www.mozilla.org/en-US/about/manifesto/">

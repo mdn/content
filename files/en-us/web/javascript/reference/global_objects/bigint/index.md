@@ -176,7 +176,7 @@ Using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/J
 
 ```js
 BigInt.prototype.toJSON = function () {
-  return this.toString();
+  return { $bigint: this.toString() };
 };
 ```
 
@@ -184,14 +184,14 @@ Instead of throwing, `JSON.stringify()` now produces a string like this:
 
 ```js
 console.log(JSON.stringify({ a: 1n }));
-// {"a":"1"}
+// {"a":{"$bigint":"1"}}
 ```
 
 If you do not wish to patch `BigInt.prototype`, you can use the [`replacer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter) parameter of `JSON.stringify` to serialize BigInt values:
 
 ```js
 const replacer = (key, value) =>
-  typeof value === "bigint" ? value.toString() : value;
+  typeof value === "bigint" ? { $bigint: value.toString() } : value;
 
 const data = {
   number: 1,
@@ -200,22 +200,32 @@ const data = {
 const stringified = JSON.stringify(data, replacer);
 
 console.log(stringified);
-// {"number":1,"big":"18014398509481982"}
+// {"number":1,"big":{"$bigint":"18014398509481982"}}
 ```
 
-If you have JSON data containing values you know will be large integers, you can use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
+You can then use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter of `JSON.parse` to handle them:
 
 ```js
-const reviver = (key, value) => (key === "big" ? BigInt(value) : value);
+const reviver = (key, value) =>
+  value !== null &&
+  typeof value === "object" &&
+  "$bigint" in value &&
+  typeof value.$bigint === "string"
+    ? BigInt(value.$bigint)
+    : value;
 
-const payload = '{"number":1,"big":"18014398509481982"}';
+const payload = '{"number":1,"big":{"$bigint":"18014398509481982"}}';
 const parsed = JSON.parse(payload, reviver);
 
 console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
 
-> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects, the reviver of `JSON.parse()` must be specific to the payload shape you expect, because the serialization is _lossy_: it's not possible to distinguish between a string that represents a BigInt and a normal string.
+> **Note:** While it's possible to make the replacer of `JSON.stringify()` generic and properly serialize BigInt values for all objects as shown above, the reviver of `JSON.parse()` has to be used with caution, because the serialization is _lossy_: it's not possible to distinguish between an object that happens to have a property called `$bigint` and an actual BigInt.
+>
+> In addition, the example above creates an entire object during replacing and reviving, which may have performance or storage implications for larger objects containing many BigInts. If you know the shape of the payload, it may be better to just serialize them as strings and revive them based on the property key's name instead.
+
+In fact, JSON allows number literals that are arbitrarily long; they just cannot be parsed to full precision in JavaScript. If you are communicating with another program in a language that supports longer integers (such as 64-bit integers), and you want to transmit the BigInt as a JSON number instead of a JSON string, see [Lossless number serialization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers).
 
 ### BigInt coercion
 
@@ -236,7 +246,7 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 ## Constructor
 
 - {{jsxref("BigInt/BigInt", "BigInt()")}}
-  - : Creates a new BigInt value.
+  - : Returns primitive values of type BigInt. Throws an error when called with `new`.
 
 ## Static methods
 

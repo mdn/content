@@ -84,7 +84,7 @@ Highlights:
 - {{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ([Firefox bug 1020139](https://bugzil.la/1020139))
 - The {{domxref("TextEncoder.TextEncoder", "TextEncoder()")}} constructor has been changed to match the spec: when an invalid parameter is passed, the `RangeError` {{domxref("DOMException")}} is now raised, rather than the erroneous {{jsxref("TypeError")}} ([Firefox bug 1125766](https://bugzil.la/1125766)).
 - The User Timing API, adding {{domxref("Performance.mark()")}}, {{domxref("Performance.clearMarks()")}}, {{domxref("Performance.measure()")}}, and {{domxref("Performance.clearMeasures()")}} has been implemented ([Firefox bug 782751](https://bugzil.la/782751)).
-- The prefixed version of {{domxref("indexedDB")}}, `mozIndexedDB` has been removed ([Firefox bug 975699](https://bugzil.la/975699)).
+- The prefixed version of {{domxref("Window.indexedDB")}}, `mozIndexedDB`, has been removed ([Firefox bug 975699](https://bugzil.la/975699)).
 - The {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is no longer cancelable ([Firefox bug 1134559](https://bugzil.la/1134559)).
 - You can now use [WebSockets](/en-US/docs/Web/API/WebSockets_API) in [Workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 504553](https://bugzil.la/504553)).
 - The {{domxref("XMLHttpRequest.responseType")}} and {{domxref("XMLHttpRequest.withCredentials")}} properties can now be set before calling {{domxref("XMLHttpRequest.open()")}} ([Firefox bug 707484](https://bugzil.la/707484)).
@@ -151,4 +151,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers('37')}}
+{{Firefox_for_developers}}

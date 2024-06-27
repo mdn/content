@@ -36,7 +36,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Indicates whether input elements can by default have their values automatically completed by the browser. `autocomplete` attributes on form elements override it on `<form>`. Possible values:
 
-    - `off`: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see [The autocomplete attribute and login fields](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).)
+    - `off`: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).)
     - `on`: The browser may automatically complete entries.
 
 - `name`
@@ -83,6 +83,7 @@ The following attributes control behavior during form submission.
     - `_blank`: Load into a new unnamed browsing context. This provides the same behavior as setting [`rel="noopener"`](#rel) which does not set [`window.opener`](/en-US/docs/Web/API/Window/opener).
     - `_parent`: Load into the parent browsing context of the current one. If no parent, behaves the same as `_self`.
     - `_top`: Load into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one and has no parent). If no parent, behaves the same as `_self`.
+    - `_unfencedTop`: Load the response from a form inside an embedded [fenced frame](/en-US/docs/Web/API/Fenced_frame_API) into the top-level frame (i.e., traversing beyond the root of the fenced frame, unlike other reserved destinations). Only available inside fenced frames.
 
     This value can be overridden by a [`formtarget`](/en-US/docs/Web/HTML/Element/button#formtarget) attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
 
@@ -142,7 +143,7 @@ The following attributes control behavior during form submission.
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

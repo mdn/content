@@ -14,7 +14,7 @@ The commands are [detailed below](#path_commands).
 
 You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
+`d` is a presentation attribute, and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
 ## Example
 
@@ -50,7 +50,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -118,8 +118,8 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
 
 ## Using d as a CSS property
 
-`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
-The property takes either [path()](/en-US/docs/Web/CSS/path) or `none`.
+`d` is a presentation attribute, and hence can be also be modified using CSS.
+The property takes either [path()](/en-US/docs/Web/CSS/basic-shape/path) or `none`.
 
 The example below shows how you might apply a new path on hover over an element.
 The new path is the same as the old one, but adds a line across the heart.
@@ -161,12 +161,12 @@ Path commands are instructions that define a path to be drawn. Each command is c
 
 SVG defines 6 types of path commands, for a total of 20 commands:
 
-- MoveTo: `M`, `m`
-- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-- Cubic Bézier Curve: `C`, `c`, `S`, `s`
-- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-- Elliptical Arc Curve: `A`, `a`
-- ClosePath: `Z`, `z`
+- [MoveTo](#moveto_path_commands): `M`, `m`
+- [LineTo](#lineto_path_commands): `L`, `l`, `H`, `h`, `V`, `v`
+- [Cubic Bézier curve](#cubic_bézier_curve): `C`, `c`, `S`, `s`
+- [Quadratic Bézier curve](#quadratic_bézier_curve): `Q`, `q`, `T`, `t`
+- [Elliptical arc curve](#elliptical_arc_curve): `A`, `a`
+- [ClosePath](#closepath): `Z`, `z`
 
 > **Note:** Commands are _case-sensitive_. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
@@ -456,7 +456,7 @@ svg {
 
 {{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}
 
-### Cubic Bézier Curve
+### Cubic Bézier curve
 
 _Cubic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using four points:
 
@@ -684,7 +684,7 @@ svg {
 
 {{EmbedLiveSample('Cubic_Bézier_Curve', '100%', 200)}}
 
-### Quadratic Bézier Curve
+### Quadratic Bézier curve
 
 _Quadratic [Bézier curves](/en-US/docs/Glossary/Bezier_curve)_ are smooth curve definitions using three points:
 
@@ -870,7 +870,10 @@ svg {
 
   <!-- Highlight the curve vertex and control points -->
   <g>
-    <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
+    <polyline
+      points="10,50 25,25 40,50"
+      stroke="rgb(0 0 0 / 20%)"
+      fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
     <!-- Curve vertex points -->
@@ -880,7 +883,7 @@ svg {
     <g id="SmoothQuadraticDown">
       <polyline
         points="40,50 55,75 70,50"
-        stroke="rgba(0,0,0,.2)"
+        stroke="rgb(0 0 0 / 20%)"
         stroke-dasharray="2"
         fill="none" />
       <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
@@ -890,7 +893,7 @@ svg {
     <g id="SmoothQuadraticUp">
       <polyline
         points="70,50 85,25 100,50"
-        stroke="rgba(0,0,0,.2)"
+        stroke="rgb(0 0 0 / 20%)"
         stroke-dasharray="2"
         fill="none" />
       <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
@@ -906,7 +909,7 @@ svg {
 
 {{EmbedLiveSample('Quadratic_Bézier_Curve', '100%', 200)}}
 
-### Elliptical Arc Curve
+### Elliptical arc curve
 
 _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is sometimes easier to draw highly regular curves with an elliptical arc than with a Bézier curve.
 

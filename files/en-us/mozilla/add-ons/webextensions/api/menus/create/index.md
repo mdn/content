@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.menus.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Creates a menu item using an options object defining properties for the item.
 

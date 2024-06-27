@@ -5,7 +5,7 @@ page-type: css-combinator
 browser-compat: css.selectors.namespace
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 The **namespace separator** (`|`) separates the selector from the namespace, identifying the {{glossary("namespace")}}, or lack thereof, for a type selector.
 

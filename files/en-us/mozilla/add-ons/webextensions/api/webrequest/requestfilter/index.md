@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.RequestFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object describing filters to apply to webRequest events.
 

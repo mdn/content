@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCEncodedAudioFrame.timestamp
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The readonly **`timestamp`** property of the {{domxref("RTCEncodedAudioFrame")}} interface indicates the time at which frame sampling started.
 

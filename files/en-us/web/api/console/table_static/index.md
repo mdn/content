@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.console.table_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.table()`** static method displays tabular data as a table.
 
@@ -15,8 +15,6 @@ This function takes one mandatory argument `data`, which must be an array or an 
 It logs `data` as a table. Each element in the array (or enumerable property if `data` is an object) will be a row in the table.
 
 The first column in the table will be labeled `(index)`. If `data` is an array, then its values will be the array indices. If `data` is an object, then its values will be the property names. Note that (in Firefox) `console.table` is limited to displaying 1000 rows (first row is the labeled index).
-
-{{AvailableInWorkers}}
 
 ### Collections of primitive types
 

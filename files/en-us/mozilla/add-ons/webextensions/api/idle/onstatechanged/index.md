@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.idle.onStateChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the system changes to an active, idle or locked state. The event listener is passed a string that has one of three values:
 

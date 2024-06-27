@@ -7,9 +7,11 @@ page-type: landing-page
 {{WebAssemblySidebar}}
 
 - [`Numeric instructions`](/en-US/docs/WebAssembly/Reference/Numeric)
-- [`Vector/SIMD instructions`](/en-US/docs/WebAssembly/Reference/Vector)
-- [`Reference instructions`](/en-US/docs/WebAssembly/Reference/Reference)
 - [`Variable instructions`](/en-US/docs/WebAssembly/Reference/Variables)
-- [`Table instructions`](/en-US/docs/WebAssembly/Reference/Table)
 - [`Memory instructions`](/en-US/docs/WebAssembly/Reference/Memory)
 - [`Control flow instructions`](/en-US/docs/WebAssembly/Reference/Control_flow)
+<!-- These pages are not written yet
+- [`Vector/SIMD instructions`](/en-US/docs/WebAssembly/Reference/Vector)
+- [`Reference instructions`](/en-US/docs/WebAssembly/Reference/Reference)
+- [`Table instructions`](/en-US/docs/WebAssembly/Reference/Table)
+  -->

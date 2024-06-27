@@ -35,40 +35,51 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 
 ## Examples
 
-### Hexadecimal syntax for a fully opaque hot pink
+### Hexadecimal hot pink
+
+This example includes four hot pink squares, with fully opaque or semi-transparent backgrounds created using four different-length case-insensitive hex-color syntaxes.
 
 #### HTML
 
 ```html
-<span>
-  #f09
-  <div class="c1"></div>
-</span>
-<span>
+<div>
   #F09
+  <div class="c1"></div>
+</div>
+<div>
+  #f09a
   <div class="c2"></div>
-</span>
-<span>
+</div>
+<div>
   #ff0099
   <div class="c3"></div>
-</span>
-<span>
-  #FF0099
+</div>
+<div>
+  #FF0099AA
   <div class="c4"></div>
-</span>
+</div>
 ```
 
 #### CSS
+
+The hot pink background colors are created using the three-, four-, six-, and eight-value hex notations, using both uppercase and lowercase letters.
 
 ```css hidden
 body {
   display: flex;
   justify-content: space-evenly;
+  font-family: monospace;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 ```
 
 ```css
-div {
+[class] {
   width: 40px;
   height: 40px;
 }
@@ -76,19 +87,19 @@ div {
   background: #f09;
 }
 .c2 {
-  background: #f09;
+  background: #f09a;
 }
 .c3 {
   background: #ff0099;
 }
 .c4 {
-  background: #ff0099;
+  background: #ff0099aa;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Hexadecimal_syntax_for_a_fully_opaque_hot_pink", "100%", 100)}}
+{{EmbedLiveSample("Hexadecimal_hot_pink", "100%", 100)}}
 
 ## Specifications
 
@@ -100,6 +111,7 @@ div {
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value): the color data type
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb): the function allowing to set the three components of the color, as well as its transparency, using decimal values
+- [`<color>`](/en-US/docs/Web/CSS/color_value) data type
+- {{cssxref("named-color")}} data-type
+- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) color function
 - [CSS color](/en-US/docs/Web/CSS/CSS_colors) module

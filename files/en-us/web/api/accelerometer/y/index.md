@@ -8,7 +8,7 @@ status:
 browser-compat: api.Accelerometer.y
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its y-axis.
 

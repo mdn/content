@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBIndex.name
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`name`** property of the {{domxref("IDBIndex")}}
 interface contains a string which names the index.
-
-{{AvailableInWorkers}}
 
 ## Value
 

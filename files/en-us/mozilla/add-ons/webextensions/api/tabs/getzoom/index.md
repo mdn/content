@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.getZoom
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the current zoom factor for the specified tab.
 

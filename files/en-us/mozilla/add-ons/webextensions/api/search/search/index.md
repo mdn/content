@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.search.search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Perform a search using the search engine specified or the default search engine if no search engine is specified.
 

@@ -5,7 +5,7 @@ page-type: web-api-overview
 spec-urls: https://w3c.github.io/ServiceWorker/
 ---
 
-{{DefaultAPISidebar("Service Workers API")}}
+{{DefaultAPISidebar("Service Workers API")}}{{AvailableInWorkers}}
 
 Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
@@ -114,11 +114,9 @@ In the future, service workers will be able to do a number of other useful thing
 
 ### Extensions to other interfaces
 
-- {{DOMxRef("caches")}}
+- {{DOMxRef("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context.
-- {{DOMxRef("Navigator.serviceWorker")}}
-  - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- {{DOMxRef("WorkerNavigator.serviceWorker")}}
+- {{DOMxRef("Navigator.serviceWorker")}} and {{DOMxRef("WorkerNavigator.serviceWorker")}}
   - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 
 ## Specifications
@@ -127,8 +125,8 @@ In the future, service workers will be able to do a number of other useful thing
 
 ## See also
 
-- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service Worker Lifecycle](https://web.dev/articles/service-worker-lifecycle)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - Web APIs that are related to the Service Worker API:
   - {{domxref("Background Fetch API", "", "", "nocode")}}

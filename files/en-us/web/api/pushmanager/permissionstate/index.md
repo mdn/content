@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PushManager.permissionState
 ---
 
-{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`permissionState()`** method of the
 {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to a

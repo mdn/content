@@ -34,7 +34,7 @@ This convention has several advantages. We will explore each one.
 
 ## Chaining
 
-A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
+A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic [callback hell](http://callbackhell.com/):
 
 ```js-nolint
 doSomething(function (result) {
@@ -421,6 +421,10 @@ for (const f of [func1, func2, func3]) {
 ```
 
 However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises concurrently so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
+
+## Cancellation
+
+`Promise` itself has no first-class protocol for cancellation, but you may be able to directly cancel the underlying asynchronous operation, typically using [`AbortController`](/en-US/docs/Web/API/AbortController).
 
 ## Creating a Promise around an old callback API
 

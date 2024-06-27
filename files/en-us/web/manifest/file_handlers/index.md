@@ -94,7 +94,7 @@ In the following example, {{domxref("LaunchQueue.setConsumer", "window.launchQue
 
 ```js
 async function playSong(handledFile) {
-  const blob = await file.getFile();
+  const blob = await handledFile.getFile();
   const url = window.URL.createObjectURL(blob);
   const audio = new Audio(url);
   audio.play();

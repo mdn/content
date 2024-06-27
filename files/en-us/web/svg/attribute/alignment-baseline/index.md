@@ -2,7 +2,7 @@
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.alignment-baseline
+browser-compat: svg.global_attributes.alignment-baseline
 ---
 
 {{SVGRef}}

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.requestAnimationFrame
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRSession")}}
 method **`requestAnimationFrame()`**, much like the

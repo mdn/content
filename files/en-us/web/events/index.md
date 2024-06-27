@@ -9,9 +9,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 
 Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in [Event > Interfaces based on Event](/en-US/docs/Web/API/Event#introduction).
 
-This topic provides an index to the main _sorts_ of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events. At the end is a flat list of all documented events.
-
-> **Note:** This page lists many of the most common events you'll come across on the web. If you are searching for an event that isn't listed here, try searching for its name, topic area, or associated specification on the rest of MDN.
+This topic provides an index to the main _sorts_ of events you might be interested in (animation, clipboard, workers etc.) along with the main classes that implement those sorts of events.
 
 ## Event index
 
@@ -111,7 +109,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to
-          <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>.
+          <a href="/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
@@ -202,10 +200,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Wheel events fired on
-          <a href="/en-US/docs/Web/API/Document/wheel_event"
-            ><code>Document</code></a
-          >
-          and
           <a href="/en-US/docs/Web/API/Element/wheel_event"
             ><code>Element</code></a
           >
@@ -811,10 +805,9 @@ This topic provides an index to the main _sorts_ of events you might be interest
         >,
         <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"
           ><code>WorkerGlobalScope</code></a
-        >, <a href="/en-US/docs/Web/API/Worker#events"><code>Worker</code></a
         >,
-        <a href="/en-US/docs/Web/API/WorkerGlobalScope#events"
-          ><code>WorkerGlobalScope</code></a
+        <a href="/en-US/docs/Web/API/Worker#events"
+          ><code>Worker</code></a
         >,
         <a href="/en-US/docs/Web/API/BroadcastChannel#events"
           ><code>BroadcastChannel</code></a

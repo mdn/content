@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/xml:base
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.core.xml_base
+browser-compat: svg.global_attributes.xml_base
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

@@ -30,13 +30,13 @@ browser-compat: path.to.feature.NameOfTheHeader
 > ```
 >
 > - **title**
->   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
+>   - : Title heading displayed at the top of the page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
 > - **page-type**
 >   - : For HTTP headers, must be `http-header`. For other HTTP `page-type` values, see the [HTTP section](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) of the documentation for the `page-type` front matter key.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -50,22 +50,28 @@ browser-compat: path.to.feature.NameOfTheHeader
 > **Top-of-page macros**
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> You should update or delete them according to the advice below:
+> These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the header you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   If it isn't, then you can remove the macro call.
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
+>
+> You should update or delete the following macros according to the advice below:
+>
 > - `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
+> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+>
+> Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
+>
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SeeCompatTable}}{{deprecated_header}}{{httpsidebar}}
+{{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The summary paragraph — start by naming the http header and saying what it does.
-This should ideally be 1 or 2 short sentences.
+This should ideally be one or two short sentences.
 
 <table class="properties">
   <tbody>
@@ -112,7 +118,8 @@ Multiple directives are comma-separated (delete information as appropriate).
 - `directive2`
   - : etc.
 
-If the header has a lot of available directives, feel free to include multiple definition lists, subsections and explanations as appropriate.
+If the header has a lot of available directives,
+feel free to include multiple definition lists, subsections, and explanations as appropriate.
 
 ## Examples
 

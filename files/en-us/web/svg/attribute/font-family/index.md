@@ -2,7 +2,7 @@
 title: font-family
 slug: Web/SVG/Attribute/font-family
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.font-family
+browser-compat: svg.global_attributes.font-family
 ---
 
 {{SVGRef}}
@@ -43,7 +43,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("font-family")}}</td>
+      <td>See {{cssxref("font-family", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

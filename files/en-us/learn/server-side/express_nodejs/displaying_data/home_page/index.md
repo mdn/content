@@ -111,7 +111,7 @@ block content
   h1= title
   p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
 
-  h1 Dynamic content
+  h2 Dynamic content
 
   p The library has the following record counts:
 

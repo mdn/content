@@ -2,7 +2,7 @@
 title: opacity
 slug: Web/SVG/Attribute/opacity
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.opacity
+browser-compat: svg.global_attributes.opacity
 ---
 
 {{SVGRef}}
@@ -37,6 +37,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("use")}}
 - {{SVGElement("unknown")}}
 - {{SVGElement("video")}}
+
+Unlike {{SVGAttr("fill-opacity")}}, {{SVGAttr("stroke-opacity")}}, and {{SVGAttr("stop-opacity")}}, which are applied to individual operations and are rendered _when_ the element is rendered, `opacity` is applied to whole objects or groups, and is more like a post-processing operation on the rendered image of the object or group. Therefore, when you have both `opacity` and the other opacity attributes in the same area, they will be overlaid on top of each other and cause the opacity to be multiplied.
 
 ## Example
 
@@ -97,3 +99,6 @@ svg {
 ## See also
 
 - {{cssxref("opacity", "CSS opacity")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke-opacity")}}

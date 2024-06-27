@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.IDBIndex.count
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`count()`** method of the {{domxref("IDBIndex")}}
 interface returns an {{domxref("IDBRequest")}} object, and in a separate thread,
 returns the number of records within a key range.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

@@ -11,8 +11,6 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
-> **Note:** The `<hgroup>` element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification but is still part of the WHATWG specification and is at least partially supported by most browsers.
-
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -22,6 +20,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 The `<hgroup>` element allows the grouping of a heading with any secondary content, such as subheadings, an alternative title, or tagline. Each of these types of content represented as a `<p>` element within the `<hgroup>`.
 
 The `<hgroup>` itself has no impact on the document outline of a web page. Rather, the single allowed heading within the `<hgroup>` contributes to the document outline.
+
+## Accessibility
+
+The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
 
 ## Examples
 
@@ -46,10 +48,6 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 ### Result
 
 {{EmbedLiveSample('Examples')}}
-
-## Accessibility concerns
-
-The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
 
 ## Technical summary
 
@@ -79,7 +77,7 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

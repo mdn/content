@@ -3,12 +3,10 @@ title: "NetworkInformation: effectiveType property"
 short-title: effectiveType
 slug: Web/API/NetworkInformation/effectiveType
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NetworkInformation.effectiveType
 ---
 
-{{SeeCompatTable}}{{APIRef("Network Information API")}}
+{{APIRef("Network Information API")}} {{AvailableInWorkers}}
 
 The **`effectiveType`** read-only property of the
 {{domxref("NetworkInformation")}} interface returns the effective type of the connection

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.network.getHAR
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Get a [HAR log](http://www.softwareishard.com/blog/har-12-spec/#log) for the page loaded in the current tab.
 

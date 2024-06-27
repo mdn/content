@@ -4,29 +4,30 @@ slug: Web/API/Storage_Access_API
 page-type: web-api-overview
 browser-compat:
   - api.Document.hasStorageAccess
+  - api.Document.hasUnpartitionedCookieAccess
   - api.Document.requestStorageAccess
   - api.Document.requestStorageAccessFor
   - api.Permissions.permission_storage-access
-spec-urls: https://privacycg.github.io/storage-access/
+spec-urls:
+  - https://privacycg.github.io/storage-access/
+  - https://privacycg.github.io/saa-non-cookie-storage/
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) that it would typically only have access to in a first-party context (i.e., when loaded directly in a browser tab).
+The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) that it would typically only have access to in a first-party context (i.e., when loaded directly in a browser tab).
 
-The Storage Access API is relevant to user agents that, by default, block access to third-party cookies to improve privacy (for example, to prevent tracking). There are legitimate uses for third-party cookies that we still want to enable, even with these default restrictions in place. Examples include single sign-on (SSO) with federated identity providers (IdPs), or persisting user details such as location data or viewing preferences across different sites.
+The Storage Access API is relevant to user agents that, by default, block access to third-party cookies and unpartitioned state to improve privacy (for example, to prevent tracking). There are legitimate uses for third-party cookies and unpartitioned state that we still want to enable, even with these default restrictions in place. Examples include single sign-on (SSO) with federated identity providers (IdPs), or persisting user details such as location data or viewing preferences across different sites.
 
 The API provides methods that allow embedded resources to check whether they currently have access to third-party cookies and, if not, to request access from the user agent.
 
-> **Note:** The _Storage Access API_ name may seem like somewhat of a misnomer, given that it only provides access to cookies, and not other client-side storage mechanisms such as {{domxref("Web_Storage_API", "Web Storage", "", "nocode")}} or {{domxref("IndexedDB_API", "IndexedDB", "", "nocode")}}. The name has been kept generic because it may provide access to other forms of client-side storage in the future.
-
 ## Concepts and usage
 
-Browsers implement several storage access features and policies restricting access to third-party cookies. These range from giving embedded resources under each top-level origin a unique cookie storage space ([partitioned cookies](#unpartitioned_versus_partitioned_cookies)) to outright blocking of cookie access when resources are loaded in a third-party context.
+Browsers implement several storage access features and policies restricting access to third-party cookies and unpartitioned state. These range from giving embedded resources under each top-level origin a unique cookie storage space ([partitioned cookies](#unpartitioned_versus_partitioned_cookies)) to outright blocking of cookie access when resources are loaded in a third-party context.
 
-The semantics around third-party cookie-blocking features and policies differ from browser to browser, but the core functionality is similar. Cross-site resources embedded in a third-party context are not given access to the same cookies that they would have access to when loaded in a first-party context. This is done with good intent — browser vendors want to take steps to better protect their user's privacy and security. Examples include leaving them less open to having their activity tracked across different sites, and less vulnerable to exploits such as cross-site request forgery ({{glossary("CSRF")}}).
+The semantics around third-party cookie and unpartitioned state blocking features and policies differ from browser to browser, but the core functionality is similar. Cross-site resources embedded in a third-party context are not given access to the same state that they would have access to when loaded in a first-party context. This is done with good intent — browser vendors want to take steps to better protect their user's privacy and security. Examples include leaving them less open to having their activity tracked across different sites, and less vulnerable to exploits such as cross-site request forgery ({{glossary("CSRF")}}).
 
-However, there are legitimate uses for embedded cross-site content accessing third-party cookies, which the above features and policies are known to break. Let's say you've got a series of different sites that provide access to different products — `heads-example.com`, `shoulders-example.com`, `knees-example.com`, and `toes-example.com`.
+However, there are legitimate uses for embedded cross-site content accessing third-party cookies and unpartitioned state, which the above features and policies are known to break. Let's say you've got a series of different sites that provide access to different products — `heads-example.com`, `shoulders-example.com`, `knees-example.com`, and `toes-example.com`.
 
 Alternatively, you might separate your content or services into different country domains for localization purposes — `example.com`, `example.ua`, `example.br`, etc. — or in some other way.
 
@@ -34,19 +35,19 @@ You might have accompanying utility sites with components embedded in all the ot
 
 In such situations, site owners often encourage users to add their site as an exception or to disable third-party cookie-blocking policies entirely. Users who wish to continue interacting with their content must significantly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
 
-The Storage Access API is intended to solve this problem; embedded cross-site content can request unrestricted access to third-party cookies on a frame-by-frame basis via the {{domxref("Document.requestStorageAccess()")}} method. It can also check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
+The Storage Access API is intended to solve this problem; embedded cross-site content can request unrestricted access to third-party cookies and unpartitioned state on a frame-by-frame basis via the {{domxref("Document.requestStorageAccess()")}} method. It can also check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
 ### Unpartitioned versus partitioned cookies
 
 It is important to note that the Storage Access API is only needed to provide access to _unpartitioned_ third-party cookies. This means cookies stored in the traditional way since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, thereby making tracking users across sites via these cookies impossible.
 
-Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies).
+Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies).
 
 When we talk about third-party cookies in the context of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
 
 ### How it works
 
-Embedded content that has a legitimate need for third party cookie access can request access using the Storage Access API as follows:
+Embedded content that has a legitimate need for third party cookie or unpartitioned state access can request access using the Storage Access API as follows:
 
 1. It can call the {{domxref("Document.hasStorageAccess()")}} method to check whether it has the access it needs already.
 2. If not, it can request access via the {{domxref("Document.requestStorageAccess()")}} method.
@@ -73,7 +74,7 @@ Several different security measures could cause a {{domxref("Document.requestSto
 2. The document and top-level document must not have a `null` origin.
 3. Origins that have never been interacted with as a first party do not have a notion of first-party storage. From the user's perspective, they only have a third-party relationship with that origin. Access requests are automatically denied if the browser detects that the user hasn't interacted with the embedded content in a first-party context recently (in Firefox, "recently" means within 30 days).
 4. The document's window must be a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-5. Sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies:
+5. Sandboxed {{htmlelement("iframe")}}s cannot be granted storage access by default for security reasons. The API therefore also adds the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox). The embedding website needs to add this to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to execute a script to call the API and execute it in an origin that can have cookies/state:
 
    ```html
    <iframe
@@ -118,8 +119,10 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 
 - {{domxref("Document.hasStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to third-party cookies.
+- {{domxref("Document.hasUnpartitionedCookieAccess()")}}
+  - : New name for {{domxref("Document.hasStorageAccess()")}}.
 - {{domxref("Document.requestStorageAccess()")}}
-  - : Allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+  - : Allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies and unpartitioned state; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 

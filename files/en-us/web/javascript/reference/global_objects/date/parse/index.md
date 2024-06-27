@@ -58,6 +58,8 @@ Date.parse("2019-01-01T00:00:00");
 
 Implementations usually default to the local time zone when the date string is non-standard. For consistency, we will assume that the code uses the UTC timezone.
 
+> **Note:** The local time zone offset comes from the system setting of the device and is then applied to the date being parsed. [Daylight Saving Time (DST), of the local time zone, can also have an effect on this too](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions).
+
 ```js
 Date.parse("Jan 1, 1970"); // 0 in all implementations
 
@@ -75,12 +77,14 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT+0300");
 
 // Single number
 Date.parse("0");
-// 946684800000 in Chrome (Sat Jan 01 2000 00:00:00 GMT+0000);
-// NaN in Firefox;
+// NaN in Firefox ≤122
+// 946684800000 in Chrome and Firefox ≥123  (Sat Jan 01 2000 00:00:00 GMT+0000);
 // -62167219200000 in Safari (Sat Jan 01 0000 00:00:00 GMT+0000)
 
 // Two-digit number that may be a month
-Date.parse("28"); // NaN in all implementations
+Date.parse("28");
+// NaN Chrome and Firefox
+// -61283606400000 in Safari (Fri Dec 31 0027 23:58:45 GMT-0001)
 
 // Two-digit year
 Date.parse("70/01/01"); // 0 in all implementations
@@ -91,9 +95,17 @@ Date.parse("Mar 32, 2014"); // NaN in all implementations
 Date.parse("2014/25/23"); // NaN in all implementations
 
 Date.parse("2014-02-30");
-// NaN in Safari and Firefox;
-// 1393718400000 in Chrome (Sun Mar 02 2014 00:00:00 GMT+0000)
+// NaN in Safari
+// 1393718400000 in Chrome and Firefox (Sun Mar 02 2014 00:00:00 GMT+0000)
 Date.parse("02/30/2014"); // 1393718400000 in all implementations
+
+// Chrome, Safari, and Firefox 122 and later parse only the first three letters for the month.
+// FF121 and earlier parse first three letters and any substring up to the correct month name.
+Date.parse("04 Dec 1995"); // 818031600000 in all implementations
+Date.parse("04 Decem 1995"); // 818031600000 in all implementations
+Date.parse("04 December 1995"); // 818031600000 in all implementations
+Date.parse("04 DecFoo 1995"); // NaN in Firefox 121 and earlier. 818031600000 in other implementations
+Date.parse("04 De 1995"); // NaN in all implementations
 ```
 
 ## Specifications

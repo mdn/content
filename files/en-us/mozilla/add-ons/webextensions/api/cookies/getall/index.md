@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a single cookie store that match the given information.
 

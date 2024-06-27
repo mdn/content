@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.FileReaderSync.FileReaderSync
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}} {{AvailableInWorkers("worker_except_service")}}
 
 The **`FileReaderSync()`** constructor creates a new {{domxref("FileReaderSync")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

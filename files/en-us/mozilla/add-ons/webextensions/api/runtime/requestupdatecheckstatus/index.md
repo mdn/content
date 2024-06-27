@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.RequestUpdateCheckStatus
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 

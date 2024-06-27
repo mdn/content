@@ -2,7 +2,7 @@
 title: flood-color
 slug: Web/SVG/Attribute/flood-color
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.flood-color
+browser-compat: svg.global_attributes.flood-color
 ---
 
 {{SVGRef}}

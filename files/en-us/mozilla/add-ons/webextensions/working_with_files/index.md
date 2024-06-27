@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 page-type: guide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Your browser extension may need to work with files to deliver its full functionality. This article looks at the five mechanisms you have for handling files:
 

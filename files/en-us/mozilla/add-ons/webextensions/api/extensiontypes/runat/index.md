@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.RunAt
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The soonest that the JavaScript or CSS will be injected into the tab.
 

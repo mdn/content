@@ -65,7 +65,7 @@ This example styles a modal dialog that opens when the "Update details" button i
 :modal {
   border: 5px solid red;
   background-color: yellow;
-  box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
 }
 ```
 

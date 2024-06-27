@@ -6,13 +6,11 @@ page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.lowerBound_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`lowerBound()`** static method of the
 {{domxref("IDBKeyRange")}} interface creates a new key range with only a lower bound.
 By default, it includes the lower endpoint value and is closed.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

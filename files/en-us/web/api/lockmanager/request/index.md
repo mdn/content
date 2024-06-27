@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.LockManager.request
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
 The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
@@ -23,8 +23,6 @@ When a `"shared"` lock for a given name is held, other `"shared"` locks for the 
 This shared/exclusive lock pattern is common in database transaction architecture, for example to allow multiple simultaneous readers (each requests a `"shared"` lock) but only one writer (a single `"exclusive"` lock).
 This is known as the readers-writer pattern.
 In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), this is exposed as `"readonly"` and `"readwrite"` transactions which have the same semantics.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

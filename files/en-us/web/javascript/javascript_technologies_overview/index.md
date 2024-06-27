@@ -106,7 +106,7 @@ Besides the above implementations, there are other popular JavaScript engines su
 
 - [Carakan](https://dev.opera.com/blog/carakan-faq/), used in earlier versions of Opera.
 - Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) engine, used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used a new JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>).
-- [LibJS](https://libjs.dev/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
+- [LibJS](https://serenityos.github.io/libjs-website/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
 - Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) engine, a JavaScript implementation written in Java, created primarily by Norris Boyd (also at Netscape).
 
 There are some engines specifically tailored for non-browser purposes:

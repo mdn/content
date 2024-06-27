@@ -5,7 +5,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.toggle_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`toggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) just after it is shown or hidden.
 

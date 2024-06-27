@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Detects the primary language of the content in a tab, using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 

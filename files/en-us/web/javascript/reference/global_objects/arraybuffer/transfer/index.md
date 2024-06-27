@@ -116,6 +116,7 @@ buffer3.transfer(20); // RangeError: Invalid array buffer length
 
 ## See also
 
+- [Polyfill of `ArrayBuffer.prototype.transfer()` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.detached")}}
 - {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}

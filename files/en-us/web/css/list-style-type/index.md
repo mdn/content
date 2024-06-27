@@ -186,7 +186,7 @@ A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
 - `hangul-consonant`: `-moz-hangul-consonant`
 - `urdu`: `-moz-urdu`
 
-See the [compatibility table](#browser-compatibility) to check which browsers support which extension.
+See the [compatibility table](#browser_compatibility) to check which browsers support which extension.
 
 ## Accessibility concerns
 

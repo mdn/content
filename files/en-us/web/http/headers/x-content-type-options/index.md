@@ -24,12 +24,10 @@ than `text/html`. Make sure to set both headers correctly.
 
 Site security testers usually expect this header to be set.
 
-> **Note:** `X-Content-Type-Options` only apply
-> [request-blocking due to `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?)
-> for [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) of "`script`"
-> and "`style`". However, it also
-> [enables Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected)
-> protection for HTML, TXT, JSON and XML files (excluding SVG `image/svg+xml`).
+> **Note:**
+>
+> `X-Content-Type-Options` only apply request-blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) of "`script`" and "`style`".
+> However, it also [enables Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected) protection for HTML, TXT, JSON and XML files (excluding SVG `image/svg+xml`).
 
 <table class="properties">
   <tbody>
@@ -74,8 +72,7 @@ X-Content-Type-Options: nosniff
 
 - {{HTTPHeader("Content-Type")}}
 - The [original definition](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vi-beta-2-update) of X-Content-Type-Options by Microsoft.
-- The [Mozilla Observatory](https://observatory.mozilla.org/) tool testing
-  the configuration (including this header) of websites for safety and security
+- Use [HTTP Observatory](/en-US/observatory/) to test the security configuration of websites (including this header).
 - [Mitigating MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
 - [Cross-Origin Read Blocking (CORB)](https://fetch.spec.whatwg.org/#corb)
 - [Google Docs CORB explainer](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)

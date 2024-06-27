@@ -17,7 +17,7 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ### Formal syntax
 
-```css-nolint
+```plain
 :lang(<language-code> [,<language-code> ]*)
   /* ... */
 }

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.copyTextureToTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`copyTextureToTexture()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that copies data from one {{domxref("GPUTexture")}} to another.

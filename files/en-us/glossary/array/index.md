@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An _array_ is an ordered collection of data (either {{Glossary("primitive")}} or {{Glossary("object")}} depending upon the language). Arrays are used to store multiple values under a single variable name. A regular variable, on the other hand, can store only one value.
+An **array** is an ordered collection of data (either {{Glossary("primitive")}} or {{Glossary("object")}} depending upon the language). Arrays are used to store multiple values under a single variable name. A regular variable, on the other hand, can store only one value.
 
 Each item in an array has a number attached to it, called a numeric index, that allows you to access it. In JavaScript, arrays start at index zero and can be manipulated with various {{Glossary("Method", "methods")}}.
 
@@ -24,4 +24,4 @@ console.log(barbieDollNamesArray[2]); // output: "Midge"
 
 ## See also
 
-- JavaScript {{jsxref("Array")}} on MDN
+- JavaScript {{jsxref("Array")}}

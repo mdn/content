@@ -25,7 +25,7 @@ Try updating the live code below to recreate the finished example by following t
 2. Add the first two variables together and store the result in another variable.
 3. Subtract the fourth variable from the third and store the result in another variable.
 4. Multiply the results from steps **2** and **3** and store the result in a variable called `finalResult`.
-5. Check if `finalResult` is an even number using an [arithmetic operator](/en-US/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators) and store the result in a variable called `evenOddResult`.
+5. Check if `finalResult` is an even number using one of the [arithmetic operators](/en-US/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators). Store the result (`0` for even, `1` for odd) in a variable called `evenOddResult`.
 
 To pass this test, `finalResult` should have a value of `48` and `evenOddResult` should have a value of `0`.
 

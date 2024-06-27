@@ -141,7 +141,7 @@ const [one, two, three] = foo;
 
 ### Evaluation and nesting
 
-In general, assignments are used within a variable declaration (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements).
+In general, assignments are used within a variable declaration (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements.
 
 ```js
 // Declares a variable x and initializes it to the result of f().
@@ -184,7 +184,7 @@ console.log(f(0, x = f(), 0));
 The evaluation result matches the expression to the right of the `=` sign in the
 "Meaning" column of the table above. That means that `x = f()` evaluates into
 whatever `f()`'s result is, `x += f()` evaluates into the resulting sum `x + f()`,
-`x **= f()` evaluates into the resulting power `x ** y`, and so on.
+`x **= f()` evaluates into the resulting power `x ** f()`, and so on.
 
 In the case of logical assignments, `x &&= f()`,
 `x ||= f()`, and `x ??= f()`, the return value is that of the

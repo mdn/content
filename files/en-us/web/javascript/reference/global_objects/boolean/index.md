@@ -13,41 +13,32 @@ The **`Boolean`** object represents a truth value: `true` or `false`.
 
 ### Boolean primitives and Boolean objects
 
-Do not confuse the {{Glossary("Primitive", "primitive")}} `Boolean` values `true` and `false` with the `true` and `false` values of the `Boolean` object.
+For converting non-boolean values to boolean, use `Boolean` as a function or use the [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) operator. Do not use the `Boolean()` constructor with `new`.
 
-**Any** object, including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
-
-```js
-const x = new Boolean(false);
-if (x) {
-  // this code is executed
-}
+```js example-good
+const good = Boolean(expression);
+const good2 = !!expression;
 ```
 
-This behavior does not apply to `Boolean` primitives. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `false`:
-
-```js
-const x = false;
-if (x) {
-  // this code is not executed
-}
-```
-
-Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
-
-```js
-const good = Boolean(expression); // use this
-const good2 = !!expression; // or this
+```js example-bad
 const bad = new Boolean(expression); // don't use this!
 ```
 
-If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
+This is because _all_ objects, including a `Boolean` object whose wrapped value is `false`, are {{glossary("truthy")}} and evaluate to `true` in places such as conditional statements. (See also the [boolean coercion](#boolean_coercion) section below.)
 
 ```js
-const myFalse = new Boolean(false); // initial value of false
-const g = Boolean(myFalse); // initial value of true
-const myString = new String("Hello"); // string object
-const s = Boolean(myString); // initial value of true
+if (new Boolean(true)) {
+  console.log("This log is printed.");
+}
+
+if (new Boolean(false)) {
+  console.log("This log is ALSO printed.");
+}
+
+const myFalse = new Boolean(false); // myFalse is a Boolean object (not the primitive value false)
+const g = Boolean(myFalse); // g is true
+const myString = new String("Hello"); // myString is a String object
+const s = Boolean(myString); // s is true
 ```
 
 > **Warning:** You should rarely find yourself using `Boolean` as a constructor.
@@ -100,7 +91,7 @@ Truthy values are even more unlikely to be loosely equal to `true`. All values a
 ## Constructor
 
 - {{jsxref("Boolean/Boolean", "Boolean()")}}
-  - : Creates a new `Boolean` object.
+  - : Creates `Boolean` objects. When called as a function, it returns primitive values of type Boolean.
 
 ## Instance properties
 

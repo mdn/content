@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a tab is closed.
 

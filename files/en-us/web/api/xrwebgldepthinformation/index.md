@@ -17,15 +17,15 @@ This interface inherits properties from its parent, {{domxref("XRDepthInformatio
 
 ## Instance properties
 
-- {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}}
+- {{domxref("XRDepthInformation.height")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the height of the depth buffer (number of rows).
-- {{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}}
+- {{domxref("XRDepthInformation.normDepthBufferFromNormView")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into the depth buffer. The transformation that the matrix represents changes the coordinate system from normalized view coordinates to normalized depth buffer coordinates that can then be scaled by depth buffer's `width` and `height` to obtain the absolute depth buffer coordinates.
-- {{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}}
+- {{domxref("XRDepthInformation.rawValueToMeters")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
 - {{domxref("XRWebGLDepthInformation.texture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("WebGLTexture")}} containing depth buffer information as an opaque texture.
-- {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}
+- {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Contains the width of the depth buffer (number of columns).
 
 ## Examples

@@ -5,8 +5,6 @@ page-type: guide
 browser-compat: html.elements.video
 ---
 
-{{MDNSidebar}}
-
 > **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
@@ -105,12 +103,6 @@ class BookListView(generic.ListView):
     template_name = 'books/my_arbitrary_template_name_list.html'
 ```
 
-### Formal syntax
-
-_The formal syntax must be taken from the spec and added to the [MDN data repository](https://github.com/mdn/data). It is an important tool to get precise syntax information for advanced users._
-
-{{CSSSyntax("font-stretch")}}
-
 ## Interactive Examples
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}} {{EmbedInteractiveExample("pages/css/order.html")}} {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
@@ -150,7 +142,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

@@ -2,14 +2,12 @@
 title: white-space-collapse
 slug: Web/CSS/white-space-collapse
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.white-space-collapse
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
-The **`white-space-collapse`** CSS property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
+The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
 > **Note:** The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
@@ -47,7 +45,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
   - : The behavior is identical to `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 > **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 

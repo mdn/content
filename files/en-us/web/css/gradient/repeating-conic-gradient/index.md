@@ -20,8 +20,8 @@ The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-U
    offset by 3degrees so there is no up/down straight line */
 repeating-conic-gradient(
   from 3deg at 25% 25%,
-  hsl(200, 100%, 50%) 0deg 15deg,
-  hsl(200, 100%, 60%) 10deg 30deg
+  hsl(200 100% 50%) 0deg 15deg,
+  hsl(200 100% 60%) 10deg 30deg
 )
 
 /* Interpolation in polar color space

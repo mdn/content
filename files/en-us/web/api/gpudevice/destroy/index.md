@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.destroy
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`destroy()`** method of the
 {{domxref("GPUDevice")}} interface destroys the device, preventing further operations on it.

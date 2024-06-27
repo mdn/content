@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioEncoder.dequeue_event
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`dequeue`** event of the {{domxref("AudioEncoder")}} interface fires to signal a decrease in {{domxref("AudioEncoder.encodeQueueSize")}}.
 

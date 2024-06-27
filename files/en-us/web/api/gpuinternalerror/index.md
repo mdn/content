@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUInternalError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUInternalError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes an application error indicating that an operation did not pass the WebGPU API's validation constraints.
 
@@ -26,7 +26,7 @@ Internal errors occur when something happens in the WebGPU implementation that w
 
 The `message` property is inherited from its parent, {{domxref("GPUError")}}:
 
-- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples

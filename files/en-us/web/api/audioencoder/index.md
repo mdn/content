@@ -7,7 +7,7 @@ status:
 browser-compat: api.AudioEncoder
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 

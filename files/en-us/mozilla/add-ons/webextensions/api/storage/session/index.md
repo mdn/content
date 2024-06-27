@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.storage.session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Represents the `session` storage area. Items in `session` storage are stored in memory for the duration of the browser session and are not persisted to disk.
 By default, it's not exposed to content scripts, but this behavior can be changed through {{WebExtAPIRef("storage.StorageArea.setAccessLevel", "storage.session.setAccessLevel()")}}.

@@ -25,7 +25,7 @@ The `<image>` data type can be represented with any of the following:
 CSS can handle the following kinds of images:
 
 - Images with _intrinsic dimensions_ (a natural size), like a JPEG, PNG, or other [raster format](https://en.wikipedia.org/wiki/Raster_graphics).
-- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the aspect ratio most similar to the containing box.)
+- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the {{glossary("aspect ratio")}} most similar to the containing box.)
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 
@@ -89,7 +89,7 @@ nourl.jpg            /* An image file must be defined using the url() function. 
 url(report.pdf)      /* A file pointed to by the url() function must be an image. */
 element(#fakeid)     /* An element ID must be an existing ID on the page. */
 image(z.jpg#xy=0,0)  /* The spatial fragment must be written in the format of xywh=#,#,#,# */
-image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolutions */
+image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolution */
 ```
 
 ## Specifications
@@ -103,7 +103,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a
 ## See also
 
 - {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
+- {{CSSxRef("element","element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}
 - {{CSSxRef("cross-fade","cross-fade()")}}

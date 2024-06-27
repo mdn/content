@@ -26,7 +26,13 @@ browser-compat: webextensions.manifest.name
 
 Name of the extension. This is used to identify the extension in the browser's user interface and on sites like addons.mozilla.org.
 
-It's good practice to keep the name short enough to display in the UI. Google Chrome and Microsoft Edge restrict the name length to 45 characters.
+It's good practice to keep the name short enough to display in the UI. Also, the length of the name of a published extension may be limited. For example, as of February 2024:
+
+- addons.mozilla.org accepts a maximum of 50 characters.
+- the Chrome Web Store accepts a maximum of 75 characters.
+- the Microsoft Edge Addons store accepts a maximum of 45 characters.
+
+These restrictions do not apply to self-hosted extensions or extensions distributed outside the stores.
 
 This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 

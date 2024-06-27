@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.port
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated

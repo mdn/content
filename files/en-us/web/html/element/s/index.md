@@ -11,6 +11,59 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
 
 {{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Accessibility
+
+The presence of the `s` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
+
+```css
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+s::before {
+  content: " [start of stricken text] ";
+}
+
+s::after {
+  content: " [end of stricken text] ";
+}
+```
+
+Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
+
+- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Examples
+
+```css
+.sold-out {
+  text-decoration: line-through;
+}
+```
+
+```html
+<s>Today's Special: Salmon</s> SOLD OUT<br />
+<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
+```
+
+### Result
+
+{{EmbedLiveSample("Examples")}}
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -38,7 +91,7 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -68,57 +121,6 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-```css
-.sold-out {
-  text-decoration: line-through;
-}
-```
-
-```html
-<s>Today's Special: Salmon</s> SOLD OUT<br />
-<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
-```
-
-### Result
-
-{{EmbedLiveSample("Examples")}}
-
-## Accessibility concerns
-
-The presence of the `s` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
-
-```css
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-s::before {
-  content: " [start of stricken text] ";
-}
-
-s::after {
-  content: " [end of stricken text] ";
-}
-```
-
-Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
-
-- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Specifications
 

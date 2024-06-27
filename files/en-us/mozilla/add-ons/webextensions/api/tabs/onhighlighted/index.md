@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onHighlighted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the set of highlighted tabs in a window changes.
 

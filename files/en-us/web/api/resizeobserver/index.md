@@ -122,4 +122,4 @@ As long as the error event does not fire indefinitely, resize observer will sett
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
-- Upcoming [container queries](/en-US/docs/Web/CSS/CSS_container_queries) may be a viable alternative for implementing responsive design.
+- Upcoming [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) may be a viable alternative for implementing responsive design.

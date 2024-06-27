@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.captivePortal.canonicalURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Return the canonical URL of the captive-portal detection page. Read-only.
 

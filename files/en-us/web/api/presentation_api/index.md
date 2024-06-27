@@ -41,7 +41,7 @@ Depending on the connection mechanism provided by the presentation device, any c
 
 ## Example
 
-Example codes below highlight the usage of main features of the Presentation API: `controller.html` implements the controller and `presentation.html` implements the presentation. Both pages are served from the domain `http://example.org` (`http://example.org/controller.html` and `http://example.org/presentation.html`). These examples assume that the controlling page is managing one presentation at a time. Please refer to the comments in the code examples for further details.
+Example codes below highlight the usage of main features of the Presentation API: `controller.html` implements the controller and `presentation.html` implements the presentation. Both pages are served from the domain `https://example.org` (`https://example.org/controller.html` and `https://example.org/presentation.html`). These examples assume that the controlling page is managing one presentation at a time. Please refer to the comments in the code examples for further details.
 
 ### Monitor availability of presentation displays
 
@@ -55,8 +55,8 @@ In `controller.html`:
 
   // It is also possible to use relative presentation URL e.g. "presentation.html"
   const presUrls = [
-    "http://example.com/presentation.html",
-    "http://example.net/alternate.html",
+    "https://example.com/presentation.html",
+    "https://example.net/alternate.html",
   ];
 
   // Show or hide present button depending on display availability

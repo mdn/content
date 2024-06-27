@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ask to give up the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 

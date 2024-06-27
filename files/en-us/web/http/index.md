@@ -39,7 +39,7 @@ Learn how to use HTTP with guides and tutorials.
 Browse through detailed HTTP reference documentation.
 
 - [HTTP Headers](/en-US/docs/Web/HTTP/Headers)
-  - : HTTP message headers are used to describe a resource, or the behavior of the server or the client. Header fields are kept in an [IANA registry](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers). IANA also maintains a [registry of proposed new HTTP message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers).
+  - : HTTP message headers are used to describe a resource, or the behavior of the server or the client. Header fields are maintained in an [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), which includes [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status), which may be "permanent" (standards-defined), "provisional" (new), "deprecated" (use not recommended), or "obsolete" (no longer in use).
 - [HTTP Request Methods](/en-US/docs/Web/HTTP/Methods)
   - : The different operations that can be done with HTTP: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, and also less common requests like {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}}, or {{HTTPMethod("TRACE")}}.
 - [HTTP Status Response Codes](/en-US/docs/Web/HTTP/Status)
@@ -53,7 +53,7 @@ Helpful tools and resources for understanding and debugging HTTP.
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [Network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
-- [Mozilla Observatory](https://observatory.mozilla.org/)
+- [HTTP Observatory](/en-US/observatory/)
   - : A project designed to help developers, system administrators, and security professionals configure their sites safely and securely.
 - [RedBot](https://redbot.org/)
   - : Tools to check your cache-related headers.

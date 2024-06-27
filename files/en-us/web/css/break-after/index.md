@@ -61,9 +61,9 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
   - : Allows, but does not force, any break (page, column, or region) to be inserted right after the principal box.
 - `avoid`
   - : Avoids any break (page, column, or region) from being inserted right after the principal box.
-- `always` {{experimental_inline}}
+- `always`
   - : Forces a page break right after the principal box. The type of this break is that of the immediately-containing fragmentation context. If we are inside a multicol container then it would force a column break, inside paged media (but not inside a multicol container) a page break.
-- `all` {{experimental_inline}}
+- `all`
   - : Forces a page break right after the principal box. Breaking through all possible fragmentation contexts. So a break inside a multicol container, which was inside a page container would force a column and page break.
 
 #### Page break values
@@ -90,9 +90,9 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
 
 #### Region break values
 
-- `avoid-region` {{experimental_inline}}
+- `avoid-region`
   - : Avoids any region break right after the principal box.
-- `region` {{experimental_inline}}
+- `region`
   - : Forces a region break right after the principal box.
 
 ## Page break aliases

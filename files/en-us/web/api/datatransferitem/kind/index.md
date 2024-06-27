@@ -8,14 +8,12 @@ browser-compat: api.DataTransferItem.kind
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only **`DataTransferItem.kind`** property returns a
-{{domxref("DataTransferItem")}} representing the _drag data item_ kind: some text
-or some file.
+The read-only **`DataTransferItem.kind`** property returns the kind–a string or a file–of the {{domxref("DataTransferItem")}} object representing the _drag data item_.
 
 ## Value
 
-A string representing the drag data item's kind. It must be one of
-the following values:
+A string representing the drag data item's kind.
+It must be one of the following values:
 
 - `'file'`
   - : If the drag data item is a file.
@@ -27,7 +25,7 @@ the following values:
 This example shows the use of the `kind` property.
 
 ```js
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
   const data = event.dataTransfer.items;
@@ -43,7 +41,7 @@ function drop_handler(ev) {
     } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
       // Drag data item is an image file
       const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      console.log("… Drop: File");
     }
   }
 }

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.install
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Installs and enables a theme extension from the given URL.
 

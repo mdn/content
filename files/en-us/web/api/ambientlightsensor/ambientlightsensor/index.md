@@ -8,7 +8,7 @@ status:
 browser-compat: api.AmbientLightSensor.AmbientLightSensor
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`AmbientLightSensor()`** constructor creates a new {{domxref("AmbientLightSensor")}} object, which returns the current light level or illuminance of the ambient light around the hosting device.
 
@@ -25,7 +25,7 @@ new AmbientLightSensor(options)
 
   - : Currently only one option is supported:
 
-    - `frequency`
+    - `frequency` {{optional_inline}}
       - : The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on the device hardware and consequently may be less than requested.
 
 ### Exceptions

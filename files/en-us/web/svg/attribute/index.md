@@ -1,5 +1,6 @@
 ---
 title: SVG Attribute reference
+short-title: Attributes
 slug: Web/SVG/Attribute
 page-type: landing-page
 ---
@@ -343,26 +344,33 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - Core attributes
 
-  - : [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
-
-    {{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
-
-- Style attributes
-
-  - : [Style attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-
-    {{SVGAttr("class")}}, {{SVGAttr("style")}}
+  - {{SVGAttr("id")}}
+  - {{SVGAttr("class")}}
+  - {{SVGAttr("style")}}
+  - {{SVGAttr("lang")}}
+  - {{SVGAttr("tabindex")}}
+  - {{SVGAttr("xml:base")}}
+  - {{SVGAttr("xml:lang")}}
+  - {{SVGAttr("xml:space")}}
 
 - Conditional processing attributes
-  - : {{SVGAttr("requiredExtensions")}}, {{SVGAttr("requiredFeatures")}}, {{SVGAttr("systemLanguage")}}.
+  - {{SVGAttr("requiredExtensions")}}
+  - {{SVGAttr("requiredFeatures")}}
+  - {{SVGAttr("systemLanguage")}}
 
 ### XLink attributes
 
-{{SVGAttr("xlink:href")}}{{deprecated_inline}} , {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}}, {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:type")}}
+- {{SVGAttr("xlink:role")}}
+- {{SVGAttr("xlink:arcrole")}}
+- {{SVGAttr("xlink:title")}}
+- {{SVGAttr("xlink:show")}}
+- {{SVGAttr("xlink:actuate")}}
 
 ### Presentation attributes
 
-> **Note:** All [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) can be used as CSS properties.
+> **Note:** All SVG presentation attributes can be used as CSS properties.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -375,6 +383,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("cursor")}}
+- {{SVGAttr("d")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
@@ -449,32 +458,76 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Event attributes
 
-- Animation event attributes
-
-  - : [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
-
-    **`onbegin`**, **`onend`**, **`onrepeat`**
-
-- Document event attributes
-
-  - : [Document event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes)
-
-    **`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
-
-- Global event attributes
-
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)
-
-    **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
-
-- Graphical event attributes
-
-  - : [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
-
-    **`onactivate`**, **`onfocusin`**, **`onfocusout`**
+- **`onabort`**
+- **`onactivate`**
+- **`onbegin`**
+- **`oncancel`**
+- **`oncanplay`**
+- **`oncanplaythrough`**
+- **`onchange`**
+- **`onclick`**
+- **`onclose`**
+- **`oncuechange`**
+- **`ondblclick`**
+- **`ondrag`**
+- **`ondragend`**
+- **`ondragenter`**
+- **`ondragleave`**
+- **`ondragover`**
+- **`ondragstart`**
+- **`ondrop`**
+- **`ondurationchange`**
+- **`onemptied`**
+- **`onend`**
+- **`onended`**
+- **`onerror`**
+- **`onerror`**
+- **`onfocus`**
+- **`onfocusin`**
+- **`onfocusout`**
+- **`oninput`**
+- **`oninvalid`**
+- **`onkeydown`**
+- **`onkeypress`**
+- **`onkeyup`**
+- **`onload`**
+- **`onloadeddata`**
+- **`onloadedmetadata`**
+- **`onloadstart`**
+- **`onmousedown`**
+- **`onmouseenter`**
+- **`onmouseleave`**
+- **`onmousemove`**
+- **`onmouseout`**
+- **`onmouseover`**
+- **`onmouseup`**
+- **`onmousewheel`**
+- **`onpause`**
+- **`onplay`**
+- **`onplaying`**
+- **`onprogress`**
+- **`onratechange`**
+- **`onrepeat`**
+- **`onreset`**
+- **`onresize`**
+- **`onresize`**
+- **`onscroll`**
+- **`onscroll`**
+- **`onseeked`**
+- **`onseeking`**
+- **`onselect`**
+- **`onshow`**
+- **`onstalled`**
+- **`onsubmit`**
+- **`onsuspend`**
+- **`ontimeupdate`**
+- **`ontoggle`**
+- **`onunload`**
+- **`onvolumechange`**
+- **`onwaiting`**
 
 ## See also
 
 - [SVG element reference](/en-US/docs/Web/SVG/Element)
 - [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG interface reference](/en-US/docs/Web/API/SVG_API#interfaces)

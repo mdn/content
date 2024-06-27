@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.IDBOpenDBRequest
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 

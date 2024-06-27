@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCompilationMessage.type
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`type`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is an enumerated value representing the type of the message. Each type represents a different severity level.

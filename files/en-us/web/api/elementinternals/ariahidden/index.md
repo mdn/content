@@ -20,7 +20,7 @@ A string with one of the following values:
   - : The element is hidden from the accessibility API.
 - `"false"`
   - : The element is exposed to the accessibility API as if it were rendered.
-- `undefined`
+- `"undefined"`
   - : The element's hidden state is determined by the user agent based on whether it is rendered.
 
 ## Examples

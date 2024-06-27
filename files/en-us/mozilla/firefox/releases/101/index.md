@@ -85,4 +85,4 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
 
 ## Older versions
 
-{{Firefox_for_developers(100)}}
+{{Firefox_for_developers}}

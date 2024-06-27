@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBTransaction.abort
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`abort()`** method of the {{domxref("IDBTransaction")}}
 interface rolls back all the changes to objects in the database associated with this
@@ -14,8 +14,6 @@ transaction.
 
 All pending {{domxref("IDBRequest")}} objects created during this transaction have
 their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref("DOMException")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

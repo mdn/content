@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
 
+{{AccessibilitySidebar}}
+
 A `feed` is a dynamic scrollable `list` of `articles` in which articles are added to or removed from either end of the list as the user scrolls. A `feed` enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.
 
 ```html
@@ -19,7 +21,7 @@ A `feed` is a dynamic scrollable `list` of `articles` in which articles are adde
 
 ## Description
 
-A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for scrollable [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an e-commerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
+A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for scrollable [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Mastodon, or even a list of related products on an e-commerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
 
 Unlike the document structure elements that represent static HTML elements, the `feed` role requires specific interactions and implementation of keyboard navigation. The `feed` is a container element whose children are {{HTMLElement('article')}}s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.
 
@@ -86,11 +88,3 @@ To ensure good user experience, avoid inserting or removing articles in the midd
 - The {{HTMLElement('ul')}} unordered list element
 - [ARIA: `article` role](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

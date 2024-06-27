@@ -250,7 +250,7 @@ If you open your project's **package.json** file you'll now see a new section wi
 
 ```json
  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.3"
 }
 ```
 
@@ -339,19 +339,15 @@ The **package.json** file defines the application dependencies and other informa
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.3"
   }
 }
 ```
 
-The dependencies include the _express_ package and the package for our selected view engine (_pug_). In addition, we have the following packages that are useful in many web applications:
-
-- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
-- [debug](https://www.npmjs.com/package/debug): A tiny node debugging utility modeled after node core's debugging technique.
-- [morgan](https://www.npmjs.com/package/morgan): An HTTP request logger middleware for node.
-- [http-errors](https://www.npmjs.com/package/http-errors): Create HTTP errors where needed (for express error handling).
-
 The scripts section first defines a "_start_" script, which is what we are invoking when we call `npm start` to start the server (this script was added by the _Express Application Generator_). From the script definition, you can see that this actually starts the JavaScript file **./bin/www** with _node_.
+
+We already modified this section in [Enable server restart on file changes](#enable_server_restart_on_file_changes) by adding the _devstart_ and _serverstart_ scripts.
+These can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this version of the scripts is for Linux and macOS, as discussed above).
 
 ```json
   "scripts": {
@@ -361,11 +357,51 @@ The scripts section first defines a "_start_" script, which is what we are invok
   },
 ```
 
-The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this example is for Linux and macOS, as discussed above in [Enable server restart on file changes](#enable_server_restart_on_file_changes)).
+The dependencies include the _express_ package and the package for our selected view engine (_pug_).
+In addition, we have the following packages that are useful in many web applications:
+
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
+- [debug](https://www.npmjs.com/package/debug): A tiny node debugging utility modeled after node core's debugging technique.
+- [morgan](https://www.npmjs.com/package/morgan): An HTTP request logger middleware for node.
+- [http-errors](https://www.npmjs.com/package/http-errors): Create HTTP errors where needed (for express error handling).
+
+The default versions in the generated project are a little out of date.
+Replace the dependencies section of your `package.json` file with the following text, which specifies the latest versions of these libraries at the time of writing:
+
+```json
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.5",
+    "express": "^4.19.2",
+    "http-errors": "~2.0.0",
+    "morgan": "^1.10.0",
+    "pug": "3.0.3"
+  },
+```
+
+Then update your installed dependencies using the command:
+
+```bash
+npm install
+```
+
+> **Note:** It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a continuous integration setup.
+>
+> Usually library updates to the minor and patch version remain compatible.
+> We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:
+>
+> ```bash
+> npm update --save
+> ```
+>
+> Major versions change the compatibility.
+> For those updates we'll need to manually update the `package.json`and code that uses the library, and extensively re-test the project.
 
 ### www file
 
 The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api.html) application object.
+`require()` is the [CommonJS way](https://nodejs.org/api/modules.html) to import JavaScript code, JSON, and other files into the current file.
+Here we specify **app.js** module using a relative path and omit the optional (.**js**) file extension.
 
 ```js
 #!/usr/bin/env node
@@ -377,7 +413,9 @@ The file **/bin/www** is the application entry point! The very first thing this 
 const app = require("../app");
 ```
 
-> **Note:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
+> **Note:** Node.js 14 and later support ES6 `import` statements for importing JavaScript (ECMAScript) modules.
+> To use this feature you have to add `"type": "module",` to your Express **package.json** file, all the modules in your application have to use `import` rather than `require()`, and for _relative imports_ you must include the file extension (for more information see the [Node documentation](https://nodejs.org/api/esm.html#introduction)).
+> While there are benefits to using `import`, this tutorial uses `require()` in order to match [the Express documentation](https://expressjs.com/en/starter/hello-world.html).
 
 The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
 

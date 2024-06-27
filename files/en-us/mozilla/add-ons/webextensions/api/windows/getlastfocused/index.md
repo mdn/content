@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getLastFocused
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the window that was most recently focused — typically the window 'on top'.
 

@@ -25,13 +25,13 @@ Linear gradients transition colors progressively along an imaginary line. They a
 
 Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function.
 
-### Repeating gradient
-
-Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} functions.
-
 ### Conic gradient
 
 Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function.
+
+### Repeating gradient
+
+Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, and {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} functions.
 
 ## Interpolation
 
@@ -92,51 +92,11 @@ div {
 
 ```css
 .radial-gradient {
-  background: radial-gradient(red, yellow, rgb(30, 144, 255));
+  background: radial-gradient(red, yellow, rgb(30 144 255));
 }
 ```
 
 {{EmbedLiveSample('Radial_gradient_example', 240, 120)}}
-
-### Repeating gradient examples
-
-Simple repeating linear and radial gradient examples.
-
-```html hidden
-<div class="linear-repeat">Repeating linear gradient</div>
-<br />
-<div class="radial-repeat">Repeating radial gradient</div>
-```
-
-```css hidden
-div {
-  width: 240px;
-  height: 80px;
-}
-```
-
-```css
-.linear-repeat {
-  background: repeating-linear-gradient(
-    to top left,
-    lightpink,
-    lightpink 5px,
-    white 5px,
-    white 10px
-  );
-}
-
-.radial-repeat {
-  background: repeating-radial-gradient(
-    powderblue,
-    powderblue 8px,
-    white 8px,
-    white 16px
-  );
-}
-```
-
-{{EmbedLiveSample('Repeating_gradient_examples', 240, 220)}}
 
 ### Conic gradient example
 
@@ -155,11 +115,66 @@ div {
 
 ```css
 .conic-gradient {
-  background: conic-gradient(lightpink, white, powderblue);
+  background: conic-gradient(pink, coral, lime);
 }
 ```
 
 {{EmbedLiveSample('Conic_gradient_example', 240, 240)}}
+
+### Repeating gradient examples
+
+Simple repeating linear and radial gradient examples.
+
+```html hidden
+<div class="linear-repeat"></div>
+<span>Repeating linear gradient</span>
+<hr />
+<div class="radial-repeat"></div>
+<span>Repeating radial gradient</span>
+<hr />
+<div class="conic-repeat"></div>
+<span>Repeating conic gradient</span>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  width: 240px;
+  height: 80px;
+}
+
+span {
+  font-weight: bold;
+  vertical-align: top;
+}
+```
+
+```css
+.linear-repeat {
+  background: repeating-linear-gradient(
+    to top left,
+    pink,
+    pink 5px,
+    white 5px,
+    white 10px
+  );
+}
+
+.radial-repeat {
+  background: repeating-radial-gradient(
+    lime,
+    lime 15px,
+    white 15px,
+    white 30px
+  );
+}
+
+.conic-repeat {
+  background: repeating-conic-gradient(lime, pink 30deg);
+}
+```
+
+{{EmbedLiveSample('Repeating_gradient_examples', 240, 300)}}
 
 ## Specifications
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.store
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`store()`** method of the
 {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
@@ -29,6 +29,11 @@ store(credentials)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if there is also a credential of the same type as the current one under operation.
 
 ## Examples
 

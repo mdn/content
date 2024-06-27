@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.RegisteredUserScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `RegisteredUserScript` object is returned by a call to {{WebExtAPIRef("userScripts.register","userScripts.register()")}} and represents the user scripts registered in that call.
 

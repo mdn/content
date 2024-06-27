@@ -19,7 +19,7 @@ A string.
 
 ## Examples
 
-In the following example, an event listener receives the [input](/en-US/docs/Web/API/HTMLElement/input_event) event. Any textual change
+In the following example, an event listener receives the [input](/en-US/docs/Web/API/Element/input_event) event. Any textual change
 to the {{htmlelement("input")}} element is retrieved by `InputEvent.data` and
 inserted into a paragraph using the
 [`Node.textContent`](/en-US/docs/Web/API/Node/textContent)

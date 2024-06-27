@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnInstalledReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
 

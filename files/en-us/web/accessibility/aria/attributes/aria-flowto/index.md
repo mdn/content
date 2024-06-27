@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-flowto
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-flowto` attribute identifies the next element (or elements) in an alternate reading order of content. This allows assistive technology to override the general default of reading in document source order at the user's discretion.
 
 ## Description
@@ -15,7 +17,7 @@ The global `aria-flowto` attribute lets the author indicate to assistive technol
 
 When `aria-flowto` has a single [id](/en-US/docs/Web/HTML/Global_attributes/id) reference, it allows assistive technologies to, at the user's request, go to the element targeted via that `id` instead of reading the document in the order of the DOM. When the `aria-flowto` value uses a space separated list of multiple `id` references, assistive technology can provide the user with a list of path choices, with each `id` referenced being a choice. The path choice names are determined by the accessible name of each target element of the `aria-flowto` attribute.
 
-> **Note:** Setting `aria-flow` does not impact the content's tab order. It only provides users the option to follow a content path that doesn't match the DOM order when using tech that supports this attribute.
+> **Note:** Setting `aria-flowto` does not impact the content's tab order. It only provides users the option to follow a content path that doesn't match the DOM order when using tech that supports this attribute.
 
 ## Values
 
@@ -32,15 +34,10 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
 - HTML [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute
 - CSS {{CSSXRef('order')}} property
 - [WCAG: source order](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Using aria-flowto](https://www.w3.org/WAI/GL/wiki/Using_aria-flowto) - W3 Wiki
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

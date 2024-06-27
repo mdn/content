@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.MutedInfoReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Specifies the reason a tab was muted or unmuted.
 

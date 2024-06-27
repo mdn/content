@@ -117,7 +117,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"
             >listitem</a
           ></code
         >

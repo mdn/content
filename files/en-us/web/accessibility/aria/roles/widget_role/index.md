@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#widget
 ---
 
+{{AccessibilitySidebar}}
+
 The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles), is an interactive component of a graphical user interface (GUI).
 
 > **Note:** The `widget` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
@@ -25,7 +27,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 
@@ -37,11 +39,3 @@ Do not use.
 - [ARIA: `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 - [ARIA: `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onFocusChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the currently focused window changes. Will be {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} if all browser windows have lost focus.
 

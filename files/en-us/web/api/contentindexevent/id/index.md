@@ -8,9 +8,9 @@ status:
 browser-compat: api.ContentIndexEvent.id
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
-The read-only **`id`** property of the
+The **`id`** read-only property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
 the deleted content index via its `id`.
 

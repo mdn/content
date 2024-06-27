@@ -558,50 +558,6 @@ There are also a couple of events related to buffering:
 
 > **Note:** You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
 
-## Browser support
-
-The following tables list basic audio support across desktop and mobile browsers, and what audio codecs are supported.
-
-### Desktop
-
-| Desktop Browser   | Version |
-| ----------------- | ------- |
-| Chrome            | 4+      |
-| Firefox           | 3.5+    |
-| Internet Explorer | 9+      |
-| Opera             | 10.5+   |
-| Safari            | 4+      |
-
-### Mobile
-
-| Mobile Browser    | Version |
-| ----------------- | ------- |
-| Chrome (Android)  | 32+     |
-| Firefox (Android) | 26+     |
-| IE Mobile         | 10+     |
-| Opera Mobile      | 11+     |
-| Safari (iOS)      | 4+      |
-| Android Browser   | 2.3+    |
-| Blackberry        | 7+      |
-
-## Audio Codec Support
-
-| Browser                  | Ogg | MP3     | AAC | PCM      | Opus    |
-| ------------------------ | --- | ------- | --- | -------- | ------- |
-| Firefox 3.5+             | ✓   | ✓ \*26+ |     | ✓        | ✓ \*14+ |
-| Safari 5+                |     | ✓       | ✓   |          |         |
-| Chrome 6+                | ✓   | ✓       | ✓   | ✓ \*9+   |         |
-| Opera 10.5+              | ✓   |         |     |          |         |
-| Internet Explorer 9+     |     | ✓       | ✓   |          |         |
-| Firefox Mobile           | ✓   | ✓       | ✓   | ✓        | ✓       |
-| Safari iOS3+             |     | ✓       | ✓   | ✓ \*4.2+ |         |
-| Chrome Mobile            | ✓   | ✓       | ✓   | ✓        |         |
-| Opera Mobile             | ✓   | ✓       | ✓   | ✓        |         |
-| Internet Explorer Mobile | ✓   | ✓       | ✓   | ✓        |         |
-| Android 2.3+             | ✓   | ✓       | ✓   | ✓        |         |
-
-> **Note:** Nearly all browsers support MP3 — for more details see this page on [media format browser compatibility](/en-US/docs/Web/Media/Formats#browser_compatibility).
-
 ## See also
 
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)

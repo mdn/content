@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.copyBufferToTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`copyBufferToTexture()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that copies data from a {{domxref("GPUBuffer")}} to a {{domxref("GPUTexture")}}.

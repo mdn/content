@@ -1,5 +1,6 @@
 ---
 title: "SVG: Scalable Vector Graphics"
+short-title: SVG
 slug: Web/SVG
 page-type: landing-page
 ---
@@ -41,5 +42,5 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial).
 - [SVG authoring guidelines](https://jwatt.org/svg/authoring/)
 - [SVG as an image](/en-US/docs/Web/SVG/SVG_as_an_Image)
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
-- [SVG art gallery](https://www1.plurib.us/svg_gallery/)
+- [SVG Tutorial Advent Calendar](https://svg-tutorial.com)
 - [D3](https://d3js.org) (JavaScript library for visualizing data with HTML, SVG, and CSS)

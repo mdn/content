@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Hides one or more tabs.
 

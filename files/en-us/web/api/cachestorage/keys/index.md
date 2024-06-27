@@ -6,12 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.CacheStorage.keys
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`keys()`** method of the {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the order they were created.
 Use this method to iterate over a list of all {{domxref("Cache")}} objects.
 
-You can access `CacheStorage` through the global {{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
 ## Syntax
 
@@ -64,4 +64,4 @@ this.addEventListener("activate", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

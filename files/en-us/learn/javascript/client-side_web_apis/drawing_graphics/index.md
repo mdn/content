@@ -124,7 +124,7 @@ So that's it — our canvas is now primed and ready for drawing on! The `ctx` va
 Let's do one last thing before we move on. We'll color the canvas background black to give you a first taste of the canvas API. Add the following lines at the bottom of your JavaScript:
 
 ```js
-ctx.fillStyle = "rgb(0, 0, 0)";
+ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
@@ -148,7 +148,7 @@ Let's start with some simple rectangles.
 2. Next, add the following lines to the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
+   ctx.fillStyle = "rgb(255 0 0)";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
@@ -157,7 +157,7 @@ Let's start with some simple rectangles.
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = "rgb(0, 255, 0)";
+   ctx.fillStyle = "rgb(0 255 0)";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
@@ -179,7 +179,7 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 1. Add the following to the previous example, again below the previous JavaScript lines:
 
    ```js
-   ctx.strokeStyle = "rgb(255, 255, 255)";
+   ctx.strokeStyle = "rgb(255 255 255)";
    ctx.strokeRect(25, 25, 175, 200);
    ```
 
@@ -212,7 +212,7 @@ We'll be using some common methods and properties across all of the below sectio
 A typical, simple path-drawing operation would look something like so:
 
 ```js
-ctx.fillStyle = "rgb(255, 0, 0)";
+ctx.fillStyle = "rgb(255 0 0)";
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -234,7 +234,7 @@ Let's draw an equilateral triangle on the canvas.
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
+   ctx.fillStyle = "rgb(255 0 0)";
    ctx.beginPath();
    ctx.moveTo(50, 50);
    ```
@@ -274,7 +274,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 1. Let's add an arc to our canvas — add the following to the bottom of your code:
 
    ```js
-   ctx.fillStyle = "rgb(0, 0, 255)";
+   ctx.fillStyle = "rgb(0 0 255)";
    ctx.beginPath();
    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
    ctx.fill();
@@ -382,7 +382,7 @@ It is possible to render external images onto your canvas. These can be simple i
    - Parameters 6 and 7 define the coordinates at which you want to draw the top-left corner of the cut-out portion of the image, relative to the top-left corner of the canvas.
    - Parameters 8 and 9 define the width and height to draw the cut-out area of the image. In this case, we have specified the same dimensions as the original slice, but you could resize it by specifying different values.
 
-5. When the image is meaningfully updated, the accessible description must also be updated.
+5. When the image is meaningfully updated, the {{glossary("accessible description")}} must also be updated.
 
    ```js
    canvas.setAttribute("aria-label", "Firefox Logo");
@@ -658,7 +658,7 @@ When the "Clear canvas" button is pressed, we run a simple function that clears 
 
 ```js
 clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
 });
 ```
@@ -707,7 +707,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
 
 1. To start with, make a local copy of [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
 2. Next, create a new file called `script.js`, again in the same folder as before.
-3. Next, you need to [download the three.min.js library](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) and save it in the same directory as before.
+3. Next, you need to have the Three.js library installed. You can follow the environment setup steps described in the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) so that you have Three.js working as expected.
 4. Now we've got `three.js` attached to our page, we can start to write JavaScript that makes use of it into `script.js`. Let's start by creating a new scene — add the following into your `script.js` file:
 
    ```js
@@ -731,7 +731,7 @@ Let's look at a simple example of how to create something with a WebGL library. 
    The [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) constructor takes four arguments:
 
    - The field of view: How wide the area in front of the camera is that should be visible onscreen, in degrees.
-   - The aspect ratio: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
+   - The {{glossary("aspect ratio")}}: Usually, this is the ratio of the scene's width divided by the scene's height. Using another value will distort the scene (which might be what you want, but usually isn't).
    - The near plane: How close to the camera objects can be before we stop rendering them to the screen. Think about how when you move your fingertip closer and closer to the space between your eyes, eventually you can't see it anymore.
    - The far plane: How far away things are from the camera before they are no longer rendered.
 
@@ -778,10 +778,10 @@ Let's look at a simple example of how to create something with a WebGL library. 
 8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
    ```js
-   const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
+   const light = new THREE.AmbientLight("rgb(255 255 255)"); // soft white light
    scene.add(light);
 
-   const spotLight = new THREE.SpotLight("rgb(255,255,255)");
+   const spotLight = new THREE.SpotLight("rgb(255 255 255)");
    spotLight.position.set(100, 1000, 1000);
    spotLight.castShadow = true;
    scene.add(spotLight);

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.permissions.onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when some permissions are removed from the extension.
 

@@ -7,7 +7,9 @@ browser-compat: api.SubtleCrypto
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions. Access to the features of `SubtleCrypto` is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from the {{domxref("crypto_property", "crypto")}} property.
+The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions.
+
+An instance of `SubtleCrypto` is available as the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} interface, which in turn is available in windows through the {{domxref("Window.crypto")}} property and in workers through the {{domxref("WorkerGlobalScope.crypto")}} property.
 
 > **Warning:** This API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.
 >

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.removeCSS
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertCSS()")}}.
 

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
@@ -159,7 +161,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - The {{HTMLElement('th')}} and {{HTMLElement('td')}} [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property
@@ -167,11 +169,3 @@ Inherits into roles:
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

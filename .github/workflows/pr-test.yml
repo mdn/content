@@ -7,11 +7,7 @@
 name: PR Test
 
 on:
-  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
-  # is granted read/write repository access.
-  # Please pay attention to limit the permissions of each job!
-  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
@@ -22,8 +18,6 @@ jobs:
     # Set the permissions to `read-all`, preventing the workflow from
     # any accidental write access to the repository.
     permissions: read-all
-    outputs:
-      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -35,8 +29,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: "${{ env.HEAD_SHA }}"
 
       - name: Get changed files
         run: |
@@ -119,9 +111,6 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
 
-          # Set the output variable so the next job could skip if there are no assets
-          echo "has_assets=true" >> "$GITHUB_OUTPUT"
-
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
@@ -143,13 +132,3 @@ jobs:
 
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
-
-  review:
-    needs: tests
-    if: ${{ needs.tests.outputs.has_assets }}
-    # write permissions are required to create a comment in the corresponding PR
-    permissions: write-all
-    uses: ./.github/workflows/pr-review-companion.yml
-    # inherit the secrets from the parent workflow
-    # https://docs.github.com/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
-    secrets: inherit

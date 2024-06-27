@@ -2,7 +2,7 @@
 title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
 page-type: svg-attribute
-browser-compat: svg.attributes.conditional_processing.systemLanguage
+browser-compat: svg.global_attributes.systemLanguage
 ---
 
 {{SVGRef}}

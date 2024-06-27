@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.eventPhase
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`eventPhase`** read-only property of the
 {{domxref("Event")}} interface indicates which phase of the event flow is currently
@@ -29,8 +29,7 @@ flow. Possible values are:
     called are triggered during this phase.
 - `Event.AT_TARGET (2)`
   - : The event has arrived at
-    {{domxref("EventTarget", "the event's target", "",
-        1)}}.
+    {{domxref("EventTarget", "the event's target", "", 1)}}.
     Event listeners registered for this phase are called at this time. If
     {{domxref("Event.bubbles")}} is `false`, processing
     the event is finished after this phase is complete.

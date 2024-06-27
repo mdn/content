@@ -1,5 +1,6 @@
 ---
 title: SVG element reference
+short-title: Elements
 slug: Web/SVG/Element
 page-type: landing-page
 ---

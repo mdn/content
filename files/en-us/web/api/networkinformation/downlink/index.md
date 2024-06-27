@@ -3,12 +3,10 @@ title: "NetworkInformation: downlink property"
 short-title: downlink
 slug: Web/API/NetworkInformation/downlink
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NetworkInformation.downlink
 ---
 
-{{SeeCompatTable}}{{APIRef("Network Information API")}}
+{{APIRef("Network Information API")}} {{AvailableInWorkers}}
 
 The **`downlink`** read-only property of the
 {{domxref("NetworkInformation")}} interface returns the effective bandwidth estimate in

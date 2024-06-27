@@ -560,7 +560,7 @@ async function getBufferSubDataAsync(
   gl.getBufferSubData(target, srcByteOffset, dstBuffer, dstOffset, length);
   gl.bindBuffer(target, null);
 
-  return dest;
+  return dstBuffer;
 }
 
 async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
@@ -577,7 +577,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 }
 ```
 
-### `devicePixelRatio` and high-dpi rendering
+## `devicePixelRatio` and high-dpi rendering
 
 Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
@@ -585,7 +585,7 @@ Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` t
 
 Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
-### ResizeObserver and 'device-pixel-content-box'
+## ResizeObserver and 'device-pixel-content-box'
 
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
@@ -619,3 +619,11 @@ Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resiz
 Using the [ImageBitmapOptions dictionary](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmapoptions) is essential for properly preparing textures for upload to WebGL, but unfortunately there's no obvious way to query exactly which dictionary members are supported by a given browser.
 
 [This JSFiddle](https://jsfiddle.net/ptkyewhx/) illustrates how to determine which dictionary members a given browser supports.
+
+## Use `WEBGL_provoking_vertex` when it's available
+
+When assembling vertices into primitives such as triangles and lines, in OpenGL's convention, the last vertex of the primitive is considered the "provoking vertex". This is relevant when using `flat` vertex attribute interpolation in ESSL300 (WebGL 2); the attribute value from the provoking vertex is used for all of the vertices of the primitive.
+
+Nowadays, many browsers' WebGL implementations are hosted on top of different graphics APIs than OpenGL, and some of these APIs use the first vertex as the provoking vertex for drawing commands. Emulating OpenGL's provoking vertex convention can be computationally expensive on some of these APIs.
+
+For this reason, the [WEBGL_provoking_vertex](https://registry.khronos.org/webgl/extensions/WEBGL_provoking_vertex/) extension has been introduced. If a WebGL implementation exposes this extension, this is a hint to the application that changing the convention to `FIRST_VERTEX_CONVENTION_WEBGL` will improve performance. It is strongly recommended that applications using flat shading check for the presence of this extension, and use it to do so if it's available. Note that this may require changes to the application's vertex buffers or shaders.

@@ -34,7 +34,7 @@ There are a few concepts worth digging into before looking at how the flex prope
 
 In order to work out how much space there is available to lay out flex items, the browser needs to know how big the item is to start with. How is this worked out for items that don't have a width or a height applied using an absolute length unit?
 
-There is a concept in CSS of {{CSSxRef('min-content')}} and {{CSSxRef('max-content')}}; these keywords can be used in place of a [length unit](/en-US/docs/Web/CSS/length).
+There is a concept in CSS of {{CSSxRef('min-content')}} and {{CSSxRef('max-content')}}; these keywords can be used in place of a {{cssxref("length")}} unit.
 
 In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. You should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
 
@@ -134,7 +134,7 @@ Change the `flex-shrink` value to `1` and you will see each item shrink by the s
 
 You could say that `flex-shrink` works in pretty much the same way as `flex-grow`. However there are two reasons why it isn't _quite_ the same.
 
-While it is usually subtle, defined in the specification is one reason why `flex-shrink` isn't quite the same for negative space as `flex-grow` is for positive space:
+While it is usually subtle, defined in the [specification](https://drafts.csswg.org/css-flexbox/#flex-flex-shrink-factor) is one reason why `flex-shrink` isn't quite the same for negative space as `flex-grow` is for positive space. The concept of [flex base size](#what_sets_the_base_size_of_the_item) affects how negative space is distributed across flex items.
 
 > "Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won't shrink to zero before a larger item has been noticeably reduced."
 

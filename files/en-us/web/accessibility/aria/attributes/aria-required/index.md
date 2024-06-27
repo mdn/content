@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-required
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-required` attribute indicates that user input is required on the element before a form may be submitted.
 
 ## Description
@@ -87,7 +89,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute
 - [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional)
@@ -95,8 +97,3 @@ Inherits into roles:
 - [`aria-invalid` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

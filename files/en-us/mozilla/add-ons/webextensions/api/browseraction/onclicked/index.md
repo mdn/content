@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.browserAction.onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
@@ -53,11 +53,11 @@ Events have three functions:
 
 ## Examples
 
-When the user clicks the icon, disable it for the active tab, and log the tab's URL:
+When the user clicks the browser action icon this code turns it off for the active tab and logs the tab's URL:
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
-  // disable the active tab
+  // disable the browser action for the tab
   browser.browserAction.disable(tab.id);
   // requires the "tabs" or "activeTab" permission, or host permissions for the URL
   console.log(tab.url);

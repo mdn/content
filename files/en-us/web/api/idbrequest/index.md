@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.IDBRequest
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBRequest`** interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
 
@@ -16,8 +16,6 @@ All asynchronous operations immediately return an {{domxref("IDBRequest")}} inst
 In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `error` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
 
 The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 

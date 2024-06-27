@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.storage.local
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Represents the `local` storage area. Items in `local` storage are local to the machine the extension is installed on.
 

@@ -11,9 +11,8 @@ browser-compat: api.Screen.availHeight
 The read-only {{DOMxRef("Screen")}} interface's
 **`availHeight`** property returns the height, in CSS pixels, of
 the space available for Web content on the screen. Since {{DOMxRef("Screen")}} is
-exposed on the {{DOMxRef("Window")}} interface's {{DOMxRef("Window.screen",
-  "window.screen")}} property, you access `availHeight` using
-`window.screen.availHeight`.
+exposed on the {{DOMxRef("Window")}} interface's {{DOMxRef("Window.screen", "window.screen")}}
+property, you access `availHeight` using `window.screen.availHeight`.
 
 You can similarly use {{DOMxRef("Screen.availWidth")}} to get the number of pixels
 which are horizontally available to the browser for its use.
@@ -21,14 +20,11 @@ which are horizontally available to the browser for its use.
 ## Value
 
 A numeric value indicating the number of CSS pixels tall the screen's available space
-is. This can be no larger than the value of {{DOMxRef("Screen.height",
-  "window.screen.height")}}, and will be less if the device or user agent reserves any
+is. This can be no larger than the value of {{DOMxRef("Screen.height", "window.screen.height")}},
+and will be less if the device or user agent reserves any
 vertical space for itself.
 
-For instance, on a Mac whose Dock is located at the bottom of screen (which is the
-default), the value of `availHeight` is approximately the value of
-`height` (the total height of the screen in CSS pixels) minus the heights of
-the Dock and menu bar, as seen in the diagram below.
+For instance, on a Mac whose Dock is located at the bottom of screen (which is the default), the value of `availHeight` is approximately the value of `height` (the total height of the screen in CSS pixels) minus the heights of the Dock and menu bar, as seen in the diagram below. They only take up `availHeight` if they are always shown: if the page is fullscreened, or if the dock is configured to automatically hide and show, then they won't be counted in `availHeight`.
 
 [![Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents](availheight-diagram.svg)](availheight-diagram.svg)
 

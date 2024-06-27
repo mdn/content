@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-current
 ---
 
+{{AccessibilitySidebar}}
+
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 
 ## Description
@@ -81,15 +83,8 @@ Usable in all roles; except in for elements with the role of [`gridcell`](/en-US
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
 - [Breadcrumb navigation with `aria-current`](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
-
-<section id="Quick_links">
-
-<ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">ARIA States &amp; Properties</a>
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}</li></ol>
-
-</section>

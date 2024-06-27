@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ByteLengthQueuingStrategy.highWaterMark
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The read-only **`ByteLengthQueuingStrategy.highWaterMark`** property returns the total number of bytes that can be contained in the internal queue before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
 

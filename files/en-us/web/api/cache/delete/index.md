@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.delete
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`delete()`** method of the {{domxref("Cache")}} interface finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the {{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to `true`.
 If no {{domxref("Cache")}} entry is found, it resolves to `false`.
@@ -73,4 +73,4 @@ caches.open("v1").then((cache) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/navigation.html
 ---
 
+{{AccessibilitySidebar}}
+
 The `navigation` role is used to identify major groups of links used for navigating through a website or page content.
 
 ```html
@@ -116,11 +118,3 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Semantic navigation with the nav element | HTML5 Doctor](https://html5doctor.com/nav-element/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

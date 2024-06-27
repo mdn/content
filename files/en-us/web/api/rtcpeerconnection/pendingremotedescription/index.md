@@ -8,26 +8,21 @@ browser-compat: api.RTCPeerConnection.pendingRemoteDescription
 
 {{APIRef("WebRTC")}}
 
-The read-only property
-**`RTCPeerConnection.pendingRemoteDescription`** returns an
-{{domxref("RTCSessionDescription")}} object describing a pending configuration change
-for the remote end of the connection. This does not describe the connection as it
-currently stands, but as it may exist in the near future. Use
-{{domxref("RTCPeerConnection.currentRemoteDescription")}} or
-{{domxref("RTCPeerConnection.remoteDescription")}} to get the current session
-description for the remote endpoint. For details on the difference, see
-[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
+The **`pendingRemoteDescription`** read-only property of the {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSessionDescription")}} object describing a pending configuration change for the remote end of the connection.
+
+This does not describe the connection as it currently stands, but as it may exist in the near future.
+Use {{domxref("RTCPeerConnection.currentRemoteDescription")}} or {{domxref("RTCPeerConnection.remoteDescription")}} to get the current session
+description for the remote endpoint.
+For details on the difference, see [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
 ## Value
 
-If a remote description change is in progress, this is an
-{{domxref("RTCSessionDescription")}} describing the proposed configuration. Otherwise,
-this returns `null`.
+If a remote description change is in progress, this is an {{domxref("RTCSessionDescription")}} describing the proposed configuration.
+Otherwise, this returns `null`.
 
 ## Examples
 
-This example looks at the `pendingRemoteDescription` to determine whether or
-not there's a description change being processed.
+This example looks at the `pendingRemoteDescription` to determine whether or not there's a description change being processed.
 
 ```js
 const pc = new RTCPeerConnection();
@@ -48,10 +43,8 @@ if (sd) {
 
 {{Compat}}
 
-> **Note:** The addition of `pendingRemoteDescription` and
-> {{domxref("RTCPeerConnection.currentRemoteDescription", "currentRemoteDescription")}}
-> to the WebRTC spec is relatively recent. In browsers which don't support them, only
-> {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is available.
+> **Note:** The addition of `pendingRemoteDescription` and {{domxref("RTCPeerConnection.currentRemoteDescription", "currentRemoteDescription")}} to the WebRTC spec is relatively recent.
+> In browsers which don't support them, only {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is available.
 
 ## See also
 

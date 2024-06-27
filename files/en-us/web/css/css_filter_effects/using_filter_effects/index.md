@@ -122,7 +122,7 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: rgb(255 255 255 / 10%);
   text-shadow: 2px 2px black;
 }
 ```
@@ -169,12 +169,10 @@ img {
 
 ```css nolint
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(210deg 100% 50%)
-    )
-    drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(30deg 100% 50%)
-    );
+  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%))
+    drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
+    drop-shadow(2px 2px 0 hsl(120deg 100% 50%))
+    drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
 }
 img + img {
   filter: none;

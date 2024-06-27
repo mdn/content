@@ -28,10 +28,10 @@ If an activation has been triggered, the user agent differentiates between two t
 
 APIs that require transient activation (list is not exhaustive):
 
-- {{domxref("Window/beforeunload_event", "beforeunload")}} event
 - {{domxref("Clients.openWindow()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
+- {{domxref("Clipboard.write()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("ContactsManager.select()")}}
 - {{domxref("Document.requestStorageAccess()")}}
@@ -72,6 +72,7 @@ APIs that require transient activation (list is not exhaustive):
 
 APIs that require sticky activation (not exhaustive):
 
+- {{domxref("Window/beforeunload_event", "beforeunload")}} event
 - {{domxref("Navigator.vibrate()")}}
 - {{domxref("VirtualKeyboard.show()")}}
 - Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).

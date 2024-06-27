@@ -12,7 +12,7 @@ An instruction or a set of instructions is executed if a specific condition is f
 
 ## See also
 
-- [Condition](https://en.wikipedia.org/wiki/Exception_handling#Condition_systems) on Wikipedia
-- [Control flow](/en-US/docs/Glossary/Control_flow) on MDN
+- {{glossary("Control_flow", "Control flow")}}
 - [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Control flow and error handling in JavaScript](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN
+- [Control flow and error handling in JavaScript](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Conditional](<https://en.wikipedia.org/wiki/Conditional_(computer_programming)>) on Wikipedia

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gyroscope.y
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`y`** read-only property of the {{domxref("Gyroscope")}} interface returns a number specifying the angular velocity of the device along its y-axis.
 

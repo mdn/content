@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.contacts
 ---
 
-{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
+{{APIRef("Contact Picker API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`contacts`** read-only property of the
 {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface

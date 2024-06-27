@@ -2,12 +2,10 @@
 title: Set.prototype.symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Set.symmetricDifference
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`symmetricDifference()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
 
@@ -49,7 +47,7 @@ The following example computes the symmetric difference between the set of even 
 ```js
 const evens = new Set([2, 4, 6, 8]);
 const squares = new Set([1, 4, 9]);
-console.log(evens.symmetricDifference(squares)); // Set(5) { 1, 2, 6, 8, 9 }
+console.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }
 ```
 
 ## Specifications

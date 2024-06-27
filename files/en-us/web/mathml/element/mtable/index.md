@@ -31,19 +31,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `columnlines` {{Non-standard_Inline}}
   - : Specifies column borders. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnlines="none none solid"`). Possible values are: `none` (default), `solid` and `dashed`.
 - `columnspacing` {{Non-standard_Inline}}
-  - : Specifies the space between table columns. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnspacing="1em 2em"`). Possible values are [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage).
+  - : Specifies the space between table columns. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnspacing="1em 2em"`). Possible values are {{cssxref("length-percentage")}}.
 - `frame` {{Non-standard_Inline}}
   - : Specifies borders of the entire table. Possible values are: `none` (default), `solid` and `dashed`.
 - `framespacing` {{Non-standard_Inline}}
-  - : Specifies additional space added between the table and frame. The first value specifies the spacing on the right and left; the second value specifies the spacing above and below. Possible values are [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage).
+  - : Specifies additional space added between the table and frame. The first value specifies the spacing on the right and left; the second value specifies the spacing above and below. Possible values are {{cssxref("length-percentage")}}.
 - `rowalign` {{Non-standard_Inline}}
   - : Specifies the vertical alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowalign="top bottom axis"`). Possible values are: `axis`, `baseline` (default), `bottom`, `center` and `top`.
 - `rowlines` {{Non-standard_Inline}}
   - : Specifies row borders. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowlines="none none solid"`). Possible values are: `none` (default), `solid` and `dashed`.
 - `rowspacing` {{Non-standard_Inline}}
-  - : Specifies the space between table rows. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowspacing="1em 2em"`). Possible values are [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage).
+  - : Specifies the space between table rows. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. `rowspacing="1em 2em"`). Possible values are {{cssxref("length-percentage")}}.
 - `width` {{Non-standard_Inline}}
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the width of the entire table.
+  - : A {{cssxref("length-percentage")}} indicating the width of the entire table.
 
 > **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 

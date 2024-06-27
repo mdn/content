@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeFormData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears data that the browser has saved for autofilling forms.
 

@@ -77,7 +77,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 .redsquare {
   height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(128 128 128);
   border: solid 1px black;
   mask: url("#m");
 }
@@ -122,7 +122,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 .redsquare {
   height: 100px;
   width: 100px;
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(128 128 128);
   border: solid 1px black;
   mask: url("#m");
 }

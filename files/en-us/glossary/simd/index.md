@@ -14,6 +14,4 @@ See also {{Glossary("SISD")}} for a sequential architecture with no parallelism 
 
 - [SIMD](https://en.wikipedia.org/wiki/SIMD) on Wikipedia
 - [Glossary](/en-US/docs/Glossary)
-
-  - {{Glossary("SIMD")}}
   - {{Glossary("SISD")}}

@@ -145,7 +145,7 @@ console.log(x); // x is 5
 
 ### Variable hoisting
 
-`var`-declared variables are [hoisted](/en-US/docs/Glossary/Hoisting), meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet. You can see `var` declarations as being "lifted" to the top of its function or global scope. However, if you access a variable before it's declared, the value is always `undefined`, because only its _declaration_ is hoisted, but not its _initialization_.
+`var`-declared variables are [hoisted](/en-US/docs/Glossary/Hoisting), meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet. You can see `var` declarations as being "lifted" to the top of its function or global scope. However, if you access a variable before it's declared, the value is always `undefined`, because only its _declaration_ and _default initialization (with `undefined`)_ is hoisted, but not its _value assignment_.
 
 ```js
 console.log(x === undefined); // true
@@ -189,7 +189,7 @@ Unlike `var` declarations, which only hoist the declaration but not its value, [
 
 Global variables are in fact properties of the _global object_.
 
-In web pages, the global object is {{domxref("window")}}, so you can set and access global variables using the `window.variable` syntax. In all environments, you can use the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable (which itself is a global variable) to access global variables.
+In web pages, the global object is {{domxref("window")}}, so you can read and set global variables using the `window.variable` syntax. In all environments, the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable (which itself is a global variable) may be used to read and set global variables. This is to provide a consistent interface among various JavaScript runtimes.
 
 Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the `window` or `frame` name. For example, if a variable called `phoneNumber` is declared in a document, you can refer to this variable from an `iframe` as `parent.phoneNumber`.
 
@@ -305,7 +305,7 @@ parseInt("101", 2); // 5
 An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
 
 ```js-nolint
-"1.1" + "1.1" // '1.11.1'
+"1.1" + "1.1"; // '1.11.1'
 (+"1.1") + (+"1.1"); // 2.2
 // Note: the parentheses are added for clarity, not required.
 ```
@@ -331,7 +331,7 @@ The following example creates the `coffees` array with three elements and a `len
 const coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
+An array literal creates a new array object every time the literal is evaluated. For example, an array defined with a literal in the global scope is created once when the script loads. However, if the array literal is inside a function, a new array is instantiated every time that function is called.
 
 > **Note:** Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 

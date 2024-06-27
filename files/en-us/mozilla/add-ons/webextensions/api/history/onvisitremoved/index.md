@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.history.onVisitRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a page is removed completely from the browser history.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gamepad.axes
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}
 interface returns an array representing the controls with axes present on the device

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when there is an error evaluating the PAC file or the `onRequest` listener.
 

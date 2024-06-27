@@ -60,10 +60,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>
-        It is a {{Glossary("void element")}}; it must have a start
-        tag, but must not have an end tag.
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

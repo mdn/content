@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRViewport.width
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRViewport")}} property
 **`width`** specifies the width of the viewport, in pixels,

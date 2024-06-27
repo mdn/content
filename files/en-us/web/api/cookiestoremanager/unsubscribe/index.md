@@ -3,16 +3,12 @@ title: "CookieStoreManager: unsubscribe() method"
 short-title: unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
 The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interface stops the {{domxref("ServiceWorkerRegistration")}} from receiving previously subscribed events.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -24,7 +20,7 @@ unsubscribe(subscriptions)
 
 - `subscriptions`
 
-  - : An object containing:
+  - : An object list, each object containing:
 
     - `name`
       - : A string with the name of a cookie.

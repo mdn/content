@@ -38,7 +38,7 @@ You can add a `rtctransform` event listener to be notified when the new frame is
 This example creates an event listener for the {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event.
 
 The example assumes we have a {{domxref("TransformStream")}} with an `options` object passed from a {{domxref("RTCRtpScriptTransform")}} constructor in the main-thread.
-The code at the end shows how the stream is piped through the the transform stream from the `readable` to the `writable`.
+The code at the end shows how the stream is piped through the transform stream from the `readable` to the `writable`.
 
 ```js
 addEventListener("rtctransform", (event) => {

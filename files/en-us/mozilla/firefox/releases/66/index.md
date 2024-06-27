@@ -95,7 +95,7 @@ No changes.
 
 #### Removals
 
-- The legacy WebRTC {{domxref("PeerConnection.getStats()")}} method has been removed, along with associated types ([Firefox bug 1328194](https://bugzil.la/1328194)).
+- The legacy WebRTC `PeerConnection.getStats()` method has been removed, along with associated types ([Firefox bug 1328194](https://bugzil.la/1328194)).
 
 ### Networking
 
@@ -144,4 +144,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(65)}}
+{{Firefox_for_developers}}

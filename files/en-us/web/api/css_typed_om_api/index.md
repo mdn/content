@@ -119,4 +119,4 @@ CSSStyleValue is the base class through which all CSS values are expressed. Subc
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)
+- [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs)

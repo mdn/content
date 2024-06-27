@@ -11,7 +11,7 @@ browser-compat: html.elements.dir
 
 The **`<dir>`** [HTML](/en-US/docs/Web/HTML) element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the {{Glossary("user agent")}}. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.
 
-> **Warning:** Do not use this element. Though present in early HTML specifications, it has been deprecated in HTML 4, and has since been removed entirely. **No major browsers support this element.**
+> **Warning:** Do not use this element. Though present in early HTML specifications, it has been deprecated in HTML 4, and has since been removed entirely.
 
 ## DOM interface
 

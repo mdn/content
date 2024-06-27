@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.getSelection
 ---
 
-{{ ApiRef() }}
+{{APIRef("Selection API")}}
 
 The **`Window.getSelection()`** method returns a
 {{domxref("Selection")}} object representing the range of text selected by the user or
@@ -49,11 +49,8 @@ function foo() {
 
 ### String representation of the Selection object
 
-In JavaScript, when an object is passed to a function expecting a string (like {{
-  Domxref("window.alert()") }} or {{ Domxref("document.write()") }}), the object's
-{{jsxref("Object.toString", "toString()")}} method is called and the returned value is
-passed to the function. This can make the object appear to be a string when used with
-other functions when it is really an object with properties and methods.
+In JavaScript, when an object is passed to a function expecting a string (like {{Domxref("window.alert()")}} or {{Domxref("document.write()")}}), the object's {{jsxref("Object.toString", "toString()")}} method is called and the returned value is passed to the function.
+This can make the object appear to be a string when used with other functions when it is really an object with properties and methods.
 
 In the above example, `selObj.toString()` is automatically called when it is
 passed to {{domxref("window.alert()")}}. However, attempting to use a JavaScript [String](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) property

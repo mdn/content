@@ -30,7 +30,7 @@ Designing your icon as an SVG file is a good idea, as this will allow it to be s
 
 Use the [`icons`](/en-US/docs/Web/Manifest/icons) web app manifest member to define a set of icons for your PWA.
 
-As described in [Create the necessary icon sizes](#create-the-necessary-icon-sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
+As described in [Create the necessary icon sizes](#create_the_necessary_icon_sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
 
 - `src`
   - : The URL of the icon image file.
@@ -117,7 +117,7 @@ The following web app manifest example uses a WebP image for the small icon, an 
 }
 ```
 
-Learn more about how to reference the various icon sizes in [Reference your icons in the web app manifest](#reference-your-icons-in-the-web-app-manifest).
+Learn more about how to reference the various icon sizes in [Reference your icons in the web app manifest](#reference_your_icons_in_the_web_app_manifest).
 
 ## Support masking
 

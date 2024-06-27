@@ -2,7 +2,7 @@
 title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.lighting-color
+browser-compat: svg.global_attributes.lighting-color
 ---
 
 {{SVGRef}}

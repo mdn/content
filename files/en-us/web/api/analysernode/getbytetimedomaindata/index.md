@@ -49,11 +49,11 @@ function draw() {
   drawVisual = requestAnimationFrame(draw);
   analyser.getByteTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillStyle = "rgb(200 200 200)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  canvasCtx.strokeStyle = "rgb(0 0 0)";
 
   const sliceWidth = (WIDTH * 1.0) / bufferLength;
   let x = 0;

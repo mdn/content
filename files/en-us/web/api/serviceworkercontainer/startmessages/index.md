@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.startMessages
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`startMessages()`** method of
 the {{domxref("ServiceWorkerContainer")}} interface explicitly starts the flow of

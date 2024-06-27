@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.URL.password
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`password`** property of the {{domxref("URL")}} interface
 is a string containing the password specified before the domain name.
 
 If it is set without first setting the {{domxref("URL.username", "username")}}
 property, it silently fails.
-
-{{AvailableInWorkers}}
 
 ## Value
 
