@@ -7,13 +7,13 @@ browser-compat: css.properties.top
 
 {{CSSRef}}
 
-The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It does not effect non-positioned elements.
+The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/top.html")}}
 
 The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block.
+- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of the top edge and the inner border of the top edge of its containing block, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the specified [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) edge. The `top` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
 - When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
 - When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `top` property has _no effect_.
@@ -30,6 +30,8 @@ When both `top` and {{cssxref("bottom")}} values are specified, there are three 
 /* <length> values */
 top: 3px;
 top: 2.4em;
+top: anchor(bottom);
+top: calc(anchor(--myAnchor 50%) + 10px);
 
 /* <percentage>s of the height of the containing block */
 top: 10%;
@@ -52,6 +54,7 @@ top: unset;
   - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
 
     - for _absolutely positioned elements_, the distance to the top edge of the containing block.
+    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s top or bottom edge.
     - for _relatively positioned elements_, the distance that the element is moved below its normal position.
 
 - {{cssxref("&lt;percentage&gt;")}}

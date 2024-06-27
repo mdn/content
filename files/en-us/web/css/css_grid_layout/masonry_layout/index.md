@@ -50,29 +50,11 @@ This example includes an item which has positioning for columns. Items with defi
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/positioned.html", '100%', 1000)}}
 
-## Controlling the masonry axis
-
-The masonry axis operates under different rules as it is following the masonry layout rules rather than normal grid auto-placement rules. To control this axis we have three additional properties defined in the Grid Level 3 specification {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}, and {{cssxref("masonry-auto-flow")}}.
-
-### masonry-auto-flow
+## masonry-auto-flow
 
 The `masonry-auto-flow` property gives you a way to change how the masonry algorithm behaves. Give it a value of `next` and items will display in order on the grid axis, rather than going into whichever track has the most free space. The value `positioned` will ignore items with definite placement and place items in order-modified document order.
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/masonry-auto-flow.html", '100%', 1000)}}
-
-### align-tracks
-
-The `align-tracks` property allows for the alignment of items in grid containers with masonry in their block axis. The property aligns the items within their track, much in the way flex layout works. The property takes the same values as `align-content`, however you can specify multiple values to have different alignment values per track on the grid axis.
-
-If you specify more values than tracks the additional values are ignored. If there are more tracks than values any additional tracks will use the last specified value.
-
-{{EmbedGHLiveSample("css-examples/grid/masonry/align-tracks.html", '100%', 1000)}}
-
-### justify-tracks
-
-The `justify-tracks` property works in the same way as align-tracks, however it is used when the masonry axis is the inline axis.
-
-{{EmbedGHLiveSample("css-examples/grid/masonry/justify-tracks.html", '100%', 1000)}}
 
 ## Fallback
 
@@ -84,4 +66,4 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 
 ## See also
 
-- [Native CSS Masonry Layout In CSS Grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)

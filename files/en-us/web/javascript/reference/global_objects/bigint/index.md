@@ -246,7 +246,7 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 ## Constructor
 
 - {{jsxref("BigInt/BigInt", "BigInt()")}}
-  - : Creates a new BigInt value.
+  - : Returns primitive values of type BigInt. Throws an error when called with `new`.
 
 ## Static methods
 

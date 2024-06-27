@@ -21,7 +21,7 @@ transform: rotate(atan(pi / 2));
 transform: rotate(atan(e * 3));
 ```
 
-### Parameter
+### Parameters
 
 The `atan(number)` function accepts only one value as its parameter.
 

@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:decimal-format>` element defines the characters and symbols that are to be used in converting numbers into strings using the `format-number( )` function.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:decimal-format
@@ -58,10 +58,10 @@ None.
 
 Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-### Defined
+## Specifications
 
 XSLT, section 12.3.
 
-### Gecko support
+## Gecko support
 
 Supported as of 1.0 (Mozilla 1.0, Netscape 7.0).

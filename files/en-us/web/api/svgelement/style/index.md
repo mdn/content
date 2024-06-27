@@ -89,3 +89,4 @@ for (const prop in elementStyle) {
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("HTMLElement.style")}}
 - {{domxref("MathMLElement.style")}}
+- {{domxref("SVGElement.attributeStyleMap")}}
