@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.GamepadHapticActuator.type
 ---
 
-{{APIRef("Gamepad")}}
+{{APIRef("Gamepad API")}}
 
 The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enumerated value representing the type of the haptic hardware.
 
@@ -14,14 +14,19 @@ The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} in
 
 An enumerated value representing the haptic hardware type. Currently available types are:
 
-- `dual-rumble`
-  - : vibration hardware, which creates a rumbling effect.
-- `trigger-rumble`
-  - : vibration hardware, which creates a rumbling effect.
+- `"vibration"`
+  - : Simple vibration hardware, which creates a rumbling effect.
+- `"dual-rumble"`
+  - : A controller with a vibration motor in each handle. Each motor can be vibrated independently to create positional rumbling effects.
 
 ## Examples
 
-TBC
+```js
+const gamepad = navigator.getGamepads()[0];
+
+// Logs "vibration" or "dual-rumble"
+console.log(gamepad.hapticActuators[0].type);
+```
 
 ## Specifications
 
