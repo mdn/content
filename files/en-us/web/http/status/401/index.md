@@ -2,7 +2,7 @@
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
 page-type: http-status-code
-browser-compat: http.status.401
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.401
 ---
 
 {{HTTPSidebar}}

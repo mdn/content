@@ -2,7 +2,7 @@
 title: 409 Conflict
 slug: Web/HTTP/Status/409
 page-type: http-status-code
-browser-compat: http.status.409
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.409
 ---
 
 {{HTTPSidebar}}

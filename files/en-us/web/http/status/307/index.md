@@ -2,7 +2,7 @@
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
 page-type: http-status-code
-browser-compat: http.status.307
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.307
 ---
 
 {{HTTPSidebar}}
@@ -34,10 +34,6 @@ identical.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

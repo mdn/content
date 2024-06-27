@@ -70,9 +70,11 @@ Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsof
 
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
-### Secure context
+### HTTPS, localhost, or loopback are required
 
-For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
+For a PWA to be installable it must be served using the `https` protocol, or from a local development environment using `localhost` or `127.0.0.1` — with or without a port number.
+
+This is a more stringent requirement than [secure context](/en-US/docs/Web/Security/Secure_Contexts), which considers resources loaded from `file://` URLs to be secure.
 
 ## Installation from an app store
 
