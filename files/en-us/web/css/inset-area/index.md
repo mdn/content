@@ -7,7 +7,7 @@ browser-compat: css.properties.inset-area
 
 {{CSSRef}}{{seecompattable}}
 
-The **`inset-area`** [CSS](/en-US/docs/Web/CSS) property enables an **anchor-positioned** element to be positioned relative to the edges of its associated **anchor element** by placing the positioned element on one or more tiles of an implicit 3x3 grid called the **inset-area grid**. This provides an alternative to positioning an element relative to its anchor via {{glossary("inset properties")}} and the {{cssxref("anchor()")}} function.
+The **`inset-area`** [CSS](/en-US/docs/Web/CSS) property enables an **anchor-positioned** element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid called the **inset-area grid**. This provides an alternative to positioning an element relative to its anchor via {{glossary("inset properties")}} and the {{cssxref("anchor()")}} function.
 
 ## Syntax
 

@@ -19,6 +19,7 @@ If the writing mode is vertically oriented, the value of `min-block-size` relate
 /* <length> values */
 min-block-size: 100px;
 min-block-size: 5em;
+min-block-size: anchor-size(self-inline);
 
 /* <percentage> values */
 min-block-size: 10%;
@@ -28,10 +29,6 @@ min-block-size: max-content;
 min-block-size: min-content;
 min-block-size: fit-content;
 min-block-size: fit-content(20em);
-
-/* anchor-size() function values */
-min-block-size: anchor-size(self-inline);
-min-block-size: anchor-size(--myAnchor block, 150px);
 
 /* Global values */
 min-block-size: inherit;
