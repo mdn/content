@@ -51,8 +51,8 @@ Display override objects are display-mode strings, the possible values are:
     <tr>
       <td><code>minimal-ui</code></td>
       <td>
-        The application will look and feel like a standalone application, but
-        will have a minimal set of UI elements for controlling navigation. The
+        The application will look and feel like a standalone application with
+        a minimal set of UI elements for controlling navigation. The
         elements will vary by browser.
       </td>
     </tr>
