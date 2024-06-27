@@ -14,7 +14,9 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 ## Instance properties
 
 - {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
-  - : Returns an enum representing the type of the haptic hardware.
+  - : Returns an enumerated value representing the type of the haptic hardware.
+- {{domxref("GamepadHapticActuator.effects")}} {{ReadOnlyInline}}
+  - : Returns an array of enumerated values representing the different haptic effects that the actuator supports.
 
 ## Instance methods
 

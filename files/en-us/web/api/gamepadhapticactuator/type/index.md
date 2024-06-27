@@ -8,13 +8,16 @@ browser-compat: api.GamepadHapticActuator.type
 
 {{APIRef("Gamepad")}}
 
-The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enum representing the type of the haptic hardware.
+The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enumerated value representing the type of the haptic hardware.
 
 ## Value
 
-An enum of type [`GamepadHapticActuatorType`](https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuatortype-enum); currently available types are:
+An enumerated value representing the haptic hardware type. Currently available types are:
 
-- `vibration` — vibration hardware, which creates a rumbling effect.
+- `dual-rumble`
+  - : vibration hardware, which creates a rumbling effect.
+- `trigger-rumble`
+  - : vibration hardware, which creates a rumbling effect.
 
 ## Examples
 
