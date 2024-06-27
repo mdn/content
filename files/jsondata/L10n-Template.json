@@ -1,0 +1,79 @@
+{
+  "experimental_badge_title": {
+    "en-US": "Experimental. Expect behavior to change in the future.",
+    "es": "Experimental. Espere que el comportamiento cambie en el futuro.",
+    "fr": "Expérimental. Le comportement attendu pourrait évoluer à l'avenir.",
+    "ja": "Experimental. Expect behavior to change in the future.",
+    "ko": "Experimental. 예상되는 동작은 향후 변경될 수 있습니다.",
+    "pt-BR": "Experimental. Expect behavior to change in the future.",
+    "ru": "Экспериментальная возможность. Её поведение в будущем может измениться",
+    "zh-CN": "实验性。预期行为可能会在未来发生变更。",
+    "zh-TW": "實驗性質。行為可能會在未來發生變動。"
+  },
+
+  "experimental_badge_abbreviation": {
+    "en-US": "Experimental",
+    "es": "Experimental",
+    "fr": "Expérimental",
+    "ja": "Experimental",
+    "ko": "Experimental",
+    "pt-BR": "Experimental",
+    "ru": "Экспериментальная возможность",
+    "zh-CN": "实验性",
+    "zh-TW": "實驗性質"
+  },
+
+  "deprecated_badge_title": {
+    "en-US": "Deprecated. Not for use in new websites.",
+    "ko": "지원이 중단되었습니다. 새로운 웹사이트에서 사용하지 마세요.",
+    "zh-CN": "已弃用。请不要在新的网站中使用。",
+    "zh-TW": "已棄用。請不要在新的網站中使用。"
+  },
+
+  "deprecated_badge_abbreviation": {
+    "en-US": "Deprecated",
+    "es": "Obsoleto",
+    "fr": "Obsolète",
+    "ja": "非推奨;",
+    "ko": "지원이 중단되었습니다",
+    "ru": "Устарело",
+    "zh-CN": "已弃用",
+    "zh-TW": "已棄用"
+  },
+
+  "non_standard_badge_title": {
+    "en-US": "Non-standard. Check cross-browser support before using.",
+    "ko": "비표준. 사용하기전에 다른 브라우저에서도 사용 가능한지 확인 해주세요.",
+    "zh-CN": "非标准。请在使用前检查跨浏览器支持。",
+    "zh-TW": "非標準。請在使用前檢查跨瀏覽器支援。"
+  },
+
+  "non_standard_badge_abbreviation": {
+    "en-US": "Non-standard",
+    "ko": "비표준",
+    "zh-CN": "非标准",
+    "zh-TW": "非標準"
+  },
+
+  "interactive_example_cta": {
+    "en-US": "Try it",
+    "fr": "Exemple interactif",
+    "ja": "試してみましょう",
+    "ko": "시도해보기",
+    "ru": "Интерактивный пример",
+    "pt-BR": "Experimente",
+    "es": "Pruébalo",
+    "zh-CN": "尝试一下",
+    "zh-TW": "嘗試一下"
+  },
+
+  "optional": {
+    "en-US": "Optional",
+    "fr": "Facultatif",
+    "ja": "省略可",
+    "ru": "Необязательный",
+    "zh-CN": "可选",
+    "zh-TW": "選擇性",
+    "es": "Opcional"
+  }
+}
