@@ -49,7 +49,7 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 
 {{Specifications}}
 
-### Compatibility notes
+## Compatibility notes
 
 Browser behavior differs if this response erroneously includes a body on persistent connections.
 See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more details.

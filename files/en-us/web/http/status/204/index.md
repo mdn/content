@@ -45,7 +45,7 @@ Server: Apache/2.4.1 (Unix)
 
 {{Specifications}}
 
-### Compatibility notes
+## Compatibility notes
 
 Although this status code is intended to describe a response with no body, servers may erroneously include data after the headers.
 The protocol allows user agents to vary in how they process such responses and there is discussion regarding the specification text in the [HTTPWG `http-core` GitHub repository](https://github.com/httpwg/http-core/issues/26).
