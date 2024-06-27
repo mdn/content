@@ -2,7 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
 page-type: http-status-code
-browser-compat: http.status.500
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.500
 ---
 
 {{HTTPSidebar}}
@@ -20,10 +20,6 @@ This error response is a generic "catch-all" response. Usually, this indicates t
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
