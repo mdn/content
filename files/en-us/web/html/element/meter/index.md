@@ -62,7 +62,8 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 
 ```html
 <p>
-  Student's exam score: <meter min="0" low="50" high="80" max="100" value="84">84%</meter>
+  Student's exam score:
+  <meter min="0" low="50" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
