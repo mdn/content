@@ -22,7 +22,7 @@ updateWith(details)
 
 - `details`
 
-  - : An object specifying the changes applied to the payment request:
+  - : Either an object or a {{jsxref("Promise")}} that resolves to an object, specifying the changes applied to the payment request:
 
     - `displayItems` {{optional_inline}}
 

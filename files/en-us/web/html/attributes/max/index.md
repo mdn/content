@@ -16,7 +16,7 @@ Valid for the numeric input types, including the {{HTMLElement("input/date", "da
 
 If the value exceeds the max value allowed, the {{domxref('validityState.rangeOverflow')}} will be true, and the control will be matched by the {{cssxref(':out-of-range')}} and {{cssxref(':invalid')}} pseudo-classes.
 
-### Syntax
+## Syntax
 
 <table class="no-markdown">
   <caption>

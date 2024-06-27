@@ -3,12 +3,10 @@ title: "GamepadHapticActuator: playEffect() method"
 short-title: playEffect()
 slug: Web/API/GamepadHapticActuator/playEffect
 page-type: web-api-instance-method
-status:
-  - non-standard
 browser-compat: api.GamepadHapticActuator.playEffect
 ---
 
-{{APIRef("Gamepad")}}{{Non-standard_Header}}
+{{APIRef("Gamepad")}}
 
 The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware play a specific vibration pattern.
 
