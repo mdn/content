@@ -139,7 +139,7 @@ The example below shows a three-column track grid with new rows created at a min
 
 ## See also
 
-- Related glossary terms: terms:
+- Related glossary termss:
   - [Grid](/en-US/docs/Glossary/Grid)
   - [Grid lines](/en-US/docs/Glossary/Grid_Lines)
   - [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
