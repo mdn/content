@@ -13,7 +13,7 @@ page-type: glossary-definition
 - Blink project [home page](https://www.chromium.org/blink/)
 - [Blink](<https://en.wikipedia.org/wiki/Blink_(browser_engine)>) on Wikipedia
 - [FAQ](https://www.chromium.org/blink/developer-faq/) on Blink
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
   - {{glossary("Google Chrome")}}
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}

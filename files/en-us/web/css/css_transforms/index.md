@@ -108,7 +108,7 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
   - [`<number>`](/en-US/docs/Web/CSS/number)
   - {{cssxref("percentage")}}
   - [`<position>`](/en-US/docs/Web/CSS/position_value)
-- Glossary terms:
+- Related glossary terms: terms:
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)
 - [SVG](/en-US/docs/Web/SVG) concepts:

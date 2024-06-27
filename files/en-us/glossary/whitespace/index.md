@@ -28,6 +28,6 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmasc
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   1. {{Glossary("Character")}}

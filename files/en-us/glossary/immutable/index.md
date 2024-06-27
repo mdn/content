@@ -23,5 +23,5 @@ Note that you can easily prove mutability: an object is mutable as long as it of
 ## See also
 
 - [Immutable object](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia
-- Glossary
+- Related glossary terms:
   - {{glossary("Mutable")}}

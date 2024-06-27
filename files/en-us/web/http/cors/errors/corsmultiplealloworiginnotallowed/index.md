@@ -25,6 +25,6 @@ null
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
+- Related glossary terms: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
 - [Enable CORS: I want to add CORS support to my server](https://enable-cors.org/server.html)

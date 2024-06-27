@@ -22,7 +22,7 @@ Popular elliptic-curve algorithms include [Elliptic-curve Diffie–Hellman](http
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto supported algorithms](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms)
-- Glossary
+- Related glossary terms:
 
   - {{Glossary("Symmetric-key cryptography")}}
 

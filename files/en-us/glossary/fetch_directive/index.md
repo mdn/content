@@ -14,7 +14,7 @@ See [Fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetc
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive")}}

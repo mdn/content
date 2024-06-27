@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   - {{glossary("Lossless compression")}}
   - {{glossary("Lossy compression")}}
