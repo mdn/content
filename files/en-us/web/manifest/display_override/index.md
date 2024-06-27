@@ -69,7 +69,7 @@ Display override objects are display-mode strings, the possible values are:
     <tr>
       <td><code>tabbed</code></td>
       <td>
-        The application can contain multiple application contexts inside a single OS-level window. Supporting browsers can choose to handle the display of these contexts in whatever way they want, but a common approach is to provide a tab bar to switch between them.
+        The application can contain multiple application contexts inside a single OS-level window. Supporting browsers can choose how to display these contexts, but a common approach is to provide a tab bar to switch between them.
       </td>
     </tr>
     <tr>
