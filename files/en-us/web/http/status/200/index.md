@@ -2,7 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Status/200
 page-type: http-status-code
-browser-compat: http.status.200
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.200
 ---
 
 {{HTTPSidebar}}
@@ -82,10 +82,6 @@ Content-Type: application/json
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

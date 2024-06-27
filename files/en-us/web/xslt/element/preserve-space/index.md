@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:preserve-space>` element defines the elements in the source document for which whitespace should be preserved. If there is more than one element, separate the names with a whitespace character. Preserving whitespace is the default setting, so this element only needs to be used to counteract an `<xsl:strip-space>` element.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:preserve-space elements=LIST-OF-ELEMENT-NAMES />
@@ -27,10 +27,10 @@ None.
 
 Top-level, must be a child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-### Defined
+## Specifications
 
 XSLT, section 3.4
 
-### Gecko support
+## Gecko support
 
 Supported.

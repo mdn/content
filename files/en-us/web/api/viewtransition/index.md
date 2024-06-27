@@ -7,9 +7,16 @@ browser-compat: api.ViewTransition
 
 {{APIRef("View Transitions API")}}
 
-The **`ViewTransition`** interface of the {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
+The **`ViewTransition`** interface of the {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} represents an active view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
 
-This object type is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method. When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). This also explains when the different promises fulfill.
+This object type is made available in the following ways:
+
+- In the case of same-document (SPA) transitions, it is returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method.
+- In the case of cross-document (MPA) transitions, it is made available:
+  - In the outgoing page via the {{domxref("Window.pageswap_event", "pageswap")}} event object's {{domxref("PageSwapEvent.viewTransition")}} property.
+  - In the inbound page via the {{domxref("Window.pagereveal_event", "pagereveal")}} event object's {{domxref("PageRevealEvent.viewTransition")}} property.
+
+When a view transition is triggered by a `startViewTransition()` call (or a page navigation in the case of MPA transitions), a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_process). This also explains when the different promises fulfill.
 
 ## Instance properties
 
@@ -18,7 +25,7 @@ This object type is returned by the {{domxref("Document.startViewTransition()", 
 - {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
 - {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}}
-  - : A {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}}'s callback fulfills.
+  - : A {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method's callback fulfills.
 
 ## Instance methods
 
@@ -27,7 +34,7 @@ This object type is returned by the {{domxref("Document.startViewTransition()", 
 
 ## Examples
 
-In the following example, the {{domxref("ViewTransition.ready")}} promise is used to trigger a custom circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
+In the following SPA example, the {{domxref("ViewTransition.ready")}} promise is used to trigger a custom circular reveal view transition emanating from the position of the user's cursor on click, with animation provided by the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}}.
 
 ```js
 // Store the last click event
