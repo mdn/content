@@ -137,3 +137,4 @@ div {
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
+- {{cssxref("clamp", "minmax()")}}
