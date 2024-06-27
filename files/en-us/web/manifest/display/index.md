@@ -17,7 +17,7 @@ The `display` manifest member is used to specify your preferred display mode for
 
 ### Values
 
-The values of the `display` member is a string. The possible values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`. If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`. If `display` is not specified, the default value `browser` is used.
+The value of the `display` member is a string. The possible values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`. If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`. If `display` is not specified, the default value `browser` is used.
 
 - `fullscreen`
 
