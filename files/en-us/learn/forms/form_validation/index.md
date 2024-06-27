@@ -244,7 +244,7 @@ A field is invalid if it has a value and that value has fewer characters than th
 Browsers often don't let the user type a longer value than expected into text fields. A better user experience than just using `maxlength` is to also provide character count feedback in an accessible manner and let them edit their content down to size.
 An example of this is the character limit when posting on social media. JavaScript, including [solutions using `maxlength`](https://github.com/mimo84/bootstrap-maxlength), can be used to provide this.
 
-> **Note:** Length constraints are never reported if the value is set programmatically. It's only reported for user-provided input.
+> **Note:** Length constraints are never reported if the value is set programmatically. They are only reported for user-provided input.
 
 ### Constraining the values of your entries
 
