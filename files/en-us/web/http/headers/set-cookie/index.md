@@ -191,9 +191,9 @@ The following cookie will be rejected if set by a server hosted on `originalcomp
 Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
 ```
 
-A cookie for a subdomain of the serving domain will be rejected.
+A cookie for a subdomain of the serving domain will be accepted.
 
-The following cookie will be rejected if set by a server hosted on `example.com`:
+The following cookie will be accepted if set by a server hosted on `example.com`:
 
 ```http
 Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
