@@ -41,8 +41,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## Usage notes
 
-- The `<tr>` may be placed as a direct child of its parent {{HTMLElement("table")}} element, but only if the `<table>` has no child {{HTMLElement("tbody")}} elements, and only after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and {{HTMLElement("thead")}} elements. Otherwise, the parent must be a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element.
+- The `<tr>` element is valid as a child of a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element only.
+- If the `<tr>` is placed as a direct child of its parent {{HTMLElement("table")}} element, the `<tbody>` parent is implied and browsers will add the `<tbody>` to the markup.
+- The implied `<tbody>` parent is only supported if the `<table>` otherwise has no child `<tbody>` elements, and only if the `<tr>` is included after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and `<thead>` elements.
 - The CSS pseudo-classes {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, and {{cssxref(":last-of-type")}} are often useful for selecting the desired set of rows and their data and header cells ({{HTMLElement("td")}} and {{HTMLElement("th")}} elements).
+- When a `<tr>` is included as a direct child of the `<table>`, as the browser adds a `<tbody>` to the markup, CSS selectors such as `table > tr` may not work as expected or at all.
 
 ## Examples
 
@@ -341,7 +344,6 @@ th {
 {{EmbedLiveSample('Sorting_rows_with_a_click_on_header_cells', '650', '100')}}
 
 > **Note:** To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
-> **Note:** To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
 
 ## Technical summary
 
@@ -392,7 +394,7 @@ th {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/row_role"
             >row</a
           ></code
         >

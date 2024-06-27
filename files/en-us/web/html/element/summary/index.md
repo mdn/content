@@ -106,6 +106,16 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 <table class="properties">
   <tbody>
+     <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        none
+      </td>
+    </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>

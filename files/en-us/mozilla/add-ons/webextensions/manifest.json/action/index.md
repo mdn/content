@@ -155,7 +155,7 @@ The `action` key is an object that may have any of these properties, all optiona
         <p>
           You cannot specify multiple icons of the same sizes.<br /><br />See
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes"
+            href="#choosing_icon_sizes"
             >Choosing icon sizes</a
           >
           for more guidance on this.

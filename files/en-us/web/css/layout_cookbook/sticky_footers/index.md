@@ -2,7 +2,6 @@
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
 page-type: guide
-browser-compat: css.properties.grid
 ---
 
 {{CSSRef}}
@@ -23,20 +22,19 @@ The Sticky footer pattern needs to meet the following requirements:
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
 > **Callout:**
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html)
+> To take a look at the code, you can [download the full example](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html).
 
 > **Note:** In this example and the following one we are using a wrapper set to `min-height: 100%`. You can also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
 
 ## Choices made
 
-In the above example we achieve the sticky footer using CSS Grid Layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
+In the above example we achieve the sticky footer using CSS grid layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
 
 Grid auto-placement will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
 
 ## Alternate method
 
-You can also use Flexbox to create a sticky footer.
+You can also use flexbox to create a sticky footer.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
 

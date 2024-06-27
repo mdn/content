@@ -2,7 +2,7 @@
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 page-type: html-attribute
-browser-compat: html.global_attributes.itemscope
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemscope
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -265,10 +265,6 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

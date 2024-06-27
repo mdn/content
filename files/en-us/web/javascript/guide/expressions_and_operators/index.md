@@ -141,7 +141,7 @@ const [one, two, three] = foo;
 
 ### Evaluation and nesting
 
-In general, assignments are used within a variable declaration (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements).
+In general, assignments are used within a variable declaration (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements.
 
 ```js
 // Declares a variable x and initializes it to the result of f().

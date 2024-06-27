@@ -4,27 +4,7 @@ slug: Web/Accessibility/ARIA/ARIA_Techniques
 page-type: guide
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
-    <li class="toggle">
-      <details><summary>ARIA states and properties</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA Roles</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
+{{AccessibilitySidebar}}
 
 ARIA defines semantics that can be applied to elements, with these divided into **roles** (defining a type of user interface element) and **states** and **properties** that are supported by a role. Authors must assign an ARIA role and the appropriate states and properties to an element during its life-cycle, unless the element already has appropriate ARIA semantics (via use of an appropriate HTML element). Addition of ARIA semantics only exposes extra information to a browser's accessibility API, and does not affect a page's DOM.
 

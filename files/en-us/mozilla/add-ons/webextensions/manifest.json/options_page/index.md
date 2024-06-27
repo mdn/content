@@ -32,15 +32,13 @@ browser-compat: webextensions.manifest.options_page
   </tbody>
 </table>
 
-{{Deprecated_Header}}
+Use the `options_page` key to define an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) that opens in a new tab. You use this page to enable users to modify your extension's settings.
 
-> **Warning:** This manifest key has been deprecated. Use [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) instead.
+The way the user opens the page is browser-dependent. In Firefox, the page opens when the extension's icon is clicked. Your extension can also open the page using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
-Use the `options_page` key to define an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) for your extension.
+Alternatively, you can use the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key with `open_in_tab` set to `true`. If `options_ui` is specified, `options page` is ignored.
 
-The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
-
-Unlike options pages specified using the newer `options_ui` key, options pages specified using the deprecated `options_page` key don't receive browser styles and always open in a normal browser tab.
+See [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) for more information on developing a settings page.
 
 ## Example
 
@@ -51,8 +49,3 @@ Unlike options pages specified using the newer `options_ui` key, options pages s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
-- [Options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)

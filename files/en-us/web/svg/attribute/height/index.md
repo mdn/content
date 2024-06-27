@@ -73,11 +73,11 @@ For {{SVGElement('feBlend')}}, `height` defines the vertical length for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -104,11 +104,11 @@ For {{SVGElement('feColorMatrix')}}, `height` defines the vertical length for th
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -135,11 +135,11 @@ For {{SVGElement('feComponentTransfer')}}, `height` defines the vertical length 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -166,11 +166,11 @@ For {{SVGElement('feComposite')}}, `height` defines the vertical length for the 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -197,11 +197,11 @@ For {{SVGElement('feConvolveMatrix')}}, `height` defines the vertical length for
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -228,11 +228,11 @@ For {{SVGElement('feDiffuseLighting')}}, `height` defines the vertical length fo
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -259,11 +259,11 @@ For {{SVGElement('feDisplacementMap')}}, `height` defines the vertical length fo
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -290,11 +290,11 @@ For {{SVGElement('feDropShadow')}}, `height` defines the vertical length for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -321,11 +321,11 @@ For {{SVGElement('feFlood')}}, `height` defines the vertical length for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -352,11 +352,11 @@ For {{SVGElement('feGaussianBlur')}}, `height` defines the vertical length for t
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -383,11 +383,11 @@ For {{SVGElement('feImage')}}, `height` defines the vertical length for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -414,11 +414,11 @@ For {{SVGElement('feMerge')}}, `height` defines the vertical length for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -445,11 +445,11 @@ For {{SVGElement('feMorphology')}}, `height` defines the vertical length for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -476,11 +476,11 @@ For {{SVGElement('feOffset')}}, `height` defines the vertical length for the ren
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -507,11 +507,11 @@ For {{SVGElement('feSpecularLighting')}}, `height` defines the vertical length f
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -538,11 +538,11 @@ For {{SVGElement('feTile')}}, `height` defines the vertical length for the rende
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -569,11 +569,11 @@ For {{SVGElement('feTurbulence')}}, `height` defines the vertical length for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -600,11 +600,11 @@ For {{SVGElement('filter')}}, `height` defines the vertical length for the rende
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -632,11 +632,11 @@ For {{SVGElement('foreignObject')}}, `height` defines the vertical length for th
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -666,11 +666,11 @@ For {{SVGElement('image')}}, `height` defines the vertical length for the image.
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -699,11 +699,11 @@ For {{SVGElement('mask')}}, `height` defines the vertical length of its area of 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -730,7 +730,7 @@ For {{SVGElement('pattern')}}, `height` defines the vertical length of the tile 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
       </td>
     </tr>
@@ -756,11 +756,11 @@ For {{SVGElement('rect')}}, `height` defines the vertical length for the rectang
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -792,11 +792,11 @@ For {{SVGElement('svg')}}, `height` defines the vertical length for the renderin
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -826,11 +826,11 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >

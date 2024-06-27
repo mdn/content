@@ -253,7 +253,10 @@ function cached(getter) {
   const cache = new Map();
   return async (key) => {
     if (cache.has(key)) {
-      return cache.get(key).deref();
+      const dereferencedValue = cache.get(key).deref();
+      if (dereferencedValue !== undefined) {
+        return dereferencedValue;
+      }
     }
     const value = await getter(key);
     cache.set(key, new WeakRef(value));

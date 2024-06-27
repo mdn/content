@@ -8,7 +8,7 @@ status:
 browser-compat: api.ReadableStream.from_static
 ---
 
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`ReadableStream.from()`** static method returns a {{domxref("ReadableStream")}} from a provided iterable or async iterable object.
 

@@ -75,7 +75,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
       <th scope="row">Permitted ARIA roles</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"
             >listitem</a
           ></code
         >

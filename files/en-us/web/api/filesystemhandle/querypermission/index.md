@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemHandle.queryPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
@@ -17,23 +17,24 @@ current handle.
 ## Syntax
 
 ```js-nolint
-queryPermission(fileSystemHandlePermissionDescriptor)
+queryPermission(descriptor)
 ```
 
 ### Parameters
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : An object which specifies the permission mode to query for. Options are as follows:
 
-    - `'mode'`: Can be either `'read'` or
-      `'readwrite'`.
+    - `'mode'` {{optional_inline}}
+
+      - : Can be either `'read'` or `'readwrite'`.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
-If {{domxref('PermissionStatus.state')}} returns "prompt" the website will have to call requestPermission() before any
+If {{domxref('PermissionStatus.state')}} returns "prompt" the website will have to call `requestPermission()` before any
 operations on the handle can be done. If this returns "denied" any operations will
 reject. Usually handles returned by the local file system handle factories will
 initially return "granted" for their read permission state. However, other than through

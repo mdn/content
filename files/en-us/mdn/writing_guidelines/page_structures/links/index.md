@@ -62,7 +62,7 @@ Each macro is different!
 
 To prevent HTML code semantics and CSS code styling, some cross-reference macros include a parameter with the `"nocode"` to disable this styling.
 
-For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `{{domxref("CSS.supports_static", "check support", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "nocode")}}".
+For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `\{{domxref("CSS.supports_static", "check support", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "nocode")}}".
 
 Make sure to look at the source code to understand how the macro you are using works and to understand the various parameters; while the parameters are generally well documented, exceptions like "don't render as code if the second parameter includes a space" that we saw in the `\{{HTMLElement("")}}` macro is in the code but not otherwise documented.
 
@@ -71,6 +71,6 @@ To learn which parameters each macro supports and the order of parameters for ea
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
+- [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub
 - [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros ( `\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, and `\{{Compat(&lt;feature>, &lt;depth>)}}`) and specification macros (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
 - [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.

@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#listitem
 ---
 
+{{AccessibilitySidebar}}
+
 The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role, which is used to identify a list container.
 
 ```html
@@ -74,11 +76,3 @@ or use an ordered list if the order of the list items matters:
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 - [ARIA Lists examples](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

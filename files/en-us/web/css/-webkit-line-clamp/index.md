@@ -2,12 +2,12 @@
 title: "-webkit-line-clamp"
 slug: Web/CSS/-webkit-line-clamp
 page-type: css-property
-browser-compat: css.properties.-webkit-line-clamp
+browser-compat: css.properties.line-clamp
 ---
 
 {{CSSRef}}
 
-The **`-webkit-line-clamp`** CSS property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
+The **`-webkit-line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
 
 It only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("box-orient", "-webkit-box-orient")}} property set to `vertical`.
 
@@ -37,7 +37,7 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ### Values
 
-- `none` {{experimental_inline}}
+- `none`
   - : This value specifies that the content won't be clamped.
 - {{cssxref("integer")}}
   - : This value specifies the number of lines after which the content will be clamped. It must be greater than 0.

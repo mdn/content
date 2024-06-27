@@ -8,7 +8,7 @@ status:
 browser-compat: api.Event.initEvent
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{APIRef("DOM")}}{{deprecated_header}}{{AvailableInWorkers}}
 
 The **`Event.initEvent()`** method is used to initialize the
 value of an {{ domxref("event") }} created using {{domxref("Document.createEvent()")}}.

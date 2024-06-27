@@ -37,9 +37,22 @@ At this point, we are ready to start creating our to-do list application using A
 
 ## The to-do application structure
 
-Just like a basic application that doesn't use a framework, an Angular application has an `index.html`.
-Within the `<body>` tag of the `index.html`, Angular uses a special element — `<app-root>` — to insert your main component, which in turn includes other components you create.
-Generally, you don't need to touch the `index.html`, instead focusing your work within specialized areas of your application called components.
+Like any web application, an Angular application has an `index.html` as the entry point. The `index.html` actually is the app's top level HTML template:
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ... -->
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>
+```
+
+Within the `<body>` tag, Angular uses a special element — `<app-root>` — to insert your main component, which in turn includes other components you create.
+Generally, you don't need to touch the `index.html`, and you mostly focus your work within specialized areas of your application called components.
 
 ### Organize your application with components
 
@@ -47,7 +60,7 @@ Components are a central building block of Angular applications.
 This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
 
 Each component is made up of a TypeScript class, HTML, and CSS.
-TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using TypeScript's extended features and streamlined syntax.
 
 ### Dynamically change the UI with \*ngIf and \*ngFor
 
@@ -83,23 +96,26 @@ export interface Item {
 }
 ```
 
-You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` interface creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be done.
+You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` interface creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be marked done.
 
 ## Add logic to AppComponent
 
-Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
+Now that you know what an `item` is, you can give your application some items by adding them to the app.
 In `app.component.ts`, replace the contents with the following:
 
 ```js
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+  standalone: true,
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  imports: [CommonModule],
 })
 export class AppComponent {
-  title = "todo";
+  componentTitle = "My To Do List";
 
   filter: "all" | "active" | "done" = "all";
 
@@ -121,26 +137,28 @@ export class AppComponent {
 }
 ```
 
-The first line is a JavaScript import that imports Angular.
+The first two lines are JavaScript imports. In this case they are importing Angular libraries.
 The `@Component()` decorator specifies metadata about the `AppComponent`.
-The default metadata properties are as follows:
+Here's some more information about the metadata we're using:
 
-- `selector`: Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is `'app-root'`.
+- [`standalone`](https://angular.io/api/core/Component#standalone): Describe whether the component requires a [NgModule](https://angular.io/guide/ngmodules#the-basic-ngmodule) or not.
+  Your app will directly manage template dependencies (components, directives, etc.) using imports when it's a standalone.
+- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
   In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
   You use all component selectors in the same way by adding them to other component HTML templates.
-- `templateUrl`: Specifies the HTML file to associate with this component.
-  Here it is, './app.component.html',
-- `styleUrls`: Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- [`templateUrl`](https://angular.io/api/core/Component#templateurl): Specifies the HTML file to associate with this component.
+  Here it is, `'./app.component.html'`,
+- [`styleUrls`](https://angular.io/api/core/Component#styleurls): Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- [`imports`](https://angular.io/api/core/Component#imports): Allows you to specify the component's dependencies that can be used within its template.
 
 The `filter` property is of type `union`, which means `filter` could have the value of `all`, `active`, or `done`.
 With the `union` type, if you make a typo in the value you assign to the `filter` property, TypeScript lets you know so that you can catch the bug early.
 This guide shows you how to add filtering in a later step, but you can also use a filter to show the default list of all the items.
 
-The `allItems` array contains the to-do items and whether they are `done`.
+The `allItems` array contains the to-do items and whether they are done.
 The first item, `eat`, has a `done` value of true.
 
-The getter, `get items()`, retrieves the items from the `allItems` array if the `filter` is equal to `all`.
-Otherwise, `get items()` returns the `done` items or the outstanding items depending on how the user filters the view.
+The getter, `get items()`, retrieves the items from the `allItems` array if the `filter` is equal to `all`. Otherwise, `get items()` returns the done or pending items depending on how the user filters the view.
 The getter also establishes the name of the array as `items`, which you'll use in the next section.
 
 ## Add HTML to the AppComponent template
@@ -149,7 +167,7 @@ To see the list of items in the browser, replace the contents of `app.component.
 
 ```html
 <div class="main">
-  <h1>My To Do List</h1>
+  <h1>\{{ componentTitle }}</h1>
   <h2>What would you like to do today?</h2>
 
   <ul>
@@ -176,12 +194,13 @@ What would you like to do today?
 
 ## Add items to the list
 
-A to-do list needs a way to add items.
-
-In `app.component.ts`, add the following method to the class:
+A to-do list needs a way to add items, so let's get started.
+In `app.component.ts`, add the following method to the class after the `allItems` array:
 
 ```ts
 addItem(description: string) {
+  if (!description) return;
+
   this.allItems.unshift({
     description,
     done: false
@@ -194,7 +213,6 @@ The `addItem()` method uses the array method `unshift()` to add a new item to th
 You could alternatively use `push()`, which would add the new item to the end of the array and the bottom of the list.
 
 To use the `addItem()` method, edit the HTML in the `AppComponent` template.
-
 In `app.component.html`, replace the `<h2>` with the following:
 
 ```html

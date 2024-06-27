@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.NotificationEvent
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
 
 The **`NotificationEvent`** interface of the {{domxref("Notifications API", "", "", "nocode")}} represents a notification event dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 

@@ -580,7 +580,6 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
               <th scope="col">Firefox Android</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -590,9 +589,8 @@ For the time being, because of these factors, AV1 is not yet ready to be your fi
               <td>75</td>
               <td>67</td>
               <td>113</td>
-              <td>No</td>
               <td>57</td>
-              <td>No</td>
+              <td>17</td>
             </tr>
           </tbody>
         </table>
@@ -745,28 +743,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <tbody>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-            <tr>
-              <th scope="row">AVC/H.264 support</th>
-              <td>4</td>
-              <td>12</td>
-              <td>35</td>
-              <td>9</td>
-              <td>25</td>
-              <td>3.2</td>
-            </tr>
-          </tbody>
-        </table>
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
         <p>
           Firefox support for AVC is dependent upon the operating system's
           built-in or preinstalled codecs for AVC and its container in order to
@@ -834,7 +811,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
   <tbody>
     <tr>
       <th scope="row">Supported bit rates</th>
-      <td>Unrestricted, but typically below 64 Kbps</td>
+      <td>Unrestricted, but typically below 64 kbps</td>
     </tr>
     <tr>
       <th scope="row">Supported frame rates</th>
@@ -885,13 +862,11 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
               <th scope="row">H.263 support</th>
-              <td>No</td>
               <td>No</td>
               <td>No</td>
               <td>No</td>
@@ -955,7 +930,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
   <tbody>
     <tr>
       <th scope="row">Supported bit rates</th>
-      <td>Up to 800,000 Kbps</td>
+      <td>Up to 800,000 kbps</td>
     </tr>
     <tr>
       <th scope="row">Supported frame rates</th>
@@ -1057,7 +1032,6 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1066,7 +1040,6 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
               <td>107</td>
               <td>18</td>
               <td>No</td>
-              <td>11</td>
               <td>94</td>
               <td>11</td>
             </tr>
@@ -1078,7 +1051,6 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
-        <p>Internet Explorer only supports HEVC for devices with a hardware decoder.</p>
         <p>Opera and other Chromium based browsers have the same support status as Chrome.</p>
         <p>Safari supports HEVC for all devices on macOS High Sierra or later.</p>
       </td>
@@ -1141,7 +1113,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
   <tbody>
     <tr>
       <th scope="row">Supported bit rates</th>
-      <td>5 Kbps to 1 Gbps and more</td>
+      <td>5 kbps to 1 Gbps and more</td>
     </tr>
     <tr>
       <th scope="row">Supported frame rates</th>
@@ -1185,7 +1157,6 @@ You almost certainly don't want to use this format, since it isn't supported in 
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1194,7 +1165,6 @@ You almost certainly don't want to use this format, since it isn't supported in 
               <td>No</td>
               <td>No</td>
               <td>Yes</td>
-              <td>No</td>
               <td>No</td>
               <td>No</td>
             </tr>
@@ -1303,13 +1273,11 @@ Because any MPEG-2 decoder can also play MPEG-1 video, it's compatible with a wi
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
               <th scope="row">MPEG-1 support</th>
-              <td>No</td>
               <td>No</td>
               <td>No</td>
               <td>No</td>
@@ -1473,13 +1441,11 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
               <th scope="row">MPEG-2 support</th>
-              <td>No</td>
               <td>No</td>
               <td>No</td>
               <td>No</td>
@@ -1610,7 +1576,6 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1619,7 +1584,6 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
               <td>3</td>
               <td>Yes</td>
               <td>3.5</td>
-              <td>No</td>
               <td>10.5</td>
               <td>No</td>
             </tr>
@@ -1711,40 +1675,8 @@ Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <tbody>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-            <tr>
-              <th scope="row">VP8 support</th>
-              <td>25</td>
-              <td>14</td>
-              <td>4</td>
-              <td>9</td>
-              <td>16</td>
-              <td>12.1</td>
-            </tr>
-            <tr>
-              <th scope="row">MSE compatibility</th>
-              <td></td>
-              <td></td>
-              <td>Yes</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Edge support for VP8 requires the use of <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a>.</p>
-        <p>macOS: Safari 14.1 supports VP8 in WebRTC, MSE and video elements. Safari 12.2 only supports VP8 in WebRTC connections.</p>
-        <p>iOS: Safari 12.1 and later support VP8 in WebRTC connections only.</p>
+        <p>All versions of Chrome, Edge, Firefox, Opera, and Safari<p>
+        <p><a href="https://webkit.org/blog/8672/on-the-road-to-webrtc-1-0-including-vp8/">iOS: Safari 12.1</a> and later support VP8 in WebRTC connections only.</p>
         <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.</p>
       </td>
     </tr>
@@ -1877,46 +1809,11 @@ This is especially true if you wish to use an open codec rather than a proprieta
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <tbody>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-            <tr>
-              <th scope="row">VP9 support</th>
-              <td>29</td>
-              <td>14</td>
-              <td>28</td>
-              <td>No</td>
-              <td>10.6</td>
-              <td>14 (macOS), 15 (iOS)</td>
-            </tr>
-            <tr>
-              <th scope="row">MSE compatibility</th>
-              <td></td>
-              <td></td>
-              <td>Yes</td>
-              <td></td>
-              <td></td>
-              <td>14 (macOS 11.3+), 15 (iOS)</td>
-            </tr>
-          </tbody>
-        </table>
+        <p>All versions of Chrome, Edge, Firefox, Opera, and Safari<p>
         <p>
           Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use
           {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.
         </p>
-        <ul>
-          <li>Safari 14: (macOS, iOS) supports VP9 in WebM for WebRTC.</li>
-          <li>Safari 14: (macOS) Supports VP9 in <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a> from MacOS 11.3.</li>
-          <li>Safari 14.1: (macOS) supports WebM files containing VP9 video tracks "everywhere".</li>
-          <li>Safari 15: (macOS) supports VP9 in WebM in <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a>.</li>
         </ul>
       </td>
     </tr>
@@ -2067,5 +1964,4 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
 - [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
-- [Video](/en-US/docs/Web/API/HTMLVideoElement) and [audio](/en-US/docs/Web/HTML/Element/audio) codecs in Internet Explorer
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

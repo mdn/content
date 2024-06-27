@@ -35,11 +35,6 @@ A number.
 
 {{Specifications}}
 
-### Notes
-
-`clientHeight` is a property introduced in the Internet Explorer object
-model.
-
 ## Browser compatibility
 
 {{Compat}}

@@ -305,7 +305,7 @@ Details of all the keys you can include are given in the table below.
               <p>
                 <strong>Warning:</strong> Due to the lack of isolation, the web page can detect and interfere with the executed code.
                 Do not use the <code>MAIN</code> world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
-                <code>worid</code>, and therefore <code>"MAIN"</code>, is not supported in Firefox (although it is planned, and the work to introduce it is tracked by <a href="https://bugzil.la/1736575" class="external" target="_blank">Bug 1736575</a>). In the meantime, JavaScript code running in the isolated content script sandbox can use the Firefox "Xray vision" feature, as described in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Share objects with page scripts</a>.
+                <code>world</code>, and therefore <code>"MAIN"</code>, is not supported in Firefox (although it is planned, and the work to introduce it is tracked by <a href="https://bugzil.la/1736575" class="external" target="_blank">Bug 1736575</a>). In the meantime, JavaScript code running in the isolated content script sandbox can use the Firefox "Xray vision" feature, as described in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Share objects with page scripts</a>.
               </p>
             </div>
           </dd>

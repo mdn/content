@@ -15,7 +15,7 @@ result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling
 is done in each direction. If all three coordinates are equal, the scaling is uniform (_isotropic_) and the
-aspect ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
+{{glossary("aspect ratio")}} of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
 shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)

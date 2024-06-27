@@ -11,7 +11,7 @@ browser-compat: api.WorkerNavigator.globalPrivacyControl
 
 {{APIRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
-The **`WorkerNavigator.globalPrivacyControl`** read-only property returns the user's Global Privacy Control setting for the current website.
+The **`WorkerNavigator.globalPrivacyControl`** read-only property returns the user's [Global Privacy Control](https://globalprivacycontrol.org/) setting for the current website.
 This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
 
 The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP header.

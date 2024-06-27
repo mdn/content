@@ -28,8 +28,7 @@ getActiveUniform(program, index)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform attribute to get. This
     value is an index 0 to N - 1 as returned
-    by {{domxref("WebGLRenderingContext.getProgramParameter",
-    "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
+    by {{domxref("WebGLRenderingContext.getProgramParameter", "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
 
 ### Return value
 

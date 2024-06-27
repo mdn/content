@@ -43,7 +43,7 @@ It is important to note that there is only one listener per context and that it 
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : Sets the position of the listener.
 
-> **Note:** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox.
+> **Note:** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox (see [Firefox bug 1283029](https://bugzilla.mozilla.org/show_bug.cgi?id=1283029)).
 
 ## Deprecated features
 

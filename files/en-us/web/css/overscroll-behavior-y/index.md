@@ -7,7 +7,7 @@ browser-compat: css.properties.overscroll-behavior-y
 
 {{CSSRef}}
 
-The **`overscroll-behavior-y`** CSS property sets the browser's behavior when the vertical boundary of a scrolling area is reached.
+The **`overscroll-behavior-y`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the vertical boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 

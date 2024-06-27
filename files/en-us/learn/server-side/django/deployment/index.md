@@ -437,7 +437,7 @@ To start using PythonAnywhere you will first need to create an account:
 
 ### Install library from GitHub
 
-Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from Github.
+Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from GitHub.
 We'll also configure the default database and collect static files so that they can be served by PythonAnywhere.
 
 1. First open the Console management screen by selecting **Consoles** in the top application bar.

@@ -14,19 +14,21 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let querying = browser.tabs.query(queryObj)
+let querying = browser.tabs.query(queryInfo)
 ```
 
 ### Parameters
 
-- `queryObj`
+- `queryInfo`
 
-  - : `object`. The `query()` function will only get tabs whose properties match the properties included here.
+  - : `object`. The `query()` function gets the tabs whose properties match the properties included here.
 
     See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.
 
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tabs are active in their windows.
+    - `attention` {{optional_inline}}
+      - : `boolean`. Indicates whether the tabs are drawing attention.
     - `audible` {{optional_inline}}
       - : `boolean`. Whether the tabs are audible.
     - `autoDiscardable` {{optional_inline}}

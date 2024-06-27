@@ -27,7 +27,3 @@ An {{domxref("HTMLCollection")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [MSDN documentation](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)

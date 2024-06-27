@@ -112,11 +112,7 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 ## Constructor
 
 - {{jsxref("Number/Number", "Number()")}}
-  - : Creates a new `Number` value.
-
-When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
-
-> **Warning:** You should rarely find yourself using `Number` as a constructor.
+  - : Creates `Number` objects. When called as a function, it returns primitive values of type Number.
 
 ## Static properties
 

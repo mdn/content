@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/TR/wai-aria-1.2/#alert
 ---
 
+{{AccessibilitySidebar}}
+
 The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
 
 ## Description
@@ -122,11 +124,3 @@ document.getElementById("hiddenAlertContainer").innerHTML =
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
 - [ARIA Practices alert example](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

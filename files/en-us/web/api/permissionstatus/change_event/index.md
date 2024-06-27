@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.PermissionStatus.change_event
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
 The **`change`** event of the {{domxref("PermissionStatus")}} interface fires whenever the {{domxref("PermissionStatus.state")}} property changes.
 

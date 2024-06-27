@@ -21,7 +21,7 @@ The HTML specification defines the following set of standard metadata names:
   > - Simple web pages shouldn't define an application-name.
 
 - `author`: the name of the document's author.
-- `description`: a short and accurate summary of the content of the page. Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
+- `description`: a short and accurate summary of the content of the page. Search engines like [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) may use this field to control the appearance of the webpage in the search result.
 - `generator`: the identifier of the software that generated the page.
 - `keywords`: words relevant to the page's content separated by commas.
 - `referrer`: controls the HTTP {{httpheader("Referer")}} header of requests sent from the document:

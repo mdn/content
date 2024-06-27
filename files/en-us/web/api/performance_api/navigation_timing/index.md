@@ -14,7 +14,7 @@ Only the current document is included, so usually there is only one {{domxref("P
 
 ## Navigation timestamps
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](/en-US/docs/Web/API/PerformanceNavigationTiming/timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 Figure 1. Navigation timestamps ([source](https://w3c.github.io/navigation-timing/#process)).
 
 The document navigation timestamps (in addition to those from [Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing)) are:

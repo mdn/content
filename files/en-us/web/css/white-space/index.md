@@ -7,7 +7,7 @@ browser-compat: css.properties.white-space
 
 {{CSSRef}}
 
-The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
+The **`white-space`** [CSS](/en-US/docs/Web/CSS) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
@@ -61,7 +61,7 @@ white-space: unset;
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 The following table summarizes the behavior of the various `white-space` keyword values:
 
@@ -228,6 +228,80 @@ select.addEventListener("change", (e) => {
 ```
 
 {{EmbedLiveSample("In_action", "100%", 350)}}
+
+### Multiple lines in SVG text element
+
+The {{CSSXRef("white-space")}} CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
+
+> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+
+#### HTML
+
+The text inside the `<text>` element needs to be split into multiple lines for the new-lines to be detected. After the first line the rest need to have their whitespace removed.
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20" x="10">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  white-space: break-spaces;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 150)}}
+
+### Controlling line wrapping in tables
+
+#### HTML
+
+```html
+<table>
+  <tr>
+    <td></td>
+    <td>Very long content that splits</td>
+    <td class="nw">Very long content that don't split</td>
+  </tr>
+  <tr>
+    <td class="nw">white-space:</td>
+    <td>normal</td>
+    <td>nowrap</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+  text-align: center;
+}
+.nw {
+  white-space: nowrap;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Controlling line wrapping in tables', "100%", "100%")}}
 
 ## Specifications
 

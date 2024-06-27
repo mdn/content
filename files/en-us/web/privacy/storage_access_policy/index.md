@@ -39,7 +39,7 @@ Firefox uses the built-in [Tracking Protection](https://support.mozilla.org/en-U
 
 ## What does the storage access policy block?
 
-The storage access policy blocks resources identified as trackers from accessing their cookies and other site storage when they are loaded in a third-party context. This prevents those resources from retrieving tracking identifiers stored in cookies or site storage and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
+The storage access policy blocks resources identified as trackers from accessing [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and other site storage loaded in a third-party context. This prevents those resources from retrieving tracking identifiers and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
 
 Cookies:
 

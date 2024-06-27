@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.getSenders
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method **`getSenders()`** returns an array of {{domxref("RTCRtpSender")}} objects, each of which represents the RTP sender responsible for transmitting one track's data.
+The **`getSenders()`** method of the {{domxref("RTCPeerConnection")}} interface returns an array of {{domxref("RTCRtpSender")}} objects, each of which represents the RTP sender responsible for transmitting one track's data.
 A sender object provides methods and properties for examining and controlling the encoding and transmission of the track's data.
 
 ## Syntax
@@ -28,7 +28,9 @@ The array does not include senders associated with transceivers that have been [
 
 ## Example
 
-In this example, a `setMuting()` function is shown. This function takes as input an {{domxref("RTCPeerConnection")}}, `pc`, and a Boolean, `muting`. The function gets the list of the peer connection's senders and iterates over every sender, setting the corresponding media track's {{domxref("MediaStreamTrack.enabled", "enabled")}} to the inverse of the specified `muting`.
+In this example, a `setMuting()` function is shown.
+This function takes as input an {{domxref("RTCPeerConnection")}}, `pc`, and a Boolean, `muting`.
+The function gets the list of the peer connection's senders and iterates over every sender, setting the corresponding media track's {{domxref("MediaStreamTrack.enabled", "enabled")}} to the inverse of the specified `muting`.
 
 ```js
 function setMuting(pc, muting) {

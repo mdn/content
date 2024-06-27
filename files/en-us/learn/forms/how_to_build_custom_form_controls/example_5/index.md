@@ -270,9 +270,15 @@ window.addEventListener("load", () => {
       }
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        event.preventDefault();
       }
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        event.preventDefault();
+      }
+
+      if (event.key === "Enter" || event.key === " ") {
+        toggleOptList(select);
       }
 
       updateValue(select, index);

@@ -25,7 +25,7 @@ getByteFrequencyData(array)
 ### Parameters
 
 - `array`
-  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is `-Infinity`.
+  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.
     If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
 ### Return value

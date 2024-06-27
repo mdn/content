@@ -23,19 +23,21 @@ The `<length>` units can be relative or absolute. Relative lengths represent a m
 
 > **Note:** Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
 
-The relative length units listed here are based on font and viewport.
+## Relative length units
+
+CSS relative length units are based on font, container, or viewport sizes.
 
 ### Relative length units based on font
 
 Font lengths define the `<length>` value in terms of the size of a particular character or font attribute in the font currently in effect in an element or its parent.
 
-> **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
+> **Note:** These units, especially `em` and the root relative `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
 
 - `cap`
   - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
 - `ch`
-  - : Represents the width or more precisely the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
-    In cases where it is impossible or impractical to determine the measure of the `0` glyph, it must be assumed to be `0.5em` wide by `1em` tall.
+  - : Represents the width or, more precisely, the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
+    In cases where determining the measure of the `0` glyph is impossible or impractical, it must be assumed to be `0.5em` wide by `1em` tall.
 - `em`
   - : Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the _inherited_ font-size of the element.
 - `ex`
@@ -46,6 +48,8 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
 ### Relative length units based on root element's font
+
+Root element font relative length units define the `<length>` value in terms of the size of a particular character or font attribute of the [root](/en-US/docs/Web/CSS/:root) element:
 
 - `rcap`
   - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
@@ -74,11 +78,11 @@ The viewport-percentage length units are based on four different viewport sizes:
 
 - **Large**
 
-  - : When you want the largest possible viewport in response to browser interfaces retracting dynamically, you should use the large viewport size. The large viewport size allows the content you design to fill the entire viewport when browser interfaces are retracting. You need to be aware though that the content might get hidden when browser interfaces expand.
+  - : When you want the largest possible viewport in response to browser interfaces retracting dynamically, you should use the large viewport size. The large viewport size allows the content you design to fill the entire viewport when browser interfaces are retracting. You need to be aware that the content might get hidden when browser interfaces expand.
 
-    For example, on mobile phones where the screen real-estate is at a premium, browsers often hide part or all of the title and address bar after a user starts scrolling the page. When an element is sized using a viewport-percentage unit based on the large viewport size, the content of the element will fill the entire visible page when these browser interfaces are hidden. However, when these retractable browser interfaces are shown, they can hide the content that is sized or positioned using the _large_ viewport-percentage units.
+    For example, on mobile phones where screen real-estate is at a premium, browsers often hide part or all of the title and address bar after a user starts scrolling the page. When an element is sized using a viewport-percentage unit based on the large viewport size, the content of the element will fill the entire visible page when these browser interfaces are hidden. However, when these retractable browser interfaces are shown, they can hide the content that is sized or positioned using the _large_ viewport-percentage units.
 
-    The large viewport unit is represented by the `lv` prefix and results in the `lv*` viewport-percentage units. The sizes of the large viewport-percentage units are fixed, and therefore stable, unless the viewport itself is resized.
+    The large viewport unit is represented by the `lv` prefix and results in the `lv*` viewport-percentage units. The sizes of the large viewport-percentage units are fixed and therefore stable, unless the viewport itself is resized.
 
 - **Dynamic**
 
@@ -102,42 +106,42 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 
   - : Represents a percentage of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block). `1vh` is 1% of the viewport height. For example, if the viewport height is `300px`, then a value of `70vh` on a property will be `210px`.
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svh`, `lvh`, and `dvh`. `vh` represents the viewport-percentage length unit based on the browser default viewport size.
+    The respective viewport-percentage units for small, large, and dynamic viewport sizes are `svh`, `lvh`, and `dvh`. `vh` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 - `vw`
 
   - : Represents a percentage of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block). `1vw` is 1% of the viewport width. For example, if the viewport width is `800px`, then a value of `50vw` on a property will be `400px`.
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svw`, `lvw`, and `dvw`.
-    `vw` represents the viewport-percentage length unit based on the browser default viewport size.
+    `vw` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 - `vmax`
 
   - : Represents in percentage the largest of `vw` and `vh`.
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmax`, `lvmax`, and `dvmax`.
-    `vmax` represents the viewport-percentage length unit based on the browser default viewport size.
+    `vmax` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 - `vmin`
 
   - : Represents in percentage the smallest of `vw` and `vh`.
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmin`, `lvmin`, and `dvmin`.
-    `vmin` represents the viewport-percentage length unit based on the browser default viewport size.
+    `vmin` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 - `vb`
 
-  - : Represents percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).
+  - : Represents the percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svb`, `lvb`, and `dvb`, respectively.
-    `vb` represents the viewport-percentage length unit based on the browser default viewport size.
+    `vb` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 - `vi`
 
-  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).
+  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
     For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
-    `vi` represents the viewport-percentage length unit based on the browser default viewport size.
+    `vi` represents the viewport-percentage length unit based on the browser's default viewport size.
 
 ### Container query length units
 
@@ -170,7 +174,7 @@ For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_containmen
 
   - : Represents a percentage of the larger value of either the query container's inline size or block size. `1cqmax` is 1% of the larger value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmax` on a property will be `400px`.
 
-### Absolute length units
+## Absolute length units
 
 Absolute length units represent a physical measurement when the physical properties of the output medium are known, such as for print layout. This is done by anchoring one of the units to a physical unit and then defining the others relative to it. The anchoring is done differently for low-resolution devices, such as screens, versus high-resolution devices, such as printers.
 
@@ -197,7 +201,7 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 
 ## Interpolation
 
-When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The interpolation happens on the calculated value. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The {{glossary("interpolation")}} happens on the calculated value. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
@@ -205,7 +209,7 @@ When animated, values of the `<length>` data type are interpolated as real, floa
 
 The following example provides you with an input field in which you can enter a `<length>` value (e.g. `300px`, `50%`, `30vw`) to set the width of a result bar that will appear below it once you've pressed the <kbd>Enter</kbd> or the <kbd>Return</kbd> key.
 
-This allows you to compare and contrast the effect of different length units.
+This allows you to compare and contrast the effects of different length units.
 
 #### HTML
 
@@ -313,5 +317,5 @@ inputElem.addEventListener("change", () => {
 ## See also
 
 - [CSS values & units tutorial](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [CSS values & units reference](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values & units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Box Model](/en-US/docs/Web/CSS/CSS_box_model)

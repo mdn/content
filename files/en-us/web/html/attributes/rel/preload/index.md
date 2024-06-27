@@ -48,12 +48,10 @@ A simple example might look like this (see our [JS and CSS example source](https
 Here we preload our CSS and JavaScript files so they will be available as soon as they are required for the rendering of the page later on. This example is trivial, as the browser probably discovers the `<link rel="stylesheet">` and `<script>` elements in the same chunk of HTML as the preloads, but the benefits can be seen much more clearly the later resources are discovered and the larger they are. For example:
 
 - Resources that are pointed to from inside CSS, like fonts or images.
-- Resources that JavaScript can request, like JSON, imported scripts, or web workers.
-- Larger images and video files.
+- Resources that JavaScript can request, like imported scripts.
 
 `preload` has other advantages too. Using `as` to specify the type of content to be preloaded allows the browser to:
 
-- Prioritize resource loading more accurately.
 - Store in the cache for future requests, reusing the resource if appropriate.
 - Apply the correct [content security policy](/en-US/docs/Web/HTTP/CSP) to the resource.
 - Set the correct {{HTTPHeader("Accept")}} request headers for it.
@@ -62,55 +60,44 @@ Here we preload our CSS and JavaScript files so they will be available as soon a
 
 Many content types can be preloaded. The possible `as` attribute values are:
 
-- `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
-- `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
-- `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
 - `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly binary, or JSON file.
 - `font`: Font file.
 - `image`: Image file.
-- `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
 - `script`: JavaScript file.
 - `style`: CSS stylesheet.
 - `track`: WebVTT file.
-- `worker`: A JavaScript web worker or shared worker.
-- `video`: Video file, as typically used in {{htmlelement("video")}}.
 
 > **Note:** `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
 
-> **Note:** There's more detail about these values and the web features they expect to be consumed by in the Preload spec — see [link element extensions](https://w3c.github.io/preload/#link-element-extensions). Also note that the full list of values the `as` attribute can take is governed by the Fetch spec — see [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination).
+> **Note:** There's more detail about these values and the web features they expect to be consumed by in the HTML spec — see [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type). Also note that the full list of values the `as` attribute can take is governed by the Fetch spec — see [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination).
 
 ## Including a MIME type
 
 `<link>` elements can accept a [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
 
-You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
-
 ```html
 <head>
   <meta charset="utf-8" />
-  <title>Video preload example</title>
+  <title>Image preload example</title>
 
-  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
+  <link rel="preload" href="flower.avif" as="image" type="image/avif" />
 </head>
 <body>
-  <video controls>
-    <source src="sintel-short.mp4" type="video/mp4" />
-    <source src="sintel-short.webm" type="video/webm" />
-    <p>
-      Your browser doesn't support HTML video. Here is a
-      <a href="sintel-short.mp4">link to the video</a> instead.
-    </p>
-  </video>
+  <picture>
+    <source src="flower.avif" type="image/avif" />
+    <source src="flower.webp" type="image/webp" />
+    <img src="flower.jpg" />
+  </picture>
 </body>
 ```
 
-The code in the example above causes the `video/mp4` video to be preloaded only in supporting browsers — and for users who have `video/mp4` support in their browsers, causes the `video/mp4` video to actually be used (since it's the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have `video/mp4` support in their browsers.
+The code in the example above causes the `image/avif` image to be preloaded only in supporting browsers — and for users who have `image/avif` support in their browsers, causes the `image/avif` image to actually be used (since it's the first {{htmlelement("source")}} specified). That makes the image download hopefully smaller for users who have `image/avif` support in their browsers.
 
-Note that for users whose browsers have both `video/mp4` and `video/webm` support, if in that code a `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` element were also specified, then _both_ the `video/mp4` and `video/webm` videos would be preloaded — even though only one of them would actually be used.
+Note that for users whose browsers have both `image/avif` and `image/webp` support, if in that code a `<link rel="preload" href="flower.webp" as="image" type="image/webp">` element were also specified, then _both_ the `image/avif` and `image/webp` images would be preloaded — even though only one of them would actually be used.
 
-Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That's why the code in the example above doesn't specify preloading for the `video/webm` video.
+Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That's why the code in the example above doesn't specify preloading for the `image/webp` image.
 
-However, the lack of preloading doesn't prevent the `video/webm` video from actually being used by those who need it: for users whose browsers don't have `video/mp4` support but do have `video/webm` support, the code in the example above does still cause the `video/webm` video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
+However, the lack of preloading doesn't prevent the `image/webp` image from actually being used by those who need it: for users whose browsers don't have `image/avif` support but do have `image/webp` support, the code in the example above does still cause the `image/webp` image to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.
 
 ## CORS-enabled fetches
 

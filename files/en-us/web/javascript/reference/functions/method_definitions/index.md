@@ -219,6 +219,7 @@ const obj2 = {
 ### Async generator methods
 
 ```js
+// Using a named property
 const obj = {
   f: async function* () {
     yield 1;

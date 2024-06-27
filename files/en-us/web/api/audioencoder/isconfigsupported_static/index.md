@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioEncoder.isConfigSupported_static
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`isConfigSupported()`** static method of the {{domxref("AudioEncoder")}} interface checks if the given config is supported (that is, if {{domxref("AudioEncoder")}} objects can be successfully configured with the given config).
 

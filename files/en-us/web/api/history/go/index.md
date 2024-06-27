@@ -42,8 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-To move back one page (the equivalent of calling {{domxref("History.back",
-  "back()")}}):
+To move back one page (the equivalent of calling {{domxref("History.back", "back()")}}):
 
 ```js
 history.go(-1);
@@ -67,7 +66,7 @@ To move backwards by two pages:
 history.go(-2);
 ```
 
-And, finally either of the following statements will reload the current page:
+And finally, either of the following statements will reload the current page:
 
 ```js
 history.go();

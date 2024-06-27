@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-owns
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-owns` attribute identifies an element (or elements) in order to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
 
 ## Description
@@ -61,8 +63,3 @@ Used in **ALL** roles.
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns` browser support](https://a11ysupport.io/tech/aria/aria-owns_attribute)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -54,7 +54,7 @@ svg {
       <td>
         <code>auto</code> |
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Length"
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
             >&#x3C;length></a
           ></code
         >

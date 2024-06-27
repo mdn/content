@@ -65,7 +65,7 @@ Click the circle to change colors.
   - : The {{Glossary("URL")}} to the script to load.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

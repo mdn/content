@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object

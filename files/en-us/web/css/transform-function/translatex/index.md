@@ -114,7 +114,7 @@ transform: translateX(50%);
 
 ### Formal syntax
 
-```css
+```plain
 translateX({{cssxref("&lt;length-percentage&gt;")}})
 ```
 

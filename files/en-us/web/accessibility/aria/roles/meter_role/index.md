@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 ---
 
+{{AccessibilitySidebar}}
+
 The `meter` role is used to identify an element being used as a meter.
 
 > **Note:** Where possible, it is recommended that you use a native {{HTMLElement("meter")}} element rather than the `meter` role, as native elements are more widely supported by user agents and assistive technology.
@@ -80,11 +82,3 @@ In the above scenario, when the `aria-valuenow` value updates, the width of the 
 
 - {{HTMLElement('meter')}}
 - {{HTMLElement('progress')}}
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

@@ -429,7 +429,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
      <li>
-       <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+       <form id="logout-form" method="post" action="{% url 'logout' %}">
          {% csrf_token %}
          <button type="submit" class="btn btn-link">Logout</button>
        </form>
@@ -448,7 +448,7 @@ We create the login link URL using the `url` template tag and the name of the `l
 The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
-YOu also also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
+You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
 
 ```css
 #logout-form {
@@ -461,6 +461,7 @@ YOu also also need to append the following styles to **/django-locallibrary-tuto
 ```
 
 Try it out by clicking the Login/Logout links in the sidebar.
+You should be taken to the logout/login pages that you defined in the [Template directory](#template_directory) above.
 
 ### Testing in views
 

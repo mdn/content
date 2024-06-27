@@ -4,6 +4,7 @@ slug: Web/CSS/::-moz-list-number
 page-type: css-pseudo-element
 status:
   - non-standard
+browser-compat: css.selectors.-moz-list-number
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -46,6 +47,10 @@ li::-moz-list-number {
 ## Specifications
 
 Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

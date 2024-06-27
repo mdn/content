@@ -19,7 +19,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
+- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator))
 - `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
@@ -135,7 +135,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 
   - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 

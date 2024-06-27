@@ -26,7 +26,7 @@ You can use this attribute with the following SVG elements:
       <td>
         <code>auto</code> | <code>sRGB</code> | <code>&#x3C;name></code> |
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#IRI">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>

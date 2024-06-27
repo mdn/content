@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**Media queries** allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution or orientation, aspect ratio, browser {{glossary("viewport")}} width or height, user preferences such as preferring reduced motion, data usage, or transparency.
+**Media queries** allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution or orientation, {{glossary("aspect ratio")}}, browser {{glossary("viewport")}} width or height, user preferences such as preferring reduced motion, data usage, or transparency.
 
 Media queries are used for the following:
 

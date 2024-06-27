@@ -121,7 +121,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Formal syntax
 
-`\{CSSSyntax}}`
+`\{{CSSSyntax}}`
 
 _To use this macro, remove the backticks and backslash in the markdown file._
 

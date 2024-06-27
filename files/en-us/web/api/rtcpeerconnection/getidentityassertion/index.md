@@ -8,16 +8,12 @@ browser-compat: api.RTCPeerConnection.getIdentityAssertion
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnection.getIdentityAssertion()`** method
-initiates the gathering of an identity assertion. This has an effect only if the
-{{domxref("RTCPeerConnection.signalingState", "signalingState")}} is not
-`"closed"`.
+The **`getIdentityAssertion()`** method of the {{domxref("RTCPeerConnection")}} interface initiates the gathering of an identity assertion.
+This has an effect only if the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is not `"closed"`.
 
-The method returns a JavaScript {{jsxref("Promise")}} which resolves to an
-identity assertion encoded as a string.
+The method returns a JavaScript {{jsxref("Promise")}} which resolves to an identity assertion encoded as a string.
 
-It is not expected for the application dealing with the `RTCPeerConnection`:
-this is automatically done; an explicit call only allows to anticipate the need.
+It is not expected for the application dealing with the `RTCPeerConnection`: this is automatically done; an explicit call only allows to anticipate the need.
 
 ## Syntax
 

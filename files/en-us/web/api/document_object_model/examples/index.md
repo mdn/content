@@ -52,14 +52,16 @@ The following example shows the use of the `height` and `width` properties along
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -68,7 +70,7 @@ The following example shows the use of the `height` and `width` properties along
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -157,7 +159,7 @@ const ss = document.styleSheets;
 
 for (let i = 0; i < ss.length; i++) {
   for (let j = 0; j < ss[i].cssRules.length; j++) {
-    dump(`${ss[i].cssRules[j].selectorText}\n`);
+    console.log(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```

@@ -12,8 +12,8 @@ The global **`fetch()`** method starts the process of fetching a resource from t
 
 The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
-A {{domxref("fetch()")}} promise only rejects when a network error is encountered (which is usually when there's a permissions issue or similar).
-A {{domxref("fetch()")}} promise _does not_ reject on HTTP errors (`404`, etc.).
+A `fetch()` promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error.
+A `fetch()` promise _does not_ reject if the server responds with HTTP status codes that indicate errors (`404`, `504`, etc.).
 Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.
 
 The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
@@ -40,6 +40,17 @@ fetch(resource, options)
 
   - : An object containing any custom settings you want to apply to the request.
     The possible options are:
+
+    - `attributionReporting` {{experimental_inline}}
+
+      - : Indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers). `attributionReporting` is an object containing the following properties:
+
+        - `eventSourceEligible`
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution source. If set to `false`, it isn't.
+        - `triggerEligible`
+          - : A boolean. If set to `true`, the request's response is eligible to register an attribution trigger. If set to `false`, it isn't.
+
+        > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
     - `body`
 
@@ -87,7 +98,6 @@ fetch(resource, options)
       - : The request method, e.g., `"GET"`, `"POST"`.
         The default is `"GET"`.
         Note that the {{httpheader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
-        (This behavior was corrected in Firefox 65 — see [Firefox bug 1508661](https://bugzil.la/1508661).)
         Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
         If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
 
@@ -139,7 +149,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
+  - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
 - {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
@@ -151,6 +161,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Blocked by a permissions policy</td>
+      <td>Use of the <a href="/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> is blocked by a <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}}, and a <code>fetch()</code> request was made with <code>attributionReporting</code> specified.</td>
+    </tr>
     <tr>
       <td>Invalid header name.</td>
       <td>
@@ -295,50 +309,44 @@ fetch(myRequest)
   });
 ```
 
-In the [Fetch with init then Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request/index.html) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)), we do the same thing except that we pass in an
-`init` object when we invoke `fetch()`:
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
+In this case, we can set a {{httpheader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js
 const myImage = document.querySelector("img");
+const reqHeaders = new Headers();
 
-const myHeaders = new Headers();
-myHeaders.append("Accept", "image/jpeg");
+// A cached response is okay unless it's more than a week old
+reqHeaders.set("Cache-Control", "max-age=604800");
 
-const myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
+const options = {
+  headers: reqHeaders,
 };
 
-const myRequest = new Request("flowers.jpg");
+// Pass init as an "options" object with our headers.
+const req = new Request("flowers.jpg", options);
 
-fetch(myRequest, myInit).then((response) => {
-  // …
+fetch(req).then((response) => {
+  // ...
 });
 ```
 
-You could also pass the `init` object in with the
-`Request` constructor to get the same effect:
+You could also pass the `init` object in with the `Request` constructor to get the same effect:
 
 ```js
-const myRequest = new Request("flowers.jpg", myInit);
+const req = new Request("flowers.jpg", options);
 ```
 
-You can also use an object literal as `headers` in
-`init`.
+You can also use an object literal as `headers` in `init`:
 
 ```js
-const myInit = {
-  method: "GET",
+const options = {
   headers: {
-    Accept: "image/jpeg",
+    "Cache-Control": "max-age=60480",
   },
-  mode: "cors",
-  cache: "default",
 };
 
-const myRequest = new Request("flowers.jpg", myInit);
+const req = new Request("flowers.jpg", options);
 ```
 
 ## Specifications

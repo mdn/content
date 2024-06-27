@@ -7,7 +7,7 @@ browser-compat: css.properties.outline-color
 
 {{CSSRef}}
 
-The **`outline-color`** CSS property sets the color of an element's outline.
+The **`outline-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's outline.
 
 {{EmbedInteractiveExample("pages/css/outline-color.html")}}
 
@@ -36,7 +36,7 @@ The `outline-color` property is specified as any one of the values listed below.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
-- `auto` {{Experimental_Inline}}
+- `auto`
   - : Computes to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it computes to the [accent color](/en-US/docs/Web/CSS/accent-color).
 
 ## Description
@@ -103,4 +103,3 @@ p {
 - {{cssxref("outline-width")}}
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

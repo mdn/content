@@ -12,12 +12,21 @@ A typical 3D scene in a game — even the simplest one — contains standard ite
 
 ## Environment setup
 
-To start developing with Three.js, you don't need much. You should:
+To start developing with Three.js, you should make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 
-- Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Create a directory to store your experiments in.
-- Save a copy of the [latest minimized Three.js library](https://threejs.org/build/three.min.js) inside your directory.
-- Open the [Three.js documentation](https://threejs.org/docs/) in a separate tab — it is useful to refer to.
+You can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
+Bear in mind that the archives include source files, which makes the download size approximately 350MB.
+
+Alternatively, you can import Three.js [using a CDN or use Node.js](https://threejs.org/docs/#manual/en/introduction/Installation).
+A Node.js setup with Three.js installed as a dependency is convenient if you want to track versions and it can speed up collaboration and deployment:
+
+```bash
+npm install --save three
+npm install --save-dev vite # For development
+npx vite
+```
+
+Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere while you're working for reference.
 
 ## HTML structure
 
@@ -104,7 +113,7 @@ You should experiment with these values and see how they change what you see in 
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/Window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {

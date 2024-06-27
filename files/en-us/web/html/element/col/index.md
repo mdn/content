@@ -38,11 +38,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `char` {{deprecated_inline}}
 
-  - : Specifies the alignment of the content to a character of each column cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still override the specified [`char`](/en-US/docs/Web/HTML/Element/colgroup#char) of its {{HTMLElement("colgroup")}} parent element.
+  - : Does nothing. It was originally intended to specify the alignment of the content to a character of each column cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still override the specified [`char`](/en-US/docs/Web/HTML/Element/colgroup#char) of its {{HTMLElement("colgroup")}} parent element.
 
 - `charoff` {{deprecated_inline}}
 
-  - : Specifies the number of characters to offset the column cell content from the alignment character specified by the [`char`](#char) attribute.
+  - : Does nothing. It was originally intended to specify the number of characters to offset the column cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
@@ -182,7 +182,7 @@ table {
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>It must have start tag, but must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

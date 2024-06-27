@@ -94,7 +94,7 @@ fetchPromise
 
 This operation performs a simple exchange between the client and the server, using CORS headers to handle the privileges:
 
-![Diagram of simple CORS GET request](simple-req.png)
+![Diagram of simple CORS GET request](https://mdn.github.io/shared-assets/images/diagrams/http/cors/simple-request.svg)
 
 Let's look at what the browser will send to the server in this case:
 
@@ -164,7 +164,7 @@ fetchPromise.then((response) => {
 
 The example above creates an XML body to send with the `POST` request. Also, a non-standard HTTP `X-PINGOTHER` request header is set. Such headers are not part of HTTP/1.1, but are generally useful to web applications. Since the request uses a `Content-Type` of `text/xml`, and since a custom header is set, this request is preflighted.
 
-![Diagram of a request that is preflighted](preflight_correct.png)
+![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
 > **Note:** As described below, the actual `POST` request does not include the `Access-Control-Request-*` headers; they are needed only for the `OPTIONS` request.
 
@@ -180,7 +180,7 @@ Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 
 HTTP/1.1 204 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
@@ -198,7 +198,7 @@ Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTION
 
 ```http
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will do so with a `POST` request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will do so with `X-PINGOTHER` and `Content-Type` custom headers. Now the server has an opportunity to determine whether it can accept a request under these conditions.
@@ -256,7 +256,7 @@ Content-Type: text/plain
 
 Not all browsers currently support following redirects after a preflighted request. If a redirect occurs after such a request, some browsers currently will report an error message such as the following:
 
-> The request was redirected to 'https\://example.com/foo', which is disallowed for cross-origin requests that require preflight.
+> The request was redirected to `https://example.com/foo`, which is disallowed for cross-origin requests that require preflight.
 > Request requires preflight, which is disallowed to follow cross-origin redirects.
 
 The CORS protocol originally required that behavior but [was subsequently changed to no longer require it](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2). However, not all browsers have implemented the change, and thus still exhibit the originally required behavior.
@@ -296,7 +296,7 @@ fetchPromise.then((response) => console.log(response));
 
 This code creates a {{domxref("Request")}} object, setting the `credentials` option to `"include"` in the constructor, then passes this request into `fetch()`. Since this is a simple `GET` request, it is not preflighted but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` header, and **not** make the response available to the invoking web content.
 
-![Diagram of a simple GET request with Access-Control-Allow-Credentials](cred-req-updated.png)
+![Diagram of a simple GET request with Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
 Here is a sample exchange between client and server:
 
@@ -476,7 +476,7 @@ Examples of this usage can be [found above.](#preflighted_requests)
 The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (for example, by passing them as the [`headers`](/en-US/docs/Web/API/Request/Request#headers) option to the {{domxref("Request.Request()", "Request()")}} constructor). This browser-side header will be answered by the complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 ```http
-Access-Control-Request-Headers: <field-name>[, <field-name>]*
+Access-Control-Request-Headers: <field-name>[,<field-name>]*
 ```
 
 Examples of this usage can be [found above](#preflighted_requests).

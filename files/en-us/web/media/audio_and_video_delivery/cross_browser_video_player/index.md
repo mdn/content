@@ -6,15 +6,13 @@ page-type: guide
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
+This article describes a simple HTML video player that uses the Media and Fullscreen APIs. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example
 
 Our example video player displays a clip from an open source movie called [Tears of Steel](https://mango.blender.org/about/), and includes typical video controls.
 
 ![a shot of a video player, with several control buttons such as play, pause and stop. The video is showing a group of men fighting a group of robots.](video-player-example.png)
-
-> **Note:** You can see the [example running live](https://iandevlin.github.io/mdn/video-player/), or check out the [source code on GitHub](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player).
 
 ## HTML Markup
 
@@ -50,8 +48,6 @@ Even though this player will define its own custom control set, the `controls` a
 
 A poster image is defined for the video, and the `preload` attribute is set to `metadata`, which informs the browser that it should initially only attempt to load the metadata from the video file rather than the entire video file. This provides the player with data such as video duration and format.
 
-> **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
-
 Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
 
 The code above would allow playback of the video in most browsers, using the browser's default control set. The next step is to define a custom control set, also in HTML, which will be used to control the video.
@@ -69,16 +65,14 @@ Most browser's default video controls have the following functionality:
 
 The custom control set will also support this functionality, with the addition of a stop button.
 
-Once again the HTML is quite straightforward, using an unordered list with `list-style-type:none` set to enclose the controls, each of which is a list item with `float:left`. For the progress bar, the `progress` element is taken advantage of, with a fallback provided for browsers that don't support it (e.g. IE8 and IE9). This list is inserted after the {{ htmlelement("video") }} element, but inside the {{ htmlelement("figure") }} element (this is important for the fullscreen functionality, which is explained later on).
+Once again the HTML is quite straightforward, using an unordered list with `list-style-type:none` set to enclose the controls, each of which is a list item with `float:left`. For the progress bar, the `progress` element is taken advantage of. This list is inserted after the {{ htmlelement("video") }} element, but inside the {{ htmlelement("figure") }} element (this is important for the fullscreen functionality, which is explained later on).
 
 ```html
 <ul id="video-controls" class="controls">
   <li><button id="playpause" type="button">Play/Pause</button></li>
   <li><button id="stop" type="button">Stop</button></li>
   <li class="progress">
-    <progress id="progress" value="0" min="0">
-      <span id="progress-bar"></span>
-    </progress>
+    <progress id="progress" value="0" min="0"></progress>
   </li>
   <li><button id="mute" type="button">Mute/Unmute</button></li>
   <li><button id="volinc" type="button">Vol+</button></li>
@@ -87,11 +81,11 @@ Once again the HTML is quite straightforward, using an unordered list with `list
 </ul>
 ```
 
-Each button is given an `id` so it can be easily accessed with JavaScript. The `span` within the {{ htmlelement("progress") }} element is for [browsers that do not support the `progress` element](https://caniuse.com/#search=progress) and will be updated at the same time as `progress` (this `span` element won't be visible on browsers that support `progress`).
+Each button is given an `id` so it can be easily accessed with JavaScript.
 
 The controls are initially hidden with a CSS `display:none` and will be enabled with JavaScript. Again if a user has JavaScript disabled, the custom control set will not appear and they can use the browser's default control set unhindered.
 
-Of course this custom control set is currently useless and doesn't do a thing: Let's improve the situation with JavaScript.
+Of course, this custom control set is currently useless and doesn't do a thing: Let's improve the situation with JavaScript.
 
 ## Using the Media API
 
@@ -101,7 +95,7 @@ HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) t
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](/en-US/docs/Web/API/HTMLMediaElement/canPlayType), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
 const supportsVideo = !!document.createElement("video").canPlayType;
@@ -111,7 +105,7 @@ if (supportsVideo) {
 }
 ```
 
-Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
+Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. Variables pointing to HTML elements are required:
 
 ```js
 const videoContainer = document.getElementById("videoContainer");
@@ -138,7 +132,6 @@ const mute = document.getElementById("mute");
 const volinc = document.getElementById("volinc");
 const voldec = document.getElementById("voldec");
 const progress = document.getElementById("progress");
-const progressBar = document.getElementById("progress-bar");
 const fullscreen = document.getElementById("fs");
 ```
 
@@ -191,7 +184,7 @@ voldec.addEventListener("click", (e) => {
 });
 ```
 
-Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user defined function, `alterVolume(direction)` has been created that deals with this:
+Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user-defined function, `alterVolume(direction)` has been created that deals with this:
 
 ```js
 function alterVolume(dir) {
@@ -225,13 +218,10 @@ Another event, `timeupdate`, is raised periodically as the video is being played
 ```js
 video.addEventListener("timeupdate", () => {
   progress.value = video.currentTime;
-  progressBar.style.width = `${Math.floor(
-    (video.currentTime * 100) / video.duration,
-  )}%`;
 });
 ```
 
-As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. The {{ htmlelement("span") }} element mentioned earlier, for browsers that do not support the {{ htmlelement("progress") }} element, is also updated at this time, setting its width to be a percentage of the total time played. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
+As the `timeupdate` event is raised, the `progress` element's `value` attribute is set to the video's `currentTime`. This span has a solid CSS background color, which helps it provide the same visual feedback as a {{ htmlelement("progress") }} element.
 
 Coming back to the `video.duration` problem mentioned above, when the `timeupdate` event is raised, in most mobile browsers the video's `duration` attribute should now have the correct value. This can be taken advantage of to set the `progress` element's `max` attribute if it is currently not set:
 
@@ -240,9 +230,6 @@ video.addEventListener("timeupdate", () => {
   if (!progress.getAttribute("max"))
     progress.setAttribute("max", video.duration);
   progress.value = video.currentTime;
-  progressBar.style.width = `${Math.floor(
-    (video.currentTime * 100) / video.duration,
-  )}%`;
 });
 ```
 
@@ -266,9 +253,7 @@ This piece of code uses the clicked position to (roughly) work out where in the 
 
 The Fullscreen API should be straight forward to use: the user clicks a button, if the video is in fullscreen mode: cancel it, otherwise enter fullscreen mode.
 
-Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods to call the right one.
-
-The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:
+The fullscreen button is hidden if the Fullscreen API is not enabled:
 
 ```js
 if (!document?.fullscreenEnabled) {
@@ -276,7 +261,7 @@ if (!document?.fullscreenEnabled) {
 }
 ```
 
-Naturally the fullscreen button needs to actually do something, so, like the other buttons, a `click` event handler is attached in which we call a user defined function `handleFullscreen`:
+The fullscreen button needs to actually do something. Like the other buttons, a `click` event handler is attached that calls a user-defined function `handleFullscreen`:
 
 ```js
 fullscreen.addEventListener("click", (e) => {
@@ -323,4 +308,3 @@ document.addEventListener("fullscreenchange", (e) => {
 - {{ htmlelement("video") }} for reference material
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)
-- [Video for Everybody](https://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.

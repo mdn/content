@@ -59,9 +59,14 @@ const element = document.querySelector("circle");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSStyleDeclaration)
+// We loop through all the element's styles using `for...in`
 for (const prop in elementStyle) {
-  if (Object.hasOwn(elementStyle, prop)) {
+  // We check if the property belongs to the CSSStyleDeclaration instance
+  // We also ensure that the property is a numeric index (indicating an inline style)
+  if (
+    Object.hasOwn(elementStyle, prop) &&
+    !Number.isNaN(Number.parseInt(prop))
+  ) {
     out.textContent += `${
       elementStyle[prop]
     } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
@@ -83,3 +88,5 @@ for (const prop in elementStyle) {
 
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("HTMLElement.style")}}
+- {{domxref("MathMLElement.style")}}
+- {{domxref("SVGElement.attributeStyleMap")}}

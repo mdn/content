@@ -9,9 +9,11 @@ browser-compat: webextensions.api.webRequest
 
 Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
 
-Each event is fired at a particular stage of the request. The typical sequence of events is like this:
+Each event is fired at a particular stage of the request. The sequence of events is like this:
 
 ![Order of requests is onBeforeRequest, onBeforeSendHeader, onSendHeaders, onHeadersReceived, onResponseStarted, and onCompleted. The onHeadersReceived can cause an onBeforeRedirect and an onAuthRequired. Events caused by onHeadersReceived start at the beginning onBeforeRequest. Events caused by onAuthRequired start at onBeforeSendHeader.](webrequest-flow.png)
+
+However, not all of these events might be observed by an extension. For example, `onBeforeRedirect` might not be followed by `onBeforeRequest` when the redirect target doesn't match the event `filter.urls`. This can be because the URLs in the filter are narrowly defined, or the redirect target can't be observed by an extension, such as when it redirects to a `data:` URL.
 
 {{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can fire at any time during the request. Also, note that sometimes the sequence of events may differ from this. For example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event is triggered immediately after `onBeforeRequest`. `onErrorOccurred` is also fired if [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) blocks a request.
 

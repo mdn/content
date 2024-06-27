@@ -17,68 +17,11 @@ spec-urls:
 
 The **`x`** attribute defines an x-axis coordinate in the user coordinate system.
 
-You can use this attribute with the following SVG elements:
+## Elements
 
-- {{SVGElement("cursor")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
-- {{SVGElement("glyphRef")}}
-- {{SVGElement("image")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("rect")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("text")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
-- {{SVGElement("use")}}
+You can use this attribute with the SVG elements described in the sections below.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="60" height="60" />
-  <rect x="120" y="20" width="60" height="60" />
-  <rect x="220" y="20" width="60" height="60" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-## feBlend
+### `<feBlend>`
 
 For {{SVGElement('feBlend')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -111,7 +54,7 @@ For {{SVGElement('feBlend')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feColorMatrix
+### `<feColorMatrix>`
 
 For {{SVGElement('feColorMatrix')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -144,7 +87,7 @@ For {{SVGElement('feColorMatrix')}}, `x` defines the minimum x coordinate for th
   </tbody>
 </table>
 
-## feComponentTransfer
+### `<feComponentTransfer>`
 
 For {{SVGElement('feComponentTransfer')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -177,7 +120,7 @@ For {{SVGElement('feComponentTransfer')}}, `x` defines the minimum x coordinate 
   </tbody>
 </table>
 
-## feComposite
+### `<feComposite>`
 
 For {{SVGElement('feComposite')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -210,7 +153,7 @@ For {{SVGElement('feComposite')}}, `x` defines the minimum x coordinate for the 
   </tbody>
 </table>
 
-## feConvolveMatrix
+### `<feConvolveMatrix>`
 
 For {{SVGElement('feConvolveMatrix')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -243,7 +186,7 @@ For {{SVGElement('feConvolveMatrix')}}, `x` defines the minimum x coordinate for
   </tbody>
 </table>
 
-## feDiffuseLighting
+### `<feDiffuseLighting>`
 
 For {{SVGElement('feDiffuseLighting')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -276,7 +219,7 @@ For {{SVGElement('feDiffuseLighting')}}, `x` defines the minimum x coordinate fo
   </tbody>
 </table>
 
-## feDisplacementMap
+### `<feDisplacementMap>`
 
 For {{SVGElement('feDisplacementMap')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -309,7 +252,7 @@ For {{SVGElement('feDisplacementMap')}}, `x` defines the minimum x coordinate fo
   </tbody>
 </table>
 
-## feDropShadow
+### `<feDropShadow>`
 
 For {{SVGElement('feDropShadow')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -342,7 +285,7 @@ For {{SVGElement('feDropShadow')}}, `x` defines the minimum x coordinate for the
   </tbody>
 </table>
 
-## feFlood
+### `<feFlood>`
 
 For {{SVGElement('feFlood')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -375,7 +318,7 @@ For {{SVGElement('feFlood')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feFuncA
+### `<feFuncA>`
 
 For {{SVGElement('feFuncA')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -408,7 +351,7 @@ For {{SVGElement('feFuncA')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feFuncB
+### `<feFuncB>`
 
 For {{SVGElement('feFuncB')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -441,7 +384,7 @@ For {{SVGElement('feFuncB')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feFuncG
+### `<feFuncG>`
 
 For {{SVGElement('feFuncG')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -474,7 +417,7 @@ For {{SVGElement('feFuncG')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feFuncR
+### `<feFuncR>`
 
 For {{SVGElement('feFuncR')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -507,7 +450,7 @@ For {{SVGElement('feFuncR')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feGaussianBlur
+### `<feGaussianBlur>`
 
 For {{SVGElement('feGaussianBlur')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -540,7 +483,7 @@ For {{SVGElement('feGaussianBlur')}}, `x` defines the minimum x coordinate for t
   </tbody>
 </table>
 
-## feImage
+### `<feImage>`
 
 For {{SVGElement('feImage')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -573,7 +516,7 @@ For {{SVGElement('feImage')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feMerge
+### `<feMerge>`
 
 For {{SVGElement('feMerge')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -606,7 +549,7 @@ For {{SVGElement('feMerge')}}, `x` defines the minimum x coordinate for the rend
   </tbody>
 </table>
 
-## feMergeNode
+### `<feMergeNode>`
 
 For {{SVGElement('feMergeNode')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -639,7 +582,7 @@ For {{SVGElement('feMergeNode')}}, `x` defines the minimum x coordinate for the 
   </tbody>
 </table>
 
-## feMorphology
+### `<feMorphology>`
 
 For {{SVGElement('feMorphology')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -672,7 +615,7 @@ For {{SVGElement('feMorphology')}}, `x` defines the minimum x coordinate for the
   </tbody>
 </table>
 
-## feOffset
+### `<feOffset>`
 
 For {{SVGElement('feOffset')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -705,7 +648,7 @@ For {{SVGElement('feOffset')}}, `x` defines the minimum x coordinate for the ren
   </tbody>
 </table>
 
-## fePointLight
+### `<fePointLight>`
 
 For {{SVGElement('fePointLight')}}, `x` defines the x location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
@@ -732,7 +675,7 @@ For {{SVGElement('fePointLight')}}, `x` defines the x location for the light sou
   </tbody>
 </table>
 
-## feSpecularLighting
+### `<feSpecularLighting>`
 
 For {{SVGElement('feSpecularLighting')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -765,7 +708,7 @@ For {{SVGElement('feSpecularLighting')}}, `x` defines the minimum x coordinate f
   </tbody>
 </table>
 
-## feSpotLight
+### `<feSpotLight>`
 
 For {{SVGElement('feSpotLight')}}, `x` defines the x location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
@@ -792,7 +735,7 @@ For {{SVGElement('feSpotLight')}}, `x` defines the x location for the light sour
   </tbody>
 </table>
 
-## feTile
+### `<feTile>`
 
 For {{SVGElement('feTile')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -825,7 +768,7 @@ For {{SVGElement('feTile')}}, `x` defines the minimum x coordinate for the rende
   </tbody>
 </table>
 
-## feTurbulence
+### `<feTurbulence>`
 
 For {{SVGElement('feTurbulence')}}, `x` defines the minimum x coordinate for the rendering area of the primitive.
 
@@ -858,7 +801,7 @@ For {{SVGElement('feTurbulence')}}, `x` defines the minimum x coordinate for the
   </tbody>
 </table>
 
-## filter
+### `<filter>`
 
 For {{SVGElement('filter')}}, `x` defines the x coordinate of the upper left corner for the rendering area of the filter.
 
@@ -891,7 +834,7 @@ For {{SVGElement('filter')}}, `x` defines the x coordinate of the upper left cor
   </tbody>
 </table>
 
-## foreignObject
+### `<foreignObject>`
 
 For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper left corner of its viewport.
 
@@ -926,7 +869,7 @@ For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper l
 
 > **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
-## glyphRef
+### `<glyphRef>`
 
 > **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
@@ -959,7 +902,7 @@ For {{SVGElement('glyphRef')}}, `x` defines the x-axis coordinate of the glyph.
   </tbody>
 </table>
 
-## image
+### `<image>`
 
 For {{SVGElement('image')}}, `x` defines the x coordinate of the upper left corner of the image.
 
@@ -994,7 +937,7 @@ For {{SVGElement('image')}}, `x` defines the x coordinate of the upper left corn
 
 > **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
-## mask
+### `<mask>`
 
 For {{SVGElement('mask')}}, `x` defines the x coordinate of the upper left corner of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.
 
@@ -1027,7 +970,7 @@ For {{SVGElement('mask')}}, `x` defines the x coordinate of the upper left corne
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `x` defines the x coordinate of the upper left corner of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.
 
@@ -1054,7 +997,7 @@ For {{SVGElement('pattern')}}, `x` defines the x coordinate of the upper left co
   </tbody>
 </table>
 
-## rect
+### `<rect>`
 
 For {{SVGElement('rect')}}, `x` defines the x coordinate of the upper left corner of the shape.
 
@@ -1089,7 +1032,7 @@ For {{SVGElement('rect')}}, `x` defines the x coordinate of the upper left corne
 
 > **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
-## svg
+### `<svg>`
 
 For {{SVGElement('svg')}}, `x` defines the x coordinate of the upper left corner of its viewport.
 
@@ -1124,7 +1067,7 @@ For {{SVGElement('svg')}}, `x` defines the x coordinate of the upper left corner
 
 > **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
-## text
+### `<text>`
 
 For {{SVGElement('text')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1201,7 +1144,7 @@ line {
 
 {{EmbedLiveSample('text', '100%', 100)}}
 
-## tref
+### `<tref>`
 
 > **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
@@ -1238,7 +1181,7 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
   </tbody>
 </table>
 
-## tspan
+### `<tspan>`
 
 For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1317,7 +1260,7 @@ line {
 
 {{EmbedLiveSample('tspan', '100%', 100)}}
 
-## use
+### `<use>`
 
 For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner of the referenced element.
 
@@ -1351,6 +1294,28 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
 </table>
 
 > **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+
+## Examples
+
+This example contains three {{SVGElement("rect")}} elements, each with an `x` value smaller than the previous value.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="220" y="20" width="60" height="60" fill="red" />
+  <rect x="120" y="20" width="60" height="60" fill="yellow" />
+  <rect x="20" y="20" width="60" height="60" fill="blue" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Specifications
 

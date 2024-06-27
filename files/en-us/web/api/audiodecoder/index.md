@@ -7,7 +7,7 @@ status:
 browser-compat: api.AudioDecoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of audio.
 

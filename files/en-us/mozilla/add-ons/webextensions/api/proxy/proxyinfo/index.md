@@ -37,12 +37,12 @@ Values of this type are objects. They contain the following properties:
   - : `number`. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from the `proxy.onRequest` listener will be used.
 - `proxyAuthorizationHeader`
 
-  - : `string`. This string, if set to non-empty, is passed directly as a value to the {{httpheader("Proxy-Authorization")}} request header sent to HTTPS proxies as part of HTTPS and CONNECT requests. In other words, this can be used to directly authenticate to HTTPS proxies that allow (non-challenging) authentication.
+  - : `string`. When set, this is passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP or HTTPS proxies as part of a [CONNECT](/en-US/docs/Web/HTTP/Methods/CONNECT) request. Used to authenticate to HTTP and HTTPS proxies that allow non-challenging authentication.
 
     For instance, if you want to send "username" and "password" for "basic" authentication, you can set the `proxyAuthorizationHeader` property to `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`
 
 - `connectionIsolationKey` {{optional_inline}}
-  - : `string`. An optional key used for additional isolation of this proxy connection. Applies to HTTPS proxies only.
+  - : `string`. An optional key used for additional isolation of this proxy connection.
 
 ## Browser compatibility
 

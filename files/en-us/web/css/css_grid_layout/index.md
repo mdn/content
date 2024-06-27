@@ -106,9 +106,7 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
-- {{CSSxRef("masonry-auto-flow")}} {{Experimental_Inline}}
-- {{CSSxRef("align-tracks")}} {{Experimental_Inline}}
-- {{CSSxRef("justify-tracks")}} {{Experimental_Inline}}
+- {{CSSxRef("masonry-auto-flow")}}
 
 ### Functions
 
@@ -133,7 +131,7 @@ The example below shows a three-column track grid with new rows created at a min
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
-- [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
+- [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
 
 ## Specifications
 
@@ -153,8 +151,8 @@ The example below shows a three-column track grid with new rows created at a min
   - [Grid column](/en-US/docs/Glossary/Grid_Column)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
-- [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
-- [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
-- [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
-- [CSS Grid Garden](https://cssgridgarden.com) - A game for learning CSS grid
+- [Grid by example](https://gridbyexample.com/)
+- [CSS grid reference](https://tympanus.net/codrops/css_reference/grid/) via Codrops
+- [CSS grid inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS grid playground](https://mozilladevelopers.github.io/playground/css-grid/)
+- [CSS grid garden](https://cssgridgarden.com) - A game for learning CSS grid

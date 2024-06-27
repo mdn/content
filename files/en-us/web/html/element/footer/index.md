@@ -7,7 +7,7 @@ browser-compat: html.elements.footer
 
 {{HTMLSidebar}}
 
-The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
+The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -20,6 +20,12 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - Enclose information about the author in an {{HTMLElement("address")}} element that can be included into the `<footer>` element.
 - When the nearest ancestor sectioning content or sectioning root element is the body element the footer applies to the whole page.
 - The `<footer>` element is not sectioning content and therefore doesn't introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements).
+
+## Accessibility
+
+Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) was not properly exposed by [VoiceOver](https://help.apple.com/voiceover/info/guide/). If needing to support legacy Safari browsers, add `role="contentinfo"` to the `footer` element to ensure the landmark will be properly exposed.
+
+- Related: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
 ## Examples
 
@@ -50,12 +56,6 @@ footer {
 ```
 
 {{EmbedLiveSample('Examples')}}
-
-## Accessibility concerns
-
-Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) was not properly exposed by [VoiceOver](https://help.apple.com/voiceover/info/guide/). If needing to support legacy Safari browsers, add `role="contentinfo"` to the `footer` element to ensure the landmark will be properly exposed.
-
-- Related: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
 ## Technical summary
 
@@ -93,8 +93,8 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>, or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a>, or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>
         if a descendant of an
         <a href="/en-US/docs/Web/HTML/Element/article">article</a>,
         <a href="/en-US/docs/Web/HTML/Element/aside">aside</a>,
@@ -102,12 +102,12 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
         <a href="/en-US/docs/Web/HTML/Element/nav">nav</a> or
         <a href="/en-US/docs/Web/HTML/Element/section">section</a> element, or
         an element with
-        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a>
+        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role">article</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>
         or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>
       </td>
     </tr>
     <tr>

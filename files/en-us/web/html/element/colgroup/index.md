@@ -41,11 +41,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `char` {{deprecated_inline}}
 
-  - : Specifies the alignment of the content to a character of each column group cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/en-US/docs/Web/HTML/Element/col#align) of the {{HTMLElement("col")}} elements which are members of this column group.
+  - : Does nothing. It was originally intended to specify the alignment of the content to a character of each column group cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/en-US/docs/Web/HTML/Element/col#align) of the {{HTMLElement("col")}} elements which are members of this column group.
 
 - `charoff` {{deprecated_inline}}
 
-  - : Specifies the number of characters to offset the column group cell content from the alignment character specified by the [`char`](#char) attribute.
+  - : Does nothing. It was originally intended to specify the number of characters to offset the column group cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
@@ -175,7 +175,7 @@ table {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        If the <a href="/en-US/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute is
+        If the <a href="#span"><code>span</code></a> attribute is
         present: none.<br />If
         the attribute is not present: zero or more {{HTMLElement("col")}}
         element

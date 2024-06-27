@@ -9,7 +9,7 @@ browser-compat: css.properties.page-break-before
 
 > **Warning:** This property has been replaced by the {{cssxref("break-before")}} property.
 
-The **`page-break-before`** CSS property adjusts page breaks _before_ the current element.
+The **`page-break-before`** [CSS](/en-US/docs/Web/CSS) property adjusts page breaks _before_ the current element.
 
 This property applies to block elements that generate a box. It won't apply on an empty {{ HTMLElement("div") }} that won't generate a box.
 
@@ -47,9 +47,9 @@ page-break-before: unset;
   - : Force page breaks before the element so that the next page is formatted as a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
   - : Force page breaks before the element so that the next page is formatted as a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
-- `recto` {{experimental_inline}}
+- `recto`
   - : If pages progress left-to-right, then this acts like `right`. If pages progress right-to-left, then this acts like `left`.
-- `verso` {{experimental_inline}}
+- `verso`
   - : If pages progress left-to-right, then this acts like `left`. If pages progress right-to-left, then this acts like `right`.
 
 ## Page break aliases

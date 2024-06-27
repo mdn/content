@@ -5,24 +5,39 @@
 
 name: PR review companion
 
-on: workflow_call
+on:
+  workflow_run:
+    workflows: ["PR Test"]
+    types:
+      - completed
 
 jobs:
   review:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: "Download artifact"
         uses: actions/download-artifact@v4
         with:
-          name: build
+          pattern: build
           path: build
+          merge-multiple: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Check for artifacts
+        if: ${{ hashFiles('build/') != '' }}
+        run: |
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
 
       - uses: actions/checkout@v4
+        if: ${{ env.HAS_ARTIFACT }}
         with:
           repository: mdn/yari
           path: yari
 
       - name: Install Python
+        if: ${{ env.HAS_ARTIFACT }}
         id: setup-python
         uses: actions/setup-python@v5
         with:
@@ -30,6 +45,7 @@ jobs:
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local
+        if: ${{ env.HAS_ARTIFACT }}
         uses: actions/cache@v4
         with:
           path: ~/.local
@@ -38,12 +54,14 @@ jobs:
           key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install Python poetry
+        if: ${{ env.HAS_ARTIFACT }}
         uses: snok/install-poetry@v1.3
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
       - name: Load cached venv
+        if: ${{ env.HAS_ARTIFACT }}
         id: cached-poetry-dependencies
         uses: actions/cache@v4
         with:
@@ -53,17 +71,19 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install poetry dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        if: ${{ env.HAS_ARTIFACT && steps.cached-poetry-dependencies.outputs.cache-hit != 'true' }}
         run: |
           cd yari/deployer
           poetry install --no-interaction --no-root
 
       - name: Install Deployer
+        if: ${{ env.HAS_ARTIFACT }}
         run: |
           cd yari/deployer
           poetry install --no-interaction
 
       - name: Deploy and analyze built content
+        if: ${{ env.HAS_ARTIFACT }}
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
 

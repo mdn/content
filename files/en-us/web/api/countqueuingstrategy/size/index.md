@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CountQueuingStrategy.size
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`size()`** method of the
 {{domxref("CountQueuingStrategy")}} interface always returns `1`, so that the

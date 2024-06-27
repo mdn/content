@@ -26,7 +26,7 @@ How do you pull it up? Three ways:
 
 - **_Menu bar:_**
 
-  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Safari:** _Develop ➤ Show Web Inspector._ If you can't see the _Develop_ menu, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ checkbox.
   - **Opera**: _Developer ➤ Developer tools_
@@ -82,7 +82,7 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 - _Layout_: In Firefox, this area includes two sections:
 
   - _Box Model_: represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is.
-  - _Grid_: If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
+  - _Grid_: If the page you are inspecting uses CSS grid, this section allows you to view the grid details.
 
 - _Fonts_: In Firefox, the _Fonts_ tab shows the fonts applied to the current element.
 

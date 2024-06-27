@@ -4,9 +4,7 @@ slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 ## Spatial Localization
 

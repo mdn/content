@@ -11,8 +11,8 @@ The **HTTP `CONNECT` method** starts two-way communications
 with the requested resource. It can be used to open a tunnel.
 
 For example, the `CONNECT` method can be used to access websites that use
-{{Glossary("TLS")}} ({{Glossary("HTTPS")}}). The client asks an HTTP {{Glossary("Proxy
-  server")}} to tunnel the [TCP](/en-US/docs/Glossary/TCP) connection to
+{{Glossary("TLS")}} ({{Glossary("HTTPS")}}). The client asks an HTTP {{Glossary("Proxy server")}}
+to tunnel the [TCP](/en-US/docs/Glossary/TCP) connection to
 the desired destination. The proxy server then proceeds to make the connection on behalf of
 the client. Once the connection is established, the
 proxy server continues to relay the TCP stream to and

@@ -159,7 +159,7 @@ It will fetch the referenced document, then fetch any linked resources that are 
 
 ### Speculation Rules API
 
-[`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) is used to provide a set of rules that determine what future documents should be prefetched or prerendered by the browser. This is part of the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) is used to specify a set of rules that determine what future documents should be prefetched or prerendered by the browser. These rules are provided as JSON structures inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header.
 
 ## When should you use each feature?
 

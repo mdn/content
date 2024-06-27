@@ -55,7 +55,7 @@ src:
     If omitted, the browser will download the resource and then detect the format.
     If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal_syntax), enclose the format string in quotes.
     Possible values are described in the [Font formats](#font_formats) section below.
-- `tech()` {{Experimental_inline}}
+- `tech()`
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`

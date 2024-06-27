@@ -8,11 +8,10 @@ browser-compat: api.ProgressEvent.total
 
 {{APIRef("XMLHttpRequest API")}}
 
-The **`ProgressEvent.total`** read-only property is an unsigned
-64-bit integer value indicating the total size of the data being processed or
-transmitted. In the case of an HTTP transmission, this is the size of the body of the
-message (the `Content-Length`), and does not include headers and other
-overhead.
+The **`ProgressEvent.total`** read-only property is a 64-bit unsigned integer
+indicating the total size, in bytes, of the data being transmitted or processed.
+
+When downloading a resource using HTTP, this value is taken from the `Content-Length` response header. It only counts the body of the HTTP message, and doesn't include headers and other overhead.
 
 If the event's {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}}
 property is `false`, this value is meaningless and should be ignored.

@@ -48,7 +48,7 @@ svg {
   - : Defines the total path length in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

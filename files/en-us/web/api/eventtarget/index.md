@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.EventTarget
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`EventTarget`** interface is implemented by objects that can receive events and may have listeners for them.
 In other words, any target of events implements the three methods associated with this interface.

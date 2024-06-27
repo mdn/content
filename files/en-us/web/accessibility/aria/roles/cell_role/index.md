@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
+{{AccessibilitySidebar}}
+
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.
 
 ```html
@@ -182,11 +184,3 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 - [HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

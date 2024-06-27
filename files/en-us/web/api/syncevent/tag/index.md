@@ -3,12 +3,10 @@ title: "SyncEvent: tag property"
 short-title: tag
 slug: Web/API/SyncEvent/tag
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.SyncEvent.tag
 ---
 
-{{APIRef("Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
 The **`tag`** read-only property of the
 {{domxref("SyncEvent")}} interface returns the developer-defined identifier for

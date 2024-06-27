@@ -81,7 +81,7 @@ Try setting some other colors for the text and background colors:
 - Try other named colors like `lime` or `aqua`.
 - Use hexadecimal values like `#00ff00` or `#00ffff`.
 - You can use other color schemes like `rgb(0 255 255)`.
-- Finally, try semi-transparent variations, like `rgb(0 0 0 / 80%)`.
+- Finally, try semi-transparent variations, like `rgb(0 0 0 / .8)`.
 
 > **Note:** Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 

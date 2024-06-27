@@ -10,7 +10,7 @@ A **microtask** is a short function which is executed after the function or prog
 
 This event loop may be either the browser's main event loop or the event loop driving a [web worker](/en-US/docs/Web/API/Web_Workers_API). This lets the given function run without the risk of interfering with another script's execution, yet also ensures that the microtask runs before the user agent has the opportunity to react to actions taken by the microtask.
 
-JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and the [Mutation Observer API](/en-US/docs/Web/API/MutationObserver) both use the microtask queue to run their callbacks, but there are other times when the ability to defer work until the current event loop pass is wrapping up. In order to allow microtasks to be used by third-party libraries, frameworks, and polyfills, the {{domxref("queueMicrotask()")}} method is exposed on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces.
+JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and the [Mutation Observer API](/en-US/docs/Web/API/MutationObserver) both use the microtask queue to run their callbacks, but there are other times when the ability to defer work until the current event loop pass is wrapping up is helpful. In order to allow microtasks to be used by third-party libraries, frameworks, and polyfills, the {{domxref("queueMicrotask()")}} method is exposed on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces.
 
 ## Tasks vs. microtasks
 

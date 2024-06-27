@@ -67,6 +67,8 @@ For security reasons, browsers may apply the [same-origin policy](/en-US/docs/We
 
 > **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
 
+## Usage context
+
 {{SVGInfo}}
 
 ## Specifications

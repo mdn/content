@@ -8,8 +8,7 @@ browser-compat: api.RTCPeerConnection.sctp
 
 {{APIRef("WebRTC")}}
 
-The read-only **`sctp`** property on the {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}} describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and
-received.
+The **`sctp`** read-only property of the {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}} describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and received.
 If SCTP hasn't been negotiated, this value is `null`.
 
 The SCTP transport is used for transmitting and receiving data for any and all {{domxref("RTCDataChannel")}}s on the peer connection.

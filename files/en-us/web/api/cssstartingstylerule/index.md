@@ -2,12 +2,10 @@
 title: CSSStartingStyleRule
 slug: Web/API/CSSStartingStyleRule
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSStartingStyleRule
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The **`CSSStartingStyleRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSxRef("@starting-style")}} at-rule.
 

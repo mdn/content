@@ -42,8 +42,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateNode` {{domxref("DOMException")}}
-  - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start",
-    "start()")}}.
+  - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start", "start()")}}.
 - {{jsxref("RangeError")}}
   - : Thrown if the value specified for `when` is negative.
 

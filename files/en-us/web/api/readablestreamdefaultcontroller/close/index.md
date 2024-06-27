@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.close
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`close()`** method of the
 {{domxref("ReadableStreamDefaultController")}} interface closes the associated stream.

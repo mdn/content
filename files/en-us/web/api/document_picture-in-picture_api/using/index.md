@@ -8,7 +8,7 @@ page-type: guide
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 
-> **Note:** You can see the featured demo in action at [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) (see the full [source code](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture) also).
+> **Note:** You can see the featured demo in action at [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture) also).
 
 ## Sample HTML
 
@@ -72,22 +72,24 @@ The `width` and `height` options of `requestWindow()` set the Picture-in-Picture
 
 ```js
 async function togglePictureInPicture() {
-  // Returns null if no pip window is currently open
-  if (!!window.documentPictureInPicture.window) {
-    // Open a Picture-in-Picture window.
-    const pipWindow = await documentPictureInPicture.requestWindow({
-      width: videoPlayer.clientWidth,
-      height: videoPlayer.clientHeight,
-    });
-
-    // ...
-
-    // Move the player to the Picture-in-Picture window.
-    pipWindow.document.body.append(videoPlayer);
-
-    // Display a message to say it has been moved
-    inPipMessage.style.display = "block";
+  // Early return if there's already a Picture-in-Picture window open
+  if (window.documentPictureInPicture.window) {
+    return;
   }
+
+  // Open a Picture-in-Picture window.
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
+    width: videoPlayer.clientWidth,
+    height: videoPlayer.clientHeight,
+  });
+
+  // ...
+
+  // Move the player to the Picture-in-Picture window.
+  pipWindow.document.body.append(videoPlayer);
+
+  // Display a message to say it has been moved
+  inPipMessage.style.display = "block";
 }
 ```
 
@@ -121,6 +123,40 @@ To copy all CSS style sheets from the originating window, loop through all style
 });
 
 // ...
+```
+
+## Target styles when in Picture-in-Picture mode
+
+The `picture-in-picture` value of the {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/@media#media_features) allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode. Basic usage looks like so:
+
+```css
+@media (display-mode: picture-in-picture) {
+  body {
+    background: red;
+  }
+}
+```
+
+This snippet will turn the background of the document `<body>` red, only when it is displayed in Picture-in-Picture mode.
+
+In [our demo](https://mdn.github.io/dom-examples/document-picture-in-picture/), we combine the `display-mode: picture-in-picture` value with the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media feature to create light and dark color schemes that are applied based on the user's color scheme preference, only when the app is being shown in Picture-in-Picture mode.
+
+```css
+@media (display-mode: picture-in-picture) and (prefers-color-scheme: light) {
+  body {
+    background: antiquewhite;
+  }
+}
+
+@media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+  }
+
+  a {
+    color: antiquewhite;
+  }
+}
 ```
 
 ## Handle when the Picture-in-Picture window closes

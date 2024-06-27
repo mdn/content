@@ -33,7 +33,7 @@ svg {
 
 {{EmbedLiveSample('Example', 100, '100%')}}
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

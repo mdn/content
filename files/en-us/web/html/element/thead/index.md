@@ -29,11 +29,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `char` {{deprecated_inline}}
 
-  - : Specifies the alignment of the content to a character of each head cell. If [`align`](#align) is not set to `char`, this attribute is ignored.
+  - : Does nothing. It was originally intended to specify the alignment of the content to a character of each head cell. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : Specifies the number of characters to offset the head cell content from the alignment character specified by the [`char`](#char) attribute.
+  - : Does nothing. It was originally intended to specify the number of characters to offset the head cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
@@ -266,7 +266,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role"
             >rowgroup</a
           ></code
         >

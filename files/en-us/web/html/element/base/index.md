@@ -75,7 +75,7 @@ For example, given `<base href="https://example.com/">` and this link: `<a href=
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>There must be no closing tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

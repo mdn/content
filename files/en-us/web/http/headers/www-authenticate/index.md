@@ -172,7 +172,7 @@ For `"Basic"` authentication the credentials are constructed by first combining 
 
 > **Note:** This example is taken from {{RFC("7616")}} "HTTP Digest Access Authentication" (other examples in the specification show the use of `SHA-512`, `charset`, and `userhash`).
 
-The client attempts to access a document at URI "http://www.example.org/dir/index.html" that is protected via digest authentication.
+The client attempts to access a document at URI `http://www.example.org/dir/index.html` that is protected via digest authentication.
 The username for this document is "Mufasa" and the password is "Circle of Life" (note the single space between each of the words).
 
 The first time the client requests the document, no {{HTTPHeader("Authorization")}} header field is sent.

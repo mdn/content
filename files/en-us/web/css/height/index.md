@@ -7,7 +7,7 @@ browser-compat: css.properties.height
 
 {{CSSRef}}
 
-The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/height.html")}}
 
@@ -53,7 +53,7 @@ height: unset;
   - : The intrinsic minimum height.
 - `fit-content`
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 - {{cssxref("clamp", "clamp()")}}
   - : Enables selecting a middle value within a range of values between a defined minimum and maximum.

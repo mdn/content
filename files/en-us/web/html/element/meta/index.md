@@ -51,6 +51,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - The number of seconds until the page should be reloaded - only if the [`content`](#content) attribute contains a non-negative integer.
       - The number of seconds until the page should redirect to another - only if the [`content`](#content) attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
 
+      The timer starts when the page is _completely loaded_, which is after the {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events have both fired.
+
       > **Warning:**
       >
       > Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
@@ -104,10 +106,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     </tr>
     <tr>
       <th>Tag omission</th>
-      <td>
-        As it is a void element, the start tag must be present and the end tag
-        must not be present.
-      </td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th>Permitted parents</th>
@@ -117,7 +116,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <code>&#x3C;meta charset></code>,
             <code>&#x3C;meta http-equiv></code>: a
             {{HTMLElement("head")}} element. If the
-            <a href="/en-US/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> is not an
+            <a href="#http-equiv"><code>http-equiv</code></a> is not an
             encoding declaration, it can also be inside a
             {{HTMLElement("noscript")}} element, itself inside a
             <code>&#x3C;head></code> element.

@@ -34,7 +34,7 @@ Additional examples are available on the {{jsxref("Proxy")}} reference page.
 
 The following terms are used when talking about the functionality of proxies.
 
-- {{jsxref("Proxy/Proxy", "handler", "", "true")}}
+- {{jsxref("Proxy/Proxy", "handler", "", 1)}}
   - : Placeholder object which contains traps.
 - traps
   - : The methods that provide property access. (This is analogous to the concept of _traps_ in operating systems.)

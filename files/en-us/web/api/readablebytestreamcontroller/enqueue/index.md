@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is copied into the stream's internal queues).
 

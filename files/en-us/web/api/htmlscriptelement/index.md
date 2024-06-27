@@ -17,42 +17,38 @@ JavaScript files should be served with the `text/javascript` [MIME type](/en-US/
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLScriptElement.type")}}
-  - : A string representing the MIME type of the script. It reflects the [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute.
-- {{domxref("HTMLScriptElement.src")}}
-  - : A string representing the URL of an external script. It reflects the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute.
-- {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
-  - : A string; an obsolete way of registering event handlers on elements in an HTML document.
-- {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
+- {{domxref("HTMLScriptElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
+  - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/script#attributionsrc) attribute on an {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively.
+- {{domxref("HTMLScriptElement.async")}}
+  - : A boolean value that controls how the script should be executed. For classic scripts, if the `async` property is set to `true`, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` property is set to `true`, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
+- {{domxref("HTMLScriptElement.blocking")}} {{Experimental_Inline}}
+  - : A string indicating that certain operations should be blocked on the fetching of the script. It reflects the `blocking` attribute of the {{HTMLElement("script")}} element.
+- `HTMLScriptElement.charset` {{deprecated_inline}}
   - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Element/script#charset) attribute.
-- {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
-
-  - : The `async` and `defer` attributes are boolean attributes that control how the script should be executed. **The `defer` and `async` attributes must not be specified if the `src` attribute is absent.**
-
-    There are three possible execution modes:
-
-    1. If the `async` attribute is present, then the script will be executed asynchronously as soon as it downloads.
-    2. If the `async` attribute is absent but the `defer` attribute is present, then the script is executed when [the page has finished parsing](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
-    3. If neither attribute is present, then the script is fetched and executed immediately, blocking further parsing of the page.
-
-    The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
-
-    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://html.spec.whatwg.org/multipage/scripting.html) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://html.spec.whatwg.org/multipage/syntax.html#start-tags) and [end](https://html.spec.whatwg.org/multipage/syntax.html#end-tags) tags in HTML, [in foreign content](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements), and [in XML](https://html.spec.whatwg.org/multipage/xhtml.html); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://html.spec.whatwg.org/multipage/webappapis.html); and so on.
-
 - {{domxref("HTMLScriptElement.crossOrigin")}}
   - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
-- {{domxref("HTMLScriptElement.text")}}
-
-  - : A string that joins and returns the contents of all [`Text` nodes](/en-US/docs/Web/API/Text) inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the [`textContent`](/en-US/docs/Web/API/Node/textContent) IDL attribute.
-
-    > **Note:** When inserted using the [`document.write()`](/en-US/docs/Web/API/Document/write) method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML) or [`outerHTML`](/en-US/docs/Web/API/Element/outerHTML), they do not execute at all.
-
+- {{domxref("HTMLScriptElement.defer")}}
+  - : A boolean value that controls how the script should be executed. For classic scripts, if the `defer` property is set to `true`, the external script will be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), the `defer` property has no effect.
+- `HTMLScriptElement.event` {{deprecated_inline}}
+  - : A string; an obsolete way of registering event handlers on elements in an HTML document.
 - {{domxref("HTMLScriptElement.fetchPriority")}}
-  - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
+  - : An optional string representing a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default). It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
+- {{domxref("HTMLScriptElement.integrity")}}
+  - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("script")}} element.
 - {{domxref("HTMLScriptElement.noModule")}}
   - : A boolean value that if true, stops the script's execution in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
+- {{domxref("HTMLScriptElement.src")}}
+  - : A string representing the URL of an external script; this can be used as an alternative to embedding a script directly within a document. It reflects the `src` attribute of the {{HTMLElement("script")}} element.
+- {{domxref("HTMLScriptElement.text")}}
+
+  - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
+
+    > **Note:** When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+
+- {{domxref("HTMLScriptElement.type")}}
+  - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
 
 ## Static methods
 
