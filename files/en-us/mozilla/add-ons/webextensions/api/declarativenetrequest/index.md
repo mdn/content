@@ -188,6 +188,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
   - : The minimum number of static rules guaranteed to an extension across its enabled static rulesets.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}}
   - : The number of times {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} can be called within a period of {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}
+  - : The maximum number of static rules that can be disabled on each static ruleset.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}
   - : The maximum number of combined dynamic and session scoped rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}
