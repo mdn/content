@@ -37,7 +37,6 @@ Assistive technologies provide users with the accessibility name property, which
 - [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - Related glossary terms:
-
   - {{Glossary("Accessibility")}}
   - {{Glossary("Accessibility tree")}}
   - {{Glossary("Accessible description")}}

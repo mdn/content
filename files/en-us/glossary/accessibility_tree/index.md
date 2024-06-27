@@ -35,7 +35,6 @@ While still in draft form within the Web Incubator Community Group as of April 2
 - [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - Related glossary terms:
-
   - {{Glossary("Accessibility")}}
   - {{Glossary("Accessible description")}}
   - {{Glossary("Accessible name")}}

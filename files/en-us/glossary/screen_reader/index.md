@@ -38,6 +38,5 @@ See [ChromeVox screen reader](https://support.google.com/accessibility/answer/70
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - Related glossary terms:
-
   - {{Glossary("Accessibility")}}
   - {{Glossary("ARIA")}}

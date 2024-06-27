@@ -33,6 +33,7 @@ ensure that the user agent or HTTP library you're using on the client is up-to-d
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
-- Related glossary terms: {{Glossary("CORS")}}
+- Related glossary term:
+  - {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)

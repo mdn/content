@@ -14,7 +14,6 @@ The protocol is relatively straightforward. Primary complications include suppor
 
 - [SMTP](https://en.wikipedia.org/wiki/SMTP) (Wikipedia)
 - Related glossary terms:
-
   - {{glossary("NNTP")}}
   - {{glossary("POP")}}
   - {{glossary("protocol")}}

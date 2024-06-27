@@ -47,7 +47,6 @@ The steps for defining accessible description in HTML are defined in the [HTML-A
 - [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - Related glossary terms:
-
   - {{Glossary("Accessibility")}}
   - {{Glossary("Accessibility tree")}}
   - {{Glossary("Accessible name")}}

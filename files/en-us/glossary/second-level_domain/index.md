@@ -18,7 +18,6 @@ As another example, in `developer.mozilla.org`, the `developer` subdomain is use
 
 - [SLD](https://en.wikipedia.org/wiki/Second-level_domain) (Wikipedia)
 - Related glossary terms:
-
   - {{Glossary("DNS")}}
   - {{Glossary("Domain")}}
   - {{Glossary("Domain name")}}

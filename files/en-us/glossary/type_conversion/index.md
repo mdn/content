@@ -14,6 +14,5 @@ For example, given the expression `"foo" + 1`, the {{glossary("Number")}} `1` is
 
 - [Type conversion](https://en.wikipedia.org/wiki/Type_conversion) (Wikipedia)
 - Related glossary terms:
-
   - {{Glossary("Type")}}
   - {{Glossary("Type coercion")}}

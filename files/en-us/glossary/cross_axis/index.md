@@ -41,7 +41,6 @@ CSS flexbox guides:
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - Related glossary terms:
-
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container")}}
   - {{Glossary("Flex Item")}}

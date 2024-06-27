@@ -32,7 +32,6 @@ A server might use them to modify its caching behavior, or the information that 
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - [List of all HTTP headers > Fetch metadata request headers](/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers)
 - Related glossary terms:
-
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP_header","HTTP header")}}
   - {{Glossary("Response header")}}

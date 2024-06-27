@@ -19,7 +19,6 @@ If you are unsure of the type of a value, you can use the [`typeof`](/en-US/docs
 - [Data type](https://en.wikipedia.org/wiki/Data_type) on Wikipedia
 - [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
 - Related glossary terms:
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

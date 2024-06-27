@@ -29,5 +29,4 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmasc
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
 - Related glossary terms:
-
   1. {{Glossary("Character")}}

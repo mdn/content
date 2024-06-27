@@ -71,5 +71,4 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
 - [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - Related glossary terms:
-
   - {{Glossary("SEO")}}
