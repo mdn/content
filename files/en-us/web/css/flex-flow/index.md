@@ -61,7 +61,7 @@ See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on th
 
 ### Setting column-reverse and wrap
 
-In this example, the main-axis is the block direction with a reversed main-start and main-end. The flex items are allowed to wrap onto new lines, with the items laid out in multiple lines, if needed.
+In this example, the main-axis is the block direction with a reversed main-start and main-end. The flex items are allowed to wrap, creating new lines if needed.
 
 ```css
 element {
