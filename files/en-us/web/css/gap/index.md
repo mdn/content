@@ -192,11 +192,11 @@ Early versions of the specification called this property `grid-gap`, and to main
 
 ## Percentage gap values
 
-Gap acts like an empty item/track. In other words instead of gap you could simply use an empty item/track in the container. The item/track's size would be the size set in `gap` property value. Percentage values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element.
+A gap acts like an empty item or track. Instead of the gap, you could use an empty item or track in the container, and the item or track's size would be the size set in the `gap` property value. Percentage values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element.
 
 ### Explicit container size
 
-If the container has fixed size set then percentage value calculations are simple. Percentages are simply calculated from the sizes set on the container. Thus gap behaviour is consistant across all layouts. In the following example there are two containers one with grid layout and other with flex layout. The containers have five red 20x20px children. Both the containers have height explicitly set to 200px using `height: 200px`. And the gap is set using `gap: 10% 0`.
+If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 20x20px children. Both containers are explicitly set to 200px using `height: 200px` and the gap is set with `gap: 10% 0`.
 
 ```html
 <span>Grid</span>
