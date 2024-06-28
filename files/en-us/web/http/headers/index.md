@@ -274,7 +274,8 @@ The following request headers are not _strictly_ "fetch metadata request headers
 - {{HTTPHeader("Upgrade")}}
   - : This HTTP/1.1 (only) header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
 - {{HTTPHeader("Priority")}}
-  - : Provides a hint from the client as to the priority of a resource request on a particular connection as an absolute value.
+  - : Provides a hint from about the priority of a particular resource request on a particular connection.
+    The value can be sent in a request to indicate the client priority, or in a response if the server chooses to reprioritize the request.
 
 ## Experimental headers
 
