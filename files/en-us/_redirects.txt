@@ -3601,6 +3601,7 @@
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
 /en-US/docs/Glossary/Reference	/en-US/docs/Glossary/Object_reference
+/en-US/docs/Glossary/Rendering_engine	/en-US/docs/Glossary/Engine/Rendering
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
@@ -11568,6 +11569,7 @@
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
+/en-US/docs/Web/CSS/calc-constant	/en-US/docs/Web/CSS/calc-keyword
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters

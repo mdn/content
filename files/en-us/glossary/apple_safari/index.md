@@ -8,6 +8,8 @@ page-type: glossary-definition
 
 [**Safari**](https://www.apple.com/safari/) is a {{Glossary("Browser","web browser")}} developed by Apple and is built into Apple's operating systems, including macOS (for Mac computers), iPadOS (for iPad tablets), iOS (for iPhones), and visionOS (for augmented reality devices like the Apple Vision Pro).
 
+Safari uses the open source {{glossary("WebKit")}} rendering engine, which was derived from [KHTML](https://en.wikipedia.org/wiki/KHTML).
+
 ## See also
 
 - [Safari](<https://en.wikipedia.org/wiki/Safari_(web_browser)>) on Wikipedia
@@ -15,3 +17,6 @@ page-type: glossary-definition
 - [The WebKit project](https://webkit.org/)
 - [WebKit Build Archives](https://webkit.org/build-archives/)
 - [Reporting a bug for Safari](https://bugs.webkit.org/)
+- Glossary
+  - {{glossary("Browser")}}
+  - {{glossary("WebKit")}}

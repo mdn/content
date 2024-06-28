@@ -24,7 +24,7 @@ When a view transition is triggered by a `startViewTransition()` call (or a page
   - : A {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
 - {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
-- {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method's callback fulfills.
 
 ## Instance methods

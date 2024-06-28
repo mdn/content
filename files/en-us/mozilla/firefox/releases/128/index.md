@@ -52,6 +52,7 @@ This article provides information about the changes in Firefox 128 that affect d
 - {{domxref('MediaKeys.getStatusForPolicy()')}} is now supported for checking whether the CDM module, which is used to decrypt DRM protected content, would allow the presentation of encrypted media data for a "hypothetical" key based on specified policy requirements such as the [High-bandwidth Digital Content Protection (HDCP)](https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection) version supported by the system.
   This provides an application with a simple mechanism to know in advance whether playback at the optimal resolution will be allowed, without having to create a media key session or fetch a real license. ([Firefox bug 1878714](https://bugzil.la/1878714)).
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} is now supported for setting the allowed codecs in preference order. Web applications can use this to cause the remote peer to choose a preferred codec, and to disable the negotiation of specific codecs — including those used for retransmission, redundancy, and forward error correction. ([Firefox bug 1396922](https://bugzil.la/1396922)).
+- Serialization of [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), including the methods {{domxref('ShadowRoot.getHTML()')}} and {{domxref('Element.getHTML()')}}, and associated properties {{domxref('ShadowRoot.serializable')}} and {{domxref('HTMLTemplateElement.shadowRootSerializable')}}.
 
 #### DOM
 
@@ -75,6 +76,7 @@ This article provides information about the changes in Firefox 128 that affect d
 
 - Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762))
 - The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
+- The non-standard Web API events `overflow` and `underflow` have been deprecated. Use of these events should be removed from extension documents before the release of Firefox 131 ([Firefox bug 1898445](https://bugzil.la/1898445)).
 
 ### Removals
 
