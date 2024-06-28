@@ -32,7 +32,7 @@ order: unset;
 
 Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order. `order` must not be used on non-visual media such as [speech](/en-US/docs/Web/CSS/@media#speech).
 
-Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property only impact grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, the `order` property has no effect. 
+Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property only impact grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, the `order` property has no effect.
 
 ### Values
 
