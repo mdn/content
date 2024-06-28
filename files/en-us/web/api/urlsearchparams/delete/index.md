@@ -68,8 +68,8 @@ console.log(`Query string (after):\t ${params}`);
 All parameters that match both the parameter `name` and `value` should be deleted (there is no reason to specify two parameters with the same name and value as shown above).
 
 ```plain
-Query string (before):	 foo=1&bar=2&foo=3&foo=1
-Query string (after):	 bar=2&foo=3
+Query string (before):   foo=1&bar=2&foo=3&foo=1
+Query string (after):   bar=2&foo=3
 ```
 
 If your browser supports the `value` option, the "after" string should be `bar=2&foo=3`.
