@@ -73,7 +73,7 @@ Most browsers offer a debugger that can identify poorly-formed XML documents.
 
 ## Character references
 
-Like HTML, XML offers methods (called {{glossary("character reference", "character references")}}) for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
+Like HTML, XML offers {{glossary("character reference", "character references")}} for referring to some special reserved characters (such as a greater than sign which is used for tags). There are five of these characters that you should know:
 
 | Entity     | Character | Description                               |
 | ---------- | --------- | ----------------------------------------- |
