@@ -264,12 +264,16 @@ The CSS code styles the box as well as the text inside it.
 
 #### JavaScript
 
-This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.
+This code is very simple. All it does is attach an event handler to the "Hello world!" text that toggles it when it is clicked.
 
 ```js
 const el = document.getElementById("item");
+let toggleClick = false;
 el.onclick = function () {
-  alert("Owww, stop poking me!");
+  this.textContent = toggleClick
+    ? "Hello world! Welcome to MDN"
+    : "Owww, stop poking me!";
+  toggleClick = !toggleClick;
 };
 ```
 
@@ -312,12 +316,16 @@ The CSS code styles the box as well as the text inside it. The `live-sample___he
 }
 ```
 
-This JavaScript code attaches an event handler to the "Hello world!" text that makes an alert appear when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
+This JavaScript code attaches an event handler to the "Hello world!" text that toggles it when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
 
 ```js live-sample___hello-world
 const el = document.getElementById("item");
+let toggleClick = false;
 el.onclick = function () {
-  alert("Owww, stop poking me!");
+  this.textContent = toggleClick
+    ? "Hello world! Welcome to MDN"
+    : "Owww, stop poking me!";
+  toggleClick = !toggleClick;
 };
 ```
 
