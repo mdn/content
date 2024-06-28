@@ -452,7 +452,8 @@ However, if you use one type of quote, you can include the other type of quote _
 </a>
 ```
 
-To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
+To use quote marks inside other quote marks of the same type (single quote or double quote), use {{glossary("character reference", "character references")}}.
+For example, this will break:
 
 ```html-nolint example-bad
 <a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
