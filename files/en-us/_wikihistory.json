@@ -123760,10 +123760,6 @@
       "ratcliffe_mike"
     ]
   },
-  "Web/SVG/Attribute/color-profile": {
-    "modified": "2020-10-15T21:04:59.286Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
-  },
   "Web/SVG/Attribute/cursor": {
     "modified": "2020-10-15T21:18:37.523Z",
     "contributors": [
@@ -123912,10 +123908,6 @@
   "Web/SVG/Attribute/elevation": {
     "modified": "2020-10-15T21:20:22.181Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/enable-background": {
-    "modified": "2020-10-15T22:21:13.409Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Attribute/end": {
     "modified": "2020-03-17T14:16:54.678Z",
@@ -124176,10 +124168,6 @@
   "Web/SVG/Attribute/kernelUnitLength": {
     "modified": "2019-06-30T15:02:41.242Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/kerning": {
-    "modified": "2020-10-15T21:06:36.596Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
   },
   "Web/SVG/Attribute/keyPoints": {
     "modified": "2020-10-15T22:20:10.730Z",
