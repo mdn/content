@@ -241,8 +241,8 @@ body > div {
 #grid > div,
 #flex > div {
   background-color: coral;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 ```
 
@@ -293,8 +293,8 @@ body > div {
 #grid > div,
 #flex > div {
   background-color: coral;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 ```
 
