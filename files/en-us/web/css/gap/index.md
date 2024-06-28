@@ -300,7 +300,7 @@ body > div {
 
 {{EmbedLiveSample("Implicit container size", "auto", "200px")}}
 
-In case of the grid layout, percentage gap doesn't contribute to actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 120px (24px x5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `12px` (120px x 10%). The gap is applied just before rendering. Thus the grid remains 120px high but it overflows due to the percentage gap added later just befor rendering.
+In case of the grid layout, percentage gap doesn't contribute to actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 120px (24px x 5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `12px` (120px x 10%). The gap is applied just before rendering. Thus the grid remains 120px high but it overflows due to the percentage gap added later just befor rendering.
 
 In case of the flex layout, percentage gap always results in zero value.
 
