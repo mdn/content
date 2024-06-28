@@ -2,7 +2,7 @@
 title: 100 Continue
 slug: Web/HTTP/Status/100
 page-type: http-status-code
-browser-compat: http.status.100
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
 ---
 
 {{HTTPSidebar}}
@@ -24,10 +24,6 @@ and receive a `100 Continue` status code in response before sending the body.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

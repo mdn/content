@@ -18,7 +18,7 @@ There are four properties in an accessibility tree object:
   - : How do we describe this thing, if we want to provide more description beyond the name? The description of a table could explain what kind of information the table contains.
 - [**role**](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : What kind of thing is it? For example, is it a button, a nav bar, or a list of items?
-- **state**
+- [**state**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
   - : Does it have a state? Examples include checked or unchecked checkbox states and collapsed or expanded states for the [`<summary>`](/en-US/docs/Web/HTML/Element/summary) element.
 
 Additionally, the accessibility tree often contains information on what can be done with an element: a link can be _followed_, a text input can be _typed into_, etc.
@@ -27,7 +27,16 @@ While still in draft form within the Web Incubator Community Group as of April 2
 
 ## See also
 
+- [Accessibility](/en-US/docs/Web/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
+- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - [Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Accessibility")}}
+  - {{Glossary("Accessible description")}}
+  - {{Glossary("Accessible name")}}
   - {{Glossary("ARIA")}}

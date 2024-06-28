@@ -42,5 +42,5 @@ For this codec, the value in `sdpFmtpLine` would be `maxplaybackrate=16000; ster
 
 ## See also
 
-- `codecs.sdpFmtpLine` option in parameter passed to [`RTCRtpTransceiver.setCodecPreferences()`](/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#sdpFmtpLine) and [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#sdpFmtpLine).
-- `codecs.sdpFmtpLine` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#sdpFmtpLine) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#sdpFmtpLine).
+- `codecs.sdpFmtpLine` option in parameter passed to [`RTCRtpTransceiver.setCodecPreferences()`](/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#sdpfmtpline) and [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#sdpfmtpline).
+- `codecs.sdpFmtpLine` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#sdpfmtpline) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#sdpfmtpline).

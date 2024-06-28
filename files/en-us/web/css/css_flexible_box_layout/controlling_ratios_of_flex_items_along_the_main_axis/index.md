@@ -154,7 +154,7 @@ To really understand how flex item sizing works, you need to understand all thes
 
 1. Is `flex-basis` set to `auto`, and does the item have a width set? If so, the size will be based on that width.
 2. Is `flex-basis` set to `auto`? If so, the size is based on the item size.
-3. Is `flex-basis` a length or percentage, but not zero? If so this is the size of the item.
+3. Is `flex-basis` a length or percentage, but not zero? If so this is the size of the item  (floored at `min-content`).
 4. Is `flex-basis` set to `0`? If so, the item's size is not taken into consideration for the space-sharing calculation.
 
 ### Do we have available space?
