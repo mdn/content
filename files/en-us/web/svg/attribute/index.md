@@ -74,7 +74,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
 
@@ -386,7 +385,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}

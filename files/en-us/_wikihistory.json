@@ -123913,10 +123913,6 @@
     "modified": "2020-10-15T21:20:22.181Z",
     "contributors": ["Sebastianz", "Jeremie"]
   },
-  "Web/SVG/Attribute/enable-background": {
-    "modified": "2020-10-15T22:21:13.409Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Attribute/end": {
     "modified": "2020-03-17T14:16:54.678Z",
     "contributors": ["mfuji09", "VictorJanin", "Sebastianz", "Jeremie"]
