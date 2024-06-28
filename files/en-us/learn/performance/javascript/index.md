@@ -285,7 +285,7 @@ elem.removeEventListener("mousemove", handleMouseMove);
 
 Another tip is to use event delegation wherever possible. When you have some code to run in response to a user interacting with any one of a large number of child elements, you can set an event listener on their parent. Events fired on any child element will bubble up to their parent, so you don't need to set the event listener on each child individually. Less event listeners to keep track of means better performance.
 
-See [Event delegation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation) for more details and a useful example.
+See [Event delegation](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#event_delegation) for more details and a useful example.
 
 ## Tips for writing more efficient code
 
