@@ -6545,7 +6545,7 @@
 /en-US/docs/SVG/Attribute/k4	/en-US/docs/Web/SVG/Attribute/k4
 /en-US/docs/SVG/Attribute/kernelMatrix	/en-US/docs/Web/SVG/Attribute/kernelMatrix
 /en-US/docs/SVG/Attribute/kernelUnitLength	/en-US/docs/Web/SVG/Attribute/kernelUnitLength
-/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/SVG/Attribute/kerning
+/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/SVG/Attribute/keySplines	/en-US/docs/Web/SVG/Attribute/keySplines
 /en-US/docs/SVG/Attribute/keyTimes	/en-US/docs/Web/SVG/Attribute/keyTimes
 /en-US/docs/SVG/Attribute/letter-spacing	/en-US/docs/Web/SVG/Attribute/letter-spacing
@@ -11569,6 +11569,7 @@
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
+/en-US/docs/Web/CSS/calc-constant	/en-US/docs/Web/CSS/calc-keyword
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
@@ -12980,6 +12981,7 @@
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/SVGElement/dataset
+/en-US/docs/Web/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG

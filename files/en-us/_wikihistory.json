@@ -124177,10 +124177,6 @@
     "modified": "2019-06-30T15:02:41.242Z",
     "contributors": ["Sebastianz", "Jeremie"]
   },
-  "Web/SVG/Attribute/kerning": {
-    "modified": "2020-10-15T21:06:36.596Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
-  },
   "Web/SVG/Attribute/keyPoints": {
     "modified": "2020-10-15T22:20:10.730Z",
     "contributors": ["Sebastianz"]

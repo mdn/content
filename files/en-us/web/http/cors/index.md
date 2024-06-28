@@ -194,7 +194,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("Safe/HTTP", "safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent (lines 9 and 10 respectively):
+The first block above represents the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("Safe/HTTP", "safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent:
 
 ```http
 Access-Control-Request-Method: POST
@@ -203,7 +203,7 @@ Access-Control-Request-Headers: content-type,x-pingother
 
 The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will do so with a `POST` request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will do so with `X-PINGOTHER` and `Content-Type` custom headers. Now the server has an opportunity to determine whether it can accept a request under these conditions.
 
-Lines 12 - 21 above are the response that the server returns, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. Let's have a closer look at lines 15-18:
+The second block above is the response that the server returns, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. Let's have a closer look at the following lines:
 
 ```http
 Access-Control-Allow-Origin: https://foo.example
@@ -330,7 +330,7 @@ Content-Type: text/plain
 [text/plain payload]
 ```
 
-Although line 10 contains the Cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` (line 16), the response would be ignored and not made available to the web content.
+Although the request's `Cookie` header contains the cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}} with value `true`, as demonstrated in this example, the response would be ignored and not made available to the web content.
 
 #### Preflight requests and credentials
 
@@ -360,9 +360,9 @@ Also note that any `Set-Cookie` response header in a response would not set a co
 
 #### Third-party cookies
 
-Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the cookie on line 19 is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
+Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the `Cookie` header in the response is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
 
-Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
+Cookie in the request may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
 
 Cookie policy around the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute would apply.
 
