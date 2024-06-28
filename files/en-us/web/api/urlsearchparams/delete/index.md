@@ -49,8 +49,8 @@ console.log(`Query string (after):\t ${params}`);
 The log below shows that all parameters that have the name of `foo` are deleted.
 
 ```plain
-Query string (before):	 foo=1&bar=2&foo=3
-Query string (after):	 bar=2
+Query string (before):   foo=1&bar=2&foo=3
+Query string (after):   bar=2
 ```
 
 ### Delete parameters with specified name and value
