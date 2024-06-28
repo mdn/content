@@ -228,6 +228,15 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
+        <code><a id="match_about_blank">match_origin_as_fallback</a></code>
+      </td>
+      <td><code>Boolean</code></td>
+      <td>
+        When <code>true</code>, code is injected into <code>about:</code>, <code>data:</code>, and <code>blob:</code> pages when their origin matches the pattern in <code>matches</code>, even if the document origin is opaque (due to the use of CSP or iframe sandbox). Match patterns in <code>matches</code> must specify a wildcard path glob. Defaults to <code>false</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a id="matches"><code>matches</code></a>
       </td>
       <td><code>Array</code></td>

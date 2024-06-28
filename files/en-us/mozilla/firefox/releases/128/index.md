@@ -76,6 +76,8 @@ This article provides information about the changes in Firefox 128 that affect d
 - Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762))
 - The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
 - The non-standard Web API events `overflow` and `underflow` have been deprecated. Use of these events should be removed from extension documents before the release of Firefox 131 ([Firefox bug 1898445](https://bugzil.la/1898445)).
+- The {{WebExtAPIRef("scripting")}} API can now inject scripts into sandboxed pages with `about:blank`, `about:srcdoc`, and `data:` URLs ([Firefox bug 1475831](https://bugzil.la/1475831)).
+- The [manifest key `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) now supports `match_origin_as_fallback`, enabling scripts to be injected into `about:`, `data:`, and `blob:` pages when the document origin is opaque due to the use of CSP or iframe sandbox ([Firefox bug 1475831](https://bugzil.la/1475831)).
 
 ### Removals
 
