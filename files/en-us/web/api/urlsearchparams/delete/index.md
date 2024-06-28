@@ -49,7 +49,7 @@ console.log(`Query string (after):\t ${params}`);
 The log below shows that all parameters that have the name of `foo` are deleted.
 
 ```plain
-Query string (before):   foo=1&bar=2&foo=3
+Query string (before):  foo=1&bar=2&foo=3
 Query string (after):   bar=2
 ```
 
@@ -68,7 +68,7 @@ console.log(`Query string (after):\t ${params}`);
 All parameters that match both the parameter `name` and `value` should be deleted (there is no reason to specify two parameters with the same name and value as shown above).
 
 ```plain
-Query string (before):   foo=1&bar=2&foo=3&foo=1
+Query string (before):  foo=1&bar=2&foo=3&foo=1
 Query string (after):   bar=2&foo=3
 ```
 
