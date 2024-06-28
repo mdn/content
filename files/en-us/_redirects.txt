@@ -3584,6 +3584,7 @@
 /en-US/docs/Glossary/GZip	/en-US/docs/Glossary/gzip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
+/en-US/docs/Glossary/Guard	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
@@ -8171,6 +8172,7 @@
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
+/en-US/docs/Web/API/Fetch_API/Basic_concepts	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
