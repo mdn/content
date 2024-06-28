@@ -19,7 +19,8 @@ The server may also include this header in responses in order to indicate it has
 This information can then be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
 > **Note:** This header is just one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
-> There are also HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that can be used to re-prioritize a resource request after it has been sent. <!-- also the setting to turn off the HTTP2 scheme -->
+> There are also HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that can be used to re-prioritize a resource request after it has been sent.
+> The request can be sent in any HTTP version.
 
 <table class="properties">
   <tbody>
