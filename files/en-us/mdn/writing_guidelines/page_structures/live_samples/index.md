@@ -264,7 +264,7 @@ The CSS code styles the box as well as the text inside it.
 
 #### JavaScript
 
-This code is very simple. All it does is attach an event handler to the "Hello world!" text that toggles it when it is clicked.
+In the JavaScript example, we attach an event handler to the "Hello world!" text that toggles it when it is clicked.
 
 ```js
 const el = document.getElementById("item");
