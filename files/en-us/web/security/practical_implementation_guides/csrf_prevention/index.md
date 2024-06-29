@@ -27,7 +27,7 @@ There are a variety of CSRF mitigation strategies available. The most common and
 
 ### `SameSite` cookies
 
-`SameSite` cookies allow you specify that you want the browser to only send cookies in response to requests originating from the cookie's origin site, for example. This makes the CSRF attack fail because the malicious commands will not have cookies sent with them and therefore cannot authenticate as the user. The available values are:
+`SameSite` cookies allow you to specify that you want the browser to only send cookies in response to requests originating from the cookie's origin site, for example. This makes the CSRF attack fail because the malicious commands will not have cookies sent with them and therefore cannot authenticate as the user. The available values are:
 
 - `Strict`
   - : Causes the browser to only send the cookie in response to requests originating from the cookie's origin site.
@@ -75,5 +75,5 @@ httpRequest.setRequestHeader("X-CSRF-Token", token); // add it as an X-CSRF-Toke
 ## See also
 
 - [Types of attacks: Cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Types_of_attacks#cross-site_request_forgery_csrf)
-- [Wikipedia on CRSF Attacks and Prevention](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention)
+- [Wikipedia on CSRF Attacks and Prevention](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention)
 - [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
