@@ -42,7 +42,7 @@ You should set the strongest `SameSite` level that you can for your site to stil
 
 Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request.
 
-You are advised to use both strategies for websites that allow destructive changes such as account deletion. Anti-CRSF tokens are arguably unnecessary for other sites, although it is still advised to have `SameSite` set to a non-`None` value to help protect the user's [Privacy](/en-US/docs/Web/Privacy).
+You are advised to use both strategies for websites that allow destructive changes such as account deletion. Anti-CSRF tokens are arguably unnecessary for other sites, although it is still advised to have `SameSite` set to a non-`None` value to help protect the user's [Privacy](/en-US/docs/Web/Privacy).
 
 Most application frameworks have built-in CSRF tokenization to ease implementation. Make sure to choose one that does, and don't try to reinvent the wheel.
 

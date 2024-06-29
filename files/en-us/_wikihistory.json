@@ -2637,10 +2637,6 @@
     "modified": "2020-03-26T14:30:59.270Z",
     "contributors": ["mfuji09", "j9t", "teoli", "rachelandrew"]
   },
-  "Glossary/Guard": {
-    "modified": "2019-01-16T20:19:28.335Z",
-    "contributors": ["chrisdavidmills", "klez", "Andrew_Pfeiffer", "kscarfone"]
-  },
   "Glossary/Gutters": {
     "modified": "2019-03-23T22:16:42.903Z",
     "contributors": ["Verger", "teoli", "rachelandrew"]
@@ -34967,21 +34963,6 @@
       "teoli",
       "DavidWalsh",
       "kscarfone"
-    ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-02-18T19:55:22.051Z",
-    "contributors": [
-      "jswisher",
-      "Sheppy",
-      "sideshowbarker",
-      "LurN",
-      "parambirs",
-      "chrisdavidmills",
-      "gapple",
-      "lawrencekgrant",
-      "gbharatwaj",
-      "smarvin"
     ]
   },
   "Web/API/Fetch_API/Cross-global_fetch_usage": {
@@ -123760,10 +123741,6 @@
       "ratcliffe_mike"
     ]
   },
-  "Web/SVG/Attribute/color-profile": {
-    "modified": "2020-10-15T21:04:59.286Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
-  },
   "Web/SVG/Attribute/cursor": {
     "modified": "2020-10-15T21:18:37.523Z",
     "contributors": [
@@ -123912,10 +123889,6 @@
   "Web/SVG/Attribute/elevation": {
     "modified": "2020-10-15T21:20:22.181Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/enable-background": {
-    "modified": "2020-10-15T22:21:13.409Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Attribute/end": {
     "modified": "2020-03-17T14:16:54.678Z",
@@ -124176,10 +124149,6 @@
   "Web/SVG/Attribute/kernelUnitLength": {
     "modified": "2019-06-30T15:02:41.242Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/kerning": {
-    "modified": "2020-10-15T21:06:36.596Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
   },
   "Web/SVG/Attribute/keyPoints": {
     "modified": "2020-10-15T22:20:10.730Z",
