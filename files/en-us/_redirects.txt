@@ -3584,6 +3584,7 @@
 /en-US/docs/Glossary/GZip	/en-US/docs/Glossary/gzip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
+/en-US/docs/Glossary/Guard	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
@@ -3601,6 +3602,7 @@
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
 /en-US/docs/Glossary/Reference	/en-US/docs/Glossary/Object_reference
+/en-US/docs/Glossary/Rendering_engine	/en-US/docs/Glossary/Engine/Rendering
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
@@ -6502,7 +6504,6 @@
 /en-US/docs/SVG/Attribute/color	/en-US/docs/Web/SVG/Attribute/color
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
-/en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -6544,7 +6545,7 @@
 /en-US/docs/SVG/Attribute/k4	/en-US/docs/Web/SVG/Attribute/k4
 /en-US/docs/SVG/Attribute/kernelMatrix	/en-US/docs/Web/SVG/Attribute/kernelMatrix
 /en-US/docs/SVG/Attribute/kernelUnitLength	/en-US/docs/Web/SVG/Attribute/kernelUnitLength
-/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/SVG/Attribute/kerning
+/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/SVG/Attribute/keySplines	/en-US/docs/Web/SVG/Attribute/keySplines
 /en-US/docs/SVG/Attribute/keyTimes	/en-US/docs/Web/SVG/Attribute/keyTimes
 /en-US/docs/SVG/Attribute/letter-spacing	/en-US/docs/Web/SVG/Attribute/letter-spacing
@@ -8171,6 +8172,7 @@
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
+/en-US/docs/Web/API/Fetch_API/Basic_concepts	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
@@ -11568,6 +11570,7 @@
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
+/en-US/docs/Web/CSS/calc-constant	/en-US/docs/Web/CSS/calc-keyword
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
@@ -12979,6 +12982,7 @@
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/SVGElement/dataset
+/en-US/docs/Web/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
