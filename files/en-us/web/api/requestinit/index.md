@@ -40,6 +40,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - {{jsxref("TypedArray")}}
     - {{domxref("URLSearchParams")}}
 
+    See [Setting a body](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_a_body) for more details.
+
 - `browsingTopics` {{optional_inline}} {{experimental_inline}}
 
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
@@ -98,6 +100,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     Including credentials in cross-origin requests can make a site vulnerable to {{glossary("CSRF")}} attacks, so even if `credentials` is set to `include`, the server must also agree to their inclusion by including the {{httpheader("Access-Control-Allow-Credentials")}} in its response. Additionally, in this situation the server must explicitly specify the client's origin in the {{httpheader("Access-Control-Allow-Origin")}} response header (that is, `*` is not allowed).
 
+    See [Including credentials](/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials) for more details.
+
     Defaults to `same-origin`.
 
 - `headers` {{optional_inline}}
@@ -108,6 +112,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}.
 
     If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
+
+    See [Setting headers](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_headers) for more details.
 
 - `integrity`
 
@@ -151,6 +157,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
       - : Used only by HTML navigation. A `navigate` request is created only while navigating between documents.
     - `websocket`
       - : Used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
+
+    See [Making cross-origin requests](/en-US/docs/Web/API/Fetch_API/Using_Fetch#making_cross-origin_requests) for more details.
 
     Defaults to `cors`.
 
