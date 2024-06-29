@@ -272,7 +272,7 @@ async function post() {
 In this case the request will be sent with the following options:
 
 - `method: "POST"`
-- `headers: ["Content-Type": "application/json"]`
+- `headers: {"Content-Type": "application/json"}`
 - `body: '{"username":"example2"}'`
 - `referrer: ""`
 
