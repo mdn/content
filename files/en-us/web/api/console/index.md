@@ -218,6 +218,8 @@ The properties usable along with the `%c` syntax are as follows (at least, in Fi
 
 > **Note:** The console message behaves like an inline element by default. To see the effects of `padding`, `margin`, etc. you should set it to for example `display: inline-block`.
 
+> **Note:** In order to support both light and dark color schemes, {{cssxref("light-dark")}} can be used when specifying color. e.g. `color: light-dark(#D00000, #FF4040);`
+
 ### Using groups in the console
 
 You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call `console.group()`. The `console.groupCollapsed()` method is similar but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.
