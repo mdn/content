@@ -83,8 +83,12 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 The static properties are all well-known Symbols. In these Symbols' descriptions, we will use language like "`Symbol.hasInstance` is a method determining…", but bear in mind that this is referring to the semantic of an object's method having this Symbol as the method name (because well-known Symbols act as "protocols"), not describing the value of the Symbol itself.
 
+- {{jsxref("Symbol.asyncDispose")}}
+  - : A method that disposes resources of the object asynchronously when the object goes out of scope. Used by the [`await using`](/en-US/docs/Web/JavaScript/Reference/Statements/await_using) declaration.
 - {{jsxref("Symbol.asyncIterator")}}
   - : A method that returns the default AsyncIterator for an object. Used by [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of).
+- {{jsxref("Symbol.dispose")}}
+  - : A method that disposes resources of the object when the object goes out of scope. Used by the [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declaration.
 - {{jsxref("Symbol.hasInstance")}}
   - : A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("Operators/instanceof", "instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}

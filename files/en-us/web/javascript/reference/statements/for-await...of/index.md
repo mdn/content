@@ -58,6 +58,14 @@ If the `for await...of` loop exited early (e.g., a `break` statement is encounte
 - If the `iterable` is a sync iterable that yields promises, `for await...of` would produce a sequence of resolved values, while `for...of` would produce a sequence of promises. (However, beware of error handling and cleanup — see [Iterating over sync iterables and generators](#iterating_over_sync_iterables_and_generators))
 - For `for await...of`, the `variable` can be the identifier `async` (e.g., `for await (async of foo)`); `for...of` forbids this case.
 
+Like `for...of`, if you use the `using` declaration, then the variable cannot be called `of`:
+
+```js-nolint example-bad
+for await (using of of []); // SyntaxError
+```
+
+This is to avoid syntax ambiguity with the valid code `for await (using of [])`, before `using` was introduced.
+
 ## Examples
 
 ### Iterating over async iterables
