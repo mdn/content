@@ -203,7 +203,7 @@ The `fragment` object contains an array of objects, each of which can contain th
         Note that multiple flags can be specified by separating values with pipe symbols, for example:
 
         ```js
-        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA
+        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
         ```
 
 ### `multisample` object structure
