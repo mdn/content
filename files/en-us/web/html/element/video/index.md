@@ -435,9 +435,6 @@ This example builds on the last one, offering three different sources for the me
   controls
   poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
   <source
-    src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
-    type="video/ogg" />
-  <source
     src="https://archive.org/download/ElephantsDream/ed_hd.avi"
     type="video/avi" />
   <source
