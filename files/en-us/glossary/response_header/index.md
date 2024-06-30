@@ -39,5 +39,4 @@ x-frame-options: DENY
 
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP header")}}
-  - {{Glossary("Response header")}}
   - {{Glossary("Request header")}}
