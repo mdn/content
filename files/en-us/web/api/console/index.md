@@ -17,8 +17,6 @@ The `console` object can be accessed from any global object. {{domxref("Window")
 console.log("Failed to open the specified link");
 ```
 
-This page documents the [Methods](#methods) available on the `console` object and gives a few [Usage](#usage) examples.
-
 ## Instance methods
 
 - {{domxref("console/assert_static", "console.assert()")}}
