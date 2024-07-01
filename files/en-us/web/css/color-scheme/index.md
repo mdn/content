@@ -20,7 +20,7 @@ color-scheme: normal;
 color-scheme: light;
 color-scheme: dark;
 color-scheme: light dark;
-color-scheme: only light;
+color-scheme: light only;
 
 /* Global values */
 color-scheme: inherit;
@@ -44,7 +44,7 @@ The `color-scheme` property's value must be one of the following keywords.
 
   - : Forbids the user agent from overriding the color scheme for the element.
 
-    Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: only light;` on a specific element or `:root`.
+    Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: light only;` on a specific element or `:root`.
 
 ## Formal definition
 
@@ -70,13 +70,13 @@ To opt in specific elements to the user's color scheme preferences, declare `col
 
 ```css
 header {
-  color-scheme: only light;
+  color-scheme: light only;
 }
 main {
   color-scheme: light dark;
 }
 footer {
-  color-scheme: only dark;
+  color-scheme: dark only;
 }
 ```
 
