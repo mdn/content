@@ -463,23 +463,23 @@ The anchor-positioned element, with its `position` set to `fixed`, is associated
 const anchors = document.querySelectorAll(".anchor");
 anchors.forEach((anchor) => dragElement(anchor));
 
-function dragElement(elmnt) {
+function dragElement(element) {
   let pos1, pos2, pos3, pos4;
 
-  elmnt.onmousedown = dragMouseDown;
-  elmnt.addEventListener("keyup", (e) => {
+  element.onmousedown = dragMouseDown;
+  element.addEventListener("keyup", (e) => {
     switch (e.key) {
       case "d":
-        elmnt.style.left = elmnt.offsetLeft + 5 + "px";
+        element.style.left = element.offsetLeft + 5 + "px";
         break;
       case "a":
-        elmnt.style.left = elmnt.offsetLeft - 5 + "px";
+        element.style.left = element.offsetLeft - 5 + "px";
         break;
       case "w":
-        elmnt.style.top = elmnt.offsetTop - 5 + "px";
+        element.style.top = element.offsetTop - 5 + "px";
         break;
       case "s":
-        elmnt.style.top = elmnt.offsetTop + 5 + "px";
+        element.style.top = element.offsetTop + 5 + "px";
         break;
     }
     e.preventDefault();
@@ -493,8 +493,8 @@ function dragElement(elmnt) {
     pos3 = e.offsetLeft;
     pos4 = e.offsetTop;
     // set the element's new position:
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    element.style.top = element.offsetTop - pos2 + "px";
+    element.style.left = element.offsetLeft - pos1 + "px";
   }
 
   function dragMouseDown(e) {
@@ -513,8 +513,8 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    element.style.top = element.offsetTop - pos2 + "px";
+    element.style.left = element.offsetLeft - pos1 + "px";
   }
 
   function closeDragElement() {
