@@ -11,7 +11,7 @@ The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items 
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-The {{cssxref("flex-flow")}} property shorthand can be used to set both the {{CSSXRef("flex-direction")}} and `flex-wrap` properties, which together define the flex container's main and cross axes, respectively.
+The {{cssxref("flex-flow")}} property shorthand can be used to set both the {{CSSXRef("flex-direction")}} and `flex-wrap` properties, which define the flex container's main and cross axes, respectively.
 
 ## Syntax
 
