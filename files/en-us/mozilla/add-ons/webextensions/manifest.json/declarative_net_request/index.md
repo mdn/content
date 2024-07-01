@@ -40,6 +40,8 @@ browser-compat: webextensions.manifest.declarative_net_request
 
 Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions">Permissions</a> for more information on permission requirements.
 
+> **Note:** When a rules file contains unrecognized properties, these properties are ignored, and all otherwise valid rules are loaded.
+
 ## Syntax
 
 The `"declarative_net_request"` key is an object that must contain the `"rule_resources"` property, an array that must include at least one object with these properties:
