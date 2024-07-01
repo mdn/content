@@ -93,6 +93,7 @@ And what's even better is that it is being developed as a web standard via the [
 ## Examples
 
 - [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
+- [Conway's Game of Life](https://github.com/TrezorTop/wasm-cellular-automata)
 - See our [webassembly-examples](https://github.com/mdn/webassembly-examples/) repo for a number of other examples.
 
 ## Specifications
