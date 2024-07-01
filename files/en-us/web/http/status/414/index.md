@@ -21,6 +21,10 @@ There are a few rare conditions when this might occur:
 414 URI Too Long
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}

@@ -19,6 +19,10 @@ For example, in {{Glossary("WebDAV")}}, if a `PROPPATCH` request was issued, and
 424 Failed Dependency
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}

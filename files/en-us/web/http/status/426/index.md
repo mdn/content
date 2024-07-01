@@ -19,6 +19,8 @@ The server sends an {{HTTPHeader("Upgrade")}} header with this response to indic
 
 ## Examples
 
+### Upgrade required
+
 ```http
 HTTP/1.1 426 Upgrade Required
 Upgrade: HTTP/2.0

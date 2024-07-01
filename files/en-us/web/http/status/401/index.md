@@ -19,7 +19,9 @@ This status code is similar to the {{HTTPStatus("403", "403 Forbidden")}} status
 401 Unauthorized
 ```
 
-## Example response
+## Examples
+
+### Unauthorized
 
 ```http
 HTTP/1.1 401 Unauthorized

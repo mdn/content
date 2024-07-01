@@ -19,7 +19,9 @@ No standard use convention exists and different entities use it in different con
 402 Payment Required
 ```
 
-## Example response
+## Examples
+
+### Payment required
 
 ```http
 HTTP/1.1 402 Payment Required

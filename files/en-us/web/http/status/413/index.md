@@ -9,12 +9,45 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.413
 
 The HTTP **`413 Content Too Large`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
 
-Prior to RFC 9110 the response phrase for the status was **`Payload Too Large`**. That name is still widely used.
+Prior to RFC 9110 the response phrase for the status was **`Payload Too Large`**, and that message is still widely used.
 
 ## Status
 
 ```http
 413 Content Too Large
+```
+
+## Examples
+
+### File upload limit exceeded
+
+The following example shows what the client may send when an [input](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
+
+```http
+POST /upload HTTP/1.1
+Host: www.example.com
+Content-Type: multipart/form-data; boundary=----Boundary1234
+Content-Length: 4012345
+
+------Boundary1234
+Content-Disposition: form-data; name="file"; filename="myImage.jpg"
+Content-Type: image/jpeg
+
+\xFF\xD8\xFF\xE0\x00...(binary data)
+------Boundary1234--
+```
+
+The server may reject the upload if there is a restriction on the maximum size of files it will process, and the response body includes a `message` with some context:
+
+```http
+HTTP/1.1 413 Content Too Large
+Content-Type: application/json
+Content-Length: 97
+
+{
+  "error": "Upload failed",
+  "message": "Maximum allowed upload size is 4MB",
+}
 ```
 
 ## Specifications

@@ -20,6 +20,10 @@ Faced with this error, browsers usually either abort the operation (for example,
 416 Range Not Satisfiable
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}

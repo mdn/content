@@ -18,7 +18,9 @@ A {{HTTPHeader("Retry-After")}} header might be included to this response indica
 429 Too Many Requests
 ```
 
-## Example
+## Examples
+
+### With Retry-After response header
 
 ```http
 HTTP/1.1 429 Too Many Requests

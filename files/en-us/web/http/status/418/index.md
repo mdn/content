@@ -19,6 +19,10 @@ Some websites use this response for requests they do not wish to handle, such as
 418 I'm a teapot
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}

@@ -18,7 +18,9 @@ Its content should contain some information in WebDAV's XML format.
 423 Locked
 ```
 
-### Example
+## Examples
+
+### 423 Locked
 
 ```http
 HTTP/1.1 423 Locked

@@ -17,7 +17,9 @@ This status is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that cont
 407 Proxy Authentication Required
 ```
 
-## Example response
+## Examples
+
+### Proxy auth
 
 ```http
 HTTP/1.1 407 Proxy Authentication Required

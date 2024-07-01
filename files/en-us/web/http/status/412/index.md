@@ -19,6 +19,8 @@ In that case, the request, usually an upload or a modification of a resource, ca
 
 ## Examples
 
+### Precondition failed
+
 ```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"

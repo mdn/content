@@ -19,6 +19,10 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 410 Gone
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}

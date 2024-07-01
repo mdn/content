@@ -22,6 +22,10 @@ This response is used much more since some browsers, like Chrome, Firefox 27+, a
 408 Request Timeout
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}

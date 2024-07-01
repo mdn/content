@@ -18,7 +18,9 @@ The access is tied to the application logic, such as insufficient rights to a re
 403 Forbidden
 ```
 
-## Example response
+## Examples
+
+### Forbidden
 
 ```http
 HTTP/1.1 403 Forbidden

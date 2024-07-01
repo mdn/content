@@ -23,6 +23,10 @@ When a precondition header is **not matching** the server side state, the respon
 
 {{Specifications}}
 
+## Examples
+
+TODO
+
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

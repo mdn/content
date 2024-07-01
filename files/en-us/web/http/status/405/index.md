@@ -9,13 +9,34 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.405
 
 The HTTP **`405 Method Not Allowed`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server knows the request method, but the target resource doesn't support this method.
 
-The server **must** generate an **`Allow`** header field in a 405 status code response.
-The field must contain a list of methods that the target resource currently supports.
+The server **must** generate an **`Allow`** header in a 405 response with a list of methods that the target resource currently supports.
+
+In cases where a server is returning a 405 response, and a server owner expects the requests to succeed, this may be caused by improper permissions for files or directories.
 
 ## Status
 
 ```http
 405 Method Not Allowed
+```
+
+## Examples
+
+### TRACE method not allowed
+
+It's common for server owners to disallow use of the `TRACE` method due to security concerns.
+The following example shows a typical response where a server doesn't allow the use of `TRACE`:
+
+```http
+TRACE / HTTP/1.1
+Host: example.com
+```
+
+```http
+HTTP/1.1 405 Method Not Allowed
+Content-Length: 0
+Date: Fri, 28 Jun 2024 14:30:31 GMT
+Server: ECLF (nyd/D179)
+Allow: GET, POST, HEAD
 ```
 
 ## Specifications

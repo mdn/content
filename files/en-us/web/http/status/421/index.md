@@ -16,6 +16,10 @@ This might be possible if a connection is reused or if an alternative service is
 421 Misdirected Request
 ```
 
+## Examples
+
+TODO
+
 ## Specifications
 
 {{Specifications}}
