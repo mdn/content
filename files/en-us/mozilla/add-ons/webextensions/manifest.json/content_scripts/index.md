@@ -228,7 +228,7 @@ Details of all the keys you can include are given in the table below.
     </tr>
     <tr>
       <td>
-        <code><a id="match_about_blank">match_origin_as_fallback</a></code>
+        <code><a id="match_origin_as_fallback">match_origin_as_fallback</a></code>
       </td>
       <td><code>Boolean</code></td>
       <td>
