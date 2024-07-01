@@ -18,7 +18,7 @@ Some user agents subclass this interface to provide more precise information or 
 In addition to the properties listed below, `MediaStreamTrack` has constrainable properties which can be set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} and accessed using {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} and {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) to learn how to correctly work with constrainable properties. Not doing so correctly will result in your code being unreliable.
 
 - {{domxref("MediaStreamTrack.contentHint")}}
-  - : A string that may be used by the web application to provide a hint as to what type of content the track contains to guide how it should be treated by API consumers.
+  - : A string that may be used by the web application to provide a hint as to what type of content the track contains to guide how it should be treated by API consumers. Allowable values depend on the value of the {{domxref("MediaStreamTrack.kind")}} property.
 - {{domxref("MediaStreamTrack.enabled")}}
 
   - : A Boolean whose value of `true` if the track is enabled, that is allowed to render the media source stream; or `false` if it is disabled, that is not rendering the media source stream but silence and blackness. If the track has been disconnected, this value can be changed but has no more effect.

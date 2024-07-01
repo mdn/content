@@ -1987,7 +1987,7 @@
 /en-US/docs/DOM/event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM/event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
-/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/DOM/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM/form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM/form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -2469,7 +2469,7 @@
 /en-US/docs/DOM:event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM:event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM:event.which	/en-US/docs/Web/API/UIEvent/which
-/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/DOM:form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM:form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM:form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -3584,6 +3584,7 @@
 /en-US/docs/Glossary/GZip	/en-US/docs/Glossary/gzip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
+/en-US/docs/Glossary/Guard	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
@@ -6503,7 +6504,6 @@
 /en-US/docs/SVG/Attribute/color	/en-US/docs/Web/SVG/Attribute/color
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
-/en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -6545,7 +6545,7 @@
 /en-US/docs/SVG/Attribute/k4	/en-US/docs/Web/SVG/Attribute/k4
 /en-US/docs/SVG/Attribute/kernelMatrix	/en-US/docs/Web/SVG/Attribute/kernelMatrix
 /en-US/docs/SVG/Attribute/kernelUnitLength	/en-US/docs/Web/SVG/Attribute/kernelUnitLength
-/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/SVG/Attribute/kerning
+/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/SVG/Attribute/keySplines	/en-US/docs/Web/SVG/Attribute/keySplines
 /en-US/docs/SVG/Attribute/keyTimes	/en-US/docs/Web/SVG/Attribute/keyTimes
 /en-US/docs/SVG/Attribute/letter-spacing	/en-US/docs/Web/SVG/Attribute/letter-spacing
@@ -8136,6 +8136,7 @@
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Web/API/Event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
+/en-US/docs/Web/API/Event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/Web/API/Event/CustomEvent	/en-US/docs/Web/API/CustomEvent
 /en-US/docs/Web/API/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Web/API/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
@@ -8172,6 +8173,7 @@
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
+/en-US/docs/Web/API/Fetch_API/Basic_concepts	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
@@ -12981,6 +12983,7 @@
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/SVGElement/dataset
+/en-US/docs/Web/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
