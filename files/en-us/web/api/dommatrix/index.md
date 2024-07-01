@@ -203,7 +203,7 @@ Here are the positions of the 16 elements (m_11 through m_44) which comprise the
       </mtable>
       <mo>]</mo>
     </mrow>
-    <annotation encoding="TeX">\left [ \begin{matrix} m_{11} &#x26; m_{21} &#x26; m_{31} &#x26; m_{41} \\ m_{12} &#x26; m_{22} &#x26; m_{32} &#x26; m_{42} \\ m_{13} &#x26; m_{23} &#x26; m_{33} &#x26; m_{43} \\ m_{14} &#x26; m_{24} &#x26; m_{34} &#x26; m_{44} \end{matrix} \right ]</annotation>
+    <annotation encoding="TeX">\left [ \begin{matrix} m_{11} & m_{21} & m_{31} & m_{41} \\ m_{12} & m_{22} & m_{32} & m_{42} \\ m_{13} & m_{23} & m_{33} & m_{43} \\ m_{14} & m_{24} & m_{34} & m_{44} \end{matrix} \right ]</annotation>
   </semantics>
 </math>
 

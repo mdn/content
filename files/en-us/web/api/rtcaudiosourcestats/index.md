@@ -59,6 +59,7 @@ You can calculate a root mean square (RMS) value in the same units as `audioLeve
       <mi>totalSamplesDuration</mi>
     </mfrac>
   </msqrt>
+  <annotation encoding="TeX">\sqrt{\frac{totalAudioEnergy}{totalSamplesDuration}}</annotation>
 </math>
 
 You can also use the accumulated totals to calculate the average audio level over an arbitrary time period.
