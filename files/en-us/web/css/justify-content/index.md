@@ -283,6 +283,8 @@ div:last-of-type {
   <option value="flex-start">flex-start</option>
   <option value="flex-end">flex-end</option>
   <option value="center">center</option>
+  <option value="safe center">safe center</option>
+  <option value="unsafe center">unsafe center</option>
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="space-between" selected>space-between</option>
