@@ -7,7 +7,7 @@ browser-compat: css.properties.justify-content
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **`justify-content`** property defines how the browser distributes space between and around content items along the {{Glossary("main axis")}} of a flex container and the [inline axis](/en-US/docs/Glossary/Logical_properties#inline_direction) of multicol and grid containers.
+The [CSS](/en-US/docs/Web/CSS) **`justify-content`** property defines how the browser distributes space between and around content items along the {{Glossary("main axis")}} of a flex container and the [inline axis](/en-US/docs/Glossary/Logical_properties#inline_direction) of grid and multicol containers.
 
 The interactive example below demonstrates some `justify-content` values using grid layout.
 
