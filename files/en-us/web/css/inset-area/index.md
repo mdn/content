@@ -7,39 +7,42 @@ browser-compat: css.properties.inset-area
 
 {{CSSRef}}{{seecompattable}}
 
-The **`inset-area`** [CSS](/en-US/docs/Web/CSS) property enables an **anchor-positioned** element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid called the **inset-area grid**. This provides an alternative to positioning an element relative to its anchor via {{glossary("inset properties")}} and the {{cssxref("anchor()")}} function.
+The **`inset-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
+
+This `inset-area` property provides an alternative to tethering and positioning an element relative to its anchor via {{glossary("inset properties")}} and the {{cssxref("anchor()")}} function, providing a convenient grid-based concept for the common use-case of positioning the positioned element's containing blocke's edges relative to the edges of its default anchor element.
+
+If an element does not have a default anchor element, or is not an absolutely-positioned element, this property has no effect.
 
 ## Syntax
 
 ```css
-/* Examples: Two keywords to place the element in a single specific tile */
+/* Default value */
+inset-area: none;
+
+/* Two <inset-area> keywords defining a single specific tile */
 inset-area: top left;
-inset-area: bottom right;
 inset-area: start end;
-inset-area: center end;
 inset-area: block-start center;
 inset-area: inline-start block-end;
 inset-area: x-start y-end;
 inset-area: center y-self-end;
 
-/* Examples: Two keywords to span the element across two tiles */
+/* Two <inset-area> keywords spanning two tiles */
 inset-area: top span-left;
-inset-area: span-bottom right;
 inset-area: center span-start;
 inset-area: inline-start span-block-end;
 inset-area: y-start span-x-end;
 
-/* Examples: Two keywords to span the element across three tiles */
+/* Two <inset-area> keywords spanning three tiles */
 inset-area: top span-all;
 inset-area: block-end span-all;
 inset-area: x-self-start span-all;
 
-/* Examples: One keyword with an implicit second keyword  */
+/* One <inset-area> keyword with an implicit second <inset-area> keyword  */
 inset-area: top; /* equiv: top span-all */
 inset-area: inline-start; /* equiv: inline-start span-all */
 inset-area: center; /* equiv: center center */
 inset-area: span-all; /* equiv: center center */
-inset-area: start; /* equiv: start start */
 inset-area: end; /* equiv: end end */
 
 /* Global values */
@@ -52,14 +55,19 @@ inset-area: unset;
 
 ### Values
 
+The property value is two `<inset-area>` keyterms, or the keyword `none`. If only one `<inset-area>` keyterm is provided, the second keyterm is implied.
+
 - [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value)
+
   - : Specifies the area of the inset area grid on which to place selected positioned elements.
+
 - `none`
+
   - : No inset area is set.
 
 ## Description
 
-`inset-area` provides an alternative to the `anchor()` function for positioning elements relative to anchors. `inset-area` works on the concept of a 3x3 grid of tiles, with the anchor element inside the center tile:
+The `inset-area` property provides an alternative to the `anchor()` function for positioning elements relative to anchors. `inset-area` works on the concept of a 3x3 grid of tiles, called the **inset-area grid**, with the anchor element being the center tile:
 
 ![The inset-area grid, as described below](inset-area.png)
 
@@ -74,21 +82,13 @@ The dimensions of the center tile are defined by the [containing block](/en-US/d
 
 For example:
 
-- You can specify a row value and a column value to place the positioned element in that specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom center square.
-- You can specify a row or column value plus a `span-*` value. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the amount of that column to span. For example:
-  - `top span-left` causes the positioned element to be placed in the top row, and span across the center and left tiles of that row.
-  - `block-end span-inline-end` causes the positioned element to be placed in the block end row, and span across the center and inline end tiles of that row.
-  - `bottom span-all` causes the positioned element to be placed in the bottom row, and span across the left, center, and right tiles of that row.
+- You can specify a row value and a column value to place the positioned element in a single, specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom center square.
+- You can specify a row or column value plus a `span-*` value to span two or three cells. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the amount of that column to span. For example:
+  - `top span-left` causes the positioned element to be placed in the center of the top row, and span across the center and left tiles of that row.
+  - `block-end span-inline-end` causes the positioned element to be placed in the center of the block end row, and span across the center and inline end tiles of that row.
+  - `bottom span-all` and `y-end span-all` cause the positioned element to be placed in the center of the bottom row, and span across three cells, in this case the left, center, and right tiles of the bottom row.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
-
-### An aside on positioned element width
-
-If the positioned element has not had a specific size set on it, its size will default to its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size), but it will also be affected by the size of the inset-area grid.
-
-If the positioned element is placed into a corner or side grid square (say with `inset-area: top left`) or is set to span two or more grid squares (for example using `inset-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although it may also be constrained by the edge of the `<body>`.
-
-If the positioned element is vertically aligned with the center tile (say with `inset-area: bottom center`), it will align with the specified grid square but adopt the same width as the anchor element — it is being sized according to the anchor element's containing block size. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
+For detailed information on anchor features, usage, and the `inset-area` property, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide, specifically the section on [setting an `inset-area`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_an_inset-area).
 
 ### Adjusted default behavior
 
@@ -96,16 +96,24 @@ When an [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value is set on a
 
 #### Self-alignment property `normal` value
 
-The `normal` value of the self-alignment properties ({{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("justify-self")}}) behaves as either `start`, `end`, or `anchor-center`, depending on the positioning of the element:
+The `normal` value of the self-alignment properties, including {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("justify-self")}}, behaves as either `start`, `end`, or [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center). Which value the self-alignment property defaults to depends on the positioning of the element:
 
 - If the `inset-area` value specifies the center region in an axis, the default alignment in that axis is `anchor-center`.
-- Otherwise, the behavior is the opposite of the region it specifies. For example, if the `inset-area` value specifies the start region of its axis, the default alignment in that axis is `end`.
+- Otherwise, the behavior is the opposite of the region specified by the `inset-area` property. For example, if the `inset-area` value specifies the start region of its axis, the default alignment in that axis is `end`.
 
-For example, if the `writing-mode` is set to `horizontal-tb`, `inset-area: span-x-start top` resolves to the "start" region of the vertical axis, and the "start" and "center" regions of the horizontal axis. The default alignments will therefore be `align-self: end` and `justify-self: anchor-center`.
+For example, if the `writing-mode` is set to `horizontal-tb`, `inset-area: top span-x-start` causes the positioned element to be placed in the center of the top row, and span across the center and start tiles of that row. In this case, the self-alignment properties will default to `align-self: end` and `justify-self: anchor-center`.
 
-#### Auto inset values
+#### inset properties and values
 
-Any {{glossary("inset properties")}} set to `auto` will behave as if their value was set to `0`.
+When an anchor positioned element is positioned using the `inset-area` property, any {{glossary("inset properties")}}, such as {{cssxref("top")}} or {{cssxref("inset-inline-end")}}, set specify offsets from the inset-area, and some property values, like [`max-block-size: 100%`](/en-US/docs/Web/CSS/max-block-size), will be relative to the inset-area as well. Any inset properties set or defaulting `auto` will behave as if their value was set to `0`.
+
+### An aside on positioned element width
+
+If the positioned element has not had a specific size set on it, its size will default to its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size), but it will also be affected by the size of the inset-area grid.
+
+If the positioned element is placed in the single top center, bottom center, or center center cell, it's width block will be the same width as the anchor's containing block size, growing up, down, or in both directions, respectively. It will align with the specified grid square but adopt the same width as the anchor element. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
+
+If the positioned element is placed in any other single grid square (say with `inset-area: top left`) or is set to span two or more grid squares (for example using `inset-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although it may also be constrained by the edge of the `<body>`.
 
 ## Formal definition
 
@@ -117,25 +125,86 @@ Any {{glossary("inset properties")}} set to `auto` will behave as if their value
 
 ## Examples
 
+### Basic example
+
+In this example, a positioned element is tethered and positioned relative to its associated anchor using the `inset-area` property.
+
+#### HTML
+
+The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}} that will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visable. All are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+
+```html
+<div class="anchor" contenteditable="true">⚓︎</div>
+
+<p class="positionedElement" contenteditable-"true">This can be edited.</p>
+
+<style contenteditable-"true">.positionedElement {
+  inset-area: CHANGEME;
+}
+</style>
+```
+
+#### CSS
+
+We convert the `<div>` to an anchor with the {{cssxref("anchor-name")}} property, associating the positioned (via {{cssxref("position")}}) `<p>` with it via the {{cssxref("position-anchor")}} value.
+
+We set the initial `inset-area` value to `top center`. This value is set on a `p` selector, so the value has less [specificity](/en-US/docs/Web/CSS/Specificity) than any value added to the `<style>` block's `.positionedElement` [class selector](/en-US/docs/Web/CSS/Class_selectors).
+
+```css
+.anchor {
+  anchor-name: --infobox;
+  background: palegoldenrod;
+  font-size: 3em;
+  width: fit-content;
+  border: 1px solid goldenrod;
+  margin: 100px auto;
+}
+
+p {
+  position: absolute;
+  position-anchor: --infobox;
+  inset-area: top center;
+  margin: 0;
+  background-color: olive;
+  border: 1px solid darkolivegreen;
+}
+
+style {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+  background-color: #ededed;
+  -webkit-user-modify: read-write-plaintext-only;
+  line-height: 1.5;
+  padding: 10px;
+}
+```
+
+#### Results
+
+{{ EmbedLiveSample("Basic example", "100%", "360") }}
+
+Try changing the amount of text in the anchor positioned element to see how it grows. Also try changing the invalid "CHANGEME" value of the `inset-area` property to a valid value.
+
 ### `inset-area` value comparison
 
 Let's show some of the `inset-area` values in action. This demo creates an anchor and tethers a positioned element to it. It also provides a drop-down menu that allows you to choose various `inset-area` values to apply to the positioned element, to see their effect. One of the options causes a text field to appear that enables you to enter a custom value. Finally, a checkbox is provided that can be used to turn a vertical `writing-mode` on and off, allowing you to observe how `inset-area` value effects differ across different writing modes.
 
 #### HTML
 
-In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively.
+In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively. We've included the contenteditable attribute, making them both directly editable.
 
-we've also included two forms that contain the {{htmlelement("select")}} and [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) elements for setting different `inset-area` values, and the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element for toggling the vertical {{cssxref("writing-mode")}} on and off.
+We've also included two forms that contain the {{htmlelement("select")}} and [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) elements for setting different `inset-area` values, and the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element for toggling the vertical {{cssxref("writing-mode")}} on and off. The code for these, along with the JavaScript, have been hidden for the sake of brevity.
 
 ```html
-<div id="anchor-container">
-  <div class="anchor">⚓︎</div>
+<div class="anchor" contenteditable>⚓︎</div>
 
-  <div class="infobox">
-    <p>This is an information box.</p>
-  </div>
+<div class="infobox">
+  <p contenteditable>You can edit this text.</p>
 </div>
+```
 
+```html hidden
 <form id="inset-area-form">
   <div>
     <label for="inset-area-select">Choose an inset-area:</label>
@@ -184,13 +253,13 @@ we've also included two forms that contain the {{htmlelement("select")}} and [`<
     </select>
   </div>
   <div id="inset-area-custom-container">
-    <label for="inset-area-custom">Enter a custom inset-area:</label>
+    <label for="inset-area-custom">Enter a custom inset-area:</label><br />
     <input type="text" id="inset-area-custom" name="inset-area-custom" />
   </div>
 </form>
 
 <form id="writing-mode-form">
-  <label for="writing-mode-checkbox">writing-mode: vertical-lr</label>
+  <label for="writing-mode-checkbox">writing-mode: vertical-lr</label><br />
   <input
     type="checkbox"
     id="writing-mode-checkbox"
@@ -200,7 +269,9 @@ we've also included two forms that contain the {{htmlelement("select")}} and [`<
 
 #### CSS
 
-In the CSS, we first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property:
+In the CSS, we first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property.
+
+The positioned element is associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We also give it an initial position with `inset-area: top left`; this will be overridden when new values are selected from the `<select>` menu. Finally, we set {{cssxref("opacity")}} to `0.8`, so that when the positioned element is given an `inset-area` value that places it over the top of the anchor, you can still see what position it is in.
 
 ```css hidden
 .anchor {
@@ -209,8 +280,8 @@ In the CSS, we first declare the `anchor` `<div>` as an anchor element by settin
   color: white;
   text-shadow: 1px 1px 1px black;
   background-color: hsl(240 100% 75%);
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   line-height: 50px;
   border-radius: 10px;
   border: 1px solid black;
@@ -256,13 +327,18 @@ form {
   writing-mode: horizontal-tb;
 }
 
-select,
-#inset-area-custom {
-  display: block;
-}
-
 #inset-area-custom-container {
   display: none;
+}
+
+.infobox {
+  color: darkblue;
+  background-color: azure;
+  border: 1px solid #ddd;
+  padding: 5px 2px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 ```
 
@@ -270,22 +346,7 @@ select,
 .anchor {
   anchor-name: --myAnchor;
 }
-```
 
-The positioned element is associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We also give it an initial position with `inset-area: top left`; this will be overridden when new values are selected from the `<select>` menu. Finally, we set {{cssxref("opacity")}} to `0.8`, so that when the positioned element is given an `inset-area` value that places it over the top of the anchor, you can still see what position it is in.
-
-```css hidden
-.infobox {
-  color: darkblue;
-  background-color: azure;
-  border: 1px solid #ddd;
-  padding: 20px 10px;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-```
-
-```css
 .infobox {
   position-anchor: --myAnchor;
   position: fixed;
@@ -294,16 +355,7 @@ The positioned element is associated with the anchor element by setting its anch
 }
 ```
 
-#### JavaScript
-
-The JavaScript does the following:
-
-- Runs {{domxref("Event.preventDefault", "preventDefault()")}} on the first form's [`submit`](/en-US/docs/Web/API/HTMLFormElement/submit_event) event object when the form is submitted (i.e. by pressing Enter after entering a value into the text input), to stop it from clearing the page.
-- Sets a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener on the `<select>` so that when a new `inset-area` value is chosen, it is applied to the positioned element.
-- Sets a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener on the text input so that when a custom `inset-area` value is entered into it, it is applied to the positioned element.
-- Sets a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener on the checkbox so that when it is checked and unchecked, the vertical writing mode is toggled on and off.
-
-```js
+```js hidden
 const anchorContainer = document.querySelector("#anchor-container");
 const infobox = document.querySelector(".infobox");
 
@@ -355,9 +407,11 @@ checkboxElem.addEventListener("change", () => {
 
 #### Result
 
-The result is as follows. Try selecting new `inset-area` values from the `<select>` menu to see the effect they have on the position of the infobox. Select the "Custom" value and try entering some custom `inset-area` values into the text input to see their effect. Finally, check the checkbox and then experiment with different `inset-area` values to see which ones give the same result across different writing modes, and which ones give different results.
+The result is as follows:
 
 {{ EmbedLiveSample("`inset-area` value comparison", "100%", "360") }}
+
+Try selecting new `inset-area` values from the `<select>` menu to see the effect they have on the position of the infobox. Select the "Custom" value and try entering some custom `inset-area` values into the text input to see their effect. Add text to the anchor and the anchor positioned elements to see how the anchor positioned element grows based on the `inset-area` value. Finally, check the checkbox and then experiment with different `inset-area` values to see which ones give the same result across different writing modes, and which ones give different results.
 
 ## Specifications
 
