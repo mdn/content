@@ -139,7 +139,7 @@ In this example, we have a grid that is narrower than its grid container, and we
 The {{htmlelement("section")}} container, our to-be grid container, has 16 nested {{htmlelement("div")}} to-be flex item elements.
 
 ```html
-<section id="container">
+<section class="container">
   <div>A</div>
   <div>B</div>
   <div>C</div>
@@ -162,7 +162,7 @@ The {{htmlelement("section")}} container, our to-be grid container, has 16 neste
 #### CSS
 
 ```css hidden
-#container {
+.container {
   margin: 5px;
   border: 1px solid;
   box-sizing: border-box;
@@ -181,7 +181,7 @@ We set the width of the container to `500px` but only have three columns that ar
 We set different widths (and background colors) to demonstrate how the justification is applied to the columns.
 
 ```css
-#container {
+.container {
   display: grid;
   grid: auto-flow / repeat(3, 80px);
   width: 500px;
@@ -209,6 +209,91 @@ div:nth-last-of-type(3) {
 {{EmbedLiveSample("Basic grid example", "100%", 220)}}
 
 Note that `justify-contents` aligns the columns and has no effect on the items or alignment in grid areas. Grid items, even those that overflow their grid cell, do not impact column justification.
+
+### Safe and unsafe
+
+This example demonstrates the `safe` and `unsafe` keyterms. The HTML and CSS is the same, except for the `justify-content` values:
+
+```html hidden
+<p><code>justify-content: safe center</code></p>
+<section class="container">
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <div>F</div>
+  <div>G</div>
+  <div>H</div>
+  <div>I</div>
+  <div>J</div>
+  <div>K</div>
+  <div>L</div>
+  <div>M</div>
+  <div>N</div>
+  <div>O</div>
+  <div>P</div>
+</section>
+<p><code>justify-content: unsafe center</code></p>
+<section class="container">
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <div>F</div>
+  <div>G</div>
+  <div>H</div>
+  <div>I</div>
+  <div>J</div>
+  <div>K</div>
+  <div>L</div>
+  <div>M</div>
+  <div>N</div>
+  <div>O</div>
+  <div>P</div>
+</section>
+```
+#### CSS
+
+```css hidden
+.container {
+  display: grid;
+  grid: auto-flow / repeat(3, 80px);
+  width: 500px;
+}
+
+div {
+  background-color: pink;
+  width: 80px;
+}
+
+div:nth-of-type(n + 9) {
+  width: 35px;
+  background-color: lightgreen;
+}
+
+div:nth-last-of-type(3) {
+  width: 250px;
+  background-color: lightblue;
+}
+```
+
+The first container is set to safe, the second to unsafe:
+
+```css
+.container:first-of-type {
+  justify-content: safe center;
+}
+
+.container:last-of-type {
+  justify-content: unsafe center;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("safe and unsafe", "100%", 180)}}
 
 ### Visualizing flex item distribution
 
@@ -283,8 +368,6 @@ div:last-of-type {
   <option value="flex-start">flex-start</option>
   <option value="flex-end">flex-end</option>
   <option value="center">center</option>
-  <option value="safe center">safe center</option>
-  <option value="unsafe center">unsafe center</option>
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="space-between" selected>space-between</option>
