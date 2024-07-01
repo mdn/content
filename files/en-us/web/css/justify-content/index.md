@@ -258,12 +258,19 @@ This example demonstrates the `safe` and `unsafe` keyterms. The HTML and CSS is 
 
 ```css hidden
 .container {
+  margin: 5px;
+  border: 1px solid;
+  box-sizing: border-box;
   display: grid;
   grid: auto-flow / repeat(3, 80px);
   width: 500px;
 }
 
 div {
+  line-height: 2em;
+  border: 1px solid;
+  box-sizing: border-box;
+  text-align: center;
   background-color: pink;
   width: 80px;
 }
