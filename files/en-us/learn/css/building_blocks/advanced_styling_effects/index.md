@@ -341,4 +341,4 @@ If you do want to use such features in your production work, make sure to test a
 
 We hope this article was fun — playing with shiny toys generally is, and it is always interesting to see what kinds of advanced styling tools are becoming available in modern browsers.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
