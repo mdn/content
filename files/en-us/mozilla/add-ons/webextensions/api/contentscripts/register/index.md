@@ -9,7 +9,7 @@ browser-compat: webextensions.api.contentScripts.register
 
 Use this function to register one or more content scripts.
 
-It accepts one parameter, which is an object with similar properties to the objects given in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key (but note that `content_scripts` is an array of objects, while the argument to `register()` is a single object).
+It accepts one parameter, which is an object with similar properties to the objects given in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key (but note that `content_scripts` is an array of objects, while the argument to `register()` is one object).
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -52,6 +52,8 @@ let registering = browser.contentScripts.register(
       - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `runAt` {{optional_inline}}
       - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `world` {{optional_inline}}
+      - : {{WebExtAPIRef("contentScripts.ExecutionWorld")}}. The execution environment for a script to execute in.
 
 ### Return value
 
