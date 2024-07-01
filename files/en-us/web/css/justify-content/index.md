@@ -210,12 +210,12 @@ div:nth-last-of-type(3) {
 
 Note that `justify-contents` aligns the columns and has no effect on the items or alignment in grid areas. Grid items, even those that overflow their grid cell, do not impact column justification.
 
-### Safe and unsafe
+### The safe keyword
 
-This example demonstrates the `safe` and `unsafe` keyterms. The HTML and CSS is the same, except for the `justify-content` values:
+This example demonstrates the `safe` keyterm. The HTML and CSS is the same as in the above example, except for the `justify-content` values:
 
 ```html hidden
-<p><code>justify-content: safe center</code></p>
+<p><code>justify-content: space-around;</code></p>
 <section class="container">
   <div>A</div>
   <div>B</div>
@@ -234,7 +234,7 @@ This example demonstrates the `safe` and `unsafe` keyterms. The HTML and CSS is 
   <div>O</div>
   <div>P</div>
 </section>
-<p><code>justify-content: unsafe center</code></p>
+<p><code>justify-content: safe space-around;</code></p>
 <section class="container">
   <div>A</div>
   <div>B</div>
@@ -286,21 +286,23 @@ div:nth-last-of-type(3) {
 }
 ```
 
-The first container is set to safe, the second to unsafe:
+The first container is set to `space-around`, the second is too, but with the `safe` keyword added:
 
 ```css
 .container:first-of-type {
-  justify-content: safe center;
+  justify-content: space-around;
 }
 
 .container:last-of-type {
-  justify-content: unsafe center;
+  justify-content: safe space-around;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("safe and unsafe", "100%", 360)}}
+{{EmbedLiveSample("the safe keyword", "100%", 360)}}
+
+As an item overflows the alignment container, with `safe` included, the alignment mode is `start` and the `space-around` alignment is not implemented.
 
 ### Visualizing flex item distribution
 
