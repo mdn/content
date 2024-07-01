@@ -36,7 +36,7 @@ Functional notation: `color-mix(color-interpolation-method, color1[ p1], color2[
 
     - `color-space`
 
-      - : Color space name. There are three types of colorspaces that could be used:
+      - : Color space name. Three types of colorspaces could be used:
 
         - rectangular-color-space: [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
         - polar-color-space: [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch).
@@ -64,6 +64,12 @@ Functional notation: `color-mix(color-interpolation-method, color1[ p1], color2[
 {{csssyntax}}
 
 ## Examples
+
+### Color mixer
+
+The following live demo of the `color-mix()` function mixes two colors, `color-one` and `color-two`. You can change colors by clicking on them. You can also change the percentage and color space.
+
+{{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
 ### Mixing two colors
 
@@ -373,7 +379,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 440)}}
 
-With `longer hue` the increments or decrements between colors will always be the same or larger than when using `shorter hue`. Use `increasing hue` or `descreasing hue` when the direction of the hue value change is more important than the length between values.
+With `longer hue` the increments or decrements between colors will always be the same or larger than when using `shorter hue`. Use `increasing hue` or `decreasing hue` when the direction of the hue value change is more important than the length between values.
 
 ## Specifications
 
