@@ -42,7 +42,7 @@ The parameters are:
 
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor**, referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, is used.
 
-  > **Note:** Specifying an `<anchor-element>` inside an `anchor()` function does not associate an element with an anchor; it only positions the element relative to that anchor. The [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) CSS property or the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute is still needed to create the association.
+    > **Note:** Specifying an `<anchor-element>` inside an `anchor()` function does not associate an element with an anchor; it only positions the element relative to that anchor. The [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) CSS property or the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute is still needed to create the association.
 
 - `<anchor-side>`
 
