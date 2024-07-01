@@ -300,7 +300,7 @@ The first container is set to safe, the second to unsafe:
 
 #### Result
 
-{{EmbedLiveSample("safe and unsafe", "100%", 180)}}
+{{EmbedLiveSample("safe and unsafe", "100%", 360)}}
 
 ### Visualizing flex item distribution
 
