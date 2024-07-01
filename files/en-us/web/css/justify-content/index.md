@@ -112,7 +112,7 @@ justify-content: unset;
 
 Defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module, `justify-content` applies to multicol containers, flex containers, and grid containers. The property does not apply to and has no effect on block containers.
 
-This property shares many keyword value with the {{cssxref("align content")}} property, but not all! The `justify-content` isn't involved in baseline alignment, and therefore does not take baseline values.
+This property shares many keyword values with the {{cssxref("align-content")}} property, but not all! The `justify-content` isn't involved in baseline alignment, and therefore does not take baseline values.
 
 In [flex layouts](/en-US/docs/Web/CSS/CSS_flexible_box_layout), the property defines how positive free space in each flex line is distributed between or around flex items, along the main axis. This property impacts the elements in a line, not between lines. The alignment is done after the lengths and auto margins are applied, which means that when one or more flex items in a line have a {{cssxref("flex-grow")}} factor greater than `0` the property has no effect on flex lines as that line has no available space to distribute. Also, as stretching in the main axis is controlled by {{cssxref("flex")}}, the `stretch` value behaves as `flex-start`.
 
@@ -136,7 +136,7 @@ In this example, we have a grid that is narrower than its grid container, and we
 
 #### HTML
 
-The {{htmlelement("section")}} container, our future grid container, has 16 nested {{htmlelement("div")}} future flex item elements.
+The {{htmlelement("section")}} container, our to-be grid container, has 16 nested {{htmlelement("div")}} to-be flex item elements.
 
 ```html
 <section id="container">
