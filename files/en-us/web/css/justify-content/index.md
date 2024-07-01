@@ -255,7 +255,8 @@ This example demonstrates the `safe` keyterm. The HTML and CSS is the same as in
 </section>
 ```
 
-#### CSS
+
+
 
 ```css hidden
 .container {
