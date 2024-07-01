@@ -77,7 +77,7 @@ configure(config)
         - `usedtx` {{optional_inline}}
           - : A boolean value that specifies whether the encoder uses Discontinuous Transmission (DTX), which reduces the bitrate during silence or background noise. When DTX is enabled, only one frame is encoded every 400 milliseconds. If not specified, `usedtx` defaults to `false`.
         - `useinbandfec` {{optional_inline}}
-          - : A boolean value that specifies whether the encoder provides Opus in-band Forward Error Correction (FEC). This results in packets that are determined to contain perceptually important speech information — such as onsets or transients — to be reencoded at a lower bitrate and added to a subsequent packet. If not specified, `useinbandfec` defaults to `false`.
+          - : A boolean value that specifies whether the encoder provides Opus in-band Forward Error Correction (FEC). This results in packets that are determined to contain perceptually important speech information — such as onsets or transients — to be re-encoded at a lower bitrate and added to a subsequent packet. If not specified, `useinbandfec` defaults to `false`.
 
 ### Return value
 
