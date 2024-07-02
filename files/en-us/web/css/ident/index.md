@@ -18,22 +18,22 @@ A CSS identifier consists of one or more characters, which can be any of the fol
 - a hyphen (`-`)
 - an underscore (`_`)
 - any other Unicode character `U+00A0` and higher (that is, any other non-ASCII Unicode character)
-- an [escaped character](escaping_characters).
+- an [escaped character](escaping_characters)
 
 Additionally, an identifier must not start with an unescaped digit, and must not start with an unescaped hyphen followed by an unescaped digit.
 
-Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). On the other hand, as there are several ways to escape a character, `toto\?` and `toto\3F` are the same identifiers.
+Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers because they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). On the other hand, since there are several ways to escape a character, `toto\?` and `toto\3F` are the same identifiers.
 
 ### Escaping characters
 
-Any character except a hexadecimal digit (`[0-9a-fA-F]`) can be escaped by placing a backslash in front of it. For example, `&` can be escaped as `\&`.
+You can escape a character by adding a backslash (\) in front of the character. Any character, except the hexadecimal digits `0-9`, `a-f`, and `A-F`, can be escaped in this way. For example, `&` can be escaped as `\&`.
 
-Any character can be escaped with a backslash followed by followed by one to six hexadecimal digits, representing the character's Unicode {{glossary("code point")}}. For example, `&` can be escaped as `\26`. In this situation, if the character following the escaped character is a hexadecimal digit, then either:
+You can also escape any character with a backslash followed by the character's Unicode {{glossary("code point")}} represented by one to six hexadecimal digits. For example, `&` can be escaped as `\26`. In this usage, if the escaped character is followed by a hexadecimal digit, do one of the following:
 
 - a space or other whitespace character must be placed after the Unicode code point, or:
 - the Unicode code point must be given in full, with all six digits.
 
-For example, the string `&123` could be escaped as `\26 123` or `\000026123`.
+For example, the string `&123` can be escaped as `\26 123` (with a whitespace) or `\000026123` (with the six-digit Unicode code point of `&`) to ensure that `123` is not considered as part of the escape pattern.
 
 ## Examples
 
@@ -42,11 +42,11 @@ For example, the string `&123` could be escaped as `\26 123` or `\000026123`.
 ```plain example-good
 nono79        A mix of alphanumeric characters and numbers
 ground-level  A mix of alphanumeric characters and a dash
--test         A dash followed by alphanumeric characters
+-test         /* A hyphen followed by alphanumeric characters */
 --toto        A custom-property like identifier
 _internal     An underscore followed by alphanumeric characters
 \22 toto      An escaped character followed by a sequence of alphanumeric characters
-\000022toto   The same as the previous example
+\000022toto   /* Same as the previous example */
 bili\.bob     A correctly escaped period
 🔥123         A non-ASCII character followed by numbers
 ```
@@ -54,10 +54,10 @@ bili\.bob     A correctly escaped period
 ### Invalid identifiers
 
 ```plain example-bad
-34rem     It must not start with a decimal digit.
+34rem     /* Must not start with a decimal digit */
 -12rad    It must not start with a dash followed by a decimal digit.
 bili.bob  ASCII characters apart from alphanumerics must be escaped.
-'bilibob' This would be a {{CSSxRef("&lt;string&gt;")}}.
+'bilibob' /* Treated as a string */
 "bilibob" This would be a {{CSSxRef("&lt;string&gt;")}}.
 ```
 
