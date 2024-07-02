@@ -52,8 +52,6 @@ CHIPS still allows third-party content embedded across different subdomains of a
 2. The storage key for the cookie would be `{("https://shoppy.example"), ("3rd-party.example/chat")}`.
 3. The user visits various subdomains that also embed `https://3rd-party.example/chat`, including `https://support.shoppy.example` and `https://checkout.shoppy.example`. The new embedded instances are able to access the cookie because the partition key still matches.
 
-You can restrict the cookie to just a domain and a particular subdomain by setting the cookie with the `__Host` prefix.
-
 ## Specifications
 
 {{Specifications}}
