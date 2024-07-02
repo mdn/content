@@ -102,7 +102,7 @@ For example, `top left` selects the top left tile, while `center right` selects 
 
 #### Spanning physical grid keywords
 
-The physical spanning keywords specify one physical row or column keyword, and an appropriate physical spanning keyword or [coordinate grid keyword](#coordinate-grid-keywords). When included as an `inset-area` property value, the element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The physical spanning keywords — when combined with a physical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column; it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-left`
 
@@ -124,9 +124,9 @@ The physical spanning keywords specify one physical row or column keyword, and a
 
   - : Valid with all the keyword types, spans the cell listed as well as the adjacent cells in the same row or column. See [`span-all`](#span-all) below.
 
-For example, `top span-left` spans the top center and top left grid cells.
+For example, `top span-left` spans the top-center and top-left grid cells.
 
-> **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid value. For example, `right span-right` is invalid — you can't select the center right grid tile and then try to span further to the right.
+> **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid value. For example, `right span-right` is invalid — you can't select the center-right grid tile and then try to span further to the right.
 
 ### Physical grid keyword defaults
 
@@ -142,37 +142,37 @@ If only a single physical keyword is specified in the `inset-area` value, the ot
 
 ### Logical grid keywords
 
-The logical grid keywords specify the position of the element on the `inset-area` grid using logical value. With these values, the position and direction are effected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
+The logical grid keywords specify an area of the inset area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
 
 #### Generic logical row and column keywords
 
-The generic logical keywords use the same terms for inline and block directions, with the direction determined by the position of the keyterm within pair of `<inset-area>` values. The first value in a pair of values defines the block direction position and the second defines the inline value. You can specific one or two keyterms from the following list. Specifying two from this list defines a single specific grid tile. The keyword position or direction is :
+The generic logical keywords use the same terms for inline and block directions, with the direction determined by the position of the keyterm within a pair of `<inset-area>` values. The first value in a pair of values defines the block direction position and the second value defines the inline value. You can specify one or two keyterms from the following list. Specifying two from this list defines a single specific grid tile. The keyword position or direction is:
 
 - `start`
 
-  - : The start of the grid's block direction or start of the inline direction, calculated from the containing block's writing mode
+  - : The start of the grid's block or inline direction, calculated from the containing block's writing mode.
 
 - `end`
 
-  - : Tthe end of the grid's block direction or end of its inline direction, calculated from the containing block's writing mode.
+  - : The end of the grid's block or inline direction, calculated from the containing block's writing mode.
 
 - `self-start`
 
-  - : The start of the grid's block direction or start of the inline direction, calculated from the element's own writing mode.
+  - : The start of the grid's block or inline direction, calculated from the element's own writing mode.
 
 - `self-end`
 
-  - : The end of the grid's block direction or end of its inline direction, calculated from the element's own writing mode.
+  - : The end of the grid's block or inline direction, calculated from the element's own writing mode.
 
 - `center`
 
-  - : The center of the grid's block direction or center of the inline direction, depending on if this keyword is first or second, respectively.
+  - : The center of the grid's block or inline direction, depending on whether this keyword is first or second, respectively.
 
-For example, `start end` and `self-start self-end` both describe the position at start of the block direction and end of the inline direction. With `writing-mode: horizontal-tb` set, this is the top right of the anchor element, whereas with `writing-mode: vertical-rl` is the bottom right of the anchor.
+For example, `start end` and `self-start self-end` both describe the position at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this is the top right of the anchor element, whereas with `writing-mode: vertical-rl` it is the bottom right of the anchor.
 
 #### Spanning generic logical row and column keywords
 
-The generic logical spanning keywords specify one generic logical row or column keyword, and an appropriate plain logical spanning keyword. The element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-start`
 
@@ -184,17 +184,17 @@ The generic logical spanning keywords specify one generic logical row or column 
 
 - `span-self-start`
 
-  - : Span the center tile and the start tile of the grid row/column for the positioned elements writing mode.
+  - : Span the center tile and the start tile of the grid row/column for the positioned element's own writing mode.
 
 - `span-self-end`
 
   - : Span the center tile and the end tile of the grid row/column, calculated from the element's own writing mode.
 
-For example, `start span-end` and `self-start span-self-end` both cause the element to be placed in the center of the start block row, and then spanned across the tiles in that row that are also in the inline center and end columns. With `writing-mode: horizontal-tb` set, this would span the element over the top center and top right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and bottom right.
+For example, `start span-end` and `self-start span-self-end` both specify a grid inset area that starts in the center of the start block row, and spans across the tiles in that row that are also in the inline center and end columns. With `writing-mode: horizontal-tb` set, this would span over the top center and top right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and bottom right.
 
 #### Inline and block logical keywords
 
-The inline and block logical row and column keywords refer explicitly to a block (row) or inline (column) position. You can specify one keyword for the block direction and one from the inline direction to select a single specific grid tile. Unlike with generic logical keyword values, the keyword order doesn't matter. However, declaring two keywords in the same axis invalidates the value.
+The inline and block logical row and column keywords refer explicitly to a block (row) or inline (column) position. You can specify one keyword for the block direction and one for the inline direction to select a single specific grid tile. Unlike with generic logical keyword values, the keyword order doesn't matter. However, declaring two keywords in the same axis invalidates the value.
 
 - `block-start`
 
@@ -212,31 +212,31 @@ The inline and block logical row and column keywords refer explicitly to a block
 
   - : The end of the grid's inline direction calculated from the containing block's writing mode.
 
-For example, `block-start inline-end` defines the tile at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this be the top right of the anchor, whereas with `writing-mode: vertical-rl` set it would be the cell to the bottom right.
+For example, `block-start inline-end` specifies the tile at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this would be the tile at the top-right of the anchor, whereas with `writing-mode: vertical-rl` set this would be the tile at the bottom-right.
 
 > **Note:** The specification defines `self` equivalents of these keywords — `block-self-start`, `block-self-end`, `inline-self-start`, and `inline-self-end`. However, these are not currently supported in any browser.
 
 ##### Spanning inline and block logical keywords
 
-The inline and block logical spanning keywords enable specifying a inline and block keyword, and an appropriate explicit logical spanning keyword. When used as a value on `inset-area`, the element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles.
+The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-block-start`
 
-  - : Span the center tile and the block start tile of the specified inline column .
+  - : Span the center tile and the block-start tile of the specified inline column.
 
 - `span-block-end`
 
-  - : Span the center tile and the block end tile of the specified inline column.
+  - : Span the center tile and the block-end tile of the specified inline column.
 
 - `span-inline-start`
 
-  - : Span the center tile and the inline start tile of the specified block row.
+  - : Span the center tile and the inline-start tile of the specified block row.
 
 - `span-inline-end`
 
-  - : Span the center tile and the inline end tile of the specified block row.
+  - : Span the center tile and the inline-end tile of the specified block row.
 
-For example, `block-end span-inline-start` selects the center of the end block row and spans across the tiles in that row that are also in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom center and bottom left of the anchor, whereas with `writing-mode: vertical-rl` set it would span the right center and top right grid cells.
+For example, `block-end span-inline-start` selects the center tile of the end block row and spans across the tiles in that row that are in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom-center and bottom-left grid tiles, whereas with `writing-mode: vertical-rl` set it would span the right-center and top-right grid tiles.
 
 > **Note:** The specification defines `self` equivalents of these keywords, for example — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, and `span-self-inline-end`. However, these are not currently supported in any browser.
 
@@ -266,7 +266,7 @@ If only a single logical `<inset-area>` keyword is specified, the other value is
 
 These keywords specify the cells of the `inset-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the element itself.
 
-However, the grid cells are defined according to the physical axes rather than the block/inline directions:
+However, the grid cells are defined according to physical axes rather than block/inline directions:
 
 - For `writing-mode: horizontal-tb` and `vertical-lr`, the x-axis runs left-to-right and the y-axis runs top-to-bottom.
 - For `writing-mode: horizontal-tb; direction: rtl` and `writing-mode: vertical-rl`, the x-axis runs right-to-left and the y-axis runs top-to-bottom.
@@ -339,11 +339,11 @@ You can specify one coordinate row or column keyword, and an appropriate coordin
 
   - : Span the center tile and the y-end tile of the specified x-axis column.
 
-For example, `y-end span-x-end` causes selects the cell at the center of the end y-row, and spans across the tiles in that row that are also in the x-center and x-end columns. With `writing-mode: horizontal-tb` set, this would span the grid cells to the bottom center and bottom right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the bottom center and bottom left.
+For example, `y-end span-x-end` selects the tile at the center of the end y-row, and spans across the tiles in that row that are also in the x-center and x-end columns. With `writing-mode: horizontal-tb` set, the inset grid area would span the grid tiles at the bottom-center and bottom-right, whereas with `writing-mode: vertical-rl` set it would span the bottom-center and bottom-left tiles.
 
-> **Note:** The specification doesn't define separate coordinate `self` spanning keywords, but these are not needed — the spanning keywords can be used with both types of coordinate row and column keywords.
+> **Note:** The specification doesn't define separate coordinate `self` spanning keywords, but these are not needed — the spanning keywords can be used with both coordinate row and column keywords.
 
-#### Coordinate grid keywords defaults
+#### Coordinate grid keyword defaults
 
 If only a single coordinate grid `<inset-area>` keyword is specified, the other value is implied as follows:
 
