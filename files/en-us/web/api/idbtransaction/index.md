@@ -52,7 +52,7 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 - {{domxref("IDBTransaction.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
 - {{domxref("IDBTransaction.mode")}} {{ReadOnlyInline}}
-  - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
+  - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is `readonly`.
 - {{domxref("IDBTransaction.objectStoreNames")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
