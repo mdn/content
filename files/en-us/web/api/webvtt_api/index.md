@@ -159,24 +159,75 @@ The `default` attribute may be added to just one `<track>`, and this will be pla
 
 ### Styling WebVTT in HTML or a stylesheet
 
-<!-- Perhaps replace this with something like example in http://localhost:5042/en-US/docs/Web/CSS/::cue -->
-
 You can style WebVTT cues by matching elements using the {{cssxref("::cue")}} pseudo-element.
+This allows you to modify the appearance of all cue text, or just specific elements (if supported).
 
-This CSS styles all video elements to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element is colored `"peachpuff"`.
+> **Note:** It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
+
+#### HTML
+
+The HTML and CSS for displaying the video itself is the same as for the [first example above](#using_the_webvtt_api_to_add_captions):
 
 ```css
-video::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-
-video::cue(b) {
-  color: peachpuff;
+video {
+  width: 420px;
+  height: 300px;
 }
 ```
 
-It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (see link for an example.)
+```html
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+```
+
+#### CSS
+
+This CSS styles all cues to have larger text drawn in red, with a gradient background.
+
+```css
+video::cue {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to bottom, yellow, lightyellow);
+  color: red;
+}
+```
+
+We then style text that is underlined and bold to be green and yellow, respectively.
+
+```css
+video::cue(u) {
+  color: green;
+}
+
+video::cue(b) {
+  color: purple;
+}
+```
+
+#### JavaScript
+
+The cues are also the same as in the other examples, but we've marked up some with underline and some with bold (which will be highlighted by the CSS above).
+
+```js
+let video = document.querySelector("video");
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(
+  new VTTCue(1.5, 2.9, "Tell me, is the <u>lord of the universe</u> in?"),
+);
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(
+  new VTTCue(4.3, 6, "Somebody must've <b>stolen</b> the crown jewels"),
+);
+console.log(track.cues);
+```
+
+#### Result
+
+{{EmbedLiveSample('Styling WebVTT in HTML or a stylesheet','400','330')}}
 
 ## Specifications
 
