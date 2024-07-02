@@ -693,38 +693,6 @@ All these properties can be specified as either a string containing any valid [C
       </td>
     </tr>
     <tr>
-      <td>
-        <code>tab_background_separator</code> {{Deprecated_Inline}}
-      </td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>tab_background_separator</code> is
-            not supported starting with Firefox 89.
-          </p>
-        </div>
-        <p>The color of the vertical separator of the background tabs.</p>
-        <details open>
-          <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_background_separator": "red"
-  }
-}</pre
-          >
-        </details>
-        <p>
-          <img
-            alt="A closeup of browser tabs to highlight the separator."
-            src="theme-tab-background-separator.png"
-          />
-        </p>
-      </td>
-    </tr>
-    <tr>
       <td><code>tab_background_text</code></td>
       <td>
         <p>
@@ -1062,40 +1030,6 @@ All these properties can be specified as either a string containing any valid [C
           Here, the <code>toolbar_field_highlight_text</code> field is used to
           set the text color to a dark medium-dark green, while the highlight
           color is a light green.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_separator</code> {{Deprecated_Inline}}</td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>toolbar_field_separator</code> is
-            not supported starting with Firefox 89.
-          </p>
-        </div>
-        <p>
-          The color of separators inside the URL bar. In Firefox 58 this was
-          implemented as <code>toolbar_vertical_separator</code>.
-        </p>
-        <details open>
-          <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field_separator": "red"
-  }
-}</pre
-          >
-        </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons. The color of the vertical separator line inside the URL bar is red." src="theme-toolbar_field_separator.png" /></p>
-        <p>
-          In this screenshot, <code>"toolbar_vertical_separator"</code> is the
-          red vertical line in the URL bar dividing the Reader Mode icon from
-          the other icons.
         </p>
       </td>
     </tr>
