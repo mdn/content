@@ -49,7 +49,7 @@ Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
 
 - \<type>/\<subtype>
-  - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
+  - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
 
 ## Examples
 

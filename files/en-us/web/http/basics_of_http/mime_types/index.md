@@ -116,9 +116,60 @@ There are two multipart types:
 
 ## Important MIME types for Web developers
 
-### application/octet-stream
+### Binary data types
 
-This is the default for binary files. As it means _unknown binary_ file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the {{HTTPHeader("Content-Disposition")}} header was set to `attachment`, and propose a "Save As" dialog.
+A few `application/` types need special notes:
+
+- `application/octet-stream`: This is the default for binary files. As it means _unknown binary_ file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the {{HTTPHeader("Content-Disposition")}} header was set to `attachment`, and propose a "Save As" dialog.
+- `application/xml`: This is recommended as of [RFC 7303](https://datatracker.ietf.org/doc/html/rfc7303#section-4.1) (section 4.1), but `text/xml` is still used sometimes. You can assign a specific MIME type to a file with `.xml` extension depending on how its contents are meant to be interpreted. For instance, an Atom feed is `application/atom+xml`, but `application/xml` serves as a valid default.
+- `application/zip`: This is the standard, but beware that Windows uploads .zip with MIME type `application/x-zip-compressed`.
+
+Other common binary data types:
+
+| Extension | Kind of document                                                                           | MIME Type                                                                   |
+| --------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| `.abw`    | [AbiWord](https://en.wikipedia.org/wiki/AbiWord) document                                  | `application/x-abiword`                                                     |
+| `.arc`    | Archive document (multiple files embedded)                                                 | `application/x-freearc`                                                     |
+| `.azw`    | Amazon Kindle eBook format                                                                 | `application/vnd.amazon.ebook`                                              |
+| `.bz`     | BZip archive                                                                               | `application/x-bzip`                                                        |
+| `.bz2`    | BZip2 archive                                                                              | `application/x-bzip2`                                                       |
+| `.cda`    | CD audio                                                                                   | `application/x-cdf`                                                         |
+| `.csh`    | C-Shell script                                                                             | `application/x-csh`                                                         |
+| `.doc`    | Microsoft Word                                                                             | `application/msword`                                                        |
+| `.docx`   | Microsoft Word (OpenXML)                                                                   | `application/vnd.openxmlformats-officedocument.wordprocessingml.document`   |
+| `.eot`    | MS Embedded OpenType fonts                                                                 | `application/vnd.ms-fontobject`                                             |
+| `.epub`   | Electronic publication (EPUB)                                                              | `application/epub+zip`                                                      |
+| `.gz`     | GZip Compressed Archive                                                                    | `application/gzip`                                                          |
+| `.jar`    | Java Archive (JAR)                                                                         | `application/java-archive`                                                  |
+| `.json`   | JSON format                                                                                | `application/json`                                                          |
+| `.jsonld` | JSON-LD format                                                                             | `application/ld+json`                                                       |
+| `.mpkg`   | Apple Installer Package                                                                    | `application/vnd.apple.installer+xml`                                       |
+| `.odp`    | OpenDocument presentation document                                                         | `application/vnd.oasis.opendocument.presentation`                           |
+| `.ods`    | OpenDocument spreadsheet document                                                          | `application/vnd.oasis.opendocument.spreadsheet`                            |
+| `.odt`    | OpenDocument text document                                                                 | `application/vnd.oasis.opendocument.text`                                   |
+| `.ogx`    | OGG                                                                                        | `application/ogg`                                                           |
+| `.pdf`    | Adobe [Portable Document Format](https://www.adobe.com/acrobat/about-adobe-pdf.html) (PDF) | `application/pdf`                                                           |
+| `.php`    | PHP: Hypertext Preprocessor                                                                | `application/x-httpd-php`                                                   |
+| `.ppt`    | Microsoft PowerPoint                                                                       | `application/vnd.ms-powerpoint`                                             |
+| `.pptx`   | Microsoft PowerPoint (OpenXML)                                                             | `application/vnd.openxmlformats-officedocument.presentationml.presentation` |
+| `.rar`    | RAR archive                                                                                | `application/vnd.rar`                                                       |
+| `.rtf`    | Rich Text Format (RTF)                                                                     | `application/rtf`                                                           |
+| `.sh`     | Bourne shell script                                                                        | `application/x-sh`                                                          |
+| `.tar`    | Tape Archive (TAR)                                                                         | `application/x-tar`                                                         |
+| `.vsd`    | Microsoft Visio                                                                            | `application/vnd.visio`                                                     |
+| `.xhtml`  | XHTML                                                                                      | `application/xhtml+xml`                                                     |
+| `.xls`    | Microsoft Excel                                                                            | `application/vnd.ms-excel`                                                  |
+| `.xlsx`   | Microsoft Excel (OpenXML)                                                                  | `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`         |
+| `.xul`    | XUL                                                                                        | `application/vnd.mozilla.xul+xml`                                           |
+| `.zip`    | ZIP archive                                                                                | `application/zip`                                                           |
+| `.7z`     | [7-zip](https://en.wikipedia.org/wiki/7-Zip) archive                                       | `application/x-7z-compressed`                                               |
+
+### Text types
+
+Apart from the text types introduced below, there are some other text types worth mentioning:
+
+- `text/csv`: Comma-separated values (CSV)
+- `text/calendar`: iCalendar format (ICS)
 
 ### text/plain
 
@@ -182,11 +233,14 @@ The subtype specifies which specific image file format the data represents.
 The following image types are used commonly enough to be considered _safe_ for use on web pages:
 
 - [`image/apng`](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics): Animated Portable Network Graphics (APNG)
-- [`image/avif`](/en-US/docs/Web/Media/Formats/Image_types#avif_image) : AV1 Image File Format (AVIF)
+- [`image/avif`](/en-US/docs/Web/Media/Formats/Image_types#avif_image): AV1 Image File Format (AVIF)
+- [`image/bmp`](/en-US/docs/Web/Media/Formats/Image_types#bmp_bitmap_file): Bitmap image (BMP); discouraged due to large file sizes
 - [`image/gif`](/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format): Graphics Interchange Format (GIF)
+- [`image/vnd.microsoft.icon`](/en-US/docs/Web/Media/Formats/Image_types#ico_microsoft_windows_icon): Microsoft Windows icon (ICO); discouraged
 - [`image/jpeg`](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image): Joint Photographic Expert Group image (JPEG)
 - [`image/png`](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics): Portable Network Graphics (PNG)
 - [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
+- [`image/tiff`](/en-US/docs/Web/Media/Formats/Image_types#tiff_tagged_image_file_format): Tagged Image File Format (TIFF); discouraged due to limited browser support
 - [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
 
 The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
@@ -203,8 +257,19 @@ The [codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) guide e
 
 As for MIME types of audio or video files, they typically specify the container format (file type).
 The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) can be added to the MIME type to further specify which codecs to use and what options were used to encode the media, such as codec profile, level, or other such information.
+For example, the [Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus) audio format is usually used inside the Ogg container, so when saved in a separate file, it should be served as `audio/ogg`.
+The following are common audio and video MIME types:
 
-For more information on common media types, see the [Common MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) page.
+- [`audio/aac`](/en-US/docs/Web/Media/Formats/Audio_codecs#aac_advanced_audio_coding): Advanced Audio Coding (AAC)
+- `audio/midi`, `audio/x-midi`: Musical Instrument Digital Interface (MIDI)
+- [`audio/mpeg`, `video/mpeg`](/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2): most commonly MPEG-1 Audio Layer III (MP3)
+- [`audio/mp4`, `video/mp4`](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4): MPEG-4 (MP4)
+- [`audio/ogg`, `video/ogg`](/en-US/docs/Web/Media/Formats/Containers#ogg): Ogg container
+- [`audio/wav`](/en-US/docs/Web/Media/Formats/Containers#wave_wav): Waveform Audio Format (WAV)
+- [`audio/webm`, `video/webm`](/en-US/docs/Web/Media/Formats/Containers#webm): Web Media container (WEBM)
+- `video/x-msvideo`: Audio Video Interleave (AVI)
+- [`audio/3gpp`, `video/3gpp`](/en-US/docs/Web/Media/Formats/Containers#3gp): 3GPP container
+- `audio/3gpp2`, `video/3gpp2`, `audio/3gp2`, `video/3gp2`: 3GPP2 container
 
 ### multipart/form-data
 
