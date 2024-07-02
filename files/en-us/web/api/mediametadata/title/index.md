@@ -9,7 +9,7 @@ browser-compat: api.MediaMetadata.title
 {{APIRef("Media Session API")}}
 
 The **`title`** property of the
-{{domxref("MediaMetaData")}} interface returns or sets the title of the media to be
+{{domxref("MediaMetadata")}} interface returns or sets the title of the media to be
 played.
 
 ## Value

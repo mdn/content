@@ -9,7 +9,7 @@ browser-compat: api.MediaMetadata.artist
 {{APIRef("Media Session API")}}
 
 The **`artist`** property of the
-{{domxref("MediaMetaData")}} interface returns or sets the name of the artist, group,
+{{domxref("MediaMetadata")}} interface returns or sets the name of the artist, group,
 creator, etc., of the media to be played.
 
 ## Value
