@@ -181,9 +181,12 @@ From the inside of a frame, a script can get a reference to its parent window wi
 
 Script access to a frame's content is subject to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
 
-## Positioning
+## Positioning and scaling
 
 As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position of the embedded document within the `<iframe>` element's box can be adjusted with the {{cssxref("object-position")}} property.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} doesn't work on `<iframe>` element.
 
 ## `error` and `load` event behavior
 
