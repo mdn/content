@@ -75,5 +75,37 @@
     "zh-CN": "可选",
     "zh-TW": "選擇性",
     "es": "Opcional"
+  },
+
+  "xref_csscomputed": {
+    "en-US": "Computed value",
+    "es": "Valor calculado",
+    "fr": "Valeur calculée",
+    "ja": "計算値",
+    "ko": "계산 값",
+    "ru": "Обработка значения",
+    "zh-CN": "计算值"
+  },
+
+  "xref_cssinherited": {
+    "en-US": "Inherited",
+    "es": "Heredable",
+    "fr": "Héritée",
+    "ja": "継承",
+    "ko": "상속",
+    "ru": "Наследуется",
+    "zh-CN": "是否是继承属性",
+    "zh-TW": "繼承與否"
+  },
+
+  "xref_cssinitial": {
+    "en-US": "Initial value",
+    "es": "Valor inicial",
+    "fr": "Valeur initiale",
+    "ja": "初期値",
+    "ko": "초기값",
+    "ru": "Начальное значение",
+    "zh-CN": "初始值",
+    "zh-TW": "預設值"
   }
 }
