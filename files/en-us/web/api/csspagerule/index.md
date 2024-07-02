@@ -13,7 +13,7 @@ browser-compat: api.CSSPageRule
 
 ## Instance properties
 
-_Inherits properties from its ancestor {{domxref("CSSRule")}}._
+_Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 - {{domxref("CSSPageRule.selectorText")}}
   - : Represents the text of the page selector associated with the at-rule.
@@ -22,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 ## Instance methods
 
-_Inherits methods from its ancestor {{domxref("CSSRule")}}._
+_Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Examples
 
