@@ -17,7 +17,6 @@ The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position
 /* Keyword values */
 ruby-position: over;
 ruby-position: under;
-ruby-position: inter-character;
 ruby-position: alternate;
 
 /* Global values */
@@ -36,8 +35,6 @@ ruby-position: unset;
 - `under`
   - : ![Under example](screen_shot_2015-03-04_at_13.02.07.png)
     Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.
-- `inter-character`
-  - : Is a keyword indicating that the ruby has to be placed between the different characters.
 - `alternate`
   - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
 
