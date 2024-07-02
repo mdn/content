@@ -7,7 +7,7 @@ browser-compat: css.properties.inset-area
 
 {{CSSRef}}
 
-The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) specifying the rows and columns of the **inset-area grid**, an 3x3 grid, whose center cell is an anchor element.
+The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) define the cell or spanned cells of an **inset-area grid**, an 3x3 grid whose center cell is an anchor element.
 
 The `<inset-area>` keyword values can be set as the value of the {{cssxref("inset-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 
@@ -35,18 +35,18 @@ The `<inset-area>` keyword values can be set as the value of the {{cssxref("inse
 
 ## Description
 
-The `<inset-area>` data type and `inset-area` property work on the concept of an **inset-area grid**, a 3x3 grid of tiles composed of four grid lines, two in each axis, with the anchor element inside the center tile:
+The `<inset-area>` data type and `inset-area` property work on the concept of an **inset-area grid**, a 3x3 grid of tiles composed of four grid lines, two in each axis, with an anchor element being the center tile:
 
 ![The inset-area grid, as described below](inset-area.png)
 
-The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of containing block as well, except for the `self-*`, which are calculated from the writing mode of the element on which the value is included.
+When used as the value of a positioned element`s inset-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of containing block as well, except for the `self-*`, which are calculated from the writing mode of the anchor positioned element.
 
 The grid tiles are broken up into rows and columns:
 
 - The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `block-start`, `center`, and `block-end`, and coordinate equivalents — `y-start`, `center`, and `y-end`.
 - The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `inline-start`, `center`, and `inline-end`, and coordinate equivalents — `x-start`, `center`, and `x-end`.
 
-`<inset-area>` values are composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area. For example:
+`<inset-area>` values are composed of one or two keywords, which define the cell or cells of the inset-area grid the value spans. For example, setting an `<inset-area>` value on a positioned element's `inset-area` property defines it's containing block relative to the inset grid area:
 
 ```css
 /* Examples: Two keywords to place the element in a single specific tile */
@@ -78,16 +78,7 @@ inset-area: center; /* equiv: center center */
 inset-area: span-all; /* equiv: center center */
 inset-area: start; /* equiv: start start */
 inset-area: end; /* equiv: end end */
-
-/* Global values */
-inset-area: inherit;
-inset-area: initial;
-inset-area: revert;
-inset-area: revert-layer;
-inset-area: unset;
 ```
-
-> **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 The different types of keywords that can be used include:
 
@@ -95,6 +86,8 @@ The different types of keywords that can be used include:
 - [Generic logical row and column keywords](#generic-logical-row-and-column-keywords)
 - [Inline and block logical keywords](#inline-and-block-logical-keywords), and
 - [Coordinate grid keywords](#coordinate-grid-keywords)
+
+> **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 ### Physical grid keywords
 
