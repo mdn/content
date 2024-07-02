@@ -51,7 +51,7 @@ If this is the first time a service worker has been made available, installation
 
 If there is an existing service worker available, the new version is installed in the background, but not yet activated — at this point it is called the _worker in waiting_. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more pages to be loaded, the new service worker activates (becoming the _active worker_). Activation can happen sooner using {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} and existing pages can be claimed by the active worker using {{DOMxRef("Clients.claim()")}}.
 
-You can listen for the {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built in storage API, and placing assets inside it that you'll want for running your app offline.
+You can listen for the {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built-in storage API, and placing assets inside it that you'll want for running your app offline.
 
 There is also an {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} event. The point where this event fires is generally a good time to clean up old caches and other things associated with the previous version of your service worker.
 
@@ -71,10 +71,10 @@ Service workers are also intended to be used for such things as:
 - Client-side compiling and dependency management of CoffeeScript, less, CJS/AMD modules, etc. for development purposes.
 - Hooks for background services.
 - Custom templating based on certain URL patterns.
-- Performance enhancements, for example pre-fetching resources that the user is likely to need in the near future, such as the next few pictures in a photo album.
+- Performance enhancements, for example, pre-fetching resources that the user is likely to need soon, such as the next few pictures in a photo album.
 - API mocking.
 
-In the future, service workers will be able to do a number of other useful things for the web platform that will bring it closer towards native app viability. Interestingly, other specifications can and will start to make use of the service worker context, for example:
+In the future, service workers will be able to do several other useful things for the web platform that will bring it closer to native app viability. Interestingly, other specifications can and will start to make use of the service worker context, for example:
 
 - [Background synchronization](https://github.com/WICG/background-sync): Start up a service worker even when no users are at the site, so caches can be updated, etc.
 - [Reacting to push messages](/en-US/docs/Web/API/Push_API): Start up a service worker to send users a message to tell them new content is available.
@@ -97,8 +97,8 @@ In the future, service workers will be able to do a number of other useful thing
   - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{DOMxRef("FetchEvent")}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
-- {{DOMxRef("InstallEvent")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
+- {{DOMxRef("InstallEvent")}}
+  - : The parameter passed into an {{DOMxRef("ServiceWorkerGlobalScope.install_event", "install")}} event handler function, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
 - {{DOMxRef("NavigationPreloadManager")}}
   - : Provides methods for managing the preloading of resources with a service worker.
 - {{DOMxRef("ServiceWorker")}}
