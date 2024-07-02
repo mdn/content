@@ -25,19 +25,7 @@ described by the arguments of this method. This lets you scale, rotate, translat
 transform(a, b, c, d, e, f)
 ```
 
-The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
-<mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
-</mtd><mtd><mi>c</mi>
-</mtd><mtd><mi>e</mi>
-</mtd></mtr><mtr><mtd><mi>b</mi>
-</mtd><mtd><mi>d</mi>
-</mtd><mtd><mi>f</mi>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
-</mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
-&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+The transformation matrix is described by: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{array} \right]</annotation></semantics></math>.
 
 ### Parameters
 

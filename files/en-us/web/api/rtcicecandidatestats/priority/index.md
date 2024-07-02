@@ -44,28 +44,44 @@ The candidate's priority is computed using the formula (_p<sub>type</sub>_ is
 the priority of the candidate's type and _p<sub>local</sub>_ is the priority of
 the IP address):
 
-<math display="block"><semantics><mrow><mi mathvariant="italic">priority</mi>
-<mo>=</mo>
-<msup><mn>2</mn>
-<mn>24</mn>
-</msup><mo>×</mo>
-<msub><mi>p</mi>
-<mrow><mi>type</mi>
-</mrow></msub><mo>+</mo>
-<msup><mn>2</mn>
-<mn>8</mn>
-</msup><mo>×</mo>
-<msub><mi>p</mi>
-<mrow><mi>local</mi>
-</mrow></msub><mo>+</mo>
-<mo stretchy="false">(</mo>
-<mn>256</mn>
-<mo>-</mo>
-<mi mathvariant="italic">componentID</mi>
-<mo stretchy="false">)</mo>
-</mrow><annotation encoding="TeX">priority\quad =\quad { 2 }^{ 24 }\times { p }_{
-type }\quad +\quad { 2 }^{ 8 }\times { p }_{ local }\quad +\quad (256\quad
--\quad componentID)</annotation></semantics></math>
+<math display="block">
+  <semantics>
+    <mrow>
+      <mi mathvariant="italic">priority</mi>
+      <mo>=</mo>
+      <msup>
+        <mn>2</mn>
+        <mn>24</mn>
+      </msup>
+      <mo>×</mo>
+      <msub>
+        <mi>p</mi>
+        <mrow>
+          <mi>type</mi>
+        </mrow>
+      </msub>
+      <mo>+</mo>
+      <msup>
+        <mn>2</mn>
+        <mn>8</mn>
+      </msup>
+      <mo>×</mo>
+      <msub>
+        <mi>p</mi>
+        <mrow>
+          <mi>local</mi>
+        </mrow>
+      </msub>
+      <mo>+</mo>
+      <mo stretchy="false">(</mo>
+      <mn>256</mn>
+      <mo>-</mo>
+      <mi mathvariant="italic">componentID</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <annotation encoding="TeX">priority\quad =\quad { 2 }^{ 24 }\times { p }_{ type }\quad +\quad { 2 }^{ 8 }\times { p }_{ local }\quad +\quad (256\quad -\quad componentID)</annotation>
+  </semantics>
+</math>
 
 This is equivalent to mapping the priorities of the candidate type, the local IP, and
 the component ID into various bit ranges within the 32-bit `priority`

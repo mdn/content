@@ -28,7 +28,26 @@ isSubsetOf(other)
 
 In mathematical notation, _subset_ is defined as:
 
-<math display="block"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mo stretchy="false">⇔</mo><mo>∀</mo><mi>x</mi><mo>∊</mo><mi>A</mi><mo>,</mo><mspace width="0.16666666666666666em"></mspace><mi>x</mi><mo>∊</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B \Leftrightarrow \forall x\in A,\,x\in B</annotation></semantics></math>
+<math display="block">
+  <semantics>
+    <mrow>
+      <mi>A</mi>
+      <mo>⊆</mo>
+      <mi>B</mi>
+      <mo stretchy="false">⇔</mo>
+      <mo>∀</mo>
+      <mi>x</mi>
+      <mo>∊</mo>
+      <mi>A</mi>
+      <mo>,</mo>
+      <mspace width="0.16666666666666666em"></mspace>
+      <mi>x</mi>
+      <mo>∊</mo>
+      <mi>B</mi>
+    </mrow>
+    <annotation encoding="TeX">A\subseteq B \Leftrightarrow \forall x\in A,\,x\in B</annotation>
+  </semantics>
+</math>
 
 And using Venn diagram:
 
