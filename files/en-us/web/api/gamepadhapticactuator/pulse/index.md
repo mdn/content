@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.GamepadHapticActuator.pulse
 ---
 
-{{APIRef("Gamepad")}}
+{{APIRef("Gamepad API")}}
 
 The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware pulse at a certain intensity for a specified duration.
 

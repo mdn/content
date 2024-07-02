@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.GamepadHapticActuator.playEffect
 ---
 
-{{APIRef("Gamepad")}}
+{{APIRef("Gamepad API")}}
 
-The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware play a specific vibration pattern.
+The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface causes the hardware to play a specific vibration effect.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ playEffect(type, params)
 
 - `type`
 
-  - : A string representing the desired effect. This can vary depending on the hardware type. Possible values are "dual-rumble" or "vibration".
+  - : A string representing the desired effect. Possible values are `"dual-rumble"` and `"trigger-rumble"`, and their effects can vary depending on the hardware type. See {{domxref("GamepadHapticActuator.effects")}} for further details of the effect types.
 
 - `params`
 
@@ -28,20 +28,24 @@ playEffect(type, params)
 
     Expected values are:
 
-    - `duration`
-      - : The duration of the effect in milliseconds.
-    - `startDelay`
-      - : The delay in milliseconds before the effect is started.
-    - `strongMagnitude`
-      - : Rumble intensity of the low-frequency (strong) rumble motors, normalized to the range between 0.0 and 1.0.
-    - `weakMagnitude`
-      - : Rumble intensity of the high-frequency (weak) rumble motors, normalized to the range between 0.0 and 1.0.
+    - `duration` {{optional_inline}}
+      - : The duration of the effect in milliseconds. If omitted, `duration` defaults to `0`.
+    - `startDelay` {{optional_inline}}
+      - : The delay in milliseconds before the effect is started. If omitted, `startDelay` defaults to `0`.
+    - `strongMagnitude` {{optional_inline}}
+      - : The rumble intensity of the low-frequency (strong) rumble motors, normalized to the range between `0.0` and `1.0`. If omitted, `strongMagnitude` defaults to `0.0`.
+    - `weakMagnitude` {{optional_inline}}
+      - : The rumble intensity of the high-frequency (weak) rumble motors, normalized to the range between `0.0` and `1.0`. If omitted, `weakMagnitude` defaults to `0.0`.
+    - `leftTrigger` (relevant to `"trigger-rumble"` effects only) {{optional_inline}}
+      - : The rumble intensity of the bottom-left front trigger, normalized to the range between `0.0` and `1.0`. If omitted, `leftTrigger` defaults to `0.0`.
+    - `rightTrigger` (relevant to `"trigger-rumble"` effects only) {{optional_inline}}
+      - : The rumble intensity of the bottom-right front trigger, normalized to the range between `0.0` and `1.0`. If omitted, `rightTrigger` defaults to `0.0`.
 
 > **Note:** A new call to `playEffect()` overrides a previous ongoing call.
 
 ### Return value
 
-A promise that resolves with `true` when the playEffect successfully completes.
+A promise that resolves with `"complete"` when the effect successfully completes, or `"preempted"` if the current effect is stopped or replaced by another effect.
 
 ## Examples
 
