@@ -30,7 +30,7 @@ An {{domxref("Event")}}.
 
 ### Using the `cancel` event
 
-The `cancel` event can be used to catch close request. The `cancel` event is triggered by all close signals and the {{domxref("CloseWatcher.requestClose()")}} method.
+In this example, we ask the user to confirm that they really want to close the component, and if they don't, we cancel the event using {{domxref("Event.preventDefault()")}}, which prevents the `close` event from being fired.
 
 ```js
 watcher.addEventListener("cancel", (e) => {
