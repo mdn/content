@@ -138,9 +138,10 @@ The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>`
 
 <p class="positionedElement" contenteditable="true">This can be edited.</p>
 
-<style contenteditable="true">.positionedElement {
-  inset-area: CHANGEME;
-}
+<style contenteditable="true">
+  .positionedElement {
+    inset-area: CHANGEME;
+  }
 </style>
 ```
 
