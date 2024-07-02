@@ -40,7 +40,7 @@ requestAnimationFrame(callback)
     repaint. This callback function is passed a single argument: a
     {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's
     rendering (based on the number of milliseconds since
-    [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
+    [time origin](/en-US/docs/Web/API/Performance/timeOrigin)).
   - The timestamp is a decimal number, in milliseconds, but with a minimal
     precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to
     {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared

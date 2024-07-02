@@ -565,7 +565,7 @@ The site updates as you enter values into the editor.
 
 ### Other configuration variables
 
-You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#node_env) in order to improve our performance and generate less-verbose error messages. We do this in the same file as we set the `MONGODB_URI` variable.
+You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#set_node_env_to_production) in order to improve our performance and generate less-verbose error messages. We do this in the same file as we set the `MONGODB_URI` variable.
 
 Open `.env` and add a `NODE_ENV` variable with value `production` (see the screenshot in the previous section).
 
@@ -720,7 +720,7 @@ Railway restarts your app when it updates variables. If you check the home page 
 
 ### Other configuration variables
 
-You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#node_env) in order to improve our performance and generate less-verbose error messages. We can do this in the same screen as we set the `MONGODB_URI` variable.
+You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#set_node_env_to_production) in order to improve our performance and generate less-verbose error messages. We can do this in the same screen as we set the `MONGODB_URI` variable.
 
 Open the application service.
 Then select the _Variables_ tab, where you will see that `MONGODB_URI` is already defined, and press the **New Variable** button.

@@ -55,11 +55,7 @@ if (navigator.mediaDevices) {
 }
 ```
 
-Changing line 14 to the following causes `MediaRecorder` to try to use AVC Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for audio, which is good for mobile and other possible resource-constrained situations.
-
-```js
-mimeType: 'video/mp4; codecs="avc1.424028, mp4a.40.2"';
-```
+Changing the `mimeType` in `options` to `'video/mp4; codecs="avc1.424028, mp4a.40.2"'` causes `MediaRecorder` to try to use AVC Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for audio, which is good for mobile and other possible resource-constrained situations.
 
 Assuming this configuration is acceptable to the user agent, the value returned later
 by `m.mimeType` would then be

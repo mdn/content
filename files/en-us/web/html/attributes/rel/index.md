@@ -6,6 +6,7 @@ browser-compat:
   - html.elements.link.rel
   - html.elements.a.rel
   - html.elements.area.rel
+  - html.elements.form.rel
 ---
 
 {{HTMLSidebar}}
@@ -123,7 +124,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
 - `expect` {{experimental_inline}}
 
-  - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](#blocking) attribute.
+  - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](/en-US/docs/Web/HTML/Element/link#blocking) attribute.
 
     > **Note:** See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transitions_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
 

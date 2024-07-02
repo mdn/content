@@ -2159,7 +2159,7 @@
       "fscholz"
     ]
   },
-  "Glossary/Engine": {
+  "Glossary/Engine/JavaScript": {
     "modified": "2019-05-09T03:04:25.699Z",
     "contributors": [
       "SphinxKnight",
@@ -2170,6 +2170,18 @@
       "klez",
       "kscarfone",
       "panaggio"
+    ]
+  },
+  "Glossary/Engine/Rendering": {
+    "modified": "2020-09-28T13:38:28.076Z",
+    "contributors": [
+      "myakura",
+      "ramsunvtech",
+      "hbloomer",
+      "Andrew_Pfeiffer",
+      "klez",
+      "kscarfone",
+      "ChrisL"
     ]
   },
   "Glossary/Entity": {
@@ -2624,10 +2636,6 @@
   "Glossary/Grid_Tracks": {
     "modified": "2020-03-26T14:30:59.270Z",
     "contributors": ["mfuji09", "j9t", "teoli", "rachelandrew"]
-  },
-  "Glossary/Guard": {
-    "modified": "2019-01-16T20:19:28.335Z",
-    "contributors": ["chrisdavidmills", "klez", "Andrew_Pfeiffer", "kscarfone"]
   },
   "Glossary/Gutters": {
     "modified": "2019-03-23T22:16:42.903Z",
@@ -4213,18 +4221,6 @@
       "teainthegarden"
     ]
   },
-  "Glossary/Rendering_engine": {
-    "modified": "2020-09-28T13:38:28.076Z",
-    "contributors": [
-      "myakura",
-      "ramsunvtech",
-      "hbloomer",
-      "Andrew_Pfeiffer",
-      "klez",
-      "kscarfone",
-      "ChrisL"
-    ]
-  },
   "Glossary/Repo": {
     "modified": "2019-03-23T23:09:46.809Z",
     "contributors": [
@@ -4525,10 +4521,6 @@
   "Glossary/Search_engine": {
     "modified": "2020-10-05T12:31:04.165Z",
     "contributors": ["alattalatta", "darby", "klez", "devanshmanu", "jswisher"]
-  },
-  "Glossary/Second-level_Domain": {
-    "modified": "2019-04-30T14:00:51.592Z",
-    "contributors": ["klez"]
   },
   "Glossary/Self-Executing_Anonymous_Function": {
     "modified": "2019-09-24T05:50:18.861Z",
@@ -33726,28 +33718,6 @@
       "Callek"
     ]
   },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2020-05-05T00:50:07.944Z",
-    "contributors": [
-      "mnoorenberghe",
-      "Zearin_Galaurum",
-      "mfluehr",
-      "ademaro",
-      "MHasan",
-      "ipapratilov",
-      "Sheppy",
-      "jswisher",
-      "MattBrubeck",
-      "Nickolay",
-      "Johnjbarton",
-      "Iamwriter",
-      "Waldo",
-      "SzjShu",
-      "Enn",
-      "Gomita",
-      "Hamstersoup"
-    ]
-  },
   "Web/API/Event/Event": {
     "modified": "2020-10-15T21:31:44.446Z",
     "contributors": [
@@ -34968,25 +34938,6 @@
       "DavidWalsh",
       "kscarfone"
     ]
-  },
-  "Web/API/Fetch_API/Basic_concepts": {
-    "modified": "2020-02-18T19:55:22.051Z",
-    "contributors": [
-      "jswisher",
-      "Sheppy",
-      "sideshowbarker",
-      "LurN",
-      "parambirs",
-      "chrisdavidmills",
-      "gapple",
-      "lawrencekgrant",
-      "gbharatwaj",
-      "smarvin"
-    ]
-  },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2020-10-06T03:40:09.140Z",
-    "contributors": ["ralflang", "mfluehr", "piotrekwitek", "chrisdavidmills"]
   },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-19T07:19:17.981Z",
@@ -123760,10 +123711,6 @@
       "ratcliffe_mike"
     ]
   },
-  "Web/SVG/Attribute/color-profile": {
-    "modified": "2020-10-15T21:04:59.286Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
-  },
   "Web/SVG/Attribute/cursor": {
     "modified": "2020-10-15T21:18:37.523Z",
     "contributors": [
@@ -123912,10 +123859,6 @@
   "Web/SVG/Attribute/elevation": {
     "modified": "2020-10-15T21:20:22.181Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/enable-background": {
-    "modified": "2020-10-15T22:21:13.409Z",
-    "contributors": ["Sebastianz"]
   },
   "Web/SVG/Attribute/end": {
     "modified": "2020-03-17T14:16:54.678Z",
@@ -124176,10 +124119,6 @@
   "Web/SVG/Attribute/kernelUnitLength": {
     "modified": "2019-06-30T15:02:41.242Z",
     "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/kerning": {
-    "modified": "2020-10-15T21:06:36.596Z",
-    "contributors": ["Sebastianz", "connorshea", "Jeremie"]
   },
   "Web/SVG/Attribute/keyPoints": {
     "modified": "2020-10-15T22:20:10.730Z",
@@ -125028,10 +124967,6 @@
   },
   "Web/SVG/Attribute/xlink:type": {
     "modified": "2020-10-15T22:22:53.536Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Attribute/xml:base": {
-    "modified": "2020-10-15T22:22:40.675Z",
     "contributors": ["Sebastianz"]
   },
   "Web/SVG/Attribute/xml:lang": {
