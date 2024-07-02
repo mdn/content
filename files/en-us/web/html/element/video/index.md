@@ -39,7 +39,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     Use the [`disablepictureinpicture`](#disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
 
-- `crossorigin`
+- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
