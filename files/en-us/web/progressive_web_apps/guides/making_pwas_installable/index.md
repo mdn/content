@@ -62,16 +62,19 @@ The manifest contains a single JSON object containing a collection of members, e
 
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 
-- [`name`](/en-US/docs/Web/Manifest/name)
-- [`icons`](/en-US/docs/Web/Manifest/icons)
+- [`name`](/en-US/docs/Web/Manifest/name) or [`short_name`](/en-US/docs/Web/Manifest/short_name)
+- [`icons`](/en-US/docs/Web/Manifest/icons) must contain a 192px and a 512px icon
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
 - [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
+- [`prefer-related-application`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
 
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
-### Secure context
+### HTTPS, localhost, or loopback are required
 
-For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
+For a PWA to be installable it must be served using the `https` protocol, or from a local development environment using `localhost` or `127.0.0.1` — with or without a port number.
+
+This is a more stringent requirement than [secure context](/en-US/docs/Web/Security/Secure_Contexts), which considers resources loaded from `file://` URLs to be secure.
 
 ## Installation from an app store
 

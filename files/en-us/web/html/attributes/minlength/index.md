@@ -15,6 +15,8 @@ The length is measured in UTF-16 code units, which ([for most scripts](/en-US/do
 
 The input will fail constraint validation if the length of the text value of the field is less than minlength UTF-16 code units long, with {{domxref('validityState.tooShort')}} returning `true`. Constraint validation is only applied when the value is changed by the user. Once submission fails, some browsers will display an error message indicating the minimum length required and the current length.
 
+`minlength` does not imply [`required`](/en-US/docs/Web/HTML/Attributes/required); an input only violates a `minlength` constraint if the user has input a value. If an input is not `required`, an empty string can be submitted even if `minlength` is set.
+
 {{EmbedInteractiveExample("pages/tabbed/attribute-minlength.html", "tabbed-shorter")}}
 
 ## Examples

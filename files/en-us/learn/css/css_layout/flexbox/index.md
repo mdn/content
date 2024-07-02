@@ -23,13 +23,13 @@ page-type: learn-module-chapter
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To learn how to use the Flexbox layout system to create web layouts.
+        To learn how to use the flexbox layout system to create web layouts.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Why Flexbox?
+## Why flexbox?
 
 CSS flexible box layout enables you to:
 
@@ -43,7 +43,7 @@ Flexbox features may be the perfect solution for your one dimensional layout nee
 
 In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) from our GitHub repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
-![Image showing the starting point of Flexbox tutorial](bih741v.png)
+![Image showing the starting point of flexbox tutorial](bih741v.png)
 
 You'll see that we have a {{htmlelement("header")}} element with a top level heading inside it and a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. We're going to use these to create a fairly standard three column layout.
 
@@ -77,7 +77,7 @@ When elements are laid out as flex items, they are laid out along two axes:
 
 ![Three flex items in a left-to-right language are laid out side-by-side in a flex container. The main axis — the axis of the flex container in the direction in which the flex items are laid out — is horizontal. The ends of the axis are main-start and main-end and are on the left and right respectively. The cross axis is vertical; perpendicular to the main axis. The cross-start and cross-end are at the top and bottom respectively. The length of the flex item along the main axis, in this case, the width, is called the main size, and the length of the flex item along the cross axis, in this case, the height, is called the cross size.](flex_terms.png)
 
-- The **main axis** is the axis running in the direction the flex items are laid out in (for example, as a row across the page, or a column down the page.) The start and end of this axis are called the **main start** and **main end**. The length from the main-start edge to the main-end edge is the **main size**.
+- The **main axis** is the axis running in the direction the flex items are laid out in (for example, as a row across the page, or a column down the page.) The start and end of this axis are called the **main start** and **main end**. The length from the flex item start edge to the flex item end edge is the **main size**.
 - The **cross axis** is the axis running perpendicular to the direction the flex items are laid out in. The start and end of this axis are called the **cross start** and **cross end**. The length from the cross-start edge to the cross-end edge is the **cross size**.
 - The parent element that has `display: flex` set on it (the {{htmlelement("section")}} in our example) is called the **flex container**.
 - The items laid out as flexible boxes inside the flex container are called **flex items** (the {{htmlelement("article")}} elements in our example).
@@ -346,7 +346,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-That concludes our tour of the basics of Flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: [CSS Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids).
+That concludes our tour of the basics of flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: [CSS grids](/en-US/docs/Learn/CSS/CSS_layout/Grids).
 
 ## See also
 
@@ -355,7 +355,7 @@ That concludes our tour of the basics of Flexbox. We hope you had fun and will h
 - [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
-- [CSS-Tricks Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about Flexbox in a visually appealing way
-- [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of Flexbox
+- [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — an article explaining everything about flexbox in a visually appealing way
+- [Flexbox Froggy](https://flexboxfroggy.com/) — an educational game to learn and better understand the basics of flexbox
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}

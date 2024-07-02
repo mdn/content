@@ -60,7 +60,7 @@ The {{htmlelement("video")}} element allows you to embed a video very easily. A 
 </video>
 ```
 
-The features of note are:
+The features to note are:
 
 - [`src`](/en-US/docs/Web/HTML/Element/video#src)
   - : In the same way as for the {{htmlelement("img")}} element, the `src` (source) attribute contains a path to the video you want to embed. It works in exactly the same way.
