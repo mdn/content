@@ -1,33 +1,21 @@
 ---
-title: declarativeNetRequest.getDisabledRuleIds
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getDisabledRuleIds
-page-type: webextension-api-function
-browser-compat: webextensions.api.declarativeNetRequest.getDisabledRuleIds
+title: declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_DISABLED_STATIC_RULES
+page-type: webextension-api-property
+browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES
 ---
 
 {{AddonSidebar}}
 
-Returns the IDs of the disabled rules in a static ruleset. The number of disabled rules in a ruleset is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}.
+The maximum number of static rules that can be disabled on each static ruleset.
 
-## Syntax
+Rules are enable and disable in static rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules","updateStaticRules")}} and a list of disabled rules for a static ruleset is obtained with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds","getDisabledRuleIds")}}.
 
-```js-nolint
-let ruleIds = await browser.declarativeNetRequest.getDisabledRuleIds(
-    options                // object
-);
-```
+This limit is:
 
-### Parameters
-
-- `options`
-
-  - : An object containing details of the ruleset to return disabled rules for.
-    - `rulesetId`
-      - : `string` The ID of the static ruleset to query.
-
-### Return value
-
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of static [rules IDs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/Rule#id) or an empty array if there are no disabled rules. If the request fails, the promise is rejected with an error message.
+- in Firefox: `5000`
+- in Chrome: `5000`
+- in Safari, there is no implementation for this limit.
 
 {{WebExtExamples("h2")}}
 
