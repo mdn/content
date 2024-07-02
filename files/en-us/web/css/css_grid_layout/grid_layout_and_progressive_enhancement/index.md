@@ -65,7 +65,7 @@ img {
 ```html
 <div class="media">
   <div class="image">
-    <img src="https://via.placeholder.com/150x150" alt="placeholder" />
+    <img src="https://dummyimage.com/150x150" alt="placeholder" />
   </div>
   <div class="text">
     This is a media object example. I am using floats for older browsers and

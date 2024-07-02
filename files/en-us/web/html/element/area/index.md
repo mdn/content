@@ -100,7 +100,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 </map>
 <img
   usemap="#primary"
-  src="https://via.placeholder.com/350x150"
+  src="https://dummyimage.com/350x150"
   alt="350 x 150 pic" />
 ```
 
