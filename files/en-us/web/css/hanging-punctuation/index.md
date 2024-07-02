@@ -16,18 +16,14 @@ The **`hanging-punctuation`** [CSS](/en-US/docs/Web/CSS) property specifies whet
 hanging-punctuation: none;
 hanging-punctuation: first;
 hanging-punctuation: last;
-hanging-punctuation: force-end;
 hanging-punctuation: allow-end;
 
 /* Two keywords */
-hanging-punctuation: first force-end;
 hanging-punctuation: first allow-end;
 hanging-punctuation: first last;
-hanging-punctuation: last force-end;
 hanging-punctuation: last allow-end;
 
 /* Three keywords */
-hanging-punctuation: first force-end last;
 hanging-punctuation: first allow-end last;
 
 /* Global values */
@@ -39,17 +35,6 @@ hanging-punctuation: unset;
 ```
 
 The `hanging-punctuation` property may be specified with one, two, or three space-separated values.
-
-- **One-value** syntax uses any one of the keyword values in the list below.
-- **Two-value** syntax uses one of the following:
-
-  - `first` together with any one of `last`, `allow-end`, or `force-end`
-  - `last` together with any one of `first`, `allow-end`, or `force-end`
-
-- **Three-value** syntax uses one of the following:
-
-  - `first`, `allow-end`, and `last`
-  - `first`, `force-end`, and `last`
 
 ### Values
 
@@ -66,8 +51,6 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
   - : A closing bracket or quote at the end of the last formatted line of an element hangs. This applies to:
     - all characters in the Unicode categories [Pe](https://unicodeplus.com/category/Pe), [Pf](https://unicodeplus.com/category/Pf), [Pi](https://unicodeplus.com/category/Pi)
     - the quote marks `U+0027` APOSTROPHE (`'`) and `U+0022` QUOTATION MARK (`"`).
-- `force-end`
-  - : A stop or comma at the end of a line hangs.
 - `allow-end`
   - : A stop or comma at the end of a line hangs if it does not otherwise fit prior to justification.
 
