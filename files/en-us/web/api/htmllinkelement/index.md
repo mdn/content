@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.integrity")}}
   - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.media")}}
-  - : A string representing a list of one or more media formats to which the resource applies.
+  - : A string representing a list of one or more media formats to which the resource applies. It reflects the `media` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
   - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
