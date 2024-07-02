@@ -26,8 +26,8 @@ Each main area of the site — JavaScript, CSS, and so on — has a set of domai
 
 These page types are not specific to a particular MDN technology area:
 
-- `guide`: a generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
-- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
+- `guide`: a generic guide page with no specific structure.
+- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages.
 - `how-to`: a page that acts primarily as a goal-oriented how-to article.
 - `tutorial`: a page that is the overview page of a learning-oriented article.
 - `tutorial-chapter`: a page that is a part of a multipart tutorial.
@@ -144,7 +144,7 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `web-api-instance-property`: an instance property, like [`request.headers`](/en-US/docs/Web/API/Request/headers).
 - `web-api-static-method`: a static method, like [`Response.error()`](/en-US/docs/Web/API/Response/error_static).
 - `web-api-static-property`: a static property, like [`Notification.permission`](/en-US/docs/Web/API/Notification/permission_static).
-- `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
+- `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event).
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
 
