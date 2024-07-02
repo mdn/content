@@ -356,7 +356,7 @@ form {
 ```
 
 ```js hidden
-const anchorContainer = document.querySelector("#anchor-container");
+const anchorContainer = document.querySelector("body");
 const infobox = document.querySelector(".infobox");
 
 const insetAreaForm = document.querySelector("#inset-area-form");

@@ -170,7 +170,7 @@ The generic logical keywords use the same terms for inline and block directions,
 
 For example, `start end` and `self-start self-end` both describe the position at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this is the top right of the anchor element, whereas with `writing-mode: vertical-rl` it is the bottom right of the anchor.
 
-### Spanning generic logical row and column keywords
+#### Spanning generic logical row and column keywords
 
 The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
