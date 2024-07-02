@@ -80,6 +80,8 @@ The visible space between elements may differ from the specified `gap` value bec
 
 Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers still accept `grid-gap` as an alias for `gap`.
 
+A gap acts like an empty item or track. Instead of the gap, you could use an empty item or track in the container, and the item or track's size would be the size set in the `gap` property value. Percentage values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element. Two examples that demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) are in the examples section.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -190,11 +192,7 @@ Early versions of the specification called this property `grid-gap`, and to main
 
 {{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
 
-## Percentage gap values
-
-A gap acts like an empty item or track. Instead of the gap, you could use an empty item or track in the container, and the item or track's size would be the size set in the `gap` property value. Percentage values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element.
-
-### Explicit container size
+### Percentage gap value and explicit container size
 
 If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 20x20px children. Both containers are explicitly set to 200px high using `height: 200px` and the gap is set with `gap: 12.5% 0`.
 
@@ -250,7 +248,7 @@ body > div {
 
 Now inspect the grid and flex elements using [Inspector tab in Web Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). In order to see the actual gaps hover mouse over `<div id="grid">` and `<div id="flex">` tags in the inspector. You will notice that the gap is the same in both cases which is 25px.
 
-### Implicit container size
+### Percentage gap value and implicit container size
 
 If size is not explicitly set on the container, then the percentage gap behaves differently in case of grid and flex layouts. In the following example the containers don't have height explicitly set.
 
