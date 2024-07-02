@@ -398,11 +398,8 @@
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:user-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
-/en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
-/en-US/docs/CSS/::-moz-page-sequence	/en-US/docs/Web/CSS/::-moz-page-sequence
 /en-US/docs/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/CSS/::-moz-progress-bar	/en-US/docs/Web/CSS/::-moz-progress-bar
-/en-US/docs/CSS/::-moz-scrolled-page-sequence	/en-US/docs/Web/CSS/::-moz-scrolled-page-sequence
 /en-US/docs/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/CSS/::after	/en-US/docs/Web/CSS/::after
 /en-US/docs/CSS/::after-redirect-1	/en-US/docs/Web/CSS/::after
