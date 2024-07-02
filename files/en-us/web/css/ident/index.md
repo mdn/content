@@ -11,7 +11,7 @@ The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 ## Syntax
 
-A CSS identifier consists of one or more characters, where characters can be any of the following:
+A CSS identifier consists of one or more characters, which can be any of the following:
 
 - any ASCII character in the ranges `A-Z` and `a-z`
 - any decimal digit (`0` to `9`)
