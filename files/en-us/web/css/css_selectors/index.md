@@ -179,7 +179,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 
   - {{CSSxRef("::cue")}}
-  - {{CSSxRef("::cue-region")}}
 
 - {{CSSXref("@namespace")}} at-rule
 

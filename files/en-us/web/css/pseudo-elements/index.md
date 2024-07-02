@@ -55,7 +55,6 @@ B
 C
 
 - {{CSSxRef("::cue")}}
-- {{CSSxRef("::cue-region")}}
 
 F
 
