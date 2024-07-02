@@ -8175,6 +8175,7 @@
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
 /en-US/docs/Web/API/Fetch_API/Basic_concepts	/en-US/docs/Web/API/Fetch_API/Using_Fetch
+/en-US/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size

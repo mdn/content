@@ -34939,10 +34939,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/Fetch_API/Cross-global_fetch_usage": {
-    "modified": "2020-10-06T03:40:09.140Z",
-    "contributors": ["ralflang", "mfluehr", "piotrekwitek", "chrisdavidmills"]
-  },
   "Web/API/Fetch_API/Using_Fetch": {
     "modified": "2020-10-19T07:19:17.981Z",
     "contributors": [
