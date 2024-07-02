@@ -1,14 +1,14 @@
 ---
-title: fetch() global function
+title: "WorkerGlobalScope: fetch() method"
 short-title: fetch()
-slug: Web/API/fetch
-page-type: web-api-global-function
+slug: Web/API/WorkerGlobalScope/fetch
+page-type: web-api-instance-method
 browser-compat: api.fetch
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("Fetch API")}}
 
-The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+The **`fetch()`** method of the {{domxref("WorkerGlobalScope")}} interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
 
 The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
@@ -62,7 +62,7 @@ fetch(resource, options)
 
     - `browsingTopics` {{experimental_inline}}
 
-      - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+      - : A boolean specifying that the selected topics for the current user should be sent in a {{HTTPHeader("Sec-Browsing-Topics")}} header with the associated request. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
     - `cache`
 
@@ -81,9 +81,9 @@ fetch(resource, options)
     - `headers`
 
       - : Any headers you want to add to your request, contained within a {{domxref("Headers")}} object or an object literal with {{jsxref("String")}} values.
-        Note that [some names are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
+        Note that {{Glossary("forbidden header name", "some names are forbidden")}}.
 
-        > **Note:** The [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
+        > **Note:** The {{HTTPHeader("Authorization")}} HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
 
     - `integrity`
 
@@ -97,7 +97,7 @@ fetch(resource, options)
 
       - : The request method, e.g., `"GET"`, `"POST"`.
         The default is `"GET"`.
-        Note that the {{httpheader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
+        Note that the {{HTTPHeader("Origin")}} header is not set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
         Any string which is a case-insensitive match for one of the methods in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) will be uppercased automatically.
         If you want to use a custom method (like `PATCH`), you should uppercase it yourself.
 
@@ -149,7 +149,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
+  - : Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{HTTPHeader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
 - {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
@@ -161,10 +161,6 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Blocked by a permissions policy</td>
-      <td>Use of the <a href="/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> is blocked by a <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}}, and a <code>fetch()</code> request was made with <code>attributionReporting</code> specified.</td>
-    </tr>
     <tr>
       <td>Invalid header name.</td>
       <td>
@@ -296,7 +292,8 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest)
+self
+  .fetch(myRequest)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -310,7 +307,7 @@ fetch(myRequest)
 ```
 
 In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
-In this case, we can set a {{httpheader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
+In this case, we can set a {{HTTPHeader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js
 const myImage = document.querySelector("img");
@@ -359,6 +356,7 @@ const req = new Request("flowers.jpg", options);
 
 ## See also
 
+- {{domxref("Window.fetch()")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
