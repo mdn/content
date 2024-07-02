@@ -156,8 +156,8 @@ We have four anchors and two positioned elements, distinguished with different `
 
 <div class="infobox" id="infobox1">
   <form>
-    <label for="myanchor1-anchor-select">Place infobox on:</label>
-    <select id="myanchor1-anchor-select">
+    <label for="anchor1-anchor-select">Place infobox on:</label>
+    <select id="anchor1-anchor-select">
       <option value="1">Anchor 1</option>
       <option value="2">Anchor 2</option>
       <option value="3">Anchor 3</option>
@@ -168,8 +168,8 @@ We have four anchors and two positioned elements, distinguished with different `
 
 <div class="infobox" id="infobox2">
   <form>
-    <label for="myanchor2-anchor-select">Place infobox on:</label>
-    <select id="myanchor2-anchor-select">
+    <label for="anchor2-anchor-select">Place infobox on:</label>
+    <select id="anchor2-anchor-select">
       <option value="1">Anchor 1</option>
       <option value="2">Anchor 2</option>
       <option value="3">Anchor 3</option>
@@ -253,8 +253,8 @@ We dynamically change which anchor elements the `anchor-name` values are set on 
 
 ```js
 // Get references to the two select menus
-const select1 = document.querySelector("#myanchor1-anchor-select");
-const select2 = document.querySelector("#myanchor2-anchor-select");
+const select1 = document.querySelector("#anchor1-anchor-select");
+const select2 = document.querySelector("#anchor2-anchor-select");
 // Store references to all the anchors in a NodeList (array-like)
 const anchors = document.querySelectorAll("#anchor-container > div");
 
@@ -263,7 +263,7 @@ select1.addEventListener("change", updateAnchorNames);
 select2.addEventListener("change", updateAnchorNames);
 
 function updateAnchorNames() {
-  // Remove all anchor names fomr all anchors
+  // Remove all anchor names from all anchors
   for (const anchor of anchors) {
     anchor.style.anchorName = "none";
   }
