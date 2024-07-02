@@ -1,35 +1,20 @@
 ---
-title: declarativeNetRequest.getSessionRules
-slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getSessionRules
-page-type: webextension-api-function
-browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
+title: declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES
+slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_SESSION_RULES
+page-type: webextension-api-property
+browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES
 ---
 
 {{AddonSidebar}}
 
-Returns the active set of session-scoped rules for the extension.
+The maximum number of session-scoped rules an extension can add.
 
-## Syntax
+This limit is:
 
-```js-nolint
-let sessionRules = await browser.declarativeNetRequest.getSessionRules();
-```
+- in Firefox: `5000`
+- in Chrome: `5000`
 
-### Parameters
-
-- `filter` {{optional_inline}}
-
-  - : An object to filter the list of returned rules.
-    - `ruleIds` {{optional_inline}}
-      - : An array of `integer`. The IDs of the rules to return.
-
-### Return value
-
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with an array of {{WebExtAPIRef("declarativeNetRequest.Rule")}} objects. If no rules are active, the object is empty. If the request fails, the promise is rejected with an error message
-
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
