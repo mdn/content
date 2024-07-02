@@ -15,7 +15,7 @@ They are primarily used for displaying video subtitles or captions that overlay 
 
 ## Concepts and usage
 
-A text track is a container for time-aligned text data of a particular kind, and in a particular language.
+A text track is a container for time-aligned text data, that can be played in parallel with a video or audio track in order to provide a translation, transcription, or overview of the content.
 A video or audio media element may define tracks of different kinds and in different languages, allowing an appropriate track (or tracks) to be selected based on user preferences and browser user interface.
 
 The different kinds of text data that can be specified are listed below (not all browsers will necessarily support all kinds of text tracks):
@@ -39,9 +39,9 @@ A text track and cues can be defined in a file using the [WebVTT File Format](/e
 Alternatively you can add a {{domxref("TextTrack")}} to a media element in JavaScript using [`HTMLMediaElement.addTextTrack()`](/en-US/docs/Web/API/HTMLMediaElement#htmlmediaelement.addtexttrack), and then add individual {{domxref("VTTCue")}} objects to the track with {{domxref("TextTrack.addCue()")}}.
 
 The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
-The {{cssxref("::cue-region")}} is intended for styling cues in a particular region, but is not yet broadly supported.
+The `::cue-region` pseudo-element is intended for styling cues in a particular region, but is not supported in any browser.
 
-Generally most important WebVTT functionality can be achieved using either the file format or Web API.
+Most important WebVTT features can be accessed using either the file format or Web API.
 
 ## Interfaces
 
@@ -67,12 +67,9 @@ Generally most important WebVTT functionality can be achieved using either the f
 ### Related CSS extensions
 
 These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) are used to style cues in media with VTT tracks.
-https://w3c.github.io/webvtt/#css-extensions-introduction
 
 - {{CSSxRef("::cue")}}
   - : Matches cues within a selected element in media with VTT tracks.
-- {{CSSxRef("::cue-region")}}
-  - : Matches cue regions within a selected element in media with VTT tracks.
 
 ## Examples
 
