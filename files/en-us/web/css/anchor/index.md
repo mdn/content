@@ -3,6 +3,7 @@ title: anchor()
 slug: Web/CSS/anchor
 page-type: css-function
 browser-compat: css.types.anchor
+sidebar: cssref
 ---
 
 {{CSSRef}}

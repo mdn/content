@@ -2,6 +2,7 @@
 title: JavaScript engine
 slug: Glossary/Engine/JavaScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
 {{GlossarySidebar}}

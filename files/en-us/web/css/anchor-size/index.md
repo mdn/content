@@ -3,6 +3,7 @@ title: anchor-size()
 slug: Web/CSS/anchor-size
 page-type: css-function
 browser-compat: css.types.anchor-size
+sidebar: cssref
 ---
 
 {{CSSRef}}
