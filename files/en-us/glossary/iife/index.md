@@ -155,7 +155,6 @@ When clicked, these buttons alert 0 and 1.
 ## See also
 
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Function")}}
   - {{Glossary("Self-Executing Anonymous Function")}}

@@ -114,7 +114,7 @@ Generally, our documentation falls into the following categories:
 
 - Reference
 - Guide
-- Glossary
+- Related glossary terms
 - Learn/Tutorials
 
 In general, MDN Web Docs is for _product_ documentation, not for _project_ or _process_ documentation. So, if the document is about "how to use a thing" or "how a thing works" (where, the "thing" is in one of the topic categories mentioned above), then it can go on MDN Web Docs.

@@ -14,7 +14,7 @@ See [Document directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#d
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive")}}

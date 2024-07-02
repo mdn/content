@@ -24,5 +24,5 @@ The definition of the alignment subject depends on the layout mode being used.
 ## See also
 
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
-- Glossary
+- Related glossary term:
   - {{Glossary("alignment container")}}

@@ -17,6 +17,6 @@ In the modern age, most computer systems use {{glossary("Unicode")}} instead, wh
 
 - [ASCII](https://en.wikipedia.org/wiki/ASCII) on Wikipedia
 - {{rfc("20")}}
-- Glossary
+- Related glossary terms:
   - {{glossary("Unicode")}}
   - {{glossary("UTF-8")}}

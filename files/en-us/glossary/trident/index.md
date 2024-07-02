@@ -13,7 +13,7 @@ Trident is used in Microsoft Edge when 'IE mode' is on, a feature that allows Ed
 ## See also
 
 - [Trident](<https://en.wikipedia.org/wiki/Trident_(software)>) on Wikipedia
-- Glossary
+- Related glossary terms:
   - {{Glossary("Microsoft Internet Explorer")}}
   - {{Glossary("Microsoft Edge")}}
   - {{Glossary("Engine/Rendering", "Rendering engine")}}

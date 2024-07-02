@@ -18,6 +18,6 @@ Common rendering engines include:
 ## See also
 
 - [Browser engine](https://en.wikipedia.org/wiki/Browser_engine) on Wikipedia
-- Glossary
+- Related glossary terms:
   - {{Glossary("Engine")}}
   - {{Glossary("Browser")}}

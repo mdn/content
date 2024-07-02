@@ -76,5 +76,6 @@ add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
-- Glossary: {{Glossary("CORS")}}
+- Related glossary term:
+  - {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)

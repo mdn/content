@@ -21,8 +21,7 @@ Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} t
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) on W3C
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/) specification
 - [Web Accessibility In Mind](https://webaim.org/)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("ARIA")}}
   - {{Glossary("Screen reader")}}
   - {{Glossary("Accessibility tree")}}

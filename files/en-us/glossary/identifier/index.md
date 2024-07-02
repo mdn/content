@@ -14,7 +14,7 @@ In {{glossary("CSS")}}, there are two identifier data types: {{cssxref("custom-i
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
   - {{glossary("Scope")}}
   - {{glossary("string")}}
   - {{glossary("Unicode")}}

@@ -31,8 +31,7 @@ A server might use them to modify its caching behavior, or the information that 
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - [List of all HTTP headers > Fetch metadata request headers](/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP_header","HTTP header")}}
   - {{Glossary("Response header")}}

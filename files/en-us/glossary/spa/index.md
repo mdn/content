@@ -14,7 +14,7 @@ This therefore allows users to use websites without loading whole new pages from
 
 - [Single-page application](https://en.wikipedia.org/wiki/Single-page_application) (Wikipedia)
 - [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   - {{Glossary("API")}}
   - {{Glossary("AJAX")}}
