@@ -398,11 +398,8 @@
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:user-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
-/en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
-/en-US/docs/CSS/::-moz-page-sequence	/en-US/docs/Web/CSS/::-moz-page-sequence
 /en-US/docs/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/CSS/::-moz-progress-bar	/en-US/docs/Web/CSS/::-moz-progress-bar
-/en-US/docs/CSS/::-moz-scrolled-page-sequence	/en-US/docs/Web/CSS/::-moz-scrolled-page-sequence
 /en-US/docs/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/CSS/::after	/en-US/docs/Web/CSS/::after
 /en-US/docs/CSS/::after-redirect-1	/en-US/docs/Web/CSS/::after
@@ -1987,7 +1984,7 @@
 /en-US/docs/DOM/event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM/event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
-/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/DOM/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM/form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM/form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -2469,7 +2466,7 @@
 /en-US/docs/DOM:event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM:event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM:event.which	/en-US/docs/Web/API/UIEvent/which
-/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/DOM:form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM:form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM:form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -3608,6 +3605,7 @@
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
+/en-US/docs/Glossary/Second-level_Domain	/en-US/docs/Glossary/SLD
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Simple_header	/en-US/docs/Glossary/CORS-safelisted_request_header
 /en-US/docs/Glossary/Simple_response_header	/en-US/docs/Glossary/CORS-safelisted_response_header
@@ -8136,6 +8134,7 @@
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Web/API/Event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
+/en-US/docs/Web/API/Event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/Web/API/Event/CustomEvent	/en-US/docs/Web/API/CustomEvent
 /en-US/docs/Web/API/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Web/API/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
@@ -8173,6 +8172,7 @@
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
 /en-US/docs/Web/API/Fetch_API/Basic_concepts	/en-US/docs/Web/API/Fetch_API/Using_Fetch
+/en-US/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
