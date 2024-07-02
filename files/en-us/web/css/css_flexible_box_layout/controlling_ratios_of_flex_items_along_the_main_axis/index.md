@@ -105,6 +105,7 @@ Try changing the `flex-grow` factor from 1 to 0 in this live example to see the 
 Using `flex-grow` and `flex-basis` together enables us to control individual item sizes by setting different `flex-grow` factors. If we keep the `flex-basis` at `0` so that all the space can be distributed, we can create differently sized flex items by assigning each item a different `flex-grow` factor.
 
 In the example below, we use `1` as the `flex-grow` factor for the first two items and double it to `2` for the third item. With `flex-basis: 0` set on all the items, the available space is distributed as follows:
+
 1. The `flex-grow` factor values of all the sibling flex items are added together (the total is 4 in this case).
 2. The positive free space in the flex container is divided by this total value.
 3. The free space is distributed according to the individual values. In this case, the first item gets one part, the second one part, and the third two parts. This means that the third item is twice the size of the first and second items.
