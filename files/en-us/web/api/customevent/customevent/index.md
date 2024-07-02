@@ -46,12 +46,14 @@ const dogFound = new CustomEvent("animalfound", {
   },
 });
 
+const element = document.createElement("div"); // create a <div> element
+
 // add an appropriate event listener
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+element.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // dispatch the events
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
+element.dispatchEvent(catFound);
+element.dispatchEvent(dogFound);
 
 // "cat" and "dog" logged in the console
 ```

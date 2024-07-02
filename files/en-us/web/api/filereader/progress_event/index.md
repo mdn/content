@@ -8,7 +8,7 @@ browser-compat: api.FileReader.progress_event
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`progress`** event is fired periodically as the `FileReader` reads data.
+The **`progress`** event of the {{domxref("FileReader")}} interface is fired periodically as the `FileReader` reads data.
 
 This event is not cancelable and does not bubble.
 

@@ -77,8 +77,8 @@ CSS can also be used to match a custom state [within a custom element's shadow D
 
 Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
 
-> **Warning:** Chrome supports a deprecated syntax that selects custom states using a CSS `<dashed-ident>` rather than the `:state()` function.
-> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](compability_with_dashed-ident_syntax) section below.
+> **Warning:** Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
+> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compability_with_dashed-ident_syntax) section below.
 
 ## Examples
 
@@ -140,7 +140,26 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+
+// Display a warning to unsupported browsers
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 In the `LabeledCheckbox` class:
@@ -199,6 +218,7 @@ class LabeledCheckbox extends HTMLElement {
     super();
     this._boundOnClick = this._onClick.bind(this);
     this.addEventListener("click", this._boundOnClick);
+
     // Attach an ElementInternals to get states property
     this._internals = this.attachInternals();
   }
@@ -235,9 +255,25 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
 
 customElements.define("labeled-checkbox", LabeledCheckbox);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
@@ -350,17 +386,17 @@ class ManyStateElement extends HTMLElement {
   set state(stateName) {
     // Set internal state to passed value
     // Add identifier matching state and delete others
-    if (stateName == "loading") {
+    if (stateName === "loading") {
       this._state = "loading";
       this._internals.states.add("loading");
       this._internals.states.delete("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "interactive") {
+    } else if (stateName === "interactive") {
       this._state = "interactive";
       this._internals.states.delete("loading");
       this._internals.states.add("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "complete") {
+    } else if (stateName === "complete") {
       this._state = "complete";
       this._internals.states.delete("loading");
       this._internals.states.delete("interactive");
@@ -378,9 +414,25 @@ class ManyStateElement extends HTMLElement {
       this.state = "loading";
     }
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(loading))");
+  }
 }
 
 customElements.define("many-state-element", ManyStateElement);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 #### HTML
@@ -418,12 +470,12 @@ Click the element to see a different border being applied as the state changes.
 ## Compability with `<dashed-ident>` syntax
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
-Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
+Browser versions that don't support `:state()` will throw an error when supplied with an ident that is not prefixed with the double dash.
 If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector.
 
 ### Using a try...catch block
 
-Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS.
+This code shows how you can use `try...catch` to attempt adding a state identifier that does not use a `<dashed-ident>`, and fall back to `<dashed-ident>` if an error is thrown.
 
 #### JavaScript
 

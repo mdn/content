@@ -32,7 +32,7 @@ A new string containing the extracted section of the string.
 
 ## Description
 
-`slice()` extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string.
+`slice()` extracts the text from one string and returns a new string.
 
 `slice()` extracts up to but not including `indexEnd`. For example, `str.slice(4, 8)` extracts the fifth character through the eighth character (characters indexed `4`, `5`, `6`, and `7`):
 

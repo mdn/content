@@ -1,6 +1,6 @@
 ---
 title: Ending a call
-slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call
 page-type: guide
 ---
 

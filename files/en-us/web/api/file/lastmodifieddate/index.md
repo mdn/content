@@ -15,7 +15,7 @@ The **`lastModifiedDate`** read-only property of the {{domxref("File")}} interfa
 
 ## Value
 
-A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indicating the date and time at which the file was last modified.
+A {{JSXRef("Global_Objects/Date", "Date")}} object indicating the date and time at which the file was last modified.
 
 ## Examples
 

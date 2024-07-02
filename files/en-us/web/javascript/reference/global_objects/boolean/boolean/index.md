@@ -27,9 +27,9 @@ Boolean(value)
 
 ### Return value
 
-When `Boolean()` is called as a constructor (with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it creates a {{jsxref("Boolean")}} object, which is **not** a primitive.
+When `Boolean()` is called as a function (without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it returns `value` [coerced to a boolean primitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
 
-When `Boolean()` is called as a function (without `new`), it coerces the parameter to a boolean primitive.
+When `Boolean()` is called as a constructor (with `new`), it coerces `value` to a boolean primitive and returns a wrapping {{jsxref("Boolean")}} object, which is **not** a primitive.
 
 > **Warning:** You should rarely find yourself using `Boolean` as a constructor.
 

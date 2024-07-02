@@ -66,7 +66,7 @@ transaction(storeNames, mode, options)
             This is recommended where the risk of data loss outweighs the impact of its use on performance and power (compared to `relaxed`).
         - `"relaxed"`
           - : The user agent may consider that the transaction has successfully committed as soon as all outstanding changes have been written to the operating system, without subsequent verification.
-            This offers better performance than `scrict`, and is recommended for ephemeral data such as caches or quickly changing records.
+            This offers better performance than `strict`, and is recommended for ephemeral data such as caches or quickly changing records.
         - `"default"`
           - : The user agent should use its default durability behavior for the storage bucket.
             This is the default for transactions if not otherwise specified.

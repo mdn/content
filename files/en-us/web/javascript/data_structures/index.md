@@ -155,7 +155,7 @@ In computer science, an object is a value in memory which is possibly referenced
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Object properties are equivalent to key-value pairs. Property keys are either [strings](#string_type) or [symbols](#symbol_type). Property values can be values of any type, including other objects, which enables building complex data structures.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Object properties are equivalent to key-value pairs. Property keys are either [strings](#string_type) or [symbols](#symbol_type). When other types (such as numbers) are used to index objects, the values are implicitly converted to strings. Property values can be values of any type, including other objects, which enables building complex data structures.
 
 There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property). Each property has corresponding _attributes_. Each attribute is accessed internally by the JavaScript engine, but you can set them through {{jsxref("Object.defineProperty()")}}, or read them through {{jsxref("Object.getOwnPropertyDescriptor()")}}. You can read more about the various nuances on the {{jsxref("Object.defineProperty()")}} page.
 

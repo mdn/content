@@ -1,5 +1,24 @@
 [
   {
+    "Attribution Reporting API": {
+      "overview": ["Attribution Reporting API"],
+      "guides": [
+        "/docs/Web/API/Attribution_Reporting_API/Registering_sources",
+        "/docs/Web/API/Attribution_Reporting_API/Registering_triggers",
+        "/docs/Web/API/Attribution_Reporting_API/Generating_reports"
+      ],
+      "methods": [
+        "fetch()",
+        "XMLHttpRequest.setAttributionReporting()",
+        "Window.open()"
+      ],
+      "properties": [
+        "HTMLAnchorElement.attributionSrc",
+        "HTMLImageElement.attributionSrc",
+        "HTMLScriptElement.attributionSrc"
+      ],
+      "events": []
+    },
     "Audio Output Devices API": {
       "overview": ["Audio Output Devices API"],
       "methods": [
@@ -159,6 +178,13 @@
       "properties": [],
       "events": []
     },
+    "Compute Pressure API": {
+      "overview": ["Compute Pressure API"],
+      "interfaces": ["PressureObserver", "PressureRecord"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
       "interfaces": ["ContactAddress", "ContactsManager"],
@@ -211,11 +237,14 @@
     },
     "Credential Management API": {
       "overview": ["Credential Management API"],
+      "guides": ["/docs/Web/API/Credential_Management_API/Credential_types"],
       "interfaces": [
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "PasswordCredential"
+        "FederatedCredentialInit",
+        "PasswordCredential",
+        "PasswordCredentialInit"
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
@@ -368,10 +397,9 @@
       "overview": ["Document Object Model"],
       "guides": [
         "/docs/Web/API/Document_Object_Model/Introduction",
-        "/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core",
+        "/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
-        "/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors",
-        "/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree",
+        "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
         "/docs/Web/API/Document_Object_Model/Events",
         "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
@@ -490,7 +518,6 @@
       "overview": ["Fetch API"],
       "guides": [
         "/docs/Web/API/Fetch_API/Using_Fetch",
-        "/docs/Web/API/Fetch_API/Basic_concepts",
         "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
       ],
       "interfaces": ["Headers", "Request", "Response"],
@@ -518,7 +545,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": [],
+      "methods": ["URL.createObjectURL_static", "URL.revokeObjectURL_static"],
       "properties": [],
       "events": []
     },
@@ -742,6 +769,8 @@
         "MessageEvent",
         "MessagePort",
         "Navigator",
+        "PageRevealEvent",
+        "PageSwapEvent",
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
@@ -1011,6 +1040,7 @@
       "interfaces": [
         "NavigateEvent",
         "Navigation",
+        "NavigationActivation",
         "NavigationCurrentEntryChangeEvent",
         "NavigationDestination",
         "NavigationHistoryEntry",
@@ -1214,10 +1244,7 @@
         "PresentationSessionConnectEvent"
       ],
       "methods": [],
-      "properties": [
-        "Navigator.presentation",
-        "Navigator.mozPresentationDeviceInfo"
-      ],
+      "properties": ["Navigator.presentation"],
       "events": []
     },
     "Prioritized Task Scheduling API": {
@@ -1231,7 +1258,11 @@
         "TaskPriorityChangeEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.scheduling", "scheduler_property"],
+      "properties": [
+        "Navigator.scheduling",
+        "Window.scheduler",
+        "WorkerGlobalScope.scheduler"
+      ],
       "events": []
     },
     "Push API": {
@@ -1373,7 +1404,8 @@
       ],
       "methods": [],
       "properties": [
-        "caches",
+        "Window.caches",
+        "WorkerGlobalScope.caches",
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
@@ -1422,9 +1454,10 @@
         "/docs/Web/API/Storage_Access_API/Using",
         "/docs/Web/API/Storage_Access_API/Related_website_sets"
       ],
-      "interfaces": [],
+      "interfaces": ["StorageAccessHandle"],
       "methods": [
         "Document.hasStorageAccess()",
+        "Document.hasUnpartitionedCookieAccess()",
         "Document.requestStorageAccess()",
         "Document.requestStorageAccessFor()"
       ],
@@ -1620,7 +1653,7 @@
         "TrustedTypePolicyFactory"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.trustedTypes", "WorkerGlobalScope.trustedTypes"],
       "events": []
     },
     "UI Events": {
@@ -1708,10 +1741,11 @@
     },
     "View Transitions API": {
       "overview": ["View Transitions API"],
+      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
-      "events": []
+      "events": ["Window: pagereveal", "Window: pageswap"]
     },
     "VirtualKeyboard API": {
       "overview": ["VirtualKeyboard API"],
@@ -1821,6 +1855,7 @@
       ],
       "interfaces": [
         "PublicKeyCredential",
+        "PublicKeyCredentialCreationOptions",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"
@@ -1911,7 +1946,7 @@
         "RsaPssParams"
       ],
       "methods": [],
-      "properties": ["crypto_property"],
+      "properties": ["Window.crypto", "WorkerGlobalScope.crypto"],
       "events": []
     },
     "WebGL": {
@@ -2141,6 +2176,7 @@
         "RTCAudioSourceStats",
         "RTCVideoSourceStats",
         "RTCCodecStats",
+        "RTCDataChannelStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
         "RTCRemoteOutboundRtpStreamStats"

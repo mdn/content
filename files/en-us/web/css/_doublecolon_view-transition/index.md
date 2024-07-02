@@ -9,9 +9,9 @@ browser-compat: css.selectors.view-transition
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`::view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the root of the [view transitions](/en-US/docs/Web/API/View_Transitions_API) overlay, which contains all view transitions and sits over the top of all other page content.
+The **`::view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the root of the [view transitions](/en-US/docs/Web/API/View_Transitions_API) overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
 
-During a view transition, `::view-transition` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is the top-level node of this tree, and has one or more {{cssxref("::view-transition-group")}}s as children.
+During a view transition, `::view-transition` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree). It is the top-level node of this tree, and has one or more {{cssxref("::view-transition-group")}}s as children.
 
 `::view-transition` is given the following default styling in the UA stylesheet:
 

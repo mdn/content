@@ -7,7 +7,7 @@ browser-compat: css.properties.width
 
 {{CSSRef}}
 
-The **`width`** CSS property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
@@ -135,9 +135,6 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic; /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
@@ -153,8 +150,6 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
   width: min-content;
 }
 ```

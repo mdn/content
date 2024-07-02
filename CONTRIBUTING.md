@@ -84,7 +84,7 @@ See the [Creating a pull request](#creating-a-pull-request) for more details on 
 
 If you're not certain of the changes that you want to make, [get in touch with us]!
 
-> [!NOTE]  
+> [!NOTE]
 > You can click the **View the source on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
 ### Forking and cloning the repository
@@ -192,7 +192,7 @@ To edit files and track your changes, you should use feature branches.
 Feature branches are created from the `main` branch and should be named after the feature you're working on.
 This will make it easier to submit a pull request for your changes.
 
-> [!NOTE]  
+> [!NOTE]
 > Open a discussion if your changes will contain large, complex or structural changes. Ask for feedback before embarking on large tasks.
 
 1. When the server is running, make the changes you would like to make to one or more `index.md` files.
@@ -225,7 +225,7 @@ To ensure that all MDN documents follow the same formatting, we use both [Pretti
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
-> [!NOTE]  
+> [!NOTE]
 > Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
 > This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
 
@@ -249,7 +249,7 @@ This command moves the file and fixes up redirects automatically. You can use th
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-> [!WARNING] 
+> [!WARNING]
 > Don't edit the `_redirects.txt` file manually.
 > See the [Redirecting a document](#redirecting-a-document) section for more information.
 

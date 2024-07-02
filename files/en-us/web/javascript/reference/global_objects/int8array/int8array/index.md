@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Int8Array.Int8Array
 
 {{JSRef}}
 
-The **`Int8Array()`** constructor creates {{jsxref("Int8Array")}} objects. The contents are initialized to `0`.
+The **`Int8Array()`** constructor creates {{jsxref("Int8Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 

@@ -267,7 +267,7 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- {{HTTPHeader("Service-Worker-Allowed")}}
+- `Service-Worker-Allowed`
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
@@ -275,6 +275,17 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : This HTTP/1.1 (only) header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
 
 ## Experimental headers
+
+### Attribution reporting headers
+
+The [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies, instead relying on various headers to register **sources** and **triggers** that are matched to indicate a conversion.
+
+- {{httpheader("Attribution-Reporting-Eligible")}}
+  - : Used to indicate that the response corresponding to the current request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
+- {{httpheader("Attribution-Reporting-Register-Source")}}
+  - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution source.
+- {{httpheader("Attribution-Reporting-Register-Trigger")}}
+  - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution trigger.
 
 ### Client hints
 

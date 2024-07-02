@@ -20,7 +20,7 @@ To avoid leaking visited links, this feature is currently disabled in Chrome-bas
 
 ## Instance properties
 
-_This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
+_This interface inherits properties from {{domxref('WorkletGlobalScope')}}._
 
 - {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the current device's ratio of physical pixels to logical pixels.

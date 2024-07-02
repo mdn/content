@@ -113,7 +113,7 @@ You should experiment with these values and see how they change what you see in 
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/Window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {
