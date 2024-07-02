@@ -11,7 +11,7 @@ The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/We
 
 For example:
 
-- A [progressive web app](/en-US/docs/Web/Progressive_web_apps) [can set its display mode](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app) by setting the [`display`](/en-US/docs/Web/Manifest#display) member in its manifest. In this case, the value of `display-mode` identifies the value that was set (but note that this may not be the same as the value requested in the manifest, since a browser may not support the requested mode).
+- A [progressive web app](/en-US/docs/Web/Progressive_web_apps) [can set its display mode](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app) by setting the [`display`](/en-US/docs/Web/Manifest/display) member in its manifest. In this case, the value of `display-mode` identifies the value that was set (but note that this may not be the same as the value requested in the manifest, since a browser may not support the requested mode).
 
 - Any web app can use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) or the [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) to set the display mode, and in this case the value of `display-mode` identifies the mode that was set.
 
@@ -24,7 +24,7 @@ The `display-mode` feature is specified as a keyword value chosen from the list 
 - `browser`
   - : The application opens in a conventional browser tab or new window, depending on the browser and platform.
 - `fullscreen`
-  - : All of the available display area is used and no user agent {{glossary("chrome")}} is shown. This can be used to apply CSS only when the app has been put in fullscreen mode by the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) or by using the `fullscreen` value of the [`display`](/en-US/docs/Web/Manifest#display) member of the Wep App Manifest.
+  - : All of the available display area is used and no user agent {{glossary("chrome")}} is shown. This can be used to apply CSS only when the app has been put in fullscreen mode by the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) or by using the `fullscreen` value of the [`display`](/en-US/docs/Web/Manifest/display) member of the Wep App Manifest.
 - `minimal-ui`
   - : The application will look and feel like a standalone application, but will have a minimal set of UI elements for controlling navigation. The elements will vary by browser.
 - `picture-in-picture`
