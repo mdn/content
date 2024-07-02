@@ -89,7 +89,7 @@ The different types of keywords that can be used include:
 
 > **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
-### Physical grid keywords
+## Physical grid keywords
 
 The physical grid keywords specify a cell or section of the `inset-area` grid using physical values. These values are not affected by {{cssxref("writing-mode")}} or {{cssxref("direction")}} settings.
 
@@ -100,7 +100,7 @@ With physical row and column keywords, you can specify one keyword from each of 
 
 For example, `top left` selects the top left tile, while `center right` selects the center tile of the right-hand column.
 
-#### Spanning physical grid keywords
+### Spanning physical grid keywords
 
 The physical spanning keywords — when combined with a physical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column; it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
@@ -122,29 +122,29 @@ The physical spanning keywords — when combined with a physical row or column k
 
 - `span-all`
 
-  - : Valid with all the keyword types, spans the cell listed as well as the adjacent cells in the same row or column. See [`span-all`](#span-all) below.
+  - : Valid with all the keyword types, spans the cell listed as well as the adjacent cells in the same row or column. See [`span-all`](#span-all_2) below.
 
 For example, `top span-left` spans the top-center and top-left grid cells.
 
 > **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid value. For example, `right span-right` is invalid — you can't select the center-right grid tile and then try to span further to the right.
 
-### Physical grid keyword defaults
+## Physical grid keyword defaults
 
 If only a single physical keyword is specified in the `inset-area` value, the other value is implied as follows:
 
 - `left`, `right`, `top`, or `bottom`
 
-  - : The other value defaults to [`span-all`](#span-all), causing the element to span all three tiles of the grid or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
+  - : The other value defaults to [`span-all`](#span-all_2), causing the element to span all three tiles of the grid or row it was initially placed in. For example, `left` is equivalent to `left span-all`.
 
 - `center`, `span-left`, `span-right`, `span-top`, or `span-bottom`
 
   - : The other value defaults to `center`. For example, `span-left` is equivalent to `center span-left` and `center` is equivalent to `center center`.
 
-### Logical grid keywords
+## Logical grid keywords
 
 The logical grid keywords specify an area of the inset area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
 
-#### Generic logical row and column keywords
+### Generic logical row and column keywords
 
 The generic logical keywords use the same terms for inline and block directions, with the direction determined by the position of the keyterm within a pair of `<inset-area>` values. The first value in a pair of values defines the block direction position and the second value defines the inline value. You can specify one or two keyterms from the following list. Specifying two from this list defines a single specific grid tile. The keyword position or direction is:
 
@@ -170,7 +170,7 @@ The generic logical keywords use the same terms for inline and block directions,
 
 For example, `start end` and `self-start self-end` both describe the position at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this is the top right of the anchor element, whereas with `writing-mode: vertical-rl` it is the bottom right of the anchor.
 
-#### Spanning generic logical row and column keywords
+### Spanning generic logical row and column keywords
 
 The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
@@ -192,7 +192,7 @@ The generic logical spanning keywords — when combined with a logical row or co
 
 For example, `start span-end` and `self-start span-self-end` both specify a grid inset area that starts in the center of the start block row, and spans across the tiles in that row that are also in the inline center and end columns. With `writing-mode: horizontal-tb` set, this would span over the top center and top right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and bottom right.
 
-#### Inline and block logical keywords
+### Inline and block logical keywords
 
 The inline and block logical row and column keywords refer explicitly to a block (row) or inline (column) position. You can specify one keyword for the block direction and one for the inline direction to select a single specific grid tile. Unlike with generic logical keyword values, the keyword order doesn't matter. However, declaring two keywords in the same axis invalidates the value.
 
@@ -216,7 +216,7 @@ For example, `block-start inline-end` specifies the tile at the start of the blo
 
 > **Note:** The specification defines `self` equivalents of these keywords — `block-self-start`, `block-self-end`, `inline-self-start`, and `inline-self-end`. However, these are not currently supported in any browser.
 
-##### Spanning inline and block logical keywords
+#### Spanning inline and block logical keywords
 
 The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
@@ -242,7 +242,7 @@ For example, `block-end span-inline-start` selects the center tile of the end bl
 
 > **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid property value. For example, `block-end span-block-end` is invalid — you can't select the center block-end row and then try to span one tile further past the block end direction.
 
-#### Logical grid keyword defaults
+### Logical grid keyword defaults
 
 If only a single logical `<inset-area>` keyword is specified, the other value is implied as follows:
 
@@ -256,13 +256,13 @@ If only a single logical `<inset-area>` keyword is specified, the other value is
 
 - `block-start`, `block-end`, `inline-start`, `inline-end`
 
-  - : The other value defaults to [`span-all`](#span-all), spanning all three tiles of the column or row set. For example, `block-start` is equivalent to `block-start span-all`.
+  - : The other value defaults to [`span-all`](#span-all_2), spanning all three tiles of the column or row set. For example, `block-start` is equivalent to `block-start span-all`.
 
 - `span-block-start`, `span-block-end`, `span-inline-start`, `span-inline-end`
 
   - : The other value defaults to `center`. For example, `span-inline-start` is equivalent to `span-inline-start center`.
 
-### Coordinate grid keywords
+## Coordinate grid keywords
 
 These keywords specify the cells of the `inset-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the element itself.
 
@@ -319,7 +319,7 @@ The y-axis keywords include:
 
 For example, `x-end y-start` and `x-self-end y-self-start` both select the grid cell at end of the x-axis and the start of the y-axis. With `writing-mode: horizontal-tb` set, this would be the cell to the top right of the anchor, whereas with `writing-mode: vertical-rl` is at the top left.
 
-#### Spanning coordinate grid keywords
+### Spanning coordinate grid keywords
 
 You can specify one coordinate row or column keyword, and an appropriate coordinate spanning keyword. The element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
@@ -343,19 +343,19 @@ For example, `y-end span-x-end` selects the tile at the center of the end y-row,
 
 > **Note:** The specification doesn't define separate coordinate `self` spanning keywords, but these are not needed — the spanning keywords can be used with both coordinate row and column keywords.
 
-#### Coordinate grid keyword defaults
+### Coordinate grid keyword defaults
 
 If only a single coordinate grid `<inset-area>` keyword is specified, the other value is implied as follows:
 
 - `x-start`, `x-self-start`, `x-end`, `x-self-end`, `y-start`, `y-self-start`, `y-end`, or `y-self-end`
 
-  - : The other value defaults to [`span-all`](#span-all), selecting the grid tiles spanning all three tiles of the column or row it was initially placed in. For example, `x-start` is equivalent to `x-start span-all`.
+  - : The other value defaults to [`span-all`](#span-all_2), selecting the grid tiles spanning all three tiles of the column or row it was initially placed in. For example, `x-start` is equivalent to `x-start span-all`.
 
 - `span-x-start`, `span-x-end`, `span-y-start`, or `span-y-end`
 
   - : The other value defaults to `center`. For example, `span-start` is equivalent to `span-start center`.
 
-### `span-all`
+## `span-all`
 
 `span-all` is a special keyword usable with all of the row and column keywords listed in the sections above. When you specify two values — a row/column keyword and `span-all`, the element is placed in the specified row or column, and it then spans all of the tiles in that row or column.
 
