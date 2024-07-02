@@ -89,7 +89,12 @@ inset-area: unset;
 
 > **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
-The following sections explain in detail the different types of keywords that can be used.
+The different types of keywords that can be used include:
+
+- [Physical grid keywords](#physical-grid-keywords)
+- [Generic logical row and column keywords](#generic-logical-row-and-column-keywords)
+- [Inline and block logical keywords](#inline-and-block-logical-keywords), and
+- [Coordinate grid keywords](#coordinate-grid-keywords)
 
 ### Physical grid keywords
 
