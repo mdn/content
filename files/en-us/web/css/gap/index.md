@@ -196,7 +196,7 @@ A gap acts like an empty item or track. Instead of the gap, you could use an emp
 
 ### Explicit container size
 
-If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 24x24px children. Both containers are explicitly set to 200px using `height: 200px` and the gap is set with `gap: 10% 0`.
+If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 24x24px children. Both containers are explicitly set to 200px using `height: 200px` and the gap is set with `gap: 12.5% 0`.
 
 ```html
 <span>Grid</span>
@@ -229,30 +229,30 @@ body > div {
 #grid {
   display: inline-grid;
   height: 200px;
-  gap: 10% 0;
+  gap: 12.5% 0;
 }
 
 #flex {
   display: inline-flex;
   height: 200px;
-  gap: 10% 0;
+  gap: 12.5% 0;
 }
 
 #grid > div,
 #flex > div {
   background-color: coral;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 ```
 
 {{EmbedLiveSample("Explicit container size", "auto", "200px")}}
 
-Now inspect the grid and flex elements using [Inspector tab in Web Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). In order to see the actual gaps hover mouse over `<div id="grid">` and `<div id="flex">` tags in the inspector. You will notice that the gap is same in both the cases which is 20px.
+Now inspect the grid and flex elements using [Inspector tab in Web Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). In order to see the actual gaps hover mouse over `<div id="grid">` and `<div id="flex">` tags in the inspector. You will notice that the gap is the same in both cases which is 25px.
 
 ### Implicit container size
 
-If size is not explicitly set on the container, then the percentage gap behaves different in case of grid and flex layouts. In the following example the containers don't have height explicitly set.
+If size is not explicitly set on the container, then the percentage gap behaves differently in case of grid and flex layouts. In the following example the containers don't have height explicitly set.
 
 ```html hidden
 <span>Grid</span>
@@ -281,28 +281,28 @@ body > div {
 
 #grid {
   display: inline-grid;
-  gap: 10% 0;
+  gap: 12.5% 0;
 }
 
 #flex {
   display: inline-flex;
-  gap: 10% 0;
+  gap: 12.5% 0;
   flex-flow: column;
 }
 
 #grid > div,
 #flex > div {
   background-color: coral;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 ```
 
 {{EmbedLiveSample("Implicit container size", "auto", "200px")}}
 
-In case of the grid layout, percentage gap doesn't contribute to actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 120px (24px x 5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `12px` (120px x 10%). The gap is applied just before rendering. Thus the grid remains 120px high but it overflows due to the percentage gap added later just befor rendering.
+In case of the grid layout, percentage gap doesn't contribute to the actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 100px (20px x5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `12.5px` (100px x 12.5%). The gap is applied just before rendering. Thus the grid remains 100px high but it overflows due to the percentage gap added later just before rendering.
 
-In case of the flex layout, percentage gap always results in zero value.
+In case of the flex layout, the percentage gap always results in zero value.
 
 ## Specifications
 
