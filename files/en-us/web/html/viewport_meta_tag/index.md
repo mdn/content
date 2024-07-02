@@ -81,7 +81,7 @@ Allowed values are:
 - `overlays-content`
   - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
 
-When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths).
+When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
 ## Common viewport sizes for mobile and tablet devices
 
