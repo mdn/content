@@ -73,16 +73,16 @@ The `inset-area` property provides an alternative to the `anchor()` function for
 
 The grid tiles are broken up into rows and columns:
 
-- The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `block-start`, `center`, and `block-end`, and coordinate equivalents — `y-start`, `center`, and `y-end`.
+- The three rows are represented by the [physical values](/en-US/docs/Web/CSS/inset-area_value#physical_grid_keywords) `top`, `center`, and `bottom`. They also have [logical equivalents](/en-US/docs/Web/CSS/inset-area_value#logical_grid_keywords) such as `block-start`, `center`, and `block-end`, and [coordinate equivalents](/en-US/docs/Web/CSS/inset-area_value#coordinate_grid_keywords) — `y-start`, `center`, and `y-end`.
 - The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `inline-start`, `center`, and `inline-end`, and coordinate equivalents — `x-start`, `center`, and `x-end`.
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block.
 
-[`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) values are composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
+The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value is composed of one or two keywords, which define the region of the grid the positioned element should be placed inside. To be exact, the containing block of the positioned element is set to the grid area.
 
 For example:
 
-- You can specify a row value and a column value to place the positioned element in a single, specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom-center square.
+- You can specify a row value and a column value to place the positioned element in a single, specific grid square — for example, `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom-center square.
 - You can specify a row or column value plus a `span-*` value to span two or three cells. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the other tiles of that row or column to span. For example:
   - `top span-left` causes the positioned element to be placed in the center of the top row, and span across the center and left tiles of that row.
   - `block-end span-inline-end` causes the positioned element to be placed in the center of the block end row, and span across the center and inline end tiles of that row.
@@ -111,7 +111,7 @@ When an anchor-positioned element is positioned using the `inset-area` property,
 
 If the positioned element does not have a specific size set on it, its size will default to its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size), but it will also be affected by the size of the inset-area grid.
 
-If the positioned element is placed in the single top-center, bottom-center, or center-center cell, its block size will be the same size as the anchor's containing block size. It will grow up, down, or in both directions, respectively. The positioned element will align with the specified grid square but adopt the same width as the anchor element. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
+If the positioned element is placed in a single top-center, bottom-center, or center-center cell, its block size will be the same as the anchor's containing block size, growing up, down, or in both directions, respectively, as needed. The positioned element will align with the specified grid square but adopt the same width as the anchor element. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
 
 If the positioned element is placed in any other single grid square (say with `inset-area: top left`) or is set to span two or more grid squares (for example using `inset-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although it may also be constrained by the edge of the `<body>`.
 
@@ -133,13 +133,12 @@ In this example, a positioned element is tethered and positioned relative to its
 
 The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>` will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visible. All elements are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
 
-```html
+```html-nolint
 <div class="anchor" contenteditable="true">⚓︎</div>
 
 <p class="positionedElement" contenteditable="true">This can be edited.</p>
 
-<style contenteditable="true">
-  .positionedElement {
+<style contenteditable="true">.positionedElement {
     inset-area: CHANGEME;
   }
 </style>
@@ -166,7 +165,7 @@ p {
   position-anchor: --infobox;
   inset-area: top center;
   margin: 0;
-  background-color: olive;
+  background-color: darkkhaki;
   border: 1px solid darkolivegreen;
 }
 

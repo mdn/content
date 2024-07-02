@@ -84,7 +84,7 @@ The different types of keywords that can be used include:
 
 - [Physical grid keywords](#physical_grid_keywords)
 - [Generic logical row and column keywords](#generic_logical_row_and_column_keywords)
-- [Inline and block logical keywords](#inline_and_block_logical_keywords), and
+- [Explicity inline and block logical keywords](#explicit_inline_and_block_logical_keywords), and
 - [Coordinate grid keywords](#coordinate_grid_keywords)
 
 > **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
@@ -128,7 +128,7 @@ For example, `top span-left` spans the top-center and top-left grid cells.
 
 > **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid value. For example, `right span-right` is invalid — you can't select the center-right grid tile and then try to span further to the right.
 
-## Physical grid keyword defaults
+### Physical grid keyword defaults
 
 If only a single physical keyword is specified in the `inset-area` value, the other value is implied as follows:
 
@@ -192,9 +192,9 @@ The generic logical spanning keywords — when combined with a logical row or co
 
 For example, `start span-end` and `self-start span-self-end` both specify a grid inset area that starts in the center of the start block row, and spans across the tiles in that row that are also in the inline center and end columns. With `writing-mode: horizontal-tb` set, this would span over the top center and top right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and bottom right.
 
-### Inline and block logical keywords
+### Explicit inline and block logical keywords
 
-The inline and block logical row and column keywords refer explicitly to a block (row) or inline (column) position. You can specify one keyword for the block direction and one for the inline direction to select a single specific grid tile. Unlike with generic logical keyword values, the keyword order doesn't matter. However, declaring two keywords in the same axis invalidates the value.
+The explicit inline and block logical row and column keywords refer explicitly to a block (row) or inline (column) position. You can specify one keyword for the block direction and one for the inline direction to select a single specific grid tile. Unlike with generic logical keyword values, the keyword order doesn't matter. However, declaring two keywords in the same axis invalidates the value.
 
 - `block-start`
 
@@ -216,7 +216,7 @@ For example, `block-start inline-end` specifies the tile at the start of the blo
 
 > **Note:** The specification defines `self` equivalents of these keywords — `block-self-start`, `block-self-end`, `inline-self-start`, and `inline-self-end`. However, these are not currently supported in any browser.
 
-#### Spanning inline and block logical keywords
+#### Spanning explicit inline and block logical keywords
 
 The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
@@ -321,7 +321,7 @@ For example, `x-end y-start` and `x-self-end y-self-start` both select the grid 
 
 ### Spanning coordinate grid keywords
 
-You can specify one coordinate row or column keyword, and an appropriate coordinate spanning keyword. The element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+When combined with a coordinate row or column keyword, the coordinate-spanning keywords specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-x-start`
 
