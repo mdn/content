@@ -27,11 +27,11 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `autocomplete`
+- [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
   - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
 - `autofocus`
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
-- `disabled`
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
 - `form`
 
@@ -39,13 +39,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-- `multiple`
+- [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
   - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
 - `name`
   - : This attribute is used to specify the name of the control.
-- `required`
+- [`required`](/en-US/docs/Web/HTML/Attributes/required)
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
-- `size`
+- [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
   - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
