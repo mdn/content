@@ -13,7 +13,7 @@ browser-compat: http.headers.Set-Cookie.Partitioned
 
 Without cookie partitioning, third-party cookies can enable services to track users and associate their information across unrelated top-level sites. Cookies marked `Partitioned` are double-keyed: by the origin that sets them _and_ the origin of the top-level page.
 
-This means they can only be read within the context of the top-level site they were set on. This allows cross-site tracking to be blocked, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different sites, and persisting config information for subresource CDN load balancing and Headless CMS providers.
+This means they can only be read within the context of the top-level site they were set on. This allows cross-site tracking to be blocked, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across a domain and its subdomains, and persisting config information for subresource CDN load balancing and Headless CMS providers.
 
 ## How does CHIPS work?
 
@@ -32,7 +32,7 @@ Browsers with CHIPS support provide a new attribute for the {{httpheader("Set-Co
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **Note:** Partitioned cookies must be set with `Secure`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
+> **Note:** Partitioned cookies must be set with `Secure`. In addition, you could use the `__Host` prefix when setting partitioned cookies to bind them to the current host domain only, and not any subdomains.
 
 With `Partitioned` set, third-party cookies are stored using two keys, the host key and a new **partition key**. The partition key is based on the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level URL the browser was visiting when the request was made to the URL endpoint that set the cookie.
 
@@ -51,6 +51,8 @@ CHIPS still allows third-party content embedded across different subdomains of a
 1. A user visits `https://shoppy.example`, which embeds a third-party chat service from `https://3rd-party.example/chat` to provide support for users that need help. `https://3rd-party.example/chat` sets a cookie on the user's device using `Partitioned`, to persist the state of the chat across different site subdomains.
 2. The storage key for the cookie would be `{("https://shoppy.example"), ("3rd-party.example/chat")}`.
 3. The user visits various subdomains that also embed `https://3rd-party.example/chat`, including `https://support.shoppy.example` and `https://checkout.shoppy.example`. The new embedded instances are able to access the cookie because the partition key still matches.
+
+You can restrict the cookie to just a domain and a particular subdomain by setting the cookie with the `__Host` prefix.
 
 ## Specifications
 
