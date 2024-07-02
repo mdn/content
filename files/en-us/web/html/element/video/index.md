@@ -339,15 +339,7 @@ You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")
 
 If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
 
-If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
-
-```plain
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in `httpd.conf`.
+If you use Apache Web Server to serve WebM videos, you can fix this problem by adding the video file type extensions to "video/webm" MIME type. The most common video file type extension is ".webm". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
 
 ```plain
 AddType video/webm .webm
