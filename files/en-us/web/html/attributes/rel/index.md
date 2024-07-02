@@ -6,6 +6,7 @@ browser-compat:
   - html.elements.link.rel
   - html.elements.a.rel
   - html.elements.area.rel
+  - html.elements.form.rel
 ---
 
 {{HTMLSidebar}}

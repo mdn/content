@@ -4522,10 +4522,6 @@
     "modified": "2020-10-05T12:31:04.165Z",
     "contributors": ["alattalatta", "darby", "klez", "devanshmanu", "jswisher"]
   },
-  "Glossary/Second-level_Domain": {
-    "modified": "2019-04-30T14:00:51.592Z",
-    "contributors": ["klez"]
-  },
   "Glossary/Self-Executing_Anonymous_Function": {
     "modified": "2019-09-24T05:50:18.861Z",
     "contributors": ["natevw", "Porkepix", "chrisdavidmills"]
@@ -33720,28 +33716,6 @@
       "Maian",
       "JesseW",
       "Callek"
-    ]
-  },
-  "Web/API/Event/Comparison_of_Event_Targets": {
-    "modified": "2020-05-05T00:50:07.944Z",
-    "contributors": [
-      "mnoorenberghe",
-      "Zearin_Galaurum",
-      "mfluehr",
-      "ademaro",
-      "MHasan",
-      "ipapratilov",
-      "Sheppy",
-      "jswisher",
-      "MattBrubeck",
-      "Nickolay",
-      "Johnjbarton",
-      "Iamwriter",
-      "Waldo",
-      "SzjShu",
-      "Enn",
-      "Gomita",
-      "Hamstersoup"
     ]
   },
   "Web/API/Event/Event": {
@@ -124997,10 +124971,6 @@
   },
   "Web/SVG/Attribute/xlink:type": {
     "modified": "2020-10-15T22:22:53.536Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/SVG/Attribute/xml:base": {
-    "modified": "2020-10-15T22:22:40.675Z",
     "contributors": ["Sebastianz"]
   },
   "Web/SVG/Attribute/xml:lang": {

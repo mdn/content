@@ -319,7 +319,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:base")}}
 - {{SVGAttr("xml:lang")}}
 - {{SVGAttr("xml:space")}}
 
@@ -346,7 +345,6 @@ Below is a list of all of the attributes available in SVG along with links to re
   - {{SVGAttr("style")}}
   - {{SVGAttr("lang")}}
   - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:base")}}
   - {{SVGAttr("xml:lang")}}
   - {{SVGAttr("xml:space")}}
 
