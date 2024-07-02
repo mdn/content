@@ -435,6 +435,6 @@ You don't need to understand anything about other such environments at this stag
 
 In this chapter we've learned what events are, how to listen for events, and how to respond to them.
 
-You've seen by now that elements in a web page can be nested inside other elements. For example, in the [Preventing default behavior](#preventing_default_behavior) example, we have some text boxes, placed inside {{htmlelement("div")}} elements, which in turn are placed inside a {{htmlelement("form")}} element. When happens when an click event listener is attached to the `<form>` element, and the user clicks inside one of the text boxes? This is called _event bubbling_ and is the subject of the next chapter.
+You've seen by now that elements in a web page can be nested inside other elements. For example, in the [Preventing default behavior](#preventing_default_behavior) example, we have some text boxes, placed inside {{htmlelement("div")}} elements, which in turn are placed inside a {{htmlelement("form")}} element. What happens when a click event listener is attached to the `<form>` element, and the user clicks inside one of the text boxes? This is called _event bubbling_ and is the subject of the next chapter.
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Event_bubbling", "Learn/JavaScript/Building_blocks")}}
