@@ -22,7 +22,7 @@ Our finished table will look like the image below. There are a number of ways th
 - Align headings and data for columns containing numbers right.
 - Align headings and data for columns containing text left.
 - Align the heading of the table footer right.
-- Align data of the table footer left.
+- Align the data of the table footer left.
 - Add a 1px top and bottom solid border with the hex color `#999` to the table.
 - Add a 1px top solid border with the hex color `#999` to the footer.
 - Remove the default spacing between the table elements borders to get the expected result.
