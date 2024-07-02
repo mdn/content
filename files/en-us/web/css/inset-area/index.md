@@ -9,7 +9,7 @@ browser-compat: css.properties.inset-area
 
 The **`inset-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
 
-This `inset-area` property provides an alternative to tethering and positioning an element relative to its anchor via {{glossary("inset properties")}} and the {{cssxref("anchor()")}} function, providing a convenient grid-based concept for the common use-case of positioning the positioned element's containing blocke's edges relative to the edges of its default anchor element.
+`inset-area` provides a convenient alternative to tethering and positioning an element relative to its anchor via {{glossary("inset properties")}} and the {{cssxref("anchor()")}} function. The grid-based concept solves the common use-case of positioning the edges of the positioned element's containing block relative to the edges of its default anchor element.
 
 If an element does not have a default anchor element, or is not an absolutely-positioned element, this property has no effect.
 
@@ -82,8 +82,8 @@ The dimensions of the center tile are defined by the [containing block](/en-US/d
 
 For example:
 
-- You can specify a row value and a column value to place the positioned element in a single, specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom center square.
-- You can specify a row or column value plus a `span-*` value to span two or three cells. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the amount of that column to span. For example:
+- You can specify a row value and a column value to place the positioned element in a single, specific grid square — for example `top left` (logical equivalent `start start`) or `bottom center` (logical equivalent `end center`) will place the positioned element in the top-right or bottom-center square.
+- You can specify a row or column value plus a `span-*` value to span two or three cells. The first value specifies the row or column to place the positioned element in, placing it initially in the center, and the other one specifies the other tiles of that row or column to span. For example:
   - `top span-left` causes the positioned element to be placed in the center of the top row, and span across the center and left tiles of that row.
   - `block-end span-inline-end` causes the positioned element to be placed in the center of the block end row, and span across the center and inline end tiles of that row.
   - `bottom span-all` and `y-end span-all` cause the positioned element to be placed in the center of the bottom row, and span across three cells, in this case the left, center, and right tiles of the bottom row.
@@ -105,13 +105,13 @@ For example, if the `writing-mode` is set to `horizontal-tb`, `inset-area: top s
 
 #### inset properties and values
 
-When an anchor positioned element is positioned using the `inset-area` property, any {{glossary("inset properties")}}, such as {{cssxref("top")}} or {{cssxref("inset-inline-end")}}, set specify offsets from the inset-area, and some property values, like [`max-block-size: 100%`](/en-US/docs/Web/CSS/max-block-size), will be relative to the inset-area as well. Any inset properties set or defaulting `auto` will behave as if their value was set to `0`.
+When an anchor-positioned element is positioned using the `inset-area` property, any {{glossary("inset properties")}} set, such as {{cssxref("top")}} or {{cssxref("inset-inline-end")}}, specify offsets from the inset-area. Some other property values, like [`max-block-size: 100%`](/en-US/docs/Web/CSS/max-block-size), will also be relative to the inset-area. Any inset properties set or defaulting to `auto` will behave as if their value was set to `0`.
 
 ### An aside on positioned element width
 
-If the positioned element has not had a specific size set on it, its size will default to its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size), but it will also be affected by the size of the inset-area grid.
+If the positioned element does not have a specific size set on it, its size will default to its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size), but it will also be affected by the size of the inset-area grid.
 
-If the positioned element is placed in the single top center, bottom center, or center center cell, it's width block will be the same width as the anchor's containing block size, growing up, down, or in both directions, respectively. It will align with the specified grid square but adopt the same width as the anchor element. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
+If the positioned element is placed in the single top-center, bottom-center, or center-center cell, its block size will be the same size as the anchor's containing block size. It will grow up, down, or in both directions, respectively. The positioned element will align with the specified grid square but adopt the same width as the anchor element. However, it won't allow its content to overflow — its minimum `width` will be its `min-content` (as defined by the width of its longest word).
 
 If the positioned element is placed in any other single grid square (say with `inset-area: top left`) or is set to span two or more grid squares (for example using `inset-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although it may also be constrained by the edge of the `<body>`.
 
@@ -131,14 +131,14 @@ In this example, a positioned element is tethered and positioned relative to its
 
 #### HTML
 
-The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}} that will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visable. All are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>` will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visible. All elements are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
 
 ```html
 <div class="anchor" contenteditable="true">⚓︎</div>
 
-<p class="positionedElement" contenteditable-"true">This can be edited.</p>
+<p class="positionedElement" contenteditable="true">This can be edited.</p>
 
-<style contenteditable-"true">.positionedElement {
+<style contenteditable="true">.positionedElement {
   inset-area: CHANGEME;
 }
 </style>
@@ -146,9 +146,9 @@ The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}} that will 
 
 #### CSS
 
-We convert the `<div>` to an anchor with the {{cssxref("anchor-name")}} property, associating the positioned (via {{cssxref("position")}}) `<p>` with it via the {{cssxref("position-anchor")}} value.
+We convert the `<div>` to an anchor element with the {{cssxref("anchor-name")}} property. We then associate the absolutely-positioned `<p>` with it by setting its {{cssxref("position-anchor")}} value to the same anchor name.
 
-We set the initial `inset-area` value to `top center`. This value is set on a `p` selector, so the value has less [specificity](/en-US/docs/Web/CSS/Specificity) than any value added to the `<style>` block's `.positionedElement` [class selector](/en-US/docs/Web/CSS/Class_selectors).
+We set the initial `inset-area` value to `top center`. This value is set on a `p` selector, so the value has less [specificity](/en-US/docs/Web/CSS/Specificity) than any value added to the `<style>` block's `.positionedElement` [class selector](/en-US/docs/Web/CSS/Class_selectors). As a result, you can override the initial `inset-area` value by setting an `inset-area` value inside the style block. 
 
 ```css
 .anchor {
@@ -184,17 +184,17 @@ style {
 
 {{ EmbedLiveSample("Basic example", "100%", "360") }}
 
-Try changing the amount of text in the anchor positioned element to see how it grows. Also try changing the invalid "CHANGEME" value of the `inset-area` property to a valid value.
+Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the invalid "CHANGEME" value of the `inset-area` property to a valid value.
 
 ### `inset-area` value comparison
 
-Let's show some of the `inset-area` values in action. This demo creates an anchor and tethers a positioned element to it. It also provides a drop-down menu that allows you to choose various `inset-area` values to apply to the positioned element, to see their effect. One of the options causes a text field to appear that enables you to enter a custom value. Finally, a checkbox is provided that can be used to turn a vertical `writing-mode` on and off, allowing you to observe how `inset-area` value effects differ across different writing modes.
+Let's show some `inset-area` values in action. This demo creates an anchor and tethers a positioned element to it. It also provides a drop-down menu allowing you to choose various `inset-area` values to apply to the positioned element, to see their effect. One of the options causes a text field to appear that enables you to enter a custom value. Finally, a checkbox is provided to turn `writing-mode: vertical-lr` on and off, allowing you to observe how `inset-area` value effects differ across different writing modes.
 
 #### HTML
 
-In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively. We've included the contenteditable attribute, making them both directly editable.
+In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively. We've included the `contenteditable` attribute on both, making them directly editable.
 
-We've also included two forms that contain the {{htmlelement("select")}} and [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) elements for setting different `inset-area` values, and the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element for toggling the vertical {{cssxref("writing-mode")}} on and off. The code for these, along with the JavaScript, have been hidden for the sake of brevity.
+We've also included two forms that contain the {{htmlelement("select")}} and [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) elements for setting different `inset-area` values, and the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element for toggling the vertical {{cssxref("writing-mode")}} on and off. The code for these, along with the JavaScript, has been hidden for the sake of brevity.
 
 ```html
 <div class="anchor" contenteditable>⚓︎</div>
@@ -271,7 +271,7 @@ We've also included two forms that contain the {{htmlelement("select")}} and [`<
 
 In the CSS, we first declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property.
 
-The positioned element is associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We also give it an initial position with `inset-area: top left`; this will be overridden when new values are selected from the `<select>` menu. Finally, we set {{cssxref("opacity")}} to `0.8`, so that when the positioned element is given an `inset-area` value that places it over the top of the anchor, you can still see what position it is in.
+The positioned element is associated with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We also give it an initial position with `inset-area: top left`; this will be overridden when new values are selected from the `<select>` menu. Finally, we set its {{cssxref("opacity")}} to `0.8`, so that when the positioned element is given an `inset-area` value that places it over the top of the anchor, you can still see the elements' position relative to one another.
 
 ```css hidden
 .anchor {

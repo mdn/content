@@ -7,7 +7,7 @@ browser-compat: css.properties.inset-area
 
 {{CSSRef}}
 
-The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) define the cell or spanned cells of an **inset-area grid**, an 3x3 grid whose center cell is an anchor element.
+The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of an **inset-area grid**, an 3x3 grid whose center cell is an anchor element.
 
 The `<inset-area>` keyword values can be set as the value of the {{cssxref("inset-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 
@@ -35,18 +35,18 @@ The `<inset-area>` keyword values can be set as the value of the {{cssxref("inse
 
 ## Description
 
-The `<inset-area>` data type and `inset-area` property work on the concept of an **inset-area grid**, a 3x3 grid of tiles composed of four grid lines, two in each axis, with an anchor element being the center tile:
+Inset areas work on the concept of an **inset-area grid**, a 3x3 grid of tiles composed of four grid lines, two on each axis, with an anchor element being the center tile:
 
 ![The inset-area grid, as described below](inset-area.png)
 
-When used as the value of a positioned element`s inset-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element, while the dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of containing block as well, except for the `self-*`, which are calculated from the writing mode of the anchor positioned element.
+The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
 
 The grid tiles are broken up into rows and columns:
 
 - The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `block-start`, `center`, and `block-end`, and coordinate equivalents — `y-start`, `center`, and `y-end`.
 - The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `inline-start`, `center`, and `inline-end`, and coordinate equivalents — `x-start`, `center`, and `x-end`.
 
-`<inset-area>` values are composed of one or two keywords, which define the cell or cells of the inset-area grid the value spans. For example, setting an `<inset-area>` value on a positioned element's `inset-area` property defines it's containing block relative to the inset grid area:
+`<inset-area>` values contain one or two keywords defining a specific area of the inset-area grid. Setting an `<inset-area>` value on a positioned element's `inset-area` property places its containing block in the specified grid area:
 
 ```css
 /* Examples: Two keywords to place the element in a single specific tile */
