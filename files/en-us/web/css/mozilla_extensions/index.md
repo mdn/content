@@ -451,8 +451,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef("::-moz-page")}}
-- {{CSSxRef("::-moz-page-sequence")}}
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
 - {{CSSxRef(":placeholder-shown", ":-moz-placeholder")}} {{deprecated_inline}}
@@ -468,7 +466,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
-- {{CSSxRef("::-moz-scrolled-page-sequence")}}
 - {{CSSxRef("::selection","::-moz-selection")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}
