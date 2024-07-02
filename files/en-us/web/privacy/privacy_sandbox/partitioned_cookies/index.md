@@ -32,7 +32,7 @@ Browsers with CHIPS support provide a new attribute for the {{httpheader("Set-Co
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **Note:** Partitioned cookies must be set with `Secure`. In addition, you could use the `__Host` prefix when setting partitioned cookies to bind them only to the current host (domain or subdomain) and not any other subdomains (though in this case there would not be much need for a partitioned cookie).
+> **Note:** Partitioned cookies must be set with `Secure`. In addition, you could use the `__Host` prefix when setting partitioned cookies to bind them only to the current host and not any other subdomains (or the domain if you were binding to a subdomain).
 
 With `Partitioned` set, third-party cookies are stored using two keys, the host key and a new **partition key**. The partition key is based on the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level URL the browser was visiting when the request was made to the URL endpoint that set the cookie.
 
