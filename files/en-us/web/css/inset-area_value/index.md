@@ -84,7 +84,7 @@ The different types of keywords that can be used include:
 
 - [Physical grid keywords](#physical_grid_keywords)
 - [Generic logical row and column keywords](#generic_logical_row_and_column_keywords)
-- [Explicity inline and block logical keywords](#explicit_inline_and_block_logical_keywords), and
+- [Explicit inline and block logical keywords](#explicit_inline_and_block_logical_keywords)
 - [Coordinate grid keywords](#coordinate_grid_keywords)
 
 > **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
