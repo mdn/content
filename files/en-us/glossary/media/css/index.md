@@ -7,7 +7,7 @@ sidebar: glossarysidebar
 
 {{GlossarySidebar}}
 
-In the context of {{Glossary("CSS")}} (Cascading Style Sheets), the term **_media_** refers to the destination to which the document is to be drawn by the {{Glossary("rendering engine")}}.
+In the context of {{Glossary("CSS")}} (Cascading Style Sheets), the term **_media_** refers to the destination to which the document is to be drawn by the {{Glossary("Engine/Rendering", "rendering engine")}}.
 
 Typically, this is a screen—but it may also be a printer, Braille display, or another type of device.
 

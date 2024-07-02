@@ -7,7 +7,7 @@ sidebar: glossarysidebar
 
 {{GlossarySidebar}}
 
-**Blink** is an open-source browser rendering engine developed by Google as part of Chromium (and therefore part of {{glossary("Google Chrome", "Chrome")}} as well). Specifically, Blink began as a fork of the WebCore library in {{glossary("WebKit")}}, which handles layout, rendering, and {{glossary("DOM")}}, but now stands on its own as a separate {{glossary("rendering engine")}}.
+**Blink** is an open-source browser rendering engine developed by Google as part of Chromium (and therefore part of {{glossary("Google Chrome", "Chrome")}} as well). Specifically, Blink began as a fork of the WebCore library in {{glossary("WebKit")}}, which handles layout, rendering, and {{glossary("DOM")}}, but now stands on its own as a separate {{Glossary("Engine/Rendering", "rendering engine")}}.
 
 ## See also
 
@@ -19,4 +19,4 @@ sidebar: glossarysidebar
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}
   - {{glossary("WebKit")}}
-  - {{glossary("Rendering engine")}}
+  - {{Glossary("Engine/Rendering", "Rendering engine")}}

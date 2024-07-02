@@ -332,6 +332,17 @@ The following functions are used as a value of different `animation-timeline` pr
 - {{cssxref("animation-timeline/view", "view()")}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
 
+## Anchor positioning functions
+
+The anchor positioning functions are used when positioning and sizing anchor-positioned elements relative to the location and size of their associated anchor elements.
+
+- {{cssxref("anchor", "anchor()")}}
+  - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
+- {{cssxref("anchor-size", "anchor-size()")}}
+  - : Returns a length relative to the size of the associated anchor element.
+- {{cssxref("inset-area_function", "inset-area()")}}
+  - : Defines the anchor element side of a position try option.
+
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)

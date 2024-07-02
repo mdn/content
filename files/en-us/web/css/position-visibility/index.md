@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables conditionally hiding an **anchor-positioned element** depending on, for example, whether it is overflowing its containing element or the viewport.
+The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables conditionally hiding an anchor-positioned element depending on, for example, whether it is overflowing its containing element or the viewport.
 
 ## Syntax
 

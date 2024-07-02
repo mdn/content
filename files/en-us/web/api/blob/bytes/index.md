@@ -3,10 +3,12 @@ title: "Blob: bytes() method"
 short-title: bytes()
 slug: Web/API/Blob/bytes
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Blob.bytes
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`bytes()`** method of the {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a {{jsxref("Uint8Array")}} containing the contents of the blob as an array of bytes.
 

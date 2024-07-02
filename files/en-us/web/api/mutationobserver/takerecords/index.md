@@ -66,7 +66,7 @@ if (mutations.length > 0) {
 }
 ```
 
-The code in lines 12–17 fetches any unprocessed mutation records, then invokes the
+The code fetches any unprocessed mutation records, then invokes the
 callback with the records so that they can be processed. This is done immediately prior
 to calling {{domxref("MutationObserver.disconnect", "disconnect()")}} to stop observing
 the DOM.

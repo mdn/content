@@ -15,7 +15,7 @@ The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an ite
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `disabled`
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : If this Boolean attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled {{HTMLElement("optgroup")}} element.
 - `label`
   - : This attribute is text for the label indicating the meaning of the option. If the `label` attribute isn't defined, its value is that of the element text content.

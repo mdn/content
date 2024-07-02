@@ -265,7 +265,6 @@ To deal with regularly updating regions of content, you can use the `aria-live` 
 - `off:` The default. Updates should not be announced.
 - `polite`: Updates should be announced only if the user is idle.
 - `assertive`: Updates should be announced to the user as soon as possible.
-- `rude`: Updates should be announced straight away, even if this interrupts the user.
 
 Here's an example:
 

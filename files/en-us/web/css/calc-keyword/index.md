@@ -1,18 +1,18 @@
 ---
-title: <calc-constant>
-slug: Web/CSS/calc-constant
+title: <calc-keyword>
+slug: Web/CSS/calc-keyword
 page-type: css-type
-browser-compat: css.types.calc-constant
+browser-compat: css.types.calc-keyword
 sidebar: cssref
 ---
 
 {{CSSRef}}
 
-The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `pi`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
+The **`<calc-keyword>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-defined constants such as `e` and `pi`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
 
 ## Syntax
 
-The `<calc-constant>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
+The `<calc-keyword>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
 
 ### Values
 
@@ -66,7 +66,7 @@ For example:
 - `line-height: e;` is invalid, but `line-height: calc(e);` is valid.
 - `rotate(1rad * pi);` won't work because {{CSSxRef("transform-function/rotate", "rotate()")}} is not a math function. Use `rotate(calc(1rad * pi));`
 
-In math functions, `<calc-constant>` values are evaluated as {{CSSxRef("number")}} values, therefore `e` and `pi` act as numeric constants.
+In math functions, `<calc-keyword>` values are evaluated as {{CSSxRef("number")}} values, therefore `e` and `pi` act as numeric constants.
 
 Both `infinity` and `NaN` are slightly different, they are considered as degenerate numeric constants.
 While not technically numbers, they act as {{CSSxRef("number")}} values, so to get an infinite {{CSSxRef("length")}}, for example, requires an expression like `calc(infinity * 1px)`.
