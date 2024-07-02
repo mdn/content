@@ -23,8 +23,6 @@ There is no `contentScripts` API permission, but an extension must have the appr
 
 - {{WebExtAPIRef("contentScripts.RegisteredContentScript")}}
   - : An object of this type is returned by the {{WebExtAPIRef("contentScripts.register()")}} function. It represents the content scripts that were registered by that call, and can be used to unregister the content script.
-- {{WebExtAPIRef("contentScripts.ExecutionWorld")}}
-  - : Specifies the execution environment of a script registered with {{WebExtAPIRef("contentScripts.register()")}}.
 
 ## Functions
 
