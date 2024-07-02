@@ -132,7 +132,7 @@ Change the `flex-shrink` value to `1`; each item will shrink by the same amount,
 
 It may appear that `flex-shrink` works in the same way as `flex-grow`, by shrinking rather than growing elements. However, there are some important differences to note.
 
-The concept of [flex base size](#what_sets_the_base_size_of_the_item) affects how negative space is distributed across flex items. The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so, for example, a small item won't shrink to zero before a larger item has been noticeably reduced.
+The concept of [flex base size](#what_determines_the_base_size_of_the_item) affects how negative space is distributed across flex items. The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so, for example, a small item won't shrink to zero before a larger item has been noticeably reduced.
 
 Small items will not shrink to less than their `min-content` size. This is the smallest size they can be if they use all available soft wrapping opportunities.
 
@@ -163,7 +163,7 @@ To understand how flex item sizing works, you need to consider the factors below
 
 ### Is there available space?
 
-Items can't grow without positive free space, and they won't shrink unless there is negative free space.
+Items can only grow if there is positive free space, and they won't shrink unless there is negative free space.
 
 - If we add up the widths of all the items (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, there will be positive free space, and `flex-grow` will come into play.
 - If we add up the widths of all the items (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, there will be negative free space, and `flex-shrink` will come into play.
