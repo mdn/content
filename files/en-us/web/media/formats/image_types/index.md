@@ -29,7 +29,7 @@ The image file formats that are most commonly used on the web are listed below.
       </th>
       <th scope="row">Animated Portable Network Graphics</th>
       <td><code>image/apng</code></td>
-      <td><code>.apng</code></td>
+      <td><code>.apng</code>, <code>.png</code></td>
       <td>
         Good choice for lossless animation sequences (GIF is less performant).
         AVIF and WebP have better performance but less broad browser support.<br />
@@ -189,7 +189,7 @@ They're also commonly used for the animated portions of web browsers' user inter
     </tr>
     <tr>
       <th scope="row">File extension(s)</th>
-      <td><code>.apng</code></td>
+      <td><code>.apng</code>, <code>.png</code></td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
