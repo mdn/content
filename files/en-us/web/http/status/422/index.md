@@ -26,7 +26,7 @@ The `content` field is Base64 encoded, but uses `\n` line feeds every 60 charact
 
 ```http
 PUT /repos/mdn/content/contents/README.md HTTP/1.1
-Host: api.github.com
+Host: api.example.com
 Accept: application/vnd.github+json
 Authorization: Bearer abcd123
 X-GitHub-Api-Version: 2022-11-28
@@ -40,7 +40,7 @@ Content-Length: 165
 }
 ```
 
-The server expects strictly {{rfc("4648")}}-compliant Base64 encoded content, so you will receive a `422` Unprocessable Entity response.
+In this implementation, the server expects strictly {{rfc("4648")}}-compliant Base64 encoded content, so you will receive a `422` Unprocessable Entity response.
 The `message` field provides context about the validation error:
 
 ```http
@@ -51,7 +51,7 @@ Content-Length: 187
 
 {
   "message": "content is not valid Base64",
-  "documentation_url": "https://docs.github.com/en/rest/repos/contents"
+  "documentation_url": "https://docs.example.com/en/rest/repos/contents"
 }
 ```
 

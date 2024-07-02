@@ -26,7 +26,7 @@ Assuming a {{Glossary("REST")}} API exists with an endpoint to manage users at `
 
 ```http
 POST /users HTTP/1.1
-Host: www.example.com
+Host: example.com
 Content-Type: application/json
 Content-Length: 38
 

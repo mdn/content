@@ -11,7 +11,7 @@ The HTTP **`405 Method Not Allowed`** status response code is part of the `400`-
 
 The server **must** generate an **`Allow`** header in a 405 response with a list of methods that the target resource currently supports.
 
-In cases where a server is returning a 405 response, and a server owner expects the requests to succeed, this may be caused by improper permissions for files or directories.
+In cases where a server is returning a 405 response, and a server owner expects the requests to succeed, this may be caused by improper permissions set on files or directories that are expected to be served to clients.
 
 ## Status
 
@@ -23,7 +23,7 @@ In cases where a server is returning a 405 response, and a server owner expects 
 
 ### TRACE method not allowed
 
-It's common for server owners to disallow use of the `TRACE` method due to security concerns.
+Server owners often disallow the use of the `TRACE` method due to security concerns.
 The following example shows a typical response where a server doesn't allow the use of `TRACE`:
 
 ```http

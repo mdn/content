@@ -7,11 +7,11 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.401
 
 {{HTTPSidebar}}
 
-The HTTP **`401 Unauthorized`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
+The HTTP **`401 Unauthorized`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the request is not successful because it lacks valid authentication credentials for the requested resource.
 
-This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains information on how the client can request for the resource again after prompting the user for authentication credentials.
+This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains information on the [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) the server expects the client to include to make the request successfully.
 
-This status code is similar to the {{HTTPStatus("403", "403 Forbidden")}} status code, except that in situations resulting in this status code, user authentication can allow access to the resource.
+This status code is similar to the {{HTTPStatus("403", "403 Forbidden")}} response, except that a 403 is returned when a request contains valid credentials, but the client does not have permissions to perform a certain action.
 
 ## Status
 
@@ -21,12 +21,21 @@ This status code is similar to the {{HTTPStatus("403", "403 Forbidden")}} status
 
 ## Examples
 
-### Unauthorized
+### Unauthorized request to a protected API
+
+The following GET request is made to a URL `www.example.com/admin` that expects credentials in an {{HTTPHeader("Authorization")}} header:
+
+```http
+GET /admin HTTP/1.1
+Host: example.com
+```
+
+The server responds with a 401 message and a {{HTTPHeader("WWW-Authenticate")}} header indicating that the request must be authenticated and that `Bearer` auth (an access token) is the permitted [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes):
 
 ```http
 HTTP/1.1 401 Unauthorized
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"
+Date: Tue, 02 Jul 2024 12:18:47 GMT
+WWW-Authenticate: Bearer
 ```
 
 ## Specifications
@@ -37,6 +46,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{Glossary("Challenge")}}
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

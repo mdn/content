@@ -25,7 +25,7 @@ The following example shows what the client may send when an [input](/en-US/docs
 
 ```http
 POST /upload HTTP/1.1
-Host: www.example.com
+Host: example.com
 Content-Type: multipart/form-data; boundary=----Boundary1234
 Content-Length: 4012345
 

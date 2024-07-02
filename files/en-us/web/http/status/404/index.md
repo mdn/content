@@ -31,7 +31,7 @@ Fetching a non-existant page may look like the following request:
 
 ```http
 GET /my-blog-post HTTP/1.1
-Host: www.example.com
+Host: example.com
 ```
 
 The server returns a response similar to this:
