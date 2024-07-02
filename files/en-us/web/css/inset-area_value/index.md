@@ -39,7 +39,7 @@ Inset areas work on the concept of an **inset-area grid**, a 3x3 grid of tiles c
 
 ![The inset-area grid, as described below](inset-area.png)
 
-The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
+When used as the value of a positioned element`s inset-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
 
 The grid tiles are broken up into rows and columns:
 
@@ -82,10 +82,10 @@ inset-area: end; /* equiv: end end */
 
 The different types of keywords that can be used include:
 
-- [Physical grid keywords](#physical-grid-keywords)
-- [Generic logical row and column keywords](#generic-logical-row-and-column-keywords)
-- [Inline and block logical keywords](#inline-and-block-logical-keywords), and
-- [Coordinate grid keywords](#coordinate-grid-keywords)
+- [Physical grid keywords](#physical_grid_keywords)
+- [Generic logical row and column keywords](#generic_logical_row_and_column_keywords)
+- [Inline and block logical keywords](#inline_and_block_logical_keywords), and
+- [Coordinate grid keywords](#coordinate_grid_keywords)
 
 > **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
