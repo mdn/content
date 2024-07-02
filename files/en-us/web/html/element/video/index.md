@@ -339,15 +339,7 @@ You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")
 
 If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
 
-If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
-
-```plain
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in `httpd.conf`.
+If you use Apache Web Server to serve WebM videos, you can fix this problem by adding the video file type extensions to "video/webm" MIME type. The most common video file type extension is ".webm". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
 
 ```plain
 AddType video/webm .webm
@@ -435,9 +427,6 @@ This example builds on the last one, offering three different sources for the me
   controls
   poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
   <source
-    src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
-    type="video/ogg" />
-  <source
     src="https://archive.org/download/ElephantsDream/ed_hd.avi"
     type="video/avi" />
   <source
@@ -458,7 +447,7 @@ This example builds on the last one, offering three different sources for the me
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-First [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) is tried. If that can't be played, then AVI is tried. Finally, [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
+First AVI is tried. If that can't be played, then finally [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
 
