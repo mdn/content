@@ -28,7 +28,7 @@ There are no hard and fast rules about which elements you should use to mark up 
 ### Associated WAI-ARIA Roles, States, and Properties
 
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) role
-  - : A single item in a list or directory. Elements with role listitem can only be found in an element with the role `list`.
+  - : A single item in a list or directory. Elements with role `listitem` can only be found in an element with the role `list`.
 
 ## Best practices
 
