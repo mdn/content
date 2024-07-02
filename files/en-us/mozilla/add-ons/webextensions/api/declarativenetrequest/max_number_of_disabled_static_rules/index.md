@@ -9,6 +9,8 @@ browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_DISABLED_S
 
 The maximum number of static rules that can be disabled on each static ruleset.
 
+Rules are enable and disable in static rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules","updateStaticRules")}} and a list of disabled rules for a static ruleset is obtained with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds","getDisabledRuleIds")}}.
+
 This limit is:
 
 - in Firefox: `5000`
