@@ -130,8 +130,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - `Strict`
 
-      - : Means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
-        If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
+      - : Based on the Lax restrictions, if a user navigates to the origin site from a cross-origin site (for example, by clicking on a link), the origin site will not send cookies with SameSite=Strict.
 
     - `Lax`
 
