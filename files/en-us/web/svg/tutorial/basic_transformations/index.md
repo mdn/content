@@ -86,7 +86,7 @@ All the above transformations can be expressed by a 2x3 transformation matrix. T
 
 <math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x*{\mathrm{prevCoordSys}} = a x*{\mathrm{newCoordSys}} + c y*{\mathrm{newCoordSys}} + e \\ y*{\mathrm{prevCoordSys}} = b x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
 
-See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Attribute/transform#general_transformation). Detailed information about this property can be found in the [SVG Recommendation](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
+See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Attribute/transform#matrix). Detailed information about this property can be found in the [SVG Recommendation](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
 
 ## Effects on Coordinate Systems
 
