@@ -80,6 +80,8 @@ The visible space between elements may differ from the specified `gap` value bec
 
 Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers still accept `grid-gap` as an alias for `gap`.
 
+A gap acts like an empty item or track. Instead of the gap, you could use an empty item or track in the container, and the item or track's size would be the size set in the `gap` property value. Percentage values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element. Two examples that demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) are in the examples section.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -189,6 +191,116 @@ Early versions of the specification called this property `grid-gap`, and to main
 #### Result
 
 {{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+
+### Percentage gap value and explicit container size
+
+If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 20x20px children. Both containers are explicitly set to 200px high using `height: 200px` and the gap is set with `gap: 12.5% 0`.
+
+```html
+<span>Grid</span>
+<div id="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+<span>Flex</span>
+<div id="flex">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+```css hidden
+body > div {
+  background-color: #ccc;
+  width: 200px;
+  flex-flow: column;
+}
+```
+
+```css
+#grid {
+  display: inline-grid;
+  height: 200px;
+  gap: 12.5% 0;
+}
+
+#flex {
+  display: inline-flex;
+  height: 200px;
+  gap: 12.5% 0;
+}
+
+#grid > div,
+#flex > div {
+  background-color: coral;
+  width: 20px;
+  height: 20px;
+}
+```
+
+{{EmbedLiveSample("Explicit container size", "auto", "200px")}}
+
+Now inspect the grid and flex elements using [Inspector tab in Web Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). In order to see the actual gaps hover mouse over `<div id="grid">` and `<div id="flex">` tags in the inspector. You will notice that the gap is the same in both cases which is 25px.
+
+### Percentage gap value and implicit container size
+
+If size is not explicitly set on the container, then the percentage gap behaves differently in case of grid and flex layouts. In the following example the containers don't have height explicitly set.
+
+```html hidden
+<span>Grid</span>
+<div id="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+<span>Flex</span>
+<div id="flex">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
+
+```css hidden
+body > div {
+  background-color: #ccc;
+  width: 200px;
+}
+
+#grid {
+  display: inline-grid;
+  gap: 12.5% 0;
+}
+
+#flex {
+  display: inline-flex;
+  gap: 12.5% 0;
+  flex-flow: column;
+}
+
+#grid > div,
+#flex > div {
+  background-color: coral;
+  width: 20px;
+  height: 20px;
+}
+```
+
+{{EmbedLiveSample("Implicit container size", "auto", "200px")}}
+
+In case of the grid layout, percentage gap doesn't contribute to the actual height of the grid. The container's height is calculated using `0px` gap, so the actual height turns out to be 100px (20px x 5). Then the actual percentage gap is calculated using the content box's height, the gap turns out to be `12.5px` (100px x 12.5%). The gap is applied just before rendering. Thus the grid remains 100px high but it overflows due to the percentage gap added later just before rendering.
+
+In case of the flex layout, the percentage gap always results in zero value.
 
 ## Specifications
 
