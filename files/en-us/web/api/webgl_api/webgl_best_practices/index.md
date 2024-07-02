@@ -107,7 +107,7 @@ In production code, avoid such entry points, especially on the browser main thre
 - `getShader/ProgramParameter()`, `getShader/ProgramInfoLog()`, other `get`s on shaders/programs: flush + shader compile + round-trip, if not done after shader compilation is complete. (See also [parallel shader compilation](#compile_shaders_and_link_programs_in_parallel) below.)
 - `get*Parameter()` in general: possible flush + round-trip. In some cases, these will be cached to avoid the round-trip, but try to avoid relying on this.
 - `checkFramebufferStatus()`: possible flush + round-trip.
-- `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#non-blocking_async_data_downloadreadback) below.)
+- `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#use_non-blocking_async_data_readback) below.)
 - `readPixels()` to the CPU (i.e. without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
 
 ## Always enable vertex attrib 0 as an array

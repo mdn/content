@@ -68,10 +68,6 @@ The sidebar object returned has the following methods:
       <td colspan="2">
         <p>
           Installs a search engine (Sherlock).
-          <a
-            href="/en-US/docs/Web/OpenSearch#installing_sherlock_plugins"
-            >Adding Sherlock search engines </a
-          >contains more details.
         </p>
         <div class="note">
           <p>

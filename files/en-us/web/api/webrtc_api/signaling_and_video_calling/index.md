@@ -8,7 +8,7 @@ page-type: guide
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
 
-[WebRTC](/en-US/docs/Web/API/WebRTC_API) is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, [as discussed elsewhere](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection), in order for two devices on different networks to locate one another. This process is called **signaling** and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.
+[WebRTC](/en-US/docs/Web/API/WebRTC_API) is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, [as discussed elsewhere](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection), in order for two devices on different networks to locate one another. This process is called **signaling** and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.
 
 In this article, we will further enhance the [WebSocket chat](https://webrtc-from-chat.glitch.me/) first created as part of our WebSocket documentation (this article link is forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can [try out this example on Glitch](https://webrtc-from-chat.glitch.me/), and you can [remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) to experiment with it as well. You can also [look at the full project](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat) on GitHub.
 
@@ -350,7 +350,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
   - : The ICE layer sends you the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "onsignalingstatechange")}}
-  - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#signaling_state) to see our code.
+  - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#ice_signaling_state) to see our code.
 
 #### Starting negotiation
 
@@ -541,7 +541,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) property, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
 
 If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
 
@@ -614,7 +614,7 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
 4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/HTML/Element/video#src) and [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/API/HTMLMediaElement/src) and [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) properties using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
 Finally, we set the {{domxref("HTMLButtonElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 

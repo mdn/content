@@ -49,7 +49,7 @@ The basic approach for implementing a web component generally looks something li
   - : Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document.
 - {{domxref("Window.customElements")}}
   - : Returns a reference to the `CustomElementRegistry` object.
-- [Life cycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
+- [Life cycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks)
 
   - : Special callback functions defined inside the custom element's class definition, which affect its behavior:
 
