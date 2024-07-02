@@ -196,7 +196,7 @@ A gap acts like an empty item or track. Instead of the gap, you could use an emp
 
 ### Explicit container size
 
-If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 24x24px children. Both containers are explicitly set to 200px using `height: 200px` and the gap is set with `gap: 12.5% 0`.
+If the container has a fixed size set, then gap percentage value calculations are based on the size of the container. Thus, gap behavior is consistent across all layouts. In the following example, there are two containers, one with a grid layout and the other with a flex layout. The containers have five red 20x20px children. Both containers are explicitly set to 200px high using `height: 200px` and the gap is set with `gap: 12.5% 0`.
 
 ```html
 <span>Grid</span>
