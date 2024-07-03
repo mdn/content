@@ -56,6 +56,14 @@ The `class_name` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/iden
 <p>This is just a regular paragraph.</p>
 ```
 
+```html
+<!-- The next two paragraphs have class attributes
+that contain characters which must be escaped in CSS -->
+
+<p class="item?one">This paragraph has a pink background.</p>
+<p class="123item">This paragraph has a yellow background.</p>
+```
+
 #### CSS
 
 ```css
@@ -73,9 +81,21 @@ The `class_name` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/iden
 }
 ```
 
+```css
+/* In the next two rules, the class attributes must be escaped */
+
+.item\?one {
+  background-color: pink;
+}
+
+.\00003123item {
+  background-color: yellow;
+}
+```
+
 #### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples', "", 300)}}
 
 ### Invalid class selectors
 
