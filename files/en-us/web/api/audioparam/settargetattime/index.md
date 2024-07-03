@@ -76,22 +76,9 @@ the time progresses.
 | `5 * timeConstant`     | 99.3%                                                       |
 | `n * timeConstant`     | <math><semantics><mrow><mn>1</mn></mrow></semantics></math> |
 
-<math display="block">
-  <semantics>
-    <mrow>
-      <mn>1</mn>
-      <mo>-</mo>
-      <msup>
-        <mi>e</mi>
-        <mrow>
-          <mo>-</mo>
-          <mi>n</mi>
-        </mrow>
-      </msup>
-    </mrow>
-    <annotation encoding="TeX">1 - e^{-n}</annotation>
-  </semantics>
-</math>
+<!-- prettier-ignore-start -->
+<math display="block"><semantics><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics></math>
+<!-- prettier-ignore-end -->
 
 ## Examples
 
