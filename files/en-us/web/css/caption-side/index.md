@@ -18,10 +18,6 @@ The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a
 caption-side: top;
 caption-side: bottom;
 
-/* Logical values */
-caption-side: inline-start;
-caption-side: inline-end;
-
 /* Global values */
 caption-side: inherit;
 caption-side: initial;
@@ -38,10 +34,9 @@ The `caption-side` property is specified as one of the keyword values listed bel
   - : The caption box should be positioned at the block start side of the table.
 - `bottom`
   - : The caption box should be positioned at the block end side of the table.
-- `inline-start`
-  - : The caption box should be positioned at the inline start edge of the table.
-- `inline-end`
-  - : The caption box should be positioned at the inline end edge of the table.
+ 
+> ![Note]
+> The [CSS logical properties and values] module defines two logical values, `inline-start` and `inline-end`, to position the caption box at the inline start edge and inline end edge of the table, respectively. These values are not supported in any browsers.
 
 ## Formal definition
 
