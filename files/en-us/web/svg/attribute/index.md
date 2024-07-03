@@ -49,7 +49,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
@@ -74,7 +73,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
 
@@ -321,7 +319,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:base")}}
 - {{SVGAttr("xml:lang")}}
 - {{SVGAttr("xml:space")}}
 
@@ -348,7 +345,6 @@ Below is a list of all of the attributes available in SVG along with links to re
   - {{SVGAttr("style")}}
   - {{SVGAttr("lang")}}
   - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:base")}}
   - {{SVGAttr("xml:lang")}}
   - {{SVGAttr("xml:space")}}
 
@@ -379,14 +375,12 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("d")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}

@@ -23,11 +23,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
   - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
 
-    > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > **Note:** Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
-
-    In some browsers (e.g. Chrome 70.0) autoplay doesn't work if no `muted` attribute is present.
 
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
@@ -39,7 +37,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     Use the [`disablepictureinpicture`](#disablepictureinpicture) attribute if you want to disable the Picture-In-Picture mode (and the control).
 
-- `crossorigin`
+- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related video. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 

@@ -151,6 +151,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
         > **Note:** A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
 
+        > **Warning:** Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+
 - `Secure` {{optional_inline}}
 
   - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
