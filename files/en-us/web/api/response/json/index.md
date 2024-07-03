@@ -29,6 +29,13 @@ None.
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number…
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+- {{jsxref("SyntaxError")}}
+  - : The response body cannot be parsed as JSON.
+
 ## Examples
 
 In our [fetch JSON example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json) (run [fetch JSON live](https://mdn.github.io/dom-examples/fetch/fetch-json/)),

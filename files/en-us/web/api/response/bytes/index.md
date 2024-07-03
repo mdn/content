@@ -27,9 +27,9 @@ A promise that resolves with an {{jsxref("Uint8Array")}}.
 
 ### Exceptions
 
-- `TypeError`
-  - : The response body has already been read from, or the associated stream is locked or has been cancelled.
-- `RangeError`
+- {{jsxref("TypeError")}}
+  - : The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+- {{jsxref("RangeError")}}
   - : There is a problem creating the associated `ArrayBuffer`.
     For example, if the data size is more than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
 

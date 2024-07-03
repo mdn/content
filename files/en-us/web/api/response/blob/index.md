@@ -32,6 +32,11 @@ None.
 
 A promise that resolves with a {{domxref("Blob")}}.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+
 ## Examples
 
 In our [fetch request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (run [fetch request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)), we

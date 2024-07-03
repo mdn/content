@@ -31,6 +31,14 @@ None.
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - The {{glossary("MIME")}} type of the body cannot be determined from the {{httpheader("Content-Type")}} headers included in the response.
+    - The body cannot be parsed as a `FormData` object.
+
 ## Examples
 
 TBD.
