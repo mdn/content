@@ -516,10 +516,7 @@
     },
     "Fetch API": {
       "overview": ["Fetch API"],
-      "guides": [
-        "/docs/Web/API/Fetch_API/Using_Fetch",
-        "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
-      ],
+      "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["fetch()"],
       "properties": [],
