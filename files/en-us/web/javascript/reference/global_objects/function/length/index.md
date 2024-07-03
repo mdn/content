@@ -42,6 +42,10 @@ console.log(((...args) => {}).length);
 console.log(((a, b = 1, c) => {}).length);
 // 1, only parameters before the first one with
 // a default value are counted
+
+console.log((({a, b}, [c, d]) => {}).length);
+// 2, destructuring patterns each count as 
+// a single parameter
 ```
 
 ## Specifications
