@@ -39,7 +39,7 @@ Note that this is equivalent to the following [attribute selector](/en-US/docs/W
 [class~=class_name] { style properties }
 ```
 
-The `class_name` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/ident).
+The `class_name` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/ident). HTML `class` attributes which are not valid CSS identifiers must be [escaped](/en-US/docs/Web/CSS/ident#escaping_characters) before they can be used in class selectors.
 
 ## Examples
 
@@ -99,7 +99,7 @@ that contain characters which must be escaped in CSS -->
 
 ### Invalid class selectors
 
-Class selectors must be valid CSS identifiers.
+The class selectors in the following rules are not valid CSS identifiers, and will be ignored.
 
 ```css example-bad
 .item?one {
