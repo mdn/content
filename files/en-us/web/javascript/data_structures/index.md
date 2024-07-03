@@ -77,9 +77,9 @@ Boolean values are usually used for conditional operations, including [ternary o
 
 ### Number type
 
-The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 754 value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding). It is capable of storing positive floating-point numbers between 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) and 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -2<sup>-1074</sup> and -2<sup>1024</sup>, but it can only safely store integers in the range -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}). Outside this range, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation. You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}.
+The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 754 value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding). It is capable of storing positive floating-point numbers between 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) and 2<sup>1023</sup> x (2 - 2<sup>-52</sup>) ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -2<sup>-1074</sup> and -2<sup>1023</sup> x (2 - 2<sup>-52</sup>), but it can only safely store integers in the range -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}). Outside this range, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation. You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}.
 
-Values outside the range ±(2<sup>-1074</sup> to 2<sup>1024</sup>) are automatically converted:
+Values outside the range ±(2<sup>-1074</sup> to 2<sup>1023</sup> x (2 - 2<sup>-52</sup>)) are automatically converted:
 
 - Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `+Infinity`.
 - Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `+0`.
