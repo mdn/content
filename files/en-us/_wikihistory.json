@@ -73024,29 +73024,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T21:31:54.326Z",
-    "contributors": [
-      "ddbeck",
-      "Sheppy",
-      "chrisdavidmills",
-      "matt-continuousdelta",
-      "paulwanjohi",
-      "natevolker",
-      "connorshea",
-      "fscholz",
-      "mfluehr",
-      "ayunami2000",
-      "Konrud",
-      "KadirTopal",
-      "cvrebert",
-      "Sebastianz",
-      "nhashmi",
-      "iGadget",
-      "ccforward",
-      "kscarfone"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2020-10-15T21:40:57.574Z",
     "contributors": [
