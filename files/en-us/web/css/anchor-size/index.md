@@ -86,7 +86,7 @@ Returns a {{cssxref("length")}} value.
 
 ## Description
 
-The `anchor()` function enables a positioned element's sizing values to be expressed in terms of an anchor element's dimension; it defines the dimension of a specific anchor element the positioned element is being sized relative to. It is a valid value for [sizing properties](#properties_that_accept_anchor-size_function_values) set on anchor-positioned elements. When used, the function returns the {{cssxref("length")}} dimension of an anchor element, with both the anchor element and the dimension being optional parameters.
+The `anchor()` function enables a positioned element's sizing values to be expressed in terms of an anchor element's dimensions; it defines the dimension of a specific anchor element the positioned element is being sized relative to. It is a valid value for [sizing properties](#properties_that_accept_anchor-size_function_values) set on anchor-positioned elements. When used, the function returns the {{cssxref("length")}} dimension of an anchor element, with both the anchor element and the dimension being optional parameters.
 
 The length returned is the vertical or horizontal size of an anchor element or its containing block. The dimension used is defined by the `<anchor-size>` parameter. If that parameter is omitted, the dimension used will match the axis of the sizing property is it set on.
 
