@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.InstallEvent.addRoutes
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`addRoutes()`** method of the
 {{domxref("InstallEvent")}} interface specifies one or more routes, which define rules for how certain resources should be fetched and where from. This allows you to, for example, bypass a service worker in cases where you always want to fetch a resource from the network or a browser {{domxref("Cache")}}. This is useful when you want to avoid the performance overhead of unnecessary service worker cycles.
