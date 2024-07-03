@@ -47,9 +47,17 @@ open(url, target, windowFeatures)
 
     - `popup`
 
-      - : By default, if `windowFeatures` is empty (except `noopener` and `noreferrer`), `window.open` opens the page in a new tab. If `popup` is set to true, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only. If `popup` is present and set to false, a new tab is still opened.
+      - : By default, `window.open` opens the page in a new tab. If `popup` is set to true, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only. If `popup` is present and set to false, a new tab is still opened.
 
-        If `windowFeatures` is non-empty (except `noopener` and `noreferrer`), and `popup` is not set, the browser falls back to checking a few legacy features, which used to control UI features of the opened window. In modern browsers, they only have the effect of requesting a popup. They include: `location` and `toolbar` both being false or absent, or `menubar` being false or absent, or `resizable` being false, or `scrollbars` being false or absent, or `status` being false or absent. If _all_ conditions are not met, a new tab is opened. For example, `location=true,menubar=true,scrollbars=true,status=true,width=100` will open a new tab, effectively ignoring the `width` feature.
+        There are a few legacy features, which used to control UI features of the opened window. In modern browsers, they only have the effect of requesting a popup. If `popup` is unspecified, and `windowFeatures` contains any features (including unrecognized ones) other than `noopener`, `noreferrer`, or `attributionsrc`, the window is also opened as a popup if any of the following conditions apply:
+
+        - `location` and `toolbar` are both false or absent
+        - `menubar` is false or absent
+        - `resizable` is false
+        - `scrollbars` is false or absent
+        - `status` is false or absent
+
+        Otherwise the window is opened as a tab.
 
     - `width` or `innerWidth`
 
