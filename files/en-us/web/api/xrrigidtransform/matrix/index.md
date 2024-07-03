@@ -12,13 +12,13 @@ The read-only {{domxref("XRRigidTransform")}} property **`matrix`** returns the 
 
 ## Value
 
-A {{jsxref("Float32Array")}} containing 16 entries which represents the 4x4 transform matrix which is described by the {{domxref("XRRigidTransform.position", "position")}} and {{domxref("XRRigidTransform.orientation", "orientation")}} properties.
+A {{jsxref("Float32Array")}} containing 16 entries, which represents the 4x4 transform matrix described by the {{domxref("XRRigidTransform.position", "position")}} and {{domxref("XRRigidTransform.orientation", "orientation")}} properties.
 
 ## Usage notes
 
 ### Matrix format
 
-All 4x4 transform matrices used in WebGL are stored in 16-element {{jsxref("Float32Array")}}s. The values are stored into the array in column-major order; that is, each column is written into the array top-down before moving to the right one column and writing the next column into the array. Thus, for an array `[a0, a1, a2, …, a13, a14, a15]`, the matrix looks like this:
+All 4x4 transform matrices used in WebGL are stored in 16-element {{jsxref("Float32Array")}}s. The values are stored in the array in column-major order; that is, each column is written into the array top-down before moving to the next column to the right and writing it into the array. Therefore, for the array `[a0, a1, a2, …, a13, a14, a15]`, the matrix looks like this:
 
 <math display="block">
   <semantics>
