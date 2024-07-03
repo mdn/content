@@ -12,6 +12,8 @@ browser-compat: api.CloseWatcher.CloseWatcher
 
 The **`CloseWatcher()`** constructor creates a new {{domxref("CloseWatcher")}} object.
 
+You can create `CloseWatcher` instances without [user activation](/en-US/docs/Web/Security/User_activation), and this can be useful to implement cases like session inactivity timeout dialogs. However, if you create more than one `CloseWatcher` without user activation, then the newly-created one will be grouped together with the last one, so a single close request will close them both. This means that it is important to call {{domxref("CloseWatcher.destroy()", "destroy()")}}, {{domxref("CloseWatcher.close()", "close()")}}, and {{domxref("CloseWatcher.requestClose()", "requestClose()")}} properly.
+
 ## Syntax
 
 ```js-nolint
@@ -24,7 +26,7 @@ new CloseWatcher(options)
 - `options` {{optional_inline}}
   - : An object that has the following properties:
     - `signal`
-      - : If a `signal`, is provided then the watcher can be destroyed (as if by `watcher.destroy()`) by aborting the given {{domxref("AbortSignal")}}.
+      - : An {{domxref("AbortSignal")}}. If this is provided, then the watcher can be destroyed (as if by calling {{domxref("CloseWatcher.destroy()")}}) by calling {{domxref("AbortController.abort()")}} on the corresponding {{domxref("AbortController")}}.
 
 ## Return value
 
@@ -34,7 +36,7 @@ A new {{domxref("CloseWatcher")}} object.
 
 ### Creating new `CloseWatcher` instances
 
-Create a new close watcher.
+Create a new `CloseWatcher`.
 
 ```js
 const watcher = new CloseWatcher();

@@ -12,6 +12,8 @@ browser-compat: api.CloseWatcher.close_event
 
 A `close` event is fired at a {{domxref("CloseWatcher")}} object when a close request was received and only fired if the {{domxref("CloseWatcher.cancel_event", "cancel")}} event that preceded the `close` one was not canceled.
 
+The `close` event handler is where the code to close the UI component should be called: this ensures that the component will be closed properly either from the platform-specific close signal or from a call to {{domxref("CloseWatcher.requestClose()")}}.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

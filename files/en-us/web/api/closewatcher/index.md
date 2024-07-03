@@ -9,7 +9,11 @@ browser-compat: api.CloseWatcher
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-The `CloseWatcher` interface listens and responds to close requests. The user usually sends close requests using the <kbd>Esc</kbd> key, the back button on Android, the "z" gesture on iOS VoiceOver, and similar actions on other platforms. Custom UI components don't respond to these close requests like built-in components ([popover](/en-US/docs/Web/API/Popover_API) or [dialog](/en-US/docs/Web/HTML/Element/dialog)) do. The `CloseWatcher` API abstracts device-specific close methods and delivers a `close` event that custom UI components can use to deliver a device-integrated close behaviour.
+The `CloseWatcher` interface listens and responds to close requests.
+
+Some UI components have "close behavior", meaning that the component appears, and the user can close it when they are finished with it. For example: sidebars, popups, dialogs, or notifications.
+
+Users generally expect to be able to use a particular mechanism to close these elements, and the mechanism tends to be device-specific. For example, on a device with a keyboard it might be the <kbd>Esc</kbd> key, but Android might use the back button. For built-in components, such as [popover](/en-US/docs/Web/API/Popover_API) or {{htmlelement("dialog")}} elements, the browser takes care of these differences, closing the element when the user performs the close action appropriate for the device. However, when a web developer implements their own closable UI component (for example, a sidebar), it is hard to implement this kind of device-specific close behavior. The `CloseWatcher` interface solves this problem by delivering a `close` event to the when the user executes the close action for the device.
 
 {{InheritanceDiagram}}
 
