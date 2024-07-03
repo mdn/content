@@ -171,5 +171,5 @@ It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promi
 
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
-- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
+- {{DOMxRef("ScreenOrientation.change_event", "change")}} event of {{domxref("ScreenOrientation")}}
 - [The orientation media query](/en-US/docs/Web/CSS/@media/orientation)
