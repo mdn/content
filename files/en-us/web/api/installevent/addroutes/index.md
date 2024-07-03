@@ -3,6 +3,8 @@ title: "InstallEvent: addRoutes() method"
 short-title: addRoutes()
 slug: Web/API/InstallEvent/addRoutes
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.InstallEvent.addRoutes
 ---
 
