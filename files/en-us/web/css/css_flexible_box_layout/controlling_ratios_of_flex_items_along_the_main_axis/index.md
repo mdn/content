@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-In this guide, we explore the three properties that control the size and flexibility of flex items along the main axis {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the key to mastering [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+In this guide, we explore the three properties that control the size and flexibility of flex items along the main axis: {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the key to mastering [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
 ## A first look
 
@@ -48,7 +48,7 @@ We also need to understand the concept of **positive and negative free space**. 
 
 ![Image showing space left over after items have been displayed.](basics7.png)
 
-A flex container has _negative free space_ when the combined natural sizes of the flex items are larger than the available space in the flex container. If the three flex items in the `500px`-wide container example above are each `200px` wide instead of `100px`, their combined natural width is `600px`, resulting in `100px` of negative free space. This space can be removed from the items to make them fit the container, or the items will overflow.
+A flex container has _negative free space_ when the combined value of the natural sizes of the flex items is larger than the available space in the flex container. If the three flex items in the `500px`-wide container example above are each `200px` wide instead of `100px`, their combined natural width is `600px`, resulting in `100px` of negative free space. This space can be removed from the items to make them fit the container, or the items will overflow.
 
 ![The items overflow the container](ratios1.png)
 
@@ -70,7 +70,7 @@ In addition to the `auto` keyword and any other valid {{cssxref("width")}} value
 
 To completely ignore the size of the flex item during space distribution, set `flex-basis` to `0` and set a non-zero `flex-grow` value. Let's learn `flex-grow` before looking at this value in action.
 
-## The flex-grow property
+## The `flex-grow` property
 
 The {{CSSxRef("flex-grow")}} property specifies the **flex grow factor**, which determines how much a flex item will grow relative to the other flex items in the flex container when positive free space is distributed.
 
@@ -163,7 +163,7 @@ To understand how flex item sizing works, you need to consider the factors below
 
 ### Is there available space?
 
-Items can only grow if there is positive free space, and they won't shrink unless there is negative free space.
+Items can grow only if there is positive free space, and they won't shrink unless there is negative free space.
 
 - If we add up the widths of all the items (or heights if working in a column), is that total **less** than the total width (or height) of the container? If so, there will be positive free space, and `flex-grow` will come into play.
 - If we add up the widths of all the items (or heights if working in a column), is that total **more** than the total width (or height) of the container? If so, there will be negative free space, and `flex-shrink` will come into play.
