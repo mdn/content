@@ -73357,30 +73357,6 @@
       "Sheppy"
     ]
   },
-  "Web/CSS/::-moz-page": {
-    "modified": "2020-10-15T21:08:00.388Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "Sheppy"
-    ]
-  },
-  "Web/CSS/::-moz-page-sequence": {
-    "modified": "2020-10-15T21:07:58.857Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/::-moz-progress-bar": {
     "modified": "2020-07-29T00:12:03.398Z",
     "contributors": [
@@ -73429,18 +73405,6 @@
       "mfluehr",
       "Sebastianz",
       "cvrebert"
-    ]
-  },
-  "Web/CSS/::-moz-scrolled-page-sequence": {
-    "modified": "2020-10-15T21:08:02.632Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "Sheppy"
     ]
   },
   "Web/CSS/::-webkit-inner-spin-button": {

@@ -517,7 +517,7 @@
     "Fetch API": {
       "overview": ["Fetch API"],
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
-      "interfaces": ["Headers", "Request", "Response"],
+      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["fetch()"],
       "properties": [],
       "events": []
