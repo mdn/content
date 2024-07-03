@@ -188,7 +188,7 @@
       {
         "name": "fqdn-moz-links",
         "message": "Don't use developer.mozilla.org for links, except for blog posts",
-        "searchPattern": "/\\]\\(https:\\/\\/developer.mozilla.org\\/(?!en-US\\/(blog|observatory)\\/)/g",
+        "searchPattern": "/\\]\\(https:\\/\\/developer.mozilla.org\\/(?!en-US\\/(blog\\/|observatory))/g",
         "replace": "](/",
         "searchScope": "text",
       },
