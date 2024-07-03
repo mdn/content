@@ -28,7 +28,8 @@ A {{jsxref("Promise")}} that fulfills with an unpartitioned {{domxref("StorageMa
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("StorageManager.estimate()")}}
+
+See {{domxref("StorageManager.estimate()")}}
 
 ## Examples
 

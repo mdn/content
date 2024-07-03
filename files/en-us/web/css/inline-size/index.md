@@ -19,6 +19,8 @@ If the writing mode is vertically oriented, the value of `inline-size` relates t
 /* <length> values */
 inline-size: 300px;
 inline-size: 25em;
+inline-size: anchor-size(width);
+inline-size: anchor-size(--myAnchor inline);
 
 /* <percentage> values */
 inline-size: 75%;

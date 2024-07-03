@@ -21,7 +21,7 @@ math:min(nodeSet)
 - `nodeSet`
   - : The node-set whose lowest value is to be returned.
 
-### Returns
+### Return value
 
 A result tree fragment representing the lowest valued node's numeric value as a string.
 
