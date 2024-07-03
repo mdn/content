@@ -12,7 +12,7 @@ browser-compat: css.properties.-moz-user-input
 
 In Mozilla applications, **`-moz-user-input`** determines if an element will accept user input.
 
-As of Firefox 60, this property may no longer be used to grant an element to accept user input if it normally does not. It may only be used to disable user input.
+As of Firefox 60, this property can no longer grant an element the ability to accept user input if it normally does not. It may only be used to disable user input.
 
 > **Note:** `-moz-user-input` was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations). A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the User Interface for CSS3 specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
 
