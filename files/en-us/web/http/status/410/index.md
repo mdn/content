@@ -7,9 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.410
 
 {{HTTPSidebar}}
 
-The HTTP **`410 Gone`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.
+The HTTP **`410 Gone`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the target resource is no longer available at the origin server and that this condition is likely to be permanent.
 
-If you don't know whether this condition is temporary or permanent, a {{HTTPStatus(404)}} status code should be used instead.
+Clients should not repeat requests for resources that return a 401 response, and website owners should remove or replace links that return this code.
+If server owners don't know whether this condition is temporary or permanent, a {{HTTPStatus(404)}} status code should be used instead.
 
 > **Note:** A 410 response is cacheable by default.
 
@@ -21,7 +22,30 @@ If you don't know whether this condition is temporary or permanent, a {{HTTPStat
 
 ## Examples
 
-TODO
+### Requesting an outdated resource
+
+The following `GET` request is for a page with promotional content that is no longer valid:
+
+```http
+GET /promotions/summer-2023 HTTP/1.1
+Host: example.com
+```
+
+```http
+HTTP/1.1 410 Gone
+Content-Type: text/html
+Content-Length: 212
+
+<html>
+  <head>
+    <title>Promotion expired</title>
+  </head>
+  <body>
+    <h1>Promotion expired</h1>
+    <p>This promotion is no longer active! See <a href="/offers">our latest offers</a>.</p>
+  </body>
+</html>
+```
 
 ## Specifications
 
