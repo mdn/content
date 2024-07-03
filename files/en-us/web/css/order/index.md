@@ -32,7 +32,7 @@ order: unset;
 
 Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order. `order` must not be used on non-visual media such as [speech](/en-US/docs/Web/CSS/@media#speech).
 
-Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property only impact grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, the `order` property has no effect.
+Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, the `order` property has no effect.
 
 ### Values
 
@@ -64,7 +64,7 @@ In this example, we create a classic two-sidebar layout.
 
 #### HTML
 
-We include a header, footer, and a main content area. The main content includes an article and two side bars. Note their order! oWe'll use the CSS `order` property to change their visual order.
+We include a header, a footer, and a main content area. The main content includes an article and two side bars. Note their order! We'll use the CSS `order` property to change their visual order.
 
 ```html
 <header>Header</header>
@@ -80,7 +80,7 @@ We include a header, footer, and a main content area. The main content includes 
 
 We style the main area using [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module features; by setting {{cssxref("display")}} to `flex`, the {{htmlelement("main")}} element becomes a flex container. By default, this creates flex items of equal vertical size. The sidebars are both given an absolute {{cssxref("width")}}, while the {{htmlelement("article")}} will consume all the [positive free space](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#positive_and_negative_free_space) with a {{cssxref("flex-grow")}} factor set via the {{cssxref("flex")}} shorthand.
 
-We then set different `order` property values on each of the flex containers three children; this means the CSS is defining that component's visual order rather than appearing in the order declared in the HTML.
+We then set different `order` property values on each of the flex container's three children; this means the CSS is defining that component's visual order rather than it appearing in the order declared in the HTML.
 
 ```css
 main {
@@ -105,7 +105,7 @@ main > aside {
 
 {{ EmbedLiveSample('Ordering_items_in_a_flex_container') }}
 
-The `<article>` appears first in the source order, but appears in the center when rendered visually.
+The `<article>` appears first in the source order but visually rendered in the center.
 
 ## Specifications
 
