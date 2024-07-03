@@ -28,8 +28,12 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ### Exceptions
 
+- {{domxref("DOMException")}} `AbortError`
+  - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
-  - : The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+  - : Thrown for one of the following reasons:
+    - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There is an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 - {{jsxref("RangeError")}}
   - : There is a problem creating the associated `ArrayBuffer`.
     For example, if the data size is more than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
