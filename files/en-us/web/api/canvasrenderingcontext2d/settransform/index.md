@@ -26,7 +26,7 @@ This transformation matrix gets multiplied on the left of a column vector repres
 
 ### Parameters
 
-`setTransform()` has two types of parameter that it can accept. The older type consists of several parameters representing the individual components of the transformation matrix to set:
+`setTransform()` accepts two types of parameters. The older type consists of several parameters representing the individual components of the transformation matrix to set:
 
 - `a` (`m11`)
   - : The cell in the first row and first column of the matrix.
