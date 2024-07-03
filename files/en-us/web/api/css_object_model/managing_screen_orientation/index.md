@@ -143,7 +143,7 @@ The Screen Orientation API is made to prevent or handle such a change.
 
 ### Listening to orientation changes
 
-Each time the orientation of the screen changes, the {{domxref("Window.orientationchange_event", "orientationchange")}} event is triggered:
+Each time the orientation of the screen changes, the {{domxref("ScreenOrientation.change_event", "change")}} event of the {{domxref("ScreenOrientation")}} interface is triggered:
 
 ```js
 screen.orientation.addEventListener("change", () => {
