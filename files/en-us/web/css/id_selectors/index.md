@@ -22,15 +22,26 @@ The CSS **ID selector** matches an element based on the value of the element's [
 #id_value { style properties }
 ```
 
-Note that syntactically (but not specificity-wise), this is equivalent to the following {{Cssxref("Attribute_selectors", "attribute selector")}}:
+Note that syntactically (but not specificity-wise), this is equivalent to the following [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors):
 
 ```css
 [id=id_value] { style properties }
 ```
 
+The `id_value` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/ident).
+
 ## Examples
 
-### CSS
+### Valid ID selectors
+
+#### HTML
+
+```html
+<div id="identified">This div has a special ID on it!</div>
+<div>This is just a regular div.</div>
+```
+
+#### CSS
 
 ```css
 #identified {
@@ -38,16 +49,23 @@ Note that syntactically (but not specificity-wise), this is equivalent to the fo
 }
 ```
 
-### HTML
-
-```html
-<div id="identified">This div has a special ID on it!</div>
-<div>This is just a regular div.</div>
-```
-
-### Result
+#### Result
 
 {{EmbedLiveSample("Examples", '100%', 50)}}
+
+### Invalid ID selectors
+
+ID selectors must be valid CSS identifiers.
+
+```css example-bad
+#item?one {
+  background-color: green;
+}
+
+#123item {
+  background-color: green;
+}
+```
 
 ## Specifications
 
