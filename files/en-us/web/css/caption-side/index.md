@@ -7,7 +7,7 @@ browser-compat: css.properties.caption-side
 
 {{CSSRef}}
 
-The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref('writing-mode')}} of the table.
+The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref("writing-mode")}} of the table.
 
 {{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
@@ -36,7 +36,7 @@ The `caption-side` property is specified as one of the keyword values listed bel
   - : The caption box should be positioned at the block end side of the table.
  
 > ![Note]
-> The [CSS logical properties and values] module defines two logical values, `inline-start` and `inline-end`, to position the caption box at the inline start edge and inline end edge of the table, respectively. These values are not supported in any browsers.
+> The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module defines two logical values, `inline-start` and `inline-end`, to position the caption box at the inline start edge and inline end edge of the table, respectively. These values are not supported in any browsers.
 
 ## Formal definition
 
@@ -110,5 +110,6 @@ td {
 
 ## See also
 
+- {{HTMLelement("caption")}}
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
