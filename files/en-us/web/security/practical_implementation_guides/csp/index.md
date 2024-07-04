@@ -39,8 +39,8 @@ CSP can also be used to provide granular control over:
 > **Note:** Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header. This allows you to see if any violations would have occurred with that policy. This test requires the use of `report-to`/`report-uri`, as explained below.
 
 1. Begin by trying out a policy of `default-src https:`. This is a great first goal because it disables inline code and requires browsers to use HTTPS when loading resources. It will also allow you to start to pinpoint the resources that are failing to load as a result of the policy. [`default-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) serves as a fallback for the other CSP fetch directives.
-2. Next, start to make the policy more specific, in an effort to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked-down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';`.
-3. You can then go on to add in specific sources as highlighted during testing; for example, `style-src 'self' https://example.com/`.
+2. Next, start to make the policy more specific, to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked-down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';`.
+3. You can then go on to add specific sources as highlighted during testing; for example, `style-src 'self' https://example.com/`.
 4. API endpoints should use a policy that disables resource loading and embedding; for example, `Content-Security-Policy: default-src 'none'; frame-ancestors 'none'`.
 5. For existing websites with large codebases that would require too much work to disable inline scripts, you can use some of the CSP features designed to ease adoption on legacy sites. For example, the [`nonce-*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#nonce-) directive requires that a `<script>` specifies the same nonce in its [`nonce`](/en-US/docs/Web/HTML/Element/script#nonce) attribute for loading to succeed, whereas the [`script-dynamic`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#strict-dynamic) directive extends the trust due to an accompanying nonce to other scripts that the top-level script loads.
 
@@ -53,6 +53,17 @@ Keep the following points in mind:
   > **Note:** `report-to` is preferred over the deprecated `report-uri`; however, both are still needed because `report-to` does not yet have full cross-browser support.
 - Don't include any unsafe sources inside your CSP. Examples include `unsafe-inline` or `data:` URIs inside `script-src` and overly broad sources or form submission targets.
 - Unless sites need the ability to execute plugins, their execution should be disabled with `object-src 'none'`.
+- If you are embedding SVG sprites defined in external files via the [`<use>`](/en-US/docs/Web/SVG/Element/use) element, for example:
+
+  ```svg
+  <svg>
+    <use href="/images/icons.svg#icon"/>
+  </svg>
+  ```
+
+  your SVG images will be blocked in Firefox if you have a `default-src 'none'` policy set. Firefox does not treat the SVG as an embedded image like other browsers do, therefore `img-src 'self'` will not allow them to be loaded. You need to use `default-src 'self'` if you want your external sprites to load in Firefox (see [bug 1773976](https://bugzilla.mozilla.org/show_bug.cgi?id=1773976) and [this CSP spec issue](https://github.com/w3c/webappsec-csp/issues/199) for more information).
+
+  Alternatively, if the `default-src 'none'` policy is a hard requirement, you can include the SVG sprites inline in the HTML page — see [CSP: default-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#firefox_default-src_none_svg_sprite_blocking_issue) for an example.
 
 ## Examples
 
