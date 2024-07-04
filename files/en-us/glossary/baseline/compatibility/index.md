@@ -32,7 +32,7 @@ Features listed as **widely available** have a consistent history of browser sup
 
 ![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](limited.png)
 
-Features listed as **newly available** works in all stable browser versions, but may not work with older browsers and devices.
+Features listed as **newly available** work in at least the latest stable version of each of the Baseline browsers, but may not work with older browsers and devices.
 
 ![Grey widget with the cross: limited availability. Four browsers' logos, two with checkmarks, two with crosses.](low.png)
 
