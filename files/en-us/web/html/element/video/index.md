@@ -11,7 +11,7 @@ The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player whi
 
 {{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
 
-The above example shows simple usage of the `<video>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, whether we want to show the browser's default video controls, etc.
+The above example shows simple usage of the `<video>` element. Similarly to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, etc.
 
 The content inside the opening and closing `<video></video>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -21,7 +21,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - `autoplay`
 
-  - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
+  - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can without stopping to finish loading the data.
 
     > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
@@ -63,9 +63,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 - `loop`
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
 - `muted`
-  - : A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning that the audio will be played when the video is played.
+  - : A Boolean attribute that indicates the default audio mute setting contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning the audio will be played when the video is played.
 - `playsinline`
-  - : A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area. Note that the absence of this attribute _does not_ imply that the video will always be played in fullscreen.
+  - : A Boolean attribute indicating that the video is to be played "inline", that is, within the element's playback area. Note that the absence of this attribute _does not_ imply that the video will always be played in fullscreen.
 - `poster`
   - : A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
 - `preload`
@@ -302,7 +302,7 @@ A good general source of information on using HTML `<video>` is the [Video and a
 
 ### Styling with CSS
 
-The `<video>` element is a replaced element — its {{cssxref("display")}} value is `inline` by default, but its default width and height in the viewport is defined by the video being embedded.
+The `<video>` element is a replaced element — its {{cssxref("display")}} value is `inline` by default — but its default width and height in the viewport is defined by the video being embedded.
 
 There are no special considerations for styling `<video>`; a common strategy is to give it a `display` value of `block` to make it easier to position, size, etc., and then provide styling and layout information as required. [Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques.
 
@@ -339,7 +339,7 @@ You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")
 
 If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
 
-If you use Apache Web Server to serve WebM videos, you can fix this problem by adding the video file type extensions to the "video/webm" MIME type (the most common WebM file extension is ".webm"). To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
+If you use Apache Web Server to serve WebM videos, you can fix this problem by adding the video file type extensions to the `video/webm` MIME type (the most common WebM file extension is `.webm`). To do this, edit the `mime.types` file in `/etc/apache` or use the `AddType` configuration directive in `httpd.conf`:
 
 ```plain
 AddType video/webm .webm
@@ -349,9 +349,9 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 ## Accessibility
 
-Videos should provide both captions and transcripts that accurately describe its content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
+Videos should provide both captions and transcripts that accurately describe their content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
-It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element, since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
+It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source video.
 
@@ -410,7 +410,7 @@ This example plays a video when activated, providing the user with the browser's
 
 {{EmbedLiveSample('Single source', '', '400')}}
 
-Until the video starts playing, the image provided in the `poster` attribute is displayed in its place. If the browser doesn't support video playback, the fallback text is displayed.
+Until the video starts playing, the image provided in the `poster` attribute is displayed in its place. If the browser doesn't support video playback, it displays the fallback text.
 
 ### Multiple sources
 
