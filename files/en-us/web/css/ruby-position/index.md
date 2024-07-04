@@ -38,6 +38,9 @@ ruby-position: unset;
 - `alternate`
   - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
 
+> ![NOTE]
+> The specification also lists an additional value, `inter-character`, which is not currently supported in any browsers. When implemented, `inter-character` will behave as `over` in vertical writing modes. Otherwise, it indicates that the ruby has to be placed between the different characters, appearing on the right of the base in horizontal text and forcing the children of the ruby annotation container to have a `vertical-rl` writing mode.
+
 ## Formal definition
 
 {{cssinfo}}
