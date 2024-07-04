@@ -26,6 +26,13 @@ font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
 font-variant-ligatures: contextual; /* <contextual-alt-values> */
 font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
+/* <contextual-alt-values> <common-lig-values>*/
+font-variant-ligatures: no-contextual common-ligatures;
+
+/* <common-lig-values> <discretionary-lig-values> <historical-lig-values> <contextual-alt-values> */
+font-variant-ligatures: common-ligatures no-discretionary-ligatures
+  historical-ligatures contextual;
+
 /* Global values */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
