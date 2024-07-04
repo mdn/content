@@ -44,3 +44,5 @@ Features listed with **limited availability** are _not_ yet available in all bro
 - [web-platform-dx/web-features repository](https://github.com/web-platform-dx/web-features)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)
+- [caniuse.com](https://caniuse.com/)
+- [a11ysupport.io](https://a11ysupport.io/)
