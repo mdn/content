@@ -22,7 +22,7 @@ Clients that receive a `400` response should expect that repeating the request w
 
 ### Malformed request syntax
 
-Assuming a {{Glossary("REST")}} API exists with an endpoint to manage users at `http://example.com/users` and a `POST` request with the following body attempts to create a user, but mistakenly uses a malformed email:
+Assuming a {{Glossary("REST")}} API exists with an endpoint to manage users at `http://example.com/users` and a `POST` request with the following body attempts to create a user, but uses invalid JSON with unescaped line breaks:
 
 ```http
 POST /users HTTP/1.1
@@ -31,12 +31,13 @@ Content-Type: application/json
 Content-Length: 38
 
 {
-  "email": "brian",
+  "email": "b@example.com
+",
   "username": "b.smith"
 }
 ```
 
-If the email is sent in a valid format, we would expect a {{HTTPStatus("201")}} Created response or another success message, but instead the server responds with a `400` and the response body includes a `message` field with some context so the client can retry the action with a properly-formed request:
+If the payload is sent in a valid format, we would expect a {{HTTPStatus("201")}} Created response or another success message, but instead the server responds with a `400` and the response body includes a `message` field with some context so the client can retry the action with a properly-formed request:
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -44,8 +45,8 @@ Content-Type: application/json
 Content-Length: 71
 
 {
-  "error": "Validation failed",
-  "message": "Email field must include a valid email address.",
+  "error": "Bad request",
+  "message": "Request body could not be read properly.",
 }
 ```
 
