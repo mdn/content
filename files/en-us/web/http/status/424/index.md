@@ -9,8 +9,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.4
 
 The HTTP **`424 Failed Dependency`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the method could not be performed on the resource because the requested action depended on another action, and that action failed.
 
-Regular web servers will normally not return this status code.
-But some other protocols, like {{Glossary("WebDAV")}}, can return it.
+Regular web servers typically do not return this status code, but some protocols like {{Glossary("WebDAV")}} can return it.
 For example, in {{Glossary("WebDAV")}}, if a `PROPPATCH` request was issued, and one command fails then automatically every other command will also fail with `424 Failed Dependency`.
 
 ## Status
@@ -18,10 +17,6 @@ For example, in {{Glossary("WebDAV")}}, if a `PROPPATCH` request was issued, and
 ```http
 424 Failed Dependency
 ```
-
-## Examples
-
-TODO
 
 ## Specifications
 

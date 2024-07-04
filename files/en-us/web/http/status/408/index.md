@@ -24,7 +24,39 @@ This response is used much more since some browsers, like Chrome, Firefox 27+, a
 
 ## Examples
 
-TODO
+The following example shows what a client may send when an [input](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
+
+```http
+POST /upload HTTP/1.1
+Host: example.com
+Content-Type: multipart/form-data; boundary=----Boundary1234
+Content-Length: 4012345
+
+------Boundary1234
+Content-Disposition: form-data; name="file"; filename="myImage.jpg"
+Content-Type: image/jpeg
+
+\xFF\xD8\xFF\xE0\x00...(binary data)
+------Boundary1234--
+```
+
+If the data is not received in full due to network issues or latency, the server may timeout the connection.
+Clients may repeat the request again, and a new connection will be used:
+
+```http
+HTTP/1.1 408 Request Timeout
+Content-Type: text/html
+
+<html>
+<head>
+    <title>408 Request Timeout</title>
+</head>
+<body>
+    <h1>408 Request Timeout</h1>
+    <p>Failed to process request in time. Please try again.</p>
+</body>
+</html>
+```
 
 ## Specifications
 

@@ -23,10 +23,6 @@ If a server returns such an error status, the body of the message should contain
 406 Not Acceptable
 ```
 
-## Examples
-
-TODO
-
 ## Specifications
 
 {{Specifications}}

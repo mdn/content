@@ -2,8 +2,6 @@
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
 page-type: http-status-code
-status:
-  - non-standard
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
 ---
 
@@ -22,13 +20,6 @@ No standard use convention exists and different systems use it in different cont
 ```
 
 ## Examples
-
-### Generic 402 response
-
-```http
-HTTP/1.1 402 Payment Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-```
 
 ### Payment API failure
 

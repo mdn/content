@@ -9,6 +9,10 @@ browser-compat: http.status.425
 
 The HTTP **`425 Too Early`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server is unwilling to risk processing a request that might be replayed, which creates the potential for a replay attack.
 
+If a client has interacted with a server recently, early data (also known as zero round-trip time (0-RTT) data) allows the client to send data to a server in the first round trip of a connection, without waiting for the TLS handshake to complete.
+A client that sends a request in early data does not need to include the `Early-Data` header.
+See {{HTTPHeader("Early-Data")}} for more information.
+
 ## Status
 
 ```http
@@ -19,10 +23,8 @@ The HTTP **`425 Too Early`** status response code is part of the `400`-`499` cla
 
 {{Specifications}}
 
-## Examples
-
-TODO
-
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [TLS 1.3](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3)
+- {{HTTPHeader("Early-Data")}}

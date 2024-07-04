@@ -42,7 +42,7 @@ Content-Length: 212
   </head>
   <body>
     <h1>Promotion expired</h1>
-    <p>This promotion is no longer active! See <a href="/offers">our latest offers</a>.</p>
+    <p>Promotion no longer active! See <a href="/offers">current offers</a>.</p>
   </body>
 </html>
 ```

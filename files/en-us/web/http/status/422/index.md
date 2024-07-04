@@ -21,15 +21,14 @@ Clients that receive a `422` response should expect that repeating the request w
 
 ### SHA validation failure
 
-The following example is based on GitHub's API and makes a request to [update a file contents](https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#create-or-update-file-contents).
-The `content` field is Base64 encoded, but uses `\n` line feeds every 60 characters, with one terminating the string:
+The following example makes a request to update file contents ([based on GitHub's API](https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#create-or-update-file-contents)).
+The `content` field is Base64 encoded and uses `\n` line feeds every 60 characters, with one terminating the string:
 
 ```http
 PUT /repos/mdn/content/contents/README.md HTTP/1.1
 Host: api.example.com
 Accept: application/vnd.github+json
 Authorization: Bearer abcd123
-X-GitHub-Api-Version: 2022-11-28
 Content-Type: application/json
 Content-Length: 165
 
@@ -40,8 +39,8 @@ Content-Length: 165
 }
 ```
 
-In this implementation, the server expects strictly {{rfc("4648")}}-compliant Base64 encoded content, so you will receive a `422` Unprocessable Entity response.
-The `message` field provides context about the validation error:
+In this implementation, the server expects strictly {{rfc("4648")}}-compliant Base64 encoded content (using [strict encoding methods](https://ruby-doc.org/3.3.2/stdlibs/base64/Base64.html#method-i-strict_encode64)).
+A `422` Unprocessable Entity response is returned and the `message` field provides context about the validation error:
 
 ```http
 HTTP/1.1 422 Unprocessable Entity
