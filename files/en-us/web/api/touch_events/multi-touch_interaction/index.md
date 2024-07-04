@@ -208,7 +208,7 @@ These functions support the application but aren't directly involved with the ev
 
 #### Update background color
 
-The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move](#touch_move) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
+The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move handler](#touch_move_handler) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
 
 ```js
 function update_background(ev) {

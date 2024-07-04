@@ -24,7 +24,7 @@ The above process can be made more effective using interest-based advertising (I
 
 First of all, the browser infers a user's interests from the URLs of sites they visit that have ad tech `<iframe>`s embedded. These interests are mapped to specific **topics of interest**, and the browser calculates and records the users' top topic (i.e. the topic that their interests mapped to most often) at the end of each **epoch**. An epoch is a week by default. The top topic is updated each week so that interests are kept current and users don't start to see ads for topics that they are no longer interested in.
 
-> **Note:** This process only happens on sites where a Topics API feature is used (see [What API features observe and return topics?](#what_api_features_observe_and_return_topics)).
+> **Note:** This process only happens on sites where a Topics API feature is used (see [What API features enable the Topics API?](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)).
 
 Once the browser has observed one or more topics for a user, the Topics API can retrieve them and send them to an ad tech platform. The platform can then use those topics to personalize the ads they serve to the user. The API helps to preserve privacy by _only returning topics to an API caller that have been observed by them_ on pages visited by the current user.
 
