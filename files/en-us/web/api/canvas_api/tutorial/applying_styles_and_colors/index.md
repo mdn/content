@@ -394,8 +394,6 @@ function draw() {
   // check input
   if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
     ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
-  } else {
-    alert("Value must be a positive number");
   }
 
   // Draw lines
@@ -421,7 +419,7 @@ function draw() {
       clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label for="miterLimit">Miter limit</label>
-        <input type="number" size="3" id="miterLimit" />
+        <input type="number" size="3" min="1" id="miterLimit" />
         <input type="submit" value="Redraw" />
       </form>
     </td>
