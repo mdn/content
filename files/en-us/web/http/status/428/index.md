@@ -30,7 +30,7 @@ Host: example.com
 Content-Type: application/json
 
 {
-  [...]
+  […]
 ```
 
 The server implementation requires that all PUT requests for the specific path or type of documents must be conditional and sends a 428 response:

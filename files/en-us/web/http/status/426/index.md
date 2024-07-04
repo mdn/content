@@ -19,7 +19,16 @@ The server sends an {{HTTPHeader("Upgrade")}} header with this response to indic
 
 ## Examples
 
-### Upgrade required
+### Upgrade required from HTTP/1.1
+
+Given a GET request to a system:
+
+```http
+GET /resources HTTP/1.1
+Host: example.com
+```
+
+The origin server expects that requests must be made in HTTP/2:
 
 ```http
 HTTP/1.1 426 Upgrade Required
