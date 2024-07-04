@@ -40,7 +40,6 @@ A link is included in content box above to demonstrate the effects of keyboard f
 - {{CSSxRef("text-overflow")}}
 - {{CSSxRef("-webkit-line-clamp")}}
 
-
 > [!NOTE]
 > The CSS overflow module level 4 introduces the `block-ellipsis`, `continue, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
 
