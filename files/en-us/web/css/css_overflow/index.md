@@ -2,7 +2,9 @@
 title: CSS overflow
 slug: Web/CSS/CSS_overflow
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-overflow/#propdef-overflow
+spec-urls: 
+ - https://drafts.csswg.org/css-overflow-3
+ - https://drafts.csswg.org/css-overflow-4
 ---
 
 {{CSSRef}}
@@ -36,11 +38,11 @@ A link is included in content box above to demonstrate the effects of keyboard f
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("block-ellipsis")}}
-- {{CSSxRef("continue")}}
-- {{CSSxRef("line-clamp")}}
-- {{CSSxRef("max-lines")}}
 - {{CSSxRef("-webkit-line-clamp")}}
+
+
+> [!NOTE]
+> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
 
 ### Data types
 
