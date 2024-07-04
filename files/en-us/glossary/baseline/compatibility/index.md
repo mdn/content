@@ -18,7 +18,11 @@ Baseline considers support in the following browsers:
 - Mozilla Firefox (Android)
 - Mozilla Firefox (desktop)
 
-Baseline is a summary guide to browser support, but does address feature accessibility, usability, performance, security, or other concerns.
+Baseline is a summary of browser support. It is not a substitute for accessibility, usability, performance, security, or other testing. Baseline may not tell if you if a feature works with:
+
+- Older devices and browser releases
+- Browsers not covered by the Baseline definition, such as operating system web views
+- Assistive technology, such as screen readers.
 
 ## Baseline badges
 
