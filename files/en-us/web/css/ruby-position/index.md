@@ -131,5 +131,5 @@ ruby {
 
 ## See also
 
-- HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
-- CSS Ruby properties: {{cssxref("ruby-align")}}, {{cssxref("ruby-merge")}}.
+- {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}} HTML elements
+- {{cssxref("ruby-align")}}
