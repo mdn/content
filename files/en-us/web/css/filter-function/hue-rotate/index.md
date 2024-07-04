@@ -9,7 +9,7 @@ browser-compat: css.types.filter-function.hue-rotate
 
 The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-> **Note:** `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve saturation or lightness of the original color perfectly, especially for saturated colors.
+> **Note:** `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
 
 {{EmbedInteractiveExample("pages/css/function-hue-rotate.html")}}
 
@@ -178,15 +178,15 @@ This example shows three images: the image with a `hue-rotate()` filter function
 
 ### hue-rotate() does not preserve saturation or lightness
 
-The diagram below compares two color strips starting with red: one generated using `hue-rotate`, one using actual HSL color values. Note how the one using `hue-rotate` shows obvious differences in saturation and lightness in the middle.
+The diagram below compares two color gradients starting with red: the first is generated using `hue-rotate()`, and the second uses actual HSL color values. Note how the `hue-rotate()` gradient shows obvious differences in saturation and lightness in the middle.
 
 ```html
 <div>
-  <b>Using <code>hue-rotate()</code></b>
+  <p>Using <code>hue-rotate()</code></p>
   <div id="hue-rotate"></div>
 </div>
 <div>
-  <b>Using <code>hsl()</code></b>
+  <p>Using <code>hsl()</code></p>
   <div id="hsl"></div>
 </div>
 ```

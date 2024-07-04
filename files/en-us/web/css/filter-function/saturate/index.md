@@ -9,7 +9,7 @@ browser-compat: css.types.filter-function.saturate
 
 The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-> **Note:** `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color perfectly.
+> **Note:** `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
 
 {{EmbedInteractiveExample("pages/css/function-saturate.html")}}
 
@@ -37,15 +37,15 @@ saturate(200%)  /* Double saturation */
 
 ### saturate() does not preserve hue or lightness
 
-The diagram below compares two color strips with `hsl(0, 50%, 50%)` as the mid-point: one generated using `saturate`, one using actual HSL color values. Note how the one using `saturate` shows obvious differences in hue and lightness towards the two ends.
+The diagram below compares two color gradients with `hsl(0, 50%, 50%)` as the mid-point: the first is generated using `saturate()`, and the second uses actual HSL color values. Note how the `saturate()` gradient shows differences in hue and lightness towards the two ends.
 
 ```html
 <div>
-  <b>Using <code>saturate()</code></b>
+  <p>Using <code>saturate()</code></p>
   <div id="saturate"></div>
 </div>
 <div>
-  <b>Using <code>hsl()</code></b>
+  <p>Using <code>hsl()</code></p>
   <div id="hsl"></div>
 </div>
 ```
