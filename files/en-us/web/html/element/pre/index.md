@@ -13,7 +13,7 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
+If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective {{glossary("character reference", "character references")}}.
 
 `<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
@@ -165,5 +165,5 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 ## See also
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
-- [HTML Entity](/en-US/docs/Glossary/Entity)
+- {{glossary("Character reference")}}
 - Related element: {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}

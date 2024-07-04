@@ -74,7 +74,7 @@ The cascade is in ascending order, meaning animations have precedence of normal 
 >
 > Property values being set in a {{cssxref('transition')}} take precedence over all other values set, even those marked with `!important`.
 
-The cascade algorithm is applied _before_ the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (line 2) and a less specific `p {color: blue;}` is in the author stylesheet (line 3), the paragraphs will be blue.
+The cascade algorithm is applied _before_ the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (row 2) and a less specific `p {color: blue;}` is in the author stylesheet (row 3), the paragraphs will be blue.
 
 ## Basic example
 

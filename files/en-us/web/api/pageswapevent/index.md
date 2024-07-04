@@ -15,7 +15,7 @@ The `pageswap` event is fired when you navigate across documents, when the previ
 
 ## Constructor
 
-- {{domxref("PageSwapEvent.PageSwapEvent", "PageSwapEvent()")}}
+- {{domxref("PageSwapEvent.PageSwapEvent", "PageSwapEvent()")}} {{experimental_inline}}
   - : Creates a new {{domxref("PageSwapEvent")}} object instance.
 
 ## Instance properties

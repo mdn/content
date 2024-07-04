@@ -37,6 +37,7 @@ justify-self: self-start;
 justify-self: self-end;
 justify-self: left; /* Pack item from the left */
 justify-self: right; /* Pack item from the right */
+justify-self: anchor-center;
 
 /* Baseline alignment */
 justify-self: baseline;
@@ -101,6 +102,8 @@ This property can take one of three different forms:
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
