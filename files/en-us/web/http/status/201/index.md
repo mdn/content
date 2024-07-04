@@ -39,7 +39,7 @@ Content-Type: application/json
 A generic 201 response may look like this:
 
 ```http
-HTTP/1.1 201 CREATED
+HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
