@@ -68,9 +68,22 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### General
 
+- Added support for the "HTTP flag" of a WebDriver Session to align with the WebDriver classic specification. This allows to identify sessions created for WebDriver classic. ([Firefox bug 1884090](https://bugzil.la/1884090))
+- We now support the extended "unhandledPromptBehavior" capability which includes both strings and JSON objects. This is used by WebDriver BiDi for handling "beforeunload" prompts. ([Firefox bug 1884650](https://bugzil.la/1884650))
+- Fixed a bug in browsingContext.navigate where a navigation error would load an error page and cause subsequent commands to fail. ([Firefox bug 1878690](https://bugzil.la/1878690))
+
 #### WebDriver BiDi
 
+- We fixed the order in which network.responseCompleted events are emitted for redirects. The original request's responseCompleted is now always emitted before the events for the redirect. ([Firefox bug 1879580](https://bugzil.la/1879580))
+- To align with the current Firefox behavior, we introduced the workaround to not partition cookies which are added with the "storage.setCookie" command for the same domain as the page loaded in the targeted context. ([Firefox bug 1898222](https://bugzil.la/1898222))
+- Added support for the "userContext" argument in the "permissions.setPermission" command, which allows to isolate a permission to a specific user context. ([Firefox bug 1894217](https://bugzil.la/1894217))
+- The "input.setFiles" command has been updated to throw an "UnsupportedOperation" error if the specified file does not exist. ([Firefox bug 1887644](https://bugzil.la/1887644))
+- Added support for the "BiDi flag" of a WebDriver Session to align with the WebDriver BiDi specification. This allows to identify sessions created for or upgraded to WebDriver BiDi. ([Firefox bug 1898719](https://bugzil.la/1898719))
+- Added support for several arguments for the "network.continueRequest" command, which now allows to modify headers, cookies, method and body of a request before it is sent over the network. ([Firefox bug 1850680](https://bugzil.la/1850680))
+
 #### Marionette
+
+- Added support for the Permissions API in WebDriver Classic. ([Firefox bug 1524074](https://bugzil.la/1524074))
 
 ## Changes for add-on developers
 
