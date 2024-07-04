@@ -11,7 +11,7 @@ browser-compat: css.properties.position-try-order
 
 The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various options that result in an available **position try option** being used to set an **anchor-positioned element's** position, instead of its initial position settings.
 
-> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-options")}} values in a single declaration.
+> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-fallbacks")}} values in a single declaration.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ position-try-order: unset;
 ### Values
 
 - `normal`
-  - : The default. No position try options will be tried when the element is first displayed.
+  - : The default. No position try fallback options will be tried when the element is first displayed.
 - `<try-size>`
   - : Defines the different try size options, which specify criteria that determine what try option should be applied to the anchor-positioned element when it initially renders. Available values are:
     - `most-height`
@@ -48,9 +48,9 @@ position-try-order: unset;
 
 ## Description
 
-`position-try-order` has a slightly different focus to the rest of the position try functionality, in that it makes use of position try options when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
+`position-try-order` has a slightly different focus to the rest of the position try functionality, in that it makes use of position try fallback options when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
 
-The browser will test the available position try options to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling.
+The browser will test the available position try fallback options to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling.
 
 If no position try option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied. In effect, the behavior is as if `position-try-order` was set to `normal`.
 
@@ -170,7 +170,7 @@ We initially position the element above its anchor, and then give it our custom 
   margin-bottom: 10px;
   justify-self: anchor-center;
 
-  position-try-options: --custom-bottom;
+  position-try-fallbacks: --custom-bottom;
 }
 ```
 
@@ -210,7 +210,7 @@ Try selecting the `most-height` order option. This has the effect of applying th
 ## See also
 
 - {{cssxref("position-try")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - The {{cssxref("@position-try")}} at-rule
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

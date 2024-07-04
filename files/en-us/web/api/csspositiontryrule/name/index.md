@@ -44,7 +44,7 @@ console.log(tryOption.name); // "--custom-bottom"
 
 - {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{cssxref("@position-try")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
 - [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)

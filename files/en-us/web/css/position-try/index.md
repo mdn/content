@@ -9,19 +9,19 @@ browser-compat: css.properties.position-try
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-try-options`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("position-try-order")}} and {{cssxref("position-try-options")}} properties.
+The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("position-try-order")}} and {{cssxref("position-try-fallbacks")}} properties.
 
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
 - {{cssxref("position-try-order")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 
 ## Syntax
 
 ```css
-/* position-try-options only */
+/* position-try-fallbacks only */
 position-try: flip-block;
 position-try: inset-area(top);
 position-try: --custom-try-option;
@@ -30,7 +30,7 @@ position-try: inset-area(top), inset-area(right), inset-area(bottom);
 position-try: --custom-try-option1, --custom-try-option2;
 position-try: flip-block, inset-area(right), --custom-try-option;
 
-/* position-try-order and position-try-options */
+/* position-try-order and position-try-fallbacks */
 position-try:
   most-width --custom-try-option1,
   --custom-try-option2;
@@ -49,9 +49,9 @@ position-try: unset;
 
 ### Values
 
-See {{cssxref("position-try-order")}} and {{cssxref("position-try-options")}} for value descriptions.
+See {{cssxref("position-try-order")}} and {{cssxref("position-try-fallbacks")}} for value descriptions.
 
-`position-try` can specify values for `position-try-options`, or `position-try-order` and `position-try-options`, in that order. If `position-try-order` is omitted, it is set to the property's initial value, which is `normal`. `normal` means that the position try options are tried in the order they appear in the property.
+`position-try` can specify values for `position-try-fallbacks`, or `position-try-order` and `position-try-fallbacks`, in that order. If `position-try-order` is omitted, it is set to the property's initial value, which is `normal`. `normal` means that the position try fallback options are tried in the order they appear in the property.
 
 ## Formal definition
 
@@ -133,7 +133,7 @@ We then include a custom try option — `--custom-bottom` — which positions th
 }
 ```
 
-We initially position the element above its anchor, and then set a `position-try` value on it that gives it a `position-try-order` of `most-height`, and a `position-try-options` list that just includes our custom try option:
+We initially position the element above its anchor, and then set a `position-try` value on it that gives it a `position-try-order` of `most-height`, and a `position-try-fallbacks` list that just includes our custom try option:
 
 ```css
 .infobox {
@@ -165,7 +165,7 @@ The element appears below its anchor, even though it is initially positioned abo
 ## See also
 
 - {{cssxref("inset-area")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try-order")}}
 - The {{cssxref("@position-try")}} at-rule
 - The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function

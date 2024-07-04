@@ -425,7 +425,7 @@ Try selecting new `inset-area` values from the `<select>` menu to see the effect
 
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - The [`anchor()`](/en-US/docs/Web/CSS/anchor) function
 - The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
