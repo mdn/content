@@ -86,7 +86,7 @@ If no option can be found that will place the positioned element completely on-s
 
 For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
-### Predefined \<try-tactic> values
+### Predefined &lt;try-tactic&gt; values
 
 Referred to as a `<try-tactic>` in the specification, the predefined values move the positioned element by taking its computed position and transforming it across a particular axis of the anchor. The predefined values are:
 
