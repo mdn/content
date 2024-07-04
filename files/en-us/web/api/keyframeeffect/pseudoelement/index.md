@@ -30,12 +30,14 @@ A string or `null`.
 
 ```css
 #text::after {
-  content: "⭐";
+  content: "👹";
   display: inline-block; /* Needed as the `transform` property does not apply to inline elements */
+  font-size: 2rem;
 }
 #text::before {
-  content: "😊";
+  content: "🤠";
   display: inline-block;
+  font-size: 2rem;
 }
 ```
 
@@ -72,7 +74,7 @@ switchPseudoElement();
 logPseudoElement();
 ```
 
-{{EmbedLiveSample("Examples", "100", "70")}}
+{{EmbedLiveSample("Examples", "100", "80")}}
 
 ## Specifications
 
