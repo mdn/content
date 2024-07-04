@@ -229,7 +229,7 @@ The [`justify-items`](/en-US/docs/Web/CSS/justify-items) property is ignored in 
 
 ### place-items and place-content
 
-The [`[place-items`](/en-US/docs/Web/CSS/place-items) property is a shorthand property for `align-items` and `justify-items`. If set on a flex container, it will set the alignment but not the justification, and `justify-items` is ignored in flexbox.
+The [`place-items`](/en-US/docs/Web/CSS/place-items) property is a shorthand property for `align-items` and `justify-items`. If set on a flex container, it will set the alignment but not the justification, and `justify-items` is ignored in flexbox.
 
 There is another shorthand property, [`place-content`](/en-US/docs/Web/CSS/place-content), that defines the {{cssxref("align-content")}} and `justify-content` properties. The `align-content` property only effects flex containers that wrap, and is discussed in [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container).
 

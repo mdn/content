@@ -84,7 +84,7 @@ body {
 }
 ```
 
-We use CSS to convert the `infobox` element into an **anchor-positioned element** and position it relative to its anchor. We set its:
+We use CSS to convert the `infobox` element into an _anchor-positioned element_ and position it relative to its anchor. We set its:
 
 - {{cssxref("position")}} property to `fixed`, converting it to a positioned element so it can be positioned relative to the anchor's position.
 - {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right`. This tethers the positioned element to its anchor, positioning its left edge flush to the anchor's right edge.
