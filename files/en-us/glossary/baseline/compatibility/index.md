@@ -6,7 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Baseline** identifies newer web platform features, including APIs, CSS property sets, and JavaScript syntaxes, that works consistently across popular browsers. Baseline defines newer web features as being either widely available, newly available, or having limited availability in the following browsers:
+**Baseline** identifies the availability of web platform features across popular browsers, including APIs, CSS properties, and JavaScript syntax. Baseline describes web features as being either widely available or newly available. Features that do not meet the Baseline criteria are said to have limited availability.
+
+Baseline considers support in the following browsers:
 
 - Apple Safari (iOS)
 - Apple Safari (macOS)
