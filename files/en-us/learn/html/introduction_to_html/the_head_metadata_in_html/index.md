@@ -210,7 +210,7 @@ You may also need different icons for different contexts. For example, you'll fi
 <link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
 ```
 
-This is a simple way to make the site show an icon when saved to an Apple device's home screen. You may even want to provide different icons for different devices, to ensure that the icon looks good on all devices. For example:
+This is a way to make the site show an icon when saved to an Apple device's home screen. You may even want to provide different icons for different devices, to ensure that the icon looks good on all devices. For example:
 
 ```html
 <!-- iPad Pro with high-resolution Retina display: -->
