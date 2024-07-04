@@ -28,7 +28,7 @@ Baseline is a summary of browser support. It is not a substitute for accessibili
 
 ![Green widget with the checkmark: Baseline, widely available. Four browsers logos, all with checkmarks.](high.png)
 
-Features listed as **widely available** have a consistent history of browser support for at least 2.5 years.
+Features listed as **widely available** have a consistent history of support in each of the Baseline browsers for at least 2.5 years.
 
 ![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](limited.png)
 
