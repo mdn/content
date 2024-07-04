@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 - [Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default. Relative color syntax allows you to create a color value relative to an origin color, and can allow you to change a color in a different [color space](/en-US/docs/Glossary/Color_space) using [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) ([Firefox bug 1900251](https://bugzil.la/1900251)).
 - The [`content`](/en-US/docs/Web/CSS/content) property now supports [alternative text](/en-US/docs/Web/CSS/content#alternative_text) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
+- The [`CSSPropertyRule`](/en-US/docs/Web/API/CSSPropertyRule) is now supported. This allows you to get the values of a [CSS custom property](/en-US/docs/Web/CSS/--*) set in an [`@property`](/en-US/docs/Web/CSS/@property) at-rule, including [`name`](/en-US/docs/Web/API/CSSPropertyRule/name), [`syntax`](/en-US/docs/Web/API/CSSPropertyRule/syntax), [`inherits`](/en-US/docs/Web/API/CSSPropertyRule/inherits) and [`initialValue`](/en-US/docs/Web/API/CSSPropertyRule/initialvalue) ([Firefox bug 1864818](https://bugzil.la/1864818)).
+- The [`registerProperty`](/en-US/docs/Web/API/CSS/registerProperty_static) is now supported. This allows you to define a [CSS custom property](/en-US/docs/Web/CSS/--*) via JavaScript ([Firefox bug 1864818](https://bugzil.la/1864818)).
 
 #### Removals
 
