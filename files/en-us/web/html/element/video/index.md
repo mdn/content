@@ -339,7 +339,7 @@ You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")
 
 If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
 
-If you use Apache Web Server to serve WebM videos, you can fix this problem by adding the video file type extensions to "video/webm" MIME type. The most common video file type extension is ".webm". To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
+If you use Apache Web Server to serve WebM videos, you can fix this problem by adding the video file type extensions to the "video/webm" MIME type (the most common WebM file extension is ".webm"). To do this, edit the "mime.types" file in "/etc/apache" or use the `"AddType"` configuration directive in `httpd.conf`.
 
 ```plain
 AddType video/webm .webm
@@ -447,7 +447,7 @@ This example builds on the last one, offering three different sources for the me
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-First AVI is tried. If that can't be played, then finally [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
+First AVI is tried. If that can't be played, [MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
 Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) for audio.
 
