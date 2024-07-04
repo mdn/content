@@ -24,6 +24,8 @@ This response is used much more since some browsers, like Chrome, Firefox 27+, a
 
 ## Examples
 
+### Timeout in form submission
+
 The following example shows what a client may send when an [input](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
 
 ```http

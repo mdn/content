@@ -21,6 +21,15 @@ This status is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that cont
 
 ### Proxy auth
 
+A GET request is made to `example.com/admin`:
+
+```http
+GET /admin HTTP/1.1
+Host: example.com
+```
+
+Along the way, an intermediary lets the client know that clients must be authenticated and provides information about the authentication scheme:
+
 ```http
 HTTP/1.1 407 Proxy Authentication Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT

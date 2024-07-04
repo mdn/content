@@ -20,6 +20,8 @@ When a precondition header is **not matching** the server side state, the respon
 
 ## Examples
 
+### Missing precondition in request
+
 A client has fetched a resource `my-document` from the server, updated it locally, and then tries to send the updated document back to the server:
 
 ```http
