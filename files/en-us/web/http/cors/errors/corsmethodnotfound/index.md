@@ -36,7 +36,6 @@ Make sure your code only uses the permitted HTTP methods when accessing the serv
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
-- Related glossary term:
-  - {{Glossary("CORS")}}
+- Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)

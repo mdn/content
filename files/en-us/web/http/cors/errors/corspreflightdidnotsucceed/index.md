@@ -26,6 +26,5 @@ performed. There are a couple of reasons why preflighting might fail:
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
-- Related glossary term:
-  - {{Glossary("CORS")}}
+- Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)

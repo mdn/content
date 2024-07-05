@@ -21,7 +21,6 @@ This error occurs when attempting to preflight a header that is not expressly al
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
-- Related glossary term:
-  - {{Glossary("CORS")}}
+- Glossary: {{Glossary("CORS")}}
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
