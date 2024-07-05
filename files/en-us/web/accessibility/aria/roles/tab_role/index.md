@@ -56,7 +56,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [id](/en-US/docs/Web/HTML/Global_attributes#id)
   - : content
 
-### Keyboard interaction
+### Keyboard interactions
 
 | Key               | Action                                                                                                                                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
