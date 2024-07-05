@@ -21,7 +21,9 @@ new ByteLengthQueuingStrategy(options)
 ### Parameters
 
 - `options`
-  - : An object with the following property: 
+
+  - : An object with the following property:
+
     - `highWaterMark`
       - : The total number of bytes that can be contained in the internal queue before backpressure is applied.
 
