@@ -37,5 +37,4 @@ Ciphers are also classified according to how their {{glossary("key", "keys")}} a
   - {{Glossary("Plaintext")}}
   - {{Glossary("Public-key cryptography")}}
   - {{Glossary("Symmetric-key cryptography")}}
-
 - [Cipher](https://en.wikipedia.org/wiki/Cipher) on Wikipedia
