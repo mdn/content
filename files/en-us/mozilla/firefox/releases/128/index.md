@@ -27,6 +27,16 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### JavaScript
 
+- Resizeable {{jsxref("ArrayBuffer")}} and growable {{jsxref("SharedArrayBuffer")}} are now supported, allowing the size of buffers to be changed without having to allocate a new buffer and copy data into it ([Firefox bug 1884150](https://bugzil.la/1884150)).
+  The relevant methods and properties are:
+
+  - Grow {{jsxref("SharedArrayBuffer")}} using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
+    The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
+    The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can grow, and its maximum allowed size, respectively.
+  - Resize {{jsxref("ArrayBuffer")}} using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
+    The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
+    The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
+
 #### Removals
 
 ### SVG
@@ -36,6 +46,7 @@ This article provides information about the changes in Firefox 128 that affect d
 ### HTTP
 
 - The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) now includes the `image/svg+xml` MIME type ([Firefox bug 1711622](https://bugzil.la/1711622)).
+- The {{rfc("9218", "Extensible Prioritization Scheme for HTTP")}} is now supported, including the HTTP [`Priority`](/en-US/docs/Web/HTTP/Headers/Priority) request and response header, which allows clients to hint at the expected relative priority for resources sent over a connection, and the HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that allow the priority to be subsequently changed after the header has been sent ([Firefox bug 1865040](https://bugzil.la/1865040)).
 
 #### Removals
 
@@ -59,6 +70,8 @@ This article provides information about the changes in Firefox 128 that affect d
 #### Media, WebRTC, and Web Audio
 
 #### Removals
+
+- The non-standard {{domxref('HTMLMediaElement.seekToNextFrame()')}} method has been removed, and is now not supported by any browser. ([Firefox bug 1336404](https://bugzil.la/1336404)).
 
 ### WebAssembly
 
