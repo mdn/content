@@ -111,9 +111,13 @@ function handle_pinch_zoom(ev) {
         ev.target.style.background = "green";
     } else {
       // empty tpCache
-      tpCache = [];
+      clearTouchCache();
     }
   }
+}
+
+function clearTouchCache() {
+  tpCache.length = 0;
 }
 ```
 
