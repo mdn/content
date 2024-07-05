@@ -70,6 +70,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### Removals
 
+- The non-standard {{domxref('HTMLMediaElement.seekToNextFrame()')}} method has been removed, and is now not supported by any browser. ([Firefox bug 1336404](https://bugzil.la/1336404)).
+
 ### WebAssembly
 
 #### Removals
