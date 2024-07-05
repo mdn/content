@@ -182,7 +182,6 @@ The example below shows how to define two font faces with the same font family. 
   src: local(Futura-Medium),
     url('FuturaMedium.woff') format("woff"),
     url('FuturaMedium.otf') format("opentype");
-    format("opentype");
 }
 
 /* Defining a different bold font face for the same family */
