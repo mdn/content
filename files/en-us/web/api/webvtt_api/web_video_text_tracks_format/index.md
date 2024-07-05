@@ -2,26 +2,41 @@
 title: Web Video Text Tracks Format (WebVTT)
 slug: Web/API/WebVTT_API/Web_Video_Text_Tracks_Format
 page-type: guide
-browser-compat:
-  - api.VTTCue
-  - api.TextTrack
-  - api.VTTRegion
+browser-compat: html.elements.track
+spec-urls: https://w3c.github.io/webvtt/
 ---
 
 {{DefaultAPISidebar("WebVTT")}}
 
 <!-- need to add info on region block -->
 
-**Web Video Text Tracks Format** (**WebVTT**) is a format for displaying timed text tracks (such as subtitles or captions) using the {{HTMLElement("track")}} element. The primary purpose of WebVTT files is to add text overlays to a {{HTMLElement("video")}}. WebVTT is a text based format, which must be encoded using {{Glossary("UTF-8")}}. Where you can use spaces you can also use tabs. There is also a small API available to represent and manage these tracks and the data needed to perform the playback of the text at the correct times.
+**Web Video Text Tracks Format** (**WebVTT**) is a plain-text file format for displaying timed text tracks that are synchronized with content in {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
+These can be used, for example, to add closed captions and subtitle text overlays to a {{HTMLElement("video")}}.
 
-## WebVTT files
+The WebVTT files associated with a media element are added using the {{HTMLElement("track")}} element.
 
-The MIME type of WebVTT is `text/vtt`.
+> **Note:** WebVTT content can also be created and managed programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
 
-A WebVTT file (`.vtt`) contains cues, which can be either a single line or multiple lines, as shown below:
+## Overview
+
+The MIME type of WebVTT file is `text/vtt` and by convention has the file extension `.vtt`.
+The content must be encoded using {{Glossary("UTF-8")}}.
+
+The structure of a WebVTT consists of the following components, some of them optional, in this order:
+
+- A header, consisting of an optional byte order mark (BOM), the string "`WEBVTT`", followed by an optional text header, separated by one or more space or tab characters.
+- One or more blank lines, each which is equivalent to two consecutive newlines.
+- Zero or more `STYLE` or `REGION` blocks, separated by one or more blank lines
+- Zero or more cue or `NOTE` blocks, separated by one or more blank lines.
+
+A simple WebVTT file that has the `WEBVTT` string (but no header text), a NOTE block, and two cues is shown below:
 
 ```plain
 WEBVTT
+
+NOTE This is a multi-line note block.
+These are used for comments by the author
+Below are two cue blocks
 
 00:01.000 --> 00:04.000
 Never drink liquid nitrogen.
@@ -32,284 +47,97 @@ Because:
 - You could die.
 ```
 
-## WebVTT body
+The following sections explain the parts of the file, including those not used in the example above.
 
-The structure of a WebVTT consists of the following components, some of them optional, in this order:
+## WebVTT Header
+
+The WebVTT files should start with a header block that has the following properties:
 
 - An optional byte order mark (BOM).
 - The string "`WEBVTT`".
 - An optional text header to the right of `WEBVTT`.
 
   - There must be at least one space after `WEBVTT`.
-  - You could use this to add a description to the file.
+  - You could use this to add a description to the file (where you can use spaces you can also use tabs).
   - You may use anything in the text header except newlines or the string "`-->`".
 
-- A blank line, which is equivalent to two consecutive newlines.
-- Zero or more cues or comments.
-- Zero or more blank lines.
-
-### Examples
-
-- Simplest possible WebVTT file
-
-  ```plain
-  WEBVTT
-  ```
-
-- Very simple WebVTT file with a text header
-
-  ```plain
-  WEBVTT - This file has no cues.
-  ```
-
-- Common WebVTT example with a header and cues
-
-  ```plain
-  WEBVTT - This file has cues.
-
-  14
-  00:01:14.815 --> 00:01:18.114
-  - What?
-  - Where are we now?
-
-  15
-  00:01:18.171 --> 00:01:20.991
-  - This is big bat country.
-
-  16
-  00:01:21.058 --> 00:01:23.868
-  - [ Bats Screeching ]
-  - They won't get in your hair. They're after the bugs.
-  ```
-
-### Inner structure of a WebVTT file
-
-Let's re-examine one of our previous examples, and look at the cue structure in a bit more detail.
+The header string is the only required part of the WebVTT file, so the simplest WebVTT files would look like this:
 
 ```plain
 WEBVTT
+```
 
+The example below shows a header with text.
+Note that this text must be separated by at least one space or tab.
+
+```plain
+WEBVTT This file has no cues.
+```
+
+## WebVTT cues
+
+A cue defines a single caption, subtitle or other block of text that is displayed over a particular time interval.
+
+Each cue consists of three or more lines:
+
+- Optional cue identifier followed by a newline.
+- Cue timings (time range), optionally followed by cue settings with at least one space before the first setting and between each setting, followed by a single newline.
+- The cue payload text, which may span multiple lines, and will be terminated by an empty line.
+
+Here is an example of a simple cue.
+The first line specifies the cue's display start and end times, separated using the string "`-->`".
+We then have a line with the text to be displayed.
+
+```plain
 00:01.000 --> 00:04.000
 Never drink liquid nitrogen.
+```
 
-00:05.000 --> 00:09.000
+The next cue is slightly more complicated.
+Unlike the previous queue it starts with a cue identifier "`1 - Title Crawl`", which may be used to reference the cue for styling.
+It also has cue settings after the cue timings to set the cue position.
+
+```plain
+1 - Title Crawl
+00:05.000 --> 00:09.000 line:0 position:20% size:60% align:start
 Because:
 - It will perforate your stomach.
 - You could die.
 ```
 
-In the case of each cue:
-
-- The first line specifies the cue's display start and end times, separated using the string `-->`".
-- We then have one or more lines, each containing part of the text track to be shown.
-
-Note that while the output will respect line breaks in the source text, so you can create bullet-like list usings hyphen (`-`) characters as shown, it may include additional line breaks when wrapping the text.
+Note that the output will respect line breaks in the source text, which allows you to create bullet-like list usings hyphen (`-`) characters as shown.
+Generally you should only insert these breaks when needed, as the browser will wrap text appropriately.
 
 It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload, or within the payload.
 WebVTT is line based; a blank line will end the cue.
 
-We can also place comments in our `.vtt` file, to help us remember important information about the parts of our file. These should be on separate lines, starting with the string `NOTE`. You'll find more about these in the below section.
-
-## WebVTT comments
-
-Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.
-
-A comment cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). If you wish to use these characters, you need to instead use a {{glossary("character reference")}} such as `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
-
-A comment consists of three parts:
-
-- The string `NOTE`.
-- A space or a newline.
-- Zero or more characters other than those noted above.
-
-### Examples
-
-- Common WebVTT example
-
-  ```plain
-  NOTE This is a comment
-  ```
-
-- Multi-line comment
-
-  ```plain
-  NOTE
-  One comment that is spanning
-  more than one line.
-
-  NOTE You can also make a comment
-  across more than one line this way.
-  ```
-
-- Common comment usage
-
-  ```plain
-  WEBVTT - Translation of that film I like
-
-  NOTE
-  This translation was done by Kyle so that
-  some friends can watch it with their parents.
-
-  1
-  00:02:15.000 --> 00:02:20.000
-  - Ta en kopp varmt te.
-  - Det är inte varmt.
-
-  2
-  00:02:20.000 --> 00:02:25.000
-  - Har en kopp te.
-  - Det smakar som te.
-
-  NOTE This last line may not translate well.
-
-  3
-  00:02:25.000 --> 00:02:30.000
-  - Ta en kopp
-  ```
-
-## Styling WebVTT cues
-
-You can style WebVTT cues by looking for elements which match the {{cssxref("::cue")}} pseudo-element.
-
-### Within site CSS
-
-```css
-video::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-
-video::cue(b) {
-  color: peachpuff;
-}
-```
-
-Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored `"peachpuff"`.
-
-The HTML snippet below actually handles displaying the media itself.
-
-```html
-<video controls autoplay src="video.webm">
-  <track default src="track.vtt" />
-</video>
-```
-
-### Within the WebVTT file itself
-
-You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itself on a line of text, as shown below:
-
-```plain
-WEBVTT
-
-STYLE
-::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-/* Style blocks cannot use blank lines nor "dash dash greater than" */
-
-NOTE comment blocks can be used between style blocks.
-
-STYLE
-::cue(b) {
-  color: peachpuff;
-}
-
-00:00:00.000 --> 00:00:10.000
-- Hello <b>world</b>.
-
-NOTE style blocks cannot appear after the first cue.
-```
-
-We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:
-
-```plain
-WEBVTT
-
-1
-00:00.000 --> 00:02.000
-That's an, an, that's an L!
-
-crédit de transcription
-00:04.000 --> 00:05.000
-Transcrit par Célestes™
-```
-
-```css
-::cue(#\31) {
-  color: lime;
-}
-::cue(#crédit\ de\ transcription) {
-  color: red;
-}
-```
-
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
-
-```plain
-WEBVTT
-
-00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
-Where did he go?
-
-00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
-I think he went down this lane.
-
-00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
-What are you waiting for?
-```
-
-## WebVTT cues
-
-A cue is a single subtitle block that has a single start time, end time, and textual payload. A cue consists of five components:
-
-- An optional cue identifier followed by a newline.
-- Cue timings.
-- Optional cue settings with at least one space before the first and between each setting.
-- A single newline.
-- The cue payload text.
-
-Here is an example of a cue:
-
-```plain
-1 - Title Crawl
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....
-```
+Each part of the cue is explained in more detail in the following sections.
 
 ### Cue identifier
 
 The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
-Here are a few examples:
+The example below shows a file with several cues that have identifiers
 
-- A basic cue identifier
+```plain
+WEBVTT
 
-  ```plain
-  1 - Title Crawl
-  ```
+1
+00:00:22.230 --> 00:00:24.606
+This is the first subtitle.
 
-- Common usage of identifiers
+2 Some Text
+00:00:30.739 --> 00:00:34.074
+This is the second.
 
-  ```plain
-  WEBVTT
-
-  1
-  00:00:22.230 --> 00:00:24.606
-  This is the first subtitle.
-
-  2
-  00:00:30.739 --> 00:00:34.074
-  This is the second.
-
-  3
-  00:00:34.159 --> 00:00:35.743
-  Third
-  ```
+3
+00:00:34.159 --> 00:00:35.743
+This is the third
+```
 
 ### Cue timings
 
-A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
+A cue timing indicate the time interval when the cue is shown. It has a start and end time that are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
 If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`) then the file cannot have overlapping timings.
 
@@ -421,8 +249,7 @@ The cue settings are added to the right of the cue timings. There must be one or
     | `align:center` | centered horizontally | centered vertically | centered vertically |
     | `align:end`    | right                 | bottom              | bottom              |
 
-Let's study an example of cue setting.
-
+Here are a few examples.
 The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.
 
 ```plain
@@ -434,7 +261,10 @@ The first line demonstrates no settings. The second line might be used to overla
 
 ### Cue payload
 
-The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
+The payload is where the main information or content is located.
+In normal usage the payload contains the subtitles to be displayed.
+The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines.
+A blank line signifies the end of a cue.
 
 A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`).
 Instead use a {{glossary("character reference")}} such as the named character reference `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
@@ -453,7 +283,8 @@ Older browser versions may support only the following subset of named character 
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used.
+However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
 
@@ -531,42 +362,134 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
     <v Bob>text</v>
     ```
 
-## Instance methods and properties
+## NOTE blocks
 
-The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
+NOTE blocks are optional sections that can be used to add comments to a WebVTT file.
+They are intended for those reading the file and are not seen by users.
+For example, you might use them to document the author, provide an overview of your structure, or note parts that are still missing.
 
-### VTTCue
+Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines.
+A blank line signifies the end of a comment.
 
-The methods which are available in the {{domxref("VTTCue")}} interface are:
+A comment cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`).
+If you wish to use these characters, you need to instead use a {{glossary("character reference")}} such as `&amp;` for ampersand and `&lt;` for less-than.
+It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
 
-- {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}} to get the HTML of that cue.
-- A constructor, {{domxref("VTTCue.VTTCue", "VTTCue()")}} for creating new instances of this interface.
+A comment consists of three parts:
 
-Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}} for a complete list.
+- The string `NOTE`.
+- A space or a newline.
+- Zero or more characters other than those noted above.
 
-### VTTRegion
+Below we show a number of examples:
 
-The {{domxref("VTTRegion")}} provides methods used for region are listed below along with description of their functionality, especially it allows to adjust the scrolling setting of all nodes present in the given region.
+```plain
+NOTE This is a single line comment
 
-## Tutorial on how to write a WebVTT file
+NOTE
+This is a simple multi line comment
 
-There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as '.vtt' file. Steps are given below:
+NOTE
+One comment that is spanning
+more than one line.
 
-- Open a notepad.
-- The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
+NOTE You can also make a comment
+across more than one line this way.
 
-  ```plain
-  WEBVTT
-  ```
+NOTE TODO I might add a line to indicate work that still has to be done.
+```
 
-- Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
+## Styling WebVTT cues
 
-  ```plain
-  00:01.000 --> 00:05.000
-  ```
+You can style WebVTT cues by looking for elements which match the {{cssxref("::cue")}} pseudo-element.
 
-- On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
-- Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+### Within site CSS
+
+```css
+video::cue {
+  background-image: linear-gradient(to bottom, dimgray, lightgray);
+  color: papayawhip;
+}
+
+video::cue(b) {
+  color: peachpuff;
+}
+```
+
+Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored `"peachpuff"`.
+
+The HTML snippet below actually handles displaying the media itself.
+
+```html
+<video controls autoplay src="video.webm">
+  <track default src="track.vtt" />
+</video>
+```
+
+### Within the WebVTT file itself
+
+You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itself on a line of text, as shown below:
+
+```plain
+WEBVTT
+
+STYLE
+::cue {
+  background-image: linear-gradient(to bottom, dimgray, lightgray);
+  color: papayawhip;
+}
+/* Style blocks cannot use blank lines nor "dash dash greater than" */
+
+NOTE comment blocks can be used between style blocks.
+
+STYLE
+::cue(b) {
+  color: peachpuff;
+}
+
+00:00:00.000 --> 00:00:10.000
+- Hello <b>world</b>.
+
+NOTE style blocks cannot appear after the first cue.
+```
+
+We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:
+
+```plain
+WEBVTT
+
+1
+00:00.000 --> 00:02.000
+That's an, an, that's an L!
+
+crédit de transcription
+00:04.000 --> 00:05.000
+Transcrit par Célestes™
+```
+
+```css
+::cue(#\31) {
+  color: lime;
+}
+::cue(#crédit\ de\ transcription) {
+  color: red;
+}
+```
+
+Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
+
+```plain
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
+Where did he go?
+
+00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
+I think he went down this lane.
+
+00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
+What are you waiting for?
+```
 
 ## CSS pseudo-classes
 

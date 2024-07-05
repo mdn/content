@@ -10,7 +10,7 @@ browser-compat:
 
 {{DefaultAPISidebar("WebVTT")}}
 
-**Web Video Text Tracks** (**WebVTT**) are text tracks that can be used to provide specific text "cues" that is time-aligned with other media, such as video or audio tracks.
+**Web Video Text Tracks** (**WebVTT**) are text tracks that can be used to provide specific text "cues" that are time-aligned with other media, such as video or audio tracks.
 They are primarily used for displaying video subtitles or captions that overlay with video content, but they can also be used to provide chapter information for easier navigation, audio descriptions, and generally any other form of metadata that needs to be time-aligned with audio or video content.
 
 ## Concepts and usage
@@ -18,7 +18,8 @@ They are primarily used for displaying video subtitles or captions that overlay 
 A text track is a container for time-aligned text data, that can be played in parallel with a video or audio track in order to provide a translation, transcription, or overview of the content.
 A video or audio media element may define tracks of different kinds and in different languages, allowing an appropriate track (or tracks) to be selected based on user preferences and browser user interface.
 
-The different kinds of text data that can be specified are listed below (not all browsers will necessarily support all kinds of text tracks):
+The different kinds of text data that can be specified are listed below.
+Note that browser do not necessarily support all kinds of text tracks.
 
 - `subtitles` provide a textual translation of spoken dialog.
   This is the default type of text track, and if used, the source language must be specified.
