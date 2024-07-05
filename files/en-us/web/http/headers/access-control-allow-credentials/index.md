@@ -13,7 +13,7 @@ Credentials are cookies, {{glossary("TLS")}} client certificates, or authenticat
 
 A client can ask that credentials should be included in cross-site requests in one of two ways:
 
-- Using {{domxref("fetch()")}}, by setting the [`credentials`](/en-US/docs/Web/API/Request/Request#credentials) option in the {{domxref("Request.Request()", "Request()")}} constructor to `"include"`.
+- Using {{domxref("fetch()")}}, by setting the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option to `"include"`.
 - Using {{domxref("XMLHttpRequest")}}, by setting the {{domxref("XMLHttpRequest.withCredentials")}} property to `true`.
 
 If the client has asked for credentials to be included:

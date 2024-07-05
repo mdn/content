@@ -29,7 +29,7 @@ A generic {{domxref("Event")}}.
 
 This event bubbles to {{domxref("IDBDatabase")}}. The `event.target` property refers to the {{domxref('IDBTransaction')}} object that bubbles up.
 
-For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
+For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling).
 
 ## Examples
 

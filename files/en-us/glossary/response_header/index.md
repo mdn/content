@@ -38,5 +38,4 @@ x-frame-options: DENY
 - Related glossary terms:
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP header")}}
-  - {{Glossary("Response header")}}
   - {{Glossary("Request header")}}

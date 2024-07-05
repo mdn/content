@@ -96,7 +96,6 @@ Inherits from roles:
 
 ## See also
 
-- HTML [`invalid`](/en-US/docs/Web/HTML/Global_attributes#invalid) attribute
 - CSS {{CSSxref(':invalid')}} pseudoclass
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)

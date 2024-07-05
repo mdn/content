@@ -19,10 +19,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-- `disabled`
-
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-
 - `form`
 
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)

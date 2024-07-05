@@ -48,7 +48,7 @@ using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} const
 with no arguments, the `OfflineAudioContext()` constructor requires three
 arguments, since it needs to create an `AudioBuffer`. This works in exactly
 the same way as when you create a new {{domxref("AudioBuffer")}} with the
-{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
+{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
 
 ### Return value
 
