@@ -7,7 +7,7 @@ browser-compat: http.headers.Priority
 
 {{HTTPSidebar}}
 
-The **`Priority`** HTTP header in sent in requests to indicate a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection. If the header is not specified in the request, a default priority is assumed.
+The **`Priority`** HTTP header is sent in requests to indicate a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection. If the header is not specified in the request, a default priority is assumed.
 
 The server is not bound by the client prioritization, and might use the client request as just one input to its own prioritization process.
 For example, a server may have specific knowledge that a particular image is vitally important for the best user experience, and therefore should be sent at highest priority.
