@@ -92,8 +92,8 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >generic</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
           ></code
         >
       </td>
