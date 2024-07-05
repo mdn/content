@@ -52,7 +52,7 @@ new Request(input, options)
     newRequest.headers.get("From"); // "developer@example.org"
     ```
 
-## Errors
+### Exceptions
 
 <table class="no-markdown">
   <thead>
