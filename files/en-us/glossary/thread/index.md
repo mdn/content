@@ -22,5 +22,5 @@ Overall it can be observed these threads within our operating system are extreme
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
 - [Web worker API](/en-US/docs/Web/API/Web_Workers_API)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
-- Related glossary term:
+- Related glossary terms:
   - {{Glossary("Main thread")}}

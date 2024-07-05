@@ -20,5 +20,5 @@ Cryptographic hash functions such as MD5 and SHA-1 are considered broken, as att
 ## See also
 
 - [Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function) on Wikipedia
-- Related glossary term:
+- Related glossary terms:
   - {{Glossary("Symmetric-key cryptography")}}
