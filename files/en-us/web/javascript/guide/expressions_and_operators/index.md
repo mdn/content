@@ -754,7 +754,7 @@ const n3 = false ?? 3; // false
 const n4 = 0 ?? 4; // 0
 ```
 
-Note how `??` works like `||`, but it only returns the second expression when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). If you only want to avoid `null` or `undefined`, `??` is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
+Note how `??` works like `||`, but it only returns the second expression when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). `??` is a better alternative than `||` for setting defaults for values that might be `null` or `undefined`, in particular when values like `''` or `0` are valid values and the default should not apply.
 
 The following code shows examples of the `!` (logical NOT) operator.
 
@@ -1110,7 +1110,7 @@ a * c + b * c // 9
 
 ### Property accessor
 
-The [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax accesses properties on objects using dot notation or bracket notation.
+The [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax gets property values on objects, using either dot notation or bracket notation.
 
 ```js
 object.property;
@@ -1121,7 +1121,8 @@ The [working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects
 
 ### Optional chaining
 
-The [optional chaining syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) (`?.`) allows you to operate on a value that may be `null` or `undefined` without causing a `TypeError`.
+The [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) syntax (`?.`) performs the chained operation on an object if it is defined and non-`null`, and otherwise short-circuits the operation and returns `undefined`.
+This allows you to operate on a value that may be `null` or `undefined` without causing a `TypeError`.
 
 ```js
 maybeObject?.property;
