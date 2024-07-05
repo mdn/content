@@ -16,7 +16,7 @@ would be represented by a `CSSNumericValue`.
 ## Syntax
 
 ```js-nolint
-new CSSUnitValue()
+new CSSUnitValue(value, unit)
 ```
 
 ### Parameters
