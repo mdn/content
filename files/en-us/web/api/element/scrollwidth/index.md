@@ -26,73 +26,97 @@ without a need for horizontal scrollbar, its `scrollWidth` is equal to
 
 ## Value
 
-A number.
+An integer corresponding to the scrollWidth pixel value of the element.
 
 ## Examples
 
+### Detecting overflowing content
+
+In this example, we will use the `scrollWidth` property to check if the content of an element is overflowing its boundaries. We have two `div` elements, the first with a width of `100px`, and the second `div` without a fixed width. Their content is exactly the same, and we will use a button to check if the content is overflowing the container by logging a message.
+
+#### HTML
+
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Example</title>
-    <style>
-      div {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-
-      #aDiv {
-        width: 100px;
-      }
-
-      button {
-        margin-bottom: 2em;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
-    <button id="aButton">Check for overflow</button>
-
-    <div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
-    <button id="anotherButton">Check for overflow</button>
-  </body>
-  <script>
-    const buttonOne = document.getElementById("aButton");
-    const buttonTwo = document.getElementById("anotherButton");
-    const divOne = document.getElementById("aDiv");
-    const divTwo = document.getElementById("anotherDiv");
-
-    //check to determine if an overflow is happening
-    function isOverflowing(element) {
-      return element.scrollWidth > element.offsetWidth;
-    }
-
-    function alertOverflow(element) {
-      if (isOverflowing(element)) {
-        alert("Contents are overflowing the container.");
-      } else {
-        alert("No overflows!");
-      }
-    }
-
-    buttonOne.addEventListener("click", () => {
-      alertOverflow(divOne);
-    });
-
-    buttonTwo.addEventListener("click", () => {
-      alertOverflow(divTwo);
-    });
-  </script>
-</html>
+<div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
+<button id="aButton">Check for overflow</button>
+<div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
+<button id="anotherButton">Check for overflow</button>
+<pre id="log"></pre>
 ```
 
-### Result
+#### CSS
 
-{{EmbedLiveSample('Examples')}}
+```css
+div {
+  padding: 0.15em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+button {
+  margin: 0.15em 0 1em 0;
+}
+
+#aDiv {
+  width: 100px;
+}
+```
+
+#### JavaScript
+
+```js
+const aButton = document.getElementById("aButton");
+const anotherButton = document.getElementById("anotherButton");
+
+const aDiv = document.getElementById("aDiv");
+const anotherDiv = document.getElementById("anotherDiv");
+
+// Check if the scrollWidth is bigger than the offsetWidth or not
+function isOverflowing(element) {
+  return element.scrollWidth > element.offsetWidth;
+}
+
+function checkOverflow(element) {
+  if (isOverflowing(element)) {
+    log(`Contents are overflowing, scrollWidth is ${element.scrollWidth}px`);
+  } else {
+    log(`No overflows, scrollWidth is ${element.scrollWidth}px`);
+  }
+}
+
+aButton.addEventListener("click", () => {
+  checkOverflow(aDiv);
+});
+
+anotherButton.addEventListener("click", () => {
+  checkOverflow(anotherDiv);
+});
+```
+
+```css hidden
+#log {
+  height: 60px;
+  overflow: scroll;
+  padding: 0.25rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.getElementById("log");
+
+function log(text) {
+  logElement.innerText = `${logElement.innerText}> ${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### Result
+
+Click the buttons to check if the content is overflowing the containers.
+
+{{EmbedLiveSample('Examples', '100%', 210)}}
 
 ## Specifications
 
