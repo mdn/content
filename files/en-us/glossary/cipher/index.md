@@ -26,7 +26,6 @@ Ciphers are also classified according to how their {{glossary("key", "keys")}} a
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto supported algorithms](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms)
 - Related glossary terms:
-
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Ciphertext")}}
   - {{Glossary("Cipher suite")}}
