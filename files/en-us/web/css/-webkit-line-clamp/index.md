@@ -9,13 +9,13 @@ browser-compat: css.properties.line-clamp
 
 The **`-webkit-line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
 
-It only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("box-orient", "-webkit-box-orient")}} property set to `vertical`.
+It only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("box-orient", "-webkit-box-orient")}} property set to `vertical`. Despite them being deprecated, the co-dependency of these three properties is fully specified behavior and will continue to be supported.
 
 In most cases you will also want to set {{cssxref("overflow")}} to `hidden`, otherwise the contents won't be clipped but an ellipsis will still be shown after the specified number of lines.
 
 When applied to anchor elements, the truncating can happen in the middle of the text, not necessarily at the end.
 
-> **Note:** This property was originally implemented in WebKit and has some issues. It got standardized in [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) for legacy support. The [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp) specification also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues.
+> **Note:** This property was originally implemented in WebKit and has some issues, such as the dependency on two other legacy properties. It got standardized in [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) for legacy support. CSS Overflow Module Level 4 also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues. However, all browsers that support `line-clamp` will also support `-webkit-line-clamp` for compatibility reasons.
 
 ## Syntax
 
