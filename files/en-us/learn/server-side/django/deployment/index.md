@@ -564,7 +564,7 @@ After getting the local library sources and installing the dependencies in a vir
    application = get_wsgi_application()
    ```
 
-   Note that the role of the WGSI file is to help the Gunicorn server find the local library application.
+   Note that the role of the WSGI file is to help the Gunicorn server find the local library application.
    PythonAnywhere expects this file to be in this location, which is why the WSGI file already in the project cannot be used.
 
 7. Scroll down to the "Virtualenv" section of the _Web_ tab.
