@@ -18,6 +18,7 @@ new CountQueuingStrategy(options)
 ```
 
 ### Parameters
+
 - `options`
   - : An object with the following property:
     - `highWaterMark`
