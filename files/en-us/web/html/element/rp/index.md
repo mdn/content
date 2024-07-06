@@ -27,7 +27,7 @@ This example uses ruby annotations to display the [Romaji](https://en.wikipedia.
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Han</rt><rp>)</rp> 字 <rp>(</rp><rt>zi</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -48,7 +48,7 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
 If your browser does not support ruby annotations, the result looks like this instead:
 
 ```html hidden
-漢 (Kan) 字 (ji)
+漢 (Han) 字 (zi)
 ```
 
 ```css hidden
