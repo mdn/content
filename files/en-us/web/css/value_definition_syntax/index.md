@@ -17,7 +17,7 @@ The definition syntax describes which values are allowed and the interactions be
 
 #### Generic keywords
 
-A keyword with a predefined meaning appears literally, without quotation marks. For example: `auto`, `smaller` or `ease-in`.
+A keyword with a predefined meaning appears literally, without quotation marks. For example: `auto`, `smaller`, or `ease-in`.
 
 #### The specific case of `inherit`, `initial` and `unset`
 
@@ -304,6 +304,19 @@ But not:
 - `smaller bold`, as `bold` is juxtaposed and must appear before the `smaller` keyword.
 - `bold smaller bold`, as `bold` and `smaller` may only appear once.
 
+## Bracketed range notation (`[,]`)
+
+Some properties take numeric values that can be in a limited range, and any value out of the range makes the declarations invalid and the declaration is ignored. For example, the [`column-count`](/en-US/docs/Web/CSS/column-count) property can have values from 1 to positive infinity only.
+
+The _bracketed range notation_ `[min, max]` indicates the range between `min` and `max` values. The range includes `min` and `max` values as well. The range notation is used in numeric type notations, e.g. `<angle [0,180deg]>`. Infinities, -∞ and ∞, must not have units specified. Zero values can be written without units, even zero seconds.
+
+Following are some examples:
+
+- `<integer>` or `<integer [-∞,∞]>` - any integer from negative infinity to positive infinity
+- `<integer [0,∞]>` - negative integers not allowed
+- `<time [0s,10s]>` or `<time [0,10s]>` - time less than 11 seconds
+- `<integer [-∞,-1]> | <integer [1,∞]>` - any integer except zero
+
 ## Summary
 
 <table class="standard-table">
@@ -401,6 +414,12 @@ But not:
       <td>Exclamation point</td>
       <td>Group must produce at least 1 value</td>
       <td><code>[ bold? smaller? ]!</code></td>
+    </tr>
+    <tr>
+      <td><code>[,]</code></td>
+      <td>Bracketed range</td>
+      <td>Specifies a numeric range</td>
+      <td><code>&#x3C;integer [0,∞]></code></td>
     </tr>
   </tbody>
 </table>
