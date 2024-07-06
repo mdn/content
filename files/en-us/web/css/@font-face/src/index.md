@@ -189,8 +189,8 @@ The example below shows how to define two font faces with the same font family. 
 @font-face {
   font-family: MainText;
   src:
-    /* full font name */ local(Gill Sans Bold),
-    /* postscript name */ local(GillSans-Bold),
+    local(Gill Sans Bold) /* full font name */,
+    local(GillSans-Bold) /* postscript name */,
     url("GillSansBold.woff") format("woff"),
     url("GillSansBold.otf") format("opentype"),
     url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
