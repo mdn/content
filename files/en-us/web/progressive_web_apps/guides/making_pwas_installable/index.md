@@ -110,8 +110,8 @@ Support for PWA installation promotion from the web varies by browser and by pla
 
 On desktop:
 
-- Chrome, Edge & Safari support installing PWAs on all supported desktop operating systems.
-- Firefox only supports installing PWAs on desktop with an [unofficial extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
+- Chromium browsers support installing PWAs that have a manifest file on all supported desktop operating systems.
+- Firefox and Safari do not support installing PWAs using a manifest file.
 
 On mobile:
 
@@ -121,7 +121,8 @@ On mobile:
 
 ### Installing sites as apps
 
-Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support installing any website as an app. However, this is not specific to PWA because the site doesn't need to meet the installability criteria described in this guide, and because the browser doesn't proactively promote the site for installation.
+Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support users installing any website as an app, whether or not it has a manifest file, and without regard to the installability criteria for the manifest file.
+The benefit of using a manifest file is that the browser will actively promote the site for installation when it is visited, and developers can customize installation behavior.
 
 ### Triggering the install prompt
 
