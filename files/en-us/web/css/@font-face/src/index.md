@@ -196,10 +196,12 @@ The example below shows how to define two font faces with the same font family. 
     url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
   font-weight: bold;
 }
+
 /* Using the regular font face */
 p {
   font-family: MainText;
 }
+
 /* Font-family is inherited, but bold fonts are used */
 p.bold {
   font-weight: bold;
