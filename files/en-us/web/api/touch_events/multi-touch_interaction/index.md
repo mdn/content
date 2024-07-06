@@ -49,7 +49,7 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 
 ```js
 // Log events flag
-const logEvents = false;
+let logEvents = false;
 
 // Touch Point cache
 const tpCache = [];
