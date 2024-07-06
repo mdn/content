@@ -416,8 +416,11 @@ Following are some examples:
       <td><code>[ bold? smaller? ]!</code></td>
     </tr>
     <tr>
+      <th colspan="4">Ranges</th>
+    </tr>
+    <tr>
       <td><code>[,]</code></td>
-      <td>Bracketed range</td>
+      <td>Numeric bracketed range</td>
       <td>Specifies a numeric range</td>
       <td><code>&#x3C;integer [0,∞]></code></td>
     </tr>
