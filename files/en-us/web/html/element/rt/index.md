@@ -21,10 +21,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Using ruby annotations
 
-This simple example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:
+This simple example provides Romaji transliteration for the hanzi characters within the {{HTMLElement("ruby")}} element:
 
 ```html
-<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
+<ruby> 漢 <rt>han</rt> 字 <rt>zi</rt> </ruby>
 ```
 
 ```css hidden
