@@ -28,7 +28,7 @@ new CloseWatcher(options)
     - `signal`
       - : An {{domxref("AbortSignal")}}. If this is provided, then the watcher can be destroyed (as if by calling {{domxref("CloseWatcher.destroy()")}}) by calling {{domxref("AbortController.abort()")}} on the corresponding {{domxref("AbortController")}}.
 
-## Return value
+### Return value
 
 A new {{domxref("CloseWatcher")}} object.
 
