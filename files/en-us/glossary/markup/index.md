@@ -22,7 +22,6 @@ Within a text file such as an HTML file, elements are _marked up_ using {{glossa
 ## See also
 
 - Related glossary terms:
-
   - {{Glossary("HTML")}}
   - {{Glossary("XHTML")}}
   - {{Glossary("XML")}}

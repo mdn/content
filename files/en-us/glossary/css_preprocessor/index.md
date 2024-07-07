@@ -22,5 +22,4 @@ To use a CSS preprocessor, you must install a CSS compiler on your web {{Glossar
   - [PostCSS](https://postcss.org/)
 
 - Related glossary terms:
-
   - {{Glossary("CSS")}}

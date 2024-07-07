@@ -60,7 +60,6 @@ In this example, we are returning a function from another function - _We can ret
 
 - [First-class functions](https://en.wikipedia.org/wiki/First-class_function) on Wikipedia
 - Related glossary terms:
-
   - {{glossary("Callback function")}}
   - {{glossary("Function")}}
   - {{glossary("Variable")}}

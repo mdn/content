@@ -35,7 +35,6 @@ console.log(global === global.global); // true (in Node.js)
 ## See also
 
 - Related glossary terms:
-
   - {{glossary("global scope")}}
   - {{glossary("object")}}
 

@@ -14,7 +14,6 @@ page-type: glossary-definition
 - [Moving to HTTPS community guide](https://movingtohttps.com/)
 - [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
 - Related glossary terms:
-
   - {{glossary("HTTP")}}
   - {{glossary("TLS")}}
   - {{glossary("SSL")}}
