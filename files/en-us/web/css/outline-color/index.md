@@ -34,6 +34,8 @@ The `outline-color` property is specified as any one of the values listed below.
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
 
+The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/accent-color).
+
 ## Description
 
 An outline is a line that is drawn around an element, outside the {{cssxref("border")}}. Unlike the element's border, the outline is drawn outside the element's frame, and may overlap other content. The border, on the other hand, will actually alter the page's layout to ensure that it fits without overlapping anything else (unless you explicitly set it to overlap).
