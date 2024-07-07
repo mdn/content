@@ -103941,7 +103941,7 @@
     "modified": "2020-04-15T10:56:43.340Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve"]
   },
-  "Web/JavaScript/Reference/Errors/Deprecated_octal": {
+  "Web/JavaScript/Reference/Errors/Deprecated_octal_literal": {
     "modified": "2020-04-15T11:05:34.536Z",
     "contributors": ["fscholz", "PatrickKettner", "non-descriptive"]
   },
