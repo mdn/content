@@ -14,7 +14,7 @@ The opposite of LTR, {{Glossary("RTL")}} (Right To Left) is used in other common
 
 ## See also
 
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   - {{Glossary("locale")}}
   - {{Glossary("Localization")}}

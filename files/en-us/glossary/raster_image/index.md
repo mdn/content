@@ -12,4 +12,5 @@ Raster image files usually contain one set of dimensions, but the ICO and CUR fo
 
 ## See also
 
-- {{glossary("Vector images")}}
+- Related glossary terms:
+  - {{glossary("Vector images")}}

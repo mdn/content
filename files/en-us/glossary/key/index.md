@@ -15,7 +15,7 @@ In {{Glossary("symmetric-key cryptography")}}, the same key is used for both enc
 ## See also
 
 - [Kerckhoffs's principle](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) on Wikipedia
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
 
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Cipher")}}

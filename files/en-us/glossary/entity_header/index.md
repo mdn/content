@@ -21,4 +21,5 @@ Content-Length: 128
 
 ## See also
 
-- {{Glossary("Representation header")}}
+- Related glossary terms:
+  - {{Glossary("Representation header")}}
