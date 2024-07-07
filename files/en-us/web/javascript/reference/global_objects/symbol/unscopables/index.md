@@ -31,15 +31,19 @@ This protocol is also utilized by DOM APIs, such as [`Element.prototype.append()
 
 ### Scoping in with statements
 
-The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside a `with` environment, "keys" would now be the method and not the variable. That's why the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
+The following code works fine in ES5 and below. However, in ECMAScript 2015, the {{jsxref("Array.prototype.values()")}} method was introduced. That means that inside a `with` environment, "values" would now be the `Array.prototype.values()` method and not the variable outside the `with` statement.
 
 ```js
-var keys = [];
+var values = [];
 
-with (Array.prototype) {
-  keys.push("something");
+with (values) {
+  // If @@unscopables did not exist, values would become Array.prototype.values starting with ECMAScript 2015.
+  // And an error would have occurred.
+  values.push("something");
 }
 ```
+
+The code containing `with (values)` caused some websites to malfunction in Firefox when `Array.prototype.values()` was added ([Firefox Bug 883914](https://bugzil.la/883914)). Furthermore, this implies that any future array method addition may be breaking if it implicitly changes the `with` scope. Therefore, the `@@unscopables` symbol was introduced and implemented on `Array` as {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
 
 ### Unscopables in objects
 
