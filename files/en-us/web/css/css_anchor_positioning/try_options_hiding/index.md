@@ -10,15 +10,15 @@ When using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning),
 
 Alternatively, in some situations it may be preferrable to just hide overflowing positioned elements — for example, if their anchors are off-screen their content might not make sense.
 
-This guide explains how to use CSS anchor positioning mechanisms to manage these issues — **position try fallback options** and **conditional hiding**. position try fallback options provide alternative positions for the browser to try placing positioned elements in as they start to overflow, to keep them on-screen. Conditional hiding allows conditions to be specified under which the anchor or a positioned element will be hidden.
+This guide explains how to use CSS anchor positioning mechanisms to manage these issues — **position try fallback options** and **conditional hiding**. Position-try fallback options provide alternative positions for the browser to try placing positioned elements in as they start to overflow, to keep them on-screen. Conditional hiding allows conditions to be specified under which the anchor or a positioned element will be hidden.
 
 > **Note:** For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 
 ## Feature summary
 
-If a tooltip is fixed to the top-right of a UI element, when the user scrolls the content so that the UI feature is in the top-right corner of the viewport, that UI feature's tooltip will have scrolled off the screen. CSS anchor positioning solves such problems. The module's {{cssxref("position-try-fallbacks")}} property specifies one or more alternative position try fallback options for the browser to try to prevent the positioned element from overflowing.
+If a tooltip is fixed to the top-right of a UI element, when the user scrolls the content so that the UI feature is in the top-right corner of the viewport, that UI feature's tooltip will have scrolled off the screen. CSS anchor positioning solves such problems. The module's {{cssxref("position-try-fallbacks")}} property specifies one or more alternative position-try fallback options for the browser to try to prevent the positioned element from overflowing.
 
-position try fallback options can be specified using:
+Position-try fallback options can be specified using:
 
 - [Predefined try options](#predefined_try_options).
 - [`inset-area` values](#using_inset-area_try_options) wrapped inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function.
@@ -99,7 +99,8 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 }
 ```
 
-> **Note:** When multiple try options are specified, they are separated by commas. position try fallback options are tried in the order they are specified in.
+> ![NOTE]
+> When multiple try options are specified, they are separated by commas. Position try fallback options are tried in the order they are specified in.
 
 Try scrolling the demo so that the anchor starts to get near the edges:
 

@@ -4,9 +4,7 @@ slug: Web/CSS/position-try-fallbacks
 page-type: css-property
 status:
   - experimental
-browser-compat:
-  - css.properties.position-try-fallbacks
-  - css.properties.position-try-options
+browser-compat: css.properties.position-try-fallbacks
 ---
 
 {{CSSRef}}{{seecompattable}}
