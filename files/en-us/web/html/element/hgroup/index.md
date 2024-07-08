@@ -21,10 +21,6 @@ The `<hgroup>` element allows the grouping of a heading with any secondary conte
 
 The `<hgroup>` itself has no impact on the document outline of a web page. Rather, the single allowed heading within the `<hgroup>` contributes to the document outline.
 
-## Accessibility
-
-The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
-
 ## Examples
 
 ```html
@@ -92,8 +88,8 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >generic</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
           ></code
         >
       </td>
