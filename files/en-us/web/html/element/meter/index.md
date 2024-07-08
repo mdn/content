@@ -54,7 +54,7 @@ On Google Chrome, the resulting meter looks like this:
 
 ![A screenshot of the meter element in Google Chrome](Screenshot_from_2024-06-27_10-40-55.png)
 
-### High and Low Range Example
+### High and low range example
 
 Note that in this example the [`min`](#min) attribute is omitted. This is allowed, as it will default to `0`.
 
