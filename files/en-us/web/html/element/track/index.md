@@ -32,11 +32,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).
       - Suitable for users who are deaf or when the sound is muted.
 
-    - `descriptions`
-
-      - Textual description of the video content.
-      - Suitable for users who are blind or where the video cannot be seen.
-
     - `chapters`
 
       - Chapter titles are intended to be used when the user is navigating the media resource.
@@ -56,7 +51,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Track data types
 
-The type of data that `track` adds to the media is set in the `kind` attribute, which can take values of `subtitles`, `captions`, `descriptions`, `chapters` or `metadata`. The element points to a source file containing timed text that the browser exposes when the user requests additional data.
+The type of data that `track` adds to the media is set in the `kind` attribute, which can take values of `subtitles`, `captions`, `chapters` or `metadata`. The element points to a source file containing timed text that the browser exposes when the user requests additional data.
 
 A media element cannot have more than one `track` with the same `kind`, `srclang`, and `label`.
 
@@ -81,7 +76,6 @@ textTrackElem.addEventListener("cuechange", (event) => {
   <source src="sample.mp4" type="video/mp4" />
   <source src="sample.ogv" type="video/ogv" />
   <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
   <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
