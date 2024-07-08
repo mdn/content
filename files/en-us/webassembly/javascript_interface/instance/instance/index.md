@@ -51,7 +51,7 @@ synchronously instantiate a given [`WebAssembly.Module`](/en-US/docs/WebAssembly
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -72,7 +72,7 @@ However, the preferred way to get an `Instance` is through the asynchronous
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
