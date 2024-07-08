@@ -401,9 +401,9 @@ Here are some more examples:
       <td><code>bold smaller?</code></td>
     </tr>
     <tr>
-      <td><code>{A,B}</code></td>
+      <td><code>{min,max}</code></td>
       <td>Curly braces</td>
-      <td>At least <code>A</code> times, at most <code>B</code> times</td>
+      <td>At least <code>min</code> times, at most <code>max</code> times</td>
       <td><code>bold smaller{1,3}</code></td>
     </tr>
     <tr>
