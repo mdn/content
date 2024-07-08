@@ -26,10 +26,10 @@ font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
 font-variant-ligatures: contextual; /* <contextual-alt-values> */
 font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
-/* <contextual-alt-values> <common-lig-values>*/
+/* Two keyward values */
 font-variant-ligatures: no-contextual common-ligatures;
 
-/* <common-lig-values> <discretionary-lig-values> <historical-lig-values> <contextual-alt-values> */
+/* Four keyword values */
 font-variant-ligatures: common-ligatures no-discretionary-ligatures
   historical-ligatures contextual;
 
@@ -41,7 +41,7 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-The `font-variant-ligatures` property is specified as one of the keyword values listed below.
+The font-variant-ligatures property is specified as `normal`, `none`, or one or more of the other value types listed below, separated by spaces.
 
 ### Values
 
