@@ -3,6 +3,7 @@ title: "HTML attribute: crossorigin"
 slug: Web/HTML/Attributes/crossorigin
 page-type: html-attribute
 browser-compat:
+  - html.elements.audio.crossorigin
   - html.elements.img.crossorigin
   - html.elements.link.crossorigin
   - html.elements.script.crossorigin

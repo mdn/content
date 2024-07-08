@@ -16,6 +16,8 @@ default state, which is usually `prompt`.
 This method is called on the global {{domxref("Permissions")}} object
 {{domxref("navigator.permissions")}}.
 
+This method is removed from the main permissions API specification because its use case is unclear. Permissions are managed by the browser and the current permission model does not involve the site developer being able to imperatively request or revoke permissions. Browsers have shipped this API behind preferences but it's unlikely to reach the standards track. For more context, see the [original discussion to remove `permissions.revoke()`](https://github.com/w3c/permissions/issues/46).
+
 ## Syntax
 
 ```js-nolint

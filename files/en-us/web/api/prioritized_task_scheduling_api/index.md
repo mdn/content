@@ -213,7 +213,7 @@ This allows you to avoid blocking the main thread when the user is actively inte
 - {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}
   - : These properties are the entry points for using the `Scheduler.postTask()` method in a window or a worker scope, respectively.
 
-## Task scheduling examples
+## Examples
 
 Note that the examples below use `mylog()` to write to a text area.
 The code for the log area and method is generally hidden to not distract from more relevant code.

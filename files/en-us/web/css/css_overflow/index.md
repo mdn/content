@@ -2,14 +2,16 @@
 title: CSS overflow
 slug: Web/CSS/CSS_overflow
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-overflow/#propdef-overflow
+spec-urls:
+  - https://drafts.csswg.org/css-overflow-3
+  - https://drafts.csswg.org/css-overflow-4
 ---
 
 {{CSSRef}}
 
 The **CSS overflow** module properties enable you to handle scrollable overflow in visual media.
 
-Overflow happens when the content in an element box extends past one or more of the box's edges. **Scrollable overflow** is the content that appears outside the element box for which you might want to add a scrolling mechanism. CSS overflow properties enable you to control what happens when content overflows an element box.
+Overflow happens when the content in an element box extends past one or more of the box's edges. **Scrollable overflow** is the content that appears outside the element box for which you might want to add a scrolling mechanism. CSS overflow properties let you control what happens when content overflows an element box.
 
 Painting effects that overflow the content but do not participate in the CSS box model do not affect layout. This type of overflow is also known as {{Glossary("ink overflow")}}. Examples of ink overflows include box shadows, border images, text decoration, overhanging glyphs, and outlines. Ink overflows do not extend the scrollable overflow region.
 
@@ -17,11 +19,11 @@ Painting effects that overflow the content but do not participate in the CSS box
 
 Use the following interactive example to see the effects of various `overflow` property values on the content overflow and scrollbars in the adjacent fixed-size box.
 
-The example also includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out different `ScrollLeft` and `ScrollTop` slider settings.
+The example also includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out the various `ScrollLeft` and `ScrollTop` slider settings.
 
 {{EmbedGHLiveSample("css-examples/modules/overflow.html", '100%', 320)}}
 
-A link is included in content box above to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing to the link or programmatically scrolling the content: the content will scroll only if the enumerated `<overflow>` value created a scroll container.
+A link is included in the content box above to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing to the link or programmatically scrolling the content: the content will scroll only if the enumerated `<overflow>` value creates a scroll container.
 
 ## Reference
 
@@ -36,11 +38,10 @@ A link is included in content box above to demonstrate the effects of keyboard f
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("block-ellipsis")}}
-- {{CSSxRef("continue")}}
-- {{CSSxRef("line-clamp")}}
-- {{CSSxRef("max-lines")}}
 - {{CSSxRef("-webkit-line-clamp")}}
+
+> [!NOTE]
+> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
 
 ### Data types
 
@@ -50,7 +51,7 @@ A link is included in content box above to demonstrate the effects of keyboard f
 
 - [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
   - : CSS building block: learn what overflow is and how to manage it.
-- [Creating a named scroll timeline](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_timeline)
+- [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
 ## Related concepts
