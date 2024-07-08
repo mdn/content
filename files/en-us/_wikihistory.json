@@ -70530,14 +70530,6 @@
     "modified": "2020-10-15T22:12:36.673Z",
     "contributors": ["Sebastianz"]
   },
-  "Web/API/XPathNSResolver": {
-    "modified": "2020-10-15T22:12:44.720Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/API/XPathNSResolver/lookupNamespaceURI": {
-    "modified": "2020-10-15T22:12:44.834Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/API/XPathResult": {
     "modified": "2020-10-15T21:14:20.405Z",
     "contributors": [
@@ -85806,22 +85798,6 @@
       "Sebastianz",
       "OlofT",
       "Ruggero"
-    ]
-  },
-  "Web/CSS/initial-letter-align": {
-    "modified": "2020-10-15T21:31:42.697Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "Sheppy",
-      "dominicegginton",
-      "rohitravirane",
-      "chrisdavidmills",
-      "komalbharadiya",
-      "fscholz",
-      "mfluehr",
-      "Sebastianz",
-      "kscarfone"
     ]
   },
   "Web/CSS/initial_value": {
