@@ -89,7 +89,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- `rel`
+- [`rel`](/en-US/docs/Web/HTML/Attributes/rel)
   - : The relationship of the linked URL as space-separated link types.
 - `target`
 

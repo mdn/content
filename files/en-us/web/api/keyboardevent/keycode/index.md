@@ -38,11 +38,11 @@ Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable b
 6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
 7. Otherwise, i.e., pressed key inputs a unicode character:
 
-   1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+   1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with the following additional rules.
    2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
 
       1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
-      2. Otherwise, use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+      2. Otherwise, use 0 or compute with the following additional rules.
 
 Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
 

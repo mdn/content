@@ -21,5 +21,5 @@ The **alignment container** is the rectangle that the {{glossary("alignment subj
   - CSS {{CSSXref("place-content")}} shorthand property
   - CSS {{CSSXref("place-self")}} shorthand property
   - CSS {{CSSXref("scroll-snap-align")}} property
-- Glossary
+- Related glossary terms:
   - {{Glossary("alignment subject")}}

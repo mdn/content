@@ -353,7 +353,7 @@ We've now got a `setTasks` hook that we can use in our `addTask()` function to u
 
 First of all, we need to put `name` into an object that has the same structure as our existing tasks. Inside of the `addTask()` function, we will make a `newTask` object to add to the array.
 
-We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to [copy the existing array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copy_an_array), and add our object at the end. We then pass this array into `setTasks()` to update the state.
+We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to [copy the existing array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copying_an_array), and add our object at the end. We then pass this array into `setTasks()` to update the state.
 
 Putting that all together, your `addTask()` function should read like so:
 

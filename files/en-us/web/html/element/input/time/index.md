@@ -301,7 +301,7 @@ input:valid + span::after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
+      <td><strong><a href="/en-US/docs/Web/HTML/Element/input#value">Value</a></strong></td>
       <td>A string representing a time, or empty.</td>
     </tr>
     <tr>
