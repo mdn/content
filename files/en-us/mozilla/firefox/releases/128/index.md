@@ -27,6 +27,16 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### JavaScript
 
+- Resizeable {{jsxref("ArrayBuffer")}} and growable {{jsxref("SharedArrayBuffer")}} are now supported, allowing the size of buffers to be changed without having to allocate a new buffer and copy data into it ([Firefox bug 1884150](https://bugzil.la/1884150)).
+  The relevant methods and properties are:
+
+  - Grow {{jsxref("SharedArrayBuffer")}} using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
+    The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
+    The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can grow, and its maximum allowed size, respectively.
+  - Resize {{jsxref("ArrayBuffer")}} using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
+    The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
+    The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
+
 #### Removals
 
 ### SVG
@@ -36,6 +46,7 @@ This article provides information about the changes in Firefox 128 that affect d
 ### HTTP
 
 - The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) now includes the `image/svg+xml` MIME type ([Firefox bug 1711622](https://bugzil.la/1711622)).
+- The {{rfc("9218", "Extensible Prioritization Scheme for HTTP")}} is now supported, including the HTTP [`Priority`](/en-US/docs/Web/HTTP/Headers/Priority) request and response header, which allows clients to hint at the expected relative priority for resources sent over a connection, and the HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that allow the priority to be subsequently changed after the header has been sent ([Firefox bug 1865040](https://bugzil.la/1865040)).
 
 #### Removals
 
@@ -62,6 +73,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### Removals
 
+- The non-standard {{domxref('HTMLMediaElement.seekToNextFrame()')}} method has been removed, and is now not supported by any browser. ([Firefox bug 1336404](https://bugzil.la/1336404)).
+
 ### WebAssembly
 
 #### Removals
@@ -70,14 +83,27 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### General
 
+- We now support the extended "unhandledPromptBehavior" capability which can either be a string (WebDriver classic) or a JSON object (WebDriver BiDi). The object type offers more capabilities for WebDriver BiDi like handling "beforeunload" prompts. ([Firefox bug 1884650](https://bugzil.la/1884650))
+
 #### WebDriver BiDi
+
+- Added support for the "BiDi flag" of a WebDriver Session to align with the WebDriver BiDi specification. This allows to identify sessions created for or upgraded to WebDriver BiDi. ([Firefox bug 1898719](https://bugzil.la/1898719))
+- Added support for several arguments for the `network.continueRequest` command, which now allows to modify headers, cookies, method and body of a request before it is sent over the network. ([Firefox bug 1850680](https://bugzil.la/1850680))
+- Added support for the `userContext` argument in the `permissions.setPermission` command, which allows to isolate a permission to a specific user context (implemented as containers in Firefox). ([Firefox bug 1894217](https://bugzil.la/1894217))
+- Fixed a bug in `browsingContext.navigate` where a navigation error would load an error page and cause subsequent commands to fail. ([Firefox bug 1878690](https://bugzil.la/1878690))
+- We fixed the order in which `network.responseCompleted` events are emitted for redirects. The original request's `responseCompleted` is now always emitted before the events for the redirect. ([Firefox bug 1879580](https://bugzil.la/1879580))
+- To align with the current Firefox behavior, we introduced the workaround to not partition cookies which are added with the "storage.setCookie" command for the same domain as the page loaded in the targeted context. ([Firefox bug 1898222](https://bugzil.la/1898222))
+- The `input.setFiles` command has been updated to throw an `UnsupportedOperation` error if the specified file does not exist. ([Firefox bug 1887644](https://bugzil.la/1887644))
 
 #### Marionette
 
+- Added support for the "HTTP flag" of a WebDriver Session to align with the WebDriver classic specification. This allows to identify sessions created for WebDriver classic. ([Firefox bug 1884090](https://bugzil.la/1884090))
+- Added support for the Permissions API in WebDriver Classic. ([Firefox bug 1524074](https://bugzil.la/1524074))
+
 ## Changes for add-on developers
 
-- Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762))
-- A static declarative net request rule, one defined through the [`declarative_net_request` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), is now loaded when it contains unrecognized properties but is otherwise valid ([Firefox bug 1886608](https://bugzil.la/1886608).
+- Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762)).
+- A static declarative net request rule, one defined through the [`declarative_net_request` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), is now loaded when it contains unrecognized properties but is otherwise valid ([Firefox bug 1886608](https://bugzil.la/1886608)).
 - The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
 - The non-standard Web API events `overflow` and `underflow` have been deprecated. Use of these events should be removed from extension documents before the release of Firefox 131 ([Firefox bug 1898445](https://bugzil.la/1898445)).
 - Support is now provided for scripts to run in the web page execution environment. This is provided through support for `MAIN` in {{WebExtAPIRef("scripting.executionWorld","ExecutionWorld")}} for the {{WebExtAPIRef("scripting")}} API, the addition of `world` to the {{WebExtAPIRef("contentScripts.register()")}} API, and support for `world` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key ([Firefox bug 1736575](https://bugzil.la/1736575)).
@@ -95,6 +121,10 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 - **`image/jxl` MIME type in Accept header for default and image requests:** `image.jxl.enabled`.
 
   The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured to indicate support for the `image/jxl` MIME type. ([Firefox bug 1711622](https://bugzil.la/1711622)).
+
+- **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`.
+
+  [CHIPS](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. When set, cookies have separate storage for each top-level site, and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1898253](https://bugzil.la/1898253)).
 
 ## Older versions
 

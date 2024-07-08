@@ -279,7 +279,7 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 The most interesting capability exposed by both {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will _not_ send credentials.
 
-To ask for a `fetch()` request to include credentials, set the [`credentials`](/en-US/docs/Web/API/Request/Request#credentials) option in the {{domxref("Request.Request()", "Request()")}} constructor to `"include"`.
+To ask for a `fetch()` request to include credentials, set the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option to `"include"`.
 
 To ask for an `XMLHttpRequest` request to include credentials, set the {{domxref("XMLHttpRequest.withCredentials")}} property to `true`.
 
@@ -473,7 +473,7 @@ Examples of this usage can be [found above.](#preflighted_requests)
 
 ### Access-Control-Request-Headers
 
-The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (for example, by passing them as the [`headers`](/en-US/docs/Web/API/Request/Request#headers) option to the {{domxref("Request.Request()", "Request()")}} constructor). This browser-side header will be answered by the complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
+The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (for example, by passing them as the [`headers`](/en-US/docs/Web/API/RequestInit#headers) option). This browser-side header will be answered by the complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 ```http
 Access-Control-Request-Headers: <field-name>[,<field-name>]*

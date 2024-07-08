@@ -270,7 +270,7 @@ The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} inte
 - {{DOMxRef("Document.createExpression()")}}
   - : Compiles an [`XPathExpression`](/en-US/docs/Web/API/XPathExpression) which can then be used for (repeated) evaluations.
 - {{DOMxRef("Document.createNSResolver()")}}
-  - : Creates an {{DOMxRef("XPathNSResolver")}} object.
+  - : Returns the input node as-is.
 - {{DOMxRef("Document.evaluate()")}}
   - : Evaluates an XPath expression.
 
