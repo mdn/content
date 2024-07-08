@@ -304,18 +304,24 @@ But not:
 - `smaller bold`, as `bold` is juxtaposed and must appear before the `smaller` keyword.
 - `bold smaller bold`, as `bold` and `smaller` may only appear once.
 
-## Bracketed range notation (`[,]`)
+## Bracketed range notation (`[min,max]`)
 
-Some properties take numeric values that can be in a limited range, and any value out of the range makes the declarations invalid and the declaration is ignored. For example, the [`column-count`](/en-US/docs/Web/CSS/column-count) property can have values from 1 to positive infinity only.
+Some types can accept numeric values within a certain range. For example, the [`column-count`](/en-US/docs/Web/CSS/column-count) property can accept an integer value between positive 1 and infinity, inclusive. The corresponding syntax looks like this:
 
-The _bracketed range notation_ `[min, max]` indicates the range between `min` and `max` values. The range includes `min` and `max` values as well. The range notation is used in numeric type notations, e.g. `<angle [0,180deg]>`. Infinities, -∞ and ∞, must not have units specified. Zero values can be written without units, even zero seconds.
+```plain
+<integer [1,∞]>
+```
 
-Following are some examples:
+Any value outside this specified range causes the whole declaration to be invalid, therefore the browser will ignore it.
 
-- `<integer>` or `<integer [-∞,∞]>` - any integer from negative infinity to positive infinity
-- `<integer [0,∞]>` - negative integers not allowed
-- `<time [0s,10s]>` or `<time [0,10s]>` - time less than 11 seconds
-- `<integer [-∞,-1]> | <integer [1,∞]>` - any integer except zero
+The _bracketed range notation_ `[min, max]` indicates an inclusive range between a `min` and `max` value. This notation is used in numeric type notations and can include units, e.g. `<angle [0,180deg]>`. Positive and negative Infinity (-∞ and ∞) must not have units specified. Types specified in units can have zero values specified with or without units, for example `<time [0s,10s]>` or `<time [0,10s]>`.
+
+Here are some more examples:
+
+- `<integer [-∞,∞]>` - any integer from negative infinity to positive infinity
+- `<integer [0,∞]>`: Any integer from 0 to positive infinity is valid. Negative integers are invalid.
+- `<time [0s,10s]>` or `<time [0,10s]>`: Any duration from 0 to 10 seconds is valid.
+- `<integer [-∞,-1]> | <integer [1,∞]>`: Any integer except zero is valid.
 
 ## Summary
 
@@ -419,7 +425,7 @@ Following are some examples:
       <th colspan="4">Ranges</th>
     </tr>
     <tr>
-      <td><code>[,]</code></td>
+      <td><code>[min,max]</code></td>
       <td>Numeric bracketed range</td>
       <td>Specifies a numeric range</td>
       <td><code>&#x3C;integer [0,∞]></code></td>
