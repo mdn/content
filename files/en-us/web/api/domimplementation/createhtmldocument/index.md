@@ -70,15 +70,15 @@ function makeDocument() {
 }
 ```
 
-The code in lines 4–12 handle creating the new HTML document and inserting some content
-into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
-whose {{ HTMLElement("title") }} is `"New Document"`. Lines 5 and 6 create a
-new paragraph element with some simple content, and then lines 8–12 handle inserting the
-new paragraph into the new document.
+The code handles creating the new HTML document and inserting some content
+into it. `createHTMLDocument()` constructs a new HTML document
+whose {{ HTMLElement("title") }} is `"New Document"`. Then we create a
+new paragraph element with some simple content, and then the new paragraph gets inserted
+into the new document.
 
-Line 16 pulls the `contentDocument` of the frame; this is the document into
+`destDocument` stores the `contentDocument` of the frame; this is the document into
 which we'll be injecting the new content. The next two lines handle importing the
-contents of our new document into the new document's context. Finally, line 20 actually
+contents of our new document into the new document's context. Finally, `destDocument.replaceChild` actually
 replaces the contents of the frame with the new document's contents.
 
 [View Live Examples](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)

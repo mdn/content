@@ -14,7 +14,7 @@ Some side-channel hardware vulnerabilities (also known as Cross-site leaks, or X
 
 ## Solution
 
-Use `Cross-Origin-Resource-Policy` to block [`no-cors`](/en-US/docs/Web/API/fetch#mode) cross-origin requests to given resources. As this policy is expressed via a response header, the actual request is not prevented. Instead, the browser prevents the result from being leaked by stripping out the response body.
+Use `Cross-Origin-Resource-Policy` to block [`no-cors`](/en-US/docs/Web/API/RequestInit#mode) cross-origin requests to given resources. As this policy is expressed via a response header, the actual request is not prevented. Instead, the browser prevents the result from being leaked by stripping out the response body.
 
 The possible values are:
 

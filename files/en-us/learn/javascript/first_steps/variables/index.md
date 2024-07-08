@@ -34,7 +34,7 @@ A variable is a container for a value, like a number we might use in a sum, or a
 
 ### Variable example
 
-Let's look at a simple example:
+Let's look at an example:
 
 ```html
 <button id="button_A">Press me</button>
@@ -45,16 +45,18 @@ Let's look at a simple example:
 const buttonA = document.querySelector("#button_A");
 const headingA = document.querySelector("#heading_A");
 
+let count = 1;
+
 buttonA.onclick = () => {
-  const name = prompt("What is your name?");
-  alert(`Hello ${name}, nice to see you!`);
-  headingA.textContent = `Welcome ${name}`;
+  buttonA.textContent = "Try again!";
+  headingA.textContent = `${count} clicks so far`;
+  count += 1;
 };
 ```
 
 {{ EmbedLiveSample('Variable_example', '100%', 120) }}
 
-In this example pressing the button runs some code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value and the third line displays that name on the page.
+In this example pressing the button runs some code. First, it changes the text on the button itself. Second, it shows a message of the number of times the button has been pressed. The number is stored in a variable. Each time the user presses the button, the number in the variable will increment by one.
 
 ### Without a variable
 
@@ -70,14 +72,14 @@ const buttonB = document.querySelector("#button_B");
 const headingB = document.querySelector("#heading_B");
 
 buttonB.onclick = () => {
-  alert(`Hello ${prompt("What is your name?")}, nice to see you!`);
-  headingB.textContent = `Welcome ${prompt("What is your name?")}`;
+  buttonB.textContent = "Try again!";
+  headingB.textContent = "1 click so far";
 };
 ```
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
 
-You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. If we didn't have variables available, we'd have to ask the reader for their name every time we needed to use it!
+You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. Without a variable, we don't have a way of knowing how many times the button have been clicked. The message to the user will quickly be irrelevant when no information can be remembered.
 
 Variables just make sense, and as you learn more about JavaScript they will start to become second nature.
 
