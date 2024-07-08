@@ -35,17 +35,54 @@ For a cross-document view transition to work, the current and destination docume
 
 ## Examples
 
-### Basic usage
+### Transitioning page view
+
+In this external example, there is cross-document view-transitions; a half second transition that occurs when navigating between the site's two pages.
+
+The `@view-transition` at-rule is specified in the CSS for both your current and destination documents of a navigation to opt them both in to the view transition:
 
 ```css
 @view-transition {
-  navigation: auto;
+    navigation: auto;
 }
 ```
 
-You need to specify the above `@view-transition` at-rule in the CSS for both the current and destination documents of a navigation to opt them in to the view transition.
+In addition to the above `@view-transition` at-rule in the CSS for both the current and destination documents, we define two {{cssxref("@keyframe")}} animations and the use the {{cssxref("animation")}} shorthand property to apply those keyframe animations to the elements in the outbound ({{cssxref("::view-transition-old()")}}) and inbound ({{cssxref("::view-transition-new()")}}) pages that we want to animate.
 
-> **Note:** Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/) shows this at-rule in action, and additionally demonstrates how to customize the outbound and inbound animations of the view transition.
+```css
+/* Create a custom animation */
+@keyframes move-out {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes move-in {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* Apply the custom animation to the old and new page states */
+::view-transition-old(root) {
+    animation: 0.4s ease-in both move-out;
+
+}
+
+::view-transition-new(root) {
+    animation: 0.4s ease-in both move-in;
+}
+```
+
+The above CSS is included in the [View transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/), demonstrating this at-rule example in action.
 
 ## Specifications
 
