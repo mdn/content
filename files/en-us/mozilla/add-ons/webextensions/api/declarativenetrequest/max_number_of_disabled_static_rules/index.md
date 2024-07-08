@@ -14,7 +14,7 @@ Rules are enabled and disabled in static rulesets with {{WebExtAPIRef("declarati
 This limit is:
 
 - in Firefox: `5000`
-- in Chrome: `5000`
+- in Chrome: `5000`, counted across all rulesets instead of per ruleset.
 - in Safari, there is no implementation for this limit.
 
 {{WebExtExamples("h2")}}
