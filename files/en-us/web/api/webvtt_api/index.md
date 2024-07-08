@@ -113,7 +113,7 @@ console.log(track.cues);
 
 {{EmbedLiveSample('Using the WebVTT API to add captions','400','330')}}
 
-### Displaying a VTT content defined in a file
+### Displaying VTT content defined in a file
 
 First let's define a "captions.vtt" file that specifies the same cues as the [Using the WebVTT API to add captions](#using_the_webvtt_api_to_add_captions) example above:
 
@@ -229,6 +229,146 @@ console.log(track.cues);
 #### Result
 
 {{EmbedLiveSample('Styling WebVTT in HTML or a stylesheet','400','330')}}
+
+### More cue styling examples
+
+This example shows more examples of how you can mark up cue text with tags and then style them.
+The same markup and styles can be used in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
+
+The HTML and CSS for displaying the video itself is the same as for the [first example above](#using_the_webvtt_api_to_add_captions) so here we only show the specific code for marking up and styling the text.
+
+```css hidden
+video {
+  width: 420px;
+  height: 300px;
+}
+```
+
+```html hidden
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+```
+
+#### Styling by tag type
+
+The first cue we create will be displayed for all 6 seconds of the video and display text marked up with `b`, `u`, `i` and `c` tags.
+
+```js
+let video = document.querySelector("video");
+
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+track.addCue(
+  new VTTCue(
+    0,
+    6,
+    "Styles: Normal <b>bold</b> <u>underlined</u> <i>italic</i> <c>class</c>",
+  ),
+);
+```
+
+First make all cues 1.2 times bigger than normal.
+
+```css
+video::cue {
+  font-size: 1.2rem;
+}
+```
+
+Then we style each of the tags above with a different colour.
+
+```css
+video::cue(u) {
+  color: green;
+}
+
+video::cue(b) {
+  color: purple;
+}
+
+video::cue(i) {
+  color: red;
+}
+
+video::cue(c) {
+  color: lightpurple;
+}
+```
+
+#### Styling by class
+
+The second cue is displayed just after the first one, and includes the same tags but they also have the class `myclass` applied.
+
+```js
+track.addCue(
+  new VTTCue(
+    1,
+    6,
+    "Styles: Class markup: <b.myclass>bold</b> <u.myclass>underlined</u> <i.myclass>italic</i> <c.myclass>class</c>",
+  ),
+);
+```
+
+We then style all items with the `.myclass` class to light blue, except for the specific case of `c.myclass`, which is set to blue.
+
+```css
+video::cue(.myclass) {
+  color: lightblue;
+}
+
+video::cue(c.myclass) {
+  color: blue;
+}
+```
+
+#### Styling using attributes
+
+The next two cues are displayed after three seconds.
+The first displays a `v` (voice) tag with the "Bob" attribute, while the second displays text marked up with the `lang` tag for three locales of English.
+
+```js
+track.addCue(
+  new VTTCue(
+    2,
+    6,
+    "<lang en>Lang markup: 'en'</lang>  <lang en-GB>Text: 'en-GB'</lang> <lang en-US>Text: 'en-US'</lang>",
+  ),
+);
+
+track.addCue(new VTTCue(3, 6, "<v Bob>Bob's voice</v>"));
+```
+
+We use the `lang` attribute selector to colour each of the language variants.
+
+```css
+video::cue([lang="en"]) {
+  color: lightgreen;
+}
+
+video::cue([lang="en-GB"]) {
+  color: darkgreen;
+}
+
+video::cue(:lang(en-US)) {
+  color: #6082b6;
+}
+```
+
+Then we use the `v` tag and attribute selector for `voice` to colour text in "Bob's voice" as orange.
+
+```css
+video::cue(v[voice="Bob"]) {
+  color: orange;
+}
+```
+
+#### Result
+
+The example should the cues with colour coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
+
+{{EmbedLiveSample('More cue styling examples','400','330')}}
 
 ## Specifications
 
