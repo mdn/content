@@ -22,15 +22,19 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* position-try-fallbacks only */
-position-try: flip-block;
+position-try: normal flip-block;
 position-try: inset-area(top);
 position-try: --custom-try-option;
 position-try: flip-block flip-inline;
 position-try: inset-area(top), inset-area(right), inset-area(bottom);
 position-try: --custom-try-option1, --custom-try-option2;
-position-try: flip-block, inset-area(right), --custom-try-option;
+position-try:
+  normal flip-block,
+  inset-area(right),
+  --custom-try-option;
 
 /* position-try-order and position-try-fallbacks */
+position-try: normal none;
 position-try:
   most-width --custom-try-option1,
   --custom-try-option2;
@@ -51,7 +55,7 @@ position-try: unset;
 
 See {{cssxref("position-try-order")}} and {{cssxref("position-try-fallbacks")}} for value descriptions.
 
-`position-try` can specify values for `position-try-fallbacks`, or `position-try-order` and `position-try-fallbacks`, in that order. If `position-try-order` is omitted, it is set to the property's initial value, which is `normal`. `normal` means that the position try fallback options are tried in the order they appear in the property.
+The `position-try` shorthand can specify values for `position-try-fallbacks`, or `position-try-order` and `position-try-fallbacks`, in that order. If `position-try-order` is omitted, it is set to the property's initial value, which is `normal`, meaning the position-try fallback options are tried in the order they appear in the property.
 
 ## Formal definition
 
@@ -123,7 +127,7 @@ form {
 }
 ```
 
-We then include a custom try option — `--custom-bottom` — which positions the element below the anchor and gives it an appropriate margin:
+We then include a custom try fallback option — `--custom-bottom` — which positions the element below the anchor and gives it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {
@@ -133,7 +137,7 @@ We then include a custom try option — `--custom-bottom` — which positions th
 }
 ```
 
-We initially position the element above its anchor, and then set a `position-try` value on it that gives it a `position-try-order` of `most-height`, and a `position-try-fallbacks` list that just includes our custom try option:
+We initially position the element above its anchor, and then set a `position-try` value on it that gives it a `position-try-order` of `most-height`, and a `position-try-fallbacks` list that just includes our custom fallback option:
 
 ```css
 .infobox {
@@ -150,7 +154,7 @@ We initially position the element above its anchor, and then set a `position-try
 
 #### Result
 
-The element appears below its anchor, even though it is initially positioned above it. This occurs because there is more vertical space below the anchor than there is above it. The `most-height` try order causes the `--custom-bottom` try option to be applied, placing the positioned element in the position that gives its containing block the most height.
+The element appears below its anchor, even though it is initially positioned above it. This occurs because there is more vertical space below the anchor than there is above it. The `most-height` try order causes the `--custom-bottom` try fallback option to be applied, placing the positioned element in the position that gives its containing block the most height.
 
 {{ EmbedLiveSample("Basic `position-try` usage", "100%", "300") }}
 
