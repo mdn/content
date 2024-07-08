@@ -9,7 +9,7 @@ browser-compat: css.properties.position-try-order
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various options that result in an available position try fallback options being used to set an anchor-positioned element's position, instead of its initial position settings.
+The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various fallback options that result in an available position-try fallback being used to set an anchor-positioned element's position, instead of its initial position settings.
 
 > **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-fallbacks")}} values in a single declaration.
 
@@ -38,15 +38,15 @@ The `position-try-order` property may be specified as either the keyword value `
 - `normal`
   - : The default. No position-try fallback options will be tried when the element is first displayed.
 - `<try-size>`
-  - : Defines the different try size options, which specify criteria that determine what try option should be applied to the anchor-positioned element when it initially renders. Available values are:
+  - : Defines the different try size fallback options, which specify criteria that determine what try fallback should be applied to the anchor-positioned element when it initially renders. Available values are:
     - `most-height`
-      - : The position try option will be applied that gives the element's containing block the most height.
+      - : The position try fallback option will be applied that gives the element's containing block the most height.
     - `most-width`
-      - : The position try option will be applied that gives the element's containing block the most width.
+      - : The position try fallback option will be applied that gives the element's containing block the most width.
     - `most-block-size`
-      - : The position try option will be applied that gives the element's containing block the largest size in the block direction.
+      - : The position try fallback option will be applied that gives the element's containing block the largest size in the block direction.
     - `most-inline-size`
-      - : The position try option will be applied that gives the element's containing block the largest size in the inline direction.
+      - : The position try fallback option will be applied that gives the element's containing block the largest size in the inline direction.
 
 ## Description
 
@@ -149,7 +149,7 @@ form {
 }
 ```
 
-We then include a custom option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
+We then include a custom fallback option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {
@@ -159,7 +159,7 @@ We then include a custom option named `--custom-bottom` which positions the elem
 }
 ```
 
-We initially position the element above its anchor, and then give it our custom position option as a position-try fallback option:
+We initially position the element above its anchor, and then give it our custom position fallback option as a position-try fallback option using the `position-try` shorthand, which sets the `position-try-order` to `normal`:
 
 ```css
 .infobox {
@@ -170,8 +170,7 @@ We initially position the element above its anchor, and then give it our custom 
   margin-bottom: 10px;
   justify-self: anchor-center;
 
-  position-try-fallbacks: --custom-bottom;
-  position-try: --custom-bottom;
+  position-try: normal --custom-bottom;
 }
 ```
 

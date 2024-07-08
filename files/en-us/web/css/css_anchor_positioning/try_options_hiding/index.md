@@ -377,7 +377,7 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 The {{cssxref("position-try-order")}} property has a slightly different focus to the rest of the position try functionality, in that it makes use of position try fallback options when the positioned element is first displayed, rather than when it is in the process of overflowing.
 
-This property allows you to specify that you want the positioned element initially displayed using the position try option that gives its containing block the most width or most height, for example. This is achieved by setting the `most-height`, `most-width`, `most-block-size`, or `most-inline-size` values. You can also remove the effects of any previously-set `position-try-order` values using the `normal` value.
+This property allows you to specify that you want the positioned element initially displayed using the position try option that gives its containing block the most width or most height. This is achieved by setting the `most-height`, `most-width`, `most-block-size`, or `most-inline-size` values. You can also remove the effects of any previously-set `position-try-order` values using the `normal` value.
 
 If no position-try fallback option is available that provides more width/height than the initial positioning assigned to the element, `position-try-order` has no effect.
 
