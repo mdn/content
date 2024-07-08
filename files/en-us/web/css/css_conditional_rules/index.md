@@ -27,6 +27,7 @@ There are plans to further extend possible queries by adding the generalized con
 ### At-rules
 
 - {{cssxref("@media")}}
+- {{cssxref("@container")}}
 - {{cssxref("@supports")}}
 
 > **Note:** The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
