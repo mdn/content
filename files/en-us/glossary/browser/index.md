@@ -25,6 +25,6 @@ Common browsers include:
   - [Google Chrome](https://www.google.com/chrome/)
   - [Microsoft Edge](https://www.microsoft.com/en-us/edge)
   - [Opera Browser](https://www.opera.com/)
-- Glossary
+- Related glossary terms:
   - {{Glossary("Engine/Rendering", "Rendering engine")}}
   - {{Glossary("User agent")}}
