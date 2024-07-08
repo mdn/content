@@ -32,9 +32,9 @@ To access a window's visual viewport, you can obtain a {{domxref("VisualViewport
 
 ## Examples
 
-The code below is based on [the sample in the specification](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html), though it adds a few things that make it function better. It shows a function called `viewportHandler()`. When called it queries the `offsetLeft` and `height` properties for values it uses in a CSS `translate()` method. You invoke this function by passing it to _both_ event calls.
+The code below is based on [the sample in the specification](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html), though it adds a few things that make it function better. It shows a function called `viewportHandler()`. When called it queries the `offsetLeft` and `height` properties for values it uses in a CSS `translate()` method. `viewportHandler()` is passed in as a handler for the `resize` and `scroll` events.
 
-One thing that may not be clear in this example is the use of the `pendingUpdate` flag and the call to `requestAnimationFrame()`. The `pendingUpdate` flag serves to prevent multiple invocations of the transform that can occur when `onresize` and `onscroll` fire at the same time. Using `requestAnimationFrame()` ensures that the transform occurs before the next render.
+One thing that may not be clear in this example is the use of the `pendingUpdate` flag and the call to `requestAnimationFrame()`. The `pendingUpdate` flag serves to prevent multiple invocations of the transform that can occur when `resize` and `scroll` fire at the same time. Using `requestAnimationFrame()` ensures that the transform occurs before the next render.
 
 ```js
 let pendingUpdate = false;
