@@ -54,9 +54,8 @@ _In addition to the properties below, `Node` inherits properties from its parent
     `null` if there isn't such node.
 - {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
   - : Returns a string containing the name of the `Node`. The
-    structure of the name will differ with the node type. E.g. An
-    {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
-    `'audio'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
+    structure of the name will differ with the node type. The case of the name varies by node type. E.g. An {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
+    `'AUDIO'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
