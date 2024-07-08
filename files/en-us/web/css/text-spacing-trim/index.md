@@ -35,36 +35,38 @@ text-spacing-trim: unset;
   - : Defines the different spacing trim options. Available values are:
 
     - `normal`
-      - : Sets CJK full width opening punctuation characters to be full width at the start of each line. Sets CJK full width closing punctuation characters to be full width at the end of each line, or half width if they do not fit on the line prior to justification. [Collapses spacing](#full_width_punctuation_collapsing) between punctuation characters.
+      - : Sets CJK full-width opening punctuation characters to be full-width at the start of each line. Sets CJK full-width closing punctuation characters to be full-width at the end of each line, or half-width if they do not fit on the line before justification. [Collapses spacing](#full-width_punctuation_collapsing) between punctuation characters.
     - `space-all`
-      - : All CJK full width punctuation characters are set to be full width.
+      - : All CJK full-width punctuation characters are set to be full-width.
     - `space-first`
-      - : Behaves as `normal`, except that CJK full width opening punctuation characters are set to be full width at the start of the first line of the text's block container, and every subsequent line after an explicit line break (for example, a newline character).
+      - : Behaves as `normal`, except that CJK full-width opening punctuation characters are set to be full-width at the start of the first line of the text's block container, and the start of every subsequent line coming after an explicit line break such as a newline character.
     - `trim-start`
 
-      - : Behaves as `normal`, except that CJK full width opening punctuation characters are set to be half width at the start of each line.
+      - : Behaves as `normal`, except that CJK full-width opening punctuation characters are set to be half-width at the start of each line.
 
-      The specification also defines `trim-both`, `trim-all`, and `auto` values, however these are not currently implemented in any browser.
+    > [!NOTE]
+    > The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module also defines `trim-both,` `trim-all,` and `auto` values. However, these are not currently implemented in any browser.
 
 ## Description
 
-`text-spacing-trim` applies spacing / kerning to CJK punctuation characters to produce visually-pleasing typography as defined by the [Requirements for Japanese Text Layout](https://w3c.github.io/jlreq/) (JLREQ) and [Requirements for Chinese Text Layout](https://www.w3.org/International/clreq/) (CLREQ).
+The `text-spacing-trim` property applies spacing/kerning to CJK punctuation characters to produce visually pleasing typography as defined by the [Requirements for Japanese text layout](https://w3c.github.io/jlreq/) (JLREQ) and the [Requirements for Chinese text layout](https://www.w3.org/International/clreq/) (CLREQ).
 
 Many CJK punctuation characters include glyph-internal spacing. For example, the CJK full stop and the CJK close parenthesis usually have glyph-internal spacing on their right-hand side, to give them a constant [advance measure](/en-US/docs/Glossary/Advance_measure) consistent with other ideographic characters. However, when they appear in a row, the glyph-internal spacing can become excessive.
 
 `text-spacing-trim` can be used to adjust such excessive spacing between adjacent characters (kerning) and at the start or end of text lines. Generally speaking:
 
-- If a full width punctuation character is set to be full width, it has internal spacing set on both sides and is the full width of an ideograph.
-- If a full width punctuation character is set to be half width, it has internal spacing set on one side only, and its other side is flush to the start (in the case of opening punctuation characters) or end (in the case of closing punctuation characters). Half width characters are typically half the width of an ideograph.
+- If a full-width punctuation character is set to be full-width, it has internal spacing set on both sides and is the full width of an ideograph.
+- If a full-width punctuation character is set to be half-width, it has internal spacing set on one side only, and its other side is flush to the start (in the case of opening punctuation characters) or end (in the case of closing punctuation characters). Half-width characters are typically half the width of an ideograph.
 
-> **Note:** To avoid the risk of excessive kerning, fonts must have the OpenType Alternate Half Widths (`halt`) or Contextual Half-width Spacing (`chws`) feature, or both. If the font doesn't have either feature, `text-spacing-trim` is disabled.
+> **Note:** To avoid the risk of excessive kerning, fonts must have the OpenType Alternate Half Widths (`halt`) feature, the Contextual Half-width Spacing (`chws`) feature, or both. If the font doesn't have either feature, `text-spacing-trim` is disabled.
+> å
 
-### Full width punctuation collapsing
+### Full-width punctuation collapsing
 
-When pairs of punctuation characters appear adjacent to one another, the space between them is colapsed according to the following rules:
+When pairs of punctuation characters are adjacent to one another, the space between them is collapsed according to the following rules:
 
-- Set a full width opening punctuation character to half width if the previous character is a fullwidth opening punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth closing punctuation character of an equivalent or larger font-size, or a character belonging to Unicode general category Ps. Otherwise set it to full width.
-- Set a full width closing punctuation character to half width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character of a larger font-size, or a character belonging to Unicode general category Pe. Otherwise set it to full width.
+- Set a full-width opening punctuation character to half-width if the previous character is a fullwidth opening punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth closing punctuation character of an equivalent or larger font size, or a character belonging to [Unicode general category "Open punctuation" Ps](https://www.compart.com/en/unicode/category/Ps). Otherwise, set it to full-width.
+- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with a larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://www.compart.com/en/unicode/category/Pe). Otherwise, set it to full-width.
 
 ## Formal definition
 
@@ -86,28 +88,28 @@ This example compares the effect of four different `text-spacing-trim` propertie
 <main>
   <div id="normal">
     <h2>normal</h2>
-    <p class="test">
+    <p>
       （東）、【「（東）」】。<br />
       「東」「東」「東」東東東「東」。
     </p>
   </div>
   <div id="space-all">
     <h2>space-all</h2>
-    <p class="test">
+    <p>
       （東）、【「（東）」】。<br />
       「東」「東」「東」東東東「東」。
     </p>
   </div>
   <div id="space-first">
     <h2>space-first</h2>
-    <p class="test">
+    <p>
       （東）、【「（東）」】。<br />
       「東」「東」「東」東東東「東」。
     </p>
   </div>
   <div id="trim-start">
     <h2>trim-start</h2>
-    <p class="test">
+    <p>
       （東）、【「（東）」】。<br />
       「東」「東」「東」東東東「東」。
     </p>
@@ -131,7 +133,7 @@ h2 {
   font-size: 80%;
   margin: 0;
 }
-.test {
+p {
   font-size: 20px;
   border: 1px solid blue;
   margin: 0;
@@ -172,4 +174,5 @@ h2 {
 
 ## See also
 
+- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units#root_font-relative_lengths) units
 - The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module
