@@ -48,7 +48,7 @@ The most performant, least blocking JavaScript you can use is JavaScript that yo
 - **Consider built-in browser features**: It might be that you can use a feature the browser already has, rather than creating your own via JavaScript. For example:
   - Use [built-in client-side form validation](/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation).
   - Use the browser's own {{htmlelement("video")}} player.
-  - Use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead of a JavaScript animation library (see also [Handling animations](#handling_animations)).
+  - Use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead of a JavaScript animation library (see also [Handling animations](#handling_javascript_animations)).
 
 You should also split your JavaScript into multiple files representing critical and non-critical parts. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) allow you to do this more efficiently than just using separate external JavaScript files.
 

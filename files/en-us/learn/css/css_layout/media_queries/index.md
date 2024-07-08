@@ -163,7 +163,6 @@ If you want to improve the readability of this, you can use "range" syntax:
 ```
 
 So in this case, styles are applied when the viewport width is between `30em` and `50em`.
-For more information on using this style, see [Using Media Queries: Syntax improvements in Level 4](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4)
 
 ## More complex media queries
 
