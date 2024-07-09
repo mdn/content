@@ -212,94 +212,71 @@ Note that `justify-contents` aligns the columns and has no effect on the items o
 
 ### The safe keyword
 
-This example demonstrates the `safe` keyterm. The HTML and CSS is the same as in the above example, except for the `justify-content` values:
+This example demonstrates the `safe` keyterm. Four centered flex items are not allowed to wrap, overflow their single flex-line container. By adding `safe` to `center` in the `justify-content` property, overflowing content behaves as if the alignment mode is `start`
 
 ```html hidden
-<p><code>justify-content: space-around;</code></p>
+<p><code>justify-content: center;</code></p>
 <section class="container">
   <div>A</div>
   <div>B</div>
   <div>C</div>
   <div>D</div>
-  <div>E</div>
-  <div>F</div>
-  <div>G</div>
-  <div>H</div>
-  <div>I</div>
-  <div>J</div>
-  <div>K</div>
-  <div>L</div>
-  <div>M</div>
-  <div>N</div>
-  <div>O</div>
-  <div>P</div>
 </section>
-<p><code>justify-content: safe space-around;</code></p>
+<p><code>justify-content: safe center;</code></p>
 <section class="container">
   <div>A</div>
   <div>B</div>
   <div>C</div>
   <div>D</div>
-  <div>E</div>
-  <div>F</div>
-  <div>G</div>
-  <div>H</div>
-  <div>I</div>
-  <div>J</div>
-  <div>K</div>
-  <div>L</div>
-  <div>M</div>
-  <div>N</div>
-  <div>O</div>
-  <div>P</div>
+</section>
+<p><code>justify-content: safe center;</code with 3 items</p>
+<section class="container">
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
 </section>
 ```
 
 ```css hidden
 .container {
-  margin: 5px;
-  border: 1px solid;
+  margin: 5px auto;
+  border: 1px dashed;
   box-sizing: border-box;
-  display: grid;
-  grid: auto-flow / repeat(3, 80px);
-  width: 500px;
+  background-color: lightblue;
 }
 
 div {
-  line-height: 2em;
+  line-height: 1em;
   border: 1px solid;
   box-sizing: border-box;
   text-align: center;
   background-color: pink;
-  width: 80px;
-}
-
-div:nth-of-type(n + 9) {
-  width: 35px;
-  background-color: lightgreen;
-}
-
-div:nth-last-of-type(3) {
-  width: 250px;
-  background-color: lightblue;
 }
 ```
 
-The first container is set to `space-around`, the second is too, but with the `safe` keyword added:
+The container is set to `center`, with every container other than the first having the `safe` keyword added:
 
 ```css
-.container:first-of-type {
-  justify-content: space-around;
+.container {
+  justify-content: center;
+  align-items: baseline;
+  display: flex;
+  width: 350px;
+  height: 2em;
 }
 
-.container:last-of-type {
-  justify-content: safe space-around;
+.container ~ .container {
+  justify-content: safe center;
+}
+
+div {
+  flex: 0 0 100px;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("the safe keyword", "100%", 360)}}
+{{EmbedLiveSample("the safe keyword", "100%", 260)}}
 
 As an item overflows the alignment container, with `safe` included, the alignment mode is `start` and the `space-around` alignment is not implemented.
 
@@ -310,8 +287,10 @@ This example includes a multi-line wrapping flex layout. The second flex item ha
 #### CSS
 
 ```css hidden
-container {
-  margin: 5px;
+#container {
+  margin: 5px auto;
+  border: 1px dashed #ccc;
+  box-sizing: border-box;
 }
 
 div {
