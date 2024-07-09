@@ -35,7 +35,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
-- `crossorigin`
+- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 

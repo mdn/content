@@ -33,7 +33,7 @@ open(url, target, windowFeatures)
 
 - `windowFeatures` {{optional_inline}}
 
-  - : A string containing a comma-separated list of window features in the form `name=value` — or for boolean features, just `name`. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
+  - : A string containing a comma-separated list of window features in the form `name=value`. Boolean values can be set to true using one of: `name`, `name=yes`, `name=true`, or `name=n` where `n` is any non-zero integer. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
 
     - `attributionsrc` {{experimental_inline}}
 
@@ -47,15 +47,17 @@ open(url, target, windowFeatures)
 
     - `popup`
 
-      - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
+      - : By default, `window.open` opens the page in a new tab. If `popup` is set to true, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only. If `popup` is present and set to false, a new tab is still opened.
 
-        If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
+        There are a few legacy features, which used to control UI features of the opened window. In modern browsers, they only have the effect of requesting a popup. If `popup` is unspecified, and `windowFeatures` contains any features (including unrecognized ones) other than `noopener`, `noreferrer`, or `attributionsrc`, the window is also opened as a popup if any of the following conditions apply:
 
-        > **Note:** Specifying any features in the `windowFeatures` parameter, other than `noopener` or `noreferrer`, also has the effect of requesting a popup.
+        - `location` and `toolbar` are both false or absent
+        - `menubar` is false or absent
+        - `resizable` is false
+        - `scrollbars` is false or absent
+        - `status` is false or absent
 
-        To enable the feature, specify `popup` either with no value at all, or else set it to `yes`, `1`, or `true`.
-
-        Example: `popup=yes`, `popup=1`, `popup=true`, and `popup` all have identical results.
+        Otherwise the window is opened as a tab.
 
     - `width` or `innerWidth`
 

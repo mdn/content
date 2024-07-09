@@ -2,7 +2,7 @@
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
 page-type: http-status-code
-browser-compat: http.status.418
+spec-urls: https://www.rfc-editor.org/rfc/rfc2324#section-2.3.2
 ---
 
 {{HTTPSidebar}}
@@ -20,10 +20,6 @@ Some websites use this response for requests they do not wish to handle, such as
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
