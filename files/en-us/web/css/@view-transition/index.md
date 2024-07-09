@@ -81,7 +81,7 @@ In addition to the above `@view-transition` at-rule in the CSS for both the curr
 }
 ```
 
-The above CSS is included in the [View transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/), demonstrating this at-rule example in action.
+The above CSS is included in the [View transitions multi-page app demo](https://mdn.github.io/dom-examples/view-transitions/mpa/), demonstrating this at-rule example in action.
 
 ## Specifications
 
