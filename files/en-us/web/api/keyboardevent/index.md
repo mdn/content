@@ -274,7 +274,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ### Compatibility notes
 
-- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)), except for the
+- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the
 
   <kbd>Enter</kbd>
 

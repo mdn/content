@@ -109,7 +109,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`:
 \{{EmbedLiveSample("paragraph-styling")}}
 ````
 
-The macro uses a special URL to fetch the output for a given group of code blocks, for example `https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`. The general structure followed is `https://url-of-page/_sample_.group-id.html`, where `group-id` is the ID of the heading or block where the code blocks are located.
+The macro uses a special URL that includes the ID to fetch the output for a given group of code blocks. You should never hardcode this URL in content — if you need to link to the example, use the [`LiveSampleLink`](#livesamplelink_macro) macro.
 
 The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the web. Of course, as a practical matter, the code should be relevant to the page's content; any unrelated material is subject to removal by MDN's editor community.
 

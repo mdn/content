@@ -10,10 +10,8 @@ page-type: glossary-definition
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("Lossless compression")}}
   - {{glossary("Lossy compression")}}
-
 - [The gzip home page](https://www.gzip.org/)
 - [gzip on Wikipedia](https://en.wikipedia.org/wiki/Gzip)

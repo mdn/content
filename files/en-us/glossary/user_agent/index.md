@@ -22,7 +22,8 @@ A typical user agent string looks like this: `"Mozilla/5.0 (Windows NT 10.0; Win
 - {{domxref("navigator.userAgent")}}
 - [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}: The `User-Agent` header
-- {{Glossary("Browser")}} (glossary)
+- Related glossary terms:
+  - {{Glossary("Browser")}}
 - HTTP Headers
 
   - {{HTTPHeader("User-agent")}}
