@@ -20,7 +20,7 @@ Attributes may be _reflected_ into a particular property of the specific interfa
 It means that the value of the attribute can be read by accessing the property,
 and can be modified by setting the property to a different value.
 
-For example, the `placeholder` below is reflected into {{domxref("HTMLInputElement.placeholder")}}.
+For example, the `placeholder` below is reflected into {{domxref("HTML/Attributes/placeholder")}}.
 
 Considering the following HTML:
 
@@ -28,7 +28,7 @@ Considering the following HTML:
 <input placeholder="Original placeholder" />
 ```
 
-We can check the reflection between {{domxref("HTMLInputElement.placeholder")}} and the attribute using:
+We can check the reflection between {{domxref("HTML/Attributes/placeholder")}} and the attribute using:
 
 ```js
 const input = document.querySelector("input");
