@@ -293,7 +293,7 @@ Elements that belong to this category include:
 - {{HtmlElement("strong")}}
 - {{HtmlElement("sub")}}
 - {{HtmlElement("sup")}}
-- {{SVGElement("svg")}} from [SVG](/en-US/docs/Web/SVG/)
+- {{SVGElement("svg")}} from [SVG](en-US/docs/Web/SVG)
 - {{HtmlElement("table")}}
 - {{HtmlElement("textarea")}}
 - {{HtmlElement("time")}}
