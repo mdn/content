@@ -16,6 +16,7 @@ Decryption is the reverse process of {{glossary("encryption")}} and if the key s
 
 ## See also
 
-- {{glossary("Encryption")}}
-- {{glossary("Cipher")}}
-- {{glossary("Cryptography")}}
+- Related glossary terms:
+  - {{glossary("Encryption")}}
+  - {{glossary("Cipher")}}
+  - {{glossary("Cryptography")}}

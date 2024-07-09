@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### HTML
 
+- The [`target`](/en-US/docs/Web/HTML/Element/base#target) attribute of the `<base>` element now disallows ASCII newlines, tabs, or the `<` character, changing the value to `_blank` if any are present. This prevents dangling markup injection attacks that use an unclosed `target` attribute ([Firefox bug 1835157](https://bugzil.la/1835157)).
+
 #### Removals
 
 ### CSS
@@ -64,6 +66,8 @@ This article provides information about the changes in Firefox 128 that affect d
   This provides an application with a simple mechanism to know in advance whether playback at the optimal resolution will be allowed, without having to create a media key session or fetch a real license. ([Firefox bug 1878714](https://bugzil.la/1878714)).
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} is now supported for setting the codecs that a WebRTC local peer is able to use for decoding received data, in its preferred codec order. Web applications can use this to cause the remote peer to choose a preferred codec, and to disable the negotiation of specific codecs — including those used for retransmission, redundancy, and forward error correction. ([Firefox bug 1396922](https://bugzil.la/1396922)).
 - Serialization of [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), including the methods {{domxref('ShadowRoot.getHTML()')}} and {{domxref('Element.getHTML()')}}, and associated properties {{domxref('ShadowRoot.serializable')}} and {{domxref('HTMLTemplateElement.shadowRootSerializable')}}.
+- The [`CSSPropertyRule`](/en-US/docs/Web/API/CSSPropertyRule) interface is now supported by default and represents a CSS [`@property`](/en-US/docs/Web/CSS/@property) at-rule. The interface allows you to get the values, including [`name`](/en-US/docs/Web/API/CSSPropertyRule/name), [`syntax`](/en-US/docs/Web/API/CSSPropertyRule/syntax), [`inherits`](/en-US/docs/Web/API/CSSPropertyRule/inherits), and [`initialValue`](/en-US/docs/Web/API/CSSPropertyRule/initialvalue), of CSS custom properties defined using the `@property` at-rule ([Firefox bug 1864818](https://bugzil.la/1864818)).
+- The [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) method is now supported by default. It allows you to define [CSS custom properties](/en-US/docs/Web/CSS/--*) via JavaScript, which is similar to using the `@property` at-rule in CSS ([Firefox bug 1864818](https://bugzil.la/1864818)).
 
 #### DOM
 
@@ -119,6 +123,10 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 - **`image/jxl` MIME type in Accept header for default and image requests:** `image.jxl.enabled`.
 
   The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured to indicate support for the `image/jxl` MIME type. ([Firefox bug 1711622](https://bugzil.la/1711622)).
+
+- **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`.
+
+  [CHIPS](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. When set, cookies have separate storage for each top-level site, and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1898253](https://bugzil.la/1898253)).
 
 ## Older versions
 
