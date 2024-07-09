@@ -238,8 +238,7 @@ Some elements belong to this category only under specific conditions:
 
 ### Palpable content
 
-Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
-Elements that belong to this category include:
+Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable. Elements that belong to this category include:
 
 - {{HTMLElement("a")}}
 - {{HTMLElement("abbr")}}
