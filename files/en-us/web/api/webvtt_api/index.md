@@ -11,7 +11,7 @@ browser-compat:
 {{DefaultAPISidebar("WebVTT")}}
 
 **Web Video Text Tracks** (**WebVTT**) are text tracks that can be used to provide specific text "cues" that are time-aligned with other media, such as video or audio tracks.
-They are primarily used for displaying video subtitles or captions that overlay with video content, but they can also be used to provide chapter information for easier navigation, audio descriptions, and generally any other form of metadata that needs to be time-aligned with audio or video content.
+They are primarily used for displaying video subtitles or captions that overlay with video content, but they can also be used to provide chapter information for easier navigation, and generic metadata that needs to be time-aligned with audio or video content.
 
 ## Concepts and usage
 
@@ -26,8 +26,6 @@ Note that browser do not necessarily support all kinds of text tracks.
 - `captions` provide a transcription of spoken text, and may include information about other audio such as music or background noise.
   They are intended for hearing impaired users.
 - `chapters` provide high level navigation information, allowing users to more easily switch to relevant content.
-- `descriptions` provide a textual description of the video content.
-  They are intended for users who are sight impaired, or for when the video can't be seen clearly.
 - `metadata` is used for any other kinds of time-aligned information.
 
 The individual time-aligned units of text data within a track are referred to as "cues".
