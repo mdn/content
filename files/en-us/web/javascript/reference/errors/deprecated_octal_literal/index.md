@@ -12,6 +12,8 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ```plain
 SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
+SyntaxError: Decimals with leading zeros are not allowed in strict mode. (V8-based)
+SyntaxError: Unexpected number (V8-based)
 SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
 SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)
 ```
@@ -23,6 +25,8 @@ SyntaxError: Decimal integer literals with a leading zero are forbidden in stric
 ## What went wrong?
 
 Octal literals are deprecated. When you prefix a decimal integer with `0`, you actually change it to an octal literal, which may be surprising. The standardized syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O`).
+
+Leading zeros are always forbidden, even when the literal is not valid octal literal syntax (such as when the literal contains the digits `8` or `9`, or it has a decimal point). A number literal may only start with `0` if that 0 is its units place.
 
 ## Examples
 
