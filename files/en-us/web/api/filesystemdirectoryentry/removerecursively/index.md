@@ -40,7 +40,7 @@ removeRecursively(successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 If an error occurs and an `errorCallback` was specified, it gets called with
 a single parameter: a {{domxref("FileError")}} object describing the error. The

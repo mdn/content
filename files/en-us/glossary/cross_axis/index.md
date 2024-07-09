@@ -35,12 +35,12 @@ Alignment of items on the cross axis is achieved with the `align-items` property
 
 ### Further reading
 
-- CSS Flexbox Guide:
-  - [Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-  - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [Glossary](/en-US/docs/Glossary)
+CSS flexbox guides:
 
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- Related glossary terms:
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container")}}
   - {{Glossary("Flex Item")}}

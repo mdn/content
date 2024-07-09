@@ -28,7 +28,7 @@ The cards in the group should line up in two dimensions — both vertically and 
 
 ## Choices made
 
-Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite the layout being one-dimensional. This enables the use of content sizing for the grid tracks. To set up a single-column grid we can use the following:
+Each card is laid out using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite the layout being one-dimensional. This enables the use of content sizing for the grid tracks. To set up a single-column grid we can use the following:
 
 ```css
 .card {
@@ -69,10 +69,12 @@ We chose grid for the cards as, generally, you want cards to be lined up both ve
 
 ## Accessibility concerns
 
-Depending on the content of your card, there may be things you could or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
+Depending on the content of your card, there may be things you could or should do to enhance accessibility. See [Inclusive components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
 
 ## See also
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
-- [Inclusive Components: Card](https://inclusive-components.design/cards/)
-- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- {{Cssxref("grid-template-columns")}}
+- {{Cssxref("grid-template-rows")}}
+- {{Cssxref("gap")}}
+- [Inclusive components: Card](https://inclusive-components.design/cards/)
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module

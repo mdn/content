@@ -57,7 +57,7 @@ arc.temperature = 30;
 // TypeError: setting getter-only property "temperature"
 ```
 
-To fix this error, you will either need to remove line 16, where there is an attempt to
+To fix this error, you will either need to remove the `arc.temperature = 30` line, which attempts to
 set the temperature property, or you will need to implement a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) for it, for
 example like this:
 

@@ -40,10 +40,14 @@ To display list items inline, we use [flexbox layout](/en-US/docs/Learn/CSS/CSS_
 
 We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
-Be aware that the arrows `→` added via `content` are exposed to screen readers and braille displays.
+Be aware that the separator arrows `→` added via the {{cssxref("content")}} CSS property in the example above are exposed to assistive technologies (AT), including screen readers and braille displays. For a quieter solution, use a decorative {{HTMLElement("img")}} in your HTML with an empty `alt` attribute. An ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) will also prevent the image from being exposed to AT.
+
+Alternatively, silence the [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) by including an empty string as alternative text, preceded by a slash (`/`); for example, `content: url("arrow.png") / "";`.
+
+If including generated separators that will be exposed to AT, opt for creating the generated content using the {{cssxref("::after")}} pseudo-element selector instead of {{cssxref("::before")}}, so the separator content is announced after the HTML content instead of before it.
 
 ## See also
 
-- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-- [Providing a Breadcrumb Trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [Providing a breadcrumb trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Using the `aria-current` attribute](https://tink.uk/using-the-aria-current-attribute/)

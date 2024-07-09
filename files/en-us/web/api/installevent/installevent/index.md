@@ -27,7 +27,7 @@ new InstallEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can contain any custom settings that you want to apply to the event object. Currently no possible options are mandatory, but this has been defined for forward compatibility.
 
-## Return value
+### Return value
 
 A new {{domxref("InstallEvent")}} object.
 

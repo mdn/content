@@ -72,8 +72,38 @@ setParameters(parameters)
         This ID is set in the previous {{domxref("RTCRtpSender.getParameters", "getParameters()")}} call, and ensures that the parameters originated from a previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}.
         <!-- spec defines following in RTCRtpParameters -->
     - `codecs`
-      - : An array of {{domxref("RTCRtpCodecParameters")}} objects describing the set of codecs from which the sender will choose.
-        This parameter cannot be changed.
+
+      - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) from which the sender will choose.
+        This parameter cannot be changed once initially set.
+
+        Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
+
+        - `channels` {{optional_inline}}
+
+          - : A positive integer indicating the number of channels supported by the codec.
+            For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
+
+        - `clockRate`
+
+          - : A positive integer specifying the codec's clock rate in Hertz (Hz).
+            The clock rate is the rate at which the codec's RTP timestamp advances.
+            Most codecs have specific values or ranges of values they permit.
+            The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+
+        - `mimeType`
+
+          - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
+            The MIME type strings used by RTP differ from those used elsewhere.
+            IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+            Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+
+        - `payloadType`
+
+          - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
+
+        - `sdpFmtpLine` {{optional_inline}}
+          - : A string giving the format specific parameters provided by the local description.
+
     - `headerExtensions`
       - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender.
         Header extensions are described in {{RFC(3550, "", "5.3.1")}}.
@@ -105,7 +135,7 @@ If an error occurs, the returned promise is rejected with the appropriate except
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error occurs that does not match the ones specified here.
 - {{jsxref("RangeError")}}
-  - : Returned if the value specified for `scaleResolutionDownBy` option is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` {{domxref("#maxframerate", "maxFramerate")}} values is less than 0.0.
+  - : Returned if the value specified for `scaleResolutionDownBy` option is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` [`maxFramerate`](#maxframerate) values is less than 0.0.
 
 In addition, if a WebRTC error occurs while configuring or accessing the media, an {{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail", "errorDetail")}} set to `hardware-encoder-error`.
 
@@ -121,7 +151,7 @@ One use case for `setParameters()` is to try to reduce network bandwidth used in
 
 Currently, some browsers have limitations on their implementations that may cause issues.
 For that reason, two examples are given here.
-The first shows how to use `setParameters()` when all browsers fully support the parameters being used, while the second example demonstrates workarounds to help solve limitations in browsers with incomplete support for the {{domxref("#maxBitrate","maxBitrate")}} and {{domxref("#scaleResolutionDownBy", "scaleResolutionDownBy")}} parameters.
+The first shows how to use `setParameters()` when all browsers fully support the parameters being used, while the second example demonstrates workarounds to help solve limitations in browsers with incomplete support for the [`maxBitrate`](#maxbitrate) and [`scaleResolutionDownBy`](#scaleresolutiondownby) parameters.
 
 ### By the specification
 
@@ -144,7 +174,7 @@ In calling this function, you specify a sender, as well as the height you wish t
 A scaling factor for the size of the video, `scaleRatio`, is computed.
 Then the sender's current parameters are fetched using {{domxref("RTCRtpSender.getParameters", "getParameters()")}}.
 
-The parameters are then altered by changing the first `encodings` object's {{domxref("#scaleResolutionDownBy", "scaleResolutionDownBy")}} and {{domxref("#maxBitrate", "maxBitrate")}} to the calculated scaling factor and the specified maximum `bitrate`.
+The parameters are then altered by changing the first `encodings` object's [`scaleResolutionDownBy`](#scaleresolutiondownby) and [`maxBitrate`](#maxbitrate) to the calculated scaling factor and the specified maximum `bitrate`.
 
 The changed parameters are then saved by calling the sender's `setParameters()` method.
 

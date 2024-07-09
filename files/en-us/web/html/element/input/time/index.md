@@ -301,7 +301,7 @@ input:valid + span::after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
+      <td><strong><a href="/en-US/docs/Web/HTML/Element/input#value">Value</a></strong></td>
       <td>A string representing a time, or empty.</td>
     </tr>
     <tr>
@@ -363,5 +363,5 @@ input:valid + span::after {
 - [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -26,7 +26,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
   - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
-  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
+  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
@@ -101,9 +101,9 @@ Make a textarea autogrow while typing:
 #### JavaScript
 
 ```js
-function autoGrow(oField) {
-  if (oField.scrollHeight > oField.clientHeight) {
-    oField.style.height = `${oField.scrollHeight}px`;
+function autoGrow(field) {
+  if (field.scrollHeight > field.clientHeight) {
+    field.style.height = `${field.scrollHeight}px`;
   }
 }
 ```
@@ -211,71 +211,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vita
 ```
 
 {{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
-
-### Maximum length and number of lines example
-
-Create a textarea with a maximum number of characters per line and a maximum number of lines:
-
-First, create a function that takes the text field and a key event as input and determines if any of the limits have been reached. If the limit has not been reached, it will return the key.
-
-```js
-function checkRows(oField, oKeyEvent) {
-  let nKey = (
-      oKeyEvent ||
-      /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }
-    ).keyCode,
-    // put here the maximum number of characters per line:
-    nCols = 30,
-    // put here the maximum number of lines:
-    nRows = 5,
-    nSelS = oField.selectionStart,
-    nSelE = oField.selectionEnd,
-    sVal = oField.value,
-    nLen = sVal.length,
-    nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw =
-      sVal
-        .substring(nBackward, nSelS)
-        .search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
-    nRowStart = nBackward + nDeltaForw,
-    aReturns = (
-      sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)
-    ).match(/\n/g),
-    nRowEnd = nSelE + nRowStart + nCols - nSelS,
-    sRow =
-      sVal.substring(nRowStart, nSelS) +
-      sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
-    bKeepCols =
-      nKey === 13 ||
-      nLen + 1 < nCols ||
-      /\n/.test(sRow) ||
-      ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) &&
-        (sRow.length < nCols ||
-          (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
-
-  return (
-    (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) &&
-    ((nKey > 32 && nKey < 41) || bKeepCols)
-  );
-}
-```
-
-In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
-
-```html
-<form>
-  <p>
-    Textarea with fixed number of characters per line:<br />
-    <textarea
-      cols="50"
-      rows="10"
-      onkeypress="return checkRows(this, event);"
-      onpaste="return false;"></textarea>
-  </p>
-</form>
-```
-
-{{EmbedLiveSample('Maximum_length_and_number_of_lines_example', 600, 300)}}
 
 ## Specifications
 
