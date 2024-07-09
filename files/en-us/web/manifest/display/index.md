@@ -34,7 +34,7 @@ The value of the `display` member is a string. The possible values include `full
   - : Opens the app to look and feel like a standalone app but with a minimal set of UI elements for navigation. The specific elements can vary by browser but typically include navigation controls like back, forward, reload, and possibly a way to view the app's URL. Additionally, the browser may include platform-specific UI elements that provide functionality for sharing and printing content. Use this value for apps where displaying a minimal browser interface is beneficial. For example, use it for a news reading or other general reading apps that show only the essential browser controls like back and reload buttons, providing a cleaner and less distracting interface.
 
 - `browser`
-  - : Opens the app in a conventional browser tab or new window, using the platform-specific convention for opening hyperlinks. Use this value for apps that are designed to be used within a browser context, where full browser functionality is needed. This is the default value if no `display` mode is specified.
+  - : Opens the app in a conventional browser tab or new window, using the platform-specific convention for opening links. Use this value for apps that are designed to be used within a browser context, where full browser functionality is needed. This is the default value if no `display` mode is specified.
 
 ## Description
 
