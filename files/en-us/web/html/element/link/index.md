@@ -324,17 +324,30 @@ This provides a way for users to see multiple versions of a page.
 You can include links to several icons on the same page, and the browser will choose which one works best for its particular context using the `rel` and `sizes` values as hints.
 
 ```html
-<!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
-<!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
-<!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
-<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon" href="favicon57.png" />
+<!-- iPad Pro with high-resolution Retina display: -->
+<link
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x resolution iPhone: -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- non-Retina iPad, iPad mini, etc.: -->
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x resolution iPhone and other devices: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
+
+For information about what `sizes` to choose for Apple icons, see [Apple's documentation on configuring web applications](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and the referenced [Apple human interface guidelines](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes). Usually, it is sufficient to provide a large image, such as 192x192, and let the browser scale it down as needed, but you may want to provide images with different levels of detail for different sizes, as the Apple design guideline recommends. Providing smaller icons for lower resolutions also saves bandwidth.
+
+It may not be necessary to provide `<link>` elements at all. For example, browsers automatically request `/favicon.ico` from the root of a site, and Apple also automatically requests `/apple-touch-icon-[size].png`, `/apple-touch-icon.png`, etc. However, providing explicit links protects you against changes to these conventions.
 
 ### Conditionally loading resources with media queries
 

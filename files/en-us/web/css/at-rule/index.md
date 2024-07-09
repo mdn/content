@@ -29,6 +29,8 @@ There are several regular at-rules, designated by their identifiers, each with a
 - {{cssxref("@import")}} — Tells the CSS engine to include an external style sheet.
 - {{cssxref("@namespace")}} — Tells the CSS engine that all its content must be considered prefixed with an XML namespace.
 
+> **Note:** Strictly speaking, `@charset` is not an at-rule, but a special byte sequence that's stripped before processing the content. Read its reference for more information.
+
 ### Nested
 
 ```css

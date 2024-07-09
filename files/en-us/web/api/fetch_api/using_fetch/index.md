@@ -294,6 +294,23 @@ cancelButton.addEventListener("click", () => {
 });
 ```
 
+If the request is aborted after the `fetch()` call has been fulfilled but before the response body has been read, then attempting to read the response body will reject with an `AbortError` exception.
+
+```js
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
+
+  const response = await fetch(request);
+  controller.abort();
+  // The next line will throw `AbortError`
+  const text = await response.text();
+  console.log(text);
+}
+```
+
 ## Handling the response
 
 As soon as the browser has received the response status and headers from the server (and potentially before the response body itself has been received), the promise returned by `fetch()` is fulfilled with a {{domxref("Response")}} object.

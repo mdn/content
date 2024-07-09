@@ -60,7 +60,7 @@ In the following examples, the {{CSSxRef("flex-direction")}} is set to `row`, so
 
 The {{CSSxRef("flex-basis")}} property specifies the initial size of a flex item before any distribution of the positive or negative free space happens. The initial value for this property is `auto`. This property accepts the same values as the {{cssxref("width")}} and {{cssxref("height")}} properties, and it also accepts the `content` keyword.
 
-If `flex-basis` is set to `auto`, the initial size of the item is the {{cssxref("length-percentage")}} size of the main size, if any was set. For example, if the item has `width: 200px` set, then `200px` would be the `flex-basis` for this item. Percentage values are relative to the flex container's inner main size. If `width: 50%` were set, the `flex-basis` for this item would be half of the container's content-box width. If no such size is set, meaning the item is auto-sized, then `auto` resolves to the size of its content (see the [`min-` and `max-content` sizing](#flex-item-sizing) discussion above), meaning the `flex-basis` is the item's `max-content` size.
+If `flex-basis` is set to `auto`, the initial size of the item is the {{cssxref("length-percentage")}} size of the main size, if any was set. For example, if the item has `width: 200px` set, then `200px` would be the `flex-basis` for this item. Percentage values are relative to the flex container's inner main size. If `width: 50%` were set, the `flex-basis` for this item would be half of the container's content-box width. If no such size is set, meaning the item is auto-sized, then `auto` resolves to the size of its content (see the [`min-` and `max-content` sizing](#flex_item_sizing) discussion above), meaning the `flex-basis` is the item's `max-content` size.
 
 This example contains three inflexible flex items, with both `flex-grow` and `flex-shrink` set to `0`. The first item, which has an explicit width of `150px`, takes a `flex-basis` of `150px`, whereas the other two items have no width set and so are sized according to their content width or `max-content`.
 
@@ -132,7 +132,7 @@ Change the `flex-shrink` value to `1`; each item will shrink by the same amount,
 
 It may appear that `flex-shrink` works in the same way as `flex-grow`, by shrinking rather than growing elements. However, there are some important differences to note.
 
-The concept of [flex base size](#what_determines_the_base_size_of_the_item) affects how negative space is distributed across flex items. The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink. So, for example, a small item won't shrink to zero before a larger item has been noticeably reduced.
+The concept of [flex base size](#what_determines_the_base_size_of_an_item) affects how negative space is distributed across flex items. The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink. So, for example, a small item won't shrink to zero before a larger item has been noticeably reduced.
 
 Small items will not shrink to less than their `min-content` size, which is the smallest size the element can be if it used all the available soft wrapping opportunities.
 
