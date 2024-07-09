@@ -22,7 +22,7 @@ addRoutes(routerRules)
 
 - `routerRules`
 
-  - : A single object, or an array of one or more objects representing rules for how certain resources should be fetched and where from. Each `routerRules` object contains the following two properties:
+  - : A single object, or an array of one or more objects, representing rules for how certain resources should be fetched. Each `routerRules` object contains the following properties:
 
     - `condition`
 
