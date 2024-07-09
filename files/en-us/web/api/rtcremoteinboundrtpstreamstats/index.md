@@ -19,7 +19,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 <!-- RTCRemoteInboundRtpStreamStats -->
 
 - {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}} {{optional_inline}}
-  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
+  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}} {{optional_inline}}
   - : A number indicating the fraction of packets lost for this SSRC since the last sender or receiver report.
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}} {{optional_inline}}
