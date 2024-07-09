@@ -16,8 +16,8 @@ The **`Document.body`** property represents the
 
 One of the following:
 
-- {{domxref("HTMLBodyElement")}}.
-- {{domxref("HTMLFrameSetElement")}}.
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
 - `null`
 
 ## Examples
