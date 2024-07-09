@@ -61,7 +61,7 @@ Your service worker can respond to requests using the {{DOMxRef("FetchEvent")}} 
 
 For a complete tutorial to show how to build up your first basic example, read [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
-### Adding static routing to control how resources are fetched
+### Using static routing to control how resources are fetched
 
 Service workers can incur a performance cost — when a page is loaded for the first time in a while, the browser has to wait for the service worker to start up and run to know what content to load. This cost can be significant, for example, if you are attempting to improve performance via service worker caching strategies.
 
