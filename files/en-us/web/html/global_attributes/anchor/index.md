@@ -3,11 +3,12 @@ title: anchor
 slug: Web/HTML/Global_attributes/anchor
 page-type: html-attribute
 status:
+  - experimental
   - non-standard
 browser-compat: html.global_attributes.anchor
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
+{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`anchor`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to associate a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 
@@ -83,7 +84,7 @@ body {
 }
 ```
 
-We use CSS to convert the `infobox` element into an **anchor-positioned element** and position it relative to its anchor. We set its:
+We use CSS to convert the `infobox` element into an _anchor-positioned element_ and position it relative to its anchor. We set its:
 
 - {{cssxref("position")}} property to `fixed`, converting it to a positioned element so it can be positioned relative to the anchor's position.
 - {{cssxref("left")}} property to an {{cssxref("anchor()")}} function with a value of `right`. This tethers the positioned element to its anchor, positioning its left edge flush to the anchor's right edge.

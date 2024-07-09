@@ -675,8 +675,8 @@ To achieve this, we need two things:
 First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.
 
 ```html
-<body>
-  <form class="no-widget">
+<body class="no-widget">
+  <form>
     <select name="myFruit">
       <option>Cherry</option>
       <option>Lemon</option>

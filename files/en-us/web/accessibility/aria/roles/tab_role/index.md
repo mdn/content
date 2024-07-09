@@ -56,7 +56,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [id](/en-US/docs/Web/HTML/Global_attributes#id)
   - : content
 
-### Keyboard interaction
+### Keyboard interactions
 
 | Key               | Action                                                                                                                                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -161,8 +161,10 @@ To handle changing the active `tab` and `tabpanel`, we have a function that take
 
 ```js
 window.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll('[role="tab"]');
+  // Only handle one particular tablist; if you have multiple tab
+  // lists (might even be nested), you have to apply this code for each one
   const tabList = document.querySelector('[role="tablist"]');
+  const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
 
   // Add a click event handler to each tab
   tabs.forEach((tab) => {
@@ -198,26 +200,26 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function changeTabs(e) {
-  const target = e.target;
-  const parent = target.parentNode;
-  const grandparent = parent.parentNode;
+  const targetTab = e.target;
+  const tabList = targetTab.parentNode;
+  const tabGroup = tabList.parentNode;
 
   // Remove all current selected tabs
-  parent
-    .querySelectorAll('[aria-selected="true"]')
+  tabList
+    .querySelectorAll(':scope > [aria-selected="true"]')
     .forEach((t) => t.setAttribute("aria-selected", false));
 
   // Set this tab as selected
-  target.setAttribute("aria-selected", true);
+  targetTab.setAttribute("aria-selected", true);
 
   // Hide all tab panels
-  grandparent
-    .querySelectorAll('[role="tabpanel"]')
+  tabGroup
+    .querySelectorAll(':scope > [role="tabpanel"]')
     .forEach((p) => p.setAttribute("hidden", true));
 
   // Show the selected panel
-  grandparent.parentNode
-    .querySelector(`#${target.getAttribute("aria-controls")}`)
+  tabGroup
+    .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
     .removeAttribute("hidden");
 }
 ```
