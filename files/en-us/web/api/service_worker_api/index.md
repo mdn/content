@@ -11,12 +11,11 @@ Service workers essentially act as proxy servers that sit between web applicatio
 
 ## Service worker concepts and usage
 
-A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registered against an origin and a path. It takes the form of a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).
+A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registered against an origin and a path. It takes the form of a JavaScript file that can control the web page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).
 
-A service worker is run in a worker context: it therefore has no DOM access and runs on a different thread to the main JavaScript that powers your app, so it is non-blocking. It is designed to be fully async; as a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
+Service workers run in a worker context: they therefore have no DOM access and run on a different thread to the main JavaScript that powers your app. They are non-blocking and designed to be fully asynchronous. As a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
 
-Service workers can't import JavaScript modules dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#browser_compatibility) will throw if it is called in a service worker global scope.
-Static import using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement is allowed.
+Service workers can't import JavaScript modules dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#browser_compatibility) will throw if it is called in a service worker global scope. Static imports using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement are allowed.
 
 Service workers only run over HTTPS, for security reasons. Most significantly, HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs. In Firefox, service worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
@@ -63,9 +62,9 @@ For a complete tutorial to show how to build up your first basic example, read [
 
 ### Using static routing to control how resources are fetched
 
-Service workers can incur a performance cost — when a page is loaded for the first time in a while, the browser has to wait for the service worker to start up and run to know what content to load. This cost can be significant, for example, if you are attempting to improve performance via service worker caching strategies.
+Service workers can incur an unnecessary performance cost — when a page is loaded for the first time in a while, the browser has to wait for the service worker to start up and run to know what content to load and whether it should come from a cache or the network.
 
-In such a case, it would be preferable to bypass the service worker altogether and fetch resources straight from a browser {{domxref("Cache")}}. The {{domxref("InstallEvent.addRoutes()")}} method can be used to implement this use case and more.
+If you already know ahead of time where certain content should be fetched from, you can bypass the service worker altogether and fetch resources immediately. The {{domxref("InstallEvent.addRoutes()")}} method can be used to implement this use case and more.
 
 ## Other use case ideas
 
