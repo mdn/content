@@ -46,7 +46,7 @@ Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}}
 @namespace svg url(http://www.w3.org/2000/svg);
 ```
 
-If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. Block at-rules, also called [block at-rules](/en-US/docs/Web/CSS/At-rule#block_at-rules), like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.
+If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. [Block at-rules](/en-US/docs/Web/CSS/At-rule#block_at-rules) like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.
 
 Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what, if anything, will invalidate the entire at-rule. The expected grammar for [each at-rule](/en-US/docs/Web/CSS/At-rule) and how errors are handled are documented on the respective at-rule page. The handling of invalid content depends on the error.
 
@@ -182,7 +182,7 @@ body {
 }
 ```
 
-In the above code, the custom property declaration is valid. The `background-color` declaration is also valid at compute time. However, when the browser substitutes the custom property in `var(--theme-color)` with `45deg` as a value of the `background-color` property, the grammar is invalid. An {{cssxref("angle")}} is not a valid `background-color` value. In this case, the declaration is not ignored as invalid. Rather, when a custom property is of the wrong type, if the property is inheritable, the value is inherited from its parent. If the property is not inheritable, the default initial value is used. In the case of `background-color`, the property value is not an inherited value, so the inital value of `transparent` is used.
+In the above code, the custom property declaration is valid. The `background-color` declaration is also valid at compute time. However, when the browser substitutes the custom property in `var(--theme-color)` with `45deg` as a value of the `background-color` property, the grammar is invalid. An {{cssxref("angle")}} is not a valid `background-color` value. In this case, the declaration is not ignored as invalid. Rather, when a custom property is of the wrong type, if the property is inheritable, the value is inherited from its parent. If the property is not inheritable, the default initial value is used. In the case of `background-color`, the property value is not an inherited value, so the initial value of `transparent` is used.
 
 To better control the way custom properties fall back, use the {{cssxref("@property")}} at-rule to define the initial value of the property:
 

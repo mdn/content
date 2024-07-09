@@ -25,9 +25,12 @@ spec-urls:
 
 Statement at-rules end in a semicolon. There are several statement at-rules, designated by their identifiers, each with a different syntax:
 
-- {{cssxref("@charset")}} — Defines the character set used by the style sheet.
-- {{cssxref("@import")}} — Tells the CSS engine to include an external style sheet.
-- {{cssxref("@namespace")}} — Tells the CSS engine that all its content must be considered prefixed with an XML namespace.
+- {{cssxref("@charset")}}
+  - : Defines the character set used by the style sheet.
+- {{cssxref("@import")}}
+  - : Tells the CSS engine to include an external style sheet.
+- {{cssxref("@namespace")}}
+  - : Tells the CSS engine that all its content must be considered prefixed with an XML namespace.
 
 > **Note:** Strictly speaking, `@charset` is not an at-rule, but a special byte sequence that's stripped before processing the content. Read its reference for more information.
 
@@ -40,19 +43,30 @@ Statement at-rules end in a semicolon. There are several statement at-rules, des
 
 Block at-rules end in {}-block containing a subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.
 
-- {{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a {{glossary("media query")}}.
-- {{cssxref("@container")}} — A conditional group rule that will apply its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s.
-- {{cssxref("@scope")}} — A conditional group rule that will apply its content if the device meets the criteria of the given condition.
-- {{cssxref("@starting-style")}} — A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
-- {{cssxref("@supports")}} — A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
-- {{cssxref("@document")}} {{deprecated_inline}} — A conditional group rule that will apply its content if the document in which the style sheet is applied meets the criteria of the given condition.
-- {{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.
-- {{cssxref("@font-face")}} — Describes the aspect of an external font to be downloaded.
-- {{cssxref("@keyframes")}} — Describes the aspect of intermediate steps in a CSS animation sequence.
-- {{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles.
-- {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType.
-- {{cssxref("@property")}} — Describes the aspect of custom properties and variables.
-- {{cssxref("@layer")}} – Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
+- {{cssxref("@counter-style")}}
+  - : Defines specific counter styles that are not part of the predefined set of styles.
+- {{cssxref("@container")}}
+  - : A conditional group rule that will apply its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s.
+- {{cssxref("@font-face")}}
+  - : Describes the aspect of an external font to be downloaded.
+- {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
+  - : Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType.
+- {{cssxref("@keyframes")}}
+  - : Describes the aspect of intermediate steps in a CSS animation sequence.
+- {{cssxref("@layer")}}
+  - : Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
+- {{cssxref("@media")}}
+  - : A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
+- {{cssxref("@page")}}
+  - : Describes the aspect of layout changes that will be applied when printing the document.
+- {{cssxref("@property")}}
+  - : Describes the aspect of custom properties and variables.
+- {{cssxref("@scope")}}
+  - : A conditional group rule that will apply its content if the device meets the criteria of the given condition.
+- {{cssxref("@starting-style")}}
+  - : A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
+- {{cssxref("@supports")}}
+  - : A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
 
 ## At-rule uses
 
@@ -60,18 +74,17 @@ Block at-rules end in {}-block containing a subset of nested statements, which c
 
 Much like the values of properties, each at-rule has a different syntax. These statements share a common syntax and each of them can include _nested statements_—either _rulesets_ or _nested at-rules_.
 
-- {{cssxref("@page")}}
 - {{cssxref("@layer")}}
+- {{cssxref("@page")}}
 - {{cssxref("@scope")}}
 
 #### Conditional group rules
 
 Rules that link some type of condition, which at any time evaluates to either **true** or **false**, are further categorized as [conditional group rules](/en-US/docs/Web/CSS/CSS_conditional_rules). If the condition evaluates to **true**, then all of the statements within the group will be applied.
 
-- {{cssxref("@media")}}
 - {{cssxref("@container")}}
+- {{cssxref("@media")}}
 - {{cssxref("@supports")}}
-- {{cssxref("@document")}} {{deprecated_inline}}
 
 Since each conditional group may also contain nested statements, there may be an unspecified amount of nesting.
 
@@ -80,23 +93,23 @@ Since each conditional group may also contain nested statements, there may be an
 At-rules that define custom, reusable style information that can be used as or within property values fall in this category.
 
 - {{cssxref("@counter-style")}}
-- {{cssxref("@property")}}
+- {{cssxref("@font-face")}}
 - {{cssxref("@namespace")}}
+- {{cssxref("@property")}}
 
 ### Manage syntactic constructs
 
 At-rules that declare mappings like import and namespace keywords.
 
-- {{cssxref("@namespace")}}
 - {{cssxref("@import")}}
+- {{cssxref("@namespace")}}
 
 ### Miscellaneous purposes not served by a style rule
 
 These at-rules have properties defined in the declaration block but they serve a special purpose.
 
-- {{cssxref("@starting-style")}}
-- {{cssxref("@font-face")}}
 - {{cssxref("@view-transition")}}
+- {{cssxref("@starting-style")}}
 
 ## Index
 
@@ -104,7 +117,6 @@ These at-rules have properties defined in the declaration block but they serve a
 - {{cssxref("@color-profile")}}
 - {{cssxref("@container")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("@document")}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
 - {{cssxref("@font-feature-values")}}
 - {{cssxref("@font-palette-values")}}
