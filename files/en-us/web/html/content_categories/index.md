@@ -273,7 +273,7 @@ Elements that belong to this category include:
 - {{HtmlElement("main")}}
 - {{HtmlElement("map")}}
 - {{HtmlElement("mark")}}
-- {{MathMLElement("math")}} from [MathML](en-us/doc/Web/MathML/)
+- {{MathMLElement("math")}} from [MathML](/en-us/doc/Web/MathML)
 - {{HtmlElement("meter")}}
 - {{HtmlElement("nav")}}
 - {{HtmlElement("object")}}
@@ -293,7 +293,7 @@ Elements that belong to this category include:
 - {{HtmlElement("strong")}}
 - {{HtmlElement("sub")}}
 - {{HtmlElement("sup")}}
-- {{SVGElement("svg")}} from [SVG](en-US/docs/Web/SVG)
+- {{SVGElement("svg")}} from [SVG](/en-US/docs/Web/SVG)
 - {{HtmlElement("table")}}
 - {{HtmlElement("textarea")}}
 - {{HtmlElement("time")}}
