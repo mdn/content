@@ -22,7 +22,29 @@ SyntaxError: Invalid regular expression: incomplete {} quantifier for Unicode pa
 
 ## What went wrong?
 
+A `{` character in a regular expression pattern starts a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier). A valid quantifier is in the form `{n}`, `{n,}`, or `{n,m}`, where `n` and `m` are non-negative integers and `m` is not less than `n`. If the `{` character does not start a valid quantifier, a `SyntaxError` occurs.
+
+In Unicode-unaware mode, this syntax causes the `{` to become a literal character instead of generating an error, but this is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+
 ## Examples
+
+### Invalid cases
+
+```js example-bad
+/1{/u;
+/1{a}/u;
+/1{}/u;
+/1{1,2,3}/u;
+/1{1, 2}/u;
+```
+
+### Valid cases
+
+```js example-good
+/1{1}/u;
+/1{1,}/u;
+/1{1,2}/u;
+```
 
 ## See also
 

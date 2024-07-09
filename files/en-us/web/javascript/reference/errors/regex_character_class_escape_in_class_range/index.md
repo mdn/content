@@ -22,7 +22,36 @@ SyntaxError: Invalid regular expression: invalid range in character class for Un
 
 ## What went wrong?
 
+A character class can specify a range of characters by using a hyphen (`-`) between two characters. For example, `[a-z]` matches any lowercase letter from `a` to `z`. The two bounds of the range must represent single characters in order for the range to make sense. If one of the bounds actually represents multiple characters, an error is generated. In [non-`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#non-v-mode_character_class), only character class escapes are allowed inside character classes; in [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class), this can also happen if one the bounds is another `[...]` character class.
+
+In Unicode-unaware mode, this syntax causes the `-` to become a literal character instead of generating an error, but this is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) and you should not rely on it.
+
 ## Examples
+
+### Invalid cases
+
+```js example-bad
+/[\s-_]/u; // \s is a character class escape for whitespace
+/[A-\D]/u; // \D is a character class escape for non-digits
+/[\p{L}-\p{N}]/u; // \p{L} is a character class escape for Unicode letters
+/[\w-_]/v; // In unicodeSets mode, character classes can be nested
+```
+
+### Valid cases
+
+```js example-good
+// Put the hyphen at the start of the character class,
+// so it matches the literal character
+/[-\s_]/u;
+// Escape the hyphen so it also matches the literal character
+/[\s\-_]/u;
+// Remove the backslash so the bound is a literal character
+/[A-D]/u;
+// Remove the hyphen so the two bounds represent two alternatives
+/[\p{L}\p{N}]/u;
+// Use -- in unicodeSets mode, which represents set subtraction
+/[\w--_]]/v;
+```
 
 ## See also
 

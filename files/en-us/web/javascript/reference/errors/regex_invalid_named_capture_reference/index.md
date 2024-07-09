@@ -26,7 +26,25 @@ SyntaxError: Invalid regular expression: invalid escaped character for Unicode p
 
 ## What went wrong?
 
+You are using the escape sequence `\k` which is parsed as a [named backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference), but the `\k` is either syntactically invalid or does not refer to a named capture group in the pattern.
+
+`\k` only starts a named backreference when the pattern contains a [named capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) or when the pattern is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode); otherwise, it is an [identity escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences) for the character `k`.
+
 ## Examples
+
+### Invalid cases
+
+```js example-bad
+/\k<x>/u; // Does not refer to a named capture group
+/(?<x>.+)\k<y>/u; // Does not refer to an existing named capture group
+/(?<x>.+)\k{x}/u; // Invalid syntax
+```
+
+### Valid cases
+
+```js example-good
+/(?<x>.+)\k<x>/u; // Refers to an existing named capture group
+```
 
 ## See also
 
