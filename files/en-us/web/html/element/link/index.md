@@ -268,12 +268,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Non-standard attributes
 
-- `methods` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : The value of this attribute provides information about the functions that might be performed on an object.
-    The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link.
-    For example, the browser might choose a different rendering of a link as a function of the methods specified;
-    something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site.
-    This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
 - `target` {{Deprecated_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
