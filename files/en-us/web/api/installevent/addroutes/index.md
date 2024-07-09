@@ -44,7 +44,7 @@ addRoutes(routerRules)
 
     - `source`
 
-      - : An enumerated value or an object specifying how matching resources will be loaded. Possible enumerated values are:
+      - : An enumerated value or an object specifying the source from which matching resources will be loaded. Possible enumerated values are:
 
         - `"cache"`
           - : Matching resources will be loaded from a browser {{domxref("Cache")}}.
