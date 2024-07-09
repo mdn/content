@@ -49,7 +49,7 @@ Installation is attempted when the downloaded file is found to be new — either
 
 If this is the first time a service worker has been made available, installation is attempted, then after a successful installation, it is activated.
 
-If there is an existing service worker available, the new version is installed in the background, but not yet activated — at this point, it is called the _worker in waiting_. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more pages to be loaded, the new service worker activates (becoming the _active worker_). Activation can happen sooner using {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} and existing pages can be claimed by the active worker using {{DOMxRef("Clients.claim()")}}.
+If there is an existing service worker available, the new version is installed in the background, but not yet activated — at this point it is called the _worker in waiting_. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more pages to be loaded, the new service worker activates (becoming the _active worker_). Activation can happen sooner using {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} and existing pages can be claimed by the active worker using {{DOMxRef("Clients.claim()")}}.
 
 You can listen for the {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built-in storage API, and placing assets inside it that you'll want for running your app offline.
 
