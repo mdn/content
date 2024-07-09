@@ -6,13 +6,15 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "invalid property name in regular expression" occurs
+The JavaScript exception "invalid property name in regular expression" or "invalid class property name in regular expression" occurs
 
 ## Message
 
 ```plain
 SyntaxError: Invalid regular expression: /\p{x}/u: Invalid property name (V8-based)
+SyntaxError: Invalid regular expression: /[\p{x}]/u: Invalid property name in character class (V8-based)
 SyntaxError: invalid property name in regular expression (Firefox)
+SyntaxError: invalid class property name in regular expression (Firefox)
 SyntaxError: Invalid regular expression: invalid property expression (Safari)
 ```
 
