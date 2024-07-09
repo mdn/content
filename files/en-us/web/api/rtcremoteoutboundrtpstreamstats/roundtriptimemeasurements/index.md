@@ -8,15 +8,15 @@ browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.roundTripTimeMeasure
 
 {{APIRef("WebRTC")}}
 
-The **`roundTripTimeMeasurements`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary contains a positive integer value that represents the total number valid round trip time measurements received for this [synchronizing source](#ssrc).
+The **`roundTripTimeMeasurements`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary is a positive integer value that represents the total number valid round of trip time measurements received for this [synchronizing source (SSRC)](/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/ssrc).
 
-The count can be used as a measure of the availability and reliability of round-trip-time measurement data.
+The count can be used as a measure of the availability and reliability of round trip time measurement data.
 
 ## Value
 
 A positive number indicating the number of valid round trip time measurements.
 
-This is the count of _RTCP Sender Reports (SR)_ received for this [synchronizing source](#ssrc) that contain a "delay since last RR (DLRR)" field from which a valid round trip time can be derived (according to {{rfc("3611","DLRR Report Block", "4.5")}}).
+This is the number of _RTCP Sender Reports (SR)_ received for this SSRC that contain a "delay since last RR (DLRR)" field from which a valid round trip time can be derived (according to {{rfc("3611","DLRR Report Block", "4.5")}}).
 
 ## Specifications
 

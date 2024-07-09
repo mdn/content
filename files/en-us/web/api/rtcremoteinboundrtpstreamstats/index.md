@@ -19,11 +19,11 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 <!-- RTCRemoteInboundRtpStreamStats -->
 
 - {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}} {{optional_inline}}
-  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](#ssrc).
+  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}} {{optional_inline}}
-  - : A number indicating the fraction packet loss for this [synchronization source (SSRC)](#ssrc). Calculated as defined in [RFC3550] section 6.4.1 and Appendix A.3.
+  - : A number indicating the fraction of packets lost for this SSRC since the last sender or receiver report.
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}} {{optional_inline}}
-  - : A number that indicates the estimated round trip time (RTT) for this [synchronization source (SSRC)](#ssrc), in seconds.
+  - : A number that indicates the estimated round trip time (RTT) for this SSRC, in seconds.
     This property will not exist until valid RTT data has been received.
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTimeMeasurements", "roundTripTimeMeasurements")}} {{optional_inline}}
   - : A positive integer indicating the total number of valid round trip time measurements received for this [synchronization source (SSRC)](#ssrc).
@@ -36,12 +36,12 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 <!-- RTCReceivedRtpStreamStats -->
 
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
-  - : A positive integer indicating the total number of RTP packets received for this [synchronization source (SSRC)](#ssrc), including retransmissions.
+  - : A positive integer indicating the total number of RTP packets received for this SSRC, including retransmissions.
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}} {{optional_inline}}
-  - : An integer indicating the total number of RTP packets lost for this [synchronization source (SSRC)](#ssrc), as measured at the remote endpoint.
-    This value can be negative.
+  - : An integer indicating the total number of RTP packets lost for this SSRC, as measured at the remote endpoint.
+    This value can be negative if duplicate packets were received.
 - {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}} {{optional_inline}}
-  - : An indicating the {{glossary("jitter", "packet jitter")}} for this [synchronization source (SSRC)](#ssrc), measured in seconds.
+  - : A number indicating the {{glossary("jitter", "packet jitter")}} for this synchronization source, measured in seconds.
 
 ### Common RTP stream statistics
 
@@ -52,7 +52,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCRemoteInboundRtpStreamStats.kind", "kind")}}
   - : A string indicating whether the {{domxref("MediaStreamTrack")}} associated with the stream is an audio or a video track.
 - {{domxref("RTCRemoteInboundRtpStreamStats.ssrc", "ssrc")}}
-  - : A positive integer that identifies the synchronization source (SSRC) of the RTP packets in this stream.
+  - : A positive integer that identifies the SSRC of the RTP packets in this stream.
 - {{domxref("RTCRemoteInboundRtpStreamStats.transportId", "transportId")}} {{optional_inline}}
   - : A string that uniquely identifies the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
 

@@ -10,4 +10,4 @@ page-type: glossary-definition
 
 "High jitter" indicates that packets are arriving at significantly varying rates, possibly due to network congestion, packet loss, and routing of packets in a stream through different paths.
 
-High jitter can significantly degrade the performance of real-time web applications, including voice/video communication and streaming, and online gaming.
+High jitter can significantly degrade the performance of real-time web applications, including voice/video streaming and online gaming.

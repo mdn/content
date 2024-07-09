@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.totalRoundTripTime
 
 {{APIRef("WebRTC")}}
 
-The **`totalRoundTripTime`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary indicates the cumulative number sum of all round trip time (RTT) measurements since the beginning of the session, in seconds.
+The **`totalRoundTripTime`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary indicates the sum of all round trip time (RTT) measurements since the beginning of the session, in seconds.
 
 The individual round trip time is calculated based on RTCP timestamps in the DLRR report block of RTCP Sender Reports (SR).
 The average RTT can be computed by dividing `totalRoundTripTime` by {{domxref("RTCRemoteOutboundRtpStreamStats.roundTripTimeMeasurements","roundTripTimeMeasurements")}}.

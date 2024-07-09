@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.fractionLost
 
 {{APIRef("WebRTC")}}
 
-The **`fractionLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary provides the fraction packet loss for this [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) in the last reporting interval.
+The **`fractionLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary provides the fraction of packets lost for this [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) in the last reporting interval.
 
 The value provides a quick and convenient measure of the link quality.
 It is the packet loss as a fraction, scaled up by 256.
@@ -25,7 +25,7 @@ It is calculated by dividing the expected packets by the packets received in the
 If the packet loss is negative the value is set to zero.
 Otherwise the value is bit-shifted 8 bits.
 This has the effect of making the fractional part of the fraction packet loss into the 8 bit unsigned integer which is what is sent in the SR or RR packet and contained in this property.
-For more informaiton see the definition of "fraction lost" in {{rfc("3550","SR: Sender Report RTCP Packet", "6.4.1")}} and [RFC 3550, Appendix A.3: Determining Number of Packets Expected and Lost](https://datatracker.ietf.org/doc/html/rfc3550#appendix-A.3).
+For more information see the definition of "fraction lost" in {{rfc("3550","SR: Sender Report RTCP Packet", "6.4.1")}} and [RFC 3550, Appendix A.3: Determining Number of Packets Expected and Lost](https://datatracker.ietf.org/doc/html/rfc3550#appendix-A.3).
 
 ## Specifications
 
