@@ -7,7 +7,7 @@ browser-compat: css.properties.transition-delay
 
 {{CSSRef}}
 
-The **`transition-delay`** CSS property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) when its value changes.
+The **`transition-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) when its value changes.
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 

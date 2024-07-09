@@ -41,7 +41,7 @@ event.initEvent(type, bubbles, cancelable)
   - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
 
-## Return value
+### Return value
 
 None.
 

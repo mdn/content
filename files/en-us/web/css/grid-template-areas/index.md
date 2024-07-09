@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-template-areas
 
 {{CSSRef}}
 
-The **`grid-template-areas`** CSS property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
+The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 
 {{EmbedInteractiveExample("pages/css/grid-template-areas.html")}}
 
@@ -118,6 +118,8 @@ In the above code, a null token (`.`) was used to create an unnamed area in the 
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
-- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template")}}
+- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- Video: [Grid template areas](https://gridbyexample.com/video/grid-template-areas/)

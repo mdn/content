@@ -7,7 +7,7 @@ browser-compat: svg.global_attributes.letter-spacing
 
 {{SVGRef}}
 
-The **`letter-spacing`** attribute controls spacing between text characters, in addition to any spacing from the {{SVGAttr("kerning")}} attribute.
+The **`letter-spacing`** attribute controls spacing between text characters.
 
 If the attribute value is a unitless number (like `128`), the browser processes it as a {{cssxref("length")}} in the current user coordinate system.
 
