@@ -6,27 +6,13 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An **attribute** extends an HTML or XML {{Glossary("element")}}, changing its behavior or providing metadata.
+An **attribute** extends an {{Glossary("HTML")}} or {{Glossary("XML")}} {{Glossary("element")}}, changing its behavior or providing metadata.
 
 An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value).
 
-You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML; such attributes are considered to be [boolean attributes](/en-US/docs/Web/HTML/Attributes#boolean_attributes). However, this is not allowed in XML: XML requires the equals sign followed by the attribute name.
+You may see attributes without an equals sign or a value. They are {{Glossary("Boolean/HTML", "boolean attributes")}}, the shorthand for providing the empty string in HTML and are considered to be `true`. However, this is not allowed in XML: XML requires the equals sign followed by the attribute name.
 
-The following code provides examples of different boolean attribute forms in HTML:
-
-```html example-good
-<input required />
-<!-- is equivalent to -->
-<input required="" />
-<!-- or -->
-<input required="anything" />
-```
-
-In XML, attributes without equals sign or value will throw a syntax error:
-
-```xml-nolint example-bad
-<tag id />
-```
+See {{Glossary("Boolean/HTML", "boolean attributes")}} for more information.
 
 ## Reflection of an attribute
 
@@ -60,3 +46,9 @@ console.log(attr.value); // Prints `Modified placeholder`
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
 - Information about HTML's [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml#sec-starttags)
+- Related glossary terms:
+  - {{Glossary("Element")}}
+  - {{Glossary("Tag")}}
+  - {{Glossary("HTML")}}
+  - {{Glossary("XML")}}
+  - {{Glossary("Boolean/HTML", "Boolean attributes")}}
