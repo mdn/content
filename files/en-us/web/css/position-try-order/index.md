@@ -9,9 +9,9 @@ browser-compat: css.properties.position-try-order
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various options that result in an available **position try option** being used to set an **anchor-positioned element's** position, instead of its initial position settings.
+The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various fallback options that result in an available position-try fallback being used to set an anchor-positioned element's position, instead of its initial position settings.
 
-> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-options")}} values in a single declaration.
+> **Note:** There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-fallbacks")}} values in a single declaration.
 
 ## Syntax
 
@@ -33,28 +33,30 @@ position-try-order: unset;
 
 ### Values
 
+The `position-try-order` property may be specified as either the keyword value `normal` or a `<try-size>`.
+
 - `normal`
-  - : The default. No position try options will be tried when the element is first displayed.
+  - : The default. No position-try fallback options will be tried when the element is first displayed.
 - `<try-size>`
-  - : Defines the different try size options, which specify criteria that determine what try option should be applied to the anchor-positioned element when it initially renders. Available values are:
+  - : Defines the different try size fallback options, which specify criteria that determine what try fallback should be applied to the anchor-positioned element when it initially renders. Available values are:
     - `most-height`
-      - : The position try option will be applied that gives the element's containing block the most height.
+      - : The position try fallback option will be applied that gives the element's containing block the most height.
     - `most-width`
-      - : The position try option will be applied that gives the element's containing block the most width.
+      - : The position try fallback option will be applied that gives the element's containing block the most width.
     - `most-block-size`
-      - : The position try option will be applied that gives the element's containing block the most size in the block direction.
+      - : The position try fallback option will be applied that gives the element's containing block the largest size in the block direction.
     - `most-inline-size`
-      - : The position try option will be applied that gives the element's containing block the most size in the inline direction.
+      - : The position try fallback option will be applied that gives the element's containing block the largest size in the inline direction.
 
 ## Description
 
-`position-try-order` has a slightly different focus to the rest of the position try functionality, in that it makes use of position try options when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
+The `position-try-order` property has a slightly different focus from the rest of the position-try functionality features, in that it makes use of position-try fallback options when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
 
-The browser will test the available position try options to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling.
+The browser will test the available position-try fallback options to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling.
 
-If no position try option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied. In effect, the behavior is as if `position-try-order` was set to `normal`.
+If no position try fallback option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied. In effect, the behavior is as if `position-try-order` was set to `normal`.
 
-For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
+For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
 ## Formal definition
 
@@ -107,7 +109,7 @@ The HTML includes two {{htmlelement("div")}} elements that will become an anchor
 
 #### CSS
 
-In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position")}} value of `absolute` set on it. We position it in the top-half of the viewport using {{cssxref("top")}} and {{cssxref("left")}} values:
+In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{cssxref("margin")}} to position it toward the top center of the viewport:
 
 ```css hidden
 .anchor {
@@ -125,9 +127,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxre
 ```css
 .anchor {
   anchor-name: --myAnchor;
-  position: absolute;
-  top: 90px;
-  left: 45%;
+  margin: 90px auto;
 }
 ```
 
@@ -149,7 +149,7 @@ form {
 }
 ```
 
-We then include a custom try option — `--custom-bottom` — which positions the element below the anchor and gives it an appropriate margin:
+We then include a custom fallback option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {
@@ -159,7 +159,7 @@ We then include a custom try option — `--custom-bottom` — which positions th
 }
 ```
 
-We initially position the element above its anchor, and then give it our custom try option:
+We initially position the element above its anchor, and then give it our custom position fallback option as a position-try fallback option using the `position-try` shorthand, which sets the `position-try-order` to `normal`:
 
 ```css
 .infobox {
@@ -170,7 +170,7 @@ We initially position the element above its anchor, and then give it our custom 
   margin-bottom: 10px;
   justify-self: anchor-center;
 
-  position-try-options: --custom-bottom;
+  position-try: normal --custom-bottom;
 }
 ```
 
@@ -195,9 +195,9 @@ function setTryOrder(e) {
 
 #### Result
 
-Try selecting the `most-height` order option. This has the effect of applying the `--custom-bottom` position try option, which positions the element below the anchor. This occurs because there is more vertical space below the anchor than there is above it.
-
 {{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
+
+Try selecting the `most-height` order option. This has the effect of applying the `--custom-bottom` position-try fallback option, which positions the element below the anchor. This occurs because there is more vertical space below the anchor than there is above it.
 
 ## Specifications
 
@@ -210,8 +210,8 @@ Try selecting the `most-height` order option. This has the effect of applying th
 ## See also
 
 - {{cssxref("position-try")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - The {{cssxref("@position-try")}} at-rule
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
