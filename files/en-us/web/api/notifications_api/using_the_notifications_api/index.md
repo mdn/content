@@ -222,6 +222,8 @@ window.addEventListener("load", () => {
 
 {{ EmbedLiveSample('Tag_example', '100%', 150) }}
 
+To test the above example, change the [send notification setting](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions) for the `https://live.mdnplay.dev` website.
+
 ## See also
 
 - {{ domxref("Notification") }}
