@@ -51,12 +51,12 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 
       - : Specifies how the bitmap image should be oriented.
 
-        - `none`
-          - : Image oriented according to image encoding, ignoring any metadata about the orientation (such as EXIF metadata, that might be added to an image to indicate that the camera was turned sideways to capture the image in portrait mode).
         - `from-image`
-          - : Image oriented according to EXIF orientation metadata, if present. This is the default.
+          - : Image oriented according to EXIF orientation metadata, if present (default).
         - `flipY`
           - : Image oriented according to EXIF orientation metadata, if present, and then flipped vertically.
+        - `none`
+          - : Image oriented according to image encoding, ignoring any metadata about the orientation (such as EXIF metadata, that might be added to an image to indicate that the camera was turned sideways to capture the image in portrait mode).
 
     - `premultiplyAlpha`
       - : Specifies whether the bitmap's color channels should be premultiplied by the alpha channel.
