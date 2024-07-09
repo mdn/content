@@ -43,7 +43,7 @@ The `@view-transition` at-rule is specified in the CSS for both your current and
 
 ```css
 @view-transition {
-    navigation: auto;
+  navigation: auto;
 }
 ```
 
@@ -52,33 +52,32 @@ In addition to the above `@view-transition` at-rule in the CSS for both the curr
 ```css
 /* Create a custom animation */
 @keyframes move-out {
-    from {
-        transform: translateY(0%);
-    }
+  from {
+    transform: translateY(0%);
+  }
 
-    to {
-        transform: translateY(-100%);
-    }
+  to {
+    transform: translateY(-100%);
+  }
 }
 
 @keyframes move-in {
-    from {
-        transform: translateY(100%);
-    }
+  from {
+    transform: translateY(100%);
+  }
 
-    to {
-        transform: translateY(0%);
-    }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 /* Apply the custom animation to the old and new page states */
 ::view-transition-old(root) {
-    animation: 0.4s ease-in both move-out;
-
+  animation: 0.4s ease-in both move-out;
 }
 
 ::view-transition-new(root) {
-    animation: 0.4s ease-in both move-in;
+  animation: 0.4s ease-in both move-in;
 }
 ```
 
