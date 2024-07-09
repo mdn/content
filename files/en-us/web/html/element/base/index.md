@@ -45,8 +45,8 @@ For example, given `<base href="https://example.com/">` and this link: `<a href=
 
 ### target may not contain ASCII newline, tab, or <
 
-If the [`target`](#target) attribute contains an ASCII newline, tab or the `<` character the value is reset to `_blank`.
-This is to prevent dangling markup injection attacks, a form of scriptless injection where an unclosed `target` attribute is injected into the page so that any text that follows is captured (until the browser reaches a character that closes the attribute).
+If the [`target`](#target) attribute contains an ASCII newline, tab, or the `<` character, the value is reset to `_blank`.
+This is to prevent dangling markup injection attacks, a script-less attack in which an unclosed `target` attribute is injected into the page so that any text that follows is captured until the browser reaches a character that closes the attribute.
 
 ### Open Graph
 
