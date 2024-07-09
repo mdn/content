@@ -7,9 +7,9 @@ browser-compat: api.TextTrackList
 
 {{APIRef("HTML DOM")}}
 
-The **`TextTrackList`** interface is used to represent a list of the text tracks defined for the associated video element, with each track represented by a separate {{domxref("textTrack")}} object in the list.
+The **`TextTrackList`** interface is used to represent a list of the text tracks defined for the associated video or audio element, with each track represented by a separate {{domxref("textTrack")}} object in the list.
 
-The tracks could have been added using the {{HTMLElement("track")}} element or programmatically.
+Text tracks can be added to a media element declaratively using the {{HTMLElement("track")}} element or programmatically using the {{domxref('HTMLMediaElement.addTextTrack()')}} method.
 
 An instance of this object can be retrieved using the {{domxref('HTMLMediaElement.textTracks', 'textTracks')}} property of an {{domxref('HTMLMediaElement')}} object.
 

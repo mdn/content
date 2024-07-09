@@ -10,16 +10,16 @@ browser-compat:
 
 {{DefaultAPISidebar("WebVTT")}}
 
-**Web Video Text Tracks** (**WebVTT**) are text tracks that can be used to provide specific text "cues" that are time-aligned with other media, such as video or audio tracks.
-They are primarily used for displaying video subtitles or captions that overlay with video content, but they can also be used to provide chapter information for easier navigation, and generic metadata that needs to be time-aligned with audio or video content.
+**Web Video Text Tracks** (**WebVTT**) are text tracks providing specific text "cues" that are time-aligned with other media, such as video or audio tracks. The **WebVTT API** provides functionality to define and manipulate these text tracks.
+The WebVTT API is primarily used for displaying subtitles or captions that overlay with video content, but it has other uses: providing chapter information for easier navigation and generic metadata that needs to be time-aligned with audio or video content.
 
 ## Concepts and usage
 
-A text track is a container for time-aligned text data, that can be played in parallel with a video or audio track in order to provide a translation, transcription, or overview of the content.
-A video or audio media element may define tracks of different kinds and in different languages, allowing an appropriate track (or tracks) to be selected based on user preferences and browser user interface.
+A text track is a container for time-aligned text data that can be played in parallel with a video or audio track to provide a translation, transcription, or overview of the content.
+A video or audio media element may define tracks of different kinds or in different languages, allowing users to display appropriate tracks based on their preferences or needs.
 
 The different kinds of text data that can be specified are listed below.
-Note that browser do not necessarily support all kinds of text tracks.
+Note that browsers do not necessarily support all kinds of text tracks.
 
 - `subtitles` provide a textual translation of spoken dialog.
   This is the default type of text track, and if used, the source language must be specified.
@@ -29,7 +29,7 @@ Note that browser do not necessarily support all kinds of text tracks.
 - `metadata` is used for any other kinds of time-aligned information.
 
 The individual time-aligned units of text data within a track are referred to as "cues".
-Each cue has a start time, end time and textual payload.
+Each cue has a start time, end time, and textual payload.
 It may also have "cue settings", which affect its display region, position, alignment, and/or size.
 Lastly, a cue may have a label, which can be used to select it for CSS styling.
 
@@ -49,14 +49,14 @@ Most important WebVTT features can be accessed using either the file format or W
 - {{domxref("VTTRegion")}}
   - : Represents a portion of a video element onto which a {{domxref("VTTCue")}} can be rendered.
 - {{domxref("TextTrack")}}
-  - : Represents the text track, which holds the list of cues that will be displayed over the associated video element at various points while it plays.
+  - : Represents a text track, which holds the list of cues to display along with an associated media element at various points while it plays.
 - {{domxref("TextTrackCue")}}
   - : An abstract base class for various cue types, such as {{domxref("VTTCue")}}.
 - {{domxref("TextTrackCueList")}}
   - : An array-like object that represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.
     An instance of this type is obtained from {{domxref('TextTrack.cues')}} in order to get all the cues in the {{domxref("TextTrack")}} object.
 - {{domxref("TextTrackList")}}
-  - : Represents a list of the text tracks defined for the associated video element, with each track represented by a separate {{domxref("TextTrack")}} instance in the list.
+  - : Represents a list of the text tracks defined for a media element, with each track represented by a separate {{domxref("TextTrack")}} instance in the list.
 
 ### Related interfaces
 
@@ -76,7 +76,7 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 
 #### HTML
 
-The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using the {{domxref("TextTrack.addCue()")}} method, with a `VTTCue` object as the value.
+The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using {{domxref("TextTrack.addCue()")}} method calls, with constructed `VTTCue` objects as arguments.
 
 ```html
 <video
@@ -113,7 +113,9 @@ console.log(track.cues);
 
 ### Displaying VTT content defined in a file
 
-First let's define a "captions.vtt" file that specifies the same cues as the [Using the WebVTT API to add captions](#using_the_webvtt_api_to_add_captions) example above:
+This example demonstrates how to add the same set of captions to the video seen in the above [Using the WebVTT API to add captions](#using_the_webvtt_api_to_add_captions) example. This time, however, we will do it declaratively using a {{htmlelement("track")}} element.
+
+First, let's define the captions inside a "captions.vtt" file:
 
 ```plain
 WEBVTT
@@ -143,8 +145,8 @@ The following HTML would result in the same text track as the previous example:
 </video>
 ```
 
-We can add multiple {{HTMLElement("track")}} elements in order to specify different kinds of tracks in different languages, using the `kind` and `srclang` attributes (note that if `kind` is specified, the `srclang` _must_ be set too).
-The `default` attribute may be added to just one `<track>`, and this will be played if user preferences don't specify a particular language or kind.
+We can add multiple {{HTMLElement("track")}} elements to specify different kinds of tracks in multiple languages, using the `kind` and `srclang` attributes. Note that, if `kind` is specified, `srclang` _must_ be set too.
+The `default` attribute may be added to just one `<track>`: this is the one that will be played if user preferences don't specify a particular language or kind.
 
 ```html
 <video controls src="video.webm">
@@ -159,15 +161,15 @@ The `default` attribute may be added to just one `<track>`, and this will be pla
 ### Styling WebVTT in HTML or a stylesheet
 
 You can style WebVTT cues by matching elements using the {{cssxref("::cue")}} pseudo-element.
-This allows you to modify the appearance of all cue text, or just specific elements (if supported).
+This allows you to modify the appearance of all cue text, or just specific elements. In this example, we'll add some styling to the [first example above](#using_the_webvtt_api_to_add_captions).
 
 > **Note:** It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
 
 #### HTML
 
-The HTML and CSS for displaying the video itself is the same as for the [first example above](#using_the_webvtt_api_to_add_captions):
+The HTML for the video itself is the same as we saw previously:
 
-```css
+```css hidden
 video {
   width: 420px;
   height: 300px;
@@ -182,7 +184,7 @@ video {
 
 #### CSS
 
-This CSS styles all cues to have larger text drawn in red, with a gradient background.
+First, we use the {{cssxref("::cue")}} pseudo-element to select all video text cues, giving them larger red and a gradient background.
 
 ```css
 video::cue {
@@ -267,7 +269,7 @@ track.addCue(
 );
 ```
 
-First make all cues 1.2 times bigger than normal.
+First, we'll add a rule to make all cues 1.2 times bigger than normal.
 
 ```css
 video::cue {
@@ -297,7 +299,7 @@ video::cue(c) {
 
 #### Styling by class
 
-The second cue is displayed just after the first one, and includes the same tags but they also have the class `myclass` applied.
+The second cue is displayed right after the first one and includes the same tags. However, they all have a class of `myclass` applied to them.
 
 ```js
 track.addCue(
@@ -309,7 +311,7 @@ track.addCue(
 );
 ```
 
-We then style all items with the `.myclass` class to light blue, except for the specific case of `c.myclass`, which is set to blue.
+We style all items with the `.myclass` class with a light blue text color, except for the specific case of `c.myclass`, which is given a blue text color.
 
 ```css
 video::cue(.myclass) {
@@ -338,7 +340,7 @@ track.addCue(
 track.addCue(new VTTCue(3, 6, "<v Bob>Bob's voice</v>"));
 ```
 
-We use the `lang` attribute selector to colour each of the language variants.
+We use the `lang` attribute selector to give each language variant a different text color.
 
 ```css
 video::cue([lang="en"]) {
@@ -354,7 +356,7 @@ video::cue(:lang(en-US)) {
 }
 ```
 
-Then we use the `v` tag and attribute selector for `voice` to colour text in "Bob's voice" as orange.
+Then we use the `v` tag and attribute selector for `voice` to color text in "Bob's voice" orange.
 
 ```css
 video::cue(v[voice="Bob"]) {

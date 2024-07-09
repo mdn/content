@@ -9,7 +9,7 @@ browser-compat: api.VTTCue
 
 The `VTTCue` interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) represents a cue that can be added to the text track associated with a particular video (or other media).
 
-A cue defines the particular text that will be displayed in a particular timeslice of a video track, along with display properties such as its size, alignment, and position.
+A cue defines the text to display in a particular timeslice of a video or audio track, along with display properties such as its size, alignment, and position.
 
 {{InheritanceDiagram}}
 
@@ -35,7 +35,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
   - : An enum representing the alignment of the {{domxref("VTTCue.line")}}.
 - {{domxref("VTTCue.position")}}
   - : Represents the indentation of the cue within the line.
-    This can be the string `auto` or a number representing the percentage of the {{domxref("VTTCue.region")}}, or the video size if {{domxref("VTTCue.region")}} is `null`.
+    This can be the string `auto`, a number representing the percentage of the {{domxref("VTTCue.region")}}, or the video size if {{domxref("VTTCue.region")}} is `null`.
 - {{domxref("VTTCue.positionAlign")}}
   - : An enum representing the alignment of the cue.
     This is used to determine what the {{domxref("VTTCue.position")}} is anchored to.

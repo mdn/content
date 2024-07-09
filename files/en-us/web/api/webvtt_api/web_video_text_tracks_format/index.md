@@ -13,19 +13,19 @@ spec-urls: https://w3c.github.io/webvtt/
 **Web Video Text Tracks Format** (**WebVTT**) is a plain-text file format for displaying timed text tracks that are synchronized with content in {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 These can be used, for example, to add closed captions and subtitle text overlays to a {{HTMLElement("video")}}.
 
-The WebVTT files associated with a media element are added using the {{HTMLElement("track")}} element — see [Displaying VTT content defined in a file](/en-US/docs/Web/API/WebVTT_API#displaying_vtt_content_defined_in_a_file) in the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
+The WebVTT files associated with a media element are added using the {{HTMLElement("track")}} element — see [Displaying VTT content defined in a file](/en-US/docs/Web/API/WebVTT_API#displaying_vtt_content_defined_in_a_file).
 A media element can be associated with a number of files, each representing different kinds of timed data, such as closed captions, subtitles, or chapter headings, translated into different locales.
 
 > **Note:** WebVTT content can also be created and managed programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
 
 ## Overview
 
-The MIME type of WebVTT file is `text/vtt` and by convention has the file extension `.vtt`.
+WebVTT files have a MIME type of `text/vtt` and the file extension `.vtt`.
 The content must be encoded using {{Glossary("UTF-8")}}.
 
 The structure of a WebVTT consists of the following components, some of them optional, in this order:
 
-- A header, consisting of an optional byte order mark (BOM), the string "`WEBVTT`", followed by an optional text header, separated by one or more space or tab characters (in WebVTT files, tab and space characters are interchangeable).
+- A header, consisting of an optional byte order mark (BOM) — the string "`WEBVTT`" — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
 - One or more blank lines, each which is equivalent to two consecutive newlines.
 - Zero or more `STYLE`, `REGION`, or `NOTE` blocks, separated by one or more blank lines.
 - Zero or more cue or `NOTE` blocks, separated by one or more blank lines.
@@ -52,7 +52,7 @@ The following sections explain the parts of the file, including those not used i
 
 ## WebVTT Header
 
-The WebVTT files should start with a header block that has the following properties:
+WebVTT files start with a header block containing the following:
 
 - An optional byte order mark (BOM).
 - The string "`WEBVTT`".
@@ -77,18 +77,18 @@ WEBVTT This file has no cues.
 
 ## WebVTT cues
 
-A cue defines a single caption, subtitle or other block of text that is displayed over a particular time interval.
+A cue defines a single caption, subtitle, or other text block to be displayed over a particular time interval.
 Cues must appear after the header and any `STYLE` or `REGION` blocks.
 
 Each cue consists of three or more lines:
 
-- Optional cue identifier followed by a newline.
-- Cue timings that indicate the time range that the cue payload text should be displayed, optionally followed by cue settings with at least one space before the first setting and between each setting, followed by a single newline.
+- An optional cue identifier followed by a newline.
+- Cue timings that indicate the time range in which the payload text should be displayed. These are optionally followed by cue settings with at least one space before the first setting and between each setting, followed by a single newline.
 - The cue payload text, which may span multiple lines, and will be terminated by an empty line.
 
 Here is an example of a simple cue.
 The first line specifies the cue's display start and end times, separated using the string "`-->`".
-We then have a line with the text to be displayed.
+The second line defines the text to be displayed.
 
 ```plain
 00:01.000 --> 00:04.000
@@ -96,7 +96,7 @@ Never drink liquid nitrogen.
 ```
 
 The next cue is slightly more complicated.
-Unlike the previous queue it starts with a cue identifier "`1 - Title Crawl`", which may be used to reference the cue in JavaScript and for styling.
+It starts with a cue identifier — "`1 - Title Crawl`" — which may be used to reference the cue in JavaScript and CSS.
 It also has cue settings after the cue timings to set the cue position.
 
 ```plain
@@ -107,7 +107,7 @@ Because:
 - You could die.
 ```
 
-Note that the output will respect line breaks in the source text, which allows you to create bullet-like list usings hyphen (`-`) characters as shown.
+Note that the output will respect line breaks in the payload text, which allows you to create bulleted lists using hyphen (`-`) characters as shown.
 Generally you should only insert these breaks when needed, as the browser will wrap text appropriately.
 
 It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload, or within the payload.
@@ -117,9 +117,9 @@ Each part of the cue is explained in more detail in the following sections.
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
-The example below shows a file with several cues that have identifiers
+The example below shows a file with several cues that include identifiers:
 
 ```plain
 WEBVTT
@@ -139,19 +139,19 @@ This is the third
 
 ### Cue timings
 
-A cue timing indicate the time interval when the cue is shown. It has a start and end time that are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
+A cue timing indicates the time interval when the cue is shown. It has a start and end time, represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`) then the file cannot have overlapping timings.
+Cues may have overlapping timings, unless the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`).
 
 Each cue timing contains five components:
 
-- Timestamp for start time.
+- A timestamp for the start time.
 - At least one space.
 - The string "`-->`".
 - At least one space.
-- Timestamp for end time, which must be greater than the start time.
+- A timestamp for the end time, which must be greater than the start time.
 
-The timestamps must be in one of two formats:
+The timestamps can be specified in one of the following two formats:
 
 - `mm:ss.ttt`
 - `hh:mm:ss.ttt`
@@ -197,24 +197,24 @@ Here are a few cue timing examples:
 
 ### Cue settings
 
-Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.
+Cue settings are optional components that position the cue payload text over the video. This includes horizontal and vertical positions. Zero or more cue settings can be specified and used in any order so long as each setting is used no more than once.
 
-The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
+Cue settings are added to the right of cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A colon separates a setting's name and value. The settings are case-sensitive; use lowercase as shown. There are five available cue settings:
 
 - `vertical`
   - : Indicates that the text will be displayed vertically rather than horizontally, such as in some Asian languages. There are two possible values:
     - `rl`
-      - : The writing direction is right to left
+      - : The writing direction is right to left.
     - `lr`
-      - : The writing direction is left to right
+      - : The writing direction is left to right.
 - `line`
 
-  - : If vertical is not set, specifies where the text appears vertically. If vertical is set, line specifies where text appears horizontally. Its value can be:
+  - : If `vertical` is not set, `line` specifies where the text appears vertically. If `vertical` is set, `line` specifies where text appears horizontally. Its value can be:
 
-    - a line number
-      - : The number is the height of the first line of the cue as it appears on the video. Positive numbers indicate top down and negative numbers indicate bottom up.
-    - a percentage
-      - : It must be an integer (i.e., no decimals) between 0 and 100 inclusive and must be followed by a percent sign (%).
+    - A line number
+      - : The position of the first line of the cue as it appears on the video. Positive numbers are counted from the top down and negative numbers are counted from the bottom up.
+    - A percentage
+      - : An integer (i.e., no decimals) between 0 and 100 inclusive, which must be followed by a percent sign (%).
 
     | Line        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
     | ----------- | ------------------ | ------------- | ------------- |
@@ -225,7 +225,7 @@ The cue settings are added to the right of the cue timings. There must be one or
 
 - `position`
 
-  - : Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
+  - : If `vertical` is not set, `position` specifies where the text will appear horizontally. If `vertical` is set, `position` specifies where the text will appear vertically. The value is a percentage between 0 and 100 inclusive.
 
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
     | --------------- | ------------------ | ------------- | ------------- |
@@ -267,7 +267,7 @@ The first line demonstrates no settings. The second line might be used to overla
 ### Cue payload
 
 The payload is where the cue content is defined, such as the subtitle or closed caption text.
-The payload text may contain newlines but it cannot contain two consecutive newlines, as this is a blank line, and signifies the end of a cue.
+The payload text may contain newlines but it cannot contain two consecutive newlines: that would create a blank line, which signifies the end of a cue.
 
 A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`).
 If needed, you can instead use a {{glossary("character reference")}} such as the named character reference `&amp;` for ampersand and `&lt;` for less-than.
@@ -342,7 +342,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](/en-US/docs/
 
 - Class tag (`<c></c>`)
 
-  - : Style the contained text using a CSS class.
+  - : Add a class to the contained text for selection via CSS.
 
     ```xml
     <c.classname>text</c>
@@ -388,7 +388,7 @@ For example, you might use them to record author contact details, provide an ove
 
 They can be used anywhere in the WebVTT file after the header.
 
-NOTE blocks may contain newlines but cannot contain two consecutive newlines, as this is a blank line and indicates the end of the block.
+NOTE blocks may contain newlines but cannot contain two consecutive newlines: that would create a blank line, which indicates the end of the block.
 
 A comment cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`).
 If you wish to use these characters, you need to instead use a {{glossary("character reference")}} such as `&amp;` for ampersand and `&lt;` for less-than.
