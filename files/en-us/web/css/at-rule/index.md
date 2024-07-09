@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and include everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
+**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier, and include everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
 
 ## Syntax
 
@@ -38,9 +38,9 @@ Statement at-rules end in a semicolon. There are several statement at-rules, des
 }
 ```
 
-Block at-rules end in {}-block. A subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.
+Block at-rules end in {}-block containing a subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.
 
-- {{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
+- {{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a {{glossary("media query")}}.
 - {{cssxref("@container")}} — A conditional group rule that will apply its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s.
 - {{cssxref("@scope")}} — A conditional group rule that will apply its content if the device meets the criteria of the given condition.
 - {{cssxref("@starting-style")}} — A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
@@ -71,13 +71,13 @@ Rules that link some type of condition, which at any time evaluates to either **
 - {{cssxref("@media")}}
 - {{cssxref("@container")}}
 - {{cssxref("@supports")}}
-- {{cssxref("@document")}} _(deferred to Level 4 of CSS Spec)_
+- {{cssxref("@document")}} {{deprecated_inline}}
 
 Since each conditional group may also contain nested statements, there may be an unspecified amount of nesting.
 
 ### Declare style information
 
-At-rules that declare new style information fall in this category.
+At-rules that define custom, reusable style information that can be used as or within property values fall in this category.
 
 - {{cssxref("@counter-style")}}
 - {{cssxref("@property")}}
