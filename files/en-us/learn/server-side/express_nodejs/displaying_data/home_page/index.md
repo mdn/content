@@ -97,6 +97,9 @@ When all the queries complete, the promise returned by `all()` fulfills, continu
 We then call [`res.render()`](https://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
 The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
+> **Note:** If you use a key/variable in a Pug template that hasn't been passed in, then it will render as an empty string, and be evaluated as `false` in expressions.
+> Other template languages may require that you pass in values for all objects that you use.
+
 Note that the code is very simple because we can assume that the database queries succeed.
 If any of the database operations fail, the exception that is thrown will be caught by `asyncHandler()` and passed to the `next` middleware handler in the chain.
 

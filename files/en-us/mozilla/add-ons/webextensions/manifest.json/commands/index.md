@@ -179,6 +179,8 @@ The availability of these special shortcuts varies between manifest versions and
 </tbody>
 </table>
 
+> **Note:** If the user changes the shortcut of the `_execute_browser_action` command, it is automatically carried over to the `_execute_action` command when the extension migrates from Manifest V2 to V3. This was implemented in Chrome 111 and Firefox 127.
+
 For example, this JSON defines a key combination that clicks the extension's browser action:
 
 ```json

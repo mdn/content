@@ -42,17 +42,17 @@ See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for yo
 
 ## Examples
 
-Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
+Imagine the `values.push('something')` call below is in code that was written prior to ECMAScript 2015.
 
 ```js
-var keys = [];
+var values = [];
 
-with (Array.prototype) {
-  keys.push("something");
+with (values) {
+  values.push("something");
 }
 ```
 
-When ECMAScript 2015 introduced the {{jsxref("Array.prototype.keys()")}} method, if the `@@unscopables` data property had not also been introduced, that `keys.push('something')` call would break — because the JavaScript runtime would have interpreted `keys` as being the {{jsxref("Array.prototype.keys()")}} method, rather than the `keys` array defined in the example code.
+When ECMAScript 2015 introduced the {{jsxref("Array.prototype.values()")}} method, the `with` statement in the above code started to interpret `values` as the `values.values` array method instead of the external `values` variable. The `values.push('something')` call would break because it's now accessing `push` on the `values.values` method. This caused a bug to be reported to Firefox ([Firefox Bug 883914](https://bugzil.la/883914)).
 
 So the `@@unscopables` data property for `Array.prototype` causes the `Array` properties introduced in ECMAScript 2015 to be ignored for `with` statement-binding purposes — allowing code that was written prior to ECMAScript 2015 to continue working as expected, rather than breaking.
 

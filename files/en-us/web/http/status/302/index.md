@@ -2,7 +2,7 @@
 title: 302 Found
 slug: Web/HTTP/Status/302
 page-type: http-status-code
-browser-compat: http.status.302
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.302
 ---
 
 {{HTTPSidebar}}
@@ -34,10 +34,6 @@ confirmation message such as: 'you successfully uploaded XYZ'.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

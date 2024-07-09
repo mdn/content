@@ -42,7 +42,7 @@ new FetchEvent(type, options)
     - `handled`
       - : A _pending_ promise that will be fulfilled once the event has been handled.
 
-## Return value
+### Return value
 
 A new {{domxref("FetchEvent")}} object.
 

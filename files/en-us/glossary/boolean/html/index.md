@@ -31,4 +31,5 @@ Here's an example of a HTML boolean attribute `checked`:
 
 ## See also
 
-- {{Glossary("Enumerated")}}
+- Related glossary terms:
+  - {{Glossary("Enumerated")}}

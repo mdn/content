@@ -137,8 +137,8 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functio
 - {{cssxref("&lt;calc-product&gt;")}}
   - : A calculation which is a sequence of calculation values interspersed with multiplication (`*`) and division (`/`) operators. When multiplying, one value must be unitless. When dividing, the second value must be unitless.
 - {{cssxref("&lt;calc-value&gt;")}}
-  - : Defines accepted values for calculations, values such as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;calc-constant&gt;")}} or nested {{cssxref("&lt;calc-sum&gt;")}} calculations.
-- {{cssxref("&lt;calc-constant&gt;")}}
+  - : Defines accepted values for calculations, values such as {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;calc-keyword&gt;")}} or nested {{cssxref("&lt;calc-sum&gt;")}} calculations.
+- {{cssxref("&lt;calc-keyword&gt;")}}
   - : Defines a number of CSS keywords representing numeric constants such as `e` and `π`, that can be used in CSS math functions.
 
 ## Specifications
