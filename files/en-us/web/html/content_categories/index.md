@@ -302,7 +302,7 @@ Elements that belong to this category include:
 - {{HtmlElement("video")}}
 - [Autonomus custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
-Some elements belong to this category only under specific conditions:
+  Some elements belong to this category only under specific conditions:
 
 - {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
 - {{HTMLElement("dl")}}, if the element's children include at least one name-value group
