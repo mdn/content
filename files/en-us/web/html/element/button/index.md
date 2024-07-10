@@ -104,6 +104,14 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
+### Button layout
+
+The default layout of a button changes depending on the {{cssxref("display") }} value. Most notably when the value is not
+`inline-grid`, `grid`, `inline-flex`, or `flex` then children are centered (horizontally and vertically) as long as they
+do not overflow.
+
+- [Button Rendering HTML Living Standard](https://html.spec.whatwg.org/multipage/rendering.html#button-layout)
+
 ## Accessibility
 
 ### Icon buttons
