@@ -51,7 +51,7 @@ You can use this attribute with the following SVG filter primitive transfer func
 
 In this example, a gradient box has text with a linear filter applied.
 
-```svg
+```html
 <svg width="8cm" height="4cm" viewBox="0 0 800 400"
   xmlns="http://www.w3.org/2000/svg" version="1.1">
   <title>Examples of feComponentTransfer operations</title>
@@ -81,7 +81,7 @@ In this example, a gradient box has text with a linear filter applied.
 </svg>
 ```
 
-{{ EmbedLiveSample('Examples') }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 
