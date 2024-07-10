@@ -216,20 +216,20 @@ This example demonstrates the `safe` keyterm. Four centered flex items are not a
 
 ```html hidden
 <p><code>justify-content: center;</code></p>
-<section class="container">
+<section class="container safe">
   <div>A</div>
   <div>B</div>
   <div>C</div>
   <div>D</div>
 </section>
 <p><code>justify-content: safe center;</code></p>
-<section class="container">
+<section class="container safe-center">
   <div>A</div>
   <div>B</div>
   <div>C</div>
   <div>D</div>
 </section>
-<p><code>justify-content: safe center;</code with 3 items</p>
+<p><code>justify-content: safe center;</code> with 3 items</p>
 <section class="container">
   <div>A</div>
   <div>B</div>
@@ -265,7 +265,7 @@ The container is set to `center`, with every container other than the first havi
   height: 2em;
 }
 
-.container ~ .container {
+.safe-center {
   justify-content: safe center;
 }
 
@@ -278,7 +278,7 @@ div {
 
 {{EmbedLiveSample("the safe keyword", "100%", 260)}}
 
-As an item overflows the alignment container, with `safe` included, the alignment mode is `start` and the `space-around` alignment is not implemented.
+As an item overflows the alignment container, with `safe` included, the alignment mode is `start` and the `center` alignment is not implemented. The `safe` keyterm has no effect if the items do not overflow the container.
 
 ### Visualizing flex item distribution
 
@@ -289,7 +289,7 @@ This example includes a multi-line wrapping flex layout. The second flex item ha
 ```css hidden
 #container {
   margin: 5px auto;
-  border: 1px dashed #ccc;
+  border: 1px dashed black;
   box-sizing: border-box;
 }
 
@@ -375,7 +375,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 {{EmbedLiveSample("Visualizing_flex_item_distribution", "100%", 180)}}
 
-Select different keywords from the drop down menu to visualize the different `justify-content` keyword values. Because an item on the first line can grow, there is no available space for the `justify-content` property to distribute on that line only. With the `space-between` value, the first item on each line is flush with the main-start edge, and the last item is flush with the main-end edge; this means if a line has only one item, it will be at the main-start edge (as seen in the last line). This is not the case for other values, such as `space-evenly` and `space-around`, which centers one-item flex-lines.
+Select different keywords from the drop-down menu to visualize the different `justify-content` keyword values. Because an item on the first line can grow, there is no available space for the `justify-content` property to distribute on that line only. With the `space-between` value, the first item on each line is flush with the main-start edge, and the last item is flush with the main-end edge; this means if a line has only one item, it will be at the main-start edge (as seen in the last line). This is not the case for other `space-*` values, such as `space-evenly` and `space-around`, which centers one-item flex-lines.
 
 ## Specifications
 
