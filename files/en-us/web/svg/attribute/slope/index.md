@@ -46,10 +46,9 @@ You can use this attribute with the following SVG filter primitive transfer func
 
 - `<number>`
   - : This value indicates the linear slope of the transfer function.
- 
 ## Examples
 
-In this example, a gradient box has text with a linear filter applied. 
+In this example, a gradient box has text with a linear filter applied.
 
 ```svg
 <svg width="8cm" height="4cm" viewBox="0 0 800 400"
@@ -63,7 +62,7 @@ In this example, a gradient box has text with a linear filter applied.
       <stop offset="0" stop-color="#ff0000" />
       <stop offset="1" stop-color="#0000ff" />
     </linearGradient>
-    <filter id="Linear" filterUnits="objectBoundingBox" 
+    <filter id="Linear" filterUnits="objectBoundingBox"
        x="0%" y="0%" width="100%" height="100%">
       <feComponentTransfer>
         <feFuncR type="linear" slope="2"/>
@@ -72,9 +71,9 @@ In this example, a gradient box has text with a linear filter applied.
       </feComponentTransfer>
     </filter>
   </defs>
-  <rect fill="none" stroke="blue"  
+  <rect fill="none" stroke="blue"
     x="1" y="1" width="798" height="398"/>
-  <g font-family="Verdana" font-size="200" 
+  <g font-family="Verdana" font-size="200"
     font-weight="bold" fill="url(#MyGradient)">
     <text x="100" y="290" filter="url(#Linear)">Slope</text>
   </g>
