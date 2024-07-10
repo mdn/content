@@ -60,8 +60,8 @@ In this example, a gradient box has two text elements with linear filters applie
   version="1.1">
   <title>Examples of feComponentTransfer operations</title>
   <desc>
-    A text strings showing the effects of feComponentTransfer using the
-    feComponentTransfer linear option.
+    Text strings showing the effects of the slope attribute of the
+    feComponentTransfer filter function linear options.
   </desc>
   <defs>
     <linearGradient
