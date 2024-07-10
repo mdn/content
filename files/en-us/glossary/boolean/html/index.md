@@ -13,7 +13,7 @@ If the attribute is present, it can have one of the following values:
 
 - no value at all, e.g. `attribute` (This is not allowed in XML: XML requires the equals sign followed by the attribute name.)
 - the empty string, e.g. `attribute=""`
-- attribute's canonical name, with no leading or trailing whitespace, e.g. `attribute="attribute"`
+- attribute's name itself, with no leading or trailing whitespace, e.g. `attribute="attribute"`
 
 Here's an example of a HTML boolean attribute `checked`:
 
