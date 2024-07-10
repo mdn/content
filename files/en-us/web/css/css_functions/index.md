@@ -339,8 +339,6 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
   - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
-- {{cssxref("inset-area_function", "inset-area()")}}
-  - : Defines the anchor element side of a position try option.
 
 ## See also
 

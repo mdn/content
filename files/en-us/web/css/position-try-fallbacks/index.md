@@ -23,7 +23,7 @@ position-try-fallbacks: none;
 
 /* Single try option */
 position-try-fallbacks: flip-block;
-position-try-fallbacks: inset-area(top);
+position-try-fallbacks: top;
 position-try-fallbacks: --custom-try-option;
 
 /* Multiple value combination option */
@@ -31,7 +31,7 @@ position-try-fallbacks: flip-block flip-inline;
 
 /* Multiple values */
 position-try-fallbacks: flip-block, flip-inline;
-position-try-fallbacks: inset-area(top), inset-area(right), inset-area(bottom);
+position-try-fallbacks: top, right, bottom;
 position-try-fallbacks: --custom-try-option1, --custom-try-option2;
 position-try-fallbacks:
   flip-block,
@@ -41,7 +41,7 @@ position-try-fallbacks:
   flip-block,
   --custom-try-option,
   --custom-try-option flip-inline,
-  inset-area(right);
+  right;
 
 /* Global values */
 position-try-fallbacks: inherit;
@@ -51,7 +51,7 @@ position-try-fallbacks: revert-layer;
 position-try-fallbacks: unset;
 ```
 
-The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or an `inset-area()` function.
+The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or an `inset-area` value.
 
 ### Values
 
@@ -65,8 +65,8 @@ The `position-try-fallbacks` property may be specified as either the keyword val
       - : Flips the element's position along the inline axis.
     - `flip-start`
       - : Flips both the inline and block axis values, swapping the `start` properties with each other, and the `end` properties with each other.
-- [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)
-  - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [inset area grid](/en-US/docs/Web/CSS/inset-area#description) based on the {{cssxref("inset-area_value","&lt;inset-area>")}} value passed into the `inset-area()` function; the effect is similar to a custom {{cssxref("@position-try")}} option contains only an {{cssxref("inset-area")}} descriptor.
+- [`inset-area`](/en-US/docs/Web/CSS/inset-area) value
+  - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [inset area grid](/en-US/docs/Web/CSS/inset-area#description) based on the specified {{cssxref("inset-area_value","&lt;inset-area>")}} value; the effect is the same as a custom {{cssxref("@position-try")}} option containing only an {{cssxref("inset-area")}} descriptor.
 - {{cssxref("dashed-ident")}}
   - : Adds a custom {{cssxref("@position-try")}} option to the try options list, the identifying name of which matches the specified `dashed-ident`. If no custom option exists with that name, the option is ignored.
 
@@ -102,7 +102,7 @@ A single position-try fallback option can include more than one `<try-tactic>` o
 - In the case of multiple predefined `<try-tactic>` options, their transformations are composed together.
 - In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@postion-try` options, the custom option is applied first, then the `<try-tactic>` transformation is applied.
 
-The `inset-area()` function value cannot be combined like this.
+`inset-area` values cannot be combined like this.
 
 ## Formal definition
 
@@ -275,11 +275,11 @@ The third position-try fallback option means that the browser will try `flip-blo
 
 ### `inset-area` try options
 
-This example shows some `inset-area()` position-try fallback options in action.
+This example shows some `inset-area` position-try fallback options in action.
 
 #### HTML and CSS
 
-All of the HTML and CSS in this demo is the same, except for the positioned element code. In this case, our position try fallback options are all `inset-area()` functions; we've included an option for top, top-right, right, bottom-right, bottom, bottom-left, and left.
+All of the HTML and CSS in this demo is the same, except for the positioned element code. In this case, our position try fallback options are all `inset-area` values — `top`, `top right`, `right`, `bottom right`, `bottom`, `bottom left`, and `left`.
 
 This means that the positioned element will find a reasonable position to display in, whatever viewport edges the anchor is near. This approach is a bit more longwinded than the predefined values approach, but it is also more granular and flexible.
 
@@ -330,16 +330,14 @@ body {
   inset-area: top left;
 
   position-try:
-    inset-area(top), inset-area(top right),
-    inset-area(right), inset-area(bottom right),
-    inset-area(bottom), inset-area(bottom left),
-    inset-area(left);
+    top, top right, right,
+    bottom right, bottom,
+    bottom left, left;
 
   position-try-fallbacks:
-    inset-area(top), inset-area(top right),
-    inset-area(right), inset-area(bottom right),
-    inset-area(bottom), inset-area(bottom left),
-    inset-area(left);
+    top, top right, right,
+    bottom right, bottom,
+    bottom left, left;
 }
 ```
 
@@ -367,7 +365,6 @@ See the {{cssxref("@position-try")}} reference page.
 - {{cssxref("position-try-order")}}
 - {{cssxref("@position-try")}} at-rule
 - {{cssxref("inset-area")}}
-- [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

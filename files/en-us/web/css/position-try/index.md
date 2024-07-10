@@ -23,14 +23,14 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* position-try-fallbacks only */
 position-try: normal flip-block;
-position-try: inset-area(top);
+position-try: top;
 position-try: --custom-try-option;
 position-try: flip-block flip-inline;
-position-try: inset-area(top), inset-area(right), inset-area(bottom);
+position-try: top, right, bottom;
 position-try: --custom-try-option1, --custom-try-option2;
 position-try:
   normal flip-block,
-  inset-area(right),
+  right,
   --custom-try-option;
 
 /* position-try-order and position-try-fallbacks */
@@ -40,7 +40,7 @@ position-try:
   --custom-try-option2;
 position-try:
   most-height flip-block,
-  inset-area(right),
+  right,
   --custom-try-option;
 
 /* Global values */
@@ -172,7 +172,6 @@ The element appears below its anchor, even though it is initially positioned abo
 - {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try-order")}}
 - The {{cssxref("@position-try")}} at-rule
-- The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

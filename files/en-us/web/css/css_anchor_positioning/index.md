@@ -37,7 +37,6 @@ In addition, the specification provides CSS-only mechanisms to:
 
 - [`anchor()`](/en-US/docs/Web/CSS/anchor)
 - [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size)
-- [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)
 
 ### Data types and values
 

@@ -376,7 +376,6 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 ## See also
 
 - {{cssxref("inset-area")}}
-- [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/en-US/docs/Web/CSS/anchor) function

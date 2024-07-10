@@ -21,7 +21,7 @@ If a tooltip is fixed to the top-right of a UI element, when the user scrolls th
 Position-try fallback options can be specified using:
 
 - [Predefined fallback options](#predefined_fallback_options).
-- [`inset-area` values](#using-inset-area_try_fallbacks) wrapped inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function.
+- [`inset-area` values](#using-inset-area_try_fallbacks).
 - [Custom options](#custom_fallback_options) defined using the {{cssxref("@position-try")}} at-rule.
 
 In addition, the {{cssxref("position-try-order")}} property allows you to specify various options that result in an available position try option being set in preference to the element's initial positioning. For example, you might want to initially display the element in a space that has more available height or width.
@@ -181,11 +181,11 @@ This means that the browser will first try `flip-block` and then try `flip-inlin
 
 ## Using `inset-area` try fallbacks
 
-The predefined `<try-tactic>` try fallback options are useful but limited, as they only allow positioned element placement to be flipped across axes. What if you had an anchor-positioned element positioned to the top left of its anchor, and wanted to change its position to directly below the anchor if it started to overflow? To achieve this, you can use an {{cssxref("inset-area")}} value as a position-try fallback option.
+The predefined `<try-tactic>` try fallback options are useful but limited, as they only allow positioned element placement to be flipped across axes. What if you had an anchor-positioned element positioned to the top left of its anchor, and wanted to change its position to directly below the anchor if it started to overflow?
 
-An `inset-area` try fallback option is created by wrapping an `inset-area` value inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function, which is then included in the `position-try-fallbacks` list. The `inset-area()` function automatically creates a try fallback option based on that inset area. In effect, it is a shortcut for creating a [custom position option](#custom_fallback_options) that contains only that `inset-area` property value.
+To achieve this, you can use an {{cssxref("inset-area")}} value as a position-try fallback option, including it in the `position-try-fallbacks` list. This automatically creates a try fallback option based on that inset area. In effect, it is a shortcut for creating a [custom position option](#custom_fallback_options) that contains only that `inset-area` property value.
 
-The following example shows `inset-area` position try fallback options in use. We use the same HTML and CSS, except for the infobox positioning. In this case, our position-try fallback options are `inset-area()` functions, including top, top-right, right, bottom-right, bottom, bottom-left, and left fallback options. The positioned element will be reasonably positioned no matter which viewport edge the anchor approaches. This verbose approach is more granular and flexible than the predefined values approach.
+The following example shows `inset-area` position try fallback options in use. We use the same HTML and CSS, except for the infobox positioning. In this case, our position-try fallback options are `inset-area` values — `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, and `left`. The positioned element will be reasonably positioned no matter which viewport edge the anchor approaches. This verbose approach is more granular and flexible than the predefined values approach.
 
 ```html hidden
 <div class="anchor">⚓︎</div>
@@ -235,10 +235,9 @@ body {
   position-anchor: --myAnchor;
   inset-area: top left;
   position-try-fallbacks:
-    inset-area(top), inset-area(top right),
-    inset-area(right), inset-area(bottom right),
-    inset-area(bottom), inset-area(bottom left),
-    inset-area(left);
+    top, top right, right,
+    bottom right, bottom,
+    bottom left, left;
 }
 ```
 
