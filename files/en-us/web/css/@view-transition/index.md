@@ -37,7 +37,9 @@ For a cross-document view transition to work, the current and destination docume
 
 ### Transitioning page view
 
-In this external example, there is cross-document view-transitions; a half second transition that occurs when navigating between the site's two pages.
+The following code snippets show key concepts used in a page transition demo.
+The demo uses cross-document view-transitions; a half second transition that occurs when navigating between two pages of a site.
+For the full demo, see the [View transitions multi-page app demo](https://mdn.github.io/dom-examples/view-transitions/mpa/).
 
 The `@view-transition` at-rule is specified in the CSS for both your current and destination documents of a navigation to opt them both in to the view transition:
 
