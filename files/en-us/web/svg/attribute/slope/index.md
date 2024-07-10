@@ -46,6 +46,7 @@ You can use this attribute with the following SVG filter primitive transfer func
 
 - `<number>`
   - : This value indicates the linear slope of the transfer function.
+
 ## Examples
 
 In this example, a gradient box has text with a linear filter applied.
