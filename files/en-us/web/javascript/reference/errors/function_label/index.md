@@ -33,13 +33,13 @@ SyntaxError: Unexpected keyword 'function'. Cannot use async function declaratio
 
 ## What went wrong?
 
-Function declarations are never supposed to be labeled, because labels should only apply to statements, not declarations. There's no way to actually jump to this label. However, due to a legacy JavaScript syntax, the error condition is a bit more complicated than necessary:
+Function declarations are never supposed to be labeled, because labels should only apply to statements, not declarations. There's no way to actually jump to this label. However, due to some legacy JavaScript syntax rules, the error condition is a bit more complicated than necessary:
 
 - In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations are never allowed to be labeled.
 - In non-strict mode, function declarations are allowed to be labeled, but not when the function is the sole statement of an `if` statement (which itself is a deprecated feature).
 - Async functions, generator functions, and async generator functions are never allowed to be labeled.
 
-The error message may say something along the line of "invalid place for a function declaration to appear", because when the parser sees a label, it expects a statement to follow, and a function declaration is not a statement. It depends on whether the error's perspective is that a label cannot be followed by a function, or that a function cannot be preceded by a label.
+The error message may say something along the lines of "invalid place for a function declaration to appear", because when the parser sees a label, it expects a statement to follow, and a function declaration is not a statement. It depends on whether the error's perspective is that a label cannot be followed by a function, or that a function cannot be preceded by a label.
 
 ## Examples
 
@@ -55,7 +55,7 @@ const createObj = () => {
 };
 ```
 
-Here, `{...}` is actually not an object literal, but the block body of the [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), so `greet:` becomes a label. To fix this, you need to wrap the object literal in parentheses:
+Here, `{...}` is actually not an object literal, but is instead the block body of the [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), so `greet:` becomes a label. To fix this, you need to wrap the object literal in parentheses:
 
 ```js-nolint example-good
 const createObj = () => ({
