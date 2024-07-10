@@ -12,9 +12,9 @@ Much of today's web content assumes the user's pointing device will be a mouse. 
 
 Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 
-The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
+The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType")}} property to inspect the device type which produced the event.
 
-The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (`mousedown`/`pointerdown`, `mousemove`/`pointermove`, etc.). Consequently, pointer event types are intentionally similar to mouse event types.
+The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events", "", 1)}} (`mousedown`/`pointerdown`, `mousemove`/`pointermove`, etc.). Consequently, pointer event types are intentionally similar to mouse event types.
 
 Additionally, a pointer event contains the usual properties present in mouse events (client coordinates, target element, button states, etc.) in addition to new properties for other forms of input: pressure, contact geometry, tilt, etc. In fact, the {{domxref("PointerEvent")}} interface inherits all of the {{domxref("MouseEvent")}} properties, thus facilitating the migration of content from mouse events to pointer events.
 
@@ -42,7 +42,9 @@ A hardware-agnostic representation of input devices that can target a specific c
 
 ### pointer capture
 
-Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location.
+Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location. See [capturing the pointer](#capturing_the_pointer) for an example.
+
+> **Note:** _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
 
 ### pointer event
 
@@ -269,7 +271,12 @@ The following table provides the values of `button` and `buttons` for the variou
 
 ## Capturing the pointer
 
-Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal [hit test](#hit_test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).
+Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event", "", 1)}} to be re-targeted to a particular element instead of the normal [hit test](#hit_test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling or panning).
+
+Pointer capture will cause the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set.
+For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), an [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture) will be called on the element when a `pointerdown` event triggers. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
+
+> **Note:** If you need to move an element in the DOM, then make sure to call `setPointerCapture()` **after DOM movements** so that `setPointerCapture()` will not lose track of it. E.g., if you need to use `Element.append()` to move an element somewhere else, then make sure to call `setPointerCapture()` on it only after the call to `Element.append()`.
 
 The following example shows pointer capture being set on an element.
 

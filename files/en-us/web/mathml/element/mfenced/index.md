@@ -19,7 +19,7 @@ The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possib
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 - `close`
-  - : A string for the closing delimiter. The default value is `")`" and any white space is trimmed.
+  - : A string for the closing delimiter. The default value is `")"` and any white space is trimmed.
 - `open`
   - : A string for the opening delimiter. The default value is `"("` and any white space is trimmed.
 - `separators`

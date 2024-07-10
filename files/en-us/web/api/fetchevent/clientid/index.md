@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FetchEvent.clientId
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`clientId`** read-only property of the
 {{domxref("FetchEvent")}} interface returns the id of the {{domxref("Client")}} that the

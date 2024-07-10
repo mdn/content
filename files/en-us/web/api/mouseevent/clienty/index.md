@@ -14,7 +14,7 @@ For example, clicking on the top edge of the viewport will always result in a mo
 
 ## Value
 
-A `double` floating point value.
+A `double` floating point value in pixels.
 
 ## Examples
 

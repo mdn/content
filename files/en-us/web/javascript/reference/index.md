@@ -80,6 +80,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Uint32Array")}}
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("BigUint64Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 

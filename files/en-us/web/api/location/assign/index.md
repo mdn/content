@@ -22,7 +22,7 @@ assign(url)
 ### Parameters
 
 - `url`
-  - : A string containing the URL of the page to navigate to; for example, an absolute URL such as `https://developer.mozilla.org/en-US/docs/Web/API/Location/reload`, or a relative URL — such as `"/Web` (just a path, for navigating to another document at the same origin) or `#specifications` (just a fragment string, for navigating to some part of the same page), and so on.
+  - : A string containing the URL of the page to navigate to; for example, an absolute URL such as `https://developer.mozilla.org/en-US/docs/Web/API/Location/reload`, or a relative URL — such as `/Web` (just a path, for navigating to another document at the same origin) or `#specifications` (just a fragment string, for navigating to some part of the same page), and so on.
 
 ### Exceptions
 

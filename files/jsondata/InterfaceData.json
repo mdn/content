@@ -376,6 +376,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "ChapterInformation": {
+      "inh": "",
+      "impl": []
+    },
     "CharacterBoundsUpdateEvent": {
       "inh": "Event",
       "impl": []
@@ -644,6 +648,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSNestedDeclarations": {
+      "inh": "CSSRule",
+      "impl": []
+    },
     "CSSNumericArray": {
       "inh": "",
       "impl": []
@@ -698,6 +706,10 @@
     },
     "CSSPerspective": {
       "inh": "CSSTransformComponent",
+      "impl": []
+    },
+    "CSSPositionTryDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSPositionTryRule": {
@@ -850,6 +862,10 @@
     },
     "DeprecationReportBody": {
       "inh": "ReportBody",
+      "impl": []
+    },
+    "DeviceChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "DeviceMotionEvent": {
@@ -1430,6 +1446,18 @@
     },
     "Gyroscope": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "HandwritingDrawing": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingRecognizer": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingStroke": {
+      "inh": "",
       "impl": []
     },
     "HashChangeEvent": {
@@ -2848,6 +2876,10 @@
       "inh": "",
       "impl": []
     },
+    "RTCIceCandidatePair": {
+      "inh": "",
+      "impl": []
+    },
     "RTCIceTransport": {
       "inh": "EventTarget",
       "impl": []
@@ -2914,6 +2946,10 @@
     },
     "RTCTransformEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Sanitizer": {
+      "inh": "",
       "impl": []
     },
     "Scheduler": {
@@ -3016,18 +3052,6 @@
       "inh": "",
       "impl": []
     },
-    "SharedStorageOperation": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageRunOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
-    "SharedStorageSelectURLOperation": {
-      "inh": "SharedStorageOperation",
-      "impl": []
-    },
     "SharedStorageWorklet": {
       "inh": "Worklet",
       "impl": []
@@ -3117,6 +3141,10 @@
       "impl": []
     },
     "Storage": {
+      "inh": "",
+      "impl": []
+    },
+    "StorageAccessHandle": {
       "inh": "",
       "impl": []
     },

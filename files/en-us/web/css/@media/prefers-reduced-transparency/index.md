@@ -9,7 +9,7 @@ browser-compat: css.at-rules.media.prefers-reduced-transparency
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) is used to detect if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device. Switching on such a setting can help improve contrast and readability for some users.
+The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device. Switching on such a setting can help improve contrast and readability for some users.
 
 ## Syntax
 

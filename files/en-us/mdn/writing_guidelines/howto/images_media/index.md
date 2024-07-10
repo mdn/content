@@ -153,7 +153,7 @@ See [Working with the Animation Inspector](https://firefox-source-docs.mozilla.o
 In addition, you should consider the following tips:
 
 - The video will end up being uploaded to YouTube before embedding.
-  We recommend a 16:9 aspect ratio for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video.
+  We recommend a 16:9 {{glossary("aspect ratio")}} for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video.
   So for example, you might choose a resolution of 1024×576, 1152×648, or 1280×720.
 - Record the video in HD, so that it looks better when uploaded.
 - For DevTools videos, it is often a good idea to choose a contrasting theme to the page content. For example, choose the dark theme if the example webpage is light-themed. It is easier to see what is going on and where the DevTools start and the page ends.

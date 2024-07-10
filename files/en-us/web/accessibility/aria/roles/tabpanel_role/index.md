@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/
 ---
 
+{{AccessibilitySidebar}}
+
 The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
 
 ## Description
@@ -50,9 +52,9 @@ Carousels can be created using this tab pattern: A slide picker controls can be 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Should be used on the necessary `tab` elements if a multi-selectable `tablist` is used.
 
-### Keyboard interaction
+### Keyboard interactions
 
-See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role#keyboard_interaction) in the [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) role definition.
+See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role#keyboard_interactions) in the [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) role definition.
 
 ## Example
 
@@ -68,11 +70,3 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 - [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
 - [Example: Tabs with Automatic Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html) - W3C
 - [Example: Tabs with Manual Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html) -W3C
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

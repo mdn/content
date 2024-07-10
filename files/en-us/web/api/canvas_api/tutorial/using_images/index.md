@@ -46,7 +46,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
 
 ### Using other canvas elements
 
@@ -203,11 +203,11 @@ The resulting canvas looks like this:
 The third and last variant of the `drawImage()` method has eight parameters in addition to the image source. It lets us cut out a section of the source image, then scale and draw it on our canvas.
 
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)")}}
-  - : Given an `image`, this function takes the area of the source image specified by the rectangle whose top-left corner is (`sx`, `sy`) and whose width and height are `sWidth` and `sHeight` and draws it into the canvas, placing it on the canvas at (`dx`, `dy`) and scaling it to the size specified by `dWidth` and `dHeight`.
+  - : Given an `image`, this function takes the area of the source image specified by the rectangle whose top-left corner is (`sx`, `sy`) and whose width and height are `sWidth` and `sHeight` and draws it into the canvas, placing it on the canvas at (`dx`, `dy`) and scaling it to the size specified by `dWidth` and `dHeight`, maintaining its {{glossary("aspect ratio")}}.
 
 To really understand what this does, it may help to look at this image:
 
-![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, maintaining its aspect ratio, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
+![The rectangular source image top left coordinates are sx and sy with a width and height of sWidth and sHeight respectively. The source image is translated to the destination canvas where the top-left corner coordinates are dx and dy, with a width and height of dWidth and dHeight respectively.](canvas_drawimage.jpg)
 
 The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.
 

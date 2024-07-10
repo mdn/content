@@ -5,13 +5,12 @@ page-type: web-api-overview
 browser-compat:
   - api.Navigator.share
   - api.Navigator.canShare
+spec-urls: https://w3c.github.io/web-share/
 ---
 
-{{DefaultAPISidebar("Web Share API")}}
+{{DefaultAPISidebar("Web Share API")}}{{securecontext_header}}
 
 The **Web Share API** provides a mechanism for sharing text, links, files, and other content to an arbitrary _share target_ selected by the user.
-
-{{securecontext_header}}
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
@@ -33,6 +32,8 @@ The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permi
 If the policy is supported but has not been granted, both methods will indicate that the data is not shareable.
 
 ## Interfaces
+
+### Extensions to other interfaces
 
 - {{domxref("navigator.canShare()")}}
   - : Returns a boolean indicating whether the specified data is shareable.

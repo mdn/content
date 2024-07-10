@@ -64,7 +64,7 @@ When range is specified as integers (versus `auto`), the value `infinite` can be
 
 The value of `range` is either `auto`, discussed above, or a comma separated list of one or more ranges. The range of the counter style is the union of all the ranges defined in the list.
 
-Each range in the list of ranges takes two values. Those values are either an {{cssxref("integer")}} or the keyword `infinite`. The first value is the _lower bound_, inclusive. The second value is the _upper bound_, inclusive. For two integer values, the lower value must come first. If the lower bound of any range in the list is higher than the upper bound, the entire `range` descriptor is invalid and will be ignored. The `infinite` keyword will not invalidated the range as it's position determines it's value; either negative or positive infinity based on whether it's the lower bound or upper bound, respectively.
+Each range in the list of ranges takes two values. Those values are either an {{cssxref("integer")}} or the keyword `infinite`. The first value is the _lower bound_, inclusive. The second value is the _upper bound_, inclusive. For two integer values, the lower value must come first. If the lower bound of any range in the list is higher than the upper bound, the entire `range` descriptor is invalid and will be ignored. The `infinite` keyword will not invalidate the range, because the position of `infinite` determines its value; either negative or positive infinity based on whether it's the lower bound or upper bound, respectively.
 
 ## Formal definition
 

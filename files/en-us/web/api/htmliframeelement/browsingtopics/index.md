@@ -11,9 +11,9 @@ browser-compat: api.HTMLIFrameElement.browsingTopics
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
-> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.
 
-The **`browsingTopics`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean specifying that that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the `browsingtopics` HTML attribute.
+The **`browsingTopics`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean specifying that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the `browsingtopics` HTML attribute.
 
 See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 

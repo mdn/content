@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.error
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`error()`** method of the
 {{domxref("ReadableStreamDefaultController")}} interface causes any future interactions

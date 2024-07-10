@@ -329,7 +329,7 @@ withAwait();
 //    at async withAwait
 ```
 
-However, there's a little performance penalty coming with `return await` because the promise has to be unwrapped and wrapped again.
+Contrary to some popular belief, `return await promise` is at least as fast as `return promise`, due to how the spec and engines optimize the resolution of native promises. There's a proposal to [make `return promise` faster](https://github.com/tc39/proposal-faster-promise-adoption) and you can also read about [V8's optimization on async functions](https://v8.dev/blog/fast-async). Therefore, except for stylistic reasons, `return await` is almost always preferable.
 
 ## Specifications
 
@@ -345,3 +345,4 @@ However, there's a little performance penalty coming with `return await` because
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
 - {{jsxref("AsyncFunction")}}
 - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (2019)
+- [typescript-eslint rule: `return-await`](https://typescript-eslint.io/rules/return-await/)

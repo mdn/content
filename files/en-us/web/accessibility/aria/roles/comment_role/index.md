@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Roles/comment_role
 page-type: aria-role
 ---
 
+{{AccessibilitySidebar}}
+
 The `comment` role semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
 > **Note:** The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
@@ -86,11 +88,3 @@ None
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## See also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
 
 ## Description
@@ -71,8 +73,3 @@ Supported by all roles and by all base markup elements except for `role="generic
 ## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

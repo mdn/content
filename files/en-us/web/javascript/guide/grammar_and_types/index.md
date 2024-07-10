@@ -145,7 +145,7 @@ console.log(x); // x is 5
 
 ### Variable hoisting
 
-`var`-declared variables are [hoisted](/en-US/docs/Glossary/Hoisting), meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet. You can see `var` declarations as being "lifted" to the top of its function or global scope. However, if you access a variable before it's declared, the value is always `undefined`, because only its _declaration_ is hoisted, but not its _initialization_.
+`var`-declared variables are [hoisted](/en-US/docs/Glossary/Hoisting), meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet. You can see `var` declarations as being "lifted" to the top of its function or global scope. However, if you access a variable before it's declared, the value is always `undefined`, because only its _declaration_ and _default initialization (with `undefined`)_ is hoisted, but not its _value assignment_.
 
 ```js
 console.log(x === undefined); // true
@@ -305,7 +305,7 @@ parseInt("101", 2); // 5
 An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
 
 ```js-nolint
-"1.1" + "1.1" // '1.11.1'
+"1.1" + "1.1"; // '1.11.1'
 (+"1.1") + (+"1.1"); // 2.2
 // Note: the parentheses are added for clarity, not required.
 ```

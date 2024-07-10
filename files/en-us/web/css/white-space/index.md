@@ -7,7 +7,7 @@ browser-compat: css.properties.white-space
 
 {{CSSRef}}
 
-The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
+The **`white-space`** [CSS](/en-US/docs/Web/CSS) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
@@ -61,7 +61,7 @@ white-space: unset;
 
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 The following table summarizes the behavior of the various `white-space` keyword values:
 

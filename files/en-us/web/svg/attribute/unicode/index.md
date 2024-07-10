@@ -17,11 +17,11 @@ It is often useful to refer to characters using XML character references express
 
 The `unicode` attribute contributes to the process for deciding which glyph(s) are used to represent which character(s).
 
-You can use this attribute with the following SVG elements:
+## Elements
 
-- {{SVGElement("glyph")}}
+You can use this attribute with the {{SVGElement("glyph")}} SVG element.
 
-## Context notes
+## Usage notes
 
 <table class="properties">
   <tbody>

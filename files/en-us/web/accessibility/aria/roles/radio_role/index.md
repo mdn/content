@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Roles/radio_role
 page-type: aria-role
 ---
 
+{{AccessibilitySidebar}}
+
 The `radio` role is one of a group of checkable radio buttons, in a `radiogroup`, where no more than a single radio button can be checked at a time.
 
 ## Description
@@ -225,19 +227,19 @@ let handleClick = function (event) {
 
 // handle key presses
 let handleKeydown = function (event) {
-  switch (event.keyCode) {
-    case 32: // space
-    case 12: // return
+  switch (event.code) {
+    case "Space":
+    case "Enter":
       currentChecked();
       break;
 
-    case 38: // up
-    case 37: // left
+    case "ArrowUp":
+    case "ArrowLeft":
       previousRadioChecked();
       break;
 
-    case 40: // down
-    case 39: // right
+    case "ArrowDown":
+    case "ArrowRight":
       nextItemChecked();
       break;
 
@@ -299,11 +301,3 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

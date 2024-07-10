@@ -20,7 +20,7 @@ You have already encountered the {{cssxref("grid-area")}} property. This is the 
 
 What we are doing here when defining all four lines, is defining the area by specifying the lines that enclose that area.
 
-![The Grid Area defined by lines](4_area.png)
+![The grid area defined by lines](4_area.png)
 
 We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.
 
@@ -428,7 +428,7 @@ These can quickly become difficult to read for other developers, or even your fu
 
 Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, they also act to **reset things** to their initial values that you do not, or cannot set in the shorthand. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.
 
-The two shorthands for the grid container are the Explicit Grid Shorthand `grid-template` and the Grid Definition Shorthand `grid`.
+The two shorthands for the grid container are the Explicit grid shorthand `grid-template` and the grid definition shorthand `grid`.
 
 ### `grid-template`
 
@@ -438,7 +438,7 @@ The {{cssxref("grid-template")}} property sets the following properties:
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
 
-The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
+The property is referred to as the Explicit grid shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
 
 The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
 

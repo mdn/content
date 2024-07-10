@@ -355,23 +355,27 @@ Instead, you'd need to do something like:
 
 ```js
 async function fetchProducts() {
-  try {
-    const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
-    );
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Could not get products: ${error}`);
+  const response = await fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+  );
+  if (!response.ok) {
+    throw new Error(`HTTP error: ${response.status}`);
   }
+  const data = await response.json();
+  return data;
 }
 
 const promise = fetchProducts();
-promise.then((data) => console.log(data[0].name));
+promise
+  .then((data) => {
+    console.log(data[0].name);
+  })
+  .catch((error) => {
+    console.error(`Could not get products: ${error}`);
+  });
 ```
+
+Here, we moved the `try...catch` back to the `catch` handler on the returned promise. This means our `then` handler doesn't have to deal with the case where an error got caught inside the `fetchProducts` function, causing `data` to be `undefined`. Handle errors as the last step of your promise chain.
 
 Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
 
@@ -388,6 +392,7 @@ try {
   console.log(data[0].name);
 } catch (error) {
   console.error(`Could not get products: ${error}`);
+  throw error;
 }
 ```
 

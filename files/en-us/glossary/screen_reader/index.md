@@ -8,34 +8,35 @@ page-type: glossary-definition
 
 Screen readers are software applications that attempt to convey what is seen on a screen display in a non-visual way, usually as text to speech, but also into braille or sound icons. Screen readers are essential to people who are visually impaired, illiterate, or have a learning disability. There are some browser extension screen readers, but most screen readers operate system-wide for all user applications, not just the browser.
 
-In terms of web accessibility, most user agents provide an accessibility object model and screen readers interact with dedicated accessibility APIs, using various operating system features and employing hooking techniques.
+In terms of web {{glossary("accessibility")}}, most user agents provide an accessibility object model and screen readers interact with dedicated accessibility APIs, using various operating system features and employing hooking techniques.
 
-## VoiceOver
+## Common screen readers
 
-macOS comes with VoiceOver, a built-in screen reader. To access VoiceOver, go to System Preferences > Accessibility > VoiceOver. You can also toggle VoiceOver on and off with fn+command + F5. VoiceOver both reads aloud and displays content. The content read aloud is displayed in a dark grey box.
+### VoiceOver
 
-Desktop/laptop screen reader users navigate websites with a keyboard or other non-pointing device. The best way to emulate use is to do the same.
+iOS and macOS comes with VoiceOver, a built-in screen reader. To access VoiceOver on macOS, go to System Settings > Accessibility > VoiceOver. You can also toggle VoiceOver on and off with fn + Command + F5. VoiceOver both reads aloud and displays content. The content read aloud is displayed in a dark grey box.
 
-Just like keyboard navigation without VoiceOver, you can navigate through interactive elements using the tab key and the arrow keys:
+VoiceOver can also be used with commands shortcuts. See [VoiceOver general commands on Mac](https://support.apple.com/en-sg/guide/voiceover/cpvokys01/mac) for a complete list.
 
-- Next interactive element: Tab
-- Previous interactive element: Shift + Tab
-- Next radio button in a same named-group: right or down arrow
-- Previous radio button in a same named-group: left or up arrow
+See [VoiceOver User Guide for Mac](https://support.apple.com/guide/voiceover/welcome/mac) and [Use VoiceOver in apps on iPhone](https://support.apple.com/guide/iphone/use-voiceover-in-apps-iphe4ee74be8/ios) for more information.
 
-Navigating through the content of a page is done with the tab key and a series of other keys along with Control + Option keys
+### Narrator
 
-- Next heading: Control + Option + H
-- Next list: Control + Option + X
-- Next graphic: Control + Option + G
-- Next table: Control + Option + T
-- Down an HTML hierarchical order Control + Option + right arrow
-- Previous heading: Shift + Control + Option + H
-- Previous list: Shift + Control + Option + X
-- Previous graphic: Shift + Control + Option + G
-- Previous table: Shift + Control + Option + T
-- Up an HTML hierarchical order: Control + Option + left arrow
+Narrator is a screen-reading application that's built into Windows 10 and Windows 11.
+
+See [Complete guide to Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
+
+### ChromeVox
+
+Chromebooks have a built-in screen reader called ChromeVox, which enables people with visual impairments to use the Chrome operating system.
+
+See [ChromeVox screen reader](https://support.google.com/accessibility/answer/7031755) for more information.
 
 ## See also
 
+- [Accessibility](/en-US/docs/Web/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn/Accessibility)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- Related glossary terms:
+  - {{Glossary("Accessibility")}}
+  - {{Glossary("ARIA")}}

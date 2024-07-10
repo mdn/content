@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextMetrics.actualBoundingBoxRight
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The read-only `actualBoundingBoxRight` property of the {{domxref("TextMetrics")}} interface is a `double` giving the distance parallel to the baseline from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the right side of the bounding rectangle of the given text, in CSS pixels.
 

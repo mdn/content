@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/TR/wai-aria-1.2/#aria-describedby
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-describedby` attribute identifies the element (or elements) that describes the element on which the attribute is set.
 
 ## Description
@@ -55,8 +57,3 @@ Used in **all** roles. Usable in all HTML elements as well.
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -57,7 +57,7 @@ Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 2. **_platform_** describes the native platform that the browser is running on (Windows, Mac, Linux, Android, etc.) and if it is a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple "`;`"-separated tokens. See below for further details and examples.
 3. **rv:_geckoversion_** indicates the release version of Gecko (such as "_17.0_"). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
 4. **_Gecko/geckotrail_** indicates that the browser is based on Gecko. (On the desktop, **_geckotrail_** is always the fixed string `20100101`.)
-5. **_Firefox/firefoxversion_** indicates that the browser is Firefox and provides the version (such as "_17.0"_).
+5. **_Firefox/firefoxversion_** indicates that the browser is Firefox and provides the version (such as "_17.0_").
 
 ### Examples
 

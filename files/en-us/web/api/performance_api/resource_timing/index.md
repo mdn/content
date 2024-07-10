@@ -14,7 +14,7 @@ For each `PerformanceResourceTiming` entry, a _resource loading timeline_ will b
 
 ## Resource loading timestamps
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](/en-US/docs/Web/API/PerformanceResourceTiming/timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 Figure 1. Resource loading timestamps ([source](https://w3c.github.io/resource-timing/#attribute-descriptions)).
 
 An application can get timestamps for the various stages used to load a resource. The timestamps this API provides are:

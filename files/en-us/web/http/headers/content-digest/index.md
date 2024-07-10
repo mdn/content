@@ -48,7 +48,7 @@ For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
 
 ## Examples
 
-```htto
+```plain
 Content-Digest: unixcksum=916142062
 Content-Digest: md5=:+thA//8pGVGk2VYuJkFNvA==:, unixsum=26869
 ```

@@ -119,6 +119,16 @@ arr[1] = "n";
 console.log(iterator.next().value); // "n"
 ```
 
+Unlike [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), the array iterator object does not save the array's length at the time of its creation, but reads it once on each iteration. Therefore, if the array grows during iteration, the iterator will visit the new elements too. This may lead to infinite loops.
+
+```js
+const arr = [1, 2, 3];
+for (const e of arr) {
+  arr.push(e * 10);
+}
+// RangeError: invalid array length
+```
+
 ### Iterating sparse arrays
 
 `values()` will visit empty slots as if they are `undefined`.

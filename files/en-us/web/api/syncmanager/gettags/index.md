@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SyncManager.getTags
 ---
 
-{{APIRef("Background Sync")}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers}}
 
 The **`getTags()`** method of the
 {{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for

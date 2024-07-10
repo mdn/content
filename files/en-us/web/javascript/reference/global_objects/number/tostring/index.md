@@ -25,12 +25,14 @@ toString(radix)
 
 ### Return value
 
-A string representing the specified number value.
+A string representing the specified number value. Scientific notation is used if radix is 10 and the number's magnitude (ignoring sign) is greater than or equal to 10<sup>21</sup> or less than 10<sup>-6</sup>.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
   - : Thrown if `radix` is less than 2 or greater than 36.
+- {{jsxref("TypeError")}}
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Description
 
@@ -49,6 +51,15 @@ If the number is not a whole number, the decimal point `.` is used to separate t
 console.log((10 ** 21.5).toString()); // "3.1622776601683794e+21"
 console.log((10 ** 21.5).toString(8)); // "526665530627250154000000"
 ```
+
+The underlying representation for floating point numbers is base-2 scientific notation (see [number encoding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)). However, the `toString()` method doesn't directly use this most precise representation of the number value. Rather, the algorithm uses the least number of significant figures necessary to distinguish the output from adjacent number values. For example, if the number is large, there will be many equivalent string representations of the same floating point number, and `toString()` will choose the one with the most 0s to the right (for any given radix).
+
+```js
+console.log((1000000000000000128).toString()); // "1000000000000000100"
+console.log(1000000000000000100 === 1000000000000000128); // true
+```
+
+On the other hand, {{jsxref("Number.prototype.toFixed()")}} and {{jsxref("Number.prototype.toPrecision()")}} allow you to specify the precision and can be more precise than `toString()`.
 
 The `toString()` method requires its `this` value to be a `Number` primitive or wrapper object. It throws a {{jsxref("TypeError")}} for other `this` values without attempting to coerce them to number values.
 

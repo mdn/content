@@ -52,11 +52,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `char` {{deprecated_inline}}
 
-  - : Specifies the alignment of the content to a character of the header cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+  - : Does nothing. It was originally intended to specify the alignment of the content to a character of the header cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : Specifies the number of characters to offset the header cell content from the alignment character specified by the [`char`](#char) attribute.
+  - : Does nothing. It was originally intended to specify the number of characters to offset the header cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `height` {{deprecated_inline}}
 

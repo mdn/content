@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamBYOBReader()`** constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 

@@ -192,7 +192,7 @@ In this example we have two adjacent {{HTMLElement("div")}} elements, which each
 
 #### Preventing margin collapsing
 
-In this example we wrap the second `<div>` in an outer one, to create a new BFC and prevent margin collapsing.
+In this example, we wrap the second `<div>` in an outer `<div>`, and create a new BFC by using `overflow: hidden` on the outer `<div>`. This new BFC prevents the margins of the nested `<div>` from collapsing with those of the outer `<div>`.
 
 ```html
 <div class="blue"></div>
