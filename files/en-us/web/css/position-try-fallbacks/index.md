@@ -68,7 +68,7 @@ The `position-try-fallbacks` property may be specified as either the keyword val
 - [`inset-area`](/en-US/docs/Web/CSS/inset-area) value
   - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [inset area grid](/en-US/docs/Web/CSS/inset-area#description) based on the specified {{cssxref("inset-area_value","&lt;inset-area>")}} value; the effect is the same as a custom {{cssxref("@position-try")}} option containing only an {{cssxref("inset-area")}} descriptor.
 - {{cssxref("dashed-ident")}}
-  - : Adds a custom {{cssxref("@position-try")}} option to the try options list, the identifying name of which matches the specified `dashed-ident`. If no custom option exists with that name, the option is ignored.
+  - : Adds a custom {{cssxref("@position-try")}} option to the fallback options list, the identifying name of which matches the specified `dashed-ident`. If no custom position option exists with that name, the option is ignored.
 
 > **Note:** Multiple options can be specified, separated by commas.
 
@@ -76,13 +76,13 @@ The `position-try-fallbacks` property may be specified as either the keyword val
 
 Anchor-positioned elements should always appear in a convenient place for the user to interact with, if at all possible, regardless of where their anchor is positioned. To stop the positioned element from overflowing the viewport, it is often necessary to change its location when its anchor gets close to the edge of its containing element or the viewport.
 
-This is achieved by providing one or more position-try fallback options in the `position-try-fallbacks` property. If the positioned element's initial position would overflow, the browser will try each fallback position option; the first fallback option that doesn't cause the element to overflow its containing block is applied. By default, the browser will try them in the order they appear in the list, applying the first one it finds one that will stop the positioned element from overflowing.
+This is achieved by providing one or more position-try fallback options in the `position-try-fallbacks` property. If the positioned element's initial position would overflow, the browser will try each fallback position option; the first fallback option that doesn't cause the element to overflow its containing block is applied. By default, the browser will try them in the order they appear in the list, applying the first one it finds that will stop the positioned element from overflowing.
 
 If no option can be found that will place the positioned element completely on-screen, the browser will revert to displaying the positioned element at its default position before any try fallback options were applied.
 
 > **Note:** In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
 
-For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
+For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
 ### Predefined &lt;try-tactic&gt; values
 
@@ -100,7 +100,7 @@ Referred to as a `<try-tactic>` in the specification, the predefined values move
 A single position-try fallback option can include more than one `<try-tactic>` or `dashed-ident` options, or a combination of both by declaring them as a single space-separated option:
 
 - In the case of multiple predefined `<try-tactic>` options, their transformations are composed together.
-- In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@postion-try` options, the custom option is applied first, then the `<try-tactic>` transformation is applied.
+- In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@postion-try` option, the custom position option is applied first, then the `<try-tactic>` transformation is applied.
 
 `inset-area` values cannot be combined like this.
 
@@ -208,7 +208,7 @@ Let's use a combined try fallback option to fix the problem we found with the pr
 
 #### HTML and CSS
 
-All of the HTML and CSS in this demo is the same, except for the positioned element code. In this case, it is given a third position try option: `flip-block flip-inline`:
+All of the HTML and CSS in this demo is the same, except for the positioned element code. In this case, it is given a third position try fallback option: `flip-block flip-inline`:
 
 ```html hidden
 <div class="anchor">⚓︎</div>
