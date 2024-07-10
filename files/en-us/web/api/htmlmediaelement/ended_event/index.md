@@ -14,6 +14,8 @@ This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("aud
 
 This event is not cancelable and does not bubble.
 
+> **Note:** The `ended` event will not be fired if the `loop` attribute is set to true on the HTMLMediaElement.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
