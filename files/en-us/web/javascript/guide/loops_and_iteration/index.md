@@ -437,7 +437,7 @@ for (const i in arr) {
 // "0" "1" "2" "foo"
 
 for (const i of arr) {
-  console.log(i);
+  console.log(arr[i]);
 }
 // Logs: 3 5 7
 ```
