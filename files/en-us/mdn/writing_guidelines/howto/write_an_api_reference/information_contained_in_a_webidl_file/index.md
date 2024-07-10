@@ -363,7 +363,7 @@ The parameters of a method are listed in the Syntax section of the method sub-pa
 Parameter types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
 
 - `[LegacyNullToEmptyString]`
-  - : Add the following sentence at the end of the parameter description: _A ["null"](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
+  - : Add the following sentence at the end of the parameter description: _A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
 
 ### Type of the return value
 
