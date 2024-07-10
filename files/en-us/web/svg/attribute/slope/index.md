@@ -16,7 +16,7 @@ You can use this attribute with the following SVG filter primitive transfer func
 - {{SVGElement("feFuncB")}}
 - {{SVGElement("feFuncA")}}
 
-> ![NOTE]
+> [!NOTE]
 > Originally, the `slope` attribute was used within {{SVGElement("font-face")}} to indicate the vertical stroke angle of a font. This use case has been deprecated.
 
 ## Usage notes
@@ -99,7 +99,7 @@ In this example, a gradient box has text with a linear filter applied.
 </svg>
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples', 300, 300)}}
 
 ## Specifications
 
