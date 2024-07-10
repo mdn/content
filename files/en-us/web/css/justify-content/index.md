@@ -230,7 +230,7 @@ This example demonstrates the `safe` keyterm. Four centered flex items are not a
   <div>D</div>
 </section>
 <p><code>justify-content: safe center;</code> with 3 items</p>
-<section class="container">
+<section class="container safe-center">
   <div>A</div>
   <div>B</div>
   <div>C</div>
@@ -258,11 +258,14 @@ The container is set to `center`, with every container other than the first havi
 
 ```css
 .container {
-  justify-content: center;
   align-items: baseline;
   display: flex;
   width: 350px;
   height: 2em;
+}
+
+.safe {
+  justify-content: center;
 }
 
 .safe-center {
