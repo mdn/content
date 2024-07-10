@@ -19,10 +19,10 @@ A {{domxref("URLSearchParams")}} object.
 ## Examples
 
 ```js
-let params = new URL("https://example.com/?name=Jonathan%20Smith&age=18")
+const params = new URL("https://example.com/?name=Jonathan%20Smith&age=18")
   .searchParams;
-let name = params.get("name");
-let age = parseInt(params.get("age"));
+const name = params.get("name");
+const age = parseInt(params.get("age"));
 
 console.log(`name:\t${name}`);
 console.log(`age:\t${age}`);
