@@ -49,7 +49,7 @@ font-size: unset;
 The `font-size` property is specified in one of the following ways:
 
 - As one of the absolute-size, relative-size or `math` keywords
-- As a `<length>` or a `<percentage>`, relative to the element's font size.
+- As a `<length>` or a `<percentage>`, relative to the parent element's font size.
 
 ### Values
 
