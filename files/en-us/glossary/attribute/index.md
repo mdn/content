@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 An **attribute** extends an {{Glossary("HTML")}} or {{Glossary("XML")}} {{Glossary("element")}}, changing its behavior or providing metadata.
 
-An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value). You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML.
+An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value). You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML. However, this is not valid in XML: XML requires all attributes to have an explicit value.
 
 A number of HTML attributes are {{Glossary("Boolean/HTML", "boolean attributes")}}. These attributes' values are only controlled by the presence or absence of the attribute. See {{Glossary("Boolean/HTML", "boolean attributes")}} for more information.
 
