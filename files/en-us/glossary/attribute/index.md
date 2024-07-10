@@ -54,3 +54,4 @@ console.log(attr.value); // Prints `Modified placeholder`
   - {{Glossary("HTML")}}
   - {{Glossary("XML")}}
   - {{Glossary("Boolean/HTML", "Boolean attributes")}}
+  - {{Glossary("Enumerated", "Enumerated attributes")}}
