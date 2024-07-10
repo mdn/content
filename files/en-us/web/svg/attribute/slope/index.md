@@ -52,30 +52,48 @@ You can use this attribute with the following SVG filter primitive transfer func
 In this example, a gradient box has text with a linear filter applied.
 
 ```html
-<svg width="8cm" height="4cm" viewBox="0 0 800 400"
-  xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="8cm"
+  height="4cm"
+  viewBox="0 0 800 400"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
   <title>Examples of feComponentTransfer operations</title>
-  <desc>A text strings showing the effects of feComponentTransfer
-    using the feComponentTransfer linear option.</desc>
+  <desc>
+    A text strings showing the effects of feComponentTransfer using the
+    feComponentTransfer linear option.
+  </desc>
   <defs>
-    <linearGradient id="MyGradient" gradientUnits="userSpaceOnUse"
-      x1="100" y1="0" x2="600" y2="0">
+    <linearGradient
+      id="MyGradient"
+      gradientUnits="userSpaceOnUse"
+      x1="100"
+      y1="0"
+      x2="600"
+      y2="0">
       <stop offset="0" stop-color="#ff0000" />
       <stop offset="1" stop-color="#0000ff" />
     </linearGradient>
-    <filter id="Linear" filterUnits="objectBoundingBox"
-       x="0%" y="0%" width="100%" height="100%">
+    <filter
+      id="Linear"
+      filterUnits="objectBoundingBox"
+      x="0%"
+      y="0%"
+      width="100%"
+      height="100%">
       <feComponentTransfer>
-        <feFuncR type="linear" slope="2"/>
-        <feFuncG type="linear" slope="25"/>
-        <feFuncB type="linear" slope="5"/>
+        <feFuncR type="linear" slope="2" />
+        <feFuncG type="linear" slope="25" />
+        <feFuncB type="linear" slope="5" />
       </feComponentTransfer>
     </filter>
   </defs>
-  <rect fill="none" stroke="blue"
-    x="1" y="1" width="798" height="398"/>
-  <g font-family="Verdana" font-size="200"
-    font-weight="bold" fill="url(#MyGradient)">
+  <rect fill="none" stroke="blue" x="1" y="1" width="798" height="398" />
+  <g
+    font-family="Verdana"
+    font-size="200"
+    font-weight="bold"
+    fill="url(#MyGradient)">
     <text x="100" y="290" filter="url(#Linear)">Slope</text>
   </g>
 </svg>
