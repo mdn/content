@@ -149,7 +149,7 @@ form {
 }
 ```
 
-We then include a custom fallback option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
+We then include a custom position option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {
@@ -159,7 +159,7 @@ We then include a custom fallback option named `--custom-bottom` which positions
 }
 ```
 
-We initially position the element above its anchor, and then give it our custom position fallback option as a position-try fallback option using the `position-try` shorthand, which sets the `position-try-order` to `normal`:
+We initially position the element above its anchor, and then give it our custom position option using the `position-try` shorthand, which also sets the `position-try-order` property to `normal`:
 
 ```css
 .infobox {
@@ -197,7 +197,7 @@ function setTryOrder(e) {
 
 {{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
 
-Try selecting the `most-height` order option. This has the effect of applying the `--custom-bottom` position-try fallback option, which positions the element below the anchor. This occurs because there is more vertical space below the anchor than there is above it.
+Try selecting the `most-height` order option. This has the effect of applying `--custom-bottom` as a position try fallback option, which positions the element below the anchor. This occurs because there is more vertical space below the anchor than there is above it.
 
 ## Specifications
 

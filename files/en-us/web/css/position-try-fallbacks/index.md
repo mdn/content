@@ -18,7 +18,7 @@ The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property enables you
 ## Syntax
 
 ```css
-/* Default value: no try option */
+/* Default value: no try fallback options */
 position-try-fallbacks: none;
 
 /* Single try option */
@@ -51,7 +51,7 @@ position-try-fallbacks: revert-layer;
 position-try-fallbacks: unset;
 ```
 
-The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom try option names or `<try-tactic>`s or an `inset-area()` function.
+The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or an `inset-area()` function.
 
 ### Values
 

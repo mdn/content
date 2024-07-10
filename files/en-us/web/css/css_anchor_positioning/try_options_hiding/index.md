@@ -100,7 +100,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 ```
 
 > ![NOTE]
-> When multiple try options are specified, they are separated by commas. Position try fallback options are tried in the order they are specified in.
+> When multiple position try fallback options are specified, they are separated by commas, and tried in the order they are specified.
 
 Try scrolling the demo so that the anchor starts to get near the edges:
 
@@ -183,7 +183,7 @@ This means that the browser will first try `flip-block` and then try `flip-inlin
 
 The predefined `<try-tactic>` try fallback options are useful but limited, as they only allow positioned element placement to be flipped across axes. What if you had an anchor-positioned element positioned to the top left of its anchor, and wanted to change its position to directly below the anchor if it started to overflow? To achieve this, you can use an {{cssxref("inset-area")}} value as a position-try fallback option.
 
-An `inset-area` try fallback option is created by wrapping an `inset-area` value inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function, which is then included in the `position-try-fallbacks` list. The `inset-area()` function automatically creates a try fallback option based on that inset area. In effect, it is a shortcut for creating a [custom try option](#custom_fallback_options) that contains only that `inset-area` property value.
+An `inset-area` try fallback option is created by wrapping an `inset-area` value inside an [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function, which is then included in the `position-try-fallbacks` list. The `inset-area()` function automatically creates a try fallback option based on that inset area. In effect, it is a shortcut for creating a [custom position option](#custom_fallback_options) that contains only that `inset-area` property value.
 
 The following example shows `inset-area` position try fallback options in use. We use the same HTML and CSS, except for the infobox positioning. In this case, our position-try fallback options are `inset-area()` functions, including top, top-right, right, bottom-right, bottom, bottom-left, and left fallback options. The positioned element will be reasonably positioned no matter which viewport edge the anchor approaches. This verbose approach is more granular and flexible than the predefined values approach.
 
@@ -242,7 +242,7 @@ body {
 }
 ```
 
-> **Note:** `inset-area` try fallback options can't be added into a space-separated combined try fallback option.
+> **Note:** `inset-area` try fallback options can't be added into a space-separated combined position option within a position-try fallback list.
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport:
 
@@ -250,7 +250,7 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 ## Custom fallback options
 
-To use fallback options that aren't available via the above mechanisms, you can create your own with the {{cssxref("@position-try")}} at-rule. The syntax is:
+To use custom position fallback options that aren't available via the above mechanisms, you can create your own with the {{cssxref("@position-try")}} at-rule. The syntax is:
 
 ```text
 @position-try --try-fallback-name {
@@ -377,7 +377,7 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 The {{cssxref("position-try-order")}} property has a slightly different focus to the rest of the position try functionality, in that it makes use of position try fallback options when the positioned element is first displayed, rather than when it is in the process of overflowing.
 
-This property allows you to specify that you want the positioned element initially displayed using the position try option that gives its containing block the most width or most height. This is achieved by setting the `most-height`, `most-width`, `most-block-size`, or `most-inline-size` values. You can also remove the effects of any previously-set `position-try-order` values using the `normal` value.
+This property allows you to specify that you want the positioned element initially displayed using the position try fallback option that gives its containing block the most width or most height. This is achieved by setting the `most-height`, `most-width`, `most-block-size`, or `most-inline-size` values. You can also remove the effects of any previously set `position-try-order` values using the `normal` value.
 
 If no position-try fallback option is available that provides more width/height than the initial positioning assigned to the element, `position-try-order` has no effect.
 

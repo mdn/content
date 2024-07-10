@@ -127,7 +127,7 @@ form {
 }
 ```
 
-We then include a custom try fallback option — `--custom-bottom` — which positions the element below the anchor and gives it an appropriate margin:
+We then include a custom position option — `--custom-bottom` — which positions the element below the anchor and gives it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {

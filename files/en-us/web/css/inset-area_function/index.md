@@ -9,9 +9,9 @@ browser-compat: css.properties.position-try-fallbacks.inset-area
 
 {{CSSRef}}{{seecompattable}}
 
-The **`inset-area()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used as a value for the {{cssxref("position-try-fallbacks")}} property. It accepts an {{cssxref("inset-area")}} property value as a parameter, and returns a custom **position try option** based on that `inset-area`. In effect, it is a shortcut for creating a custom {{cssxref("@position-try")}} option that contains only that `inset-area` property value.
+The **`inset-area()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used as a value for the {{cssxref("position-try-fallbacks")}} property. It accepts an {{cssxref("inset-area")}} property value as a parameter, and returns a custom **position try fallback option** based on that `inset-area`. In effect, it is a shortcut for creating a custom {{cssxref("@position-try")}} position option that contains only that `inset-area` property value.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page, [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using), and [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
 
 ## Syntax
 
