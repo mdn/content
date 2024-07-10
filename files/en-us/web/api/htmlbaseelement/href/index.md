@@ -23,7 +23,7 @@ A string that contains a URL, or the empty string (`""`) if the `<base>` element
 ```
 
 ```js
-const base = document.getElementsByTag("base")[0];
+const base = document.getElementsByTagName("base")[0];
 console.log(base.href); // 'https://developer.mozilla.org/example'
 ```
 
