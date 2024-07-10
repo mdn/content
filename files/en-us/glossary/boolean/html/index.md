@@ -25,6 +25,8 @@ Here's an example of a HTML boolean attribute `checked`:
 
 <!-- The following checkbox will not be checked on initial rendering -->
 <input type="checkbox" />
+```
+
 > **Note:** The strings "true" and "false" are invalid values. To set the attribute to `false`, the attribute should be omitted altogether. Though modern browsers treat _any_ string value as `true`, you should not rely on that behavior.
 
 ## See also
