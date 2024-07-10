@@ -15,9 +15,11 @@ The following code provides examples of different boolean attribute forms in HTM
 <input required />
 <!-- is equivalent to -->
 <input required="" />
-<!-- or -->
-<input required="anything" />
+<!-- and -->
+<input required="required" />
 ```
+
+> **Note:** Though setting the value of a boolean attribute to anything may be parsed as true across different browsers, it's suggested to follow the [specification](https://html.spec.whatwg.org/#boolean-attributes) to set its value to either be the empty string or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace.
 
 In XML, attributes without equals sign or value will throw a syntax error:
 
@@ -25,10 +27,11 @@ In XML, attributes without equals sign or value will throw a syntax error:
 <tag id />
 ```
 
-> **Note:** Any presence of a boolean attribute on an element represents `true`, regardless of the attribute's value.
+> **Note:** Any presence of a boolean attribute on an element represents `true`, regardless of the attribute's value. To set the attribute to `false`, you should just omit the attribute altogether.
 
 ## See also
 
 - [Boolean attributes](/en-US/docs/Web/HTML/Attributes#boolean_attributes)
+- [Boolean attributes](https://html.spec.whatwg.org/#boolean-attributes) in HTML specification
 - Related glossary terms:
   - {{Glossary("Attribute")}}
