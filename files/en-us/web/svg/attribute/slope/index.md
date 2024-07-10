@@ -49,7 +49,7 @@ You can use this attribute with the following SVG filter primitive transfer func
 
 ## Examples
 
-In this example, a gradient box has text with a linear filter applied.
+In this example, a gradient box has two text elements with linear filters applied. The slopes of the filter transfer functions of each filter differ.
 
 ```html
 <svg
@@ -75,7 +75,7 @@ In this example, a gradient box has text with a linear filter applied.
       <stop offset="1" stop-color="#0000ff" />
     </linearGradient>
     <filter
-      id="Linear"
+      id="Linear1"
       filterUnits="objectBoundingBox"
       x="0%"
       y="0%"
@@ -87,19 +87,33 @@ In this example, a gradient box has text with a linear filter applied.
         <feFuncB type="linear" slope="5" />
       </feComponentTransfer>
     </filter>
+    <filter
+      id="Linear2"
+      filterUnits="objectBoundingBox"
+      x="0%"
+      y="0%"
+      width="100%"
+      height="100%">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="1" />
+        <feFuncG type="linear" slope="0.5" />
+        <feFuncB type="linear" slope="1" />
+      </feComponentTransfer>
+    </filter>
   </defs>
   <rect fill="none" stroke="blue" x="1" y="1" width="798" height="398" />
   <g
     font-family="Verdana"
-    font-size="200"
+    font-size="100"
     font-weight="bold"
     fill="url(#MyGradient)">
-    <text x="100" y="290" filter="url(#Linear)">Slope</text>
+    <text x="100" y="190" filter="url(#Linear1)">Slope1</text>
+    <text x="100" y="290" filter="url(#Linear2)">Slope2</text>
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Examples', 300, 300)}}
+{{EmbedLiveSample('Examples', 300, 200)}}
 
 ## Specifications
 
