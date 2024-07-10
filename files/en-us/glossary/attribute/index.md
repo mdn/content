@@ -10,7 +10,7 @@ An **attribute** extends an {{Glossary("HTML")}} or {{Glossary("XML")}} {{Glossa
 
 An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value). You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML.
 
-A number of attributes are {{Glossary("Boolean/HTML", "boolean attributes")}}. The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value. See {{Glossary("Boolean/HTML", "boolean attributes")}} for more information.
+A number of HTML attributes are {{Glossary("Boolean/HTML", "boolean attributes")}}. These attributes' values are only controlled by the presence or absence of the attribute. See {{Glossary("Boolean/HTML", "boolean attributes")}} for more information.
 
 ## Reflection of an attribute
 

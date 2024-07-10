@@ -15,6 +15,16 @@ If the attribute is present, it can have one of the following values:
 - the empty string, e.g. `attribute=""`
 - attribute's canonical name, with no leading or trailing whitespace, e.g. `attribute="attribute"`
 
+Here's an example of a HTML boolean attribute `checked`:
+
+```html
+<!-- The following checkboxes will be checked on initial rendering -->
+<input type="checkbox" checked />
+<input type="checkbox" checked="" />
+<input type="checkbox" checked="checked" />
+
+<!-- The following checkbox will not be checked on initial rendering -->
+<input type="checkbox" />
 > **Note:** The strings "true" and "false" are invalid values. To set the attribute to `false`, the attribute should be omitted altogether. Though modern browsers treat _any_ string value as `true`, you should not rely on that behavior.
 
 ## See also
@@ -23,3 +33,4 @@ If the attribute is present, it can have one of the following values:
 - [Boolean attributes](https://html.spec.whatwg.org/#boolean-attributes) in HTML specification
 - Related glossary terms:
   - {{Glossary("Attribute")}}
+  - {{Glossary("Enumerated", "Enumerated attribute")}}
