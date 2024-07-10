@@ -23,8 +23,7 @@ createExpression(expression, resolver)
 - `expression`
   - : A string representing the XPath expression to be created.
 - `resolver` {{optional_inline}}
-  - : Permits translation of all prefixes, including the `xml` namespace
-    prefix, within the XPath expression into appropriate namespace URIs.
+  - : A {{domxref("Node")}}, `null`, or any object implementing the {{domxref("Node/lookupNamespaceURI", "lookupNamespaceURI")}} method. Permits translation of all prefixes, including the `xml` namespace prefix, within the XPath expression into appropriate namespace URIs.
 
 ### Return value
 
@@ -42,7 +41,7 @@ If the expression is not legal according to the rules of the
 #### NAMESPACE_ERR
 
 If the expression contains namespace prefixes which cannot be resolved by the specified
-{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`XPathNSResolver`, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
 ## Examples

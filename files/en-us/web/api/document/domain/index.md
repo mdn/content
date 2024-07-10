@@ -41,7 +41,7 @@ there are some exceptions:
 
 - If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
   return the empty string.
-- If the `document.domain` [setter](#setter) has been used, then
+- If the `document.domain` [setter](#setting_the_domain) has been used, then
   it will return the value that was set.
 
 Although the getter is not dangerous in the same way that the setter is, it is likely

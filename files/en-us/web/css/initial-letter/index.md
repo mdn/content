@@ -95,5 +95,4 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 
 ## See also
 
-- {{cssxref("initial-letter-align")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

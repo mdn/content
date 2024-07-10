@@ -2,7 +2,7 @@
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
 page-type: http-status-code
-browser-compat: http.status.501
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.501
 ---
 
 {{HTTPSidebar}}
@@ -29,7 +29,3 @@ If the server _does_ recognize the method, but intentionally does not support it
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

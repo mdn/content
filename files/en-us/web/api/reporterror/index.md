@@ -77,6 +77,6 @@ self.addEventListener("error", (error) => {
 
 ## See also
 
-- [`Window`](/en-US/docs/Web/API/Window#methods_implemented_from_elsewhere)
-- [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#methods_implemented_from_elsewhere)
+- [`Window`](/en-US/docs/Web/API/Window)
+- [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope)
 - [error](/en-US/docs/Web/API/HTMLElement/error_event) event
