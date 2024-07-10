@@ -14,56 +14,11 @@ spec-urls:
 
 The **`width`** attribute defines the horizontal length of an element in the user coordinate system.
 
-You can use this attribute with the following SVG elements:
+## Elements
 
-- {{SVGElement('feBlend')}}
-- {{SVGElement('feColorMatrix')}}
-- {{SVGElement('feComponentTransfer')}}
-- {{SVGElement('feComposite')}}
-- {{SVGElement('feConvolveMatrix')}}
-- {{SVGElement('feDiffuseLighting')}}
-- {{SVGElement('feDisplacementMap')}}
-- {{SVGElement('feDropShadow')}}
-- {{SVGElement('feFlood')}}
-- {{SVGElement('feGaussianBlur')}}
-- {{SVGElement('feImage')}}
-- {{SVGElement('feMerge')}}
-- {{SVGElement('feMorphology')}}
-- {{SVGElement('feOffset')}}
-- {{SVGElement('feSpecularLighting')}}
-- {{SVGElement('feTile')}}
-- {{SVGElement('feTurbulence')}}
-- {{SVGElement('filter')}}
-- {{SVGElement('foreignObject')}}
-- {{SVGElement('image')}}
-- {{SVGElement('mask')}}
-- {{SVGElement('pattern')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('svg')}}
-- {{SVGElement('use')}}
+You can use this attribute with the SVG elements described in the sections below.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect x="0" y="0" width="0" height="90" />
-  <rect x="0" y="100" width="60" height="90" />
-  <rect x="0" y="200" width="100%" height="90" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-## feBlend
+### `<feBlend>`
 
 For {{SVGElement('feBlend')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -96,7 +51,7 @@ For {{SVGElement('feBlend')}}, `width` defines the horizontal length for the ren
   </tbody>
 </table>
 
-## feColorMatrix
+### `<feColorMatrix>`
 
 For {{SVGElement('feColorMatrix')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -129,7 +84,7 @@ For {{SVGElement('feColorMatrix')}}, `width` defines the horizontal length for t
   </tbody>
 </table>
 
-## feComponentTransfer
+### `<feComponentTransfer>`
 
 For {{SVGElement('feComponentTransfer')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -162,7 +117,7 @@ For {{SVGElement('feComponentTransfer')}}, `width` defines the horizontal length
   </tbody>
 </table>
 
-## feComposite
+### `<feComposite>`
 
 For {{SVGElement('feComposite')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -195,7 +150,7 @@ For {{SVGElement('feComposite')}}, `width` defines the horizontal length for the
   </tbody>
 </table>
 
-## feConvolveMatrix
+### `<feConvolveMatrix>`
 
 For {{SVGElement('feConvolveMatrix')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -228,7 +183,7 @@ For {{SVGElement('feConvolveMatrix')}}, `width` defines the horizontal length fo
   </tbody>
 </table>
 
-## feDiffuseLighting
+### `<feDiffuseLighting>`
 
 For {{SVGElement('feDiffuseLighting')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -261,7 +216,7 @@ For {{SVGElement('feDiffuseLighting')}}, `width` defines the horizontal length f
   </tbody>
 </table>
 
-## feDisplacementMap
+### `<feDisplacementMap>`
 
 For {{SVGElement('feDisplacementMap')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -294,7 +249,7 @@ For {{SVGElement('feDisplacementMap')}}, `width` defines the horizontal length f
   </tbody>
 </table>
 
-## feDropShadow
+### `<feDropShadow>`
 
 For {{SVGElement('feDropShadow')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -327,7 +282,7 @@ For {{SVGElement('feDropShadow')}}, `width` defines the horizontal length for th
   </tbody>
 </table>
 
-## feFlood
+### `<feFlood>`
 
 For {{SVGElement('feFlood')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -360,7 +315,7 @@ For {{SVGElement('feFlood')}}, `width` defines the horizontal length for the ren
   </tbody>
 </table>
 
-## feGaussianBlur
+### `<feGaussianBlur>`
 
 For {{SVGElement('feGaussianBlur')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -393,7 +348,7 @@ For {{SVGElement('feGaussianBlur')}}, `width` defines the horizontal length for 
   </tbody>
 </table>
 
-## feImage
+### `<feImage>`
 
 For {{SVGElement('feImage')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -426,7 +381,7 @@ For {{SVGElement('feImage')}}, `width` defines the horizontal length for the ren
   </tbody>
 </table>
 
-## feMerge
+### `<feMerge>`
 
 For {{SVGElement('feMerge')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -459,7 +414,7 @@ For {{SVGElement('feMerge')}}, `width` defines the horizontal length for the ren
   </tbody>
 </table>
 
-## feMorphology
+### `<feMorphology>`
 
 For {{SVGElement('feMorphology')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -492,7 +447,7 @@ For {{SVGElement('feMorphology')}}, `width` defines the horizontal length for th
   </tbody>
 </table>
 
-## feOffset
+### `<feOffset>`
 
 For {{SVGElement('feOffset')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -525,7 +480,7 @@ For {{SVGElement('feOffset')}}, `width` defines the horizontal length for the re
   </tbody>
 </table>
 
-## feSpecularLighting
+### `<feSpecularLighting>`
 
 For {{SVGElement('feSpecularLighting')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -558,7 +513,7 @@ For {{SVGElement('feSpecularLighting')}}, `width` defines the horizontal length 
   </tbody>
 </table>
 
-## feTile
+### `<feTile>`
 
 For {{SVGElement('feTile')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -591,7 +546,7 @@ For {{SVGElement('feTile')}}, `width` defines the horizontal length for the rend
   </tbody>
 </table>
 
-## feTurbulence
+### `<feTurbulence>`
 
 For {{SVGElement('feTurbulence')}}, `width` defines the horizontal length for the rendering area of the primitive.
 
@@ -624,7 +579,7 @@ For {{SVGElement('feTurbulence')}}, `width` defines the horizontal length for th
   </tbody>
 </table>
 
-## filter
+### `<filter>`
 
 For {{SVGElement('filter')}}, `width` defines the horizontal length for the rendering area of the filter.
 
@@ -657,7 +612,7 @@ For {{SVGElement('filter')}}, `width` defines the horizontal length for the rend
   </tbody>
 </table>
 
-## foreignObject
+### `<foreignObject>`
 
 For {{SVGElement('foreignObject')}}, `width` defines the horizontal length for the rendering area for the referenced document.
 
@@ -693,7 +648,7 @@ For {{SVGElement('foreignObject')}}, `width` defines the horizontal length for t
 
 > **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
-## image
+### `<image>`
 
 For {{SVGElement('image')}}, `width` defines the horizontal length for the image.
 
@@ -729,7 +684,7 @@ For {{SVGElement('image')}}, `width` defines the horizontal length for the image
 
 > **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
-## mask
+### `<mask>`
 
 For {{SVGElement('mask')}}, `width` defines the horizontal length of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.
 
@@ -762,7 +717,7 @@ For {{SVGElement('mask')}}, `width` defines the horizontal length of its area of
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `width` defines the horizontal length of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.
 
@@ -789,7 +744,7 @@ For {{SVGElement('pattern')}}, `width` defines the horizontal length of the tile
   </tbody>
 </table>
 
-## rect
+### `<rect>`
 
 For {{SVGElement('rect')}}, `width` defines the horizontal length for the rectangle.
 
@@ -825,7 +780,7 @@ For {{SVGElement('rect')}}, `width` defines the horizontal length for the rectan
 
 > **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
-## svg
+### `<svg>`
 
 For {{SVGElement('svg')}}, `width` defines the horizontal length for the rendering area of the SVG viewport.
 
@@ -863,7 +818,7 @@ For {{SVGElement('svg')}}, `width` defines the horizontal length for the renderi
 
 > **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
-## use
+### `<use>`
 
 For {{SVGElement('use')}}, `width` defines the horizontal length for the referenced element.
 
@@ -900,6 +855,50 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
 > **Note:** `width` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+
+## Examples
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+This example includes three {{SVGElement("rect")}} elements with varied `width` attribute values. The first `<rect>` has a `width="0"` set. SVG elements with a width of `0` or less are not rendered.
+
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- With a width of 0 or less, nothing will be rendered -->
+  <rect
+    x="0"
+    y="0"
+    width="0"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="100"
+    width="60"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="200"
+    width="100%"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Specifications
 

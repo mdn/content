@@ -198,7 +198,7 @@ By ordering things in this way, we at least have an idea in which part of the st
 
 ### Avoid overly-specific selectors
 
-If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the below selector, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
+If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the selector below, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
 
 ```css
 article.main p.box {
@@ -391,7 +391,7 @@ If the partials are all loaded into an index file, as implied above, you can the
 
 #### Post-processing for optimization
 
-If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.co/).
+If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.github.io/cssnano/).
 
 ## Summary
 
@@ -399,6 +399,6 @@ This is the final part of our building blocks module, and as you can see there a
 
 To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
-You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

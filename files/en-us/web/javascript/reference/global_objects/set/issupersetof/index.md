@@ -2,12 +2,10 @@
 title: Set.prototype.isSupersetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Set.isSupersetOf
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`isSupersetOf()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if all elements of the given set are in this set.
 
@@ -30,7 +28,9 @@ isSupersetOf(other)
 
 In mathematical notation, _superset_ is defined as:
 
+<!-- prettier-ignore-start -->
 <math display="block"><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi><mo stretchy="false">⇔</mo><mo>∀</mo><mi>x</mi><mo>∊</mo><mi>B</mi><mo>,</mo><mspace width="0.16666666666666666em"></mspace><mi>x</mi><mo>∊</mo><mi>A</mi></mrow><annotation encoding="TeX">A\supseteq B \Leftrightarrow \forall x\in B,\,x\in A</annotation></semantics></math>
+<!-- prettier-ignore-end -->
 
 And using Venn diagram:
 

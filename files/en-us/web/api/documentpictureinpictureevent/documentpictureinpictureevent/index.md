@@ -8,7 +8,7 @@ status:
 browser-compat: api.DocumentPictureInPictureEvent.DocumentPictureInPictureEvent
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}
+{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`DocumentPictureInPictureEvent()`** constructor creates a new
 {{domxref("DocumentPictureInPictureEvent")}} object instance.

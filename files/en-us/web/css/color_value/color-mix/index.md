@@ -24,7 +24,9 @@ Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
 - `method`
 
-  - : A {{CSSXref("&lt;color-interpolation-method&gt;")}} specifying the interpolation color space.
+  - : The method is the {{CSSXref("&lt;color-interpolation-method&gt;")}}, including the {{glossary("color space")}} preceded by `in`, optionally followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+
+> **Note:** When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
 
 - `color1`, `color2`
 
@@ -48,7 +50,7 @@ Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
 ### Mixing two colors
 
-In a supporting browser, the items have more blue, and therefore less white, as a higher percentage of `#34c9eb` is mixed in. When no value is given, the percentage defaults to 50%.
+This example demonstrates mixing two colors, blue `#34c9eb` at different percentages and white with no percentage given. The higher the percentage of `#34c9eb` is mixed, the more blue and less white the output color is.
 
 #### HTML
 
@@ -64,6 +66,8 @@ In a supporting browser, the items have more blue, and therefore less white, as 
 ```
 
 #### CSS
+
+The `color-mix()` function is used to add increasing percentages of blue, up to 100%. The 6th {{htmlelement("li")}} doesn't include a percentage for either color.
 
 ```css hidden
 ul {
@@ -115,61 +119,244 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("mixing_two_colors", "100%", 150)}}
 
-### Using hue interpolation in color-mix()
+The total value of both colors in a `color-mix()` function is 100%, even if the values set by the developer don't total 100%. In this example, as only one color has a percentage assigned, the other color is implicitly given a percentage value so that the combined total equals 100%. In the last {{htmlelement("li")}}, where neither color is assigned a percentage, both default to 50%.
 
-When using shorter hue interpolation, the resulting hue angle is halfway between the input angles when taking the shortest route around the color wheel.
-The longer hue interpolation method results in a hue angle which is the midpoint when taking the longer route around the color wheel.
-For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
+### Adding transparency
+
+This example demonstrates using the `color-mix()` function to add transparency to a color by mixing any color with [`transparent`](/en-US/docs/Web/CSS/named-color#transparent).
+
+#### HTML
 
 ```html
-<div class="color-one">color one</div>
-<div class="color-two">color two</div>
-<div class="shorter">mixed shorter</div>
-<div class="longer">mixed longer</div>
+<ul>
+  <li>0%</li>
+  <li>25%</li>
+  <li>50%</li>
+  <li>75%</li>
+  <li>100%</li>
+  <li></li>
+</ul>
 ```
 
 #### CSS
 
+The `color-mix()` function is used to add increasing percentages of `red`, which is declared using a {{cssxref('--*', 'CSS custom property')}} named `--base`, defined on the {{cssxref(":root")}}. The 6th {{htmlelement("li")}} doesn't include a percentage, creating an output color that is half as opaque as the `--base` color. We include a striped background on the {{htmlelement("ul")}} to make the transparency visible.
+
 ```css hidden
-body {
+ul {
   display: flex;
-  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
 }
-div {
-  border: 1px solid;
-  font: bold 150% monospace;
-  height: 100px;
-  margin: 10px 5%;
-  width: 30%;
+
+li {
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  outline: 1px solid var(--base);
+  text-align: center;
 }
 ```
 
 ```css
-.color-one {
-  background-color: hsl(10 100% 50%);
+:root {
+  --base: red;
 }
-.color-two {
-  background-color: hsl(60 100% 50%);
-}
-.shorter {
-  background-color: color-mix(
-    in hsl shorter hue,
-    hsl(10 100% 50%),
-    hsl(60 100% 50%)
+
+ul {
+  background: repeating-linear-gradient(
+    45deg,
+    palegoldenrod 0px 2px,
+    white 2px 4px
   );
 }
-.longer {
+
+li:nth-child(1) {
+  background-color: color-mix(in srgb, var(--base) 0%, transparent);
+}
+
+li:nth-child(2) {
+  background-color: color-mix(in srgb, var(--base) 25%, transparent);
+}
+
+li:nth-child(3) {
+  background-color: color-mix(in srgb, var(--base) 50%, transparent);
+}
+
+li:nth-child(4) {
+  background-color: color-mix(in srgb, var(--base) 75%, transparent);
+}
+
+li:nth-child(5) {
+  background-color: color-mix(in srgb, var(--base) 100%, transparent);
+}
+
+li:nth-child(6) {
+  background-color: color-mix(in srgb, var(--base), transparent);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("adding transparency", "100%", 150)}}
+
+In this way, the `color-mix()` function can be used to add transparency to any color, even if the color is already non-opaque (with an alpha channel value < 1). However, `color-mix()` can't be used to make a semi-transparent color fully opaque. For this, use a [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) with a CSS [color function](/en-US/docs/Web/CSS/CSS_colors#functions). Relative colors can alter the value of any color channel, including increasing a color's alpha channel to render the color fully opaque.
+
+### Using hue interpolation in color-mix()
+
+This example demonstrates the hue interpolation methods available to the `color-mix()` function. When using hue [interpolation](/en-US/docs/Web/CSS/color_value#interpolation), the resulting hue is between the hue values of the two colors being mixed. The value will be different based on which route is taken around the color wheel.
+
+For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
+
+```html hidden
+<p>longer</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+<p>shorter</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+<p>increasing</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+<p>decreasing</p>
+<ul>
+  <li>100%</li>
+  <li>80%</li>
+  <li>60%</li>
+  <li>40%</li>
+  <li>20%</li>
+  <li>0%</li>
+</ul>
+```
+
+#### CSS
+
+The `shorter hue` interpolation method takes the shorter route around the color wheel, whereas the `longer hue` interpolation method takes the longer route. With `increasing hue`, the route starts with increasing values. With `decreasing hue` the value decreases. We mix two {{cssxref("named-color")}} values to create a series of `lch()` intermediary colors that differ based on which route is taken around the color wheel. The mixed colors include `red`, `blue`, and `yellow` with LCH hue values of approximately 41deg, 301deg, and 100deg, respectively.
+
+To reduce code redundancy, we used {{cssxref('--*', 'CSS custom properties')}} for both colors and for the interpolation method, setting different values on each {{htmlelement("ul")}}.
+
+```css hidden
+body {
+  font-family: monospace;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  padding: 10px;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  outline: 1px solid var(--base);
+  text-align: center;
+}
+```
+
+```css
+ul:nth-of-type(1) {
+  --distance: longer; /* 52 degree hue increments */
+  --base: red;
+  --mixin: blue;
+}
+ul:nth-of-type(2) {
+  /* 20 degree hue decrements */
+  --distance: shorter;
+  --base: red;
+  --mixin: blue;
+}
+ul:nth-of-type(3) {
+  /* 40 degree hue increments */
+  --distance: increasing;
+  --base: yellow;
+  --mixin: blue;
+}
+ul:nth-of-type(4) {
+  /* 32 degree hue decrements */
+  --distance: decreasing;
+  --base: yellow;
+  --mixin: blue;
+}
+
+li:nth-child(1) {
   background-color: color-mix(
-    in hsl longer hue,
-    hsl(10 100% 50%),
-    hsl(60 100% 50%)
+    in lch var(--distance) hue,
+    var(--base) 100%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(2) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 80%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(3) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 60%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(4) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 40%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(5) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 20%,
+    var(--mixin)
+  );
+}
+
+li:nth-child(6) {
+  background-color: color-mix(
+    in lch var(--distance) hue,
+    var(--base) 0%,
+    var(--mixin)
   );
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 250)}}
+{{EmbedLiveSample("using_hue_interpolation_in_color_mix", "100%", 440)}}
+
+With `longer hue` the increments or decrements between colors will always be the same or larger than when using `shorter hue`. Use `increasing hue` or `descreasing hue` when the direction of the hue value change is more important than the length between values.
 
 ## Specifications
 
@@ -184,3 +371,4 @@ div {
 - {{CSSXref("&lt;color&gt;")}}
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}
+- [CSS relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)

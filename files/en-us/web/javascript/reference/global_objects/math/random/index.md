@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Math.random
 
 The **`Math.random()`** static method returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1, with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.
 
-> **Note:** `Math.random()` _does not_ provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}} method.
+> **Note:** `Math.random()` _does not_ provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the {{domxref("Crypto.getRandomValues()")}} method.
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
@@ -55,9 +55,9 @@ This example returns a random _integer_ between the specified values. The value 
 
 ```js
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 ```
 
@@ -69,9 +69,9 @@ While the `getRandomInt()` function above is inclusive at the minimum, it's excl
 
 ```js
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
 }
 ```
 
@@ -85,4 +85,4 @@ function getRandomIntInclusive(min, max) {
 
 ## See also
 
-- {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}
+- {{domxref("Crypto.getRandomValues()")}}

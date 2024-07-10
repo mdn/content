@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-modal` attribute indicates whether an element is modal when displayed.
 
 ## Description
@@ -56,7 +58,7 @@ If a dialog is not modal — there is no inert background and focus isn't confin
 
 This partial example includes an `alertdialog` nested in a full-screen, non-scrollable backdrop.
 
-The [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) identifies the element that serves as the alert dialog container. The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) provides the alert dialog an accessible name by referring to the element that provides the alert dialog title. The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute gives the alert dialog an accessible description by referring to the alert dialog content that describes the primary message or purpose of the alert dialog.
+The [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) identifies the element that serves as the alert dialog container. The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) provides the alert dialog an accessible name by referring to the element that provides the alert dialog title. The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute gives the alert dialog an {{glossary("accessible description")}} by referring to the alert dialog content that describes the primary message or purpose of the alert dialog.
 
 The `aria-modal="true"` informs the assistive technology user that the content underneath the dialog is not interactive so long as the element with a declaration of `role="alertdialog"` has focus.
 
@@ -91,15 +93,10 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement("dialog")}} element
 - [`alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [`dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - HTML [`inert` global attribute](/en-US/docs/Web/HTML/Global_attributes/inert)
 - HTMLElement API [`inert`](/en-US/docs/Web/API/HTMLElement/inert) property
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

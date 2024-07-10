@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Navigate the tab to a new URL, or modify other properties of the tab.
 

@@ -14,15 +14,8 @@ buffer object's data store.
 ## Syntax
 
 ```js-nolint
-// WebGL1
-bufferData(target, usage)
 bufferData(target, size, usage)
 bufferData(target, srcData, usage)
-
-// WebGL2
-bufferData(target, usage, srcOffset)
-bufferData(target, srcData, usage, srcOffset)
-bufferData(target, srcData, usage, srcOffset, length)
 ```
 
 ### Parameters
@@ -106,12 +99,6 @@ bufferData(target, srcData, usage, srcOffset, length)
         times as the source for WebGL drawing and image specification
         commands.
 
-- `srcOffset`
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
-    the buffer.
-- `length` {{optional_inline}}
-  - : A {{domxref("WebGL_API/Types", "GLuint")}} defaulting to 0.
-
 ### Return value
 
 None ({{jsxref("undefined")}}).
@@ -165,6 +152,7 @@ const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
 
 ## See also
 
+- {{domxref("WebGL2RenderingContext.bufferData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferSubData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

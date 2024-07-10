@@ -28,8 +28,7 @@ image height, it will be rendered this tall.
 An integer value indicating the intrinsic height, in CSS pixels, of the image. This is
 the height at which the image is naturally drawn when no constraint or specific value is
 established for the image. This natural height is corrected for the pixel density of the
-device on which it's being presented, unlike {{domxref("HTMLImageElement.height",
-  "height")}}.
+device on which it's being presented, unlike {{domxref("HTMLImageElement.height", "height")}}.
 
 If the intrinsic height is not available—either because the image does not specify an
 intrinsic height or because the image data is not available in order to obtain this

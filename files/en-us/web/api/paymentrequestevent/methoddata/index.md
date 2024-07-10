@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.methodData
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`methodData`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns an array of

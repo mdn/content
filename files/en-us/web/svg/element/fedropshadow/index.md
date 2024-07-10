@@ -60,20 +60,9 @@ svg {
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
 - {{SVGAttr("stdDeviation")}}
   - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+    _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
-  - : {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}
-- [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
@@ -84,3 +73,8 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes) including {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, and {{SVGAttr('width')}}.
+- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes), including {{SVGAttr('flood-color')}}, and {{SVGAttr('flood-opacity')}}.

@@ -51,7 +51,7 @@ function touchHandler(e) {
   if (e.touches) {
     playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
     playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
-    output.textContent = `Touch:  x: ${playerX}, y: ${playerY}`;
+    output.textContent = `Touch:\nx: ${playerX}, y: ${playerY}`;
     e.preventDefault();
   }
 }
@@ -155,24 +155,32 @@ We can pull the ship around and do something in the meantime, and react when the
 
 ### Dedicated plugins
 
-You could go even further and use dedicated plugins like [Virtual Joystick](https://phaser.io/shop/plugins/virtualjoystick) — this is a paid, official Phaser plugin, but you can find free and [open source alternatives](https://github.com/Gamegur-us/phaser-touch-control-plugin). The initialization of Virtual Joystick looks like this:
+You can use dedicated plugins that handle touch events in different ways, render UI controls, and more.
+Here are some plugin examples that use a virtual gamepad and joystick:
 
-```js
-this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
-this.stick = this.pad.addStick(30, 30, 80, "generic");
+- [phaser-plugin-virtual-gamepad](https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad) (Phaser 2)
+- [Virtual joystick](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/virtualjoystick/) (Phaser 3)
+
+For basic plugins like the virtual gamepad, you can download the script and make it available in your page:
+
+```html
+<script src="js/phaser.min.js"></script>
+<!-- https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad -->
+<script src="js/phaser-plugin-virtual-gamepad.js"></script>
 ```
 
-In the `create()` function of the `Game` state we're creating a virtual pad and a generic stick that has four directional virtual buttons by default. This is placed 30 pixels from the top and left edges of the screen and is 80 pixels wide.
-
-The stick being pressed can be handled during the gameplay in the `update` function like so:
+Then include them in your script and use them similar to the following snippet:
 
 ```js
-if (this.stick.isDown) {
-  // Move the player
-}
+// Add the VirtualGamepad plugin to a Phaser 2 game
+this.gamepad = this.game.plugins.add(Phaser.Plugin.VirtualGamepad);
+// Add a joystick to the game
+this.joystick = this.gamepad.addJoystick(100, 420, 1.2, "gamepad");
+// Add a button to the game
+this.button = this.gamepad.addButton(400, 420, 1.0, "gamepad");
 ```
 
-We can adjust the player's velocity based on the current angle of the stick and move him appropriately.
+For more information, have a look through then [unofficial catalog of Phaser plugins](https://phaserplugins.com/) to see if something fits your needs.
 
 ## Summary
 

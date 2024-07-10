@@ -19,7 +19,25 @@ In HTTP, redirection is triggered by a server sending a special _redirect_ respo
 
 When browsers receive a redirect, they immediately load the new URL provided in the `Location` header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.
 
-![Initial request goes from client to server. Server responds with a 301:moved permanently, with the URL for the redirect. Client makes an a GET request for the new URL which is returned by the server, with a 200 OK response.](httpredirect.png)
+<!--
+%%{init: { "sequence": { "wrap": true, "width":250, "noteAlign": "center", "messageAlign": "center" }} }%%
+
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Note left of Client: Request resource
+    Client->>Server: GET /doc HTTP/1.1
+    Note right of Server: Resource moved<br>Respond with new location
+    Server->>Client: HTTP/1.1 301 Moved Permanently<br/>Location: /doc_new
+
+    Note left of Client: Request resource at new location
+    Client->>Server: GET /doc_new HTTP/1.1
+    Note right of Server: Return resource
+    Server->>Client: HTTP/1.1 200 OK
+-->
+
+![A request made from client to server. The server responds with "301:moved permanently" and the new URL for the resource. The client makes a GET request for the new URL which is returned by the server, with a 200 OK response.](httpredirect.svg)
 
 There are several types of redirects, sorted into three categories:
 
@@ -97,8 +115,9 @@ Like HTML redirections, this can't work on all resources, and obviously, this wi
 With three ways to trigger redirections, several ways can be used at the same time. But which is applied first?
 
 1. HTTP redirects always execute first — they exist when there is not even a transmitted page.
-2. HTML redirects ({{HTMLElement("meta")}}) execute if there weren't any HTTP redirects.
-3. JavaScript redirects execute last, and only if JavaScript is enabled.
+2. Somewhat surprisingly, JavaScript redirects execute next, before HTML redirects. This is because the `<meta>` redirect happens after the page is _completely loaded_, which is after all scripts have executed.
+3. HTML redirects ({{HTMLElement("meta")}}) execute if there weren't any HTTP redirects or JavaScript redirects that were executed before the page was loaded.
+4. If there is any JavaScript redirect that happens after the page is loaded (for example, on a button click), it will execute last if the page isn't already redirected by the previous methods.
 
 When possible, use HTTP redirects and don't add {{HTMLElement("meta")}} element redirects. If someone changes the HTTP redirects but forgets to change the HTML redirects, the redirects will no longer be identical, which could cause an infinite loop or other nightmares.
 
@@ -145,7 +164,7 @@ Redirects can be set either in the server config file or in the `.htaccess` of e
 
 The [`mod_alias`](https://httpd.apache.org/docs/current/mod/mod_alias.html) module has `Redirect` and `RedirectMatch` directives that set up {{HTTPStatus("302")}} redirects by default:
 
-```xml
+```apacheconf
 <VirtualHost *:443>
   ServerName example.com
   Redirect / https://www.example.com
@@ -156,7 +175,7 @@ The URL `https://example.com/` will be redirected to `https://www.example.com/`,
 
 `RedirectMatch` does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:
 
-```plain
+```apacheconf
 RedirectMatch ^/images/(.*)$ https://images.example.com/$1
 ```
 
@@ -164,7 +183,7 @@ All documents in the `images/` directory will redirect to a different domain.
 
 If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the `permanent` keyword) can be used to set up a different redirect:
 
-```plain
+```apacheconf
 Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
@@ -176,7 +195,7 @@ The [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 
 
 In Nginx, you create a specific server block for the content you want to redirect:
 
-```plain
+```nginx
 server {
   listen 80;
   server_name example.com;
@@ -186,7 +205,7 @@ server {
 
 To apply a redirect to a directory or only certain pages, use the `rewrite` directive:
 
-```plain
+```nginx
 rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
 rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 ```

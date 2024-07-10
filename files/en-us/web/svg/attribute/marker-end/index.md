@@ -2,7 +2,7 @@
 title: marker-end
 slug: Web/SVG/Attribute/marker-end
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.marker-end
+browser-compat: svg.global_attributes.marker-end
 ---
 
 {{SVGRef}}

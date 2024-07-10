@@ -74,4 +74,4 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(89)}}
+{{Firefox_for_developers}}

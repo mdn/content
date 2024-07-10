@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.URLSearchParams
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
 
@@ -17,8 +17,6 @@ for (const [key, value] of mySearchParams) {
 for (const [key, value] of mySearchParams.entries()) {
 }
 ```
-
-{{AvailableInWorkers}}
 
 ## Constructor
 

@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.db
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`db`** read-only property of the {{domxref("IDBTransaction")}} interface returns the database connection
 with which this transaction is associated.
-
-{{AvailableInWorkers}}
 
 ## Value
 

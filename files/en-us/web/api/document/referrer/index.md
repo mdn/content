@@ -18,8 +18,10 @@ link, but, for example, by using a bookmark). Because this property returns only
 string, it doesn't give you document object model (DOM) access to the referring page.
 
 Inside an {{HTMLElement("iframe")}}, the `Document.referrer` will initially
-be set to the same value as the {{domxref("HTMLAnchorElement/href", "href")}} of
-the parent window's {{domxref("Window/location", "Window.location")}}.
+be set to the {{domxref("HTMLAnchorElement/href", "href")}} of the parent's
+{{domxref("Window/location", "Window.location")}} in same-origin requests.
+In cross-origin requests, it's the {{domxref("HTMLAnchorElement/origin", "origin")}} of the parent's `Window.location` by default.
+For more information, see the [Referrer-Policy: strict-origin-when-cross-origin](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin) documentation.
 
 ## Specifications
 

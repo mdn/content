@@ -65,7 +65,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - The WebRTC API's {{domxref("RTCIceCandidate")}} object now includes a {{domxref("RTCIceCandidate.toJSON", "toJSON()")}} method to help with signaling and debugging ([Firefox bug 928304](https://bugzil.la/928304)).
 - The {{domxref("Navigator.vibrate()")}} method has been adapted to match the final specification: It now returns `false` when the list is too long or has too large entries, instead of throwing ([Firefox bug 884935](https://bugzil.la/884935)).
 - As part of the ongoing effort to standardize global objects, the non-standard stylesheet change event interfaces, including `StyleRuleChangeEvent`, `StyleSheetApplicableStateChangeEvent` and `StyleSheetChangeEvent`, are no longer available from Web content. The `CSSGroupRuleRuleList` interface, the implementation detail of {{domxref("CSSRuleList")}}, has also been removed ([Firefox bug 872934](https://bugzil.la/872934) and [Firefox bug 916871](https://bugzil.la/916871)).
-- `atob` now ignores whitespaces ([Firefox bug 711180](https://bugzil.la/711180)).
+- {{domxref("Window.atob()")}} now ignores whitespaces ([Firefox bug 711180](https://bugzil.la/711180)).
 - [WebGL](/en-US/docs/Web/API/WebGL_API): `MOZ_` prefixed extension strings are deprecated. Support for them will be removed in the future. Use unprefixed extension string only. To get draft extensions, set the `webgl.enable-draft-extensions` preferences ([Firefox bug 924176](https://bugzil.la/924176)).
 
 ### MathML
@@ -91,4 +91,4 @@ _No change._
 
 ### Older versions
 
-{{Firefox_for_developers('26')}}
+{{Firefox_for_developers}}

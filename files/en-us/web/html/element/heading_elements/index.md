@@ -11,63 +11,6 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, heading content, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role"
-          >heading</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLHeadingElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -86,46 +29,7 @@ While using multiple `<h1>` elements on one page is allowed by the HTML standard
 
 Prefer using only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
 
-## Examples
-
-### All headings
-
-The following code shows all the heading levels, in use.
-
-```html
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-<h5>Heading level 5</h5>
-<h6>Heading level 6</h6>
-```
-
-{{EmbedLiveSample('All_headings', '280', '300')}}
-
-### Example page
-
-The following code shows a few headings with some content under them.
-
-```html
-<h1>Heading elements</h1>
-<h2>Summary</h2>
-<p>Some text here…</p>
-
-<h2>Examples</h2>
-<h3>Example 1</h3>
-<p>Some text here…</p>
-
-<h3>Example 2</h3>
-<p>Some text here…</p>
-
-<h2>See also</h2>
-<p>Some text here…</p>
-```
-
-{{EmbedLiveSample('Example_page', '280', '480')}}
-
-## Accessibility concerns
+## Accessibility
 
 ### Navigation
 
@@ -219,6 +123,104 @@ In this example, screen reading technology would announce that there are two {{H
 
 - [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+
+## Examples
+
+### All headings
+
+The following code shows all the heading levels, in use.
+
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
+
+{{EmbedLiveSample('All_headings', '280', '300')}}
+
+### Example page
+
+The following code shows a few headings with some content under them.
+
+```html
+<h1>Heading elements</h1>
+<h2>Summary</h2>
+<p>Some text here…</p>
+
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>Some text here…</p>
+
+<h3>Example 2</h3>
+<p>Some text here…</p>
+
+<h2>See also</h2>
+<p>Some text here…</p>
+```
+
+{{EmbedLiveSample('Example_page', '280', '480')}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, heading content, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role"
+          >heading</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLHeadingElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

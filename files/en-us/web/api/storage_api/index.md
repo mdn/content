@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: api.StorageManager
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Storage")}}
+{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
 The [Storage Standard](https://storage.spec.whatwg.org) defines a shared storage system designed to be used by all APIs and technologies that websites can use to store data in a user's browser.
 
@@ -17,8 +17,6 @@ This article gives an overview of the way user agents store and maintain website
 
 This article also gives an overview of the {{domxref("StorageManager")}} interface used to estimate available storage for a site.
 
-{{AvailableInWorkers}}
-
 ## Concepts and usage
 
 ### Storage buckets
@@ -27,7 +25,7 @@ The storage system described by the Storage Standard, where site data is stored,
 
 In essence, every website has its own storage space into which its data gets placed. In some cases however, user agents may decide to store a single origin's data in multiple different buckets, for example when this origin is embedded in different third-party origins.
 
-To learn more, see [How browsers separate data from different websites?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_browsers_separate_data_from_different_websites)
+To learn more, see [How do browsers separate data from different websites?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_do_browsers_separate_data_from_different_websites)
 
 ### Bucket modes
 

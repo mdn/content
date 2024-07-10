@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.setZoomSettings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab.
 
@@ -29,7 +29,7 @@ let settingZoomSettings = browser.tabs.setZoomSettings(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments after the zoom settings have been changed. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.getZoom
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments after the zoom settings have been changed. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
 ## Examples
 

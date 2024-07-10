@@ -2,7 +2,7 @@
 title: color-interpolation-filters
 slug: Web/SVG/Attribute/color-interpolation-filters
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.color-interpolation-filters
+browser-compat: svg.global_attributes.color-interpolation-filters
 ---
 
 {{SVGRef}}

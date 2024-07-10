@@ -2,7 +2,7 @@
 title: id
 slug: Web/SVG/Attribute/id
 page-type: svg-attribute
-browser-compat: svg.attributes.core.id
+browser-compat: svg.global_attributes.id
 ---
 
 {{SVGRef}}

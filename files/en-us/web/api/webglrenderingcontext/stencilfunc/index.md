@@ -67,8 +67,7 @@ gl.stencilFunc(gl.LESS, 0, 0b1110011);
 ```
 
 To get the current stencil function, reference value, or other stencil information,
-query the following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+query the following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FUNC);

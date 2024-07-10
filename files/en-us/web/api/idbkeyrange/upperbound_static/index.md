@@ -6,13 +6,11 @@ page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.upperBound_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`upperBound()`** static method of the
 {{domxref("IDBKeyRange")}} interface creates a new upper-bound key range. By default,
 it includes the upper endpoint value and is closed.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

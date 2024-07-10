@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setViewport
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setViewport()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.

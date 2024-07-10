@@ -7,7 +7,7 @@ status:
 browser-compat: webextensions.api.tabs.onHighlightChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Warning:** This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
 

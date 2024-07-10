@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getCurrent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the current browser window, passing its details into a callback.
 

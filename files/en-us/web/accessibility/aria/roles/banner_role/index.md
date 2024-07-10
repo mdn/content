@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html
 ---
 
+{{AccessibilitySidebar}}
+
 The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
 By default, the HTML's {{htmlelement("header")}} element has an identical meaning to the `banner` landmark, unless it is a descendant of {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}}, or {{htmlelement("section")}}, at which point {{htmlelement("header")}} exposes a [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role) role, and not the equivalent of the site-wide banner.
@@ -71,11 +73,3 @@ While it is best to use the `header` element and ensure it is not a descendant o
 
 - [HTML `header` element](/en-US/docs/Web/HTML/Element/header)
 - [WC3 Landmarks Example](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

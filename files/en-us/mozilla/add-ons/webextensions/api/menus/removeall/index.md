@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.menus.removeAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes all menu items added by the extension.
 

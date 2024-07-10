@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.selectAlternateInterface
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`selectAlternateInterface()`** method of the
 {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when

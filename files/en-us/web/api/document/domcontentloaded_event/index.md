@@ -22,8 +22,6 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js
 addEventListener("DOMContentLoaded", (event) => {});
-
-onDOMContentLoaded = (event) => {};
 ```
 
 ## Event type

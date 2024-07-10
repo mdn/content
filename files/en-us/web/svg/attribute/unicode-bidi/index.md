@@ -2,7 +2,7 @@
 title: unicode-bidi
 slug: Web/SVG/Attribute/unicode-bidi
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.unicode-bidi
+browser-compat: svg.global_attributes.unicode-bidi
 ---
 
 {{SVGRef}}
@@ -11,6 +11,8 @@ The **`unicode-bidi`** attribute specifies how the accumulation of the backgroun
 
 > **Note:** As a presentation attribute, `unicode-bidi` can be used as a CSS property. See the [CSS `unicode-bidi`](/en-US/docs/Web/CSS/unicode-bidi) property for more information.
 
+## Elements
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("textPath")}}
@@ -18,13 +20,13 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
-## Context notes
+## Usage notes
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("unicode-bidi")}}</td>
+      <td>See {{cssxref("unicode-bidi", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

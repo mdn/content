@@ -82,7 +82,7 @@ function random(number) {
 }
 
 function randomColor() {
-  return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return `rgb(${random(255)} ${random(255)} ${random(255)})`;
 }
 
 button.onclick = () => {

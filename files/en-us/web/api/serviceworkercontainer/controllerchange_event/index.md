@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerContainer.controllerchange_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`controllerchange`** event of the {{domxref("ServiceWorkerContainer")}} interface fires when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
 

@@ -60,7 +60,7 @@ Django helps you write software that is:
 
 Django was initially developed between 2003 and 2005 by a web team who were responsible for creating and maintaining newspaper websites. After creating a number of sites, the team began to factor out and reuse lots of common code and design patterns. This common code evolved into a generic web development framework, which was open-sourced as the "Django" project in July 2005.
 
-Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the version 4.0 in 2022. Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
+Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the version 5.0 in late 2023. Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
 
 > **Note:** Check out the [release notes](https://docs.djangoproject.com/en/stable/releases/) on the Django website to see what has changed in recent versions, and how much work is going into making Django better.
 

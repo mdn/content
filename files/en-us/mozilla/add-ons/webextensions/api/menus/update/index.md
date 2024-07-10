@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.menus.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates a previously created menu item.
 

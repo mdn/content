@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface ends a render pass debug group, which is begun with a {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.

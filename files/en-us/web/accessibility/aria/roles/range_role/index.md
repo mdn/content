@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#range
 ---
 
+{{AccessibilitySidebar}}
+
 The `range` abstract role is a generic type of structure role representing a range of values.
 
 > **Note:** The `range` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It is not to be used by web authors.
@@ -21,7 +23,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
 - [ARIA: `meter` role](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
@@ -32,11 +34,3 @@ Do not use.
 - {{HTMLElement("input/range")}}
 - {{HTMLElement("meter")}}
 - {{HTMLElement("progress")}}
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

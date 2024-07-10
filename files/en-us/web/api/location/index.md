@@ -91,7 +91,7 @@ body {
 :target {
   position: relative;
   z-index: 1;
-  outline: 50em solid rgba(255, 255, 255, 0.8);
+  outline: 50em solid rgb(255 255 255 / 80%);
 }
 ```
 

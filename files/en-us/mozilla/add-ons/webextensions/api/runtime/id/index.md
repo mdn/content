@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.runtime.id
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The ID of the extension.
 

@@ -23,8 +23,8 @@ This value is reset when the media is reloaded or replaced.
 
 ## Examples
 
-This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
-  "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
+This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality", "getVideoPlaybackQuality()")}}
+to obtain a {{domxref("VideoPlaybackQuality")}} object,
 then determines what percentage of frames have been lost by either corruption or being
 dropped. If that exceeds 10% (0.1), a function called
 `lostFramesThresholdExceeded()` is called to, perhaps, update a quality

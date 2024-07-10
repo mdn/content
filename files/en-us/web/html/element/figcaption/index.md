@@ -7,7 +7,7 @@ browser-compat: html.elements.figcaption
 
 {{HTMLSidebar}}
 
-The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption or legend describing the rest of the contents of its parent {{HTMLElement("figure")}} element.
+The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption or legend describing the rest of the contents of its parent {{HTMLElement("figure")}} element, providing the `<figure>` an {{glossary("accessible description")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
@@ -41,7 +41,7 @@ Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

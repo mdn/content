@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.IDBIndex.unique
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`unique`** read-only property returns a boolean that
 states whether the index allows duplicate keys.
@@ -15,8 +15,6 @@ This is decided when the index is created, using the
 {{domxref("IDBObjectStore.createIndex")}} method. This method takes an optional
 parameter, `unique`, which if set to `true` means that the index
 will not be able to accept duplicate entries.
-
-{{AvailableInWorkers}}
 
 ## Value
 

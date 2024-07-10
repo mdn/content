@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.windows.WindowState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The state of this browser window.
 

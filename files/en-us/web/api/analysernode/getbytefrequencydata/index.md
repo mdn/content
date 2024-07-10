@@ -25,7 +25,7 @@ getByteFrequencyData(array)
 ### Parameters
 
 - `array`
-  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is `-Infinity`.
+  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.
     If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
 ### Return value
@@ -54,7 +54,7 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillStyle = "rgb(0 0 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   const barWidth = (WIDTH / bufferLength) * 2.5;
@@ -64,7 +64,7 @@ function draw() {
   for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillStyle = `rgb(${barHeight + 100} 50 50)`;
     canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
     x += barWidth + 1;

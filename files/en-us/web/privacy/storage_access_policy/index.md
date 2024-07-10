@@ -4,8 +4,6 @@ slug: Web/Privacy/Storage_Access_Policy
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
-
 Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies, which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.
 
 ## Testing in Firefox
@@ -41,7 +39,7 @@ Firefox uses the built-in [Tracking Protection](https://support.mozilla.org/en-U
 
 ## What does the storage access policy block?
 
-The storage access policy blocks resources identified as trackers from accessing their cookies and other site storage when they are loaded in a third-party context. This prevents those resources from retrieving tracking identifiers stored in cookies or site storage and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
+The storage access policy blocks resources identified as trackers from accessing [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and other site storage loaded in a third-party context. This prevents those resources from retrieving tracking identifiers and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
 
 Cookies:
 
@@ -177,3 +175,7 @@ This depends on how the third party has implemented the measurement tool, but ge
 1. You run an ad on a social media website that is seen several times by a user, but never clicked. That user later visits your website, which includes a conversion tracking tag from the same social media website. This type of conversion is often referred to as a "view-through conversion." Since the social media website does not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that most view-through conversion tracking techniques will no longer work, including those offered by display networks.
 2. You run an ad on a display network or social media website that is clicked by a user. That user lands on your website, which includes a conversion tracking tag from the same website that displayed your ad. This type of conversion is often referred to as a "click-through conversion." Since the social media site or display network will not have access to their third-party storage, they will not recognize the user as the same user that saw the advertisements on their website and the conversion will not be tracked. We expect that this version of click-through conversion will no longer work.
 3. You run an ad that appears on a social media website. A user clicks on your advertisement and is taken to a landing page that contains a conversion tracking tag from the third-party network. On the social media website, the network annotates the advertisement landing page URL with a query parameter that signals that the visit was the result of a click on an advertisement. On your website, the display network's tag checks the URL query parameters and saves any ad tracking parameters to first-party storage. If a user later completes a conversion event, the network's tag checks first-party storage to determine which click (or clicks) was responsible for the visit. We expect that click-through conversion implemented in this way will continue to work.
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiselectable
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-multiselectable` attribute indicates that the user may select more than one item from the current selectable descendants.
 
 ## Description
@@ -154,15 +156,10 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
 - [multiple](/en-US/docs/Web/HTML/Attributes/multiple) attribute
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

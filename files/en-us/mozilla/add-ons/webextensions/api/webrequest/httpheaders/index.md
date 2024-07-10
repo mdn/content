@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.HttpHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
 

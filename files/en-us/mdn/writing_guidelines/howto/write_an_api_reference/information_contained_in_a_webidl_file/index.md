@@ -1,6 +1,6 @@
 ---
 title: Information contained in a WebIDL file
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 page-type: mdn-writing-guide
 ---
 
@@ -17,7 +17,7 @@ WebIDL can be found in multiple locations:
 - Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).
 - Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
 
-  - For Gecko, all WebIDL files are grouped in a single directory: <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
+  - For Gecko, all WebIDL files are grouped in a single directory: <https://searchfox.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
   - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
   - For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 

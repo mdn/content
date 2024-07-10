@@ -7,7 +7,7 @@ status:
 browser-compat: api.Magnetometer
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about the magnetic field as detected by the device's primary magnetometer sensor.
 

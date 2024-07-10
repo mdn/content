@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.drawIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.

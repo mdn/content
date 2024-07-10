@@ -25,7 +25,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `denomalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
 - `linethickness`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line.
+  - : A {{cssxref("length-percentage")}} indicating the thickness of the horizontal fraction line.
 - `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
 

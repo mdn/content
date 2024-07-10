@@ -50,7 +50,7 @@ The `<box-edge>` keywords are defined as follows:
 
 - `content-box`
 
-  - : Refers to the outer edge of the box's content area. . The content box is the innermost box. The content area contains the actual content, such as text, images, or other HTML elements. In SVG, this value is treated as `fill-box`.
+  - : Refers to the outer edge of the box's content area. The content box is the innermost box. The content area contains the actual content, such as text, images, or other HTML elements. In SVG, this value is treated as `fill-box`.
 
 - `padding-box`
 

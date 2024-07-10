@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Roles/comment_role
 page-type: aria-role
 ---
 
+{{AccessibilitySidebar}}
+
 The `comment` role semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
 > **Note:** The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
@@ -59,7 +61,7 @@ Since `aria-details` can now accept multiple IDs, we can associate multiple comm
 
 ### Nested comments
 
-Nested comments are also possible with ARIA annotations — nest the comments inside one another, like so:
+It's possible to nest comments inside one another, like so:
 
 ```html
 <div role="comment" id="thread-1" data-author="chris">
@@ -86,13 +88,3 @@ None
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## See also
-
-- [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

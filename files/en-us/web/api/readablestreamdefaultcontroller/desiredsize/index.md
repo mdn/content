@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ReadableStreamDefaultController.desiredSize
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`desiredSize`** read-only property of the
 {{domxref("ReadableStreamDefaultController")}} interface returns the desired size

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getChildren
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.getChildren()`** retrieves all the immediate children of a bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 

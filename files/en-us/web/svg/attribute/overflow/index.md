@@ -2,7 +2,7 @@
 title: overflow
 slug: Web/SVG/Attribute/overflow
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.overflow
+browser-compat: svg.global_attributes.overflow
 ---
 
 {{SVGRef}}

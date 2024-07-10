@@ -44,7 +44,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
 
 ### Page properties
 
-The `@page` at-rule can contain only [page descriptors](#page-descriptors) and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
+The `@page` at-rule can contain only page descriptors and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
 - [`margin`](/en-US/docs/Web/CSS/margin)
   - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/margin-top), [`margin-right`](/en-US/docs/Web/CSS/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/margin-left) can also be used.
@@ -151,7 +151,7 @@ Where the `<page-body>` includes:
 - page-properties
 - page-margin properties
 
-and `<pseudo-selector>` represents these pseudo-classes:
+and `<pseudo-page>` represents these pseudo-classes:
 
 - [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}

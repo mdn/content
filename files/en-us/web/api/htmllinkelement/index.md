@@ -17,6 +17,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
   - : A string representing the type of content being loaded by the HTML link when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+- {{domxref("HTMLLinkElement.blocking")}} {{Experimental_Inline}}
+  - : A string indicating that certain operations should be blocked on the fetching of an external resource. It reflects the `blocking` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.crossOrigin")}}
   - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
@@ -27,6 +29,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the URI for the target resource.
 - {{domxref("HTMLLinkElement.hreflang")}}
   - : A string representing the language code for the linked resource.
+- {{domxref("HTMLLinkElement.integrity")}}
+  - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.media")}}
   - : A string representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}}

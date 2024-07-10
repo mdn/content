@@ -47,7 +47,7 @@ Some of the new features in Firefox 1.5:
 - [Tree API changes](/en-US/docs/Tree_Widget_Changes)
   - : The interfaces for accessing XUL `<tree>` elements have changed.
 - [XUL Changes for Firefox 1.5](/en-US/docs/XUL_Changes_for_Firefox_1.5)
-  - : Summary of XUL changes. See also [Adapting XUL Applications for Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5).
+  - : Summary of XUL changes.
 
 #### Networking-related changes
 

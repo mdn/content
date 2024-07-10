@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstall
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Uninstalls an add-on, given its ID.
 

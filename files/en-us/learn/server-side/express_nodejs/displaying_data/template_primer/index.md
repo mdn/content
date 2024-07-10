@@ -12,7 +12,7 @@ Express can be used with many different [template rendering engines](https://exp
 
 Different template languages use different approaches for defining layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be transpiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent nesting. The result is a page definition that translates directly to HTML, but is more concise and arguably easier to read.
 
-> **Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.
+> **Note:** A downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.
 
 ## Template configuration
 
@@ -84,7 +84,7 @@ Element attributes are defined in parentheses after their associated element. In
 - `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
 - `meta(name='viewport' content='width=device-width initial-scale=1')`
 
-The values of all attributes are _escaped_ (e.g. characters like "`>`" are converted to their HTML code equivalents like "`&gt;"`) to prevent JavaScript injection or cross-site scripting attacks.
+The values of all attributes are _escaped_ (e.g. characters like `>` are converted to their HTML code equivalents like `&gt;`) to prevent JavaScript injection or cross-site scripting attacks.
 
 If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the `title` variable. In both cases the default behavior is to _escape_ the line.
 
@@ -92,6 +92,11 @@ If a tag is followed by the equals sign, the following text is treated as a Java
 h1= title
 p= 'Evaluated and <em>escaped expression</em>:' + title
 ```
+
+> **Note:** In Pug templates, a variable that is used but not passed in from your Express code (or defined locally) is "undefined".
+> If you used this template without passing in a `title` variable the tags would be created but would contain an empty string.
+> If you use undefined variables in conditional statements then they evaluate to `false`.
+> Other template languages may require that variables used in the template must be defined.
 
 If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and `!{}` syntax respectively, as shown below. You can also add raw HTML within the plain text.
 

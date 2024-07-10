@@ -8,13 +8,12 @@ browser-compat: api.PannerNode.orientationX
 
 {{ APIRef("Web Audio API") }}
 
-The **`orientationX`** property of the {{
-    domxref("PannerNode") }} interface indicates the X (horizontal) component of the
+The **`orientationX`** property of the {{domxref("PannerNode")}} interface indicates the X (horizontal) component of the
 direction in which the audio source is facing, in a 3D Cartesian coordinate space.
 
 The complete vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY", "positionY")}},
+{{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},
@@ -39,10 +38,9 @@ direction in which the audio source is facing, in 3D Cartesian coordinate space.
 
 ## Example
 
-In this example, we'll demonstrate how changing the orientation parameters of a {{
-  domxref("PannerNode") }} in combination with {{domxref("PannerNode.coneInnerAngle",
-  "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle",
-  "coneOuterAngle")}} affects volume. To help us visualize how the orientation vector
+In this example, we'll demonstrate how changing the orientation parameters of a
+{{domxref("PannerNode")}} in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and
+{{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} affects volume. To help us visualize how the orientation vector
 affects, we can use the [Right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule):
 
 ![This chart visualizes how the PannerNode orientation vectors affect the direction of the sound cone.](pannernode-orientation.png)
@@ -70,8 +68,8 @@ const yRotationToVector = (degrees) => {
 };
 ```
 
-Now we can create our {{ domxref("AudioContext") }}, an oscillator and a {{
-  domxref("PannerNode") }}:
+Now we can create our {{ domxref("AudioContext") }}, an oscillator and a
+{{domxref("PannerNode")}}:
 
 ```js
 const context = new AudioContext();

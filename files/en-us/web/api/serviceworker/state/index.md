@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorker.state
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`state`** read-only property of the
 {{domxref("ServiceWorker")}} interface returns a string representing the current state

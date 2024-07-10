@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.executeScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Injects JavaScript code into a page.
 

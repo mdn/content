@@ -38,7 +38,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTTP
 
-- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be whitelisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes), where previously only inline scripts could be whitelisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
+- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
 
 ### APIs
 
@@ -72,7 +72,7 @@ This article provides information about the changes in Firefox 116 that affect d
 ## Changes for add-on developers
 
 - The URL of a page visited when an extension is uninstalled, provided in {{WebExtAPIRef("runtime.setUninstallURL")}}, can now be up to 1023 characters instead of 255 ([Firefox bug 1835723](https://bugzil.la/1835723)).
-- Adds {{WebExtAPIRef("action.getUserSettings")}} providing the user-specified settings for an extension's browser action ([Firefox bug 1814905](https://bugzil.la/1814905)).
+- Adds {{WebExtAPIRef("action.getUserSettings")}} and {{WebExtAPIRef("browserAction.getUserSettings")}} providing the user-specified settings for an extension's browser action ([Firefox bug 1814905](https://bugzil.la/1814905)).
 - `autoDiscardable` is now supported in {{WebExtAPIRef("tabs.Tab")}}, {{WebExtAPIRef("tabs.onUpdated")}}, {{WebExtAPIRef("tabs.update")}}, and {{WebExtAPIRef("tabs.query")}} ([Firefox bug 1809094](https://bugzil.la/1809094)).
 
 ## Developer Tools
@@ -85,4 +85,4 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ## Older versions
 
-{{Firefox_for_developers(115)}}
+{{Firefox_for_developers}}

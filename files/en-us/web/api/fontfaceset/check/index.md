@@ -8,7 +8,7 @@ browser-compat: api.FontFaceSet.check
 
 {{APIRef("CSS Font Loading API")}}
 
-The `check()` method of the {{domxref("FontFaceSet")}} returns `true` if you can render some text using the given font specification without attempting to use any fonts in this `FontFaceSet` that are not yet fully loaded. This means you can use the font specification without causing a [font swap](/en-US/docs/Web/CSS/@font-face/font-display#the_font_display_timeline).
+The `check()` method of the {{domxref("FontFaceSet")}} returns `true` if you can render some text using the given font specification without attempting to use any fonts in this `FontFaceSet` that are not yet fully loaded. This means you can use the font specification without causing a [font swap](/en-US/docs/Web/CSS/@font-face/font-display).
 
 ## Syntax
 
@@ -76,8 +76,6 @@ If we specify a font that is not in the `FontFaceSet` and is not a system font, 
 console.log(document.fonts.check("12px i-dont-exist"));
 // true: the matching font is a nonexistent font
 ```
-
-> **Note:** In this situation Chrome incorrectly returns `false`. This can make [fingerprinting](/en-US/docs/Glossary/Fingerprinting) easier, because an attacker can easily test which system fonts the browser has.
 
 ### System and unloaded fonts
 

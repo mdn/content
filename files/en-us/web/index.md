@@ -55,6 +55,8 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Web App Manifests let you enable users to install Web apps to their device home screens, with aspects such as portrait/landscape screen orientation and display mode (e.g., full screen) pre-set.
 - [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps)
   - : Progressive Web Apps provide a user experience similar to native mobile apps.
+- [Glossary](/en-US/docs/Glossary)
+  - : Definitions of Web-related terms
 
 ## Developer tools documentation
 

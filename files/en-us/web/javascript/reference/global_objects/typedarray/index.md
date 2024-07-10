@@ -34,6 +34,7 @@ When creating an instance of a `TypedArray` subclass (e.g. `Int8Array`), an arra
 | {{jsxref("Uint16Array")}}       | 0 to 65535                            | 2             | `unsigned short`      |
 | {{jsxref("Int32Array")}}        | -2147483648 to 2147483647             | 4             | `long`                |
 | {{jsxref("Uint32Array")}}       | 0 to 4294967295                       | 4             | `unsigned long`       |
+| {{jsxref("Float16Array")}}      | `-65504` to `65504`                   | 2             | N/A                   |
 | {{jsxref("Float32Array")}}      | `-3.4e38` to `3.4e38`                 | 4             | `unrestricted float`  |
 | {{jsxref("Float64Array")}}      | `-1.8e308` to `1.8e308`               | 8             | `unrestricted double` |
 | {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1 | 8             | `bigint`              |
@@ -45,7 +46,7 @@ All typed arrays operate on `ArrayBuffer`s, where you can observe the exact byte
 
 - Unsigned integer arrays (`Uint8Array`, `Uint16Array`, `Uint32Array`, and `BigUint64Array`) store the number directly in binary.
 - Signed integer arrays (`Int8Array`, `Int16Array`, `Int32Array`, and `BigInt64Array`) store the number using [two's complement](https://en.wikipedia.org/wiki/Two's_complement).
-- Floating-point arrays (`Float32Array` and `Float64Array`) store the number using [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) floating-point format. The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) reference has more information about the exact format. JavaScript numbers use double precision floating point format by default, which is the same as `Float64Array`. `Float32Array` uses 23 (instead of 52) bits for the mantissa and 8 (instead of 11) bits for the exponent. Note that the spec requires all {{jsxref("NaN")}} values to use the same bit encoding, but the exact bit pattern is implementation-dependent.
+- Floating-point arrays (`Float16Array`, `Float32Array`, and `Float64Array`) store the number using [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) floating-point format. The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) reference has more information about the exact format. JavaScript numbers use double precision floating point format by default, which is the same as `Float64Array`. `Float32Array` uses 23 (instead of 52) bits for the mantissa and 8 (instead of 11) bits for the exponent. `Float16Array` uses 10 bits for the mantissa and 5 bits for the exponent. Note that the spec requires all {{jsxref("NaN")}} values to use the same bit encoding, but the exact bit pattern is implementation-dependent.
 - `Uint8ClampedArray` is a special case. It stores the number in binary like `Uint8Array` does, but when you store a number outside the range, it _clamps_ the number to the range 0 to 255 by mathematical value, instead of truncating the most significant bits.
 
 All typed arrays except `Int8Array`, `Uint8Array`, and `Uint8ClampedArray` store each element using multiple bytes. These bytes can either be ordered from most significant to least significant (big-endian) or from least significant to most significant (little-endian). See [Endianness](/en-US/docs/Glossary/Endianness) for more explanation. Typed arrays always use the platform's native byte order. If you want to specify the endianness when writing and reading from buffers, you should use a {{jsxref("DataView")}} instead.
@@ -54,7 +55,7 @@ When writing to these typed arrays, values that are outside the representable ra
 
 - All integer arrays (except `Uint8ClampedArray`) use [fixed-width number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion), which first truncates the decimal part of the number and then takes the lowest bits.
 - `Uint8ClampedArray` first clamps the number to the range 0 to 255 (values greater than 255 become 255 and values less than 0 become 0). It then _rounds_ (instead of flooring) the result to the nearest integer, with half-to-even; meaning if the number is exactly between two integers, it rounds to the nearest even integer. For example, `0.5` becomes `0`, `1.5` becomes `2`, and `2.5` becomes `2`.
-- `Float32Array` performs a "round to even" to convert 64-bit floating point numbers to 32-bit. This is the same algorithm as provided by {{jsxref("Math.fround()")}}.
+- `Float16Array` and `Float32Array` perform a "round to even" to convert 64-bit floating point numbers to 32-bit and 16-bit. This is the same algorithm as provided by {{jsxref("Math.fround()")}} and {{jsxref("Math.f16round()")}}.
 
 ### Behavior when viewing a resizable buffer
 

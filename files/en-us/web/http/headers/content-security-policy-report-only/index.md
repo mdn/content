@@ -7,9 +7,9 @@ browser-compat: http.headers.Content-Security-Policy-Report-Only
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Security-Policy-Report-Only`** response header allows web developers to experiment with policies by monitoring (but not enforcing) their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
+The HTTP **`Content-Security-Policy-Report-Only`** response header allows web developers to experiment with policies by monitoring (but not enforcing) their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 
-For more information, see also this article on [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+For more information, see this article on [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 <table class="properties">
   <tbody>

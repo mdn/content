@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.History
 ---
 
-{{ APIRef("History API") }}
+{{APIRef("History API")}}
 
-The **`History`** interface allows manipulation of the browser _session history_, that is the pages visited in the tab or frame that the current page is loaded in.
+The **`History`** interface of the {{domxref("History API", "", "", "nocode")}} allows manipulation of the browser _session history_, that is the pages visited in the tab or frame that the current page is loaded in.
 
 There is only one instance of `history` (It is a _singleton_.) accessible via the global object {{domxref("Window.history", "history")}}.
 

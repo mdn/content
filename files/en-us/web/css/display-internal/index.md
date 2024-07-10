@@ -31,13 +31,13 @@ Valid `<display-internal>` values:
   - : These elements behave like {{HTMLElement("col")}} HTML elements.
 - `table-caption`
   - : These elements behave like {{HTMLElement("caption")}} HTML elements.
-- `ruby-base` {{Experimental_Inline}}
+- `ruby-base`
   - : These elements behave like {{HTMLElement("rb")}} HTML elements.
-- `ruby-text` {{Experimental_Inline}}
+- `ruby-text`
   - : These elements behave like {{HTMLElement("rt")}} HTML elements.
-- `ruby-base-container` {{Experimental_Inline}}
+- `ruby-base-container`
   - : These elements are generated as anonymous boxes.
-- `ruby-text-container` {{Experimental_Inline}}
+- `ruby-text-container`
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
 ## Formal syntax

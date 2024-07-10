@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.tag
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`tag`** read-only property of the
 {{domxref("Notification")}} interface signifies an identifying tag for the notification,

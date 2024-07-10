@@ -2,7 +2,7 @@
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-opacity
+browser-compat: svg.global_attributes.stroke-opacity
 ---
 
 {{SVGRef}}
@@ -90,3 +90,9 @@ It's important to know that the stroke partially covers the fill of a shape, so 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("stop-opacity")}}

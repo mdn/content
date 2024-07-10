@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.lost
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`lost`** read-only property of the
 {{domxref("GPUDevice")}} interface contains a {{jsxref("Promise")}} that remains pending throughout the device's lifetime and resolves with a {{domxref("GPUDeviceLostInfo")}} object when the device is lost.

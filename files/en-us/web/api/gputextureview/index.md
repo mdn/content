@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUTextureView
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUTextureView`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a view into a subset of the texture resources defined by a particular {{domxref("GPUTexture")}}.
 

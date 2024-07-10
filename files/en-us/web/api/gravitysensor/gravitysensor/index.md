@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.GravitySensor.GravitySensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`GravitySensor()`**
 constructor creates a new {{domxref("GravitySensor")}} object which
@@ -25,14 +25,14 @@ new GravitySensor(options)
 
   - : Options are as follows:
 
-    - `frequency`
+    - `frequency` {{optional_inline}}
       - : The desired number of times per second a sample should
         be taken, meaning the number of times per second that the
         {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be
         used, the latter for frequencies less than a second. The actual reading frequency
         depends on device hardware and consequently may be less than requested. The default
         frequency is the one defined by the underlying platform.
-    - `referenceFrame`
+    - `referenceFrame` {{optional_inline}}
       - : The local coordinate system representing
         the reference frame. It can be either `'device'` or
         `'screen'`. The default is `'device'`.

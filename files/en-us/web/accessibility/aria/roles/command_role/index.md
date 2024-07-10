@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#command
 ---
 
+{{AccessibilitySidebar}}
+
 The `command` role defines a widget that performs an action but does not receive input data.
 
 > **Note:** The `command` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
@@ -21,17 +23,9 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 - [ARIA: `link` role](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

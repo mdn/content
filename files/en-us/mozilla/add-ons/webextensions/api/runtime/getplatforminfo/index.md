@@ -5,10 +5,9 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Returns information about the current platform. This can only be called in the background script context.
-
+Returns information about the current platform.
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax

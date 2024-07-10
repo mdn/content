@@ -10,7 +10,7 @@ browser-compat: api.OTPCredential.code
 
 {{SecureContext_Header}}{{APIRef("WebOTP API")}}{{SeeCompatTable}}
 
-The **`code`** property of the {{domxref("OTPCredential")}} interface contains the one-time password (OTP).
+The **`code`** read-only property of the {{domxref("OTPCredential")}} interface contains the one-time password (OTP).
 
 ## Value
 

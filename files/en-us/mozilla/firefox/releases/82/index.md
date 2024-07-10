@@ -61,4 +61,4 @@ This article provides information about the changes in Firefox 82 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(81)}}
+{{Firefox_for_developers}}

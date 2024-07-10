@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-valuemin` attribute defines the minimum allowed value for a range widget.
 
 ## Description
@@ -53,14 +55,9 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `min` attribute](/en-US/docs/Web/HTML/Element/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow).
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

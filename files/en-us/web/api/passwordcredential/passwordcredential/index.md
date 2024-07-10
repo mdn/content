@@ -8,7 +8,7 @@ status:
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
 
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PasswordCredential()`**
 constructor creates a new {{domxref("PasswordCredential")}} object. In
@@ -18,31 +18,38 @@ from the `init` object for global {{domxref('fetch()')}}.
 ## Syntax
 
 ```js-nolint
-new PasswordCredential(passwordCredentialData)
-new PasswordCredential(htmlFormElement)
+new PasswordCredential(data)
+new PasswordCredential(form)
 ```
 
 ### Parameters
 
 Either of the following:
 
-- `passwordCredentialData`
+- `data`
 
   - : An object with the following properties:
 
     - `iconURL` {{optional_inline}}
-      - : The URL of a user's avatar image.
+      - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `id`
-      - : The ID of the user signing in.
+      - : A string representing a unique ID for the credential.
     - `name` {{optional_inline}}
-      - : The name of the user signing in.
+      - : A string representing the credential username.
+    - `origin`
+      - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
     - `password`
-      - : The password of the user signing in.
+      - : A string representing the credential password.
 
-- `htmlFormElement`
+- `form`
   - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
     form should, at the very least, contain an id and password. It could also require a
     CSRF token.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if one of the `id`, `origin` or `password` option is empty.
 
 ## Examples
 

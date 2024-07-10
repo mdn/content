@@ -5,22 +5,20 @@ page-type: web-api-interface
 browser-compat: api.IDBFactory
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBFactory`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) lets applications asynchronously access the indexed databases. The object that implements the interface is `window.indexedDB`. You open — that is, create and access — and delete a database with this object, and not directly with `IDBFactory`.
 
-{{AvailableInWorkers}}
-
 ## Instance methods
 
-- {{domxref("IDBFactory.open")}}
-  - : The current method to request opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
-- {{domxref("IDBFactory.deleteDatabase")}}
-  - : A method to request the deletion of a database.
-- {{domxref("IDBFactory.cmp")}}
-  - : A method that compares two keys and returns a result indicating which one is greater in value.
-- {{domxref("IDBFactory.databases")}}
-  - : A method that returns a list of all available databases, including their names and versions.
+- {{domxref("IDBFactory.open()")}}
+  - : Requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
+- {{domxref("IDBFactory.deleteDatabase()")}}
+  - : Requests the deletion of a database.
+- {{domxref("IDBFactory.cmp()")}}
+  - : Compares two keys and returns a result indicating which one is greater in value.
+- {{domxref("IDBFactory.databases()")}}
+  - : Returns a promise that fulfills with an array of all available databases, including their names and versions.
 
 ## Example
 

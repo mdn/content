@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRFrame.fillJointRadii
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`fillJointRadii()`** method of the {{domxref("XRFrame")}} interface populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces and returns `true` if successful for all spaces.
 

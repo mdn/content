@@ -34,7 +34,7 @@ A variable is a container for a value, like a number we might use in a sum, or a
 
 ### Variable example
 
-Let's look at a simple example:
+Let's look at an example:
 
 ```html
 <button id="button_A">Press me</button>
@@ -45,16 +45,18 @@ Let's look at a simple example:
 const buttonA = document.querySelector("#button_A");
 const headingA = document.querySelector("#heading_A");
 
+let count = 1;
+
 buttonA.onclick = () => {
-  const name = prompt("What is your name?");
-  alert(`Hello ${name}, nice to see you!`);
-  headingA.textContent = `Welcome ${name}`;
+  buttonA.textContent = "Try again!";
+  headingA.textContent = `${count} clicks so far`;
+  count += 1;
 };
 ```
 
 {{ EmbedLiveSample('Variable_example', '100%', 120) }}
 
-In this example pressing the button runs some code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value and the third line displays that name on the page.
+In this example pressing the button runs some code. First, it changes the text on the button itself. Second, it shows a message of the number of times the button has been pressed. The number is stored in a variable. Each time the user presses the button, the number in the variable will increment by one.
 
 ### Without a variable
 
@@ -70,14 +72,14 @@ const buttonB = document.querySelector("#button_B");
 const headingB = document.querySelector("#heading_B");
 
 buttonB.onclick = () => {
-  alert(`Hello ${prompt("What is your name?")}, nice to see you!`);
-  headingB.textContent = `Welcome ${prompt("What is your name?")}`;
+  buttonB.textContent = "Try again!";
+  headingB.textContent = "1 click so far";
 };
 ```
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
 
-You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. If we didn't have variables available, we'd have to ask the reader for their name every time we needed to use it!
+You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. Without a variable, we don't have a way of knowing how many times the button have been clicked. The message to the user will quickly be irrelevant when no information can be remembered.
 
 Variables just make sense, and as you learn more about JavaScript they will start to become second nature.
 
@@ -168,7 +170,7 @@ var myName;
 
 > **Note:** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
-This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
+This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#hoisting) for more detail on the subject.
 
 Hoisting no longer works with `let`. If we changed `var` to `let` in the above example, it would fail with an error. This is a good thing — declaring a variable after you initialize it results in confusing, harder to understand code.
 
@@ -264,8 +266,6 @@ Try creating a few more variables now, with the above guidance in mind.
 
 There are a few different types of data we can store in variables. In this section we'll describe these in brief, then in future articles, you'll learn about them in more detail.
 
-So far we've looked at the first two, but there are others.
-
 ### Numbers
 
 You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:
@@ -316,7 +316,7 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [a future article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
+To learn more, see our article on [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
 
 ### Objects
 
@@ -334,7 +334,7 @@ To retrieve the information stored in the object, you can use the following synt
 dog.name;
 ```
 
-We won't be looking at objects any more for now — you can learn more about those in [a future module](/en-US/docs/Learn/JavaScript/Objects).
+For more on this topic, see the [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module.
 
 ## Dynamic typing
 

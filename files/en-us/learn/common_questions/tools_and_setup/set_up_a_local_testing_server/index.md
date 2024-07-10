@@ -56,6 +56,30 @@ For VSCode, you can check the following free extension:
 
 - `vscode-preview-server`. You can check it on its [home page](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server).
 
+### Using Node.js
+
+The Node.js [`http-server`](https://www.npmjs.com/package/http-server) module is an easiest way to host HTML files in any directory.
+
+To use the module:
+
+1. Run the following commands to check if Node.js is already installed:
+
+   ```bash
+   node -v
+   npm -v
+   npx -v
+   ```
+
+2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download/) in the Node.js docs, then run the above commands again to check if the installation is successful.
+
+3. Let's assume the directory is `/path/to/project`. Run the following command to start the server:
+
+   ```bash
+   npx http-server /path/to/project -o -p 9999
+   ```
+
+   This hosts all files in the `/path/to/project` directory on `localhost:9999`. The option `-o` will open the `index.html` page in a web browser. If `index.html` doesn't exist, then the directory is displayed instead.
+
 ### Using Python
 
 Another way to achieve this is to use Python's `http.server` module.
@@ -108,13 +132,19 @@ To do this:
 
 ## Running server-side languages locally
 
-Python's `http.server` (or `SimpleHTTPServer` for Python 2) module is useful, but it is merely a _static_ file server; it doesn't know how to run code written in languages such as Python, PHP or JavaScript. To handle them, you'll need something more — exactly what you'll need depends on the server-side language you are trying to run. Here are a few examples:
+The best approach for working with server side languages, such as Python, PHP, or JavaScript, depends on the server-side language you are using, and whether you're working with a web framework or "stand-alone" code.
 
-- To run Python server-side code, you'll need to use a Python web framework. There are many popular Python web frameworks, such as Django (a [guide](/en-US/docs/Learn/Server-side/Django) is available), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
-- To run Node.js (JavaScript) server-side code, you'll need to use raw node or a framework built on top of it. Express is a good choice — see [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs).
-- To run PHP server-side code, launch [PHP's built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
+If you're working with a web framework, usually the framework will provide its own development server.
+For example, the following languages/frameworks come with a development server:
+
+- Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
+- Node/JavaScript frameworks such as [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs)
+- PHP has its own [built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash
   cd path/to/your/php/code
   php -S localhost:8000
   ```
+
+If you're not working directly with a server-side framework or a programming language that provides a development server, Python's `http.server` module can also be used to test server-side code written in languages such as Python, PHP, JavaScript, and so on, by invoking server-side Common Gateway Interface (CGI) scripts.
+For examples of how to use this feature see [Execute a Script Remotely Through the Common Gateway Interface (CGI)](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi) in _How to Launch an HTTP Server in One Line of Python Code_ on realpython.com.

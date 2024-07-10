@@ -51,10 +51,10 @@ button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border: 2px solid rgb(200 200 0 / 0.6);
-  background-color: rgb(0 217 217 / 0.6);
-  color: rgb(100 0 0 / 1);
-  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+  border: 2px solid rgb(200 200 0 / 60%);
+  background-color: rgb(0 217 217 / 60%);
+  color: rgb(100 0 0 / 100%);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
   border-radius: 10px;
   padding: 3px 10px;
   cursor: pointer;
@@ -159,7 +159,7 @@ function updateName() {
 }
 ```
 
-Here we are selecting a button (line 1), then attaching an event listener to it (line 3) so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
+Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
 
 If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.

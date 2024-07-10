@@ -28,16 +28,12 @@ The `*` operator is overloaded for two types of operands: number and [BigInt](/e
 ```js
 2 * 2; // 4
 -2 * 2; // -4
-```
 
-### Multiplication with Infinity
-
-```js
 Infinity * 0; // NaN
 Infinity * Infinity; // Infinity
 ```
 
-### Multiplication with non-numbers
+Other non-BigInt values are coerced to numbers:
 
 ```js
 "foo" * 2; // NaN
@@ -49,10 +45,18 @@ Infinity * Infinity; // Infinity
 ```js
 2n * 2n; // 4n
 -2n * 2n; // -4n
+```
 
+You cannot mix BigInt and number operands in multiplication.
+
+```js example-bad
 2n * 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 * 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
-// To multiply a BigInt with a non-BigInt, convert either operand
+To do multiplication with a BigInt and a non-BigInt, convert either operand:
+
+```js
 2n * BigInt(2); // 4n
 Number(2n) * 2; // 4
 ```

@@ -5,11 +5,13 @@ page-type: web-api-interface
 browser-compat: api.ServiceWorkerContainer
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`ServiceWorkerContainer`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
 
 Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}} method used to register service workers, and the {{domxref("ServiceWorkerContainer.controller")}} property used to determine whether or not the current page is actively controlled.
+
+Service workers can currently only be registered in the Window scope in some or all browsers, because the `ServiceWorkerContainer` object is not exposed to {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. Check the [browser compatibility](#browser_compatibility) for information.
 
 {{InheritanceDiagram}}
 

@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.openSearchResultsInNewTabs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
 

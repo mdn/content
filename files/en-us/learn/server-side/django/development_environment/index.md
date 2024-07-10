@@ -35,7 +35,7 @@ The development environment is an installation of Django on your local computer 
 
 The main tools that Django itself provides are a set of Python scripts for creating and working with Django projects, along with a simple _development web server_ that you can use to test local (i.e. on your computer, not on an external web server) Django web applications on your computer's web browser.
 
-There are other peripheral tools, which form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDE for editing code, and a source control management tool like [Git](https://git-scm.com/) for safely managing different versions of your code. We are assuming that you've already got a text editor installed.
+There are other peripheral tools, that often form part of the development environment, that we won't be covering here. These include things like a [text editor](/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) or IDE for editing code, linters for auto formatting, and so on. We are assuming that you've already got a text editor installed.
 
 ### What are the Django setup options?
 
@@ -60,9 +60,9 @@ In this article, we'll provide instructions for Windows, macOS, and Linux/Unix.
 #### What version of Python should be used?
 
 You can use any Python version supported by your target Django release.
-For Django 4.2 the allowed versions are Python 3.8 to 3.11 (see [FAQ:Installation](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django)).
+For Django 5.0 the allowed versions are Python 3.10 to 3.12 (see [FAQ:Installation](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)).
 
-The Django project _recommends_ (and "officially supports") using the newest available supported Python release.
+The Django project _recommends_ (and "officially supports") using the newest available version of the supported Python release.
 
 #### Where can we download Django?
 
@@ -76,7 +76,7 @@ This article shows how to install Django from PyPi, in order to get the latest s
 
 #### Which database?
 
-Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/4.2/ref/databases/) that are better to avoid).
+Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite databases, and there are community libraries that provide varying levels of support for other popular SQL and NoSQL databases. We recommend that you select the same database for both production and development (although Django abstracts many of the database differences using its Object-Relational Mapper (ORM), there are still [potential issues](https://docs.djangoproject.com/en/5.0/ref/databases/) that are better to avoid).
 
 For this article (and most of this module) we will be using the _SQLite_ database, which stores its data in a file. SQLite is intended for use as a lightweight database and can't support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.
 
@@ -103,14 +103,14 @@ This section briefly explains how you can check what versions of Python are pres
 
 > **Note:** Depending on your platform, you may also be able to install Python/pip from the operating system's own package manager or via other mechanisms. For most platforms, you can download the required installation files from <https://www.python.org/downloads/> and install them using the appropriate platform-specific method.
 
-### Ubuntu 20.04
+### Ubuntu 22.04
 
-Ubuntu Linux 20.04 LTS includes Python 3.8.10 by default.
+Ubuntu Linux 22.04 LTS includes Python 3.10.12 by default.
 You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
-# Output: Python 3.8.10
+# Output: Python 3.10.12
 ```
 
 However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
@@ -120,9 +120,8 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
-> **Note:** Python 3.8 is the oldest version [supported by Django 4.2](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django).
-> While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
-> If you want to update Python, then there are instructions on the internet.
+> **Note:** Python 3.10 is the oldest version [supported by Django 5.0](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
+> You don't _need_ to use the latest version of Python for this tutorial, but if you want to there are instructions on the internet.
 
 ### macOS
 
@@ -140,8 +139,8 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/macos/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
-      (at time of writing this is Python 3.11.4).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
+      (at time of writing this is Python 3.11.8).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -160,8 +159,8 @@ Windows doesn't include Python by default, but you can easily install it (along 
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/windows/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.2/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
-      (at time of writing this is Python 3.11.4).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
+      (at time of writing this is Python 3.11.8).
 
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
@@ -387,6 +386,168 @@ py -3 -m django --version
 
 > **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
 
+## Source code management with Git and GitHub
+
+Source Code Management (SCM) and versioning tools allow you to reliably store and recover versions of your source code, try out changes, and share code between your experiments and "known good code" when you need to.
+
+There are many different SCM tools, including git, Mercurial, Perforce, SVN (Subversion), CVS (Concurrent Versions System), etc., and cloud SCM hosting sources such as Bitbucket, GitHub, and GitLab.
+For this tutorial we'll hosting our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and using the **git** tool to manage our source code locally and send it to GitHub when needed.
+
+> **Note:** Using SCM tools is good software development practice!
+> Ths instructions provide a basic introduction to git and GitHub.
+> To learn more, see [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
+
+### Key concepts
+
+Git (and GitHub) use repositories ("repos") as the top level "bucket" for storing code, where each repo normally contains the source code for just one application or module.
+Repositories can be public, in which case the code is visible to everyone on the internet, or private, in which case they are restricted to the owning organization or user account.
+
+All work is done on a particular "branch" of code in your repo.
+When you want to backup some changes to a branch you can create a "commit", which stores all changes since your last commit to the current branch.
+
+The repo is created with a default branch named "main". You can spawn other branches off this using git, which initially have all the commits of the original branch.
+You can evolve branches separately by adding commits, and then later on use a "Pull Request" (PR) on GitHub to merge changes from one branch to another.
+You can also use git to switch between branches on your local compute, for example to try out different things.
+
+In addition to branches, it is possible to create `tags` on any branch and later recover that branch at that point.
+
+### Create an account and repository on GitHub
+
+First we will create a free account on GitHub.
+With a free account you can't create private repos, but you can create as many _public_ repositories ("repos") as you like.
+Then we create and configure a repository named "django_local_library" for storing the [Local library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) as we evolve it in the rest of this tutorial.
+
+The steps are:
+
+1. Visit <https://github.com/> and create an account.
+2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
+3. Fill in all the fields on this form.
+   While these are not compulsory, they are strongly recommended.
+
+   - Enter a repository name: "django_local_library".
+   - Enter a new repository description: "Local Library website written in Django".
+   - Select "Public" for the repository (the default).
+
+     > **Warning:** This will make _all_ source code visible.
+     > Remember not to store credentials or other sensitive material in your repo unless it is private.
+
+   - Choose **Python** in the _Add .gitignore_ selection list.
+   - Choose your preferred license in the _Add license_ selection list.
+     MDN uses "Creative Commons Zero v1.0 Universal" for this example.
+   - Check **Initialize this repository with a README**.
+
+4. Press **Create repository**.
+
+   The repository will be created, containing just the files `README.txt` and `.gitignore`.
+
+### Clone the repo to your local computer
+
+Now that the repository ("repo") is created on GitHub we are going to want to clone (copy) it to our local computer:
+
+1. On GitHub, click the green **Code** button.
+   In the "Clone" section, select the "HTTPS" tab, and copy the URL.
+   If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
+
+2. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+3. Open a command prompt/terminal and clone your repo using the URL you copied above:
+
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
+
+   This will create the repository inside the current directory.
+
+4. Navigate into the repo folder.
+
+   ```bash
+   cd django_local_library
+   ```
+
+### Modify and sync changes
+
+Now we're going to modify the `.gitignore` file on the local computer, commit the change, and update the repository on GitHub.
+This is a useful change to make, but mostly we're doing it to show you how to pull changes from GitHub, make changes locally, and then push them to GitHub.
+
+1. In the command prompt/terminal we first "fetch" (get) and then pull (get and merge into the current branch) the latest version of the source from GitHub:
+
+   > **Note:** This step isn't strictly necessary as we have just cloned the source and know it is up to date.
+   > However in general you should update your sources from GitHub before making changes.
+
+   ```bash
+   git fetch origin main
+   git pull origin main
+   ```
+
+   The "origin" is a _remote_, which represents the location of the repo where the source is located, and "main" is the branch.
+   You can verify that origin is our repo on GitHub using the command: `git remote -v`.
+
+2. Next we checkout a new branch to store our changes:
+
+   ```bash
+   git checkout -b update_gitignore
+   ```
+
+   The `checkout` command is used to switch some branch to be the current branch that you are working on.
+   The `-b` flag indicates that we intend to create a new branch named "update_gitignore" instead of selecting an existing branch with that name.
+
+3. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save:
+
+   ```plain
+   # Text backup files
+   *.bak
+
+   # Database
+   *.sqlite3
+   ```
+
+   Note that `.gitignore` is used to indicate files that should not be backed up by git automatically, such as temporary files and other build artifacts.
+
+4. Use the `add` command to add all changed files (that aren't ignored by the **.gitignore** file) to the "staging area" for the current branch.
+
+   ```bash
+   git add -A
+   ```
+
+5. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.).
+   It should look a bit like the listing below.
+
+   ```bash
+   > git status
+   On branch main
+   Your branch is up-to-date with 'origin/update_gitignore'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
+
+           modified:   .gitignore
+   ```
+
+6. When you're satisfied, `commit` the files to your local repo, using the `-m` flag to specify a concise but clear commit message.
+   This is equivalent to signing off on the changes and making them an official part of the local repo.
+
+   ```bash
+   git commit -m ".gitignore: add .bak and .sqlite3"
+   ```
+
+7. At this point, the remote repo has not been changed.
+   We can push the `update_gitignore` branch to the "origin" repo (GitHub) using the following command:
+
+   ```bash
+   git push origin update_gitignore
+   ```
+
+8. Go back to the page on GitHub where you created your repo and refresh the page.
+
+   A banner should appear with a button to press if you want to "Compare and pull request" the branch you just uploaded.
+   Select the button and then follow the instructions to create and then merge a pull request.
+
+   ![Banner asking if user wants to compare and merge recent branch updates](github_compare_and_pull_banner.png)
+
+   After merging, the "main" branch on the repo on GitHub will contain your changes to `.gitignore`.
+
+9. You can continue to update your local repo as files change using this add/commit/push cycle.
+
+In the next topic we'll use this repo to store our local library website source code.
+
 ## Other Python tools
 
 Experienced Python developers may install additional tools, such as linters (which help detect common errors in code).
@@ -433,8 +594,8 @@ In the testing section you also briefly saw how we can create a new Django websi
 
 ## See also
 
-- [Quick Install Guide](https://docs.djangoproject.com/en/4.2/intro/install/) (Django docs)
-- [How to install Django — Complete guide](https://docs.djangoproject.com/en/4.2/topics/install/) (Django docs) — also covers how to remove Django
-- [How to install Django on Windows](https://docs.djangoproject.com/en/4.2/howto/windows/) (Django docs)
+- [Quick Install Guide](https://docs.djangoproject.com/en/5.0/intro/install/) (Django docs)
+- [How to install Django — Complete guide](https://docs.djangoproject.com/en/5.0/topics/install/) (Django docs) — also covers how to remove Django
+- [How to install Django on Windows](https://docs.djangoproject.com/en/5.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}

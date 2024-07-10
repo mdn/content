@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.get
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("IDBObjectStore")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
@@ -14,13 +14,11 @@ returns the object selected by the specified key. This is for retrieving
 specific records from an object store.
 
 If a value is successfully found, then a structured clone of it is created and set as
-the [`result`](/en-US/docs/Web/API/IDBRequest#attr_result) of the
+the [`result`](/en-US/docs/Web/API/IDBRequest/result) of the
 request object.
 
 > **Note:** This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
 > To tell these situations apart, call the `openCursor()` method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

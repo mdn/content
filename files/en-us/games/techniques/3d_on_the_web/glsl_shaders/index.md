@@ -36,11 +36,7 @@ Let's build a simple demo to explain those shaders in action. Be sure to read [T
 
 ### Environment setup
 
-To start with the WebGL shaders you don't need much. You should:
-
-- Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Create a directory to store your experiments in.
-- Save a copy of the [latest minimized Three.js library](https://threejs.org/build/three.min.js) inside your directory.
+To get started with the WebGL shaders, follow the environment setup steps described in the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) so that you have Three.js working as expected.
 
 ### HTML structure
 

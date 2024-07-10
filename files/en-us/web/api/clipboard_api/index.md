@@ -48,7 +48,7 @@ The Clipboard API extends the following APIs, adding the listed features.
   - : An event fired whenever the user initiates a copy action.
 - [`Element: cut`](/en-US/docs/Web/API/Element/cut_event) event
   - : An event fired whenever the user initiates a cut action.
-- [`Element: paste`](/en-US/docs/Web/API/Element/cut_event) event
+- [`Element: paste`](/en-US/docs/Web/API/Element/paste_event) event
   - : An event fired whenever the user initiates a paste action.
 
 <!-- Note `Window: clipboardchange` event is in spec but not implemented -->
@@ -77,7 +77,7 @@ Chromium browsers:
 Firefox & Safari:
 
 - Reading and writing require transient activation.
-- The paste-prompt is is suppressed if reading same-origin clipboard content, but not cross-origin content.
+- The paste-prompt is suppressed if reading same-origin clipboard content, but not cross-origin content.
 - The `clipboard-read` and `clipboard-write` permissions are not supported (and not planned to be supported) by Firefox or Safari.
 
 Firefox [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard):

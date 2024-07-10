@@ -41,3 +41,12 @@ Functional notation: `color-contrast(color vs color-list)`
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("color_value", "&lt;color>")}} data type
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) {{cssxref("@media")}} features
+- [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
+- [WCAG: color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- {{cssxref('--*', 'CSS custom properties')}} and {{cssxref("var")}}

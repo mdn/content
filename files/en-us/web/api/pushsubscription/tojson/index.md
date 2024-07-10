@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PushSubscription.toJSON
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `toJSON()` method of the {{domxref("PushSubscription")}} interface is a
 standard serializer: it returns a JSON representation of the subscription properties,

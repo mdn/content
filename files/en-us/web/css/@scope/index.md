@@ -2,12 +2,10 @@
 title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
-status:
-  - experimental
 browser-compat: css.at-rules.scope
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
 
@@ -209,7 +207,7 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
   & & { ... }
 
   /* Doesn't work */
-  :root :root { ... }
+  :scope :scope { ... }
 }
 ```
 

@@ -41,7 +41,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
-Compared to {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapes a larger set of characters. Use `encodeURIComponent()` on user-entered fields from forms {{HTTPMethod("POST")}}'d to the server — this will encode `&` symbols that may inadvertently be generated during data entry for special HTML entities or other characters that require encoding/decoding. For example, if a user writes `Jack & Jill`, without `encodeURIComponent()`, the ampersand could be interpreted on the server as the start of a new field and jeopardize the integrity of the data.
+Compared to {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapes a larger set of characters. Use `encodeURIComponent()` on user-entered fields from forms {{HTTPMethod("POST")}}'d to the server — this will encode `&` symbols that may inadvertently be generated during data entry for {{glossary("character reference", "character references")}} or other characters that require encoding/decoding. For example, if a user writes `Jack & Jill`, without `encodeURIComponent()`, the ampersand could be interpreted on the server as the start of a new field and jeopardize the integrity of the data.
 
 For [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 
@@ -82,7 +82,7 @@ function encodeRFC5987ValueChars(str) {
 
 ### Encoding for RFC3986
 
-The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserves !, ', (, ), and \*, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL component format. It also encodes [ and ], which are part of the {{Glossary("IPv6")}} URI syntax. An RFC3986-compliant `encodeURI` implementation should not escape them, which is demonstrated in the [`encodeURI()` example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986).
+The more recent [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986) reserves `!`, `'`, `(`, `)`, and `*`, even though these characters have no formalized URI delimiting uses. The following function encodes a string for RFC3986-compliant URL component format. It also encodes `[` and `]`, which are part of the {{Glossary("IPv6")}} URI syntax. An RFC3986-compliant `encodeURI` implementation should not escape them, which is demonstrated in the [`encodeURI()` example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI#encoding_for_rfc3986).
 
 ```js
 function encodeRFC3986URIComponent(str) {

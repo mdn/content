@@ -5,11 +5,13 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#scrollbar
 ---
 
+{{AccessibilitySidebar}}
+
 A `scrollbar` is a graphical object that controls the scrolling of content within a viewing area.
 
 ## Description
 
-A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+A `scrollbar` is a range that controls what part of a viewport's content is currently visible in the viewport's frame; whether the viewport is a full browser size, an iframe, or any element's [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ### What is scroll bar
 
@@ -154,7 +156,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
 - HTML {{HTMLElement('progress')}} element
@@ -166,11 +168,3 @@ The above CSS means a native scroll bar will appear when the user interacts with
   - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
   - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [Document `scroll` event](/en-US/docs/Web/API/Document/scroll_event)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

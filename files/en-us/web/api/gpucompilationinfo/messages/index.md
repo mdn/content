@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCompilationInfo.messages
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`messages`** read-only property of the
 {{domxref("GPUCompilationInfo")}} interface is an array of {{domxref("GPUCompilationMessage")}} objects, each one containing the details of an individual shader compilation message. Messages can be informational, warnings, or errors.

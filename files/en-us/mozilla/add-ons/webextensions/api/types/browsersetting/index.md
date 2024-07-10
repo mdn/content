@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.types.BrowserSetting
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `BrowserSetting` is an object representing a browser setting.
 

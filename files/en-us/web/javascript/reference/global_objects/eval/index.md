@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.eval
 
 {{jsSidebar("Objects")}}
 
-> **Warning:** Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use eval()!](#never_use_eval!), below.
+> **Warning:** Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
@@ -93,13 +93,17 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
     const y = 4;
     // Direct call, uses local scope
     console.log(eval("x + y")); // Result is 6
-    console.log(eval?.("x + y")); // Uses global scope, throws because x is undefined
+    // Indirect call, uses global scope
+    console.log(eval?.("x + y")); // Throws because x is not defined in global scope
   }
   ```
 
-- Indirect `eval` would not inherit the strictness of the surrounding context, and would only be in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the source string itself has a `"use strict"` directive.
+- Indirect `eval` does not inherit the strictness of the surrounding context, and is only in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the source string itself has a `"use strict"` directive.
 
   ```js
+  function nonStrictContext() {
+    eval?.(`with (Math) console.log(PI);`);
+  }
   function strictContext() {
     "use strict";
     eval?.(`with (Math) console.log(PI);`);
@@ -108,8 +112,9 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
     "use strict";
     eval?.(`"use strict"; with (Math) console.log(PI);`);
   }
+  nonStrictContext(); // Logs 3.141592653589793
   strictContext(); // Logs 3.141592653589793
-  strictContextStrictEval(); // Throws a SyntaxError because the source string is in strict mode
+  strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
   On the other hand, direct eval inherits the strictness of the invoking context.
@@ -122,8 +127,13 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
     "use strict";
     eval(`with (Math) console.log(PI);`);
   }
+  function strictContextStrictEval() {
+    "use strict";
+    eval(`"use strict"; with (Math) console.log(PI);`);
+  }
   nonStrictContext(); // Logs 3.141592653589793
-  strictContext(); // Throws a SyntaxError because it's in strict mode
+  strictContext(); // Uncaught SyntaxError: Strict mode code may not include a with statement
+  strictContextStrictEval(); // Uncaught SyntaxError: Strict mode code may not include a with statement
   ```
 
 - `var`-declared variables and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) would go into the surrounding scope if the source string is not interpreted in strict mode — for indirect eval, they become global variables. If it's a direct eval in a strict mode context, or if the `eval` source string itself is in strict mode, then `var` and function declarations do not "leak" into the surrounding scope.
@@ -162,7 +172,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
   new Ctor(); // [Function: Ctor]
   ```
 
-### Never use eval()!
+### Never use direct eval()!
 
 Using direct `eval()` suffers from multiple problems:
 

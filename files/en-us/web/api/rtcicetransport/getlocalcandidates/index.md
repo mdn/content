@@ -8,15 +8,9 @@ browser-compat: api.RTCIceTransport.getLocalCandidates
 
 {{APIRef("WebRTC")}}
 
-The **{{domxref("RTCIceTransport")}}** method
-**`getLocalCandidates()`** returns an array of
-{{domxref("RTCIceCandidate")}} objects, one for each of the candidates that have been
-gathered by the local device during the current {{Glossary("ICE")}} agent
-session.
+The **`getLocalCandidates()`** method of the {{domxref("RTCIceTransport")}} interface returns an array of {{domxref("RTCIceCandidate")}} objects, one for each of the candidates that have been gathered by the local device during the current {{Glossary("ICE")}} agent session.
 
-The local candidates are placed in this list by the ICE agent prior to being delivered
-to the local client's code in an {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event so that the client can
-forward the candidates to the remote peer.
+The local candidates are placed in this list by the ICE agent prior to being delivered to the local client's code in an {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event so that the client can forward the candidates to the remote peer.
 
 ## Syntax
 
@@ -30,19 +24,14 @@ None.
 
 ### Return value
 
-A JavaScript {{jsxref("Array")}} containing one {{domxref("RTCIceCandidate")}} object
-for each candidate that has been identified so far during the ICE candidate gathering
-session.
+A JavaScript {{jsxref("Array")}} containing one {{domxref("RTCIceCandidate")}} object for each candidate that has been identified so far during the ICE candidate gathering session.
 
-You can't correlate these local candidates with matching remote candidates. To find the
-best match found so far, call {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
+You can't correlate these local candidates with matching remote candidates.
+To find the best match found so far, call {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
 
 ## Examples
 
-This simple example gets the local candidate list from the
-{{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the
-{{domxref("RTCPeerConnection")}}, then outputs to the console all of the candidates in
-the list.
+This simple example gets the local candidate list from the {{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the {{domxref("RTCPeerConnection")}}, then outputs to the console all of the candidates in the list.
 
 ```js
 const localCandidates = pc

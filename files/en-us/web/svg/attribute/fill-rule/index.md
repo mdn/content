@@ -2,7 +2,7 @@
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill-rule
+browser-compat: svg.global_attributes.fill-rule
 ---
 
 {{SVGRef}}

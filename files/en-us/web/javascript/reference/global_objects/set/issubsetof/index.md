@@ -2,12 +2,10 @@
 title: Set.prototype.isSubsetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Set.isSubsetOf
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`isSubsetOf()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if all elements of this set are in the given set.
 
@@ -30,7 +28,9 @@ isSubsetOf(other)
 
 In mathematical notation, _subset_ is defined as:
 
+<!-- prettier-ignore-start -->
 <math display="block"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mo stretchy="false">⇔</mo><mo>∀</mo><mi>x</mi><mo>∊</mo><mi>A</mi><mo>,</mo><mspace width="0.16666666666666666em"></mspace><mi>x</mi><mo>∊</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B \Leftrightarrow \forall x\in A,\,x\in B</annotation></semantics></math>
+<!-- prettier-ignore-end -->
 
 And using Venn diagram:
 

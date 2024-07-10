@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.IDBIndex.multiEntry
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`multiEntry`** read-only property of the
 {{domxref("IDBIndex")}} interface returns a boolean value that affects how the index
@@ -15,8 +15,6 @@ behaves when the result of evaluating the index's key path yields an array.
 This is decided when the index is created, using the
 {{domxref("IDBObjectStore.createIndex")}} method. This method takes an optional
 `options` parameter whose `multiEntry` property is set to `true`/`false`.
-
-{{AvailableInWorkers}}
 
 ## Value
 

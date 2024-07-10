@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBTransaction.objectStore
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`objectStore()`** method of the
 {{domxref("IDBTransaction")}} interface returns an object store that has already been
@@ -15,8 +15,6 @@ added to the scope of this transaction.
 Every call to this method on the same transaction object, with the same name, returns
 the same {{domxref("IDBObjectStore")}} instance. If this method is called on a different
 transaction object, a different {{domxref("IDBObjectStore")}} instance is returned.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

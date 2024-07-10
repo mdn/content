@@ -7,7 +7,7 @@ browser-compat: css.properties.overscroll-behavior-block
 
 {{CSSRef}}
 
-The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
+The **`overscroll-behavior-block`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 
@@ -34,7 +34,7 @@ The `overscroll-behavior-block` property is specified as a keyword chosen from t
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no scroll chaining occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no {{Glossary("Scroll_chaining", "scroll chaining")}} occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 

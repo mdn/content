@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNodeUnmodifiable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`bookmarks.BookmarkTreeNodeUnmodifiable`** type is used to indicate the reason that a node in the bookmark tree (where each node is either a bookmark or a bookmark folder) cannot be changed. This is used as the value of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} field on bookmark nodes.
 

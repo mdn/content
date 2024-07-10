@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.move
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Moves one or more contextual identities to a new position within the list of contextual identities.
 

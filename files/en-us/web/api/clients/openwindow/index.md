@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Clients.openWindow
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`openWindow()`** method of the {{domxref("Clients")}}
 interface creates a new top level browsing context and loads a given URL. If the calling
@@ -36,8 +36,7 @@ openWindow(url)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("WindowClient")}} object if the
-URL is from the same origin as the service worker or a {{Glossary("null", "null
-  value")}} otherwise.
+URL is from the same origin as the service worker or a {{Glossary("null", "null value")}} otherwise.
 
 ### Exceptions
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.captivePortal.getState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 

@@ -2,7 +2,7 @@
 title: color-interpolation
 slug: Web/SVG/Attribute/color-interpolation
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.color-interpolation
+browser-compat: svg.global_attributes.color-interpolation
 ---
 
 {{SVGRef}}
@@ -15,7 +15,7 @@ The color-interpolation property chooses between color operations occurring in t
 
 When a child element is blended into a background, the value of the `color-interpolation` property on the child determines the type of blending, not the value of the `color-interpolation` on the parent. For gradients which make use of the {{SVGAttr("href")}} or the deprecated {{SVGAttr("xlink:href")}} attribute to reference another gradient, the gradient uses the property's value from the gradient element which is directly referenced by the {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property. When animating colors, color interpolation is performed according to the value of the `color-interpolation` property on the element being animated.
 
-> **Note:** As a presentation attribute, `color-interpolation` can be used as a CSS property.
+> **Note:** As a presentation attribute, {{CSSXref("color-interpolation")}} can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 
@@ -74,6 +74,122 @@ You can use this attribute with the following SVG elements:
 - `linearRGB`
   - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
 
+## Example
+
+This example shows four SVGs, each with a {{SVGElement("rect")}} element and a different gradient used as a fill for the `<rect>`. The first two SVGs use {{SVGElement("linearGradient")}} and the second two use {{SVGElement("radialGradient")}} elements. In unsupported browsers, the gradient looks the same.
+
+In this first SVG, the `color-interpolation` attribute is not included on the `<linearGradient>` element, which defaults to `sRGB`.
+
+```css hidden
+svg {
+  display: block;
+}
+```
+
+```html
+<svg width="450" height="70">
+  <title>
+    Example of linearGradient excluding the color-interpolation attribute
+  </title>
+  <defs>
+    <linearGradient id="gradientDefault">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="25%" stop-color="blue" />
+      <stop offset="50%" stop-color="white" />
+      <stop offset="75%" stop-color="red" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
+  <rect
+    x="0"
+    y="0"
+    width="400"
+    height="40"
+    fill="url(#gradientDefault)"
+    stroke="black" />
+  <text x="0" y="60" font-family="courier" font-size="16">
+    color-interpolation not set
+  </text>
+</svg>
+```
+
+In this second SVG, the `color-interpolation` attribute is included on the `<linearGradient>` element and set to `linearRGB`.
+
+```html
+<svg width="450" height="70">
+  <title>
+    Example of linearGradient using the color-interpolation attribute
+  </title>
+  <defs>
+    <linearGradient id="gradientLinearRGB" color-interpolation="linearRGB">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="25%" stop-color="blue" />
+      <stop offset="50%" stop-color="white" />
+      <stop offset="75%" stop-color="red" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
+  <rect
+    x="0"
+    y="0"
+    width="400"
+    height="40"
+    fill="url(#gradientLinearRGB)"
+    stroke="black" />
+  <text x="0" y="60" font-family="courier" font-size="16">
+    color-interpolation="linearRGB"
+  </text>
+</svg>
+```
+
+In this third SVG, the `color-interpolation` attribute is not included on the `<radialGradient>` element, which defaults to `sRGB`.
+
+```html
+<svg width="450" height="70">
+  <title>
+    Example of radialGradient excluding the color-interpolation attribute
+  </title>
+  <defs>
+    <radialGradient id="none">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="gold" />
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="400" height="40" fill="url(#none)" stroke="black" />
+  <text x="0" y="60" font-family="courier" font-size="16">
+    color-interpolation not set
+  </text>
+</svg>
+```
+
+In this fourth SVG, the `color-interpolation` attribute is included on the `<radialGradient>` element and set to `linearRGB`.
+
+```html
+<svg width="450" height="70">
+  <title>
+    Example of radialGradient using the color-interpolation attribute
+  </title>
+  <defs>
+    <radialGradient id="radLinearRGB" color-interpolation="linearRGB">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="gold" />
+    </radialGradient>
+  </defs>
+  <rect
+    x="0"
+    y="0"
+    width="400"
+    height="40"
+    fill="url(#radLinearRGB)"
+    stroke="black" />
+  <text x="0" y="60" font-family="courier" font-size="16">
+    color-interpolation="linearRGB" (SVG attr)
+  </text>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "100%", "280")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -84,6 +200,9 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("radialGradient")}}
+- {{CSSXref("color-interpolation")}}
 - [sRGB specification](https://webstore.iec.ch/publication/6169)
 - {{SVGAttr("color-interpolation-filters")}}
 - [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB

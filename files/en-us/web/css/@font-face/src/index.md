@@ -53,11 +53,11 @@ src:
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
     If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth.
     If omitted, the browser will download the resource and then detect the format.
-    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal-syntax), enclose the format string in quotes.
+    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal_syntax), enclose the format string in quotes.
     Possible values are described in the [Font formats](#font_formats) section below.
-- `tech()` {{Experimental_inline}}
+- `tech()`
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
-    The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
+    The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`
 
   - : Specifies the font name should the font be available on the user's device.
@@ -179,19 +179,20 @@ The example below shows how to define two font faces with the same font family. 
 /* Defining a regular font face */
 @font-face {
   font-family: MainText;
-  src: local(Futura-Medium),
-    url('FuturaMedium.woff') format("woff"),
-    url('FuturaMedium.otf') format("opentype");
-    format("opentype");
+  src:
+    local(Futura-Medium),
+    url("FuturaMedium.woff") format("woff"),
+    url("FuturaMedium.otf") format("opentype");
 }
 
 /* Defining a different bold font face for the same family */
 @font-face {
   font-family: MainText;
-  src: local(Gill Sans Bold), /* full font name */
-    local(GillSans-Bold), /* postscript name */
-    url('GillSansBold.woff') format("woff"),
-    url('GillSansBold.otf') format("opentype"),
+  src:
+    local(Gill Sans Bold) /* full font name */,
+    local(GillSans-Bold) /* postscript name */,
+    url("GillSansBold.woff") format("woff"),
+    url("GillSansBold.otf") format("opentype"),
     url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
   font-weight: bold;
 }

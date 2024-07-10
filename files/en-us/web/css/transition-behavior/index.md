@@ -2,12 +2,10 @@
 title: transition-behavior
 slug: Web/CSS/transition-behavior
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.transition-behavior
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 

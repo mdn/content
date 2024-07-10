@@ -2,7 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
 page-type: http-status-code
-browser-compat: http.status.502
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.502
 ---
 
 {{HTTPSidebar}}
@@ -20,10 +20,6 @@ The HyperText Transfer Protocol (HTTP) **`502 Bad Gateway`** server error respon
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

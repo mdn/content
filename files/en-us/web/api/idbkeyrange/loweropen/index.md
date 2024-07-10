@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBKeyRange.lowerOpen
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`lowerOpen`** read-only property of the
 {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
 lower-bound value is included in the key range.
-
-{{AvailableInWorkers}}
 
 ## Value
 

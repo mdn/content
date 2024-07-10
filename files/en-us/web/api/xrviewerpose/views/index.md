@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRViewerPose.views
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRViewerPose")}} property **`views`**
 returns an array which contains every {{domxref("XRView")}} which must be rendered in

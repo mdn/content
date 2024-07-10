@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MessageEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}} {{AvailableInWorkers}}
 
 The **`MessageEvent`** interface represents a message received by a target object.
 
@@ -20,8 +20,6 @@ This is used to represent messages in:
 - WebRTC data channels (see {{domxref("RTCDataChannel.message_event", "onmessage")}}).
 
 The action triggered by this event is defined in a function set as the event handler for the relevant `message` event (e.g. using an `onmessage` handler as listed above).
-
-{{AvailableInWorkers}}
 {{InheritanceDiagram}}
 
 ## Constructor

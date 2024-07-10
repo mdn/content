@@ -20,7 +20,7 @@ h1 {
 }
 ```
 
-The `display` property also lets us use [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) when `display: grid` or `display: flex` is set. The important concept to understand is that changing an element's `display` value can change the formatting context of its direct children. When you use `display: flex` or `display: grid`, the element's children become flex or grid items and respond to the properties in grid and flexbox specifications.
+The `display` property also lets us use [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) when `display: grid` or `display: flex` is set. The important concept to understand is that changing an element's `display` value can change the formatting context of its direct children. When you use `display: flex` or `display: grid`, the element's children become flex or grid items and respond to the properties in grid and flexbox specifications.
 
 What grid and flexbox demonstrate, however, is that an element has both an **outer** and an **inner** display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.
 
@@ -59,7 +59,7 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar to you. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
+Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar to you. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
 
 In the example below, two `<p>` elements, one inside a `<div>` demonstrate how display values affect formatting contexts.
 The first `<div>` element with the demo controls is hidden so we can focus on the elements that follow instead.

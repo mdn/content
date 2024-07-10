@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#generic
 ---
 
+{{AccessibilitySidebar}}
+
 The `generic` role creates a nameless container element which has no semantic meaning on its own.
 
 > **Note:** The `generic` role is the implicit role of generic elements used by user agents. It is included here for completeness of documentation. It should not be used by web authors.
@@ -33,16 +35,8 @@ This role is for use by user agents and not by developers. As such, no appropria
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('div')}} and {{HTMLElement('span')}} elements
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) roles such as
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

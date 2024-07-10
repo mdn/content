@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioEncoder.AudioEncoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioEncoder()`** constructor creates a new {{domxref("AudioEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("AudioEncoder.state")}} set to `"unconfigured"`.
 

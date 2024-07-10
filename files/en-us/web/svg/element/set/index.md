@@ -49,25 +49,7 @@ svg {
   - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
     _Value type_: [**\<anything>**](/en-US/docs/Web/SVG/Content_type#anything); _Default value_: none; _Animatable_: **no**
 
-### Animation Attributes
-
-- [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
-  - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
-  - : Most notably: {{SVGAttr("attributeName")}}
-- [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
-  - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
-
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
@@ -81,4 +63,6 @@ svg {
 
 ## See also
 
+- {{SVGAttr("attributeName")}} attribute
+- [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes), including {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, and {{SVGAttr("fill")}}.
 - {{SVGElement("animate")}}

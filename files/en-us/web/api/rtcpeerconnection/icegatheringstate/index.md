@@ -8,12 +8,13 @@ browser-compat: api.RTCPeerConnection.iceGatheringState
 
 {{APIRef("WebRTC")}}
 
-The read-only property **`RTCPeerConnection.iceGatheringState`** returns a string
-that describes the connection's ICE gathering state.
+The **`iceGatheringState`** read-only property of the {{domxref("RTCPeerConnection")}} interface returns a string that describes the overall ICE gathering state for this connection.
 This lets you detect, for example, when collection of ICE candidates has finished.
 
-You can detect when the value of this property changes by watching for an event of type
-{{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}.
+You can detect when the value of this property changes by watching for an event of type {{domxref("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}.
+
+Note that **`iceGatheringState`** represents the overall gathering state of the connection, including every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection.
+This contrasts with {{domxref("RTCIceTransport.gatheringState")}}, which represents the gathering state for a single transport.
 
 ## Value
 
@@ -25,9 +26,7 @@ The possible values are:
   - : The ICE agent is in the process of gathering candidates for the connection.
 - `complete`
   - : The ICE agent has finished gathering candidates.
-    If something happens that requires collecting new candidates,
-    such as a new interface being added or the addition of a new ICE server,
-    the state will revert to `gathering` to gather those candidates.
+    If something happens that requires collecting new candidates, such as a new interface being added or the addition of a new ICE server, the state will revert to `gathering` to gather those candidates.
 
 ## Example
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PresentationConnection.send
 ---
 
-{{APIRef("Presentation")}}{{SeeCompatTable}}
+{{APIRef("Presentation")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`send()`** method of the
 {{domxref("PresentationConnection")}} interface tells a controlling browsing context to

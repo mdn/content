@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`pushsubscriptionchange`** event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}} to indicate a change in push subscription that was triggered outside the application's control.
 
@@ -45,7 +45,7 @@ self.addEventListener(
   "pushsubscriptionchange",
   (event) => {
     const conv = (val) =>
-      btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
+      self.btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
     const getPayload = (subscription) => ({
       endpoint: subscription.endpoint,
       publicKey: conv(subscription.getKey("p256dh")),

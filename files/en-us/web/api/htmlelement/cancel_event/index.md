@@ -30,7 +30,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-### \<dialog> element
+### Canceling a dialog
 
 #### HTML
 
@@ -80,9 +80,9 @@ closeButton.addEventListener("click", () => {
 
 #### Result
 
-{{ EmbedLiveSample('dialog_cancel', '100%', '100px') }}
+{{ EmbedLiveSample('Canceling a dialog', '100%', '100px') }}
 
-### \<input> element
+### Canceling an input element
 
 #### HTML
 
@@ -107,7 +107,7 @@ const elem = document.getElementById("file");
 const result = document.getElementById("result");
 
 elem.addEventListener("cancel", () => {
-  result.textContent = "Cancelled.";
+  result.textContent = "Canceled.";
 });
 
 elem.addEventListener("change", () => {
@@ -119,7 +119,7 @@ elem.addEventListener("change", () => {
 
 #### Result
 
-{{ EmbedLiveSample('input_cancel', '100%', '100px') }}
+{{ EmbedLiveSample('Canceling an input element', '100%', '100px') }}
 
 Open the file selector, then close the selection dialog with the escape key or the cancel button. Both of these will cause the cancel event to be fired. Also, try selecting a local file on your machine; then reopen the file selection window and reselect the same file. This too causes the cancel event to be fired.
 

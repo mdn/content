@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FileSystemSyncAccessHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} represents a synchronous handle to a file system entry.
 

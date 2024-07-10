@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Reload a tab, optionally bypassing the local web cache.
 

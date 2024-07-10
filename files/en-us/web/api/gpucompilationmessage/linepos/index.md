@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCompilationMessage.linePos
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`linePos`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a number representing the position in the code line that the message corresponds to. This could be an exact point, or the start of the relevant substring.

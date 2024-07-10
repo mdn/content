@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.insertDebugMarker
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`insertDebugMarker()`** method of the
 {{domxref("GPUCommandEncoder")}} interface marks a specific point in a series of encoded commands with a label.

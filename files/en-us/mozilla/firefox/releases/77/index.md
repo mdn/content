@@ -77,4 +77,4 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(76)}}
+{{Firefox_for_developers}}

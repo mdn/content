@@ -7,7 +7,7 @@ status:
 browser-compat: api.ContentIndex
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`ContentIndex`** interface of the [Content Index API](/en-US/docs/Web/API/Content_Index_API) allows developers to register their offline enabled content with the browser.
 
@@ -97,7 +97,7 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!Array.length) {
+  if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
     message.innerText =

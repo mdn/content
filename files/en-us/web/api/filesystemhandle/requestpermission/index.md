@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemHandle.requestPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
@@ -17,17 +17,18 @@ file handle.
 ## Syntax
 
 ```js-nolint
-requestPermission(fileSystemHandlePermissionDescriptor)
+requestPermission(descriptor)
 ```
 
 ### Parameters
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : An object which specifies the permission mode to query for. Options are as follows:
 
-    - `'mode'`: Can be either `'read'` or
-      `'readwrite'`.
+    - `'mode'` {{optional_inline}}
+
+      - : Can be either `'read'` or `'readwrite'`.
 
 ### Return value
 

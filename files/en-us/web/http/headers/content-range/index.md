@@ -25,8 +25,7 @@ a full body message a partial message belongs.
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted
-        response-header")}}
+        {{Glossary("CORS-safelisted request header")}}
       </th>
       <td>no</td>
     </tr>

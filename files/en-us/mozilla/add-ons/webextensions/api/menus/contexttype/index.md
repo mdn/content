@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.menus.ContextType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The different contexts a menu item can appear in.
 

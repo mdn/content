@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.error
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface
 returns the type of error when there is an unsuccessful transaction.
-
-{{AvailableInWorkers}}
 
 ## Value
 

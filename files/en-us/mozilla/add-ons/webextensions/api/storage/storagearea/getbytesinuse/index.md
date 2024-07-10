@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the amount of storage space, in bytes, used one or more items being stored in the storage area.
 

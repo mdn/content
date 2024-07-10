@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object containing information about the current platform.
 

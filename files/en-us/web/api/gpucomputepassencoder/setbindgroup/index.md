@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.

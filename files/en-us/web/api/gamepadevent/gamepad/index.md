@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.GamepadEvent.gamepad
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`GamepadEvent.gamepad`** property of the
 **{{domxref("GamepadEvent")}} interface** returns a {{domxref("Gamepad")}}

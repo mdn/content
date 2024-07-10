@@ -67,8 +67,9 @@ The rectangle's corner is located at (10, 20). It has a width of 150 and a heigh
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.rect(10, 20, 150, 100);
-ctx.fill();
+ctx.beginPath(); // Start a new path
+ctx.rect(10, 20, 150, 100); // Add a rectangle to the current path
+ctx.fill(); // Render the path
 ```
 
 #### Result

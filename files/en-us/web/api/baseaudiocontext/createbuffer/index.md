@@ -10,8 +10,7 @@ browser-compat: api.BaseAudioContext.createBuffer
 
 The `createBuffer()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to create a new, empty {{ domxref("AudioBuffer") }} object, which
-can then be populated by data, and played via an {{ domxref("AudioBufferSourceNode")
-  }}
+can then be populated by data, and played via an {{ domxref("AudioBufferSourceNode")}}.
 
 For more details about audio buffers, check out the {{ domxref("AudioBuffer") }}
 reference page.
@@ -34,7 +33,7 @@ createBuffer(numOfChannels, length, sampleRate)
 ### Parameters
 
 > **Note:** For an in-depth explanation of how audio buffers work, and
-> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our Basic concepts guide.
+> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our Basic concepts guide.
 
 - `numOfChannels`
   - : An integer representing the number of channels this buffer should have. The default
@@ -93,9 +92,8 @@ on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
 > reproduce high frequency content (treble sound).
 
 Now let's look at a more complex `createBuffer()` example, in which we
-create a three-second buffer, fill it with white noise, and then play it via an {{
-  domxref("AudioBufferSourceNode") }}. The comment should clearly explain what is going
-on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
+create a three-second buffer, fill it with white noise, and then play it via an {{domxref("AudioBufferSourceNode")}}. The comment should clearly explain what is going on.
+You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();

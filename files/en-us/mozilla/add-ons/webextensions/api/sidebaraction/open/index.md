@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.open
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Open the sidebar in the active window.
 

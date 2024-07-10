@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.usage
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`usage`** read-only property of the
 {{domxref("GPUTexture")}} interface is the {{glossary("bitwise flags")}} representing the allowed usages of the `GPUTexture`.

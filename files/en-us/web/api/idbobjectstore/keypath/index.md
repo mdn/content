@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.keyPath
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`keyPath`** read-only property of the
 {{domxref("IDBObjectStore")}} interface returns the [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this object store.
 
 If this property is null, the application must provide a key for each modification
 operation.
-
-{{AvailableInWorkers}}
 
 ## Value
 

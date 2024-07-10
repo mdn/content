@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/glyph-orientation-vertical
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.glyph-orientation-vertical
+browser-compat: svg.global_attributes.glyph-orientation-vertical
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -33,7 +33,7 @@ You can use this attribute with the following SVG elements:
       <td>
         <code>auto</code> |
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Angle"
+          ><a href="/en-US/docs/Web/SVG/Content_type#angle"
             >&#x3C;angle></a
           ></code
         >

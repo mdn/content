@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseType
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} property
 **`responseType`** is an enumerated string value specifying

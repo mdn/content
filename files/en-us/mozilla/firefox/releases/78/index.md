@@ -84,4 +84,4 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 ## Older versions
 
-{{Firefox_for_developers(77)}}
+{{Firefox_for_developers}}

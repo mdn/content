@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PushSubscriptionOptions
 ---
 
-{{DefaultAPISidebar("Push API")}}
+{{DefaultAPISidebar("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`PushSubscriptionOptions`** interface of the {{domxref('Push API','','',' ')}} represents the options associated with a push subscription.
 

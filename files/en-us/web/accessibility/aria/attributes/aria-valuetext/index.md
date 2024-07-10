@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuetext
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-valuetext` attribute defines the human-readable text alternative of `aria-valuenow` for a range widget.
 
 ## Description
@@ -51,11 +53,6 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

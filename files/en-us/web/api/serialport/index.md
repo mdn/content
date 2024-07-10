@@ -7,7 +7,7 @@ status:
 browser-compat: api.SerialPort
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The `SerialPort` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.
 

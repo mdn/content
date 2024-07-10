@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.disable
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`disable()`** method of the {{domxref("NavigationPreloadManager")}} interface halts the automatic preloading of service-worker-managed resources previously started using {{domxref("NavigationPreloadManager.enable()","enable()")}}
 It returns a promise that resolves with `undefined`.

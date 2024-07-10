@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.MediaDevices
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-The **`MediaDevices`** interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
+The **`MediaDevices`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
 
 {{InheritanceDiagram}}
 
@@ -19,13 +19,13 @@ _Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-- {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
+- {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
   - : Obtains an array of information about the media input and output devices available on the system.
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
   - : Returns an object conforming to {{domxref("MediaTrackSupportedConstraints")}} indicating which constrainable properties are supported on the {{domxref("MediaStreamTrack")}} interface. See [Media Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) to learn more about constraints and how to use them.
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a `MediaStream`.
-- {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
   - : With the user's permission through a prompt, turns on a camera and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.
 - {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}}
   - : Prompts the user to select a specific audio output device.

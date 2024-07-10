@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The maximum number of regular expression rules that an extension can add.
 

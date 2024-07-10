@@ -147,7 +147,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

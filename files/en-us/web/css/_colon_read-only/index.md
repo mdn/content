@@ -28,8 +28,6 @@ One use of `readonly` form controls is to allow the user to check and verify inf
 The `:read-only` pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs. The `:read-write` pseudo-class on the other hand is used to provide some nicer styling to the editable `<textarea>`.
 
 ```css
-input:-moz-read-only,
-textarea:-moz-read-only,
 input:read-only,
 textarea:read-only {
   border: 0;
@@ -37,7 +35,6 @@ textarea:read-only {
   background-color: white;
 }
 
-textarea:-moz-read-write,
 textarea:read-write {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;

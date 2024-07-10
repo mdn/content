@@ -12,8 +12,9 @@ The **`positionZ`** property of the {{ domxref("PannerNode") }} interface specif
 coordinates, corresponding to the _depth_ axis (behind-in front of the
 listener). The complete vector is defined by the position of the audio source, given
 as ({{domxref("PannerNode.positionX", "positionX")}},
-{{domxref("PannerNode.positionY", "positionY")}}, {{domxref("PannerNode.positionZ",
-    "positionZ")}}), and the orientation of the audio source (that is, the direction in
+{{domxref("PannerNode.positionY", "positionY")}},
+{{domxref("PannerNode.positionZ", "positionZ")}}),
+and the orientation of the audio source (that is, the direction in
 which it's facing), given as ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},
 {{domxref("PannerNode.orientationZ", "orientationZ")}}).

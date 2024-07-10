@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.storage.StorageArea
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 StorageArea is an object representing a storage area.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Uninstalls the calling add-on.
 

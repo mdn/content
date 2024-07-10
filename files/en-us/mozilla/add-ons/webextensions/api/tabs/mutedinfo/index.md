@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.MutedInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 

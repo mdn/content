@@ -28,14 +28,6 @@ No notable changes.
   The `stack` is not yet serialized when errors are sent using other APIs, such as [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
   (See [Firefox bug 1774866](https://bugzil.la/1774866) for more details.)
 
-### HTTP
-
-No notable changes.
-
-### Security
-
-No notable changes.
-
 ### APIs
 
 #### DOM
@@ -61,10 +53,6 @@ No notable changes.
   The option was previously deprecated, and users that need this functionality should already have migrated to {{domxref("StorageManager.persist()")}}.
   (See [Firefox bug 1354500](https://bugzil.la/1354500) for more details.)
 
-### WebAssembly
-
-No notable changes.
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
@@ -77,10 +65,6 @@ No notable changes.
 - Improved stability and performance when minimizing or restoring windows on Linux ([Firefox bug 1780212](https://bugzil.la/1780212)).
 - Added support for `touch` actions ([Firefox bug 1543337](https://bugzil.la/1543337)).
 
-## Changes for add-on developers
-
-No notable changes.
-
 ## Older versions
 
-{{Firefox_for_developers(103)}}
+{{Firefox_for_developers}}

@@ -6,14 +6,12 @@ page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.bound_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`bound()`** static method of the {{domxref("IDBKeyRange")}}
 interface creates a new key range with the specified upper and lower bounds. The
 bounds can be open (that is, the bounds exclude the endpoint values) or closed (that
 is, the bounds include the endpoint values). By default, the bounds are closed.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getNotifications()`** method of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the

@@ -8,15 +8,15 @@ browser-compat: api.MediaRecorder.resume
 
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.resume()`**
-method (part of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to resume media recording when it has been previously
-paused.
+The **`resume()`** method of the {{domxref("MediaRecorder")}} interface is used to resume media recording when it has been previously paused.
+
+If {{domxref("MediaRecorder.state")}} is already "recording", calling `resume()` has no effect.
 
 When the `resume()` method is invoked, the browser queues a task that runs
 the following steps:
 
 1. If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
-   `InvalidState` error and terminate these steps. If
+   `InvalidStateError` exception and terminate these steps. If
    {{domxref("MediaRecorder.state")}} is not "inactive", continue to the next step.
 2. Set {{domxref("MediaRecorder.state")}} to "recording".
 3. Continue gathering data into the current {{domxref("Blob")}}.
@@ -36,13 +36,10 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
-An `InvalidState` error is raised if the `resume()` method is
-called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
-is "inactive" — the recording cannot be resumed if it is not already paused; if
-{{domxref("MediaRecorder.state")}} is already "recording", `resume()` has no
-effect.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `MediaRecorder` is currently `"inactive"`.
 
 ## Examples
 
@@ -70,6 +67,6 @@ pause.onclick = () => {
 
 - [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
-- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://github.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton).
 - {{domxref("Navigator.getUserMedia")}}

@@ -101,7 +101,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ([Firefox bug 1305928](https://bugzil.la/1305928)).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been re-enabled on Windows desktop platforms — see [Firefox bug 1244402](https://bugzil.la/1244402). (They were disabled in Firefox 24 because they broke a number of major sites; see [Firefox bug 888304](https://bugzil.la/888304).)
 - The {{domxref("Element/focusin_event", "focusin")}} and {{domxref("Element/focusout_event", "focusout")}} events are now implemented ([Firefox bug 687787](https://bugzil.la/687787)).
-- The {{domxref("isSecureContext")}} property has been implemented (see [Firefox bug 1269052](https://bugzil.la/1269052)).
+- The {{domxref("WorkerGlobalScope.isSecureContext")}} property has been implemented (see [Firefox bug 1269052](https://bugzil.la/1269052)).
 - The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed {{domxref("Window.appinstalled_event", "appinstalled")}} to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See [Firefox bug 1309099](https://bugzil.la/1309099) for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see [Firefox bug 1298243](https://bugzil.la/1298243)).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
@@ -198,4 +198,4 @@ New APIs:
 
 ## Older versions
 
-{{Firefox_for_developers(51)}}
+{{Firefox_for_developers}}

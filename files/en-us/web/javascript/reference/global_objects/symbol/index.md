@@ -77,7 +77,7 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 ## Constructor
 
 - {{jsxref("Symbol/Symbol", "Symbol()")}}
-  - : Creates a new `Symbol` object. It is not a constructor in the traditional sense, because it can only be called as a function, instead of being constructed with `new Symbol()`.
+  - : Returns primitive values of type Symbol. Throws an error when called with `new`.
 
 ## Static properties
 
@@ -113,7 +113,7 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 ## Static methods
 
 - {{jsxref("Symbol.for()")}}
-  - : Searches for existing Symbols with the given `key` and returns it if found. Otherwise a new Symbol gets created in the global Symbol registry with `key`.
+  - : Searches for existing registered Symbols in the global Symbol registry with the given `key` and returns it if found. Otherwise a new Symbol gets created and registered with `key`.
 - {{jsxref("Symbol.keyFor()")}}
   - : Retrieves a shared Symbol key from the global Symbol registry for the given Symbol.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Searches for text in a tab.
 

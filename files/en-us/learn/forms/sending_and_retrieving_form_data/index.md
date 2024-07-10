@@ -123,6 +123,8 @@ Host: foo.com
 
 > **Note:** You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
+> **Note:** The data will not be appended if the `action` URL scheme cannot handle queries, e.g. `file:`.
+
 #### The POST method
 
 The [`POST` method](/en-US/docs/Web/HTTP/Methods/POST) is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.
@@ -160,6 +162,8 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 
 > **Note:** You can find this example on GitHub — see [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
+> **Note:** The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
+
 ### Viewing HTTP requests
 
 HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) or the [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:
@@ -168,7 +172,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 2. Select "Network"
 3. Select "All"
 4. Select "foo.com" in the "Name" tab
-5. Select "Headers"
+5. Select "Request" (Firefox) or "Payload" (Chrome/Edge)
 
 You can then get the form data, as shown in the image below.
 
@@ -246,7 +250,7 @@ There are many other server-side technologies you can use for form handling, inc
 - Node.js
   - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
   - [Next.js](https://nextjs.org/) (for React apps)
-  - [Nuxt](https://nuxtjs.org/) (for Vue apps)
+  - [Nuxt](https://nuxt.com/) (for Vue apps)
   - [Remix](https://remix.run/)
 - PHP
   - [Laravel](https://laravel.com/)

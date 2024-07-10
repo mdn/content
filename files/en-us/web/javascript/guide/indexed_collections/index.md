@@ -523,8 +523,19 @@ The code below uses an arrow function to return the `type` of each array element
 
 ```js
 const result = Object.groupBy(inventory, ({ type }) => type);
-console.log(result.vegetables);
-// [{ name: "asparagus", type: "vegetables" }]
+console.log(result);
+// Logs
+// {
+//   vegetables: [{ name: 'asparagus', type: 'vegetables' }],
+//   fruit: [
+//     { name: 'bananas', type: 'fruit' },
+//     { name: 'cherries', type: 'fruit' }
+//   ],
+//   meat: [
+//     { name: 'goat', type: 'meat' },
+//     { name: 'fish', type: 'meat' }
+//   ]
+// }
 ```
 
 Note that the returned object references the _same_ elements as the original array (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.

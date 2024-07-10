@@ -11,15 +11,13 @@ The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how backgro
 
 {{EmbedInteractiveExample("pages/css/background-repeat.html")}}
 
-By default, the repeated images are clipped to the size of the element, but they can be scaled to fit (using `round`) or evenly distributed from end to end (using `space`).
-
 ## Syntax
 
 ```css
 /* Keyword values */
+background-repeat: repeat;
 background-repeat: repeat-x;
 background-repeat: repeat-y;
-background-repeat: repeat;
 background-repeat: space;
 background-repeat: round;
 background-repeat: no-repeat;
@@ -38,91 +36,55 @@ background-repeat: revert-layer;
 background-repeat: unset;
 ```
 
-### Values
+## Description
 
-- `<repeat-style>`
+The property accepts two [`<repeat-style>`](#values) keyterms, or one keyterm as a shorthand for the two values. When two values are provided, the first value defines the horizontal repetition behavior and the second value defines the vertical behavior.
+Property values can be used to repeat only horizontally, vertically, or not at all.
 
-  - : The one-value syntax is a shorthand for the full two-value syntax:
+The default value is `repeat repeat`. With this value, the background image maintains its intrinsic {{glossary("aspect ratio")}}, repeating both horizontally and vertically to cover the entire background paint area, with edge images being clipped to the size of the element. Which edges clipped depends on the value of the {{cssxref("background-position")}}. How many times they are repeated and how much the images on the edges are clipped depends on the size of the background painting area and the {{cssxref("background-size")}}.
 
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td><strong>Single value</strong></td>
-          <td><strong>Two-value equivalent</strong></td>
-        </tr>
-        <tr>
-          <td><code>repeat-x</code></td>
-          <td><code>repeat no-repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>repeat-y</code></td>
-          <td><code>no-repeat repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>repeat</code></td>
-          <td><code>repeat repeat</code></td>
-        </tr>
-        <tr>
-          <td><code>space</code></td>
-          <td><code>space space</code></td>
-        </tr>
-        <tr>
-          <td><code>round</code></td>
-          <td><code>round round</code></td>
-        </tr>
-        <tr>
-          <td><code>no-repeat</code></td>
-          <td><code>no-repeat no-repeat</code></td>
-        </tr>
-      </tbody>
-    </table>
+The repeating images can be evenly spaced apart, ensuring the repeated image maintains its aspect ratio without being clipped. With the `space` value, if the background paint area has a different aspect ratio than the image or does not otherwise have a size that a multiple of the background size in either direction, there will be areas not covered by the background image.
 
-    In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior. Here is an explanation of how each option works for either direction:
+Alternatively, the repeated background image can be stretched to cover the entire area without clipping. With `round`, the repeated image is stretched to fill all the available space until there is room to add an additional repeated image if the aspect ratio of the background image is not the same as the paint area's aspect ratio. For example, given a background image is 100px x 100px and a background paint area of 1099px x 750px, the image will be repeated 10 times in the horizontal direction and 7 times vertically, for a total of 70 repetitions, with each image stretched in both directions to be 109.9px x 105px. If the width of the paint area increases by 1px, becoming 1100px wide, an 11th image will fit horizontally for a total of 77 image repetitions, with each image being painted at 100px wide and 105px tall, stretched only in the vertical direction.
 
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td><code>repeat</code></td>
-          <td>
-            The image is repeated as much as needed to cover the whole background
-            image painting area. The last image will be clipped if it doesn't fit.
-          </td>
-        </tr>
-        <tr>
-          <td><code>space</code></td>
-          <td>
-            The image is repeated as much as possible without clipping. The first
-            and last images are pinned to either side of the element, and whitespace
-            is distributed evenly between the images. The
-            {{cssxref("background-position")}} property is ignored unless
-            only one image can be displayed without clipping. The only case where
-            clipping happens using <code>space</code> is when there isn't enough
-            room to display one image.
-          </td>
-        </tr>
-        <tr>
-          <td><code>round</code></td>
-          <td>
-            As the allowed space increases in size, the repeated images will stretch
-            (leaving no gaps) until there is room (space left >= half of the image
-            width) for another one to be added. When the next image is added, all of
-            the current ones compress to allow room. Example: An image with an
-            original width of 260px, repeated three times, might stretch until each
-            repetition is 300px wide, and then another image will be added. They
-            will then compress to 225px.
-          </td>
-        </tr>
-        <tr>
-          <td><code>no-repeat</code></td>
-          <td>
-            The image is not repeated (and hence the background image painting area
-            will not necessarily be entirely covered). The position of the
-            non-repeated background image is defined by the
-            {{cssxref("background-position")}} CSS property.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+## Values
+
+The property accepts up to two `<repeat-style>` keyterms. The first value is the horizontal repetition. The second value is the vertical behavior. If only a single value is set to a value other than `repeat-x` or `repeat-y`, that value is applied the both vertices. The values include:
+
+- `repeat`
+
+  - : The default value. The image is repeated as many times as needed to cover the entire background image painting area, with the edge image being clipped if the dimension of the painting area is not a multiple of the dimension of your background image.
+
+- `no-repeat`
+
+  - : The image is not repeated (and hence the background image painting area will not necessarily be entirely covered). The position of the non-repeated background image is defined by the {{cssxref("background-position")}} CSS property.
+
+- `space`
+
+  - : The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when there isn't enough room to display one image.
+
+- `round`
+
+  - : As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. This is the only `<repeat-style>` value that can lead to the distortion of the background image's {{glossary("aspect ratio")}}, which will occur if the aspect ratio of the background image differs from the aspect ratio of the background paint area.
+
+- `repeat-x`
+
+  - : Shorthand for `repeat no-repeat`, the background image repeats horizontally only, with the edge image being clipped if the width of the paint area is not a multiple of the background image's width.
+
+- `repeat-y`
+
+  - : Shorthand for `no-repeat repeat`, the background image repeats vertically only, with the edge image being clipped if the height of the paint area is not a multiple of the background image's height.
+
+When one `<repeat-style>` keyterm is provided, the value is shorthand for the following two-value syntax:
+
+| Single value | Two-value equivalent  |
+| ------------ | --------------------- |
+| `repeat-x`   | `repeat no-repeat`    |
+| `repeat-y`   | `no-repeat repeat`    |
+| `repeat`     | `repeat repeat`       |
+| `space`      | `space space`         |
+| `round`      | `round round`         |
+| `no-repeat`  | `no-repeat no-repeat` |
 
 ## Formal definition
 
@@ -233,4 +195,7 @@ In this example, each list item is matched with a different value of `background
 
 ## See also
 
+- The other {{cssxref("background")}} shorthand components: {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}{{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}} ({{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}), and {{cssxref("background-size")}}
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

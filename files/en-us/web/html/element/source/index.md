@@ -11,60 +11,6 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more me
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>It must have a start tag, but must not have an end tag.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        <div>
-          A media element—{{HTMLElement("audio")}} or
-          {{HTMLElement("video")}}—and it must be placed before any
-          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-            >flow content</a
-          >
-          or {{HTMLElement("track")}} element.
-        </div>
-        <div>
-          A {{HTMLElement("picture")}} element, and it must be placed
-          before the {{HTMLElement("img")}} element.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLSourceElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attributes). In addition, the following attributes can be used with it:
@@ -199,6 +145,62 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
     height="400" />
 </picture>
 ```
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        <div>
+          A media element—{{HTMLElement("audio")}} or
+          {{HTMLElement("video")}}—and it must be placed before any
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+            >flow content</a
+          >
+          or {{HTMLElement("track")}} element.
+        </div>
+        <div>
+          A {{HTMLElement("picture")}} element, and it must be placed
+          before the {{HTMLElement("img")}} element.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLSourceElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

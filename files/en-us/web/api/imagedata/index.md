@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.ImageData
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageData`** interface represents the underlying pixel data of an area of a {{HTMLElement("canvas")}} element.
 
 It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constructor or creator methods on the {{domxref("CanvasRenderingContext2D")}} object associated with a canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. It can also be used to set a part of the canvas by using {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.
-
-{{AvailableInWorkers}}
 
 ## Constructors
 

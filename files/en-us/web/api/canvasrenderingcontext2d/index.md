@@ -60,7 +60,7 @@ The resulting drawing looks like this:
 
 ### Context
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles

@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox/
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
@@ -26,8 +28,6 @@ The `mixed` value is not supported on [`radio`](/en-US/docs/Web/Accessibility/AR
   aria-labelledby="chk15-label"></span>
 <label id="chk15-label">Subscribe to the newsletter</label>
 ```
-
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` as this element has built in semantics and does not require ARIA attributes.
 
 The `tabindex` attribute is required to enable focus. JavaScript is required to toggle the `aria-checked` state. And, if this checkbox is part of a submittable form, more JavaScript is required to set a name and a value.
 
@@ -77,7 +77,7 @@ myHTMLElement.ariaChecked = true;
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
@@ -85,11 +85,3 @@ myHTMLElement.ariaChecked = true;
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - [Two state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html) - w3.org
 - [Mix-state checkbox example](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox-mixed.html) - w3.org
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

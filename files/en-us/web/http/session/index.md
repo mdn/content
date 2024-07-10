@@ -147,7 +147,7 @@ X-Cache: Error from cloudfront
 
 ### Response status codes
 
-[HTTP response status codes](/en-US/docs/Web/HTTP/Status) indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and servers errors.
+[HTTP response status codes](/en-US/docs/Web/HTTP/Status) indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and server errors.
 
 - {{HTTPStatus(200)}}: OK. The request has succeeded.
 - {{HTTPStatus(301)}}: Moved Permanently. This response code means that the URI of requested resource has been changed.

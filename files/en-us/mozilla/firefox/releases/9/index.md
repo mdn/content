@@ -140,4 +140,4 @@ The IDL parser no longer includes support for the never fully-implemented notion
 
 ## See also
 
-{{Firefox_for_developers('8')}}
+{{Firefox_for_developers}}

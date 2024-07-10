@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes the specified browsing data.
 

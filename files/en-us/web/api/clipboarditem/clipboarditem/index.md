@@ -42,16 +42,19 @@ This item is then written to the clipboard, using the {{domxref("Clipboard.write
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = "/myimage.png";
-    const data = await fetch(imgURL);
-    const blob = await data.blob();
-
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        [blob.type]: blob,
-      }),
-    ]);
-    console.log("Fetched image copied.");
+    if (ClipboardItem.supports("image/png")) {
+      const imgURL = "/myimage.png";
+      const data = await fetch(imgURL);
+      const blob = await data.blob();
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          [blob.type]: blob,
+        }),
+      ]);
+      console.log("Fetched image copied.");
+    } else {
+      console.log("image png is not suported");
+    }
   } catch (err) {
     console.error(err.name, err.message);
   }

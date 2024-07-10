@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.Port
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `Port` object represents one end of a connection between two specific contexts, which can be used to exchange messages.
 

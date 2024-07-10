@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.mode
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`mode`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns the current mode for accessing the
 data in the object stores in the scope of the transaction (i.e. is the mode to be
 read-only, or do you want to write to the object stores?) The default value is
 `readonly`.
-
-{{AvailableInWorkers}}
 
 ## Value
 

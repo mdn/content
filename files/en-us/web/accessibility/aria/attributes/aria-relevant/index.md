@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-relevant
 ---
 
+{{AccessibilitySidebar}}
+
 Used in ARIA live regions, the global `aria-relevant` attribute indicates what notifications the user agent will trigger when the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree) within a live region is modified.
 
 ## Description
@@ -49,14 +51,9 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

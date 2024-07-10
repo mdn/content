@@ -62,7 +62,7 @@ draw();
 
 This example's output is shown below.
 
-{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("Rectangular_shape_example", "", "160")}}
 
 The `fillRect()` function draws a large black square 100 pixels on each side. The `clearRect()` function then erases a 60x60 pixel square from the center, and then `strokeRect()` is called to create a rectangular outline 50x50 pixels within the cleared square.
 
@@ -134,7 +134,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
+{{EmbedLiveSample("Drawing_a_triangle", "", "110")}}
 
 ### Moving the pen
 
@@ -180,7 +180,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
+{{EmbedLiveSample("Moving_the_pen", "", "160")}}
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
@@ -235,7 +235,7 @@ draw();
 
 This starts by calling `beginPath()` to start a new shape path. We then use the `moveTo()` method to move the starting point to the desired position. Below this, two lines are drawn which make up two sides of the triangle.
 
-{{EmbedLiveSample("Lines", 160, 160, "canvas_lineto.png")}}
+{{EmbedLiveSample("Lines", "", "160")}}
 
 You'll notice the difference between the filled and stroked triangle. This is, as mentioned above, because shapes are automatically closed when a path is filled, but not when they are stroked. If we left out the `closePath()` for the stroked triangle, only two lines would have been drawn, not a complete triangle.
 
@@ -303,7 +303,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
+{{EmbedLiveSample("Arcs", "", "210")}}
 
 ### Bezier and quadratic curves
 
@@ -359,7 +359,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
+{{EmbedLiveSample("Quadratic_Bezier_curves", "", "160")}}
 
 #### Cubic Bezier curves
 
@@ -397,7 +397,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
+{{EmbedLiveSample("Cubic_Bezier_curves", "", "160")}}
 
 ### Rectangles
 
@@ -415,7 +415,7 @@ So far, each example on this page has used only one type of path function per sh
 ```html hidden
 <html lang="en">
   <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
+    <canvas id="canvas" width="200" height="185"></canvas>
   </body>
 </html>
 ```
@@ -426,8 +426,8 @@ function draw() {
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
 
-    roundedRect(ctx, 12, 12, 150, 150, 15);
-    roundedRect(ctx, 19, 19, 150, 150, 9);
+    roundedRect(ctx, 12, 12, 184, 168, 15);
+    roundedRect(ctx, 19, 19, 170, 154, 9);
     roundedRect(ctx, 53, 53, 49, 33, 10);
     roundedRect(ctx, 53, 119, 49, 16, 6);
     roundedRect(ctx, 135, 53, 49, 33, 10);
@@ -508,7 +508,7 @@ draw();
 
 The resulting image looks like this:
 
-{{EmbedLiveSample("Making_combinations", 160, 160, "combinations.png")}}
+{{EmbedLiveSample("Making_combinations", "", "200")}}
 
 We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
@@ -516,7 +516,7 @@ We'll take another look at `fillStyle`, in more detail, later in this tutorial. 
 
 ### Shapes with holes
 
-To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape clockwise and the inner shape anticlockwise.
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape anticlockwise and the inner shape clockwise.
 
 ```html hidden
 <html lang="en">
@@ -534,7 +534,7 @@ function draw() {
 
     ctx.beginPath();
 
-    // Outter shape clockwise ⟳
+    // Outer shape clockwise ⟳
     ctx.moveTo(0, 0);
     ctx.lineTo(150, 0);
     ctx.lineTo(75, 129.9);
@@ -553,9 +553,9 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Shapes_with_holes", 160, 160, "shape_with_hole.png")}}
+{{EmbedLiveSample("Shapes_with_holes", "", "160")}}
 
-In the example above the outer triangle goes clockwise (move to the top-left corner, then draw a line to the right-left corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
+In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 
@@ -612,7 +612,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
+{{EmbedLiveSample("Path2D_example", "", "110")}}
 
 ### Using SVG paths
 

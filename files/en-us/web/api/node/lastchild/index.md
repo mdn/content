@@ -18,7 +18,7 @@ returns the last child of the node, or `null` if there are no child nodes.
 
 ## Value
 
-A {{domxref("Node")}} that is the last child of the node, or `null` is there are no child nodes.
+A {{domxref("Node")}} that is the last child of the node, or `null` if there are no child nodes.
 
 ## Example
 

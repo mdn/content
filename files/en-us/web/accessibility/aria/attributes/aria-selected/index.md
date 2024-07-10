@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 
 ## Description
@@ -37,7 +39,7 @@ If the grid supports column selection and a column is selected, all cells in the
 
 In a tablist, `aria-selected` is used on a tab to indicate the currently-displayed [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
 
-The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have has its `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
+The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have the attribute `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
 
 If more than one tab is selectable at a time, include `aria-multiselectable` on the `tablist`.
 
@@ -122,12 +124,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

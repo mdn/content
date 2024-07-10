@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#progressbar
 ---
 
+{{AccessibilitySidebar}}
+
 The `progressbar` role defines an element that displays the progress status for tasks that take a long time.
 
 ## Description
@@ -94,7 +96,7 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('progress')}} element
 - Other range widgets include:
@@ -103,11 +105,3 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
   - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
   - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
   - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

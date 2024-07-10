@@ -23,6 +23,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
+    See [iframes](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
+
     > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
 - `allowfullscreen`
@@ -37,7 +39,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
-- `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
+- `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
+
+  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the {{htmlelement("iframe")}}'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+
+- `credentialless` {{Experimental_Inline}}
 
   - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 
@@ -91,8 +97,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `allow-downloads`
       - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
-    - `allow-downloads-without-user-activation` {{experimental_inline}}
-      - : Allows for downloads to occur without a gesture from the user.
     - `allow-forms`
       - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
     - `allow-modals`
@@ -128,9 +132,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** When redirecting the user, opening a popup window, or opening a new tab from an embedded page within an `<iframe>` with the `sandbox` attribute, the new browsing context is subject to the same `sandbox` restrictions. This can create issues — for example, if a page embedded within an `<iframe>` without a `sandbox="allow-forms"` or `sandbox="allow-popups-to-escape-sandbox"` attribute set on it opens a new site in a separate tab, form submission in that new browsing context will silently fail.
 
 - `src`
+
   - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+
+    > **Note:** The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+
 - `srcdoc`
-  - : Inline HTML to embed, overriding the `src` attribute. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
+
+  - : Inline HTML to embed, overriding the `src` attribute. Its content should follow the syntax of a full HTML document, which includes the doctype directive, `<html>`, `<body>` tags, etc., although most of them can be omitted, leaving only the body content. This doc will have `about:srcdoc` as its location. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
+
+    > **Note:** The `about:srcdoc` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+
 - `width`
   - : The width of the frame in CSS pixels. Default is `300`.
 
@@ -177,11 +189,23 @@ As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, ali
 
 The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
+## Accessibility
+
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+
+```html
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+```
+
+Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
 ## Examples
 
 ### A simple \<iframe>
 
-This example embeds the page at <https://example.org> in an iframe.
+This example embeds the page at <https://example.org> in an iframe. This is a common use case of iframes: to embed content from another site. For example, the live sample itself, and the [try it](#try_it) example at the top, are both `<iframe>` embeds of content from another MDN site.
 
 #### HTML
 
@@ -198,17 +222,45 @@ This example embeds the page at <https://example.org> in an iframe.
 
 {{ EmbedLiveSample('A_simple_iframe', 640,400)}}
 
-## Accessibility concerns
+### Embedding source code in an \<iframe>
 
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+This example directly renders source code in an iframe. This can be used as a technique to prevent script injection when displaying user-generated content, when combined with the `sandbox` attribute.
 
-```html
-<iframe
-  title="Wikipedia page for Avocados"
-  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+Note that when using `srcdoc`, any relative URLs in the embedded content will be resolved relative to the URL of the embedding page. If you want to use anchor links that point to places in the embedded content, you need to explicitly specify `about:srcdoc` as the base URL.
+
+#### HTML
+
+```html-nolint
+<article>
+  <footer>Nine minutes ago, <i>jc</i> wrote:</footer>
+  <iframe
+    sandbox
+    srcdoc="<p>There are two ways to use the <code>iframe</code> element:</p>
+<ol>
+<li><a href=&quot;about:srcdoc#embed_another&quot;>To embed content from another page</a></li>
+<li><a href=&quot;about:srcdoc#embed_user&quot;>To embed user-generated content</a></li>
+</ol>
+<h2 id=&quot;embed_another&quot;>Embedding content from another page</h2>
+<p>Use the <code>src</code> attribute to specify the URL of the page to embed:</p>
+<pre><code>&amp;lt;iframe src=&quot;https://example.org&quot;&amp;gt;&amp;lt;/iframe&amp;gt;</code></pre>
+<h2 id=&quot;embed_user&quot;>Embedding user-generated content</h2>
+<p>Use the <code>srcdoc</code> attribute to specify the content to embed. This post is already an example!</p>
+"
+    width="500"
+    height="250"
+></iframe>
+</article>
 ```
 
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+Here's how to write escape sequences when using `srcdoc`:
+
+- First, write the HTML out, escaping anything you would escape in a normal HTML document (such as `<`, `>`, `&`, etc.).
+- `&lt;` and `<` represent the exact same character in the `srcdoc` attribute. Therefore, to make it an actual escape sequence in the HTML document, replace any ampersands (`&`) with `&amp;`. For example, `&lt;` becomes `&amp;lt;`, and `&amp;` becomes `&amp;amp;`.
+- Replace any double quotes (`"`) with `&quot;` to prevent the `srcdoc` attribute from being prematurely terminated (if you use `'` instead, then you should replace `'` with `&apos;` instead). This step happens after the previous one, so `&quot;` generated in this step doesn't become `&amp;quot;`.
+
+#### Result
+
+{{ EmbedLiveSample('Embedding_source_code_in_an_iframe', 640, 300)}}
 
 ## Technical summary
 
@@ -235,7 +287,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

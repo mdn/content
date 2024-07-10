@@ -108,6 +108,7 @@ globalThis.customElements.define(
 
 ## See also
 
-- The [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute - Used to define parts which can be selected by the `::part()` selector
-- The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute
+- {{CSSxRef(":state",":state()")}} pseudo-class function
+- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute
 - [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module

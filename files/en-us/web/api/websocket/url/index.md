@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebSocket.url
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}
 
 The **`WebSocket.url`** read-only property returns the absolute
 URL of the {{domxref("WebSocket")}} as resolved by the constructor.

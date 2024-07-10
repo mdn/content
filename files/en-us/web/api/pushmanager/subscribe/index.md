@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PushManager.subscribe
 ---
 
-{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`subscribe()`** method of the {{domxref("PushManager")}}
 interface subscribes to a push service.

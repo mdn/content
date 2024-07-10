@@ -5,11 +5,9 @@ page-type: web-api-overview
 browser-compat: api.WebTransport
 ---
 
-{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}
+{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **WebTransport API** provides a modern update to {{domxref("WebSockets API", "WebSockets", "", "nocode")}}, transmitting data between client and server using [HTTP/3 Transport](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/). WebTransport provides support for multiple streams, unidirectional streams, and out-of-order delivery. It enables reliable transport via {{domxref("Streams API", "streams", "", "nocode")}} and unreliable transport via UDP-like datagrams.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -22,7 +20,7 @@ These include:
 - **Faster performance**
   - : QUIC is more performant than TCP in many ways. QUIC can handle security features by itself, rather than handing responsibility off to other protocols like TLS — meaning fewer round trips. And streams provide better transport efficiency than the older packet mechanism. That can make a significant difference, especially on high-latency networks.
 - **Better network transitions**
-  - : QUIC uses a unique connection ID to handle the source and destination of each request — to ensure that packets are delivered correctly. This ID can persist between different networks, meaning that, for example, a download can continue interrupted if you switch from Wifi to a mobile network. HTTP/2, on the other hand, uses IP addresses as identifiers, so network transitions can be problematic.
+  - : QUIC uses a unique connection ID to handle the source and destination of each request — to ensure that packets are delivered correctly. This ID can persist between different networks, meaning that, for example, a download can continue without getting interrupted if you switch from Wi-Fi to a mobile network. HTTP/2, on the other hand, uses IP addresses as identifiers, so network transitions can be problematic.
 - **Unreliable transport**
   - : HTTP/3 supports unreliable data transmission via datagrams.
 

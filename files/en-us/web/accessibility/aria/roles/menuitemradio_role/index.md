@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
+{{AccessibilitySidebar}}
+
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
 
 ## Description
@@ -19,9 +21,9 @@ The three menu item elements can only be contained in, or owned by, an element w
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
-Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
+Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
-Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). If missing, the value defaults to `false`. There is no `mixed` value like there is for `menuitemcheckbox`.
+Similar to the `checked` attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). There is no `mixed` value like there is for `menuitemcheckbox`.
 
 Only one `menuitemradio` in a group can be checked at the same time. When one item in the group is checked, the `aria-checked` attribute gets set to `true`, while the previously checked `menuitemradio` element in the same group, if there was one, becomes unchecked, by having the `aria-checked` attribute value switched to `false`.
 
@@ -142,15 +144,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

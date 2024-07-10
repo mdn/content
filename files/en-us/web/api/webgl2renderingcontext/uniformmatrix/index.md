@@ -62,8 +62,7 @@ uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
 - `transpose`
-  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix. Must be
-    `false`.
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix.
 - `data`
   - : A {{jsxref("Float32Array")}} of float values.
 

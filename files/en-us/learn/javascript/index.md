@@ -8,15 +8,6 @@ page-type: learn-topic
 
 {{Glossary("JavaScript")}} is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 JavaScript is arguably more difficult to learn than related technologies such as [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CSS). Before attempting to learn JavaScript, you are strongly advised to get familiar with at least these two technologies first, and perhaps others as well. Start by working through the following modules:
@@ -68,4 +59,4 @@ This topic contains the following modules, in a suggested order for working thro
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free.
 - [Coding math](https://www.youtube.com/user/codingmath)
-  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://www.bit-101.com/blog/about-me/).
+  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://www.bit-101.com/2017/about-me/).

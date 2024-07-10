@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CacheStorage
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
@@ -18,15 +18,11 @@ Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance
 
 Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
 
-You can access `CacheStorage` through the global {{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
 > **Note:** `CacheStorage` always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu. Furthermore, because `CacheStorage` requires file-system access, it may be unavailable in private mode in Firefox.
 
 > **Note:** {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.
-
-{{AvailableInWorkers}}
-
-{{securecontext_header}}
 
 ## Instance methods
 
@@ -44,7 +40,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 ## Examples
 
 This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/).)
-This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
+This service worker script waits for an {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
@@ -172,5 +168,5 @@ try {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
 - [Private Browsing / Incognito modes](/en-US/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)
