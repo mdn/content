@@ -2,7 +2,7 @@
 title: slope
 slug: Web/SVG/Attribute/slope
 page-type: svg-attribute
-browser-compat: svg.elements.feFuncR.slope
+browser-compat: svg.elements.feFuncR
 ---
 
 {{SVGRef}}
