@@ -83,7 +83,6 @@ In addition to the `@view-transition` at-rule, we define two {{cssxref("@keyfram
 }
 ```
 
-The above CSS is included in the [View transitions multi-page app demo](https://mdn.github.io/dom-examples/view-transitions/mpa/), demonstrating this at-rule example in action.
 
 ## Specifications
 
