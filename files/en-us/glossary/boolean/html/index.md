@@ -11,7 +11,7 @@ A **boolean attribute** in {{Glossary("HTML")}} is an attribute that represents 
 
 If the attribute is present, it can have one of the following values:
 
-- no value at all, e.g. `attribute` (This is not allowed in XML: XML requires the equals sign followed by the attribute name.)
+- no value at all, e.g. `attribute`
 - the empty string, e.g. `attribute=""`
 - attribute's name itself, with no leading or trailing whitespace, e.g. `attribute="attribute"`
 
