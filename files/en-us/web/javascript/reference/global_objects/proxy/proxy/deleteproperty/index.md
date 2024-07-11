@@ -17,23 +17,23 @@ The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object
 new Proxy(target, {
   deleteProperty(target, property) {
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameters are passed to the `deleteProperty()` method.
-`this` is bound to the handler.
+The following parameters are passed to the `deleteProperty()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}} of the property to delete.
+  - : A string or {{jsxref("Symbol")}} representing the property name.
 
 ### Return value
 
-The `deleteProperty()` method must return a boolean value indicating
-whether or not the property has been successfully deleted.
+The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating whether or not the property has been successfully deleted. Other values are [coerced to booleans](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
+
+Many operations, including the {{jsxref("Operators/delete", "delete")}} operator when in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throw a {{jsxref("TypeError")}} if the `[[Delete]]` internal method returns `false`.
 
 ## Description
 
@@ -49,10 +49,10 @@ Or any other operation that invokes the `[[Delete]]` [internal method](/en-US/do
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[Delete]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- A property cannot be deleted, if it exists as a non-configurable own property of the
-  target object.
+- A property cannot be reported as deleted, if it exists as a non-configurable own property of the target object. That is, if {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns `configurable: false` for the property on `target`, then the trap must return a falsy value.
+- A property cannot be reported as deleted, if it exists as an own property of the target object and the target object is non-extensible. That is, if {{jsxref("Reflect.isExtensible()")}} returns `false` on `target`, and {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns a property descriptor for the property on `target`, then the trap must return a falsy value.
 
 ## Examples
 

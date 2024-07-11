@@ -19,7 +19,7 @@ deleteCell(index)
 
 ### Parameters
 
-- `index` {{optional_inline}}
+- `index`
   - : The cell index of the cell to remove. If `index` is `-1` or equal to the number of cells, the last cell of the row is removed.
 
 ### Return value

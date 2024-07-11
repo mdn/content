@@ -54,11 +54,6 @@ _In addition to the following properties, `MediaStreamAudioSourceNode` inherits 
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Exceptions
-
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the stream specified by the `mediaStream` parameter does not contain any audio tracks.
-
 ## Usage notes
 
 ### Track ordering

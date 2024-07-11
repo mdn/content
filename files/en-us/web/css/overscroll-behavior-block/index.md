@@ -7,7 +7,7 @@ browser-compat: css.properties.overscroll-behavior-block
 
 {{CSSRef}}
 
-The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
+The **`overscroll-behavior-block`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 

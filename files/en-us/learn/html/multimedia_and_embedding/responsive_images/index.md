@@ -106,7 +106,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 2. A space
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 
-> **Note:** For the slot width, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`) — but not a percentage. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
+> **Note:** In `sizes`, you can use any [length value](/en-US/docs/Web/CSS/length). For example, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`). However, you cannot use a percentage as the slot width. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
 
 So, with these attributes in place, the browser will:
 
@@ -127,7 +127,9 @@ Older browsers that don't support these features will just ignore them. Instead,
 
 ### Resolution switching: Same size, different resolutions
 
-If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
+Suppose you have an image that will be rendered at the same real-world size on displays that have different screen resolutions. You can provide a better user experience on high resolution displays by serving a higher resolution version of the image.
+
+To achieve this you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
 <img
@@ -135,6 +137,8 @@ If you're supporting multiple display resolutions, but everyone sees your image 
   src="elva-fairy-640w.jpg"
   alt="Elva dressed as a fairy" />
 ```
+
+Note that even though the image is always displayed with the same size, on higher resolution displays you get to see more details.
 
 ![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
 

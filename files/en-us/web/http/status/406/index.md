@@ -2,7 +2,7 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
 page-type: http-status-code
-browser-compat: http.status.406
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.406
 ---
 
 {{HTTPSidebar}}
@@ -18,11 +18,6 @@ Proactive content negotiation headers include:
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
 
-In practice, this error is very rarely used. Instead of responding using this error
-code, which would be cryptic for the end user and difficult to fix, servers ignore the
-relevant header and serve an actual page to the user. It is assumed that even if the
-user won't be completely happy, they will prefer this to an error code.
-
 If a server returns such an error status, the body of the message should contain the
 list of the available representations of the resources, allowing the user to choose
 among them.
@@ -36,10 +31,6 @@ among them.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

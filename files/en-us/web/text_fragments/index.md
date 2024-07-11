@@ -50,9 +50,9 @@ The key parts to understand are as follows:
 - `textEnd` {{optional_inline}}
   - : A text string specifying the end of the linked text.
 - `prefix-` {{optional_inline}}
-  - : A text string followed by a hyphen specifying what text should precede the linked text. This helps the browser to select the correct linked text, in cases where there are multiple matches.
+  - : A text string followed by a hyphen specifying what text should immediately precede the linked text, only allowing for whitespace in between. This helps the browser to select the correct linked text, in cases where there are multiple matches.
 - `-suffix` {{optional_inline}}
-  - : A hyphen followed by a text string specifying what text should follow the linked text. This helps the browser to select the correct linked text, in cases where there are multiple matches.
+  - : A hyphen followed by a text string specifying what text should immediately follow the linked text, only allowing for whitespace in between. This helps the browser to select the correct linked text, in cases where there are multiple matches.
 
 Supporting browsers will scroll to and highlight the first text fragment in the linked document that matches the specified directive. Note that it is possible to specify multiple text fragments to highlight in the same URL by separating them with ampersand (`&`) characters.
 

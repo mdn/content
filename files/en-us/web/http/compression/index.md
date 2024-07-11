@@ -71,7 +71,7 @@ sequenceDiagram
 
 ![A client requesting content with an 'Accept-Encoding: br, gzip' header. The server responds with a body compressed using the Brotli algorithm and the required 'Content-Encoding' and 'Vary' headers.](httpcompression1.svg)
 
-As compression brings significant performance improvements, it is recommended to activate it for all files, but already compressed ones like images, audio files and videos.
+As compression brings significant performance improvements, it is recommended to activate it for all files except already compressed ones like images, audio files and videos.
 
 Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://docs.microsoft.com/iis/configuration/system.webServer/httpCompression/) element.
 

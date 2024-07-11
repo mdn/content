@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 An {{glossary("HTML")}} **character reference** is a formatted pattern of characters that is used to represent another character in the rendered web page.
 
-Character references are used as replacements for characters that are reserved in HTML, such as the less-than (`<`) and greater-than (`>`) symbols used by the HTML parser to identify element {{Glossary('tag','tags')}}.
+Character references are used as replacements for characters that are reserved in HTML, such as the less-than (`<`) and greater-than (`>`) symbols used by the HTML parser to identify element {{Glossary('tag','tags')}}, or `"` or `'` within attributes, which may be enclosed by those characters.
 They can also be used for invisible characters that would otherwise be impossible to type, including non-breaking spaces, control characters like left-to-right and right-to-left marks, and for characters that are hard to type on a standard keyboard.
 
 There are three types of character references:
@@ -26,7 +26,7 @@ There are three types of character references:
 
 - **Hexadecimal numeric character reference**
   - : These references start with `&#x` or `&#X`, followed by one or more ASCII hex digits, representing the hexadecimal integer that corresponds to the character's Unicode code point, and ending with `;`.
-    For example, the hexadecimal character reference for `<` is `&#x3C;` or `&#x3C;`, because the Unicode code point for the symbol is `U+0003C`.
+    For example, the hexadecimal character reference for `<` is `&#x3C;` or `&#X3C;`, because the Unicode code point for the symbol is `U+0003C`.
 
 A very small subset of useful named character references along with their unicode code points are listed below.
 
@@ -36,6 +36,7 @@ A very small subset of useful named character references along with their unicod
 | <         | `&lt;`          | U+0003C            |
 | >         | `&gt;`          | U+0003E            |
 | "         | `&quot;`        | U+00022            |
+| '         | `&apos;`        | U+00027            |
 |           | `&nbsp;`        | U+000A0            |
 | –         | `&ndash;`       | U+02013            |
 | —         | `&mdash;`       | U+02014            |

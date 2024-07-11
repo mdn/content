@@ -301,7 +301,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a script is about to be executed.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
+  - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/scrollend_event", "scrollend")}}
