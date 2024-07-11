@@ -7,12 +7,12 @@ browser-compat: svg.elements.feFuncR
 
 {{SVGRef}}
 
-The **`slope`** attribute defines the values for linear filters, such as brightness. The `slope` attribute is suppported by children of the {{SVGElement("feComponentTransfer")}} filter primitive, including the `<feFuncR>`, `<feFuncB>`, `<feFuncG>`, and `<feFuncA>` transfer function. When the `type` of transfer function is `linear`, the `slope` defines the slope of the linear function.
+The **`slope`** attribute defines the values for linear filters, such as brightness. The `slope` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive, including the `<feFuncR>`, `<feFuncB>`, `<feFuncG>`, and `<feFuncA>` transfer functions. When the `type` of a transfer function is `linear`, the `slope` defines the slope of the linear function.
 
-You can use this attribute with the following SVG filter primitive transfer function elements when `type="linear"` is set:
+You can use this attribute with the following SVG component transfer function elements when `type="linear"` is set:
 
 - {{SVGElement("feFuncR")}}
-- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
 - {{SVGElement("feFuncB")}}
 - {{SVGElement("feFuncA")}}
 
@@ -45,7 +45,7 @@ You can use this attribute with the following SVG filter primitive transfer func
 </table>
 
 - `<number>`
-  - : This value indicates the linear slope of the transfer function.
+  - : This value indicates the slope of the linear component transfer functions.
 
 ## Examples
 
@@ -82,9 +82,9 @@ In this example, a gradient box has two text elements with linear filters applie
       width="100%"
       height="100%">
       <feComponentTransfer>
-        <feFuncR type="linear" slope="2" />
-        <feFuncG type="linear" slope="25" />
-        <feFuncB type="linear" slope="5" />
+        <feFuncR type="linear" slope="1" />
+        <feFuncG type="linear" slope="1" />
+        <feFuncB type="linear" slope="1" />
       </feComponentTransfer>
     </filter>
     <filter
@@ -95,9 +95,9 @@ In this example, a gradient box has two text elements with linear filters applie
       width="100%"
       height="100%">
       <feComponentTransfer>
-        <feFuncR type="linear" slope="1" />
-        <feFuncG type="linear" slope="0.5" />
-        <feFuncB type="linear" slope="1" />
+        <feFuncR type="linear" slope="2" />
+        <feFuncG type="linear" slope="2.5" />
+        <feFuncB type="linear" slope="2" />
       </feComponentTransfer>
     </filter>
   </defs>
