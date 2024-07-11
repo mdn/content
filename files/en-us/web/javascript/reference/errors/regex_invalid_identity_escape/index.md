@@ -24,6 +24,8 @@ SyntaxError: Invalid regular expression: invalid escaped character for Unicode p
 
 In Unicode-unaware mode, `\` could be used to escape any character, including those without a defined meaning. In these cases, the escaped character represents itself. For example, `\q` would match the character `q`. This severely limits the ability to add new escape sequences in the future, so in Unicode-aware mode, only recognized escape sequences are allowed. Do not add `\` redundantly.
 
+This error is also thrown when the `\x` [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) is not followed by two hexadecimal digits.
+
 For an exhaustive list of available escape sequences, see the [regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences). For a table of which characters can appear literally escaped or unescaped in each context, see [literal characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character).
 
 ## Examples
