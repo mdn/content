@@ -48,7 +48,7 @@ console.log(rollingKeyframes.target);
 <hr />
 ```
 
-```css
+```css hidden
 hr {
   background: linear-gradient(to bottom, red, transparent);
   height: 1rem;

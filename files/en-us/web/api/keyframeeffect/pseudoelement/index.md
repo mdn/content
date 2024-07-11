@@ -46,14 +46,11 @@ const log = document.getElementById("log");
 const text = document.getElementById("text");
 
 // Create the keyframe and launch the animation
-const animation = text.animate(
-  [
-    { transform: "rotate(0)" },
-    { transform: "rotate(180deg)" },
-    { transform: "rotate(360deg)" },
-  ],
-  { duration: 3000, iterations: Infinity, pseudoElement: "::after" },
-);
+const animation = text.animate([{ transform: "rotate(360deg)" }], {
+  duration: 3000,
+  iterations: Infinity,
+  pseudoElement: "::after",
+});
 
 // Get the value of KeyframeEffect.pseudoElement
 function logPseudoElement() {
