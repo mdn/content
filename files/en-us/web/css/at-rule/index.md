@@ -67,6 +67,8 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
   - : Define the starting property values for an element to transition from when the element receives its first style update, such as when transitioning from `display: none` ([CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)).
 - {{cssxref("@supports")}}
   - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
+- {{cssxref("@view-transitions")}}
+  - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transitions_API), and the destination document as well in the case of cross-document navigation transitions.
 
 ## Index
 
