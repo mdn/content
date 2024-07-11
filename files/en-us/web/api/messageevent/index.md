@@ -15,7 +15,7 @@ This is used to represent messages in:
 - [Web sockets](/en-US/docs/Web/API/WebSockets_API) (see the {{domxref("WebSocket.message_event", "message")}} event of {{domxref("WebSocket")}}).
 - Cross-document messaging (see {{domxref("Window.postMessage()")}} and the {{domxref("Window.message_event", "message")}} event of {{domxref("Window")}}).
 - [Channel messaging](/en-US/docs/Web/API/Channel_Messaging_API) (see {{domxref("MessagePort.postMessage()")}} and the {{domxref("MessagePort.message_event", "message")}} event of {{domxref("MessagePort")}}).
-- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, the {{domxref("Worker.message_event", "message")}} event of {{domxref("Worker")}}, the {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event of  {{domxref("ServiceWorkerGlobalScope")}}, etc.)
+- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, the {{domxref("Worker.message_event", "message")}} event of {{domxref("Worker")}}, the {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event of {{domxref("ServiceWorkerGlobalScope")}}, etc.)
 - [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("BroadcastChannel.postMessage()")}}) and the {{domxref("BroadcastChannel.message_event", "message")}} event of {{domxref("BroadcastChannel")}}).
 - WebRTC data channels (see the {{domxref("RTCDataChannel.message_event", "message")}} event of {{domxref("RTCDataChannel")}}).
 
