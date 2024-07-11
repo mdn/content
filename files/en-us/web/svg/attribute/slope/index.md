@@ -3,6 +3,7 @@ title: slope
 slug: Web/SVG/Attribute/slope
 page-type: svg-attribute
 browser-compat: svg.elements.feFuncR
+spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-slope
 ---
 
 {{SVGRef}}
@@ -95,9 +96,9 @@ In this example, a gradient box has two text elements with linear filters applie
       width="100%"
       height="100%">
       <feComponentTransfer>
-        <feFuncR type="linear" slope="2" />
+        <feFuncR type="linear" slope="0.5" />
         <feFuncG type="linear" slope="2.5" />
-        <feFuncB type="linear" slope="2" />
+        <feFuncB type="linear" slope="5" />
       </feComponentTransfer>
     </filter>
   </defs>
