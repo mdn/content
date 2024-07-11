@@ -65,14 +65,11 @@ console.log(rollingAnimation.effect.getKeyframes());
 
 ```html
 <div>🤣</div>
-<hr />
 ```
 
 ```css hidden
-hr {
-  background: linear-gradient(to bottom, red, transparent);
-  height: 1rem;
-  margin: 0;
+body {
+  box-shadow: 0 5px 5px pink;
 }
 
 div {
