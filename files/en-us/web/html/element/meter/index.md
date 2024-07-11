@@ -50,10 +50,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{EmbedLiveSample("Simple_example", 300, 60)}}
 
-On Google Chrome, the resulting meter looks like this:
-
-![A screenshot of the meter element in Google Chrome](Screenshot_from_2024-06-27_10-40-55.png)
-
 ### High and low range example
 
 Note that in this example the [`min`](#min) attribute is omitted. This is allowed, as it will default to `0`.
@@ -70,10 +66,6 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 #### Result
 
 {{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}
-
-On Google Chrome, the resulting meter looks like this:
-
-![red meter in Google Chrome](Screenshot_from_2024-06-27_10-44-28.png)
 
 ## Technical Summary
 
