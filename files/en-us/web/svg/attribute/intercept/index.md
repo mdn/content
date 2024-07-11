@@ -2,19 +2,42 @@
 title: intercept
 slug: Web/SVG/Attribute/intercept
 page-type: svg-attribute
+browser-compat: svg.elements.feFuncR
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
 ---
 
 {{SVGRef}}
 
-The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.
+The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`. The `intercept` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive, including the `<feFuncR>`, `<feFuncB>`, `<feFuncG>`, and `<feFuncA>` transfer functions. When the `type` of a transfer function is `linear`, the `intercept` defines the intercept of the linear function.
 
-You can use this attribute with the following SVG elements:
+You can use this attribute with the following SVG component transfer function elements when `type="linear"` is set:
 
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncB")}}
 - {{SVGElement("feFuncG")}}
 - {{SVGElement("feFuncR")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `<number>`
+  - : This value indicates the intercept of the linear component transfer functions.
 
 ## Example
 
@@ -76,25 +99,10 @@ svg {
 
 {{EmbedLiveSample("Example", "480", "200")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>{{cssxref("number")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
