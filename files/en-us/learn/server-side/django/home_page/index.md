@@ -395,7 +395,7 @@ Here are a couple of tasks to test your familiarity with model queries, views, a
 
    > **Note:** The section [Extending templates](#extending_templates) explains how to create blocks and extend a block in another template.
 
-2. Modify the [view](<#view_(function-based)>) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context`. You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
+2. Modify the [view](#view_function-based) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context`. You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
 
 ## Summary
 

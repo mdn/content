@@ -15,7 +15,7 @@ Do not confuse JavaScript engines with {{glossary("engine/rendering", "rendering
 ## See also
 
 - [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) on Wikipedia
-- Glossary
+- Related glossary terms:
   - {{glossary("Engine")}}
   - {{glossary("JavaScript")}}
   - {{glossary("WebAssembly")}}

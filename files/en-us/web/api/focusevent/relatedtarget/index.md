@@ -61,4 +61,3 @@ An instance of {{domxref("EventTarget")}}.
 ## See also
 
 - {{ domxref("FocusEvent") }}
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
